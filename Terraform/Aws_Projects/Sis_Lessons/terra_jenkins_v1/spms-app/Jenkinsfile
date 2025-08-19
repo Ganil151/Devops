@@ -1,0 +1,76 @@
+pipeline {
+  agent any 
+
+  options {
+    ansiColor('xterm')
+    timestamps()
+    disableConcurrentBuilds()
+  }
+
+  parameters{
+    choice(name: 'ACTION', choices: ['plan', 'apply', 'destroy'], description: 'Terraform action to run')
+    string(name: 'AWS_REGION', defaultValue: 'us-east-1', description: 'AWS region')
+    string(name: 'TF_WORKSPACE', defaultValue: 'dev', description: 'Terraform workspace (e.g., dev/stage/prod)')
+    booleanParam(name: 'AUTO_APPROVE', defaultValue: true, description: 'Auto-approve apply/destroy')
+  }
+
+  enviroment {
+    AWS_DEFAULT_REGION = "${params.AWS_REGION}" 
+    TF_IN_AUTOMATION = '1'
+    TF_INPUT = '0'
+  }
+
+  triggers {/* add any triggers here if needed */}
+
+  stages {
+
+    stage('Checkout'){
+      steps{
+        checkout scm
+      }
+    }
+  }
+
+  stage('Install Tools (if missing)'){
+    steps {
+      sh '''
+      set -e
+      which terraform >/dev/null 2>&1 || {
+        echo "Installing Terraform..."
+        curl -fsSL https://releases.hashicorp.com/terraform/1.7.5/terraform_1.7.5_linux_amd64.zip -o /tmp/terraform.zip
+        unzip -o /tmp/terraform.zip -d /tmp
+        sudo mv /tmp/terraform /usr/local/bin/terraform
+      }
+
+      which jq >/dev/null 2>&1 || {
+        echo "Installing jq..."
+        sudo apt-get update -y >/dev/null 2>&1 || true
+        sudo apt-get install -y jq >/dev/null 2>&1 || sudo yum install -y jq
+      }
+     '''
+    }
+  }
+
+  stage('Terraform Init'){
+    steps{
+      withCredentials([[$class: 'AmazonWebSevicesCredentualsBinding', credentialsId: 'aws-creds', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]){
+        dir('envs/dev'){
+          sh '''
+            set -e
+            terraform --version
+            terraform workspace list || true
+            terraform init -input=false
+            terraform workspace new "${TF_WORKSPACE}" 2>/dev/null || terraform workspace select "${TF_WORKSPACE}
+          '''
+        }
+      }
+    }
+  }
+
+  stage('Validate & Format'){}
+
+
+
+
+
+}
