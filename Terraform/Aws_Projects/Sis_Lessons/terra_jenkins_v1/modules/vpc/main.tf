@@ -18,7 +18,6 @@ resource "aws_subnet" "spms_subnet" {
   }
 
 }
-
 resource "aws_internet_gateway" "spms_igw" {
   vpc_id = aws_vpc.spms_vpc.id
 
@@ -26,7 +25,6 @@ resource "aws_internet_gateway" "spms_igw" {
     Name = "${var.project_name}-igw"
   }
 }
-
 resource "aws_route_table" "spms_route_table" {
   vpc_id = aws_vpc.spms_vpc.id
 
@@ -39,7 +37,6 @@ resource "aws_route_table" "spms_route_table" {
     Name = "${var.project_name}-route-table"
   }
 }
-
 resource "aws_route_table_association" "spam_rta" {
   subnet_id      = aws_subnet.spms_subnet.id
   route_table_id = aws_route_table.spms_route_table.id
