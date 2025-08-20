@@ -1,5 +1,5 @@
 pipeline {
-  agent any 
+  agent any
 
   options {
     ansiColor('xterm')
@@ -7,147 +7,148 @@ pipeline {
     disableConcurrentBuilds()
   }
 
-  parameters{
+  parameters {
     choice(name: 'ACTION', choices: ['plan', 'apply', 'destroy'], description: 'Terraform action to run')
     string(name: 'AWS_REGION', defaultValue: 'us-east-1', description: 'AWS region')
     string(name: 'TF_WORKSPACE', defaultValue: 'dev', description: 'Terraform workspace (e.g., dev/stage/prod)')
     booleanParam(name: 'AUTO_APPROVE', defaultValue: true, description: 'Auto-approve apply/destroy')
   }
 
-  enviroment {
-    AWS_DEFAULT_REGION = "${params.AWS_REGION}" 
+  environment {
+    AWS_DEFAULT_REGION = "${params.AWS_REGION}"
     TF_IN_AUTOMATION = '1'
     TF_INPUT = '0'
   }
 
-  triggers {/* add any triggers here if needed */}
-
   stages {
-
-    stage('Checkout'){
-      steps{
+    stage('Checkout') {
+      steps {
         checkout scm
       }
     }
-  }
 
-  stage('Install Tools (if missing)'){
-    steps {
-      sh '''
-      set -e
-      which terraform >/dev/null 2>&1 || {
-        echo "Installing Terraform..."
-        curl -fsSL https://releases.hashicorp.com/terraform/1.7.5/terraform_1.7.5_linux_amd64.zip -o /tmp/terraform.zip
-        unzip -o /tmp/terraform.zip -d /tmp
-        sudo mv /tmp/terraform /usr/local/bin/terraform
-      }
-
-      which jq >/dev/null 2>&1 || {
-        echo "Installing jq..."
-        sudo apt-get update -y >/dev/null 2>&1 || true
-        sudo apt-get install -y jq >/dev/null 2>&1 || sudo yum install -y jq
-      }
-     '''
-    }
-  }
-
-  stage('Terraform Init'){
-    steps{
-      withCredentials([[$class: 'AmazonWebSevicesCredentualsBinding', credentialsId: 'aws-creds', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]){
-        dir('envs/dev'){
-          sh '''
-            set -e
-            terraform --version
-            terraform workspace list || true
-            terraform init -input=false
-            terraform workspace new "${TF_WORKSPACE}" 2>/dev/null || terraform workspace select "${TF_WORKSPACE}
-          '''
-        }
-      }
-    }
-  }
-
-  stage('Validate & Format'){
-    steps{
-      dir('envs/dev'){
-        sh '''
-          set -e 
-          terraform fmt -recurisive -check
-          terraform validate
-        '''
-      }
-    }
-  }
-
-  stage('Plan'){
-    steps{
-      withCredentials([[$class: 'AmazonWebServicesCredentualsBinding', credentialsId: 'aws-creds', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]){
-        dir('envs/dev'){
-          sh '''
-            set -e 
-            if ["${ACTION}" = "destroy"]; then
-              terraform plan -destroy -out=tfplan
-            else
-              terraform plan -out-tfplan
-            fi
-          '''
-        }
-      }
-    }
-    post{
-      success {
-        archiveArtifacts artifacts: 'envs/dev/tfplan', fingerprint: true, onlyIfSuccessful: true
-      }
-    }
-  }
-  stage('Apply/Destroy (Approved)'){
-    when{
-      anyOf{
-        expression { params.ACTION == 'apply'}
-        expression { params.ACTION == 'destroy'}
-      }
-    }
-    steps {
-      script{
-        if (!params.AUTO_APPROVE){
-          input message: "Proceed with Terraform ${params.ACTION} in workspace '${params.TF_WORKSPACE}'?", ok: "Proceed"
-        }
-      }
-      withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentuals: 'aws-creds', accessKeyVariale: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]){
-        dir('envs/dev'){
-          sh '''
-            set -e
-            if [ "${ACTION}" = "destroy"]; then
-              terraform destroy -auto-approve=${AUTO_APPROVE}
-            else
-              terraform apply -auto-approve=${AUTO_APPROVE} tfplan
-            fi
-          '''
-        }
-      }
-    }
-  }
-
-  stage('Show Outputs') {
-    when { expression { params.ACTION != 'destroy' } }
-    steps {
-      dir('envs/dev') {
+    stage('Install Tools (if missing)') {
+      steps {
         sh '''
           set -e
-          terraform output -json | tee tf-outputs.json
-          echo "Public IP: $(jq -r '.public_ip.value // empty' tf-outputs.json)"
-          echo "Instance ID: $(jq -r '.instance_id.value // empty' tf-outputs.json)"
+          which terraform >/dev/null 2>&1 || {
+            echo "Installing Terraform..."
+            curl -fsSL https://releases.hashicorp.com/terraform/1.7.5/terraform_1.7.5_linux_amd64.zip -o /tmp/terraform.zip
+            unzip -o /tmp/terraform.zip -d /tmp
+            sudo mv /tmp/terraform /usr/local/bin/terraform
+          }
+
+          which jq >/dev/null 2>&1 || {
+            echo "Installing jq..."
+            sudo apt-get update -y >/dev/null 2>&1 || true
+            sudo apt-get install -y jq >/dev/null 2>&1 || sudo yum install -y jq
+          }
         '''
       }
     }
-    post {
-      always {
-        archiveArtifacts artifacts: 'envs/dev/tf-outputs.json', fingerprint: true, allowEmptyArchive: true
+
+    stage('Terraform Init') {
+      steps {
+        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-creds', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+          dir('spms-app') {
+            sh '''
+              set -e
+              terraform --version
+              terraform workspace list || true
+              terraform init -input=false
+              terraform workspace new "${TF_WORKSPACE}" 2>/dev/null || terraform workspace select "${TF_WORKSPACE}"
+            '''
+          }
+        }
       }
     }
-  }  
-    post{
-    always{
+
+    stage('Validate & Format') {
+      steps {
+        dir('spms-app') {
+          sh '''
+            set -e
+            terraform fmt -recursive -check
+            terraform validate
+          '''
+        }
+      }
+    }
+
+    stage('Plan') {
+      steps {
+        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-creds', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+          dir('spms-app') {
+            sh '''
+              set -e
+              if [ "${ACTION}" = "destroy" ]; then
+                terraform plan -destroy -out=tfplan
+              else
+                terraform plan -out=tfplan
+              fi
+            '''
+          }
+        }
+      }
+      post {
+        success {
+          archiveArtifacts artifacts: 'spms-app/tfplan', fingerprint: true, onlyIfSuccessful: true
+        }
+      }
+    }
+
+    stage('Apply/Destroy (Approved)') {
+      when {
+        anyOf {
+          expression { params.ACTION == 'apply' }
+          expression { params.ACTION == 'destroy' }
+        }
+      }
+      steps {
+        script {
+          if (!params.AUTO_APPROVE) {
+            input message: "Proceed with Terraform ${params.ACTION} in workspace '${params.TF_WORKSPACE}'?", ok: "Proceed"
+          }
+        }
+        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-creds', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+          dir('spms-app') {
+            sh '''
+              set -e
+              if [ "${ACTION}" = "destroy" ]; then
+                terraform destroy -auto-approve=${AUTO_APPROVE}
+              else
+                terraform apply -auto-approve=${AUTO_APPROVE} tfplan
+              fi
+            '''
+          }
+        }
+      }
+    }
+
+    stage('Show Outputs') {
+      when {
+        expression { params.ACTION != 'destroy' }
+      }
+      steps {
+        dir('spms-app') {
+          sh '''
+            set -e
+            terraform output -json | tee tf-outputs.json
+            echo "Public IP: $(jq -r '.public_ip.value // empty' tf-outputs.json)"
+            echo "Instance ID: $(jq -r '.instance_id.value // empty' tf-outputs.json)"
+          '''
+        }
+      }
+      post {
+        always {
+          archiveArtifacts artifacts: 'spms-app/tf-outputs.json', fingerprint: true, allowEmptyArchive: true
+        }
+      }
+    }
+  }
+
+  post {
+    always {
       cleanWs(cleanWhenAborted: false, notFailBuild: true, deleteDirs: true)
     }
   }
