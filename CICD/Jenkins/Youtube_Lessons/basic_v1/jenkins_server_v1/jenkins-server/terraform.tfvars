@@ -10,7 +10,7 @@ enable_dns_hostnames    = true
 map_public_ip_on_launch = true
 
 # Security Group
-# security_group_id = ["jenkins-sg"]
+security_group_id = ["jenkins-sg"]
 
 # Keys
 # key_name = "jenkins-keys"
