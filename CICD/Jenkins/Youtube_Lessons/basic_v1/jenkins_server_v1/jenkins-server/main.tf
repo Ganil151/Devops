@@ -14,3 +14,8 @@ module "security_group" {
   vpc_id = module.vpc.vpc_id
   project_name = var.project_name
 }
+
+module "keys" {
+  source = "../modules/keys"
+  key_name = var.key_name
+}
