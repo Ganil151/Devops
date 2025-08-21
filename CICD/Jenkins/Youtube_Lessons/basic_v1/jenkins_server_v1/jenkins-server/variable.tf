@@ -1,7 +1,11 @@
 variable "project_name" {}
 
 # VPC
-variable "vpc_id"{}
+variable "vpc_id" {
+  description = "The VPC ID where the security group will be created"
+  type        = string
+}
+
 variable "vpc_cidr_block" {}
 variable "subnet_cidr_block"{}
 variable "enable_dns_support" {}

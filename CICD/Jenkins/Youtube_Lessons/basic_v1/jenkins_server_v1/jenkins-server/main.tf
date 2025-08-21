@@ -8,3 +8,9 @@ module "vpc" {
   enable_dns_hostnames = var.enable_dns_hostnames
   map_public_ip_on_launch = var.map_public_ip_on_launch
 }
+
+module "security_group" {
+  source = "../modules/security_group"
+  vpc_id = module.vpc.vpc_id
+  project_name = var.project_name
+}
