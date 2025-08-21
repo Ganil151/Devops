@@ -17,3 +17,9 @@ variable "security_group_id" {
   description = "A list of security group IDs for the EC2 instance"
   type        = list(string)
 }
+
+# Keys
+variable "key_name" {
+  description = "The name of the key pair to associate with the EC2 instance"
+  type        = string
+}

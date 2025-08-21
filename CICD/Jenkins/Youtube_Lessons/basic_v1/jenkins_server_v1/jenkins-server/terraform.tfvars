@@ -13,7 +13,7 @@ map_public_ip_on_launch = true
 security_group_id = ["jenkins-sg"]
 
 # Keys
-# key_name = "jenkins-keys"
+key_name = "jenkins-keys"
 
 # Ec2
 # ami                         = "ami-020cba7c55df1f615"
