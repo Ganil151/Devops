@@ -2,10 +2,8 @@ module "vpc" {
   source                  = "../modules/vpc"
   vpc_id                  = var.vpc_id
   project_name            = var.project_name
-  vpc_cidr_block          = var.vpc_cidr_block
+  vpc_cidr_block          = var.subnet_cidr_block
   subnet_cidr_block       = var.subnet_cidr_block
-  public_subnet_cidrs     = var.public_subnet_cidrs
-  private_subnet_cidrs    = var.private_subnet_cidrs
   enable_dns_support      = var.enable_dns_support
   enable_dns_hostnames    = var.enable_dns_hostnames
   map_public_ip_on_launch = var.map_public_ip_on_launch
@@ -22,26 +20,14 @@ module "keys" {
   key_name = var.key_name
 }
 
-module "ec2_instance_1" {
+module "ec2" {
   source                      = "../modules/ec2"
   ami                         = var.ami
   key_name                    = var.key_name
   project_name                = var.project_name
   instance_type               = var.instance_type
-  subnet_id                   = element(module.vpc.public_subnet_ids, 0)
+  subnet_id                   = module.vpc.subnet_id
   user_data                   = file("${path.module}/jscript.sh")
   user_data_replace_on_change = var.user_data_replace_on_change
-  vpc_security_group_id       = module.security_group.security_group_id
-}
-
-module "ec2_instance_2" {
-  source                      = "../modules/ec2"
-  ami                         = var.ami
-  key_name                    = var.key_name
-  project_name                = "ienkins-worker-1"
-  instance_type               = var.instance_type
-  subnet_id                   = element(module.vpc.public_subnet_ids, 1)
-  user_data                   = ""
-  user_data_replace_on_change = false
   vpc_security_group_id       = module.security_group.security_group_id
 }
