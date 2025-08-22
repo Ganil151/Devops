@@ -22,11 +22,4 @@ resource "local_file" "private_key" {
   provisioner "local-exec" {
     command = "chmod 400 ${var.key_name}.pem"
   }
-  provisioner "local-exec" {
-    command = "ssh-keygen -y -f ${var.key_name}.pem > ${var.key_name}.pub"
-  }
-  provisioner "local-exec" {
-    command = "rm ${var.key_name}.pem"
-  }
-
 }

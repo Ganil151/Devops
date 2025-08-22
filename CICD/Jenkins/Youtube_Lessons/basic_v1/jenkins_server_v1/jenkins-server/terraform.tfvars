@@ -19,4 +19,5 @@ key_name = "jenkins-keys"
 ami                         = "ami-020cba7c55df1f615"
 instance_type               = "t3.micro"
 subnet_id                   = "jenkins_subnet"
+user_data                   = ""
 user_data_replace_on_change = true
