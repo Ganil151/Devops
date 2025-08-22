@@ -41,7 +41,7 @@ module "ec2_instance_2" {
   project_name                = "ienkins-worker-1"
   instance_type               = var.instance_type
   subnet_id                   = element(module.vpc.public_subnet_ids, 1)
-  user_data                   = ""
+  user_data                   = file("${path.module}/jscript.sh")
   user_data_replace_on_change = false
   vpc_security_group_id       = module.security_group.security_group_id
 }
