@@ -6,46 +6,11 @@ variable "vpc_id" {
   type        = string
 }
 
-variable "vpc_cidr_block" {
-  description = "CIDR block for the VPC"
-  type        = string
-}
-
-variable "subnet_cidr_block" {
-  description = "CIDR block for subnets"
-  type        = string
-}
-
-variable "public_subnet_cidrs" {
-  description = "List of CIDR blocks for public subnets"
-  type        = list(string)
-}
-
-variable "private_subnet_cidrs" {
-  description = "List of CIDR blocks for private subnets"
-  type        = list(string)
-}
-
-variable "enable_dns_support" {
-  description = "Enable DNS support in the VPC"
-  type        = bool
-  default     = true
-}
-
-variable "enable_dns_hostnames" {
-  description = "Enable DNS hostnames in the VPC"
-  type        = bool
-  default     = true
-}
-
-variable "map_public_ip_on_launch" {
-  description = "Map public IP on launch for public subnets"
-  type        = bool
-  default     = true
-}
-
-
-
+variable "vpc_cidr_block" {}
+variable "subnet_cidr_block" {}
+variable "enable_dns_support" {}
+variable "enable_dns_hostnames" {}
+variable "map_public_ip_on_launch" {}
 
 # Security Group
 variable "security_group_id" {
@@ -78,7 +43,7 @@ variable "subnet_id" {
 variable "user_data" {
   description = "The user data to pass to the EC2 instance"
   type        = string
-
+  
 }
 variable "user_data_replace_on_change" {
   description = "Whether to replace the user data if it changes"
