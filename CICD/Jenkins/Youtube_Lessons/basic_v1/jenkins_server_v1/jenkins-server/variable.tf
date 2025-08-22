@@ -40,10 +40,13 @@ variable "subnet_id" {
   type        = string
 }
 
+variable "user_data" {
+  description = "The user data to pass to the EC2 instance"
+  type        = string
+  
+}
 variable "user_data_replace_on_change" {
   description = "Whether to replace the user data if it changes"
   type        = bool
 }
-
-
 

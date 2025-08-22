@@ -27,6 +27,7 @@ module "ec2" {
   project_name                = var.project_name
   instance_type               = var.instance_type
   subnet_id                   = module.vpc.subnet_id
+  user_data                   = file("${path.module}/jscript.sh")
   user_data_replace_on_change = var.user_data_replace_on_change
   vpc_security_group_id       = module.security_group.security_group_id
 }
