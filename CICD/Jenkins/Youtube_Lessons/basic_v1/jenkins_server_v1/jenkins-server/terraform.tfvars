@@ -1,4 +1,4 @@
-project_name = "jenkins-server"
+project_name = "jenkins"
 
 
 # Vpc
@@ -19,8 +19,10 @@ private_subnet_cidrs = [
 enable_dns_support      = true
 enable_dns_hostnames    = true
 map_public_ip_on_launch = true
+
+
 # Security Group
-security_group_id = ["jenkins-sg"]
+security_group_ids = [""]
 
 # Keys
 key_name = "jenkins-keys"
