@@ -22,26 +22,26 @@ module "keys" {
   key_name = var.key_name
 }
 
-module "ec2_instance_1" {
+module "master_instance" {
   source                      = "../modules/ec2"
   ami                         = var.ami
   key_name                    = var.key_name
-  project_name                = var.project_name
+  project_name                = "${var.project_name}-master-v1"
   instance_type               = var.instance_type
   subnet_id                   = element(module.vpc.public_subnet_ids, 0)
-  user_data                   = file("${path.module}/jscript.sh")
+  user_data                   = file("${path.module}/jenkins_script.sh")
   user_data_replace_on_change = var.user_data_replace_on_change
-  vpc_security_group_id       = module.security_group.security_group_id
+  security_group_ids      = [module.security_group.jenkins_master_sg_id]
 }
 
-module "ec2_instance_2" {
+module "worker_instance" {
   source                      = "../modules/ec2"
   ami                         = var.ami
   key_name                    = var.key_name
-  project_name                = "ienkins-worker-1"
+  project_name                = "${var.project_name}-worker-v1"
   instance_type               = var.instance_type
   subnet_id                   = element(module.vpc.public_subnet_ids, 1)
-  user_data                   = file("${path.module}/jscript.sh")
+  user_data                   = file("${path.module}/java_script.sh")
   user_data_replace_on_change = false
-  vpc_security_group_id       = module.security_group.security_group_id
+  security_group_ids      = [module.security_group.jenkins_wk_sg]
 }

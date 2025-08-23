@@ -48,10 +48,11 @@ variable "map_public_ip_on_launch" {
 
 
 # Security Group
-variable "security_group_id" {
+variable "security_group_ids" {
   description = "A list of security group IDs for the EC2 instance"
   type        = list(string)
 }
+
 
 # Keys
 variable "key_name" {
