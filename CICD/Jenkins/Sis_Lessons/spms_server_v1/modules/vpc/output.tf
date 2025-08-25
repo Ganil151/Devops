@@ -1,6 +1,6 @@
 output "vpc_id" {
   description = "The ID of the VPC"
-  value       = aws_vpc.jenkins_vpc.id
+  value       = aws_vpc.spms_vpc.id
 }
 
 output "public_subnet_ids" {

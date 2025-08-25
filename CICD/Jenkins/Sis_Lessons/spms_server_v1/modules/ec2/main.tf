@@ -1,4 +1,4 @@
-resource "aws_instance" "jenkins-server" {
+resource "aws_instance" "spms-server" {
   ami                         = var.ami
   key_name                    = var.key_name
   subnet_id                   = var.subnet_id
