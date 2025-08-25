@@ -1,7 +1,7 @@
-# Jenkins Master SG
-resource "aws_security_group" "jenkins_sg" {
-  name        = "jenkins_sg"
-  description = "Allow traffic for Jenkins Master"
+# SPMS Master SG
+resource "aws_security_group" "spms_sg" {
+  name        = "spms_sg"
+  description = "Allow traffic for SPMS Master"
   vpc_id      = var.vpc_id
 
   ingress {
@@ -29,7 +29,7 @@ resource "aws_security_group" "jenkins_sg" {
   }
 
   ingress {
-    description = "Jenkins UI"
+    description = "SPMS UI"
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
@@ -44,14 +44,14 @@ resource "aws_security_group" "jenkins_sg" {
   }
 
   tags = {
-    Name = "jenkins_sg"
+    Name = "spms_sg"
   }
 }
 
-# Jenkins Worker SG
-resource "aws_security_group" "jenkins_wk_sg" {
-  name        = "jenkins_wk_sg"
-  description = "Jenkins Worker Security"
+# spms Worker SG
+resource "aws_security_group" "spms_wk_sg" {
+  name        = "spms_wk_sg"
+  description = "SPMS Worker Security"
   vpc_id      = var.vpc_id
 
   ingress {
@@ -70,7 +70,7 @@ resource "aws_security_group" "jenkins_wk_sg" {
   }
 
   tags = {
-    Name = "jenkins_wk_sg"
+    Name = "spms_wk_sg"
   }
 }
 
@@ -80,8 +80,8 @@ resource "aws_security_group_rule" "allow_master_to_worker_ssh" {
   from_port                = 22
   to_port                  = 22
   protocol                 = "tcp"
-  source_security_group_id = aws_security_group.jenkins_sg.id
-  security_group_id        = aws_security_group.jenkins_wk_sg.id
+  source_security_group_id = aws_security_group.spms_sg.id
+  security_group_id        = aws_security_group.spms_wk_sg.id
 }
 
 resource "aws_security_group_rule" "allow_worker_to_master_ssh" {
@@ -89,8 +89,8 @@ resource "aws_security_group_rule" "allow_worker_to_master_ssh" {
   from_port                = 22
   to_port                  = 22
   protocol                 = "tcp"
-  source_security_group_id = aws_security_group.jenkins_wk_sg.id
-  security_group_id        = aws_security_group.jenkins_sg.id
+  source_security_group_id = aws_security_group.spms_wk_sg.id
+  security_group_id        = aws_security_group.spms_sg.id
 }
 
 resource "aws_security_group_rule" "allow_worker_to_master_icmp" {
@@ -98,6 +98,6 @@ resource "aws_security_group_rule" "allow_worker_to_master_icmp" {
   from_port                = -1
   to_port                  = -1
   protocol                 = "icmp"
-  source_security_group_id = aws_security_group.jenkins_wk_sg.id
-  security_group_id        = aws_security_group.jenkins_sg.id
+  source_security_group_id = aws_security_group.spms_wk_sg.id
+  security_group_id        = aws_security_group.spms_sg.id
 }

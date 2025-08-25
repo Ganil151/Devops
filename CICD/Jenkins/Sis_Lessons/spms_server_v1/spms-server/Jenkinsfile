@@ -1,0 +1,37 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Clone Repository') {
+      steps {
+        git 'https://github.com/spring-petclinic/spring-petclinic-microservices.git'
+      }
+    }
+
+    stage('Build Application') {
+      steps {
+        sh './mvnw package -DskipTests'
+      }
+    }
+
+    stage('Deploy Services') {
+      steps {
+        script {
+          def services = [
+            'spring-petclinic-config-server',
+            'spring-petclinic-discovery-server',
+            'spring-petclinic-api-gateway',
+            'spring-petclinic-visits-service',
+            'spring-petclinic-vets-service',
+            'spring-petclinic-customers-service'
+          ]
+
+          services.each { service ->
+            sh "nohup java -jar ${service}/target/*.jar > ${service}.log 2>&1 &"
+            sleep 60
+          }
+        }
+      }
+    }
+  }
+}

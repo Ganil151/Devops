@@ -47,20 +47,20 @@ variable "map_public_ip_on_launch" {
 
 
 
-# Security Group
+# # Security Group
 variable "security_group_ids" {
   description = "A list of security group IDs for the EC2 instance"
   type        = list(string)
 }
 
 
-# Keys
+# # Keys
 variable "key_name" {
   description = "The name of the key pair to associate with the EC2 instance"
   type        = string
 }
 
-# EC2
+# # EC2
 
 variable "ami" {
   description = "The AMI ID to use for the EC2 instance"

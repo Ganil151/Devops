@@ -4,7 +4,7 @@ resource "tls_private_key" "rsa_4096" {
 
 }
 
-resource "aws_key_pair" "jenkins_key" {
+resource "aws_key_pair" "spms_key" {
   key_name   = var.key_name
   public_key = tls_private_key.rsa_4096.public_key_openssh
   tags = {
