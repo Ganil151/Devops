@@ -1,0 +1,88 @@
+pipeline {
+    
+    agent { label params.NODE_LABEL }
+
+    environment {
+        COMPOSE_PROJECT_NAME = "spring-petclinic"
+    }
+
+    parameters {
+        string(
+            name: 'NODE_LABEL',
+            defaultValue: 'worker-node-1',
+            description: 'Label of the Jenkins worker node to run this pipeline'
+        )
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    git 'https://github.com/spring-petclinic/spring-petclinic-microservices.git'
+                }
+            }
+        }
+
+        stage('Install yq') {
+            steps {
+                script {
+                    sh '''
+                    if ! command -v yq &> /dev/null; then
+                        echo "Installing yq..."
+                        sudo wget https://github.com/mikefarah/yq/releases/download/v4.34.1/yq_linux_amd64 -O /usr/local/bin/yq
+                        sudo chmod +x /usr/local/bin/yq
+                    fi
+                    '''
+                }
+            }
+        }
+
+        stage('Remove genai-service from docker-compose.yml') {
+            steps {
+                script {
+                    // Backup and modify the docker-compose.yml file
+                    sh '''
+                    cp docker-compose.yml docker-compose.yml.bak
+                    yq eval 'del(.services.genai-service)' -i docker-compose.yml
+                    '''
+                }
+            }
+        }
+
+        stage('Build Images') {
+            steps {
+                script {
+                    // Build Docker images
+                    sh 'docker-compose build'
+                }
+            }
+        }
+
+        stage('Start Services') {
+            steps {
+                script {
+                    // Start services in detached mode
+                    sh 'docker-compose up -d'
+                }
+            }
+        }
+
+        stage('Verify Running Containers') {
+            steps {
+                script {
+                    // List running containers
+                    sh 'docker ps --format "table {{.Names}}\t{{.Status}}"'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            script {
+                // Clean up Docker resources
+                sh 'docker-compose down -v'
+            }
+        }
+    }
+}
