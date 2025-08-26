@@ -22,19 +22,30 @@ sudo systemctl enable jenkins
 sudo systemctl start jenkins
 sudo systemctl status jenkins --no-pager || true
 
-# SSH KEYGEN
-sudo ssh-keygen -t rsa -b 4096 -N "" -f /var/lib/jenkins/.ssh/id_rsa
+# Create SSH Directory
+sudo -u jenkins mkdir -p /var/lib/jenkins/.ssh
+sudo -u jenkins chmod 700 /var/lib/jenkins/.ssh
 
-# Create Known Hosts
-sudo touch /var/lib/jenkins/.ssh/known_hosts
+# Generate SSH key as jenkins user
+sudo -u jenkins ssh-keygen -t rsa -b 4096 -N "" -f /var/lib/jenkins/.ssh/id_rsa
 
-# Change Owner
+# Get public key
+sudo -u jenkins cp -r /var/lib/jenkins/.ssh/id_rsa* > /var/lib/jenkins/.ssh/
+
+# Create known_hosts file
+sudo -u jenkins touch /var/lib/jenkins/.ssh/known_hosts
+
+# Fix permissions
 sudo chown -R jenkins:jenkins /var/lib/jenkins/.ssh
+sudo -u jenkins chmod 600 /var/lib/jenkins/.ssh/id_rsa
+sudo -u jenkins chmod 644 /var/lib/jenkins/.ssh/id_rsa.pub
+sudo -u jenkins chmod 644 /var/lib/jenkins/.ssh/known_hosts
 
-# Change Permissions
-sudo chmod 600 /var/lib/jenkins/.ssh/id_rsa
-sudo chmod 600 /var/lib/jenkins/.ssh/id_rsa.pub
-sudo chmod 644 /var/lib/jenkins/.ssh/known_hosts
+
+# Increase Jenkins /tmp Directory
+echo "tmpfs /tmp tmpfs defaults,size=1500M 0 0" | sudo tee -a /etc/fstab
+sudo mount -o remount /tmp
+
 
 # Install Docker
 sudo yum install -y docker

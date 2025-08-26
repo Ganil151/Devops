@@ -21,6 +21,10 @@ echo 'export M2_HOME=/opt/maven' | sudo tee -a /etc/profile.d/maven.sh
 echo 'export PATH=$M2_HOME/bin:$PATH' | sudo tee -a /etc/profile.d/maven.sh
 source /etc/profile.d/maven.sh
 
+# Increase Jenkins /tmp Directory
+echo "tmpfs /tmp tmpfs defaults,size=1500M 0 0" | sudo tee -a /etc/fstab
+sudo mount -o remount /tmp
+
 # Install Docker (needed for microservices deployment)
 sudo yum install docker -y
 sudo systemctl start docker
@@ -31,5 +35,4 @@ sudo usermod -aG docker ec2-user
 sudo mkdir -p /usr/libexec/docker/cli-plugins
 sudo curl -SL "https://github.com/docker/compose/releases/latest/download/docker-compose-linux-$(uname -m)" -o /usr/libexec/docker/cli-plugins/docker-compose
 sudo chmod +x /usr/libexec/docker/cli-plugins/docker-compose
-
 
