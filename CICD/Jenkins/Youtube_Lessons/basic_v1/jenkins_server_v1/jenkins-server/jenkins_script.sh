@@ -9,10 +9,10 @@ log() {
 
 # Install Dependencies
 install_dependencies() {
-    log "Installing dependencies..."
-    sudo apt-get update -y
-    sudo apt-get install -y fontconfig openjdk-17-jre git curl
-    java -version || { log "Java installation failed"; exit 1; }
+log "Installing dependencies..."
+sudo apt-get update -y
+sudo apt-get install -y fontconfig openjdk-17-jre git curl
+java -version || { log "Java installation failed"; exit 1; }
 }
 
 # Add Jenkins Repository

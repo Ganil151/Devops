@@ -13,6 +13,11 @@ pipeline {
         )
     }
 
+    triggers {
+        // Trigger builds via GitHub webhook
+        githubPush()
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -47,42 +52,45 @@ pipeline {
             }
         }
 
-        stage('Build Images') {
-            steps {
-                script {
-                    sh 'docker compose build'
-                }
-            }
-        }
-
-        stage('Start Services') {
-            steps {
-                script {
-                    sh 'docker compose up -d'
-                }
-            }
-        }
-
-        stage('Verify Running Containers') {
-            steps {
-                script {
-                    sh 'docker ps --format "table {{.Names}}\t{{.Status}}"'
-                }
-            }
-        }
-
-        stage('Check Service Health') {
+        stage('Build Application') {
             steps {
                 script {
                     sh '''
-                    echo "Checking Config Server..."
-                    curl -s http://localhost:8888/actuator/health
+                    echo "Building the Spring PetClinic application..."
+                    ./mvnw clean package -DskipTests
+                    '''
+                }
+            }
+        }
 
-                    echo "Checking Discovery Server..."
-                    curl -s http://localhost:8761
+        stage('Run Unit Tests') {
+            steps {
+                script {
+                    sh '''
+                    echo "Running unit tests..."
+                    ./mvnw test
+                    '''
+                }
+            }
+        }
 
-                    echo "Checking API Gateway..."
-                    curl -s http://localhost:8080/actuator/health
+        stage('Verify Build Artifacts') {
+            steps {
+                script {
+                    sh '''
+                    echo "Verifying build artifacts..."
+                    ls -l target/
+                    '''
+                }
+            }
+        }
+
+        stage('Deploy to Test Environment') {
+            steps {
+                script {
+                    sh '''
+                    echo "Deploying application to the test environment..."
+                    # Add deployment logic here (e.g., copying files to a server or uploading to a cloud service)
                     '''
                 }
             }
@@ -90,10 +98,14 @@ pipeline {
     }
 
     post {
+        success {
+            echo "Build successful!"
+        }
+        failure {
+            echo "Build failed!"
+        }
         always {
-            script {
-                sh 'docker compose down -v'
-            }
+            cleanWs() // Clean up workspace after the build
         }
     }
 }
