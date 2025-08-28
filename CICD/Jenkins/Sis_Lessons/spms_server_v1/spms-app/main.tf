@@ -41,7 +41,7 @@ module "worker_instance" {
   project_name                = "${var.project_name}-worker-v1"
   instance_type               = var.instance_type
   subnet_id                   = element(module.vpc.public_subnet_ids, 1)
-  user_data                   = file("${path.module}/scripts/petclinic_setup.sh")
+  user_data                   = file("${path.module}/scripts/depend.sh")
   user_data_replace_on_change = false
   security_group_ids      = [module.security_group.spms_wk_sg]
 }

@@ -47,20 +47,6 @@ echo "tmpfs /tmp tmpfs defaults,size=1500M 0 0" | sudo tee -a /etc/fstab
 sudo mount -o remount /tmp
 
 
-# Install Docker
-sudo yum install -y docker
-sudo systemctl enable docker
-sudo systemctl start docker
 
-# Install Docker Compose
-sudo mkdir -p /usr/libexec/docker/cli-plugins
-sudo curl -SL "https://github.com/docker/compose/releases/latest/download/docker-compose-linux-$(uname -m)" -o /usr/libexec/docker/cli-plugins/docker-compose
-sudo chmod +x /usr/libexec/docker/cli-plugins/docker-compose
-
-# Add Jenkins to Docker group
-sudo usermod -aG docker jenkins
-
-# Restart Docker
-sudo systemctl restart docker
 
 
