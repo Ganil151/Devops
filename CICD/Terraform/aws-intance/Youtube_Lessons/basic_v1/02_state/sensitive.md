@@ -1,1 +1,0 @@
-Chuck is of God
