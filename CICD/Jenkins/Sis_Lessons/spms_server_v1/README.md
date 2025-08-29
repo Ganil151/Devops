@@ -64,8 +64,8 @@ Password: <your GitHub personal access token>
 ID: github-credentials
 ```
 
-Then change your pipeline Checkout stage to:
-```
+### Then change your pipeline Checkout stage to:
+
 stage('Checkout') {
     steps {
         git branch: 'main',
