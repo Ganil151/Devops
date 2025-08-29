@@ -4,6 +4,9 @@ set -e
 # Update packages
 sudo yum update -y
 
+# Change the hostname
+sudo hostnamectl set-hostname "master"
+
 # Install amazon-linux-extras if not present
 sudo yum install -y java-17-amazon-corretto-devel git
 
