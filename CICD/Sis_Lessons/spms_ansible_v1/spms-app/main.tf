@@ -22,9 +22,22 @@ module "keys" {
   key_name = var.key_name
 }
 
+data "aws_ami" "amazon-linux" {
+  most_recent = true
+  owners      = ["amazon"]
+  filter {
+    name   = "name"
+    values = [var.ami_name_pattern]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = [var.ami_virtualization_type]
+  }
+}
 module "master_instance" {
   source                      = "../modules/ec2"
-  ami                         = var.ami
+  ami                         = data.aws_ami.amazon-linux.id
   key_name                    = var.key_name
   project_name                = "${var.project_name}-master-v1"
   instance_type               = var.instance_type
@@ -36,7 +49,7 @@ module "master_instance" {
 
 module "worker_instance" {
   source                      = "../modules/ec2"
-  ami                         = var.ami
+  ami                         = data.aws_ami.amazon-linux.id
   key_name                    = var.key_name
   project_name                = "${var.project_name}-worker-v1"
   instance_type               = var.instance_type

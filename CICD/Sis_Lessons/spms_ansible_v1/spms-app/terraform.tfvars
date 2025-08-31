@@ -27,7 +27,8 @@ security_group_ids = [""]
 key_name = "spms-keys"
 
 # # Ec2
-ami                         = "ami-00ca32bbc84273381"
+ami_name_pattern       = "amzn2-ami-kernel-5.10-hvm-*-x86_64-gp2"
+ami_virtualization_type = "hvm"
 instance_type               = "t3.small"
 subnet_id                   = "spms_subnet"
 user_data                   = ""
