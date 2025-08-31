@@ -62,13 +62,8 @@ variable "key_name" {
 
 # # EC2
 
-variable "ami_name_pattern" {
-  description = "AMI name filter pattern"
-  type        = string
-}
-
-variable "ami_virtualization_type" {
-  description = "Virtualization type form AMI"
+variable "ami" {
+  description = "The AMI ID to use for the EC2 instance"
   type        = string
 }
 variable "instance_type" {

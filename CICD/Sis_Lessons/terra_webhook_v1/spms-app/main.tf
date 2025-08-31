@@ -19,10 +19,24 @@ module "keys" {
   key_name = var.key_name
 }
 
-module "ec2" {
-  source = "../modules/ec2"
+data "aws_ami" "amazon-linux-2" {
+  most_recent = true
+  owners      = ["amazon"]
 
-  ami                         = var.ami
+  filter {
+    name   = "name"
+    values = [var.ami_name_pattern]
+  }
+
+  filter {
+    name   = [var.ami_virtualization_type]
+    values = ["hvm"]
+  }
+}
+
+module "ec2" {
+  source                      = "../modules/ec2"
+  ami                         = data.aws_ami.amazon-linux-2.id
   aws_region                  = var.aws_region
   instance_type               = var.instance_type
   subnet_id                   = module.vpc.subnet_id

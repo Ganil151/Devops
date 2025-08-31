@@ -1,9 +1,9 @@
 # S3 Bucket
 resource "aws_s3_bucket" "project_register" {
-  bucket = "${var.project_name}-register"
+  bucket = "${var.project_name}-bucket"
 
   tags = {
-    Name    = "${var.project_name}-register"
+    Name    = "${var.project_name}-bucket"
     Project = var.project_name
   }
 }

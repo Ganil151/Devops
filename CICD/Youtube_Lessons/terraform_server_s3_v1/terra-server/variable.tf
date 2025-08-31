@@ -62,9 +62,14 @@ variable "key_name" {
 
 # # EC2
 
-variable "ami" {
-  description = "The AMI ID to use for the EC2 instance"
+variable "ami_name_pattern" {
+  description = "The name pattern of the AMI to use for the EC2 instance"
   type        = string
+}
+
+variable "ami_virtualization_type" {
+  description = "The virtualization type of the AMI to use for the EC2 instance"
+  type        = string  
 }
 variable "instance_type" {
   description = "The type of EC2 instance to run"
