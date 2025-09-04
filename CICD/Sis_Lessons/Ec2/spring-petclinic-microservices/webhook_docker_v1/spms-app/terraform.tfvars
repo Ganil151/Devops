@@ -23,7 +23,7 @@ map_public_ip_on_launch = true
 # # Security Group
 security_group_ids = [""]
 ingress_rules      = [22, 80, 443, 3000, 8080, 8888, 8761, 9090, 9091, 9411]
-egress_rules       = [0 - 65535]
+egress_rules       = [0]
 
 # # Keys
 key_name = "spms-keys"

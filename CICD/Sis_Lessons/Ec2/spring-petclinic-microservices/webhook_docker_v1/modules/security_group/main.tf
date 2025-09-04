@@ -51,11 +51,11 @@ resource "aws_security_group" "spms_sg" {
 # spms Worker SG
 resource "aws_security_group" "spms_wk_sg" {
   name        = "spms_wk_sg"
-  description = "SPMS Worker Security"
+  description = "Allow traffic for SPMS Master"
   vpc_id      = var.vpc_id
 
-  ingress {
-    description = "SSH from my IP"
+    ingress {
+    description = "SSH"
     from_port = 22
     to_port = 22
     protocol = "tcp"
