@@ -155,6 +155,29 @@ curl ... -o /usr/libexec/docker/cli-plugins/docker-compose: This command downloa
 chmod +x: Makes the downloaded binary executable.
 docker compose version: Verifies that both Docker and the new compose plugin are installed and working. 
 
+With this change, Jenkins will compile your pipeline properly, and you’ll get the stages:
+
+- Checkout
+
+- Install yq
+
+- Remove genai-service
+
+- Build Application
+
+- Run Unit Tests
+
+- Configure Docker Compose
+
+- Build Images
+
+- Tag Images for Docker Hub
+
+- Push Images to Docker Hub
+
+- Start Services
+
+
 ```Jenkinsfile
 // Use a stage-based declarative pipeline.
 pipeline {
@@ -462,6 +485,273 @@ pipeline {
                 }
             }
         }
+    }
+
+    post {
+        success {
+            echo "Pipeline completed successfully!"
+        }
+        failure {
+            echo "Pipeline failed!"
+        }
+        always {
+            cleanWs() // Clean up workspace after the build
+        }
+    }
+}
+```
+
+## Docker Test
+```
+pipeline {
+    agent { label params.NODE_LABEL }
+    
+    environment {
+        COMPOSE_PROJECT_NAME = 'spring-petclinic'
+        DOCKER_HUB_REPO = 'ganil151/spms-app:tagtest'
+    }
+    
+    parameters {
+        string(
+            name: 'NODE_LABEL',
+            defaultValue: 'worker-node-1',
+            description: 'Label of the Jenkins worker node to run this pipeline'
+        )
+    }
+    
+    triggers {
+        githubPush()
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                credentialsId: 'github-credential',
+                url: 'https://github.com/Ganil151/spring-petclinic-microservices.git'
+            }
+        }
+        
+        stage('Install yq') {
+            steps {
+                script {
+                    sh '''
+                    if ! command -v yq &> /dev/null; then
+                        echo "Installing yq..."
+                        sudo wget https://github.com/mikefarah/yq/releases/download/v4.34.1/yq_linux_amd64 -O /usr/local/bin/yq
+                        sudo chmod +x /usr/local/bin/yq
+                    fi
+                    '''
+                }
+            }
+        }
+        
+        stage('Remove genai-service from docker-compose.yml') {
+            steps {
+                script {
+                    sh '''
+                    cp docker-compose.yml docker-compose.yml.bak
+                    yq eval 'del(.services.genai-service)' -i docker-compose.yml
+                    '''
+                }
+            }
+        }
+        
+         stage('Build Application') {
+            steps {
+                script {
+                    sh '''
+                    echo "Building the Spring PetClinic application..."
+                    ./mvnw clean package -DskipTests
+                    '''
+                }
+            }
+        }
+        
+        stage('Run Unit Tests') {
+            steps {
+                script {
+                    sh '''
+                    echo "Running unit tests..."
+                    ./mvnw test
+                    '''
+                }
+            }
+        }
+        
+        stage('Configure Docker Compose') {
+            steps {
+                script {
+                    sh ''' 
+                    mkdir -p ~/.docker/cli-plugins/
+                    curl -SL https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-linux-x86_64 \
+                      -o ~/.docker/cli-plugins/docker-compose
+                    chmod +x ~/.docker/cli-plugins/docker-compose
+                    
+                    docker --version
+                    docker compose version
+                    sudo systemctl restart docker
+                    '''
+                }
+            }
+        }
+        
+        stage('Build Images') {
+            steps {
+                script {
+                    sh 'docker compose build'
+                }
+            }
+        }
+        
+        stage('Tag Images for Docker Hub') {
+            steps {
+                script {
+                    sh '''
+                    # Tag all images built by Docker Compose
+                    for image in $(docker images --filter=reference="${COMPOSE_PROJECT_NAME}_*" --format "{{.Repository}}:{{.Tag}}"); do
+                        new_tag="${DOCKER_HUB_REPO}/$(echo $image | cut -d':' -f1):latest"
+                        docker tag $image $new_tag
+                        echo "Tagged $image as $new_tag"
+                    done
+                    '''
+                }
+            }
+        }
+
+        
+            
+            stage('Start Services') {
+                steps {
+                    script {
+                        sh 'docker compose up -d'
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+## Another test edition
+```
+check for errors: 
+pipeline {
+    agent { label params.NODE_LABEL }
+
+    environment {
+        COMPOSE_PROJECT_NAME = "spring-petclinic"
+        DOCKER_HUB_USERNAME = credentials('ganil151') 
+        DOCKER_HUB_PASSWORD = credentials('dockerhub-pwd')
+        DOCKER_HUB_REPO = "ganil151/spring-petclinic" 
+    }
+
+    parameters {
+        string(
+            name: 'NODE_LABEL',
+            defaultValue: 'worker-node-1',
+            description: 'Label of the Jenkins worker node to run this pipeline'
+        )
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    credentialsId: 'github-credentials',
+                    url: 'https://github.com/Ganil151/spring-petclinic-microservices.git  '
+            }
+        }
+
+        stage('Install yq') {
+            steps {
+                script {
+                    sh '''
+                    if ! command -v yq &> /dev/null; then
+                        echo "Installing yq..."
+                        sudo wget https://github.com/mikefarah/yq/releases/download/v4.34.1/yq_linux_amd64   -O /usr/local/bin/yq
+                        sudo chmod +x /usr/local/bin/yq
+                    fi
+                    '''
+                }
+            }
+        }
+
+        stage('Remove genai-service from docker-compose.yml') {
+            steps {
+                script {
+                    sh '''
+                    cp docker-compose.yml docker-compose.yml.bak
+                    yq eval 'del(.services.genai-service)' -i docker-compose.yml
+                    '''
+                }
+            }
+        }        
+
+        stage('Build Images') {
+            steps {
+                script {
+                    sh 'docker compose build'
+                }
+            }
+        }
+
+        stage('Tag Images for Docker Hub') {
+            steps {
+                script {
+                    sh '''
+                    # Tag all images built by Docker Compose
+                    for image in $(docker images --filter=reference="${COMPOSE_PROJECT_NAME}_*" --format "{{.Repository}}:{{.Tag}}"); do
+                        new_tag="${DOCKER_HUB_REPO}/$(echo $image | cut -d':' -f1):latest"
+                        docker tag $image $new_tag
+                        echo "Tagged $image as $new_tag"
+                    done
+                    '''
+                }
+            }
+        }
+
+        stage('Login to Docker Hub') {
+            steps {
+                script {
+                    sh '''
+                    echo "Logging into Docker Hub..."
+                    echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USERNAME" --password-stdin
+                    '''
+                }
+            }
+        }
+
+        stage('Push Images to Docker Hub') {
+            steps {
+                script {
+                    sh '''
+                    # Push all tagged images to Docker Hub
+                    for image in $(docker images --filter=reference="${DOCKER_HUB_REPO}/*" --format "{{.Repository}}:{{.Tag}}"); do
+                        echo "Pushing $image to Docker Hub..."
+                        docker push $image
+                    done
+                    '''
+                }
+            }
+        }
+
+        stage('Start Services') {
+            steps {
+                script {
+                    sh 'docker compose up -d'
+                }
+            }
+        }
+
+        stage('Verify Running Containers') {
+            steps {
+                script {
+                    sh 'docker ps --format "table {{.Names}}\t{{.Status}}"'
+                }
+            }
+        }
+
     }
 
     post {

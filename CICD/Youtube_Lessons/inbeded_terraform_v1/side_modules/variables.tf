@@ -7,20 +7,10 @@ variable "my_instance_type" {
   default = "t2.micro"
 }
 
-variable "my_instance_type" {
-  description = "EC2 instance type"
-  type        = map(string)
-  default     = {
-    small  = "t2.micro"
-    medium = "t2.medium"
-    large  = "t2.large"
-  }
-}
-
-variable "my_key" {
+variable "spms_key" {
   description = "AWS EC2 Key pair that needs to be associated with EC2 Instance"
   type        = string
-  default     = "OhioKey"
+  default     = "spms_key"
 }
 
 variable "ingressrules" {

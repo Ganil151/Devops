@@ -48,9 +48,9 @@ module "ec2_master" {
 }
 
 module "s3" {
-  source = "../modules/s3"
-  vpc_id = module.vpc.vpc_id
-  project_name = var.project_name
-  aws_region = var.aws_region
+  source            = "../modules/s3"
+  vpc_id            = module.vpc.vpc_id
+  project_name      = var.project_name
+  aws_region        = var.aws_region
   security_group_id = module.security_group.security_group_id
 }

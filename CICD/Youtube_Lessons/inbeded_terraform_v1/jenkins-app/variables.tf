@@ -38,9 +38,9 @@ variable "ami_name_pattern" {
   type        = string
 }
 
-variable "ami_virtualization_type" {  
+variable "ami_virtualization_type" {
   description = "The virtualization type for the EC2 instance"
-  type        = string  
+  type        = string
 }
 
 variable "instance_type" {

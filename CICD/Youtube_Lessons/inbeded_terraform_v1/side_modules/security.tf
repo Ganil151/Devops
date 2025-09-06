@@ -1,5 +1,5 @@
 # Create Security Group - SSH Traffic and other ports
-data "aws_vpc" "default" {
+data "jenkins_vpc" "default" {
   default = true
 }
 
