@@ -15,8 +15,6 @@ sudo mount -o remount /tmp
 # Install Ansible (works for AL2 or AL2023)
 if command -v amazon-linux-extras &>/dev/null; then
     sudo yum install -y epel-release
-    sudo amazon-linux-extras enable ansible2
-    sudo yum install -y ansible
 else
     sudo yum install -y ansible
 fi

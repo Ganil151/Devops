@@ -127,3 +127,4 @@ ansible-playbook register-ci.yml --check
 ansible-playbook register-ci.yml 
 ```
 
+[text](https://youtu.be/NKUOSc9pCfk?t=6457)
