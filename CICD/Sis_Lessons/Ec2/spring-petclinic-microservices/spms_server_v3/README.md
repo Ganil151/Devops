@@ -270,3 +270,135 @@ Example output:
 ```
 
 This is your webhook secret.
+
+
+## Build & Push Docker 
+```
+pipeline {
+    agent { label params.NODE_LABEL }
+
+    environment {
+        COMPOSE_PROJECT_NAME = "spring-petclinic"
+        DOCKER_IMAGE = "ganil151/spring-petclinic:latest"
+    }
+
+    parameters {
+        string(
+            name: 'NODE_LABEL',
+            defaultValue: 'worker-node-1',
+            description: 'Label of the Jenkins worker node to run this pipeline'
+        )
+    }
+
+    triggers {
+        githubPush()
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    credentialsId: 'github-credentials',
+                    url: 'https://github.com/Ganil151/spring-petclinic-microservices.git'
+            }
+        }
+
+        stage('Install yq') {
+            steps {
+                script {
+                    sh '''
+                    if ! command -v yq &> /dev/null; then
+                        echo "Installing yq..."
+                        sudo wget https://github.com/mikefarah/yq/releases/download/v4.34.1/yq_linux_amd64 -O /usr/local/bin/yq
+                        sudo chmod +x /usr/local/bin/yq
+                    fi
+                    '''
+                }
+            }
+        }
+
+        stage('Remove genai-service from docker-compose.yml') {
+            steps {
+                script {
+                    sh '''
+                    cp docker-compose.yml docker-compose.yml.bak
+                    yq eval 'del(.services.genai-service)' -i docker-compose.yml
+                    '''
+                }
+            }
+        }
+
+        stage('Build Application') {
+            environment {
+                JAVA_HOME = '/usr/lib/jvm/java-17-amazon-corretto.x86_64'
+                PATH = "${JAVA_HOME}/bin:${env.PATH}
+            }
+            steps {
+                script {
+                    sh '''
+                    echo "Building the Spring PetClinic application..."
+                    ./mvnw clean package -DskipTests
+                    JAR_FILE=$(ls target/*.jar | head -n 1)
+                    cp "$JAR_FILE" spring-petclinic
+                    '''
+                }
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                script {
+                    sh '''
+                    echo "Building Docker image"
+                    docker compose build
+                    '''
+                }
+            }
+        }
+
+        stage('Docker Build UP') {
+            steps {
+                script {
+                    sh '''
+                    echo "Building Docker up"
+                    docker compose up -d 
+                    '''
+                }
+            }
+        }
+
+        stage('Docker Login') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    sh '''
+                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                    echo "Building Docker image..."
+                    docker build -t $DOCKER_IMAGE .
+                    '''
+                }
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                sh '''
+                echo "Pushing Docker image to DockerHub..."
+                docker push $DOCKER_IMAGE
+                '''
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "✅ Build and Docker push successful!"
+        }
+        failure {
+            echo "❌ Build failed!"
+        }
+        always {
+            cleanWs()
+        }
+    }
+}
+```
