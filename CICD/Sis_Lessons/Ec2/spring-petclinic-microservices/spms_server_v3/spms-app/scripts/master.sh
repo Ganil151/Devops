@@ -16,6 +16,16 @@ echo "export JAVA_HOME=$JAVA_HOME" | sudo tee -a /etc/profile.d/jdk.sh
 echo 'export PATH=$PATH:$JAVA_HOME/bin' | sudo tee -a /etc/profile.d/jdk.sh
 source /etc/profile.d/jdk.sh
 
+JAVA_HOME="/usr/lib/jvm/java-17-amazon-corretto.x86_64"
+echo "export JAVA_HOME=$JAVA_HOME" | sudo tee -a .bash_profile
+echo 'export PATH=$PATH:$JAVA_HOME/bin' | sudo tee -a .bash_profile
+source .bash_profile
+
+JAVA_HOME="/usr/lib/jvm/java-17-amazon-corretto.x86_64"
+echo "export JAVA_HOME=$JAVA_HOME" | sudo tee -a /var/lib/jenkins/.bash_profile
+echo 'export PATH=$PATH:$JAVA_HOME/bin' | sudo tee -a /var/lib/jenkins/.bash_profile
+source /var/lib/jenkins/.bash_profile
+
 # Add Jenkins repository
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key

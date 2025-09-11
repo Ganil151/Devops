@@ -31,7 +31,7 @@ module "master_instance" {
   project_name                = "${var.project_name}-master"
   instance_type               = var.instance_type
   subnet_id                   = element(module.vpc.public_subnet_ids, 0)
-  user_data                   = file("${path.module}/scripts/jenkins_setup.sh")
+  user_data                   = file("${path.module}/scripts/master.sh")
   user_data_replace_on_change = var.user_data_replace_on_change
   security_group_ids          = [module.security_group.spms_master_sg_id]
 }
@@ -43,7 +43,7 @@ module "worker_instance" {
   project_name                = "${var.project_name}-worker"
   instance_type               = var.instance_type
   subnet_id                   = element(module.vpc.public_subnet_ids, 1)
-  user_data                   = file("${path.module}/scripts/dependencies.sh")
+  user_data                   = file("${path.module}/scripts/worker.sh")
   user_data_replace_on_change = var.user_data_replace_on_change
   security_group_ids          = [module.security_group.spms_wk_sg]
 }

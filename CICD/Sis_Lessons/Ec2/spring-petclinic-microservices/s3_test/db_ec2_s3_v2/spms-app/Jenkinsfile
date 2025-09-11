@@ -3,7 +3,6 @@ pipeline {
 
     environment {
         COMPOSE_PROJECT_NAME = "spring-petclinic"
-        DOCKER_IMAGE = "ganil/spring-petclinic:latest"
     }
 
     parameters {
@@ -15,6 +14,7 @@ pipeline {
     }
 
     triggers {
+        // Trigger builds via GitHub webhook
         githubPush()
     }
 
@@ -74,37 +74,17 @@ pipeline {
             }
         }
 
-        stage('Docker Login & Build') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                    sh '''
-                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                    echo "Building Docker image..."
-                    docker build -t $DOCKER_IMAGE .
-                    '''
-                }
-            }
-        }
-
-        stage('Push Docker Image') {
-            steps {
-                sh '''
-                echo "Pushing Docker image to DockerHub..."
-                docker push $DOCKER_IMAGE
-                '''
-            }
-        }
     }
 
     post {
         success {
-            echo "✅ Build and Docker push successful!"
+            echo "Build successful!"
         }
         failure {
-            echo "❌ Build failed!"
+            echo "Build failed!"
         }
         always {
-            cleanWs()
+            cleanWs() // Clean up workspace after the build
         }
     }
 }

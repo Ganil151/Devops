@@ -43,6 +43,58 @@ Let me know if you need further assistance!
 sudo -u jenkins ssh-keyscan -H <WORKER-IP> | sudo tee -a /var/lib/jenkins/.ssh/known_hosts > /dev/null
 ```
 
+If you already provision your worker EC2 instance with Terraform, add an output in your worker_ec2/main.tf:
+```terraform 
+output "worker_public_ip" {
+  description = "Public IP of worker instance"
+  value       = aws_instance.spms_app-worker-v1.public_ip
+}
+```
+
+After terraform apply, get the IP:
+```terraform
+WORKER_IP=$(terraform output -raw worker_public_ip)
+sudo -u jenkins ssh-keyscan -H $WORKER_IP | sudo tee -a /var/lib/jenkins/.ssh/known_hosts > /dev/null
+```
+
+You can even drop that into your setup script inside a function:
+```terraform
+add_worker_known_host(){
+  WORKER_IP=$(terraform output -raw worker_public_ip)
+  echo "Adding worker ($WORKER_IP) to Jenkins known_hosts..."
+  sudo -u jenkins ssh-keyscan -H $WORKER_IP | sudo tee -a /var/lib/jenkins/.ssh/known_hosts > /dev/null
+}
+```
+
+And call it at the end of your script:
+```terraform
+add_worker_known_host
+```
+
+Using AWS CLI (if you don’t want Terraform output)
+If your instance is tagged (for example Name=spms_app-worker-v1), you can pull its IP directly:
+```terraform
+WORKER_IP=$(aws ec2 describe-instances \
+  --filters "Name=tag:Name,Values=spms_app-worker-v1" "Name=instance-state-name,Values=running" \
+  --query "Reservations[*].Instances[*].PublicIpAddress" \
+  --output text)
+
+sudo -u jenkins ssh-keyscan -H $WORKER_IP | sudo tee -a /var/lib/jenkins/.ssh/known_hosts > /dev/null
+```
+
+You can also wrap that in a function:
+```terraform
+add_worker_known_host(){
+  WORKER_IP=$(aws ec2 describe-instances \
+    --filters "Name=tag:Name,Values=spms_app-worker-v1" "Name=instance-state-name,Values=running" \
+    --query "Reservations[*].Instances[*].PublicIpAddress" \
+    --output text)
+
+  echo "Adding worker ($WORKER_IP) to Jenkins known_hosts..."
+  sudo -u jenkins ssh-keyscan -H $WORKER_IP | sudo tee -a /var/lib/jenkins/.ssh/known_hosts > /dev/null
+}
+```
+
 ### Configure Git tool in Jenkins
 Go to Manage Jenkins → Global Tool Configuration → Git
 Add an installation, e.g. name: Default, Path: /usr/bin/git
@@ -102,6 +154,29 @@ Re-authentication: Because group changes require a new login session, the script
 curl ... -o /usr/libexec/docker/cli-plugins/docker-compose: This command downloads the Docker Compose V2 plugin binary directly from the Docker GitHub repository and places it in the correct directory for Amazon Linux 2023.
 chmod +x: Makes the downloaded binary executable.
 docker compose version: Verifies that both Docker and the new compose plugin are installed and working. 
+
+With this change, Jenkins will compile your pipeline properly, and you’ll get the stages:
+
+- Checkout
+
+- Install yq
+
+- Remove genai-service
+
+- Build Application
+
+- Run Unit Tests
+
+- Configure Docker Compose
+
+- Build Images
+
+- Tag Images for Docker Hub
+
+- Push Images to Docker Hub
+
+- Start Services
+
 
 ```Jenkinsfile
 // Use a stage-based declarative pipeline.
@@ -256,30 +331,16 @@ sudo tee /etc/profile.d/maven.sh: Creates a script to set the M2_HOME and PATH e
 source /etc/profile.d/maven.sh: Sources the newly created environment script to apply the changes immediately within the current session.
 mvn -version: Verifies that Maven has been successfully installed and is accessible
 
-## Steps to generate and configure a webhook secret in Jenkins
-1. Generate a random secret
-
-On your Jenkins master (or locally), run:
-```bash
-openssl rand -hex 20
-```
-
-Example output:
-```bash
-4a1d5b6f7a9c2e8d1f3a4b7c6e8d9a2f3b7c5a4d
-```
-
-This is your webhook secret.
-
-
-## Build & Push Docker 
-```
+## Jenkinsfile to save on Docker
+```jenkins
 pipeline {
     agent { label params.NODE_LABEL }
 
     environment {
         COMPOSE_PROJECT_NAME = "spring-petclinic"
-        DOCKER_IMAGE = "ganil151/spring-petclinic:latest"
+        DOCKER_HUB_USERNAME = credentials('docker-hub-username') // Retrieve Docker Hub username from Jenkins credentials
+        DOCKER_HUB_PASSWORD = credentials('docker-hub-password') // Retrieve Docker Hub password/token from Jenkins credentials
+        DOCKER_HUB_REPO = "your-dockerhub-username/spring-petclinic" // Replace with your Docker Hub repository name
     }
 
     parameters {
@@ -288,10 +349,6 @@ pipeline {
             defaultValue: 'worker-node-1',
             description: 'Label of the Jenkins worker node to run this pipeline'
         )
-    }
-
-    triggers {
-        githubPush()
     }
 
     stages {
@@ -328,96 +385,137 @@ pipeline {
             }
         }
 
-        stage('Build Application') {
-            environment {
-                JAVA_HOME = '/usr/lib/jvm/java-17-amazon-corretto.x86_64'
-                PATH = "${JAVA_HOME}/bin:${env.PATH}
+        stage('Configure Docker Compose') {
+            steps {
+                script {
+                    sh ''' 
+                    mkdir -p ~/.docker/cli-plugins/
+                    curl -SL https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-linux-x86_64 \
+                      -o ~/.docker/cli-plugins/docker-compose
+                    chmod +x ~/.docker/cli-plugins/docker-compose
+                    
+                    docker --version
+                    docker compose version
+                    sudo systemctl restart docker
+                    '''
+                }
             }
+        }
+
+        stage('Build Images') {
+            steps {
+                script {
+                    sh 'docker compose build'
+                }
+            }
+        }
+
+        stage('Tag Images for Docker Hub') {
             steps {
                 script {
                     sh '''
-                    echo "Building the Spring PetClinic application..."
-                    ./mvnw clean package -DskipTests
-                    JAR_FILE=$(ls target/*.jar | head -n 1)
-                    cp "$JAR_FILE" spring-petclinic
+                    # Tag all images built by Docker Compose
+                    for image in $(docker images --filter=reference="${COMPOSE_PROJECT_NAME}_*" --format "{{.Repository}}:{{.Tag}}"); do
+                        new_tag="${DOCKER_HUB_REPO}/$(echo $image | cut -d':' -f1):latest"
+                        docker tag $image $new_tag
+                        echo "Tagged $image as $new_tag"
+                    done
                     '''
                 }
             }
         }
 
-        stage('Docker Build') {
+        stage('Login to Docker Hub') {
             steps {
                 script {
                     sh '''
-                    echo "Building Docker image"
-                    docker compose build
+                    echo "Logging into Docker Hub..."
+                    echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USERNAME" --password-stdin
                     '''
                 }
             }
         }
 
-        stage('Docker Build UP') {
+        stage('Push Images to Docker Hub') {
             steps {
                 script {
                     sh '''
-                    echo "Building Docker up"
-                    docker compose up -d 
+                    # Push all tagged images to Docker Hub
+                    for image in $(docker images --filter=reference="${DOCKER_HUB_REPO}/*" --format "{{.Repository}}:{{.Tag}}"); do
+                        echo "Pushing $image to Docker Hub..."
+                        docker push $image
+                    done
                     '''
                 }
             }
         }
 
-        stage('Docker Login') {
+        stage('Start Services') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                script {
+                    sh 'docker compose up -d'
+                }
+            }
+        }
+
+        stage('Verify Running Containers') {
+            steps {
+                script {
+                    sh 'docker ps --format "table {{.Names}}\t{{.Status}}"'
+                }
+            }
+        }
+
+        stage('Check Service Health') {
+            steps {
+                script {
                     sh '''
-                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                    echo "Building Docker image..."
-                    docker build -t $DOCKER_IMAGE .
+                    echo "Checking Config Server..."
+                    curl -s http://localhost:8888/actuator/health
+
+                    echo "Checking Discovery Server..."
+                    curl -s http://localhost:8761
+
+                    echo "Checking API Gateway..."
+                    for i in {1..10}; do
+                        echo "Attempt $i: Checking API Gateway..."
+                        curl -s http://localhost:8080/actuator/health && break || sleep 10
+                    done
                     '''
                 }
-            }
-        }
-
-        stage('Push Docker Image') {
-            steps {
-                sh '''
-                echo "Pushing Docker image to DockerHub..."
-                docker push $DOCKER_IMAGE
-                '''
             }
         }
     }
 
     post {
         success {
-            echo "✅ Build and Docker push successful!"
+            echo "Pipeline completed successfully!"
         }
         failure {
-            echo "❌ Build failed!"
+            echo "Pipeline failed!"
         }
         always {
-            cleanWs()
+            cleanWs() // Clean up workspace after the build
         }
     }
 }
 ```
 
-## Worked and Tested
-```groovy
+## Docker Test
+```
 pipeline {
-    agent {label params.NODE_LABEL}
+    agent { label params.NODE_LABEL }
     
     environment {
-        COMPOSE_PROJECT_NAME = "spring-petclinic"
-        DOCKER_IMAGE = "ganil151/spring-petclinic:latest"
+        COMPOSE_PROJECT_NAME = 'spring-petclinic'
+        DOCKER_HUB_REPO = 'ganil151/spms-app:tagtest'
     }
     
     parameters {
         string(
             name: 'NODE_LABEL',
             defaultValue: 'worker-node-1',
-            description: 'Label of the Jenkins worker node to run this pipeline '
+            description: 'Label of the Jenkins worker node to run this pipeline'
         )
     }
     
@@ -429,12 +527,12 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    credentialsId: 'github-credentials',
-                    url: 'https://github.com/Ganil151/spring-petclinic-microservices.git'
+                credentialsId: 'github-credential',
+                url: 'https://github.com/Ganil151/spring-petclinic-microservices.git'
             }
         }
         
-        stage('Install yq'){
+        stage('Install yq') {
             steps {
                 script {
                     sh '''
@@ -447,6 +545,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Remove genai-service from docker-compose.yml') {
             steps {
                 script {
@@ -457,7 +556,8 @@ pipeline {
                 }
             }
         }
-        stage('Build Application') {
+        
+         stage('Build Application') {
             steps {
                 script {
                     sh '''
@@ -467,25 +567,65 @@ pipeline {
                 }
             }
         }
-        stage('Docker Login') {
+        
+        stage('Run Unit Tests') {
             steps {
-                 withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                     sh '''
-                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                    echo "Docker Login..."
+                script {
+                    sh '''
+                    echo "Running unit tests..."
+                    ./mvnw test
                     '''
-                 }
+                }
             }
         }
         
-        stage('Docker Build & Docker Push'){
+        stage('Configure Docker Compose') {
             steps {
                 script {
                     sh ''' 
-                     echo "Docker Build & Docker Push Successfully"
-                     docker build -t $DOCKER_IMAGE .
-                     docker push $DOCKER_IMAGE
-                     '''
+                    mkdir -p ~/.docker/cli-plugins/
+                    curl -SL https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-linux-x86_64 \
+                      -o ~/.docker/cli-plugins/docker-compose
+                    chmod +x ~/.docker/cli-plugins/docker-compose
+                    
+                    docker --version
+                    docker compose version
+                    sudo systemctl restart docker
+                    '''
+                }
+            }
+        }
+        
+        stage('Build Images') {
+            steps {
+                script {
+                    sh 'docker compose build'
+                }
+            }
+        }
+        
+        stage('Tag Images for Docker Hub') {
+            steps {
+                script {
+                    sh '''
+                    # Tag all images built by Docker Compose
+                    for image in $(docker images --filter=reference="${COMPOSE_PROJECT_NAME}_*" --format "{{.Repository}}:{{.Tag}}"); do
+                        new_tag="${DOCKER_HUB_REPO}/$(echo $image | cut -d':' -f1):latest"
+                        docker tag $image $new_tag
+                        echo "Tagged $image as $new_tag"
+                    done
+                    '''
+                }
+            }
+        }
+
+        
+            
+            stage('Start Services') {
+                steps {
+                    script {
+                        sh 'docker compose up -d'
+                    }
                 }
             }
         }
@@ -493,68 +633,50 @@ pipeline {
 }
 ```
 
-##  Jenkins enforces CSRF (Cross-Site Request Forgery)
-```bash
-#!/bin/bash
-
-# Jenkins credentials and URL
-USERNAME="admin"
-API_TOKEN="12345678abcdef"
-JENKINS_URL="http://localhost:8080"
-JOB_NAME="spms-pipeline-2"
-
-# Retrieve the crumb
-CRUMB=$(curl -u "$USERNAME:$API_TOKEN" "$JENKINS_URL/crumbIssuer/api/json" | jq -r '.crumb')
-
-# Trigger the Jenkins job
-curl -u "$USERNAME:$API_TOKEN" -X POST "$JENKINS_URL/job/$JOB_NAME/build" \
---header "Jenkins-Crumb: $CRUMB"
+## Another test edition
 ```
-
-## Edits:
-```groovy
+check for errors: 
 pipeline {
-    agent {label params.NODE_LABEL}
-    
+    agent { label params.NODE_LABEL }
+
     environment {
         COMPOSE_PROJECT_NAME = "spring-petclinic"
-        DOCKER_IMAGE = "ganil151/spring-petclinic:latest"
+        DOCKER_HUB_USERNAME = credentials('ganil151') 
+        DOCKER_HUB_PASSWORD = credentials('dockerhub-pwd')
+        DOCKER_HUB_REPO = "ganil151/spring-petclinic" 
     }
-    
+
     parameters {
         string(
             name: 'NODE_LABEL',
             defaultValue: 'worker-node-1',
-            description: 'Label of the Jenkins worker node to run this pipeline '
+            description: 'Label of the Jenkins worker node to run this pipeline'
         )
     }
-    
-    triggers {
-        githubPush()
-    }
-    
+
     stages {
         stage('Checkout') {
             steps {
                 git branch: 'main',
                     credentialsId: 'github-credentials',
-                    url: 'https://github.com/Ganil151/spring-petclinic-microservices.git'
+                    url: 'https://github.com/Ganil151/spring-petclinic-microservices.git  '
             }
         }
-        
-        stage('Install yq'){
+
+        stage('Install yq') {
             steps {
                 script {
                     sh '''
                     if ! command -v yq &> /dev/null; then
                         echo "Installing yq..."
-                        sudo wget https://github.com/mikefarah/yq/releases/download/v4.34.1/yq_linux_amd64 -O /usr/local/bin/yq
+                        sudo wget https://github.com/mikefarah/yq/releases/download/v4.34.1/yq_linux_amd64   -O /usr/local/bin/yq
                         sudo chmod +x /usr/local/bin/yq
                     fi
                     '''
                 }
             }
         }
+
         stage('Remove genai-service from docker-compose.yml') {
             steps {
                 script {
@@ -564,71 +686,84 @@ pipeline {
                     '''
                 }
             }
-        }
-        stage('Build Java Connection') {
-            environment {
-                JAVA_HOME = "/usr/lib/jvm/java-17-amazon-corretto.x86_64"
-                PATH = "${JAVA_HOME}/bin:${env.PATH}"
+        }        
+
+        stage('Build Images') {
+            steps {
+                script {
+                    sh 'docker compose build'
+                }
             }
+        }
+
+        stage('Tag Images for Docker Hub') {
             steps {
                 script {
                     sh '''
-                    echo "Building the Spring PetClinic application..."
-                    ./mvnw clean package -DskipTests
+                    # Tag all images built by Docker Compose
+                    for image in $(docker images --filter=reference="${COMPOSE_PROJECT_NAME}_*" --format "{{.Repository}}:{{.Tag}}"); do
+                        new_tag="${DOCKER_HUB_REPO}/$(echo $image | cut -d':' -f1):latest"
+                        docker tag $image $new_tag
+                        echo "Tagged $image as $new_tag"
+                    done
                     '''
                 }
             }
         }
-        
-        stage('Docker Login') {
+
+        stage('Login to Docker Hub') {
             steps {
-                 withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                     sh '''
-                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                    echo "Docker Login..."
+                script {
+                    sh '''
+                    echo "Logging into Docker Hub..."
+                    echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USERNAME" --password-stdin
                     '''
-                 }
-            }
-        }
-        
-        stage('Docker Build') {
-            steps {
-                script {
-                    sh ''' 
-                    echo 'Building the Docker image..'
-                    cd /opt/docker/workspace/spms-pipeline-2/docker
-                    docker build  \\ 
-                        --build-arg ARTIFACT_NAME=spring-petclinic \\
-                        --build-arg JAR_FILE=spring-petclinic-microservices/spring-petclinic-config-server/target/spring-petclinic-config-server-3.2.0-SNAPSHOT.jar \\
-                        -t $DOCKER_IMAGE \\
-                        -f docker/Dockerfile . 
-                        '''
                 }
             }
         }
-        
-        stage('Docker Push'){
+
+        stage('Push Images to Docker Hub') {
             steps {
                 script {
-                    sh ''' 
-                     echo "Docker Push Successfully"
-                     docker push $DOCKER_IMAGE
-                     '''
+                    sh '''
+                    # Push all tagged images to Docker Hub
+                    for image in $(docker images --filter=reference="${DOCKER_HUB_REPO}/*" --format "{{.Repository}}:{{.Tag}}"); do
+                        echo "Pushing $image to Docker Hub..."
+                        docker push $image
+                    done
+                    '''
                 }
             }
         }
+
+        stage('Start Services') {
+            steps {
+                script {
+                    sh 'docker compose up -d'
+                }
+            }
+        }
+
+        stage('Verify Running Containers') {
+            steps {
+                script {
+                    sh 'docker ps --format "table {{.Names}}\t{{.Status}}"'
+                }
+            }
+        }
+
     }
+
     post {
-            success {
-                echo "Build and Docker push Successful!"
-            }
-            failure {
-                echo "Build Failed"
-            }
-            always {
-                cleanWs()
-            }
-      }
+        success {
+            echo "Pipeline completed successfully!"
+        }
+        failure {
+            echo "Pipeline failed!"
+        }
+        always {
+            cleanWs() // Clean up workspace after the build
+        }
+    }
 }
-
 ```

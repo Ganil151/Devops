@@ -39,13 +39,17 @@ wget https://archive.apache.org/dist/maven/maven-3/3.9.6/binaries/apache-maven-3
 sudo mkdir -p /opt/maven
 sudo chown -R ec2-user:ec2-user /opt/maven
 sudo cd /opt/maven
-sudo tar -xzf /tmp/maven.tar.gz -C /opt/maven --strip-components=1
-sudo rm -f /tmp/maven.tar.gz
+sudo tar -xzf apache-maven-3.9.6-bin.tar.gz -C /opt/maven --strip-components=1
+sudo rm -f apache-maven-3.9.6-bin.tar.gz
 
 # Configure Maven environment variables
 echo "export M2_HOME=/opt/maven" | sudo tee -a /etc/profile.d/maven.sh
 echo 'export PATH=$PATH:$M2_HOME/bin' | sudo tee -a /etc/profile.d/maven.sh
 source /etc/profile.d/maven.sh
+
+echo "export M2_HOME=/opt/maven" | sudo tee -a .bash_profile
+echo 'export PATH=$PATH:$M2_HOME/bin' | sudo tee -a .bash_profile
+source .bash_profile
 
 # Verify Java and Maven
 java -version

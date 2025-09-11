@@ -12,9 +12,11 @@ module "vpc" {
 }
 
 module "security_group" {
-  source       = "../modules/security_group"
-  vpc_id       = module.vpc.vpc_id
-  project_name = var.project_name
+  source        = "../modules/security_group"
+  vpc_id        = module.vpc.vpc_id
+  project_name  = var.project_name
+  ingress_rules = var.ingress_rules
+  egress_rules  = var.egress_rules
 }
 
 module "keys" {
@@ -26,7 +28,7 @@ module "master_instance" {
   source                      = "../modules/ec2"
   ami                         = var.ami
   key_name                    = var.key_name
-  project_name                = "${var.project_name}-master-v1"
+  project_name                = "${var.project_name}-master"
   instance_type               = var.instance_type
   subnet_id                   = element(module.vpc.public_subnet_ids, 0)
   user_data                   = file("${path.module}/scripts/master.sh")
@@ -38,10 +40,10 @@ module "worker_instance" {
   source                      = "../modules/ec2"
   ami                         = var.ami
   key_name                    = var.key_name
-  project_name                = "${var.project_name}-worker-v1"
+  project_name                = "${var.project_name}-worker"
   instance_type               = var.instance_type
   subnet_id                   = element(module.vpc.public_subnet_ids, 1)
   user_data                   = file("${path.module}/scripts/worker.sh")
-  user_data_replace_on_change = false
+  user_data_replace_on_change = var.user_data_replace_on_change
   security_group_ids          = [module.security_group.spms_wk_sg]
 }
