@@ -15,7 +15,17 @@
               "state": {
                 "file": "CICD/Sis_Lessons/Notes/SPMS Notes.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
               "title": "SPMS Notes"
@@ -151,6 +161,20 @@
               "icon": "lucide-list",
               "title": "Outline of variable.tf"
             }
+          },
+          {
+            "id": "3d57f24950df9aae",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
           }
         ]
       }
@@ -161,6 +185,11 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "markdown-importer:Open format converter": false,
+      "zk-prefixer:Create new unique note": false,
+      "random-note:Open random note": false,
+      "workspaces:Manage workspace layouts": false,
+      "publish:Publish changes...": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -172,17 +201,41 @@
   },
   "active": "8956b97c38d4badd",
   "lastOpenFiles": [
-    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/spms-app/scripts/worker.sh",
-    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/keys/variables.tf",
-    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/keys/main.tf",
-    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/vpc/output.tf",
-    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/spms-app/scripts/master.sh",
-    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/vpc/variables.tf",
-    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/vpc/main.tf",
-    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/keys/output.tf",
-    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/security_group/variables.tf",
-    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/security_group/output.tf",
-    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/security_group/main.tf",
+    "CICD/Sis_Lessons/Working",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-customers-service/src/main/java/org/springframework/samples/petclinic/customers/web/mapper/OwnerEntityMapper.java",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-customers-service/src/main/java/org/springframework/samples/petclinic/customers/web/mapper/Mapper.java",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/java/org/springframework/samples/petclinic/api/boundary/web/FallbackController.java",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/test/java/org/springframework/samples/petclinic/api/boundary/web/ApiGatewayControllerTest.java",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/test/java/org/springframework/samples/petclinic/api/boundary/web/CircuitBreakerConfiguration.java",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/java/org/springframework/samples/petclinic/api/boundary/web/ApiGatewayController.java",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-visits-service/src/main/java/org/springframework/samples/petclinic/visits/web/VisitResource.java",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-customers-service/target/classes/org/springframework/samples/petclinic/customers/web/mapper/OwnerEntityMapper.class",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-visits-service/src/main/java/org/springframework/samples/petclinic/visits/model/VisitRepository.java",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-customers-service/target/classes/org/springframework/samples/petclinic/customers/web/mapper/Mapper.class",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/images/spring-pivotal-logo.png",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/images/spring-logo-dataflow.png",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/images/spring-logo-dataflow-mobile.png",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/images/platform-bg.png",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/images/pets.png",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/images/favicon.png",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/fonts/varela_round-webfont.svg",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/fonts/montserrat-webfont.svg",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/target/classes/static/images/spring-pivotal-logo.png",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/target/classes/static/images/spring-logo-dataflow.png",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/scripts/chaos/README.md",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/README.md",
+    "CICD/Sis_Lessons/Successfully/Webhook/webhook_docker_v2/README.md",
+    "CICD/Sis_Lessons/Successfully/Webhook/spms_webhook_v1/README.md",
+    "CICD/Sis_Lessons/Successfully/Webhook/webhook_docker_v1/README.md",
+    "CICD/Sis_Lessons/Successfully/Ec2/spms_server_v1_bak/README.md",
+    "CICD/Sis_Lessons/Successfully/Ec2/spms_server_v3/README.md",
+    "CICD/Sis_Lessons/Successfully/Ec2/spms_server_v1/README.md",
+    "CICD/Sis_Lessons/Successfully/Ec2/pms_instance_v3/README.md",
+    "CICD/Sis_Lessons/Successfully/Ansible/spms_ansible_v1/README.md",
+    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/README.md",
+    "CICD/Sis_Lessons/s3_test/db_ec2_s3_v2/README.md",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/README.md",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/scripts/chaos/README.md",
     "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/README.md",
     "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/webhook_docker_v2/README.md",
     "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/webhook_docker_v1/README.md",
