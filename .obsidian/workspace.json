@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CICD/AWS/s3/commands.md",
+                "file": "CICD/Sis_Lessons/Notes/SPMS Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "commands"
+              "title": "SPMS Notes"
             }
           }
         ]
@@ -172,18 +172,22 @@
   },
   "active": "8956b97c38d4badd",
   "lastOpenFiles": [
-    "CICD/Sis_Lessons/spms_webhook_v1/spms-app/main.tf",
-    "CICD/Sis_Lessons/spms_webhook_v1/spms-app/spms-keys.pem",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/spms-app/scripts/worker.sh",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/keys/variables.tf",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/keys/main.tf",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/vpc/output.tf",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/spms-app/scripts/master.sh",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/vpc/variables.tf",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/vpc/main.tf",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/keys/output.tf",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/security_group/variables.tf",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/security_group/output.tf",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/modules/security_group/main.tf",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/README.md",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/webhook_docker_v2/README.md",
+    "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/webhook_docker_v1/README.md",
+    "CICD/Sis_Lessons/Notes/SPMS Notes.md",
     "CICD/Sis_Lessons/spms_webhook_v1/README.md",
-    "CICD/Sis_Lessons/spms_webhook_v1/spms-app/terraform.tfstate",
-    "CICD/Sis_Lessons/spms_webhook_v1/spms-app/Jenkinsfile",
-    "CICD/Sis_Lessons/spms_webhook_v1/spms-app/scripts/depend.sh",
-    "CICD/Sis_Lessons/spms_webhook_v1/spms-app/scripts/jenkins_setup.sh",
-    "CICD/Sis_Lessons/spms_webhook_v1/spms-app/scripts",
-    "CICD/Sis_Lessons/spms_webhook_v1/spms-app/tfplan",
-    "CICD/Sis_Lessons/spms_webhook_v1/modules/vpc/variables.tf",
-    "CICD/Sis_Lessons/spms_webhook_v1/modules/vpc/output.tf",
-    "CICD/Sis_Lessons/spms_webhook_v1/modules/vpc/main.tf",
     "CICD/AWS/s3/commands.md",
     "Untitled.canvas",
     "CICD/AWS/s3/variable.tf.md",

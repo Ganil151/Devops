@@ -1,1 +1,7 @@
-{}
+{
+  "enabledCssSnippets": [
+    "view"
+  ],
+  "accentColor": "",
+  "cssTheme": "Obsidianite"
+}

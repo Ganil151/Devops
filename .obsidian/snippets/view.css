@@ -1,0 +1,9 @@
+.markdown-source-view, .markdown-preview-view.linespacing, p {
+      width: auto;
+      content: '';
+      display: block;      
+   
+    }
+
+
+
