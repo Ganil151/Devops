@@ -7,10 +7,9 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "jenkins-app-sivaqg-bucket"
+    bucket = "ansible-register"
     key    = "jenkins/terraform.tfstate"
     region = "us-east-1"
-
   }
 }
 

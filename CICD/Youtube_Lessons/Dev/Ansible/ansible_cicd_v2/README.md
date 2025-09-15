@@ -1,258 +1,519 @@
-### Webhook Configuration
-Added the triggers block with githubPush() to enable automatic builds triggered by GitHub webhooks.
-To set up the webhook:
-Go to your GitHub repository settings.
-Navigate to Webhooks > Add Webhook.
-Set the Payload URL to your Jenkins server's webhook endpoint (e.g., http://<jenkins-server>/github-webhook/).
-Select Content type as application/json.
-Save the webhook.
-2. Removed Docker Commands
-Removed all Docker-specific commands (docker compose build, docker compose up -d, etc.) since Docker is no longer used.
-Instead, the pipeline now focuses on building and testing the application directly.
-3. Maven Build and Test
-Used Maven (./mvnw) to build and test the application:
-./mvnw clean package -DskipTests: Builds the application without running tests.
-./mvnw test: Runs unit tests.
-4. Deployment Step
-Added a placeholder for deploying the application to a test environment. You can customize this step based on your deployment process (e.g., copying files to a server, uploading to AWS S3, etc.).
-5. Post-Build Actions
-Added cleanWs() in the post block to clean up the workspace after the build.
-Added success and failure notifications for better visibility.
-Steps to Configure Jenkins
-Install Required Plugins
-Ensure the following plugins are installed:
-Pipeline
-Git Plugin
-Workspace Cleanup Plugin (for cleanWs())
-Create a Multibranch Pipeline
-Create a multibranch pipeline job in Jenkins.
-Configure the repository URL and credentials.
-Enable the GitHub hook trigger for GITScm polling option.
-Set Up Webhook
-Follow the steps mentioned above to configure the GitHub webhook.
-Run the Pipeline
-Push changes to the repository, and the webhook will trigger the pipeline automatically.
-Advantages of This Approach
-No Dependency on Docker: Simplifies the pipeline by removing Docker, making it easier to manage and debug.
-Automated Builds: Webhooks ensure that builds are triggered automatically whenever changes are pushed to the repository.
-Focus on Core Build Process: The pipeline focuses on building, testing, and deploying the application without unnecessary complexity.
-Let me know if you need further assistance!
+## End-to-End DevOps CI/CD Project From Youtube
+(Link)[https://youtu.be/NKUOSc9pCfk]
 
-### 
+### Build Steps:
+#### Step-1
+- Follow script : ()[app\scripts\Terraform-Server.sh]
+
+#### Step-2:
+- Create jenkins.sh:
 ```bash
-sudo -u jenkins ssh-keyscan -H <WORKER-IP> | sudo tee -a /var/lib/jenkins/.ssh/known_hosts > /dev/null
-```
+#!/bin/bash
 
-### Configure Git tool in Jenkins
-Go to Manage Jenkins → Global Tool Configuration → Git
-Add an installation, e.g. name: Default, Path: /usr/bin/git
-Save.
-Jenkins will stop saying "Git tool = NONE".
+set -e 
 
-### Use Jenkins credentials instead of hardcoding token
-Go to Manage Jenkins → Credentials → Add Credentials
-Kind: Username with password
-```
-Username: Ganil151
-```
+# Change Host Name
+echo "Changing Host Name..."
+sudo hostnamectl set-hostname "Jenkins-Server"
 
-```
-Password: <your GitHub personal access token>
-```
+# Install dependencies
+echo "Installing dependencies..."
+sudo yum update -y
+sudo yum -y upgrade --releasever=2023.8.20250908
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2 ansible git python3 net-tools bind-utils
 
-```
-ID: github-credentials
-```
+# Install Terraform 
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform
 
-### Then change your pipeline Checkout stage to:
-```
-stage('Checkout') {
-    steps {
-        git branch: 'main',
-            url: 'https://github.com/Ganil151/spring-petclinic-microservices.git',
-            credentialsId: 'github-credentials'
+# Verfiy Terraform installation
+if ! command -v terraform &> /dev/null; then
+    echo "Terraform installation failed."
+    exit 1
+fi
+
+# Create Jenkins Directory
+mkdir -p jenkins && cd ~/jenkins
+
+# Create Modules in Jenkins Directory
+touch providers.tf main.tf variables.tf data.tf security.tf
+
+# Create Providers file
+cat <<EOF > providers.tf
+terraform {
+  required_version = "~> 1.5"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
     }
-}
-```
-
-### Install Docker using Jenkinsfile
-
-Configure Credentials: Follow the prerequisite steps to set up an SSH key pair and add the private key to Jenkins Credentials with the ID aws-ec2-ssh-key.
-Create Jenkins Pipeline Job:
-In the Jenkins UI, click New Item.
-Enter a name for your job and select Pipeline. Click OK.
-Define the Pipeline:
-Scroll down to the Pipeline section in the job configuration.
-Select Pipeline script from the "Definition" dropdown.
-Copy and paste the Groovy script from above into the text area.
-Important: Replace <YOUR_EC2_IP> with the public IP address or hostname of your Amazon Linux 2023 instance.
-Run the Job:
-Save the job configuration.
-Click Build Now to execute the pipeline.
-You can monitor the installation progress by viewing the Console Output of the build. 
-Script explanation
-pipeline { ... }: Defines a declarative pipeline.
-agent any: Tells Jenkins to use any available agent to run the pipeline.
-environment { ... }: Defines environment variables for your EC2 host and SSH credential ID.
-sshagent(credentials: [...]) { ... }: This step from the SSH Agent Plugin makes the private key securely available to commands run inside its block.
-ssh -o StrictHostKeyChecking=no ... << END_OF_SCRIPT: This is a heredoc that runs a series of commands on the remote host via SSH. StrictHostKeyChecking=no is added for automation to skip the host key verification prompt.
-sudo yum install -y docker: Installs the Docker engine from the Amazon Linux 2023 repositories.
-sudo usermod -a -G docker ${EC2_USER}: Adds the EC2 user to the docker group, allowing them to run Docker commands without sudo.
-Re-authentication: Because group changes require a new login session, the script intentionally exits and reconnects.
-curl ... -o /usr/libexec/docker/cli-plugins/docker-compose: This command downloads the Docker Compose V2 plugin binary directly from the Docker GitHub repository and places it in the correct directory for Amazon Linux 2023.
-chmod +x: Makes the downloaded binary executable.
-docker compose version: Verifies that both Docker and the new compose plugin are installed and working. 
-
-```Jenkinsfile
-// Use a stage-based declarative pipeline.
-pipeline {
-    agent any
-
-    // Define environment variables.
-    environment {
-        // Use the ID of the SSH credential you stored in Jenkins.
-        SSH_CREDENTIAL_ID = 'aws-ec2-ssh-key'
-        // Replace with your EC2 instance's public IP or hostname.
-        EC2_HOST = '<YOUR_EC2_IP>'
-        // Replace with the user for your EC2 instance.
-        EC2_USER = 'ec2-user'
-    }
-
-    stages {
-        stage('Install Docker and Compose on EC2') {
-            steps {
-                // Use the SSH Agent plugin to securely provide credentials.
-                sshagent(credentials: [SSH_CREDENTIAL_ID]) {
-                    // Use a multiline shell command to execute all installation steps.
-                    sh """
-                        # Connect to the EC2 instance via SSH and run commands.
-                        ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} << END_OF_SCRIPT
-                            echo "Updating yum packages..."
-                            sudo yum update -y
-                            echo "Installing Docker..."
-                            sudo yum install -y docker
-                            echo "Starting Docker service..."
-                            sudo systemctl start docker
-                            echo "Enabling Docker service to start on boot..."
-                            sudo systemctl enable docker
-                            
-                            echo "Adding ec2-user to the docker group..."
-                            sudo usermod -a -G docker ${EC2_USER}
-                            
-                            # Log out and log back in to apply group changes.
-                            echo "Applying group permissions and re-authenticating..."
-                            exit
-
-                        # Reconnect with new permissions to continue.
-                        END_OF_SCRIPT
-                        ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} << END_OF_SCRIPT
-                            echo "Installing Docker Compose (v2 plugin)..."
-                            sudo curl -sL https://github.com/docker/compose/releases/latest/download/docker-compose-linux-$(uname -m) -o /usr/libexec/docker/cli-plugins/docker-compose
-                            sudo chmod +x /usr/libexec/docker/cli-plugins/docker-compose
-                            
-                            echo "Verifying installations..."
-                            docker --version
-                            docker compose version
-                        END_OF_SCRIPT
-                    """
-                }
-            }
-        }
-    }
+  }
+  backend "s3" {
+    bucket = "ansible-register"
+    key    = "jenkins/terraform.tfstate"
+  }
 }
 
-```
+provider "aws" {
+  region = "us-east-1"
 
-### install maven on aws linux 2023 using Jenkinsfile pipeline
-To install Maven on a remote Amazon Linux 2023 EC2 instance using a Jenkins Pipeline, you'll create a pipeline script that securely executes the installation steps via SSH. The process requires Java to be installed first, as Maven is a Java-based tool. 
-Prerequisites
-EC2 Instance: A running EC2 instance with Amazon Linux 2023.
-Jenkins: A running Jenkins server with the following plugins installed:
-SSH Agent Plugin: For handling SSH credentials securely in your pipeline.
-Pipeline: Job: For running the declarative pipeline script.
-SSH Key Pair: An SSH key pair for passwordless access between Jenkins and your EC2 instance.
-Generate a key pair on the Jenkins server (ssh-keygen).
-Add the public key to the ~/.ssh/authorized_keys file on the EC2 instance.
-Store the private key in Jenkins credentials (Manage Jenkins > Credentials > System > Global credentials > Add Credentials), selecting SSH Username with private key. Give it a unique ID, like aws-ec2-ssh-key. 
-
-- Jenkinsfile for Maven installation
-```
-// Use a stage-based declarative pipeline.
-pipeline {
-    agent any
-
-    // Define environment variables.
-    environment {
-        // Use the ID of the SSH credential stored in Jenkins.
-        SSH_CREDENTIAL_ID = 'aws-ec2-ssh-key'
-        // Replace with your EC2 instance's public IP or hostname.
-        EC2_HOST = '<YOUR_EC2_IP>'
-        // Replace with the user for your EC2 instance.
-        EC2_USER = 'ec2-user'
-    }
-
-    stages {
-        stage('Install Java and Maven on EC2') {
-            steps {
-                // Use the SSH Agent plugin to provide credentials securely.
-                sshagent(credentials: [SSH_CREDENTIAL_ID]) {
-                    // Use a multiline shell script to install dependencies via SSH.
-                    sh """
-                        ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} << 'END_OF_SCRIPT'
-                            echo "Updating system packages..."
-                            sudo dnf update -y
-
-                            echo "Installing Java 17 (required by Maven)..."
-                            sudo dnf install -y java-17-amazon-corretto-devel
-                            java -version
-
-                            echo "Downloading and installing Maven..."
-                            MAVEN_VERSION="3.9.6" # Specify the desired Maven version
-                            wget https://dlcdn.apache.org/maven/maven-3/\${MAVEN_VERSION}/binaries/apache-maven-\${MAVEN_VERSION}-bin.tar.gz -P /tmp
-                            
-                            sudo tar xf /tmp/apache-maven-\${MAVEN_VERSION}-bin.tar.gz -C /opt
-                            sudo ln -s /opt/apache-maven-\${MAVEN_VERSION} /opt/maven
-
-                            echo "Setting up Maven environment variables..."
-                            sudo tee /etc/profile.d/maven.sh > /dev/null << 'EOF'
-                            export M2_HOME=/opt/maven
-                            export PATH=\${M2_HOME}/bin:\${PATH}
-                            EOF
-                            sudo chmod +x /etc/profile.d/maven.sh
-                            
-                            echo "Verifying Maven installation..."
-                            source /etc/profile.d/maven.sh
-                            mvn -version
-                        END_OF_SCRIPT
-                    """
-                }
-            }
-        }
-    }
 }
-```
-#### 
-How to use the script
-Configure Jenkins Credentials: Follow the prerequisite steps to set up the aws-ec2-ssh-key SSH credential in Jenkins.
-Create Jenkins Pipeline Job:
-In the Jenkins UI, click New Item, enter a name, and select Pipeline.
-Define the Pipeline Script:
-In the job configuration, scroll to the Pipeline section.
-Select Pipeline script from the "Definition" dropdown.
-Copy and paste the Groovy script above into the text area.
-Important: Replace <YOUR_EC2_IP> with the public IP address or hostname of your Amazon Linux 2023 instance.
-Run the Job:
-Save the job and click Build Now.
-Check the Console Output to monitor the installation progress. The output should show Java and Maven versions successfully installed on the remote machine. 
-Script explanation
-sshagent(credentials: [...]) { ... }: This step from the SSH Agent Plugin securely makes your private key available to the commands run inside its block, so you don't need to manually expose keys.
-ssh -o StrictHostKeyChecking=no ... << 'END_OF_SCRIPT': This is a "heredoc" that allows you to execute a multi-line shell script on the remote EC2 instance via SSH.
-sudo dnf update -y: Updates the package manager on Amazon Linux 2023, ensuring that you are working with the latest packages.
-sudo dnf install -y java-17-amazon-corretto-devel: Installs Java 17, which is a prerequisite for running modern Maven versions on Amazon Linux 2023.
-wget ... -P /tmp: Downloads the Maven binary from the official Apache site to a temporary directory.
-sudo tar xf ...: Extracts the Maven tarball into the /opt directory, which is a standard location for optional software.
-sudo ln -s ...: Creates a symbolic link for Maven. This simplifies version updates and path management.
-sudo tee /etc/profile.d/maven.sh: Creates a script to set the M2_HOME and PATH environment variables for all users. This makes the mvn command available system-wide.
-source /etc/profile.d/maven.sh: Sources the newly created environment script to apply the changes immediately within the current session.
-mvn -version: Verifies that Maven has been successfully installed and is accessible
+EOF
 
+# Create Date file
+cat <<EOF > data.tf
+data "aws_ami" "amazonlinux2" {
+  most_recent = true
+  owners      = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
+  }
+
+  filter {
+    name   = "owner-alias"
+    values = ["amazon"]
+  }
+}
+
+
+EOF
+
+# Create Security file
+cat <<EOF > security.tf
+resource "aws_security_group" "cicd_sg" {
+  name        = "cicd_sg_${var.project_name}"
+  description = "Allow inbound/outbound traffic"
+  vpc_id      = var.vpc_id
+
+  dynamic "ingress" {
+    for_each = var.ingress_rules
+    content {
+      description = "Allow port \${ingress.value}"
+      from_port   = ingress.value
+      to_port     = ingress.value
+      protocol    = "tcp"
+      cidr_blocks = ["0.0.0.0/0"]
+    }
+  }
+
+  egress {
+    description = "Allow all egress"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "cicd_sg"
+  }
+}
+EOF
+
+# Create Main file
+cat <<EOF > main.tf
+resource "aws_instance" "JenkinsServer" {
+  ami           = data.aws_ami.amazonlinux2.id
+  instance_type = "t3.small"
+  key_name      = var.key_name
+  subnet_id     = var.subnet_id
+  vpc_security_group_ids = [aws_security_group.cicd_sg.id]
+
+  tags = {
+    Name = "Jenkins"
+  }
+}
+EOF
+
+# Create Variables file
+cat <<EOF > variables.tf
+variable "project_name" {
+  type        = string
+  description = "Project Name"
+  default     = "Jenkins"
+}
+
+variable "vpc_id" {
+  type        = string
+  description = "VPC ID"
+  default     = "cicd_vpc"
+}
+
+variable "key_name" {
+  type        = string
+  description = "Key Pair"
+  default     = "cicd-keys"
+}
+
+variable "subnet_id" {
+  type        = string
+  description = "Subnet ID"
+  default     = "cicd_subnet"
+}
+
+variable "ingress_rules" {
+  type        = list(number)
+  description = "List of ingress ports"
+  default     = [22, 80, 443, 8080, 8090, 9000, 8081, 2479]
+}
+
+variable "egressrules" {
+  type    = list(number)
+  default = [0]
+}
+EOF
+
+# Verify File Creation
+if [[ -f "providers.tf" && -f "main.tf" && -f "variables.tf" && -f "data.tf" && -f "security.tf" ]]; then
+    echo "All Terraform files created successfully."
+else
+    echo "Failed to create one or more Terraform files."
+    exit 1
+fi
+
+echo "Setup completed successfully."
+```
+
+#### Step-3 Install Jenkins on the jenkins-server
+change to root:
+```bash
+sudo su -
+```
+
+- Install the dependencies on the server
+```bash
+yum -y update 
+```
+
+- Install Jenkins
+```bash
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+#Then Import Key:
+sudo rpm --import https://yum.corretto.aws/corretto.key
+sudo curl -L -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
+
+#Then Upgrade and Epel
+yum -y upgrade amazon-linux-extras install epel -y
+
+# Then install Java JDk
+sudo yum install -y java-21-amazon-corretto-devel
+
+# Now Install Jenkins
+sudo yum install -y jenkins
+```    
+
+- Configure Jenkins
+```bash
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+```
+
+#### Step-4 Install Maven 
+```bash
+cd /opt
+wget https://dlcdn.apache.org/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz
+tar -xzvf apache-maven-3.9.11-bin.tar.gz
+
+# When done
+rm -r apache-maven-3.9.11-bin.tar.gz
+
+# Rename the apache-maven 
+mv apache-maven-3.9.11/ maven
+```
+
+- Configure Maven in .bash_profile
+```bash
+cd ~
+
+find / -name java-11*
+
+# Copy this output:
+/usr/lib/jvm/java-11-openjdk-11.0.25.0.9-1.amzn2.0.2.x86_64
+
+nano .bash_profile
+
+#---Edit .bash_profile file ---#
+
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+         .~/.bashrc
+fi 
+
+M2_HOME=/opt/maven
+M2=/opt/maven/bin
+JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
+
+# User specific environment and startup programs 
+PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
+
+export
+```
+- Option 2
+```bash
+M2=/opt/maven/bin
+echo "export M2=$M2" | sudo tee -a .bash_profile
+M2_HOME=/opt/maven
+echo "export M2_HOME=$M2_HOME" | sudo tee -a .bash_profile
+JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto 
+echo "export JAVA_HOME=$JAVA_HOME" | sudo tee -a .bash_profile
+echo "export PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2" | sudo tee -a .bash_profile
+```
+- Add to jenkins
+```sh
+touch /var/lib/jenkins/.bash_profile
+sudo chown -R jenkins:jenkins /var/lib/jenkins/.bash_profile
+M2=/opt/maven/bin
+echo "export M2=$M2" | sudo tee -a > /var/lib/jenkins/.bash_profile
+M2_HOME=/opt/maven
+echo "export M2_HOME=$M2_HOME" | sudo tee -a > /var/lib/jenkins/.bash_profile
+JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto 
+echo "export JAVA_HOME=$JAVA_HOME" | sudo tee -a /var/lib/jenkins/.bash_profile
+echo "export PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2" | sudo tee -a > /var/lib/jenkins/.bash_profile
+source /var/lib/jenkins/.bash_profile
+```
+
+- Test if Maven is working 
+```bash
+mvn -v
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/maven
+Java version: 21.0.8, vendor: Amazon.com Inc., runtime: /usr/lib/jvm/java-21-amazon-corretto
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.14.355-280.679.amzn2.x86_64", arch: "amd64", family: "unix"
+```
+
+#### Step-5 Login into Jenkins and Configure
+Open a new tab in browser, then get the aws instance <jenkins-server public ip>
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+Install the plugins:
+![alt text](<Screenshot (131).png>)
+
+Then go to Manage Jenkins -> Plugins and install: 
+- Pipeline: Stage Step
+![alt text](<Screenshot (133).png>)
+
+- maven integration
+![alt text](<Screenshot (134)-1.png>)
+
+Then go to Manage Jenkins -> Tools
+- add JDK
+![alt text](<Screenshot (136).png>)
+```bash
+echo $JAVA_HOME
+```
+
+Then add Maven location
+- add Maven
+![alt text](<Screenshot (137).png>)
+```bash
+echo $M2_HOME
+```
+
+Then disable Github Branch Source Plugin
+![alt text](<Screenshot (138)-1.png>)
+
+#### Step-6 Test Jenkins Maven Job
+![alt text](<Screenshot (139).png>)
+
+- Pull the Register App from Github
+()[https://github.com/Ganil151/Register-App.git]
+![alt text](<Screenshot (140).png>)
+
+- In the Jenkins Job
+![alt text](<Screenshot (141).png>)
+  - create a git token for the project
+
+- Add github credentials
+![alt text](<Screenshot (142).png>)
+
+![alt text](<Screenshot (143).png>)
+
+- Set branch to */main
+![alt text](<Screenshot (144).png>)
+
+#### Step-7 Provision Ansible Server with Terraform
+- Go back to Terraform Server 
+```sh
+cp -r jenkins/ ansible && cd ansible
+
+# then all old terraform builds from the jenkins build
+rm -r .terraform 
+```
+
+- Make changes to ansible/main.tf file
+```sh
+# Create Main file
+cat <<EOF > main.tf
+resource "aws_instance" "AnsibleServer" { 
+  ami           = data.aws_ami.amazonlinux2.id
+  instance_type = "t3.small"
+  key_name      = var.key_name
+  subnet_id     = var.subnet_id
+  vpc_security_group_ids = [aws_security_group.cicd_sg_${var.project_name}.id]
+
+  tags = {
+    Name = "Ansible-Server"
+  }
+}
+EOF
+```
+
+- Make changes to ansible/provider.tf
+```bash
+# Create Providers file
+cat <<EOF > providers.tf
+terraform {
+  required_version = "~> 1.5"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+  }
+  backend "s3" {
+    bucket = "ansible-register"
+    key    = "ansible/terraform.tfstate"
+  }
+}
+
+provider "aws" {
+  region = "us-east-1"
+
+}
+EOF
+```
+
+- Make changes to ansiable/security_group
+```bash
+# Create Security file
+cat <<EOF > security.tf
+resource "aws_security_group" "cicd_sg" {
+  name        = "cicd_sg_1_${var.project_name}"
+  description = "Allow inbound/outbound traffic"
+  vpc_id      = var.vpc_id
+
+  dynamic "ingress" {
+    for_each = var.ingress_rules
+    content {
+      description = "Allow port \${ingress.value}"
+      from_port   = ingress.value
+      to_port     = ingress.value
+      protocol    = "tcp"
+      cidr_blocks = ["0.0.0.0/0"]
+    }
+  }
+
+  egress {
+    description = "Allow all egress"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "cicd_sg_1"
+  }
+}
+EOF
+```
+
+- Make changes ansible/variables.tf
+```bash
+# Create Variables file
+cat <<EOF > variables.tf
+variable "project_name" {
+  type        = string
+  description = "Project Name"
+  default     = "Jenkins"
+}
+
+variable "vpc_id" {
+  type        = string
+  description = "VPC ID"
+  default     = "cicd_vpc"
+}
+
+variable "key_name" {
+  type        = string
+  description = "Key Pair"
+  default     = "cicd-keys"
+}
+
+variable "subnet_id" {
+  type        = string
+  description = "Subnet ID"
+  default     = "cicd_subnet"
+}
+
+variable "ingress_rules" {
+  type        = list(number)
+  description = "List of ingress ports"
+  default     = [22, 80, 443, 8080, 8090, 9000, 8081, 2479]
+}
+
+variable "egressrules" {
+  type    = list(number)
+  default = [25, 80, 443, 8080, 8090, 3306, 53] 
+}
+EOF
+```
+
+- Then Pass Terraform
+```bash
+terraform init -reconfigure
+
+# Then
+terrafom plan -out=tfplan
+
+# Then 
+terraform apply -auto-approve tfplan 
+```
+
+#### Step-8 Install and Configure Ansiable
+- Create a new user
+```bash
+sudo su -
+
+# Then 
+adduser ansadmin
+passwd ansadmin
+```
+
+- Add to SudoGroup 
+```bash
+visudo 
+
+# Under: Same thing without a password
+# %wheel    ALL=(ALL)     NOPASSWD: ALL
+ansadmin  ALL=(ALL)   NOPASSWD: ALL
+:wq
+
+
+# then 
+cd /etc/ssh
+
+```
+
+- Edit sshd_config
+```bash
+nano sshd_config
+
+# Change 
+PasswordAuthentication to yes
+
+# Reload SSHD
+service sshd reload
+```
+
+Youtube Link: ()[https://youtu.be/NKUOSc9pCfk?t=4660]

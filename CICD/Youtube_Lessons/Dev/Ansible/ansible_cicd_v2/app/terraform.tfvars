@@ -1,4 +1,5 @@
-project_name = "server"
+project_name = "Terraform"
+project_name-2 = ""
 
 # Vpc
 vpc_id            = "cicd_vpc"

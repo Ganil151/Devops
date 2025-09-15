@@ -20,5 +20,5 @@ variable "ingressrules" {
 
 variable "egressrules" {
   type    = list(number)
-  default = [25, 80, 443, 8080, 8090, 3306, 53]
+  default = [22, 80, 443, 8080, 8090, 3306, 53]
 }

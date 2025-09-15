@@ -1,4 +1,6 @@
 variable "project_name" {}
+variable "project_name-2" {}
+
 
 # VPC
 variable "vpc_id" {
