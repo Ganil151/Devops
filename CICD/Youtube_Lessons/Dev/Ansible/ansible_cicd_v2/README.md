@@ -516,4 +516,94 @@ PasswordAuthentication to yes
 service sshd reload
 ```
 
-Youtube Link: ()[https://youtu.be/NKUOSc9pCfk?t=4660]
+- Create SSH Key 
+```bash
+[ansadmin@ansible-server ~]$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ansadmin/.ssh/id_rsa):
+Created directory '/home/ansadmin/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/ansadmin/.ssh/id_rsa.
+Your public key has been saved in /home/ansadmin/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:HRi6JpBA2uz/3rrv1Y0UTdsJuR2HbHF/Hyy5yboZC7k ansadmin@ansible-server
+The key's randomart image is:
++---[RSA 2048]----+
+|o.      .    o+o.|
+|.+ .   . o   +B=+|
+|. =   . . . .+=+*|
+| . .   . . ..o+.+|
+|  . . o S . .+  .|
+|   . o    .o.o   |
+|    .    o.oo .  |
+|     . . .o =    |
+|     .==+E +     |
++----[SHA256]-----+
+[ansadmin@ansible-server ~]$
+```
+- Install Ansiable 
+```bash
+sudo su - 
+# then 
+amazon-linux-extras install ansible2
+```
+
+#### Step-9 Integrate Ansible with Jenkins
+
+- Install Publish over SSH
+![alt text](<Screenshot (147).png>)
+![alt text](<Screenshot (149).png>)
+
+- Restart Jenkins
+```bash
+[root@jenkins-server ~]# systemctl restart jenkins
+```
+
+- Configure Publish over SSH
+![alt text](<Screenshot (145).png>)
+
+- Add SSH Server
+![alt text](<Screenshot (150).png>)
+Fillin <ansible-server-public-ip>
+![alt text](<Screenshot (151)-1.png>)
+Go to Advance: Fillin password
+![alt text](<Screenshot (152).png>)
+Test the Configuration then apply & save
+
+#### Step-10 Install Docker in Ansible Server
+
+- Setup for Docker installation
+```bash
+[root@ansible-server ~]# su ansadmin
+[ansadmin@ansible-server root]$ cd ~
+[ansadmin@ansible-server ~]$ sudo mkdir /opt/docker
+[ansadmin@ansible-server ~]$ ls /opt
+aws  docker  rh
+[ansadmin@ansible-server ~]$ cd /opt/docker
+[ansadmin@ansible-server docker]$ sudo chown -R ansadmin:ansadmin /opt/docker
+[ansadmin@ansible-server docker]$ ls -la /opt/docker
+total 0
+drwxr-xr-x 2 ansadmin ansadmin  6 Sep 15 18:14 .
+drwxr-xr-x 5 root     root     41 Sep 15 18:14 ..
+```
+
+- Run a Docker Test 
+![alt text](<Screenshot (153).png>)
+
+Go to Configure:
+![alt text](<Screenshot (154).png>)
+
+Slide down Post-Build Actions
+![alt text](<Screenshot (155).png>)
+
+Go to Send build artifacts over SSH
+![alt text](<Screenshot (157).png>)
+
+![alt text](<Screenshot (158).png>) 
+Fillin:
+![alt text](<Screenshot (159).png>)
+Apply and Save
+
+Then Build:
+![alt text](<Screenshot (160).png>)
