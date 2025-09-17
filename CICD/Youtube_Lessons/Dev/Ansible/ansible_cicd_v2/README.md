@@ -346,7 +346,7 @@ Then disable Github Branch Source Plugin
 ```sh
 cp -r jenkins/ ansible && cd ansible
 
-# then all old terraform builds from the jenkins build
+# then remove all old terraform builds from the jenkins build
 rm -r .terraform 
 ```
 
@@ -542,6 +542,15 @@ The key's randomart image is:
 +----[SHA256]-----+
 [ansadmin@ansible-server ~]$
 ```
+
+- Change Ownership & Mode
+```bash
+sudo chown -R ansadmin:ansadmin /home/ansadmin/.ssh
+sudo chmod 700 /home/ansadmin/.ssh
+sudo chmod 600 /home/ansadmin/.ssh/id_rsa
+sudo chmod 644 /home/ansadmin/.ssh/id_rsa.pub
+```
+
 - Install Ansiable 
 ```bash
 sudo su - 
@@ -602,8 +611,157 @@ Go to Send build artifacts over SSH
 
 ![alt text](<Screenshot (158).png>) 
 Fillin:
-![alt text](<Screenshot (159).png>)
+![alt text](<Screenshot (162).png>)
 Apply and Save
 
 Then Build:
 ![alt text](<Screenshot (160).png>)
+
+- Install Docker after Build is successful
+```bash
+[ansadmin@ansible-server ~]$ ls /opt/docker/
+myprojectapp.war
+[ansadmin@ansible-server ~]$ cd /opt/docker/
+[ansadmin@ansible-server docker]$ sudo yum install -y docker
+```
+
+- Add Docker to ansadmin user group 
+```bash
+[ansadmin@ansible-server docker]$ sudo usermod -aG docker ansadmin
+[ansadmin@ansible-server docker]$ id ansadmin
+uid=1001(ansadmin) gid=1001(ansadmin) groups=1001(ansadmin),992(docker)
+```
+
+- Start Docker Services 
+```bash
+sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+     Docs: https://docs.docker.com
+[ansadmin@ansible-server docker]$ sudo systemctl enable docker
+Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.
+[ansadmin@ansible-server docker]$ sudo systemctl start docker
+[ansadmin@ansible-server docker]$ sudo systemctl status docker
+# Then restart the Ansible-Server
+sudo init 6
+```
+
+#### Create Project Dockefile in Ansible Server
+```Dockerfile
+FROM tomcat:latest 
+RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+COPY ./*.war /usr/local/tomcat/webapps/register.war
+```
+
+#### Create Ansible Playbook for Docker Tasks
+
+- Login into Docker
+```bash
+[ansadmin@ansible-server ~]$ docker login -u ganil151
+Password: # Docker Password 
+```
+
+- Edit Ansible Host
+```bash 
+# Remove everything in the file   
+sudo vi /etc/ansible/hosts
+
+# Add Ansible-Server Private Ip in the 
+[ansible]
+10.0.1.45 ansible_user=ansadmin ansible_ssh_private_key_file=/home/ansadmin/.ssh/id_rsa
+```
+
+- Copy ssh key to the private ip, from the **ssh-key** that was generated earlier
+```sh
+ssh-copy-id 10.0.1.45
+#Or
+ssh-copy-id ansadmin@10.0.1.45 # with the username
+
+# Output-1:
+/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/ansadmin/.ssh/id_rsa.pub"
+/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+
+/bin/ssh-copy-id: WARNING: All keys were skipped because they already exist on the remote system.
+                (if you think this is a mistake, you may want to use -f option)
+
+# Output-2:
+/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/ansadmin/.ssh/id_rsa.pub"
+The authenticity of host '10.0.1.45 (10.0.1.45)' can't be established.
+ECDSA key fingerprint is SHA256:M13tZlvdk6nSPxntLNECArWpRNm95eLPr42FivSd3Zk.
+ECDSA key fingerprint is MD5:c2:7b:1f:84:e5:1b:9e:b2:38:25:70:a3:9b:fd:60:f4.
+Are you sure you want to continue connecting (yes/no)? yes
+/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+ansadmin@10.0.1.45's password: # Add the ansadmin password
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh '10.0.1.45'"
+and check to make sure that only the key(s) you wanted were added.
+```
+- Create a Manifest file 
+```bash
+[ansadmin@ansible-server ~]$ sudo vi register-ci.yml
+
+- hosts: ansible
+
+  tasks:
+  - name: create docker image
+    command: docker build -t register-1:latest .
+    args:
+      chdir: /opt/docker
+
+  - name: create tag to push image onto dockerhub
+    command: docker tag register-1:latest ganil151/register-1:latest
+
+  - name: push docker image
+    command: docker push ganil151/register-1:latest
+
+```
+AI Example:
+- before using AI Example:
+```bash
+ansible-galaxy collection install community.docker
+```
+- Then edit: register-1-ci.yml 
+```bash
+---
+- hosts: ansible
+  become: yes
+  tasks:
+    - name: Ensure Docker is installed
+      package:
+        name: docker
+        state: present
+
+    - name: Build docker image
+      community.docker.docker_image:
+        name: register-1
+        tag: latest
+        build:
+          path: /opt/docker
+
+    - name: Login to Docker Hub
+      community.docker.docker_login:
+        username: ganil151
+        password: "{{ dockerhub_password }}"
+
+    - name: Push docker image
+      community.docker.docker_image:
+        name: register-1
+        tag: latest
+        push: yes
+
+```
+- Go back to Jenkins <http://52.55.121.151:8080/> and start a new Job:
+![alt text](<Screenshot (163).png>)
+
+- Start a new Job
+![alt text](<Screenshot (164).png>)
+
+- Get github repositories
+![alt text](<Screenshot (165).png>)
+
+then:
+![alt text](<Screenshot (166).png>)
