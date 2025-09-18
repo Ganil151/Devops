@@ -3,10 +3,58 @@
 
 ### Build Steps:
 #### Step-1
-- Follow script : ()[app\scripts\Terraform-Server.sh]
+**Follow script** : ()[app\scripts\Terraform-Server.sh]
 
 #### Step-2:
-- Create jenkins.sh:
+
+Jenkins Important in CI/CD Development?
+1. **Automates the CI/CD Pipeline:**
+Jenkins listens to your Git repository.
+When developers push code, Jenkins triggers jobs: build, test, package, deploy.
+This removes manual steps and reduces human error.
+
+2. **Plugin Ecosystem:**
+Jenkins has 1,800+ plugins for integration with almost anything: GitHub, Docker, Kubernetes (including EKS), Slack, Jira, etc.
+This makes Jenkins highly flexible in connecting different tools in your DevOps stack.
+
+3. **Build Automation:**
+Jenkins compiles code, runs tests, packages artifacts (e.g., Docker images, JAR files, npm bundles).
+This ensures every commit is validated and ready to deploy.
+
+4. **Supports Continuous Deployment:**
+Jenkins pipelines can automatically deploy new builds to staging or production environments.
+You can connect Jenkins to EKS (or any Kubernetes cluster, VMs, or servers).
+
+5. **Pipeline-as-Code:**
+Jenkins uses Jenkinsfile (written in Groovy DSL) to define pipelines.
+Pipelines can be version-controlled alongside code → reproducible, consistent deployments.
+
+6. **Extensible for Any Workflow:**
+You can create pipelines with stages for unit tests, integration tests, security scans, approvals, deployments.
+Teams can enforce policies before software is promoted to production.
+
+7. **Scalability & Distributed Builds:**
+Jenkins can run builds on multiple worker nodes (agents), scaling across infrastructure.
+This speeds up pipelines by distributing workloads.
+
+8. **Integration with Containers & Cloud:**
+Jenkins works great with Docker and Kubernetes (via EKS).
+Typical flow: Jenkins builds a Docker image → pushes to ECR → triggers deployment in EKS.
+
+**In Simple Terms:**
+Jenkins = the automation brain (triggers, builds, tests, deploys).
+EKS = the execution environment (runs the deployed application).
+
+**So in a CI/CD pipeline:**
+Jenkins detects code changes, builds, and runs tests.
+Jenkins creates a Docker image and pushes it to a registry.
+Jenkins updates EKS manifests (via kubectl or Helm) to roll out the new version.
+EKS runs and manages the application.
+
+----
+
+**Create jenkins.sh:**
+
 ```bash
 #!/bin/bash
 
@@ -60,6 +108,8 @@ provider "aws" {
 }
 EOF
 
+----
+
 # Create Date file
 cat <<EOF > data.tf
 data "aws_ami" "amazonlinux2" {
@@ -79,6 +129,8 @@ data "aws_ami" "amazonlinux2" {
 
 
 EOF
+
+--- 
 
 # Create Security file
 cat <<EOF > security.tf
@@ -112,6 +164,8 @@ resource "aws_security_group" "cicd_sg" {
 }
 EOF
 
+---
+
 # Create Main file
 cat <<EOF > main.tf
 resource "aws_instance" "JenkinsServer" {
@@ -126,6 +180,8 @@ resource "aws_instance" "JenkinsServer" {
   }
 }
 EOF
+
+----
 
 # Create Variables file
 cat <<EOF > variables.tf
@@ -165,6 +221,8 @@ variable "egressrules" {
 }
 EOF
 
+----
+
 # Verify File Creation
 if [[ -f "providers.tf" && -f "main.tf" && -f "variables.tf" && -f "data.tf" && -f "security.tf" ]]; then
     echo "All Terraform files created successfully."
@@ -176,18 +234,20 @@ fi
 echo "Setup completed successfully."
 ```
 
+----
+
 #### Step-3 Install Jenkins on the jenkins-server
 change to root:
 ```bash
 sudo su -
 ```
 
-- Install the dependencies on the server
+**Install the dependencies on the server**
 ```bash
 yum -y update 
 ```
 
-- Install Jenkins
+**Install Jenkins**
 ```bash
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
@@ -206,14 +266,70 @@ sudo yum install -y java-21-amazon-corretto-devel
 sudo yum install -y jenkins
 ```    
 
-- Configure Jenkins
+**Configure Jenkins:**
 ```bash
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
 sudo systemctl status jenkins
 ```
 
+----
+
 #### Step-4 Install Maven 
+
+##### What is Maven?
+Apache Maven is a build automation and dependency management tool, mainly for Java-based projects (but can also be used with other languages).
+It automates the build lifecycle: compiling code, running tests, packaging applications (e.g., JAR, WAR), and managing dependencies.
+Instead of being a deployment environment (like EKS) or a CI/CD orchestrator (like Jenkins), Maven is focused on building and packaging applications.
+
+Why is Maven Important in CI/CD Development?
+1. **Standardized Build Process:**
+Maven uses a convention-over-configuration approach.
+Every project follows a standard structure (src/main/java, src/test/java, etc.).
+This makes builds predictable and consistent across environments.
+
+2. **Dependency Management:**
+Maven uses a pom.xml (Project Object Model) file to define dependencies.
+It automatically downloads required libraries from Maven Central or other repositories.
+This ensures reproducibility — the same versions are used in dev, CI, and production.
+
+3. **Integration with CI/CD Tools:**
+Jenkins (and other CI/CD servers) can run Maven commands (mvn clean install, mvn test, mvn package) as build steps.
+This means the same Maven build pipeline developers use locally is automated in CI/CD.
+
+4. **Testing Support:**
+Maven integrates with popular testing frameworks (JUnit, TestNG).
+CI/CD pipelines can run automated tests through Maven before moving to deployment stages.
+
+5. **Artifact Management:**
+Maven packages the application into build artifacts (like JARs/WARs).
+These artifacts can be stored in artifact repositories (e.g., Nexus, Artifactory) and then deployed via CI/CD.
+
+6. **Extensible Plugins:**
+Maven has a rich plugin ecosystem (e.g., plugins for Docker builds, Kubernetes deployments, reporting).
+
+In a CI/CD workflow, Maven plugins can be used to:
+Build Docker images.
+Run code quality checks (SonarQube, PMD, Checkstyle).
+Generate documentation.
+
+7. **Consistency Across Environments:**
+With Maven, the build command is the same everywhere (mvn clean install).
+CI/CD pipelines benefit from this because builds are reproducible and not tied to local developer setups.
+
+**In Simple Terms:**
+Maven = the builder and packager (compiles code, manages dependencies, runs tests, packages output).
+Jenkins = the automation engine (triggers Maven builds, runs pipelines).
+EKS = the runtime environment (deploys and manages the application).
+
+**So in a CI/CD pipeline**:
+Developer pushes code.
+Jenkins triggers a pipeline.
+Jenkins runs Maven to build, test, and package the application.
+The packaged artifact (e.g., JAR or Docker image) is stored in a registry.
+Jenkins/CD step deploys it to EKS.
+EKS runs the application.
+
 ```bash
 cd /opt
 wget https://dlcdn.apache.org/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz
@@ -226,7 +342,7 @@ rm -r apache-maven-3.9.11-bin.tar.gz
 mv apache-maven-3.9.11/ maven
 ```
 
-- Configure Maven in .bash_profile
+**Configure Maven in .bash_profile:**
 ```bash
 cd ~
 
@@ -255,6 +371,9 @@ PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
 
 export
 ```
+
+----
+
 - Option 2
 ```bash
 M2=/opt/maven/bin
@@ -279,7 +398,7 @@ echo "export PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2" | sudo tee -a > /var/
 source /var/lib/jenkins/.bash_profile
 ```
 
-- Test if Maven is working 
+**Test if Maven is working:** 
 ```bash
 mvn -v
 Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
@@ -289,31 +408,33 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "4.14.355-280.679.amzn2.x86_64", arch: "amd64", family: "unix"
 ```
 
+----
+
 #### Step-5 Login into Jenkins and Configure
 Open a new tab in browser, then get the aws instance <jenkins-server public ip>
 ```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-Install the plugins:
+**Install the plugins:**
 ![alt text](<Screenshot (131).png>)
 
 Then go to Manage Jenkins -> Plugins and install: 
-- Pipeline: Stage Step
+**Pipeline: Stage Step**
 ![alt text](<Screenshot (133).png>)
 
-- maven integration
+**Maven integration:**
 ![alt text](<Screenshot (134)-1.png>)
 
-Then go to Manage Jenkins -> Tools
+**Then go to Manage Jenkins -> Tools**
 - add JDK
 ![alt text](<Screenshot (136).png>)
 ```bash
 echo $JAVA_HOME
 ```
 
-Then add Maven location
-- add Maven
+**Then add Maven location**
+- add Maven:
 ![alt text](<Screenshot (137).png>)
 ```bash
 echo $M2_HOME
@@ -350,7 +471,7 @@ cp -r jenkins/ ansible && cd ansible
 rm -r .terraform 
 ```
 
-- Make changes to ansible/main.tf file
+Make changes to **ansible/main.tf** file:
 ```sh
 # Create Main file
 cat <<EOF > main.tf
@@ -368,7 +489,9 @@ resource "aws_instance" "AnsibleServer" {
 EOF
 ```
 
-- Make changes to ansible/provider.tf
+----
+
+Make changes to **ansible/provider.tf**
 ```bash
 # Create Providers file
 cat <<EOF > providers.tf
@@ -393,7 +516,10 @@ provider "aws" {
 EOF
 ```
 
-- Make changes to ansiable/security_group
+----
+
+Make changes to **ansiable/security_group:**
+
 ```bash
 # Create Security file
 cat <<EOF > security.tf
@@ -428,7 +554,10 @@ resource "aws_security_group" "cicd_sg" {
 EOF
 ```
 
-- Make changes ansible/variables.tf
+----
+
+Make changes **ansible/variables.tf**
+
 ```bash
 # Create Variables file
 cat <<EOF > variables.tf
@@ -469,7 +598,9 @@ variable "egressrules" {
 EOF
 ```
 
-- Then Pass Terraform
+----
+
+Then Pass Terraform
 ```bash
 terraform init -reconfigure
 
@@ -481,7 +612,66 @@ terraform apply -auto-approve tfplan
 ```
 
 #### Step-8 Install and Configure Ansiable
-- Create a new user
+
+What is Ansible?
+Ansible is an open-source IT automation and configuration management tool.
+It automates tasks like provisioning servers, configuring environments, deploying applications, and orchestration across infrastructure.
+Unlike Maven (build tool) or Jenkins (pipeline orchestrator), Ansible is focused on automating infrastructure and deployments.
+It uses playbooks (written in YAML) to define desired states, making deployments idempotent (running the same playbook multiple times always produces the same result).
+
+Why is Ansible Important in CI/CD Development?
+1. **Automated Deployment:**
+CI/CD pipelines often use Ansible to deploy applications after Jenkins/Maven have built them.
+Instead of manually copying files or running shell scripts, Ansible ensures consistent, repeatable deployments.
+
+2. **Infrastructure as Code (IaC):**
+Ansible playbooks define infrastructure and configurations as code.
+These playbooks can be version-controlled alongside application code.
+This allows CI/CD pipelines to provision environments (e.g., dev, staging, prod) automatically.
+
+3. **Consistency Across Environments:**
+With Ansible, the same playbook can configure all environments identically.
+This removes the “works on my machine” problem in CI/CD.
+
+4. **Agentless Architecture:**
+Unlike Chef/Puppet, Ansible is agentless — it only requires SSH and Python.
+This makes it lightweight and easy to integrate into CI/CD workflows.
+
+5. **Integration with CI/CD Tools:**
+Jenkins can call Ansible playbooks as part of a pipeline. Example:
+
+- Stage 1: Build app with Maven.
+
+- Stage 2: Package Docker image.
+
+- Stage 3: Deploy with Ansible (to VMs, cloud, or even Kubernetes manifests).
+
+6. **Application & Infrastructure Management**
+
+Ansible isn’t just for deployment — it can also:
+Configure servers (OS, network, firewall).
+Manage cloud resources (AWS, Azure, GCP).
+Orchestrate container deployments (with Kubernetes/EKS).
+
+7.**Rollback & Recovery:**
+Ansible playbooks can include rollback steps.
+In CI/CD, this means if a deployment fails, Ansible can revert the system to a stable state.
+
+In Simple Terms:
+Maven = builds the app.
+Jenkins = orchestrates the pipeline.
+Ansible = deploys and configures infrastructure/app.
+EKS = runs the containerized application.
+
+So in a CI/CD pipeline:
+Developer pushes code.
+Jenkins triggers the pipeline.
+Maven builds and tests the code.
+Jenkins packages the app into Docker image.
+Ansible deploys the app (to EKS, VMs, or servers).
+EKS (or infrastructure managed by Ansible) runs the application.
+
+**Create a new user**
 ```bash
 sudo su -
 
@@ -490,7 +680,7 @@ adduser ansadmin
 passwd ansadmin
 ```
 
-- Add to SudoGroup 
+**Add to SudoGroup** 
 ```bash
 visudo 
 
@@ -505,7 +695,7 @@ cd /etc/ssh
 
 ```
 
-- Edit sshd_config
+**Edit sshd_config**
 ```bash
 nano sshd_config
 
@@ -516,7 +706,7 @@ PasswordAuthentication to yes
 service sshd reload
 ```
 
-- Create SSH Key 
+**Create SSH Key**
 ```bash
 [ansadmin@ansible-server ~]$ ssh-keygen
 Generating public/private rsa key pair.
@@ -543,7 +733,7 @@ The key's randomart image is:
 [ansadmin@ansible-server ~]$
 ```
 
-- Change Ownership & Mode
+**Change Ownership & Mode**
 ```bash
 sudo chown -R ansadmin:ansadmin /home/ansadmin/.ssh
 sudo chmod 700 /home/ansadmin/.ssh
@@ -551,7 +741,7 @@ sudo chmod 600 /home/ansadmin/.ssh/id_rsa
 sudo chmod 644 /home/ansadmin/.ssh/id_rsa.pub
 ```
 
-- Install Ansiable 
+**Install Ansiable** 
 ```bash
 sudo su - 
 # then 
@@ -560,29 +750,85 @@ amazon-linux-extras install ansible2
 
 #### Step-9 Integrate Ansible with Jenkins
 
-- Install Publish over SSH
+**Install Publish over SSH**
 ![alt text](<Screenshot (147).png>)
 ![alt text](<Screenshot (149).png>)
 
-- Restart Jenkins
+**Restart Jenkins**
 ```bash
 [root@jenkins-server ~]# systemctl restart jenkins
 ```
 
-- Configure Publish over SSH
+**Configure Publish over SSH**
 ![alt text](<Screenshot (145).png>)
 
-- Add SSH Server
+**Add SSH Server**
 ![alt text](<Screenshot (150).png>)
-Fillin <ansible-server-public-ip>
+
+**Fillin:** <ansible-server-public-ip>
 ![alt text](<Screenshot (151)-1.png>)
-Go to Advance: Fillin password
+
+**Go to Advance**: Fillin password
 ![alt text](<Screenshot (152).png>)
 Test the Configuration then apply & save
 
 #### Step-10 Install Docker in Ansible Server
+What is Docker?
+Docker is a platform for building, packaging, and running applications in containers.
+A container is a lightweight, portable environment that includes everything an application needs to run: code, libraries, and dependencies.
+Unlike VMs, containers share the host OS kernel, making them faster, smaller, and more portable.
+In CI/CD, Docker ensures that the same application image runs consistently on a developer’s laptop, in CI pipelines, and in production (EKS, servers, or cloud).
 
-- Setup for Docker installation
+Why is Docker Important in CI/CD Development?
+1. **Consistency Across Environments:**
+Docker removes the “works on my machine” issue.
+CI/CD pipelines build a Docker image once, and that exact image runs in all environments (dev → staging → prod).
+
+2. **Immutable Build Artifacts:**
+Each CI pipeline run creates a versioned Docker image.
+This makes builds reproducible and traceable, improving auditability and rollback in CI/CD.
+
+3. **Integration with CI/CD Tools:**
+Jenkins, GitHub Actions, GitLab CI, etc., can build and push Docker images to registries (e.g., Amazon ECR, Docker Hub).
+CD steps then pull these images and deploy them to environments like EKS.
+
+4. **Lightweight & Fast Deployments:**
+Containers start in seconds compared to VMs.
+This speed is crucial for CI/CD pipelines that spin up test environments on demand.
+
+5. **Microservices Architecture:**
+Modern applications are built as microservices, each in its own Docker container.
+CI/CD pipelines can independently build, test, and deploy services, then run them together in orchestrators like Kubernetes/EKS.
+
+6. **Supports Automated Testing:**
+Pipelines can use Docker to spin up ephemeral test environments.
+Example: start a database container and run integration tests against it, then tear it down automatically.
+
+7. **Portability:**
+Docker images can run anywhere: developer laptops, CI/CD servers, Kubernetes clusters, or cloud VMs.
+This makes Docker the universal packaging format in CI/CD workflows.
+
+In Simple Terms:
+
+- Maven = compiles/builds the app.
+
+- Jenkins = automates the pipeline.
+
+- Docker = packages the app into a portable container.
+
+- Ansible = deploys/configures the app & infrastructure.
+
+- EKS = runs and manages the containers in production.
+
+**So in a CI/CD pipeline:**
+Developer pushes code.
+Jenkins runs Maven to build & test.
+Jenkins builds a Docker image.
+Docker image is pushed to a registry (ECR, Docker Hub).
+Ansible (or Helm/Kubectl) deploys the Docker container to EKS.
+EKS orchestrates and scales the running containers.
+
+**Setup for Docker installation**
 ```bash
 [root@ansible-server ~]# su ansadmin
 [ansadmin@ansible-server root]$ cd ~
@@ -597,27 +843,28 @@ drwxr-xr-x 2 ansadmin ansadmin  6 Sep 15 18:14 .
 drwxr-xr-x 5 root     root     41 Sep 15 18:14 ..
 ```
 
-- Run a Docker Test 
+**Run a Docker Test:**
 ![alt text](<Screenshot (153).png>)
 
-Go to Configure:
+**Go to Configure:**
 ![alt text](<Screenshot (154).png>)
 
-Slide down Post-Build Actions
+**Slide down Post-Build Actions:**
 ![alt text](<Screenshot (155).png>)
 
-Go to Send build artifacts over SSH
+**Go to Send build artifacts over SSH:**
 ![alt text](<Screenshot (157).png>)
 
-![alt text](<Screenshot (158).png>) 
-Fillin:
+![alt text](<Screenshot (158).png>)
+
+**Fillin:**
 ![alt text](<Screenshot (162).png>)
 Apply and Save
 
-Then Build:
+**Then Build:**
 ![alt text](<Screenshot (160).png>)
 
-- Install Docker after Build is successful
+**Install Docker after Build is successful**
 ```bash
 [ansadmin@ansible-server ~]$ ls /opt/docker/
 myprojectapp.war
@@ -647,6 +894,8 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 sudo init 6
 ```
 
+----
+
 #### Create Project Dockefile in Ansible Server
 ```Dockerfile
 FROM tomcat:latest 
@@ -654,15 +903,17 @@ RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
 COPY ./*.war /usr/local/tomcat/webapps/register.war
 ```
 
+----
+
 #### Create Ansible Playbook for Docker Tasks
 
-- Login into Docker
+**Login into Docker**
 ```bash
 [ansadmin@ansible-server ~]$ docker login -u ganil151
 Password: # Docker Password 
 ```
 
-- Edit Ansible Host
+**Edit Ansible Host**
 ```bash 
 # Remove everything in the file   
 sudo vi /etc/ansible/hosts
@@ -672,7 +923,7 @@ sudo vi /etc/ansible/hosts
 10.0.1.45 ansible_user=ansadmin ansible_ssh_private_key_file=/home/ansadmin/.ssh/id_rsa
 ```
 
-- Copy ssh key to the private ip, from the **ssh-key** that was generated earlier
+Copy ssh key to the private ip, from the **ssh-key** that was generated earlier
 ```sh
 ssh-copy-id 10.0.1.45
 #Or
@@ -700,7 +951,7 @@ Number of key(s) added: 1
 Now try logging into the machine, with:   "ssh '10.0.1.45'"
 and check to make sure that only the key(s) you wanted were added.
 ```
-- Create a Manifest file 
+**Create a Manifest file**
 ```bash
 [ansadmin@ansible-server ~]$ sudo vi register-ci.yml
 
@@ -719,7 +970,7 @@ and check to make sure that only the key(s) you wanted were added.
     command: docker push ganil151/register-1:latest
 
 ```
-AI Example:
+**AI Example:**
 - before using AI Example:
 ```bash
 ansible-galaxy collection install community.docker
@@ -754,14 +1005,211 @@ ansible-galaxy collection install community.docker
         push: yes
 
 ```
-- Go back to Jenkins <http://52.55.121.151:8080/> and start a new Job:
+
+Go back to Jenkins <http://52.55.121.151:8080/> and start a new Job:
 ![alt text](<Screenshot (163).png>)
 
-- Start a new Job
+Start a new Job
 ![alt text](<Screenshot (164).png>)
 
-- Get github repositories
+Get github repositories
 ![alt text](<Screenshot (165).png>)
 
 then:
 ![alt text](<Screenshot (166).png>)
+
+then: 
+![alt text](<Screenshot (167).png>)
+
+----
+
+#### Provision EKS Server with Terraform 
+
+**Set-up Eks Server in the Terraform Server**
+
+```bash
+cp -r ansible eks-server
+[ec2-user@Terraform-Server ~]$ ls
+ansible  eks-server  jenkins
+[ec2-user@Terraform-Server ~]$ cd eks-server/
+[ec2-user@Terraform-Server eks-server]$ ls
+data.tf  main.tf  provider.tf  security.tf  tfplan  variables.tf
+[ec2-user@Terraform-Server eks-server]$ ls -a
+.   .terraform           data.tf  provider.tf  tfplan
+..  .terraform.lock.hcl  main.tf  security.tf  variables.tf
+[ec2-user@Terraform-Server eks-server]$ rm -r .terraform*
+```
+
+---- 
+
+Change the name in **main.tf**
+```bash
+resource "aws_instance" "Eks-Server" { # here
+  ami                    = data.aws_ami.amazonlinux2.id
+  instance_type          = "t3.small"
+  key_name               = var.key_name
+  subnet_id              = var.subnet_id
+  vpc_security_group_ids = [aws_security_group.cicd_sg.id]
+
+  tags = {
+    Name = "Eks-Server" # here
+  }
+}
+```
+
+----
+
+Make changes to **provider.tf**:
+```bash
+terraform {
+  required_version = "~> 1.5"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+  }
+  backend "s3" {
+    bucket = "ansible-register"
+    key    = "eks-server/terraform.tfstate" # here
+    region = "us-east-1"
+
+  }
+}
+
+provider "aws" {
+  region = "us-east-1"
+
+}
+```
+
+----
+
+Change the name in **Security.tf** file
+```bash
+resource "aws_security_group" "cicd_sg" {
+  name        = "cicd_sg_2_${var.project_name}"
+  description = "Allow inbound/outbound traffic"
+  vpc_id      = var.vpc_id
+
+  ingress {
+    description = "Allow all port"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    description = "Allow all egress"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "cicd_sg_2"
+  }
+}
+```
+
+----
+
+#### Provision EKS Cluster using eksctl
+
+##### What is EKS Server?
+When people say “EKS server”, they’re usually referring to Amazon EKS (Elastic Kubernetes Service) clusters that run on AWS.
+EKS is Amazon’s managed Kubernetes service.
+Instead of you setting up and managing Kubernetes control planes and nodes yourself, AWS does that heavy lifting.
+With EKS, you get a Kubernetes cluster where you can deploy, manage, and scale containerized applications.
+So, “EKS server” isn’t a literal single server — it’s shorthand for the Kubernetes cluster and infrastructure managed by AWS.
+
+Why is EKS Important in CI/CD Development?
+CI/CD (Continuous Integration / Continuous Deployment) is all about automating the software release pipeline so that code changes go from developer laptops → testing → staging → production quickly and safely.
+Here’s where EKS fits in:
+
+1. **Scalable & Reliable Deployment Environment**:
+Kubernetes (via EKS) automatically handles load balancing, scaling, and failover for applications.
+Your CI/CD pipeline can push new builds into EKS without worrying about infrastructure details.
+As traffic grows, EKS scales up pods automatically.
+
+2. **Containerized Workloads**:
+Modern CI/CD pipelines usually build Docker containers.
+EKS natively runs containers, so it becomes the natural target for deploying builds.
+This ensures consistency: the same container that passed CI tests is the one running in production.
+
+3. **Automated Rollouts & Rollbacks**:
+EKS supports rolling updates. When a new image is deployed, pods are replaced gradually.
+If something fails, Kubernetes automatically rolls back to the previous version.
+This reduces downtime and risk in CI/CD releases.
+
+4. **Integration with CI/CD Tools**:
+Popular CI/CD platforms (e.g., Jenkins, GitHub Actions, GitLab CI, ArgoCD, Tekton) integrate seamlessly with EKS.
+You can automate deployments: every time code is merged, a pipeline builds a new Docker image, pushes it to Amazon ECR (Elastic Container Registry), and updates workloads in EKS.
+
+5. **Infrastructure as Code (IaC)**:
+With tools like Terraform, Helm, or AWS CDK, you can define your Kubernetes deployments as code.
+This fits naturally into CI/CD — infrastructure and app updates can be version-controlled and deployed together.
+
+6. **Security & Compliance**:
+AWS manages Kubernetes control plane patches, upgrades, and security fixes.
+You can integrate IAM (Identity and Access Management), network policies, and secrets management into your CI/CD workflow.
+This ensures secure, compliant software delivery.
+
+7. **Multi-Environment Support**:
+You can run multiple namespaces or clusters for dev, staging, and production.
+Your CI/CD pipeline can promote builds across these environments automatically, ensuring consistent deployments.
+
+**In Simple Terms:**
+Think of EKS as the engine that runs all the containerized applications.
+In CI/CD:
+CI builds and tests the app → produces a Docker image.
+CD pushes that image into EKS, where Kubernetes ensures it runs smoothly, scales, updates, or rolls back automatically.
+Without something like EKS, you’d have to manually manage servers, scaling, and deployments — which defeats the purpose of CI/CD automation.
+
+Go to Link: (Amazon_EKS)[https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html]
+
+##### Step-1: 
+```bash
+[ec2-user@eks-server ~]$ sudo su -
+[root@eks-server ~]# curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.33.4/2025-08-20/bin/linux/amd64/kubectl
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 57.3M  100 57.3M    0     0  23.4M      0  0:00:02  0:00:02 --:--:-- 23.4M
+[root@eks-server ~]# chmod +x ./kubectl
+[root@eks-server ~]# ls
+kubectl
+[root@eks-server ~]# mv kubectl /bin
+[root@eks-server ~]# ls /bin | grep kubectl
+kubectl
+```
+
+- Install Eksctl At: [https://github.com/eksctl-io/eksctl/blob/main/README.md#installation]
+```bash 
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+cd /tmp
+sudo mv /tmp/eksctl /bin
+eksctl version
+```
+- Create and Attach roles to the EKS Server
+```bash
+AmazonEC2FullAccess
+AWSCloudFormationFullAccess
+IAMFullAccess
+AdministratorAccess
+```
+![alt text](<Screenshot (168).png>)
+![alt text](<Screenshot (169).png>)
+![alt text](<Screenshot (170).png>)
+![alt text](<Screenshot (171).png>)
+![alt text](<Screenshot (172).png>)
+![alt text](<Screenshot (173).png>)
+
+- Launch the Eks Cluster 
+```bash
+eksctl create cluster --name registerapp-cluster \
+--region us-east-1 \
+--node-type t3.small
+```
+
