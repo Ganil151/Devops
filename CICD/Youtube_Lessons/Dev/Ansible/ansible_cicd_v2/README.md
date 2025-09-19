@@ -1170,7 +1170,7 @@ Without something like EKS, you’d have to manually manage servers, scaling, an
 
 Go to Link: (Amazon_EKS)[https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html]
 
-##### Step-1: 
+
 ```bash
 [ec2-user@eks-server ~]$ sudo su -
 [root@eks-server ~]# curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.33.4/2025-08-20/bin/linux/amd64/kubectl
@@ -1213,3 +1213,264 @@ eksctl create cluster --name registerapp-cluster \
 --node-type t3.small
 ```
 
+##### To install the AWS CLI, run the following commands:
+(Link)[https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html]
+```bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+Update and Get the Nodes
+```bash
+aws eks update-kubeconfig --region us-east-1 --name register-cluster
+
+# Output:
+Added new context arn:aws:eks:us-east-1:365269738775:cluster/register-cluster to /root/.kube/config
+
+# Then
+kubectl get nodes
+
+# Output
+NAME                            STATUS   ROLES    AGE   VERSION
+ip-192-168-3-196.ec2.internal   Ready    <none>   36m   v1.32.8-eks-99d6cc0
+ip-192-168-47-98.ec2.internal   Ready    <none>   36m   v1.32.8-eks-99d6cc0
+
+# Then
+kubectl get pods
+```
+
+##### Create deployment manifest files
+```bash
+vi register-deployment.yml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: register 
+  labels:
+    app: register
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: register
+  template:
+    metadata:
+      labels:
+        app: register
+    spec:
+      containers:
+      - name: register
+        image: ganil151/register
+        ports:
+        - containerPort: 8080
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+```
+
+----
+
+Create `Register Service` file:
+```bash
+vi register-service.yml
+
+apiVersion: v1 
+kind: Service 
+metadata: 
+  name: service
+  labels: 
+    app: register
+spec:
+  selector:
+    app: register
+
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+  
+  type: LoadBalancer  
+```
+
+#### Intergrate EKS Server with Ansible
+
+Enable: Go to /etc/ssh/sshd_config
+`PasswordAuthentication yes` 
+
+Set Password for Root:
+```bash
+[root@eks-server ~]# passwd root
+Changing password for user root.
+New password:
+BAD PASSWORD: The password fails the dictionary check - it is based on a dictionary word
+Retype new password:
+passwd: all authentication tokens updated successfully
+
+# Then
+service sshd reload
+```
+
+Go back to the ansible-server:
+```bash
+# sudo to Root user that was created
+[ansadmin@ansible-server ~]$ sudo su ansadmin
+
+# Then 
+[ansadmin@ansible-server ~]$ sudo vi /etc/ansible/hosts
+[ansible]
+10.0.1.45 ansible_user=ansadmin ansible_ssh_private_key_file=/home/ansadmin/.ssh/id_rsa
+
+[kubernetes]                                                                         
+10.0.1.13 #<eks-server-private-ip>
+```
+Copy ssh public key that was created earlier
+```bash
+[ansadmin@ansible-server ~]$ ssh-copy-id root@10.0.1.13
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/ansadmin/.ssh/id_rsa.pub"
+The authenticity of host '10.0.1.13 (10.0.1.13)' can't be established.
+ECDSA key fingerprint is SHA256:xDdHjirqKaRQJAij9sY49h/Zr2YX9EgR/NWYGUqk61I.
+ECDSA key fingerprint is MD5:a4:69:23:2b:18:36:9d:56:de:42:76:0f:b5:be:50:1c.
+Are you sure you want to continue connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+root@10.0.1.13's password: #<password from eks-server>
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'root@10.0.1.13'"
+and check to make sure that only the key(s) you wanted were added.
+```
+
+#### Create Ansible Playbook for the deployment
+Create kube_deploy.yml file in ansible-server /opt/docker
+```bash
+- hosts: kubernetes
+  user: root 
+
+  tasks: 
+   - name: deploy regapp on kubernetes
+     command: kubectl apply -f register-deployment.yml
+
+   - name: create service for regapp
+     command: kubectl apply -f register-service.yml
+  
+   - name: update deployment with new pods if image updated in docker hub
+     command: kubectl rollout restart deployment.apps/register
+```
+
+Run a test Ansible Playbook kube_deploy.yml:
+```bash
+[ansadmin@ansible-server ~]$ ansible-playbook kube_deploy.yml --check
+
+# Correct Output
+PLAY [kubernetes] *******************************************************************
+
+TASK [Gathering Facts] **************************************************************
+[WARNING]: Platform linux on host 10.0.1.13 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+ok: [10.0.1.13]
+
+TASK [deploy regapp on kubernetes] **************************************************
+skipping: [10.0.1.13]
+
+TASK [create service for regapp] ****************************************************
+skipping: [10.0.1.13]
+
+TASK [update deployment with new pods if image updated in docker hub] ***************
+skipping: [10.0.1.13]
+
+PLAY RECAP **************************************************************************
+10.0.1.13                  : ok=1    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
+
+# Then Run the Code:
+ansible-playbook kube_deploy.yml
+```
+
+Now go back to Eks-Server and check if everthings working:
+```bash
+[root@eks-server ~]# kubectl get pods
+# Output
+NAME                       READY   STATUS    RESTARTS   AGE
+register-c7d4b99d4-d5dbr   1/1     Running   0          2m13s
+register-c7d4b99d4-stcbc   1/1     Running   0          2m13s
+
+# Then run:
+[root@eks-server ~]# kubectl get all
+NAME                           READY   STATUS    RESTARTS   AGE
+pod/register-c7d4b99d4-d5dbr   1/1     Running   0          9m24s
+pod/register-c7d4b99d4-stcbc   1/1     Running   0          9m24s
+
+NAME                 TYPE           CLUSTER-IP       EXTERNAL-IP                                                               PORT(S)          AGE
+service/kubernetes   ClusterIP      10.100.0.1       <none>                                                                    443/TCP          126m
+service/service      LoadBalancer   10.100.250.100   a8dece2e8b78b4326b1a89cc131375fc-2032408722.us-east-1.elb.amazonaws.com   8080:32481/TCP   9m25s
+
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/register   2/2     2            2           9m27s
+
+NAME                                  DESIRED   CURRENT   READY   AGE
+replicaset.apps/register-6f8df655cb   0         0         0       9m27s
+replicaset.apps/register-c7d4b99d4    2         2         2       9m24s
+```
+
+#### Create Continouse Deployment Job on Jenkins
+Go to Jenkins and create a new Job:
+![alt text](<Screenshot (174).png>)
+
+Post-build Actions
+![alt text](<Screenshot (175).png>)
+
+Send build artifacts over SSH:
+![alt text](<Screenshot (176).png>)
+
+Under Exec command add the ansible playbook:
+![alt text](<Screenshot (177).png>)
+
+#### Integrate the CI and the CD Jobs:
+Go to Register-CI job and configure:
+![alt text](<Screenshot (178).png>)
+
+Check Poll SCM:
+![alt text](<Screenshot (179).png>)
+
+Go to Add post-build action and click `Build other projects`:
+![alt text](<Screenshot (180).png>)
+
+Slide up to Post-Build Actions to build `Register-CD`:
+![alt text](<Screenshot (181).png>)
+
+Then Run the build on Register-CI, and confirm the it was built in Register-CD 
+
+#### Deploy/Test the CI/CD Configurations
+- Go to ~/Documents/Register-App and push to github
+- Check github webhook 
+- Check Docker Hub
+- Check Eks-server:
+```bash
+ kubectl get pods
+NAME                        READY   STATUS    RESTARTS   AGE
+register-77bfd55865-lhmxb   1/1     Running   0          16m
+register-77bfd55865-nsf8d   1/1     Running   0          16m
+[root@eks-server ~]# kubectl get pods
+NAME                        READY   STATUS    RESTARTS   AGE
+register-77bfd55865-lhmxb   1/1     Running   0          18m
+register-77bfd55865-nsf8d   1/1     Running   0          18m
+[root@eks-server ~]# kubectl get svc
+NAME         TYPE           CLUSTER-IP       EXTERNAL-IP                                                               PORT(S)          AGE
+kubernetes   ClusterIP      10.100.0.1       <none>                                                                    443/TCP          3h23m
+service      LoadBalancer   10.100.250.100   a8dece2e8b78b4326b1a89cc131375fc-2032408722.us-east-1.elb.amazonaws.com   8080:32481/TCP   86m
+```
+
+Go to the browser: 
+```bash
+paste: a8dece2e8b78b4326b1a89cc131375fc-2032408722.us-east-1.elb.amazonaws.com:8080
+```
+![alt text](<Screenshot (182).png>)
+
+![alt text](<Screenshot (183).png>)
