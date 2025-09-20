@@ -376,6 +376,11 @@ export
 
 - Option 2
 ```bash
+[root@master-server ~]# which java
+/usr/bin/java
+[root@master-server ~]# readlink -f $(which java)
+/usr/lib/jvm/java-21-amazon-corretto.x86_64/bin/java
+
 M2=/opt/maven/bin
 echo "export M2=$M2" | sudo tee -a .bash_profile
 M2_HOME=/opt/maven

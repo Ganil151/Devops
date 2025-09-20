@@ -1,5 +1,5 @@
 resource "aws_security_group" "sis_sg" {
-  name        = "sis_sg"
+  name        = "sis_sg_${var.project_name_1}"
   description = "Allow inbound/outbound traffic"
   vpc_id      = var.vpc_id
 

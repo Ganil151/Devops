@@ -1,5 +1,5 @@
 project_name_1 = "master-server"
-project_name_2 = "jenkins-server"
+project_name_2 = "worker-server"
 project_name_3 = "ansible-server"
 project_name_4 = "eks-server"
 
@@ -19,3 +19,11 @@ egress_rules  = [0]
 
 # Keys
 key_name = "sis_keys"
+
+# Ec2
+ami                         = "ami-00ca32bbc84273381"
+instance_type               = "t3.small"
+subnet_id                   = "sis_subnet"
+user_data                   = ""
+user_data_replace_on_change = false
+security_group_ids          = [""]

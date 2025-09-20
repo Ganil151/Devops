@@ -319,7 +319,9 @@ Important: Replace <YOUR_EC2_IP> with the public IP address or hostname of your 
 Run the Job:
 Save the job and click Build Now.
 Check the Console Output to monitor the installation progress. The output should show Java and Maven versions successfully installed on the remote machine. 
-Script explanation
+
+Script explanation:
+```bash
 sshagent(credentials: [...]) { ... }: This step from the SSH Agent Plugin securely makes your private key available to the commands run inside its block, so you don't need to manually expose keys.
 ssh -o StrictHostKeyChecking=no ... << 'END_OF_SCRIPT': This is a "heredoc" that allows you to execute a multi-line shell script on the remote EC2 instance via SSH.
 sudo dnf update -y: Updates the package manager on Amazon Linux 2023, ensuring that you are working with the latest packages.
@@ -330,6 +332,7 @@ sudo ln -s ...: Creates a symbolic link for Maven. This simplifies version updat
 sudo tee /etc/profile.d/maven.sh: Creates a script to set the M2_HOME and PATH environment variables for all users. This makes the mvn command available system-wide.
 source /etc/profile.d/maven.sh: Sources the newly created environment script to apply the changes immediately within the current session.
 mvn -version: Verifies that Maven has been successfully installed and is accessible
+```
 
 ## Jenkinsfile to save on Docker
 ```jenkins
