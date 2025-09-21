@@ -713,6 +713,8 @@ service sshd reload
 
 **Create SSH Key**
 ```bash
+[ansadmin@ansible-server ~]$ su ansadmin
+[ansadmin@ansible-server ~]$ cd ~
 [ansadmin@ansible-server ~]$ ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/ansadmin/.ssh/id_rsa):
@@ -847,7 +849,6 @@ total 0
 drwxr-xr-x 2 ansadmin ansadmin  6 Sep 15 18:14 .
 drwxr-xr-x 5 root     root     41 Sep 15 18:14 ..
 ```
-
 **Run a Docker Test:**
 ![alt text](<images\Screenshot (153).png>)
 

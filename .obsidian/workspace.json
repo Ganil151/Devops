@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f535d62e94066941",
+        "id": "ba66bcba017b4ce4",
         "type": "tabs",
         "children": [
           {
-            "id": "8956b97c38d4badd",
+            "id": "36574c9535b9eed3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CICD/Sis_Lessons/Notes/SPMS Notes.md",
+                "file": "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "SPMS Notes"
+              "title": "README"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 353.505859375,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -198,8 +199,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "8956b97c38d4badd",
+  "active": "36574c9535b9eed3",
   "lastOpenFiles": [
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (159).png",
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (158).png",
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (157).png",
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/README.md",
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (154).png",
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (155).png",
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (153).png",
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (152).png",
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (151)-1.png",
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (151).png",
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (150).png",
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (149).png",
+    "CICD/Youtube_Lessons/Dev/jenkins/README.md",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD/README.md",
+    "CICD/Youtube_Lessons/Dev/terraform_server_s3_v1/README.md",
+    "CICD/Sis_Lessons/Notes/SPMS Notes.md",
     "CICD/Sis_Lessons/Working",
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-customers-service/src/main/java/org/springframework/samples/petclinic/customers/web/mapper/OwnerEntityMapper.java",
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-customers-service/src/main/java/org/springframework/samples/petclinic/customers/web/mapper/Mapper.java",
@@ -210,17 +227,6 @@
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-visits-service/src/main/java/org/springframework/samples/petclinic/visits/web/VisitResource.java",
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-customers-service/target/classes/org/springframework/samples/petclinic/customers/web/mapper/OwnerEntityMapper.class",
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-visits-service/src/main/java/org/springframework/samples/petclinic/visits/model/VisitRepository.java",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-customers-service/target/classes/org/springframework/samples/petclinic/customers/web/mapper/Mapper.class",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/images/spring-pivotal-logo.png",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/images/spring-logo-dataflow.png",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/images/spring-logo-dataflow-mobile.png",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/images/platform-bg.png",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/images/pets.png",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/images/favicon.png",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/fonts/varela_round-webfont.svg",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/resources/static/fonts/montserrat-webfont.svg",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/target/classes/static/images/spring-pivotal-logo.png",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/target/classes/static/images/spring-logo-dataflow.png",
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/scripts/chaos/README.md",
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/README.md",
     "CICD/Sis_Lessons/Successfully/Webhook/webhook_docker_v2/README.md",
@@ -238,13 +244,9 @@
     "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/spms_webhook_v1/README.md",
     "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/webhook_docker_v2/README.md",
     "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/webhook_docker_v1/README.md",
-    "CICD/Sis_Lessons/Notes/SPMS Notes.md",
     "CICD/Sis_Lessons/spms_webhook_v1/README.md",
     "CICD/AWS/s3/commands.md",
     "Untitled.canvas",
-    "CICD/AWS/s3/variable.tf.md",
-    "CICD/AWS/s3/output.tf.md",
-    "CICD/AWS/s3/main.tf.md",
-    "CICD/AWS/s3/call in main.md"
+    "CICD/AWS/s3/variable.tf.md"
   ]
 }
