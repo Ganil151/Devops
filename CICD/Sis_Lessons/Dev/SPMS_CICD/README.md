@@ -10,3 +10,8 @@ Copy SSH Key from master to worker
 ```bash
 ssh-copy-id <user-name@public-ip>
 ```
+
+Plugins
+
+Credentials
+![alt text](<Screenshot (195).png>)

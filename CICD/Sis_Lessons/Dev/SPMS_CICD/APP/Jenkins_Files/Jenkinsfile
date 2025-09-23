@@ -1,0 +1,198 @@
+pipeline {
+    agent { label params.NODE_LABEL }
+
+    environment {
+        COMPOSE_PROJECT_NAME = "spring-petclinic"
+        DOCKER_IMAGE = 'ganil151/spring-petclinic-microservice:latest'
+        AWS_REGION = 'us-east-1'
+        INSTANCE_TYPE = 't3.small'
+        KEY_NAME = 'jenkins-key' // Ensure this key exists in AWS
+        SECURITY_GROUP_ID = 'sg-xxxxxxxx' // Replace with your security group ID
+        SUBNET_ID = 'subnet-xxxxxxxx' // Replace with your subnet ID
+        INSTANCE_ID = ''
+        PUBLIC_IP = ''
+    }
+
+    parameters {
+        string (
+            name: 'NODE_LABEL',
+            defaultValue: 'worker-node-1',
+            description: 'Label of the Jenkins worker node to run this pipeline'
+        )
+    }
+
+    triggers {
+        githubPush()
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    credentialsId: 'github-credentials',
+                    url: 'https://github.com/Ganil151/spring-petclinic-microservices.git'
+            }
+        }
+
+        stage('Install yq') {
+            steps {
+                sh '''
+                if ! command -v yq &> /dev/null; then
+                    echo "Installing yq..."
+                    sudo wget https://github.com/mikefarah/yq/releases/download/v4.34.1/yq_linux_amd64 -O /usr/local/bin/yq
+                    sudo chmod +x /usr/local/bin/yq
+                fi
+                '''
+            }
+        }
+
+        stage('Remove genai-service from docker-compose.yml') {
+            steps {
+                sh '''
+                cp docker-compose.yml docker-compose.yml.bak
+                yq eval 'del(.services.genai-service)' -i docker-compose.yml
+                '''
+            }
+        }
+
+        stage('Docker Login') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    sh '''
+                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                    echo "Docker Login..."
+                    '''
+                }
+            }
+        }
+
+        stage('Build Application') {
+            environment {
+                JAVA_HOME = "/usr/lib/jvm/java-21-amazon-corretto"
+                PATH = "${JAVA_HOME}/bin:$PATH"
+            }
+            steps {
+                script {
+                    try {
+                        sh '''
+                        echo "Building the Spring PetClinic application..."
+                        ./mvnw clean install
+
+                        # Example: pick the config-server JAR
+                        JAR_FILE=$(ls spring-petclinic-config-server/target/*.jar | head -n 1)
+
+                        echo "Copying $JAR_FILE to docker/application.jar"
+                        cp "$JAR_FILE" docker/application.jar
+                        '''
+                    } catch (err) {
+                        echo "Build failed: ${err}"
+                        error("Stopping pipeline")
+                    }
+                }
+            }
+        }
+
+        stage('Docker Image Build') {
+            steps {
+                sh '''
+                echo "Docker Image Building"
+                cd docker
+
+                # Verify the .jar file
+                ls -la
+                if [ ! -f "application.jar" ]; then
+                    echo "application.jar not found in the build context."
+                    exit 1
+                fi
+
+                # Build the Docker image
+                docker build \
+                  --build-arg JAR_FILE=application.jar \
+                  -t $DOCKER_IMAGE \
+                  -f Dockerfile .
+                '''
+            }
+        }
+
+        stage('Docker Push') {
+            steps {
+                sh '''
+                echo "Pushing Docker Image..."
+                docker push $DOCKER_IMAGE
+                '''
+            }
+        }
+
+        stage('Provision EC2 Instance') {
+            steps {
+                script {
+                    // Spin up an EC2 instance using AWS CLI
+                    def instanceInfo = sh(script: """
+                        aws ec2 run-instances \
+                            --image-id ami-0c02fb55956c7d316 \\ # Amazon Linux 2 AMI
+                            --instance-type ${INSTANCE_TYPE} \\
+                            --key-name ${KEY_NAME} \\
+                            --security-group-ids ${SECURITY_GROUP_ID} \\
+                            --subnet-id ${SUBNET_ID} \\
+                            --region ${AWS_REGION} \\
+                            --query 'Instances[0].InstanceId' \\
+                            --output text
+                    """, returnStdout: true).trim()
+
+                    env.INSTANCE_ID = instanceInfo
+                    echo "EC2 Instance Created: ${env.INSTANCE_ID}"
+
+                    // Wait for the instance to be in a running state
+                    sh """
+                        aws ec2 wait instance-running \
+                            --instance-ids ${env.INSTANCE_ID} \
+                            --region ${AWS_REGION}
+                    """
+
+                    // Get the public IP address of the instance
+                    def publicIP = sh(script: """
+                        aws ec2 describe-instances \
+                            --instance-ids ${env.INSTANCE_ID} \
+                            --region ${AWS_REGION} \\
+                            --query 'Reservations[0].Instances[0].PublicIpAddress' \\
+                            --output text
+                    """, returnStdout: true).trim()
+
+                    env.PUBLIC_IP = publicIP
+                    echo "EC2 Instance Public IP: ${env.PUBLIC_IP}"
+                }
+            }
+        }
+
+        stage('Deploy Docker Image on EC2') {
+            steps {
+                script {
+                    // SSH into the EC2 instance and pull/run the Docker image
+                    sh """
+                        ssh -o StrictHostKeyChecking=no -i ~/.ssh/${KEY_NAME}.pem ec2-user@${env.PUBLIC_IP} << EOF
+                        # Install Docker
+                        sudo yum update -y
+                        sudo amazon-linux-extras install docker -y
+                        sudo service docker start
+                        sudo usermod -aG docker ec2-user
+                        newgrp docker
+
+                        # Pull and Run the Docker Image
+                        docker pull ${DOCKER_IMAGE}
+                        docker run -d -p 8080:8080 ${DOCKER_IMAGE}
+                        EOF
+                    """
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "✅ Build, Docker push, and EC2 deployment Successful!"
+        }
+        failure {
+            echo "❌ Build or Deployment Failed"
+        }
+    }
+}

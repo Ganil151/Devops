@@ -25,5 +25,5 @@ ami                         = "ami-00ca32bbc84273381"
 instance_type               = "t3.small"
 subnet_id                   = "sis_subnet"
 user_data                   = ""
-user_data_replace_on_change = false
+user_data_replace_on_change = true
 security_group_ids          = [""]

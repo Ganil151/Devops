@@ -9,29 +9,15 @@ sudo hostnamectl set-hostname "worker-server"
 # Install dependencies
 echo "Install dependencies"
 sudo yum update -y
-sudo yum upgrade -y
-
-# Change to Root User
-echo "Change to Root User"
-sudo su - 
-sudo dnf upgrade --releasever=2023.8.20250908 -y
 
 # Then install Java JDk
-sudo yum install -y java-21-amazon-corretto-devel
+sudo yum install -y java-21-amazon-corretto-devel git docker
 
 # Configure Java
 echo "Configure Java"
 JAVA_HOME="/usr/lib/jvm/java-21-amazon-corretto"
 echo "export JAVA_HOME=$JAVA_HOME" | sudo tee -a ~/.bashrc
 echo "export PATH=$PATH:$HOME/bin:$JAVA_HOME" | sudo tee -a ~/.bashrc
-
-# Install Git
-echo "Installing Git..."
-sudo yum install -y git
-
-# Install Docker
-echo "Installing Docker..."
-sudo yum install -y docker
 
 # Function to configure Docker
 echo "Configuring Docker..."

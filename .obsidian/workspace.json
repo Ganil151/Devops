@@ -11,24 +11,12 @@
             "id": "36574c9535b9eed3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/README.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "Docker/Lesson/docker_cheatsheet.pdf"
               },
-              "icon": "lucide-file",
-              "title": "README"
+              "icon": "lucide-file-text",
+              "title": "docker_cheatsheet"
             }
           }
         ]
@@ -201,10 +189,12 @@
   },
   "active": "36574c9535b9eed3",
   "lastOpenFiles": [
+    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/README.md",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD/APP/Jenkinsfile",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD/APP/sis_keys.pem",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (159).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (158).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (157).png",
-    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/README.md",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (154).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (155).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (153).png",
@@ -212,7 +202,6 @@
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (151)-1.png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (151).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (150).png",
-    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (149).png",
     "CICD/Youtube_Lessons/Dev/jenkins/README.md",
     "CICD/Sis_Lessons/Dev/SPMS_CICD/README.md",
     "CICD/Youtube_Lessons/Dev/terraform_server_s3_v1/README.md",
@@ -225,8 +214,6 @@
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/test/java/org/springframework/samples/petclinic/api/boundary/web/CircuitBreakerConfiguration.java",
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/java/org/springframework/samples/petclinic/api/boundary/web/ApiGatewayController.java",
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-visits-service/src/main/java/org/springframework/samples/petclinic/visits/web/VisitResource.java",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-customers-service/target/classes/org/springframework/samples/petclinic/customers/web/mapper/OwnerEntityMapper.class",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-visits-service/src/main/java/org/springframework/samples/petclinic/visits/model/VisitRepository.java",
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/scripts/chaos/README.md",
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/README.md",
     "CICD/Sis_Lessons/Successfully/Webhook/webhook_docker_v2/README.md",

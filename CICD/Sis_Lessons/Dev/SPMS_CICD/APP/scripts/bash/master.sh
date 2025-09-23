@@ -11,11 +11,6 @@ echo "Install dependencies"
 sudo yum update -y
 sudo yum upgrade -y
 
-# Change to Root User
-echo "Change to Root User"
-sudo su - 
-sudo dnf upgrade --releasever=2023.8.20250908 -y
-
 # Then install Java JDk
 sudo yum install -y java-21-amazon-corretto-devel
 
@@ -45,7 +40,7 @@ sudo systemctl status jenkins
 
 # Configure Java in Jenkins
 echo "Configure Java"
-sudo mkdir /var/lib/jenkins/.bash_profile
+sudo touch /var/lib/jenkins/.bash_profile
 sudo chown jenkins:jenkins /var/lib/jenkins/.bash_profile
 echo "export JAVA_HOME=$JAVA_HOME" | sudo tee -a /var/lib/jenkins/.bash_profile
 echo "export PATH=$PATH:$HOME/bin:$JAVA_HOME" | sudo tee -a /var/lib/jenkins/.bash_profile
