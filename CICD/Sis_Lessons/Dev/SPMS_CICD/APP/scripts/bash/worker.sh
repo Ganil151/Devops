@@ -24,13 +24,11 @@ echo "Configuring Docker..."
 sudo systemctl enable docker
 sudo systemctl start docker
 sudo usermod -aG docker ec2-user
-sudo usermod -aG docker jenkins
-sudo systemctl restart docker
 
 # Install yq
 echo "Installing yq..."
-sudo wget https://github.com/mikefarah/yq/releases/download/v4.34.1/yq_linux_amd64 -O /usr/local/bin/yq &&\
-sudo chmod +x /usr/bin/yq
+sudo wget https://github.com/mikefarah/yq/releases/download/v4.34.1/yq_linux_amd64 -O /usr/local/bin/yq && \
+sudo chmod +x /usr/local/bin/yq
 
 # Function to install Docker Compose
 echo "Installing Docker Compose..."
@@ -42,4 +40,7 @@ chmod +x ~/.docker/cli-plugins/docker-compose
 echo "Verifying Docker and Docker Compose installation..."
 docker --version
 docker compose version
-sudo systemctl restart docker
+
+# Increase /tmp file
+echo "tmpfs /tmp tmpfs defaults,size=1500M 0 0" | sudo tee -a /etc/fstab
+sudo mount -o remount /tmp

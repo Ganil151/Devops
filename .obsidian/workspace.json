@@ -11,12 +11,24 @@
             "id": "36574c9535b9eed3",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Docker/Lesson/docker_cheatsheet.pdf"
+                "file": "CICD/Notes/EBS volume.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "docker_cheatsheet"
+              "icon": "lucide-file",
+              "title": "EBS volume"
             }
           }
         ]
@@ -76,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.505859375,
+    "width": 200,
     "collapsed": true
   },
   "right": {
@@ -189,9 +201,20 @@
   },
   "active": "36574c9535b9eed3",
   "lastOpenFiles": [
+    "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/README.md",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/app/terraform.tfvars",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/modules/vpc/variable.tf",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/modules/vpc/output.tf",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/modules/vpc/main.tf",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/modules/sg/variable.tf",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/modules/sg/output.tf",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/modules/sg/main.tf",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/modules/keys/variable.tf",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/modules/keys/output.tf",
+    "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/modules/keys/main.tf",
+    "SSH/SSH-COPY-ID.md",
+    "CICD/Notes/EBS volume.md",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/README.md",
-    "CICD/Sis_Lessons/Dev/SPMS_CICD/APP/Jenkinsfile",
-    "CICD/Sis_Lessons/Dev/SPMS_CICD/APP/sis_keys.pem",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (159).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (158).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (157).png",
@@ -206,14 +229,6 @@
     "CICD/Sis_Lessons/Dev/SPMS_CICD/README.md",
     "CICD/Youtube_Lessons/Dev/terraform_server_s3_v1/README.md",
     "CICD/Sis_Lessons/Notes/SPMS Notes.md",
-    "CICD/Sis_Lessons/Working",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-customers-service/src/main/java/org/springframework/samples/petclinic/customers/web/mapper/OwnerEntityMapper.java",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-customers-service/src/main/java/org/springframework/samples/petclinic/customers/web/mapper/Mapper.java",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/java/org/springframework/samples/petclinic/api/boundary/web/FallbackController.java",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/test/java/org/springframework/samples/petclinic/api/boundary/web/ApiGatewayControllerTest.java",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/test/java/org/springframework/samples/petclinic/api/boundary/web/CircuitBreakerConfiguration.java",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-api-gateway/src/main/java/org/springframework/samples/petclinic/api/boundary/web/ApiGatewayController.java",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/spring-petclinic-visits-service/src/main/java/org/springframework/samples/petclinic/visits/web/VisitResource.java",
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/scripts/chaos/README.md",
     "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/README.md",
     "CICD/Sis_Lessons/Successfully/Webhook/webhook_docker_v2/README.md",
@@ -232,8 +247,6 @@
     "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/webhook_docker_v2/README.md",
     "CICD/Sis_Lessons/Ec2/spring-petclinic-microservices/Successfully/Webhook/webhook_docker_v1/README.md",
     "CICD/Sis_Lessons/spms_webhook_v1/README.md",
-    "CICD/AWS/s3/commands.md",
-    "Untitled.canvas",
-    "CICD/AWS/s3/variable.tf.md"
+    "Untitled.canvas"
   ]
 }

@@ -79,7 +79,7 @@ pipeline {
 
         stage('Docker Login') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'Dockerhub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     sh '''
                     echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
                     echo "Docker Login Successful..."
@@ -204,6 +204,8 @@ pipeline {
                           --output text)
 
                         echo "EC2 Instance is running at $PUBLIC_IP"
+
+                        # Save for next stage
                         echo $PUBLIC_IP > public_ip.txt
                         '''
                     }
@@ -222,61 +224,115 @@ pipeline {
             }
         }
 
-        stage('Configure EC2 & Pull Image') {
+        stage('Login into Ec2 Instance') {
             steps {
                 sshagent(['ec2-ssh-key']) {
-                    withCredentials([
-                        sshUserPrivateKey(credentialsId: 'ec2-ssh-key', keyFileVariable: 'SSH_KEY'),
-                        usernamePassword(credentialsId: 'Dockerhub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')
-                    ]) {
+                    withCredentials([sshUserPrivateKey(credentialsId: 'ec2-ssh-key', keyFileVariable: 'SSH_KEY')]) {
                         sh '''
                         PUBLIC_IP=$(cat public_ip.txt)
 
-                        echo "Copying docker-compose.yml to EC2..."
-                        scp -i $SSH_KEY -o StrictHostKeyChecking=no docker-compose.yml ec2-user@$PUBLIC_IP:/home/ec2-user/
-
-                        echo "SSH into $PUBLIC_IP to configure..."
-                        ssh -o StrictHostKeyChecking=no -i $SSH_KEY ec2-user@$PUBLIC_IP 
-                          set -e
-                          echo "Updating packages & installing Docker..."
-                          sudo yum update -y
-                          sudo yum install -y docker
-
-                          echo "Configure Docker..."
-                          sudo systemctl enable docker
-                          sudo systemctl start docker
-
-                          echo "Installing Docker Compose..."
-                          sudo mkdir -p /usr/libexec/docker/cli-plugins/
-                          sudo curl -SL https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-linux-x86_64 \
-                              -o /usr/libexec/docker/cli-plugins/docker-compose
-                          sudo chmod +x /usr/libexec/docker/cli-plugins/docker-compose
-
-                          echo "Login to Docker Hub..."
-                          echo "$DOCKER_PASS" | sudo docker login -u "$DOCKER_USER" --password-stdin
-
-                          echo "Starting application with Docker Compose..."
-                          cd /home/ec2-user
-                          sudo docker compose pull
-                          sudo docker compose up -d
-                        
+                        echo "Deploying to EC2: $PUBLIC_IP ..."
+                        ssh -o StrictHostKeyChecking=no -i $SSH_KEY ec2-user@$PUBLIC_IP \
+                          "echo 'Changing Hostname...' && \
+                          sudo hostnamectl set-hostname docker-server && \
+                          echo 'New hostname set to: $(hostname)'"
                         '''
                     }
                 }
             }
             post {
                 always {
-                    echo "======= EC2 Configure & Pull Image ======="
+                    echo "======== Login into Ec2 Instance ========"
                 }
                 success {
-                    echo "======= EC2 Configure & Pull Image ⭐Successfully⭐========"
+                    echo "======== Login into Ec2 Instance ⭐Successfully⭐========"
                 }
                 failure {
-                    echo "======= EC2 Configure & Pull Image failed❌========"
+                    echo "======== Login into Ec2 Instance failed❌========"
                 }
             }
         }
 
+        stage('Install Docker') {
+            steps {
+                sh '''
+                echo "Installing Dependencies"
+                sudo yum update -y
+
+                echo "Install Java & Docker"
+                sudo yum install -y docker
+
+                echo "Configure Docker"
+                sudo systemctl enable docker
+                sudo systemctl start docker
+                sudo usermod -aG docker ec2-user
+                '''
+            }
+            post {
+                always {
+                    echo "======== Install Dependencies ========"
+                }
+                success {
+                    echo "======== Install Dependencies ⭐Successfully⭐========"
+                }
+                failure {
+                    echo "======== Install Dependencies Instance failed❌========"
+                }
+            }
+        }
+
+        stage('Install Docker Compose'){
+            steps {
+                script{
+                    sh '''
+                    echo "Installing Docker Compose..."
+                    mkdir -p ~/.docker/cli-plugins/
+                    curl -SL https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-linux-x86_64 \
+                    -o ~/.docker/cli-plugins/docker-compose
+                    chmod +x ~/.docker/cli-plugins/docker-compose
+
+                    echo "Verifying Docker and Docker Compose installation..."
+                    docker --version
+                    docker compose version
+
+                    echo "Restarting Docker service..."
+                    sudo systemctl restart docker
+                    '''
+                }
+            }
+            post {
+                always {
+                    echo "======== Install Docker Compose ========"
+                }
+                success {
+                    echo "======== Install Docker Compose ⭐Successfully⭐========"
+                }
+                failure {
+                    echo "======== Install Docker Compose Instance failed❌========"
+                }
+            }
+        }
+        stage('Docker login into the New Instance') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    sh '''
+                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                    echo "Docker Login Successful..."
+                    '''
+                }
+            }
+            post {
+                always {
+                    echo "======== Docker login into the New Instance ========"
+                }
+                success {
+                    echo "======== Docker login into the New Instance ⭐Successfully⭐========"
+                }
+                failure {
+                    echo "======== Install Dependencies Instance failed❌fuck========"
+                }
+            }
+        }
     }
 
     post {

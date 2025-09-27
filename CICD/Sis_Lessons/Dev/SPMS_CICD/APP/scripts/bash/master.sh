@@ -9,10 +9,9 @@ sudo hostnamectl set-hostname "master-server"
 # Install dependencies
 echo "Install dependencies"
 sudo yum update -y
-sudo yum upgrade -y
 
 # Then install Java JDk
-sudo yum install -y java-21-amazon-corretto-devel
+sudo yum install -y java-21-amazon-corretto-devel git
 
 # Configure Java
 echo "Configure Java"
@@ -41,7 +40,7 @@ sudo systemctl status jenkins
 # Configure Java in Jenkins
 echo "Configure Java"
 sudo touch /var/lib/jenkins/.bash_profile
-sudo chown jenkins:jenkins /var/lib/jenkins/.bash_profile
+sudo chown -R jenkins:jenkins /var/lib/jenkins/.bash_profile
 echo "export JAVA_HOME=$JAVA_HOME" | sudo tee -a /var/lib/jenkins/.bash_profile
 echo "export PATH=$PATH:$HOME/bin:$JAVA_HOME" | sudo tee -a /var/lib/jenkins/.bash_profile
 source /var/lib/jenkins/.bash_profile
