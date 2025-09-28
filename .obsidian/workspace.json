@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CICD/Notes/EBS volume.md",
+                "file": "CICD/Notes/Ansible Project To Monitor VMs Health Steps Doc.docx.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "EBS volume"
+              "title": "Ansible Project To Monitor VMs Health Steps Doc.docx"
             }
           }
         ]
@@ -201,21 +201,22 @@
   },
   "active": "36574c9535b9eed3",
   "lastOpenFiles": [
+    "Script-Files/Keys/copy_keys.sh",
+    "Script-Files/Keys",
+    "Script-Files/Aws/tagging_ec2.sh",
+    "Script-Files/Aws/aws_cli.sh",
+    "Script-Files/Aws",
+    "Script-Files/Jenkins/jenkins-installation-aws-ubuntu-instance.txt",
+    "Script-Files/Jenkins/jenkins_setup.sh",
+    "Script-Files/Jenkins/Jenkinsfile1",
+    "Script-Files/Jenkins/Jenkinsfile",
+    "Script-Files/Jenkins",
+    "CICD/Notes/EBS volume.md",
     "CICD/Sis_Lessons/Successfully/SPMS_CICD/Image/Screenshot (195).png",
     "CICD/Sis_Lessons/Successfully/SPMS_CICD/Image",
-    "CICD/Sis_Lessons/Successfully/SPMS_CICD/APP/Jenkinsfile",
-    "CICD/Sis_Lessons/Successfully/SPMS_CICD/APP/tfplan",
-    "CICD/Sis_Lessons/Successfully/SPMS_CICD/APP/terraform.tfstate",
-    "CICD/Sis_Lessons/Successfully/SPMS_CICD/APP/scripts/bash/worker.sh",
-    "CICD/Sis_Lessons/Successfully/SPMS_CICD/APP/scripts/bash/master.sh",
-    "CICD/Sis_Lessons/Successfully/SPMS_CICD/APP/scripts/build",
-    "CICD/Sis_Lessons/Successfully/SPMS_CICD/APP/scripts/bash",
-    "CICD/Sis_Lessons/Successfully/SPMS_CICD/APP/variable.tf",
-    "CICD/Sis_Lessons/Successfully/SPMS_CICD/APP/terraform.tfvars",
     "CICD/Sis_Lessons/Successfully/SPMS_CICD/README.md",
     "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/README.md",
     "SSH/SSH-COPY-ID.md",
-    "CICD/Notes/EBS volume.md",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/README.md",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (159).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (158).png",
@@ -226,7 +227,6 @@
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (152).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (151)-1.png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (151).png",
-    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (150).png",
     "CICD/Youtube_Lessons/Dev/jenkins/README.md",
     "CICD/Sis_Lessons/Dev/SPMS_CICD/README.md",
     "CICD/Youtube_Lessons/Dev/terraform_server_s3_v1/README.md",
