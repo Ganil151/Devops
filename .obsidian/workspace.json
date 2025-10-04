@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CICD/Notes/Agil-Methodology/Agil-Methodology.md",
+                "file": "sonarQube/SonarQube in Docker 🚀.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Agil-Methodology"
+              "title": "SonarQube in Docker 🚀"
             }
           }
         ]
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -201,6 +200,13 @@
   },
   "active": "36574c9535b9eed3",
   "lastOpenFiles": [
+    "Terraform/Notes/Number of Ec2 Instances.md",
+    "sonarQube/SonarQube in Docker 🚀.md",
+    "sonarQube",
+    "CICD/MySql/Commands.md",
+    "Terraform/Notes",
+    "CICD/Notes/Agil-Methodology/Agil-Methodology.md",
+    "CICD/MySql",
     "CICD/Notes/Agil-Methodology/Images/Agile-Development-Stages.png",
     "CICD/Notes/Agil-Methodology/Images/Unconfirmed 230416.crdownload",
     "CICD/Notes/Agil-Methodology/Images/12-Principles-of-Agile-Methodology.webp",
@@ -208,16 +214,12 @@
     "CICD/Notes/Agil-Methodology/Images",
     "CICD/Notes/Agil-Methodology/New folder",
     "CICD/Notes/Untitled.md",
-    "CICD/Notes/Agil-Methodology/Agil-Methodology.md",
     "CICD/Notes/Methodology",
     "CICD/Notes/Agil-Methodology/Agil",
     "CICD/Notes/Agil-Methodology",
     "CICD/Youtube_Lessons/Dev/Netflix-Clone-CICD-Pipeline/README.md",
-    "CICD/Youtube_Lessons/Dev/test.sh",
     "CICD/Notes/Ansible Project To Monitor VMs Health Steps Doc.docx.md",
     "CICD/Youtube_Lessons/Dev/README.md",
-    "CICD/Youtube_Lessons/Dev/Netflix-Clone-CICD-Pipeline",
-    "Script-Files/Keys/copy_keys.sh",
     "CICD/Notes/EBS volume.md",
     "CICD/Sis_Lessons/Successfully/SPMS_CICD/Image/Screenshot (195).png",
     "CICD/Sis_Lessons/Successfully/SPMS_CICD/README.md",
@@ -231,7 +233,6 @@
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (155).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (153).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (152).png",
-    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (151)-1.png",
     "CICD/Youtube_Lessons/Dev/jenkins/README.md",
     "CICD/Sis_Lessons/Dev/SPMS_CICD/README.md",
     "CICD/Youtube_Lessons/Dev/terraform_server_s3_v1/README.md",
@@ -245,8 +246,6 @@
     "CICD/Sis_Lessons/Successfully/Ec2/spms_server_v3/README.md",
     "CICD/Sis_Lessons/Successfully/Ec2/spms_server_v1/README.md",
     "CICD/Sis_Lessons/Successfully/Ec2/pms_instance_v3/README.md",
-    "CICD/Sis_Lessons/Successfully/Ansible/spms_ansible_v1/README.md",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/README.md",
     "Untitled.canvas"
   ]
 }
