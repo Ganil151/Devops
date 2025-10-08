@@ -4,13 +4,13 @@ set -e
 
 # Change Host Name
 echo "Change Host Name"
-sudo hostnamectl set-hostname "master-server"
+sudo hostnamectl set-hostname "jenkins-server"
 
-# Install dependencies
-echo "Install dependencies"
+# Install dependencies and update system
+echo "Install dependencies and update system"
 sudo yum update -y
+sudo yum install -y wget git
 
-# Then install Java JDk
 sudo yum install -y java-21-amazon-corretto-devel git
 
 # Configure Java
@@ -20,21 +20,17 @@ echo "export JAVA_HOME=$JAVA_HOME" | sudo tee -a ~/.bashrc
 echo "export PATH=$PATH:$HOME/bin:$JAVA_HOME" | sudo tee -a ~/.bashrc
 
 
-# Install Jenkins 
-echo "Install Jenkins"
+# Install Jenkins
+echo "Installing Jenkins"
+
+# Add Jenkins repo key and source list
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
-
-#Then Import Key:
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-sudo curl -L -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
-
-# Now Install Jenkins
-sudo yum install -y jenkins
-
-# Configure Jenkins
-sudo systemctl enable jenkins
-sudo systemctl start jenkins
+sudo yum upgrade -y
+# Add required dependencies for the jenkins package
+sudo yum install jenkins -y
+sudo systemctl daemon-reload
 
 # Configure Java in Jenkins
 echo "Configure Java"
@@ -42,7 +38,12 @@ sudo touch /var/lib/jenkins/.bash_profile
 sudo chown -R jenkins:jenkins /var/lib/jenkins/.bash_profile
 echo "export JAVA_HOME=$JAVA_HOME" | sudo tee -a /var/lib/jenkins/.bash_profile
 echo "export PATH=$PATH:$HOME/bin:$JAVA_HOME" | sudo tee -a /var/lib/jenkins/.bash_profile
-source /var/lib/jenkins/.bash_profile
+
+
+# Configure Jenkins
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+
 
 # Configure SSH for Jenkins user
 echo "Generating SSH key for Jenkins..."
@@ -59,6 +60,8 @@ sudo chmod 644 /var/lib/jenkins/.ssh/id_rsa.pub
 sudo touch /var/lib/jenkins/.ssh/known_hosts
 sudo chmod 644 /var/lib/jenkins/.ssh/known_hosts
 
-# Increase /tmp file
+# Increase /tmp size and make persistent
 echo "tmpfs /tmp tmpfs defaults,size=1500M 0 0" | sudo tee -a /etc/fstab
 sudo mount -o remount /tmp
+
+echo "Script execution complete. Jenkins should be running."

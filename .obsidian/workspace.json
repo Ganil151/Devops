@@ -30,8 +30,45 @@
               "icon": "lucide-file",
               "title": "SonarQube in Docker 🚀"
             }
+          },
+          {
+            "id": "62ac3d756ebaa5b2",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.14"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.14"
+            }
+          },
+          {
+            "id": "84da1f1873d4d8df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MySql/Temporary MySql Password.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Temporary MySql Password"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -88,7 +125,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -198,25 +236,31 @@
       "bases:Create new base": false
     }
   },
-  "active": "36574c9535b9eed3",
+  "active": "84da1f1873d4d8df",
   "lastOpenFiles": [
+    "Untitled.md",
+    "MySql/Temporary MySql Password.md",
+    "MySql",
+    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/master_keys.pem",
+    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/scripts/build/mysql.sh",
+    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/terraform.tfstate",
+    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/scripts/build/sonerQ.sh",
+    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/scripts/build/jenkins.sh",
+    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/scripts/build/docker.sh",
+    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/scripts/build",
+    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/variable.tf",
+    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/tfplan",
+    "CICD/Sis_Lessons/Dev/MySql_CICD/IMAGES/Screenshot (211).png",
+    "CICD/Sis_Lessons/Dev/MySql_CICD/IMAGES/Screenshot (210).png",
+    "CICD/Sis_Lessons/Dev/MySql_CICD/README.md",
+    "sonarQube/dockerContainer.md",
     "Terraform/Notes/Number of Ec2 Instances.md",
     "sonarQube/SonarQube in Docker 🚀.md",
-    "sonarQube",
     "CICD/MySql/Commands.md",
-    "Terraform/Notes",
     "CICD/Notes/Agil-Methodology/Agil-Methodology.md",
-    "CICD/MySql",
     "CICD/Notes/Agil-Methodology/Images/Agile-Development-Stages.png",
-    "CICD/Notes/Agil-Methodology/Images/Unconfirmed 230416.crdownload",
     "CICD/Notes/Agil-Methodology/Images/12-Principles-of-Agile-Methodology.webp",
-    "CICD/Notes/Agil-Methodology/Images/Unconfirmed 560676.crdownload",
-    "CICD/Notes/Agil-Methodology/Images",
-    "CICD/Notes/Agil-Methodology/New folder",
     "CICD/Notes/Untitled.md",
-    "CICD/Notes/Methodology",
-    "CICD/Notes/Agil-Methodology/Agil",
-    "CICD/Notes/Agil-Methodology",
     "CICD/Youtube_Lessons/Dev/Netflix-Clone-CICD-Pipeline/README.md",
     "CICD/Notes/Ansible Project To Monitor VMs Health Steps Doc.docx.md",
     "CICD/Youtube_Lessons/Dev/README.md",
@@ -231,8 +275,6 @@
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (157).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (154).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (155).png",
-    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (153).png",
-    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (152).png",
     "CICD/Youtube_Lessons/Dev/jenkins/README.md",
     "CICD/Sis_Lessons/Dev/SPMS_CICD/README.md",
     "CICD/Youtube_Lessons/Dev/terraform_server_s3_v1/README.md",
@@ -242,10 +284,6 @@
     "CICD/Sis_Lessons/Successfully/Webhook/webhook_docker_v2/README.md",
     "CICD/Sis_Lessons/Successfully/Webhook/spms_webhook_v1/README.md",
     "CICD/Sis_Lessons/Successfully/Webhook/webhook_docker_v1/README.md",
-    "CICD/Sis_Lessons/Successfully/Ec2/spms_server_v1_bak/README.md",
-    "CICD/Sis_Lessons/Successfully/Ec2/spms_server_v3/README.md",
-    "CICD/Sis_Lessons/Successfully/Ec2/spms_server_v1/README.md",
-    "CICD/Sis_Lessons/Successfully/Ec2/pms_instance_v3/README.md",
     "Untitled.canvas"
   ]
 }
