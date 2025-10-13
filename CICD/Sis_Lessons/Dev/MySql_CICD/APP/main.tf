@@ -43,42 +43,12 @@ module "jenkins_instance" {
 
 }
 
-# SonarQube Instance
-module "sonarqube_instance" {
+# Worker Instance
+module "worker_instance" {
   source                      = "../MODULES/EC2"
   ami                         = var.ami
   key_name                    = var.key_name
   project_name_1              = var.project_name_2
-  instance_type               = var.instance_type
-  subnet_id                   = element(module.vpc.public_subnet_ids, 0)
-  user_data                   = file("${path.module}/scripts/build/sonerQ.sh")
-  user_data_replace_on_change = false
-  security_group_ids          = [module.master_sg.master_sg]
-  environment                 = var.environment
-}
-
-
-# MySQL Instance
-module "mysql_instance" {
-  source                      = "../MODULES/EC2"
-  ami                         = var.ami
-  key_name                    = var.key_name
-  project_name_1              = var.project_name_3
-  instance_type               = var.instance_type
-  subnet_id                   = element(module.vpc.public_subnet_ids, 0)
-  user_data                   = file("${path.module}/scripts/build/mysql.sh")
-  user_data_replace_on_change = false
-  security_group_ids          = [module.master_sg.master_sg]
-  environment                 = var.environment
-
-}
-
-# Worker Instance
-module "Worker_instance" {
-  source                      = "../MODULES/EC2"
-  ami                         = var.ami
-  key_name                    = var.key_name
-  project_name_1              = var.project_name_4
   instance_type               = var.instance_type
   subnet_id                   = element(module.vpc.public_subnet_ids, 0)
   user_data                   = file("${path.module}/scripts/build/docker.sh")
@@ -87,3 +57,10 @@ module "Worker_instance" {
   environment                 = var.environment
 
 }
+
+
+
+
+
+
+

@@ -162,41 +162,57 @@ pipeline {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-credentials']]) {
                     sh '''
                     echo "Checking if EC2 Instance already exists..."
+                    # Debug: Print the value of EC2_INSTANCE_NAME
+                    echo "DEBUG: EC2_INSTANCE_NAME is set to: '${EC2_INSTANCE_NAME}'"
+                    
+                    # Check if EC2_INSTANCE_NAME is empty or contains only whitespace
+                    if [ -z "${EC2_INSTANCE_NAME}" ] || [ -z "$(echo "${EC2_INSTANCE_NAME}" | sed 's/[[:space:]]*//g')" ]; then
+                    echo "ERROR: EC2_INSTANCE_NAME parameter is empty or contains only spaces."
+                    exit 1
+                    fi
+
                     INSTANCE_ID=$(aws ec2 describe-instances \
-                      --filters "Name=tag:Name,Values=${EC2_INSTANCE_NAME}" "Name=instance-state-name,Values=running" \
-                      --query "Reservations[0].Instances[0].InstanceId" \
-                      --output text || true)
+                    --filters "Name=tag:Name,Values=${EC2_INSTANCE_NAME}" "Name=instance-state-name,Values=running" \
+                    --query "Reservations[0].Instances[0].InstanceId" \
+                    --output text 2>/dev/null || echo "None")
 
                     if [ "$INSTANCE_ID" == "None" ] || [ -z "$INSTANCE_ID" ]; then
-                      echo "No existing instance found. Launching a new EC2 instance..."
-                      INSTANCE_ID=$(aws ec2 run-instances \
+                    echo "No existing instance found with name '${EC2_INSTANCE_NAME}'. Launching a new EC2 instance..."
+                    INSTANCE_ID=$(aws ec2 run-instances \
                         --image-id ami-00ca32bbc84273381 \
                         --instance-type t3.small \
-                        --key-name sis_keys \
-                        --security-group-ids sg-027d23ab6b6135bfc \
-                        --subnet-id subnet-07d92cb4846fd94a3 \
+                        --key-name master_keys \
+                        --security-group-ids sg-01721a3a3b738749c \
+                        --subnet-id subnet-04351b31e254306f1 \
                         --associate-public-ip-address \
                         --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${EC2_INSTANCE_NAME}}]" \
                         --query "Instances[0].InstanceId" \
                         --output text)
-                      echo "Launched new EC2 Instance: $INSTANCE_ID"
+                    echo "Launched new EC2 Instance: $INSTANCE_ID"
                     else
-                      echo "Using existing EC2 Instance: $INSTANCE_ID"
+                    echo "Using existing EC2 Instance: $INSTANCE_ID with name '${EC2_INSTANCE_NAME}'"
                     fi
 
+                    if [ -z "$INSTANCE_ID" ] || [ "$INSTANCE_ID" = "None" ]; then
+                    echo "ERROR: Could not determine or launch an EC2 Instance ID."
+                    exit 1
+                    fi
+
+                    echo "Waiting for instance $INSTANCE_ID to be running..."
                     aws ec2 wait instance-running --instance-ids $INSTANCE_ID
+                    echo "Instance $INSTANCE_ID is now running."
 
                     PUBLIC_IP=$(aws ec2 describe-instances \
-                      --instance-ids $INSTANCE_ID \
-                      --query "Reservations[0].Instances[0].PublicIpAddress" \
-                      --output text)
+                    --instance-ids $INSTANCE_ID \
+                    --query "Reservations[0].Instances[0].PublicIpAddress" \
+                    --output text)
 
                     if [ -z "$PUBLIC_IP" ] || [ "$PUBLIC_IP" = "None" ]; then
-                      echo "ERROR: Could not retrieve Public IP"
-                      exit 1
+                    echo "ERROR: Could not retrieve Public IP for instance $INSTANCE_ID"
+                    exit 1
                     fi
 
-                    echo "EC2 Instance is running at $PUBLIC_IP"
+                    echo "EC2 Instance $INSTANCE_ID is running at $PUBLIC_IP"
                     echo $PUBLIC_IP > public_ip.txt
                     '''
                 }
@@ -210,7 +226,7 @@ pipeline {
 
         stage('Configure & Deploy on EC2') {
             steps {
-                sshagent(['sis_keys']) {
+                sshagent(['master_keys']) {
                     withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                         sh '''
                         set -e
@@ -284,117 +300,32 @@ pipeline {
     }
 }
 
-// MySql Jenkinsfile
-pipeline {
-    agent { label params.NODE_LABEL }
 
-    parameters {
-        string(name: 'NODE_LABEL', defaultValue: 'mysql-node', description: 'Label of the Jenkins worker node')
-        string(name: 'EC2_PUBLIC_IP', defaultValue: '18.209.159.148', description: 'Public IP of the EC2 instance')
-        password(name: 'MYSQL_ROOT_PASSWORD', defaultValue: 'Mysql$3773!', description: 'Root password for MySQL')
-        string(name: 'MYSQL_PETCLINIC_DB_NAME', defaultValue: 'petclinic', description: 'PetClinic DB name')
-        string(name: 'MYSQL_PETCLINIC_USER', defaultValue: 'petclinic_user', description: 'PetClinic DB username')
-        password(name: 'MYSQL_PETCLINIC_PASSWORD', defaultValue: 'Petclinic$3773!', description: 'PetClinic DB password')
-    }
 
-    stages {
-        stage('Checkout Spring PetClinic Code') {
-            steps {
-                git branch: 'main',
-                    credentialsId: 'github-credentials',
-                    url: 'https://github.com/Ganil151/spring-petclinic-microservices.git'
-            }
-            post {
-                always { echo "======== Checkout Stage Completed ========" }
-            }
-        }
 
-        stage('Install & Configure MySQL on EC2') {
-            steps {
-                sshagent(['master_keys']) {
-                    sh """
-                        set -e
-                        EC2_PUBLIC_IP="${params.EC2_PUBLIC_IP}"
 
-                        if [ -z "\$EC2_PUBLIC_IP" ]; then
-                            echo "ERROR: EC2_PUBLIC_IP parameter not set!"
-                            exit 1
-                        fi
 
-                        echo "Connecting to EC2 instance at \$EC2_PUBLIC_IP..."
 
-                        ssh -o StrictHostKeyChecking=no ec2-user@\$EC2_PUBLIC_IP 'bash -s' <<'EOF'
-                        set -e
 
-                        echo "Setting hostname..."
-                        sudo hostnamectl set-hostname mysql-server || true
 
-                        echo "Checking if MySQL is already installed..."
-                        if command -v mysql >/dev/null 2>&1; then
-                            echo "MySQL is already installed. Skipping installation."
-                            sudo systemctl status mysqld || sudo systemctl start mysqld
-                            exit 0
-                        fi
 
-                        echo "Installing prerequisites..."
-                        sudo yum update -y
-                        sudo yum install -y wget git
 
-                        echo "Installing MySQL 8.0..."
-                        sudo wget https://dev.mysql.com/get/mysql80-community-release-el9-1.noarch.rpm -O /tmp/mysql.rpm
-                        sudo yum localinstall -y /tmp/mysql.rpm
-                        sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023
-                        sudo yum install -y mysql-community-client mysql-community-server
 
-                        echo "Starting MySQL service..."
-                        sudo systemctl enable mysqld
-                        sudo systemctl start mysqld
 
-                        echo "Extracting temporary root password..."
-                        TEMP_PASSWORD=\$(sudo grep 'temporary password' /var/log/mysqld.log | awk '{print \$NF}')
-                        if [ -z "\$TEMP_PASSWORD" ]; then
-                            echo "No temporary password found — MySQL may already be initialized."
-                            TEMP_PASSWORD="invalid"
-                        fi
 
-                        echo "Configuring MySQL for PetClinic..."
-                        MYSQL_ROOT_PASSWORD="${params.MYSQL_ROOT_PASSWORD}"
-                        MYSQL_PETCLINIC_DB_NAME="${params.MYSQL_PETCLINIC_DB_NAME}"
-                        MYSQL_PETCLINIC_USER="${params.MYSQL_PETCLINIC_USER}"
-                        MYSQL_PETCLINIC_PASSWORD="${params.MYSQL_PETCLINIC_PASSWORD}"
 
-                        cat <<SQL | sudo mysql --connect-expired-password -uroot -p"\$TEMP_PASSWORD" || true
-                        ALTER USER 'root'@'localhost' IDENTIFIED BY '\$MYSQL_ROOT_PASSWORD';
-                        CREATE DATABASE IF NOT EXISTS \$MYSQL_PETCLINIC_DB_NAME;
-                        CREATE USER IF NOT EXISTS '\$MYSQL_PETCLINIC_USER'@'%' IDENTIFIED BY '\$MYSQL_PETCLINIC_PASSWORD';
-                        GRANT ALL PRIVILEGES ON \$MYSQL_PETCLINIC_DB_NAME.* TO '\$MYSQL_PETCLINIC_USER'@'%';
-                        FLUSH PRIVILEGES;
-                        SQL
 
-                        echo "🔁 Restarting MySQL service..."
-                        sudo systemctl restart mysqld
 
-                        echo "✅ MySQL installation and configuration completed successfully!"
-                    EOF
-                    """
-                }
-            }
-            post {
-                always { echo "======= Install & Configure MySQL Stage Completed =======" }
-                success { echo "✅ MySQL configured successfully on EC2." }
-                failure { echo "❌ MySQL installation failed." }
-            }
-        }
-    }
 
-    post {
-        always {
-            script {
-                if (params.EC2_PUBLIC_IP) {
-                    echo "ℹ️ MySQL configured on server: ${params.EC2_PUBLIC_IP}"
-                }
-            }
-        }
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
 

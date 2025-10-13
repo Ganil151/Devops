@@ -9,8 +9,8 @@ sudo hostnamectl set-hostname "jenkins-server"
 # Install dependencies and update system
 echo "Install dependencies and update system"
 sudo yum update -y
-sudo yum install -y wget git
-
+# Install Java
+echo "Installing Java..."
 sudo yum install -y java-21-amazon-corretto-devel git
 
 # Configure Java
@@ -43,6 +43,7 @@ echo "export PATH=$PATH:$HOME/bin:$JAVA_HOME" | sudo tee -a /var/lib/jenkins/.ba
 # Configure Jenkins
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
+sudo yum update -y
 
 
 # Configure SSH for Jenkins user
@@ -60,8 +61,19 @@ sudo chmod 644 /var/lib/jenkins/.ssh/id_rsa.pub
 sudo touch /var/lib/jenkins/.ssh/known_hosts
 sudo chmod 644 /var/lib/jenkins/.ssh/known_hosts
 
-# Increase /tmp size and make persistent
-echo "tmpfs /tmp tmpfs defaults,size=1500M 0 0" | sudo tee -a /etc/fstab
-sudo mount -o remount /tmp
+# Increase /tmp file size persistently and remount
+echo "Increasing /tmp file size to 1.5GB persistently..."
+if ! grep -q "/tmp tmpfs" /etc/fstab; then
+    echo "tmpfs /tmp tmpfs defaults,size=1500M 0 0" | sudo tee -a /etc/fstab
+fi
+
+echo "Remounting /tmp with the new size..."
+if sudo mount -o remount /tmp; then
+    echo "/tmp remounted successfully."
+else
+    echo "WARNING: Failed to remount /tmp immediately. A reboot is required for the change to take effect."
+    exit 0 
+fi
+
 
 echo "Script execution complete. Jenkins should be running."

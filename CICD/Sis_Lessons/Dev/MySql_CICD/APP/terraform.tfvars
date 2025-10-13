@@ -1,8 +1,6 @@
 # Project Names
 project_name_1 = "jenkins-server"
-project_name_2 = "sonarQube-server"
-project_name_3 = "mysql-server"
-project_name_4 = "worker-server"
+project_name_2 = "worker-server"
 
 
 # Environment
