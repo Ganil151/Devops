@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -ea
 
 # Change Host Name
 echo "Changing Host Name..."
@@ -9,7 +9,14 @@ sudo hostnamectl set-hostname "mysql-server"
 # Load Dependencies
 echo "Updating system and installing dependencies..."
 sudo yum update -y
-sudo yum install -y wget git
+sudo yum install -y java-21-amazon-corretto-devel wget git
+
+# Configure Java
+echo "Configure Java"
+JAVA_HOME="/usr/lib/jvm/java-21-amazon-corretto"
+echo "export JAVA_HOME=$JAVA_HOME" | sudo tee -a ~/.bashrc
+echo "export PATH=$PATH:$HOME/bin:$JAVA_HOME" | sudo tee -a ~/.bashrc
+
 
 # Install MySQL 8.0
 echo "Downloading MySQL 8.0 repository..."
@@ -38,7 +45,7 @@ if ! sudo grep -q 'temporary password' /var/log/mysqld.log; then
 fi
 
 TEMP_PASSWORD=$(sudo grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}')
-NEW_PASSWORD='mysql$3773'
+NEW_PASSWORD='Mysql$9999!'
 
 mysql --connect-expired-password -uroot -p"$TEMP_PASSWORD" <<EOF
 ALTER USER 'root'@'localhost' IDENTIFIED BY '$NEW_PASSWORD';

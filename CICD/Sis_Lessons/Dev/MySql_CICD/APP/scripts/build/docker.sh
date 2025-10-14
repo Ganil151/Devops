@@ -4,7 +4,7 @@ set -e
 
 # Change Host Name
 echo "Changing Host Name..."
-sudo hostnamectl set-hostname "worker-server"
+sudo hostnamectl set-hostname "docker-server"
 
 # Install dependencies and update system
 echo "Installing dependencies and updating system..."
