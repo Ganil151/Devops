@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MySql/Temporary MySql Password.md",
+                "file": "Kubernetes/Commands.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -64,7 +64,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Temporary MySql Password"
+              "title": "Commands"
             }
           }
         ],
@@ -238,18 +238,23 @@
   },
   "active": "84da1f1873d4d8df",
   "lastOpenFiles": [
-    "Untitled.md",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS/terraform",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS/README.md",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS/02-example",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS/01-example",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/terraform",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/README.md",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/02-example",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/01-example",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/02-example",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/01-example",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/terraform",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/README.md",
+    "Kubernetes/Commands.md",
     "MySql/Temporary MySql Password.md",
-    "MySql",
-    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/master_keys.pem",
-    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/scripts/build/mysql.sh",
-    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/terraform.tfstate",
-    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/scripts/build/sonerQ.sh",
-    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/scripts/build/jenkins.sh",
-    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/scripts/build/docker.sh",
-    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/scripts/build",
-    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/variable.tf",
-    "CICD/Sis_Lessons/Dev/MySql_CICD/APP/tfplan",
+    "Untitled.md",
     "CICD/Sis_Lessons/Dev/MySql_CICD/IMAGES/Screenshot (211).png",
     "CICD/Sis_Lessons/Dev/MySql_CICD/IMAGES/Screenshot (210).png",
     "CICD/Sis_Lessons/Dev/MySql_CICD/README.md",
@@ -279,11 +284,6 @@
     "CICD/Sis_Lessons/Dev/SPMS_CICD/README.md",
     "CICD/Youtube_Lessons/Dev/terraform_server_s3_v1/README.md",
     "CICD/Sis_Lessons/Notes/SPMS Notes.md",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/scripts/chaos/README.md",
-    "CICD/Sis_Lessons/Successfully/Ansible/auto_ec2_ansible/spring-petclinic-microservices/README.md",
-    "CICD/Sis_Lessons/Successfully/Webhook/webhook_docker_v2/README.md",
-    "CICD/Sis_Lessons/Successfully/Webhook/spms_webhook_v1/README.md",
-    "CICD/Sis_Lessons/Successfully/Webhook/webhook_docker_v1/README.md",
     "Untitled.canvas"
   ]
 }
