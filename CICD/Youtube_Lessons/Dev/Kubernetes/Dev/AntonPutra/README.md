@@ -1,3 +1,5 @@
+(Anton_Putra)[https://youtu.be/aRXg75S5DWA?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l]
+
 ### Notes 
 Amazon EKS Components
 Clusters
