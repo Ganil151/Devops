@@ -1,1 +1,16 @@
-[https://youtu.be/aRXg75S5DWA?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l&t=494]
+resource "aws_eip" "nat" {
+  domain = "vpc"
+
+  tags = {
+    Name = "${local.env}-nat"
+  }
+}
+
+resource "aws_nat_gateway" "nat" {
+  allocation_id = aws_eip.nat.id
+  subnet_id    = aws_subnet.public.id
+
+  tags = {
+    Name = "${local.env}-nat"
+  }
+}
