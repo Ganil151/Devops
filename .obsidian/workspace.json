@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/Commands.md",
+                "file": "Kubernetes/Youtube_Lessons/Anton_Putra/Notes.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -64,7 +64,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Commands"
+              "title": "Notes"
             }
           }
         ],
@@ -238,21 +238,22 @@
   },
   "active": "84da1f1873d4d8df",
   "lastOpenFiles": [
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/5-nat.tf",
+    "Kubernetes/Youtube_Lessons/Anton_Putra/eks-ug.pdf",
+    "Kubernetes/Youtube_Lessons/Anton_Putra/Unconfirmed 686120.crdownload",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/4-subnets.tf",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/3-igw.tf",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/1-providers.tf",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/2-vpc.tf",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/1-providers",
+    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/01-providers",
+    "Kubernetes/Commands.md",
+    "Kubernetes/Youtube_Lessons/Anton_Putra/Notes.md",
+    "Kubernetes/Youtube_Lessons/Anton_Putra",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS/terraform",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS/README.md",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS/02-example",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS/01-example",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/terraform",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/README.md",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/02-example",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/01-example",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/02-example",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/01-example",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/terraform",
     "CICD/Youtube_Lessons/Dev/Kubernetes/README.md",
-    "Kubernetes/Commands.md",
     "MySql/Temporary MySql Password.md",
     "Untitled.md",
     "CICD/Sis_Lessons/Dev/MySql_CICD/IMAGES/Screenshot (211).png",
@@ -283,7 +284,6 @@
     "CICD/Youtube_Lessons/Dev/jenkins/README.md",
     "CICD/Sis_Lessons/Dev/SPMS_CICD/README.md",
     "CICD/Youtube_Lessons/Dev/terraform_server_s3_v1/README.md",
-    "CICD/Sis_Lessons/Notes/SPMS Notes.md",
     "Untitled.canvas"
   ]
 }
