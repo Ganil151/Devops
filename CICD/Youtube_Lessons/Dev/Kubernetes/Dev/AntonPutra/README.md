@@ -722,3 +722,470 @@ Test the Meterics Server
 ```bash
 kubectl top pods -n kube-system
 ```
+
+### Create 3-Example folder
+This YAML configuration defines a Kubernetes Deployment 
+object, which is used to manage the deployment of an 
+application (in this case, my-app) in a Kubernetes cluster.
+
+In the 3-example/0-namespace.yaml
+```yaml
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: 3-example 
+```
+3-example/1-deployment.yaml:
+
+```yaml
+---
+apiVersion: app/v1  # The API version for the Kubernetes Deployment resource.
+kind: Deployment     # Specifies that this is a Deployment resource.
+metadata:
+  name: my-app       # The name of the Deployment (used to identify it in the cluster).
+  namespace: 3-example  # The namespace where this Deployment will be created.
+
+spec:
+  selector:
+    matchLabels:
+      app: my-app    # Defines how the Deployment identifies the Pods it manages.
+                     # Pods with the label `app: my-app` are selected by this Deployment.
+
+  template:          # Describes the Pod template used to create new Pods.
+    metadata:
+      labels:
+        app: my-app  # Labels applied to the Pods created by this Deployment.
+                     # These labels must match the `selector.matchLabels`.
+
+    spec:            # The Pod specification.
+      containers:    # List of containers to run in the Pod.
+        - name: my-app  # Name of the container.
+          image: ganil151/my-app:v1.0.0  # Docker image to use for the container.
+          ports:
+            - containerPort: 8080  # Port on which the container listens for traffic.
+          resources:               # Resource limits and requests for the container.
+            limits:                # Maximum resources the container can use.
+              cpu: 100m            # CPU limit (100 millicores = 0.1 CPU core).
+              memory: 256Mi        # Memory limit (256 MiB).
+            requests:              # Minimum resources guaranteed to the container.
+              cpu: 100m            # CPU request (100 millicores = 0.1 CPU core).
+              memory: 256Mi        # Memory request (256 MiB).
+```
+
+In 3-example/2-service.yaml:
+```bash
+---
+apiVersion: v1  # The API version for the Kubernetes Service resource.
+kind: Service    # Specifies that this is a Service resource.
+metadata:
+  name: myapp    # The name of the Service (used to identify it in the cluster).
+  namespace: 3-example  # The namespace where this Service will be created.
+
+spec:
+  ports:         # Defines the ports exposed by the Service.
+    - port: 8080  # The port on which the Service listens for incoming traffic.
+      targetPort: http  # The port on the Pod(s) to which the traffic will be forwarded.
+                        # "http" is a named port defined in the Pod specification.
+
+  selector:      # Specifies how the Service identifies the Pods it routes traffic to.
+    app: myapp   # The Service routes traffic to Pods with the label `app: myapp`.
+```
+
+In the 3-example/3-hpa.yaml
+```yaml
+---
+apiVersion: autoscaling/v2  # The API version for the HorizontalPodAutoscaler resource.
+kind: HorizontalPodAutoscaler  # Specifies that this is an HPA resource.
+meta
+  name: myapp  # The name of the HPA (used to identify it in the cluster).
+  namespace: 3-example  # The namespace where this HPA will be created.
+
+spec:
+  scaleTargetRef:  # Specifies the target resource to scale.
+    apiVersion: apps/v1  # The API version of the target resource.
+    kind: Deployment  # The type of resource being scaled (e.g., Deployment).
+    name: myapp  # The name of the Deployment to scale.
+
+  minReplicas: 1  # The minimum number of replicas the Deployment can scale down to.
+  maxReplicas: 5  # The maximum number of replicas the Deployment can scale up to.
+
+  metrics:  # Defines the metrics used to determine when to scale.
+    - type: Resource  # Specifies that the metric is based on a resource (e.g., CPU or memory).
+      resource:
+        name: cpu  # The resource being monitored (CPU in this case).
+        target:
+          type: Utilization  # Specifies that the metric is based on utilization percentage.
+          averageUtilization: 80  # Target CPU utilization percentage (80%).
+
+    - type: Resource  # Specifies that the metric is based on a resource (e.g., CPU or memory).
+      resource:
+        name: memory  # The resource being monitored (memory in this case).
+        target:
+          type: Utilization  # Specifies that the metric is based on utilization percentage.
+          averageUtilization: 70  # Target memory utilization percentage (70%).
+```
+
+To apply 3-hpa.yaml run code:
+```bash 
+kukbectl apply -f 3-example
+```
+
+Check if the 3-example application is running:
+```bash
+watch -t kubectl get pods -n 3-example
+
+# Split screen to check hpa 
+watch -t kubectl get hpa -n 3-example
+
+# Split screen to check service
+kubectl get svc -n 3-example
+
+# Split screen to send a request to generate a Fibonacci number
+curl "localhost:8080/api/cpu?index=44"
+
+# Don't forget to delete namespace 3-example
+kubectl delete ns 3-example 
+```
+
+### EKS Pod Identity Agent
+
+> To find the latest addon version run code:
+```bash 
+aws eks describe-addon-versioins \
+--regiion us-east-1 \
+--addon-name eks-pod-identity-agent
+```
+
+create file 13-pod-identity-addon.tf
+```hcl
+resource "aws_eks_addons" "pod-identity" {
+  cluster_name = aws_eks_cluster.eks.name  # Specifies the name of the EKS cluster to which the addon will be attached.
+                                           # This references the `name` attribute of the `aws_eks_cluster` resource.
+
+  addon_name   = "eks-pod-identity-agent"  # Specifies the name of the EKS addon to be installed.
+                                           # In this case, it is the "eks-pod-identity-agent" addon.
+                                           # This addon enables Kubernetes workloads to securely access AWS resources using IAM roles.
+
+  addon_version = "latest"                 # Specifies the version of the addon to install.
+                                           # Using "latest" ensures that the most recent stable version of the addon is installed.
+}
+```
+Then Apply:
+```bash 
+terraform init 
+# then 
+terraform apply
+```
+and to make sure it is up and run:
+```bash
+kubectl get pods -n kube-system
+```
+
+To get an Daemon Set of all the agents that are running:
+```bash 
+kubectl get daemonset eks-pod-identity-agent -n kube-system
+```
+
+### AutoScaler Cluster
+Create terraform/cluster-autoscaler.tf
+```hcl
+resource "aws_iam_role" "cluster_autoscaler" {
+  name = "${aws_eks_cluster.eks.name}-cluster-autoscaler"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "sts:AssumeRole",
+          "sts:TagSession"
+        ]
+        Principal = {
+          Service = "pods.eks.amazonaws.com"
+        }
+      }
+    ]
+  })
+}
+
+resource "aws_iam_policy" "cluster_autoscaler" {
+  name = "${aws_eks_cluster.eks.name}-cluster-autoscaler"
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "autoscaling:DescribeAutoScalingGroups",
+          "autoscaling:DescribeAutoScalingInstances",
+          "autoscaling:DescribeLaunchConfigurations",
+          "autoscaling:DescribeScalingActivities",
+          "autoscaling:DescribeTags",
+          "ec2:DescribeImages",
+          "ec2:DescribeInstanceTypes",
+          "ec2:DescribeLaunchTemplateVersions",
+          "ec2:GetInstanceTypesFromInstanceRequirements",
+          "eks:DescribeNodegroup"
+        ]
+        Resource = "*"
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "autoscaling:SetDesiredCapacity",
+          "autoscaling:TerminateInstanceInAutoScalingGroup"
+        ]
+        Resource = "*"
+      }
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "cluster_autoscaler" {
+  policy_arn = aws_iam_policy.cluster_autoscaler.arn
+  role       = aws_iam_role.cluster_autoscaler.name # Fixed: Use the correct attribute name (aws_iam_role.cluster_autoscaler.name)
+}
+
+resource "aws_eks_pod_identity_association" "cluster_autoscaler" {
+  cluster_name      = aws_eks_cluster.eks.name
+  namespace         = "kube-system"
+  service_account   = "cluster-autoscaler"
+  role_arn          = aws_iam_role.cluster_autoscaler.arn
+}
+
+resource "helm_release" "cluster_autoscaler" {
+  name       = "autoscaler"
+  repository = "https://kubernetes.github.io/autoscaler" # Fixed: Removed trailing space
+  chart      = "cluster-autoscaler"
+  namespace  = "kube-system"
+  version    = "9.37.0"
+
+  set {
+    name  = "rbac.serviceAccount.name"
+    value = "cluster-autoscaler"
+  }
+
+  set {
+    name  = "autoDiscovery.clusterName"
+    value = aws_eks_cluster.eks.name
+  }
+
+  # MUST be updated to match your region
+  set {
+    name  = "awsRegion"
+    value = "us-east-1"
+  }
+
+  depends_on = [helm_release.meterics_server] # Ensure this resource exists
+}
+```
+Apply the terraform app
+
+```bash
+terraform init
+# then 
+terraform apply
+```
+
+Check the kubernetes pods:
+```bash
+kubectl get pods -n kube-system
+```
+
+In case auto scaling is not trigged, check the logs
+```bash
+kubesctl logs -l app.kubernetes.io/instance=autoscaler -f -n kube-system
+```
+
+#### Create 4-Example
+In the 4-example/0-namespace.yaml:
+```yaml
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: 4-example 
+```
+
+In the 4-example/1-deployment.yaml
+```yaml
+# Specifies the API version for the Kubernetes resource (apps/v1 for Deployments)
+apiVersion: apps/v1
+# Defines the kind of Kubernetes resource, which is a Deployment
+kind: Deployment
+# Metadata section containing information about the resource
+metadata:
+  # Name of the Deployment resource
+  name: myapp
+  # Namespace where the Deployment will be created
+  namespace: 4-example
+# Specification section defining the desired state of the Deployment
+spec:
+  # Number of desired replicas (pods) to maintain
+  replicas: 5
+  # Selector used to identify which pods belong to this Deployment
+  selector:
+    # Labels that the selector uses to match pods
+    matchLabels:
+      app: myapp
+  # Template for creating new pods
+  template:
+    # Metadata for the pod template
+    metadata:
+      # Labels applied to each pod created by this Deployment
+      labels:
+        app: myapp
+    # Specification for the pod's containers
+    spec:
+      # List of containers to run in the pod
+      containers:
+        # First container definition
+        - name: myapp
+          # Docker image to use for the container
+          image: ganil151/myapp-v1.0:1.0
+          # List of ports to expose from the container
+          ports:
+            # Definition for the HTTP port
+            - name: http
+              # Port number the container listens on
+              containerPort: 8080
+          # Resource management for the container
+          resources:
+            # Minimum resources guaranteed to the container
+            requests:
+              # Minimum memory allocation
+              memory: 512Mi
+              # Minimum CPU allocation (500 milliCPU = 0.5 CPU)
+              cpu: 500m
+            # Maximum resources the container is allowed to use
+            limits:
+              # Maximum memory the container can use
+              memory: 512Mi
+              # Maximum CPU the container can use
+              cpu: 500m
+```
+Then Run Code:
+```bash
+watch -t kubectl get node
+```
+explaination:
+```bash
+# The 'watch' command repeatedly executes the following command at regular intervals
+watch 
+  # The '-t' flag suppresses the header information (like the title and time) in the watch output
+  -t 
+  # The command to be executed repeatedly: get information about Kubernetes nodes
+  kubectl get node
+```
+Splite Srceen:then
+```bash
+watch -t kubectl get pods -n 4-example
+```
+Splite another Srceen:then
+```bash
+kubectl apply -f 4-example
+```
+Make sure to Delete
+```bash
+kubectl delete ns 4-example
+```
+#### Create terraform/15-aws-lbc.tf file
+```bash
+# Defines a data source for an AWS IAM policy document named "aws_lbc"
+data "aws_iam_policy_document" "aws_lbc" {
+  # Defines a statement within the policy document
+  statement {
+    # Sets the effect of the statement (Allow or Deny access)
+    effect = "Allow"
+
+    # Defines the principal(s) to which this statement applies
+    principals {
+      # Specifies the type of principal (e.g., Service, AWS Account)
+      type        = "Service"
+      # Identifies the specific service principal
+      identifiers = ["pods.eks.amazonaws.com"]
+    }
+
+    # Lists the actions that the principal is allowed to perform
+    actions = [
+      "sts:AssumeRole",   # Allows assuming IAM roles
+      "sts:TagSession"    # Allows tagging the session when assuming a role
+    ]
+  }
+}
+
+# Creates an AWS IAM role for the AWS Load Balancer Controller
+resource "aws_iam_role" "aws_lbc" {
+  # Names the role using the EKS cluster name as a prefix
+  name               = "${aws_eks_cluster.eks.name}-aws-lbc"
+  # Attaches the trust policy defined above to this role
+  assume_role_policy = data.aws_iam_policy_document.aws_lbc.json
+}
+
+# Creates an AWS IAM managed policy for the AWS Load Balancer Controller
+resource "aws_iam_policy" "aws_lbc" {
+  # Specifies the path to the JSON file containing the policy document
+  policy = file("./iam/AWSLoadBalancerController.json")
+  # Names the managed policy
+  name   = "AWSLoadBalancerController"
+}
+
+# Attaches the managed policy to the IAM role
+resource "aws_iam_role_policy_attachment" "aws_lbc" {
+  # References the ARN of the managed policy created above
+  policy_arn = aws_iam_policy.aws_lbc.arn
+  # References the name of the IAM role created above
+  role       = aws_iam_role.aws_lbc.name
+}
+
+# Creates an EKS Pod Identity Association
+resource "aws_eks_pod_identity_association" "aws_lbc" {
+  # Specifies the name of the EKS cluster
+  cluster_name    = aws_eks_cluster.eks.name
+  # Specifies the Kubernetes namespace where the pod runs
+  namespace       = "kube-system"
+  # Specifies the Kubernetes service account associated with the role
+  service_account = "aws-load-balancer-controller"
+  # References the ARN of the IAM role created above
+  role_arn        = aws_iam_role.aws_lbc.arn
+}
+
+# Deploys the AWS Load Balancer Controller using Helm
+resource "helm_release" "aws_lbc" {
+  # Names the Helm release
+  name = "aws-load-balancer-controller"
+
+  # Specifies the Helm repository URL for EKS charts
+  repository = "https://aws.github.io/eks-charts"
+  # Specifies the name of the Helm chart
+  chart      = "aws-load-balancer-controller"
+  # Specifies the Kubernetes namespace for the release
+  namespace  = "kube-system"
+  # Specifies the version of the Helm chart to deploy
+  version    = "1.7.2"
+
+  # Sets the cluster name in the Helm chart values
+  set {
+    name  = "clusterName"
+    value = aws_eks_cluster.eks.name
+  }
+
+  # Sets the service account name in the Helm chart values
+  set {
+    name  = "serviceAccount.name"
+    value = "aws-load-balancer-controller"
+  }
+  # Sets the VPC ID in the Helm chart values
+  set {
+    name  = "vpcId"
+    value = aws_vpc.main.id
+  }
+
+  # Ensures this resource is created after the cluster autoscaler Helm release
+  depends_on = [helm_release.cluster_autoscaler]
+}
+```
+Create a iam/LoadBalancerController.json file:
