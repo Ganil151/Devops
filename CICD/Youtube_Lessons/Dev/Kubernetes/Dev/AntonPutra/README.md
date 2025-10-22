@@ -1189,3 +1189,363 @@ resource "helm_release" "aws_lbc" {
 }
 ```
 Create a iam/LoadBalancerController.json file:
+```json
+{
+    // Defines the version of the IAM policy language being used
+    "Version": "2012-10-17",
+    // An array of statements that define the permissions within the policy
+    "Statement": [
+        // Statement 1: Allows creating a specific service-linked role for ELB
+        {
+            // Specifies whether the effect is Allow or Deny
+            "Effect": "Allow",
+            // The specific AWS actions this statement permits
+            "Action": [
+                "iam:CreateServiceLinkedRole"
+            ],
+            // The AWS resources this statement applies to (all resources in this case)
+            "Resource": "*",
+            // Optional conditions that must be met for the statement to apply
+            "Condition": {
+                // Checks if the specified IAM service name matches
+                "StringEquals": {
+                    "iam:AWSServiceName": "elasticloadbalancing.amazonaws.com"
+                }
+            }
+        },
+        // Statement 2: Allows describing various EC2 and ELB resources
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeAccountAttributes",
+                "ec2:DescribeAddresses",
+                "ec2:DescribeAvailabilityZones",
+                "ec2:DescribeInternetGateways",
+                "ec2:DescribeVpcs",
+                "ec2:DescribeVpcPeeringConnections",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeInstances",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeTags",
+                "ec2:GetCoipPoolUsage",
+                "ec2:DescribeCoipPools",
+                "elasticloadbalancing:DescribeLoadBalancers",
+                "elasticloadbalancing:DescribeLoadBalancerAttributes",
+                "elasticloadbalancing:DescribeListeners",
+                "elasticloadbalancing:DescribeListenerAttributes",
+                "elasticloadbalancing:DescribeListenerCertificates",
+                "elasticloadbalancing:DescribeSSLPolicies",
+                "elasticloadbalancing:DescribeRules",
+                "elasticloadbalancing:DescribeTargetGroups",
+                "elasticloadbalancing:DescribeTargetGroupAttributes",
+                "elasticloadbalancing:DescribeTargetHealth",
+                "elasticloadbalancing:DescribeTags",
+                "elasticloadbalancing:DescribeTrustStores"
+            ],
+            "Resource": "*" // Applies to all resources for these actions
+        },
+        // Statement 3: Allows describing resources related to other AWS services (Cognito, ACM, IAM, WAF, Shield)
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cognito-idp:DescribeUserPoolClient",
+                "acm:ListCertificates",
+                "acm:DescribeCertificate",
+                "iam:ListServerCertificates",
+                "iam:GetServerCertificate",
+                "waf-regional:GetWebACL",
+                "waf-regional:GetWebACLForResource",
+                "waf-regional:AssociateWebACL",
+                "waf-regional:DisassociateWebACL",
+                "wafv2:GetWebACL",
+                "wafv2:GetWebACLForResource",
+                "wafv2:AssociateWebACL",
+                "wafv2:DisassociateWebACL",
+                "shield:GetSubscriptionState",
+                "shield:DescribeProtection",
+                "shield:CreateProtection",
+                "shield:DeleteProtection"
+            ],
+            "Resource": "*" // Applies to all resources for these actions
+        },
+        // Statement 4: Allows authorizing and revoking security group ingress rules
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:RevokeSecurityGroupIngress"
+            ],
+            "Resource": "*" // Applies to all resources for these actions
+        },
+        // Statement 5: Allows creating security groups
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateSecurityGroup"
+            ],
+            "Resource": "*" // Applies to all resources for this action
+        },
+        // Statement 6: Allows creating tags on newly created security groups if they have a specific cluster tag
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            // Applies only to security group resources
+            "Resource": "arn:aws:ec2:*:*:security-group/*",
+            "Condition": {
+                // Only when the action is CreateSecurityGroup
+                "StringEquals": {
+                    "ec2:CreateAction": "CreateSecurityGroup"
+                },
+                // And the request includes the elbv2.k8s.aws/cluster tag
+                "Null": {
+                    "aws:RequestTag/elbv2.k8s.aws/cluster": "false"
+                }
+            }
+        },
+        // Statement 7: Allows creating and deleting tags on existing security groups if they have the specific cluster tag
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateTags",
+                "ec2:DeleteTags"
+            ],
+            // Applies only to security group resources
+            "Resource": "arn:aws:ec2:*:*:security-group/*",
+            "Condition": {
+                // Where the request does NOT include the cluster tag (true means it's absent)
+                "Null": {
+                    "aws:RequestTag/elbv2.k8s.aws/cluster": "true",
+                    // AND the resource DOES have the cluster tag (false means it's present)
+                    "aws:ResourceTag/elbv2.k8s.aws/cluster": "false"
+                }
+            }
+        },
+        // Statement 8: Allows managing security groups (ingress rules, deletion) if they are tagged with the cluster identifier
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:RevokeSecurityGroupIngress",
+                "ec2:DeleteSecurityGroup"
+            ],
+            "Resource": "*", // Applies to all resources for these actions
+            "Condition": {
+                // Only if the resource has the elbv2.k8s.aws/cluster tag
+                "Null": {
+                    "aws:ResourceTag/elbv2.k8s.aws/cluster": "false"
+                }
+            }
+        },
+        // Statement 9: Allows creating load balancers and target groups if the request includes the cluster tag
+        {
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:CreateLoadBalancer",
+                "elasticloadbalancing:CreateTargetGroup"
+            ],
+            "Resource": "*", // Applies to all resources for these actions
+            "Condition": {
+                // Only if the request includes the elbv2.k8s.aws/cluster tag
+                "Null": {
+                    "aws:RequestTag/elbv2.k8s.aws/cluster": "false"
+                }
+            }
+        },
+        // Statement 10: Allows creating/deleting listeners and rules (no specific tagging condition on resources)
+        {
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:CreateListener",
+                "elasticloadbalancing:DeleteListener",
+                "elasticloadbalancing:CreateRule",
+                "elasticloadbalancing:DeleteRule"
+            ],
+            "Resource": "*" // Applies to all resources for these actions
+        },
+        // Statement 11: Allows adding/removing tags on target groups and load balancers if they are already tagged with the cluster identifier
+        {
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:AddTags",
+                "elasticloadbalancing:RemoveTags"
+            ],
+            // Applies only to target group and load balancer resources
+            "Resource": [
+                "arn:aws:elasticloadbalancing:*:*:targetgroup/*/*",
+                "arn:aws:elasticloadbalancing:*:*:loadbalancer/net/*/*",
+                "arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*/*"
+            ],
+            "Condition": {
+                // Where the request does NOT include the cluster tag (true means it's absent)
+                "Null": {
+                    "aws:RequestTag/elbv2.k8s.aws/cluster": "true",
+                    // AND the resource DOES have the cluster tag (false means it's present)
+                    "aws:ResourceTag/elbv2.k8s.aws/cluster": "false"
+                }
+            }
+        },
+        // Statement 12: Allows adding/removing tags on listeners and listener rules (no specific tagging condition)
+        {
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:AddTags",
+                "elasticloadbalancing:RemoveTags"
+            ],
+            // Applies only to listener and listener-rule resources
+            "Resource": [
+                "arn:aws:elasticloadbalancing:*:*:listener/net/*/*/*",
+                "arn:aws:elasticloadbalancing:*:*:listener/app/*/*/*",
+                "arn:aws:elasticloadbalancing:*:*:listener-rule/net/*/*/*",
+                "arn:aws:elasticloadbalancing:*:*:listener-rule/app/*/*/*"
+            ]
+        },
+        // Statement 13: Allows modifying/deleting load balancers and target groups if they are tagged with the cluster identifier
+        {
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:ModifyLoadBalancerAttributes",
+                "elasticloadbalancing:SetIpAddressType",
+                "elasticloadbalancing:SetSecurityGroups",
+                "elasticloadbalancing:SetSubnets",
+                "elasticloadbalancing:DeleteLoadBalancer",
+                "elasticloadbalancing:ModifyTargetGroup",
+                "elasticloadbalancing:ModifyTargetGroupAttributes",
+                "elasticloadbalancing:DeleteTargetGroup"
+            ],
+            "Resource": "*", // Applies to all resources for these actions
+            "Condition": {
+                // Only if the resource has the elbv2.k8s.aws/cluster tag
+                "Null": {
+                    "aws:ResourceTag/elbv2.k8s.aws/cluster": "false"
+                }
+            }
+        },
+        // Statement 14: Allows adding tags to newly created target groups and load balancers if the request includes the cluster tag
+        {
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:AddTags"
+            ],
+            // Applies only to target group and load balancer resources
+            "Resource": [
+                "arn:aws:elasticloadbalancing:*:*:targetgroup/*/*",
+                "arn:aws:elasticloadbalancing:*:*:loadbalancer/net/*/*",
+                "arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*/*"
+            ],
+            "Condition": {
+                // Only when the action is CreateTargetGroup or CreateLoadBalancer
+                "StringEquals": {
+                    "elasticloadbalancing:CreateAction": [
+                        "CreateTargetGroup",
+                        "CreateLoadBalancer"
+                    ]
+                },
+                // And the request includes the elbv2.k8s.aws/cluster tag
+                "Null": {
+                    "aws:RequestTag/elbv2.k8s.aws/cluster": "false"
+                }
+            }
+        },
+        // Statement 15: Allows registering/deregistering targets from target groups
+        {
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:RegisterTargets",
+                "elasticloadbalancing:DeregisterTargets"
+            ],
+            // Applies only to target group resources
+            "Resource": "arn:aws:elasticloadbalancing:*:*:targetgroup/*/*"
+        },
+        // Statement 16: Allows other specific ELB modifications (WebACL, Listener, Certificates, Rule)
+        {
+            "Effect": "Allow",
+            "Action": [
+                "elasticloadbalancing:SetWebAcl",
+                "elasticloadbalancing:ModifyListener",
+                "elasticloadbalancing:AddListenerCertificates",
+                "elasticloadbalancing:RemoveListenerCertificates",
+                "elasticloadbalancing:ModifyRule"
+            ],
+            "Resource": "*" // Applies to all resources for these actions
+        }
+    ]
+}
+```
+Apply the Terraform code:
+```bash
+terraform init
+# then 
+terraform apply
+```
+Apply the Kubernetes code:
+```bash
+kubectl get pods -n kube-system
+```
+Then create 5-example folder
+- In the 5-example/0-namespace.yaml
+```yaml
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: 5-example
+```
+- In the 5-example/1-deployment.yaml
+```bash
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+  namespace: 5-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: myapp
+          image: ganil151/myapp
+          ports:
+            - name: http
+              containerPort: 8080
+          resources:
+            requests:
+              memory: 128Mi
+              cpu: 100m
+            limits:
+              memory: 128Mi
+              cpu: 100m
+```
+- In the 5-example/2-service.yaml
+```bash
+---
+# Supported annotations
+# https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.7/guide/service/annotations/
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp
+  namespace: 5-example
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: external
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+    # service.beta.kubernetes.io/aws-load-balancer-proxy-protocol: "*"
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: http
+  selector:
+    app: myapp
+```
+STOPPED: [Link](https://youtu.be/5XpPiORNy1o?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l&t=469)
