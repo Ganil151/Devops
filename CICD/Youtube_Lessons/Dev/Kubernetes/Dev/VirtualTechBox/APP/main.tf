@@ -52,7 +52,7 @@ module "agent_instance" {
   instance_type               = var.instance_type
   subnet_id                   = element(module.vpc.public_subnet_ids, 0)
   user_data                   = file("${path.module}/scripts/jagent.sh")
-  user_data_replace_on_change = var.user_data_replace_on_change
+  user_data_replace_on_change = false
   security_group_ids          = [module.master_sg.master_sg]
   environment                 = var.environment
 
@@ -66,11 +66,10 @@ module "sonarQube_instance" {
   project_name_1              = var.project_name_3
   instance_type               = var.instance_type
   subnet_id                   = element(module.vpc.public_subnet_ids, 0)
-  user_data                   = file("${path.module}/scripts/jagent.sh")
-  user_data_replace_on_change = false
+  user_data                   = file("${path.module}/scripts/sonarqube.sh")
+  user_data_replace_on_change = var.user_data_replace_on_change
   security_group_ids          = [module.master_sg.master_sg]
   environment                 = var.environment
-
 }
 
 

@@ -224,4 +224,4 @@ Conclusion
 By switching from H2 to MySQL or MariaDB, you eliminate the limitations of the H2 database and ensure that SonarQube runs in a production-ready environment. Follow the steps above carefully, and verify the logs to confirm successful startup. If any issues persist, provide the relevant log entries for further assistance.
 
 -- Stopped --
-[Youtube](https://youtu.be/e42hIYkvxoQ?t=1876)
+[Youtube](https://youtu.be/e42hIYkvxoQ?t=3596)
