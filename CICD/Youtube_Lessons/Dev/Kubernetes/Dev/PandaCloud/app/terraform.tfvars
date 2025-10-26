@@ -16,7 +16,7 @@ enable_dns_hostnames    = true
 map_public_ip_on_launch = true
 
 # Security Group
-ingress_rules = [22, 80, 443, 3000, 3306, 8080, 9000]
+ingress_rules = [22, 80, 443, 3000, 3306, 8080, 8086, 9000]
 egress_rules  = [0]
 
 # Keys
