@@ -1,6 +1,8 @@
 # Project Names
-project_name_1 = "Master-Srv"
-project_name_2 = "Agent-Srv"
+project_name_1 = "Master-Jenkins"
+project_name_2 = "Kube-Agent"
+
+
 
 # Environment
 environment = "dev"
@@ -16,14 +18,14 @@ enable_dns_hostnames    = true
 map_public_ip_on_launch = true
 
 # Security Group
-ingress_rules = [22, 80, 443, 3000, 3306, 8080, 8086, 9000]
+ingress_rules = [22, 80, 443, 3000, 3306, 8080, 9000]
 egress_rules  = [0]
 
 # Keys
-key_name = "linux-vm-key"
+key_name = "linux-vm-keys-6"
 
 # Ec2
-ami                         = "ami-0341d95f75f311023"
+ami                         = "ami-0360c520857e3138f"
 instance_type               = "t3.small"
 subnet_id                   = "master_subnet"
 user_data                   = ""

@@ -1,5 +1,5 @@
 module "vpc" {
-  source                  = "../modules/vpc"
+  source                  = "../MODULES/Vpc"
   vpc_id                  = var.vpc_id
   vpc_cidr_block          = var.vpc_cidr_block
   project_name_1          = var.project_name_1
@@ -13,7 +13,7 @@ module "vpc" {
 
 # Security Group
 module "master_sg" {
-  source         = "../modules/sg"
+  source         = "../MODULES/SG"
   project_name_1 = var.project_name_1
   vpc_id         = module.vpc.vpc_id
   ingress_rules  = var.ingress_rules
@@ -24,13 +24,13 @@ module "master_sg" {
 
 # Keys
 module "key" {
-  source   = "../modules/keys"
+  source   = "../MODULES/Keys"
   key_name = var.key_name
 }
 
 # Jenkins Instance
 module "jenkins_instance" {
-  source                      = "../modules/ec2"
+  source                      = "../MODULES/EC2"
   ami                         = var.ami
   key_name                    = var.key_name
   project_name_1              = var.project_name_1
@@ -45,19 +45,18 @@ module "jenkins_instance" {
 
 # Agent Instance
 module "agent_instance" {
-  source                      = "../modules/ec2"
+  source                      = "../MODULES/EC2"
   ami                         = var.ami
   key_name                    = var.key_name
   project_name_1              = var.project_name_2
   instance_type               = var.instance_type
   subnet_id                   = element(module.vpc.public_subnet_ids, 0)
-  user_data                   = file("${path.module}/scripts/jagent.sh")
+  user_data                   = file("${path.module}/scripts/kubernetes.sh")
   user_data_replace_on_change = var.user_data_replace_on_change
   security_group_ids          = [module.master_sg.master_sg]
   environment                 = var.environment
 
 }
-
 
 
 
