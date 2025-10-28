@@ -33,35 +33,35 @@ Next, [learn how to set up “Vanilla” Kubernetes](https://www.splunk.com/en_
 
 Use these commands to quickly list and describe what's running in your cluster.
 
-|Command|What it does|Example|
-|---|---|---|
-|**kubectl get pods**|List all pods in current namespace|kubectl get pods|
-|**kubectl get pods -n**|List pods in a specific namespace|kubectl get pods -n kube-system|
-|**kubectl get services**|List all services|kubectl get services|
-|**kubectl get deployments**|List all Deployments|kubectl get deployments|
-|**kubectl get nodes**|List all nodes in the cluster|kubectl get nodes|
-|**kubectl get all**|List all resources in namespace|kubectl get all|
-|**kubectl describe pod**|Detailed info about a pod|kubectl describe pod nginx-pod|
-|**kubectl describe service**|Detailed info about a service|kubectl describe service my-service|
-|**kubectl describe deployment**|Detailed info about a Deployment|kubectl describe deployment web|
-|**kubectl describe node**|Detailed info about a node|kubectl describe node worker-1|
-|**kubectl get pods -o wide**|Show pods with additional info: IPs, node assignments, pod status, etc.|kubectl get pods -o wide|
+| Command                         | What it does                                                            | Example                             |
+| ------------------------------- | ----------------------------------------------------------------------- | ----------------------------------- |
+| **kubectl get pods**            | List all pods in current namespace                                      | kubectl get pods                    |
+| **kubectl get pods -n**         | List pods in a specific namespace                                       | kubectl get pods -n kube-system     |
+| **kubectl get services**        | List all services                                                       | kubectl get services                |
+| **kubectl get deployments**     | List all Deployments                                                    | kubectl get deployments             |
+| **kubectl get nodes**           | List all nodes in the cluster                                           | kubectl get nodes                   |
+| **kubectl get all**             | List all resources in namespace                                         | kubectl get all                     |
+| **kubectl describe pod**        | Detailed info about a pod                                               | kubectl describe pod nginx-pod      |
+| **kubectl describe service**    | Detailed info about a service                                           | kubectl describe service my-service |
+| **kubectl describe deployment** | Detailed info about a Deployment                                        | kubectl describe deployment web     |
+| **kubectl describe node**       | Detailed info about a node                                              | kubectl describe node worker-1      |
+| **kubectl get pods -o wide**    | Show pods with additional info: IPs, node assignments, pod status, etc. | kubectl get pods -o wide            |
 
 ## Deploying and managing applications
 
 These commands let you create, update, and scale workloads in Kubernetes.
 
-|Command|What it does|Example|
-|---|---|---|
-|**kubectl apply -f**|Create/update resources from YAML|kubectl apply -f app.yaml|
-|**kubectl create -f**|Create resources|kubectl create -f app.yaml|
-|**kubectl delete -f**|Delete resources|kubectl delete -f app.yaml|
-|**kubectl delete pod**|Delete a specific pod|kubectl delete pod nginx-pod|
-|**kubectl delete service**|Delete a specific service|kubectl delete service my-service|
-|**kubectl delete deployment**|Delete a specific Deployment|kubectl delete deployment web|
-|**kubectl scale deployment --replicas=N**|Scale replicas|kubectl scale deployment web --replicas=5|
-|**kubectl rollout status deployment/**|Check rollout status of a Deployment|kubectl rollout status deployment/web|
-|**kubectl rollout undo deployment/**|Roll back a Deployment|kubectl rollout undo deployment/web|
+| Command                                   | What it does                         | Example                                   |
+| ----------------------------------------- | ------------------------------------ | ----------------------------------------- |
+| **kubectl apply -f**                      | Create/update resources from YAML    | kubectl apply -f app.yaml                 |
+| **kubectl create -f**                     | Create resources                     | kubectl create -f app.yaml                |
+| **kubectl delete -f**                     | Delete resources                     | kubectl delete -f app.yaml                |
+| **kubectl delete pod**                    | Delete a specific pod                | kubectl delete pod nginx-pod              |
+| **kubectl delete service**                | Delete a specific service            | kubectl delete service my-service         |
+| **kubectl delete deployment**             | Delete a specific Deployment         | kubectl delete deployment web             |
+| **kubectl scale deployment --replicas=N** | Scale replicas                       | kubectl scale deployment web --replicas=5 |
+| **kubectl rollout status deployment/**    | Check rollout status of a Deployment | kubectl rollout status deployment/web     |
+| **kubectl rollout undo deployment/**      | Roll back a Deployment               | kubectl rollout undo deployment/web       |
 
 ## Debugging and troubleshooting
 

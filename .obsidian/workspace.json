@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/Youtube_Lessons/Anton_Putra/Notes.md",
+                "file": "Kubernetes/Commands.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -64,7 +64,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Notes"
+              "title": "Commands"
             }
           }
         ],
@@ -238,6 +238,12 @@
   },
   "active": "84da1f1873d4d8df",
   "lastOpenFiles": [
+    "Script-Files/Prometheus/install-prometheus.md",
+    "Script-Files/Prometheus",
+    "Script-Files/New folder",
+    "Script-Files/Node_Exporter/install-node_exporter.md",
+    "Script-Files/Node_Exporter",
+    "Kubernetes/Youtube_Lessons/Anton_Putra/Notes.md",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/1-example/1-viewer-cluster-role-binding.yaml",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/1-example/0-viewer-cluster-role.yaml",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/0-viewer-cluster-role.yaml",
@@ -245,12 +251,7 @@
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/1-example",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/terraform.tfstate",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/tfplan",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/8-node.tf",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/7-eks.tf",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/6-routes.tf",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/5-nat.tf",
     "Kubernetes/Commands.md",
-    "Kubernetes/Youtube_Lessons/Anton_Putra/Notes.md",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS/README.md",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/README.md",
     "CICD/Youtube_Lessons/Dev/Kubernetes/README.md",
@@ -283,7 +284,6 @@
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (155).png",
     "CICD/Youtube_Lessons/Dev/jenkins/README.md",
     "CICD/Sis_Lessons/Dev/SPMS_CICD/README.md",
-    "CICD/Youtube_Lessons/Dev/terraform_server_s3_v1/README.md",
     "Untitled.canvas"
   ]
 }
