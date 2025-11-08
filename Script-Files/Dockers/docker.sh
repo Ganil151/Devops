@@ -20,6 +20,38 @@ JAVA_HOME="/usr/lib/jvm/java-21-amazon-corretto"
 echo "export JAVA_HOME=$JAVA_HOME" | sudo tee -a ~/.bashrc
 echo "export PATH=$PATH:$HOME/bin:$JAVA_HOME" | sudo tee -a ~/.bashrc
 
+# Install Maven (Already in the dependencies list, but we'll re-verify)
+if ! command -v mvn &> /dev/null; then
+    echo "Maven is not installed. Installing Maven..."
+    sudo yum install -y maven 
+fi
+
+JAVA_HOME="/usr/lib/jvm/java-21-amazon-corretto"
+# Maven is typically installed to /usr/share/maven on RHEL-based systems
+M2_HOME="/usr/share/maven"
+# Verify Maven installation path for M2_HOME (best practice)
+if [ ! -d "$M2_HOME" ]; then
+    echo "WARNING: Could not confirm standard M2_HOME directory ($M2_HOME). Skipping M2_HOME export."
+    M2_HOME="" # Clear if not found to prevent exporting an invalid path
+fi
+
+# Configure environment variables for the current user's profile
+echo "Configuring environment variables (JAVA_HOME, M2_HOME) for current user..."
+{
+    echo "export JAVA_HOME=${JAVA_HOME}"
+    if [ -n "$M2_HOME" ]; then
+        echo "export M2_HOME=${M2_HOME}"
+    fi
+    echo "export PATH=\$PATH:\$HOME/bin:\$JAVA_HOME/bin"
+    if [ -n "$M2_HOME" ]; then
+        echo "export PATH=\$PATH:\$M2_HOME/bin"
+    fi
+} | sudo tee -a /etc/profile.d/jenkins_env.sh # Use a profile.d script for system-wide shell configuration
+
+# Make the profile script executable
+sudo chmod +x /etc/profile.d/jenkins_env.sh
+
+
 # Install Docker
 echo "Installing Docker..."
 sudo yum install -y docker git
@@ -46,7 +78,7 @@ docker compose version || { echo 'Docker Compose V2 not working or not found in 
 
 # Add the current user to the docker group
 echo "Adding the current user to the docker group..."
-sudo usermod -a -G docker ec2-user
+sudo usermod -a -G docker ${whoami}
 
 # Configure Docker to start on boot
 echo "Configuring Docker to start on boot..."

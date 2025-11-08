@@ -238,9 +238,12 @@
   },
   "active": "84da1f1873d4d8df",
   "lastOpenFiles": [
+    "Script-Files/AgroCD/install-argo.sh",
+    "Script-Files/AgroCD/install-ag",
+    "Script-Files/AgroCD",
+    "Script-Files/New folder",
     "Script-Files/Prometheus/install-prometheus.md",
     "Script-Files/Prometheus",
-    "Script-Files/New folder",
     "Script-Files/Node_Exporter/install-node_exporter.md",
     "Script-Files/Node_Exporter",
     "Kubernetes/Youtube_Lessons/Anton_Putra/Notes.md",
@@ -249,8 +252,6 @@
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/0-viewer-cluster-role.yaml",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/2-example",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/1-example",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/terraform.tfstate",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/terraform/tfplan",
     "Kubernetes/Commands.md",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS/README.md",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/README.md",
@@ -283,7 +284,6 @@
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (154).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (155).png",
     "CICD/Youtube_Lessons/Dev/jenkins/README.md",
-    "CICD/Sis_Lessons/Dev/SPMS_CICD/README.md",
     "Untitled.canvas"
   ]
 }

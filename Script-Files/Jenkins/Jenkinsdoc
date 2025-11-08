@@ -1,0 +1,288 @@
+pipeline {
+    agent { label params.NODE_LABEL }
+
+    environment {
+        COMPOSE_PROJECT_NAME = "spring-petclinic"
+        DOCKER_IMAGE         = "ganil151/spring-petclinic-microservice"
+        CONFIG_SERVER_IMAGE  = "springcommunity/spring-petclinic-config-server"
+        IMAGE_TAG            = "${env.BUILD_NUMBER ?: 'latest'}"
+    }
+
+    parameters {
+        string(
+            name: 'NODE_LABEL',
+            defaultValue: 'worker-node-1',
+            description: 'Label of the Jenkins worker node to run this pipeline'
+        )
+    }
+
+    triggers {
+        githubPush()
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git(
+                    branch: 'main',
+                    credentialsId: 'github-credentials',
+                    url: 'https://github.com/Ganil151/spring-petclinic-microservices.git' // Removed trailing space
+                )
+            }
+            post {
+                always { echo "========Checkout========" }
+                success { echo "========Checkout ⭐Successfully⭐========" }
+                failure { echo "========Checkout failed❌========" }
+            }
+        }
+
+        stage('Verify Prerequisites') {
+            steps {
+                sh '''
+                echo "Checking for essential build files (mvnw, pom.xml, docker-compose.yml)..."
+
+                # Check for Maven Wrapper
+                if [ ! -f "./mvnw" ]; then
+                    echo "ERROR: Maven wrapper script (mvnw) not found in the repository root."
+                    echo "This script is required to build the project. Please check the repository: https://github.com/Ganil151/spring-petclinic-microservices.git"
+                    exit 1
+                fi
+                echo "Maven wrapper script (mvnw) found."
+
+                # Check for Root POM
+                if [ ! -f "./pom.xml" ]; then
+                    echo "ERROR: Root pom.xml not found in the repository root."
+                    echo "This file is required to build the project."
+                    exit 1
+                fi
+                echo "Root pom.xml found."
+
+                # Check for Docker Compose File
+                if [ ! -f "./docker-compose.yml" ]; then
+                    echo "ERROR: docker-compose.yml not found in the repository root."
+                    echo "This file is required for deployment."
+                    exit 1
+                fi
+                echo "docker-compose.yml found."
+
+                # --- FIX ADDED ---
+                # Sanitize mvnw script to remove Windows line endings (\r)
+                echo "Sanitizing mvnw script for Linux execution..."
+                sed -i 's/\r$//' ./mvnw
+                # --- END FIX ---
+
+                # Make mvnw executable
+                chmod +x ./mvnw
+                echo "Maven wrapper script (mvnw) is now executable."
+                '''
+            }
+            post {
+                always { echo "========Verify Prerequisites========" }
+                success { echo "========Verify Prerequisites ⭐Successfully⭐========" }
+                failure { echo "========Verify Prerequisites failed❌========" }
+            }
+        }
+
+        stage('Install yq') {
+            steps {
+                sh '''
+                if ! command -v yq &> /dev/null; then
+                    echo "Installing yq..."
+                    sudo wget https://github.com/mikefarah/yq/releases/download/v4.34.1/yq_linux_amd64 -O /usr/local/bin/yq
+                    sudo chmod +x /usr/local/bin/yq
+                fi
+                '''
+            }
+            post {
+                always { echo "========Install yq========" }
+                success { echo "========Install yq ⭐Successfully⭐========" }
+                failure { echo "========Install yq failed❌========" }
+            }
+        }
+
+        stage('Remove genai-service from docker-compose.yml') {
+            steps {
+                sh '''
+                cp docker-compose.yml docker-compose.yml.bak
+                yq eval 'del(.services.genai-service)' -i docker-compose.yml
+                echo "Removed genai-service from docker-compose.yml"
+                '''
+            }
+        }
+
+        stage('Docker Login') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    sh '''
+                    echo "Logging into Docker Hub..."
+                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                    if [ $? -eq 0 ]; then
+                        echo "Docker Login Successful..."
+                    else
+                        echo "Failed to log in to Docker Hub"
+                        exit 1
+                    fi
+                    '''
+                }
+            }
+            post {
+                always { echo "========Docker Login========" }
+                success { echo "========Docker Login ⭐Successfully⭐========" }
+                failure { echo "========Docker Login failed❌========" }
+            }
+        }
+
+        stage('Build Application') {
+            environment {
+                JAVA_HOME = "/usr/lib/jvm/java-21-amazon-corretto"
+                PATH = "${JAVA_HOME}/bin:${env.PATH}"
+            }
+            steps {
+                sh '''
+                echo "Building the Spring PetClinic application..."
+                # mvnw is already made executable in 'Verify Prerequisites'
+                ./mvnw clean install -DskipTests
+
+                JAR_FILE=$(ls spring-petclinic-config-server/target/*.jar | head -n 1)
+
+                echo "Copying $JAR_FILE to docker/application.jar"
+                cp "$JAR_FILE" docker/application.jar
+                '''
+            }
+            post {
+                always { echo "========Build Application========" }
+                success { echo "========Build Application ⭐Successfully⭐========" }
+                failure { echo "========Build Application failed❌========" }
+            }
+        }
+
+        stage('Docker Build and Push') {
+            steps {
+                script {
+                    echo "Building and pushing Docker image..."
+                    sh '''
+                    cd docker
+                    echo "Current working directory: $(pwd)"
+                    echo "Contents of docker/ directory:"
+                    ls -la
+
+                    if [ ! -f application.jar ]; then
+                        echo "application.jar not found!"
+                        exit 1
+                    fi
+
+                    # Extract the version from the config-server's pom.xml to use for tagging
+                    echo "Extracting project version using Maven wrapper..."
+                    CONFIG_SERVER_VERSION=$(cd .. && ./mvnw -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec 2>&1 | grep -v "" | tr -d "\n\r")
+
+                    if [ -z "$CONFIG_SERVER_VERSION" ]; then
+                        echo "Failed to extract config-server version from pom.xml. Output was: '$(cd .. && ./mvnw -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec 2>&1)'"
+                        exit 1
+                    fi
+                    echo "Extracted config-server version: $CONFIG_SERVER_VERSION"
+
+                    # Determine the tag for the original config-server image based on the pom version
+                    ORIGINAL_CONFIG_IMAGE_TAG="${CONFIG_SERVER_VERSION}"
+                    ORIGINAL_CONFIG_IMAGE_FULL="${env.CONFIG_SERVER_IMAGE}:${ORIGINAL_CONFIG_IMAGE_TAG}"
+                    echo "Target original config-server image name: ${ORIGINAL_CONFIG_IMAGE_FULL}"
+
+                    echo "Building Docker image..."
+                    # Tag the built image with the custom name, latest, and the original name expected by docker-compose
+                    docker build --build-arg JAR_FILE=application.jar -t $DOCKER_IMAGE:$IMAGE_TAG -t $DOCKER_IMAGE:latest -t $ORIGINAL_CONFIG_IMAGE_FULL -f Dockerfile .
+                    if [ $? -ne 0 ]; then
+                        echo "Failed to build Docker image"
+                        exit 1
+                    fi
+
+                    echo "Pushing Docker image to Docker Hub (custom tags)..."
+                    docker push $DOCKER_IMAGE:$IMAGE_TAG
+                    if [ $? -ne 0 ]; then
+                        echo "Failed to push image with tag $IMAGE_TAG"
+                        exit 1
+                    fi
+
+                    docker push $DOCKER_IMAGE:latest
+                    if [ $? -ne 0 ]; then
+                        echo "Failed to push image with tag latest"
+                        exit 1
+                    fi
+
+                    # Do NOT push the tag matching the original image name to Docker Hub unless you own that namespace
+                    # docker push $ORIGINAL_CONFIG_IMAGE_FULL # Commented out
+
+                    echo "Successfully built and pushed Docker image (custom tags). Tagged local image for docker-compose use."
+                    '''
+                }
+            }
+            post {
+                always { echo "========Docker Build and Push========" }
+                success { echo "========Docker Build and Push ⭐Successfully⭐========" }
+                failure { echo "========Docker Build and Push failed❌========" }
+            }
+        }
+
+        stage('Deploy to Worker Node') {
+            steps {
+                echo "Deploying Spring Petclinic on worker node (${env.NODE_NAME}) using Docker Compose..."
+                sh '''
+                    set -e
+
+                    # Verify Docker Compose is available
+                    if ! docker compose version &> /dev/null; then
+                        echo "ERROR: Docker Compose V2 is not installed or not accessible on this node."
+                        exit 1
+                    fi
+
+                    # Navigate to the workspace root where docker-compose.yml is located
+                    cd $WORKSPACE
+
+                    # Stop existing containers gracefully (ignore errors if no containers are running)
+                    echo "Stopping existing containers..."
+                    docker compose down || true
+
+                    # Start the services defined in docker-compose.yml.
+                    # The config-server service should now use the locally tagged image from the previous stage.
+                    echo "Starting services with Docker Compose..."
+                    docker compose up -d # Removed --build as we rely on the tagged local image
+
+                    echo "Docker Compose deployment completed successfully."
+                '''
+            }
+            post {
+                always { echo "======= Deploy to Worker Node =======" }
+                success { echo "======= Deploy to Worker Node ⭐Successfully⭐========" }
+                failure { echo "======= Deploy to Worker Node failed❌========" }
+            }
+        }
+
+        // Optional: Stage to verify deployment status
+        stage('Verify Deployment') {
+            steps {
+                sh '''
+                    set -e
+                    cd $WORKSPACE
+                    echo "Checking status of Docker Compose services..."
+                    docker compose ps
+                    # Add more specific health checks if needed, e.g., curl API endpoints
+                '''
+            }
+            post {
+                always { echo "======= Verify Deployment =======" }
+                success { echo "======= Verify Deployment ⭐Successfully⭐========" }
+                failure { echo "======= Verify Deployment failed❌========" }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo "========always========"
+        }
+        success {
+            echo "========pipeline executed successfully ========"
+        }
+        failure {
+            echo "========pipeline execution failed========"
+        }
+    }
+}
