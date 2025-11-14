@@ -3,8 +3,9 @@
 set -e
 
 # Change Host Name
-echo "Changing Host Name..."
-sudo hostnamectl set-hostname "docker-server"
+NEW_HOSTNAME="Docker-Server"
+echo "Changing Host Name ${NEW_HOSTNAME} ..."
+sudo hostnamectl set-hostname $NEW_HOSTNAME
 
 # Install dependencies and update system
 echo "Installing dependencies and updating system..."
@@ -60,10 +61,10 @@ sudo yum install -y docker git
 echo '=== Installing Docker Compose V2 if missing ==='
 if ! docker compose version &> /dev/null; then
     echo 'Installing Docker Compose V2...'
-    mkdir -p ~/.docker/cli-plugins/
+    sudo mkdir -p /usr/libexec/docker/cli-plugins/
     # Ensure the binary is downloaded to the correct location and is executable
-    curl -SL https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
-    chmod +x ~/.docker/cli-plugins/docker-compose
+    curl -SL https://github.com/docker/compose/releases/latest/download/docker-compose-linux-$(uname -m) -o /usr/libexec/docker/cli-plugins/docker-compose    chmod +x ~/.docker/cli-plugins/docker-compose
+    chmod +x /usr/libexec/docker/cli-plugins/docker-compose
 
     # Optional: Add the directory to PATH if not recognized by default
     # This might be redundant as Docker usually looks in ~/.docker/cli-plugins/
@@ -72,6 +73,17 @@ if ! docker compose version &> /dev/null; then
 
 fi
 
+# Install and Configure Docker Buildx
+echo '=== Installing Docker Buildx if missing ==='
+if ! docker buildx version &> /dev/null; then
+    echo 'Installing Docker Buildx...'
+    DOCKER_BUILDX_VERSION=$(curl -s https://api.github.com/repos/docker/buildx/releases/latest | grep tag_name | cut -d '"' -f 4)
+    sudo mkdir -p /usr/libexec/docker/cli-plugins/
+    curl -SL https://github.com/docker/buildx/releases/download/${DOCKER_BUILDX_VERSION}/docker-buildx-linux-$(uname -m) -o /usr/libexec/docker/cli-plugins/docker-buildx
+    sudo chmod +x /usr/libexec/docker/cli-plugins/docker-buildx
+fi  
+
+# Verify Docker and Docker Compose installation
 echo '=== Verify Docker & Compose ==='
 docker --version || { echo 'Docker not working'; exit 1; }
 docker compose version || { echo 'Docker Compose V2 not working or not found in expected location'; exit 1; }

@@ -1,95 +1,96 @@
 #!/bin/bash
 
-set -ea
+# Exit immediately if a command exits with a non-zero status or a variable is unset
+set -eu
 
-# --- 1. System Setup and Host Name Configuration ---
+JAVA_VERSION="21"
+# Update the RPM file name to be compatible with EL9 (CentOS 9) systems
+MYSQL_RELEASE_RPM="mysql80-community-release-el9-1.noarch.rpm"
+TEMP_PASSWORD=""
+APP_PASSWORD='PetClinic3773$151'
+DB_USER='petclinic_user'
+DB_NAME='petclinic'
 
-echo "--- 1. Changing Host Name ---"
-# Set Host Name
-NEW_HOSTNAME="Mysql-Server"
-echo "Changing Host Name to: ${NEW_HOSTNAME}"
-sudo hostnamectl set-hostname "${NEW_HOSTNAME}"
+# Use dnf instead of yum for CentOS 9
+echo "Installing prerequisites (Java, wget, git)..."
+sudo dnf install -y java-"${JAVA_VERSION}"-openjdk-devel wget git
 
-# --- 2. Update System and Install Dependencies ---
-
-echo "--- 2. Updating system and installing dependencies ---"
-# Update system packages
-sudo dnf update -y
-
-# Install Java, Git, and Wget
-echo "--- Installing Java, Git, and Wget ---"
-sudo dnf install -y java-21-openjdk-devel git wget
-
-# Verify Java installation
-JAVA_HOME="/usr/lib/jvm/java-21-openjdk"
-if [ ! -d "$JAVA_HOME" ]; then
-    echo "ERROR: Java 21 OpenJDK not found at $JAVA_HOME. Please verify installation."
-    exit 1
-fi
-
-# Configure Java environment variables
-echo "--- Configuring Java environment variables ---"
+echo "Setting up JAVA_HOME environment variables..."
+JAVA_HOME="/usr/lib/jvm/java-${JAVA_VERSION}-openjdk"
 {
-    echo "export JAVA_HOME=${JAVA_HOME}"
-    echo "export PATH=\$PATH:\$HOME/bin:\$JAVA_HOME/bin"
-} | sudo tee -a /etc/profile.d/java_env.sh
+  echo "export JAVA_HOME=${JAVA_HOME}"
+  echo "export PATH=\$PATH:\$HOME/bin:\$JAVA_HOME/bin"
+} | sudo tee /etc/profile.d/java_mysql.sh
 
-# Make the profile script executable
-sudo chmod +x /etc/profile.d/java_env.sh
+sudo chmod +x /etc/profile.d/java_mysql.sh
 
-# Source the profile script to apply changes immediately
-source /etc/profile.d/java_env.sh
+echo "Downloading MySQL repository RPM for EL9..."
+# Download to /tmp with the correct filename using the variable
+sudo wget "https://dev.mysql.com/get/${MYSQL_RELEASE_RPM}" -O /tmp/"${MYSQL_RELEASE_RPM}"
 
-# --- 3. Install MySQL 8.0 ---
+echo "Installing MySQL repository using dnf localinstall..."
+# Use dnf localinstall which handles dependencies better than raw rpm -Uvh
+sudo dnf localinstall -y /tmp/"${MYSQL_RELEASE_RPM}"
 
-echo "--- 3. Installing MySQL 8.0 ---"
-# Download and install the MySQL 8.0 repository
-echo "--- Downloading MySQL 8.0 repository ---"
-sudo wget https://dev.mysql.com/get/mysql80-community-release-el9-1.noarch.rpm
-sudo dnf localinstall -y mysql80-community-release-el9-1.noarch.rpm
-sudo rm -f mysql80-community-release-el9-1.noarch.rpm
+# The previous erroneous line is removed:
+# sudo rpm -Uvh mysql80-community-release-el7-3.noarch.rpm
 
-# Import MySQL GPG key
-echo "--- Importing MySQL GPG key ---"
-sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023
+echo "Installing MySQL Community Server..."
+# Use dnf instead of yum for CentOS 9
+sudo dnf install -y --nogpgcheck mysql-community-server
 
-# Install MySQL server and client
-echo "--- Installing MySQL server and client ---"
-sudo dnf install -y mysql-community-server mysql-community-client
+sudo rm -f /tmp/"${MYSQL_RELEASE_RPM}"
 
-# Start and enable MySQL service
-echo "--- Starting and enabling MySQL service ---"
+echo "Starting and enabling MySQL service..."
 sudo systemctl start mysqld
 sudo systemctl enable mysqld
 
-# --- 4. Secure MySQL Installation ---
+echo "Waiting for and extracting temporary MySQL root password..."
+for i in {1..10}; do
+    # Filter logs carefully; 'grep' might need time to find the file if it was just started
+    TEMP_PASSWORD=$(sudo grep 'temporary password' /var/log/mysqld.log 2>/dev/null | awk '{print $NF}')
+    if [ -n "$TEMP_PASSWORD" ]; then
+        break
+    fi
+    echo "Waiting for mysqld service logs... attempt $i"
+    sleep 5
+done
 
-echo "--- 4. Securing MySQL installation ---"
-# Retrieve the temporary root password from the MySQL log
-TEMP_PASSWORD=$(sudo grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}')
 if [ -z "$TEMP_PASSWORD" ]; then
-    echo "ERROR: Temporary password not found in /var/log/mysqld.log"
+    echo "ERROR: Failed to retrieve temporary MySQL root password. Exiting." >&2
     exit 1
 fi
+echo "Temporary password found."
 
-# Define the new root password
-NEW_PASSWORD='Mysql$9999!'
+echo "Configuring MySQL security, database, and user access..."
+sudo mysql --connect-expired-password -uroot -p"$TEMP_PASSWORD" <<EOF
+-- Reset root password and allow non-expiring login
+ALTER USER 'root'@'localhost' IDENTIFIED BY '$APP_PASSWORD' PASSWORD EXPIRE NEVER;
 
-# Use the temporary password to secure the MySQL installation
-echo "--- Securing MySQL with a new root password ---"
-mysql --connect-expired-password -uroot -p"$TEMP_PASSWORD" <<EOF
-ALTER USER 'root'@'localhost' IDENTIFIED BY '$NEW_PASSWORD';
+-- Create the database
+CREATE DATABASE IF NOT EXISTS $DB_NAME CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Create the Petclinic user, allowing remote connections ('%' host)
+CREATE USER IF NOT EXISTS '$DB_USER'@'%' IDENTIFIED BY '$APP_PASSWORD';
+
+-- Grant all privileges on the new database to the new user
+GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'%';
+
+-- Remove anonymous user (good security practice)
 DELETE FROM mysql.user WHERE User='';
+-- Drop test database (good security practice)
 DROP DATABASE IF EXISTS test;
+
+-- Apply changes
 FLUSH PRIVILEGES;
 EOF
 
-# Restart MySQL to apply changes
-echo "--- Restarting MySQL service ---"
+echo "Restarting MySQL service to apply security and user changes..."
 sudo systemctl restart mysqld
 
-# --- Final Output ---
-
-echo "--- MySQL installation and configuration completed successfully ---"
-echo "MySQL root password has been updated to: $NEW_PASSWORD"
-echo "Please ensure you store this password securely."
+echo "--- MySQL Server Setup Complete ---"
+echo "Database: $DB_NAME"
+echo "User: $DB_USER"
+echo "Password: $APP_PASSWORD"
+echo "Root Password: $APP_PASSWORD"
+echo "The MySQL server is now configured and ready for connections from your microservices."
