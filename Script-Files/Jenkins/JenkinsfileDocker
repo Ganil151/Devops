@@ -1,117 +1,213 @@
 pipeline {
-    agent { label 'worker-node-2' }
+    agent { label params.NODE_LABEL }
 
     environment {
         DOCKER_IMAGE = "ganil151/spring-petclinic-microservice"
-        IMAGE_TAG = "latest"
-        DOCKER_HUB_CREDENTIALS_ID = "dockerhub-credentials"
-        SSH_CREDENTIALS_ID = "master_keys"
-        REMOTE_USER = "ec2-user"
+        IMAGE_TAG    = "${env.BUILD_NUMBER ?: 'latest'}"
+        REGION       = "us-east-1"
     }
 
     parameters {
-        string(
-            name: 'EC2_INSTANCE_NAME',
-            defaultValue: 'Spring-PetClinic-Docker',
-            description: 'Name of the Docker-Server'
-        )
+        string(name: 'NODE_LABEL',        defaultValue: 'worker-node')
+        string(name: 'EC2_INSTANCE_NAME', defaultValue: 'Spring-PetClinic-Docker')
+        string(name: 'SSH_CREDENTIALS_ID', defaultValue: 'master_keys')
     }
+
+    triggers { githubPush() }
 
     stages {
 
-        /* -----------------------------
-           Get Docker-Server Public IP
-        ------------------------------ */
-        stage('Find Docker-Server IP') {
+        /* ========================
+         *  CHECKOUT PROJECT
+         * ======================== */
+        stage('Checkout') {
             steps {
-                script {
-                    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-credentials']]) {
+                git(
+                    branch: 'main',
+                    url: 'https://github.com/Ganil151/spring-petclinic-microservices.git',
+                    credentialsId: 'github-credentials'
+                )
+            }
+        }
 
-                        env.DOCKER_SERVER_IP = sh(
-                            script: """
-                                INSTANCE_ID=\$(aws ec2 describe-instances \
-                                    --filters "Name=tag:Name,Values=${EC2_INSTANCE_NAME}" \
-                                             "Name=instance-state-name,Values=running" \
-                                    --query "Reservations[0].Instances[0].InstanceId" \
-                                    --output text)
+        /* ========================
+         *  BUILD JAR
+         * ======================== */
+        stage('Build App') {
+            environment {
+                JAVA_HOME = "/usr/lib/jvm/java-21-amazon-corretto"
+                PATH = "${JAVA_HOME}/bin:${env.PATH}"
+            }
+            steps {
+                sh '''
+                chmod +x ./mvnw
+                sed -i 's/\r$//' ./mvnw
+                
+                ./mvnw clean install
 
-                                if [ "\$INSTANCE_ID" = "None" ] || [ -z "\$INSTANCE_ID" ]; then
-                                    echo "ERROR: EC2 instance not found" >&2
-                                    exit 1
-                                fi
+                JAR=$(ls spring-petclinic-config-server/target/*.jar | head -n 1)
+                cp "$JAR" docker/application.jar
+                '''
+            }
+        }
 
-                                PUBLIC_IP=\$(aws ec2 describe-instances \
-                                    --instance-ids "\$INSTANCE_ID" \
-                                    --query "Reservations[0].Instances[0].PublicIpAddress" \
-                                    --output text)
+        /* ========================
+         *  BUILD AND PUSH IMAGE
+         * ======================== */
+        stage('Docker Build & Push') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials',
+                    usernameVariable: 'D_USER',
+                    passwordVariable: 'D_PASS')]) {
 
-                                if [ "\$PUBLIC_IP" = "None" ] || [ -z "\$PUBLIC_IP" ]; then
-                                    echo "ERROR: No public IP found" >&2
-                                    exit 1
-                                fi
+                    sh '''
+                    echo "$D_PASS" | docker login -u "$D_USER" --password-stdin
 
-                                echo "\$PUBLIC_IP"
-                            """,
-                            returnStdout: true
-                        ).trim()
-                    }
+                    cd docker
+                    docker build -t $DOCKER_IMAGE:$IMAGE_TAG -t $DOCKER_IMAGE:latest .
+
+                    docker push $DOCKER_IMAGE:$IMAGE_TAG
+                    docker push $DOCKER_IMAGE:latest
+                    '''
                 }
             }
         }
 
-        /* -----------------------------
-           Pull and Run Docker Image
-        ------------------------------ */
-        stage('Deploy Docker Container') {
+        /* ========================
+         *  EC2 PROVISION + SOFTWARE INSTALL
+         * ======================== */
+        stage('Provision EC2 Instance') {
             steps {
-                script {
+                withCredentials([
+                    [$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-credentials'],
+                    [$class: 'SSHUserPrivateKeyBinding', credentialsId: params.SSH_CREDENTIALS_ID,
+                        keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER']
+                ]) {
 
-                    withCredentials([
-                        usernamePassword(
-                            credentialsId: env.DOCKER_HUB_CREDENTIALS_ID,
-                            usernameVariable: 'DOCKER_USER',
-                            passwordVariable: 'DOCKER_PASS'),
-                        sshUserPrivateKey(
-                            credentialsId: env.SSH_CREDENTIALS_ID,
-                            keyFileVariable: 'SSH_KEY')
-                    ]) {
+                    sh '''
+                    echo "Searching for EC2 instance…"
+                    INSTANCE_ID=$(aws ec2 describe-instances \
+                        --filters "Name=tag:Name,Values=${EC2_INSTANCE_NAME}" \
+                                  "Name=instance-state-name,Values=running" \
+                        --query "Reservations[0].Instances[0].InstanceId" \
+                        --output text || echo "None")
 
-                        sh """
-echo "Deploying to ${DOCKER_SERVER_IP}..."
+                    if [ "$INSTANCE_ID" = "None" ]; then
+                        echo "Creating a NEW EC2 instance..."
+                        INSTANCE_ID=$(aws ec2 run-instances \
+                            --image-id ami-052064a798f08f0d3 \
+                            --instance-type c7i-flex.large \
+                            --key-name master_keys \
+                            --security-group-ids sg-00c6bccfbdec3bb9d \
+                            --subnet-id subnet-0e2489f42748d00f3 \
+                            --associate-public-ip-address \
+                            --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${EC2_INSTANCE_NAME}}]" \
+                            --query "Instances[0].InstanceId" --output text)
+                        echo "New instance started: $INSTANCE_ID"
+                    else
+                        echo "Found existing EC2 instance: $INSTANCE_ID"
+                    fi
 
-ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ${REMOTE_USER}@${DOCKER_SERVER_IP} << EOF
+                    echo "Waiting for instance to enter running state..."
+                    aws ec2 wait instance-running --instance-ids $INSTANCE_ID
 
-    echo "Logging into Docker Hub..."
-    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                    PUBLIC_IP=$(aws ec2 describe-instances \
+                        --instance-ids $INSTANCE_ID \
+                        --query "Reservations[0].Instances[0].PublicIpAddress" \
+                        --output text)
 
-    echo "Stopping existing container..."
-    docker stop spring-petclinic || true
-    docker rm spring-petclinic || true
+                    echo "$PUBLIC_IP" > public_ip.txt
+                    echo "EC2 Public IP: $PUBLIC_IP"
 
-    echo "Pulling latest image..."
-    docker pull ${DOCKER_IMAGE}:${IMAGE_TAG}
+                    echo "===== Installing Docker, Java, Maven, Docker Compose on EC2 ====="
+                    ssh -o StrictHostKeyChecking=no -i "$SSH_KEY" $SSH_USER@$PUBLIC_IP <<'EOF'
 
-    echo "Running container on port 8080..."
-    docker run -d --restart unless-stopped \\
-        -p 8080:8080 \\
-        --name spring-petclinic \\
-        ${DOCKER_IMAGE}:${IMAGE_TAG}
+                        sudo yum update -y
 
-    echo "Deployment complete."
+                        echo "Installing Java 21..."
+                        sudo yum install -y java-21-amazon-corretto-devel git
+
+                        echo "Installing Maven..."
+                        sudo yum install -y maven
+
+                        echo "Configuring JAVA_HOME and M2_HOME..."
+                        JAVA_HOME="/usr/lib/jvm/java-21-amazon-corretto"
+                        M2_HOME="/usr/share/maven"
+
+                        sudo bash -c 'cat << EOS > /etc/profile.d/jenkins_env.sh
+export JAVA_HOME='${JAVA_HOME}'
+export M2_HOME='${M2_HOME}'
+export PATH=\$PATH:\$JAVA_HOME/bin:\$M2_HOME/bin
+EOS'
+                        sudo chmod +x /etc/profile.d/jenkins_env.sh
+                        # Source the new environment for the current session
+                        source /etc/profile.d/jenkins_env.sh
+
+                        echo "Installing Docker..."
+                        sudo yum install -y docker
+                        sudo systemctl enable docker
+                        sudo systemctl start docker
+                        sudo usermod -aG docker ec2-user
+
+                        echo "Installing Docker Compose v2..."
+                        sudo mkdir -p /usr/libexec/docker/cli-plugins/
+                        sudo curl -SL \
+                          https://github.com/docker/compose/releases/latest/download/docker-compose-linux-$(uname -m) \
+                          -o /usr/libexec/docker/cli-plugins/docker-compose
+                        sudo chmod +x /usr/libexec/docker/cli-plugins/docker-compose
+
+                        # Verify installations
+                        docker --version
+                        docker compose version
 EOF
-                        """
-                    }
+                    '''
+                }
+            }
+        }
+
+        /* ========================
+         *  COPY COMPOSE + DEPLOY APP
+         * ======================== */
+        stage('Deploy Application to EC2') {
+            steps {
+                withCredentials([
+                    [$class: 'SSHUserPrivateKeyBinding', credentialsId: params.SSH_CREDENTIALS_ID,
+                        keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER'],
+                    usernamePassword(credentialsId: 'dockerhub-credentials',
+                        usernameVariable: 'D_USER', passwordVariable: 'D_PASS')
+                ]) {
+
+                    sh '''
+                    PUBLIC_IP=$(cat public_ip.txt)
+
+                    echo "Copying docker-compose.yml..."
+                    scp -o StrictHostKeyChecking=no -i "$SSH_KEY" docker-compose.yml \
+                        $SSH_USER@$PUBLIC_IP:~/docker-compose.yml
+
+                    echo "Deploying on EC2..."
+                    ssh -o StrictHostKeyChecking=no -i "$SSH_KEY" $SSH_USER@$PUBLIC_IP << EOF
+
+                        # Source environment to ensure docker compose is in PATH
+                        source /etc/profile.d/jenkins_env.sh
+                        source ~/.bash_profile || true
+                        source ~/.bashrc || true
+
+                        echo "$D_PASS" | docker login -u "$D_USER" --password-stdin
+
+                        echo "Pulling latest app image..."
+                        docker pull ${DOCKER_IMAGE}:latest
+
+                        echo "Deploying with Docker Compose..."
+                        docker compose -f ~/docker-compose.yml pull
+                        docker compose -f ~/docker-compose.yml up -d
+
+                        echo "✔ Deployment completed on EC2"
+EOF
+                    '''
                 }
             }
         }
     }
 
-    post {
-        success {
-            echo "SUCCESS → App running at: http://${env.DOCKER_SERVER_IP}:8080"
-        }
-        failure {
-            echo "Deployment FAILED."
-        }
-    }
+    post { always { echo "Pipeline finished." } }
 }
