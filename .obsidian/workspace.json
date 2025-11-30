@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/Commands/Comprehensive Kubernetes Commands Reference & Diagnostic Guide.md",
+                "file": "MySql/Commands/Comprehensive MySQL Commands Reference & Diagnostic Guide.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Comprehensive Kubernetes Commands Reference & Diagnostic Guide"
+              "title": "Comprehensive MySQL Commands Reference & Diagnostic Guide"
             }
           }
         ]
@@ -198,26 +198,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "566b372ccde92e0a",
   "lastOpenFiles": [
+    "Anisble/Commands/Comprehensive Ansible Commands Reference & Diagnostic Guide.md",
+    "MySql/Commands/Comprehensive MySQL Commands Reference & Diagnostic Guide.md",
+    "MySql/Commands",
+    "Kubernetes/Commands/Comprehensive Kubernetes Commands Reference & Diagnostic Guide.md",
+    "Anisble/Commands",
+    "Untitled 1",
+    "Untitled",
+    "Anisble",
     "Kubernetes/Commands",
     "Docker/Commands/Docker Commands Reference.md",
     "Docker/Commands",
     "Script-Files/Dockers/Diagnostic/docker-diagnose.sh.md",
     "Script-Files/Dockers/Diagnostic",
     "sonarQube/SonarQube in Docker 🚀.md",
-    "Kubernetes/Commands/Comprehensive Kubernetes Commands Reference & Diagnostic Guide.md",
     "Script-Files/AgroCD/install-argo.sh",
     "Script-Files/AgroCD/install-ag",
-    "Script-Files/AgroCD",
-    "Script-Files/New folder",
     "Script-Files/Prometheus/install-prometheus.md",
-    "Script-Files/Prometheus",
     "Script-Files/Node_Exporter/install-node_exporter.md",
-    "Script-Files/Node_Exporter",
     "Kubernetes/Youtube_Lessons/Anton_Putra/Notes.md",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/1-example/1-viewer-cluster-role-binding.yaml",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/1-example/0-viewer-cluster-role.yaml",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS/README.md",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/README.md",
     "CICD/Youtube_Lessons/Dev/Kubernetes/README.md",
@@ -240,7 +241,6 @@
     "CICD/Sis_Lessons/Successfully/SPMS_CICD/Image/Screenshot (195).png",
     "CICD/Sis_Lessons/Successfully/SPMS_CICD/README.md",
     "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/README.md",
-    "SSH/SSH-COPY-ID.md",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (159).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (158).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (157).png",
