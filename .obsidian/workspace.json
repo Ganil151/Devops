@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ba66bcba017b4ce4",
+        "id": "0ff11d3ebc3b96b7",
         "type": "tabs",
         "children": [
           {
-            "id": "36574c9535b9eed3",
+            "id": "566b372ccde92e0a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sonarQube/SonarQube in Docker 🚀.md",
+                "file": "Kubernetes/Commands/Comprehensive Kubernetes Commands Reference & Diagnostic Guide.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,47 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "SonarQube in Docker 🚀"
-            }
-          },
-          {
-            "id": "62ac3d756ebaa5b2",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.14"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.14"
-            }
-          },
-          {
-            "id": "84da1f1873d4d8df",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Kubernetes/Commands.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Commands"
+              "title": "Comprehensive Kubernetes Commands Reference & Diagnostic Guide"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -125,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -236,8 +198,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "84da1f1873d4d8df",
+  "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "Kubernetes/Commands",
+    "Docker/Commands/Docker Commands Reference.md",
+    "Docker/Commands",
+    "Script-Files/Dockers/Diagnostic/docker-diagnose.sh.md",
+    "Script-Files/Dockers/Diagnostic",
+    "sonarQube/SonarQube in Docker 🚀.md",
+    "Kubernetes/Commands/Comprehensive Kubernetes Commands Reference & Diagnostic Guide.md",
     "Script-Files/AgroCD/install-argo.sh",
     "Script-Files/AgroCD/install-ag",
     "Script-Files/AgroCD",
@@ -249,10 +218,6 @@
     "Kubernetes/Youtube_Lessons/Anton_Putra/Notes.md",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/1-example/1-viewer-cluster-role-binding.yaml",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/1-example/0-viewer-cluster-role.yaml",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/0-viewer-cluster-role.yaml",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/2-example",
-    "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/AntonPutra/1-example",
-    "Kubernetes/Commands.md",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/Amazon_EKS/README.md",
     "CICD/Youtube_Lessons/Dev/Kubernetes/Dev/README.md",
     "CICD/Youtube_Lessons/Dev/Kubernetes/README.md",
@@ -263,7 +228,6 @@
     "CICD/Sis_Lessons/Dev/MySql_CICD/README.md",
     "sonarQube/dockerContainer.md",
     "Terraform/Notes/Number of Ec2 Instances.md",
-    "sonarQube/SonarQube in Docker 🚀.md",
     "CICD/MySql/Commands.md",
     "CICD/Notes/Agil-Methodology/Agil-Methodology.md",
     "CICD/Notes/Agil-Methodology/Images/Agile-Development-Stages.png",
@@ -277,13 +241,11 @@
     "CICD/Sis_Lessons/Successfully/SPMS_CICD/README.md",
     "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/README.md",
     "SSH/SSH-COPY-ID.md",
-    "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/README.md",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (159).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (158).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (157).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (154).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (155).png",
-    "CICD/Youtube_Lessons/Dev/jenkins/README.md",
     "Untitled.canvas"
   ]
 }
