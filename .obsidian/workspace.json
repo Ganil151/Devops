@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Windows-11/Windows11-Privacy-Hardening.ps1.md",
+                "file": "Jenkins/Commands/Comprehensive Jenkins Commands & Diagnostics Reference.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Windows11-Privacy-Hardening.ps1"
+              "title": "Comprehensive Jenkins Commands & Diagnostics Reference"
             }
           }
         ],
@@ -226,12 +226,15 @@
   },
   "active": "a0d7169b6d04ce24",
   "lastOpenFiles": [
+    "Jenkins/Commands",
+    "Git&GitHub/Notes.md",
+    "Jenkins/Commands/Comprehensive Jenkins Commands & Diagnostics Reference.md",
+    "Jenkins",
+    "Security/Windows-11/Windows11-Privacy-Hardening.ps1.md",
     "Security/Windows-11/Windows11-Privacy-Hardening.ps1",
     "README.md",
-    "Security/Windows-11/Windows11-Privacy-Hardening.ps1.md",
     "Security/Windows-11",
     "Docker/Commands/Docker Commands Reference.md",
-    "Untitled",
     "Security",
     "Script-Files/Dockers/Diagnostic/docker-compose-diagnostic-and-fixes.sh.md",
     "MySql/Commands/Comprehensive MySQL Commands Reference & Diagnostic Guide.md",
@@ -244,7 +247,6 @@
     "Kubernetes/Commands",
     "Docker/Commands",
     "Script-Files/Dockers/Diagnostic/docker-diagnose.sh.md",
-    "Script-Files/Dockers/Diagnostic",
     "sonarQube/SonarQube in Docker 🚀.md",
     "Script-Files/Prometheus/install-prometheus.md",
     "Script-Files/Node_Exporter/install-node_exporter.md",
@@ -264,8 +266,6 @@
     "CICD/Notes/Agil-Methodology/Images/Agile-Development-Stages.png",
     "CICD/Notes/Agil-Methodology/Images/12-Principles-of-Agile-Methodology.webp",
     "CICD/Notes/Untitled.md",
-    "CICD/Youtube_Lessons/Dev/Netflix-Clone-CICD-Pipeline/README.md",
-    "CICD/Notes/Ansible Project To Monitor VMs Health Steps Doc.docx.md",
     "CICD/Sis_Lessons/Successfully/SPMS_CICD/Image/Screenshot (195).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (159).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (158).png",
