@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "Comprehensive MySQL Commands Reference & Diagnostic Guide"
             }
+          },
+          {
+            "id": "a0d7169b6d04ce24",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Windows-11/Windows11-Privacy-Hardening.ps1.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Windows11-Privacy-Hardening.ps1"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -88,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -198,24 +224,28 @@
       "bases:Create new base": false
     }
   },
-  "active": "566b372ccde92e0a",
+  "active": "a0d7169b6d04ce24",
   "lastOpenFiles": [
-    "Anisble/Commands/Comprehensive Ansible Commands Reference & Diagnostic Guide.md",
+    "Security/Windows-11/Windows11-Privacy-Hardening.ps1",
+    "README.md",
+    "Security/Windows-11/Windows11-Privacy-Hardening.ps1.md",
+    "Security/Windows-11",
+    "Docker/Commands/Docker Commands Reference.md",
+    "Untitled",
+    "Security",
+    "Script-Files/Dockers/Diagnostic/docker-compose-diagnostic-and-fixes.sh.md",
     "MySql/Commands/Comprehensive MySQL Commands Reference & Diagnostic Guide.md",
+    "Anisble/Commands/Comprehensive Ansible Commands Reference & Diagnostic Guide.md",
     "MySql/Commands",
     "Kubernetes/Commands/Comprehensive Kubernetes Commands Reference & Diagnostic Guide.md",
     "Anisble/Commands",
     "Untitled 1",
-    "Untitled",
     "Anisble",
     "Kubernetes/Commands",
-    "Docker/Commands/Docker Commands Reference.md",
     "Docker/Commands",
     "Script-Files/Dockers/Diagnostic/docker-diagnose.sh.md",
     "Script-Files/Dockers/Diagnostic",
     "sonarQube/SonarQube in Docker 🚀.md",
-    "Script-Files/AgroCD/install-argo.sh",
-    "Script-Files/AgroCD/install-ag",
     "Script-Files/Prometheus/install-prometheus.md",
     "Script-Files/Node_Exporter/install-node_exporter.md",
     "Kubernetes/Youtube_Lessons/Anton_Putra/Notes.md",
@@ -236,11 +266,7 @@
     "CICD/Notes/Untitled.md",
     "CICD/Youtube_Lessons/Dev/Netflix-Clone-CICD-Pipeline/README.md",
     "CICD/Notes/Ansible Project To Monitor VMs Health Steps Doc.docx.md",
-    "CICD/Youtube_Lessons/Dev/README.md",
-    "CICD/Notes/EBS volume.md",
     "CICD/Sis_Lessons/Successfully/SPMS_CICD/Image/Screenshot (195).png",
-    "CICD/Sis_Lessons/Successfully/SPMS_CICD/README.md",
-    "CICD/Sis_Lessons/Dev/SPMS_CICD_v2/README.md",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (159).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (158).png",
     "CICD/Youtube_Lessons/Dev/Ansible/ansible_cicd_v2/images/Screenshot (157).png",

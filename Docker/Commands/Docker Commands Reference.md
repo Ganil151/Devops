@@ -660,5 +660,489 @@ docker ps -s
 # Find large images
 docker images --format "{{.Repository}}:{{.Tag}}\t{{.Size}}" | sort -k2 -h
 ```
+---
+# Troubleshoot
 
-This comprehensive guide should cover most Docker operations and diagnostic needs for your Spring Petclinic setup!
+```bash
+docker compose up -d
+[+] Running 2/4
+ ✘ Container config-server      Error response fro...                           0.0s
+ ⠋ Container tracing-server     Creating                                        0.0s
+ ✘ Container prometheus-server  Error response...                               0.0s
+ ⠋ Container grafana-server     Creating                                        0.0s
+Error response from daemon: Conflict. The container name "/prometheus-server" is already in use by container "ba764e7ea2c36e6eb5fcd7725a6b3c60663475681461f70ea7a4ba8215685b91". You have to remove (or rename) that container to be able to reuse that name.
+```
+
+## **Quick Fix (Choose One)**
+
+### **Option 1: Remove Old Containers (Recommended)**
+
+```bash
+# Stop and remove all containers
+docker compose down
+
+# Remove all stopped containers
+docker container prune -f
+
+# Start fresh
+docker compose up -d
+```
+
+### **Option 2: Force Recreate**
+
+```bash
+# Force recreate all containers
+docker compose up -d --force-recreate
+
+# Or remove orphans as well
+docker compose up -d --force-recreate --remove-orphans
+```
+
+### **Option 3: Remove Specific Conflicting Containers**
+
+```bash
+# Remove the specific conflicting containers
+docker rm -f config-server prometheus-server
+
+# Then start
+docker compose up -d
+```
+
+---
+
+## **Complete Cleanup and Restart**
+
+```bash
+# Step 1: Stop everything
+docker compose down
+
+# Step 2: Remove all containers (including stopped ones)
+docker ps -a -q | xargs docker rm -f 2>/dev/null || true
+
+# Step 3: Clean up (optional but recommended)
+docker system prune -f
+
+# Step 4: Start fresh
+docker compose up -d
+
+# Step 5: Verify
+docker compose ps
+```
+
+---
+
+## **Detailed Troubleshooting**
+
+### **Check Current Containers**
+
+```bash
+# List all containers (running and stopped)
+docker ps -a
+
+# Filter by name
+docker ps -a --filter "name=config-server"
+docker ps -a --filter "name=prometheus-server"
+
+# Show container IDs only
+docker ps -aq
+```
+
+### **Remove Specific Containers**
+
+```bash
+# Remove by name
+docker rm -f config-server
+docker rm -f prometheus-server
+docker rm -f tracing-server
+docker rm -f grafana-server
+
+# Remove by ID (from your error)
+docker rm -f baxxxxxxxxxxd7725a6b3c6066xxxxxxxxxxx5b91
+```
+
+### **Remove All Petclinic Containers**
+
+```bash
+# Remove all containers matching pattern
+docker ps -a --filter "name=petclinic" -q | xargs docker rm -f 2>/dev/null || true
+
+# Remove all containers from compose project
+docker compose -p spring-petclinic down
+
+# Or if using default project name
+docker compose down
+```
+
+---
+
+## **Docker Compose Cleanup Commands**
+
+### **Basic Cleanup**
+
+```bash
+# Stop and remove containers, networks
+docker compose down
+
+# Stop and remove containers, networks, volumes
+docker compose down -v
+
+# Stop and remove containers, networks, images
+docker compose down --rmi all
+
+# Stop and remove containers, networks, volumes, images
+docker compose down -v --rmi all
+
+# Remove orphaned containers
+docker compose down --remove-orphans
+```
+
+### **Force Operations**
+
+```bash
+# Stop containers immediately (no graceful shutdown)
+docker compose kill
+
+# Remove stopped containers
+docker compose rm -f
+
+# Force recreate containers
+docker compose up -d --force-recreate
+
+# Build and recreate
+docker compose up -d --build --force-recreate
+```
+---
+## **Identify and Remove Conflicting Containers**
+
+### **Find Containers Using Specific Names**
+
+```bash
+# List containers with specific names
+docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Image}}" | grep -E "config-server|prometheus-server|tracing-server|grafana-server"
+
+# Get full container details
+docker inspect config-server
+docker inspect prometheus-server
+```
+
+### **Remove by Project**
+
+```bash
+# If containers were created by docker-compose
+docker compose -p spring-petclinic down
+
+# List compose projects
+docker compose ls
+
+# Remove specific project
+docker compose -p <project_name> down
+```
+
+---
+
+## **Complete Restart Script**
+
+Create a script to clean and restart:
+```bash
+#!/bin/bash
+# cleanup-and-restart.sh
+
+set -e
+
+echo "=== Spring Petclinic Docker Cleanup & Restart ==="
+echo ""
+
+# Step 1: Stop compose services
+echo "Step 1: Stopping docker-compose services..."
+docker compose down 2>/dev/null || echo "No compose services running"
+docker compose -p spring-petclinic down 2>/dev/null || echo "No spring-petclinic project running"
+
+# Step 2: Remove conflicting containers by name
+echo ""
+echo "Step 2: Removing specific containers..."
+for container in config-server prometheus-server tracing-server grafana-server \
+                 discovery-server api-gateway customers-service visits-service \
+                 vets-service admin-server mysql-server; do
+    docker rm -f $container 2>/dev/null && echo "✓ Removed $container" || true
+done
+
+# Step 3: Remove all stopped containers
+echo ""
+echo "Step 3: Removing all stopped containers..."
+docker container prune -f
+
+# Step 4: Clean up unused resources
+echo ""
+echo "Step 4: Cleaning up unused resources..."
+docker system prune -f
+
+# Step 5: Start fresh
+echo ""
+echo "Step 5: Starting services..."
+docker compose up -d
+
+# Step 6: Show status
+echo ""
+echo "Step 6: Checking status..."
+sleep 5
+docker compose ps
+
+echo ""
+echo "=== Cleanup Complete ==="
+```
+
+Make it executable and run:
+```bash
+chmod +x cleanup-and-restart.sh
+./cleanup-and-restart.sh
+```
+
+---
+
+## **Docker Compose Project Management**
+
+### **Using Project Names**
+
+```bash
+# Specify project name
+docker compose -p spring-petclinic up -d
+
+# Stop specific project
+docker compose -p spring-petclinic down
+
+# List projects
+docker compose ls
+
+# Remove all containers from a project
+docker compose -p spring-petclinic down -v --remove-orphans
+```
+
+### **Using Multiple Compose Files**
+
+```bash
+# Use specific compose file
+docker compose -f docker-compose.yml down
+docker compose -f docker-compose.yml up -d
+
+# Use multiple files
+docker compose -f docker-compose.yml -f docker-compose.override.yml down
+docker compose -f docker-compose.yml -f docker-compose.override.yml up -d
+```
+---
+## **Prevent Future Conflicts**
+
+### **Option 1: Use Container Name Prefix**
+
+Update your `docker-compose.yml`:
+```yaml
+version: '3.8'
+
+services:
+  config-server:
+    container_name: petclinic-config-server  # Add prefix
+    image: springcommunity/spring-petclinic-config-server
+    # ... rest of config
+
+  prometheus-server:
+    container_name: petclinic-prometheus     # Add prefix
+    image: prom/prometheus
+    # ... rest of config
+```
+
+### **Option 2: Don't Specify Container Names**
+
+Let Docker Compose generate unique names:
+
+```yaml
+version: '3.8'
+
+services:
+  config-server:
+    # Remove container_name line
+    image: springcommunity/spring-petclinic-config-server
+    # ... rest of config
+```
+
+### **Option 3: Use Project Name**
+
+```bash
+# Always use project name
+export COMPOSE_PROJECT_NAME=petclinic
+
+# Or in .env file
+echo "COMPOSE_PROJECT_NAME=petclinic" > .env
+
+# Or specify on command line
+docker compose -p petclinic up -d
+```
+
+---
+
+## **Advanced Cleanup**
+
+### **Remove Everything (Nuclear Option)**
+
+```bash
+# WARNING: This removes ALL Docker resources
+
+# Stop all containers
+docker stop $(docker ps -aq) 2>/dev/null || true
+
+# Remove all containers
+docker rm $(docker ps -aq) 2>/dev/null || true
+
+# Remove all images
+docker rmi $(docker images -q) 2>/dev/null || true
+
+# Remove all volumes
+docker volume rm $(docker volume ls -q) 2>/dev/null || true
+
+# Remove all networks (except default ones)
+docker network prune -f
+
+# Complete cleanup
+docker system prune -a --volumes -f
+```
+
+### **Selective Cleanup**
+
+```bash
+# Remove only stopped containers
+docker container prune -f
+
+# Remove only dangling images
+docker image prune -f
+
+# Remove only unused volumes
+docker volume prune -f
+
+# Remove only unused networks
+docker network prune -f
+
+# Remove build cache
+docker builder prune -f
+```
+
+---
+
+## **Monitoring & Debugging**
+
+### **Check What's Running**
+
+```bash
+# List running containers
+docker ps
+
+# List all containers with details
+docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}\t{{.Image}}"
+
+# Show resource usage
+docker stats
+
+# Show compose services
+docker compose ps
+docker compose ps -a
+```
+
+### **Check Logs**
+
+```bash
+# View compose logs
+docker compose logs
+
+# Follow specific service
+docker compose logs -f config-server
+
+# Last 100 lines
+docker compose logs --tail=100
+
+# View container logs
+docker logs config-server
+docker logs -f prometheus-server
+```
+
+### **Inspect Containers**
+
+```bash
+# Inspect container
+docker inspect config-server
+
+# Get specific info
+docker inspect config-server --format='{{.State.Status}}'
+docker inspect config-server --format='{{.NetworkSettings.IPAddress}}'
+
+# Check if container exists
+docker ps -a --filter "name=config-server" --format "{{.Names}}"
+```
+
+---
+
+## **One-Line Fixes**
+
+```bash
+# Quick fix 1: Force recreate
+docker compose up -d --force-recreate --remove-orphans
+
+# Quick fix 2: Down and up
+docker compose down && docker compose up -d
+
+# Quick fix 3: Remove conflicting and restart
+docker rm -f config-server prometheus-server && docker compose up -d
+
+# Quick fix 4: Nuclear restart
+docker compose down -v && docker container prune -f && docker compose up -d
+
+# Quick fix 5: Complete cleanup
+docker stop $(docker ps -aq); docker rm $(docker ps -aq); docker compose up -d
+```
+
+---
+
+## **Jenkins Pipeline Integration**
+
+If running from Jenkins, update your deploy script:
+
+```groovy
+sh '''
+    # Navigate to deployment directory
+    cd "$REMOTE_DIR"
+
+    # Complete cleanup before starting
+    docker compose down -v 2>/dev/null || true
+    docker container prune -f
+    
+    # Remove any conflicting containers
+    docker rm -f config-server prometheus-server tracing-server grafana-server 2>/dev/null || true
+    
+    # Start fresh
+    docker compose pull || true
+    docker compose up -d --force-recreate --remove-orphans
+    
+    # Verify
+    docker compose ps
+'''
+```
+
+---
+
+## **Best Practice Checklist**
+
+✅ **Always use `docker compose down` before `docker compose up`** ✅ **Use project names to isolate deployments** ✅ **Regularly clean up stopped containers** ✅ **Use `--force-recreate` when updating** ✅ **Monitor disk space with `docker system df`** ✅ **Use `.dockerignore` to reduce build context** ✅ **Tag images with versions, not just `latest`**
+
+---
+
+## **Quick Reference**
+
+```bash
+# Most Common Fix
+docker compose down && docker compose up -d --force-recreate
+
+# If Still Failing
+docker rm -f $(docker ps -aq) && docker compose up -d
+
+# Complete Reset
+docker compose down -v && docker system prune -af && docker compose up -d
+```
+
+Choose the appropriate fix based on your situation. The first option (docker compose down && up) should work 99% of the time!
+
