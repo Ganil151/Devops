@@ -1,0 +1,40 @@
+- **AIM:** A messaging protocol used for instant messaging.
+- **Bonjour:** Apple's implementation of zero-configuration networking (avahi).
+- **CIFS:** Common Internet File System, used for file sharing over a network.
+- **CUPS:** Common UNIX Printing System, used for printing services.
+- **DNS:** Domain Name System, used for resolving domain names to IP addresses.
+- **Deluge:** A BitTorrent client.
+- **IMAP:** Internet Message Access Protocol, used for accessing emails on a server.
+- **IMAPS:** IMAP over SSL/TLS (encrypted).
+- **IPP:** Internet Printing Protocol, used for network printing.
+- **KTorrent:** A BitTorrent client.
+- **Kerberos Admin:** Related to Kerberos authentication, likely for administrative tasks.
+- **Kerberos Full:** Includes all Kerberos services.
+- **Kerberos KDC:** Key Distribution Center for Kerberos authentication.
+- **Kerberos Password:** Related to Kerberos password changes.
+- **LDAP:** Lightweight Directory Access Protocol, used for accessing directory information.
+- **LDAPS:** LDAP over SSL/TLS (encrypted).
+- **LPD:** Line Printer Daemon, an older printing protocol.
+- **MSN:** Microsoft Messenger protocol (older).
+- **MSN SSL:** MSN Messenger over SSL/TLS (encrypted).
+- **Mail submission:** For sending emails from local applications.
+- **NFS:** Network File System, used for sharing files between systems on a network.
+- **OpenSSH:** The OpenSSH server and client, used for secure remote login and file transfer.
+- **POP3:** Post Office Protocol 3, used for retrieving emails from a server.
+- **POP3S:** POP3 over SSL/TLS (encrypted).
+- **PeopleNearby:** A service for discovering nearby devices.
+- **SMTP:** Simple Mail Transfer Protocol, used for sending emails.
+- **SSH:** The SSH protocol itself (often synonymous with OpenSSH).
+- **Socks:** SOCKS proxy server, used for network traffic redirection.
+- **Telnet:** A legacy remote login protocol (generally not recommended for security reasons).
+- **Transmission:** A BitTorrent client.
+- **Transparent Proxy:** A proxy server that intercepts network traffic without user intervention.
+- **VNC:** Virtual Network Computing, used for remote desktop access.
+- **WWW:** World Wide Web (HTTP) traffic.
+- **WWW Cache:** A web proxy server that caches web content.
+- **WWW Full:** Includes all web-related services.
+- **WWW Secure:** HTTPS (secure web) traffic.
+- **XMPP:** Extensible Messaging and Presence Protocol, used for instant messaging and presence information.
+- **Yahoo:** Yahoo! services (likely specific to older Yahoo! applications).
+- **qBittorrent:** A BitTorrent client.
+- **svnserve:** The server for Subversion, a version control system.
