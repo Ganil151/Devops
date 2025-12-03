@@ -1128,68 +1128,12 @@ Show available plugins:
 ansible-doc -t module -l
 ```
 
-Jenkins Ansible Pipeline for MySQL Petclinic Database Setup
-```groovy
-stage('Install MySQL via Ansible (Mysql-Server)') {
-            steps {
-                sh '''
-                set -e
+Test connection to a host:
+```bash
+ansible -m ping -i inventory.ini
+``` 
 
-                INVENTORY="/etc/ansible/inventory.ini"
-                PLAYBOOK="/etc/ansible/mysql_install.yml"
-
-                echo "Checking if PyMySQL is installed on remote hosts in group: mysql"
-
-                # Run pip show on remote hosts; suppress failure & capture output
-                ANSIBLE_CHECK_RESULT=$(ansible mysql -i "$INVENTORY" \
-                    -m ansible.builtin.command \
-                    -a "pip3 show PyMySQL" 2>/dev/null || true)
-
-                # Determine if PyMySQL is installed (reliable indicator)
-                if echo "$ANSIBLE_CHECK_RESULT" | grep -q "Name: PyMySQL"; then
-                    echo "✓ PyMySQL detected on remote hosts. MySQL environment already configured."
-                    echo "→ Skipping MySQL installation playbook."
-                else
-                    echo "✗ PyMySQL NOT found. MySQL environment incomplete."
-                    echo "→ Running MySQL installation playbook..."
-                    
-                    if [ -f "$PLAYBOOK" ]; then
-                        ansible-playbook -i "$INVENTORY" "$PLAYBOOK"
-                    else
-                        echo "⚠ ERROR: MySQL installation playbook not found at $PLAYBOOK"
-                        exit 1
-                    fi
-                fi
-                '''
-            }
-        }
-
-
-
-        stage('Configure MySQL via Ansible (Mysql-Server)') {
-            steps {
-                sh '''
-                set -e
-                if [ -f /etc/ansible/mysql_setup.yml ]; then
-                    ansible-playbook -i /etc/ansible/inventory.ini /etc/ansible/mysql_setup.yml
-                else
-                    echo "No ansible playbook at /etc/ansible/mysql_setup.yml - skipping"
-                fi
-                '''
-            } 
-        }
-
-        stage('Configure Monitoring via Ansible (Prometheus & Grafana)') {
-            steps {
-                sh '''
-                set -e
-                if [ -f /etc/ansible/monitoring_setup.yml ]; then
-                    ansible-playbook -i /etc/ansible/inventory.ini /etc/ansible/monitoring_setup.yml
-                else
-                    echo "No ansible playbook at /etc/ansible/monitoring_setup.yml - skipping"
-                fi
-                '''
-            }
-        }
-```
-This directory structure and Jenkins pipeline stages outline the setup and configuration of a MySQL Petclinic database
+Test connection to a group:
+```bash
+ansible -m ping -i inventory.ini -l docker
+``` 

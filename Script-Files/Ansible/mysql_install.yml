@@ -1,0 +1,154 @@
+---
+- name: Install MySQL 8 from Amazon Linux Repositories
+  hosts: mysql
+  become: true
+
+  tasks:
+    - name: Install MySQL 8 from Amazon Linux extras
+      shell: |
+        # Install MySQL 8 from Amazon Linux repository
+        yum install -y mysql-community-server || \
+        dnf install -y mysql-server || \
+        yum install -y mariadb-server
+      register: mysql_install
+      failed_when: false
+
+    - name: Check which MySQL service is installed
+      shell: |
+        if systemctl list-unit-files | grep -q mysqld; then
+          echo "mysqld"
+        elif systemctl list-unit-files | grep -q mysql; then
+          echo "mysql"
+        elif systemctl list-unit-files | grep -q mariadb; then
+          echo "mariadb"
+        else
+          echo "none"
+        fi
+      register: mysql_service_name
+
+    - name: Set MySQL service name
+      set_fact:
+        mysql_service: "{{ mysql_service_name.stdout }}"
+
+    - name: Display MySQL service
+      debug:
+        msg: "Using MySQL service: {{ mysql_service }}"
+
+    - name: Fail if no MySQL service found
+      fail:
+        msg: "No MySQL service was installed"
+      when: mysql_service == "none"
+
+    - name: Start MySQL service
+      systemd:
+        name: "{{ mysql_service }}"
+        state: started
+        enabled: yes
+
+    - name: Wait for MySQL
+      wait_for:
+        port: 3306
+        delay: 10
+        timeout: 120
+
+    - name: Get temp password if exists
+      shell: grep 'temporary password' /var/log/mysqld.log 2>/dev/null | awk '{print $NF}' | tail -1 || echo ""
+      register: temp_pass
+      changed_when: false
+
+    - name: Check if password already set
+      shell: mysql -u root -p'{{ mysql_root_password }}' -e "SELECT 1;" 2>&1
+      register: password_check
+      changed_when: false
+      failed_when: false
+      no_log: true
+
+    - name: Try no password
+      shell: mysql -u root -e "SELECT 1;" 2>&1
+      register: no_pass_check
+      changed_when: false
+      failed_when: false
+      when: password_check.rc != 0
+
+    - name: Set password from no password state
+      shell: |
+        mysql -u root <<'EOF'
+        ALTER USER 'root'@'localhost' IDENTIFIED BY '{{ mysql_root_password }}';
+        FLUSH PRIVILEGES;
+        EOF
+      when:
+        - password_check.rc != 0
+        - no_pass_check.rc is defined
+        - no_pass_check.rc == 0
+      no_log: true
+
+    - name: Set password from temp password
+      shell: |
+        mysql --connect-expired-password -u root -p'{{ temp_pass.stdout }}' <<'EOF'
+        ALTER USER 'root'@'localhost' IDENTIFIED BY '{{ mysql_root_password }}';
+        FLUSH PRIVILEGES;
+        EOF
+      when:
+        - password_check.rc != 0
+        - temp_pass.stdout | length > 0
+        - (no_pass_check.rc is not defined or no_pass_check.rc != 0)
+      no_log: true
+
+    - name: Create .my.cnf
+      copy:
+        dest: /root/.my.cnf
+        content: |
+          [client]
+          user=root
+          password={{ mysql_root_password }}
+        mode: '0600'
+      no_log: true
+
+    - name: Verify authentication
+      shell: mysql -e "SELECT VERSION();"
+      register: version_check
+      retries: 3
+      delay: 3
+      until: version_check.rc == 0
+
+    - name: Configure for remote access
+      lineinfile:
+        path: /etc/my.cnf
+        regexp: '^bind-address'
+        line: 'bind-address = 0.0.0.0'
+        insertafter: '^\[mysqld\]'
+
+    - name: Restart MySQL
+      systemd:
+        name: "{{ mysql_service }}"
+        state: restarted
+
+    - name: Wait after restart
+      wait_for:
+        port: 3306
+        delay: 5
+
+    - name: Create databases
+      shell: |
+        mysql <<'EOF'
+        CREATE DATABASE IF NOT EXISTS petclinic_customers;
+        CREATE DATABASE IF NOT EXISTS petclinic_visits;
+        CREATE DATABASE IF NOT EXISTS petclinic_vets;
+        EOF
+
+    - name: Create user
+      shell: |
+        mysql <<'EOF'
+        CREATE USER IF NOT EXISTS 'petclinic'@'%' IDENTIFIED BY '{{ mysql_petclinic_password }}';
+        GRANT ALL ON petclinic_*.* TO 'petclinic'@'%';
+        FLUSH PRIVILEGES;
+        EOF
+      no_log: true
+
+    - name: Verify setup
+      shell: mysql -e "SHOW DATABASES LIKE 'petclinic_%';"
+      register: final_check
+
+    - name: Display result
+      debug:
+        msg: "✓ Setup complete. Databases: {{ final_check.stdout_lines }}"
