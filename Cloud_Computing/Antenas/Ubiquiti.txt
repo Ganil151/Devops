@@ -1,0 +1,24 @@
+Ubiquiti LiteBeam AC 5GHz 450Mbps Wireless Bridge
+SKU	LBE-5AC-GEN2
+
+sudo apt-get update && sudo apt-get upgrade -y
+
+sudo apt-get install ca-certificates apt-transport-https -y
+
+echo 'deb [ arch=amd64,arm64 ] https://www.ui.com/downloads/unifi/debian stable ubiquiti' | sudo tee /etc/apt/sources.list.d/100-ubnt-unifi.list
+
+sudo wget -O /etc/apt/trusted.gpg.d/unifi-repo.gpg https://dl.ui.com/unifi/unifi-repo.gpg
+
+sudo apt-get update
+
+sudo apt-get install unifi -y
+
+sudo service unifi start
+
+Open a web browser and navigate to the IP address of your server (usually 192.168.1.188 by default).
+
+https://ui.com/download/releases/network-server
+
+
+need to purchase:
+Regarding Ubiquiti Power over Ethernet (PoE) injectors, the LAN port on a PoE injector is typically used to connect a non-PoE Ethernet cable to a network switch or another device. The injector then supplies power to a PoE device, such as a Ubiquiti access point, through the same Ethernet cable.
