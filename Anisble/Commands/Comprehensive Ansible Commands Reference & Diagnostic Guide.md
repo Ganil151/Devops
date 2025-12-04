@@ -85,7 +85,6 @@ ansible <group_name> -i inventory.ini --list-hosts
 ### Sample Inventory Files
 
 **INI Format (inventory.ini):**
-
 ```ini
 # Spring Petclinic Infrastructure
 
@@ -127,7 +126,6 @@ mysql_database=petclinic
 ```
 
 **YAML Format (inventory.yml):**
-
 ```yaml
 all:
   children:
@@ -184,7 +182,6 @@ all:
 ```
 
 **Dynamic Inventory (AWS EC2):**
-
 ```bash
 # Install boto3
 pip install boto3
@@ -212,13 +209,10 @@ EOF
 ansible-inventory -i aws_ec2.yml --graph
 ansible-inventory -i aws_ec2.yml --list
 ```
-
 ---
-
 ## **Ad-Hoc Commands**
 
 ### Basic Ad-Hoc Commands
-
 ```bash
 # Ping all hosts
 ansible all -m ping
@@ -283,9 +277,8 @@ ansible all -m shell -a "free -m"
 # Reboot hosts
 ansible all -m reboot --become
 ```
-
+---
 ### Ad-Hoc with Options
-
 ```bash
 # Run with specific user
 ansible all -m ping -u ec2-user
@@ -323,13 +316,10 @@ ansible all -m ping -o
 # Display task timing
 ansible all -m ping --profile
 ```
-
 ---
-
 ## **Playbook Management**
 
 ### Running Playbooks
-
 ```bash
 # Run playbook
 ansible-playbook playbook.yml
@@ -390,11 +380,9 @@ ansible-playbook playbook.yml --ask-vault-pass
 # Use vault password file
 ansible-playbook playbook.yml --vault-password-file=.vault_pass
 ```
-
+---
 ### Sample Playbooks
-
 **Basic MySQL Setup Playbook (mysql-setup.yml):**
-
 ```yaml
 ---
 - name: Configure MySQL Server for Spring Petclinic
@@ -487,7 +475,6 @@ ansible-playbook playbook.yml --vault-password-file=.vault_pass
 ```
 
 **Docker Installation Playbook (docker-setup.yml):**
-
 ```yaml
 ---
 - name: Install Docker on Worker Nodes
@@ -544,7 +531,6 @@ ansible-playbook playbook.yml --vault-password-file=.vault_pass
 ```
 
 **Complete Infrastructure Setup (site.yml):**
-
 ```yaml
 ---
 - name: Setup Spring Petclinic Infrastructure
@@ -658,7 +644,6 @@ ansible-playbook playbook.yml --vault-password-file=.vault_pass
 ## **Ansible Vault**
 
 ### Vault Operations
-
 ```bash
 # Create encrypted file
 ansible-vault create secrets.yml
@@ -692,7 +677,6 @@ ansible-playbook playbook.yml --vault-id dev@.vault_pass_dev --vault-id prod@.va
 ```
 
 **Sample Vault File (secrets.yml):**
-
 ```yaml
 ---
 mysql_root_password: SuperSecretPassword123!
@@ -701,7 +685,6 @@ aws_access_key: AKIAIOSFODNN7EXAMPLE
 aws_secret_key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 jenkins_admin_password: JenkinsAdmin789!
 ```
-
 ---
 
 ## **Ansible Roles**
@@ -758,7 +741,6 @@ ansible-galaxy search docker
 ```
 
 **Requirements File (requirements.yml):**
-
 ```yaml
 ---
 roles:
@@ -780,7 +762,6 @@ collections:
 ```
 
 **Using Roles in Playbook:**
-
 ```yaml
 ---
 - name: Setup Infrastructure with Roles
@@ -809,7 +790,6 @@ collections:
 ```
 
 **Sample MySQL Role (roles/mysql/tasks/main.yml):**
-
 ```yaml
 ---
 - name: Install MySQL packages

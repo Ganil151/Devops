@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/Commands/Comprehensive Kubernetes Commands Reference & Diagnostic Guide.md",
+                "file": "Anisble/Commands/Comprehensive Ansible Commands Reference & Diagnostic Guide.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Comprehensive Kubernetes Commands Reference & Diagnostic Guide"
+              "title": "Comprehensive Ansible Commands Reference & Diagnostic Guide"
             }
           }
         ],
@@ -226,6 +226,7 @@
   },
   "active": "a0d7169b6d04ce24",
   "lastOpenFiles": [
+    "Kubernetes/Commands/Comprehensive Kubernetes Commands Reference & Diagnostic Guide.md",
     "Jenkins/Commands/Comprehensive Jenkins Commands & Diagnostics Reference.md",
     "Script-Files/Ansible/reset_mysql.yml",
     "Script-Files/Ansible/requirements.yml",
@@ -245,7 +246,6 @@
     "Script-Files/Dockers/Diagnostic/docker-compose-diagnostic-and-fixes.sh.md",
     "MySql/Commands/Comprehensive MySQL Commands Reference & Diagnostic Guide.md",
     "Anisble/Commands/Comprehensive Ansible Commands Reference & Diagnostic Guide.md",
-    "Kubernetes/Commands/Comprehensive Kubernetes Commands Reference & Diagnostic Guide.md",
     "Script-Files/Dockers/Diagnostic/docker-diagnose.sh.md",
     "sonarQube/SonarQube in Docker 🚀.md",
     "Script-Files/Prometheus/install-prometheus.md",
