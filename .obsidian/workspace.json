@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Anisble/Commands/Comprehensive Ansible Commands Reference & Diagnostic Guide.md",
+                "file": "Kubernetes/Commands/Comprehensive Kubernetes Commands Reference & Diagnostic Guide.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Comprehensive Ansible Commands Reference & Diagnostic Guide"
+              "title": "Comprehensive Kubernetes Commands Reference & Diagnostic Guide"
             }
           }
         ],
@@ -221,11 +221,17 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-shellcommands:Shell commands: Custom variables": false
     }
   },
   "active": "a0d7169b6d04ce24",
   "lastOpenFiles": [
+    "Anisble/Commands/Comprehensive Ansible Commands Reference & Diagnostic Guide.md",
+    "Script-Files/Terraform/kubernetes/k8s_agent_1_server.sh",
+    "Script-Files/Terraform/kubernetes/k8s_agent_2_server.sh",
+    "Script-Files/Terraform/kubernetes/k8s_master.sh",
+    "Script-Files/Terraform/kubernetes",
     "Kubernetes/Commands/Comprehensive Kubernetes Commands Reference & Diagnostic Guide.md",
     "Jenkins/Commands/Comprehensive Jenkins Commands & Diagnostics Reference.md",
     "Script-Files/Ansible/reset_mysql.yml",
@@ -234,18 +240,13 @@
     "Script-Files/Ansible/mysql_install.yml",
     "Script-Files/Ansible/mysql_diagnostic.yml",
     "Script-Files/Ansible/monitoring_setup.yml",
-    "Script-Files/Ansible/inventory.ini",
-    "Script-Files/Ansible/hosts.ini",
-    "Script-Files/Ansible/generate_hosts.sh",
     "Script-Files/Ansible/COMMAND_REFERENCE.md",
-    "Script-Files/Ansible/ansible-health-check.sh",
     "Git&GitHub/Notes.md",
     "Security/Windows-11/Windows11-Privacy-Hardening.ps1.md",
     "README.md",
     "Docker/Commands/Docker Commands Reference.md",
     "Script-Files/Dockers/Diagnostic/docker-compose-diagnostic-and-fixes.sh.md",
     "MySql/Commands/Comprehensive MySQL Commands Reference & Diagnostic Guide.md",
-    "Anisble/Commands/Comprehensive Ansible Commands Reference & Diagnostic Guide.md",
     "Script-Files/Dockers/Diagnostic/docker-diagnose.sh.md",
     "sonarQube/SonarQube in Docker 🚀.md",
     "Script-Files/Prometheus/install-prometheus.md",
