@@ -26,52 +26,7 @@ The API server is the only component that directly interacts with etcd, the dist
 
 ## Architecture
 
-```mermaid
-graph TB
-    subgraph "External Clients"
-        kubectl[kubectl]
-        API_Clients[API Clients]
-        Dashboard[Dashboard]
-    end
-    
-    subgraph "API Server"
-        Auth[Authentication]
-        Authz[Authorization]
-        Admission[Admission Control]
-        Validation[Validation]
-        API_Handler[API Handler]
-    end
-    
-    subgraph "Control Plane Components"
-        Sched[Scheduler]
-        CM[Controller Manager]
-        CCM[Cloud Controller]
-    end
-    
-    subgraph "Node Components"
-        Kubelet[Kubelet]
-    end
-    
-    subgraph "Storage"
-        etcd[(etcd)]
-    end
-    
-    kubectl --> Auth
-    API_Clients --> Auth
-    Dashboard --> Auth
-    Auth --> Authz
-    Authz --> Admission
-    Admission --> Validation
-    Validation --> API_Handler
-    API_Handler --> etcd
-    
-    Sched -.->|Watch/Update| API_Handler
-    CM -.->|Watch/Update| API_Handler
-    CCM -.->|Watch/Update| API_Handler
-    Kubelet -.->|Watch/Update| API_Handler
-    
-    style API_Handler fill:#326ce5,stroke:#fff,stroke-width:2px,color:#fff
-```
+![Architecture](Images/KAS-1.png)
 
 ## Core Components and Request Flow
 
@@ -79,32 +34,7 @@ graph TB
 
 Every API request goes through multiple stages:
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant Auth as Authentication
-    participant Authz as Authorization
-    participant Admission as Admission Control
-    participant Validation
-    participant Storage as etcd
-    
-    Client->>Auth: API Request
-    Auth->>Auth: Verify Identity
-    Auth-->>Client: Reject (401) if invalid
-    Auth->>Authz: Authenticated Request
-    Authz->>Authz: Check Permissions
-    Authz-->>Client: Reject (403) if unauthorized
-    Authz->>Admission: Authorized Request
-    Admission->>Admission: Mutating Webhooks
-    Admission->>Admission: Validating Webhooks
-    Admission-->>Client: Reject (400) if invalid
-    Admission->>Validation: Modified Request
-    Validation->>Validation: Schema Validation
-    Validation-->>Client: Reject (400) if invalid
-    Validation->>Storage: Persist Object
-    Storage-->>Validation: Success
-    Validation-->>Client: 200 OK + Object
-```
+![Request Processing Pipeline](Images/KAS-2.png)
 
 ### 1. Authentication
 
@@ -177,21 +107,7 @@ roleRef:
 
 **Common Admission Controllers**:
 
-```mermaid
-graph LR
-    Request[API Request] --> Mutating[Mutating Controllers]
-    Mutating --> V1[NamespaceAutoProvision]
-    Mutating --> V2[DefaultStorageClass]
-    Mutating --> V3[ServiceAccount]
-    V3 --> Validating[Validating Controllers]
-    Validating --> W1[NamespaceLifecycle]
-    Validating --> W2[LimitRanger]
-    Validating --> W3[ResourceQuota]
-    W3 --> Persist[Persist to etcd]
-    
-    style Mutating fill:#f9ab00,stroke:#fff,stroke-width:2px
-    style Validating fill:#1a73e8,stroke:#fff,stroke-width:2px,color:#fff
-```
+![Common Admission Controllers](Images/KAS-3.png)
 
 **Important Admission Controllers**:
 
@@ -244,29 +160,7 @@ webhooks:
 
 Kubernetes API is organized into groups:
 
-```mermaid
-graph TB
-    subgraph "Core Group (legacy)"
-        pods[/api/v1/pods]
-        services[/api/v1/services]
-        configmaps[/api/v1/configmaps]
-    end
-    
-    subgraph "Named Groups"
-        apps[/apis/apps/v1/deployments]
-        batch[/apis/batch/v1/jobs]
-        rbac[/apis/rbac.authorization.k8s.io/v1/roles]
-        net[/apis/networking.k8s.io/v1/networkpolicies]
-    end
-    
-    subgraph "Custom Resources"
-        crd[/apis/custom.example.com/v1/myresources]
-    end
-    
-    style pods fill:#34a853,stroke:#fff,stroke-width:2px,color:#fff
-    style apps fill:#4285f4,stroke:#fff,stroke-width:2px,color:#fff
-    style crd fill:#ea4335,stroke:#fff,stroke-width:2px,color:#fff
-```
+![API Groups and Versions](Images/KAS-4.png)
 
 ### API Versioning
 
@@ -280,22 +174,7 @@ graph TB
 
 The API server provides a **watch** mechanism for real-time updates:
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant API as API Server
-    participant etcd
-    
-    Client->>API: Watch /api/v1/pods
-    API->>etcd: Subscribe to changes
-    
-    loop On Changes
-        etcd->>API: Change Event
-        API->>Client: ADDED/MODIFIED/DELETED event
-    end
-    
-    Note over Client,API: Connection maintained<br/>for continuous updates
-```
+![Watch Mechanism](Images/KAS-5.png)
 
 **Watch Features**:
 - **Resource Versions**: Track changes using resource versions
@@ -316,47 +195,7 @@ kubectl get pods --watch -o json
 
 ### Multi-Master Setup
 
-```mermaid
-graph TB
-    subgraph "Load Balancer"
-        LB[Load Balancer<br/>VIP: 10.0.0.100]
-    end
-    
-    subgraph "API Servers"
-        API1[API Server 1<br/>10.0.0.101]
-        API2[API Server 2<br/>10.0.0.102]
-        API3[API Server 3<br/>10.0.0.103]
-    end
-    
-    subgraph "etcd Cluster"
-        etcd1[(etcd-1)]
-        etcd2[(etcd-2)]
-        etcd3[(etcd-3)]
-    end
-    
-    LB --> API1
-    LB --> API2
-    LB --> API3
-    
-    API1 --> etcd1
-    API1 --> etcd2
-    API1 --> etcd3
-    API2 --> etcd1
-    API2 --> etcd2
-    API2 --> etcd3
-    API3 --> etcd1
-    API3 --> etcd2
-    API3 --> etcd3
-    
-    etcd1 -.->|Raft| etcd2
-    etcd2 -.->|Raft| etcd3
-    etcd3 -.->|Raft| etcd1
-    
-    style LB fill:#f9ab00,stroke:#fff,stroke-width:2px
-    style API1 fill:#326ce5,stroke:#fff,stroke-width:2px,color:#fff
-    style API2 fill:#326ce5,stroke:#fff,stroke-width:2px,color:#fff
-    style API3 fill:#326ce5,stroke:#fff,stroke-width:2px,color:#fff
-```
+![Multi-Master Setup](Images/KAS-6.png)
 
 ### Configuration for HA
 
@@ -458,17 +297,7 @@ spec:
 
 The API server supports API aggregation for extending with additional APIs:
 
-```mermaid
-graph LR
-    Client[kubectl] --> API[kube-apiserver]
-    API --> Core[Core APIs<br/>/api, /apis]
-    API --> Aggregated[Aggregated APIs]
-    Aggregated --> Metrics[metrics-server<br/>/apis/metrics.k8s.io]
-    Aggregated --> Custom[custom-api-server<br/>/apis/custom.io]
-    
-    style API fill:#326ce5,stroke:#fff,stroke-width:2px,color:#fff
-    style Aggregated fill:#f9ab00,stroke:#fff,stroke-width:2px
-```
+![Aggregation Layer](Images/KAS-7.png)
 
 **APIService Example**:
 ```yaml
