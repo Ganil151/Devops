@@ -1,0 +1,103 @@
+@startmindmap
+* Kubernetes Architecture
+** Control Plane
+*** API Server
+**** REST Gateway
+**** Authentication
+**** Authorization
+*** ETCD
+**** Cluster State
+**** Raft Consensus
+**** Backup/Restore
+*** Scheduler
+**** Pod Placement
+**** Resource Filtering
+**** Scoring
+*** Controller Manager
+**** Node Controller
+**** Replication Controller
+**** Deployment Controller
+*** Cloud Controller
+**** Load Balancers
+**** Storage Integration
+
+** Node Components
+*** Kubelet
+**** Pod Lifecycle
+**** Container Runtime
+**** Volume Management
+*** Kube-proxy
+**** Service Discovery
+**** Load Balancing
+*** Container Runtime
+**** containerd
+**** CRI-O
+
+** Workload Resources
+*** Pods
+**** Containers
+**** Networking
+**** Storage
+*** Deployments
+**** Rolling Updates
+**** Scaling
+**** Rollback
+*** StatefulSets
+**** Ordered Deployment
+**** Persistent Identity
+*** DaemonSets
+**** Node-wide Services
+**** System Agents
+*** Jobs/CronJobs
+**** Batch Processing
+**** Scheduled Tasks
+
+** Networking
+*** Services
+**** ClusterIP
+**** NodePort
+**** LoadBalancer
+*** Ingress
+**** HTTP Routing
+**** SSL Termination
+*** Network Policies
+**** Micro-segmentation
+**** Traffic Control
+
+** Storage
+*** Persistent Volumes
+**** PV/PVC
+**** Access Modes
+*** Storage Classes
+**** Dynamic Provisioning
+**** Cloud Integration
+
+** Configuration & Security
+*** ConfigMaps
+**** Configuration Data
+**** Environment Variables
+*** Secrets
+**** Sensitive Data
+**** Encryption
+*** RBAC
+**** Roles/RoleBindings
+**** Access Control
+*** Service Accounts
+**** Pod Identity
+**** API Access
+*** Namespaces
+**** Resource Isolation
+**** Multi-tenancy
+
+** Autoscaling & Availability
+*** HPA
+**** Horizontal Scaling
+**** Metrics-based
+*** VPA
+**** Vertical Scaling
+**** Resource Optimization
+*** PDB
+**** Availability Guarantees
+**** Disruption Management
+
+@endmindmap
