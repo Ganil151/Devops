@@ -85,19 +85,45 @@ mindmap
         Path-based Routing
         Host-based Routing
       Network Policies
-        Micro-segmentation
-        Firewall Rules
-        Traffic Control
+        Microsegmentation
+        Ingress/Egress Rules
+        Pod/Namespace Selectors
+      DNS (CoreDNS)
+        Service Discovery
+        Name Resolution
+        Custom DNS
+      Load Balancers
+        Cloud Provider LBs
+        MetalLB (Bare Metal)
+        Ingress Controllers
+      Service Mesh
+        Istio
+        Linkerd
+        Consul Connect
+      CNI Plugins
+        Flannel
+        Calico
+        Cilium
+        Weave Net
     
     Storage
       Persistent Volumes
-        PV/PVC
+        PV/PVC Model
         Access Modes
         Reclaim Policies
       Storage Classes
         Dynamic Provisioning
         Cloud Integration
         Performance Tiers
+      Volume Types
+        EmptyDir
+        HostPath
+        ConfigMap/Secret
+        Cloud Volumes
+      CSI Drivers
+        Container Storage Interface
+        Plugin Architecture
+        Vendor Integration
     
     Configuration
       ConfigMaps
@@ -106,33 +132,121 @@ mindmap
         File Mounting
       Secrets
         Sensitive Data
-        Encryption
+        Encryption at Rest
         Secret Types
     
     Security
-      RBAC
-        Roles
-        RoleBindings
-        ClusterRoles
-        Users/Groups
-      Service Accounts
-        Pod Identity
-        API Access
-        Token Management
-      Namespaces
-        Resource Isolation
-        Multi-tenancy
-        Resource Quotas
+      Authentication & Authorization
+        RBAC
+          Roles & ClusterRoles
+          RoleBindings & ClusterRoleBindings
+          Users, Groups, ServiceAccounts
+        Service Accounts
+          Pod Identity
+          API Access Tokens
+          Image Pull Secrets
+        Namespaces
+          Resource Isolation
+          Multi-tenancy
+          Resource Quotas
+      Network Security
+        Network Policies
+          Traffic Segmentation
+          Ingress/Egress Rules
+          CNI Plugin Support
+        Service Mesh Security
+          mTLS
+          Traffic Encryption
+          Identity-based Policies
+        Firewall Integration
+          Cloud Security Groups
+          Network ACLs
+      Pod Security
+        Pod Security Standards
+          Privileged
+          Baseline
+          Restricted
+        Security Contexts
+          User/Group IDs
+          Capabilities
+          SELinux/AppArmor
+          Seccomp Profiles
+        Runtime Security
+          Falco Monitoring
+          Behavior Analysis
+          Threat Detection
+      Secrets Management
+        Secret Storage
+          Kubernetes Secrets
+          External Secret Operators
+          HashiCorp Vault
+        Encryption
+          Encryption at Rest
+          KMS Integration
+          Key Rotation
+        Secret Lifecycle
+          Creation & Distribution
+          Rotation Policies
+          Access Auditing
+      Admission Control
+        Built-in Controllers
+          NodeRestriction
+          ResourceQuota
+          LimitRanger
+        Admission Webhooks
+          Mutating Webhooks
+          Validating Webhooks
+          Custom Controllers
+        Policy Engines
+          OPA Gatekeeper
+          Kyverno
+          Falco Rules
+        Policy as Code
+          Rego Policies
+          YAML Policies
+          GitOps Integration
+      Image Security
+        Image Scanning
+          Vulnerability Detection
+          Trivy Scanner
+          Twistlock/Prisma
+        Image Signing
+          Cosign
+          Notary
+          Supply Chain Security
+        Registry Security
+          Private Registries
+          Access Controls
+          Image Policies
+      Compliance & Auditing
+        Audit Logging
+          API Server Auditing
+          Event Tracking
+          Log Analysis
+        Compliance Frameworks
+          CIS Kubernetes Benchmark
+          NIST Guidelines
+          SOC 2 Compliance
+        Security Benchmarks
+          Kube-bench
+          Kube-hunter
+          Polaris
     
-    Autoscaling
+    Autoscaling & Availability
       HPA
         Horizontal Scaling
         CPU/Memory Metrics
         Custom Metrics
+        External Metrics
       VPA
         Vertical Scaling
         Resource Optimization
         Recommendation Engine
+        Auto-scaling Policies
+      Cluster Autoscaler
+        Node Scaling
+        Cloud Integration
+        Cost Optimization
       PDB
         Availability Guarantees
         Disruption Management

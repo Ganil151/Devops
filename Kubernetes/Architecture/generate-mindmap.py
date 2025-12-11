@@ -15,30 +15,70 @@ def scan_architecture():
     
     # Define the main categories
     categories = {
+        # Control Plane Components
         "Control-Plane": "Control Plane Components",
+        "api-server": "Control Plane Components",
+        "etcd": "Control Plane Components",
+        "scheduler": "Control Plane Components",
+        "controller-manager": "Control Plane Components",
+        "cloud-controller-manager": "Control Plane Components",
+        
+        # Node Components
         "kubelet": "Node Components", 
         "nodes": "Node Components",
         "crictl": "Node Components",
+        "kube-proxy": "Node Components",
+        "container-runtime": "Node Components",
+        
+        # Workload Resources
         "pods": "Workload Resources",
         "deployments": "Workload Resources", 
         "statefulsets": "Workload Resources",
         "daemonsets": "Workload Resources",
         "jobs": "Workload Resources",
         "cronjobs": "Workload Resources",
+        "replicasets": "Workload Resources",
+        
+        # Networking
         "services": "Networking",
         "ingress": "Networking", 
         "network-policies": "Networking",
+        "dns": "Networking",
+        "coredns": "Networking",
+        "load-balancers": "Networking",
+        "service-mesh": "Networking",
+        "cni-plugins": "Networking",
+        
+        # Storage
         "persistent-volumes": "Storage",
         "storage-class": "Storage",
+        "volume-types": "Storage",
+        "csi-drivers": "Storage",
+        
+        # Configuration
         "configMaps": "Configuration",
         "secrets": "Configuration",
+        
+        # Security
         "rbac": "Security",
         "service-accounts": "Security",
-        "namespaces": "Security", 
-        "hpa": "Autoscaling",
-        "vpa": "Autoscaling",
-        "pdb": "Autoscaling",
-        "kubectl": "Tools",
+        "namespaces": "Security",
+        "network-policies": "Security",
+        "pod-security": "Security",
+        "admission-controllers": "Security",
+        "security-contexts": "Security",
+        "certificates": "Security",
+        "image-security": "Security",
+        "compliance": "Security",
+        
+        # Autoscaling & Availability
+        "hpa": "Autoscaling & Availability",
+        "vpa": "Autoscaling & Availability",
+        "pdb": "Autoscaling & Availability",
+        "cluster-autoscaler": "Autoscaling & Availability",
+        
+        # Tools & Management
+        "kubectl": "Tools & Management",
         "cluster": "Foundation"
     }
     
