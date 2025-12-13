@@ -397,6 +397,8 @@ DevOps is a set of practices, tools, and cultural philosophies that combines sof
 - Innovation and experimentation
 - Industry-leading practices
 
+---
+
 ## DevOps Anti-patterns to Avoid
 
 ### Organizational Anti-patterns
