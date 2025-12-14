@@ -1,6 +1,194 @@
 # Networking for DevOps
 
-Complete guide to networking concepts, protocols, and tools essential for DevOps professionals.
+Comprehensive networking guide organized by skill levels for DevOps professionals. This directory contains structured learning paths from fundamental concepts to advanced cloud-native networking technologies.
+
+## 📚 Learning Path Structure
+
+### 🟢 [Beginner Level](./Beginner-Level/)
+Fundamental networking concepts essential for DevOps beginners
+- Network fundamentals and OSI model
+- IP addressing and subnetting
+- Basic protocols (HTTP, DNS, DHCP)
+- Network devices and their roles
+- Basic troubleshooting techniques
+
+### 🟡 [Intermediate Level](./Intermediate-Level/)
+Advanced networking concepts for experienced DevOps practitioners
+- Advanced routing protocols
+- VLANs and switching technologies
+- Network security implementations
+- Load balancing strategies
+- VPN technologies
+- DNS and DHCP management
+
+### 🔴 [Advanced Level](./Advanced-Level/)
+Cutting-edge networking technologies for senior DevOps engineers
+- Software-Defined Networking (SDN) and NFV
+- Container and Kubernetes networking
+- Cloud networking architectures
+- Network automation and IaC
+- Service mesh technologies
+- Performance optimization
+
+## 📖 Legacy Documentation
+
+### [Network Models](./Network%20Model/)
+Detailed OSI and TCP/IP model documentation
+
+### [Ports Reference](./Ports/)
+Comprehensive port numbers and services reference
+
+### [CyberSecurity](./CyberSecurity/)
+Network security fundamentals and practices
+
+---
+
+## 🚀 Quick Start Guide
+
+### For Beginners
+1. **Start with [Network Fundamentals](./Beginner-Level/Network-Fundamentals/)** - Learn OSI model and basic concepts
+2. **Master [IP Addressing](./Beginner-Level/IP-Addressing/)** - Understand subnetting and addressing
+3. **Study [Basic Protocols](./Beginner-Level/Basic-Protocols/)** - HTTP, DNS, DHCP essentials
+4. **Explore [Network Devices](./Beginner-Level/Network-Devices/)** - Routers, switches, firewalls
+5. **Practice [Basic Troubleshooting](./Beginner-Level/Basic-Troubleshooting/)** - Essential diagnostic skills
+
+### For Intermediate Practitioners
+1. **Advanced [Routing Protocols](./Intermediate-Level/Advanced-Routing/)** - OSPF, BGP, EIGRP
+2. **Implement [VLANs and Switching](./Intermediate-Level/VLANs-Switching/)** - Network segmentation
+3. **Deploy [Network Security](./Intermediate-Level/Network-Security/)** - Firewalls, IDS/IPS
+4. **Configure [Load Balancing](./Intermediate-Level/Load-Balancing/)** - High availability strategies
+5. **Setup [VPN Technologies](./Intermediate-Level/VPN-Technologies/)** - Secure connectivity
+6. **Manage [DNS and DHCP](./Intermediate-Level/DNS-DHCP/)** - Advanced service configuration
+
+### For Advanced Engineers
+1. **Master [SDN and NFV](./Advanced-Level/SDN-NFV/)** - Software-defined networking
+2. **Implement [Container Networking](./Advanced-Level/Container-Networking/)** - Docker, Kubernetes, CNI
+3. **Design [Cloud Networking](./Advanced-Level/Cloud-Networking/)** - Multi-cloud architectures
+4. **Automate with [Network Automation](./Advanced-Level/Network-Automation/)** - IaC and GitOps
+5. **Deploy [Service Mesh](./Advanced-Level/Service-Mesh/)** - Istio, Linkerd, Consul
+6. **Optimize [Performance](./Advanced-Level/Performance-Optimization/)** - Advanced tuning
+
+## 📊 Learning Progress Tracker
+
+```mermaid
+graph TD
+    A[Network Fundamentals] --> B[IP Addressing]
+    B --> C[Basic Protocols]
+    C --> D[Network Devices]
+    D --> E[Basic Troubleshooting]
+    E --> F[Advanced Routing]
+    F --> G[VLANs & Switching]
+    G --> H[Network Security]
+    H --> I[Load Balancing]
+    I --> J[VPN Technologies]
+    J --> K[DNS & DHCP]
+    K --> L[SDN & NFV]
+    L --> M[Container Networking]
+    M --> N[Cloud Networking]
+    N --> O[Network Automation]
+    O --> P[Service Mesh]
+    P --> Q[Performance Optimization]
+    Q --> R[Network Architecture Mastery]
+```
+
+## 🛠️ Essential Tools by Level
+
+### Beginner Tools
+- **Network Diagnostics**: ping, traceroute, nslookup, dig
+- **Packet Analysis**: Wireshark, tcpdump
+- **Configuration**: ip, ifconfig, netstat, ss
+- **Simulation**: Packet Tracer, GNS3
+
+### Intermediate Tools
+- **Load Balancers**: HAProxy, Nginx, F5
+- **Monitoring**: Nagios, Zabbix, PRTG
+- **Security**: pfSense, Fortinet, Palo Alto
+- **Automation**: Ansible, Puppet, Chef
+
+### Advanced Tools
+- **Container Networking**: Calico, Flannel, Cilium, Weave
+- **Service Mesh**: Istio, Linkerd, Consul Connect
+- **Cloud Networking**: AWS VPC, Azure VNet, GCP VPC
+- **Infrastructure as Code**: Terraform, Pulumi, CloudFormation
+- **Observability**: Prometheus, Grafana, Jaeger, Zipkin
+
+## 🎯 Career Progression Paths
+
+### Network Engineer → DevOps Engineer
+```
+Traditional Networking → Infrastructure as Code → Cloud Networking → DevOps
+├── Master CLI and GUI tools
+├── Learn automation scripting
+├── Understand cloud platforms
+└── Implement CI/CD for infrastructure
+```
+
+### DevOps Engineer → Network Architect
+```
+DevOps Practices → Advanced Networking → Architecture Design → Leadership
+├── Deep dive into network protocols
+├── Design scalable architectures
+├── Implement security best practices
+└── Lead technical teams
+```
+
+### Software Developer → Platform Engineer
+```
+Application Development → Container Technologies → Platform Engineering
+├── Learn containerization (Docker, Kubernetes)
+├── Understand service mesh technologies
+├── Implement developer platforms
+└── Focus on developer experience
+```
+
+## 📚 Recommended Certifications
+
+### Beginner Level
+- CompTIA Network+
+- Cisco CCNA
+- AWS Certified Cloud Practitioner
+
+### Intermediate Level
+- Cisco CCNP Enterprise
+- AWS Certified Solutions Architect
+- Microsoft Azure Network Engineer
+- Google Cloud Professional Network Engineer
+
+### Advanced Level
+- Cisco CCIE Enterprise Infrastructure
+- AWS Certified Advanced Networking - Specialty
+- Certified Kubernetes Administrator (CKA)
+- Certified Kubernetes Security Specialist (CKS)
+- Istio Certified Associate (ICA)
+
+## 🔧 Hands-On Lab Environment
+
+### Recommended Setup
+```bash
+# Virtual Lab Environment
+├── Hypervisor: VMware Workstation/VirtualBox
+├── Network Simulation: GNS3/EVE-NG
+├── Container Platform: Docker Desktop
+├── Kubernetes: minikube/kind/k3s
+├── Cloud Labs: AWS Free Tier/Azure Free Account
+└── Monitoring: Prometheus + Grafana stack
+```
+
+### Sample Lab Topology
+```
+Internet
+    │
+[Edge Router] ── [Firewall] ── [DMZ Switch]
+    │                              │
+[Core Switch]                 [Web Servers]
+    │
+├── [VLAN 10: Users] ── [Workstations]
+├── [VLAN 20: Servers] ── [App Servers]
+├── [VLAN 30: Management] ── [Monitoring]
+└── [VLAN 40: Storage] ── [NAS/SAN]
+```
+
+## Quick Reference Guide
 
 ## Network Fundamentals
 
