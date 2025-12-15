@@ -20,8 +20,7 @@ df -h /tmp
 echo ""
 
 # Increase /tmp size persistently
-echo "Step 2: Increasing /tmp size to 2.0
-GB persistently..."
+echo "Step 2: Increasing /tmp size to 2.0 GB persistently..."
 if ! grep -q "/tmp tmpfs" /etc/fstab; then
     echo "Adding tmpfs entry to /etc/fstab..."
     echo "tmpfs /tmp tmpfs defaults,size=2000M 0 0" | sudo tee -a /etc/fstab
