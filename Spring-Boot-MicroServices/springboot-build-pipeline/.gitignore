@@ -1,0 +1,11 @@
+*.env
+*.terraform.tfstate
+*.tfvars
+.terraform/
+crash.log
+override.tf
+.pem
+.vscode/
+.backup
+tfplan
+tfplan.*    

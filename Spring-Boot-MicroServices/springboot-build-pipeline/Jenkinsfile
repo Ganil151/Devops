@@ -1,0 +1,121 @@
+
+pipeline {
+  agent { label 'build' }
+   environment { 
+        registry = "ganil151/democicd" 
+        registryCredential = 'dockerhub' 
+   }
+
+  stages {
+    stage('Checkout') {
+      steps {
+        git branch: 'main', credentialsId: 'GitlabCred', url: 'https://gitlab.com/ganilbatistyan/springboot-build-pipeline.git'
+      }
+    }
+  
+   stage('Stage I: Build') {
+      steps {
+        echo "Building Jar Component ..."
+        sh "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64; mvn clean package "
+      }
+    }
+
+   stage('Stage II: Code Coverage ') {
+      steps {
+	    echo "Running Code Coverage ..."
+        sh "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64; mvn jacoco:report"
+      }
+    }
+
+   stage('Stage III: SCA') {
+      steps { 
+        script {
+          echo "Running Software Composition Analysis using OWASP Dependency-Check ..."
+          
+          // Check if dependency-check data cache exists
+          def cacheExists = fileExists("${env.HOME}/.m2/repository/org/owasp/dependency-check-data")
+          if (cacheExists) {
+            echo "✓ Dependency-Check cache found - using existing vulnerability data"
+          } else {
+            echo "⚠ No cache found - first run will take longer"
+          }
+          
+          // Run dependency-check with error handling
+          try {
+            sh "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64; mvn org.owasp:dependency-check-maven:check"
+            echo "✓ SCA analysis completed successfully"
+          } catch (Exception e) {
+            echo "⚠ WARNING: Dependency-Check encountered issues but continuing pipeline"
+            echo "Error details: ${e.getMessage()}"
+            // Mark as unstable but don't fail the build
+            currentBuild.result = 'UNSTABLE'
+          }
+          
+          // Verify reports were generated
+          def jsonReport = fileExists("target/dependency-check-report.json")
+          def htmlReport = fileExists("target/dependency-check-report.html")
+          
+          if (jsonReport && htmlReport) {
+            echo "✓ SCA reports generated successfully"
+          } else {
+            echo "⚠ WARNING: Some SCA reports may be missing"
+            echo "JSON Report: ${jsonReport ? 'Found' : 'Missing'}"
+            echo "HTML Report: ${htmlReport ? 'Found' : 'Missing'}"
+          }
+        }
+      }
+    }
+
+   stage('Stage IV: SAST') {
+      steps { 
+        echo "Running Static application security testing using SonarQube Scanner ..."
+        withSonarQubeEnv('sonarqube') {
+            sh 'mvn sonar:sonar -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml -Dsonar.dependencyCheck.jsonReportPath=target/dependency-check-report.json -Dsonar.dependencyCheck.htmlReportPath=target/dependency-check-report.html -Dsonar.projectName=GSDevOps'
+       }
+      }
+    }
+
+   stage('Stage V: QualityGates') {
+      steps { 
+        echo "Running Quality Gates to verify the code quality"
+        script {
+          timeout(time: 1, unit: 'MINUTES') {
+            def qg = waitForQualityGate()
+            if (qg.status != 'OK') {
+              error "Pipeline aborted due to quality gate failure: ${qg.status}"
+            }
+           }
+        }
+      }
+    }
+   
+   stage('Stage VI: Build Image') {
+      steps { 
+        echo "Build Docker Image"
+        script {
+               docker.withRegistry( '', registryCredential ) { 
+                 myImage = docker.build registry
+                 myImage.push()
+                }
+        }
+      }
+    }
+        
+   stage('Stage VII: Scan Image ') {
+      steps { 
+        echo "Scanning Image for Vulnerabilities"
+        sh "trivy image --scanners vuln --offline-scan ganil151/democicd:latest > trivyresults.txt"
+        }
+    }
+          
+   stage('Stage VIII: Smoke Test ') {
+      steps { 
+        echo "Smoke Test the Image"
+        sh "docker run -d --name smokerun -p 8080:8080 ganil151/democicd"
+        sh "sleep 90; ./terraform/apps/scripts/check.sh"
+        sh "docker rm --force smokerun"
+        }
+    }
+
+  }
+}
