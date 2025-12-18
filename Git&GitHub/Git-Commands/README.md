@@ -40,7 +40,7 @@ git config --global core.editor "code --wait"
 
 - git remote add <url>
 
-- git remote add origin https://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@github.com/Ganil151/DevOps.git
+- git remote add origin https://github.com/Ganil151/DevOps.git
 
 - git remote rename <the oldname> <the newname>
   
