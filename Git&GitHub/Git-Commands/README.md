@@ -1411,7 +1411,7 @@ add the new SSH key to the ssh-agent: ssh-add -K /Users/you/.ssh/id_rsa
 
 #### Fix Errors while pull & push 
 Create Personal Access Token on GitHub
-From your GitHub account, go to Settings → Developer Settings → Personal Access Token → Tokens (classic) → Generate New Token (Give your password) → Fill up the form → click Generate token → Copy the generated Token:  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
+From your GitHub account, go to Settings → Developer Settings → Personal Access Token → Tokens (classic) → Generate New Token (Give your password) → Fill up the form → click Generate token → Copy the generated Token: [REDACTED_TOKEN]
 
 for Linux: git clone https://<tokenhere>@github.com/<user>/<repo>.git
 
