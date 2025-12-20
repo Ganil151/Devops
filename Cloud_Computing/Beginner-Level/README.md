@@ -15,6 +15,7 @@ Introduction to cloud computing fundamentals, major cloud providers, and basic s
 - EC2, S3, and basic compute/storage services
 - IAM fundamentals and basic security
 - Basic networking and VPC concepts
+- [AWS Lambda Fundamentals](02-AWS-Basics/Lambda/README.md)
 
 ### 03. Azure Basics
 - Azure portal and core services
@@ -33,6 +34,7 @@ Introduction to cloud computing fundamentals, major cloud providers, and basic s
 - Virtual networks and subnets
 - Security groups and firewalls
 - Basic load balancing concepts
+- [API Gateway & CloudFront](15-Networking-Edge-Services/README.md)
 
 ### 06. Storage Fundamentals
 - Cloud storage types and use cases
@@ -53,3 +55,5 @@ By completing this level, you will:
 - Deploy basic compute and storage resources
 - Configure basic networking and security settings
 - Understand cloud pricing and billing models
+- [AWS Lambda (Intermediate)](14-Serverless-Lambda/README.md)
+- [Governance & Compliance (AWS Config)](16-Governance-Compliance/README.md)

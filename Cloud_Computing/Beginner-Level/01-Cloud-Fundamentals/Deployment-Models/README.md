@@ -24,28 +24,7 @@ Examples:
 ```
 
 ### Architecture
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Public Cloud Provider                    │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              Shared Infrastructure                   │   │
-│  │  ┌─────────┐  ┌─────────┐  ┌─────────┐            │   │
-│  │  │Tenant A │  │Tenant B │  │Tenant C │            │   │
-│  │  └─────────┘  └─────────┘  └─────────┘            │   │
-│  └─────────────────────────────────────────────────────┘   │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              Management Layer                       │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                    ┌───────┴───────┐
-                    │   Internet    │
-                    └───────┬───────┘
-                            │
-                    ┌───────┴───────┐
-                    │   End Users   │
-                    └───────────────┘
-```
+![publicArch](../../../Images/publiCloudArch.png)
 
 ### Advantages
 ```bash
@@ -146,28 +125,7 @@ Types:
 ```
 
 ### Architecture
-```
-┌─────────────────────────────────────────────────────────────┐
-│                Organization's Private Cloud                  │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              Dedicated Infrastructure                │   │
-│  │  ┌─────────┐  ┌─────────┐  ┌─────────┐            │   │
-│  │  │  Dept A │  │  Dept B │  │  Dept C │            │   │
-│  │  └─────────┘  └─────────┘  └─────────┘            │   │
-│  └─────────────────────────────────────────────────────┘   │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              Private Management Layer               │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                    ┌───────┴───────┐
-                    │ Private Network│
-                    └───────┬───────┘
-                            │
-                    ┌───────┴───────┐
-                    │Internal Users │
-                    └───────────────┘
-```
+![privateArchitecture](../../../Images/privateArch.png)
 
 ### Advantages
 ```bash
@@ -269,28 +227,7 @@ Components:
 ```
 
 ### Architecture
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Hybrid Cloud Architecture                │
-│                                                             │
-│  ┌─────────────────────┐    ┌─────────────────────────┐   │
-│  │   Private Cloud     │    │    Public Cloud         │   │
-│  │  ┌───────────────┐  │    │  ┌───────────────────┐  │   │
-│  │  │ Critical Apps │  │    │  │ Development/Test  │  │   │
-│  │  │ Sensitive Data│  │    │  │ Backup/Archive    │  │   │
-│  │  │ Compliance    │  │    │  │ Burst Capacity    │  │   │
-│  │  └───────────────┘  │    │  └───────────────────┘  │   │
-│  └─────────────────────┘    └─────────────────────────┘   │
-│              │                           │                 │
-│              └───────────┬───────────────┘                 │
-│                          │                                 │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │           Hybrid Cloud Management Platform          │   │
-│  │  • Workload Orchestration  • Security Management   │   │
-│  │  • Data Integration        • Cost Optimization     │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-```
+![hybirdArch](../../../Images/hybridArch.png)
 
 ### Advantages
 ```bash
@@ -413,28 +350,7 @@ Strategy Types:
 ```
 
 ### Architecture
-```
-┌─────────────────────────────────────────────────────────────┐
-│                Multi-Cloud Architecture                      │
-│                                                             │
-│ ┌─────────────┐ ┌─────────────┐ ┌─────────────────────┐   │
-│ │    AWS      │ │   Azure     │ │   Google Cloud      │   │
-│ │ ┌─────────┐ │ │ ┌─────────┐ │ │ ┌─────────────────┐ │   │
-│ │ │Compute  │ │ │ │AI/ML    │ │ │ │Data Analytics   │ │   │
-│ │ │Storage  │ │ │ │Services │ │ │ │BigQuery/Dataflow│ │   │
-│ │ └─────────┘ │ │ └─────────┘ │ │ └─────────────────┘ │   │
-│ └─────────────┘ └─────────────┘ └─────────────────────┘   │
-│        │               │                    │             │
-│        └───────────────┼────────────────────┘             │
-│                        │                                  │
-│ ┌─────────────────────────────────────────────────────┐   │
-│ │         Multi-Cloud Management Platform             │   │
-│ │ • Unified Dashboard    • Cost Management            │   │
-│ │ • Security Governance • Compliance Monitoring      │   │
-│ │ • Workload Orchestration • Performance Analytics   │   │
-│ └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-```
+![multiCloudArch](../../../Images/multiCloudArch.png)
 
 ### Advantages
 ```bash
@@ -553,25 +469,7 @@ Examples:
 ```
 
 ### Architecture
-```
-┌─────────────────────────────────────────────────────────────┐
-│                Community Cloud Architecture                  │
-│                                                             │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              Shared Infrastructure                   │   │
-│  │  ┌─────────┐  ┌─────────┐  ┌─────────┐            │   │
-│  │  │  Org A  │  │  Org B  │  │  Org C  │            │   │
-│  │  │(Hospital│  │(Clinic) │  │(Research│            │   │
-│  │  │   )     │  │         │  │  Lab)   │            │   │
-│  │  └─────────┘  └─────────┘  └─────────┘            │   │
-│  └─────────────────────────────────────────────────────┘   │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │           Community Governance Layer                │   │
-│  │  • Shared Policies    • Compliance Framework       │   │
-│  │  • Cost Allocation    • Security Standards         │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-```
+![commCloudArch](../../../Images/communityClArch.png)
 
 ### Advantages
 ```bash
@@ -679,20 +577,7 @@ Examples:
 ```
 
 ### Selection Matrix
-```bash
-┌─────────────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
-│    Criteria     │ Public  │ Private │ Hybrid  │ Multi   │Community│
-├─────────────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-│ Cost Efficiency │   High  │   Low   │ Medium  │ Medium  │ Medium  │
-│ Security Control│   Low   │   High  │ Medium  │ Medium  │ Medium  │
-│ Scalability     │   High  │ Medium  │   High  │   High  │ Medium  │
-│ Customization   │   Low   │   High  │ Medium  │   High  │   Low   │
-│ Compliance      │ Medium  │   High  │   High  │ Complex │   High  │
-│ Management      │   Easy  │ Complex │ Complex │ Complex │ Medium  │
-│ Performance     │ Variable│   High  │ Variable│ Variable│ Medium  │
-│ Innovation      │   High  │ Medium  │   High  │   High  │ Medium  │
-└─────────────────┴─────────┴─────────┴─────────┴─────────┴─────────┘
-```
+![deFramWork](../../../Images/decisionFrameWork.png)
 
 ### Migration Strategies
 ```bash

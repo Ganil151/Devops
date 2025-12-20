@@ -69,66 +69,10 @@ Cloud computing is the delivery of computing services—including servers, stora
 ## Cloud Computing Architecture
 
 ### Traditional IT vs Cloud Computing
-
-```
-Traditional IT Architecture:
-┌─────────────────────────────────────────────────────────────┐
-│                Physical Data Center                          │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐        │
-│  │   Server    │  │   Server    │  │   Server    │        │
-│  │     #1      │  │     #2      │  │     #3      │        │
-│  └─────────────┘  └─────────────┘  └─────────────┘        │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              Network Infrastructure                  │   │
-│  └─────────────────────────────────────────────────────┘   │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              Storage Systems                        │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-
-Cloud Computing Architecture:
-┌─────────────────────────────────────────────────────────────┐
-│                    Cloud Provider                           │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              Virtualization Layer                   │   │
-│  │  ┌─────────┐  ┌─────────┐  ┌─────────┐            │   │
-│  │  │   VM    │  │   VM    │  │   VM    │            │   │
-│  │  └─────────┘  └─────────┘  └─────────┘            │   │
-│  └─────────────────────────────────────────────────────┘   │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              Management Layer                       │   │
-│  │  • Resource Allocation  • Monitoring               │   │
-│  │  • Security            • Billing                   │   │
-│  └─────────────────────────────────────────────────────┘   │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              Physical Infrastructure                │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-```
+![tradvscloudCom](../../../Images/databasesArchicture.png)
 
 ### Cloud Service Stack
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                        SaaS                                 │
-│              Software as a Service                          │
-│    • Email (Gmail, Outlook)                                │
-│    • CRM (Salesforce)                                      │
-│    • Collaboration (Office 365)                            │
-├─────────────────────────────────────────────────────────────┤
-│                        PaaS                                 │
-│              Platform as a Service                          │
-│    • Development Platforms                                  │
-│    • Database Services                                      │
-│    • Application Runtime                                    │
-├─────────────────────────────────────────────────────────────┤
-│                        IaaS                                 │
-│            Infrastructure as a Service                      │
-│    • Virtual Machines                                       │
-│    • Storage                                               │
-│    • Networking                                            │
-└─────────────────────────────────────────────────────────────┘
-```
+![ServiceStack](../../../Images/IASS.png)
 
 ## Cloud Computing Benefits
 

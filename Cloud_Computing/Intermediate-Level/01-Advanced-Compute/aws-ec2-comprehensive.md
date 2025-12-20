@@ -58,7 +58,6 @@ i4i.xlarge  # 4 vCPU, 32 GB RAM, 937 GB NVMe SSD
 ```
 
 ### Instance Selection Best Practices
-
 ```bash
 # Get instance type recommendations
 aws compute-optimizer get-ec2-instance-recommendations \
@@ -76,11 +75,11 @@ aws ec2 describe-instance-types \
     --query 'InstanceTypes[].[InstanceType,VCpuInfo.DefaultVCpus,MemoryInfo.SizeInMiB,NetworkInfo.NetworkPerformance]' \
     --output table
 ```
+___
 
 ## EC2 Launch and Configuration
 
 ### Launching Instances
-
 ```bash
 # Basic instance launch
 aws ec2 run-instances \
@@ -126,7 +125,6 @@ aws ec2 run-instances \
 ```
 
 ### User Data Scripts
-
 ```bash
 #!/bin/bash
 # user-data-script.sh - DevOps server setup
@@ -223,11 +221,11 @@ EOF
 
 echo "DevOps server setup completed" > /var/log/user-data.log
 ```
+___
 
 ## EC2 Storage Management
 
 ### EBS Volume Management
-
 ```bash
 # List volumes
 aws ec2 describe-volumes \
@@ -292,11 +290,11 @@ sudo mkfs.ext4 /dev/md0
 sudo mkdir /mnt/raid-store
 sudo mount /dev/md0 /mnt/raid-store
 ```
+___
 
 ## EC2 Networking
 
 ### Security Groups
-
 ```bash
 # Create security group
 aws ec2 create-security-group \
@@ -342,7 +340,6 @@ aws ec2 revoke-security-group-ingress \
 ```
 
 ### Elastic IP Management
-
 ```bash
 # Allocate Elastic IP
 aws ec2 allocate-address \
@@ -367,7 +364,6 @@ aws ec2 describe-addresses --output table
 ```
 
 ### Network Interfaces
-
 ```bash
 # Create network interface
 aws ec2 create-network-interface \
@@ -390,11 +386,11 @@ aws ec2 detach-network-interface \
 aws ec2 delete-network-interface \
     --network-interface-id eni-12345678
 ```
+___
 
 ## EC2 Auto Scaling
 
 ### Launch Templates
-
 ```bash
 # Create launch template
 aws ec2 create-launch-template \
@@ -445,7 +441,6 @@ aws ec2 modify-launch-template \
 ```
 
 ### Auto Scaling Groups
-
 ```bash
 # Create Auto Scaling group
 aws autoscaling create-auto-scaling-group \
@@ -485,11 +480,11 @@ aws autoscaling suspend-processes \
 aws autoscaling resume-processes \
     --auto-scaling-group-name DevOps-WebServer-ASG
 ```
+___
 
 ## EC2 Monitoring and Troubleshooting
 
 ### CloudWatch Monitoring
-
 ```bash
 # Enable detailed monitoring
 aws ec2 monitor-instances --instance-ids i-1234567890abcdef0
@@ -525,7 +520,6 @@ aws cloudwatch put-metric-alarm \
 ```
 
 ### Instance Troubleshooting
-
 ```bash
 # Get instance console output
 aws ec2 get-console-output --instance-id i-1234567890abcdef0
@@ -558,11 +552,11 @@ sudo journalctl -u cloud-init
 sudo cat /var/log/cloud-init.log
 sudo cat /var/log/cloud-init-output.log
 ```
+___
 
 ## EC2 Security Best Practices
 
 ### Instance Security
-
 ```bash
 # Use Systems Manager Session Manager instead of SSH
 aws ssm start-session --target i-1234567890abcdef0
@@ -587,7 +581,7 @@ aws ssm create-patch-baseline \
             "ApproveAfterDays": 7,
             "ComplianceLevel": "CRITICAL"
         }]
-    }]'
+    }]
 
 # Create maintenance window
 aws ssm create-maintenance-window \
@@ -599,7 +593,6 @@ aws ssm create-maintenance-window \
 ```
 
 ### Encryption and Key Management
-
 ```bash
 # Create KMS key for EBS encryption
 aws kms create-key \
@@ -635,11 +628,11 @@ aws ec2 enable-ebs-encryption-by-default
 aws ec2 modify-ebs-default-kms-key-id \
     --kms-key-id alias/devops-ebs-key
 ```
+___
 
 ## EC2 Cost Optimization
 
 ### Instance Optimization
-
 ```bash
 # Get rightsizing recommendations
 aws compute-optimizer get-ec2-instance-recommendations \
@@ -672,7 +665,6 @@ aws ec2 purchase-reserved-instances-offering \
 ```
 
 ### Automated Cost Management
-
 ```bash
 # Create Lambda function for instance scheduling
 aws lambda create-function \

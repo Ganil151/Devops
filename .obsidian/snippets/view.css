@@ -1,5 +1,11 @@
+body {
+  --file-line-width: 1200px; /* Adjust value to your preference */
+}
+
+
 .markdown-source-view, .markdown-preview-view.linespacing, p {
-      width: auto;
+      max-width: 100%;
+      margin: auto;
       content: '';
       display: block;      
    

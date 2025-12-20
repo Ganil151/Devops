@@ -30,6 +30,9 @@ Enterprise-grade cloud architectures, multi-cloud strategies, and operational ex
 - Performance troubleshooting methodologies
 - Network connectivity and latency issues
 - Application and infrastructure monitoring
+- [Advanced Lambda Patterns](15-Serverless-Lambda/README.md)
+- [Container Orchestration (EKS)](16-Container-Orchestration/README.md)
+- [Observability & Governance (X-Ray)](17-Observability-Governance/README.md)
 - Incident response and root cause analysis
 
 ### 05. Enterprise Patterns

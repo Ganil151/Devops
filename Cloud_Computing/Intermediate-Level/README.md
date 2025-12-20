@@ -24,8 +24,10 @@ Advanced cloud services, networking, security, and DevOps integration across maj
 
 ### 04. DevOps Integration
 - CI/CD pipelines in the cloud
-- Infrastructure as Code (Terraform, ARM, Deployment Manager)
-- Configuration management and automation
+- Infrastructure as Code (Terraform)
+- [AWS Lambda (Intermediate)](14-Serverless-Lambda/README.md)
+- [Networking & Edge Services](15-Networking-Edge-Services/README.md)
+- [Governance & Compliance](16-Governance-Compliance/README.md)
 - Container orchestration and Kubernetes
 
 ### 05. Monitoring and Logging

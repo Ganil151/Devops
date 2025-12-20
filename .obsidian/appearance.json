@@ -3,5 +3,7 @@
     "view"
   ],
   "accentColor": "",
-  "cssTheme": "Obsidianite"
+  "cssTheme": "Obsidianite",
+  "baseFontSize": 18,
+  "baseFontSizeAction": true
 }

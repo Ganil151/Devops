@@ -1,4 +1,5 @@
-# Advanced Compute Services
+# Advanced Compute- [AWS EC2 Comprehensive Guide](aws-ec2-comprehensive.md)
+- [AWS ECS Deep Dive (Fargate & EC2)](aws-ecs-fargate-guide.md)
 
 Comprehensive guide to advanced compute services including containers, serverless, and high-availability architectures across major cloud platforms.
 

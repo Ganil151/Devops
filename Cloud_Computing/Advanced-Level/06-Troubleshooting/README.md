@@ -95,9 +95,15 @@ aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-12345678"
 # Verify internet gateway
 aws ec2 describe-internet-gateways --filters "Name=attachment.vpc-id,Values=vpc-12345678"
 
-# Test network ACLs
+# Check network ACLs
 aws ec2 describe-network-acls --filters "Name=vpc-id,Values=vpc-12345678"
 ```
+
+### Automation Troubleshooting
+For issues specific to SDK/CLI scripting, API throttling, and automation hacks, see the **[Automation Troubleshooting & Hacks Guide](../../Intermediate-Level/10-Cloud-Automation/automation-troubleshooting-hacks.md)**.
+
+### Security Troubleshooting
+For debugging IAM "Access Denied" errors, decoding authorization messages, and incident response hacks, see the **[Security Hacks & Troubleshooting Guide](security-hacks-troubleshooting.md)**.
 
 ### RDS Database Issues
 ```bash

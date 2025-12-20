@@ -33,7 +33,6 @@ aws ecr put-lifecycle-policy \
 ```
 
 ## Image Scanning
-
 ECR uses Clair/Inspector to scan images for vulnerabilities (CVEs).
 
 ```bash

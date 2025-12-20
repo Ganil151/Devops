@@ -7,7 +7,6 @@ AWS provides a comprehensive suite of DevOps services that enable continuous int
 ## CodeCommit - Source Control
 
 ### Repository Management
-
 ```bash
 # Create CodeCommit repository
 aws codecommit create-repository \
@@ -41,7 +40,6 @@ aws codecommit list-branches \
 ```
 
 ### Repository Triggers and Notifications
-
 ```bash
 # Create repository trigger for Lambda
 aws codecommit put-repository-triggers \
@@ -57,11 +55,11 @@ aws codestar-notifications create-notification-rule \
     --detail-type FULL \
     --status ENABLED
 ```
+___
 
 ## CodeBuild - Build Service
 
 ### Build Projects
-
 ```bash
 # Create build project
 aws codebuild create-project \
@@ -89,7 +87,6 @@ aws codebuild batch-get-builds \
 ```
 
 ### BuildSpec Configuration
-
 ```yaml
 # buildspec.yml - Build specification file
 version: 0.2
@@ -165,7 +162,6 @@ reports:
 ```
 
 ### Advanced Build Configuration
-
 ```bash
 # Create build project with VPC configuration
 aws codebuild create-project \

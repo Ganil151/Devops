@@ -7,7 +7,6 @@ AWS Identity and Access Management (IAM) is a web service that helps you securel
 ## IAM Core Components
 
 ### Users, Groups, and Roles
-
 ```bash
 # Create IAM user
 aws iam create-user \
@@ -94,6 +93,7 @@ aws sts assume-role \
 # Get caller identity
 aws sts get-caller-identity
 ```
+___
 
 ## IAM Policies
 
@@ -242,7 +242,6 @@ aws iam put-role-policy \
 ```
 
 ### Policy Conditions and Advanced Features
-
 ```json
 # advanced-conditions-policy.json
 {
@@ -304,11 +303,11 @@ aws iam put-role-policy \
   ]
 }
 ```
+___
 
 ## Multi-Factor Authentication (MFA)
 
 ### Virtual MFA Setup
-
 ```bash
 # Create virtual MFA device
 aws iam create-virtual-mfa-device \
@@ -337,7 +336,6 @@ aws iam delete-virtual-mfa-device \
 ```
 
 ### Hardware MFA Setup
-
 ```bash
 # Enable hardware MFA device
 aws iam enable-mfa-device \
@@ -353,11 +351,11 @@ aws iam resync-mfa-device \
     --authentication-code-1 123456 \
     --authentication-code-2 789012
 ```
+___
 
 ## Access Keys and Credentials Management
 
 ### Access Key Management
-
 ```bash
 # Create access key
 aws iam create-access-key --user-name devops-engineer
@@ -400,7 +398,6 @@ echo "New Secret Key: $NEW_SECRET_KEY"
 ```
 
 ### Temporary Credentials
-
 ```bash
 # Get session token with MFA
 aws sts get-session-token \
@@ -429,6 +426,7 @@ aws sts get-federation-token \
     }' \
     --duration-seconds 3600
 ```
+___
 
 ## IAM Best Practices for DevOps
 
@@ -485,7 +483,6 @@ aws sts get-federation-token \
 ```
 
 ### Service-Linked Roles
-
 ```bash
 # Create service-linked role for Auto Scaling
 aws iam create-service-linked-role \
@@ -501,7 +498,6 @@ aws iam delete-service-linked-role \
 ```
 
 ### Cross-Account Access
-
 ```json
 # cross-account-policy.json
 {
@@ -541,11 +537,11 @@ aws iam attach-role-policy \
     --role-name CrossAccountDevOpsRole \
     --policy-arn arn:aws:iam::aws:policy/ReadOnlyAccess
 ```
+___
 
 ## IAM Security Monitoring and Auditing
 
 ### Access Analyzer
-
 ```bash
 # Create access analyzer
 aws accessanalyzer create-analyzer \
@@ -564,7 +560,6 @@ aws accessanalyzer get-finding \
 ```
 
 ### Credential Reports
-
 ```bash
 # Generate credential report
 aws iam generate-credential-report
@@ -588,7 +583,6 @@ NR>1 {
 ```
 
 ### CloudTrail Integration
-
 ```bash
 # Create CloudTrail for IAM monitoring
 aws cloudtrail create-trail \
@@ -610,11 +604,11 @@ aws logs start-query \
     | filter eventName like /^(CreateUser|DeleteUser|AttachUserPolicy|DetachUserPolicy|CreateRole|DeleteRole)$/
     | sort @timestamp desc'
 ```
+___
 
 ## IAM Automation and Infrastructure as Code
 
 ### CloudFormation Templates
-
 ```yaml
 # iam-resources.yaml
 AWSTemplateFormatVersion: '2010-09-09'
@@ -697,7 +691,6 @@ Outputs:
 ```
 
 ### Terraform IAM Configuration
-
 ```hcl
 # iam.tf
 variable "team_name" {
