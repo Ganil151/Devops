@@ -15,53 +15,11 @@ A Kubernetes Cluster is:
 ## Cluster Architecture
 
 ### High-Level Architecture
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Kubernetes Cluster                      │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────────────┐  ┌─────────────────────────────┐   │
-│  │   Control Plane     │  │      Worker Nodes           │   │
-│  │  ┌───────────────┐  │  │  ┌─────────┐ ┌─────────┐   │   │
-│  │  │ API Server    │  │  │  │ Node 1  │ │ Node 2  │   │   │
-│  │  └───────────────┘  │  │  │         │ │         │   │   │
-│  │  ┌───────────────┐  │  │  │ kubelet │ │ kubelet │   │   │
-│  │  │ etcd          │  │  │  │ Pods    │ │ Pods    │   │   │
-│  │  └───────────────┘  │  │  └─────────┘ └─────────┘   │   │
-│  │  ┌───────────────┐  │  │  ┌─────────┐ ┌─────────┐   │   │
-│  │  │ Scheduler     │  │  │  │ Node 3  │ │ Node N  │   │   │
-│  │  └───────────────┘  │  │  │         │ │         │   │   │
-│  │  ┌───────────────┐  │  │  │ kubelet │ │ kubelet │   │   │
-│  │  │ Controller    │  │  │  │ Pods    │ │ Pods    │   │   │
-│  │  │ Manager       │  │  │  └─────────┘ └─────────┘   │   │
-│  │  └───────────────┘  │  │                             │   │
-│  └─────────────────────┘  └─────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-```
+![High-Level Arch](../../Images/KubeClusterArch.png)
 
 ### Component Interaction
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   kubectl   │───►│ API Server  │───►│    etcd     │
-│             │    │             │    │             │
-└─────────────┘    └─────────────┘    └─────────────┘
-                          │                   ▲
-                          ▼                   │
-                   ┌─────────────┐            │
-                   │ Scheduler   │            │
-                   └─────────────┘            │
-                          │                   │
-                          ▼                   │
-                   ┌─────────────┐            │
-                   │ Controller  │────────────┘
-                   │ Manager     │
-                   └─────────────┘
-                          │
-                          ▼
-                   ┌─────────────┐
-                   │   kubelet   │
-                   │ (on nodes)  │
-                   └─────────────┘
-```
+![Component Interaction](../../Images/kubeComponent.png)
+
 
 ## Cluster Components
 
@@ -211,23 +169,33 @@ metadata:
 ## Cluster Networking
 
 ### Network Model
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Cluster Network                         │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
-│  │   Node 1    │    │   Node 2    │    │   Node 3    │     │
-│  │ 10.244.1.0  │    │ 10.244.2.0  │    │ 10.244.3.0  │     │
-│  │    /24      │    │    /24      │    │    /24      │     │
-│  └─────────────┘    └─────────────┘    └─────────────┘     │
-│         │                   │                   │          │
-│         └───────────────────┼───────────────────┘          │
-│                             │                              │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │            Service Network (ClusterIP)             │   │
-│  │                 10.96.0.0/12                       │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
+
+```mermaid
+graph TB
+    subgraph cluster["Kubernetes Cluster Network"]
+        direction TB
+        subgraph pod_network["Pod Networks"]
+            direction LR
+            node1["Node 1<br/>10.244.1.0/24"]
+            node2["Node 2<br/>10.244.2.0/24"]
+            node3["Node 3<br/>10.244.3.0/24"]
+        end
+        
+        subgraph svc_network["Service Network"]
+            direction TB
+            clusterip["ClusterIP Range<br/>10.96.0.0/12<br/>(Virtual IPs for Services)"]
+        end
+        
+        node1 & node2 & node3 -.->|Connected via| clusterip
+    end
+    
+    style cluster fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style pod_network fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style svc_network fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style node1 fill:#4caf50,color:#fff,stroke:#2e7d32
+    style node2 fill:#4caf50,color:#fff,stroke:#2e7d32
+    style node3 fill:#4caf50,color:#fff,stroke:#2e7d32
+    style clusterip fill:#ff9800,color:#fff,stroke:#e65100
 ```
 
 ### CNI Plugins

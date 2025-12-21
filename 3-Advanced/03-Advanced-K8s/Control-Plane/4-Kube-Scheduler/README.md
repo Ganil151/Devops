@@ -34,57 +34,88 @@ The Kube-Scheduler is:
 ## Scheduling Process
 
 ### 1. Filtering Phase (Predicates)
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   Node 1    │    │   Node 2    │    │   Node 3    │
-│ ✓ Available │    │ ✗ No CPU   │    │ ✓ Available │
-└─────────────┘    └─────────────┘    └─────────────┘
-       │                                      │
-       └──────────────┬───────────────────────┘
-                      ▼
-              ┌─────────────┐
-              │ Feasible    │
-              │ Nodes       │
-              │ [1, 3]      │
-              └─────────────┘
+
+```mermaid
+flowchart TB
+    node1["Node 1<br/>✓ Available"]:: available
+    node2["Node 2<br/>✗ No CPU"]:::unavailable
+    node3["Node 3<br/>✓ Available"]:::available
+    
+    feasible["Feasible Nodes<br/>[1, 3]"]
+    
+    node1 & node3 --> feasible
+    node2 -.x|Filtered Out| feasible
+    
+    classDef available fill:#4caf50,color:#fff,stroke:#2e7d32
+    classDef unavailable fill:#f44336,color:#fff,stroke:#c62828
+    style feasible fill:#2196f3,color:#fff,stroke:#1565c0
 ```
 
 ### 2. Scoring Phase (Priorities)
-```
-┌─────────────┐    ┌─────────────┐
-│   Node 1    │    │   Node 3    │
-│ Score: 85   │    │ Score: 92   │
-└─────────────┘    └─────────────┘
-                           │
-                           ▼
-                   ┌─────────────┐
-                   │ Best Node   │
-                   │   Node 3    │
-                   └─────────────┘
+
+```mermaid
+flowchart LR
+    node1["Node 1<br/>Score: 85"]:::medium
+    node3["Node 3<br/>Score: 92"]:::high
+    best["Best Node<br/>Node 3<br/>⭐ Selected"]:::selected
+    
+    node1 --> best
+    node3 ==>|Highest Score| best
+    
+    classDef medium fill:#ff9800,color:#fff,stroke:#e65100
+    classDef high fill:#4caf50,color:#fff,stroke:#2e7d32
+    classDef selected fill:#9c27b0,color:#fff,stroke:#6a1b9a
 ```
 
 ### 3. Binding Phase
-```
-┌─────────────┐         ┌─────────────┐
-│    Pod      │  Bind   │   Node 3    │
-│  my-app     │────────►│             │
-└─────────────┘         └─────────────┘
+
+```mermaid
+flowchart LR
+    pod["Pod<br/>my-app"]:::pod
+    node["Node 3<br/>Selected"]:::node
+    
+    pod -->|Bind| node
+    
+    classDef pod fill:#326ce5,color:#fff,stroke:#1565c0
+    classDef node fill:#4caf50,color:#fff,stroke:#2e7d32
 ```
 
 ## Scheduling Framework
 
 ### Plugin Architecture
 
-```
-┌─────────────────────────────────────────┐
-│           Scheduling Framework          │
-├─────────────────────────────────────────┤
-│  QueueSort │ PreFilter │ Filter │ Score │
-├─────────────────────────────────────────┤
-│  Reserve │ Permit │ PreBind │ Bind      │
-├─────────────────────────────────────────┤
-│  PostBind │ Unreserve │ Plugins        │
-└─────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph framework["Scheduling Framework"]
+        direction TB
+        subgraph phase1["Pre-Scheduling"]
+            queue[Queue Sort]
+            prefilter[Pre Filter]
+        end
+        subgraph phase2["Filtering & Scoring"]
+            filter[Filter]
+            score[Score]
+        end
+        subgraph phase3["Binding"]
+            reserve[Reserve]
+            permit[Permit]
+            prebind[Pre Bind]
+            bind[Bind]
+        end
+        subgraph phase4["Post-Processing"]
+            postbind[Post Bind]
+            unreserve[Unreserve]
+        end
+    end
+    
+    queue --> prefilter --> filter --> score
+    score --> reserve --> permit --> prebind --> bind --> postbind
+    
+    style framework fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style phase1 fill:#e3f2fd,stroke:#1976d2
+    style phase2 fill:#fff3e0,stroke:#f57c00
+    style phase3 fill:#e8f5e9,stroke:#388e3c
+    style phase4 fill:#fce4ec,stroke:#c2185b
 ```
 
 ### Extension Points

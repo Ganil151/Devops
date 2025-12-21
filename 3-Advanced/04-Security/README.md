@@ -1,46 +1,381 @@
-# Enterprise DevSecOps: Security as Code
+# DevSecOps: Security as Code
 
-Security is not a gated process at the end of development; it must be a continuous thread that runs through every stage of the DevOps lifecycle. This is the "Shift-Left" philosophy.
+**DevSecOps** integrates security practices throughout the entire DevOps lifecycle - from planning and development to deployment and operations. Security is everyone's responsibility, not just a final gate.
+
+## 🎯 What is DevSecOps?
+
+DevSecOps = **Development** + **Security** + **Operations**
+
+Traditional security models add security checks at the end of development, creating bottlenecks and late-stage discoveries. DevSecOps shifts security "left" - embedding it early and continuously throughout the SDLC.
+
+### Key Principles
+
+1. **Security as Code**: Treat security policies like application code - version-controlled, tested, and automated
+2. **Shift-Left**: Find and fix security issues early when they're cheaper to resolve
+3. **Continuous Security**: Automate security testing at every stage
+4. **Shared Responsibility**: Security is everyone's job, not just security teams
+5. **Fast Feedback**: Provide immediate security feedback to developers
 
 ---
 
 ## ⬅️ The Shift-Left Philosophy
 
-Shift-Left means moving security testing to the earliest possible stage (the "left" of the timeline).
+```mermaid
+flowchart LR
+    subgraph "Traditional Approach"
+        T1[Plan] --> T2[Code] --> T3[Build] --> T4[Test] --> T5[Deploy] --> T6[❌ Security Check]
+    end
+    
+    subgraph "DevSecOps Approach ✓"
+        D1[Plan<br/>🔒 Threat Model] --> D2[Code<br/>🔒 SAST] --> D3[Build<br/>🔒 SCA] --> D4[Test<br/>🔒 DAST] --> D5[Deploy<br/>🔒 IaC Scan] --> D6[Operate<br/>🔒 Runtime]
+    end
+    
+    style T6 fill:#ffcdd2
+    style D1 fill:#c8e6c9
+    style D2 fill:#c8e6c9
+    style D3 fill:#c8e6c9
+    style D4 fill:#c8e6c9
+    style D5 fill:#c8e6c9
+    style D6 fill:#c8e6c9
+```
 
-1. **Plan/Code**: Static code analysis (SAST) and secret scanning in the IDE.
-2. **Build**: Scanning dependencies for known vulnerabilities (SCA).
-3. **Deploy**: Scanning Docker images and verifying infrastructure configurations (IaC Scanning).
-4. **Operate**: Runtime security, intrusion detection, and automated compliance audits.
+### Security Stages
+
+| Stage | Security Activities | Tools | Purpose |
+|-------|---------------------|-------|---------|
+| **Plan** | Threat modeling, security requirements | OWASP Threat Dragon, IriusRisk | Identify risks early |
+| **Code** | SAST, secret scanning, code review | SonarQube, GitGuardian, Semgrep | Catch vulnerabilities in code |
+| **Build** | Dependency scanning (SCA), license checks | Snyk, OWASP Dependency-Check, Trivy | Find vulnerable dependencies |
+| **Test** | DAST, penetration testing, API security | OWASP ZAP, Burp Suite | Test running applications |
+| **Deploy** | Container scanning, IaC security | Trivy, Checkov, tfsec | Secure infrastructure |
+| **Operate** | Runtime protection, compliance, monitoring | Falco, OPA, Prometheus | Continuous security |
 
 ---
 
-## 🛠️ Core Security Tooling
+## 🛠️ DevSecOps Tool Ecosystem
 
-- **[Trivy](../../00-Resources/01-Scripts-Code/SonarQube/)**: The standard for scanning containers, file systems, and configuration files for vulnerabilities.
-- **[SonarQube](../../2-Intermediate/05-CI-CD/sonarQube/)**: Continuous inspection of code quality and security.
-- **[OPA (Open Policy Agent)](../03-Advanced-K8s/Compliance/)**: A unified policy engine to enforce security rules as code (Gatekeeper).
-- **[Vault/Secrets Manager](../05-Identity-Governance/)**: Centralized management of sensitive keys and passwords.
+```mermaid
+graph TB
+    subgraph "Code Security"
+        SAST[SAST<br/>SonarQube, Semgrep]
+        SECRET[Secret Scanning<br/>GitGuardian, Gitleaks]
+        SAST --> CODE_SEC[Secure Code]
+        SECRET --> CODE_SEC
+    end
+    
+    subgraph "Dependency Security"
+        SCA[SCA<br/>Snyk, Dependency-Check]
+        LICENSE[License Check<br/>FOSSA, Black Duck]
+        SCA --> DEP_SEC[Secure Dependencies]
+        LICENSE --> DEP_SEC
+    end
+    
+    subgraph "Infrastructure Security"
+        CONTAINER[Container Scan<br/>Trivy, Clair]
+        IAC[IaC Scan<br/>Checkov, tfsec]
+        CONTAINER --> INFRA_SEC[Secure Infrastructure]
+        IAC --> INFRA_SEC
+    end
+    
+    subgraph "Runtime Security"
+        RUNTIME[Runtime Protection<br/>Falco, Aqua]
+        POLICY[Policy Enforcement<br/>OPA, Gatekeeper]
+        RUNTIME --> RUN_SEC[Secure Operations]
+        POLICY --> RUN_SEC
+    end
+    
+    CODE_SEC --> SECURE[Secure Application]
+    DEP_SEC --> SECURE
+    INFRA_SEC --> SECURE
+    RUN_SEC --> SECURE
+    
+    style SECURE fill:#c8e6c9
+```
+
+### Tool Categories
+
+#### Static Analysis (SAST)
+- **SonarQube**: Code quality and security
+- **Semgrep**: Fast, customizable code scanning
+- **Checkmarx**: Enterprise SAST platform
+
+#### Software Composition Analysis (SCA)
+- **Snyk**: Developer-first vulnerability scanning
+- **OWASP Dependency-Check**: Open-source SCA
+- **WhiteSource**: License and vulnerability management
+
+#### Dynamic Analysis (DAST)
+- **OWASP ZAP**: Web application security scanner
+- **Burp Suite**: Manual and automated testing
+- **Nikto**: Web server scanner
+
+#### Container Security
+- **Trivy**: Comprehensive vulnerability scanner
+- **Clair**: Container vulnerability analysis
+- **Anchore**: Container security and compliance
+
+#### Secrets Management
+- **HashiCorp Vault**: Secrets and encryption management
+- **AWS Secrets Manager**: Cloud-native secrets
+- **Azure Key Vault**: Microsoft cloud secrets
+
+#### Policy & Compliance
+- **Open Policy Agent (OPA)**: Policy-based control
+- **Gatekeeper**: Kubernetes policy enforcement
+- **Checkov**: Infrastructure as Code scanning
 
 ---
 
-## 📜 Key Security Modules
+## 📚 Documentation Structure
 
-### 1. [Secret Management](./Secret-Management/README.md)
-Ensuring no credentials are ever hardcoded. Using dynamic secrets and rotation.
+### 🟢 [Security Fundamentals](01-Security-Fundamentals/README.md)
 
-### 2. [Compliance-as-Code](./Compliance-As-Code/README.md)
-Automating the evidence collection for SOC2, HIPAA, or ISO audits.
+Core DevSecOps concepts and principles:
+- Shift-Left security explained
+- Security in the SDLC
+- Threat modeling basics
+- Security mindset for developers
 
-### 3. [Image Hardening](./Image-Scanning/README.md)
-Building minimal rootless images (Distroless) to reduce the attack surface.
+### 🔧 [Security Tools](02-Security-Tools/README.md)
+
+Comprehensive guides for each tool:
+- **[Trivy](02-Security-Tools/Trivy/README.md)**: Container and filesystem scanning
+- **[SonarQube](02-Security-Tools/SonarQube/README.md)**: Code quality and security
+- **[Vault](02-Security-Tools/Vault/README.md)**: Secrets management
+- **[Snyk](02-Security-Tools/Snyk/README.md)**: Developer security platform
+- **[OWASP Tools](02-Security-Tools/OWASP-DependencyCheck/README.md)**: Dependency checking
+
+### 🔍 [SAST & DAST](03-SAST-DAST/README.md)
+
+Implementation guides for security testing:
+- Static Application Security Testing (SAST)
+- Dynamic Application Security Testing (DAST)
+- Interactive Application Security Testing (IAST)
+- Integration patterns and best practices
+
+### 🐳 [Container Security](04-Container-Security/README.md)
+
+Securing containerized applications:
+- Image scanning and hardening
+- Runtime security with Falco
+- Registry security
+- Best practices and patterns
+
+### 🔐 [Secrets Management](05-Secrets-Management/README.md)
+
+Managing sensitive data securely:
+- HashiCorp Vault implementation
+- Cloud secrets managers (AWS, Azure, GCP)
+- Secret rotation strategies
+- Best practices and anti-patterns
+
+### 📋 [Compliance as Code](06-Compliance-as-Code/README.md)
+
+Automating compliance and auditing:
+- Open Policy Agent (OPA) policies
+- Kubernetes Gatekeeper
+- Automated audit trails
+- Compliance frameworks (SOC2, HIPAA, PCI-DSS)
+
+### 🔄 [CI/CD Security](07-CI-CD-Security/README.md)
+
+Securing the deployment pipeline:
+- Secure pipeline design
+- Security gates and quality gates
+- Examples for Jenkins, GitLab, GitHub Actions
+- Supply chain security (SLSA framework)
+
+---
+
+## 🎯 Learning Paths
+
+### Beginner Path (1-2 weeks)
+
+1. **[Security Fundamentals](01-Security-Fundamentals/README.md)** - Understand core concepts
+2. **[Container Security Basics](04-Container-Security/README.md)** - Secure your containers
+3. **[Secrets Management](05-Secrets-Management/README.md)** - Never hardcode credentials
+4. **[CI/CD Security](07-CI-CD-Security/README.md)** - Basic pipeline security
+
+**Goal**: Implement basic security practices in your pipeline
+
+### Intermediate Path (2-4 weeks)
+
+1. Complete Beginner Path
+2. **[Security Tools](02-Security-Tools/README.md)** - Master Trivy, SonarQube
+3. **[SAST/DAST](03-SAST-DAST/README.md)** - Implement automated testing
+4. **[Compliance](06-Compliance-as-Code/README.md)** - Policy enforcement with OPA
+
+**Goal**: Automate security across development lifecycle
+
+### Advanced Path (1-2 months)
+
+1. Complete Intermediate Path
+2. **Runtime Security**: Falco, AppArmor, SELinux
+3. **Zero Trust Architecture**: mTLS, service mesh security
+4. **Advanced Compliance**: Multi-framework auditing
+5. **Security Operations**: Incident response, forensics
+
+**Goal**: Enterprise-grade DevSecOps implementation
+
+---
+
+## 🚀 Quick Start Guide
+
+### 1. Scan Your First Container
+
+```bash
+# Install Trivy
+curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+
+# Scan a container image
+trivy image nginx:latest
+
+# Scan with severity filter
+trivy image --severity HIGH,CRITICAL nginx:latest
+```
+
+### 2. Set Up Code Scanning
+
+```bash
+# Using SonarQube Scanner
+sonar-scanner \
+  -Dsonar.projectKey=my-project \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://localhost:9000
+```
+
+### 3. Scan Dependencies
+
+```bash
+# Using Snyk
+npm install -g snyk
+snyk auth
+snyk test
+
+# Using OWASP Dependency-Check
+dependency-check --project my-app --scan ./
+```
+
+### 4. Add to CI/CD Pipeline
+
+```yaml
+# GitLab CI example
+security_scan:
+  stage: test
+  image: aquasec/trivy:latest
+  script:
+    - trivy image --exit-code 1 --severity HIGH,CRITICAL $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+```
 
 ---
 
 ## 💡 Best Practices
-- **Fail the Build**: If a high-severity vulnerability is found, the CI/CD pipeline must stop immediately.
-- **Immutable Security**: Security policies should be version-controlled just like code.
-- **Trust Nothing**: Implement Mutual TLS (mTLS) for all internal service communication.
+
+### Essential Security Practices
+
+1. **Fail Fast**: Stop builds on high-severity vulnerabilities
+2. **Automate Everything**: Manual security checks don't scale
+3. **Shift Left**: Find issues early in development
+4. **Version Control Security**: Treat policies as code
+5. **Continuous Monitoring**: Security doesn't stop at deployment
+6. **Least Privilege**: Minimal permissions everywhere
+7. **Defense in Depth**: Multiple security layers
+8. **Zero Trust**: Never trust, always verify
+
+### Security Gates Checklist
+
+- [ ] No secrets in code (use secret scanners)
+- [ ] No critical vulnerabilities in dependencies
+- [ ] Code passes SAST scans
+- [ ] Container images scanned and approved
+- [ ] Infrastructure as Code validated
+- [ ] Security policies enforced
+- [ ] Compliance requirements met
+- [ ] Runtime protection enabled
 
 ---
-**Identity**: Learn how to manage user and service permissions in the [Identity & Governance Module](../05-Identity-Governance/README.md).
+
+## 🔗 Related Documentation
+
+### Internal Resources
+
+- [Docker Security](../../1-Beginner/03-Docker/Advanced/01-Docker-Security/README.md) - Container security basics
+- [Kubernetes Security](../../2-Intermediate/01-Kubernetes/Intermediate/PodSecurity/README.md) - K8s security
+- [CI/CD Documentation](../../2-Intermediate/05-CI-CD/) - Pipeline integration
+- [Identity & Governance](../05-Identity-Governance/README.md) - Access management
+- [Compliance](../03-Advanced-K8s/Compliance/) - Kubernetes compliance
+
+### External Resources
+
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/) - Web application security risks
+- [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks/) - Security configuration standards
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) - Security framework
+- [DevSecOps Manifesto](https://www.devsecops.org/) - Core principles
+- [SLSA Framework](https://slsa.dev/) - Supply chain security
+
+---
+
+## 📊 Security Metrics
+
+Track these metrics to measure DevSecOps maturity:
+
+| Metric | Target | Purpose |
+|--------|--------|---------|
+| **Mean Time to Remediate (MTTR)** | < 7 days | Speed of fixing vulnerabilities |
+| **Vulnerability Density** | < 1 per 1000 LOC | Code quality |
+| **Security Test Coverage** | > 80% | Protection level |
+| **False Positive Rate** | < 10% | Tool accuracy |
+| **Pipeline Security Compliance** | 100% | Policy enforcement |
+| **Secrets Detected** | 0 | Credential safety |
+
+---
+
+## 🚨 Common Security Pitfalls
+
+### ❌ Anti-Patterns to Avoid
+
+1. **Security Theater**: Tools configured but not enforced
+2. **Hardcoded Secrets**: Credentials in source code
+3. **Ignored Warnings**: "We'll fix it later" syndrome
+4. **Over-Privileged Access**: Running everything as root
+5. **Outdated Dependencies**: Not updating libraries
+6. **No Security Training**: Developers without security knowledge
+7. **Manual Processes**: Security checks that can't scale
+8. **Compliance Kitchen Sink**: Implementing everything without understanding
+
+### ✅ Solutions
+
+1. Enforce security gates in CI/CD
+2. Use secrets managers (Vault, cloud providers)
+3. Break builds on security violations
+4. Implement least privilege everywhere
+5. Automated dependency updates
+6. Regular security training
+7. Automate all security checks
+8. Start with critical controls, expand gradually
+
+---
+
+## 🎓 Training Resources
+
+- **[OWASP DevSlop](https://devslop.co/)** - DevSecOps training project
+- **[Kubernetes Security Specialist](https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist/)** - CKS certification
+- **[AWS Security Specialty](https://aws.amazon.com/certification/certified-security-specialty/)** - Cloud security
+- **[SANS DevSecOps](https://www.sans.org/cyber-security-courses/dev544-secure-coding-java-jee/)** - Professional training
+
+---
+
+## 📞 Next Steps
+
+1. **Start**: Begin with [Security Fundamentals](01-Security-Fundamentals/README.md)
+2. **Implement**: Pick a tool from [Security Tools](02-Security-Tools/README.md)
+3. **Integrate**: Add security to your [CI/CD Pipeline](07-CI-CD-Security/README.md)
+4. **Expand**: Explore advanced topics as needed
+
+**Remember**: DevSecOps is a journey, not a destination. Start small, iterate, and continuously improve.
+
+---
+
+**Last Updated**: 2025-12-21  
+**Maintainer**: DevOps Team  
+**Feedback**: Open issues or submit PRs to improve this documentation

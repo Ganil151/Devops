@@ -57,10 +57,27 @@ Kubernetes Architecture
 │   │   ├── Rollback Strategy
 │   │   └── ReplicaSets
 │   ├── StatefulSets
-│   │   ├── Ordered Deployment
-│   │   ├── Persistent Identity
-│   │   ├── Stable Storage
-│   │   └── Headless Services
+│   │   ├── Stable Pod Identity
+│   │   │   ├── Ordered Naming (app-0, app-1)
+│   │   │   ├── DNS Hostnames
+│   │   │   └── Persistent Identity Across Restarts
+│   │   ├── Persistent Storage
+│   │   │   ├── PVC Templates
+│   │   │   ├── Dedicated Storage Per Pod
+│   │   │   └── Volume Lifecycle Management
+│   │   ├── Ordered Operations
+│   │   │   ├── Sequential Deployment
+│   │   │   ├── Reverse-Order Scaling Down
+│   │   │   └── Rolling Updates
+│   │   ├── Headless Services
+│   │   │   ├── Direct Pod Addressing
+│   │   │   ├── DNS SRV Records
+│   │   │   └── ClusterIP: None
+│   │   └── Use Cases
+│   │       ├── Databases (MySQL, PostgreSQL, MongoDB)
+│   │       ├── Message Queues (Kafka, RabbitMQ)
+│   │       ├── Distributed Systems (Elasticsearch, Cassandra)
+│   │       └── Caching (Redis Cluster)
 │   ├── DaemonSets
 │   │   ├── Node-wide Services
 │   │   ├── System Agents

@@ -40,15 +40,22 @@ Managing external access.
 - HTTP/HTTPS routing.
 - Path-based and Host-based routing.
 
-### 6. [Jobs](Jobs/) & [CronJobs](CronJobs/)
+### 6. [StatefulSets](StatefulSets/)
+Managing stateful applications that require stable identities and persistent storage.
+- **Stable Pod Identities**: Predictable pod names and DNS.
+- **Persistent Storage**: Dedicated PVCs for each pod.
+- **Ordered Deployment**: Sequential pod creation and scaling.
+- **Use Cases**: Databases, message queues, distributed systems.
+
+### 7. [Jobs](Jobs/) & [CronJobs](CronJobs/)
 - **Jobs**: Run to completion tasks.
 - **CronJobs**: Scheduled tasks (like crontab).
 
-### 7. [Helm](Helm/)
+### 8. [Helm](Helm/)
 - Package manager for Kubernetes.
 - Installing charts and managing releases.
 
-### 8. [Observability](Observability/)
+### 9. [Observability](Observability/)
 - **Logging**: Accessing logs, EFK stack.
 - **Monitoring**: Prometheus, Grafana, Metrics Server.
 

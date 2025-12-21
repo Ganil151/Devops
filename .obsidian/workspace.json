@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-Beginner/02-Linux-Basics/Operate-Systems/Linux/linux-filesystem-architecture.md",
+                "file": "2-Intermediate/01-Kubernetes/Intermediate/ConfigMaps/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "linux-filesystem-architecture"
+              "title": "README"
             }
           }
         ]
@@ -201,6 +201,11 @@
   },
   "active": "566b372ccde92e0a",
   "lastOpenFiles": [
+    "2-Intermediate/01-Kubernetes/Intermediate/README.md",
+    "2-Intermediate/01-Kubernetes/Intermediate/Deployments/README.md",
+    "1-Beginner/05-Networking/Beginner-Level/Basic-Protocols/README.md",
+    "1-Beginner/02-Linux-Basics/Operate-Systems/Linux/chmod-permissions-detailed.md",
+    "1-Beginner/02-Linux-Basics/Operate-Systems/Linux/linux-filesystem-architecture.md",
     "00-Resources/03-Images-Diagrams/Kubernetes/KubeMonStack.png",
     "00-Resources/03-Images-Diagrams/Kubernetes/Unconfirmed 490593.crdownload",
     "3-Advanced/02-Observability/03-Logging-ELK/README.md",
@@ -225,7 +230,6 @@
     "00-Resources/03-Images-Diagrams/AWS/SelectDServer.jpeg",
     "00-Resources/03-Images-Diagrams/AWS/Screenshot from 2025-01-22 20-48-44.png",
     "00-Resources/03-Images-Diagrams/AWS/Screenshot from 2025-01-22 20-47-10.png",
-    "00-Resources/03-Images-Diagrams/AWS/Screenshot from 2025-01-22 20-37-09.png",
     "3-Advanced/09-Advanced-Automation/README.md",
     "3-Advanced/09-Advanced-Automation/Terraform/terraform-advanced-guide.md",
     "3-Advanced/09-Advanced-Automation/Ansible/README.md",
@@ -243,10 +247,6 @@
     "3-Advanced/03-Advanced-K8s/NetworkPolicies/README.md",
     "3-Advanced/03-Advanced-K8s/Legacy/Architecture_Structure/Security/secrets/README.md",
     "3-Advanced/03-Advanced-K8s/Legacy/Architecture_Structure/Networking/network-policies/README.md",
-    "3-Advanced/03-Advanced-K8s/Legacy/Architecture_Structure/Storage/README.md",
-    "3-Advanced/03-Advanced-K8s/Legacy/Architecture_Structure/Security/README.md",
-    "3-Advanced/03-Advanced-K8s/Legacy/Architecture_Structure/Networking/README.md",
-    "3-Advanced/03-Advanced-K8s/GitOps/README.md",
     "Untitled.canvas"
   ]
 }
