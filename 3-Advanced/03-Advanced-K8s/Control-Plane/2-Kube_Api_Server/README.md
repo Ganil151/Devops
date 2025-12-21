@@ -26,7 +26,7 @@ The API server is the only component that directly interacts with etcd, the dist
 
 ## Architecture
 
-![Architecture](Images/KAS-1.png)
+![Architecture](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/KAS-1.png)
 
 ## Core Components and Request Flow
 
@@ -34,7 +34,7 @@ The API server is the only component that directly interacts with etcd, the dist
 
 Every API request goes through multiple stages:
 
-![Request Processing Pipeline](Images/KAS-2.png)
+![Request Processing Pipeline](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/KAS-2.png)
 
 ### 1. Authentication
 
@@ -107,7 +107,7 @@ roleRef:
 
 **Common Admission Controllers**:
 
-![Common Admission Controllers](Images/KAS-3.png)
+![Common Admission Controllers](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/KAS-3.png)
 
 **Important Admission Controllers**:
 
@@ -160,7 +160,7 @@ webhooks:
 
 Kubernetes API is organized into groups:
 
-![API Groups and Versions](Images/KAS-4.png)
+![API Groups and Versions](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/KAS-4.png)
 
 ### API Versioning
 
@@ -174,7 +174,7 @@ Kubernetes API is organized into groups:
 
 The API server provides a **watch** mechanism for real-time updates:
 
-![Watch Mechanism](Images/KAS-5.png)
+![Watch Mechanism](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/KAS-5.png)
 
 **Watch Features**:
 - **Resource Versions**: Track changes using resource versions
@@ -195,7 +195,7 @@ kubectl get pods --watch -o json
 
 ### Multi-Master Setup
 
-![Multi-Master Setup](Images/KAS-6.png)
+![Multi-Master Setup](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/KAS-6.png)
 
 ### Configuration for HA
 
@@ -297,7 +297,7 @@ spec:
 
 The API server supports API aggregation for extending with additional APIs:
 
-![Aggregation Layer](Images/KAS-7.png)
+![Aggregation Layer](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/KAS-7.png)
 
 **APIService Example**:
 ```yaml

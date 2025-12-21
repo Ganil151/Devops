@@ -1,5 +1,18 @@
 # Linux File System Architecture Guide for DevOps Engineers
 
+## ⚡ DevOps Quick Reference Cheat Sheet
+
+| Directory | Why it matters to DevOps | Example Use Case |
+| :--- | :--- | :--- |
+| `/etc/systemd` | Service orchestration | Managing Docker/Kubernetes service unit files |
+| `/var/log` | Troubleshooting | Checking `journalctl` or app access logs |
+| `/proc` | System performance | Checking `/proc/cpuinfo` or `/proc/meminfo` |
+| `/etc/network` | Networking | Configuring static IPs or interface bonding |
+| `/run` | Runtime state | Checking PID files for running processes |
+| `/opt` | Third-party apps | Standard home for standalone binaries like Prometheus |
+
+---
+
 ## Overview of Linux File System Hierarchy
 
 The Linux file system follows the Filesystem Hierarchy Standard (FHS), which defines the directory structure and directory contents in Unix-like operating systems. Understanding this architecture is crucial for DevOps engineers managing servers, containers, and cloud infrastructure.
@@ -29,7 +42,7 @@ The Linux file system follows the Filesystem Hierarchy Standard (FHS), which def
 └── var/          # Variable data files
 ```
 
-![fileSystemArch](../Images/fileSystem.png)
+![fileSystemArch](../../../../00-Resources/03-Images-Diagrams/fileSystem.png)
 
 ## Detailed Directory Descriptions
 
@@ -345,7 +358,7 @@ cifs/smb            # Common Internet File System
 
 ### Mount Point Strategy
 
-![sMount](../Images/serverMount.png)
+![sMount](../../../../00-Resources/03-Images-Diagrams/serverMount.png)
 
 ```bash
 # Typical production mount strategy
@@ -461,7 +474,7 @@ drwxrwxrwt  /tmp            # Temporary directory with sticky bit (1777)
 
 ### I/O Performance Optimization
 
-![PerformanceOp](../Images/storagePerformance.png)
+![PerformanceOp](../../../../00-Resources/03-Images-Diagrams/storagePerformance.png)
 
 ```bash
 # Storage hierarchy (fastest to slowest)

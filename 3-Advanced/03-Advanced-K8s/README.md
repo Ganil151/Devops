@@ -1,40 +1,55 @@
-# Advanced Kubernetes: Extensibility & Service Mesh
+# Advanced Kubernetes: Production, Security & Scale
 
-Kubernetes is just the foundation. This module explores how to extend and manage K8s for complex, high-performance, and secure enterprise applications.
-
----
-
-## 1. Extending the API (Operators & CRDs)
-
-Kubernetes is designed to be extensible. You can define your own resources (CRDs) and controllers (Operators) to manage them.
-- **Custom Resource Definitions (CRDs)**: Expanding the K8s vocabulary (e.g., adding a `Database` resource).
-- **Operators**: Software that encapsulates human operational knowledge to manage complex, stateful applications automatically.
+Welcome to the pinnacle of container orchestration. This module covers the deep technical expertise required to manage mission-critical, high-scale Kubernetes clusters in production environments.
 
 ---
 
-## 2. Service Mesh (Istio / Linkerd)
+## 🏗️ Control Plane & Internals
 
-As microservices grow, managing communication between them becomes difficult. A Service Mesh provides a dedicated infrastructure layer for:
-- **Traffic Management**: Blue-green deployments, canary rollouts, and circuit breaking.
-- **Security**: Mutual TLS (mTLS) for all service-to-service communication by default.
-- **Observability**: Automatic tracing and metrics for all network traffic without changing app code.
-
----
-
-## 3. Core Modules
-
-### ☸️ [Operators & Internals](./03-Advanced-K8s/README.md)
-Deep dive into Admission Controllers, Scheduler customization, and the K8s API.
-
-### 🕸️ [Service Mesh Deep Dive](./03-Advanced-K8s/Service-Mesh/)
-Mastering Istio and Linkerd for secure, observable networking.
+Understanding the "Brain" of Kubernetes is essential for troubleshooting and optimization.
+- **[Control Plane Deep Dive](./Control-Plane/)**: Inside the API Server, Scheduler, Controller Manager, and ETCD.
+- **[Admission Controllers](./AdmissionControllers/)**: Intercepting and validating requests before they are persisted.
+- **[Certificates & PKI](./Certificates/)**: Managing cluster-wide TLS and certificate rotation.
 
 ---
 
-## 4. Best Practices
-1. **Prefer Managed Addons**: Use managed Service Mesh (like AWS App Mesh) if possible to reduce operational overhead.
-2. **Admission Control**: Use Validating Webhooks to enforce security and compliance rules at the cluster boundary.
-3. **Cluster Federation**: Building strategies for managing multiple clusters across different regions or clouds.
+## 🛡️ Security & Governance
+
+Hardening the cluster against internal and external threats.
+- **[RBAC (Role-Based Access Control)](./RBAC/)**: Granular permission management following the principle of least privilege.
+- **[Network Policies](./NetworkPolicies/)**: Pod-level firewalling for secure East-West communication.
+- **[Compliance & Policy (OPA/Gatekeeper)](./Compliance/)**: Enforcing baseline and restricted security standards across the cluster.
 
 ---
-**Observability**: Correlate your Mesh traffic with application logic in the [Observability Module](../02-Observability/README.md).
+
+## 📈 Scalability & Performance
+
+Managing resource consumption and automated scaling.
+- **[Autoscaling (HPA/VPA)](./Autoscaling/)**: Dynamic scaling of pods and resource request adjustments.
+- **[Advanced Scheduling](./Scheduling/)**: Using Taints, Tolerations, and Affinity to control pod placement.
+- **[High-Performance Storage (CSI)](./CSI/)**: Managing volume snapshots and backup/restore strategies.
+
+---
+
+## 🏛️ Advanced Architecture
+
+Handling complex stateful applications and cloud-native services.
+- **[StatefulSets](./StatefulSets/)**: Managing databases and distributed systems with stable identities.
+- **[DaemonSets](./DaemonSets/)**: Running specialized agents (metrics, logging) on every node.
+- **[Service Mesh (Istio/Linkerd)](./ServiceMesh/)**: Advanced traffic management, mutual TLS, and observability.
+
+---
+
+## ☁️ Cloud Specific: EKS Deep Dive
+
+- **[EKS with Terraform](./EKS/EKS-TF/)**: Provisioning production-ready AWS EKS clusters with managed node groups and VPC integration.
+
+---
+
+## 📖 Best Practices
+1. **Immutable Infrastructure**: Changes should be made to templates and images, not running pods.
+2. **Observability First**: Always deploy metrics and tracing before going to production.
+3. **Automate Everything**: Use GitOps patterns to manage your cluster state (see the [GitOps Module](../01-GitOps/README.md)).
+
+---
+**Next Step**: Learn how to bridge these clusters with enterprise-scale automation in the [Advanced Automation Module](../09-Advanced-Automation/README.md).

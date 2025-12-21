@@ -69,10 +69,10 @@ Cloud computing is the delivery of computing services—including servers, stora
 ## Cloud Computing Architecture
 
 ### Traditional IT vs Cloud Computing
-![tradvscloudCom](../../../Images/databasesArchicture.png)
+![tradvscloudCom](../../../../00-Resources/03-Images-Diagrams/databasesArchicture.png)
 
 ### Cloud Service Stack
-![ServiceStack](../../../Images/IASS.png)
+![ServiceStack](../../../../00-Resources/03-Images-Diagrams/IASS.png)
 
 ## Cloud Computing Benefits
 

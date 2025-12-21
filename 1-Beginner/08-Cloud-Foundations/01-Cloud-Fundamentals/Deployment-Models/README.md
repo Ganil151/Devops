@@ -24,7 +24,7 @@ Examples:
 ```
 
 ### Architecture
-![publicArch](../../../Images/publiCloudArch.png)
+![publicArch](../../../../00-Resources/03-Images-Diagrams/publiCloudArch.png)
 
 ### Advantages
 ```bash
@@ -125,7 +125,7 @@ Types:
 ```
 
 ### Architecture
-![privateArchitecture](../../../Images/privateArch.png)
+![privateArchitecture](../../../../00-Resources/03-Images-Diagrams/privateArch.png)
 
 ### Advantages
 ```bash
@@ -227,7 +227,7 @@ Components:
 ```
 
 ### Architecture
-![hybirdArch](../../../Images/hybridArch.png)
+![hybirdArch](../../../../00-Resources/03-Images-Diagrams/hybridArch.png)
 
 ### Advantages
 ```bash
@@ -350,7 +350,7 @@ Strategy Types:
 ```
 
 ### Architecture
-![multiCloudArch](../../../Images/multiCloudArch.png)
+![multiCloudArch](../../../../00-Resources/03-Images-Diagrams/multiCloudArch.png)
 
 ### Advantages
 ```bash
@@ -469,7 +469,7 @@ Examples:
 ```
 
 ### Architecture
-![commCloudArch](../../../Images/communityClArch.png)
+![commCloudArch](../../../../00-Resources/03-Images-Diagrams/communityClArch.png)
 
 ### Advantages
 ```bash
@@ -577,7 +577,7 @@ Examples:
 ```
 
 ### Selection Matrix
-![deFramWork](../../../Images/decisionFrameWork.png)
+![deFramWork](../../../../00-Resources/03-Images-Diagrams/decisionFrameWork.png)
 
 ### Migration Strategies
 ```bash

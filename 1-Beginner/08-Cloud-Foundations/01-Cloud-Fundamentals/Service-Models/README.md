@@ -18,7 +18,7 @@ Cloud service models define the level of control, flexibility, and management re
 ```
 
 ### Architecture
-![shareRespons](../../../Images/sharedRes.png)
+![shareRespons](../../../../00-Resources/03-Images-Diagrams/sharedRes.png)
 
 ### Key Components
 
@@ -413,7 +413,7 @@ Use Cases: Enterprise container platforms, hybrid deployments
 ```
 
 ### Architecture
-![SaaSArch](../.../../../../Images/SaasArch.png)
+![SaaSArch](../../../../00-Resources/03-Images-Diagrams/SaasArch.png)
 
 ### Key Characteristics
 
@@ -711,7 +711,7 @@ curl -d "client_id=CLIENT_ID" \
 ```
 
 ### Architecture
-![FaaSArch](../../../Images/FaaSArch.png)
+![FaaSArch](../../../../00-Resources/03-Images-Diagrams/FaaSArch.png)
 
 ### Key Features
 ```bash
@@ -773,7 +773,7 @@ def hello_world(request):
 ## Service Model Comparison
 
 ### Responsibility Matrix
-![FaaSResMatrix](../../../Images/FaaSRes.png)
+![FaaSResMatrix](../../../../00-Resources/03-Images-Diagrams/FaaSRes.png)
 
 ### Selection Criteria
 ```bash

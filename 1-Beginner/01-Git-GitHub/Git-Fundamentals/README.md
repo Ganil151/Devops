@@ -4,7 +4,7 @@
 
 Git is a distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Created by Linus Torvalds in 2005, Git has become the de facto standard for version control in software development and DevOps practices.
 
-![colabo](../Images/git&githubTalk.png)
+![colabo](../../../00-Resources/03-Images-Diagrams/git&githubTalk.png)
 
 ## Why Git is Critical for DevOps
 
@@ -36,7 +36,7 @@ Git is a distributed version control system designed to handle everything from s
 
 ### Git Repository Structure
 
-![gitRepoStructure](../Images/gitStructure.png)
+![gitRepoStructure](../../../00-Resources/03-Images-Diagrams/gitStructure.png)
 
 ```bash
 .git/

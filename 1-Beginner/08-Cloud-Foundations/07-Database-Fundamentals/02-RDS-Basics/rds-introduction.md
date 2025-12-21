@@ -41,7 +41,7 @@ Time spent: 5-10% on infrastructure, 90-95% on application
 ## Supported Database Engines
 
 RDS supports six popular database engines:
-![RDS Supported Database Engines](.../../../../../Images/databasesEngines.png)
+![RDS Supported Database Engines](.../../../../../../../../00-Resources/03-Images-Diagrams/AWS/databasesEngines.png)
 
 ### Quick Comparison
 
@@ -95,15 +95,15 @@ Daily Backups:
 ```
 
 ### 2. High Availability (Multi-AZ)
-![multi-AZ](.../../../../../Images/multi-Az-Deployment.png)
+![multi-AZ](.../../../../../../../../00-Resources/03-Images-Diagrams/AWS/multi-Az-Deployment.png)
 
 
 
 ### 3. Read Replicas
-![ReadReplicas](../../../Images/replicaDeployment.png)
+![ReadReplicas](../../../../../../00-Resources/03-Images-Diagrams/AWS/replicaDeployment.png)
 
 ### 4. Automatic Scaling
-![autoScaling](../../../Images/storageAutoScaling.png)
+![autoScaling](../../../../../../00-Resources/03-Images-Diagrams/AWS/storageAutoScaling.png)
 
 ### 5. Security Features
 ```

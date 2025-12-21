@@ -23,7 +23,7 @@ By decoupling the interoperability logic between Kubernetes and the underlying c
 - **Reduced Core Complexity**: Kubernetes core remains focused on orchestration logic
 
 ## Architecture
-![CCM Architecture](Images/CCM-1.png)
+![CCM Architecture](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/CCM-1.png)
 
 ## Core Components
 
@@ -38,7 +38,7 @@ The Cloud Controller Manager runs the following controllers:
 - Checks the cloud provider to determine if a node has been deleted from the cloud after it stops responding
 
 **Workflow:**
-![Node Controller Workflow](Images/CCM-2.png)
+![Node Controller Workflow](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/CCM-2.png)
 
 ### 2. Route Controller
 
@@ -65,7 +65,7 @@ The Cloud Controller Manager runs the following controllers:
 - Integrates with cloud provider's native load balancing solutions
 
 **Example Flow:**
-![Service Controller Workflow](Images/CCM-3.png)
+![Service Controller Workflow](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/CCM-3.png)
 
 ## How It Works
 
@@ -81,7 +81,7 @@ When the CCM starts:
 
 The CCM operates on an event-driven model:
 
-![Event-Driven Operation](Images/CCM-4.png)
+![Event-Driven Operation](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/CCM-4.png)
 
 ### 3. Reconciliation Loop
 
@@ -154,11 +154,11 @@ Historically, cloud provider code was built into the Kubernetes core. The CCM re
 
 ### In-Tree (Legacy)
 
-![In-Tree](Images/CCM-5.png)
+![In-Tree](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/CCM-5.png)
 
 ### Out-of-Tree (Modern)
 
-![Out-of-Tree](Images/CCM-6.png)
+![Out-of-Tree](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/CCM-6.png)
 
 ### Migration Steps
 

@@ -96,7 +96,7 @@ resource "aws_vpc" "main" {
 
 ### Standard Directory Layout
 
-![projectArch](../../Images/teraformProArch.png)
+![projectArch](../../../00-Resources/03-Images-Diagrams/teraformProArch.png)
 ```
 terraform-project/
 ├── environments/
