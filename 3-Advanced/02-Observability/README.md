@@ -79,5 +79,14 @@ Adding specific labels (like `user_id` or `order_id`) to metrics to pinpoint iss
 ### Unified Dashboards
 Combining logs, metrics, and traces into a single Grafana view (ServiceLens).
 
+## 4. Advanced Sub-Modules
+
+### ☸️ [Kube-Prometheus-Stack](./01-Kube-Prometheus-Stack/README.md)
+The Kubernetes-native monitoring solution. Learn the Operator pattern, CRDs (ServiceMonitors/PrometheusRules), and Helm-based deployment for production clusters.
+
+### 🪵 [ELK Stack](./03-Logging-ELK/README.md)
+Advanced log management and search. Master the ingestion flow (Beats -> Logstash -> ES -> Kibana) and set up production-grade log processing pipelines.
+
 ---
+
 **Cloud Observability**: See how to implement these patterns in AWS using [CloudWatch and X-Ray](../08-Enterprise-Cloud/17-Observability-Governance/README.md).

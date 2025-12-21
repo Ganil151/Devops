@@ -56,6 +56,7 @@ A Kubernetes cluster consists of two types of resources:
 - **Namespace Isolation**: Use Namespaces to logically separate environments (Dev, Staging, Prod).
 - **Resource Quotas**: Prevent one team from "taking over" the whole cluster.
 - **GitOps**: Always manage your cluster state using Git (e.g., [ArgoCD](../ArgoCD/README.md)).
+- **Monitoring**: Implement cluster-wide observability using the [Kube-Prometheus-Stack](../../3-Advanced/02-Observability/01-Kube-Prometheus-Stack/README.md).
 
 ---
 **Deep Dive**: Learn about the [Kubernetes Control Plane](./Advanced/README.md#2-control-plane-deep-dive) for architectural excellence.

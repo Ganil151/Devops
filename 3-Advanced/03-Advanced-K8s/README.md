@@ -14,7 +14,6 @@ Understanding the "Brain" of Kubernetes is essential for troubleshooting and opt
 ---
 
 ## 🛡️ Security & Governance
-
 Hardening the cluster against internal and external threats.
 - **[RBAC (Role-Based Access Control)](./RBAC/)**: Granular permission management following the principle of least privilege.
 - **[Network Policies](./NetworkPolicies/)**: Pod-level firewalling for secure East-West communication.

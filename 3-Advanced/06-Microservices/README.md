@@ -8,7 +8,7 @@ Microservices is an architectural style that structures an application as a coll
 
 A production-grade microservices environment requires several supporting components to handle communication, security, and state.
 
-![Microservices Architecture](../../00-Resources/Images-Diagrams/microSeverviesArch.png)
+![Microservices Architecture](../../00-Resources/03-Images-Diagrams/microServiesArch.png)
 ---
 
 ## 1. Why Microservices?
