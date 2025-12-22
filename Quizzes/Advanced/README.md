@@ -152,6 +152,93 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 
 ---
 
+## Module 06: Cloud-Native & Hybrid Networking
+**Study Resource**: [Multi-Cloud Networking](../../3-Advanced/08-Enterprise-Cloud/01-Multi-Cloud-Architecture/README.md)
+
+22. Which Service Mesh feature allows for fine-grained control over traffic splitting (e.g., 90% to v1, 10% to v2)?
+- A) Ingress Gateway
+- B) VirtualService (Istio) / TrafficSplit (Linkerd)
+- C) Sidecar Injection
+- D) mTLS
+
+23. What is Global Server Load Balancing (GSLB) primarily used for?
+- A) Balancing traffic between pods in a single cluster.
+- B) Routing users to the closest healthy cloud region or provider based on DNS.
+- C) Managing internal VPC traffic.
+- D) Encrypting database connections.
+
+24. Which high-speed private connectivity option is typical for AWS and Azure respectively?
+- A) Direct Connect and ExpressRoute
+- B) VPN and Peering
+- C) Cloud Interconnect and Transit Gateway
+- D) PrivateLink and Service Endpoints
+
+25. In an Istio-enabled cluster, which component is responsible for providing mutual TLS (mTLS) identities to workloads?
+- A) Galley
+- B) Citadel (Istiod)
+- C) Envoy
+- D) Pilot
+
+---
+
+## Module 07: SRE & FinOps Essentials
+**Study Resource**: [Multi-Cloud Management & Governance](../../3-Advanced/08-Enterprise-Cloud/01-Multi-Cloud-Architecture/Management/README.md)
+
+26. What is the main difference between an SLO (Service Level Objective) and an SLA (Service Level Agreement)?
+- A) SLOs are internal goals; SLAs are external legal contracts with customers
+- B) SLAs are for developers; SLOs are for managers
+- C) SLOs are measured in dollars; SLAs are measured in time
+- D) There is no difference
+
+27. What is an "Error Budget" in Site Reliability Engineering (SRE)?
+- A) The total amount of money a team can spend on AWS
+- B) The maximum allowable amount of unreliability before the team must stop feature work and focus on stability
+- C) A list of all historical bugs in a project
+- D) A penalty paid to the customer for downtime
+
+28. Which FinOps strategy involves committing to a certain amount of cloud usage for 1-3 years in exchange for a deep discount?
+- A) Spot Instances
+- B) On-Demand Pricing
+- C) Reserved Instances / Savings Plans
+- D) Preemptible VMs
+
+29. What is the "Golden Signals" of monitoring in SRE?
+- A) Latency, Traffic, Errors, and Saturation
+- B) CPU, Memory, Disk, and Network
+- C) Code, Test, Build, and Deploy
+- D) User, Group, Role, and Policy
+
+---
+
+## Module 08: Microservices & Architectural Patterns
+**Study Resource**: [Microservices Guide](../../3-Advanced/06-Microservices/README.md) & [Specialized Tech](../../3-Advanced/07-Specialized-Tech/README.md)
+
+30. In the **12-Factor App** methodology, how should application configuration be stored?
+- A) Hardcoded in the source code
+- B) In environment variables
+- C) In a local XML file on the disk
+- D) In a private Git repository only accessible to admins
+
+31. Which communication pattern is best for **loose coupling** between microservices?
+- A) Synchronous REST calls
+- B) Asynchronous Message Queues (Pub/Sub)
+- C) Direct Database Sharing
+- D) Shared Memory
+
+32. What is the "Strangler Fig" pattern in microservices?
+- A) Deleting all code and starting from scratch
+- B) Gradually replacing parts of a monolith with new microservices until the monolith is gone
+- C) A type of security vulnerability
+- D) A way to encrypt microservices traffic
+
+33. Which technology is specifically designed for high-performance, contract-first communication between microservices?
+- A) REST
+- B) gRPC
+- C) FTP
+- D) SNMP
+
+---
+
 ## 🏗️ Real-World Scenarios (Advanced)
 
 **Scenario S1: The "Silent Data Loss"**
@@ -178,6 +265,30 @@ An attacker managed to exploit a vulnerability in one service and is now trying 
 - C) Node Affinity
 - D) Horizontal Pod Autoscaling
 
+**Scenario S4: The "Expensive Cloud Pipe"**
+An enterprise is running its analytics on GCP and its production databases on AWS. The data transfer costs (egress) between the two clouds are becoming unsustainable, and the latency is affecting real-time dashboards.
+**Question**: Which combination of architectural changes would most effectively reduce both cost and latency?
+- A) Moving all data to a single cloud provider and using a dedicated private connection (e.g., Megaport) if multi-cloud is still required.
+- B) Increasing the frequency of data syncs using `gsutil`.
+- C) Upgrading to more expensive VM instances in both clouds.
+- D) Implementing a basic VPN between the two clouds.
+
+**Scenario S5: The "Reliability vs. Features" Dilemma**
+Your production system has had several major outages this month, and you have consumed 95% of your quarterly Error Budget. The product manager wants to push a risky new feature tomorrow.
+**Question**: According to standard SRE practices, how should the team respond?
+- A) Push the feature anyway and hope for the best
+- B) Halt new feature releases and focus entirely on engineering tasks to improve system reliability
+- C) Delete the SLOs so the budget is reset
+- D) Fire the person who caused the outages
+
+**Scenario S6: The "Monolith Split"**
+You are breaking down a massive legacy e-commerce monolith. You want to move the "Inventory" logic to a separate service, but the original database has complex foreign key relationships between Inventory and Orders.
+**Question**: What is the most recommended approach to handle data in a microservices architecture?
+- A) Keep using the same shared database for both services to maintain referential integrity.
+- B) Give the Inventory service its own private database and use asynchronous events (Eventual Consistency) to keep it in sync with Orders.
+- C) Copy the entire database for every service.
+- D) Disable all foreign keys and keep the shared database.
+
 ---
 
 ## Answer Key
@@ -202,8 +313,23 @@ An attacker managed to exploit a vulnerability in one service and is now trying 
 19. B
 20. B
 21. B
+22. B
+23. B
+24. A
+25. B
+26. A
+27. B
+28. C
+29. A
+30. B
+31. B
+32. B
+33. B
 
 **Scenarios:**
 S1. C
 S2. A
 S3. B
+S4. A
+S5. B
+S6. B

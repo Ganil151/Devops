@@ -43,6 +43,9 @@ Introduction to Compute, Storage, and Networking in the cloud (AWS/Azure/GCP).
 ### 09. [Data Formats (YAML & JSON)](./09-Data-Formats/README.md)
 Master the syntax of YAML and JSON, the "language" of DevOps configuration.
 
+### 10. [Software Stack Foundations](./10-Software-Stack/README.md)
+Understand Frontend, Backend, Frameworks, and Runtimes. Know the "What" before you "How."
+
 ---
 
 ## 🎯 Learning Objectives
@@ -50,9 +53,10 @@ By the end of this level, you will be able to:
 1.  **Version Control**: Initialize, branch, and merge code safely using Git.
 2.  **OS Mastery**: Navigate the Linux filesystem and manage system resources via CLI.
 3.  **Data Ready**: Write and validate clean YAML and JSON configuration files.
-4.  **Containerize**: Package a simple application into a Docker image.
-5.  **Automate**: Build a basic pipeline that automatically tests your code on push.
-6.  **Connect**: Explain how data travels between a client and a server.
+4. **Containerize**: Package a simple application into a Docker image.
+5. **App Stack Aware**: Distinguish between libraries and frameworks, and understand runtime environments like Node.js or JVM.
+6. **Automate**: Build a basic pipeline that automatically tests your code on push.
+7. **Connect**: Explain how data travels between a client and a server.
 
 ---
 **Next Step**: Once you've mastered these foundations, move to the [Intermediate Level](../2-Intermediate/README.md) to learn about Orchestration and IaC.

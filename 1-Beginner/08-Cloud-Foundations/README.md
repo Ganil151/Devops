@@ -17,6 +17,21 @@ Master performance and data analytics. Focus on Compute Engine, Cloud Storage, a
 
 ---
 
+## ⚖️ Cloud Provider Comparison
+
+| Service Category | **AWS** | **Azure** | **GCP** |
+| :--- | :--- | :--- | :--- |
+| **Compute (VMs)** | EC2 | Virtual Machines | Compute Engine |
+| **Containers (K8s)** | EKS | AKS | GKE |
+| **Serverless** | Lambda | Azure Functions | Cloud Run / Functions |
+| **Object Storage**| S3 | Blob Storage | Cloud Storage (GCS) |
+| **Relational DB** | RDS | Azure SQL / Postgres | Cloud SQL |
+| **NoSQL DB** | DynamoDB | Cosmos DB | Firestore / Bigtable |
+| **Networking** | VPC | VNet | VPC |
+| **Identity** | IAM | Azure AD | Cloud IAM |
+
+---
+
 ## 📚 Core Learning Path
 
 1. **[01. Cloud Fundamentals](./01-Cloud-Fundamentals/README.md)**: Understanding IaaS, PaaS, SaaS, and the Shared Responsibility Model.

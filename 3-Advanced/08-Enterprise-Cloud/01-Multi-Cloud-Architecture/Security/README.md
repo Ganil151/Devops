@@ -1,82 +1,101 @@
-# Multi-Cloud Security
+# Multi-Cloud Security & Identity
 
-Complete guide to securing multi-cloud environments, identity management, and compliance.
+Complete guide to securing multi-cloud environments, identity management, and compliance federation.
 
-## Identity and Access Management
+---
+
+## 1. Workload Identity Federation
+
+Workload Identity Federation is the modern way to allow services in one cloud to access resources in another without long-lived secrets.
+
+### GCP to AWS Access
+To allow a GCP Service Account to access an S3 bucket:
+1. **AWS Side**: Create an OIDC Identity Provider in IAM pointing to Google's OIDC issuer (`https://accounts.google.com`).
+2. **AWS Side**: Create an IAM Role with a Trust Policy that allows the Google OIDC provider.
+3. **GCP Side**: The application uses the Google STS token to exchange it for temporary AWS credentials.
+
+### Azure to GCP Access
 ```bash
-# Federated Identity Management
-# Single Sign-On (SSO) across clouds
-# Centralized user management
-
-# Azure AD Federation with AWS
-aws iam create-saml-provider \
-    --name AzureADProvider \
-    --saml-metadata-document file://azure-ad-metadata.xml
-
-# Google Cloud Identity Federation
-gcloud iam workload-identity-pools create azure-pool \
+# Register Azure as an identity provider in GCP
+gcloud iam workload-identity-pools create "azure-pool" \
     --location="global" \
-    --description="Azure AD integration"
+    --display-name="Azure Identity Pool"
+
+# Add a provider to the pool
+gcloud iam workload-identity-pools providers create-oidc "azure-provider" \
+    --location="global" \
+    --workload-identity-pool="azure-pool" \
+    --issuer-uri="https://sts.windows.net/YOUR_AZURE_TENANT_ID/" \
+    --allowed-audiences="api://YOUR_GCP_PROJECT_NUMBER" \
+    --attribute-mapping="google.subject=assertion.sub"
 ```
 
-## Security Policies
+---
+
+## 2. Centralized Secret Management
+
+Using a single secret manager or federating existing ones.
+
+| Strategy | Tools | Pros | Cons |
+| :--- | :--- | :--- | :--- |
+| **Central Vault** | HashiCorp Vault | Single source of truth | Extra infrastructure |
+| **Secret Sync** | External Secrets Operator | Native cloud experience | Sync lag potential |
+| **Trust Federation** | Workload Identity | No secrets to rotate | Complex setup |
+
+### HashiCorp Vault Multi-Cloud Config
 ```bash
-# Consistent security policies
-# Cross-cloud compliance
-# Automated policy enforcement
+# Enable AWS, Azure, and GCP auth in a single Vault cluster
+vault auth enable aws
+vault auth enable azure
+vault auth enable gcp
 
-# Open Policy Agent (OPA)
-package multicloud.security
+# Define roles that bind to specific cloud identities
+vault write auth/aws/role/app-role \
+    auth_type=iam \
+    bound_iam_principal_arn="arn:aws:iam::123:role/app-role" \
+    policies="app-policy"
+```
 
+---
+
+## 3. Cross-Cloud Network Security
+
+- **mTLS Everywhere**: Using Service Meshes like Istio or Linkerd to secure traffic between clouds.
+- **Micro-segmentation**: Defining policies that follow the workload, not the IP.
+
+### Istio Multi-Primary Cross-Cloud
+```mermaid
+graph LR
+    subgraph "AWS Region"
+        A[Istio Control Plane]
+        B[Service A]
+    end
+    subgraph "Azure Region"
+        C[Istio Control Plane]
+        D[Service B]
+    end
+    B -- mTLS via Gateway --> D
+```
+
+---
+
+## 4. Compliance and Policy as Code
+
+Use Open Policy Agent (OPA) to ensure that security standards are consistent across providers.
+
+```rego
+package security.compliance
+
+# Enforce encryption on all storage services
 deny[msg] {
-    input.cloud_provider == "aws"
-    input.resource_type == "s3_bucket"
+    input.resource_type == "aws_s3_bucket"
     not input.encryption_enabled
-    msg := "S3 buckets must have encryption enabled"
+    msg := "S3 bucket must be encrypted"
 }
 
 deny[msg] {
-    input.cloud_provider == "azure"
-    input.resource_type == "storage_account"
-    not input.https_only
-    msg := "Azure Storage accounts must enforce HTTPS"
+    input.resource_type == "azurerm_storage_account"
+    input.https_only == false
+    msg := "Azure Storage must enforce HTTPS"
 }
-```
-
-## Network Security
-```bash
-# Cross-cloud networking
-# VPN connections
-# Security groups alignment
-
-# AWS to Azure VPN
-aws ec2 create-vpn-connection \
-    --type ipsec.1 \
-    --customer-gateway-id cgw-12345678 \
-    --vpn-gateway-id vgw-12345678
-
-# Multi-cloud firewall rules
-# Consistent across providers
-terraform {
-  required_providers {
-    aws = { source = "hashicorp/aws" }
-    azurerm = { source = "hashicorp/azurerm" }
-    google = { source = "hashicorp/google" }
-  }
-}
-```
-
-## Compliance Management
-```bash
-# Multi-cloud compliance frameworks
-# Automated compliance checking
-# Audit trail management
-
-Frameworks:
-- SOC 2 Type II
-- ISO 27001
-- PCI DSS
-- GDPR
-- HIPAA
-- FedRAMP
 ```

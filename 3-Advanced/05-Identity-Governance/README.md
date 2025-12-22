@@ -23,9 +23,10 @@ PoLP is the most important rule in security. It states that a user or service sh
 ## 3. Core Tooling
 
 - **AWS IAM**: The backbone of AWS security.
-- **AWS Config**: Monitoring your resource configurations over time.
+- **[AWS CloudTrail](./01-AWS-CloudTrail/README.md)**: Auditing every API call made in your environment.
+- **[AWS Config](./02-AWS-Config/README.md)**: Monitoring your resource configurations and compliance over time.
+- **[AWS GuardDuty](./03-AWS-GuardDuty/README.md)**: Intelligent threat detection and continuous security monitoring.
 - **Open Policy Agent (OPA)**: A general-purpose policy engine to enforce rules across your stack.
-- **IAM Access Analyzer**: Finding resources shared with external accounts.
 
 ---
 

@@ -35,7 +35,7 @@ Master the art of Continuous Integration and Delivery. This module includes **[J
 Moving from standalone database containers to managed enterprise solutions (RDS, Aurora, DynamoDB).
 
 ### 07. [Automation & Scripting](./07-Automation/README.md)
-Scaling your logic with **[Python for DevOps](./07-Automation/Python$DevOps/)** and advanced shell scripting.
+Scaling your logic with **[Python for DevOps](./07-Automation/)** and advanced shell scripting.
 
 ### 08. [Cloud Engineering](./08-Cloud-Engineering/README.md)
 Advanced cloud patterns, landing zones, and cost optimization.
