@@ -37,15 +37,22 @@ Securely connecting to remote servers and managing keys.
 ### 07. [Maven & Build Tools](./07-Maven/README.md)
 Packaging application code into deployable artifacts (JARs/WARs).
 
+### 08. [Cloud Foundations](./08-Cloud-Foundations/README.md)
+Introduction to Compute, Storage, and Networking in the cloud (AWS/Azure/GCP).
+
+### 09. [Data Formats (YAML & JSON)](./09-Data-Formats/README.md)
+Master the syntax of YAML and JSON, the "language" of DevOps configuration.
+
 ---
 
 ## 🎯 Learning Objectives
 By the end of this level, you will be able to:
 1.  **Version Control**: Initialize, branch, and merge code safely using Git.
 2.  **OS Mastery**: Navigate the Linux filesystem and manage system resources via CLI.
-3.  **Containerize**: Package a simple application into a Docker image.
-4.  **Automate**: Build a basic pipeline that automatically tests your code on push.
-5.  **Connect**: Explain how data travels between a client and a server.
+3.  **Data Ready**: Write and validate clean YAML and JSON configuration files.
+4.  **Containerize**: Package a simple application into a Docker image.
+5.  **Automate**: Build a basic pipeline that automatically tests your code on push.
+6.  **Connect**: Explain how data travels between a client and a server.
 
 ---
 **Next Step**: Once you've mastered these foundations, move to the [Intermediate Level](../2-Intermediate/README.md) to learn about Orchestration and IaC.

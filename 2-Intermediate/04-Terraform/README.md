@@ -48,6 +48,16 @@ Hardening your IaC for enterprise use.
 
 ---
 
+## ☁️ Terraform Cloud (HCP Terraform)
+
+For teams working together, **Terraform Cloud** provides a centralized, collaborative environment:
+- **Managed Backends**: Remote state management with locking.
+- **VCS Integration**: Trigger runs via Pull Requests.
+- **Policy Enforcement**: Sentinel and OPA.
+- **Full Guide**: [Explore Terraform Cloud & Workflows](./Terraform-Cloud/)
+
+---
+
 ## 4. State: The Single Source of Truth
 
 Terraform uses a **State File** (`terraform.tfstate`) to map your real-world resources to your configuration.

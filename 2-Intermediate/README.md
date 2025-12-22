@@ -37,6 +37,15 @@ Moving from standalone database containers to managed enterprise solutions (RDS,
 ### 07. [Automation & Scripting](./07-Automation/README.md)
 Scaling your logic with **[Python for DevOps](./07-Automation/Python$DevOps/)** and advanced shell scripting.
 
+### 08. [Cloud Engineering](./08-Cloud-Engineering/README.md)
+Advanced cloud patterns, landing zones, and cost optimization.
+
+### 09. [Observability Foundations](./09-Observability-Foundations/README.md)
+Master the "Four Golden Signals" and basic log aggregation before moving to enterprise suites.
+
+### 10. [Chef Infrastructure Automation](./10-Chef/README.md)
+Introduction to Ruby-based configuration management and the Master-agent architecture.
+
 ---
 
 ## 🎯 Learning Objectives
@@ -45,7 +54,8 @@ By the end of this level, you will be able to:
 2.  **Provision**: Use Terraform to create a complete VPC and compute environment from scratch.
 3.  **Configure**: Automate the hardening and setup of 10+ servers simultaneously using Ansible.
 4.  **Integrate**: Build a full CI/CD pipeline that builds, tests, scans, and deploys an application.
-5.  **Persist**: Design and manage scalable database layers for your applications.
+5.  **Observe**: Monitor application health using the Four Golden Signals and basic probing.
+6.  **Persist**: Design and manage scalable database layers for your applications.
 
 ---
 **Next Step**: Ready for production grade? Move to the [Advanced Level](../3-Advanced/README.md) for GitOps, Observability, and DevSecOps.

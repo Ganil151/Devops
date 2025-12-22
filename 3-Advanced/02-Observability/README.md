@@ -87,6 +87,12 @@ The Kubernetes-native monitoring solution. Learn the Operator pattern, CRDs (Ser
 ### 🪵 [ELK Stack](./03-Logging-ELK/README.md)
 Advanced log management and search. Master the ingestion flow (Beats -> Logstash -> ES -> Kibana) and set up production-grade log processing pipelines.
 
+### 🔍 [Splunk](./04-Splunk/README.md)
+Enterprise-grade SIEM and log analysis. Understand the Search Head/Indexer architecture and the power of SPL for complex analytics.
+
+### 🛡️ [Nagios](./05-Nagios/README.md)
+Classical infrastructure monitoring. Learn host/service definitions, NRPE-based remote checks, and the status-based alerting philosophy.
+
 ---
 
 **Cloud Observability**: See how to implement these patterns in AWS using [CloudWatch and X-Ray](../08-Enterprise-Cloud/17-Observability-Governance/README.md).
