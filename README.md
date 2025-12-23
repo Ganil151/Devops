@@ -12,10 +12,11 @@ Before you start, check out our centralized assets:
 
 ### 🟢 [Phase 1: Beginner (Foundations)](./1-Beginner/README.md)
 The bedrock of DevOps. Learn the tools that every engineer must master before they can automate.
+- 🌐 **Networking Foundations**: The plumbing of the digital world.
 - 🐧 **Linux & SysAdmin**: The engine of the cloud.
+- 🔑 **SSH & Remote Access**: Secure communication.
 - 📦 **Git & Version Control**: Your source of truth.
 - 🐳 **Docker Basics**: Eliminating "It works on my machine."
-- 🌐 **Networking Foundations**: The plumbing of the digital world.
 - 🏗️ **Software Stack**: Understanding Frontend, Backend, and Runtimes.
 
 ### 🟡 [Phase 2: Intermediate (Automation)](./2-Intermediate/README.md)

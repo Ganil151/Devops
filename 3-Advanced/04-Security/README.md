@@ -365,6 +365,53 @@ Track these metrics to measure DevSecOps maturity:
 
 ---
 
+---
+
+## 🧠 Training & Assessment
+
+### Knowledge Quiz
+
+**1. What does it mean to "Shift Left" in security?**
+- A) Moving all security tools to the left side of the data center
+- B) Integrating security early in the development lifecycle (Planning/Coding)
+- C) Delegating security only to the operations team
+- D) Ignoring security until the deployment phase
+
+**2. Which tool is best suited for scanning container images for vulnerabilities (CVEs)?**
+- A) SonarQube
+- B) HashiCorp Vault
+- C) Trivy
+- D) OPA
+
+**3. In a Zero Trust architecture, what is the core assumption?**
+- A) Users on the VPN can be trusted
+- B) Internal traffic is always safe
+- C) Never trust, always verify (no one is trusted by default)
+- D) Trust but verify
+
+---
+
+### Real-World Troubleshooting Scenarios
+
+#### Scenario 1: The "Secret Leak" Incident
+**Problem:** A junior developer accidentally committed an AWS Access Key to a public Git repository.
+**Investigation:**
+1.  **Detection:** GitGuardian or a similar secret-scanner alerts the security team.
+2.  **Impact:** The key is now compromised and could be used by anyone.
+**Solution:**
+    - **IMMEDIATELY** revoke/deactivate the key in AWS.
+    - Purge the secret from Git history (using BFG Repo-Cleaner or `git filter-repo`).
+    - Rotate all keys and audit for any unauthorized actions.
+
+#### Scenario 2: Pipeline Failed on SCA
+**Problem:** Your Jenkins pipeline fails at the "Dependency Scan" stage.
+**Investigation:**
+1.  **Check Logs:** Snyk/Trivy found a `CRITICAL` vulnerability in a core package (e.g., `log4j`).
+2.  **Decision:** The security policy forbids deploying images with critical vulnerabilities.
+**Solution:** Update the dependency to a patched version in your `package.json` or `pom.xml`, test for breaking changes, and re-run the pipeline.
+
+---
+
 ## 📞 Next Steps
 
 1. **Start**: Begin with [Security Fundamentals](01-Security-Fundamentals/README.md)

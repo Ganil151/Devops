@@ -7,41 +7,42 @@ Welcome to the foundation of your DevOps journey. This level is designed to equi
 ## 🚀 The Foundations of a DevOps Engineer
 
 DevOps is not just about tools; it's about the intersection of development and operations. To succeed, you must first master the building blocks:
-- **Collaboration**: Using Version Control to work with others.
-- **Environment**: Understanding the operating system that runs the internet.
-- **Packaging**: Learning how to bundle code so it runs anywhere.
 - **Connectivity**: How computers talk to each other.
+- **Environment**: Understanding the operating system that runs the internet.
+- **Remote Access**: Securely communicating with your infrastructure.
+- **Collaboration**: Using Version Control to work with others.
+- **Packaging**: Learning how to bundle and build code.
 
 ---
 
 ## 📚 Learning Modules
 
-### 01. [Git & GitHub](./01-Git-GitHub/README.md)
-The "Source of Truth" for all code and infrastructure. Learn the Git object model, branching, and collaboration.
+### 01. [Networking Foundations](./01-Networking/README.md)
+Subnets, IPs, and Gateways. The plumbing of the digital world. Learn this first to understand how cloud resources connect.
 
 ### 02. [Linux Basics & SysAdmin](./02-Linux-Basics/README.md)
 Master the command line, permissions, and process management. This module includes deep dives into **[Operating Systems](./02-Linux-Basics/Operate-Systems/)** and **[System Administration](./02-Linux-Basics/SysAdmin/)**.
 
-### 03. [Docker Basics](./03-Docker/README.md)
+### 03. [SSH & Remote Access](./03-SSH/README.md)
+Securely connecting to remote servers and managing keys. The bridge between your local machine and the cloud.
+
+### 04. [Git & GitHub](./04-Git-GitHub/README.md)
+The "Source of Truth" for all code and infrastructure. Learn the Git object model, branching, and collaboration.
+
+### 05. [Data Formats (YAML & JSON)](./05-Data-Formats/README.md)
+Master the syntax of YAML and JSON, the "language" of DevOps configuration.
+
+### 06. [Docker Basics](./06-Docker/README.md)
 Introduction to containerization. Learn why "It works on my machine" is a thing of the past.
-
-### 04. [Basic CI/CD](./04-Basic-CI-CD/README.md)
-Automating your first tasks using GitHub Actions and simple pipelines.
-
-### 05. [Networking Foundations](./05-Networking/README.md)
-Subnets, IPs, and Gateways. The plumbing of the digital world.
-
-### 06. [SSH & Remote Access](./06-SSH/README.md)
-Securely connecting to remote servers and managing keys.
 
 ### 07. [Maven & Build Tools](./07-Maven/README.md)
 Packaging application code into deployable artifacts (JARs/WARs).
 
-### 08. [Cloud Foundations](./08-Cloud-Foundations/README.md)
-Introduction to Compute, Storage, and Networking in the cloud (AWS/Azure/GCP).
+### 08. [Basic CI/CD](./08-Basic-CI-CD/README.md)
+Automating your first tasks using GitHub Actions and simple pipelines.
 
-### 09. [Data Formats (YAML & JSON)](./09-Data-Formats/README.md)
-Master the syntax of YAML and JSON, the "language" of DevOps configuration.
+### 09. [Cloud Foundations](./09-Cloud-Foundations/README.md)
+Introduction to Compute, Storage, and Networking in the cloud (AWS/Azure/GCP).
 
 ### 10. [Software Stack Foundations](./10-Software-Stack/README.md)
 Understand Frontend, Backend, Frameworks, and Runtimes. Know the "What" before you "How."

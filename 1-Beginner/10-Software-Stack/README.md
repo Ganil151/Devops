@@ -75,3 +75,9 @@ In the "old days," we installed these runtimes directly on server OSs. This led 
 2. **Build Artifacts**: Does the build produce a static folder (Frontend) or an executable/container (Backend)?
 3. **Environment Variables**: How does the app get its database URLs or API keys?
 4. **Health Checks**: How does the platform (K8s) know if the runtime has crashed?
+
+---
+
+**Congratulations/home/ganil/Documents/Devops/1-Beginner/10-Software-Stack* You have completed the Beginner Level foundations.
+
+**Next Step**: Move on to the [Intermediate Level: DevOps Orchestration](../../2-Intermediate/README.md) to begin your journey into Kubernetes, Terraform, and Enterprise CI/CD.

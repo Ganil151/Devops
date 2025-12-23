@@ -4,59 +4,115 @@ Kubernetes is an open-source system for automating deployment, scaling, and mana
 
 ---
 
-## 1. Why Orchestration?
+## 🏗️ 1. Cluster Architecture Deep Dive
 
-While Docker handles the lifecycle of a single container, Kubernetes handles the lifecycle of **clusters** of containers. It ensures:
-- **Self-healing**: Restarts containers that fail, replaces and reschedules containers when nodes die.
-- **Bin Packing**: Automatically places containers based on their resource requirements.
-- **Service Discovery**: Exposes containers using their own DNS name or IP address.
-- **Automated Rollouts/Rollbacks**: Seamlessly move to new versions of your app.
+A Kubernetes cluster is divided into two parts: the **Control Plane** and the **Worker Nodes**.
 
----
+- **Control Plane**: The brain. It contains `kube-apiserver` (the entry point), `etcd` (the database), and `kube-scheduler`.
+- **Worker Nodes**: Where the work happens. Each node runs `kubelet` (the manager) and `kube-proxy` (the networker).
 
-## 2. Cluster Architecture
+## 🛠️ 2. Essential Kubectl Commands
 
-A Kubernetes cluster consists of two types of resources:
-1.  **Control Plane**: The "Brain" of the cluster. It makes global decisions about the cluster (e.g., scheduling).
-    - `kube-apiserver`: The front-end for the control plane.
-    - `etcd`: Consistent and highly-available key-value store for cluster data.
-    - `kube-scheduler`: Watches for new pods and assigns them to nodes.
-    - `kube-controller-manager`: Runs controller processes (Node, Job, Endpoint controllers).
+### 🔍 Discovery and Inspection
+*When to use: Checking the state of your cluster and debugging resources.*
 
-2.  **Nodes (Worker Data Plane)**: The machines where your applications run.
-    - `kubelet`: An agent that runs on each node and ensures containers are running in a pod.
-    - `kube-proxy`: Maintains network rules on nodes.
-    - `Container Runtime`: Software that runs containers (e.g., Docker, containerd).
+```bash
+# Get all pods in all namespaces
+kubectl get pods -A
 
----
+# Detailed view of a specific pod (Events are here!)
+kubectl describe pod <pod_name>
 
-## 3. Learning Path Overview
+# View logs from a specific container in a pod
+kubectl logs <pod_name> -c <container_name> -f
 
-### 🟢 [Beginner Level](./Beginner/README.md)
-**Focus**: Understanding the basics and the "Object Model".
-- **Pods**: The smallest deployable unit in K8s.
-- **Nodes**: Physical or virtual machines in the cluster.
-- **Services**: Stable networking for your pods.
+# List all services and their external IPs
+kubectl get svc
+```
 
-### 🟡 [Intermediate Level](./Intermediate/README.md)
-**Focus**: Managing state and scale.
-- **Deployments**: Declarative updates for Pods and ReplicaSets.
-- **ConfigMaps & Secrets**: Externalizing configuration and sensitive data.
-- **Ingress**: Managing external access to services (HTTP/HTTPS).
+### ⚙️ Management and Scaling
+*When to use: Deploying updates and responding to traffic spikes.*
 
-### 🔴 [Advanced Level](./Advanced/README.md)
-**Focus**: Production operations and specialized workloads.
-- **StatefulSets**: Managing stateful applications (Databases).
-- **CRDs & Operators**: Extending the Kubernetes API.
-- **EKS**: Running K8s on AWS at scale.
+```bash
+# Apply a YAML configuration
+kubectl apply -f deployment.yaml
+
+# Scale a deployment to 5 replicas
+kubectl scale deployment/my-app --replicas=5
+
+# Rollout undo (Revert to previous version)
+kubectl rollout undo deployment/my-app
+
+# Port-forward to access a service locally
+kubectl port-forward svc/my-service 8080:80
+```
 
 ---
 
-## 4. Best Practices
-- **Namespace Isolation**: Use Namespaces to logically separate environments (Dev, Staging, Prod).
-- **Resource Quotas**: Prevent one team from "taking over" the whole cluster.
-- **GitOps**: Always manage your cluster state using Git (e.g., [ArgoCD](../ArgoCD/README.md)).
-- **Monitoring**: Implement cluster-wide observability using the [Kube-Prometheus-Stack](../../3-Advanced/02-Observability/01-Kube-Prometheus-Stack/README.md).
+## 💡 Kubernetes Best Practices
+
+- **Use Declarative Files**: Avoid `kubectl run`. Always use `kubectl apply -f <file>.yaml` so your cluster state is documented.
+- **Set Resource Requests/Limits**: Prevent "Noisy Neighbor" issues by defining exactly how much CPU/RAM each pod needs.
+- **Liveness & Readiness Probes**: Ensure K8s only sends traffic to pods that are actually ready to handle it.
+- **Namespace Everything**: Never deploy to the `default` namespace. Use `dev`, `prod`, `monitoring` to stay organized.
+- **Labels are Metadata**: Use labels (`app: web`, `env: production`) for selecting and grouping resources effectively.
 
 ---
-**Deep Dive**: Learn about the [Kubernetes Control Plane](./Advanced/README.md#2-control-plane-deep-dive) for architectural excellence.
+
+## 🧠 Training & Assessment
+
+### Knowledge Quiz
+
+**1. Which component is responsible for maintaining the state of the cluster (the "source of truth")?**
+- A) `kube-scheduler`
+- B) `etcd`
+- C) `kubelet`
+- D) `kube-proxy`
+
+**2. What happens if a Pod's 'Readiness Probe' fails?**
+- A) The pod is deleted and recreated
+- B) The pod is removed from the Service's endpoint list (no traffic)
+- C) The node is marked as Unhealthy
+- D) Kubernetes ignores the failure
+
+**3. Which command is used to see the internal events of a Pod (e.g., Pulling image, Started)?**
+- A) `kubectl logs`
+- B) `kubectl events`
+- C) `kubectl describe pod`
+- D) `kubectl get logs`
+
+---
+
+### Real-World Troubleshooting Scenarios
+
+#### Scenario 1: The "CrashLoopBackOff" Cycle
+**Problem:** You deploy an update, but the pods keep restarting.
+**Investigation:**
+1.  **Check Status:** `kubectl get pods` shows `CrashLoopBackOff`.
+2.  **View Events:** `kubectl describe pod <name>` shows `Back-off restarting failed container`.
+3.  **Check Logs:** `kubectl logs <name>` reveals `Error: Database connection failed (Timeout)`.
+**Solution:** The new version has an incorrect DB connection string in its ConfigMap. Fix the ConfigMap and redeploy.
+
+#### Scenario 2: Service is Unreachable
+**Problem:** You can reach the pod IP, but the Service DNS/IP isn't working.
+**Investigation:**
+1.  **Check Selectors:** Run `kubectl get svc <name> -o yaml` and check the `selector`.
+2.  **Check Pod Labels:** Run `kubectl get pods --show-labels`.
+**Solution:** The Service selector `app: web` doesn't match the Pod's label `app: micro-web`. Fix the selector to match.
+
+---
+
+## ✅ Knowledge Check
+- [ ] Install `kubectl` and `minikube`/`kind`
+- [ ] Navigate namespaces and contexts
+- [ ] Understand the Pod-Deployment-Service hierarchy
+- [ ] Manage ConfigMaps and Secrets
+- [ ] Troubleshoot with `describe`, `logs`, and `exec`
+
+## 🔗 Next Steps
+- **[Helm Charts](../02-Helm/)** - Package your K8s apps.
+- **[ArgoCD GitOps](../../3-Advanced/01-GitOps/)** - Automate your deployments.
+- **[Monitoring with Prometheus](../../3-Advanced/02-Observability/)** - Keep an eye on your cluster.
+
+---
+*Kubernetes is the orchestrator of the future—master the score, and you can conduct any scale.*
