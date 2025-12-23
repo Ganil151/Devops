@@ -4,7 +4,16 @@ As a DevOps Engineer, you aren't just managing servers; you are managing the **d
 
 ---
 
-## 🎨 1. Frontend: The User's Gateway
+## 🎯 Learning Objectives
+
+- Distinguish between Frontend and Backend responsibilities
+- Compare Libraries (Tool) vs Frameworks (Skeleton)
+- Explain the role of Runtime Environments
+- Understand how Containers solve "Runtime Hell"
+
+
+
+## 🎨 Frontend: The User's Gateway
 
 The "Front End" is everything the user interacts with directly in their browser.
 
@@ -19,7 +28,7 @@ The "Front End" is everything the user interacts with directly in their browser.
 
 ---
 
-## ⚙️ 2. Backend: The Engine Room
+## ⚙️ Backend: The Engine Room
 
 The "Back End" runs on a server and handles data processing, security, and database interactions.
 
@@ -38,7 +47,7 @@ The "Back End" runs on a server and handles data processing, security, and datab
 
 ---
 
-## 📚 3. Libraries vs. Frameworks
+## 📚 Libraries vs. Frameworks
 
 Both are reusable code written by others, but they differ in **Control**.
 
@@ -50,7 +59,7 @@ Both are reusable code written by others, but they differ in **Control**.
 
 ---
 
-## 🚀 4. Runtime Environments
+## 🚀 Runtime Environments
 
 A **Runtime** is the environment in which a program executes. It provides the necessary resources (libraries, memory management) for the code to run.
 
@@ -62,7 +71,7 @@ A **Runtime** is the environment in which a program executes. It provides the ne
 
 ---
 
-## 🐳 5. Transitioning to Containers
+## 🐳 Transitioning to Containers
 
 In the "old days," we installed these runtimes directly on server OSs. This led to "Version Hell" (e.g., App A needs Node 14, App B needs Node 18).
 
@@ -77,6 +86,43 @@ In the "old days," we installed these runtimes directly on server OSs. This led 
 4. **Health Checks**: How does the platform (K8s) know if the runtime has crashed?
 
 ---
+
+## 🧪 Practical Labs
+
+### Lab 1: Identifying Stack Components
+**Scenario**: You are given a repository with `index.html`, `style.css`, `app.py`, and `requirements.txt`.
+**Task**: Classify files into Frontend and Backend.
+**Solution**:
+- **Frontend**: `index.html` (Structure), `style.css` (Presentation). Runs in Browser.
+- **Backend**: `app.py` (Logic). Runs on Server (Python Runtime).
+
+### Lab 2: Defining Runtimes
+**Scenario**: A developer says "The app needs Node.js" but doesn't specify version. Production crashes.
+**Task**: Lock the runtime.
+**Solution**:
+1.  **Define**: Create a `.nvmrc` or `Dockerfile` specifying `FROM node:18`.
+
+## 🧠 Knowledge Quiz
+
+**1. Where is Frontend code (HTML/CSS/JS) typically executed?**
+- A) On the Database Server
+- B) In the User's Browser
+- C) In the Cloud Firewall
+- D) On the Jenkins Server
+
+**2. What is the key difference between a Library and a Framework?**
+- A) Libraries are faster
+- B) Frameworks are written in Java
+- C) Inversion of Control (Framework calls you)
+- D) Libraries cost money
+
+**3. Why do DevOps engineers prefer Containerized Runtimes?**
+- A) They are slower but safer
+- B) They guarantee the environment is identical from Dev to Prod
+- C) They don't require an OS
+- D) They eliminate the need for code
+
+## ✅ Knowledge Check
 
 **Congratulations/home/ganil/Documents/Devops/1-Beginner/10-Software-Stack* You have completed the Beginner Level foundations.
 

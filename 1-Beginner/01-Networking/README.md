@@ -29,10 +29,22 @@ While there are 7 layers, DevOps engineers focus on these core areas:
 
 ---
 
-## 4. Best Practices
-1. **Private by Default**: Keep your databases and internal servers in private subnets.
-2. **Ports**: Close all ports by default; only open the ones you explicitly need (e.g., 80, 443).
-3. **Encryption**: Always prefer HTTPS (TLS) over plain HTTP.
+## 4. Linux Networking Diagnostic Methodology
+When a connection fails, follow this "inside-out" approach common in Linux administration:
+
+1.  **Check Local Interface**: Is the NIC up? (`ip link`)
+2.  **Check Local IP**: Does the machine have the expected IP? (`ip addr`)
+3.  **Check Local Routing**: Is there a default gateway? (`ip route`)
+4.  **Check Remote Reachability**: Can you ping the gateway? Can you ping `8.8.8.8`?
+5.  **Check DNS**: Can you resolve a hostname? (`dig google.com`)
+6.  **Check Application Port**: Is the service actually listening on the target port? (`ss -tuln`)
+
+## 5. Security & Stability Best Practices
+Based on industry standards and the *Linux Command Line* guide:
+- **Minimize the Attack Surface**: Disable any network service you aren't using. Use `ss -tuln` to find "ghost" services.
+- **Prefer Static IPs for Servers**: Use DHCP reservations or static configurations for critical infrastructure to avoid IP changes.
+- **Monitor Bandwidth**: Use `iftop` or `nload` to identify processes hogging the connection.
+- **Immutable Configurations**: In DevOps, define your network (VPCs, Security Groups) as code (e.g., Terraform) rather than manual 	"clicks."
 
 ---
 

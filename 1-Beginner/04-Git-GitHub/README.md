@@ -9,7 +9,7 @@ Git is the foundation of DevOps. It allows teams to collaborate, track changes, 
 - Learn collaborative workflows (Forking, PRs)
 - Navigate GitHub features for project management
 
-## 🛠️ Essential Git Commands
+## 📖 Essential Git Commands
 
 ### 📁 Initializing and Staging
 *When to use: When starting a new project or tracking changes in an existing one.*
@@ -57,9 +57,24 @@ git commit --amend -m "Corrected message"
 
 ---
 
-## 🧠 Training & Assessment
+## 🧪 Practical Labs
 
-### Knowledge Quiz
+### Lab 1: The "Emergency Hotfix"
+**Scenario**: You are working on a feature branch, but a critical bug is found on `main` that needs to be fixed immediately.
+**Task**: Pause current work, fix the bug, and resume.
+**Solution**:
+1.  **Stash**: Use `git stash` to save your work.
+2.  **Switch**: `git checkout main` and fix the bug.
+3.  **Resume**: Return to branch and run `git stash pop`.
+
+### Lab 2: Diverged Branches
+**Scenario**: You try to push your code, but Git says `Your branch is behind 'origin/main'`.
+**Task**: Integrate remote changes without creating a messy merge bubble.
+**Solution**:
+1.  **Pull Rebase**: Run `git pull --rebase origin main`.
+2.  **Resolve**: Fix any conflicts if they arise.
+
+## 🧠 Knowledge Quiz
 
 **1. What is the difference between `git reset` and `git revert`?**
 - A) `reset` is for remote, `revert` is for local
@@ -78,24 +93,6 @@ git commit --amend -m "Corrected message"
 - B) It's a preview area for GitHub pull requests
 - C) It's a middle ground to prepare exactly what will go into the next commit
 - D) It's used for resolving merge conflicts only
-
----
-
-### Real-World Troubleshooting Scenarios
-
-#### Scenario 1: The "Emergency Hotfix"
-**Problem:** You are working on a feature branch, but a critical bug is found on `main` that needs to be fixed immediately.
-**Investigation:**
-1.  **Current State:** You have uncommitted changes in your feature branch.
-2.  **The Fix:** You don't want to commit "broken" work just to switch branches.
-**Solution:** Use `git stash` to save your work, switch to `main`, fix the bug, then return and run `git stash pop`.
-
-#### Scenario 2: Diverged Branches
-**Problem:** You try to push your code, but Git says `Your branch is behind 'origin/main'`.
-**Investigation:**
-1.  **Cause:** A teammate merged a PR while you were working.
-2.  **Resolution:** You need to integrate their changes before you can push yours.
-**Solution:** Run `git pull --rebase origin main`. This puts your local commits "on top" of the latest changes from the server, keeping history clean.
 
 ---
 

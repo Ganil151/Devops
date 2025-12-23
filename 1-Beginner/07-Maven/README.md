@@ -4,7 +4,17 @@ Maven is a build automation tool used primarily for Java projects. It handles de
 
 ---
 
-## 1. The Maven Lifecycle
+## 🎯 Learning Objectives
+
+- Understand the Maven Build Lifecycle phases
+- Manage dependencies and resolve conflicts
+- Package applications into JARs/WARs
+- Use Maven profiles for environment management
+- Debug build issues with dependency trees
+
+
+
+## 📖 The Maven Lifecycle
 
 A build lifecycle is a well-defined sequence of phases.
 1.  **Validate**: Ensure the project is correct and all information is available.
@@ -17,7 +27,7 @@ A build lifecycle is a well-defined sequence of phases.
 
 ---
 
-## 🏗️ 2. Essential Maven Commands
+## 🏗️ Essential Maven Commands
 
 ### 🚦 The Core Workflow
 *When to use: The standard cycle for building and testing your Java application.*
@@ -62,9 +72,24 @@ mvn versions:display-dependency-updates
 
 ---
 
-## 🧠 Training & Assessment
+## 🧪 Practical Labs
 
-### Knowledge Quiz
+### Lab 1: The "No Class Def Found" Nightmare
+**Scenario**: Your app compiles fine, but fails at runtime with `ClassNotFoundException`.
+**Task**: Find the missing or conflicting dependency.
+**Solution**:
+1.  **Analyze**: Run `mvn dependency:tree` to see the full list of jars.
+2.  **Identify**: Look for version conflicts or `<scope>provided</scope>` libraries that should be runtime.
+3.  **Fix**: Add an `<exclusion>` or update the version in `pom.xml`.
+
+### Lab 2: Stale Build Artifacts
+**Scenario**: You changed your code, but the `mvn package` seems to be using an old version of a class.
+**Task**: Force a clean build.
+**Solution**:
+1.  **Command**: Run `mvn clean package`.
+2.  **Why**: The `clean` phase deletes the `target/` directory, ensuring no old cached classes remain.
+
+## 🧠 Knowledge Quiz
 
 **1. Which file is the primary configuration file for a Maven project?**
 - A) `package.json`
@@ -83,23 +108,6 @@ mvn versions:display-dependency-updates
 - B) `package`
 - C) `test`
 - D) `install`
-
----
-
-### Real-World Troubleshooting Scenarios
-
-#### Scenario 1: The "No Class Def Found" Nightmare
-**Problem:** Your app compiles fine, but fails at runtime with `ClassNotFoundException` or `NoClassDefFoundError`.
-**Investigation:**
-1.  **Check Scope:** Is the missing library marked as `<scope>test</scope>` but used in main code?
-2.  **Conflict:** Do two different libraries require different versions of the same third library?
-**Solution:** Run `mvn dependency:tree` to find the conflict. Use `<exclusions>` in your POM to remove the unwanted version.
-
-#### Scenario 2: Stale Build Artifacts
-**Problem:** You changed your code, but the `mvn package` seems to be using an old version of a class.
-**Investigation:**
-1.  **Target Folder:** Sometimes the `target/` directory isn't fully updated on partial recompiles.
-**Solution:** Run `mvn clean package`. The `clean` phase ensures you start from a blank slate.
 
 ---
 

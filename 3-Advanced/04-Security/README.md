@@ -315,6 +315,29 @@ security_scan:
 
 ---
 
+## 🔍 Network Security Monitoring & Threat Detection
+
+Advanced DevSecOps involves not just preventing attacks, but detecting them in real-time.
+
+### 1. The Pyramid of Pain
+Derived from the *Network Security Bible*, this model helps prioritize detection:
+- **Trivial**: Hash values (MD5, SHA1).
+- **Easy**: IP addresses.
+- **Simple**: Domain names.
+- **Annoying**: Network/Host artifacts.
+- **Challenging**: Tools used by attackers.
+- **Tough**: TTPs (Tactics, Techniques, and Procedures).
+
+### 2. Network-Based Intrusion Detection (NIDS)
+Implement tools like **Suricata** or **Snort** to monitor traffic patterns for:
+- **Known Signatures**: Comparing traffic against a database of attack patterns (from IBM X-Force).
+- **Anomaly Detection**: Identifying deviations from a "normal" baseline (e.g., a massive spike in outbound traffic to an unknown IP).
+
+### 3. Traffic Mirroring for Deep Packet Inspection (DPI)
+In Cloud environments (AWS/Azure), use **VPC Traffic Mirroring** to send a copy of all traffic to a security appliance for inspection without impacting application performance.
+
+---
+
 ## 📊 Security Metrics
 
 Track these metrics to measure DevSecOps maturity:

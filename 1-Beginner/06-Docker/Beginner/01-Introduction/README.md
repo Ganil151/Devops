@@ -1,11 +1,9 @@
 # Introduction to Docker and Containerization
 
 ## What is Containerization?
-
 **Containerization** is a lightweight form of virtualization that packages an application and all its dependencies together in a standardized unit called a **container**. Unlike traditional virtual machines, containers share the host operating system's kernel, making them more efficient and faster to start.
 
 ### Why Containerization Matters
-
 - **Consistency**: "It works on my machine" becomes "It works everywhere"
 - **Isolation**: Applications run independently without conflicts
 - **Efficiency**: Lightweight compared to virtual machines
@@ -359,6 +357,8 @@ Now that you understand Docker basics, proceed to:
 
 1. [Images and Containers](../02-Images-and-Containers/README.md) - Deep dive into images and container management
 2. [Dockerfile Basics](../03-Dockerfile-Basics/README.md) - Learn to build your own images
+3. [Private Registry Setup](../../Intermediate/04-Private-Registry/README.md) - Host your own images
+4. [Backup & Restore](../../Intermediate/05-Backup-Restore-Migration/README.md) - Move images offline
 
 ## Resources
 

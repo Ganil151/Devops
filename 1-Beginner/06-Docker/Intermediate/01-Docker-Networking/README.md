@@ -147,6 +147,11 @@ curl http://localhost:80
 
 > [!WARNING]
 > Host network mode doesn't work on Docker Desktop for Mac/Windows. It's Linux-only.
+>
+> **Firewall Note**: When using `--network host`, Docker does not manage `iptables` rules for you. You may need to manually open ports:
+> ```bash
+> iptables -I INPUT 5 -p tcp -m tcp --dport <service-port> -j ACCEPT
+> ```
 
 ## Container Port Publishing
 

@@ -11,6 +11,23 @@ A Kubernetes cluster is divided into two parts: the **Control Plane** and the **
 - **Control Plane**: The brain. It contains `kube-apiserver` (the entry point), `etcd` (the database), and `kube-scheduler`.
 - **Worker Nodes**: Where the work happens. Each node runs `kubelet` (the manager) and `kube-proxy` (the networker).
 
+## 🌐 3. Networking & Service Discovery
+
+Kubernetes networking is based on four fundamental rules:
+1. All Pods can communicate with all other Pods without NAT.
+2. All Nodes can communicate with all Pods (and vice-versa) without NAT.
+3. The IP that a Pod sees itself as is the same IP that others see it as.
+4. **CNI (Container Network Interface)**: Kubernetes doesn't provide networking itself; it uses CNI plugins (like **Calico**, **Flannel**, or **AWS VPC CNI**) to manage IP addresses and routing.
+
+### Service Types
+- **ClusterIP**: Internal-only IP (default).
+- **NodePort**: Exposes the service on each Node's IP at a static port (30000-32767).
+- **LoadBalancer**: Exposes the service externally using a cloud provider's load balancer.
+- **ExternalName**: Maps a service to a DNS name (CNAME).
+
+### Service Discovery
+Kubernetes uses **CoreDNS** to provide name resolution. When you create a service named `my-db` in the `prod` namespace, any other pod in the cluster can reach it at `my-db.prod.svc.cluster.local`.
+
 ## 🛠️ 2. Essential Kubectl Commands
 
 ### 🔍 Discovery and Inspection

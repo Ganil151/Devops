@@ -19,6 +19,15 @@ Nmap ("Network Mapper") is an open-source tool for network exploration and secur
 | **Connect Scan**| `-sT` | Completes the TCP handshake (used if `-sS` isn't possible). |
 | **UDP Scan** | `-sU` | Scans for UDP services (DNS, DHCP, SNMP). Slow but critical. |
 
+### ⚡ Timing & Optimization (Nmap Cookbook Method)
+Nmap's speed can be adjusted to balance accuracy with network politeness:
+- `-T0` (Paranoid): Extremely slow, used to bypass old IDS.
+- `-T3` (Normal): The default speed.
+- `-T4` (Aggressive): Recommended for most DevOps work on high-speed reliable networks.
+- `-T5` (Insane): Very fast, but likely to drop packets or trigger security alerts.
+
+**Pro Tip**: Use `--max-retries 1` to speed up scans on reliable internal networks.
+
 ---
 
 ## 🚀 Powerful DevOps Commands

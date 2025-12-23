@@ -4,7 +4,17 @@ SSH (Secure Shell) is the industry standard for securely communicating with a re
 
 ---
 
-## 1. How SSH Works (Asymmetric Encryption)
+## 🎯 Learning Objectives
+
+- Understand public/private key cryptography basics
+- Generate and manage SSH keys securely
+- Configure SSH tunneling and port forwarding
+- Harden SSH server configuration
+- Troubleshoot common connection issues
+
+
+
+## 📖 How SSH Works (Asymmetric Encryption)
 
 SSH relies on public-key cryptography to authenticate the remote computer and allow it to authenticate the user.
 - **Private Key**: Kept on your computer (Never share this!).
@@ -13,7 +23,7 @@ SSH relies on public-key cryptography to authenticate the remote computer and al
 
 ---
 
-## 🏗️ 2. Essential SSH Workflow
+## 🏗️ Essential SSH Workflow
 
 ### 🔑 Key Management
 *When to use: Setting up initial access or adding a new machine to your fleet.*
@@ -60,9 +70,26 @@ Host bastion
 
 ---
 
-## 🧠 Training & Assessment
+## 🧪 Practical Labs
 
-### Knowledge Quiz
+### Lab 1: Debugging Connection Refusals
+
+**Scenario**: "Permission Denied (publickey)". You try to connect to a new server, but it rejects your connection.
+**Task**: Identify the missing key or permission issue.
+**Solution**:
+1.  **Check Key:** Verify private key exists in `~/.ssh/`.
+2.  **Check Server:** Ensure *public* key is in server's `~/.ssh/authorized_keys`.
+3.  **Check Permissions:** Run `chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys`.
+
+### Lab 2: Handling Host Key Changes
+
+**Scenario**: "Host Key Verification Failed". You try to connect to a known server, but Git/SSH warns the key has changed.
+**Task**: Reset the known host entry.
+**Solution**:
+1.  **Command**: Run `ssh-keygen -f "~/.ssh/known_hosts" -R "server-ip"`.
+2.  **Verify**: Re-connect and accept the new fingerprint (if valid).
+
+## 🧠 Knowledge Quiz
 
 **1. Which file on the REMOTE server stores the public keys of authorized users?**
 - A) `~/.ssh/id_rsa.pub`
@@ -81,24 +108,6 @@ Host bastion
 - B) It deletes the server on port 80
 - C) It maps port 80 on the remote server to port 8080 on your local machine
 - D) It changes the remote server's password
-
----
-
-### Real-World Troubleshooting Scenarios
-
-#### Scenario 1: "Permission Denied (publickey)"
-**Problem:** You try to connect to a new server, but it rejects your connection.
-**Investigation:**
-1.  **Check Key:** Do you have a private key in `~/.ssh/`?
-2.  **Check Server:** Is your *public* key inside the server's `~/.ssh/authorized_keys`?
-3.  **Check Permissions:** SSH is strict. `~/.ssh/` must be `700` and `authorized_keys` must be `600`.
-**Solution:** Ensure permissions are correct on both sides and that the key is actually loaded into your `ssh-agent`.
-
-#### Scenario 2: "Host Key Verification Failed"
-**Problem:** You try to connect to a server you've used before, but Git/SSH warns you the key has changed.
-**Investigation:**
-1.  **Cause:** The server might have been reinstalled, or someone is performing a Man-in-the-Middle attack.
-**Solution:** If you *know* the server was reinstalled, remove the old key from your local cache: `ssh-keygen -f "~/.ssh/known_hosts" -R "server-ip"`.
 
 ---
 

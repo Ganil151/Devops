@@ -4,8 +4,16 @@ CI/CD stands for Continuous Integration and Continuous Delivery (or Deployment).
 
 ---
 
-## 🏗️ 1. Essential CI/CD Pipeline Stages
+## � Learning Objectives
+- Understand the difference between CI and CD
+- Design a basic CI/CD pipeline
+- Implement automated linting and testing
+- Troubleshoot failed builds using logs
+- Secure pipelines with secrets management
 
+
+
+## 📖 Essential CI/CD Pipeline Stages
 Every modern pipeline follows a structured set of steps to ensure code quality and safety.
 
 1.  **Checkout**: The runner pulls the latest code from Git.
@@ -17,7 +25,7 @@ Every modern pipeline follows a structured set of steps to ensure code quality a
 
 ---
 
-## 🛠️ 2. Essential CI/CD Context
+## 🏗️ Essential CI/CD Context
 
 ### 🚀 GitHub Actions Basics
 *When to use: The default choice for projects hosted on GitHub. It's free for public repos and easy to set up.*
@@ -38,7 +46,6 @@ jobs:
 ---
 
 ## 💡 CI/CD Best Practices
-
 - **Automate Early**: Don't wait for your project to be "finished." Start with a simple pipeline that just runs one test or linter.
 - **Fail Fast**: Put the fastest tests (Linting/Unit Tests) at the beginning of the pipeline. If they fail, you shouldn't waste time building images.
 - **Keep it Fast**: Your CI pipeline should provide feedback in minutes. If it takes hours, developers will start ignoring it.
@@ -49,7 +56,24 @@ jobs:
 
 ## 🧠 Training & Assessment
 
-### Knowledge Quiz
+## 🧪 Practical Labs
+
+### Lab 1: The "It Works on My Machine" Build Failure
+**Scenario**: Your tests pass locally, but the CI pipeline fails.
+**Task**: align environments.
+**Solution**:
+1.  **Check Version**: Validate Node/Python versions match.
+2.  **Dependencies**: Check `package.json` lockfiles.
+3.  **Secrets**: Ensure keys exist in CI environment variables.
+
+### Lab 2: Flaky Tests
+**Scenario**: The pipeline sometimes passes and sometimes fails without any code changes.
+**Task**: Isolate the test environment.
+**Solution**:
+1.  **Mocking**: Don't call real external APIs in unit tests.
+2.  **Concurrency**: Ensure unique IDs for database records.
+
+## 🧠 Knowledge Quiz
 
 **1. What is the primary purpose of Continuous Integration (CI)?**
 - A) To automatically deploy code to production
@@ -68,25 +92,6 @@ jobs:
 - B) The developer should be fired
 - C) The pipeline should stop immediately and notify the developer
 - D) The linting errors should be automatically ignored
-
----
-
-### Real-World Troubleshooting Scenarios
-
-#### Scenario 1: The "It Works on My Machine" Build Failure
-**Problem:** Your tests pass locally, but the CI pipeline fails.
-**Investigation:**
-1.  **Environment Check:** Check the CI runner version (e.g., Node.js 18 vs. 20).
-2.  **Missing Dependencies:** Did you forget to add a new library to your `package.json` or `requirements.txt`?
-3.  **Secrets:** Is the CI environment missing a API key required for the tests?
-**Solution:** Sync the CI environment dependencies/versions with your local setup. Ensure all required secrets are stored in the CI tool's "Secrets" manager.
-
-#### Scenario 2: Flaky Tests
-**Problem:** The pipeline sometimes passes and sometimes fails without any code changes.
-**Investigation:**
-1.  **Network/Timing:** Are tests calling an external API that is sometimes slow or down?
-2.  **Concurrency:** Are multiple tests trying to write to the same database table at once?
-**Solution:** Mock external APIs during unit tests and ensure each test uses a clean, isolated database/environment.
 
 ---
 

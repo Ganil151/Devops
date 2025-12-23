@@ -11,7 +11,15 @@ DevOps engineers live in the shell. Linux provides the flexibility, security, an
 - **Lightweight**: Can run on everything from a Raspberry Pi to a supercomputer.
 - **CLI-First**: Perfect for automation and scripting.
 
-## 🛠️ 2. Essential CLI Tools
+## 🎯 Learning Objectives
+
+- Navigate the Linux filesystem efficiently
+- Manage files, directories, and permissions
+- Monitor system resources and processes
+- Automate tasks with basic shell scripting
+- Secure a Linux server for production use
+
+## 📖 Essential CLI Tools
 
 ### 📂 File & Directory Management
 *When to use: Navigating and organizing the filesystem.*
@@ -59,9 +67,36 @@ grep -r "ERROR" /var/log/
 
 ---
 
-## 🧠 Training & Assessment
+## 🧪 Practical Labs
 
-### Knowledge Quiz
+### Lab 1: System Inspection & Cleanup
+
+**Scenario**: The "Disk Full" Panic. An application starts failing with `No space left on device`.
+**Task**: Identify the large files and clean them up.
+**Solution**:
+1.  **Check Usage:** Run `df -h` to find the full partition.
+2.  **Find the Culprit:** Run `du -sh * | sort -hr` in the `/var/log` or root directory to find which folder is consuming the most space.
+3.  **The Fix:** Compress old logs (`gzip`) or delete temporary files in `/tmp`.
+
+### Lab 2: Permission Management
+
+**Scenario**: Permission Denied on Script. You try to run `./deploy.sh` but get `bash: ./deploy.sh: Permission denied`.
+**Task**: Fix the permissions to allow execution.
+**Solution**:
+1.  **Check Permissions:** Run `ls -l deploy.sh`.
+2.  **Observation:** The file has `-rw-r--r--` permissions (no `x`).
+3.  **The Fix:** Grant execution permission using `chmod +x deploy.sh`.
+
+### Lab 3: Log Monitoring
+
+**Scenario**: You need to monitor a log file in real-time as your application starts up.
+**Task**: Use `tail` to watch the log.
+**Solution**:
+```bash
+tail -f /var/log/syslog
+```
+
+## 🧠 Knowledge Quiz
 
 **1. Which command would you use to find all files ending in `.log` in the current directory?**
 - A) `ls *.log`
@@ -83,22 +118,7 @@ grep -r "ERROR" /var/log/
 
 ---
 
-### Real-World Troubleshooting Scenarios
 
-#### Scenario 1: The "Disk Full" Panic
-**Problem:** An application starts failing with `No space left on device`.
-**Investigation:**
-1.  **Check Usage:** Run `df -h` to find the full partition.
-2.  **Find the Culprit:** Run `du -sh * | sort -hr` in the `/var/log` or root directory to find which folder is consuming the most space.
-3.  **The Fix:** Compress old logs (`gzip`) or delete temporary files in `/tmp`.
-**Solution:** Implement log rotation (`logrotate`) to prevent this in the future.
-
-#### Scenario 2: Permission Denied on Script
-**Problem:** You try to run `./deploy.sh` but get `bash: ./deploy.sh: Permission denied`.
-**Investigation:**
-1.  **Check Permissions:** Run `ls -l deploy.sh`.
-2.  **Observation:** The file has `-rw-r--r--` permissions (no `x`).
-**Solution:** Grant execution permission using `chmod +x deploy.sh`.
 
 ---
 

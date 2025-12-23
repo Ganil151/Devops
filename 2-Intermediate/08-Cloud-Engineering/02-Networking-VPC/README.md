@@ -26,6 +26,29 @@ Think of a VPC as your own private data center in the cloud. You have complete c
 
 ---
 
+## 3. Advanced Architectural Patterns
+
+Designing for scale and security in the enterprise requires more than just subnets.
+
+### Hub-and-Spoke (Centralized Networking)
+Instead of peering every VPC to every other VPC (which creates a "mesh" that is hard to manage), use a **Transit Gateway** as a central hub.
+- **Spoke VPCs**: Contain your applications.
+- **Hub VPC**: Contains shared services (DNS, Active Directory) and central firewalls or Internet Gateways.
+
+### Centralized Egress
+Rather than putting a NAT Gateway in every Spoke VPC (which is expensive), route all internet-bound traffic through a single Transit Gateway to a centralized **Inspection VPC** containing a NAT Gateway and an egress firewall.
+
+---
+
+## 4. Hybrid Connectivity
+Connecting your on-premises data center to your Cloud VPC:
+
+- **Site-to-Site VPN**: Uses the public internet with an encrypted tunnel (IPsec). Fast to set up, but bandwidth is limited by internet speeds.
+- **Direct Connect (DX)**: A dedicated physical fiber connection between your data center and a cloud provider's office. Offers consistent performance and lower latency, but takes weeks/months to install.
+- **AWS VPN Client**: Allows individual developers to connect directly to the private VPC network from their local machines.
+
+---
+
 ## 3. Learning Path
 
 1.  **[VPC Hands-on Guide](vpc-hands-on.md)**: Build a public/private subnet VPC from scratch via CLI.

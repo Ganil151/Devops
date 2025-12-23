@@ -1,6 +1,16 @@
 # Docker Images and Containers
 
-## Understanding Docker Images
+---
+
+## 🎯 Learning Objectives
+
+- Manage Docker Image lifecycles (pull, tag, remove)
+- Run, stop, and inspect containers
+- Persist data using Docker Volumes
+- Map ports between host and container
+- Debug container issues using logs
+
+## 📖 Understanding Docker Images
 
 A **Docker image** is a lightweight, standalone, executable package that includes everything needed to run a piece of software: code, runtime, system tools, libraries, and settings.
 
@@ -609,7 +619,45 @@ docker stats
 docker update --cpus="0.5" --memory="512m" <container-name>
 ```
 
-## Quick Reference
+## 🧪 Practical Labs
+
+### Lab 1: Persistent Data Loss
+**Scenario**: You restart your database container, and all the data is gone.
+**Task**: persist the data.
+**Solution**:
+1.  **Cause**: Containers are ephemeral. Writes to the writable layer allow data loss.
+2.  **Fix**: Use a Volume.
+```bash
+docker run -d -v my-db-data:/var/lib/mysql mysql
+```
+
+### Lab 2: Port Conflict
+**Scenario**: You try to run a second web server but get `Bind for 0.0.0.0:80 failed: port is already allocated`.
+**Task**: Run the second server alongside the first.
+**Solution**:
+1.  **Map to different host port**: Use `-p 8081:80` for the second container.
+
+## 🧠 Knowledge Quiz
+
+**1. What is the main difference between a Docker Image and a Docker Container?**
+- A) Images are for Linux, Containers are for Windows
+- B) An Image is a read-only template; a Container is a running instance of an image
+- C) They are the same thing
+- D) A Container is used to build an Image
+
+**2. How do you map port 80 inside a container to port 8080 on your host machine?**
+- A) `docker run -p 80:8080`
+- B) `docker run -p 8080:80`
+- C) `docker run --port 8080`
+- D) `docker run -i 8080:80`
+
+**3. Which command removes all unused containers, networks, and images (dangling)?**
+- A) `docker system prune`
+- B) `docker clean all`
+- C) `docker rm -rf /`
+- D) `docker system reset`
+
+## 🔗 Next Steps
 
 ```bash
 # Essential Commands Cheat Sheet

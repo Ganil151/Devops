@@ -43,6 +43,18 @@ aws route53resolver create-resolver-rule \
 ### Traffic Flow & Geolocation
 Routing policies based on user location or endpoint health.
 
+## 🔒 Zero Trust Networking Patterns
+As enterprise networks grow, the traditional "hard shell, soft interior" model is no longer sufficient.
+
+### VPC PrivateLink (Interface Endpoints)
+Instead of using VPC Peering (which opens the whole CIDR), use **PrivateLink** to expose a specific service (NLB) in one VPC as a local IP in another VPC. This is the ultimate "Least Privilege" for networking.
+
+### Identity-Aware Proxy (IAP)
+Use services like **AWS Verified Access** or **Google IAP** to eliminate the need for traditional VPNs. Access to internal applications is granted based on user identity and device health, rather than just IP address.
+
+### Micro-segmentation
+In Kubernetes or Enterprise Cloud, use **Security Groups** and **Network Policies** to ensure that even within a single subnet, a Web server can *only* talk to a DB server on a specific port, and nothing else.
+
 ## Network Troubleshooting & Analysis
 
 ### Reachability Analyzer
