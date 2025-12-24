@@ -1,0 +1,114 @@
+services:
+  nginx:
+    image: jonasal/nginx-certbot:latest
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    configs:
+      - source: myapp_config
+        target: /etc/nginx/user_conf.d/myapp.conf
+    env_file:
+      - ./nginx-certbot.env
+    networks:
+      - public
+    volumes:
+      - nginx_secrets:/etc/letsencrypt
+      - nginx_data:/var/lib/letsencrypt
+    depends_on:
+      flask:
+        condition: service_healthy
+        restart: true
+  flask:
+    image: ganil151/flask:latest
+    build:
+      context: Flask
+      dockerfile: Dockerfile
+    # ports:
+    #   - 7071:8080
+    env_file:
+      - ./Flask/dev.env
+    secrets:
+      - source: api_key
+        target: /run/api_key
+      - source: api_key
+        target: /Flask/api_key.txt
+      - source: pg_password
+        target: /run/pg_password
+    configs:
+      - source: config-dev
+        target: /config-dev.yaml
+      - source: config-dev
+        target: /config-dev-v2.yaml
+    environment:
+      - APP_VERSION=0.1.0
+      # - DB_PASSWORD
+      - FLASK_DEBUG=1
+      - FLASK_APP=./app.py
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USER=myuser
+      - DB_DATABASE=mydb
+    volumes:
+      - ./Flask/config-dev.yaml:/config-dev.yaml
+      - ./Flask-data:/data
+      - ./Flask:/app
+    networks:
+      - private
+      - public
+    depends_on:
+      - postgres
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/about" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  postgres:
+    image: postgres:16.3
+    restart: always
+    # ports:
+    #   - "5432:5432"
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_DB: mydb
+      POSTGRES_PASSWORD_FILE: /run/secrets/pg_password
+    secrets:
+      - pg_password
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    networks:
+      - private
+      - public
+
+secrets:
+  api_key:
+    file: ./Flask/api_key.txt
+  pg_password:
+    file: ./pg_password.txt
+
+configs:
+  config-dev:
+    file: ./Flask/config-dev.yaml
+  # nginx_config:
+  #   file: ./nginx.conf
+  myapp_config:
+    file: ./myapp.conf
+
+volumes:
+  flask-data:
+  postgres-data:
+  nginx_secrets:
+  nginx_data:
+
+
+networks:
+  public:
+    driver: bridge
+  private:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: "10.0.0.0/19"
+          gateway: "10.0.0.1"

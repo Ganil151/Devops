@@ -3,7 +3,6 @@
 Docker networking enables containers to communicate with each other and with external networks. Understanding Docker networking is crucial for building multi-container applications.
 
 ## Network Types Overview
-
 Docker provides several network drivers, each suited for different use cases:
 
 ```mermaid
@@ -68,7 +67,6 @@ docker exec web1 ping web2         # Doesn't work
 - Less secure
 
 ### Custom Bridge Network (Recommended)
-
 Custom bridge networks provide:
 - ✅ Automatic DNS resolution
 - ✅ Better isolation
@@ -97,7 +95,6 @@ docker network rm my-network
 ```
 
 ### Practical Example: Web App + Database
-
 ```bash
 # Create network
 docker network create app-network
@@ -122,7 +119,6 @@ docker run -d \
 ```
 
 ## Host Network
-
 Container shares the host's network namespace. No network isolation.
 
 ```bash
@@ -153,8 +149,9 @@ curl http://localhost:80
 > iptables -I INPUT 5 -p tcp -m tcp --dport <service-port> -j ACCEPT
 > ```
 
-## Container Port Publishing
+___
 
+## Container Port Publishing
 Expose container ports to the host or external network:
 
 ```bash
@@ -181,29 +178,12 @@ docker run -d -p 53:53/udp dns-server
 docker port <container-name>
 ```
 
+___
+
 ## Network Communication Patterns
 
 ### Pattern 1: Frontend + Backend + Database
-
-```mermaid
-graph LR
-    User([User]) -->|Port 80| FE[Frontend<br/>nginx]
-    FE -->|app-network| BE[Backend API<br/>node:18]
-    BE -->|app-network| DB[(PostgreSQL)]
-    
-    subgraph "Docker Host"
-        subgraph "app-network"
-            FE
-            BE
-            DB
-        end
-    end
-    
-    style User fill:#e3f2fd
-    style FE fill:#f3e5f5
-    style BE fill:#fff3e0
-    style DB fill:#e8f5e9
-```
+![App Network Pattern](../../../Images/docker_network_pattern_1.png)
 
 ```bash
 # Create network
@@ -234,7 +214,6 @@ docker run -d \
 ### Pattern 2: Multiple Networks
 
 Containers can connect to multiple networks:
-
 ```bash
 # Create networks
 docker network create frontend-network
@@ -262,28 +241,8 @@ docker run -d \
   nginx
 ```
 
-```mermaid
-graph TB
-    subgraph "frontend-network"
-        WEB[Web Frontend]
-        API1[API Server]
-    end
-    
-    subgraph "backend-network"
-        API2[API Server]
-        DB[(Database)]
-    end
-    
-    API1 -.Same Container.- API2
-    
-    WEB --> API1
-    API2 --> DB
-    
-    style WEB fill:#e3f2fd
-    style API1 fill:#fff3e0
-    style API2 fill:#fff3e0
-    style DB fill:#e8f5e9
-```
+![Multiple Networks Architecture](../../../Images/docker_network_pattern_2.png)
+___
 
 ## Managing Networks
 
@@ -361,9 +320,9 @@ docker network prune
 # Remove specific networks
 docker network rm network1 network2 network3
 ```
+___
 
 ## DNS and Service Discovery
-
 In custom bridge networks, Docker provides automatic DNS resolution:
 
 ```bash
@@ -394,10 +353,13 @@ docker run -d --network loadbalanced --network-alias web nginx
 # Client resolves 'web' to all 3 IPs (round-robin)
 docker run --network loadbalanced alpine nslookup web
 ```
+___
 
 ## Network Security
 
 ### Isolate with Multiple Networks
+
+![Multiple Networks Architecture](../../../Images/docker_network_pattern_3.png)
 
 ```bash
 # Public network (exposed services)
@@ -419,7 +381,6 @@ docker run -d --name db --network private postgres
 ```
 
 ### Restrict Container Communication
-
 ```bash
 # Create isolated network
 docker network create \
@@ -434,8 +395,10 @@ docker run -d \
 
 # Can communicate internally but not externally
 ```
+___
 
 ## Overlay Networks (Swarm/Multi-Host)
+![Overlay Network Architecture](../../../Images/docker_network_pattern_4.png)
 
 Overlay networks enable multi-host communication in Docker Swarm:
 
@@ -456,6 +419,9 @@ docker service create \
   --replicas 3 \
   nginx
 ```
+
+
+
 
 > [!NOTE]
 > Overlay networks are primarily used in Docker Swarm or Kubernetes environments for multi-host container communication.
@@ -479,15 +445,17 @@ docker run -d \
   nginx
 ```
 
+![Macvlan Network Architecture](../../../Images/docker_network_pattern_5.png)
+
 **Use cases:**
 - Legacy applications requiring MAC addresses
 - Network monitoring applications
 - Applications that need direct Layer 2 access
+___
 
 ## Troubleshooting
 
 ### Check Container Network Settings
-
 ```bash
 # Inspect container network
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container-name
@@ -569,7 +537,6 @@ docker network inspect bridge -f '{{.Options}}'
 8. **Use Internal Networks**: For databases and internal services
 
 ## Network Commands Cheat Sheet
-
 ```bash
 # Network Management
 docker network create <name>              # Create network
@@ -589,6 +556,193 @@ docker port <container>                   # Show port mappings
 docker inspect <container>                # Full container details
 docker exec <container> ip addr           # Container IP
 ```
+___
+
+## Real-Life Scenarios
+
+### Scenario 1: Legacy Application Migration
+**Context**: You are migrating a legacy application that requires direct access to the physical network layer and has hardcoded IP dependencies.
+**Solution**: Use the **Macvlan** driver.
+1.  Verify the host network interface complies with promiscuous mode (if required).
+2.  Create a macvlan network assigned to the host's physical interface (e.g., `eth0`).
+3.  Assign specific static IPs to the containers that match the legacy configuration.
+**Benefit**: The application perceives it is on the physical network, removing the need for code refactoring.
+
+### Scenario 2: Secure Internal Microservices
+**Context**: You have a sensitive database that must only be accessed by the backend API, never by the frontend or external world.
+**Solution**: Use **Internal Bridge Networks**.
+1.  Create `frontend_net` (public-facing) and `backend_net` (internal).
+2.  Connect the Frontend container to `frontend_net`.
+3.  Connect the Backend container to both `frontend_net` and `backend_net`.
+4.  Connect the Database container *only* to `backend_net`.
+**Benefit**: The database is visibly isolated. Even if the frontend is compromised, the attacker has no direct network route to the database.
+
+### Scenario 3: High-Frequency Trading Platform
+**Context**: You are building a system where microseconds matter, and the overhead of NAT/Bridge networking is unacceptable.
+**Solution**: Use **Host Networking**.
+1.  Run containers with `--network host`.
+2.  Manage port conflicts manually ensuring no two services listen on the same port.
+**Benefit**: Removes the Docker network bridge overhead, providing bare-metal network performance.
+
+## Common Interview Questions
+
+1.  **Q: What is the default network driver in Docker, and what are its limitations?**
+    *   **A:** The default is the `bridge` driver. Limitations include lack of automatic DNS resolution (containers must communicate by IP) and lower security (all containers on the default bridge can talk to each other).
+
+2.  **Q: How do containers on different hosts communicate?**
+    *   **A:** They use the `overlay` network driver, which creates a distributed network across multiple Docker daemon hosts. This enables swarm services to communicate securely.
+
+3.  **Q: Explain the difference between `EXPOSE` and `-p` (publish).**
+    *   **A:** `EXPOSE` in a Dockerfile functions as documentation, indicating which ports the application listens on. `-p` in `docker run` actually maps the port from the host to the container, making it accessible from outside.
+
+4.  **Q: What is the "Host" network driver?**
+    *   **A:** It removes network isolation between the container and the Docker host. The container shares the host's networking namespace, using the host's IP and ports directly.
+
+5.  **Q: How does Docker handle DNS resolution?**
+    *   **A:** Docker runs an embedded DNS server at `127.0.0.11`. On custom bridge networks, containers can resolve each other by container name or service name. on the default bridge, this features is disabled.
+
+## Comprehensive Knowledge Quiz
+
+1.  Which network driver is used by default if none is specified?
+    *   a) host
+    *   b) overlay
+    *   c) bridge
+    *   d) none
+
+2.  Which command lists all Docker networks?
+    *   a) `docker network show`
+    *   b) `docker network list`
+    *   c) `docker network ls`
+    *   d) `docker ls network`
+
+3.  How do you connect a running container to a network?
+    *   a) `docker network join`
+    *   b) `docker network connect`
+    *   c) `docker attach`
+    *   d) `docker link`
+
+4.  Which network driver allows a container to appear as a physical device on your network?
+    *   a) bridge
+    *   b) host
+    *   c) macvlan
+    *   d) overlay
+
+5.  What explains why `ping container_name` fails on the default bridge network?
+    *   a) ICMP is disabled
+    *   b) Automatic DNS resolution is not supported on default bridge
+    *   c) The containers are on different subnets
+    *   d) Port 53 is blocked
+
+6.  Which flag runs a container on the host's network stack?
+    *   a) `--network host`
+    *   b) `--net-stack host`
+    *   c) `--expose host`
+    *   d) `--driver host`
+
+7.  To facilitate communication between containers on multiple Docker hosts (e.g., Swarm), you use:
+    *   a) macvlan
+    *   b) overlay
+    *   c) bridge
+    *   d) none
+
+8.  Where does Docker's embedded DNS server listen inside a container?
+    *   a) 8.8.8.8
+    *   b) 127.0.0.1
+    *   c) 127.0.0.11
+    *   d) 192.168.0.1
+
+9.  What happens if you run two containers with `-p 80:80` on the same host?
+    *   a) Docker load balances them
+    *   b) The second container fails to start (Port already allocated)
+    *   c) Both start but only one works
+    *   d) Docker assigns a random port to the second one
+
+10. Which command removes all unused networks?
+    *   a) `docker network clean`
+    *   b) `docker network rm --all`
+    *   c) `docker network prune`
+    *   d) `docker network purge`
+
+11. If you want a container to have NO network interface, which driver do you use?
+    *   a) null
+    *   b) empty
+    *   c) void
+    *   d) none
+
+12. In a custom bridge network, what happens if a container name is distinct but the network alias is the same for multiple containers?
+    *   a) Network Error
+    *   b) DNS Round Robin load balancing
+    *   c) Address Conflict
+    *   d) Only the first container responds
+
+13. Which command shows detailed information about a network, including connected containers?
+    *   a) `docker network describe`
+    *   b) `docker network inspect`
+    *   c) `docker network details`
+    *   d) `docker network show`
+
+14. True or False: You can link containers on the default bridge using `--link` (legacy), but it is deprecated.
+    *   a) True
+    *   b) False
+
+15. When using `--network host`, does the `-p` (publish) flag have any effect?
+    *   a) Yes, it still maps ports
+    *   b) No, it is ignored
+    *   c) It causes an error
+    *   d) Only for UDP ports
+
+16. Which network driver offers a dedicated Layer 2 network for containers?
+    *   a) bridge
+    *   b) macvlan
+    *   c) overlay
+    *   d) host
+
+17. How can you isolate a container from the internet but allow it to talk to other containers?
+    *   a) Block port 80
+    *   b) Use an `--internal` network
+    *   c) Use `--network none`
+    *   d) Delete the default gateway manually
+
+18. What is the format for mapping a host port to a container port?
+    *   a) `-p container:host`
+    *   b) `-p host:container`
+    *   c) `-p host->container`
+    *   d) `-p container->host`
+
+19. Which command creates a network with a specific subnet?
+    *   a) `docker network create --subnet 192.168.1.0/24 mynet`
+    *   b) `docker network add --ip-range 192.168.1.0/24 mynet`
+    *   c) `docker create network --net 192.168.1.0/24 mynet`
+    *   d) `docker network new --subnet 192.168.1.0/24 mynet`
+
+20. Can a container be connected to multiple networks simultaneously?
+    *   a) No, only one network per container
+    *   b) Yes, enabling multi-tier architecture
+    *   c) Only if they are of the same driver type
+    *   d) Only in Docker Swarm mode
+
+### Quiz Answer Key
+
+1.  **c) bridge** - It is the default driver.
+2.  **c) docker network ls** - Lists networks.
+3.  **b) docker network connect** - Connects a running container.
+4.  **c) macvlan** - Allows assignment of MAC addresses.
+5.  **b) Automatic DNS resolution is not supported** - Default bridge relies on links or IPs.
+6.  **a) --network host** - Uses host stack.
+7.  **b) overlay** - Used for multi-host networking.
+8.  **c) 127.0.0.11** - Docker's embedded DNS.
+9.  **b) The second container fails to start** - Port conflict exists.
+10. **c) docker network prune** - Removes unused objects.
+11. **d) none** - No networking.
+12. **b) DNS Round Robin load balancing** - Docker resolves the alias to multiple IPs.
+13. **b) docker network inspect** - JSON output of details.
+14. **a) True** - Links are legacy; custom networks are preferred.
+15. **b) No, it is ignored** - Ports are already "exposed" directly on the host interface.
+16. **b) macvlan** - Direct interaction with physical network.
+17. **b) Use an --internal network** - Restricts external access.
+18. **b) -p host:container** - Host port comes first.
+19. **a) docker network create --subnet...** - Correct syntax.
+20. **b) Yes** - Containers can join multiple networks.
 
 ## Next Steps
 

@@ -47,6 +47,9 @@ Introduction to Compute, Storage, and Networking in the cloud (AWS/Azure/GCP).
 ### 10. [Software Stack Foundations](./10-Software-Stack/README.md)
 Understand Frontend, Backend, Frameworks, and Runtimes. Know the "What" before you "How."
 
+### 11. [Web-Design & Frameworks](./11-Web-Design/README.md)
+Explore modern Python web frameworks like **Flask** and **Django**. Learn how applications are structured and how to containerize them for production.
+
 ---
 
 ## 🎯 Learning Objectives

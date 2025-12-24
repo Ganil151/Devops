@@ -17,6 +17,7 @@ Perfect for those new to Docker and containerization.
 | **[Introduction](Beginner/01-Introduction/README.md)** | What is Docker? Why containerization? | Architecture, Installation, First container |
 | **[Images & Containers](Beginner/02-Images-and-Containers/README.md)** | Working with images and containers | Lifecycle, Commands, Docker Hub |
 | **[Dockerfile Basics](Beginner/03-Dockerfile-Basics/README.md)** | Building custom images | Instructions, Best practices, Examples |
+| **[Debugging](Beginner/04-Debugging/README.md)** | Troubleshooting and logs | Docker logs, Exec, Exit codes |
 
 #### Docker Compose Fundamentals
 
@@ -24,6 +25,7 @@ Perfect for those new to Docker and containerization.
 |-------|-------------|--------------|
 | **[Compose Basics](Docker-Compose/Beginner/01-Basics/README.md)** | Multi-container applications | Services, Commands, Workflow |
 | **[Service Configuration](Docker-Compose/Beginner/02-Service-Configuration/README.md)** | Defining and configuring services | Ports, Environment, Dependencies |
+| **[Database Storage](Docker-Compose/Beginner/03-Database-Storage/README.md)** | Persistence for PSQL, MySQL, etc | Data paths, Init scripts, Volumes |
 
 ### 🟡 Intermediate Level
 
@@ -36,7 +38,9 @@ For developers ready to deploy applications in production.
 | **[Docker Networking](Intermediate/01-Docker-Networking/README.md)** | Container communication | Bridge, Host, Overlay networks |
 | **[Docker Volumes](Intermediate/02-Docker-Volumes/README.md)** | Data persistence and management | Named volumes, Bind mounts, Backup |
 | **[Multi-Stage Builds](Intermediate/03-Multi-Stage-Builds/README.md)** | Optimized production images | Image size, Security, Performance |
-| **[Docker Registry](Intermediate/04-Docker-Registry/README.md)** | Image distribution and management | Docker Hub, Private registries, Tagging |
+| **[Private Registry](Intermediate/04-Private-Registry/README.md)** | Image distribution and management | Docker Hub, Private registries, Tagging |
+| **[Backup & Restore](Intermediate/05-Backup-Restore-Migration/README.md)** | Data management | Backup, Restore, Migration |
+| **[NGINX & SSL](Intermediate/06-Nginx-SSL/README.md)** | Reverse Proxy & Let's Encrypt | NGINX, SSL/TLS, Certbot |
 
 #### Advanced Docker Compose
 
@@ -73,6 +77,8 @@ Production-grade Docker knowledge for DevOps engineers.
 2. [Images & Containers](Beginner/02-Images-and-Containers/README.md) - Run and manage containers
 3. [Dockerfile Basics](Beginner/03-Dockerfile-Basics/README.md) - Build custom images
 4. [Compose Basics](Docker-Compose/Beginner/01-Basics/README.md) - Multi-container apps
+5. [Database Storage](Docker-Compose/Beginner/03-Database-Storage/README.md) - DB Persistence
+6. [Debugging](Beginner/04-Debugging/README.md) - Troubleshooting containers
 
 **Goal**: Run containerized development environments
 

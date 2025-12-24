@@ -4,37 +4,42 @@ Containers are ephemeral by design - when removed, their data is lost. **Docker 
 
 ## Understanding Container Storage
 
+Docker uses a **layered filesystem** (UnionFS). When you run an image, Docker adds a thin **Read-Write layer** (Container Layer) on top. Any changes made to the container (like writing a file) happen here. However, this layer is deleted when the container is removed.
+
+To solve this, Docker provides three ways to mount data from the host into the container:
+
 ```mermaid
 graph TB
-    subgraph "Container Filesystem"
-        CL[Container Layer<br/>Read-Write<br/>⚠ Temporary]
-        IL1[Image Layer 1<br/>Read-Only]
-        IL2[Image Layer 2<br/>Read-Only]
-        IL3[Image Layer 3<br/>Read-Only]
-        IL4[Base Layer<br/>Read-Only]
+    subgraph "Docker Storage Architecture"
+        subgraph "Container Layer (Ephemeral)"
+            CL[Read-Write Layer<br/>⚠ Loses data on deletion]
+            IL[Image Layers<br/>Read-Only]
+            CL --> IL
+        end
         
-        CL --> IL1
-        IL1 --> IL2
-        IL2 --> IL3
-        IL3 --> IL4
+        subgraph "Persistent Storage (Host Side)"
+            VOL["<b>Docker Volume</b><br/>/var/lib/docker/volumes/"]
+            BIND["<b>Bind Mount</b><br/>Any path: e.g., /home/user/app/"]
+            TMPFS["<b>tmpfs Mount</b><br/>System Memory (RAM)"]
+        end
     end
     
-    subgraph "Persistent Storage"
-        VOL[Docker Volume<br/>✓ Persistent]
-        BIND[Bind Mount<br/>✓ Persistent]
-        TMPFS[tmpfs Mount<br/>⚠ Memory Only]
-    end
+    CL --- MountPoint{Mount Process}
+    MountPoint --> VOL
+    MountPoint --> BIND
+    MountPoint --> TMPFS
     
-    CL -.Deleted on<br/>container removal.- X[❌]
-    VOL --> DISK[(Host Disk)]
-    BIND --> DISK
-    TMPFS --> MEM[Host RAM]
+    VOL -.-> DISK[(Host Disk)]
+    BIND -.-> DISK
+    TMPFS -.-> RAM[Host RAM]
     
-    style CL fill:#ffcdd2
-    style VOL fill:#c8e6c9
-    style BIND fill:#fff9c4
-    style TMPFS fill#e1bee7
+    style CL fill:#ffcdd2,stroke:#b71c1c
+    style VOL fill:#c8e6c9,stroke:#2e7d32
+    style BIND fill:#fff9c4,stroke:#fbc02d
+    style TMPFS fill:#e1bee7,stroke:#7b1fa2
+    style MountPoint fill:#e3f2fd,stroke:#1565c0
 ```
+
 
 ### Storage Types Comparison
 
@@ -312,24 +317,33 @@ docker run -d --volumes-from data-container --name app2 my-app
 
 ### Pattern 3: Multi-Container Development
 
+A common pattern for local development is to bind-mount the source code into multiple containers, allowing them to share the code and reflect host-side edits immediately.
+
 ```mermaid
 graph LR
-    subgraph "Docker Host"
-        VOL[shared-code<br/>Volume]
+    subgraph "Development Environment"
+        subgraph "Docker Containers"
+            WEB[Frontend Container]
+            API[Backend API Container]
+            TEST[Test Runner Container]
+        end
         
-        WEB[Web Container] --> VOL
-        API[API Container] --> VOL
-        WORKER[Worker Container] --> VOL
-        
+        subgraph "Volumes & Mounts"
+            SRC[<b>Source Code</b><br/>Bind Mount]
+            DEPS["<b>node_modules</b><br/>Named Volume"]
+        end
     end
     
-    HOST[Host Directory] -.Bind Mount.- VOL
+    SRC --- WEB & API & TEST
+    DEPS --- WEB & API
     
-    style VOL fill:#fff3e0
-    style WEB fill:#e3f2fd
-    style API fill:#f3e5f5
-    style WORKER fill:#e8f5e9
+    style SRC fill:#fff3e0,stroke:#e65100
+    style DEPS fill:#e8f5e9,stroke:#1b5e20
+    style WEB fill:#e3f2fd,stroke:#1565c0
+    style API fill:#f3e5f5,stroke:#7b1fa2
+    style TEST fill:#fce4ec,stroke:#c2185b
 ```
+
 
 ## Backup and Restore
 
@@ -628,6 +642,195 @@ docker volume prune --filter label=temp=true   # Conditional prune
 -v /container/path                             # Anonymous volume
 --mount type=volume,src=vol,dst=/path          # Explicit syntax
 ```
+
+___
+
+## Real-Life Scenarios
+
+### Scenario 1: Database Persistence in Production
+**Objective**: Ensure that a PostgreSQL database does not lose data even if the container is upgraded or the host restarts.
+**Solution**: Use a **Named Volume**.
+```bash
+docker volume create pg_prod_data
+docker run -d --name db -v pg_prod_data:/var/lib/postgresql/data postgres:15
+```
+**Why?**: Named volumes are managed by Docker, ensuring they are not accidentally deleted by basic cleanup scripts and are easy to back up using labels.
+
+### Scenario 2: Hot-Reloading for React Development
+**Objective**: See code changes in real-time in the browser without rebuilding the Docker image.
+**Solution**: Use a **Bind Mount**.
+```bash
+docker run -v $(pwd):/app -p 3000:3000 my-react-app npm start
+```
+**Why?**: Bind mounts allow the container to use the files on your host machine. When you save a file in VS Code, the container sees the change instantly.
+
+### Scenario 3: Secure Session Storage (Zero Disk Footprint)
+**Objective**: Store user session tokens in a high-performance way that ensures they never touch the physical disk for security compliance.
+**Solution**: Use a **tmpfs Mount**.
+```bash
+docker run -d --mount type=tmpfs,destination=/app/sessions,tmpfs-size=512m my-api
+```
+**Why?**: tmpfs writes directly to RAM. If the container stops or the machine loses power, the sessions are wiped, ensuring no sensitive data remains on disk.
+
+## Common Interview Questions
+
+1. **Q: What is the difference between a volume and a bind mount?**
+   * **A**: Volumes are managed by Docker and stored in a Docker-specific directory. Bind mounts can be anywhere on the host and are managed by the host's filesystem.
+
+2. **Q: How can you share data between two running containers?**
+   * **A**: By mounting the same named volume to both containers, or using `--volumes-from` (legacy) to inherit mounts from another container.
+
+3. **Q: What happens to data in a volume when the container is deleted?**
+   * **A**: The data persists. Volumes are independent of the container lifecycle. You must explicitly run `docker volume rm` to delete them.
+
+4. **Q: When would you use a `tmpfs` mount instead of a volume?**
+   * **A**: When performance is critical (RAM is faster than disk) or when security requires that data is never written to persistent storage.
+
+5. **Q: What is the benefit of the `--mount` flag over `-v`?**
+   * **A**: `--mount` is more explicit, follows a key=value format, and is more readable. It is also the only way to specify advanced options like `tmpfs-size` or volume driver options easily.
+
+## Comprehensive Knowledge Quiz
+
+1. Which command creates a Docker volume?
+   * a) `docker create volume`
+   * b) `docker volume build`
+   * c) `docker volume create`
+   * d) `docker volume new`
+
+2. Where does Docker store named volumes on a default Linux installation?
+   * a) `/etc/docker/volumes`
+   * b) `/home/docker/data`
+   * c) `/var/lib/docker/volumes`
+   * d) `/usr/local/docker`
+
+3. Which mount type is NOT persistent?
+   * a) Bind Mount
+   * b) Named Volume
+   * c) tmpfs Mount
+   * d) Anonymous Volume
+
+4. How do you remove all volumes that are not currently used by any container?
+   * a) `docker volume rm all`
+   * b) `docker volume prune`
+   * c) `docker network prune`
+   * d) `docker volume purge`
+
+5. What does the `ro` flag do in a mount command?
+   * a) Runs Only
+   * b) Root Only
+   * c) Read-Only
+   * d) Remote Only
+
+6. Which flag is used to mount a volume from the command line using the shorthand syntax?
+   * a) `-m`
+   * b) `-v`
+   * c) `-d`
+   * d) `-p`
+
+7. True or False: You can mount a single file using a Bind Mount.
+   * a) True
+   * b) False
+
+8. What happens if you mount a non-empty volume to a container directory that already contains files?
+   * a) The container files are deleted
+   * b) The volume files are deleted
+   * c) The volume files hide the container's original files
+   * d) The files are merged
+
+9. Which command allows you to see the exact host path of a volume?
+   * a) `docker volume ls`
+   * b) `docker volume inspect`
+   * c) `docker volume stats`
+   * d) `docker inspect container`
+
+10. Which storage type is recommended for production databases?
+    * a) Bind Mounts
+    * b) tmpfs Mounts
+    * c) Named Volumes
+    * d) Storage Buckets
+
+11. How do you mount a volume to a container so it is deleted when the container is removed?
+    * a) Use an anonymous volume with `docker rm -v`
+    * b) Use `--tmpfs`
+    * c) Use a bind mount to `/tmp`
+    * d) It happens by default
+
+12. What is the default volume driver in Docker?
+    * a) nfs
+    * b) local
+    * c) overlay2
+    * d) cloud
+
+13. Which command lists all volumes attached to your Docker host?
+    * a) `docker ls volumes`
+    * b) `docker volume ps`
+    * c) `docker volume ls`
+    * d) `docker show volumes`
+
+14. How can you backup a volume?
+    * a) Use `docker volume backup`
+    * b) Copy files using a temporary container and `tar`
+    * c) Use `docker commit`
+    * d) It is done automatically
+
+15. What is the limit of a `tmpfs` mount?
+    * a) Host Disk space
+    * b) 1GB
+    * c) Host RAM capacity
+    * d) Container Layer size
+
+16. Which command executes a SQL script in a container while persisting data?
+    * a) `docker run -v`
+    * b) `docker exec`
+    * c) `docker build`
+    * d) `docker push`
+
+17. Can you use a volume driver to mount an AWS S3 bucket directly?
+    * a) Yes, using third-party plugins/drivers
+    * b) No, only local disks are supported
+    * c) Only in Docker Swarm
+    * d) Reserved for Kubernetes
+
+18. What is an 'Anonymous Volume'?
+    * a) A volume without a name, identified by a long ID
+    * b) A volume with secret data
+    * c) A volume that cannot be inspected
+    * d) A volume that is not stored on disk
+
+19. Which syntax is more recommended for modern Docker scripts?
+    * a) `-v`
+    * b) `--volume`
+    * c) `--mount`
+    * d) `--link`
+
+20. How do you share the exact same volume between 'Container A' and 'Container B'?
+    * a) Use different source names
+    * b) Define the same source name in both `docker run` commands
+    * c) Copy the data manually
+    * d) Use the `--share` flag
+
+### Quiz Answer Key
+
+1. **c) docker volume create**
+2. **c) /var/lib/docker/volumes**
+3. **c) tmpfs Mount**
+4. **b) docker volume prune**
+5. **c) Read-Only**
+6. **b) -v**
+7. **a) True**
+8. **c) The volume files hide the container's original files**
+9. **b) docker volume inspect**
+10. **c) Named Volumes**
+11. **a) Use an anonymous volume with docker rm -v**
+12. **b) local**
+13. **c) docker volume ls**
+14. **b) Copy files using a temporary container and tar**
+15. **c) Host RAM capacity**
+16. **b) docker exec**
+17. **a) Yes, using third-party plugins/drivers**
+18. **a) A volume without a name, identified by a long ID**
+19. **c) --mount**
+20. **b) Define the same source name**
 
 ## Next Steps
 
