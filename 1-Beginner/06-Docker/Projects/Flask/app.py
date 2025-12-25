@@ -1,6 +1,7 @@
 import os 
 from flask import Flask, request
 from psycopg_pool import ConnectionPool
+import redis # <---- Added Redis
 
 def dbConnect():
     """Connect to the database"""
@@ -22,14 +23,24 @@ def dbConnect():
 
 # Create a connection pool for Post
 pool = dbConnect()
+
+# Create a Redis connection
+cache = redis.Redis(host='redis', port=6379, decode_responses=True)
     
 
 app = Flask(__name__)
 
 @app.route('/about', methods=['GET'])
 def about():
-    version = os.environ.get('APP_VERSION', '0.1.0') 
-    return {'app_version': version}, 200 
+    version = os.environ.get('APP_VERSION', '0.1.0')
+    
+    # Increment hit counter in Redis
+    hits = cache.incr('visitor_count')
+    
+    return {
+        'app_version': version,
+        'visitor_count': hits
+    }, 200
   
 @app.route('/secrets', methods=['GET'])
 def secrets():

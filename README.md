@@ -25,6 +25,7 @@ Moving from manual effort to scalable, code-driven orchestration.
 - 🛠️ **IaC (Terraform)** & **Config Management (Ansible)**: Managing infrastructure via code.
 - 🔄 **Enterprise CI/CD**: Building robust, automated delivery pipelines.
 - ☁️ **Cloud Engineering**: Mastering AWS, Azure, and GCP managed services.
+- 📖 **Runbooks & Procedures**: Mastering operational excellence and incident response.
 
 ### 🔴 [Phase 3: Advanced (Enterprise)](./3-Advanced/README.md)
 Mastering the complexities of production-at-scale.

@@ -37,8 +37,70 @@ ansible-playbook site.yml --syntax-check
 # Dry-run (Check what would change without actually changing it)
 ansible-playbook site.yml --check
 
+```bash
 # Limit execution to a specific host or group
 ansible-playbook site.yml --limit webservers
+```
+
+---
+
+## 📚 3. Playbook Library (Real-World Examples)
+
+### Example A: Web Server Hardening
+*Objective: Ensure Nginx is installed, started, and the OS is up to date.*
+
+```yaml
+---
+- name: Hardening Web Servers
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Ensure Nginx is installed
+      apt:
+        name: nginx
+        state: present
+
+    - name: Ensure Nginx service is started
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Apply security config
+      copy:
+        src: files/nginx_security.conf
+        dest: /etc/nginx/conf.d/security.conf
+      notify: Reload Nginx
+
+  handlers:
+    - name: Reload Nginx
+      service:
+        name: nginx
+        state: reloaded
+```
+
+### Example B: User Management
+*Objective: Scale user creation across a cluster.*
+
+```yaml
+---
+- name: Managed User Access
+  hosts: all
+  become: yes
+  vars:
+    new_users: ["devops_bob", "devops_alice"]
+  tasks:
+    - name: Create developer accounts
+      user:
+        name: "{{ item }}"
+        state: present
+        groups: sudo
+        append: yes
+      loop: "{{ new_users }}"
 ```
 
 ---

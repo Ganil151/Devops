@@ -46,6 +46,9 @@ Master the "Four Golden Signals" and basic log aggregation before moving to ente
 ### 10. [Chef Infrastructure Automation](./10-Chef/README.md)
 Introduction to Ruby-based configuration management and the Master-agent architecture.
 
+### 11. [Runbooks & Procedures](./11-Runbooks-Procedures/README.md)
+Crucial operational documentation for incident management and service recovery. Learn the difference between manual and automated remediation.
+
 ---
 
 ## 🎯 Learning Objectives
@@ -56,6 +59,7 @@ By the end of this level, you will be able to:
 4.  **Integrate**: Build a full CI/CD pipeline that builds, tests, scans, and deploys an application.
 5.  **Observe**: Monitor application health using the Four Golden Signals and basic probing.
 6.  **Persist**: Design and manage scalable database layers for your applications.
+7.  **Operate**: Create and follow technical Runbooks for incident recovery and scaling.
 
 ---
 **Next Step**: Ready for production grade? Move to the [Advanced Level](../3-Advanced/README.md) for GitOps, Observability, and DevSecOps.

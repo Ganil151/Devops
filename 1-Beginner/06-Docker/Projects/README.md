@@ -1,5 +1,52 @@
 Link: https://youtu.be/YMBT1NguJJw
 
+---
+
+# Integrated Full-Stack Project Architecture
+
+Before diving into the steps, it is essential to understand the architectural design of this system. This project implements a **5-Tier Production Grade Stack** using Docker Compose.
+
+## 🏗️ Architectural Overview
+The following diagram illustrates how traffic flows from the user into the system and how services interact within different networks.
+
+```mermaid
+graph TD
+    User([User / Browser]) -- HTTPS:443 --> NginxSSL[NGINX Reverse Proxy]
+    
+    subgraph "Public Network (DMZ)"
+        NginxSSL -- "/" --> Frontend[Mock Frontend container:80]
+        NginxSSL -- "/api/*" --> Backend[Flask API container:8080]
+    end
+
+    subgraph "Private Backend Network"
+        Backend -- "Query:5432" --> Postgres[(Postgres DB)]
+        Backend -- "Cache:6379" --> Redis[(Redis Cache)]
+        BackupContainer[DB Backup Sidecar] -- "pg_dump" --> Postgres
+    end
+
+    subgraph "Volumes & Persistence"
+        Postgres -- persistent --> pgdata[(postgres-data)]
+        Redis -- persistent --> redisdata[(redis-data)]
+        BackupContainer -- backup --> hostbackups[(./backups host path)]
+    end
+```
+
+## 📡 Service Communication & Networking
+1.  **Isolation (Multi-Network)**: We use two distinct networks:
+    - `public`: For services that need to talk to the Nginx entry point.
+    - `private`: For internal database and cache communication (Postgres/Redis are NOT reachable from the internet).
+2.  **Service Discovery**: Containers communicate using their service names (e.g., Flask connects to `host="postgres"`) via Docker's internal DNS.
+3.  **Reverse Proxy Strategy**: Nginx handles **SSL Termination**. It determines where to route traffic based on the URI:
+    - Requests to `/` serve the static frontend.
+    - Requests to `/api/` are forwarded to the Flask Gunicorn server.
+
+## 🔒 Security & Environment Strategy
+- **Secrets Management**: Sensitive data like `DB_PASSWORD` or `API_KEY` are mounted as Docker Secrets (`/run/secrets/*`). This ensures passwords never appear in `docker inspect` or ENV listings.
+- **Rootless Operation**: Services like Nginx and Flask are configured to run as non-root users where possible within their respective Alpine images.
+- **Environment Separation**: We use `compose.prod.yaml` to layer on production settings (restart policies, healthchecks, SSL configs) while keeping the base `compose.yaml` clean.
+
+---
+
 ## Steps: 
 ### Run Commands in the Flask directory 
 ```bash
@@ -1155,6 +1202,98 @@ docker compose push
 ```
 > [!IMPORTANT]
 > Ensure the image names and tags in `compose.yaml` (e.g., `ganil151/flask:latest`) match your Docker Hub repository and desired tag.
+
+___
+
+## Step-12 Multi-Environment Setup (Dev vs Prod)
+In a professional workflow, we separate development concerns (hot-reloading, debug logs) from production concerns (SSL, restart policies).
+
+### 1. The Modular Structure
+We now use three specialized files:
+- **`compose.yaml`**: The base configuration containing shared services, networks, and volumes.
+- **`docker-compose.override.yml`**: Automatically used by Docker during local development. Adds volumes for hot-reloading and debug flags.
+- **`compose.prod.yaml`**: The production-ready configuration. Includes the NGINX/Certbot stack and strict restart policies.
+
+### 2. How to Run
+#### For Local Development
+Simply run the standard command. Docker will automatically merge `compose.yaml` and `docker-compose.override.yml`:
+```bash
+docker compose up -d
+```
+
+#### For Production
+Explicitly specify the base and production files:
+```bash
+docker compose -f compose.yaml -f compose.prod.yaml up -d
+```
+
+> [!TIP]
+> This separation prevents sensitive production configurations (like SSL certificates) from cluttering your local development environment.
+
+___
+
+## Step-13 Integrating Redis Cache
+We've added **Redis** to the stack to improve application performance. The Flask app uses Redis to track the number of visits to the `/about` page.
+
+### 1. Flask Integration
+We use the `redis` Python library to connect to the `redis` service defined in our Compose file.
+```python
+import redis
+cache = redis.Redis(host='redis', port=6379, decode_responses=True)
+
+@app.route('/about')
+def about():
+    hits = cache.incr('visitor_count')
+    return {'visitor_count': hits}
+```
+
+### 2. Benefits
+- **Performance**: Redis is an in-memory database, making it extremely fast for high-frequency counters or session storage.
+- **Persistence**: We use `--appendonly yes` to ensure data survives container restarts.
+
+___
+
+## Step-14 Automated Database Backups
+Data resilience is crucial. We now have a **db-backup sidecar** container that automatically creates a PostgreSQL dump every 24 hours.
+
+### 1. How it Works
+The `db-backup` service runs a simple loop that:
+1. Connects to the `postgres` container.
+2. Runs `pg_dump` using the shared secret password.
+3. Saves the `.sql` file to a host-mounted `./backups` directory.
+
+### 2. Manual Backup
+You can trigger a manual backup anytime by running:
+```bash
+docker compose exec db-backup pg_dump -h postgres -U myuser mydb > ./backups/manual_backup.sql
+```
+
+___
+
+## Step-15 Full-Stack Integration (Mock Frontend)
+To complete the architecture, we've added a **Frontend** service. This demonstrates how multiple services communicate through a single entry point (the NGINX reverse proxy).
+
+### 1. Architecture Overview
+- **User** → **NGINX** (SSL Termination)
+- **NGINX** (`/`) → **Frontend** (Static HTML)
+- **NGINX** (`/api/*`) → **Flask** (JSON API)
+- **Flask** → **Postgres** (Persistent Data)
+- **Flask** → **Redis** (Visitor Counters)
+
+### 2. Frontend Communication
+The frontend uses `fetch('/api/about')` to get stats from the backend. The single-domain approach (using NGINX to route `/api`) avoids **CORS** (Cross-Origin Resource Sharing) issues entirely.
+
+### 3. Verification
+Run the production stack:
+```bash
+docker compose -f compose.yaml -f compose.prod.yaml up -d
+```
+Visit your domain, and you should see the frontend displaying data fetched from the backend API, which in turn is powered by Redis and Postgres.
+
+## Operational Documentation
+For managing, troubleshooting, and automating this project, refer to:
+- **[Project Runbook](./RUNBOOK.md)**: Standard operating procedures for deployment and recovery.
+- **[Ansible Playbook](./ansible/setup.yml)**: Automation for host setup and production deployment.
 
 ___
 
