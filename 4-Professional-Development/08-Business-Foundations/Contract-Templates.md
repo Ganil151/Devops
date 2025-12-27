@@ -10,8 +10,10 @@ Ready-to-use contract templates specifically designed for DevOps consultants. Cu
 2. [Statement of Work (SOW)](#sow)
 3. [Non-Disclosure Agreement (NDA)](#nda)
 4. [Independent Contractor Agreement](#contractor)
-5. [Proposal Template](#proposal)
-6. [Invoice Template](#invoice)
+5. [Remote Work Contract Addendum](#remote-work) - NEW! 🌍
+6. [International Contractor Agreement](#international) - NEW! 🌐
+7. [Proposal Template](#proposal)
+8. [Invoice Template](#invoice)
 
 ---
 
@@ -526,6 +528,426 @@ Date: _______________________
 
 By: _________________________
 Date: _______________________
+```
+
+---
+
+## <a name="remote-work"></a>🌍 Remote Work Contract Addendum
+
+Use this addendum with your MSA or Independent Contractor Agreement when working remotely.
+
+```markdown
+# REMOTE WORK ADDENDUM
+
+**This Addendum** modifies the [Master Services Agreement / Independent Contractor Agreement] 
+dated [DATE] between [YOUR COMPANY NAME] LLC ("Contractor") and [CLIENT COMPANY NAME] ("Client").
+
+## 1. REMOTE WORK ARRANGEMENT
+
+1.1 **Work Location**: Contractor shall perform services remotely from:
+   - Primary Location: [CITY, STATE/COUNTRY]
+   - Contractor may work from other locations with notice to Client
+
+1.2 **No On-Site Requirement**: This engagement does not require physical presence 
+at Client's facilities except as mutually agreed in writing.
+
+1.3 **Travel**: If on-site presence is requested:
+   - Minimum [X] days advance notice required
+   - Client will reimburse all travel expenses (flights, lodging, meals)
+   - Travel time is billable at [50% / 100%] of standard rate
+
+## 2. WORKING HOURS AND AVAILABILITY
+
+2.1 **Core Hours**: Contractor will be available during:
+   - [TIME] to [TIME] [TIMEZONE] on business days
+   - This represents [X] hours of guaranteed overlap
+
+2.2 **Response Times**:
+   - Slack/Email: Within [4] hours during core hours
+   - Urgent matters: Within [1] hour during core hours
+   - After hours: Next business day (unless emergency)
+
+2.3 **Meetings**: Contractor will accommodate meetings within core hours.
+   Meetings outside core hours require [24-48] hours advance notice.
+
+2.4 **Timezone**: All deadlines and commitments reference [TIMEZONE] unless 
+   otherwise specified.
+
+## 3. EQUIPMENT AND WORKSPACE
+
+3.1 **Equipment**: Contractor provides all equipment, including:
+   - Computer hardware and peripherals
+   - Software and development tools
+   - Internet connectivity and backup
+
+3.2 **Expenses**: The following are Contractor's responsibility:
+   - Home office setup and utilities
+   - Internet service
+   - Equipment maintenance and upgrades
+
+3.3 **Client-Provided**: Client may provide:
+   - Access to Client's software and systems
+   - Licenses for Client-specific tools
+   - VPN and security credentials
+
+## 4. COMMUNICATION
+
+4.1 **Primary Channels**:
+   - Synchronous: [Slack / Microsoft Teams / Zoom]
+   - Asynchronous: [Email / Project Management Tool]
+   - Video Calls: [Zoom / Google Meet / Teams]
+
+4.2 **Status Updates**: Contractor will provide:
+   - Daily async standups in [platform]
+   - Weekly summary reports
+   - Immediate notification of blockers
+
+4.3 **Camera Policy**: Camera use during video calls is:
+   - [ ] Required for all meetings
+   - [X] Encouraged but not required
+   - [ ] Optional
+
+## 5. DATA SECURITY
+
+5.1 **Security Requirements**: Contractor agrees to:
+   - Use encrypted storage for all Client data
+   - Maintain password-protected devices
+   - Use VPN when accessing Client systems
+   - Enable full-disk encryption
+   - Use multi-factor authentication
+
+5.2 **Physical Security**:
+   - Work from secure, private locations
+   - Prevent unauthorized viewing of screens
+   - Lock devices when unattended
+   - Secure disposal of printed materials
+
+5.3 **Network Security**:
+   - No use of public WiFi for Client work without VPN
+   - Maintain updated antivirus/security software
+   - Report any security incidents immediately
+
+5.4 **Data Handling**:
+   - No Client data on personal devices (if separate work device required)
+   - All data deleted/returned upon project completion
+   - No data stored in unapproved cloud services
+
+## 6. INTELLECTUAL PROPERTY (Remote Specifics)
+
+6.1 **Work Product**: All work product created under this Agreement 
+   is subject to IP terms in the underlying Agreement.
+
+6.2 **Personal Projects**: Contractor may work on personal projects 
+   outside of Client hours, provided:
+   - No Client resources are used
+   - No conflict with Client's business
+   - No Client Confidential Information is incorporated
+
+## 7. COMPLIANCE
+
+7.1 **Tax Compliance**: Contractor remains solely responsible for:
+   - All income taxes in Contractor's jurisdiction
+   - Self-employment taxes
+   - Any local business licenses or registrations
+
+7.2 **Legal Compliance**: Contractor will comply with all applicable 
+   laws in Contractor's jurisdiction.
+
+7.3 **Export Controls**: Contractor will not export Client data or 
+   technology in violation of US export control laws.
+
+## 8. TERM
+
+This Addendum is effective from [DATE] and continues for the duration 
+of the underlying Agreement unless terminated earlier.
+
+---
+
+**AGREED AND ACCEPTED:**
+
+**CONTRACTOR:**
+[YOUR COMPANY NAME] LLC
+
+By: _________________________
+Date: _______________________
+
+**CLIENT:**
+[CLIENT COMPANY NAME]
+
+By: _________________________
+Date: _______________________
+```
+
+---
+
+## <a name="international"></a>🌐 International Contractor Agreement
+
+For contractors working across international borders with US companies.
+
+```markdown
+# INTERNATIONAL CONTRACTOR AGREEMENT
+
+**This Agreement** is entered into as of [DATE]
+
+**BETWEEN:**
+[CLIENT COMPANY NAME], a [STATE] corporation with its principal place 
+of business at [US ADDRESS] ("Company")
+
+**AND:**
+[YOUR COMPANY NAME] / [YOUR NAME], [BUSINESS FORM] organized under the 
+laws of [COUNTRY], located at [ADDRESS] ("Contractor")
+
+## 1. SERVICES
+
+1.1 Contractor agrees to provide DevOps consulting services as described 
+   in individual Statements of Work.
+
+1.2 **Location**: Services will be performed in [COUNTRY/COUNTRIES].
+
+1.3 **No Immigration Sponsorship**: This Agreement does not constitute 
+   employment sponsorship or immigration support.
+
+## 2. INDEPENDENT CONTRACTOR STATUS
+
+2.1 **Relationship**: Contractor is an independent contractor. This 
+   Agreement does not create an employment, partnership, or agency 
+   relationship.
+
+2.2 **No Employment Rights**: Contractor has no rights to:
+   - Employee benefits
+   - Unemployment insurance
+   - Workers' compensation
+   - Visa sponsorship
+   - Any other employment-related rights
+
+2.3 **Control**: Contractor controls the manner, means, and methods 
+   of performing services.
+
+2.4 **Other Clients**: Contractor may provide services to other clients.
+
+## 3. COMPENSATION
+
+3.1 **Currency**: All payments will be made in [US DOLLARS / EUR / LOCAL].
+
+3.2 **Rate**: Contractor's rate is specified in each Statement of Work.
+
+3.3 **Payment Method**: Payment will be made via:
+   - [ ] International Wire Transfer
+   - [ ] Wise (TransferWise)
+   - [ ] PayPal
+   - [ ] Payoneer
+   - [ ] Other: [SPECIFY]
+
+3.4 **Banking Information**:
+   - Bank Name: [BANK]
+   - Account Name: [NAME]
+   - Account Number: [NUMBER]
+   - SWIFT/BIC: [CODE]
+   - IBAN: [IF APPLICABLE]
+   - Routing/Sort Code: [IF APPLICABLE]
+
+3.5 **Payment Fees**: 
+   - [ ] Company pays all transfer fees
+   - [ ] Contractor pays all transfer fees
+   - [X] Each party pays their own bank's fees
+
+3.6 **Exchange Rate**: Rate locked at [invoice date / payment date].
+
+## 4. TAXES
+
+4.1 **Tax Responsibility**: Contractor is solely responsible for all 
+   taxes in Contractor's country of residence, including:
+   - Income tax
+   - Value Added Tax (VAT) / Goods and Services Tax (GST)
+   - Social security contributions
+   - Any other applicable taxes
+
+4.2 **No Withholding**: Company will not withhold taxes unless required 
+   by law. If withholding is required, it will be deducted from payments.
+
+4.3 **Tax Forms**: Contractor will provide:
+   - Form W-8BEN (individual) or W-8BEN-E (entity) before first payment
+   - Updated forms as required
+   - Any other tax documentation reasonably requested
+
+4.4 **Tax Treaty**: Contractor certifies eligibility for benefits under 
+   the tax treaty between [CONTRACTOR'S COUNTRY] and the United States, 
+   if applicable. Treaty benefits claimed: [SPECIFY OR N/A].
+
+4.5 **VAT/GST**: If Contractor is required to charge VAT/GST:
+   - Contractor's VAT/GST registration number: [NUMBER]
+   - VAT/GST will be added to invoices
+   - Company [will / will not] be able to reclaim VAT
+
+## 5. INVOICING
+
+5.1 **Invoice Requirements**: All invoices must include:
+   - Invoice number and date
+   - Contractor's legal name and address
+   - Contractor's tax ID / VAT number
+   - Description of services
+   - Period of service
+   - Amount in agreed currency
+   - Bank details for payment
+   - Any applicable VAT/GST
+
+5.2 **Payment Terms**: Net [30] days from invoice receipt.
+
+5.3 **Late Payments**: Interest of [1.5%] per month on overdue amounts.
+
+## 6. INTELLECTUAL PROPERTY
+
+6.1 **Work Product**: All custom deliverables created specifically for 
+   Company become Company's property upon full payment.
+
+6.2 **Pre-Existing Materials**: Contractor retains ownership of:
+   - Pre-existing tools and methodologies
+   - General knowledge and skills
+   - Reusable components not specific to Company
+
+6.3 **License**: Contractor grants Company perpetual license to use 
+   any pre-existing materials incorporated in deliverables.
+
+## 7. CONFIDENTIALITY
+
+7.1 Contractor agrees to keep confidential all non-public information 
+   relating to Company's business, clients, and technology.
+
+7.2 Confidentiality obligations survive termination for [3 / 5] years.
+
+## 8. DATA PROTECTION
+
+8.1 **GDPR Compliance** (if applicable): If Contractor processes 
+   personal data of EU residents:
+   - Contractor acts as a Data Processor
+   - Company acts as Data Controller
+   - Processing only as instructed by Company
+   - Appropriate technical measures will be maintained
+   - Data Processing Agreement attached as Exhibit [X]
+
+8.2 **Data Transfers**: Contractor acknowledges that personal data 
+   may be transferred to [COUNTRY] and agrees to appropriate safeguards.
+
+8.3 **Security**: Contractor will maintain industry-standard security 
+   measures to protect Company data.
+
+## 9. COMPLIANCE
+
+9.1 **FCPA/Anti-Bribery**: Contractor will not make any payments or 
+   provide anything of value to government officials in violation of 
+   the US Foreign Corrupt Practices Act or UK Bribery Act.
+
+9.2 **Sanctions**: Contractor is not located in, and will not provide 
+   services from, any country subject to US sanctions (Cuba, Iran, 
+   North Korea, Syria, or Crimea region).
+
+9.3 **Export Controls**: Contractor will comply with all applicable 
+   US export control laws and regulations.
+
+9.4 **Local Laws**: Contractor will comply with all applicable laws 
+   in Contractor's jurisdiction.
+
+## 10. INSURANCE
+
+10.1 Contractor will maintain professional liability insurance of 
+    at least [$1,000,000] per occurrence.
+
+10.2 Certificates of insurance will be provided upon request.
+
+## 11. INDEMNIFICATION
+
+11.1 Contractor indemnifies Company against claims arising from:
+    - Contractor's negligence or misconduct
+    - Breach of this Agreement
+    - Tax claims from any jurisdiction against Company related to 
+      Contractor's compensation
+    - Misclassification claims
+
+## 12. LIMITATION OF LIABILITY
+
+12.1 **Cap**: Total liability is limited to fees paid in the 12 months 
+    preceding the claim.
+
+12.2 **Exclusions**: Neither party is liable for indirect, incidental, 
+    consequential, or punitive damages.
+
+## 13. GOVERNING LAW AND DISPUTES
+
+13.1 **Governing Law**: This Agreement is governed by the laws of 
+    [STATE], United States.
+
+13.2 **Dispute Resolution**: Disputes will be resolved by:
+    - [ ] Binding arbitration under [AAA / ICC / JAMS] rules
+    - [ ] Courts of [STATE], United States
+    - [ ] Other: [SPECIFY]
+
+13.3 **Language**: English is the governing language of this Agreement.
+
+## 14. TERM AND TERMINATION
+
+14.1 **Term**: Continues until terminated by either party.
+
+14.2 **Termination**: Either party may terminate with [30] days 
+    written notice.
+
+14.3 **Final Payment**: Company will pay for all services performed 
+    through termination date within [15] days.
+
+## 15. MISCELLANEOUS
+
+15.1 **Entire Agreement**: This Agreement constitutes the entire 
+    agreement between the parties.
+
+15.2 **Amendments**: Must be in writing and signed by both parties.
+
+15.3 **No Waiver**: Failure to enforce any provision does not 
+    constitute waiver.
+
+15.4 **Electronic Signatures**: Electronic signatures are valid.
+
+---
+
+**EXHIBIT A: STATEMENT OF WORK** (Attached)
+**EXHIBIT B: DATA PROCESSING AGREEMENT** (If applicable)
+
+---
+
+**AGREED AND ACCEPTED:**
+
+**COMPANY:**
+[CLIENT COMPANY NAME]
+
+By: _________________________
+Name: _______________________
+Title: _______________________
+Date: _______________________
+
+**CONTRACTOR:**
+[YOUR COMPANY NAME / YOUR NAME]
+
+By: _________________________
+Name: _______________________
+Title: _______________________
+Date: _______________________
+
+---
+
+## W-8BEN REMINDER
+
+Before first payment, international contractors must submit:
+
+**Individuals**: Form W-8BEN
+**Entities**: Form W-8BEN-E
+
+Download from: https://www.irs.gov/forms-pubs/about-form-w-8-ben
+
+Key fields:
+- Legal name (as on passport/registration)
+- Country of citizenship/incorporation
+- Tax treaty claim (if applicable)
+- Foreign tax identifying number (TIN)
+- Date of birth (individuals)
+- Signature and date
 ```
 
 ---

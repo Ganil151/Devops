@@ -14,8 +14,25 @@ SSH (Secure Shell) is the industry standard for securely communicating with a re
 
 
 
-## 📖 How SSH Works (Asymmetric Encryption)
+## 📂 Module Structure
 
+### 🔰 Beginner Level
+- **[01-Introduction](./1-Beginner-Level/01-Introduction/)**: What is SSH and why use it?
+- **[02-Configuration](./1-Beginner-Level/02-Configuration/)**: Managing `~/.ssh/config` for easy access.
+- **[03-Key-Management](./1-Beginner-Level/03-Key-Management/)**: Generating, copying, and managing keys.
+- **[04-Troubleshooting](./1-Beginner-Level/04-Troubleshooting/)**: Solving "Permission Denied" and other errors.
+
+### 🚀 Intermediate Level
+- **[01-Best-Practices](./2-Intermediate-Level/01-Best-Practices/)**: Security and performance tips.
+- **[02-Tunneling](./2-Intermediate-Level/02-Tunneling/)**: Port forwarding and SOCKS proxies.
+- **[03-Automation](./2-Intermediate-Level/03-Automation/)**: Scripting with SSH.
+
+### 🛡️ Advanced Level
+- **[01-Security](./3-Advanced-Level/01-Security/)**: Hardening, 2FA, and Certificates.
+
+---
+
+## 📖 How SSH Works (Asymmetric Encryption)
 SSH relies on public-key cryptography to authenticate the remote computer and allow it to authenticate the user.
 - **Private Key**: Kept on your computer (Never share this!).
 - **Public Key**: Placed on the remote server (Stored in `~/.ssh/authorized_keys`).

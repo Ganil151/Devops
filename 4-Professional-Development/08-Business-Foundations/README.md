@@ -13,6 +13,7 @@ Transform your DevOps expertise into a legitimate, profitable business. This com
 5. [Financial Management](#financial-management)
 6. [Tax Strategy](#tax-strategy)
 7. [Scaling Your Business](#scaling)
+8. [Independent Contractor & Remote Work](./Independent-Contractor-Remote-Work.md) - NEW! 🌍
 
 ---
 

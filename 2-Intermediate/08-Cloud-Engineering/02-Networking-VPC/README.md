@@ -61,3 +61,14 @@ Connecting your on-premises data center to your Cloud VPC:
 - **NACL vs. Security Groups**: Understand the difference between stateless (network) and stateful (instance) firewalls.
 - **Flow Logs**: Enable VPC Flow Logs for auditing and troubleshooting network traffic.
 - **Private Link**: Use VPC Endpoints to connect to AWS services without traversing the public internet.
+
+---
+
+## 🏆 Certifications in Context
+
+While Cloud Certs (AWS SAA, AZ-104) are the primary goal here, your foundational networking knowledge (Network+, CCNA) is what saves you during deep troubleshooting.
+
+### How CCNA/Network+ Concepts Apply Here
+- **CIDR & Subnetting**: The `/24` vs `/16` decisions you make in VPC creation are pure Network+ math.
+- **Route Tables**: AWS Route Tables function exactly like static routes in a Cisco router—if the packet doesn't have a route, it drops.
+- **NACLs vs Security Groups**: This mirrors the CCNA concept of *Stateless ACLs* (Router standard ACLs) vs *Stateful Firewalls* (ASA/Zone-based firewalls).

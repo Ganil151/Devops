@@ -16,6 +16,23 @@ Master cloud cost optimization and turn it into a high-value consulting service.
 - **Growing Demand**: Cloud spending is projected to reach $1 trillion by 2027
 - **Executive Visibility**: CFOs and CEOs care deeply about cloud costs
 
+---
+
+## 📚 FinOps Learning Path
+
+Before diving into consulting, master FinOps fundamentals through our structured courses:
+
+| Level | Path | Topics |
+|-------|------|--------|
+| 🟢 **Beginner** | [1-Beginner/14-FinOps](../../../1-Beginner/14-FinOps/README.md) | Introduction, Cloud Billing, Cost Visibility, Budgeting |
+| 🟡 **Intermediate** | [2-Intermediate/14-FinOps](../../../2-Intermediate/14-FinOps/README.md) | Cost Allocation, Optimization, Reserved Instances, Showback/Chargeback, Automation |
+| 🔴 **Advanced** | [3-Advanced/12-FinOps](../../../3-Advanced/12-FinOps/README.md) | FinOps Framework, Multi-Cloud, Unit Economics, Culture, Enterprise Governance |
+
+> [!TIP]
+> Complete the learning path before offering FinOps consulting services. Each level includes hands-on exercises, tool recommendations, and real-world examples.
+
+---
+
 ### Market Opportunity
 
 | Metric | Value |

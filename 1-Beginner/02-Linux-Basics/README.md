@@ -19,6 +19,29 @@ DevOps engineers live in the shell. Linux provides the flexibility, security, an
 - Automate tasks with basic shell scripting
 - Secure a Linux server for production use
 
+## 📂 Module Structure
+
+This module is organized into the following sections:
+
+### 🔰 Beginner Level
+- **[01-Introduction](./1-Beginner-Level/01-Introduction/)**: Core concepts and architecture.
+- **[02-Filesystem](./1-Beginner-Level/02-Filesystem/)**: Understanding the Linux file hierarchy.
+- **[03-Commands](./1-Beginner-Level/03-Commands/)**: Essential commands for everyday tasks.
+- **[04-Permissions](./1-Beginner-Level/04-Permissions/)**: User management and file permissions.
+
+### 🚀 Intermediate Level
+- **[System Administration](./2-Intermediate-Level/System-Administration/)**: Managing processes, services, and logs.
+- **[Networking](./2-Intermediate-Level/Networking/)**: Linux networking fundamentals.
+- **[Shell Scripting](./2-Intermediate-Level/Shell-Scripting/)**: Automating tasks with Bash.
+
+### 🛡️ Advanced Level
+- **[Security](./3-Advanced-Level/Security/)**: Hardening and securing your system.
+- **[Performance](./3-Advanced-Level/Performance/)**: Optimization and monitoring.
+- **[Virtualization & WSL](./3-Advanced-Level/Virtualization-WSL/)**: Using Linux on Windows (WSL) and VMs.
+
+### 📚 Resources
+- **[Resources](./Resources/)**: Additional guides and cheat sheets.
+
 ## 📖 Essential CLI Tools
 
 ### 📂 File & Directory Management
@@ -129,10 +152,18 @@ tail -f /var/log/syslog
 - [ ] Manage users and groups
 - [ ] Monitor CPU, RAM, and Disk usage
 
+## 🏆 Related Certifications
+
+- **CompTIA Linux+**: Validates the competencies required of an early-career system administrator supporting Linux systems.
+- **Linux Foundation Certified System Administrator (LFCS)**: Validates the ability to proficiently install, configure, and operate Linux-based systems.
+- **Red Hat Certified System Administrator (RHCSA)**: A very hands-on, respected certification for Red Hat Enterprise Linux environments.
+
+---
+
 ## 🔗 Next Steps
 - **[SSH & Remote Access](../03-SSH/)** - Securely connect to your Linux servers.
 - **[Git & GitHub](../04-Git-GitHub/)** - Version control your scripts and configs.
-- **[SysAdmin Module](./SysAdmin/README.md)** - Deep dive into system management.
+- **[Windows Basics](../16-Windows-Basics/)** - Learn about Windows administration.
 
 ---
 *The shell is your cockpit—learn the gauges and you can fly anything.*

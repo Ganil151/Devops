@@ -95,4 +95,11 @@ Classical infrastructure monitoring. Learn host/service definitions, NRPE-based 
 
 ---
 
+## 🏆 Related Certifications
+
+- **Prometheus Certified Associate (PCA)**: Validates your ability to design, monitor, and troubleshoot modern observable systems using Prometheus.
+- **Elastic Certified Engineer**: Demonstrates ability to build a complete search and analytics solution using the Elastic Stack.
+
+---
+
 **Cloud Observability**: See how to implement these patterns in AWS using [CloudWatch and X-Ray](../08-Enterprise-Cloud/17-Observability-Governance/README.md).

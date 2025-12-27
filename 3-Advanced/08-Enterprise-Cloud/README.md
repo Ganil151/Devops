@@ -44,4 +44,12 @@ Advanced cloud management includes mastering the economics of the cloud:
 - **Automatic Rightsizing**: Using AI/ML to optimize instance profiles.
 
 ---
+## 🏆 Related Certifications
+
+- **AWS Certified Solutions Architect – Professional**: Validates advanced technical skills and experience in designing distributed applications and systems on the AWS platform.
+- **Google Cloud Professional Cloud Architect**: Enables organizations to leverage Google Cloud technologies.
+- **Microsoft Certified: Azure Solutions Architect Expert**: Design cloud and hybrid solutions that run on Microsoft Azure.
+
+---
+
 **The Ultimate Goal**: Become a Cloud Solution Architect capable of designing secure, scalable, and cost-effective systems that solve complex business problems globally.

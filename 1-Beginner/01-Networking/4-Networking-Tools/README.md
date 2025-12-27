@@ -15,7 +15,12 @@ Used to inspect the actual data traveling across the wire.
 Used to map the infrastructure and identify open ports or vulnerabilities.
 - **[Nmap](./Nmap-Scanning.md)**: The "Network Mapper" for discovery and security auditing.
 
-### 3. Basic Probes (Covered in Troubleshooting)
+### 3. Simulation and Emulation
+Used to design and test networks before deploying hardware.
+- **[Cisco Packet Tracer](./Packet-Tracer.md)**: Visual network simulator for learning and prototyping.
+- **[GNS3](./GNS3.md)**: Advanced network emulator using real OS images.
+
+### 4. Basic Probes (Covered in Troubleshooting)
 - **ping**: ICMP reachability.
 - **traceroute**: Path discovery.
 - **nc (Netcat)**: Port connectivity and generic data transfer.
@@ -36,3 +41,4 @@ Used to map the infrastructure and identify open ports or vulnerabilities.
 2.  **Master the Command Line**: Learn **Tcpdump** for server-side troubleshooting.
 3.  **Analyze in Detail**: Use **Wireshark** to visualize complex traffic patterns.
 4.  **Audit Your Network**: Use **Nmap** to verify your security perimeter.
+5.  **Test Your Skills**: Take the **[Networking Tools Quiz](./Tools-Quiz.md)**.

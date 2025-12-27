@@ -126,6 +126,13 @@ kubectl port-forward svc/my-service 8080:80
 - [ ] Manage ConfigMaps and Secrets
 - [ ] Troubleshoot with `describe`, `logs`, and `exec`
 
+## 🏆 Related Certifications
+
+- **Certified Kubernetes Administrator (CKA)**: Validates skills to design, build, and configure cloud-native pipelines.
+- **Certified Kubernetes Application Developer (CKAD)**: Validates skills to design, build, and monitor cloud-native applications for Kubernetes.
+
+---
+
 ## 🔗 Next Steps
 - **[Helm Charts](../02-Helm/)** - Package your K8s apps.
 - **[ArgoCD GitOps](../../3-Advanced/01-GitOps/)** - Automate your deployments.

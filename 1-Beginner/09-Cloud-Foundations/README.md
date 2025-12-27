@@ -32,6 +32,14 @@ Master performance and data analytics. Focus on Compute Engine, Cloud Storage, a
 
 ---
 
+## 🏆 Related Certifications
+
+- **AWS Certified Cloud Practitioner (CLF-C02)**: Foundational understanding of AWS cloud concepts, security, and billing.
+- **Microsoft Certified: Azure Fundamentals (AZ-900)**: Foundational knowledge of cloud services and how those services are provided with Microsoft Azure.
+- **Google Cloud Digital Leader**: Foundational understanding of Google Cloud core products and services.
+
+---
+
 ## 📚 Core Learning Path
 
 1. **[01. Cloud Fundamentals](./01-Cloud-Fundamentals/README.md)**: Understanding IaaS, PaaS, SaaS, and the Shared Responsibility Model.

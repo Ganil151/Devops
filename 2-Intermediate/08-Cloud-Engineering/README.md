@@ -45,5 +45,11 @@ Design secure and complex connectivity.
 - **Modular IaC**: Build reusable Terraform modules.
 - **Least Privilege**: Always apply minimal IAM permissions.
 
+## 🏆 Related Certifications
+
+- **AWS Certified Solutions Architect – Associate**: Validates your ability to design and implement distributed systems on AWS.
+- **Microsoft Certified: Azure Administrator Associate (AZ-104)**: Validates technical skills in managing Azure identity, governance, storage, compute, and virtual networks/monitoring.
+
 ---
+
 **Next Level**: [Advanced-Level](../Advanced-Level/README.md)

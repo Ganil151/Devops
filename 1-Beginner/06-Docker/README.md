@@ -178,6 +178,12 @@ docker compose build             # Build images
 docker compose down -v           # Remove volumes too
 ```
 
+## 🏆 Related Certifications
+
+- **Docker Certified Associate (DCA)**: Validates skills in orchestration, image creation, installation, configuration, networking, and security.
+
+---
+
 ## 📖 Additional Resources
 
 - [Docker Official Documentation](https://docs.docker.com/)

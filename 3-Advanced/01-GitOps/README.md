@@ -131,6 +131,13 @@ argocd app sync my-app
 
 ---
 
+## 🏆 Related Certifications
+
+- **Argo Project**: While not a formal certification, mastering ArgoCD is key for GitOps roles.
+- **GitLab Certified GitOps Professional**: Validates GitOps principles using GitLab.
+
+---
+
 ## 🔗 Next Steps
 - **[Advanced Kubernetes](../03-Advanced-K8s/)** - Master the platform GitOps manages.
 - **[Security Hardening](../04-Security/)** - Secure your GitOps pipelines.

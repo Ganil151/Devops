@@ -75,3 +75,14 @@ Copy network traffic from an ENI to a target (like an IDS/IPS appliance) for dee
 - Data transfer costs (Inter-AZ vs Inter-Region)
 - VPC Endpoint usage vs NAT Gateway costs
 - Right-sizing NAT Gateways
+
+---
+
+## 🏆 The Value of "Traditional" Networking in Advanced Cloud
+
+At the expert level, abstractions leak. When BGP routes flap or a Transit Gateway packet is dropped, you need the skills found in traditionally "on-prem" certifications like **CCNA** or **Network+**.
+
+### Use Cases for Deep Networking Knowledge
+- **BGP & Direct Connect**: Configuring ASN (Autonomous System Numbers) and debugging route propagation requires the BGP knowledge covered in advanced network certs.
+- **Hybrid DNS**: Understanding Split-Horizon DNS and conditional forwarders is a core networking skill essential for Resolver rules.
+- **Packet Analysis**: When simple flow logs fail, you might need to run traffic mirroring to Wireshark—a core skill from Network+.

@@ -50,6 +50,18 @@ Understand Frontend, Backend, Frameworks, and Runtimes. Know the "What" before y
 ### 11. [Web-Design & Frameworks](./11-Web-Design/README.md)
 Explore modern Python web frameworks like **Flask** and **Django**. Learn how applications are structured and how to containerize them for production.
 
+### 12. [Prompt Engineering](./12-Prompt-Engineering/README.md)
+Learn the fundamentals of crafting effective prompts for AI tools. Leverage AI assistants for documentation, scripting, and troubleshooting.
+
+### 13. [Model Context Protocol (MCP)](./13-MCP/README.md)
+Understand the open standard for connecting AI models to external tools and data sources. Build your first MCP integrations.
+
+### 14. [FinOps Fundamentals](./14-FinOps/README.md)
+Introduction to Cloud Financial Operations. Learn cloud billing basics, cost visibility through tagging, and budgeting essentials.
+
+### 15. [Blockchain Fundamentals](./15-Blockchain/README.md)
+Understand decentralized ledgers, nodes, and wallets. Learn how to interact with a blockchain using CLI tools.
+
 ---
 
 ## 🎯 Learning Objectives

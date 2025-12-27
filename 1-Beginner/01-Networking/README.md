@@ -4,6 +4,34 @@ Networking is the plumbing of the internet. For a DevOps engineer, understanding
 
 ---
 
+## 📂 Module Structure
+
+### 🔰 Beginner Level
+- **[01-Network-Fundamentals](./1-Beginner-Level/01-Network-Fundamentals/)**: Basics of networking.
+- **[02-Network-Models](./1-Beginner-Level/02-Network-Models/)**: OSI and TCP/IP models.
+- **[03-IP-Addressing](./1-Beginner-Level/03-IP-Addressing/)**: IPv4, IPv6, Subnetting.
+- **[04-Basic-Protocols](./1-Beginner-Level/04-Basic-Protocols/)**: TCP, UDP, HTTP, DNS.
+- **[05-Network-Devices](./1-Beginner-Level/05-Network-Devices/)**: Routers, Switches, Firewalls.
+- **[06-Basic-Troubleshooting](./1-Beginner-Level/06-Basic-Troubleshooting/)**: Diagnosing connectivity issues.
+
+### 🚀 Intermediate Level
+- **[01-DNS-DHCP](./2-Intermediate-Level/01-DNS-DHCP/)**: Core network services.
+- **[02-VLANs-Switching](./2-Intermediate-Level/02-VLANs-Switching/)**: Layer 2 segmentation.
+- **[03-Advanced-Routing](./2-Intermediate-Level/03-Advanced-Routing/)**: OSPF, BGP, Static routing.
+- **[04-Network-Security](./2-Intermediate-Level/04-Network-Security/)**: Firewalls, VPNs, Security Groups.
+- **[05-VPN-Technologies](./2-Intermediate-Level/05-VPN-Technologies/)**: Remote access and Site-to-Site.
+- **[06-Load-Balancing](./2-Intermediate-Level/06-Load-Balancing/)**: Distributing traffic.
+
+### 🛡️ Advanced Level
+- **[01-Cloud-Networking](./3-Advanced-Level/01-Cloud-Networking/)**: VPCs, Cloud Load Balancers.
+- **[02-Container-Networking](./3-Advanced-Level/02-Container-Networking/)**: Docker and CNI.
+- **[03-Service-Mesh](./3-Advanced-Level/03-Service-Mesh/)**: Istio, Linkerd.
+- **[04-SDN-NFV](./3-Advanced-Level/04-SDN-NFV/)**: Software Defined Networking.
+- **[05-Network-Automation](./3-Advanced-Level/05-Network-Automation/)**: NetDevOps.
+- **[06-Performance-Optimization](./3-Advanced-Level/06-Performance-Optimization/)**: Tuning and latency reduction.
+
+---
+
 ## 1. The OSI Model (Simplified)
 
 While there are 7 layers, DevOps engineers focus on these core areas:
@@ -44,12 +72,36 @@ Based on industry standards and the *Linux Command Line* guide:
 - **Minimize the Attack Surface**: Disable any network service you aren't using. Use `ss -tuln` to find "ghost" services.
 - **Prefer Static IPs for Servers**: Use DHCP reservations or static configurations for critical infrastructure to avoid IP changes.
 - **Monitor Bandwidth**: Use `iftop` or `nload` to identify processes hogging the connection.
-- **Immutable Configurations**: In DevOps, define your network (VPCs, Security Groups) as code (e.g., Terraform) rather than manual 	"clicks."
+- **Immutable Configurations**: In DevOps, define your network (VPCs, Security Groups) as code (e.g., Terraform) rather than manual clicks.
 
 ---
 
 ## 🛠️ The DevOps Toolbelt
 Mastering theory is only half the battle. You must master the diagnostic and scanning tools used in the field:
-- **[Networking Tools Deep Dive](./Networking-Tools/README.md)**: Master **Wireshark**, **Nmap**, and **Tcpdump**.
+- **[Networking Tools Deep Dive](./4-Networking-Tools/README.md)**: Master **Wireshark**, **Nmap**, and **Tcpdump**.
+
+-----
+
+## 🏆 Related Certifications
+
+### CompTIA Network+
+*The Foundation of Networking Analysis*
+- **Focus**: Vendor-neutral networking fundamentals.
+- **Key DevOps Relevance**: 
+    - **Ports & Protocols**: Knowing valid vs. ephemeral ports for Security Groups.
+    - **OSI Model**: Troubleshooting "Is it the app (Layer 7) or the firewall (Layer 4)?"
+    - **Subnetting**: Calculating CIDR blocks for VPC design.
+- **Exam Code**: N10-008 / N10-009
+
+### Cisco Certified Network Associate (CCNA)
+*The Industry Standard for Network Engineering*
+- **Focus**: Routing, Switching, IP services, and Security fundamentals.
+- **Key DevOps Relevance**: 
+    - **Routing Logic**: Essential for debugging complex VPC Peering and Transit Gateways.
+    - **CLI Mastery**: Comfort with command-line configuration (Cisco IOS mirrors many Linux network concepts).
+    - **Automation**: New CCNA exams include JSON, REST APIs, and SDN controller concepts relevant to IaC.
+- **Exam Code**: 200-301
+
+---
 
  **Next Step**: Learn how to securely log into these networked systems in the [Linux Basics Module](../02-Linux-Basics/README.md).

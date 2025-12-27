@@ -49,6 +49,18 @@ Introduction to Ruby-based configuration management and the Master-agent archite
 ### 11. [Runbooks & Procedures](./11-Runbooks-Procedures/README.md)
 Crucial operational documentation for incident management and service recovery. Learn the difference between manual and automated remediation.
 
+### 12. [Prompt Engineering](./12-Prompt-Engineering/README.md)
+Advanced prompting techniques including chain-of-thought, few-shot learning, and integration with CI/CD pipelines.
+
+### 13. [Model Context Protocol (MCP)](./13-MCP/README.md)
+Build custom MCP servers, implement tools and resources, and integrate MCP with DevOps workflows.
+
+### 14. [FinOps Optimization](./14-FinOps/README.md)
+Cost allocation strategies, optimization techniques, reserved instances, showback/chargeback models, and automation.
+
+### 15. [Blockchain CI/CD](./15-Blockchain/README.md)
+Build and deploy Smart Contracts using Hardhat and Foundry. Automate testing and deployment pipelines.
+
 ---
 
 ## 🎯 Learning Objectives

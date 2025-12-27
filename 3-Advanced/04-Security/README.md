@@ -435,6 +435,14 @@ Track these metrics to measure DevSecOps maturity:
 
 ---
 
+## 🏆 Related Certifications
+
+- **Certified Kubernetes Security Specialist (CKS)**: Secure container-based applications and Kubernetes platforms during build, deployment, and runtime.
+- **AWS Certified Security - Specialty**: Validates expertise in securing data and workloads in the AWS Cloud.
+- **Microsoft Certified: Cybersecurity Architect Expert (SC-100)**: Design zero trust strategy and architecture.
+
+---
+
 ## 📞 Next Steps
 
 1. **Start**: Begin with [Security Fundamentals](01-Security-Fundamentals/README.md)

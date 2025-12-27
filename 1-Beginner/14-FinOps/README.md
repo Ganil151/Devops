@@ -141,6 +141,12 @@ Before diving into the lessons, ensure you have:
 
 ---
 
+## 🏆 Related Certifications
+
+- **FinOps Certified Practitioner**: Validates your knowledge of the FinOps deployment, framework, and terminology.
+
+---
+
 ## Next Steps
 
 Start with **[Lesson 01: Introduction to FinOps](./01-Introduction/README.md)** to begin your FinOps journey!

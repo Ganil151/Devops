@@ -1,4 +1,0 @@
-![file:///tmp/.CFZMW2/1.png](file:///tmp/.CFZMW2/1.png)
-
-1000BASE-T (also called gigabit Ethernet) is the IEEE standard that defines the requirement for sending information at 1000 Mbps on unshielded twisted-pair cabling, and defines various aspects of running base-band Ethernet on this cabling.
- 1000BASE-T is Gigabit Ethernet (1 gigabit is 1000 megabits per second) on copper cables, using four pairs of Category 5 unshielded twisted pair to achieve the gigabit data rate. 1000BASE-T can be used in data centers for server switching, for uplinks from desktop computer switches, or directly to the desktop for broadband applications. A big advantage of 1000BASE-T is that existing copper cabling can be used instead of having to rewire with optical fiber.

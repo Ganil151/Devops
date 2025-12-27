@@ -105,6 +105,12 @@ terraform fmt
 - [ ] Build and use reusable Modules
 - [ ] Manage secrets with `tfvars` and Environment Variables
 
+## 🏆 Related Certifications
+
+- **HashiCorp Certified: Terraform Associate (003)**: Validates your basic infrastructure automation skills and your understanding of Terraform.
+
+---
+
 ## 🔗 Next Steps
 - **[Ansible Integration](../03-Ansible/)** - Configure the servers Terraform deploys.
 - **[Terraform Cloud](./Terraform-Cloud/)** - Collaborate with your team.

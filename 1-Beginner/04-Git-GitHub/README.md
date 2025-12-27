@@ -103,6 +103,13 @@ git commit --amend -m "Corrected message"
 - [ ] Resolve merge conflicts manually
 - [ ] Use `git stash` for context switching
 
+## 🏆 Related Certifications
+
+- **GitHub Foundations**: Validates your understanding of the core GitHub platform, including collaboration, products, and Git basics.
+- **GitHub Actions**: Validates your skills in automating workflows using GitHub Actions (Intermediate level).
+
+---
+
 ## 🔗 Next Steps
 - **[Data Formats](../05-Data-Formats/)** - Master YAML and JSON for configuration.
 - **[Docker Basics](../06-Docker/)** - Containerize your code versions.

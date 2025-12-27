@@ -43,6 +43,18 @@ Highly advanced cloud patterns, Multi-Cloud strategy, and Cost Optimization.
 ### 09. [Advanced Automation](./09-Advanced-Automation/README.md)
 Enterprise patterns for **Ansible** and **Terraform**, focusing on modularity and state management.
 
+### 10. [Prompt Engineering](./10-Prompt-Engineering/README.md)
+Enterprise AI integration architectures, custom model deployment, and AI-native DevOps platforms.
+
+### 11. [Model Context Protocol (MCP)](./11-MCP/README.md)
+Enterprise MCP deployments, custom transports, high availability, and advanced security patterns.
+
+### 12. [Enterprise FinOps](./12-FinOps/README.md)
+FinOps framework mastery, multi-cloud cost management, unit economics, building FinOps culture, and enterprise governance.
+
+### 13. [Blockchain Ops & Security](./13-Blockchain/README.md)
+Run production-grade Validator nodes, monitor blockchain health, and secure enterprise private chains.
+
 ---
 
 ## 🎯 Learning Objectives

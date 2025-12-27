@@ -164,6 +164,12 @@ ansible-playbook site.yml --limit webservers
 - [ ] Create and use Roles for reusability
 - [ ] Secure secrets with Ansible Vault
 
+## 🏆 Related Certifications
+
+- **Red Hat Certified Specialist in Ansible Automation**: Validates ability to use Ansible to automate the management of systems and applications.
+
+---
+
 ## 🔗 Next Steps
 - **[Terraform Integration](../04-Terraform/)** - Use Ansible to configure what Terraform spawns.
 - **[CI/CD Pipelines](../05-CI-CD/)** - Trigger Ansible runs from Jenkins or GitHub Actions.
