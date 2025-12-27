@@ -46,21 +46,7 @@ Understanding the difference between containers and VMs is crucial:
 ## Docker Architecture
 
 Docker uses a client-server architecture with several key components:
-
-```mermaid
-graph LR
-    CLI[Docker CLI] -->|Commands| DAEMON[Docker Daemon]
-    DAEMON -->|Pulls/Pushes| REGISTRY[Docker Registry<br/>Docker Hub]
-    DAEMON -->|Manages| IMAGES[Images]
-    DAEMON -->|Runs| CONTAINERS[Containers]
-    IMAGES -->|Creates| CONTAINERS
-    
-    style CLI fill:#e1f5ff
-    style DAEMON fill:#fff4e6
-    style REGISTRY fill:#f3e5f5
-    style IMAGES fill:#e8f5e9
-    style CONTAINERS fill:#fce4ec
-```
+![Docker Architecture](../../Images/dockerArch.png)
 
 ### Core Components
 

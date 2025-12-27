@@ -25,22 +25,7 @@ A **Docker image** is a lightweight, standalone, executable package that include
 ### Image Layers
 
 Docker images are built in layers, and each layer represents a change or instruction:
-
-```mermaid
-graph TB
-    subgraph "Docker Image Layers"
-        L1[Base Layer: Ubuntu 20.04] --> L2[Layer 2: Install Python]
-        L2 --> L3[Layer 3: Copy Application Code]
-        L3 --> L4[Layer 4: Install Dependencies]
-        L4 --> L5[Top Layer Container Layer<br/>Writable]
-    end
-    
-    style L1 fill:#e3f2fd
-    style L2 fill:#f3e5f5
-    style L3 fill:#fff3e0
-    style L4 fill:#e8f5e9
-    style L5 fill:#fce4ec
-```
+![Docker Image Layers](../../Images/dockerImageLayer.png)
 
 **Benefits of Layering:**
 - **Caching**: Unchanged layers are reused
@@ -134,29 +119,7 @@ docker tag myapp:latest registry.example.com/myapp:v1.0
 A **container** is a running instance of an image. While images are immutable blueprints, containers are the running processes.
 
 ### Container Lifecycle
-
-```mermaid
-stateDiagram-v2
-    [*] --> Created: docker create
-    Created --> Running: docker start
-    Running --> Paused: docker pause
-    Paused --> Running: docker unpause
-    Running --> Stopped: docker stop
-    Stopped --> Running: docker start
-    Created --> [*]: docker rm
-    Stopped --> [*]: docker rm
-    Running --> [*]: docker rm -f
-    
-    note right of Running
-        Container is executing
-        Resources are allocated
-    end note
-    
-    note right of Stopped
-        Container exists but
-        is not running
-    end note
-```
+![Container Lifecycle](../../Images/containerLifecycle.png)
 
 ### Creating and Running Containers
 

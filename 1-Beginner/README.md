@@ -62,6 +62,12 @@ Introduction to Cloud Financial Operations. Learn cloud billing basics, cost vis
 ### 15. [Blockchain Fundamentals](./15-Blockchain/README.md)
 Understand decentralized ledgers, nodes, and wallets. Learn how to interact with a blockchain using CLI tools.
 
+### 16. [Windows Basics](./16-Windows-Basics/README.md)
+Master Windows Server administration, PowerShell scripting, and key Windows-specific DevOps concepts.
+
+### 17. [Nginx Web Server](./17-Nginx/README.md)
+Comprehensive guide to Nginx: Architecture, Installation, Configuration (Blocks/Contexts), Reverse Proxy, Load Balancing, and Security best practices.
+
 ---
 
 ## 🎯 Learning Objectives

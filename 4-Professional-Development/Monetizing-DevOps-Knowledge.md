@@ -96,6 +96,27 @@ Battle-tested hacks, tips, and growth strategies to 10x your results and acceler
 
 ---
 
+### 📱 [10-App-Monetization](./10-App-Monetization/) - App Store & Marketplaces
+Transform your DevOps tools into products. Learn monetization models (Paid, Freemium, SaaS) and how to publish to Apple App Store, Google Play, and GitHub Marketplace.
+
+- **[README.md](./10-App-Monetization/README.md)** - Monetization guide and submission checklists for iOS and Android.
+
+---
+
+### 💻 [11-Freelancing](./11-Freelancing/) - Immediate Income
+Exchange your specialized DevOps skills for high hourly rates on vetted platforms and bug bounty programs.
+
+- **[README.md](./11-Freelancing/README.md)** - Guide to UpWork, Toptal, and Bug Bounty platforms (HackerOne).
+
+---
+
+### 📦 [12-Digital-Assets](./12-Digital-Assets/) - Passive Income
+Build once, sell forever. Monetize templates, scripts, and influence through affiliate marketing.
+
+- **[README.md](./12-Digital-Assets/README.md)** - Selling Notion templates, Terraform modules, and affiliate strategies.
+
+---
+
 > [!IMPORTANT]
 > **Key Strategy**: Don't try all 30 at once. Start by picking one "High-Touch" service (like Consulting) to generate immediate cash flow, and one "Scalable" product (like an E-book or Micro-SaaS) for long-term passive income.
 
