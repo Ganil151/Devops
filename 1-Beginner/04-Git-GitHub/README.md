@@ -9,6 +9,24 @@ Git is the foundation of DevOps. It allows teams to collaborate, track changes, 
 - Learn collaborative workflows (Forking, PRs)
 - Navigate GitHub features for project management
 
+## 📂 Module Structure
+
+### 🔰 Beginner Level
+- **[01-Introduction](./1-Beginner-Level/01-Introduction/)**: Core concepts of Version Control, Git, and GitHub.
+- **[02-Git-Fundamentals](./1-Beginner-Level/02-Git-Fundamentals/)**: Architecture, object models, and basic workflows.
+- **[03-Git-Commands](./1-Beginner-Level/03-Git-Commands/)**: Essential commands for initialization, staging, and committing.
+
+### 🚀 Intermediate Level
+- **[01-Git-Workflows](./2-Intermediate-Level/01-Git-Workflows/)**: GitFlow, GitHub Flow, and Trunk-Based Development.
+- **[02-GitHub-Integration](./2-Intermediate-Level/02-GitHub-Integration/)**: Issues, Projects, and Pull Requests.
+- **[03-GitHub-Actions](./2-Intermediate-Level/03-GitHub-Actions/)**: CI/CD basics with GitHub Actions.
+
+### 🛡️ Advanced Level
+- **[01-Git-Advanced](./3-Advanced-Level/01-Git-Advanced/)**: Rebasing, hooks, stashing, and internals.
+- **[02-Security-Best-Practices](./3-Advanced-Level/02-Security-Best-Practices/)**: Signing commits, scanning for secrets, and branch protection.
+
+---
+
 ## 📖 Essential Git Commands
 
 ### 📁 Initializing and Staging

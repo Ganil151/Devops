@@ -5,6 +5,34 @@ Complete guide to SSH key generation, distribution, rotation, and lifecycle mana
 ## Key Generation
 
 ### Key Types and Algorithms
+
+SSH uses **Public Key Cryptography** (Asymmetric Encryption).
+- **Public Key** (`.pub`): The "Lock". You put this on servers you want to access.
+- **Private Key**: The "Key". You keep this secret on your laptop.
+
+```mermaid
+graph LR
+    subgraph Your_Laptop
+    A[Private Key]
+    end
+    
+    subgraph Remote_Server
+    B[Public Key<br>authorized_keys]
+    end
+    
+    A --"Unlocks"--> B
+    
+    style A fill:#aaffaa,stroke:#333
+    style B fill:#ffaaaa,stroke:#333
+```
+
+**Recommended Algorithms:**
+
+1.  **Ed25519** (`ssh-ed25519`): **Best Choice**.
+    *   *Why?* Modern, very fast, short keys, and secure. Standard since 2014.
+2.  **RSA** (`ssh-rsa`): **Legacy Fallback**.
+    *   *Why?* Use ONLY if you need to connect to very old systems that don't support Ed25519. Must use at least 4096 bits.
+
 ```bash
 # Ed25519 (recommended - fastest, most secure)
 ssh-keygen -t ed25519 -C "user@example.com"
@@ -12,7 +40,7 @@ ssh-keygen -t ed25519 -C "user@example.com"
 # RSA (traditional, widely supported)
 ssh-keygen -t rsa -b 4096 -C "user@example.com"
 
-# ECDSA (elliptic curve)
+# ECDSA (elliptic curve) - Good, but Ed25519 is preferred
 ssh-keygen -t ecdsa -b 521 -C "user@example.com"
 
 # DSA (deprecated, avoid)

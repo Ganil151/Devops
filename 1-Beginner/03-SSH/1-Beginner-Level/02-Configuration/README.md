@@ -100,9 +100,27 @@ PrintLastLog yes
 ## SSH Client Configuration
 
 ### Global Client Configuration
-```bash
 # Location: /etc/ssh/ssh_config
 
+#### Configuration Precedence & "First Match Wins"
+SSH uses a **First Match Wins** strategy for `Host` blocks. If multiple blocks match a hostname, the *first* one sets the parameters. This allows you to set specific defaults first, and general defaults last.
+
+```mermaid
+graph TD
+    A[Start: Read Config] --> B{CLI Arguments?};
+    B -- Yes --> C[Apply CLI Args];
+    B -- No --> D{User Config?};
+    D -- ~/.ssh/config --> E[Apply First Match];
+    E --> F{System Config?};
+    F -- /etc/ssh/ssh_config --> G[Apply Remaining];
+    G --> H[Default Values];
+    
+    style C fill:#ff9999,stroke:#333
+    style E fill:#99ff99,stroke:#333
+    style G fill:#99ccff,stroke:#333
+```
+
+```bash
 Host *
     Protocol 2
     ForwardAgent no

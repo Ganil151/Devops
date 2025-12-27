@@ -4,6 +4,23 @@ Comprehensive guide to diagnosing and resolving SSH connection issues and proble
 
 ## Common Connection Issues
 
+When SSH fails, follow this logical flow to identify the root cause:
+
+```mermaid
+graph TD
+    A[Start: SSH Fails] --> B{Ping Host?};
+    B -- No --> C[Network/DNS Issue];
+    B -- Yes --> D{Port 22 Open?};
+    D -- Connection Refused --> E[Service Down/Firewall];
+    D -- Timeout --> E;
+    D -- Yes --> F{Permission Denied?};
+    F -- Yes --> G[Auth/Key Issue];
+    
+    style C fill:#ff9999
+    style E fill:#ff9999
+    style G fill:#ff9999
+```
+
 ### Connection Refused
 
 #### Symptoms

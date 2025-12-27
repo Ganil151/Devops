@@ -303,6 +303,27 @@ done
 
 ### SSH Certificate Authority
 
+Certificate-based authentication scales better than managing thousands of `authorized_keys`. It uses a "Trust Chain" model similar to HTTPS.
+
+```mermaid
+sequenceDiagram
+    participant CA as Certificate Authority
+    participant User as User (Laptop)
+    participant Server as SSH Server
+    
+    Note over CA: Generate CA Key Pair
+    CA->>Server: Copy CA Public Key
+    Note over Server: Server Trusts CA
+    
+    User->>CA: Send Public Key (id_ed25519.pub)
+    CA->>CA: Sign Key with CA Private Key
+    CA-->>User: Return Certificate (id_ed25519-cert.pub)
+    
+    User->>Server: Login with Cert
+    Note over Server: Validates Cert Signature using CA Public Key
+    Server-->>User: Access Granted
+```
+
 #### Create CA Key
 ```bash
 # Generate CA key

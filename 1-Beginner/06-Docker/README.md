@@ -14,18 +14,18 @@ Perfect for those new to Docker and containerization.
 
 | Topic | Description | Key Concepts |
 |-------|-------------|--------------|
-| **[Introduction](Beginner/01-Introduction/README.md)** | What is Docker? Why containerization? | Architecture, Installation, First container |
-| **[Images & Containers](Beginner/02-Images-and-Containers/README.md)** | Working with images and containers | Lifecycle, Commands, Docker Hub |
-| **[Dockerfile Basics](Beginner/03-Dockerfile-Basics/README.md)** | Building custom images | Instructions, Best practices, Examples |
-| **[Debugging](Beginner/04-Debugging/README.md)** | Troubleshooting and logs | Docker logs, Exec, Exit codes |
+| **[Introduction](01-Beginner/01-Introduction/README.md)** | What is Docker? Why containerization? | Architecture, Installation, First container |
+| **[Images & Containers](01-Beginner/02-Images-and-Containers/README.md)** | Working with images and containers | Lifecycle, Commands, Docker Hub |
+| **[Dockerfile Basics](01-Beginner/03-Dockerfile-Basics/README.md)** | Building custom images | Instructions, Best practices, Examples |
+| **[Debugging](01-Beginner/04-Debugging/README.md)** | Troubleshooting and logs | Docker logs, Exec, Exit codes |
 
 #### Docker Compose Fundamentals
 
 | Topic | Description | Key Concepts |
 |-------|-------------|--------------|
-| **[Compose Basics](Docker-Compose/Beginner/01-Basics/README.md)** | Multi-container applications | Services, Commands, Workflow |
-| **[Service Configuration](Docker-Compose/Beginner/02-Service-Configuration/README.md)** | Defining and configuring services | Ports, Environment, Dependencies |
-| **[Database Storage](Docker-Compose/Beginner/03-Database-Storage/README.md)** | Persistence for PSQL, MySQL, etc | Data paths, Init scripts, Volumes |
+| **[Compose Basics](04-Docker-Compose/Beginner/01-Basics/README.md)** | Multi-container applications | Services, Commands, Workflow |
+| **[Service Configuration](04-Docker-Compose/Beginner/02-Service-Configuration/README.md)** | Defining and configuring services | Ports, Environment, Dependencies |
+| **[Database Storage](04-Docker-Compose/Beginner/03-Database-Storage/README.md)** | Persistence for PSQL, MySQL, etc | Data paths, Init scripts, Volumes |
 
 ### 🟡 Intermediate Level
 
@@ -35,20 +35,20 @@ For developers ready to deploy applications in production.
 
 | Topic | Description | Key Concepts |
 |-------|-------------|--------------|
-| **[Docker Networking](Intermediate/01-Docker-Networking/README.md)** | Container communication | Bridge, Host, Overlay networks |
-| **[Docker Volumes](Intermediate/02-Docker-Volumes/README.md)** | Data persistence and management | Named volumes, Bind mounts, Backup |
-| **[Multi-Stage Builds](Intermediate/03-Multi-Stage-Builds/README.md)** | Optimized production images | Image size, Security, Performance |
-| **[Private Registry](Intermediate/04-Private-Registry/README.md)** | Image distribution and management | Docker Hub, Private registries, Tagging |
-| **[Backup & Restore](Intermediate/05-Backup-Restore-Migration/README.md)** | Data management | Backup, Restore, Migration |
-| **[NGINX & SSL](Intermediate/06-Nginx-SSL/README.md)** | Reverse Proxy & Let's Encrypt | NGINX, SSL/TLS, Certbot |
+| **[Docker Networking](02-Intermediate/01-Docker-Networking/README.md)** | Container communication | Bridge, Host, Overlay networks |
+| **[Docker Volumes](02-Intermediate/02-Docker-Volumes/README.md)** | Data persistence and management | Named volumes, Bind mounts, Backup |
+| **[Multi-Stage Builds](02-Intermediate/03-Multi-Stage-Builds/README.md)** | Optimized production images | Image size, Security, Performance |
+| **[Private Registry](02-Intermediate/04-Private-Registry/README.md)** | Image distribution and management | Docker Hub, Private registries, Tagging |
+| **[Backup & Restore](02-Intermediate/05-Backup-Restore-Migration/README.md)** | Data management | Backup, Restore, Migration |
+| **[NGINX & SSL](02-Intermediate/06-Nginx-SSL/README.md)** | Reverse Proxy & Let's Encrypt | NGINX, SSL/TLS, Certbot |
 
 #### Advanced Docker Compose
 
 | Topic | Description | Key Concepts |
 |-------|-------------|--------------|
-| **[Advanced Features](Docker-Compose/Intermediate/01-Advanced-Features/README.md)** | Extends, profiles, overrides | Multi-environment configs |
-| **[Networks & Volumes](Docker-Compose/Intermediate/02-Networks-Volumes/README.md)** | Complex networking and storage | Custom networks, Volume drivers |
-| **[Secrets & Configs](Docker-Compose/Intermediate/03-Secrets-Configs/README.md)** | Secure configuration management | Secrets, External configs |
+| **[Advanced Features](04-Docker-Compose/Intermediate/01-Advanced-Features/README.md)** | Extends, profiles, overrides | Multi-environment configs |
+| **[Networks & Volumes](04-Docker-Compose/Intermediate/02-Networks-Volumes/README.md)** | Complex networking and storage | Custom networks, Volume drivers |
+| **[Secrets & Configs](04-Docker-Compose/Intermediate/03-Secrets-Configs/README.md)** | Secure configuration management | Secrets, External configs |
 
 ### 🔴 Advanced Level
 
@@ -58,38 +58,38 @@ Production-grade Docker knowledge for DevOps engineers.
 
 | Topic | Description | Key Concepts |
 |-------|-------------|--------------|
-| **[Docker Security](Advanced/01-Docker-Security/README.md)** | Securing containers and images | Best practices, Scanning, Hardening |
-| **[Resource Management](Advanced/02-Resource-Management/README.md)** | CPU, memory, and resource limits | Constraints, Health checks, Monitoring |
-| **[Production Considerations](Advanced/03-Production-Considerations/README.md)** | Running Docker in production | High availability, Logging, Troubleshooting |
+| **[Docker Security](03-Advanced/01-Docker-Security/README.md)** | Securing containers and images | Best practices, Scanning, Hardening |
+| **[Resource Management](03-Advanced/02-Resource-Management/README.md)** | CPU, memory, and resource limits | Constraints, Health checks, Monitoring |
+| **[Production Considerations](03-Advanced/03-Production-Considerations/README.md)** | Running Docker in production | High availability, Logging, Troubleshooting |
 
 #### Production Docker Compose
 
 | Topic | Description | Key Concepts |
 |-------|-------------|--------------|
-| **[Production Setup](Docker-Compose/Advanced/01-Production/README.md)** | Production configurations | Scaling, Resource limits, Restart policies |
-| **[Orchestration](Docker-Compose/Advanced/02-Orchestration/README.md)** | Beyond Compose | Docker Swarm, Kubernetes migration |
+| **[Production Setup](04-Docker-Compose/Advanced/01-Production/README.md)** | Production configurations | Scaling, Resource limits, Restart policies |
+| **[Orchestration](04-Docker-Compose/Advanced/02-Orchestration/README.md)** | Beyond Compose | Docker Swarm, Kubernetes migration |
 
 ## 🎯 Learning Paths
 
 ### Path 1: Developer Quickstart (1-2 days)
 
-1. [Introduction](Beginner/01-Introduction/README.md) - Understand Docker basics
-2. [Images & Containers](Beginner/02-Images-and-Containers/README.md) - Run and manage containers
-3. [Dockerfile Basics](Beginner/03-Dockerfile-Basics/README.md) - Build custom images
-4. [Compose Basics](Docker-Compose/Beginner/01-Basics/README.md) - Multi-container apps
-5. [Database Storage](Docker-Compose/Beginner/03-Database-Storage/README.md) - DB Persistence
-6. [Debugging](Beginner/04-Debugging/README.md) - Troubleshooting containers
+1. [Introduction](01-Beginner/01-Introduction/README.md) - Understand Docker basics
+2. [Images & Containers](01-Beginner/02-Images-and-Containers/README.md) - Run and manage containers
+3. [Dockerfile Basics](01-Beginner/03-Dockerfile-Basics/README.md) - Build custom images
+4. [Compose Basics](04-Docker-Compose/Beginner/01-Basics/README.md) - Multi-container apps
+5. [Database Storage](04-Docker-Compose/Beginner/03-Database-Storage/README.md) - DB Persistence
+6. [Debugging](01-Beginner/04-Debugging/README.md) - Troubleshooting containers
 
 **Goal**: Run containerized development environments
 
 ### Path 2: Production Deployment (1 week)
 
 1. Complete Developer Quickstart
-2. [Docker Networking](Intermediate/01-Docker-Networking/README.md) - Network your services
-3. [Docker Volumes](Intermediate/02-Docker-Volumes/README.md) - Persist data properly
-4. [Multi-Stage Builds](Intermediate/03-Multi-Stage-Builds/README.md) - Optimize images
-5. [Docker Security](Advanced/01-Docker-Security/README.md) - Secure your containers
-6. [Production Setup](Docker-Compose/Advanced/01-Production/README.md) - Deploy to production
+2. [Docker Networking](02-Intermediate/01-Docker-Networking/README.md) - Network your services
+3. [Docker Volumes](02-Intermediate/02-Docker-Volumes/README.md) - Persist data properly
+4. [Multi-Stage Builds](02-Intermediate/03-Multi-Stage-Builds/README.md) - Optimize images
+5. [Docker Security](03-Advanced/01-Docker-Security/README.md) - Secure your containers
+6. [Production Setup](04-Docker-Compose/Advanced/01-Production/README.md) - Deploy to production
 
 **Goal**: Deploy secure, production-ready applications
 

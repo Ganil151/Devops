@@ -26,34 +26,7 @@
 ## Docker vs Virtual Machines
 
 Understanding the difference between containers and VMs is crucial:
-
-```mermaid
-graph TB
-    subgraph "Virtual Machines Architecture"
-        A1[App A] --> B1[Bins/Libs]
-        A2[App B] --> B2[Bins/Libs]
-        A3[App C] --> B3[Bins/Libs]
-        B1 --> OS1[Guest OS]
-        B2 --> OS2[Guest OS]
-        B3 --> OS3[Guest OS]
-        OS1 --> HV[Hypervisor]
-        OS2 --> HV
-        OS3 --> HV
-        HV --> HOST1[Host Operating System]
-        HOST1 --> HW1[Infrastructure]
-    end
-    
-    subgraph "Docker Containers Architecture"
-        C1[App A] --> D1[Bins/Libs]
-        C2[App B] --> D2[Bins/Libs]
-        C3[App C] --> D3[Bins/Libs]
-        D1 --> DE[Docker Engine]
-        D2 --> DE
-        D3 --> DE
-        DE --> HOST2[Host Operating System]
-        HOST2 --> HW2[Infrastructure]
-    end
-```
+![Docker vs VM](../../Images/virtualVsDocker.png)
 
 ### Comparison Table
 

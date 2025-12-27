@@ -4,6 +4,24 @@ Comprehensive guide to SSH best practices for security, performance, and operati
 
 ## Security Best Practices
 
+Understanding where to apply security controls is critical. We follow a "Defense in Depth" approach:
+
+```mermaid
+graph TD
+    A[Internet] --> B{Network Layer};
+    B -- Firewall/UFW --> C{Host Layer};
+    C -- TCP Wrappers/Fail2Ban --> D{Service Layer};
+    D -- SSHD Config --> E{Authentication};
+    E -- Keys/MFA --> F[Shell Access];
+    
+    style B fill:#ff9999,stroke:#333,stroke-width:2px
+    style C fill:#ffcc99,stroke:#333,stroke-width:2px
+    style D fill:#ffff99,stroke:#333,stroke-width:2px
+    style E fill:#99ff99,stroke:#333,stroke-width:2px
+```
+
+### Authentication Security
+
 ### Authentication Security
 ```bash
 # Use strong key algorithms
@@ -488,3 +506,23 @@ echo "SSH disaster recovery completed. Check $RECOVERY_LOG for details."
 ```
 
 This comprehensive best practices guide ensures secure, performant, and maintainable SSH operations in production environments.
+
+## 📜 Audit & Compliance Frameworks
+
+In regulated environments (like Finance or Healthcare), "it works" isn't enough. You need to prove *who* did *what*.
+
+### 1. The "AAA" Model
+- **Authentication**: Proving identity (SSH Keys, Certificates).
+- **Authorization**: Defining permission (Sudo groups, `AllowUsers`).
+- **Accounting**: Tracking activity (Logs, Session Recording).
+
+### 2. CIS Benchmark Checklist
+The Center for Internet Security (CIS) provides standard benchmarks for SSH:
+- [ ] Ensure permissions on `/etc/ssh/sshd_config` are configured.
+- [ ] Ensure SSH Protocol Version 2 is set.
+- [ ] Ensure SSH access is limited (Deny/Allow users).
+- [ ] Ensure SSH warning banner is configured (Legal notice).
+
+### 3. Session Auditing
+For high-security jump hosts, you may need to record entire sessions to video-like files.
+*See the "Operational Excellence" section for the `script` command usage.*

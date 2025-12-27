@@ -93,7 +93,61 @@ echo "Inventory updated: $INVENTORY_FILE"
 
 ### Deployment Automation
 
+### Deployment Automation
+
+Automating deployments via SSH is a foundational DevOps pattern.
+
+#### Typical Workflow
+
+```mermaid
+sequenceDiagram
+    participant CI as CI Runner (Jenkins/GitHub)
+    participant Bastion as Bastion Host
+    participant Web as Web Server
+    
+    Note over CI: Build Artifact (dist/)
+    CI->>Bastion: SSH -J (Jump)
+    Bastion->>Web: SCP Artifacts
+    
+    CI->>Web: ssh 'systemctl stop app'
+    CI->>Web: ssh 'mv dist/ /opt/app/'
+    CI->>Web: ssh 'systemctl start app'
+    
+    CI-->>Web: ssh 'curl localhost/health'
+    Web-->>CI: 200 OK
+    
+    Note over CI: Deployment Success!
+```
+
 #### Application Deployment Script
+Below is a robust script that handles multi-server deployment with health checks.
+
+````carousel
+![Deployment Architecture](../../../00-Resources/03-Images-Diagrams/deployment-arch.png)
+<!-- slide -->
+```bash
+#!/bin/bash
+# simplified-deploy.sh
+
+# 1. Define Target Servers
+SERVERS=("10.0.1.10" "10.0.1.11")
+
+# 2. Iterate and Deploy
+for ip in "${SERVERS[@]}"; do
+    echo "Deploying to $ip"
+    
+    # Copy new code
+    scp -r ./dist user@$ip:/var/www/html/
+    
+    # Restart Service
+    ssh user@$ip "sudo systemctl restart nginx"
+done
+```
+````
+
+### Advanced Deployment Script
+For production, you need error handling, rollbacks, and health checks.
+
 ```bash
 #!/bin/bash
 # deploy-app.sh

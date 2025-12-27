@@ -8,6 +8,30 @@ Advanced SSH tunneling techniques for secure network access and service exposure
 
 Forward local port to remote service through SSH tunnel.
 
+**Scenario**: You are on your laptop and need to access a database (MySQL on port 3306) on a private server that only accepts connections from the "Bastion" host.
+
+```mermaid
+graph LR
+    subgraph Your_Laptop
+    A[Local Client<br>Port 8080]
+    end
+    
+    subgraph SSH_Gateway
+    B[Bastion Server<br>SSHD]
+    end
+    
+    subgraph Private_Network
+    C[Database<br>Port 3306]
+    end
+    
+    A --"SSH Tunnel (Encrypted)"--> B
+    B --"Internal Network"--> C
+    
+    style A fill:#aaffaa,stroke:#333
+    style B fill:#aaaaff,stroke:#333
+    style C fill:#ffaaaa,stroke:#333
+```
+
 #### Basic Local Forwarding
 ```bash
 # Forward local port 8080 to remote port 80
@@ -45,6 +69,30 @@ done
 
 Forward remote port to local service through SSH tunnel.
 
+**Scenario**: You are developing a webhook handler on your local laptop (no public IP), and you need to let an external service (like Stripe/GitHub) call your local API.
+
+```mermaid
+graph RL
+    subgraph Public_Internet
+    A[External User]
+    end
+    
+    subgraph Public_VPS
+    B[Public Server<br>Port 8080]
+    end
+    
+    subgraph Your_Laptop
+    C[Local App<br>Port 3000]
+    end
+    
+    A --"HTTP Request"--> B
+    B --"SSH Tunnel (Reverse)"--> C
+    
+    style A fill:#ffcc99,stroke:#333
+    style B fill:#aaaaff,stroke:#333
+    style C fill:#aaffaa,stroke:#333
+```
+
 #### Basic Remote Forwarding
 ```bash
 # Forward remote port 8080 to local port 80
@@ -78,6 +126,34 @@ done
 ### Dynamic Port Forwarding (SOCKS Proxy)
 
 Create SOCKS proxy for dynamic port forwarding.
+
+**Scenario**: You are in a coffee shop with insecure WiFi. You want to route *all* your browser traffic through your secure home server to avoid sniffing.
+
+```mermaid
+graph LR
+    subgraph Your_Laptop
+    A[Browser<br>SOCKS Proxy]
+    end
+    
+    subgraph Home_Server
+    B[SSHD]
+    end
+    
+    subgraph Internet
+    C[Twitter]
+    D[Google]
+    E[Bank]
+    end
+    
+    A --"Encrypted Tunnel"--> B
+    B --> C
+    B --> D
+    B --> E
+    
+    style A fill:#aaffaa,stroke:#333
+    style B fill:#aaaaff,stroke:#333
+    style C fill:#eeeeee,stroke:#333
+```
 
 #### SOCKS Proxy Setup
 ```bash
