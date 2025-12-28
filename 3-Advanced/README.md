@@ -55,6 +55,9 @@ FinOps framework mastery, multi-cloud cost management, unit economics, building 
 ### 13. [Blockchain Ops & Security](./13-Blockchain/README.md)
 Run production-grade Validator nodes, monitor blockchain health, and secure enterprise private chains.
 
+### 14. [Advanced API Architectures](./14-Advanced-API-Architectures/README.md)
+High-performance communication for microservices. gRPC, GraphQL, BFF patterns, and Event-Driven architecture.
+
 ---
 
 ## 🎯 Learning Objectives

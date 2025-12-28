@@ -27,9 +27,9 @@ graph TB
     Host --> Router
     Router <--> Internet[External Network]
     
-    style Bridge fill:#e3f2fd
-    style Host fill:#f3e5f5
-    style C6 fill:#ffcdd2
+    style Bridge fill:#e3f2fd,color:#000000
+    style Host fill:#f3e5f5,color:#000000
+    style C6 fill:#ffcdd2,color:#000000
 ```
 
 ### Network Driver Types
@@ -584,6 +584,14 @@ ___
 2.  Manage port conflicts manually ensuring no two services listen on the same port.
 **Benefit**: Removes the Docker network bridge overhead, providing bare-metal network performance.
 
+### Scenario 4: Debugging Intermittent Connectivity
+**Context**: Service A intermittently fails to connect to Service B in a microservices architecture.
+**Solution**: Use `docker network inspect` to verify both containers are on the same network. Check the embedded DNS (`127.0.0.11`) inside the container.
+1.  Run `docker exec -it serviceA nslookup serviceB`.
+2.  If it fails, check if the container was restarted and assigned a new IP (if hardcoded).
+3.  Switch to using Docker Service Discovery (container names) instead of IPs.
+**Benefit**: Ensures reliable service-to-service communication without IP dependency.
+
 ## Common Interview Questions
 
 1.  **Q: What is the default network driver in Docker, and what are its limitations?**
@@ -600,6 +608,12 @@ ___
 
 5.  **Q: How does Docker handle DNS resolution?**
     *   **A:** Docker runs an embedded DNS server at `127.0.0.11`. On custom bridge networks, containers can resolve each other by container name or service name. on the default bridge, this features is disabled.
+
+6.  **Q: What is the difference between `macvlan` and `ipvlan`?**
+    *   **A:** `macvlan` assigns a unique MAC address to each container, making it appear as a physical device on the network. `ipvlan` shares the host's MAC address but assigns unique IP addresses, which is useful when the network switch blocks multiple MAC addresses on a single port.
+
+7.  **Q: How do you secure Docker overlay networks?**
+    *   **A:** You can enable data plane encryption when creating the overlay network using the `--opt encrypted` flag. This encrypts the traffic between containers on different nodes using IPsec.
 
 ## Comprehensive Knowledge Quiz
 
@@ -721,6 +735,36 @@ ___
     *   c) Only if they are of the same driver type
     *   d) Only in Docker Swarm mode
 
+21. Which command disconnects a container from a network?
+    *   a) `docker network leave`
+    *   b) `docker network disconnect`
+    *   c) `docker disconnect`
+    *   d) `docker network drop`
+
+22. What is the purpose of the `--link` flag?
+    *   a) It is the modern way to connect containers
+    *   b) It is deprecated and should be replaced by custom networks
+    *   c) It creates a VPN tunnel
+    *   d) It links the container to the host
+
+23. Which network driver supports encryption of traffic between containers?
+    *   a) bridge
+    *   b) host
+    *   c) overlay
+    *   d) macvlan
+
+24. How do you map a UDP port?
+    *   a) `-p 80:80/udp`
+    *   b) `-p 80:80:udp`
+    *   c) `--udp 80:80`
+    *   d) `-u 80:80`
+
+25. Which command displays the network configuration of a container?
+    *   a) `docker config show`
+    *   b) `docker inspect`
+    *   c) `docker network view`
+    *   d) `docker ipconfig`
+
 ### Quiz Answer Key
 
 1.  **c) bridge** - It is the default driver.
@@ -743,6 +787,11 @@ ___
 18. **b) -p host:container** - Host port comes first.
 19. **a) docker network create --subnet...** - Correct syntax.
 20. **b) Yes** - Containers can join multiple networks.
+21. **b) docker network disconnect** - Removes a container from a network.
+22. **b) It is deprecated** - Use user-defined bridges instead.
+23. **c) overlay** - Supports `--opt encrypted`.
+24. **a) -p 80:80/udp** - Specify protocol after port.
+25. **b) docker inspect** - Shows full configuration including networks.
 
 ## Next Steps
 

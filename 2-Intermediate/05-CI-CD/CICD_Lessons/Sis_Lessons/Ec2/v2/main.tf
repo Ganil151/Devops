@@ -5,7 +5,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws" # Specifies the AWS provider from HashiCorp
-      version = "~> 6.0"       # Pins the AWS provider to version 6.x
+      version = "~> 6.0"        # Pins the AWS provider to version 6.x
     }
   }
 }
@@ -29,9 +29,9 @@ module "security_group_1" {
   ingress_rules = [
     # Allow SSH from your PC (replace YOUR_IP with your public IP)
     {
-      from_port   = 22               # Specifies the start port for the rule (SSH uses port 22)
-      to_port     = 22               # Specifies the end port for the rule
-      protocol    = "tcp"            # Specifies the protocol (TCP for SSH)
+      from_port   = 22                     # Specifies the start port for the rule (SSH uses port 22)
+      to_port     = 22                     # Specifies the end port for the rule
+      protocol    = "tcp"                  # Specifies the protocol (TCP for SSH)
       cidr_blocks = ["148.101.225.207/32"] # Allows access only from this specific IP address (your PC's public IP)
     },
     # Allow SSH from Client-1 to Client-2
@@ -102,29 +102,29 @@ module "security_group_3" {
 
 # Call the ec2_instance module to create 3 EC2 instances
 module "ec2_instance_1" {
-  source            = "./modules/ec2_instance" # Points to the local directory containing the ec2_instance module
-  name              = "client-1"              # Defines the name of the EC2 instance
-  ami               = var.ami                 # Specifies the AMI ID for the instance
-  instance_type     = var.instance_type       # Specifies the instance type (e.g., t2.micro)
-  key_name          = module.key_pair.key_name # Uses the SSH key pair created earlier
+  source            = "./modules/ec2_instance"                  # Points to the local directory containing the ec2_instance module
+  name              = "client-1"                                # Defines the name of the EC2 instance
+  ami               = var.ami                                   # Specifies the AMI ID for the instance
+  instance_type     = var.instance_type                         # Specifies the instance type (e.g., t2.micro)
+  key_name          = module.key_pair.key_name                  # Uses the SSH key pair created earlier
   security_group_id = module.security_group_1.security_group_id # Associates the instance with its security group
 }
 
 module "ec2_instance_2" {
-  source            = "./modules/ec2_instance" # Points to the local directory containing the ec2_instance module
-  name              = "client-2"              # Defines the name of the EC2 instance
-  ami               = var.ami                 # Specifies the AMI ID for the instance
-  instance_type     = var.instance_type       # Specifies the instance type (e.g., t2.micro)
-  key_name          = module.key_pair.key_name # Uses the SSH key pair created earlier
+  source            = "./modules/ec2_instance"                  # Points to the local directory containing the ec2_instance module
+  name              = "client-2"                                # Defines the name of the EC2 instance
+  ami               = var.ami                                   # Specifies the AMI ID for the instance
+  instance_type     = var.instance_type                         # Specifies the instance type (e.g., t2.micro)
+  key_name          = module.key_pair.key_name                  # Uses the SSH key pair created earlier
   security_group_id = module.security_group_2.security_group_id # Associates the instance with its security group
 }
 
 module "ec2_instance_3" {
-  source            = "./modules/ec2_instance" # Points to the local directory containing the ec2_instance module
-  name              = "server"                # Defines the name of the EC2 instance
-  ami               = var.ami                 # Specifies the AMI ID for the instance
-  instance_type     = var.instance_type       # Specifies the instance type (e.g., t2.micro)
-  key_name          = module.key_pair.key_name # Uses the SSH key pair created earlier
+  source            = "./modules/ec2_instance"                  # Points to the local directory containing the ec2_instance module
+  name              = "server"                                  # Defines the name of the EC2 instance
+  ami               = var.ami                                   # Specifies the AMI ID for the instance
+  instance_type     = var.instance_type                         # Specifies the instance type (e.g., t2.micro)
+  key_name          = module.key_pair.key_name                  # Uses the SSH key pair created earlier
   security_group_id = module.security_group_3.security_group_id # Associates the instance with its security group
 }
 

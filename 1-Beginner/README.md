@@ -44,16 +44,16 @@ Automating your first tasks using GitHub Actions and simple pipelines.
 ### 09. [Cloud Foundations](./09-Cloud-Foundations/README.md)
 Introduction to Compute, Storage, and Networking in the cloud (AWS/Azure/GCP).
 
-### 10. [Software Stack Foundations](./10-Software-Stack/README.md)
+### 10. [Software Stack Foundations](Software%20Stack%20Foundations.md)
 Understand Frontend, Backend, Frameworks, and Runtimes. Know the "What" before you "How."
 
-### 11. [Web-Design & Frameworks](./11-Web-Design/README.md)
+### 11. [Web-Design & Frameworks](Web%20Design%20&%20Frameworks.md)
 Explore modern Python web frameworks like **Flask** and **Django**. Learn how applications are structured and how to containerize them for production.
 
-### 12. [Prompt Engineering](./12-Prompt-Engineering/README.md)
+### 12. [Prompt Engineering](DevOps%20Prompt%20Engineering%20-%20Beginner%20Level.md)
 Learn the fundamentals of crafting effective prompts for AI tools. Leverage AI assistants for documentation, scripting, and troubleshooting.
 
-### 13. [Model Context Protocol (MCP)](./13-MCP/README.md)
+### 13. [Model Context Protocol (MCP)](Model%20Context%20Protocol%20(MCP)%20-%20Beginner%20Level.md)
 Understand the open standard for connecting AI models to external tools and data sources. Build your first MCP integrations.
 
 ### 14. [FinOps Fundamentals](./14-FinOps/README.md)
@@ -67,6 +67,9 @@ Master Windows Server administration, PowerShell scripting, and key Windows-spec
 
 ### 17. [Nginx Web Server](./17-Nginx/README.md)
 Comprehensive guide to Nginx: Architecture, Installation, Configuration (Blocks/Contexts), Reverse Proxy, Load Balancing, and Security best practices.
+
+### 18. [API Basics](./18-API-Basics/README.md)
+Fundamentals of how software talks to each other. HTTP Methods, Status Codes, and JSON/XML data formats.
 
 ---
 

@@ -6,14 +6,26 @@ Cloud computing is the on-demand delivery of IT resources over the internet. Thi
 
 ## ☁️ Provider Overview
 
-### [02. AWS Basics](./02-AWS-Basics/README.md)
-The market leader. Learn about EC2, S3, RDS, and IAM.
+### [01. Basic Networking](./01-Basic-Networking/README.md)
+Understanding VPCs, Subnets, Gateways, and Security Groups is the first step in cloud engineering.
 
-### [03. Azure Basics](./03-Azure-Basics/README.md)
-The preferred choice for enterprise Microsoft shops. Focus on Virtual Machines, Blob Storage, and Azure AD.
+### [02. Storage Fundamentals](./02-Storage-Fundamentals/README.md)
+Object vs Block Storage, S3, EBS, and EFS concepts.
 
-### [04. GCP Basics](./04-GCP-Basics/README.md)
-Master performance and data analytics. Focus on Compute Engine, Cloud Storage, and BigQuery.
+### [03. Database Fundamentals](./03-Database-Fundamentals/README.md)
+SQL vs NoSQL, ACID transactions, and cloud database services (RDS, DynamoDB).
+
+### [04. Cloud Fundamentals](./04-Cloud-Fundamentals/README.md)
+IaaS, PaaS, SaaS models, deployment types, and shared responsibility.
+
+### [05. AWS Basics](./05-AWS-Basics/README.md)
+The market leader. Deep dive into EC2, S3, RDS, and IAM.
+
+### [06. Azure Basics](./06-Azure-Basics/README.md)
+Enterprise cloud with Virtual Machines, Blob Storage, and Azure AD.
+
+### [07. GCP Basics](./07-GCP-Basics/README.md)
+Performance and data analytics with Compute Engine, Cloud Storage, and BigQuery.
 
 ---
 
@@ -42,10 +54,11 @@ Master performance and data analytics. Focus on Compute Engine, Cloud Storage, a
 
 ## 📚 Core Learning Path
 
-1. **[01. Cloud Fundamentals](./01-Cloud-Fundamentals/README.md)**: Understanding IaaS, PaaS, SaaS, and the Shared Responsibility Model.
-2. **[05. Basic Networking](./05-Basic-Networking/README.md)**: VPCs, Subnets, and Gateways.
-3. **[06. Storage](./06-Storage-Fundamentals/README.md)**: Object vs. Block storage.
-4. **[07. Databases](./07-Database-Fundamentals/README.md)**: SQL vs. NoSQL basics in the cloud.
+1. **[Networking](./01-Basic-Networking/README.md)**: The backbone of the cloud.
+2. **[Storage](./02-Storage-Fundamentals/README.md)**: Where to keep your data.
+3. **[Databases](./03-Database-Fundamentals/README.md)**: Managing structured data.
+4. **[Cloud Concepts](./04-Cloud-Fundamentals/README.md)**: The theory behind it all.
+5. **[Provider Deep Dive](./05-AWS-Basics/README.md)**: Getting hands-on with AWS.
 
 ---
-**Next Level**: Move to [Intermediate Cloud Engineering](../../2-Intermediate/08-Cloud-Engineering/README.md) for VPC deep dives and load balancing.
+**Next Level**: Move to [Intermediate Cloud Engineering](../../2-Intermediate/08-Cloud-Engineering/README.md).

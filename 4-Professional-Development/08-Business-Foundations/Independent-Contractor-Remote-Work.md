@@ -107,7 +107,20 @@ ping -c 10 ec2.eu-west-1.amazonaws.com
 ```
 
 ### Ergonomics Best Practices
-![Ergonomics](./../Images/Ergonomics.png)
+```mermaid
+graph TD
+    subgraph Setup [Ideal Ergonomic Setup]
+        direction TB
+        Head[Eyes] -- "Level with top 1/3" --> Monitor[Monitor]
+        Monitor -- "Arm's length distance" --> Eyes
+        Elbows[Elbows] -- "90-100 degrees" --> Desk[Desk/Keyboard]
+        Back[Back] -- "Lumbar Support" --> Chair[Chair]
+        Hips[Hips] -- "90-100 degrees" --> Seat[Seat]
+        Feet[Feet] -- "Flat on floor" --> Floor[Floor/Footrest]
+    end
+
+    style Setup fill:#f9f9f9,stroke:#333,stroke-width:2px
+```
 
 ### Home Office Deductions
 
@@ -178,7 +191,23 @@ ping -c 10 ec2.eu-west-1.amazonaws.com
 - India: 15% withholding (can claim credit)
 
 ### Time Zone Management
-![Time Zone](./../Images/timezone.png)
+```mermaid
+gantt
+    dateFormat  HH:mm
+    axisFormat  %H:%M
+    title Time Zone Overlap Example (UTC vs EST vs IST)
+
+    section UTC (London)
+    Work Day      :active, 09:00, 17:00
+
+    section EST (New York)
+    Work Day      :active, 14:00, 22:00
+    Overlap (UTC) :crit, 14:00, 17:00
+
+    section IST (India)
+    Work Day      :active, 04:30, 12:30
+    Overlap (UTC) :crit, 09:00, 12:30
+```
 
 **Strategies for Multi-Timezone Work**:
 

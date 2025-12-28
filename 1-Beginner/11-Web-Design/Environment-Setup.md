@@ -1,9 +1,7 @@
-# Python Virtual Environments (venv)
-
+## Python Virtual Environments (venv)
 A **Virtual Environment** is a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages.
 
 ## Why use venv?
-
 1.  **Isolation**: Prevents dependency conflicts between different projects.
 2.  **Versioning**: Allows you to use different versions of the same library for different projects.
 3.  **Cleanliness**: Keeps your global Python installation clean and lightweight.
@@ -44,27 +42,22 @@ deactivate
 ---
 
 ## 2. Managing Dependencies
-
 Once the environment is **activated**, you can install packages.
-
 ### Install Packages
 ```bash
 pip install flask
 ```
-
 ### Save Dependencies (requirements.txt)
 DevOps engineers use this file to ensure the application runs exactly the same way in production (e.g., inside Docker).
 ```bash
 pip freeze > requirements.txt
 ```
-
 ### Install from a file
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
-
 ## 3. Best Practices for DevOps
 
 ### Git: Always Ignore
@@ -75,7 +68,6 @@ Add this to your `.gitignore`:
 __pycache__/
 *.pyc
 ```
-
 ### Naming Conventions
 - `.venv`: Visible but hidden by default in many explorers.
 - `venv`: Common alternative.
@@ -84,7 +76,6 @@ __pycache__/
 ---
 
 ## 4. Quiz: venv Basics
-
 1. Which command creates a new virtual environment?
    - a) `python3 venv create`
    - b) `python3 -m venv .venv`
@@ -107,4 +98,4 @@ __pycache__/
 
 ---
 
-**[← Back to Web Design](./README.md)**
+**[← Back to Web Design](Web%20Design%20&%20Frameworks.md)**

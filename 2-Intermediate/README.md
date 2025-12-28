@@ -61,6 +61,9 @@ Cost allocation strategies, optimization techniques, reserved instances, showbac
 ### 15. [Blockchain CI/CD](./15-Blockchain/README.md)
 Build and deploy Smart Contracts using Hardhat and Foundry. Automate testing and deployment pipelines.
 
+### 16. [API Gateways & Security](./16-API-Gateways-Security/README.md)
+Managing and securing APIs at scale. Authentication (mTLS, JWT, OAuth2), Rate Limiting, and Gateway patterns.
+
 ---
 
 ## 🎯 Learning Objectives

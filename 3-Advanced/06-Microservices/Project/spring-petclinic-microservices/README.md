@@ -95,7 +95,55 @@ Each service has its own specific role and communicates via REST APIs.
 
 **Architecture diagram of the Spring Petclinic Microservices**
 
-![Spring Petclinic Microservices architecture](docs/microservices-architecture-diagram.jpg)
+```mermaid
+graph TD
+    User((User)) --> Gateway[API Gateway<br/>Port 8080]
+    
+    subgraph Infrastructure
+        Config[Config Server<br/>Port 8888]
+        Discovery[Discovery Server<br/>Eureka: 8761]
+        Admin[Admin Server<br/>Port 9090]
+    end
+    
+    subgraph Microservices
+        Customers[Customers Service]
+        Vets[Vets Service]
+        Visits[Visits Service]
+        GenAI[GenAI Service]
+    end
+    
+    subgraph Persistence
+        DB[(Database<br/>HSQLDB/MySQL)]
+    end
+
+    Gateway --> Customers
+    Gateway --> Vets
+    Gateway --> Visits
+    Gateway --> GenAI
+    
+    Customers --> DB
+    Vets --> DB
+    Visits --> DB
+    
+    %% Service Discovery & Config Connections
+    Gateway -.-> Discovery
+    Customers -.-> Discovery
+    Vets -.-> Discovery
+    Visits -.-> Discovery
+    
+    Gateway -.-> Config
+    Customers -.-> Config
+    Vets -.-> Config
+    Visits -.-> Config
+    
+    classDef service fill:#e1f5fe,stroke:#01579b
+    classDef infra fill:#fff3e0,stroke:#e65100
+    classDef db fill:#e8f5e9,stroke:#2e7d32
+    
+    class Gateway,Customers,Vets,Visits,GenAI service
+    class Config,Discovery,Admin infra
+    class DB db
+```
 
 ## Integrating the Spring AI Chatbot
 

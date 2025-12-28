@@ -8,37 +8,7 @@ Docker uses a **layered filesystem** (UnionFS). When you run an image, Docker ad
 
 To solve this, Docker provides three ways to mount data from the host into the container:
 
-```mermaid
-graph TB
-    subgraph "Docker Storage Architecture"
-        subgraph "Container Layer (Ephemeral)"
-            CL[Read-Write Layer<br/>⚠ Loses data on deletion]
-            IL[Image Layers<br/>Read-Only]
-            CL --> IL
-        end
-        
-        subgraph "Persistent Storage (Host Side)"
-            VOL["<b>Docker Volume</b><br/>/var/lib/docker/volumes/"]
-            BIND["<b>Bind Mount</b><br/>Any path: e.g., /home/user/app/"]
-            TMPFS["<b>tmpfs Mount</b><br/>System Memory (RAM)"]
-        end
-    end
-    
-    CL --- MountPoint{Mount Process}
-    MountPoint --> VOL
-    MountPoint --> BIND
-    MountPoint --> TMPFS
-    
-    VOL -.-> DISK[(Host Disk)]
-    BIND -.-> DISK
-    TMPFS -.-> RAM[Host RAM]
-    
-    style CL fill:#ffcdd2,stroke:#b71c1c
-    style VOL fill:#c8e6c9,stroke:#2e7d32
-    style BIND fill:#fff9c4,stroke:#fbc02d
-    style TMPFS fill:#e1bee7,stroke:#7b1fa2
-    style MountPoint fill:#e3f2fd,stroke:#1565c0
-```
+![Docker-Storage-Arch](../../../../1-Beginner/Images/dockerStorageArch.png)
 
 
 ### Storage Types Comparison
@@ -337,11 +307,11 @@ graph LR
     SRC --- WEB & API & TEST
     DEPS --- WEB & API
     
-    style SRC fill:#fff3e0,stroke:#e65100
-    style DEPS fill:#e8f5e9,stroke:#1b5e20
-    style WEB fill:#e3f2fd,stroke:#1565c0
-    style API fill:#f3e5f5,stroke:#7b1fa2
-    style TEST fill:#fce4ec,stroke:#c2185b
+    style SRC fill:#fff3e0,stroke:#e65100,color:#000000
+    style DEPS fill:#e8f5e9,stroke:#1b5e20,color:#000000
+    style WEB fill:#e3f2fd,stroke:#1565c0,color:#000000
+    style API fill:#f3e5f5,stroke:#7b1fa2,color:#000000
+    style TEST fill:#fce4ec,stroke:#c2185b,color:#000000
 ```
 
 
