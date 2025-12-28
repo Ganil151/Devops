@@ -12,10 +12,10 @@ FinOps (Cloud Financial Operations) is the practice of bringing financial accoun
 
 | Lesson | Topic | Duration |
 |--------|-------|----------|
-| 01 | [Introduction to FinOps](./01-Introduction/README.md) | 45 min |
-| 02 | [Cloud Billing Basics](./02-Cloud-Billing-Basics/README.md) | 60 min |
-| 03 | [Cost Visibility](./03-Cost-Visibility/README.md) | 45 min |
-| 04 | [Budgeting Basics](./04-Budgeting-Basics/README.md) | 45 min |
+| 01 | [Introduction to FinOps](Introduction%20to%20FinOps.md) | 45 min |
+| 02 | [Cloud Billing Basics](Lesson%2002-Cloud%20Billing%20Basics.md) | 60 min |
+| 03 | [Cost Visibility](Lesson%2003-Cost%20Visibility.md) | 45 min |
+| 04 | [Budgeting Basics](Lesson%2004-Budgeting%20Basics.md) | 45 min |
 
 ---
 
@@ -149,7 +149,7 @@ Before diving into the lessons, ensure you have:
 
 ## Next Steps
 
-Start with **[Lesson 01: Introduction to FinOps](./01-Introduction/README.md)** to begin your FinOps journey!
+Start with **[Lesson 01: Introduction to FinOps](Introduction%20to%20FinOps.md)** to begin your FinOps journey!
 
 After completing the Beginner level, proceed to:
 - 📘 [Intermediate FinOps](../../2-Intermediate/14-FinOps/README.md) - Cost optimization strategies

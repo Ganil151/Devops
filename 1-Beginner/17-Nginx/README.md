@@ -265,4 +265,4 @@ server {
 
 ---
 
-**Next Step**: Continue to [Module 18: Advanced Nginx or DevOps Projects](../README.md).
+**Next Step**: Continue to [Module 18: Advanced Nginx or DevOps Projects](DevOps%20Foundations.md).

@@ -1,7 +1,5 @@
-# Lesson 04: Budgeting Basics
 
 ## Learning Objectives
-
 By the end of this lesson, you will:
 - Understand cloud budgeting concepts
 - Create budgets with alerts
@@ -9,9 +7,7 @@ By the end of this lesson, you will:
 - Implement basic cost controls
 
 ---
-
 ## Why Cloud Budgeting Matters
-
 Cloud's pay-as-you-go model means costs can grow unexpectedly. Budgets help you:
 
 - 🎯 Set spending targets
@@ -37,11 +33,9 @@ graph LR
 ```
 
 ---
-
 ## Types of Cloud Budgets
 
 ### 1. Fixed Budgets
-
 A static amount for a period (monthly, quarterly, annual).
 
 | Pros | Cons |
@@ -51,9 +45,7 @@ A static amount for a period (monthly, quarterly, annual).
 | Clear limits | Can block legitimate needs |
 
 ### 2. Variable Budgets
-
 Adjusts based on business metrics (revenue, users, transactions).
-
 ```mermaid
 graph LR
     subgraph "Variable Budget Example"
@@ -67,9 +59,7 @@ graph LR
 | Scales with business | More complex to set up |
 | Flexible | Requires metric tracking |
 | Aligned with value | Harder to forecast |
-
 ### 3. Zero-Based Budgets
-
 Start from zero and justify each expense every period.
 
 | Pros | Cons |
@@ -79,11 +69,9 @@ Start from zero and justify each expense every period.
 | Accurate allocation | May slow decision-making |
 
 ---
-
 ## Creating Budgets by Provider
 
 ### AWS Budgets
-
 **Console Steps:**
 1. Navigate to AWS Budgets
 2. Click "Create budget"
@@ -119,7 +107,6 @@ aws budgets create-budget \
 ```
 
 ### Azure Budgets
-
 **Console Steps:**
 1. Go to Cost Management + Billing
 2. Select "Budgets"
@@ -149,11 +136,8 @@ az consumption budget create \
 5. Connect to Pub/Sub for automation
 
 ---
-
 ## Alert Thresholds
-
 Set multiple alerts to catch overspending early:
-
 ```mermaid
 graph LR
     subgraph "Budget Alert Levels"
@@ -178,11 +162,9 @@ graph LR
 ---
 
 ## Cost Anomaly Detection
-
 Anomaly detection automatically identifies unusual spending patterns.
 
 ### AWS Cost Anomaly Detection
-
 ```bash
 # Create anomaly monitor
 aws ce create-anomaly-monitor \
@@ -213,11 +195,9 @@ aws ce create-anomaly-subscription \
 | Data transfer surge | Egress costs 10x normal |
 
 ---
-
 ## Implementing Cost Controls
 
 ### Preventive Controls
-
 Stop overspending before it happens:
 
 | Control | Description | Example |
@@ -227,7 +207,6 @@ Stop overspending before it happens:
 | **Sandbox limits** | Restrict development environments | $500/month cap |
 
 ### Detective Controls
-
 Identify overspending quickly:
 
 | Control | Description | Example |
@@ -235,9 +214,7 @@ Identify overspending quickly:
 | **Budget alerts** | Notify on threshold breach | Email at 80% |
 | **Anomaly detection** | Find unusual patterns | ML-based detection |
 | **Daily reports** | Regular cost summaries | Morning email |
-
 ### Corrective Controls
-
 Respond to overspending:
 
 | Control | Description | Example |
@@ -251,7 +228,6 @@ Respond to overspending:
 ## Budget Templates
 
 ### Development Environment Budget
-
 ```yaml
 Budget:
   Name: Development Environment
@@ -265,9 +241,7 @@ Budget:
     - Threshold: 100%
       Action: Email management + freeze non-essential resources
 ```
-
 ### Production Environment Budget
-
 ```yaml
 Budget:
   Name: Production Environment
@@ -289,7 +263,6 @@ Budget:
 ## Hands-On Exercise
 
 ### Exercise 1: Create a Budget
-
 1. Log into your cloud provider console
 2. Create a budget with these settings:
    - Name: "Monthly-Lab-Budget"
@@ -298,13 +271,11 @@ Budget:
    - Alerts: 50%, 80%, 100%
 
 ### Exercise 2: Set Up Anomaly Detection
-
 1. Enable anomaly detection for your account
 2. Set threshold to $10 for lab environment
 3. Configure email notifications
 
 ### Exercise 3: Create a Budget Report
-
 Document:
 - Total budget across all accounts
 - Current spend vs. budget

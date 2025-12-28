@@ -1,4 +1,3 @@
-# Beginner Level: DevOps Foundations
 
 Welcome to the foundation of your DevOps journey. This level is designed to equip you with the essential tools and mental models required to thrive in a cloud-native world.
 

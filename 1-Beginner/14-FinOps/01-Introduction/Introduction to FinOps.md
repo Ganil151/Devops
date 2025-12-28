@@ -1,5 +1,3 @@
-# Lesson 01: Introduction to FinOps
-
 ## Learning Objectives
 
 By the end of this lesson, you will:
@@ -59,13 +57,11 @@ graph LR
 | **Executive** | Strategic decisions, governance |
 
 ### 2. Everyone Takes Ownership
-
 - Engineering teams own their cloud costs
 - Decentralized decision-making
 - Cost awareness at the team level
 
 ### 3. A Centralized Team Drives FinOps
-
 A dedicated FinOps team provides:
 - Best practices and standards
 - Tools and training
@@ -80,9 +76,7 @@ A dedicated FinOps team provides:
 | **Accurate** | Properly allocated costs |
 | **Actionable** | Clear optimization opportunities |
 | **Accessible** | Self-service dashboards |
-
 ### 5. Decisions Are Driven by Business Value
-
 Cost optimization should consider:
 - Revenue impact
 - Customer experience
@@ -90,7 +84,6 @@ Cost optimization should consider:
 - Technical debt
 
 ### 6. Take Advantage of the Variable Cost Model
-
 The cloud's pay-as-you-go model enables:
 - Scale up when needed
 - Scale down when not
@@ -98,9 +91,7 @@ The cloud's pay-as-you-go model enables:
 - Experiment without large upfront investments
 
 ---
-
 ## FinOps Stakeholders
-
 ```mermaid
 graph TB
     subgraph "FinOps Stakeholders"
@@ -128,9 +119,7 @@ graph TB
 | **Executive Sponsor** | Strategic direction, resource allocation |
 
 ---
-
 ## The FinOps Maturity Model
-
 Organizations progress through three maturity stages:
 
 ```mermaid
@@ -141,34 +130,30 @@ graph LR
     style W fill:#f39c12,stroke:#d68910,color:#fff
     style R fill:#2ecc71,stroke:#27ae60,color:#fff
 ```
-
 ### Crawl Stage
 - Basic cost visibility
 - Manual processes
 - Limited tagging
 - Reactive approach
-
 ### Walk Stage
 - Automated reporting
 - Consistent tagging strategy
 - Showback to teams
 - Proactive optimization
-
 ### Run Stage
 - Real-time visibility
 - Automated optimization
 - Chargeback model
 - FinOps culture embedded
 
-| Capability | Crawl | Walk | Run |
-|------------|-------|------|-----|
-| **Visibility** | Basic dashboards | Detailed reports | Real-time analytics |
-| **Tagging** | Ad-hoc | Standardized | Enforced |
-| **Optimization** | Manual | Scheduled | Automated |
-| **Governance** | Minimal | Policies defined | Automated enforcement |
+| Capability       | Crawl            | Walk             | Run                   |
+| ---------------- | ---------------- | ---------------- | --------------------- |
+| **Visibility**   | Basic dashboards | Detailed reports | Real-time analytics   |
+| **Tagging**      | Ad-hoc           | Standardized     | Enforced              |
+| **Optimization** | Manual           | Scheduled        | Automated             |
+| **Governance**   | Minimal          | Policies defined | Automated enforcement |
 
 ---
-
 ## Common FinOps Challenges
 
 | Challenge | Solution |
@@ -180,7 +165,6 @@ graph LR
 | Cultural resistance | Education and awareness programs |
 
 ---
-
 ## Getting Started with FinOps
 
 ### Step 1: Assess Current State
@@ -229,4 +213,4 @@ graph LR
 
 ## Next Lesson
 
-Continue to **[Lesson 02: Cloud Billing Basics](../02-Cloud-Billing-Basics/README.md)** to learn how cloud providers charge for services.
+Continue to **[Lesson 02: Cloud Billing Basics](Lesson%2002-Cloud%20Billing%20Basics.md)** to learn how cloud providers charge for services.

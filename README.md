@@ -10,7 +10,7 @@ Before you start, check out our centralized assets:
 
 ## 🚀 The Three Levels of Excellence
 
-### 🟢 [Phase 1: Beginner (Foundations)](./1-Beginner/README.md)
+### 🟢 [Phase 1: Beginner (Foundations)](DevOps%20Foundations.md)
 The bedrock of DevOps. Learn the tools that every engineer must master before they can automate.
 - 🌐 **Networking Foundations**: The plumbing of the digital world.
 - 🐧 **Linux & SysAdmin**: The engine of the cloud.

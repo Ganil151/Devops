@@ -88,4 +88,4 @@ While Docker Compose doesn't have native "Rolling Updates" like Kubernetes, you 
 - [ ] How do you prevent disk space issues on your Docker servers?
 
 ---
-*Next Step: Finalize your roadmap in the **[Global Index](../../../README.md)**.*
+*Next Step: Finalize your roadmap in the **[Global Index](DevOps%20Foundations.md)**.*
