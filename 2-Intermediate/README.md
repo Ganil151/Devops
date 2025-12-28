@@ -1,80 +1,58 @@
-# Intermediate Level: Automation & Orchestration
+# Intermediate Level: Automation & Orchestration Roadmap
 
-The Intermediate level marks the shift from manual tasks to scalable automation. Here, you will learn to manage fleets of containers, automate infrastructure provisioning, and build robust deployment pipelines.
+Welcome to the **Intermediate Level**. This is where we shift from manual tasks and foundational concepts to building scalable, automated, and self-healing systems. 
 
----
-
-## 🛠️ The Power of Automation
-
-In the Intermediate phase, we move beyond "running a container" to "orchestrating a cluster." We focus on:
-- **Scalability**: Ensuring your infrastructure can grow with your traffic.
-- **Reliability**: Self-healing systems that recover from failure automatically.
-- **Repeatability**: Using code to define environments (IaC).
-- **Consistency**: Centralizing configuration management.
+You will transition from "managing a server" to "orchestrating a cluster" using the industry's most powerful tools.
 
 ---
 
-## 📚 Learning Modules
+## 🗺️ The 6-Phase Intermediate Journey
 
-### 01. [Kubernetes Core](./01-Kubernetes/README.md)
-The world's most powerful container orchestrator. Learn about Pods, Deployments, Services, and how K8s manages your applications.
+### 🏗️ Phase 1: Infrastructure as Code (IaC)
+*Stop clicking buttons. Start writing infrastructure.*
+1. **[Networking & VPC](./01-Networking-VPC/README.md)**: Advanced cloud networking, peering, and subnetting.
+2. **[Terraform (IaC)](./02-Terraform/README.md)**: Provisioning entire cloud environments with code.
+3. **[Ansible Automation](./03-Ansible/README.md)**: Scaling your configuration across hundreds of servers.
 
-### 02. [Helm Package Management](./02-Helm/README.md)
-The "Package Manager" for Kubernetes. Streamline your deployments using charts and templates.
+### ☸️ Phase 2: Container Orchestration
+*Manage containers at scale across a fleet.*
+4. **[Kubernetes Core](./04-Kubernetes/README.md)**: The standard for container orchestration (Pods, Services, Deployments).
+5. **[Helm Package Management](./05-Helm/README.md)**: Managing complex Kubernetes applications with charts.
 
-### 03. [Ansible Automation](./03-Ansible/README.md)
-Idempotent, agentless configuration management. Automate everything from OS patching to application setup.
+### 🛡️ Phase 3: Connectivity & Delivery
+*Securing traffic and automating the deployment lifecycle.*
+6. **[API Gateways & Security](./06-API-Gateways-Security/README.md)**: Protecting and routing traffic (JWT, OAuth2, Kong, Nginx).
+7. **[CI/CD Pipelines](./07-CI-CD/README.md)**: Master Continuous Integration/Delivery with Jenkins, GitLab, and SonarQube.
 
-### 04. [Terraform (IaC)](./04-Terraform/README.md)
-Infrastructure as Code. Define your cloud resources (VPC, EC2, RDS) in declarative HCL files.
+### 📊 Phase 4: Data & Observability
+*Understanding your system's state.*
+8. **[Managed Databases](./08-Databases/README.md)**: Moving from local containers to RDS, Aurora, and DynamoDB.
+9. **[Observability Foundations](./09-Observability-Foundations/README.md)**: Metrics, logs, and the "Four Golden Signals."
 
-### 05. [CI/CD Pipelines](./05-CI-CD/README.md)
-Master the art of Continuous Integration and Delivery. This module includes **[Jenkins](./05-CI-CD/Jenkins/)**, **[GitLab](./05-CI-CD/GitLab/)**, and **[SonarQube](./05-CI-CD/sonarQube/)**.
+### ⚙️ Phase 5: Automation & Operations
+*Scaling your logic and operational excellence.*
+10. **[Advanced Automation](./10-Automation/README.md)**: Python for DevOps and advanced scripting patterns.
+11. **[Cloud Engineering](./11-Cloud-Engineering/README.md)**: Landing zones, cloud patterns, and architectural best practices.
+12. **[Runbooks & Procedures](./12-Runbooks-Procedures/README.md)**: Moving from manual hacks to automated remediation.
+13. **[Chef Automation](./13-Chef/README.md)**: Alternative patterns for infrastructure automation.
 
-### 06. [Managed Databases](./06-Databases/README.md)
-Moving from standalone database containers to managed enterprise solutions (RDS, Aurora, DynamoDB).
-
-### 07. [Automation & Scripting](./07-Automation/README.md)
-Scaling your logic with **[Python for DevOps](./07-Automation/)** and advanced shell scripting.
-
-### 08. [Cloud Engineering](./08-Cloud-Engineering/README.md)
-Advanced cloud patterns, landing zones, and cost optimization.
-
-### 09. [Observability Foundations](./09-Observability-Foundations/README.md)
-Master the "Four Golden Signals" and basic log aggregation before moving to enterprise suites.
-
-### 10. [Chef Infrastructure Automation](./10-Chef/README.md)
-Introduction to Ruby-based configuration management and the Master-agent architecture.
-
-### 11. [Runbooks & Procedures](./11-Runbooks-Procedures/README.md)
-Crucial operational documentation for incident management and service recovery. Learn the difference between manual and automated remediation.
-
-### 12. [Prompt Engineering](./12-Prompt-Engineering/README.md)
-Advanced prompting techniques including chain-of-thought, few-shot learning, and integration with CI/CD pipelines.
-
-### 13. [Model Context Protocol (MCP)](./13-MCP/README.md)
-Build custom MCP servers, implement tools and resources, and integrate MCP with DevOps workflows.
-
-### 14. [FinOps Optimization](./14-FinOps/README.md)
-Cost allocation strategies, optimization techniques, reserved instances, showback/chargeback models, and automation.
-
-### 15. [Blockchain CI/CD](./15-Blockchain/README.md)
-Build and deploy Smart Contracts using Hardhat and Foundry. Automate testing and deployment pipelines.
-
-### 16. [API Gateways & Security](./16-API-Gateways-Security/README.md)
-Managing and securing APIs at scale. Authentication (mTLS, JWT, OAuth2), Rate Limiting, and Gateway patterns.
+### 🚀 Phase 6: Specialized Intermediate Tech
+*Staying on the cutting edge.*
+14. **[FinOps Optimization](./14-FinOps/README.md)**: Cost allocation and optimization strategies.
+15. **[Prompt Engineering](./15-Prompt-Engineering/README.md)**: Advanced AI workflows for troubleshooting and runbooks.
+16. **[Model Context Protocol (MCP)](./16-MCP/README.md)**: Building custom AI tool integrations for DevOps.
+17. **[Blockchain CI/CD](./17-Blockchain/README.md)**: Automating deployments for decentralized applications.
 
 ---
 
-## 🎯 Learning Objectives
+## 🎯 Final Learning Objectives
 By the end of this level, you will be able to:
-1.  **Orchestrate**: Deploy and manage a multi-container application on a Kubernetes cluster.
-2.  **Provision**: Use Terraform to create a complete VPC and compute environment from scratch.
-3.  **Configure**: Automate the hardening and setup of 10+ servers simultaneously using Ansible.
-4.  **Integrate**: Build a full CI/CD pipeline that builds, tests, scans, and deploys an application.
-5.  **Observe**: Monitor application health using the Four Golden Signals and basic probing.
-6.  **Persist**: Design and manage scalable database layers for your applications.
-7.  **Operate**: Create and follow technical Runbooks for incident recovery and scaling.
+1.  **Provision**: Spin up a complete VPC and K8s cluster using Terraform.
+2.  **Automate**: Use Ansible to configure and harden multiple servers simultaneously.
+3.  **Orchestrate**: Deploy multi-service applications on Kubernetes using Helm.
+4.  **Secure**: Implement API Gateways and JWT authentication for your microservices.
+5.  **Observe**: Debug production issues using logs and metrics dashboards.
+6.  **Pipeline**: Build a "Commit-to-Cloud" pipeline that includes security scanning.
 
 ---
-**Next Step**: Ready for production grade? Move to the [Advanced Level](../3-Advanced/README.md) for GitOps, Observability, and DevSecOps.
+**Ready for the Enterprises?** Once you've mastered orchestration, move to the [Advanced Level](../3-Advanced/README.md).

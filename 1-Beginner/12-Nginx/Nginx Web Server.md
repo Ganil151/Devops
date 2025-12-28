@@ -1,4 +1,3 @@
-# Module 17: Nginx Web Server
 
 Nginx (pronounced "Engine-X") is a high-performance HTTP web server, reverse proxy, and Load Balancer. It is known for its stability, rich feature set, simple configuration, and low resource consumption.
 
@@ -16,10 +15,8 @@ Nginx (pronounced "Engine-X") is a high-performance HTTP web server, reverse pro
 ---
 
 ## 🏗️ Architecture: Why Nginx?
-
 ### The C10K Problem
 In the early 2000s, web servers like Apache used a **Process/Thread-based** model. Every client connection spawned a new thread. Scaling to 10,000 concurrent connections ("C10K") required massive memory.
-
 ### The Event-Driven Model
 Nginx uses an **Asynchronous, Event-Driven** architecture.
 - **Master Process**: Reads config, binds ports, manages workers.
@@ -45,13 +42,10 @@ sudo systemctl status nginx   # Check status
 ```
 
 ### 🐳 Docker
-
 Run a simple Nginx container serving default content:
-
 ```bash
 docker run -d -p 80:80 --name my-nginx nginx:alpine
 ```
-
 Bind mount your own content:
 ```bash
 docker run -d -p 80:80 \
@@ -62,9 +56,7 @@ docker run -d -p 80:80 \
 ---
 
 ## ⚙️ Configuration Hierarchy
-
 The main configuration file is usually at `/etc/nginx/nginx.conf`.
-
 ### Directory Structure (Debian/Ubuntu style)
 - **`/etc/nginx/nginx.conf`**: The root configuration.
 - **`/etc/nginx/conf.d/*.conf`**: Global HTTP settings.
@@ -74,7 +66,6 @@ The main configuration file is usually at `/etc/nginx/nginx.conf`.
 
 ### Contexts & Directives
 Nginx config is a tree of **Contexts** (blocks) containing **Directives** (key-value pairs).
-
 ```nginx
 # 'main' context (Global settings)
 user www-data;
@@ -110,7 +101,6 @@ http {
 
 ### 1. Static Web Server
 Serve HTML, CSS, and JS files efficiently.
-
 ```nginx
 server {
     listen 80;
@@ -130,7 +120,6 @@ server {
 
 ### 2. Reverse Proxy
 Forward requests to an application server (e.g., Node.js, Python, Java). This hides your backend and adds security/performance.
-
 ```nginx
 server {
     listen 80;
@@ -146,10 +135,8 @@ server {
     }
 }
 ```
-
 ### 3. Load Balancer
 Distribute traffic across multiple backend servers.
-
 ```nginx
 upstream backend_servers {
     server 10.0.0.1:3000 weight=3; # Receives 3x traffic
@@ -171,7 +158,6 @@ server {
 
 ### SSL/TLS Termination (HTTPS)
 Using Let's Encrypt (Certbot) is the standard, but here is the manual config:
-
 ```nginx
 server {
     listen 443 ssl http2;
@@ -195,7 +181,6 @@ server {
 
 ### Rate Limiting
 Protect against DDoS and Brute Force.
-
 ```nginx
 # Define limit zone in 'http' context
 limit_req_zone $binary_remote_addr zone=mylimit:10m rate=10r/s;
@@ -212,7 +197,6 @@ server {
 ---
 
 ## ⚡ Performance Optimization
-
 - **Gzip Compression**: Reduce file size before sending.
     ```nginx
     gzip on;
