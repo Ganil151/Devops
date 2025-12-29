@@ -12,6 +12,11 @@ In traditional CD, a pipeline (like Jenkins) "pushes" changes to a cluster. In G
 - **The Agent**: Constantly compares Git to the cluster (the "Actual State").
 - **The Sync**: If they don't match, the agent automatically "reconciles" the cluster to match Git.
 
+### Learning Path
+1. [GitOps Fundamentals](./README.md)
+2. [📺 YouTube Lessons](./Youtube_Lessons.md)
+3. [❓ Interview Questions & Quiz](./Interview_Questions_and_Quiz.md)
+
 ## 🛠️ 2. Essential ArgoCD Commands
 
 ### 🔍 Inspection and Sync

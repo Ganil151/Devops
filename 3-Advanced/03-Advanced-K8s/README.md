@@ -2,6 +2,11 @@
 
 Welcome to the pinnacle of container orchestration. This module covers the deep technical expertise required to manage mission-critical, high-scale Kubernetes clusters in production environments.
 
+### Learning Path
+1. [K8s Overview](./README.md)
+2. [📺 YouTube Lessons](./Youtube_Lessons.md)
+3. [❓ Interview Questions & Quiz](./Interview_Questions_and_Quiz.md)
+
 ---
 
 ## 🏗️ Control Plane & Internals

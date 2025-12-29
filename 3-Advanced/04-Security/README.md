@@ -18,6 +18,11 @@ Traditional security models add security checks at the end of development, creat
 
 ---
 
+### Learning Path
+1. [Security Overview](./README.md)
+2. [📺 YouTube Lessons](./Youtube_Lessons.md)
+3. [❓ Interview Questions & Quiz](./Interview_Questions_and_Quiz.md)
+
 ## ⬅️ The Shift-Left Philosophy
 
 ```mermaid

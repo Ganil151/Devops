@@ -1,5 +1,3 @@
-# Terraform State Management Guide
-
 ## Table of Contents
 1. [State Fundamentals](#state-fundamentals)
 2. [Local vs Remote State](#local-vs-remote-state)
@@ -31,7 +29,6 @@ Terraform State:
     - Provider configurations
     - Outputs
 ```
-
 ### State File Structure
 ```json
 {
