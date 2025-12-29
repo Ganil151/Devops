@@ -1,4 +1,18 @@
+# Professional Development: Your DevOps Monetization Journey
+
 This comprehensive guide covers **30 ways to monetize your DevOps expertise**, organized into 5 strategic categories plus specialized paths.
+
+---
+
+## 🧭 Career Decision Framework
+
+| Your Situation | Recommended Path | Time to First $ | Revenue Potential |
+|----------------|------------------|-----------------|-------------------|
+| **Want immediate income** | [Consulting Services](./02-Consulting-Services/) | 2-4 weeks | $5k-30k/month |
+| **Love teaching & writing** | [Content & Education](./03-Content-Education/) | 1-3 months | $2k-20k/month |
+| **Enjoy building products** | [Open Source & Tools](./04-OpenSource-Tools/) | 3-6 months | $1k-50k+/month |
+| **Senior with business skills** | [Niche & Strategic Roles](./05-Niche-Roles/) | 1-2 months | $10k-40k/month |
+| **Want scalable passive income** | [Knowledge & Apps](./06-Knowledge-Apps/) | 3-12 months | $5k-100k+/month |
 
 ---
 
@@ -8,16 +22,6 @@ This comprehensive guide covers **30 ways to monetize your DevOps expertise**, o
 Day-by-day roadmaps to launch your chosen monetization path in 30 days.
 
 - **[README.md](./00-Action-Plans/README.md)** - Master index for all action plans
-- **[01-Consulting-30-Day-Plan.md](./00-Action-Plans/01-Consulting-30-Day-Plan.md)** - Day-by-day consulting roadmap
-- **[02-Content-30-Day-Plan.md](./00-Action-Plans/02-Content-30-Day-Plan.md)** - Day-by-day content creation roadmap
-- **[03-Tools-30-Day-Plan.md](./00-Action-Plans/03-Tools-30-Day-Plan.md)** - Day-by-day product development roadmap
-- **[04-Strategic-30-Day-Plan.md](./00-Action-Plans/04-Strategic-30-Day-Plan.md)** - Day-by-day strategic positioning roadmap
-- **[05-Knowledge-30-Day-Plan.md](./00-Action-Plans/05-Knowledge-30-Day-Plan.md)** - Day-by-day knowledge sharing roadmap
-- **[Tools-and-Resources.md](./00-Action-Plans/Tools-and-Resources.md)** - 120+ tools with links and pricing
-- **[Templates-and-Checklists.md](./00-Action-Plans/Templates-and-Checklists.md)** - Ready-to-use templates and checklists
-
-### 🎯 [Getting-Started-Overview.md](./Getting-Started-Overview.md)
-Decision framework to help you choose the right monetization path based on your experience, time, and goals.
 
 ---
 
