@@ -24,8 +24,9 @@ Follow these modules in order to master Ansible Automation:
 11. **[11-Custom-Modules](./11-Custom-Modules/README.md)**: Extending Ansible with your own Python scripts.
 
 ### Phase 3: Validation & Experience
-12. **[12-Interview-Questions-and-Quizzes](./12-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for the job market.
-13. **[13-Real-Life-Scenarios](./13-Real-Life-Scenarios/README.md)**: Practical troubleshooting and fleet management.
+12. **[12-Interview-Questions-and-Quizzes](./12-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for job screenings.
+13. **[13-Real-Life-Scenarios](./13-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architectural challenges.
+14. **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 

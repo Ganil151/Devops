@@ -8,7 +8,7 @@ You will transition from "managing a server" to "orchestrating a cluster" using 
 
 ## 🗺️ The Intermediate Curriculum
 
-This level is organized into a progressive journey across 17 specialized modules:
+This level is organized into a progressive journey across 17 specialized modules. Each module now includes a curated **YouTube Lessons** collection for visual reinforcement.
 
 1.  **[00-Runbooks-Procedures](Runbooks%20&%20Operational%20Procedures%20(Intermediate).md)**: Moving from manual hacks to automated remediation.
 2.  **[01-Networking-VPC](./01-Networking-VPC/README.md)**: Advanced cloud networking, peering, and subnets.

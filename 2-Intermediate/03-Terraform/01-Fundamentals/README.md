@@ -1,7 +1,9 @@
+## Terraform Fundamentals
+
 This folder contains comprehensive documentation for learning Terraform from the ground up.
 
 ## Contents
-- **[terraform-fundamentals-guide.md](./terraform-fundamentals-guide.md)** - Complete fundamentals guide covering:
+- **[Terraform Fundamentals Guide.md](Terraform%20Fundamentals%20Guide.md)** - Complete fundamentals guide covering:
   - What is Terraform and core concepts
   - Installation and setup procedures
   - HCL configuration language syntax
@@ -21,16 +23,14 @@ This folder contains comprehensive documentation for learning Terraform from the
 cd Fundamentals
 
 # Read the fundamentals guide
-cat terraform-fundamentals-guide.md
+cat "Terraform Fundamentals Guide.md"
 
 # Practice with examples in the guide
 terraform init
 terraform plan
 terraform apply
 ```
-
 ## Next Steps
-
 After completing the fundamentals:
 - Explore [Infrastructure-as-Code](../Infrastructure-as-Code/) concepts
 - Learn about [Modules](../Modules/) for reusable infrastructure

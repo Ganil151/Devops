@@ -12,8 +12,9 @@ Follow these modules in order to master Kubernetes package management:
 2.  **[02-Chart-Templating](./02-Chart-Templating/README.md)**: Master Go templates, functions, and logic to build dynamic charts.
 3.  **[03-Intermediate-Helm](./03-Intermediate-Helm/README.md)**: Subcharts, dependencies, and automated CI/CD integration.
 4.  **[04-Advanced-Helm](./04-Advanced-Helm/README.md)**: Enterprise governance, security best practices (SOPS), and custom plugins.
-5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for job screenings.
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting, multi-env management, and private registries.
+5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for interviews.
+6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architecture challenges.
+7.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 

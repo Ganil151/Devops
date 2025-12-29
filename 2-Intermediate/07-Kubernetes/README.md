@@ -19,8 +19,9 @@ Follow these modules in order to master container orchestration:
 9.  **[09-StatefulSets-and-Jobs](./09-StatefulSets-and-Jobs/README.md)**: Databases, batch processes, and scheduled tasks.
 10. **[10-Managed-Kubernetes-EKS](./10-Managed-Kubernetes-EKS/README.md)**: Running Kubernetes in the AWS Cloud.
 11. **[11-Cluster-Administration](./11-Cluster-Administration/README.md)**: Namespaces, RBAC, and Security Contexts.
-12. **[12-Interview-Questions-and-Quizzes](./12-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for CKA/CKAD.
-13. **[13-Real-Life-Scenarios](./13-Real-Life-Scenarios/README.md)**: Practical troubleshooting and scaling strategies.
+12. **[12-Interview-Questions-and-Quizzes](./12-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for job screenings.
+13. **[13-Real-Life-Scenarios](./13-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architectural challenges.
+14. **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 

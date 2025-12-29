@@ -19,6 +19,7 @@ Building on the fundamentals, this intermediate guide covers cost optimization s
 | 05 | [Automation & Tooling](./05-Automation/README.md) | 60 min |
 | 06 | [Interview Questions & Quizzes](./06-Interview-Questions-and-Quizzes/README.md) | 45 min |
 | 07 | [Real-Life Scenarios](./07-Real-Life-Scenarios/README.md) | 60 min |
+| 08 | [📺 YouTube Lessons](./Youtube_Lessons.md) | 30 min |
 
 ---
 

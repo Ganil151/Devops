@@ -1,5 +1,3 @@
-# Terraform Fundamentals Guide
-
 ## Table of Contents
 1. [What is Terraform](#what-is-terraform)
 2. [Core Concepts](#core-concepts)
@@ -13,9 +11,7 @@
 10. [Basic Examples](#basic-examples)
 
 ## What is Terraform
-
 Terraform is an open-source Infrastructure as Code (IaC) tool created by HashiCorp that allows you to define and provision infrastructure using a declarative configuration language.
-
 ### Key Benefits
 - **Infrastructure as Code**: Version control your infrastructure
 - **Multi-Cloud**: Support for 1000+ providers
@@ -23,42 +19,16 @@ Terraform is an open-source Infrastructure as Code (IaC) tool created by HashiCo
 - **Plan and Apply**: Preview changes before execution
 - **State Management**: Track resource relationships
 - **Modular**: Reusable infrastructure components
-
 ### Use Cases
 - **Cloud Infrastructure**: AWS, Azure, GCP resources
 - **Multi-Cloud Deployments**: Consistent infrastructure across clouds
 - **Application Infrastructure**: Kubernetes, Docker, databases
 - **Network Infrastructure**: VPCs, load balancers, DNS
 - **Security Infrastructure**: IAM, security groups, certificates
-
 ## Core Concepts
 
-### Infrastructure as Code Principles
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    IaC Workflow                             │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │                   Write                             │   │
-│  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐ │   │
-│  │  │ Resources   │  │ Variables   │  │   Modules   │ │   │
-│  │  └─────────────┘  └─────────────┘  └─────────────┘ │   │
-│  └─────────────────────────────────────────────────────┘   │
-│                           │                                 │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │                    Plan                             │   │
-│  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐ │   │
-│  │  │   Validate  │  │   Preview   │  │   Review    │ │   │
-│  │  └─────────────┘  └─────────────┘  └─────────────┘ │   │
-│  └─────────────────────────────────────────────────────┘   │
-│                           │                                 │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │                   Apply                             │   │
-│  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐ │   │
-│  │  │   Create    │  │   Update    │  │   Destroy   │ │   │
-│  │  └─────────────┘  └─────────────┘  └─────────────┘ │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-```
+### Infrastructure as Code Principle
+![IaC Workflow](../Images/IaC.png)
 
 ### Terraform Architecture
 - **Configuration Files**: `.tf` files defining infrastructure
@@ -91,7 +61,6 @@ tfenv use 1.6.0
 # Verify installation
 terraform version
 ```
-
 ### Initial Setup
 ```bash
 # Create project directory
@@ -110,7 +79,6 @@ touch variables.tf
 # Create outputs file
 touch outputs.tf
 ```
-
 ## Configuration Language
 
 ### HCL Syntax Basics
@@ -148,7 +116,6 @@ output "example_output" {
   value       = resource.resource_type.resource_name.attribute
 }
 ```
-
 ### Data Types
 ```hcl
 # String
@@ -200,7 +167,6 @@ variable "server_config" {
   }
 }
 ```
-
 ### Functions and Expressions
 ```hcl
 # String functions
@@ -348,7 +314,6 @@ resource "random_string" "suffix" {
   upper   = false
 }
 ```
-
 ### Resource Dependencies
 ```hcl
 # Implicit dependency (reference)
@@ -377,7 +342,6 @@ resource "aws_instance" "app_server" {
   }
 }
 ```
-
 ### Resource Meta-Arguments
 ```hcl
 # Count
@@ -576,7 +540,6 @@ data "aws_caller_identity" "current" {}
 # Current AWS region
 data "aws_region" "current" {}
 ```
-
 ### Using Data Sources
 ```hcl
 # Use AMI from data source
@@ -741,7 +704,6 @@ output "instance_public_dns" {
   value       = aws_instance.web_server.public_dns
 }
 ```
-
 ### Multi-Tier Architecture
 ```hcl
 # VPC

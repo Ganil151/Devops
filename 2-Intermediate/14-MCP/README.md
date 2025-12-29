@@ -28,7 +28,8 @@ This module is organized into 6 progressive phases:
     *   20 Essential interview questions on Agentic AI and MCP.
     *   20-Question Knowledge Quiz to test your readiness.
 
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**
+6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architecture challenges.
+7.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
     *   5 Robust scenarios covering AI-driven troubleshooting, self-healing pipelines, and automated cleanup.
 
 ---

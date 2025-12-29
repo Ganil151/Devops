@@ -41,7 +41,6 @@ Infrastructure as Code Benefits:
     - Self-service provisioning
     - Disaster recovery
 ```
-
 ### IaC Best Practices
 ```hcl
 # 1. Use consistent naming conventions
@@ -95,7 +94,6 @@ resource "aws_vpc" "main" {
 ## Project Structure
 
 ### Standard Directory Layout
-
 ![projectArch](../../../00-Resources/03-Images-Diagrams/teraformProArch.png)
 ```
 terraform-project/
@@ -147,8 +145,6 @@ terraform-project/
 ├── README.md
 └── Makefile
 ```
-
-
 ### Environment-Specific Configuration
 ```hcl
 # environments/dev/main.tf
@@ -209,7 +205,6 @@ instance_type = "t3.micro"
 enable_monitoring = false
 backup_retention = 1
 ```
-
 ### Shared Configuration
 ```hcl
 # shared/versions.tf
@@ -321,8 +316,7 @@ variable "environment_config" {
   }
 }
 ```
-
-### Environment Promotion Pipeline
+ ### Environment Promotion Pipeline
 ```yaml
 # .github/workflows/terraform.yml
 name: Terraform Infrastructure Pipeline
@@ -460,7 +454,6 @@ resource "aws_subnet" "public" {
   })
 }
 ```
-
 ### Configuration Composition
 ```hcl
 # Composition using modules
@@ -602,7 +595,6 @@ git flow feature finish add-database
 git flow release start v1.2.0
 git flow release finish v1.2.0
 ```
-
 ### .gitignore for Terraform
 ```gitignore
 # .gitignore
@@ -650,7 +642,6 @@ terraform.rc
 .env.local
 .env.*.local
 ```
-
 ### Pre-commit Hooks
 ```yaml
 # .pre-commit-config.yaml
@@ -764,7 +755,6 @@ destroy:
   only:
     - main
 ```
-
 ### Jenkins Pipeline
 ```groovy
 // Jenkinsfile
@@ -883,8 +873,7 @@ pipeline {
 package test
 
 import (
-    "testing"
-    
+    "testing"    
     "github.com/gruntwork-io/terratest/modules/terraform"
     "github.com/stretchr/testify/assert"
 )
@@ -930,7 +919,6 @@ func TestTerraformEC2Instance(t *testing.T) {
     assert.NotEmpty(t, instanceId)
 }
 ```
-
 ### Integration Testing
 ```bash
 #!/bin/bash
@@ -958,7 +946,6 @@ terraform destroy -auto-approve
 
 echo "Integration tests completed successfully"
 ```
-
 ### Policy Testing with OPA
 ```rego
 # policies/security.rego
@@ -997,7 +984,6 @@ deny contains msg if {
 ```
 
 ## 🏗️ Resource Dependency Graph
-
 Terraform builds a Directed Acyclic Graph (DAG) to determine the order of resource creation. Understanding this graph is essential for managing complex infrastructure.
 
 ```mermaid
@@ -1031,13 +1017,13 @@ graph TD
 1. **How do you reference the current index in a `count` loop?**
    - [ ] `${index}`
    - [ ] `self.index`
-   - [x] `count.index`
+   - [ ] `count.index`
    - [ ] `i`
 
 2. **Which meta-argument is used to ensure a new resource is created *before* the old one is deleted during an update?**
    - [ ] `depends_on`
    - [ ] `prevent_destroy`
-   - [x] `lifecycle { create_before_destroy = true }`
+   - [ ] `lifecycle { create_before_destroy = true }`
    - [ ] `ignore_changes`
 
 3. **What is the correct syntax for a conditional expression in HCL?**

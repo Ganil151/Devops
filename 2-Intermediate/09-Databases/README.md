@@ -13,8 +13,9 @@ Follow these modules in order to master database orchestration:
 3.  **[03-MySQL-and-RDS](./03-MySQL-and-RDS/README.md)**: Master MySQL and its cloud implementation via Amazon RDS.
 4.  **[04-NoSQL-MongoDB-Redis](./04-NoSQL-MongoDB-Redis/README.md)**: Document stores and high-performance in-memory caching.
 5.  **[05-Backup-and-Monitoring](./05-Backup-and-Monitoring/README.md)**: Strategies for data durability, snapshots, and performance tracking.
-6.  **[06-Interview-Questions-and-Quizzes](./06-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for technical screenings.
-7.  **[07-Real-Life-Scenarios](./07-Real-Life-Scenarios/README.md)**: Practical troubleshooting, migrations, and disaster recovery.
+6.  **[06-Interview-Questions-and-Quizzes](./06-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for job screenings.
+7.  **[07-Real-Life-Scenarios](./07-Real-Life-Scenarios/README.md)**: Practical troubleshootng and architecture challenges.
+8.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 

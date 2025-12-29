@@ -28,12 +28,9 @@ This module is divided into 6 progressive phases:
     *   API Lifecycle Management (Versioning, Deprecation).
     *   Testing with Postman.
 
-5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**
-    *   20 Essential interview questions for DevOps engineers.
-    *   20-Question Knowledge Quiz to test your understanding.
-
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**
-    *   5 Robust scenarios applying learned concepts (DDoS prevention, Strangler Fig migration, etc.).
+5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for job screenings.
+6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshootng and architecture challenges.
+7.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 

@@ -22,10 +22,9 @@ This module is organized into 9 progressive phases:
     *   CloudWatch, Logging, and Governance/Compliance (AWS Config).
 7.  **[07-Load-Balancing-and-Scaling](./07-Load-Balancing-and-Scaling/README.md)**
     *   Application & Network Load Balancing, and Auto Scaling.
-8.  **[08-Interview-Questions-and-Quizzes](./08-Interview-Questions-and-Quizzes/README.md)**
-    *   20 Essential interview questions and a 20-question quiz.
-9.  **[09-Real-Life-Scenarios](./09-Real-Life-Scenarios/README.md)**
-    *   5 Robust scenarios covering Disaster Recovery, Scaling, and Security Breaches.
+8.  **[08-Interview-Questions-and-Quizzes](./08-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for job screenings.
+9.  **[09-Real-Life-Scenarios](./09-Real-Life-Scenarios/README.md)**: Practical troubleshootng and architecture challenges.
+10. **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 

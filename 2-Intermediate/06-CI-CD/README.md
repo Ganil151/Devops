@@ -13,7 +13,8 @@ Follow these modules in order to master modern software delivery:
 3.  **[03-GitLab-CI-Pipelines](./03-GitLab-CI-Pipelines/README.md)**: Explore modern, YAML-based pipelines integrated into Git.
 4.  **[04-Static-Code-Analysis-SonarQube](./04-Static-Code-Analysis-SonarQube/README.md)**: Implement automated code quality and security gates.
 5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for technical screenings.
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting, security integration, and deployment strategies.
+6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architecture challenges.
+7.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 

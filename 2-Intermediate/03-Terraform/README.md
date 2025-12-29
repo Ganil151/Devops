@@ -64,7 +64,7 @@ terraform fmt
 
 Follow these modules in order to master Terraform:
 
-1.  **[01-Fundamentals](Terraform%20Fundamentals.md)**: HCL basics, Providers, and your first resource.
+1.  **[01-Fundamentals](./01-Fundamentals/Terraform%20Fundamentals%20Guide.md)**: HCL basics, Providers, and your first resource.
 2.  **[02-HCL-and-IaC](./02-HCL-and-IaC/terraform-iac-guide.md)**: Deep dive into the mechanics of IaC and advanced HCL.
 3.  **[03-State-Management](./03-State-Management/terraform-state-guide.md)**: Remote backends, locking, and drift.
 4.  **[04-Modules](./04-Modules/terraform-modules-guide.md)**: Reusable infrastructure patterns.
@@ -74,6 +74,7 @@ Follow these modules in order to master Terraform:
 8.  **[08-Real-Life-Scenarios](./08-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architecture challenges.
 9.  **[09-Sample-Project](./09-Sample-Project/)**: A hands-on deployment example.
 10. **[10-Notes](./10-Notes/)**: Extra tips and quick references.
+11. **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 

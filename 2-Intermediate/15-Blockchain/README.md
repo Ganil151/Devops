@@ -28,8 +28,8 @@ This module is organized into 6 progressive phases:
     *   20 Essential interview questions on Web3 DevOps.
     *   20-Question Knowledge Quiz to test your understanding.
 
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**
-    *   5 Robust scenarios covering Reentrancy hacks, emergency upgrades, and atomic deployments.
+6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architecture challenges.
+7.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 

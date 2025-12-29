@@ -30,6 +30,10 @@ This module is organized into 6 progressive phases:
 6.  **[06-Real-Life-Scenarios](2-Intermediate/00-Runbooks-Procedures/06-Real-Life-Scenarios/Real-Life%20Scenarios.md)**
     *   5 Robust scenarios covering "Ghost" outages, flapping services, and financial risk mitigation.
 
+7.  **[07-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for interviews.
+8.  **[08-Real-Life-Scenarios](./06-Real-Life-Scenarios/Real-Life%20Scenarios.md)**: Practical troubleshooting and governance challenges.
+9.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
+
 ---
 
 ## 🎯 Final Objectives

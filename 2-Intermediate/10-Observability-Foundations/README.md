@@ -13,7 +13,8 @@ Follow these modules in order to master system visibility:
 3.  **[03-Health-Checks-and-Probers](./03-Health-Checks-and-Probers/README.md)**: Difference between Liveness, Readiness, and Synthetic probes.
 4.  **[04-Tracing-Foundations](./04-Tracing-Foundations/README.md)**: Introduction to Distributed Tracing and APM tools.
 5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for job screenings.
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting of outages and performance leaks.
+6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architecture challenges.
+7.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 

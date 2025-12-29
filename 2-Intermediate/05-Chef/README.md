@@ -13,7 +13,8 @@ Follow these modules in order to master Chef:
 3.  **[03-Attributes-and-Ohai](./03-Attributes-and-Ohai/README.md)**: Dynamic configuration using system profiling data.
 4.  **[04-Environments-and-Data-Bags](./04-Environments-and-Data-Bags/README.md)**: Managing stage-based releases and sharing global configuration data.
 5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for technical roles.
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting and large-scale deployment scenarios.
+6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architectural challenges.
+7.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 
