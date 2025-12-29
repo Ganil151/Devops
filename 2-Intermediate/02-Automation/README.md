@@ -8,10 +8,10 @@ Automation is the multiplier that allows one DevOps engineer to manage thousands
 
 Follow these modules in order to master DevOps automation:
 
-1.  **[01-Shell-Scripting-Basics](./01-Shell-Scripting-Basics/README.md)**: Variables, Loops, and the native language of the server.
-2.  **[02-Advanced-Bash-Automation](./02-Advanced-Bash-Automation/README.md)**: Error handling, `jq`, and remote execution.
-3.  **[03-Python-for-DevOps](./03-Python-for-DevOps/README.md)**: Cloud SDKs (Boto3), APIs, and modular automation code.
-4.  **[04-Automation-Best-Practices](./04-Automation-Best-Practices/README.md)**: Logging, Idempotency, and the "Fail Fast" mindset.
+1.  **[01-Shell-Scripting-Basics](Shell%20Scripting%20Basics-The%20DevOps%20Glue.md)**: Variables, Loops, and the native language of the server.
+2.  **[02-Advanced-Bash-Automation](Advanced%20Bash%20Automation.md)**: Error handling, `jq`, and remote execution.
+3.  **[03-Python-for-DevOps](Python%20for%20DevOps.md)**: Cloud SDKs (Boto3), APIs, and modular automation code.
+4.  **[04-Automation-Best-Practices](Automation%20Best%20Practices.md)**: Logging, Idempotency, and the "Fail Fast" mindset.
 5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for job screenings.
 6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshootng and governance automation.
 

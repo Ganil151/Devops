@@ -189,6 +189,6 @@ Solidify your understanding of automation and prepare for the technical screenin
 ---
 
 ## ✅ Knowledge Check
-- [x] Passed the 20-Question Quiz
-- [x] Reviewed the Top 15 Interview Questions
-- [x] Understand the difference between Bash and Python use cases
+- [ ] Passed the 20-Question Quiz
+- [ ] Reviewed the Top 15 Interview Questions
+- [ ] Understand the difference between Bash and Python use cases
