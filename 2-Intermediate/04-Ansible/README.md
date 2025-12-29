@@ -83,8 +83,8 @@ ansible-playbook site.yml --check
 ---
 
 ## 🔗 Next Steps
-- **[Terraform Integration](../02-Terraform/)** - Use Ansible to configure what Terraform spawns.
-- **[Kubernetes Automation](../04-Kubernetes/)** - Manage K8s clusters with Ansible.
+- **[Terraform Integration](../03-Terraform/)** - Use Ansible to configure what Terraform spawns.
+- **[Kubernetes Automation](../07-Kubernetes/)** - Manage K8s clusters with Ansible.
 
 ---
 *Automation is the force multiplier of the DevOps engineer. Script once, deploy everywhere.*

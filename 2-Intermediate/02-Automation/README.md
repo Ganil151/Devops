@@ -43,8 +43,8 @@ If you have to do a task more than twice, automate it.
 ---
 
 ## 🔗 Next Steps
-- **[Terraform (Declarative IaC)](../02-Terraform/)** - Move from scripting to state-managed infrastructure.
-- **[Ansible (Config Management)](../03-Ansible/)** - Scale your scripts across thousands of nodes.
+- **[Terraform (Declarative IaC)](../03-Terraform/)** - Move from scripting to state-managed infrastructure.
+- **[Ansible (Config Management)](../04-Ansible/)** - Scale your scripts across thousands of nodes.
 
 ---
 *Automation is the force multiplier of the DevOps engineer. Script once, deploy everywhere.*

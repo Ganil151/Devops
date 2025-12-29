@@ -39,7 +39,7 @@ Chef is often compared to **[Ansible](../04-Ansible/)**. While Ansible is agentl
 ---
 
 ## 🔗 Next Steps
-- **[Helm (Microservices Packaging)](../02-Helm/)** - Package applications for Kubernetes.
+- **[Helm (Microservices Packaging)](../08-Helm/)** - Package applications for Kubernetes.
 - **[CI/CD Pipelines](../06-CI-CD/)** - Automate your cookbook testing and deployment.
 
 ---

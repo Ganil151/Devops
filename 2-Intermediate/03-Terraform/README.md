@@ -90,7 +90,7 @@ Follow these modules in order to master Terraform:
 ---
 
 ## 🔗 Next Steps
-- **[Ansible Integration](../03-Ansible/)** - Configure the servers Terraform deploys.
+- **[Ansible Integration](../04-Ansible/)** - Configure the servers Terraform deploys.
 - **[Advanced AWS Projects](./Aws_Projects/)** - Build production-grade VPCs.
 
 ---
