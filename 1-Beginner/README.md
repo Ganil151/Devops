@@ -42,7 +42,7 @@ Instead of jumping into complex tools, we follow a 6-phase journey that mimics r
 *Leveraging AI and modern paradigms in DevOps.*
 16. **[Prompt Engineering](./16-Prompt-Engineering/DevOps%20Prompt%20Engineering%20-%20Beginner%20Level.md)**: Using AI as your automation wingman.
 17. **[Model Context Protocol (MCP)](./17-MCP/Model%20Context%20Protocol%20(MCP)%20-%20Beginner%20Level.md)**: Advanced AI tool integration.
-18. **[Blockchain Fundamentals](./18-Blockchain/README.md)**: Nodes, ledgers, and decentralized ops.
+18. **[Blockchain Fundamentals](Blockchain%20DevOps%20Fundamentals.md)**: Nodes, ledgers, and decentralized ops.
 
 ---
 

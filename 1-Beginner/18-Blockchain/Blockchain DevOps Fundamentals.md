@@ -1,5 +1,3 @@
-# Blockchain DevOps: Fundamentals
-
 ## Introduction
 Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network. For DevOps engineers, understanding the underlying infrastructure—nodes, networks, and consensus mechanisms—is the first step.
 
