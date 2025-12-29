@@ -1,9 +1,6 @@
-# 05: Interview Questions and Quizzes
-
 Test your operational knowledge and prepare for SRE/DevOps roles.
 
-## 🎤 Top 20 Interview Questions
-
+## 🎤 Top 20 Interview Questions: 
 1.  **What is the difference between a Runbook and a Playbook?**
 2.  **What are the components of an effective Incident Response team?**
 3.  **Explain the concept of 'Blameless Post-Mortems'.**

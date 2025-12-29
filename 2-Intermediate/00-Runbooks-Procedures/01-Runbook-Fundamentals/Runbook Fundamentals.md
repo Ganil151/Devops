@@ -1,9 +1,6 @@
-# 01: Runbook Fundamentals
-
 Automation is the heart of DevOps, but clear, actionable documentation is its brain. **Runbooks** ensure that in the middle of a P0 outage, an engineer knows exactly what to do without guessing.
 
 ## 📖 What is a Runbook?
-
 A **Runbook** is a step-by-step guide for performing a specific operational task. Unlike a configuration script (Playbook), a Runbook details the "Who, What, When, and Why" of a process.
 
 ### The DevOps Hierarchy
@@ -33,7 +30,6 @@ Executable code triggered by specific system signals (Alerts).
 ---
 
 ## 🔄 The Deployment Lifecycle
-
 Runbooks shouldn't just exist for disasters. They should be integrated into every stage:
 - **Development**: Documenting local setup steps.
 - **Staging**: Validating environment similarity.

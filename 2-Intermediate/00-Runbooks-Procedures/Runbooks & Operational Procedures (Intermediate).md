@@ -6,28 +6,28 @@ In the world of DevOps, automation is king, but documentation is the law. **Runb
 ## 🗺️ Learning Path
 This module is organized into 6 progressive phases:
 
-1.  **[01-Runbook-Fundamentals](./01-Runbook-Fundamentals/README.md)**
+1.  **[01-Runbook-Fundamentals](Runbook%20Fundamentals.md)**
     *   Manual vs. Hybrid vs. Automated Runbooks.
     *   The DevOps hierarchy (SOPs, Runbooks, Playbooks).
 
-2.  **[02-Writing-Effective-SOPs](./02-Writing-Effective-SOPs/README.md)**
+2.  **[02-Writing-Effective-SOPs](Writing%20Effective%20SOP's.md)**
     *   The "Docs-as-Code" philosophy.
     *   Standard templates and version control for operations.
 
-3.  **[03-Auto-Remediation-Patterns](./03-Auto-Remediation-Patterns/README.md)**
+3.  **[03-Auto-Remediation-Patterns](Auto-Remediation%20Patterns.md)**
     *   Building self-healing infrastructure.
     *   Restart, Disk Cleanup, and Scaling patterns.
     *   Safety boundaries and circuit breakers.
 
-4.  **[04-Incident-Management-and-Response](./04-Incident-Management-and-Response/README.md)**
+4.  **[04-Incident-Management-and-Response](Incident%20Management%20and%20Response.md)**
     *   Incident roles (IC, Scribe, Ops Lead).
     *   Escalation matrices and Blameless Post-Mortems.
 
-5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**
+5.  **[05-Interview-Questions-and-Quizzes](Interview%20Questions%20and%20Quizzes.md)**
     *   20 Essential interview questions for SRE and DevOps roles.
     *   20-Question Knowledge Quiz to validate your operational readiness.
 
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**
+6.  **[06-Real-Life-Scenarios](2-Intermediate/00-Runbooks-Procedures/06-Real-Life-Scenarios/Real-Life%20Scenarios.md)**
     *   5 Robust scenarios covering "Ghost" outages, flapping services, and financial risk mitigation.
 
 ---
@@ -41,5 +41,5 @@ By the end of this module, you will be able to:
 5.  **Audit**: Ensure operational reliability through "Game Day" simulations and chaos engineering.
 
 ---
-**Next Step**: Learn how to automate these procedures using **[Ansible Automation](../04-Ansible/)**.
+**Next Step**: Learn how to automate these procedures using **[Runbook-Fundamentals](Runbook%20Fundamentals.md)**.
 

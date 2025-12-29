@@ -8,12 +8,12 @@ Welcome to the **Networking & VPC** module. This is the foundation of the Interm
 
 Follow these modules in order to master cloud networking:
 
-1.  **[01-VPC-Basics](./01-VPC-Basics/README.md)**: CIDR blocks, IGWs, and Route Tables.
-2.  **[02-Subnetting-Strategy](./02-Subnetting-Strategy/README.md)**: Public vs. Private subnets and NAT Gateways.
-3.  **[03-VPC-Peering](./03-VPC-Peering/README.md)**: Connecting multiple VPCs securely.
-4.  **[04-Load-Balancing](./04-Load-Balancing/README.md)**: Distributing traffic with ALB and NLB.
-5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for interviews.
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architectural challenges.
+1.  **[01-VPC-Basics](The%20Core%20of%20Cloud%20Networking.md)**: CIDR blocks, IGWs, and Route Tables.
+2.  **[02-Subnetting-Strategy](Subnetting%20Strategy.md)**: Public vs. Private subnets and NAT Gateways.
+3.  **[03-VPC-Peering](VPC%20Peering%20Guide.md)**: Connecting multiple VPCs securely.
+4.  **[04-Load-Balancing](Load%20Balancer%20Setup%20(ALB-NLB).md)**: Distributing traffic with ALB and NLB.
+5.  **[05-Interview-Questions-and-Quizzes](Interview%20Questions%20&%20Quiz.md)**: Test your knowledge and prepare for interviews.
+6.  **[06-Real-Life-Scenarios](2-Intermediate/01-Networking-VPC/06-Real-Life-Scenarios/Real-Life%20Scenarios.md)**: Practical troubleshooting and architectural challenges.
 
 ---
 

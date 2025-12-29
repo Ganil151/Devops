@@ -1,5 +1,4 @@
-# Networking-VPC: Real-Life Scenarios
-
+## Networking-VPC
 Put your knowledge to the test with these practical troubleshooting and architectural challenges.
 
 ---

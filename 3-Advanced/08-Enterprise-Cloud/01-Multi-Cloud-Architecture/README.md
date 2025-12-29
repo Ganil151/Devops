@@ -25,7 +25,7 @@ Organizations adopt multi-cloud for several reasons:
 
 ## 3. Detailed Guides
 
-### 🏗️ [Architectural Fundamentals](Fundamentals/README.md)
+### 🏗️ [Architectural Fundamentals](3-Advanced/08-Enterprise-Cloud/01-Multi-Cloud-Architecture/Fundamentals/README.md)
 Patterns for portability, cross-cloud connectivity (VPN/Peering), and data replication strategies.
 
 ### 🛡️ [Security & Identity](Security/README.md)

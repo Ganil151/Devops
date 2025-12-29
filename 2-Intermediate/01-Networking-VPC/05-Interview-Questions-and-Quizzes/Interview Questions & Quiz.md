@@ -1,5 +1,4 @@
-# Networking & VPC: Interview Questions & Quiz
-
+## Networking & VPC
 Prepare for technical interviews and validate your understanding of cloud networking.
 
 ---

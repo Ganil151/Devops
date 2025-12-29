@@ -1,4 +1,4 @@
-# VPC Foundations: The Core of Cloud Networking
+# VPC Foundations:
 
 A **Virtual Private Cloud (VPC)** is your private, isolated corner of the cloud. Understanding how to build one correctly is essential for every DevOps engineer.
 

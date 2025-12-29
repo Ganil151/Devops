@@ -1,5 +1,3 @@
-# 06: Real-Life Scenarios
-
 Explore how operational procedures and runbooks are applied in high-pressure real-world situations.
 
 ## 🚒 Scenario 1: The "Ghost" Outage

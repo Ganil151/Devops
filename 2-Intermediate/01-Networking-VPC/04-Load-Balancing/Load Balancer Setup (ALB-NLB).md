@@ -1,4 +1,3 @@
-# Load Balancer Setup (ALB/NLB)
 
 > **Note**: This is an Intermediate-level topic.
 

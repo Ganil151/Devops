@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/00-Runbooks-Procedures/Runbooks & Operational Procedures (Intermediate).md",
+                "file": "2-Intermediate/01-Networking-VPC/06-Real-Life-Scenarios/Real-Life Scenarios.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Runbooks & Operational Procedures (Intermediate)"
+              "title": "Real-Life Scenarios"
             }
           }
         ]
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 224.5,
-    "collapsed": true
+    "width": 224.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -203,13 +202,20 @@
   },
   "active": "75d73bc06ce4d6e0",
   "lastOpenFiles": [
+    "2-Intermediate/01-Networking-VPC/05-Interview-Questions-and-Quizzes/Interview Questions & Quiz.md",
+    "2-Intermediate/01-Networking-VPC/04-Load-Balancing/Load Balancer Setup (ALB-NLB).md",
+    "2-Intermediate/01-Networking-VPC/03-VPC-Peering/VPC Peering Guide.md",
+    "2-Intermediate/01-Networking-VPC/02-Subnetting-Strategy/Subnetting Strategy.md",
+    "2-Intermediate/01-Networking-VPC/01-VPC-Basics/The Core of Cloud Networking.md",
+    "2-Intermediate/00-Runbooks-Procedures/06-Real-Life-Scenarios/Real-Life Scenarios.md",
+    "2-Intermediate/00-Runbooks-Procedures/05-Interview-Questions-and-Quizzes/Interview Questions and Quizzes.md",
+    "2-Intermediate/00-Runbooks-Procedures/04-Incident-Management-and-Response/Incident Management and Response.md",
+    "2-Intermediate/00-Runbooks-Procedures/03-Auto-Remediation-Patterns/Auto-Remediation Patterns.md",
+    "2-Intermediate/00-Runbooks-Procedures/02-Writing-Effective-SOPs/Writing Effective SOP's.md",
+    "2-Intermediate/README.md",
+    "2-Intermediate/00-Runbooks-Procedures/Runbooks & Operational Procedures (Intermediate).md",
+    "2-Intermediate/00-Runbooks-Procedures/01-Runbook-Fundamentals/Runbook Fundamentals.md",
     "1-Beginner/18-Blockchain/Blockchain DevOps Fundamentals.md",
-    "2-Intermediate/00-Runbooks-Procedures/06-Real-Life-Scenarios/README.md",
-    "2-Intermediate/00-Runbooks-Procedures/05-Interview-Questions-and-Quizzes/README.md",
-    "2-Intermediate/00-Runbooks-Procedures/04-Incident-Management-and-Response/README.md",
-    "2-Intermediate/00-Runbooks-Procedures/03-Auto-Remediation-Patterns/README.md",
-    "2-Intermediate/00-Runbooks-Procedures/02-Writing-Effective-SOPs/README.md",
-    "2-Intermediate/00-Runbooks-Procedures/01-Runbook-Fundamentals/README.md",
     "2-Intermediate/00-Runbooks-Procedures/06-Real-Life-Scenarios",
     "2-Intermediate/00-Runbooks-Procedures/05-Interview-Questions-and-Quizzes",
     "2-Intermediate/00-Runbooks-Procedures/04-Incident-Management-and-Response",
@@ -233,13 +239,6 @@
     "2-Intermediate/15-Blockchain/05-Interview-Questions-and-Quizzes/README.md",
     "2-Intermediate/15-Blockchain/04-Testing-and-Testnets/README.md",
     "2-Intermediate/15-Blockchain/03-Security-and-Analysis/README.md",
-    "2-Intermediate/15-Blockchain/02-Smart-Contract-CI-CD/README.md",
-    "2-Intermediate/15-Blockchain/01-Blockchain-Development-Foundations/README.md",
-    "2-Intermediate/15-Blockchain/README.md",
-    "2-Intermediate/16-Blockchain/06-Real-Life-Scenarios/README.md",
-    "2-Intermediate/16-Blockchain/05-Interview-Questions-and-Quizzes/README.md",
-    "2-Intermediate/16-Blockchain/03-Security-and-Analysis/README.md",
-    "2-Intermediate/16-Blockchain/04-Testing-and-Testnets/README.md",
     "2-Intermediate/15-FinOps/Images/cost-optimization.png",
     "2-Intermediate/00-Runbooks-Procedures/images/incident-lifecycle.svg",
     "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/f0647ce85f5d2f7aa43d1664bae09706055480e3aa50bd1cf68d0bce459c2b79.png",
