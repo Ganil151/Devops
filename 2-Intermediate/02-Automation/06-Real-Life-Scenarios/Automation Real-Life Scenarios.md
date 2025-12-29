@@ -1,5 +1,3 @@
-# Automation Real-Life Scenarios
-
 Put your scripting skills into practice with these real-world DevOps challenges.
 
 ---

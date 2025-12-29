@@ -850,4 +850,74 @@ resource "aws_autoscaling_group" "web" {
 }
 ```
 
+## 🏗️ Terraform Execution Workflow
+
+The Terraform lifecycle is a series of stages that transform your HCL code into live infrastructure.
+
+```mermaid
+sequenceDiagram
+    participant Dev as DevOps Engineer
+    participant Core as Terraform Core
+    participant State as State File (.tfstate)
+    participant Cloud as Cloud Provider (AWS/Azure)
+
+    Dev->>Core: 1. terraform init
+    Core->>Cloud: Download Providers/Modules
+    Dev->>Core: 2. terraform plan
+    Core->>State: Read current state
+    Core->>Cloud: Refresh resource data
+    Core-->>Dev: Show Diff (Planned Changes)
+    Dev->>Core: 3. terraform apply
+    Core->>Cloud: Create/Update/Delete Resources
+    Cloud-->>Core: Success/Failure Metadata
+    Core->>State: Update State File
+```
+
+---
+
+## ❓ Interview Preparation
+
+### Top 5 Fundamentals Interview Questions
+1. **What is the difference between `terraform plan` and `terraform apply`?** (`plan` generates an execution plan showing what will happen; `apply` executes those changes).
+2. **What does `terraform init` actually do?** (It initializes the working directory, downloads provider plugins, and sets up the backend).
+3. **What is an "Implicit Dependency" in Terraform?** (When one resource references an attribute of another, e.g., `vpc_id = aws_vpc.main.id`, Terraform automatically knows to create the VPC first).
+4. **How do you provide variable values during a `terraform apply`?** (Via `.tfvars` files, environment variables like `TF_VAR_name`, or command line `-var` flags).
+5. **What is a "Provider" in Terraform?** (A plugin that translates Terraform HCL into API calls for a specific platform like AWS, Azure, or GitHub).
+
+---
+
+## 📝 Practice Quiz
+
+1. **Which command is used to fix the indentation and styling of your HCL files?**
+   - [ ] `terraform validate`
+   - [ ] `terraform styling`
+   - [x] `terraform fmt`
+   - [ ] `terraform clean`
+
+2. **In HCL, what is the keyword used to retrieve data from an existing resource not managed by the current script?**
+   - [ ] `resource`
+   - [x] `data`
+   - [ ] `fetch`
+   - [ ] `get`
+
+3. **What is the default name for the file that stores Terraform's source of truth?**
+   - [ ] `terraform.log`
+   - [ ] `infrastructure.state`
+   - [x] `terraform.tfstate`
+   - [ ] `tf.config`
+
+---
+
+## 🏢 Real-Life Scenario: The Orphaned Resource
+
+**Requirement**: You inherited a project where someone manually created an S3 bucket in the AWS console. You now need to manage it with Terraform without deleting it.
+
+**Solution**:
+1. **Define the Resource**: Write the `resource "aws_s3_bucket" "shared_data" {}` block in your `main.tf`.
+2. **Import the State**: Run `terraform import aws_instance.shared_data <bucket-name>`.
+3. **Reconcile**: Run `terraform plan`. Terraform will show a diff because your HCL block is empty.
+4. **Update HCL**: Fill in the arguments in your `main.tf` to match the actual AWS settings until `terraform plan` shows "No changes".
+
+---
+
 This fundamentals guide provides a solid foundation for understanding Terraform concepts and getting started with Infrastructure as Code.

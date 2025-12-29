@@ -1,9 +1,6 @@
-# Terraform Fundamentals
-
 This folder contains comprehensive documentation for learning Terraform from the ground up.
 
 ## Contents
-
 - **[terraform-fundamentals-guide.md](./terraform-fundamentals-guide.md)** - Complete fundamentals guide covering:
   - What is Terraform and core concepts
   - Installation and setup procedures
@@ -12,17 +9,13 @@ This folder contains comprehensive documentation for learning Terraform from the
   - Variables, outputs, and functions
   - Basic workflow and commands
   - Practical examples and use cases
-
 ## Learning Path
-
 1. Start with the fundamentals guide to understand core concepts
 2. Practice with the basic examples provided
 3. Move to Infrastructure-as-Code principles
 4. Learn about modules and state management
 5. Apply best practices and advanced topics
-
 ## Quick Start
-
 ```bash
 # Navigate to this directory
 cd Fundamentals

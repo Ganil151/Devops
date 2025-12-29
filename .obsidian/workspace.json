@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a5fdb3097bfb987c",
+        "id": "979eec0581980188",
         "type": "tabs",
         "children": [
           {
-            "id": "4ac6497c4abc828c",
+            "id": "3b0e4a985e699d8d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/02-Automation/05-Interview-Questions-and-Quizzes/README.md",
+                "file": "2-Intermediate/03-Terraform/01-Fundamentals/Terraform Fundamentals.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Terraform Fundamentals"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 224.5
+    "width": 224.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -200,8 +201,12 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "4ac6497c4abc828c",
+  "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
+    "2-Intermediate/03-Terraform/01-Fundamentals/terraform-fundamentals-guide.md",
+    "2-Intermediate/03-Terraform/01-Fundamentals/Terraform Fundamentals.md",
+    "2-Intermediate/02-Automation/06-Real-Life-Scenarios/Automation Real-Life Scenarios.md",
+    "2-Intermediate/02-Automation/05-Interview-Questions-and-Quizzes/README.md",
     "2-Intermediate/02-Automation/04-Automation-Best-Practices/Automation Best Practices.md",
     "2-Intermediate/02-Automation/03-Python-for-DevOps/Python for DevOps.md",
     "2-Intermediate/02-Automation/04-Automation-Best-Practices/README.md",
@@ -231,10 +236,6 @@
     "2-Intermediate/16-FinOps/Images/cost-optimization.png",
     "2-Intermediate/16-FinOps/07-Real-Life-Scenarios/README.md",
     "2-Intermediate/16-FinOps/06-Interview-Questions-and-Quizzes/README.md",
-    "2-Intermediate/16-FinOps/05-Automation/README.md",
-    "2-Intermediate/16-FinOps/03-Reserved-Instances/README.md",
-    "2-Intermediate/16-FinOps/04-Showback-Chargeback/README.md",
-    "2-Intermediate/16-FinOps/02-Optimization-Strategies/README.md",
     "2-Intermediate/16-FinOps/Images",
     "2-Intermediate/16-FinOps/07-Real-Life-Scenarios",
     "2-Intermediate/16-FinOps/06-Interview-Questions-and-Quizzes",

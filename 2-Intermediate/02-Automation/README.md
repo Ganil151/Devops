@@ -13,7 +13,7 @@ Follow these modules in order to master DevOps automation:
 3.  **[03-Python-for-DevOps](Python%20for%20DevOps.md)**: Cloud SDKs (Boto3), APIs, and modular automation code.
 4.  **[04-Automation-Best-Practices](Automation%20Best%20Practices.md)**: Logging, Idempotency, and the "Fail Fast" mindset.
 5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for job screenings.
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshootng and governance automation.
+6.  **[06-Real-Life-Scenarios](Automation%20Real-Life%20Scenarios.md)**: Practical troubleshootng and governance automation.
 
 ---
 

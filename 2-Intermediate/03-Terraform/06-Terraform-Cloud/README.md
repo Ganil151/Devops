@@ -132,7 +132,71 @@ Your Terraform code needs credentials and parameters to run.
 
 ---
 
+## 🏗️ Terraform Cloud VCS Workflow
+
+The most powerful way to use Terraform Cloud is through its VCS integration, enabling a true GitOps lifecycle.
+
+```mermaid
+graph LR
+    Dev[Developer] -- "1. Git Push (PR)" --> VCS[GitHub / GitLab]
+    VCS -- "2. Webhook Trigger" --> TFC[HCP Terraform]
+    TFC -- "3. Speculative Plan" --> PR_Check[PR status: Passed/Failed]
+    PR_Check -- "4. Merge to Main" --> TFC_Apply[TFC: Trigger Apply]
+    TFC_Apply -- "5. Provision" --> Cloud[AWS / Azure]
+    
+    style TFC fill:#f9f,stroke:#333,stroke-width:2px
+    style VCS fill:#bbf,stroke:#333,stroke-width:2px
+```
+
+---
+
+## ❓ Interview Preparation
+
+### Top 5 Terraform Cloud Interview Questions
+1. **How is a Terraform Cloud "Workspace" different from a CLI "Workspace"?** (CLI workspaces are just different state files in the same backend; TFC workspaces are comprehensive environments with their own state, variables, run history, and settings).
+2. **What is a "Speculative Plan"?** (A plan triggered by a Pull Request that tells you what *would* happen if you merged, but doesn't allow an `apply`).
+3. **What is Sentinel and why is it used?** (It is a Policy-as-Code framework used to enforce guardrails, such as "No EC2 instances larger than t3.medium" or "All S3 buckets must be encrypted").
+4. **How do you handle cloud credentials in Terraform Cloud?** (By adding them as "Environment Variables" in the workspace or a global "Variable Set," and marking them as `sensitive` so they are encrypted and never shown in the UI).
+5. **What is the "Private Module Registry"?** (An internal catalog where your company can publish and version its own validated Terraform modules for other teams to use).
+
+---
+
+## 📝 Practice Quiz
+
+1. **Which TFC feature allows you to share variables across multiple workspaces?**
+   - [ ] Variable Blocks
+   - [ ] HCL Locals
+   - [x] Variable Sets
+   - [ ] Workspace Links
+
+2. **What happens by default when you merge a PR into a branch connected to a TFC workspace?**
+   - [ ] It deletes the state
+   - [ ] It does nothing until you run a command locally
+   - [x] It triggers a plan and (if configured) an automatic apply
+   - [ ] It sends an email to the HashiCorp CEO
+
+3. **True or False: Terraform Cloud stores your state file's run history.**
+   - [x] True (You can see a complete list of every state change and download previous versions)
+   - [ ] False
+
+---
+
+## 🏢 Real-Life Scenario: The Global Compliance Guardrail
+
+**Requirement**: Your company security policy dictates that no developer should ever deploy a resource in a region outside of `us-east-1` or `us-west-2` to comply with data residency laws.
+
+**Solution**:
+1. **Policy as Code**: Write an **OPA (Rego)** or **Sentinel** policy that checks the `provider` or `region` attribute of all resources in a plan.
+2. **Implementation**: Upload this policy to your Terraform Cloud organization.
+3. **Enforcement**: Set the policy to `Hard-Mandatory`.
+4. **The Result**: When an engineer tries to deploy a database in `eu-central-1` (Germany), the Terraform Cloud run will automatically fail and block the deployment before it ever happens. The engineer gets a clear error message explaining the compliance violation.
+
+---
+
 ## 🗺️ Learning Path
 - [Main Terraform Docs](../README.md)
 - [State Management & Backends](../State-Management/terraform-state-guide.md)
-- [Sentinel/OPA Guide coming soon...]
+
+---
+
+This comprehensive guide to Terraform Cloud provides the foundation for secure, collaborative, and compliant infrastructure management.

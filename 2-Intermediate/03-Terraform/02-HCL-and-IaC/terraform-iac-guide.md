@@ -996,4 +996,68 @@ deny contains msg if {
 }
 ```
 
+## 🏗️ Resource Dependency Graph
+
+Terraform builds a Directed Acyclic Graph (DAG) to determine the order of resource creation. Understanding this graph is essential for managing complex infrastructure.
+
+```mermaid
+graph TD
+    VPC["aws_vpc.main"] --> SubnetA["aws_subnet.app_a"]
+    VPC --> SubnetB["aws_subnet.app_b"]
+    SubnetA --> ASG["aws_autoscaling_group.web"]
+    SubnetB --> ASG
+    SG["aws_security_group.web"] --> ASG
+    DB["aws_db_instance.primary"] --> ASG
+    
+    style VPC fill:#f9f,stroke:#333,stroke-width:2px
+    style ASG fill:#bbf,stroke:#333,stroke-width:2px
+```
+
+---
+
+## ❓ Interview Preparation
+
+### Top 5 HCL & IaC Interview Questions
+1. **Explain the difference between `count` and `for_each`.** (`count` is best for simple loops of identical resources; `for_each` is better for creating resources from a map or set of strings where items might be deleted over time).
+2. **What are `locals` and when should you use them?** (Locals are like internal variables used to simplify complex expressions or avoid repeating calculations within a specific module).
+3. **What is a "Splat Expression" `[*]`?** (It allows you to capture a list of attributes from all instances in a `count` or `for_each` loop, e.g., `aws_instance.web[*].id`).
+4. **How does Terraform handle resource deletion during an `apply`?** (If a resource is removed from HCL or its configuration changes in a way that requires replacement, Terraform schedules it for destruction before or after creating the new one).
+5. **What is the purpose of `terraform validate`?** (It checks your code for internal consistency and syntax errors without connecting to the cloud provider).
+
+---
+
+## 📝 Practice Quiz
+
+1. **How do you reference the current index in a `count` loop?**
+   - [ ] `${index}`
+   - [ ] `self.index`
+   - [x] `count.index`
+   - [ ] `i`
+
+2. **Which meta-argument is used to ensure a new resource is created *before* the old one is deleted during an update?**
+   - [ ] `depends_on`
+   - [ ] `prevent_destroy`
+   - [x] `lifecycle { create_before_destroy = true }`
+   - [ ] `ignore_changes`
+
+3. **What is the correct syntax for a conditional expression in HCL?**
+   - [ ] `if (true) then A else B`
+   - [x] `condition ? value_if_true : value_if_false`
+   - [ ] `case when condition then A else B end`
+   - [ ] `condition -> value_if_true || value_if_false`
+
+---
+
+## 🏢 Real-Life Scenario: The Dynamic Multi-Region Setup
+
+**Requirement**: You need to deploy a web application across 3 different regions (us-east-1, eu-west-1, ap-southeast-1). Each region has a different number of availability zones.
+
+**Solution**:
+1. **Define a Map**: Create a variable `regions` that maps region names to their specific configs (AZ counts, instance types).
+2. **Use Providers with Aliases**: Define 3 provider blocks for `aws`, each with a different `alias`.
+3. **Loop with `for_each`**: Call your compute module using `for_each = var.regions`.
+4. **Dynamic Lookups**: Use the `data.aws_availability_zones` data source within the module to dynamically fetch the correct number of AZs for whichever region is currently being processed.
+
+---
+
 This Infrastructure as Code guide provides comprehensive patterns and practices for managing Terraform projects at scale with proper testing, CI/CD integration, and governance.

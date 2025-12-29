@@ -992,4 +992,69 @@ module "vpc" {
 | private_subnet_ids | IDs of the private subnets |
 ```
 
+## 🏗️ Module Composition Architecture
+
+Modules are building blocks. A well-architected project uses "Resource Modules" (fine-grained) composed into "Solution Modules" (higher-level).
+
+```mermaid
+graph TD
+    Root["Root Module (main.tf)"] --> VPC_Mod["Module: VPC"]
+    Root --> App_Mod["Module: Web-App Stack"]
+    
+    subgraph "Solution Module: Web-App Stack"
+        App_Mod --> Web_Mod["Module: Compute (ASG)"]
+        App_Mod --> DB_Mod["Module: Database (RDS)"]
+        App_Mod --> SG_Mod["Module: Security (SG)"]
+    end
+    
+    style Root fill:#f9f,stroke:#333,stroke-width:2px
+    style App_Mod fill:#bbf,stroke:#333,stroke-width:2px
+```
+
+---
+
+## ❓ Interview Preparation
+
+### Top 5 Modules Interview Questions
+1. **What are the three required files for a standard Terraform module?** (`main.tf`, `variables.tf`, and `outputs.tf`).
+2. **What is the difference between a Root Module and a Child Module?** (The Root module is the directory where you run `terraform apply`; any module called from the root or another module is a Child module).
+3. **Why should you use version constraints when calling a module from the Terraform Registry?** (To prevent breaking changes in the module from automatically being applied to your infrastructure when running `init`).
+4. **How do you make a variable in a module "Required"?** (By defining the variable without a `default` value).
+5. **How can you access a resource's attribute that is defined inside a child module from your root module?** (The child module must explicitly export it as an `output`, and the root module accesses it via `module.<MODULE_NAME>.<OUTPUT_NAME>`).
+
+---
+
+## 📝 Practice Quiz
+
+1. **What is the local directory where Terraform downloads modules during `init`?**
+   - [ ] `.modules`
+   - [ ] `terraform/modules`
+   - [x] `.terraform/modules`
+   - [ ] `vendor/modules`
+
+2. **Which `source` argument is valid for loading a module from a local directory?**
+   - [ ] `source = "vpc"`
+   - [x] `source = "./modules/vpc"`
+   - [ ] `source = "/home/user/vpc"`
+   - [ ] `source = "local://vpc"`
+
+3. **True or False: A module can call another module.**
+   - [x] True (This is called module nesting or composition)
+   - [ ] False
+
+---
+
+## 🏢 Real-Life Scenario: The Reusable Microservice Stack
+
+**Requirement**: Your company is moving to a microservices architecture. Every new microservice needs its own S3 bucket, a SQS queue, and an IAM role with specific permissions.
+
+**Solution**:
+1. **Create the Module**: Build a "microservice-base" module containing the S3, SQS, and IAM resources.
+2. **Parameterize**: Use variables for the microservice name and environment.
+3. **Standardize**: Add a variable for `tags` to ensure every service is properly labeled for cost tracking.
+4. **Deploy**: Every time a new team needs a microservice, they simply add a 10-line `module` block to their repo, pointing to your "microservice-base" module.
+5. **Impact**: You reduced infrastructure setup time from 4 hours to 5 minutes and ensured 100% compliance with company security standards.
+
+---
+
 This comprehensive modules guide provides patterns for creating reusable, maintainable, and well-tested Terraform modules.

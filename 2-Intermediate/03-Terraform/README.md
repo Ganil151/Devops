@@ -8,6 +8,20 @@ Terraform is an open-source tool that allows you to define both cloud and on-pre
 
 Terraform uses **HashiCorp Configuration Language (HCL)** to describe resources. It maintains a `terraform.tfstate` file which is the "Source of Truth" for what is actually deployed in your cloud provider.
 
+### 🏛️ High-Level Architecture
+
+```mermaid
+graph TD
+    User([SRE / Developer]) -- "HCL (.tf)" --> Core[Terraform Core]
+    Core -- "Read/Write" --> State[(tfstate file)]
+    Core -- "Plugin Protocol" --> Provider[Cloud Providers: AWS / Azure / GCP]
+    Provider -- "API Calls" --> Cloud["Cloud Infrastructure (EC2, S3, etc.)"]
+    
+    style Core fill:#f9f,stroke:#333,stroke-width:2px
+```
+
+---
+
 ## 🛠️ 2. Essential Terraform Commands
 
 ### 🚦 The Core Workflow
@@ -46,13 +60,11 @@ terraform fmt
 
 ---
 
----
-
-## �️ The Terraform Learning Path
+## 🗺️ The Terraform Learning Path
 
 Follow these modules in order to master Terraform:
 
-1.  **[01-Fundamentals](./01-Fundamentals/README.md)**: HCL basics, Providers, and your first resource.
+1.  **[01-Fundamentals](Terraform%20Fundamentals.md)**: HCL basics, Providers, and your first resource.
 2.  **[02-HCL-and-IaC](./02-HCL-and-IaC/terraform-iac-guide.md)**: Deep dive into the mechanics of IaC and advanced HCL.
 3.  **[03-State-Management](./03-State-Management/terraform-state-guide.md)**: Remote backends, locking, and drift.
 4.  **[04-Modules](./04-Modules/terraform-modules-guide.md)**: Reusable infrastructure patterns.

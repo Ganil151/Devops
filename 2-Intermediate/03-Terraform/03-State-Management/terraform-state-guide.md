@@ -771,4 +771,74 @@ resource "aws_instance" "web" {
 }
 ```
 
+## 🏗️ State Locking Workflow
+
+State locking prevents two people from running Terraform at the same time on the same state file, which could lead to corruption.
+
+```mermaid
+sequenceDiagram
+    participant UserA as Engineer A
+    participant UserB as Engineer B
+    participant Lock as DynamoDB (Lock Table)
+    participant State as S3 (State File)
+
+    UserA->>Lock: 1. Request Lock (MD5 of State Path)
+    Lock-->>UserA: Lock Acquired
+    UserA->>State: 2. Read State
+    UserB->>Lock: 3. Request Lock
+    Lock-->>UserB: Lock Denied (Error 423)
+    UserA->>State: 4. Apply Changes & Write State
+    UserA->>Lock: 5. Release Lock
+    Lock-->>UserA: Lock Released
+    UserB->>Lock: 6. Retry Request Lock
+    Lock-->>UserB: Lock Acquired
+```
+
+---
+
+## ❓ Interview Preparation
+
+### Top 5 State Management Interview Questions
+1. **What is the `terraform.tfstate` file and why is it important?** (It is the source of truth mapping your code to real-world resources; it tracks metadata that the cloud provider APIs don't always return).
+2. **Why is it dangerous to store state in Git?** (State files often contain sensitive information in plain text, like database passwords, even if they are marked as `sensitive` in HCL).
+3. **How does `terraform force-unlock` work?** (It manually removes a lock from the backend; should only be used if a process crashed and left a "stale" lock that prevents others from working).
+4. **What is the difference between `terraform state rm` and `terraform destroy`?** (`rm` only removes the resource from the state file (the resource keeps running in the cloud); `destroy` actually deletes the resource from the cloud).
+5. **How can you share data between two separate Terraform projects?** (By using the `terraform_remote_state` data source to read the outputs of another project's state file).
+
+---
+
+## 📝 Practice Quiz
+
+1. **Which AWS service is commonly used alongside S3 for Terraform state locking?**
+   - [ ] SQS
+   - [x] DynamoDB
+   - [ ] RDS
+   - [ ] SNS
+
+2. **If you change your backend from 'local' to 's3', which command must you run?**
+   - [ ] `terraform plan`
+   - [ ] `terraform apply`
+   - [x] `terraform init` (supports -reconfigure or -migrate-state)
+   - [ ] `terraform refresh`
+
+3. **True or False: Storing state in a Remote Backend improves performance for large infrastructures.**
+   - [x] True (Backends often support partial state loading and shared caching)
+   - [ ] False
+
+---
+
+## 🏢 Real-Life Scenario: The Concurrent Conflict
+
+**Requirement**: Two DevOps engineers at a large company try to update the production VPC at the same time. Engineer A wants to add a subnet, and Engineer B wants to change the CIDR block.
+
+**Scenario**:
+1. Engineer A starts `terraform apply`. Their CLI contacts DynamoDB and creates a lock entry.
+2. Engineer B starts `terraform apply` two seconds later. Their CLI sees the lock entry in DynamoDB and returns a `Error: Error acquiring the state lock`.
+3. Engineer B is forced to wait until Engineer A finishes.
+4. Once Engineer A finishes, the lock is released.
+5. Engineer B runs `terraform plan`. They immediately see the new subnet added by Engineer A because their plan pulled the updated state.
+6. **Result**: A potential disaster (corrupted networking state) was avoided by the locking mechanism.
+
+---
+
 This comprehensive state management guide provides the foundation for secure, reliable, and scalable Terraform state management across teams and environments.
