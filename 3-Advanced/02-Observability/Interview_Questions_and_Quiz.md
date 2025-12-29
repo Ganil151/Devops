@@ -40,6 +40,10 @@ Master the art of debugging distributed systems with advanced observability patt
 19. **What is 'MTTR'?** (Mean Time To Resolution)
 20. **Which tool is used for tracing in AWS?** (X-Ray)
 21. **What is 'OpenTelemetry Collector'?** (A vendor-agnostic proxy that receives, processes, and exports telemetry data)
+22. **What is a CloudWatch 'Metric Filter'?** (A feature that turns log patterns into numerical metrics)
+23. **What is the Datadog 'Unified Service Tagging'?** (Using env, service, and version tags to correlate all telemetry)
+24. **True/False: Datadog can monitor multiple cloud providers in one dashboard.** (True)
+25. **What is 'DogStatsD'?** (A metrics aggregation service that sends custom metrics to the Datadog Agent)
 
 ---
 
@@ -47,12 +51,12 @@ Master the art of debugging distributed systems with advanced observability patt
 
 ### Scenario 1: The Silent 500s
 **Problem**: An API was returning 500 errors, but the CPU and Memory were normal.
-**Solution**: Looking at Traces (Jaeger/Honeycomb), the team found that a specific downstream database query was timing out. Monitoring only metrics would have missed this granular failure.
+**Solution**: Looking at Traces (Jaeger/Honeycomb or Datadog APM), the team found that a specific downstream database query was timing out. Monitoring only metrics would have missed this granular failure.
 
 ### Scenario 2: Cardinality Explosion
 **Problem**: Prometheus memory usage spiked following a release.
 **Solution**: Using `topk` queries, the team discovered a developer added `user_email` as a label in a custom metric. Removing the label and using a log for that data fixed the memory leak.
 
-### Scenario 3: Log overload in ELK
-**Problem**: Elasticsearch became unreachable during an traffic spike.
-**Solution**: The team implemented Logstash and a Redis buffer to handle peaks. They also configured Index Lifecycle Management (ILM) to automatically move old logs to "cold" storage.
+### Scenario 3: SaaS Cost Optimization (Datadog)
+**Problem**: The monthly Datadog bill spiked due to high log volume.
+**Solution**: The team implemented "Inclusion Filters" to only index logs with levels `ERROR` and `WARN`. They used CloudWatch for archival logs to reduce Datadog ingestion costs.
