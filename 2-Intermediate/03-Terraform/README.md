@@ -68,7 +68,7 @@ Follow these modules in order to master Terraform:
 2.  **[02-HCL-and-IaC](./02-HCL-and-IaC/README.md)**: Deep dive into the mechanics of IaC and advanced HCL patterns.
 3.  **[03-State-Management](./03-State-Management/README.md)**: Remote backends, locking, and drift management.
 4.  **[04-Modules](./04-Modules/README.md)**: Reusable infrastructure patterns and best practices.
-5.  **[05-Best-Practices](./05-Best-Practices/README.md)**: Security, formatting, and performance.
+5.  **[05-Best-Practices](./05-Best-Practices/README.md)**: Industry standards for security, performance, and scale.
 6.  **[06-Terraform-Cloud](./06-Terraform-Cloud/README.md)**: Enterprise collaboration.
 7.  **[07-Interview-Questions-and-Quizzes](./07-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for jobs.
 8.  **[08-Real-Life-Scenarios](./08-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architecture challenges.

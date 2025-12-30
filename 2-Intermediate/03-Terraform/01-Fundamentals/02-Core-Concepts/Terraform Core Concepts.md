@@ -39,7 +39,6 @@ graph LR
    - *Answer*: A Provider is a plugin that makes an API reachable; a Resource is an object *within* that provider that you are creating/managing.
 
 ---
-
 ## 🧠 Quiz Snippet (5/20+)
 1. **What is the name of the Terraform state file?** (terraform.tfstate)
 2. **Where does Terraform Core look for providers?** (Terraform Registry)
