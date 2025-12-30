@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/03-Terraform/03-State-Management/04-State-Locking/State Locking.md",
+                "file": "2-Intermediate/03-Terraform/03-State-Management/09-Advanced-Patterns/Advanced State Patterns.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "State Locking"
+              "title": "Advanced State Patterns"
             }
           }
         ]
@@ -203,6 +203,12 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
+    "2-Intermediate/03-Terraform/03-State-Management/08-Troubleshooting/Troubleshooting State Issues.md",
+    "2-Intermediate/03-Terraform/03-State-Management/07-State-Migration/State Migration & Versioning.md",
+    "2-Intermediate/03-Terraform/03-State-Management/06-State-Security/State Security.md",
+    "2-Intermediate/03-Terraform/03-State-Management/05-State-Operations/State Operations.md",
+    "2-Intermediate/03-Terraform/03-State-Management/09-Advanced-Patterns/Advanced State Patterns.md",
+    "2-Intermediate/03-Terraform/03-State-Management/04-State-Locking/State Locking.md",
     "2-Intermediate/03-Terraform/03-State-Management/03-Remote-State-Backends/Remote State Backends.md",
     "2-Intermediate/03-Terraform/03-State-Management/03-Remote-State-Backends/images/s3-dynamodb-architecture.png",
     "2-Intermediate/03-Terraform/03-State-Management/03-Remote-State-Backends/images",
@@ -225,12 +231,6 @@
     "2-Intermediate/03-Terraform/01-Fundamentals/07-Variables-and-Outputs/Variables and Outputs.md",
     "2-Intermediate/03-Terraform/01-Fundamentals/06-Resources/Resources.md",
     "2-Intermediate/01-Networking-VPC/10-Monitoring-and-Troubleshooting/README.md",
-    "2-Intermediate/01-Networking-VPC/09-Hybrid-Connectivity/README.md",
-    "2-Intermediate/03-Terraform/01-Fundamentals/05-Providers/Providers.md",
-    "2-Intermediate/03-Terraform/01-Fundamentals/04-Configuration-Language/Configuration Language (HCL).md",
-    "2-Intermediate/01-Networking-VPC/08-High-Availability-and-Multi-Region/README.md",
-    "2-Intermediate/01-Networking-VPC/07-Load-Balancing-ALB-NLB/README.md",
-    "2-Intermediate/01-Networking-VPC/06-VPC-Peering-and-Transit-Gateway/README.md",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/10-Getting-Started-Guide",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/09-Cloud-Provider-Comparison",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/08-VPC-Best-Practices",

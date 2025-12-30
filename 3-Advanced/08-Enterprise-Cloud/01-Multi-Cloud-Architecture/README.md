@@ -28,7 +28,7 @@ Organizations adopt multi-cloud for several reasons:
 ### 🏗️ [Architectural Fundamentals](3-Advanced/08-Enterprise-Cloud/01-Multi-Cloud-Architecture/Fundamentals/README.md)
 Patterns for portability, cross-cloud connectivity (VPN/Peering), and data replication strategies.
 
-### 🛡️ [Security & Identity](Security/README.md)
+### 🛡️ [Security & Identity](3-Advanced/08-Enterprise-Cloud/01-Multi-Cloud-Architecture/Security/README.md)
 Federating identities via SAML/OIDC, securing cross-cloud traffic, and mTLS across boundaries.
 
 ### 💼 [Management & Governance](3-Advanced/08-Enterprise-Cloud/01-Multi-Cloud-Architecture/Management/README.md)
