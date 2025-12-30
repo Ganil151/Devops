@@ -2,46 +2,44 @@
 
 A backend defines where Terraform stores its state file and how it performs operations.
 
+## The Architecture (S3 + DynamoDB)
+
+For AWS, state storage and locking are handled by two different services.
+
+```mermaid
+graph LR
+    TF[Terraform CLI]
+    S3[(AWS S3)]
+    DDB[(DynamoDB)]
+    
+    TF -- 1. Check Lock --> DDB
+    DDB -- Lock Acquired --> TF
+    TF -- 2. Read State --> S3
+    S3 -- JSON Data --> TF
+    TF -- 3. Write State --> S3
+    TF -- 4. Release Lock --> DDB
+    
+    style S3 fill:#E1F5FE
+    style DDB fill:#FFF3E0
+```
+
 ## Popular Backends
 
-### 1. AWS S3 (with DynamoDB)
-The most common setup for AWS users.
+### 1. AWS S3 (Standard)
 ```hcl
 terraform {
   backend "s3" {
     bucket         = "tf-state-prod"
     key            = "network/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "terraform-lock" # For locking
+    dynamodb_table = "terraform-lock"
+    encrypt        = true
   }
 }
 ```
 
-### 2. Azure RM
-Using Blob Storage.
-```hcl
-terraform {
-  backend "azurerm" {
-    resource_group_name  = "tfstate-rg"
-    storage_account_name = "tstateacc"
-    container_name       = "tstate"
-    key                  = "prod.terraform.tfstate"
-  }
-}
-```
-
-### 3. GCS (Google Cloud Storage)
-```hcl
-terraform {
-  backend "gcs" {
-    bucket = "tf-state-bucket"
-    prefix = "terraform/state"
-  }
-}
-```
-
-### 4. Terraform Cloud
-The managed SaaS offering from HashiCorp.
+### 2. Terraform Cloud (Managed)
+No need to configure separate locking; it's built-in.
 ```hcl
 terraform {
   cloud {
@@ -50,6 +48,49 @@ terraform {
   }
 }
 ```
+
+### 3. Azure RM & GCS
+*   **Azure**: Stores state in Blob Storage.
+*   **GCS**: Stores state in Google Cloud Storage.
+
+---
+
+## 🔧 Advanced: Partial Configuration
+
+**Problem**: You cannot use variables in the `backend` block (e.g., `bucket = var.bucket_name` is invalid).
+**Solution**: Use **Partial Configuration**. Leave the dynamic fields empty in your HCL, and provide them at `init` time.
+
+**code.tf**:
+```hcl
+terraform {
+  backend "s3" {
+    # Bucket and Region are missing!
+    key = "prod/app.tfstate"
+  }
+}
+```
+
+**Command**:
+```bash
+terraform init \
+  -backend-config="bucket=my-corp-state" \
+  -backend-config="region=us-east-1"
+```
+*Useful for using the same code across multiple environments with different state buckets.*
+
+---
+
+## 🔒 State Locking Support
+
+Not all backends support locking.
+
+| Backend | Storage | Locking Mechanism |
+| :--- | :--- | :--- |
+| **Local** | Local Disk | System API (limited) |
+| **S3** | S3 Object | **DynamoDB Table** (Must create manually) |
+| **AzureRM** | Blob Container | **Lease Blob** (Native) |
+| **GCS** | GCS Bucket | **Native** |
+| **Terraform Cloud**| Postgres (Hidden)| **Native** |
 
 ---
 

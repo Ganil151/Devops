@@ -4,8 +4,8 @@ Terraform State is the most critical component of your Infrastructure as Code li
 
 ## 📚 Learning Path
 
-1.  **[State Fundamentals](./01-State-Fundamentals/README.md)**: What is state, why we need it, and an anatomy of the .tfstate file.
-2.  **[Local vs. Remote State](./02-Local-vs-Remote-State/README.md)**: Choosing the right storage strategy for your team.
+1.  **[State Fundamentals](State%20Fundamentals.md)**: What is state, why we need it, and an anatomy of the .tfstate file.
+2.  **[Local vs. Remote State](Local%20vs.%20Remote%20State.md)**: Choosing the right storage strategy for your team.
 3.  **[Remote State Backends](./03-Remote-State-Backends/README.md)**: Configuring S3, Azure, GCS, and Terraform Cloud.
 4.  **[State Locking](./04-State-Locking/README.md)**: Protecting against concurrent modifications and corruption.
 5.  **[State Operations](./05-State-Operations/README.md)**: Master the CLI: list, show, mv, rm, and import.

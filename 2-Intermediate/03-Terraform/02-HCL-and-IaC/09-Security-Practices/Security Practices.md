@@ -1,5 +1,3 @@
-# Security Practices
-
 Security in Terraform is about protecting your state, your credentials, and your cloud resources.
 
 ## Core Security Pillars
@@ -25,10 +23,8 @@ terraform {
   }
 }
 ```
-
 *   **Access Control**: The S3 bucket policy should deny all access except to the specific IAM Roles used by your CI/CD runners.
 *   **Versioning**: Enable S3 Versioning to recover from accidental state corruptions.
-
 ### 2. Credential Management (OIDC vs Keys)
 **Anti-Pattern**: Hardcoding AWS keys in `provider` blocks or storing long-lived `AWS_ACCESS_KEY_ID` in GitLab/GitHub variables.
 **Best Practice**: OpenID Connect (OIDC). Your CI provider authenticates with AWS directly to assume a role.
@@ -73,7 +69,6 @@ resource "aws_db_instance" "main" {
   password = jsondecode(data.aws_secretsmanager_secret_version.creds.secret_string)["password"]
 }
 ```
-
 ### 4. Least Privilege
 Your CI runner should not have `AdministratorAccess`. It should only have permissions to manage the specific resources in your stack.
 

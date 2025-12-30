@@ -75,7 +75,7 @@ Detect issues *before* you commit. Use the `pre-commit` framework to run checks 
 ### Example `.pre-commit-config.yaml`
 ```yaml
 repos:
-  - repo: https://github.com/antonbabenko/pre-commit-terraform
+  - repo: https://github.com/ganil151/pre-commit-terraform
     rev: v1.86.0
     hooks:
       - id: terraform_fmt
@@ -89,11 +89,8 @@ repos:
 ---
 
 ## 🚀 CI/CD Pipeline (GitOps)
-
 **GitOps** means your Git repository is the single source of truth. The pipeline automates the deployment.
-
 ### Field-Tested Workflow
-
 1.  **PR Created**: Pipeline runs `terraform plan`. Output is posted as a comment on the PR.
 2.  **Code Review**: Human reviews code and the Plan comment.
 3.  **Merge**: Code merges to `main`.
@@ -126,7 +123,6 @@ graph LR
 **Solution**: Use **Pre-commit hooks** (like `detect-secrets` or `gitleaks`) to scan code before it leaves the developer's machine. Also, rotate keys immediately if a leak occurs.
 
 ---
-
 ## ❓ Interview Questions
 1.  **Why should state files not be in Git?**
     *   *Answer*: State files often contain plaintext secrets (passwords, keys) and change every time an apply happens, creating massive merge conflicts.

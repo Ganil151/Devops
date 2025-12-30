@@ -1,5 +1,3 @@
-# Documentation Standards
-
 High-quality documentation is the foundation of a manageable infrastructure.
 
 ## Documentation Requirements
@@ -57,16 +55,14 @@ terraform-docs .
 ```
 
 ---
-
 ## 📂 Supporting Files
-
 Beyond `README.md`, expansive projects benefit from:
 
 1.  **`EXAMPLES.md`**: Dedicated file for copy-pasteable usage examples (Basic vs Advanced configurations).
 2.  **`CONTRIBUTING.md`**: Guide for developers (how to run tests, formatting rules).
 3.  **`CHANGELOG.md`**: Version history (if not using GitHub Releases).
 
-## Mermaid Diagram: Documentation Lifecycle
+## Documentation Lifecycle
 
 ```mermaid
 graph LR

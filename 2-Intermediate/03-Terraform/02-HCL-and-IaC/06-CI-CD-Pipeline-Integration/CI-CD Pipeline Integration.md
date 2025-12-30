@@ -1,9 +1,6 @@
-# CI/CD Pipeline Integration
-
 Automating the Terraform lifecycle ensures reliable, repeatable, and audited deployments.
 
 ## The Automated Workflow
-
 To achieve "Continuous Deployment" for infrastructure, we typically use a 5-step pipeline:
 
 1.  **Validate**: Ensures the code is syntactically correct.
@@ -18,11 +15,8 @@ To achieve "Continuous Deployment" for infrastructure, we typically use a 5-step
     *   Command: `terraform apply tfplan`
 
 ---
-
 ## 🚀 Example: GitHub Actions Workflow
-
 Here is a standard pipeline that runs `plan` on Pull Requests and `apply` when merged to `main`.
-
 ```yaml
 name: Terraform Pipeline
 
@@ -95,18 +89,65 @@ sequenceDiagram
 
 ## 🛠️ Tooling Ecosystem
 
-### 1. Static Analysis (Security & Quality)
--   **Checkov**: Scans Terraform code for security misconfigurations (e.g., public S3 buckets, unencrypted databases).
--   **TFLint**: Finds errors that `terraform validate` misses (e.g., invalid instance types).
+### 1. Static Analysis & Security
+**Checkov**: Scans for security misconfigurations.
+```bash
+checkov -d .
+# Output:
+# Failed checks:
+# CKV_AWS_20: "S3 Bucket has an ACL defined which allows public access."
+```
+
+**TFLint**: Finds provider-specific errors that `terraform validate` misses (like invalid instance types).
+```bash
+tflint --init
+tflint
+# Output:
+# Error: "t2.nanoo" is an invalid instance type (aws_instance_invalid_type)
+```
 
 ### 2. Cost Estimation
--   **Infracost**: Parses your Terraform plan and generates a cost estimate (e.g., "+$150/month") before you deploy.
+**Infracost**: Generates a bill estimate from your plan file.
+```bash
+infracost breakdown --path .
+# Output:
+# OVERALL TOTAL: +$152.00
+# ──────────────────────────────────
+# aws_instance.web_app
+# ├─ Instance usage (Linux/UNIX, t3.medium)    +$30.00
+# └─ Storage (EBS, 100GB)                      +$10.00
+```
 
-### 3. Pull Request Automation
--   **Atlantis**: A specialized server that listens to webhooks. It allows engineers to run `atlantis plan` and `atlantis apply` via **comments** on the PR. It locks the state file to prevent concurrent changes.
+### 3. Pull Request Automation (Atlantis)
+**Atlantis** is a server that listens to webhooks from GitHub/GitLab. It runs Terraform commands inside your PRs.
+
+**Workflow**:
+1.  **Locking**: Atlantis locks the directory so no one else can modify it.
+2.  **Plan**: Run `atlantis plan` in a comment to see the diff.
+3.  **Apply**: Run `atlantis apply` in a comment to deploy.
+
+```mermaid
+sequenceDiagram
+    participant D as Dev
+    participant G as GitHub PR
+    participant A as Atlantis
+    participant L as Lock DB
+    
+    D->>G: Comment "atlantis plan"
+    G->>A: Webhook Event
+    A->>L: Acquire Lock (dir/project)
+    A->>A: terraform plan
+    A-->>G: Comment with Plan Output
+    
+    D->>G: Comment "atlantis apply"
+    G->>A: Webhook Event
+    A->>A: terraform apply
+    A-->>G: Comment "Apply Successful"
+    A->>L: Release Lock
+    G->>D: Merge PR (Optional)
+```
 
 ---
-
 ## 🏗️ Real-Life Scenario: The Broken Main Branch
 **Problem**: A change was merged to `main`, but it failed during `apply` because of an AWS quota limit. Now the production state is locked, and the pipeline is red.
 **Solution**:

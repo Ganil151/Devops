@@ -1,9 +1,6 @@
-# Testing Strategies
-
 Testing infrastructure prevents outages and ensures your HCL code behaves as expected.
 
 ## The Testing Pyramid
-
 Just like software development, IaC testing follows a pyramid structure. Testing should be heavy at the bottom (fast/cheap) and lighter at the top (slow/expensive).
 
 ```mermaid
@@ -29,7 +26,6 @@ Run these **locally** and in **CI** on every commit. They catch 90% of errors in
 *   **`checkov` / `tfsec`**: Security scanners that find misconfigurations (e.g., open S3 buckets, unencrypted databases).
 
 ---
-
 ## 2. Unit Testing (`terraform test`)
 Introduced in Terraform 1.6, this native framework allows you to verify your module logic without writing Go/Python wrappers. You can validate variable validation logic and resource output values.
 
@@ -57,7 +53,6 @@ run "verify_bucket_naming" {
 ```
 
 ---
-
 ## 3. Integration/End-to-End Testing (Terratest)
 For creating real resources, deploying them, running checks, and destroying them. Written in Go, **Terratest** is the industry standard for robust module verification.
 
@@ -91,7 +86,6 @@ func TestTerraformAwsS3(t *testing.T) {
 ```
 
 ---
-
 ## 4. Policy as Code (Sentinel / OPA)
 This is the final gatekeeper. It prevents "valid" Terraform code from being deployed if it violates company rules (e.g., "No deploying to `eu-west-1`").
 
@@ -108,7 +102,6 @@ deny[msg] {
 ```
 
 ---
-
 ## ❓ Interview Questions
 1.  **What is Terratest?**
     *   *Answer*: A Go library that makes it easier to write automated tests for your infrastructure. It provisions real resources, validates them (e.g., HTTP request), and destroys them.
