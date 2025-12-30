@@ -29,7 +29,6 @@ gitGraph
 All changes must go through a **Pull Request (PR)**. The PR should automatically trigger a `terraform plan` so reviewers can see *exactly* what will change (e.g., "Plan: 3 to add, 1 to destroy").
 
 ---
-
 ## The `.gitignore` Standard
 
 Terraform generates several files that should **never** be committed to version control.
