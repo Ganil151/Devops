@@ -1,9 +1,7 @@
 State locking prevents concurrent operations on the same state file, protecting it from corruption and race conditions.
 ## Why Lock?
 If two people run `terraform apply` at the same time, they might both try to write to the state file simultaneously. This can lead to a corrupted JSON file, meaning your infrastructure is no longer manageable.
-
 ## Technical Deep Dive: DynamoDB Locking
-
 When using the S3 backend, Terraform expects a DynamoDB table.
 
 **Table Schema Requirements**:
@@ -21,7 +19,6 @@ When you run `terraform apply`, Terraform writes an item to the table:
 *It records **Who** is running the command and **When** it started.*
 
 ## 🚨 Troubleshooting Stale Locks
-
 Sometimes a Terraform process crashes (e.g. laptop dies, CI job is killed `kill -9`) before it can delete the lock item. This leaves the state "locked" forever.
 
 **Symptoms**:
@@ -41,25 +38,19 @@ Sometimes a Terraform process crashes (e.g. laptop dies, CI job is killed `kill 
     ```bash
     terraform force-unlock d9d0628e-....
     ```
-
 ## ⚠️ Dangerous Flags (`-lock=false`)
-
 You *can* tell Terraform to ignore locking, but you should probably **never** do this.
-
 ```bash
 terraform apply -lock=false
 ```
-
 **Risk**: If someone else is running apply at the same time, you will overwrite each other's changes. The state file will become corrupted, and you may lose track of resources. **Only use this if your backend doesn't support locking.**
 
 ---
-
 ## 🏗️ Real-Life Scenario: The CI/CD Race Condition
 **Problem**: A Jenkins pipeline triggers two identical jobs for the same environment at the same time. Job A starts building, and Job B tries to start 5 seconds later.
 **Outcome**: Job B fails with a "State Locked" error. This is a *good* thing! It prevents Job B from accidentally deleting resources that Job A just created.
 
 ---
-
 ## ❓ Interview Questions
 1.  **What is the behavior of Terraform when it cannot acquire a lock?**
     *   *Answer*: It will output an error message showing the Lock ID and who holds the lock, and then exit without performing any changes.
