@@ -66,16 +66,12 @@ terraform.rc
 ```
 
 ---
-
 ## 🛡️ Security & Quality Gates (Pre-commit Hooks)
-
 Detect issues *before* you commit. Use the `pre-commit` framework to run checks locally.
-
 ### Key Hooks
 -   `terraform_fmt`: Automatically formats your code (`terraform fmt`).
 -   `terraform_validate`: Checks for syntax errors (`terraform validate`).
 -   `detect-secrets`: Scans for AWS keys, passwords, and tokens.
-
 ### Example `.pre-commit-config.yaml`
 ```yaml
 repos:
