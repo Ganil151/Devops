@@ -31,7 +31,7 @@ Patterns for portability, cross-cloud connectivity (VPN/Peering), and data repli
 ### 🛡️ [Security & Identity](Security/README.md)
 Federating identities via SAML/OIDC, securing cross-cloud traffic, and mTLS across boundaries.
 
-### 💼 [Management & Governance](Management/README.md)
+### 💼 [Management & Governance](3-Advanced/08-Enterprise-Cloud/01-Multi-Cloud-Architecture/Management/README.md)
 Unified FinOps, Centralized Observability (Grafana/Prometheus), and Policy-as-Code (OPA).
 
 ---

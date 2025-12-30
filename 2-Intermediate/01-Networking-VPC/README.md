@@ -8,13 +8,17 @@ Welcome to the **Networking & VPC** module. This is the foundation of the Interm
 
 Follow these modules in order to master cloud networking:
 
-1.  **[01-VPC-Basics](./01-VPC-Basics/The%20Core%20of%20Cloud%20Networking.md)**: CIDR blocks, IGWs, and Route Tables.
-2.  **[02-Subnetting-Strategy](./02-Subnetting-Strategy/Subnetting%20Strategy.md)**: Public vs. Private subnets and NAT Gateways.
-3.  **[03-VPC-Peering](./03-VPC-Peering/VPC%20Peering%20Guide.md)**: Connecting multiple VPCs securely.
-4.  **[04-Load-Balancing](./04-Load-Balancing/Load%20Balancer%20Setup%20(ALB-NLB).md)**: Distributing traffic with ALB and NLB.
-5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/Interview%20Questions%20&%20Quiz.md)**: Test your knowledge and prepare for interviews.
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/Real-Life%20Scenarios.md)**: Practical troubleshooting and architectural challenges.
-7.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
+1.  **[01-VPC-Fundamentals](./01-VPC-Fundamentals/README.md)**: Core concepts, differences from traditional networks.
+2.  **[02-Subnetting-and-CIDR](./02-Subnetting-and-CIDR/README.md)**: IP addressing, subnet sizing strategy.
+3.  **[03-Internet-and-NAT-Gateways](./03-Internet-and-NAT-Gateways/README.md)**: Connecting to the outside world.
+4.  **[04-Routing-and-Route-Tables](./04-Routing-and-Route-Tables/README.md)**: Controlling traffic flow.
+5.  **[05-Network-Security-NACLs-SGs](./05-Network-Security-NACLs-SGs/README.md)**: Layered defense mechanisms.
+6.  **[06-VPC-Peering-and-Transit-Gateway](./06-VPC-Peering-and-Transit-Gateway/README.md)**: Inter-connecting VPCs and on-prem networks.
+7.  **[07-Load-Balancing-ALB-NLB](./07-Load-Balancing-ALB-NLB/README.md)**: Distributing traffic for performance and HA.
+8.  **[08-High-Availability-and-Multi-Region](./08-High-Availability-and-Multi-Region/README.md)**: Designing for resilience and disaster recovery.
+9.  **[09-Hybrid-Connectivity](./09-Hybrid-Connectivity/README.md)**: VPNs and Direct Connect.
+10. **[10-Monitoring-and-Troubleshooting](./10-Monitoring-and-Troubleshooting/README.md)**: Flow Logs and Reachability Analyzer.
+11. **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials.
 
 ---
 

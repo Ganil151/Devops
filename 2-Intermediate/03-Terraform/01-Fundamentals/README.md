@@ -9,10 +9,10 @@ Welcome to the Foundations of Terraform. This module covers everything you need 
 3.  **[Installation and Setup](./03-Installation-and-Setup/README.md)**: CLI installation and tfenv.
 4.  **[Configuration Language (HCL)](Configuration%20Language%20(HCL).md)**: Syntax, data types, and functions.
 5.  **[Providers](Providers.md)**: Multi-cloud and plugin architecture.
-6.  **[Resources](./06-Resources/README.md)**: Managing infrastructure blocks and meta-arguments.
-7.  **[Variables and Outputs](./07-Variables-and-Outputs/README.md)**: Parameterizing and extracting data.
-8.  **[Data Sources](./08-Data-Sources/README.md)**: Fetching existing infrastructure info.
-9.  **[Terraform Workflow](./09-Terraform-Workflow/README.md)**: Init, Plan, Apply, and Destroy lifecycle.
+6.  **[Resources](Resources.md)**: Managing infrastructure blocks and meta-arguments.
+7.  **[Variables and Outputs](Variables%20and%20Outputs.md)**: Parameterizing and extracting data.
+8.  **[Data Sources](Data%20Sources.md)**: Fetching existing infrastructure info.
+9.  **[Terraform Workflow](Terraform%20Workflow.md)**: Init, Plan, Apply, and Destroy lifecycle.
 10. **[Basic Examples](./10-Basic-Examples/README.md)**: Hands-on templates for S3 and EC2.
 
 ---

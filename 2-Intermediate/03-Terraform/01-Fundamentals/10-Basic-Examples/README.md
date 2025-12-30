@@ -9,7 +9,6 @@ resource "aws_s3_bucket" "test_bucket" {
   tags = { Name = "MyBucket" }
 }
 ```
-
 ## 2. Web Server with Security Group
 ```hcl
 resource "aws_security_group" "allow_web" {
@@ -27,7 +26,6 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [aws_security_group.allow_web.id]
 }
 ```
-
 ## 3. Using Variables and Outputs
 ```hcl
 variable "region" { default = "us-west-2" }
@@ -38,13 +36,11 @@ output "region_used" { value = var.region }
 ```
 
 ---
-
 ## 🏗️ Real-Life Scenario: The Instant Environment
 **Problem**: A QA engineer needs an environment for 2 hours to test a bug fix.
 **Solution**: They use the `Basic Example` templates, run `terraform apply`, do their testing, and then run `terraform destroy`. The total cost is pennies, and the environment is perfectly cleaned up.
 
 ---
-
 ## ❓ Interview Questions
 1. **How do you ensure your S3 bucket name is unique in a script?**
    - *Answer*: You can use the `random_id` or `random_string` resource provided by the Random provider.
