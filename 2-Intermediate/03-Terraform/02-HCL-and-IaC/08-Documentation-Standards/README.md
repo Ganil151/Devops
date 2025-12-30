@@ -4,28 +4,67 @@ High-quality documentation is the foundation of a manageable infrastructure.
 
 ## Documentation Requirements
 
-### 1. The `README.md`
-Every module/project must have a README describing:
-- **Purpose**: What does this code do?
-- **Usage**: How do I run it?
-- **Inputs**: What variables are needed?
-- **Outputs**: What data is returned?
-- **Dependencies**: What other modules/resources are required?
+### 1. The `README.md` (Docs as Code)
+Treat documentation like code. It lives in the repo, evolves with PRs, and is automated.
+Every module must have a README describing:
+-   **Purpose**: What problem does this solve?
+-   **Usage**: Minimum viable example.
+-   **Inputs/Outputs**: Generated automatically.
 
-### 2. Variable Descriptions
-Never leave a variable without a description.
+### 2. Variable Descriptions (The "Why")
+Descriptions shouldn't just repeat the name. They should explain *constraints* and *expected formats*.
+
+**Bad**:
 ```hcl
-variable "region" {
+variable "vpc_cidr" { description = "VPC CIDR" }
+```
+
+**Good**:
+```hcl
+variable "vpc_cidr" {
   type        = string
-  description = "The AWS Region to deploy to (e.g. us-east-1)"
+  description = "The IPv4 CIDR block for the VPC. Must be a /16 or smaller (e.g., 10.0.0.0/16)."
+  default     = "10.0.0.0/16"
 }
 ```
 
-### 3. Automated Documentation
-Use **terraform-docs** to automatically generate tables for inputs and outputs.
-```bash
-terraform-docs markdown table . > README.md
+### 3. Automated Documentation (`terraform-docs`)
+Manual tables get stale. Use `terraform-docs` to read your HCL and generate the README.
+
+**Configuration**: Create a `.terraform-docs.yml` in your root.
+```yaml
+formatter: "markdown table"
+
+output:
+  file: "README.md"
+  mode: "inject"
+  template: "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+
+sort:
+  enabled: true
+  by: required
+
+content:
+  - inputs
+  - outputs
+  - providers
+  - requirements
 ```
+
+**Usage**:
+```bash
+terraform-docs .
+```
+
+---
+
+## 📂 Supporting Files
+
+Beyond `README.md`, expansive projects benefit from:
+
+1.  **`EXAMPLES.md`**: Dedicated file for copy-pasteable usage examples (Basic vs Advanced configurations).
+2.  **`CONTRIBUTING.md`**: Guide for developers (how to run tests, formatting rules).
+3.  **`CHANGELOG.md`**: Version history (if not using GitHub Releases).
 
 ## Mermaid Diagram: Documentation Lifecycle
 

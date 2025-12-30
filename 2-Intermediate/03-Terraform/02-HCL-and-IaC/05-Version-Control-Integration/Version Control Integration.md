@@ -30,14 +30,11 @@ All changes must go through a **Pull Request (PR)**. The PR should automatically
 
 ---
 ## The `.gitignore` Standard
-
 Terraform generates several files that should **never** be committed to version control.
-
 ### Why ignore?
 1.  **Secrets**: State files (`.tfstate`) often contain plain-text passwords.
 2.  **Local Config**: `.terraform/` contains downloaded plugins specific to your OS architecture.
 3.  **Override Files**: `override.tf` is for local debugging only.
-
 ### Recommended `.gitignore`
 ```gitignore
 # Local .terraform directories
