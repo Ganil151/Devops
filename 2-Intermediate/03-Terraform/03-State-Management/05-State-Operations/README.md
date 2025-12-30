@@ -40,7 +40,44 @@ Brings existing cloud resources into Terraform management.
 terraform import aws_vpc.main vpc-12345678
 ```
 
+### 7. `terraform state replace-provider`
+Used when you need to change the provider source (e.g., from `hashicorp/aws` to a fork or standardizing module providers).
+```bash
+terraform state replace-provider hashicorp/aws my-fork/aws
+```
+
+### 8. `terraform state pull` / `push` (Manual Editing)
+**⚠️ DANGER ZONE**: Directly editing the state file.
+1.  `terraform state pull > state.json` (Download)
+2.  Edit `state.json` (carefully!)
+3.  `terraform state push state.json` (Upload)
+*Use this only for emergencies where standard commands fail.*
+
 ---
+
+## 🚀 Modern: Declarative Import (Terraform 1.5+)
+
+The CLI `terraform import` command is tedious. The new `import` block allows you to define imports **in your HCL code**.
+
+**1. Write the Import Block**:
+```hcl
+import {
+  to = aws_vpc.main
+  id = "vpc-0a1b2c3d"
+}
+```
+
+**2. Generate Config (Optional)**:
+Terraform can generate the HCL for you!
+```bash
+terraform plan -generate-config-out=generated_resources.tf
+```
+
+**3. Apply**:
+Terraform will import the resource into the state and match it to your code.
+```bash
+terraform apply
+```
 
 ## 🏗️ Real-Life Scenario: The Refactor Without the Mess
 **Problem**: An engineer renames a resource in the code from `web` to `app`. When they run a plan, Terraform wants to *destroy* the `web` server and *create* a new `app` server, causing downtime.

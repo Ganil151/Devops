@@ -1,5 +1,3 @@
-# Remote State Backends
-
 A backend defines where Terraform stores its state file and how it performs operations.
 
 ## The Architecture (S3 + DynamoDB)

@@ -17,7 +17,6 @@ Remote state is stored in a shared service like AWS S3, Azure Blob, or HashiCorp
 | Backups | Manual | Automatic versioning |
 
 ## Backend Configurations
-
 Backends define *where* the state is stored.
 
 **1. S3 Standard (AWS)**
@@ -33,7 +32,6 @@ terraform {
   }
 }
 ```
-
 **2. Terraform Cloud (HCP)**
 Managed service by HashiCorp. Easiest for teams.
 ```hcl
@@ -46,7 +44,6 @@ terraform {
   }
 }
 ```
-
 **3. Local (Default)**
 Good for learning, bad for teams.
 ```hcl
@@ -60,7 +57,6 @@ terraform {
 ---
 
 ## 🔗 Cross-Stack References (`terraform_remote_state`)
-
 You can read outputs from *another* Terraform project's state file. This allows you to split large projects into smaller, coupled stacks (e.g., VPC stack vs. App stack).
 
 **Networking Stack (`networking/outputs.tf`)**:
@@ -69,7 +65,6 @@ output "vpc_id" {
   value = aws_vpc.main.id
 }
 ```
-
 **App Stack (`app/main.tf`)**:
 ```hcl
 data "terraform_remote_state" "network" {
@@ -109,9 +104,8 @@ Moving from Local to Remote (or S3 to TFC) is easy.
 3.  **Confirm**: Terraform detects the change and asks: *"Do you want to copy existing state to the new backend?"*
 4.  **Yes**: Type `yes`. Terraform uploads your local `terraform.tfstate` to S3 and deletes the local copy.
 
-To move back (or to another backend), just change the config and run `terraform init -migrate-state`.
+	To move back (or to another backend), just change the config and run `terraform init -migrate-state`.
 ---
-
 ## ❓ Interview Questions
 1.  **Why is remote state preferred for production environments?**
     *   *Answer*: It enables team collaboration, provides a locking mechanism to prevent concurrent runs, and ensures state is encrypted and backed up.

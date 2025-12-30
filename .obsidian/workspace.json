@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/03-Terraform/03-State-Management/02-Local-vs-Remote-State/Local vs. Remote State.md",
+                "file": "2-Intermediate/03-Terraform/03-State-Management/03-Remote-State-Backends/Remote State Backends.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Local vs. Remote State"
+              "title": "Remote State Backends"
             }
           }
         ]
@@ -203,6 +203,7 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
+    "2-Intermediate/03-Terraform/03-State-Management/02-Local-vs-Remote-State/Local vs. Remote State.md",
     "2-Intermediate/03-Terraform/03-State-Management/01-State-Fundamentals/State Fundamentals.md",
     "2-Intermediate/03-Terraform/02-HCL-and-IaC/README.md",
     "2-Intermediate/03-Terraform/02-HCL-and-IaC/10-Compliance-and-Governance/Compliance and Governance.md",
@@ -228,7 +229,6 @@
     "2-Intermediate/01-Networking-VPC/07-Load-Balancing-ALB-NLB/README.md",
     "2-Intermediate/01-Networking-VPC/06-VPC-Peering-and-Transit-Gateway/README.md",
     "2-Intermediate/01-Networking-VPC/05-Network-Security-NACLs-SGs/README.md",
-    "2-Intermediate/01-Networking-VPC/04-Routing-and-Route-Tables/README.md",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/10-Getting-Started-Guide",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/09-Cloud-Provider-Comparison",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/08-VPC-Best-Practices",
