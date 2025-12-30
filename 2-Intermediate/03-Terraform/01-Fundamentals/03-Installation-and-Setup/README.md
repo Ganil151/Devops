@@ -39,7 +39,6 @@ tfenv use 1.6.0
 **Solution**: Use **tfenv**! You can simply run `tfenv use 0.12` when in Project A's directory and `tfenv use 1.5` for Project B. This prevents hours of debugging configuration syntax errors caused by version mismatches.
 
 ---
-
 ## ❓ Interview Questions
 1. **How do you verify your Terraform installation?**
    - *Answer*: Run `terraform version` or simply `terraform`.
@@ -47,7 +46,6 @@ tfenv use 1.6.0
    - *Answer*: It allows developers to maintain different versions of Terraform for different projects, avoiding breaking changes during team collaboration.
 
 ---
-
 ## 🧠 Quiz Snippet (5/20+)
 1. **What command checks the installed Terraform version?** (`terraform version`)
 2. **Which sub-directory stores provider plugins locally?** (`.terraform/`)

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/03-Terraform/01-Fundamentals/02-Core-Concepts/Terraform Core Concepts.md",
+                "file": "2-Intermediate/03-Terraform/01-Fundamentals/03-Installation-and-Setup/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Terraform Core Concepts"
+              "title": "README"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 224.5
+    "width": 224.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -202,6 +203,27 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/10-Enterprise-Best-Practices/README.md",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/09-Advanced-Features/README.md",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/08-Governance-and-RBAC/README.md",
+    "2-Intermediate/03-Terraform/01-Fundamentals/02-Core-Concepts/Terraform Core Concepts.md",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/07-Policy-as-Code-OPA/README.md",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/06-Policy-as-Code-Sentinel/README.md",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/05-Variables-and-Secrets/README.md",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/04-Workspace-Management/README.md",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/03-CLI-and-API-Workflows/README.md",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/02-VCS-Driven-Workflow/README.md",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/01-Introduction-and-Architecture/README.md",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/10-Enterprise-Best-Practices",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/09-Advanced-Features",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/08-Governance-and-RBAC",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/07-Policy-as-Code-OPA",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/06-Policy-as-Code-Sentinel",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/05-Variables-and-Secrets",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/04-Workspace-Management",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/03-CLI-and-API-Workflows",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/02-VCS-Driven-Workflow",
+    "2-Intermediate/03-Terraform/06-Terraform-Cloud/01-Introduction-and-Architecture",
     "2-Intermediate/03-Terraform/05-Best-Practices/README.md",
     "2-Intermediate/03-Terraform/05-Best-Practices/10-Troubleshooting-Guidelines/README.md",
     "2-Intermediate/03-Terraform/05-Best-Practices/09-Monitoring-and-Observability/README.md",
@@ -213,31 +235,10 @@
     "2-Intermediate/03-Terraform/05-Best-Practices/03-Security-Best-Practices/README.md",
     "2-Intermediate/03-Terraform/05-Best-Practices/02-Naming-Conventions/README.md",
     "2-Intermediate/03-Terraform/05-Best-Practices/01-Code-Organization/README.md",
-    "2-Intermediate/03-Terraform/05-Best-Practices/10-Troubleshooting-Guidelines",
-    "2-Intermediate/03-Terraform/05-Best-Practices/09-Monitoring-and-Observability",
-    "2-Intermediate/03-Terraform/05-Best-Practices/08-CI-CD-Integration",
-    "2-Intermediate/03-Terraform/05-Best-Practices/07-Version-Control",
-    "2-Intermediate/03-Terraform/05-Best-Practices/06-Documentation-Standards",
-    "2-Intermediate/03-Terraform/05-Best-Practices/05-Testing-Strategies",
-    "2-Intermediate/03-Terraform/05-Best-Practices/04-Performance-Optimization",
-    "2-Intermediate/03-Terraform/05-Best-Practices/03-Security-Best-Practices",
-    "2-Intermediate/03-Terraform/05-Best-Practices/02-Naming-Conventions",
-    "2-Intermediate/03-Terraform/05-Best-Practices/01-Code-Organization",
     "2-Intermediate/03-Terraform/04-Modules/README.md",
     "2-Intermediate/03-Terraform/04-Modules/10-Real-World-Examples/README.md",
     "2-Intermediate/03-Terraform/04-Modules/09-Best-Practices/README.md",
     "2-Intermediate/03-Terraform/04-Modules/08-Advanced-Patterns/README.md",
-    "2-Intermediate/03-Terraform/04-Modules/07-Testing-Modules/README.md",
-    "2-Intermediate/03-Terraform/04-Modules/06-Versioning-Strategy/README.md",
-    "2-Intermediate/03-Terraform/04-Modules/05-Module-Registry/README.md",
-    "2-Intermediate/03-Terraform/04-Modules/04-Module-Composition/README.md",
-    "2-Intermediate/03-Terraform/04-Modules/03-Creating-Modules/README.md",
-    "2-Intermediate/03-Terraform/04-Modules/02-Module-Structure/README.md",
-    "2-Intermediate/03-Terraform/04-Modules/01-Module-Fundamentals/README.md",
-    "2-Intermediate/02-Automation/06-Real-Life-Scenarios/Automation Real-Life Scenarios.md",
-    "2-Intermediate/03-Terraform/01-Fundamentals/01-What-is-Terraform/What is Terraform?.md",
-    "2-Intermediate/03-Terraform/03-State-Management/README.md",
-    "2-Intermediate/03-Terraform/03-State-Management/10-Best-Practices/README.md",
     "2-Intermediate/03-Terraform/Images/IaC.png",
     "2-Intermediate/16-FinOps/Images/cost-optimization.png",
     "2-Intermediate/15-FinOps/Images/cost-optimization.png",
