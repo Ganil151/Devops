@@ -1,7 +1,4 @@
-# State Locking
-
 State locking prevents concurrent operations on the same state file, protecting it from corruption and race conditions.
-
 ## Why Lock?
 If two people run `terraform apply` at the same time, they might both try to write to the state file simultaneously. This can lead to a corrupted JSON file, meaning your infrastructure is no longer manageable.
 

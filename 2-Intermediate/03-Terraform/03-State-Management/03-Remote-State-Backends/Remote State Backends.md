@@ -1,25 +1,17 @@
 A backend defines where Terraform stores its state file and how it performs operations.
 
 ## The Architecture (S3 + DynamoDB)
-
 For AWS, state storage and locking are handled by two different services.
 
-```mermaid
-graph LR
-    TF[Terraform CLI]
-    S3[(AWS S3)]
-    DDB[(DynamoDB)]
-    
-    TF -- 1. Check Lock --> DDB
-    DDB -- Lock Acquired --> TF
-    TF -- 2. Read State --> S3
-    S3 -- JSON Data --> TF
-    TF -- 3. Write State --> S3
-    TF -- 4. Release Lock --> DDB
-    
-    style S3 fill:#E1F5FE
-    style DDB fill:#FFF3E0
-```
+![S3 and DynamoDB Architecture - Terraform acquires a lock from DynamoDB, reads/writes state to S3, then releases the lock](images/s3-dynamodb-architecture.png)
+
+**Workflow**:
+1. **Acquire Lock**: Terraform checks DynamoDB for an existing lock
+2. **Lock Acquired**: DynamoDB confirms the lock is available
+3. **Read/Write State**: Terraform interacts with the state file in S3
+4. **Release Lock**: Terraform releases the lock in DynamoDB after operations complete
+
+
 
 ## Popular Backends
 
@@ -35,7 +27,6 @@ terraform {
   }
 }
 ```
-
 ### 2. Terraform Cloud (Managed)
 No need to configure separate locking; it's built-in.
 ```hcl
@@ -46,15 +37,51 @@ terraform {
   }
 }
 ```
+### 3. Azure RM (Azure Blob Storage)
+Azure uses Blob Storage with native locking via blob leases.
+```hcl
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "tfstate-rg"
+    storage_account_name = "tfstateaccount"
+    container_name       = "tfstate"
+    key                  = "prod.terraform.tfstate"
+  }
+}
+```
 
-### 3. Azure RM & GCS
-*   **Azure**: Stores state in Blob Storage.
-*   **GCS**: Stores state in Google Cloud Storage.
+**Key Features**:
+*   **Native Locking**: Uses blob leases (no separate service needed like DynamoDB).
+*   **Authentication**: Supports Azure AD, Service Principal, or Managed Identity.
+*   **Encryption**: Server-side encryption enabled by default.
+
+**Setup Requirements**:
+1.  Create a Storage Account and Container.
+2.  Configure authentication (typically via environment variables or Azure CLI).
+
+### 4. GCS (Google Cloud Storage)
+Google Cloud Storage provides built-in state locking.
+```hcl
+terraform {
+  backend "gcs" {
+    bucket  = "tf-state-bucket"
+    prefix  = "terraform/state"
+  }
+}
+```
+
+**Key Features**:
+*   **Native Locking**: Built-in locking mechanism (no external service required).
+*   **Authentication**: Uses Application Default Credentials (ADC) or service account keys.
+*   **Versioning**: Object versioning can be enabled for state history.
+
+**Setup Requirements**:
+1.  Create a GCS bucket with versioning enabled.
+2.  Authenticate via `gcloud auth application-default login` or service account JSON.
+
 
 ---
-
 ## 🔧 Advanced: Partial Configuration
-
 **Problem**: You cannot use variables in the `backend` block (e.g., `bucket = var.bucket_name` is invalid).
 **Solution**: Use **Partial Configuration**. Leave the dynamic fields empty in your HCL, and provide them at `init` time.
 
@@ -67,7 +94,6 @@ terraform {
   }
 }
 ```
-
 **Command**:
 ```bash
 terraform init \
@@ -77,9 +103,7 @@ terraform init \
 *Useful for using the same code across multiple environments with different state buckets.*
 
 ---
-
 ## 🔒 State Locking Support
-
 Not all backends support locking.
 
 | Backend | Storage | Locking Mechanism |
@@ -91,13 +115,11 @@ Not all backends support locking.
 | **Terraform Cloud**| Postgres (Hidden)| **Native** |
 
 ---
-
 ## 🏗️ Real-Life Scenario: The Multi-Backend Disaster
 **Problem**: A company uses AWS for compute but Azure for data. They try to store the state file for an AWS resource in an Azure backend.
 **Outcome**: This works! Terraform backends are independent of the resources being managed. However, it's a best practice to keep state in the same cloud provider to reduce cross-cloud dependencies.
 
 ---
-
 ## ❓ Interview Questions
 1.  **What happens if the backend is unreachable?**
     *   *Answer*: Terraform will fail to initialize or perform any plan/apply operations as it cannot read the current source of truth.

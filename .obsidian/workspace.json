@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/03-Terraform/03-State-Management/03-Remote-State-Backends/Remote State Backends.md",
+                "file": "2-Intermediate/03-Terraform/03-State-Management/04-State-Locking/State Locking.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Remote State Backends"
+              "title": "State Locking"
             }
           }
         ]
@@ -88,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 224.5,
+    "width": 254.5,
     "collapsed": true
   },
   "right": {
@@ -203,6 +203,9 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
+    "2-Intermediate/03-Terraform/03-State-Management/03-Remote-State-Backends/Remote State Backends.md",
+    "2-Intermediate/03-Terraform/03-State-Management/03-Remote-State-Backends/images/s3-dynamodb-architecture.png",
+    "2-Intermediate/03-Terraform/03-State-Management/03-Remote-State-Backends/images",
     "2-Intermediate/03-Terraform/03-State-Management/02-Local-vs-Remote-State/Local vs. Remote State.md",
     "2-Intermediate/03-Terraform/03-State-Management/01-State-Fundamentals/State Fundamentals.md",
     "2-Intermediate/03-Terraform/02-HCL-and-IaC/README.md",
@@ -228,7 +231,6 @@
     "2-Intermediate/01-Networking-VPC/08-High-Availability-and-Multi-Region/README.md",
     "2-Intermediate/01-Networking-VPC/07-Load-Balancing-ALB-NLB/README.md",
     "2-Intermediate/01-Networking-VPC/06-VPC-Peering-and-Transit-Gateway/README.md",
-    "2-Intermediate/01-Networking-VPC/05-Network-Security-NACLs-SGs/README.md",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/10-Getting-Started-Guide",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/09-Cloud-Provider-Comparison",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/08-VPC-Best-Practices",
@@ -238,7 +240,6 @@
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/04-IP-Addressing-Basics",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/03-VPC-Components-Overview",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/02-VPC-vs-Traditional-Networks",
-    "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/01-What-is-a-VPC",
     "2-Intermediate/03-Terraform/Images/IaC.png",
     "2-Intermediate/16-FinOps/Images/cost-optimization.png",
     "2-Intermediate/15-FinOps/Images/cost-optimization.png",
@@ -248,7 +249,6 @@
     "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/e9c55b9e21882239981c901d230e3c665126f4b022424db543b3c96433d6988f.png",
     "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/dee49482150458f1366eaaa4beecb2c539532f9a19811d34f66f644917d96aaf.png",
     "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/cb92e22fa0f3a35b58859964cc59d62bd6eaa25d0623f6b7a28373153ed2d5dc.png",
-    "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/c59895ee2606ab3c58f85c4ca524cad7926b137e82072ef9f2cf75ee15b23151.png",
     "Untitled.canvas"
   ]
 }
