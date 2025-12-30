@@ -10,7 +10,7 @@ You will transition from "managing a server" to "orchestrating a cluster" using 
 
 This level is organized into a progressive journey across 17 specialized modules. Each module now includes a curated **YouTube Lessons** collection for visual reinforcement.
 
-1.  **[00-Runbooks-Procedures](Runbooks%20&%20Operational%20Procedures%20(Intermediate).md)**: Moving from manual hacks to automated remediation.
+1.  **[00-Runbooks-Procedures](./00-Runbooks-Procedures/README.md)**: Moving from manual hacks to automated remediation.
 2.  **[01-Networking-VPC](./01-Networking-VPC/README.md)**: Advanced cloud networking, peering, and subnets.
 3.  **[02-Automation](./02-Automation/README.md)**: Python for DevOps and scripting patterns.
 4.  **[03-Terraform](./03-Terraform/README.md)**: Provisioning infrastructure with code.
