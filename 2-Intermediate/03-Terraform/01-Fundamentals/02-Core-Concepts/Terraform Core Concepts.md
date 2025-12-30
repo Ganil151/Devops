@@ -4,7 +4,6 @@ Understanding the architecture and main building blocks of Terraform.
 Terraform consists of two main parts:
 1. **Terraform Core**: The CLI tool that handles the logic, state, and planning.
 2. **Providers**: Plugins that interface with remote APIs (AWS, Azure, GitHub, etc.).
-
 ## Main Building Blocks
 - **Configuration Files**: `.tf` files defining the infrastructure.
 - **State File**: A JSON file (`terraform.tfstate`) that tracks the current state of infrastructure.
