@@ -7,7 +7,7 @@ Welcome to the Foundations of Terraform. This module covers everything you need 
 1.  **[What is Terraform?](What%20is%20Terraform?.md)**: Introduction, benefits, and use cases.
 2.  **[Core Concepts](Terraform%20Core%20Concepts.md)**: Architecture, State, and Providers.
 3.  **[Installation and Setup](./03-Installation-and-Setup/README.md)**: CLI installation and tfenv.
-4.  **[Configuration Language (HCL)](./04-Configuration-Language/README.md)**: Syntax, data types, and functions.
+4.  **[Configuration Language (HCL)](Configuration%20Language%20(HCL).md)**: Syntax, data types, and functions.
 5.  **[Providers](./05-Providers/README.md)**: Multi-cloud and plugin architecture.
 6.  **[Resources](./06-Resources/README.md)**: Managing infrastructure blocks and meta-arguments.
 7.  **[Variables and Outputs](./07-Variables-and-Outputs/README.md)**: Parameterizing and extracting data.

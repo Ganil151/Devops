@@ -1,7 +1,4 @@
-# Configuration Language (HCL)
-
 HashiCorp Configuration Language (HCL) is designed to be human-readable and machine-friendly for defining infrastructure.
-
 ## Syntax Basics
 ```hcl
 # Block syntax
@@ -9,7 +6,6 @@ resource "resource_type" "local_name" {
   argument_name = "value"
 }
 ```
-
 ## Data Types
 - **String**: `"t3.micro"`
 - **Number**: `10`
@@ -24,7 +20,6 @@ Terraform provides over 100 built-in functions (no custom functions allowed).
 - **lookup(map, key, default)** -> safe map retrieval.
 
 ---
-
 ## 🏗️ Real-Life Scenario: Dynamic Naming
 **Problem**: An organization needs to tag all resources with the environment name. Hardcoding tags works but is prone to errors.
 **Solution**: Use **Locals** and **String Interpolation**.
