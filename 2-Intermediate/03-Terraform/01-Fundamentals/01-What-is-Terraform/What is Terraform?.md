@@ -7,7 +7,6 @@ Terraform is an open-source Infrastructure as Code (IaC) tool created by HashiCo
 - **Plan and Apply**: Preview changes before execution to avoid surprises.
 - **State Management**: Track resource relationships and metadata.
 - **Modular**: Build reusable infrastructure components.
-
 ## Use Cases
 - **Cloud Infrastructure**: Managing AWS, Azure, GCP resources.
 - **Multi-Cloud Deployments**: Consistent infrastructure across multiple clouds.
