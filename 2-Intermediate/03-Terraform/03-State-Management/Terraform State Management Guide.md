@@ -63,7 +63,6 @@ Terraform State:
   ]
 }
 ```
-
 ## Local vs Remote State
 
 ### Local State
@@ -84,7 +83,6 @@ terraform {
 # - Risk of loss
 # - No encryption
 ```
-
 ### Remote State Benefits
 ```yaml
 Remote State Benefits:
@@ -109,7 +107,6 @@ Remote State Benefits:
     - State consistency
     - Operation safety
 ```
-
 ## Remote State Backends
 
 ### S3 Backend Configuration
@@ -202,7 +199,6 @@ resource "aws_kms_alias" "terraform_state" {
   target_key_id = aws_kms_key.terraform_state.key_id
 }
 ```
-
 ### Terraform Cloud Backend
 ```hcl
 # Terraform Cloud backend
@@ -227,7 +223,6 @@ terraform {
   }
 }
 ```
-
 ### Azure Backend
 ```hcl
 # Azure Storage backend
@@ -246,7 +241,6 @@ terraform {
   }
 }
 ```
-
 ### Google Cloud Backend
 ```hcl
 # Google Cloud Storage backend
@@ -263,7 +257,6 @@ terraform {
   }
 }
 ```
-
 ## State Locking
 
 ### DynamoDB Locking (AWS)
@@ -301,7 +294,6 @@ terraform {
   }
 }
 ```
-
 ### Manual Lock Management
 ```bash
 # Force unlock (use with caution)
@@ -340,7 +332,6 @@ terraform state push terraform.tfstate
 # Refresh state from real infrastructure
 terraform refresh
 ```
-
 ### State Manipulation
 ```bash
 # Move resource in state
@@ -358,7 +349,6 @@ terraform import aws_instance.web i-1234567890abcdef0
 # Replace resource (mark for recreation)
 terraform apply -replace=aws_instance.web
 ```
-
 ### Advanced State Operations
 ```bash
 # Backup state before operations
@@ -407,7 +397,6 @@ terraform {
   }
 }
 ```
-
 ### Access Control
 ```json
 {
@@ -460,7 +449,6 @@ terraform {
   ]
 }
 ```
-
 ### Sensitive Data Handling
 ```hcl
 # Mark outputs as sensitive
@@ -506,7 +494,6 @@ terraform state list
 # Step 5: Remove local state file (optional)
 rm terraform.tfstate terraform.tfstate.backup
 ```
-
 ### Cross-Account Migration
 ```bash
 # Step 1: Export state from source account
@@ -524,7 +511,6 @@ terraform state push exported-state.json
 # Step 5: Verify resources
 terraform plan
 ```
-
 ### State Splitting
 ```bash
 # Split monolithic state into multiple states
@@ -544,7 +530,6 @@ terraform state mv -state-out=environments/prod/terraform.tfstate \
 cd environments/dev && terraform init
 cd ../prod && terraform init
 ```
-
 ## Troubleshooting
 
 ### Common State Issues
@@ -572,7 +557,6 @@ terraform import aws_instance.web i-1234567890abcdef0
 terraform state rm aws_instance.duplicate
 terraform import aws_instance.web i-1234567890abcdef0
 ```
-
 ### State Recovery
 ```bash
 # Recover from S3 versioning
@@ -591,7 +575,6 @@ aws s3api get-object \
 terraform state pull > current-state.json
 terraform validate
 ```
-
 ### Debug State Operations
 ```bash
 # Enable debug logging
@@ -605,7 +588,6 @@ terraform plan
 grep -i "state" terraform.log
 grep -i "lock" terraform.log
 ```
-
 ## Best Practices
 
 ### State Organization
@@ -633,7 +615,6 @@ State Organization Strategies:
    - foundation/terraform.tfstate
    - application/terraform.tfstate
 ```
-
 ### State Security Best Practices
 ```hcl
 # 1. Always use remote state for teams

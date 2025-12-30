@@ -1,9 +1,6 @@
-# 01: Chain-of-Thought (CoT) for DevOps
-
 Chain-of-Thought (CoT) is a technique that encourages LLMs to decompose complex problems into a series of logical intermediate steps. For DevOps, this is essential for troubleshooting "black box" infrastructure failures.
 
 ## 🧠 Why Use CoT in DevOps?
-
 Infrastructure issues often involve multiple layers (Network, OS, Container, Managed Service). A simple prompt might result in a "guess." CoT forces the model to trace the logic.
 
 ### Example: The "Thinking" Prompt

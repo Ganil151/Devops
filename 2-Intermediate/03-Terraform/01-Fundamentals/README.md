@@ -1,39 +1,29 @@
-## Terraform Fundamentals
+# Terraform Fundamentals
 
-This folder contains comprehensive documentation for learning Terraform from the ground up.
+Welcome to the Foundations of Terraform. This module covers everything you need to know to get started with Infrastructure as Code using HashiCorp Terraform.
 
-## Contents
-- **[Terraform Fundamentals Guide.md](Terraform%20Fundamentals%20Guide.md)** - Complete fundamentals guide covering:
-  - What is Terraform and core concepts
-  - Installation and setup procedures
-  - HCL configuration language syntax
-  - Providers, resources, and data sources
-  - Variables, outputs, and functions
-  - Basic workflow and commands
-  - Practical examples and use cases
-## Learning Path
-1. Start with the fundamentals guide to understand core concepts
-2. Practice with the basic examples provided
-3. Move to Infrastructure-as-Code principles
-4. Learn about modules and state management
-5. Apply best practices and advanced topics
-## Quick Start
-```bash
-# Navigate to this directory
-cd Fundamentals
+## 📚 Learning Path
 
-# Read the fundamentals guide
-cat "Terraform Fundamentals Guide.md"
+1.  **[What is Terraform?](What%20is%20Terraform?.md)**: Introduction, benefits, and use cases.
+2.  **[Core Concepts](./02-Core-Concepts/README.md)**: Architecture, State, and Providers.
+3.  **[Installation and Setup](./03-Installation-and-Setup/README.md)**: CLI installation and tfenv.
+4.  **[Configuration Language (HCL)](./04-Configuration-Language/README.md)**: Syntax, data types, and functions.
+5.  **[Providers](./05-Providers/README.md)**: Multi-cloud and plugin architecture.
+6.  **[Resources](./06-Resources/README.md)**: Managing infrastructure blocks and meta-arguments.
+7.  **[Variables and Outputs](./07-Variables-and-Outputs/README.md)**: Parameterizing and extracting data.
+8.  **[Data Sources](./08-Data-Sources/README.md)**: Fetching existing infrastructure info.
+9.  **[Terraform Workflow](./09-Terraform-Workflow/README.md)**: Init, Plan, Apply, and Destroy lifecycle.
+10. **[Basic Examples](./10-Basic-Examples/README.md)**: Hands-on templates for S3 and EC2.
 
-# Practice with examples in the guide
-terraform init
-terraform plan
-terraform apply
-```
-## Next Steps
-After completing the fundamentals:
-- Explore [Infrastructure-as-Code](../Infrastructure-as-Code/) concepts
-- Learn about [Modules](../Modules/) for reusable infrastructure
-- Understand [State Management](../State-Management/) best practices
-- Apply [Best Practices](../Best-Practices/) in your projects
-- Dive into [Advanced Topics](../Advanced-Topics/) for enterprise use
+---
+
+## 🏗️ Course Features
+- **50+ Quiz Questions**: Challenge yourself at the end of each module.
+- **Deep-Dive Interview Prep**: Professional answers to common Terraform queries.
+- **Real-Life Scenarios**: Practical "Stories from the Trenches" and their solutions.
+- **Mermaid Diagrams**: Visualizing complex architectures and workflows.
+
+---
+
+## 📺 YouTube Lessons
+For visual reinforcement, check out the **[📺 YouTube Lessons](../Youtube_Lessons.md)** in the parent directory.

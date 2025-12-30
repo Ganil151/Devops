@@ -8,7 +8,7 @@ Scaling from simple scripts to complex automation requires advanced prompting te
 
 This module is organized into 6 progressive phases:
 
-1.  **[01-Chain-of-Thought-DevOps](./01-Chain-of-Thought-DevOps/README.md)**
+1.  **[01-Chain-of-Thought-DevOps](Chain-of-Thought%20(CoT)%20for%20DevOps.md)**
     *   CoT for complex troubleshooting (Networking, K8s).
     *   Reasoning traces and verification steps.
 
