@@ -1,5 +1,3 @@
-# Providers
-
 Providers are the heart of Terraform's extensibility. They translate HCL commands into API calls.
 
 ## How Providers Work
@@ -45,7 +43,6 @@ resource "aws_instance" "euro_server" {
 ```
 
 ---
-
 ## ❓ Interview Questions
 1. **What happens during `terraform init` regarding providers?**
    - *Answer*: Terraform scans the configuration for provider blocks, goes to the Terraform Registry (by default), and downloads the required binaries into the `.terraform/` directory.
