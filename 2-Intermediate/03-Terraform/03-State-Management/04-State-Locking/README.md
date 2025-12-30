@@ -5,38 +5,55 @@ State locking prevents concurrent operations on the same state file, protecting 
 ## Why Lock?
 If two people run `terraform apply` at the same time, they might both try to write to the state file simultaneously. This can lead to a corrupted JSON file, meaning your infrastructure is no longer manageable.
 
-## How it works (AWS Example)
-1. **Request**: Terraform attempts to write a "Lock" item to a DynamoDB table.
-2. **Check**: If the item exists (current lock), the operation is blocked.
-3. **Execute**: If the lock is acquired, the plan/apply proceeds.
-4. **Release**: Once done, Terraform deletes the Lock item.
+## Technical Deep Dive: DynamoDB Locking
 
-## Mermaid Diagram: Locking Sequence
+When using the S3 backend, Terraform expects a DynamoDB table.
 
-```mermaid
-sequenceDiagram
-    participant User as Engineer
-    participant Lock as DynamoDB (LockID)
-    participant State as S3 (State File)
-    
-    User->>Lock: 1. Request Lock
-    alt Success
-        Lock-->>User: Lock Acquired
-        User->>State: 2. Read current state
-        User->>State: 3. Apply & Update state
-        User->>Lock: 4. Release Lock
-    else Denied
-        Lock-->>User: Error: State already locked
-        User->>User: Wait and Retry
-    end
+**Table Schema Requirements**:
+*   **Partition Key**: `LockID` (String)
+*   **Billing Mode**: Pay_Per_Request (recommended)
+
+**What a "Lock" looks like**:
+When you run `terraform apply`, Terraform writes an item to the table:
+```json
+{
+  "LockID": "my-bucket/prod/terraform.tfstate-md5",
+  "Info": "{\"ID\":\"d9d062...\",\"Operation\":\"OperationTypeApply\",\"Who\":\"ganil@laptop\",\"Version\":\"1.5.0\",\"Created\":\"2023-10-27T10:00:00Z\",\"Path\":\"network/terraform.tfstate\",\"LogPath\":\"\"}"
+}
 ```
+*It records **Who** is running the command and **When** it started.*
 
-## The "Stale Lock" Problem
-Sometimes a Terraform process crashes (e.g. internet drops) before it can release the lock.
-**Solution**: Manually unlock it.
+## 🚨 Troubleshooting Stale Locks
+
+Sometimes a Terraform process crashes (e.g. laptop dies, CI job is killed `kill -9`) before it can delete the lock item. This leaves the state "locked" forever.
+
+**Symptoms**:
+*   New `terraform apply` fails immediately.
+*   Error message: `Error acquiring the state lock`.
+
+**Resolution Steps**:
+1.  **Read the Error**: It prints the `LockID` and the `ID` (transaction ID).
+    ```text
+    Error: Error acquiring the state lock
+    Lock Info:
+      ID:        d9d0628e-....
+      Who:       ganil@laptop
+    ```
+2.  **Verify**: Ensure the process listed in "Who" is actually dead.
+3.  **Force Unlock**: Use the `force-unlock` command with the **Transaction ID** (not the LockID, confusingly).
+    ```bash
+    terraform force-unlock d9d0628e-....
+    ```
+
+## ⚠️ Dangerous Flags (`-lock=false`)
+
+You *can* tell Terraform to ignore locking, but you should probably **never** do this.
+
 ```bash
-terraform force-unlock <LOCK_ID>
+terraform apply -lock=false
 ```
+
+**Risk**: If someone else is running apply at the same time, you will overwrite each other's changes. The state file will become corrupted, and you may lose track of resources. **Only use this if your backend doesn't support locking.**
 
 ---
 
