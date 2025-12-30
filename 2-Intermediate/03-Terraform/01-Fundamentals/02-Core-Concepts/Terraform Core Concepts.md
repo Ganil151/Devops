@@ -1,5 +1,3 @@
-# Terraform Core Concepts
-
 Understanding the architecture and main building blocks of Terraform.
 
 ## Terraform Architecture

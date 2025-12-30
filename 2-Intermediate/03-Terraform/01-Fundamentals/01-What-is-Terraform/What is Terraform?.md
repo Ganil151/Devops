@@ -15,13 +15,11 @@ Terraform is an open-source Infrastructure as Code (IaC) tool created by HashiCo
 - **Security Infrastructure**: Configuring IAM, security groups, and certificates.
 
 ---
-
 ## 🏗️ Real-Life Scenario: The Manual Setup Trap
 **Problem**: A startup needs to deploy their web app to AWS. The lead engineer manually creates the VPC, 3 EC2 instances, and an RDS database. When it's time to create a "staging" environment, they realize they can't remember all the manual settings, leading to "Environment Drift."
 **Solution**: By using Terraform, the engineer defines the entire infrastructure in a `main.tf` file. They can now deploy identical copies of the environment (Dev, Staging, Prod) in minutes, ensuring consistency and version control.
 
 ---
-
 ## ❓ Interview Questions
 1. **What is Infrastructure as Code (IaC)?**
    - *Answer*: IaC is the process of managing and provisioning computer data centers through machine-readable definition files, rather than physical hardware configuration or interactive configuration tools.
@@ -29,7 +27,6 @@ Terraform is an open-source Infrastructure as Code (IaC) tool created by HashiCo
    - *Answer*: Terraform is primarily an orchestration tool (Focuses on *Infrastructure*), while Ansible is a configuration management tool (Focuses on *Apps/OS*). Terraform is declarative, whereas Ansible can be procedural.
 
 ---
-
 ## 🧠 Quiz Snippet (5/20+)
 1. **Who created Terraform?** (HashiCorp)
 2. **What language does Terraform use?** (HCL - HashiCorp Configuration Language)
