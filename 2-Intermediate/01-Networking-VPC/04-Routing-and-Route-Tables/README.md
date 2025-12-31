@@ -1,81 +1,36 @@
 # Routing and Route Tables
 
-Route tables are the GPS of your VPC. They determine where network traffic from your subnet or gateway is directed.
+Route tables are the GPS of your VPC. They determine where network traffic from your subnet or gateway is directed, ensuring packets reach their intended destination securely and efficiently.
 
-## 🗺️ Route Table Basics
+## 📚 Learning Path
 
-A route table contains a set of rules, called **routes**, that determine where network traffic uses to get to its destination.
-
--   **Main Route Table**: Automatically created with your VPC. Implicitly associated with all subnets unless a custom one is created.
--   **Custom Route Table**: Explicitly created by the user and associated with specific subnets. **Best Practice** is to use custom route tables for granular control.
-
-### Anatomy of a Route
-
-Each route consists of:
-1.  **Destination**: The range of IP addresses where you want traffic to go (e.g., `0.0.0.0/0`, `10.0.0.0/16`).
-2.  **Target**: The gateway, network interface, or connection to send traffic to (e.g., `igw-xxxx`, `nat-xxxx`, `pcx-xxxx`).
-
-### The "Local" Route
-Every route table contains a default `local` route for the VPC CIDR.
--   **Destination**: `10.0.0.0/16` (VPC CIDR)
--   **Target**: `local`
--   **Note**: This route cannot be deleted. It ensures all instances in the VPC can communicate with each other.
+| # | Topic | Description | Key Concepts |
+| :--- | :--- | :--- | :--- |
+| **01** | [**Fundamentals**](./01-Route-Table-Fundamentals/README.md) | Basics of VPC Routing | Main vs Custom, Local route |
+| **02** | [**Priority Logic (LPM)**](./02-Priority-Logic-LPM/README.md) | How the Router Decides | Longest Prefix Match, Origin Priority |
+| **03** | [**Gateway & Middleboxes**](./03-Gateway-Routing-and-Middleboxes/README.md) | Advanced Ingress Routing | Ingress Gates, Security Appliances |
+| **04** | [**Troubleshooting**](./04-Troubleshooting-and-Blackholes/README.md) | Fixing Broken Paths | Blackhole status, Diagnostic Flow |
 
 ---
 
-## 🚦 Route Priority
+## 🚦 Route Priority Decision Flow
 
-When multiple routes match a packet's destination, AWS uses the **most specific route** (longest prefix match) to determine priority.
+```mermaid
+graph TD
+    Packet[Incoming Packet] --> Match{Matches Destination?}
+    Match -->|No| Drop[Traffic Dropped]
+    Match -->|Yes| Multiple{Multiple Matches?}
+    Multiple -->|No| Connect[Route to Target]
+    Multiple -->|Yes| LPM[Winner: Longest Prefix Match]
+    LPM --> Origin{Same Length?}
+    Origin -->|Yes| Static[Winner: Static Route]
+    Origin -->|No| Connect
+```
 
-**Example**:
--   Route A: `10.0.0.0/16` -> Local
--   Route B: `10.0.1.0/24` -> Peering-Connection
--   Packet Destination: `10.0.1.50`
+## Quick Start
 
-**Winner**: Route B (more specific/longer prefix).
+1.  **Requirement**: Connect to a partner network via Peering.
+2.  **Action**: Add a route to the Partner CIDR (e.g., `172.16.0.0/16`) targeting the `pcx-xxxx` ID.
+3.  **Validation**: Ensure no overlapping `/24` or `/32` routes exist that might steal the traffic.
 
----
-
-## 🏗️ Common Route Table Configurations
-
-### 1. Public Route Table
-Associated with Public Subnets.
--   `10.0.0.0/16` -> `local`
--   `0.0.0.0/0` -> `igw-xxxx` (Internet Gateway)
-
-### 2. Private Route Table
-Associated with Private Subnets.
--   `10.0.0.0/16` -> `local`
--   `0.0.0.0/0` -> `nat-xxxx` (NAT Gateway)
-
-### 3. Gateway Route Table
-Associated with an Internet Gateway or VGW (rare usage). Used for fine-grained control of ingress traffic, typically with middlebox appliances (firewalls).
-
----
-
-## ⚠️ Blackhole Routes
-
-A "Blackhole" status in a route table means the target resource (e.g., NAT Gateway, Peering Connection) no longer exists.
--   **Symptom**: Traffic is dropped silently.
--   **Fix**: Update the route to a valid target or delete the route.
-
----
-
-## ❓ Interview Questions
-
-1.  **Can a subnet be associated with multiple route tables?**
-    *   *Answer*: No. A subnet can be associated with only one route table at a time. However, a single route table can be associated with multiple subnets.
-2.  **What is the priority order for routes?**
-    *   *Answer*: Longest Prefix Match (Most specific route wins). If there is a tie, static routes take precedence over propagated routes.
-3.  **What happens if I don't associate a subnet with a route table?**
-    *   *Answer*: It is implicitly associated with the VPC's Main Route Table.
-
----
-
-## 🧠 Quiz Snippet
-
-1.  **Which route is automatically added to every route table?** `(The local route)`
-2.  **You want to route traffic to S3 without going over the internet. What target do you use?** `(VPC Endpoint / Gateway Endpoint)`
-3.  **Can you delete the 'local' route?** `(No)`
-4.  **Target for internet traffic in a public subnet?** `(igw-id)`
-5.  **Target for internet traffic in a private subnet?** `(nat-id)`
+Please proceed to **[01-Fundamentals](./01-Route-Table-Fundamentals/README.md)**.
