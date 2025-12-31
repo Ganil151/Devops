@@ -1,653 +1,237 @@
-# Ansible Core Modules
+# Core Modules
 
-Essential guide to Ansible's core modules for system administration, file management, and basic automation tasks.
+Ansible ships with thousands of modules, but you will spend 90% of your time using these "Core" modules.
 
-## Module Basics
+## 1. Module Categories
 
-### What are Modules?
-
-Modules are discrete units of code that Ansible executes on managed nodes. Each module performs a specific task and returns structured data about what was accomplished.
-
-### Module Categories
-- **System**: User, group, service management
-- **Files**: File operations, templates, archives
-- **Commands**: Shell commands and scripts
-- **Packaging**: Package installation and management
-- **Net Tools**: Network utilities and testing
-
-## System Modules
-
-### User Management
-
-#### user Module
-```yaml
-# Create user
-- name: Create application user
-  user:
-    name: appuser
-    uid: 1001
-    group: appgroup
-    shell: /bin/bash
-    home: /home/appuser
-    create_home: yes
-    state: present
-
-# Modify existing user
-- name: Update user shell
-  user:
-    name: appuser
-    shell: /bin/zsh
-    append: yes
-    groups: sudo,docker
-
-# Remove user
-- name: Remove user
-  user:
-    name: olduser
-    state: absent
-    remove: yes
-    force: yes
-```
-
-#### group Module
-```yaml
-# Create group
-- name: Create application group
-  group:
-    name: appgroup
-    gid: 1001
-    state: present
-
-# System group
-- name: Create system group
-  group:
-    name: sysgroup
-    system: yes
-    state: present
-```
-
-### Service Management
-
-#### service Module
-```yaml
-# Start and enable service
-- name: Start and enable nginx
-  service:
-    name: nginx
-    state: started
-    enabled: yes
-
-# Restart service
-- name: Restart apache
-  service:
-    name: httpd
-    state: restarted
-
-# Stop and disable service
-- name: Stop and disable service
-  service:
-    name: unnecessary-service
-    state: stopped
-    enabled: no
-```
-
-#### systemd Module
-```yaml
-# Systemd specific operations
-- name: Reload systemd and start service
-  systemd:
-    name: myapp
-    state: started
-    enabled: yes
-    daemon_reload: yes
-
-# User service
-- name: Start user service
-  systemd:
-    name: user-app
-    state: started
-    scope: user
+```mermaid
+graph TD
+    Core[Core Modules] --> Files[File Management]
+    Core --> Pkg[Packages]
+    Core --> Sys[System]
+    Core --> Util[Utilities]
     
-# Mask service
-- name: Mask service
-  systemd:
-    name: unwanted-service
-    masked: yes
+    Files --> Copy[copy]
+    Files --> Templ[template]
+    Files --> File[file]
+    
+    Pkg --> Apt[apt/yum]
+    Pkg --> Pip[pip]
+    
+    Sys --> Svc[service]
+    Sys --> User[user]
+    
+    Util --> Debug[debug]
+    Util --> Shell[shell]
 ```
 
-## File Modules
+---
 
-### file Module
+## 2. File Management
+
+### `copy` vs `template`
+*   **copy**: Static files. "Take this file `foo.conf` and put it on the server."
+*   **template**: Dynamic files. "Take this `foo.j2`, inject variables (IP address, hostname), and save as `foo.conf`."
+
+### `file`
+Manages file attributes (permissions, ownership) and creates directories/symlinks.
 ```yaml
-# Create directory
-- name: Create application directory
-  file:
-    path: /opt/myapp
-    state: directory
-    owner: appuser
-    group: appgroup
-    mode: '0755'
-
-# Create file
-- name: Create empty file
-  file:
-    path: /tmp/testfile
-    state: touch
-    owner: root
-    group: root
-    mode: '0644'
-
-# Create symbolic link
-- name: Create symlink
-  file:
-    src: /opt/myapp/current
-    dest: /opt/myapp/app
-    state: link
-
-# Remove file/directory
-- name: Remove temporary files
-  file:
-    path: /tmp/cleanup
-    state: absent
-
-# Set permissions recursively
-- name: Set directory permissions
+- name: Create directory
   file:
     path: /var/www/html
+    state: directory
     owner: www-data
-    group: www-data
     mode: '0755'
-    recurse: yes
 ```
 
-### copy Module
+### `lineinfile`
+Edits a single line in an existing file. Perfect for `sshd_config`.
 ```yaml
-# Copy file from control node
-- name: Copy configuration file
-  copy:
-    src: /local/path/config.conf
-    dest: /etc/myapp/config.conf
-    owner: root
-    group: root
-    mode: '0644'
-    backup: yes
-
-# Copy with content
-- name: Create file with content
-  copy:
-    content: |
-      # Configuration file
-      server_name = myserver
-      port = 8080
-    dest: /etc/myapp/server.conf
-    owner: appuser
-    group: appgroup
-    mode: '0600'
-
-# Copy directory
-- name: Copy application files
-  copy:
-    src: /local/app/
-    dest: /opt/myapp/
-    owner: appuser
-    group: appgroup
-    mode: preserve
+- name: Disable Root Login
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PermitRootLogin'
+    line: 'PermitRootLogin no'
+    state: present
+    notify: Restart SSH
 ```
 
-### template Module
+---
+
+## 3. Package Management
+
+*   **`apt` / `yum` / `dnf`**: OS-specific package managers.
+*   **`package`**: Generic module. Auto-detects the OS manager. Good for mixed environments (Ubuntu + CentOS).
+*   **`pip`**: Installs Python libraries (e.g., `requests`, `boto3`).
+
 ```yaml
-# Basic template
-- name: Generate configuration from template
-  template:
-    src: nginx.conf.j2
-    dest: /etc/nginx/nginx.conf
-    owner: root
-    group: root
-    mode: '0644'
-  notify: restart nginx
-
-# Template with variables
-- name: Generate app config
-  template:
-    src: app.conf.j2
-    dest: /etc/myapp/app.conf
-    owner: appuser
-    group: appgroup
-    mode: '0600'
-  vars:
-    app_port: 8080
-    app_workers: 4
-```
-
-### fetch Module
-```yaml
-# Fetch file from remote host
-- name: Fetch log files
-  fetch:
-    src: /var/log/myapp.log
-    dest: /local/logs/{{ inventory_hostname }}/
-    flat: yes
-
-# Fetch with validation
-- name: Fetch configuration backup
-  fetch:
-    src: /etc/myapp/config.conf
-    dest: /backup/configs/
-    validate_checksum: yes
-```
-
-## Command Modules
-
-### command Module
-```yaml
-# Simple command
-- name: Check disk usage
-  command: df -h
-  register: disk_usage
-
-# Command with arguments
-- name: Create backup
-  command: tar -czf /backup/app-{{ ansible_date_time.epoch }}.tar.gz /opt/myapp
-  args:
-    creates: /backup/app-{{ ansible_date_time.epoch }}.tar.gz
-
-# Command with working directory
-- name: Run application script
-  command: ./deploy.sh
-  args:
-    chdir: /opt/myapp/scripts
-    creates: /opt/myapp/deployed.flag
-```
-
-### shell Module
-```yaml
-# Shell command with pipes
-- name: Find large files
-  shell: find /var/log -name "*.log" -size +100M | head -10
-  register: large_files
-
-# Command with environment variables
-- name: Run with environment
-  shell: echo $CUSTOM_VAR
-  environment:
-    CUSTOM_VAR: "Hello World"
-
-# Multi-line shell command
-- name: Complex shell operation
-  shell: |
-    if [ -f /etc/myapp/config.conf ]; then
-      echo "Config exists"
-    else
-      echo "Config missing"
-    fi
-  register: config_check
-```
-
-### script Module
-```yaml
-# Run local script on remote host
-- name: Execute deployment script
-  script: /local/scripts/deploy.sh
-  args:
-    creates: /opt/myapp/deployed
-
-# Script with arguments
-- name: Run maintenance script
-  script: /local/scripts/maintenance.sh {{ app_name }} {{ app_version }}
-```
-
-## Package Modules
-
-### package Module (Generic)
-```yaml
-# Install package (works across distributions)
-- name: Install git
+- name: Install Git (Generic)
   package:
     name: git
     state: present
-
-# Install multiple packages
-- name: Install development tools
-  package:
-    name:
-      - git
-      - curl
-      - wget
-      - vim
-    state: present
-
-# Remove package
-- name: Remove unnecessary package
-  package:
-    name: telnet
-    state: absent
 ```
 
-### yum Module (RHEL/CentOS)
+---
+
+## 4. System & Utilities
+
+### `service`
+Manage daemons (Start, Stop, Restart, Enable on boot).
 ```yaml
-# Install package
-- name: Install Apache
-  yum:
-    name: httpd
-    state: present
-
-# Install specific version
-- name: Install specific Python version
-  yum:
-    name: python3-3.8.0
-    state: present
-
-# Install from URL
-- name: Install RPM from URL
-  yum:
-    name: https://example.com/package.rpm
-    state: present
-
-# Update all packages
-- name: Update all packages
-  yum:
-    name: "*"
-    state: latest
-```
-
-### apt Module (Debian/Ubuntu)
-```yaml
-# Update cache and install
-- name: Install nginx
-  apt:
-    name: nginx
-    state: present
-    update_cache: yes
-
-# Install multiple packages
-- name: Install LAMP stack
-  apt:
-    name:
-      - apache2
-      - mysql-server
-      - php
-      - libapache2-mod-php
-    state: present
-
-# Install .deb package
-- name: Install local deb package
-  apt:
-    deb: /tmp/package.deb
-    state: present
-```
-
-### pip Module (Python packages)
-```yaml
-# Install Python package
-- name: Install Flask
-  pip:
-    name: flask
-    state: present
-
-# Install specific version
-- name: Install Django
-  pip:
-    name: django==3.2.0
-    state: present
-
-# Install from requirements file
-- name: Install from requirements
-  pip:
-    requirements: /opt/myapp/requirements.txt
-    virtualenv: /opt/myapp/venv
-```
-
-## Network and Utility Modules
-
-### uri Module
-```yaml
-# HTTP GET request
-- name: Check service health
-  uri:
-    url: http://localhost:8080/health
-    method: GET
-    status_code: 200
-  register: health_check
-
-# POST request with data
-- name: Send notification
-  uri:
-    url: https://api.example.com/notify
-    method: POST
-    body_format: json
-    body:
-      message: "Deployment completed"
-      server: "{{ inventory_hostname }}"
-    headers:
-      Authorization: "Bearer {{ api_token }}"
-
-# Download file
-- name: Download application
-  uri:
-    url: https://releases.example.com/app-1.0.0.tar.gz
-    dest: /tmp/app-1.0.0.tar.gz
-    creates: /tmp/app-1.0.0.tar.gz
-```
-
-### get_url Module
-```yaml
-# Download file
-- name: Download application archive
-  get_url:
-    url: https://github.com/user/repo/archive/v1.0.0.tar.gz
-    dest: /tmp/app-v1.0.0.tar.gz
-    mode: '0644'
-    checksum: sha256:abc123...
-
-# Download with authentication
-- name: Download private file
-  get_url:
-    url: https://private.example.com/file.zip
-    dest: /tmp/file.zip
-    username: "{{ download_user }}"
-    password: "{{ download_pass }}"
-```
-
-### wait_for Module
-```yaml
-# Wait for port to be available
-- name: Wait for service to start
-  wait_for:
-    port: 8080
-    host: localhost
-    timeout: 300
-
-# Wait for file to exist
-- name: Wait for deployment flag
-  wait_for:
-    path: /opt/myapp/deployed.flag
-    timeout: 600
-
-# Wait for string in file
-- name: Wait for service ready
-  wait_for:
-    path: /var/log/myapp.log
-    search_regex: "Service started successfully"
-    timeout: 120
-```
-
-## Archive and Compression
-
-### unarchive Module
-```yaml
-# Extract archive from control node
-- name: Extract application
-  unarchive:
-    src: /local/app-1.0.0.tar.gz
-    dest: /opt/myapp
-    owner: appuser
-    group: appgroup
-
-# Extract remote archive
-- name: Extract downloaded archive
-  unarchive:
-    src: /tmp/app-1.0.0.tar.gz
-    dest: /opt/myapp
-    remote_src: yes
-    creates: /opt/myapp/bin/app
-
-# Extract specific files
-- name: Extract configuration only
-  unarchive:
-    src: /tmp/backup.tar.gz
-    dest: /etc/
-    remote_src: yes
-    include:
-      - "*/config/*"
-```
-
-### archive Module
-```yaml
-# Create archive
-- name: Create backup archive
-  archive:
-    path: /opt/myapp
-    dest: /backup/myapp-{{ ansible_date_time.epoch }}.tar.gz
-    format: gz
-
-# Create archive with exclusions
-- name: Backup excluding logs
-  archive:
-    path: /opt/myapp
-    dest: /backup/myapp-clean.tar.gz
-    exclude_path:
-      - /opt/myapp/logs
-      - /opt/myapp/tmp
-```
-
-## Module Usage Patterns
-
-### Error Handling
-```yaml
-# Handle module failures
-- name: Install package with error handling
-  package:
-    name: some-package
-    state: present
-  register: install_result
-  failed_when: 
-    - install_result.failed
-    - "'No package' not in install_result.msg"
-
-# Ignore errors for optional tasks
-- name: Optional configuration
-  copy:
-    src: optional-config.conf
-    dest: /etc/optional.conf
-  ignore_errors: yes
-```
-
-### Conditional Execution
-```yaml
-# Run module based on conditions
-- name: Install development packages
-  package:
-    name: "{{ dev_packages }}"
-    state: present
-  when: 
-    - environment == "development"
-    - dev_packages is defined
-
-# OS-specific modules
-- name: Install package (RedHat)
-  yum:
-    name: httpd
-    state: present
-  when: ansible_os_family == "RedHat"
-
-- name: Install package (Debian)
-  apt:
-    name: apache2
-    state: present
-  when: ansible_os_family == "Debian"
-```
-
-### Using Register
-```yaml
-# Capture module output
-- name: Check service status
-  command: systemctl is-active nginx
-  register: nginx_status
-  failed_when: false
-  changed_when: false
-
-- name: Display service status
-  debug:
-    msg: "Nginx is {{ nginx_status.stdout }}"
-
-# Use registered variables in conditions
-- name: Start service if not running
+- name: Start Nginx
   service:
     name: nginx
     state: started
-  when: nginx_status.stdout != "active"
+    enabled: true
 ```
 
-## Best Practices
+### `command` vs `shell`
+*   **`command`**: Default. Secure. No pipes/redirects.
+*   **`shell`**: Use only if you need `| grep` or `> output.txt`.
 
-### Module Selection
-```yaml
-# Prefer specific modules over command/shell
-# Good
-- name: Create user
-  user:
-    name: appuser
-    state: present
+### `uri`
+Interacts with Web APIs. Good for "Smoke Testing" your webserver after deployment to make sure it returns 200 OK.
 
-# Avoid
-- name: Create user
-  command: useradd appuser
+---
 
-# Use appropriate module parameters
-- name: Copy file with proper ownership
-  copy:
-    src: config.conf
-    dest: /etc/app/config.conf
-    owner: appuser
-    group: appgroup
-    mode: '0644'
-    backup: yes
-```
+## 5. Real-Life Scenarios
 
-### Idempotency
-```yaml
-# Ensure idempotent operations
-- name: Ensure directory exists
-  file:
-    path: /opt/myapp
-    state: directory
-    # This is idempotent - won't change if directory exists
+### Scenario 1: "The Configuration Manager"
+**Problem**: Security required `PasswordAuthentication no` on all 500 servers.
+**Solution**: Used `lineinfile` with a regex.
+*   Regexp `^PasswordAuthentication` matches the line even if it's commented out or set to `yes`.
+*   Ansible found the line, changed it to `no`, and restarted SSHD only if changed.
 
-# Use creates/removes for command modules
-- name: Extract archive
-  command: tar -xzf /tmp/app.tar.gz -C /opt/
-  args:
-    creates: /opt/app/bin/app
-```
+### Scenario 2: "The Package Unifier"
+**Problem**: The team had RHEL 7, RHEL 8, and Ubuntu 20.04. The setup script had 3 `if` statements.
+**Solution**: Switched to the `package` module.
+*   `package: name=htop state=present`.
+*   Ansible detected `apt` on Ubuntu and `yum`/`dnf` on RHEL automatically. Code reduced by 60%.
 
-### Performance
-```yaml
-# Batch operations when possible
-- name: Install multiple packages
-  package:
-    name:
-      - git
-      - curl
-      - wget
-    state: present
-  # Better than multiple individual package tasks
+### Scenario 3: "The Web Request"
+**Problem**: Deployment claimed "Success", but Nginx was returning 502 Bad Gateway.
+**Solution**: Added a verification task at the end of the playbook.
+*   `uri: url=http://localhost return_content=yes status_code=200`.
+*   Now the playbook fails if the site isn't *actually* working, preventing bad releases.
 
-# Use appropriate module features
-- name: Copy directory efficiently
-  copy:
-    src: /local/app/
-    dest: /opt/myapp/
-    # Copies entire directory in one operation
-```
+---
 
-This comprehensive guide covers the essential Ansible core modules needed for basic system administration and automation tasks.
+## 6. ❓ Interview Questions
+
+1.  **Does `lineinfile` replace the whole file?**
+    *   **Answer**: No, it scans for a regular expression and replaces only that line. If you need to manage the whole file, use `copy` or `template`.
+
+2.  **Difference between `systemd` module and `service` module?**
+    *   **Answer**: `service` is a high-level wrapper that works on systemd, init.d, upstart, etc. `systemd` is specific to systemd and exposes advanced features like `daemon_reload`.
+
+3.  **How do you create a symlink?**
+    *   **Answer**: Use the `file` module with `state: link`. `src` is the target, `path` is the link name.
+
+4.  **How do you extract a tarball?**
+    *   **Answer**: Use the `unarchive` module. It can unzip locally or copy-and-unzip to the remote.
+
+5.  **When would you use `raw` module?**
+    *   **Answer**: To install Python on a fresh machine (e.g., `apt install python3 -y`) so that Ansible can start using normal modules.
+
+6.  **Can `user` module generate SSH keys?**
+    *   **Answer**: Yes, `generate_ssh_key: yes` will create `.ssh/id_rsa` for that user.
+
+7.  **What if I need to run a task only if a file exists?**
+    *   **Answer**: Use `stat` to check the file, register the result, then `when: result.stat.exists`.
+
+8.  **Does `pip` module install to a venv?**
+    *   **Answer**: Yes, using the `virtualenv` parameter.
+
+9.  **How do you fetch a file *from* the remote server?**
+    *   **Answer**: Use the `fetch` module (Remote -> Control Node). `copy` goes Control -> Remote.
+
+10. **Is `shell` module idempotent?**
+    *   **Answer**: No. It runs every time unless you use `creates=/path/to/file` parameter to tell it "Skip if this file exists".
+
+---
+
+## 7. 🧠 Knowledge Check (Quiz)
+
+### File Operations
+1.  **To manage directories (chmod/chown):**
+    *   [x] `file`.
+    *   [ ] `directory`.
+
+2.  **`template` module uses which engine?**
+    *   [x] Jinja2.
+    *   [ ] Go Templates.
+
+3.  **`lineinfile` is best for:**
+    *   [x] Small edits to existing config files.
+    *   [ ] Writing new files from scratch.
+
+4.  **To download a file from the internet:**
+    *   [x] `get_url`.
+    *   [ ] `download`.
+
+### Packages & System
+5.  **The generic package manager module is:**
+    *   [x] `package`.
+    *   [ ] `install`.
+
+6.  **To enable a service on boot:**
+    *   [x] `enabled: yes`.
+    *   [ ] `boot: yes`.
+
+7.  **To restart a service ONLY if config changed:**
+    *   [x] Use a Handler.
+    *   [ ] Use `state: restarted`.
+
+8.  **To add a user to a specific group:**
+    *   [x] `user` module with `groups` parameter.
+    *   [ ] `group` module.
+
+9.  **`cron` module manages:**
+    *   [x] Scheduled jobs (crontab).
+    *   [ ] System clocks.
+
+10. **To install Python libraries:**
+    *   [x] `pip`.
+    *   [ ] `npm`.
+
+### Utilities
+11. **`debug` module is used for:**
+    *   [x] Printing variables to stdout.
+    *   [ ] Debugging Python code.
+
+12. **`shell` vs `command` - which is safer?**
+    *   [x] `command` (no shell expansion).
+    *   [ ] `shell`.
+
+13. **To interact with a REST API:**
+    *   [x] `uri`.
+    *   [ ] `api`.
+
+14. **`wait_for` is useful for:**
+    *   [x] Waiting for a port to open (e.g., after reboot).
+    *   [ ] Pausing for 5 seconds.
+
+15. **To unzip a file:**
+    *   [x] `unarchive`.
+    *   [ ] `zip`.
+
+### General
+16. **Most modules return:**
+    *   [x] JSON.
+    *   [ ] XML.
+
+17. **If `get_url` downloads a file that already matches checksum:**
+    *   [x] It reports "OK" (no change).
+    *   [ ] It downloads it again.
+
+18. **Can `user` module set a password?**
+    *   [x] Yes, but it must be hashed.
+    *   [ ] Yes, plaintext.
+
+19. **`filesystem` module:**
+    *   [x] Creates filesystems (mkfs.ext4).
+    *   [ ] Checks disk space.
+
+20. **To register the output of a module:**
+    *   [x] `register: my_var`.
+    *   [ ] `output: my_var`.

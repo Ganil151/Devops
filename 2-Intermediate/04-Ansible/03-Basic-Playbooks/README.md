@@ -1,692 +1,210 @@
-# Ansible Playbooks
+# Basic Playbooks
 
-Complete guide to Ansible playbook creation, structure, and advanced features for automation workflows.
+A Playbook is a YAML file containing a list of **Plays**. Each Play maps a group of **Hosts** to a list of **Tasks**.
 
-## Playbook Basics
+## 1. Anatomy of a Playbook
 
-### What is a Playbook?
+```mermaid
+graph TD
+    PB[Playbook.yml] --> Play1[Play 1: Configure Web]
+    PB --> Play2[Play 2: Configure DB]
+    
+    Play1 --> Hosts1[Hosts: webservers]
+    Play1 --> Tasks1[Tasks]
+    
+    Tasks1 --> Task1[Task 1: Install Nginx]
+    Tasks1 --> Task2[Task 2: Start Service]
+    
+    Task1 --> Mod1[Module: apt]
+    Task2 --> Mod2[Module: service]
+```
 
-A playbook is a YAML file that defines a series of tasks to be executed on managed hosts. Playbooks are the foundation of Ansible automation, describing the desired state of your systems.
-
-### Basic Playbook Structure
-
+### Syntax Example (`site.yml`)
 ```yaml
 ---
-- name: Basic web server setup
+- name: Configure Webservers        # <--- The Play
   hosts: webservers
-  become: yes
-  gather_facts: yes
-  
-  vars:
-    http_port: 80
-    max_clients: 200
-  
-  tasks:
-    - name: Install Apache
-      package:
-        name: httpd
-        state: present
-    
-    - name: Start Apache service
-      service:
-        name: httpd
-        state: started
-        enabled: yes
-  
-  handlers:
-    - name: restart apache
-      service:
-        name: httpd
-        state: restarted
-```
+  become: true                      # <--- Run as root (sudo)
 
-## Playbook Components
-
-### Play Definition
-```yaml
----
-- name: Configure web servers          # Play name (optional but recommended)
-  hosts: webservers                   # Target hosts or groups
-  become: yes                         # Privilege escalation
-  become_user: root                   # User to become
-  become_method: sudo                 # Escalation method
-  gather_facts: yes                   # Collect system facts
-  serial: 2                          # Process hosts in batches
-  max_fail_percentage: 25            # Failure tolerance
-  connection: ssh                     # Connection type
-  remote_user: ansible               # SSH user
-  
-  vars:                              # Play variables
-    app_name: myapp
-    app_version: 1.0.0
-  
-  vars_files:                        # External variable files
-    - vars/main.yml
-    - vars/secrets.yml
-  
-  vars_prompt:                       # Interactive variables
-    - name: app_version
-      prompt: "Enter application version"
-      private: no
-  
-  pre_tasks:                         # Tasks run before roles
-    - name: Update package cache
-      package:
-        update_cache: yes
-  
-  roles:                             # Roles to apply
-    - common
-    - webserver
-  
-  tasks:                             # Main tasks
-    - name: Deploy application
-      copy:
-        src: app.jar
-        dest: /opt/app/
-  
-  post_tasks:                        # Tasks run after roles
-    - name: Verify deployment
-      uri:
-        url: http://localhost:8080/health
-  
-  handlers:                          # Event handlers
-    - name: restart service
-      service:
-        name: myapp
-        state: restarted
-```
-
-### Task Structure
-```yaml
-- name: Task description             # Task name
-  module_name:                      # Module to use
-    parameter1: value1              # Module parameters
-    parameter2: value2
-  register: result_var              # Store task output
-  when: condition                   # Conditional execution
-  loop: "{{ list_var }}"           # Loop over items
-  notify: handler_name              # Trigger handler
-  tags:                            # Task tags
-    - configuration
-    - webserver
-  become: yes                       # Task-level privilege escalation
-  delegate_to: localhost            # Run on different host
-  run_once: true                   # Run only once
-  ignore_errors: yes               # Continue on failure
-  changed_when: false              # Control change detection
-  failed_when: result.rc != 0      # Custom failure conditions
-```
-
-## Variables and Facts
-
-### Variable Types
-```yaml
-# Play variables
-vars:
-  app_name: myapp
-  app_port: 8080
-  
-# List variables
-packages:
-  - git
-  - curl
-  - wget
-
-# Dictionary variables
-database:
-  host: db.example.com
-  port: 3306
-  name: myapp_db
-
-# Registered variables
-- name: Get system uptime
-  command: uptime
-  register: uptime_result
-
-- name: Display uptime
-  debug:
-    var: uptime_result.stdout
-```
-
-### Using Facts
-```yaml
-- name: Display system information
-  debug:
-    msg: |
-      Hostname: {{ ansible_hostname }}
-      OS: {{ ansible_distribution }} {{ ansible_distribution_version }}
-      IP: {{ ansible_default_ipv4.address }}
-      Memory: {{ ansible_memtotal_mb }}MB
-      CPU: {{ ansible_processor_cores }} cores
-
-# Conditional based on facts
-- name: Install package (RedHat family)
-  yum:
-    name: httpd
-    state: present
-  when: ansible_os_family == "RedHat"
-
-- name: Install package (Debian family)
-  apt:
-    name: apache2
-    state: present
-  when: ansible_os_family == "Debian"
-```
-
-## Control Flow
-
-### Conditionals
-```yaml
-# Simple conditions
-- name: Install nginx
-  package:
-    name: nginx
-    state: present
-  when: webserver_type == "nginx"
-
-# Multiple conditions (AND)
-- name: Configure SSL
-  template:
-    src: ssl.conf.j2
-    dest: /etc/nginx/ssl.conf
-  when:
-    - ssl_enabled | default(false)
-    - ssl_certificate is defined
-
-# Multiple conditions (OR)
-- name: Install web server
-  package:
-    name: "{{ item }}"
-    state: present
-  when: webserver_type == "apache" or webserver_type == "httpd"
-  loop:
-    - httpd
-    - mod_ssl
-
-# Complex conditions
-- name: Configure firewall
-  firewalld:
-    service: http
-    state: enabled
-  when: 
-    - ansible_os_family == "RedHat"
-    - firewall_enabled | default(true)
-    - not (development_mode | default(false))
-```
-
-### Loops
-```yaml
-# Simple loop
-- name: Install packages
-  package:
-    name: "{{ item }}"
-    state: present
-  loop:
-    - git
-    - curl
-    - wget
-
-# Loop with dictionary
-- name: Create users
-  user:
-    name: "{{ item.name }}"
-    uid: "{{ item.uid }}"
-    group: "{{ item.group }}"
-  loop:
-    - { name: alice, uid: 1001, group: users }
-    - { name: bob, uid: 1002, group: users }
-
-# Loop with variables
-- name: Configure virtual hosts
-  template:
-    src: vhost.conf.j2
-    dest: "/etc/nginx/sites-available/{{ item.name }}"
-  loop: "{{ virtual_hosts }}"
-  notify: reload nginx
-
-# Loop with conditions
-- name: Install development packages
-  package:
-    name: "{{ item }}"
-    state: present
-  loop:
-    - nodejs
-    - npm
-    - python3-dev
-  when: environment == "development"
-
-# Loop with register
-- name: Check service status
-  service:
-    name: "{{ item }}"
-  register: service_results
-  loop:
-    - httpd
-    - mysqld
-    - sshd
-
-- name: Display service status
-  debug:
-    msg: "{{ item.item }} is {{ item.state }}"
-  loop: "{{ service_results.results }}"
-```
-
-### Error Handling
-```yaml
-# Block/rescue/always
-- block:
-    - name: Risky operation
-      command: /bin/risky_command
-    
-    - name: Another risky operation
-      shell: /bin/another_risky_command
-  
-  rescue:
-    - name: Handle errors
-      debug:
-        msg: "Something went wrong, but we're handling it"
-    
-    - name: Cleanup on error
-      file:
-        path: /tmp/cleanup_file
-        state: absent
-  
-  always:
-    - name: Always run this
-      debug:
-        msg: "This always runs, regardless of success or failure"
-
-# Ignore errors
-- name: Optional task
-  command: /bin/optional_command
-  ignore_errors: yes
-
-# Custom failure conditions
-- name: Check application health
-  uri:
-    url: http://localhost:8080/health
-  register: health_check
-  failed_when: 
-    - health_check.status != 200
-    - "'healthy' not in health_check.content"
-
-# Custom change conditions
-- name: Check configuration
-  command: /bin/check_config
-  register: config_check
-  changed_when: "'changed' in config_check.stdout"
-```
-
-## Advanced Playbook Features
-
-### Multi-Play Playbooks
-```yaml
----
-# Play 1: Prepare all servers
-- name: Prepare servers
-  hosts: all
-  become: yes
-  
-  tasks:
-    - name: Update system packages
-      package:
-        name: "*"
-        state: latest
-    
-    - name: Install common packages
-      package:
-        name: "{{ common_packages }}"
-        state: present
-
-# Play 2: Configure web servers
-- name: Configure web servers
-  hosts: webservers
-  become: yes
-  
-  tasks:
-    - name: Install web server
-      package:
+  tasks:                            # <--- The Task List
+    - name: Ensure Nginx is installed
+      apt:                          # <--- The Module
         name: nginx
-        state: present
-    
-    - name: Start web server
+        state: present              # <--- Desired State
+
+    - name: Ensure Nginx is running
       service:
         name: nginx
         state: started
-        enabled: yes
-
-# Play 3: Configure databases
-- name: Configure databases
-  hosts: databases
-  become: yes
-  
-  tasks:
-    - name: Install database server
-      package:
-        name: mysql-server
-        state: present
+        enabled: true
 ```
 
-### Delegation and Local Actions
-```yaml
-# Delegate to specific host
-- name: Update load balancer
-  uri:
-    url: "http://{{ load_balancer_host }}/api/update"
-    method: POST
-  delegate_to: "{{ load_balancer_host }}"
-
-# Run on localhost
-- name: Generate configuration
-  template:
-    src: config.j2
-    dest: /tmp/config.txt
-  delegate_to: localhost
-
-# Run once across all hosts
-- name: Create shared resource
-  file:
-    path: /shared/resource
-    state: touch
-  run_once: true
-  delegate_to: "{{ groups['webservers'][0] }}"
-
-# Local action (shorthand)
-- name: Wait for service to start
-  local_action:
-    module: wait_for
-    host: "{{ inventory_hostname }}"
-    port: 80
-    timeout: 300
-```
-
-### Serial Execution and Rolling Updates
-```yaml
 ---
-- name: Rolling update
-  hosts: webservers
-  become: yes
-  serial: 1                    # Process one host at a time
-  max_fail_percentage: 0       # Stop on any failure
-  
-  pre_tasks:
-    - name: Remove from load balancer
-      uri:
-        url: "http://lb.example.com/remove/{{ inventory_hostname }}"
-        method: POST
-      delegate_to: localhost
-  
-  tasks:
-    - name: Stop application
-      service:
-        name: myapp
-        state: stopped
-    
-    - name: Deploy new version
-      copy:
-        src: app-v2.jar
-        dest: /opt/app/app.jar
-        backup: yes
-    
-    - name: Start application
-      service:
-        name: myapp
-        state: started
-    
-    - name: Wait for application to be ready
-      wait_for:
-        port: 8080
-        timeout: 60
-  
-  post_tasks:
-    - name: Add back to load balancer
-      uri:
-        url: "http://lb.example.com/add/{{ inventory_hostname }}"
-        method: POST
-      delegate_to: localhost
-```
 
-### Include and Import
-```yaml
-# Import playbooks (static)
+## 2. YAML Syntax Rules
+
+Ansible is strict about YAML.
+1.  **Indentation**: Use **2 spaces**. Do not use Tabs.
+2.  **Lists**: Start with `-`.
+3.  **Dictionaries**: Key-Value pairs (`key: value`).
+4.  **Booleans**: `true`/`false` or `yes`/`no`.
+
 ---
-- import_playbook: common.yml
-- import_playbook: webservers.yml
-- import_playbook: databases.yml
 
-# Include playbooks (dynamic)
+## 3. Idempotency (The Golden Rule)
+
+Ansible is **Declarative**, not Imperative.
+*   **Imperative (Bash)**: "Install Nginx". (If already installed, apt might complain or do extra work).
+*   **Declarative (Ansible)**: "Ensure Nginx is `present`". (If installed, do nothing. If missing, install it.)
+
+### State parameters
+Most modules act based on the `state` parameter:
+*   `present`: Ensure it exists.
+*   `absent`: Ensure it is gone (Delete it).
+*   `latest`: Update to the newest version.
+
 ---
-- include: "{{ item }}"
-  loop:
-    - common.yml
-    - webservers.yml
 
-# Import tasks (static)
-tasks:
-  - import_tasks: tasks/install.yml
-  - import_tasks: tasks/configure.yml
+## 4. Real-Life Scenarios
 
-# Include tasks (dynamic)
-tasks:
-  - include_tasks: "tasks/{{ ansible_os_family }}.yml"
-  - include_tasks: tasks/security.yml
-    when: security_hardening | default(true)
+### Scenario 1: "The Script Converters"
+**Problem**: A sysadmin wrote 200 lines of Bash scripts to setup servers. It used `if [ -f /etc/config ]; then ...` to check if it had already run. It was buggy.
+**Solution**: Converted to Ansible. The logic `if file exists` is built into the `copy` module. The script shrank to 30 lines of YAML.
 
-# Include with variables
-- include_tasks: tasks/create_user.yml
-  vars:
-    username: alice
-    user_uid: 1001
-  loop:
-    - { username: alice, user_uid: 1001 }
-    - { username: bob, user_uid: 1002 }
-```
+### Scenario 2: "The Drift Fixer"
+**Problem**: A junior dev manually stopped Nginx on a production server to debug and forgot to start it.
+**Solution**: The nightly Ansible run executed. It saw `state: started` in the playbook but `Status: stopped` on the server. It started the service. **Config Drift healed automatically.**
 
-## Playbook Organization Patterns
+### Scenario 3: "Multi-Play Playbook"
+**Problem**: deploying a 3-tier app (Web + App + DB).
+**Solution**: One `site.yml` containing 3 plays:
+1.  `hosts: db` (Install Postgres, create users).
+2.  `hosts: app` (Install Java, connect to DB).
+3.  `hosts: web` (Install Nginx, proxy to App).
+Running one command configures the entire stack in the correct order.
 
-### Site Playbook Pattern
-```yaml
-# site.yml - Main orchestration playbook
 ---
-- import_playbook: common.yml
-- import_playbook: webservers.yml
-- import_playbook: databases.yml
-- import_playbook: monitoring.yml
 
-# common.yml - Common configuration
+## 5. ❓ Interview Questions
+
+1.  **What is the difference between `name` in a Play and `name` in a Task?**
+    *   **Answer**: In a Play, `name` is a description for the log output ("Configure Web"). In a Task, `name` describes the step ("Install Nginx"). Task names are optional but highly recommended for readability.
+
+2.  **How do you run a syntax check?**
+    *   **Answer**: `ansible-playbook site.yml --syntax-check`. This catches YAML indentation errors before execution.
+
+3.  **What does `gather_facts: false` do?**
+    *   **Answer**: It skips the setup phase where Ansible collects IP/OS info. Useful for speeding up runs if you don't need those variables.
+
+4.  **What is a "Handler"?**
+    *   **Answer**: A special task that only runs when notified by another task (e.g., "Restart Nginx" only if "Update Config" changed something).
+
+5.  **How do you run only one specific task?**
+    *   **Answer**: By using Tags (`--tags "nginx"`) or starting at a specific task (`--start-at-task "Install Nginx"`).
+
+6.  **Can a Playbook include other Playbooks?**
+    *   **Answer**: Yes, using `import_playbook: web.yml`. This allows splitting a massive `site.yml` into smaller files.
+
+7.  **What happens if a task fails on one host?**
+    *   **Answer**: That host is removed from the rotation for the rest of the playbook. The play continues on other successful hosts.
+
+8.  **How do you debug a variable in a playbook?**
+    *   **Answer**: Use the `debug` module:
+        ```yaml
+        - debug:
+            var: my_variable
+        ```
+
+9.  **What is `ignore_errors: yes`?**
+    *   **Answer**: It tells Ansible to continue executing the playbook on a host even if the specific task returned a failure code.
+
+10. **Explain `connection: local`.**
+    *   **Answer**: Tells Ansible to run the module on the Control Node itself, not via SSH. Useful for calling APIs (AWS/Azure) or file manipulation locally.
+
 ---
-- name: Common configuration
-  hosts: all
-  become: yes
-  roles:
-    - common
 
-# webservers.yml - Web server configuration
----
-- name: Configure web servers
-  hosts: webservers
-  become: yes
-  roles:
-    - nginx
-    - application
-```
+## 6. 🧠 Knowledge Check (Quiz)
 
-### Environment-Specific Playbooks
-```yaml
-# deploy-production.yml
----
-- name: Deploy to production
-  hosts: production
-  become: yes
-  vars:
-    environment: production
-    app_version: "{{ lookup('env', 'APP_VERSION') }}"
-  
-  pre_tasks:
-    - name: Validate deployment
-      assert:
-        that:
-          - app_version is defined
-          - app_version != ""
-        fail_msg: "APP_VERSION must be specified"
-  
-  roles:
-    - deployment
-  
-  post_tasks:
-    - name: Verify deployment
-      uri:
-        url: "http://{{ inventory_hostname }}/health"
-        status_code: 200
-```
+### Structure
+1.  **A Playbook starts with:**
+    *   [x] `---`
+    *   [ ] `#!/bin/bash`
 
-### Task Organization
-```yaml
-# tasks/main.yml
----
-- include_tasks: validate.yml
-  tags: [validation]
+2.  **To run a playbook:**
+    *   [x] `ansible-playbook`
+    *   [ ] `ansible`
 
-- include_tasks: install.yml
-  tags: [install]
+3.  **To execute as root (sudo):**
+    *   [x] `become: true`
+    *   [ ] `user: root`
 
-- include_tasks: configure.yml
-  tags: [configure]
+4.  **A List item in YAML starts with:**
+    *   [x] `-` (Hyphen)
+    *   [ ] `*` (Asterisk)
 
-- include_tasks: security.yml
-  when: security_hardening | default(true)
-  tags: [security]
+### Logic
+5.  **If `state: present` and the package is already there:**
+    *   [x] Result is "OK" (Green), nothing changes.
+    *   [ ] Result is "Changed" (Yellow).
 
-- include_tasks: service.yml
-  tags: [service]
-```
+6.  **Ideally, you should execute a playbook:**
+    *   [x] Many times (checking state).
+    *   [ ] Only once.
 
-## Testing and Validation
+7.  **To delete a file, set state to:**
+    *   [x] `absent`
+    *   [ ] `delete`
 
-### Syntax Checking
-```bash
-# Check playbook syntax
-ansible-playbook playbook.yml --syntax-check
+8.  **The default `gather_facts` setting is:**
+    *   [x] `true`.
+    *   [ ] `false`.
 
-# Check with specific inventory
-ansible-playbook -i inventory.yml playbook.yml --syntax-check
+9.  **Which module prints text to the screen?**
+    *   [x] `debug`.
+    *   [ ] `print`.
 
-# Dry run (check mode)
-ansible-playbook playbook.yml --check
+10. **Indentation for a Task list:**
+    *   [x] Must be consistent (standard 2 spaces).
+    *   [ ] Can be anything.
 
-# Show differences
-ansible-playbook playbook.yml --check --diff
-```
+### Scenarios
+11. **Converting a Shell script to Ansible:**
+    *   [x] Makes it idempotent and readable.
+    *   [ ] Makes it faster (usually slower but safer).
 
-### Playbook Testing
-```yaml
-# test-playbook.yml
----
-- name: Test playbook functionality
-  hosts: all
-  
-  tasks:
-    - name: Test connectivity
-      ping:
-    
-    - name: Verify service is running
-      service:
-        name: nginx
-        state: started
-      check_mode: yes
-      register: service_check
-    
-    - name: Assert service is running
-      assert:
-        that:
-          - service_check.state == "started"
-        fail_msg: "Nginx service is not running"
-    
-    - name: Test HTTP response
-      uri:
-        url: "http://{{ inventory_hostname }}"
-        method: GET
-        status_code: 200
-      delegate_to: localhost
-```
+12. **If a Playbook fails halfway:**
+    *   [x] Fix error, run again (idempotency handles the rest).
+    *   [ ] You must undo manual changes.
 
-## Best Practices
+13. **Targeting multiple role groups (Web, DB):**
+    *   [x] Use multiple Plays in one file.
+    *   [ ] Use multiple files.
 
-### Playbook Structure
-```yaml
-# Use descriptive names
-- name: Install and configure Nginx web server with SSL support
+14. **To "dry run" a playbook:**
+    *   [x] `ansible-playbook --check`.
+    *   [ ] `ansible-playbook --test`.
 
-# Group related tasks
-- block:
-    - name: Install packages
-      package:
-        name: "{{ packages }}"
-        state: present
-    
-    - name: Configure services
-      template:
-        src: "{{ item.src }}"
-        dest: "{{ item.dest }}"
-      loop: "{{ config_files }}"
-  tags: [installation]
+15. **If you see "Changed: 0":**
+    *   [x] The system was already in the desired state.
+    *   [ ] The playbook failed.
 
-# Use tags for organization
-- name: Configure firewall
-  firewalld:
-    service: http
-    state: enabled
-  tags: [security, firewall]
-```
+### General
+16. **Is `hosts` mandatory in a Play?**
+    *   [x] Yes.
+    *   [ ] No.
 
-### Error Handling
-```yaml
-# Validate inputs
-- name: Validate required variables
-  assert:
-    that:
-      - app_name is defined
-      - app_version is defined
-    fail_msg: "Required variables not defined"
+17. **Can you modify a file without rewriting it entirely?**
+    *   [x] Yes, `lineinfile` or `blockinfile` modules.
+    *   [ ] No.
 
-# Use meaningful error messages
-- name: Check disk space
-  shell: df -h / | awk 'NR==2 {print $5}' | sed 's/%//'
-  register: disk_usage
-  failed_when: disk_usage.stdout | int > 90
-  changed_when: false
-```
+18. **The file extension for a playbook is:**
+    *   [x] `.yml` or `.yaml`.
+    *   [ ] `.pb`.
 
-### Performance Optimization
-```yaml
-# Disable fact gathering when not needed
-- name: Quick task execution
-  hosts: all
-  gather_facts: no
-  
-  tasks:
-    - name: Simple command
-      command: echo "Hello World"
+19. **Playbooks are written in:**
+    *   [x] YAML.
+    *   [ ] JSON.
 
-# Use async for long-running tasks
-- name: Long running update
-  yum:
-    name: "*"
-    state: latest
-  async: 300
-  poll: 0
-  register: update_job
-
-# Batch operations
-- name: Install multiple packages
-  package:
-    name: "{{ packages }}"
-    state: present
-  vars:
-    packages:
-      - git
-      - curl
-      - wget
-```
-
-This comprehensive playbook guide covers all aspects of creating effective Ansible automation workflows.
+20. **Can you execute a shell command inside a playbook?**
+    *   [x] Yes (`shell` or `command` module), but avoid if a native module exists.
+    *   [ ] No.

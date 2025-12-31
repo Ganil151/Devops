@@ -112,10 +112,10 @@ graph TD
     *   *Explanation*: `init` downloads the module source code to `.terraform/modules`.
 
 2.  **Which file is mandatory for a directory to be considered a module?**
-    *   [ ] `main.tf`
+    *   [x] `main.tf`
     *   [ ] `variables.tf`
     *   [ ] `outputs.tf`
-    *   [x] None (Technically just one .tf file)
+    *   [ ] None (Technically just one .tf file)
     *   *Explanation*: Any directory with at least one `.tf` file is a module. Standardization suggests `main.tf`, but it's not enforced by the binary.
 
 3.  **Local module sources must always start with:**
@@ -132,8 +132,8 @@ graph TD
 
 5.  **If you change a module's source code locally, do you need to run `terraform init` again?**
     *   [ ] Yes, always.
-    *   [x] No, not for local paths.
-    *   [ ] Yes, but only with `-upgrade`.
+    *   [ ] No, not for local paths.
+    *   [x] Yes, but only with `-upgrade`.
     *   *Explanation*: Local paths are read directly. Remote modules are cached, so updates to remote sources need `init -upgrade`.
 
 ### Advanced Usage
@@ -143,30 +143,30 @@ graph TD
     *   [ ] Copy paste the module block.
 
 7.  **What is the best way to pass secrets to a module?**
-    *   [ ] Hardcode them in `variables.tf`.
+    *   [ ] Hardcore them in `variables.tf`.
     *   [x] Pass them as input variables marked as `sensitive = true`.
     *   [ ] Commit them to `terraform.tfvars`.
 
 8.  **Can a module access variables from the Root module without them being passed?**
-    *   [x] No, scopes are isolated.
-    *   [ ] Yes, all variables are global.
+    *   [ ] No, scopes are isolated.
+    *   [x] Yes, all variables are global.
     *   [ ] Yes, if they share the same name.
 
-9.  ** What happens if a module requires a provider version that conflicts with the root?**
+9.  **What happens if a module requires a provider version that conflicts with the root?**
     *   [x] `terraform init` will fail with a version constraint error.
     *   [ ] It will use the newer version.
     *   [ ] It will use the older version.
 
 10. **The `source` argument does NOT support which of the following?**
     *   [ ] GitHub Repositories
-    *   [ ] HTTP URLs (zip files)
+    *   [x] HTTP URLs (zip files)
     *   [ ] Terraform Registry
-    *   [x] Docker Images
+    *   [ ] Docker Images
 
 ### Scenarios
 11. **You want to use a module from a private Git repo via SSH.**
-    *   [ ] `source = "git::https://github.com..."`
-    *   [x] `source = "git::ssh://git@github.com..."`
+    *   [x] `source = "git::https://github.com..."`
+    *   [ ] `source = "git::ssh://git@github.com..."`
     *   [ ] `source = "ssh://github.com..."`
 
 12. **To reference an output `db_endpoint` from a module named `database`.**

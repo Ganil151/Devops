@@ -1,753 +1,237 @@
-# Ansible Error Handling
+# Error Handling and Debugging
 
-Comprehensive guide to error handling, debugging, and resilient automation in Ansible playbooks and roles.
+Things go wrong. Services crash, disks fill up, and typos happen. Ansible is programmed to **Fail Fast**.
 
-## Error Handling Fundamentals
+## 1. Failure Modes
 
-### Understanding Ansible Errors
+By default, if a task fails on a host, Ansible stops executing on that host immediately.
 
-#### Types of Errors
+### Ignoring Errors
+Sometimes failure is expected (e.g., checking if a file exists using `command`).
 ```yaml
-# Syntax errors (caught before execution)
-- name: Syntax error example
-  debug:
-    msg: "{{ undefined_variable }"  # Missing closing brace
-
-# Runtime errors (caught during execution)
-- name: Runtime error example
-  command: /nonexistent/command
-  # Will fail with "No such file or directory"
-
-# Logic errors (unexpected behavior)
-- name: Logic error example
-  file:
-    path: /tmp/test
-    state: directory
-  when: create_file  # Should be create_directory
-```
-
-#### Default Error Behavior
-```yaml
-# By default, Ansible stops execution on first error
-- name: This will fail
-  command: /bin/false
-  # Playbook stops here
-
-- name: This won't execute
-  debug:
-    msg: "This task is skipped due to previous failure"
-```
-
-## Basic Error Handling
-
-### ignore_errors
-```yaml
-# Continue execution despite errors
-- name: Optional task that might fail
-  command: some_unreliable_command
+- name: Run a risky script
+  command: /opt/maybe_fails.sh
   ignore_errors: yes
+```
 
-- name: This will still execute
+### Force Handlers
+If a task fails, Handlers (like "Restart Apache") are skipped by default. This leaves the system in an inconsistent state.
+*   **Solution**: `force_handlers: True` in `ansible.cfg` or the playbook. This ensures notified handlers run even if a later task crashes.
+
+### Max Fail Percentage
+In a batch of 100 servers, maybe you can tolerate 10 failures, but not 50.
+```yaml
+- hosts: webservers
+  max_fail_percentage: 30%
+  serial: 10
+```
+*   If >30% of the batch fails, Ansible aborts the *entire* playbook to prevent a mass outage.
+
+---
+
+## 2. Debugging Tools
+
+### The `debug` Module
+The `printf` of Ansible.
+```yaml
+- name: Print variable
   debug:
-    msg: "Execution continues even if previous task failed"
+    var: result.stdout
 
-# Conditional ignore_errors
-- name: Ignore errors in development only
-  command: risky_development_command
-  ignore_errors: "{{ environment == 'development' }}"
-```
-
-### failed_when
-```yaml
-# Custom failure conditions
-- name: Check service status
-  command: systemctl is-active nginx
-  register: nginx_status
-  failed_when: 
-    - nginx_status.rc != 0
-    - "'inactive' not in nginx_status.stdout"
-
-# Multiple failure conditions
-- name: Validate configuration
-  command: validate_config.sh
-  register: validation
-  failed_when:
-    - validation.rc != 0
-    - validation.rc != 2  # Warning code is acceptable
-    - "'CRITICAL' in validation.stderr"
-
-# Never fail
-- name: Information gathering task
-  command: ps aux
-  register: process_list
-  failed_when: false
-```
-
-### changed_when
-```yaml
-# Control change detection
-- name: Check if reboot is required
-  command: needs-restarting -r
-  register: reboot_check
-  changed_when: reboot_check.rc == 1
-  failed_when: reboot_check.rc not in [0, 1]
-
-# Complex change conditions
-- name: Update configuration
-  template:
-    src: config.j2
-    dest: /etc/app/config.conf
-  register: config_update
-  changed_when: 
-    - config_update is changed
-    - not (dry_run | default(false))
-```
-
-## Advanced Error Handling
-
-### Block/Rescue/Always
-```yaml
-# Comprehensive error handling structure
-- name: Application deployment with error handling
-  block:
-    - name: Stop application service
-      service:
-        name: myapp
-        state: stopped
-    
-    - name: Backup current version
-      archive:
-        path: /opt/myapp
-        dest: "/backup/myapp-{{ ansible_date_time.epoch }}.tar.gz"
-      register: backup_result
-    
-    - name: Deploy new version
-      unarchive:
-        src: "{{ deployment_package }}"
-        dest: /opt/myapp
-        remote_src: yes
-      register: deployment_result
-    
-    - name: Start application service
-      service:
-        name: myapp
-        state: started
-    
-    - name: Verify deployment
-      uri:
-        url: http://localhost:8080/health
-        status_code: 200
-      retries: 5
-      delay: 10
-  
-  rescue:
-    - name: Log deployment failure
-      debug:
-        msg: "Deployment failed: {{ ansible_failed_result.msg }}"
-    
-    - name: Stop failed service
-      service:
-        name: myapp
-        state: stopped
-      ignore_errors: yes
-    
-    - name: Restore from backup
-      unarchive:
-        src: "{{ backup_result.dest }}"
-        dest: /opt/
-        remote_src: yes
-      when: backup_result is succeeded
-    
-    - name: Start restored service
-      service:
-        name: myapp
-        state: started
-    
-    - name: Send failure notification
-      mail:
-        to: admin@example.com
-        subject: "Deployment Failed on {{ inventory_hostname }}"
-        body: "Deployment failed and rollback completed"
-      delegate_to: localhost
-    
-    - name: Fail the play
-      fail:
-        msg: "Deployment failed, rollback completed"
-  
-  always:
-    - name: Clean up temporary files
-      file:
-        path: "{{ item }}"
-        state: absent
-      loop:
-        - /tmp/deployment
-        - /tmp/backup_temp
-      ignore_errors: yes
-    
-    - name: Log deployment attempt
-      lineinfile:
-        path: /var/log/deployments.log
-        line: "{{ ansible_date_time.iso8601 }} - Deployment attempt on {{ inventory_hostname }}"
-        create: yes
-```
-
-### Nested Error Handling
-```yaml
-# Multiple levels of error handling
-- name: Complex operation with nested error handling
-  block:
-    - name: Database operations
-      block:
-        - name: Create database backup
-          mysql_db:
-            name: myapp
-            state: dump
-            target: "/backup/db-{{ ansible_date_time.epoch }}.sql"
-        
-        - name: Apply database migrations
-          command: python manage.py migrate
-          args:
-            chdir: /opt/myapp
-      
-      rescue:
-        - name: Handle database errors
-          debug:
-            msg: "Database operation failed, attempting recovery"
-        
-        - name: Restore database from backup
-          mysql_db:
-            name: myapp
-            state: import
-            target: "{{ latest_backup }}"
-          vars:
-            latest_backup: "{{ ansible_env.HOME }}/backup/latest.sql"
-    
-    - name: Application operations
-      block:
-        - name: Update application code
-          git:
-            repo: https://github.com/company/myapp.git
-            dest: /opt/myapp
-            version: "{{ app_version }}"
-        
-        - name: Install dependencies
-          pip:
-            requirements: /opt/myapp/requirements.txt
-            virtualenv: /opt/myapp/venv
-      
-      rescue:
-        - name: Handle application errors
-          debug:
-            msg: "Application update failed"
-        
-        - name: Revert to previous version
-          git:
-            repo: https://github.com/company/myapp.git
-            dest: /opt/myapp
-            version: "{{ previous_version }}"
-  
-  rescue:
-    - name: Handle overall failure
-      fail:
-        msg: "Complete operation failed, manual intervention required"
-```
-
-## Retry Mechanisms
-
-### Task Retries
-```yaml
-# Basic retry mechanism
-- name: Download file with retries
-  get_url:
-    url: "{{ download_url }}"
-    dest: /tmp/download.tar.gz
-  retries: 3
-  delay: 5
-  register: download_result
-  until: download_result is succeeded
-
-# Complex retry conditions
-- name: Wait for service to be ready
-  uri:
-    url: "http://{{ inventory_hostname }}:8080/health"
-    method: GET
-  register: health_check
-  retries: 30
-  delay: 10
-  until: 
-    - health_check.status == 200
-    - health_check.json.status == "healthy"
-  failed_when: false
-
-# Retry with exponential backoff
-- name: API call with exponential backoff
-  uri:
-    url: "{{ api_endpoint }}"
-    method: POST
-    body_format: json
-    body: "{{ api_payload }}"
-  register: api_result
-  retries: 5
-  delay: "{{ 2 ** (ansible_loop.index0) }}"  # 1, 2, 4, 8, 16 seconds
-  until: api_result.status in [200, 201]
-  loop: "{{ range(5) }}"
-  loop_control:
-    loop_var: ansible_loop
-```
-
-### Custom Retry Logic
-```yaml
-# Implement custom retry with different strategies
-- name: Custom retry implementation
-  block:
-    - name: Attempt operation
-      uri:
-        url: "{{ service_url }}"
-        method: GET
-      register: service_check
-      failed_when: false
-    
-    - name: Check if retry needed
-      set_fact:
-        retry_needed: "{{ service_check.status != 200 }}"
-        retry_count: "{{ retry_count | default(0) | int + 1 }}"
-    
-    - name: Wait before retry
-      pause:
-        seconds: "{{ retry_delay | default(5) }}"
-      when: retry_needed and retry_count < max_retries
-    
-    - name: Retry operation
-      include_tasks: retry_operation.yml
-      when: retry_needed and retry_count < max_retries
-    
-    - name: Fail if max retries exceeded
-      fail:
-        msg: "Operation failed after {{ max_retries }} attempts"
-      when: retry_needed and retry_count >= max_retries
-```
-
-## Debugging and Troubleshooting
-
-### Debug Module Usage
-```yaml
-# Basic debugging
-- name: Debug variable values
+- name: Print message
   debug:
-    var: my_variable
-
-- name: Debug with custom message
-  debug:
-    msg: "Current environment: {{ environment }}, Debug mode: {{ debug_mode }}"
-
-# Conditional debugging
-- name: Debug only in verbose mode
-  debug:
-    var: complex_data_structure
-  when: ansible_verbosity >= 2
-
-# Debug registered variables
-- name: Execute command
-  command: df -h
-  register: disk_usage
-
-- name: Debug command output
-  debug:
-    msg: |
-      Command: {{ disk_usage.cmd }}
-      Return code: {{ disk_usage.rc }}
-      Stdout: {{ disk_usage.stdout }}
-      Stderr: {{ disk_usage.stderr }}
+    msg: "System memory is {{ ansible_memtotal_mb }} MB"
 ```
 
-### Verbose Output Control
+### Verbosity (`-v`)
+*   `-v`: Show task results.
+*   `-vv`: Show task inputs/outputs.
+*   `-vvv`: Show connection details (SSH).
+*   `-vvvv`: Connection debugging (OpenSSH internal logs). **Use this for permission denied errors.**
+
+---
+
+## 3. Handlers (Deferred Execution)
+
+Handlers are special tasks that only run if notified.
+*   **Behavior**:
+    1.  Task reports `changed`.
+    2.  Handler is "flagged".
+    3.  At the *end of the play*, all flagged handlers run.
+    4.  Handlers run once, even if notified 50 times.
+
+```mermaid
+graph LR
+    Task1[Task: Install Apache] -->|Changed| Notify[Notify Payload]
+    Task2[Task: Config Apache] -->|Changed| Notify
+    Task3[Task: Install PHP] -->|OK| NoOp[No Notify]
+    
+    Notify --> HStart{End of Play}
+    HStart -->|Run| Handler[Handler: Restart Apache]
+```
+
+### Flushing Handlers
+To force handlers to run *now* instead of later:
 ```yaml
-# Control verbosity levels
-- name: Detailed operation
-  command: complex_operation.sh
-  register: operation_result
-
-- name: Show basic info (verbosity 0)
-  debug:
-    msg: "Operation completed"
-
-- name: Show detailed info (verbosity 1+)
-  debug:
-    msg: "Operation result: {{ operation_result.stdout }}"
-  when: ansible_verbosity >= 1
-
-- name: Show debug info (verbosity 2+)
-  debug:
-    var: operation_result
-  when: ansible_verbosity >= 2
+- meta: flush_handlers
 ```
 
-### Error Information Gathering
+---
+
+## 4. Real-Life Scenarios
+
+### Scenario 1: "The Flaky Service"
+**Problem**: An old cleanup script returned exit code 1 even when it worked. This stopped the playbook.
+**Solution**:
 ```yaml
-# Comprehensive error information
-- name: Gather system information on failure
-  block:
-    - name: Risky operation
-      command: risky_command
-  
-  rescue:
-    - name: Gather error context
-      set_fact:
-        error_context:
-          failed_task: "{{ ansible_failed_task.name }}"
-          error_message: "{{ ansible_failed_result.msg }}"
-          timestamp: "{{ ansible_date_time.iso8601 }}"
-          host: "{{ inventory_hostname }}"
-          user: "{{ ansible_user_id }}"
-    
-    - name: Collect system state
-      setup:
-        gather_subset:
-          - hardware
-          - network
-          - virtual
-    
-    - name: Get process information
-      command: ps aux
-      register: process_info
-    
-    - name: Get disk usage
-      command: df -h
-      register: disk_info
-    
-    - name: Get memory usage
-      command: free -h
-      register: memory_info
-    
-    - name: Create error report
-      template:
-        src: error_report.j2
-        dest: "/tmp/error_report_{{ ansible_date_time.epoch }}.txt"
-      delegate_to: localhost
-    
-    - name: Send error report
-      mail:
-        to: "{{ admin_email }}"
-        subject: "Ansible Error on {{ inventory_hostname }}"
-        attach: "/tmp/error_report_{{ ansible_date_time.epoch }}.txt"
-      delegate_to: localhost
+- command: /opt/cleanup.sh
+  register: result
+  failed_when: "'CRITICAL' in result.stdout"
 ```
+*   We overrode the failure definition. Now it only fails if it prints "CRITICAL".
 
-## Validation and Testing
-
-### Pre-task Validation
+### Scenario 2: "The Rolling Restart"
+**Problem**: Deploying to 100 web nodes. If the app config is broken, we take down 100% of traffic.
+**Solution**:
 ```yaml
-# Validate environment before execution
-- name: Pre-execution validation
-  block:
-    - name: Check required variables
-      assert:
-        that:
-          - app_name is defined
-          - app_version is defined
-          - deployment_path is defined
-        fail_msg: "Required variables not defined"
-    
-    - name: Validate disk space
-      shell: df {{ deployment_path }} | awk 'NR==2 {print $4}'
-      register: available_space
-      failed_when: available_space.stdout | int < required_space_mb
-    
-    - name: Check service dependencies
-      service:
-        name: "{{ item }}"
-      register: service_check
-      failed_when: service_check.status.ActiveState != "active"
-      loop: "{{ required_services }}"
-    
-    - name: Validate network connectivity
-      uri:
-        url: "{{ item }}"
-        method: HEAD
-        timeout: 10
-      loop: "{{ required_endpoints }}"
-    
-    - name: Check file permissions
-      file:
-        path: "{{ deployment_path }}"
-        state: directory
-        mode: '0755'
-        owner: "{{ app_user }}"
-      check_mode: yes
-      register: permission_check
-      failed_when: permission_check is changed
+serial: 10
 ```
+*   Ansible updates 10 hosts. If they succeed, it moves to the next 10. If they fail, it stops. Max impact: 10%.
 
-### Post-task Verification
+### Scenario 3: "The Silent Failure"
+**Problem**: A script `reset_db.sh` was running every time, but Ansible reported "Changed: False".
+**Solution**:
 ```yaml
-# Verify operations completed successfully
-- name: Post-execution verification
-  block:
-    - name: Verify service is running
-      service:
-        name: "{{ app_service }}"
-        state: started
-      check_mode: yes
-      register: service_status
-    
-    - name: Verify application responds
-      uri:
-        url: "http://localhost:{{ app_port }}/health"
-        method: GET
-        status_code: 200
-        timeout: 30
-      retries: 10
-      delay: 5
-    
-    - name: Verify configuration files
-      stat:
-        path: "{{ item }}"
-      register: config_files
-      failed_when: not config_files.stat.exists
-      loop: "{{ required_config_files }}"
-    
-    - name: Verify log files are being written
-      wait_for:
-        path: "{{ app_log_file }}"
-        search_regex: "Application started successfully"
-        timeout: 60
-    
-    - name: Performance verification
-      uri:
-        url: "http://localhost:{{ app_port }}/api/test"
-        method: GET
-      register: performance_test
-      failed_when: performance_test.elapsed > max_response_time
+- command: /opt/reset_db.sh
+  register: out
+  changed_when: "'Reset complete' in out.stdout"
 ```
+*   Now Ansible accurately reports Yellow/Green status based on the script output.
 
-## Error Recovery Strategies
+---
 
-### Automatic Recovery
-```yaml
-# Implement automatic recovery mechanisms
-- name: Service with automatic recovery
-  block:
-    - name: Check service health
-      uri:
-        url: "http://localhost:{{ app_port }}/health"
-        method: GET
-        status_code: 200
-      register: health_check
-      failed_when: false
-    
-    - name: Attempt service restart if unhealthy
-      block:
-        - name: Stop service gracefully
-          service:
-            name: "{{ app_service }}"
-            state: stopped
-        
-        - name: Wait for graceful shutdown
-          pause:
-            seconds: 10
-        
-        - name: Start service
-          service:
-            name: "{{ app_service }}"
-            state: started
-        
-        - name: Verify recovery
-          uri:
-            url: "http://localhost:{{ app_port }}/health"
-            method: GET
-            status_code: 200
-          retries: 5
-          delay: 10
-      when: health_check.status != 200
-    
-    - name: Escalate to manual intervention
-      fail:
-        msg: "Automatic recovery failed, manual intervention required"
-      when: 
-        - health_check.status != 200
-        - recovery_attempt is failed
-```
+## 5. ❓ Interview Questions
 
-### Rollback Mechanisms
-```yaml
-# Implement comprehensive rollback
-- name: Deployment with rollback capability
-  vars:
-    rollback_info: {}
-  
-  block:
-    - name: Capture current state
-      set_fact:
-        rollback_info:
-          previous_version: "{{ current_app_version }}"
-          backup_path: "/backup/{{ app_name }}-{{ ansible_date_time.epoch }}"
-          config_backup: "/backup/config-{{ ansible_date_time.epoch }}"
-    
-    - name: Create application backup
-      archive:
-        path: "{{ app_path }}"
-        dest: "{{ rollback_info.backup_path }}.tar.gz"
-    
-    - name: Backup configuration
-      copy:
-        src: "{{ app_config_path }}"
-        dest: "{{ rollback_info.config_backup }}"
-        remote_src: yes
-    
-    - name: Deploy new version
-      unarchive:
-        src: "{{ new_version_package }}"
-        dest: "{{ app_path }}"
-        remote_src: yes
-    
-    - name: Update configuration
-      template:
-        src: app.conf.j2
-        dest: "{{ app_config_path }}"
-    
-    - name: Restart service
-      service:
-        name: "{{ app_service }}"
-        state: restarted
-    
-    - name: Verify deployment
-      uri:
-        url: "http://localhost:{{ app_port }}/health"
-        method: GET
-        status_code: 200
-      retries: 10
-      delay: 15
-  
-  rescue:
-    - name: Execute rollback
-      block:
-        - name: Stop current service
-          service:
-            name: "{{ app_service }}"
-            state: stopped
-        
-        - name: Restore application
-          unarchive:
-            src: "{{ rollback_info.backup_path }}.tar.gz"
-            dest: "{{ app_path | dirname }}"
-            remote_src: yes
-        
-        - name: Restore configuration
-          copy:
-            src: "{{ rollback_info.config_backup }}"
-            dest: "{{ app_config_path }}"
-            remote_src: yes
-        
-        - name: Start restored service
-          service:
-            name: "{{ app_service }}"
-            state: started
-        
-        - name: Verify rollback
-          uri:
-            url: "http://localhost:{{ app_port }}/health"
-            method: GET
-            status_code: 200
-          retries: 5
-          delay: 10
-      
-      always:
-        - name: Clean up rollback files
-          file:
-            path: "{{ item }}"
-            state: absent
-          loop:
-            - "{{ rollback_info.backup_path }}.tar.gz"
-            - "{{ rollback_info.config_backup }}"
-          ignore_errors: yes
-```
+1.  **What happens if I define two handlers with the same name?**
+    *   **Answer**: Only the last one defined is used. Avoid this.
 
-## Best Practices
+2.  **How do you debug an SSH connection issue?**
+    *   **Answer**: run `ansible-playbook -vvvv`. Look for the path to the SSH key and the specific exit code from OpenSSH.
 
-### Error Handling Guidelines
-```yaml
-# Follow consistent error handling patterns
-- name: Consistent error handling example
-  block:
-    # Main operation
-    - name: Primary task
-      command: main_operation
-      register: main_result
-  
-  rescue:
-    # Log the error
-    - name: Log error
-      debug:
-        msg: "Operation failed: {{ ansible_failed_result.msg }}"
-    
-    # Attempt recovery
-    - name: Recovery action
-      command: recovery_operation
-      ignore_errors: yes
-    
-    # Notify stakeholders
-    - name: Send notification
-      uri:
-        url: "{{ notification_webhook }}"
-        method: POST
-        body_format: json
-        body:
-          status: "error"
-          message: "{{ ansible_failed_result.msg }}"
-      delegate_to: localhost
-    
-    # Fail with meaningful message
-    - name: Fail with context
-      fail:
-        msg: "Operation failed: {{ ansible_failed_result.msg }}"
-  
-  always:
-    # Cleanup actions
-    - name: Cleanup
-      file:
-        path: /tmp/operation_temp
-        state: absent
-```
+3.  **Does `ignore_errors: yes` turn the task result Green?**
+    *   **Answer**: No, it turns it **Red** (Failed) but allows the playbook to continue.
 
-### Monitoring and Alerting
-```yaml
-# Integrate error handling with monitoring
-- name: Operation with monitoring integration
-  block:
-    - name: Send start metric
-      uri:
-        url: "{{ metrics_endpoint }}"
-        method: POST
-        body_format: json
-        body:
-          metric: "operation.start"
-          host: "{{ inventory_hostname }}"
-          timestamp: "{{ ansible_date_time.epoch }}"
-    
-    - name: Execute operation
-      command: important_operation
-      register: operation_result
-    
-    - name: Send success metric
-      uri:
-        url: "{{ metrics_endpoint }}"
-        method: POST
-        body_format: json
-        body:
-          metric: "operation.success"
-          host: "{{ inventory_hostname }}"
-          duration: "{{ operation_result.delta }}"
-  
-  rescue:
-    - name: Send failure metric
-      uri:
-        url: "{{ metrics_endpoint }}"
-        method: POST
-        body_format: json
-        body:
-          metric: "operation.failure"
-          host: "{{ inventory_hostname }}"
-          error: "{{ ansible_failed_result.msg }}"
-```
+4.  **What is `any_errors_fatal`?**
+    *   **Answer**: A setting that stops the execution on *all* hosts if *any* host fails. Useful for multi-node clusters where partial deployment is lethal.
 
-This comprehensive guide covers all aspects of error handling in Ansible for building resilient and maintainable automation.
+5.  **Can handlers notify other handlers?**
+    *   **Answer**: Yes. A "Restart Apache" handler could notify a "Check HTTP Status" handler.
+
+6.  **What does the `assert` module do?**
+    *   **Answer**: It acts like a unit test inside the playbook.
+        ```yaml
+        - assert:
+            that:
+              - result.rc == 0
+        ```
+
+7.  **How do you pause a playbook for user input?**
+    *   **Answer**: `pause` module. `prompt: "Press Enter to continue"`.
+
+8.  **Difference between `fail` and `assert`?**
+    *   **Answer**: `fail` unconditionally crashes (unless `when` is used). `assert` evaluates a condition and crashes if it's false.
+
+9.  **What is a "Strategy"?**
+    *   **Answer**: Controls execution flow. `linear` (default) vs `free` (fast as possible, no waiting for other hosts).
+
+10. **How do you see all variables for a host?**
+    *   **Answer**: `ansible -m setup` (Facts) or use the debug module with `var=hostvars[inventory_hostname]`.
+
+---
+
+## 6. 🧠 Knowledge Check (Quiz)
+
+### Error Handling
+1.  **To continue after a failure:**
+    *   [x] `ignore_errors: yes`
+    *   [ ] `continue_on_error: yes`
+
+2.  **To stop deployment if 20% of hosts fail:**
+    *   [x] `max_fail_percentage: 20`
+    *   [ ] `stop_at: 20`
+
+3.  **`serial: 1` means:**
+    *   [x] Run on one host at a time (Rolling).
+    *   [ ] Run only once.
+
+4.  **`failed_when` overrides:**
+    *   [x] The standard exit code check.
+    *   [ ] The module logic.
+
+### Debugging
+5.  **Most verbose debugging flag:**
+    *   [x] `-vvvv`
+    *   [ ] `-d`
+
+6.  **`debug` module runs on:**
+    *   [x] The Control Node (prints to screen).
+    *   [ ] The Remote Node (prints to syslog).
+
+7.  **To pause execution for 5 minutes:**
+    *   [x] `pause: minutes=5`
+    *   [ ] `wait: 300`
+
+### Handlers
+8.  **Handlers run:**
+    *   [x] At the end of the play.
+    *   [ ] Immediately after notification.
+
+9.  **If a task reports "OK" (Green):**
+    *   [x] Handlers are NOT notified.
+    *   [ ] Handlers ARE notified.
+
+10. **`meta: flush_handlers`:**
+    *   [x] Runs handlers immediately.
+    *   [ ] Clears handlers without running them.
+
+### Scenarios
+11. **SSH "Permission Denied" usually means:**
+    *   [x] Wrong private key or wrong user.
+    *   [ ] Firewall blocking port 22.
+
+12. **SSH "Connection Timed Out" usually means:**
+    *   [x] Firewall / Network issue.
+    *   [ ] Wrong key.
+
+13. **To see what changed in a file:**
+    *   [x] Run with `--diff`.
+    *   [ ] Run with `--changes`.
+
+14. **If a handler restarts a service, does it restart for every change?**
+    *   [x] No, only once per play (deduplicated).
+    *   [ ] Yes.
+
+15. **Strategy `free` allows:**
+    *   [x] Fast hosts to finish without waiting for slow hosts.
+    *   [ ] Free execution without authentication.
+
+### General
+16. **Is `assert` included in Core?**
+    *   [x] Yes.
+    *   [ ] No.
+
+17. **Can you ignore unreachable hosts?**
+    *   [x] `ignore_unreachable: yes`
+    *   [ ] No.
+
+18. **The `debugger` keyword:**
+    *   [x] Drops you into an interactive TUI on failure (2.5+).
+    *   [ ] Emails you.
+
+19. **Exit code 0 means:**
+    *   [x] Success.
+    *   [ ] Failure.
+
+20. **Can you force a task to report "Changed"?**
+    *   [x] `changed_when: true`
+    *   [ ] `force_change: yes`

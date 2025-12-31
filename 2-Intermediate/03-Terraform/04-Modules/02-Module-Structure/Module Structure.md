@@ -1,10 +1,7 @@
-# Module Structure
-
-A well-structured module is easy to read, maintain, and share. Consistent file organization turns a "script" into a professional infrastructure product.
+A well-structured module is easy to read, maintain, and share. Consistent file organization turns a "<font color="#ffc000">script</font>" into a professional infrastructure product.
 
 ## 1. Standard Module Layout
 While Terraform doesn't enforce a specific structure, the industry standard (followed by the Terraform Registry and HashiCorp) is:
-
 ```text
 module-name/
 ├── main.tf        # Primary resource definitions
@@ -19,7 +16,7 @@ module-name/
         └── outputs.tf
 ```
 
-### The "Big Three" Files
+### The "<font color="#ff0000">Big Three</font>" Files
 The separation of concerns is critical for readability:
 
 ```mermaid
@@ -48,10 +45,9 @@ graph TD
     - Only use this for `required_providers` if not in `versions.tf` (though `versions.tf` is preferred).
 
 ---
+## 2. Real-Life Scenarios:
 
-## 2. Real-Life Scenarios
-
-### Scenario 1: The "Mystery Box" Module (Documentation)
+### Scenario 1: The "<font color="#ff0000">Mystery Box</font>" Module (Documentation)
 **Problem**: A new DevOps engineer joins and finds an `app-infra` module. It's a single 2,000-line `main.tf` file. No separate variable file.
 **Current State**: To find out what inputs are needed, they have to read 2,000 lines of code searching for `var.xxx`.
 **The Fix**:
@@ -59,15 +55,13 @@ graph TD
 2.  Add `description` fields to every variable.
 3.  Generate a `README.md` automatically using tools like `terraform-docs`.
 **Result**: The engineer reads the README and deploys the app in 5 minutes without opening `main.tf`.
-
-### Scenario 2: The "Circular Dependency" Trap (Architecture)
+### Scenario 2: The "<font color="#ff0000">Circular Dependency</font>" Trap (Architecture)
 **Problem**: A team splits their code into `module "app"` and `module "db"`.
 - App needs DB endpoint (Output from DB).
 - DB needs App Security Group ID (Output from App) to allow traffic.
-**The Crash**: Terraform fails with a "Cycle Error" because A waits for B, and B waits for A.
+**The Crash**: Terraform fails with a "<font color="#ffff00">Cycle Error</font>" because A waits for B, and B waits for A.
 **The Fix**: Refactor structure. Creates a third module `module "security"` (or create SGs in Root) that creates the Security Groups first, then passes the IDs to both App and DB modules.
-
-### Scenario 3: The "Monolith" Breakdown (Refactoring)
+### Scenario 3: The "<font color="#ff0000">Monolith</font>" Breakdown (Refactoring)
 **Problem**: `main.tf` has grown to 5,000 lines. It contains VPCs, EC2s, IAM, and CloudWatch. Editing it is slow and error-prone.
 **The Fix**: Split `main.tf` based on logical components, even within the same module:
 - `network.tf` (VPC/Subnets)
@@ -78,8 +72,7 @@ graph TD
 
 ---
 
-## 3. ❓ Interview Questions
-
+## 3. ❓ Interview Questions:
 1.  **What are the three most important files in a Terraform module and why?**
     *   **Answer**: `variables.tf` (inputs/API), `main.tf` (logic/resources), and `outputs.tf` (return values). This separation allows users to understand the interface without reading the implementation code.
 
@@ -87,7 +80,7 @@ graph TD
     *   **Answer**: To explicitly state which Terraform binary versions and Provider versions the module supports. This prevents users from trying to use a v1.0 module with an incompatible v0.12 binary or a v3.0 AWS provider.
 
 3.  **Should you define a `provider "aws" { region = ... }` block inside a child module?**
-    *   **Answer**: **No.** This is a "Hardcoded Provider". It prevents the user from using `providers` meta-argument to deploy the module to a different region or account. Providers should be inherited from the root.
+    *   **Answer**: **No.** This is a "<font color="#ffff00">Hardcoded Provider</font>". It prevents the user from using `providers` meta-argument to deploy the module to a different region or account. Providers should be inherited from the root.
 
 4.  **What is the purpose of the `examples/` directory?**
     *   **Answer**: It serves as executable documentation. It provides complete, copy-pasteable root module configurations that show exactly how to call the module with valid inputs.
@@ -105,7 +98,7 @@ graph TD
     *   **Answer**: The directory where you actually run the `terraform` commands. It is the entry point that calls other child modules.
 
 9.  **Why strict file separation (variables/outputs) if Terraform doesn't enforce it?**
-    *   **Answer**: For human "Cognitive Load". It matches the mental model of a function (Signature separate from Body). It allows tooling (IDEs, docs generators) to parse the module easily.
+    *   **Answer**: For human "<font color="#ffff00">Cognitive Load</font>". It matches the mental model of a function (Signature separate from Body). It allows tooling (IDEs, docs generators) to parse the module easily.
 
 10. **What is the `terraform.lock.hcl` file?**
     *   **Answer**: It locks the specific versions of *providers* used in a configuration (Root module). It is generally NOT committed in a *reusable module* repo, but IS committed in a *root/deployment* repo.
