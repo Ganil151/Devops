@@ -51,7 +51,6 @@ resource "aws_s3_bucket" "this" {
 
 ### Step 3: The Result (Outputs)
 Always output IDs and ARNs. It costs nothing and saves users from having to ask for them later.
-
 ```hcl
 output "bucket_id" {
   description = "The name of the bucket"

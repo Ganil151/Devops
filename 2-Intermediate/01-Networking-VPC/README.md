@@ -9,7 +9,7 @@ Welcome to the **Networking & VPC** module. This is the foundation of the Interm
 Follow these modules in order to master cloud networking:
 
 1.  **[01-VPC-Fundamentals](./01-VPC-Fundamentals/README.md)**: Core concepts, differences from traditional networks.
-2.  **[02-Subnetting-and-CIDR](./02-Subnetting-and-CIDR/README.md)**: IP addressing, subnet sizing strategy.
+2.  **[02-Subnetting-and-CIDR](./02-Subnetting-and-CIDR/README.md)**: Binary math, host calculation, Public/Private zoning, AWS reserved IPs.
 3.  **[03-Internet-and-NAT-Gateways](./03-Internet-and-NAT-Gateways/README.md)**: Connecting to the outside world.
 4.  **[04-Routing-and-Route-Tables](./04-Routing-and-Route-Tables/README.md)**: Controlling traffic flow.
 5.  **[05-Network-Security-NACLs-SGs](./05-Network-Security-NACLs-SGs/README.md)**: Layered defense mechanisms.
