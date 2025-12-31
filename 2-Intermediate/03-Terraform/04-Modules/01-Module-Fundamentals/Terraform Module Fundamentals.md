@@ -34,7 +34,6 @@ graph LR
 | **Git Module** | Private or public git repositories. | `git::https://github.com/org/repo.git` |
 
 ---
-
 ## 3. Real-Life Scenarios
 
 ### Scenario 1: The Copy-Paste Nightmare (DRY Principle)
@@ -45,7 +44,6 @@ graph LR
 1.  Create a `standard_bucket` module.
 2.  Define the tag in the module *once*.
 3.  All 50 services use the module. Running `terraform apply` updates all of them instantly.
-
 ### Scenario 2: The "Works on My Machine" Drift (Standardization)
 **Problem**: Developer A creates a VPC with a NAT Gateway. Developer B creates one without, using a cheap NAT instance. Developer C forgets the private subnet route table.
 **Consequence**: Inconsistent environments leading to deployment failures in Production.
