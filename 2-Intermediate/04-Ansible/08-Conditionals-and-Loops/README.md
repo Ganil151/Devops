@@ -52,4 +52,46 @@ graph TD
   loop: [git, curl, vim]
 ```
 
+---
+
+## 🚀 Advanced Logic Patterns
+
+### 1. Complex Conditionals
+You can combine multiple conditions using `and`, `or`, and `not`.
+
+```yaml
+- name: Install web server based on OS and requirement
+  package:
+    name: "{{ 'httpd' if ansible_os_family == 'RedHat' else 'apache2' }}"
+    state: present
+  when: 
+    - webserver_required | default(true)
+    - ansible_distribution_version | int >= 8
+```
+
+### 2. Advanced Loop Control
+Use `loop_control` to track indexes or provide descriptive labels in logs.
+
+```yaml
+- name: Configure virtual hosts
+  template:
+    src: vhost.conf.j2
+    dest: "/etc/nginx/sites-available/{{ item.name }}"
+  loop: "{{ virtual_hosts }}"
+  loop_control:
+    index_var: vhost_index
+    label: "Configuring {{ item.name }} (Node #{{ vhost_index }})"
+```
+
+### 3. Loop with Subelements
+Great for nested data structures like users and their SSH keys.
+
+```yaml
+- name: Create users with SSH keys
+  authorized_key:
+    user: "{{ item.0.name }}"
+    key: "{{ item.1 }}"
+  loop: "{{ users | subelements('ssh_keys') }}"
+```
+
 Please proceed to **[01-Conditional-Execution](./01-Conditional-Execution/README.md)**.

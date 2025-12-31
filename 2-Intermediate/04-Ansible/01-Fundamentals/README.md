@@ -31,6 +31,37 @@ graph TD
     end
 ```
 
+---
+
+## 🛠️ Lab Environment Setup
+
+To follow this course, you need a local or cloud-based lab environment.
+
+### Option 1: Local Virtual Machines (Vagrant)
+Ideal for testing network configurations and kernel-level changes.
+```bash
+# Start a 3-node lab (Control + 2 Nodes)
+mkdir ansible-lab && cd ansible-lab
+# ... create Vagrantfile ...
+vagrant up
+```
+
+### Option 2: Docker Containers (Fastest)
+Ideal for testing application deployments and playbook logic.
+```bash
+# Start containers with SSH enabled
+docker-compose up -d
+```
+
+### Option 3: Cloud (AWS EC2)
+Ideal for enterprise-scale testing and dynamic inventory practice.
+```bash
+# Deploy using Terraform
+terraform apply
+```
+
+---
+
 ## Quick Start (Ad-Hoc)
 
 Once you understand the architecture, you can run simple commands:

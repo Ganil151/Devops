@@ -65,7 +65,31 @@ Most modules act based on the `state` parameter:
 
 ---
 
-## 4. Real-Life Scenarios
+## 4. Advanced Playbook Structures
+
+As your infrastructure grows, a single YAML file becomes unmanageable. Ansible provides methods to split and organize your logic.
+
+### Static vs. Dynamic Inclusions
+- **`import_playbook` / `import_tasks`**: Static. Processed when the playbook is parsed. Best for fixed structures.
+- **`include_tasks`**: Dynamic. Processed during execution. Best for conditional tasks or loops.
+
+### Multi-Environment Orchestration (`site.yml`)
+The "Master Playbook" pattern allows you to orchestrate the entire infrastructure.
+
+```yaml
+# site.yml
+---
+- import_playbook: playbooks/common.yml     # Basic security/users
+- import_playbook: playbooks/db_tier.yml    # Database setup
+- import_playbook: playbooks/web_tier.yml   # App and Web servers
+
+# Usage
+ansible-playbook -i inventories/production site.yml
+```
+
+---
+
+## 5. Real-Life Scenarios
 
 ### Scenario 1: "The Script Converters"
 **Problem**: A sysadmin wrote 200 lines of Bash scripts to setup servers. It used `if [ -f /etc/config ]; then ...` to check if it had already run. It was buggy.
@@ -85,7 +109,7 @@ Running one command configures the entire stack in the correct order.
 
 ---
 
-## 5. ❓ Interview Questions
+## 6. ❓ Interview Questions
 
 1.  **What is the difference between `name` in a Play and `name` in a Task?**
     *   **Answer**: In a Play, `name` is a description for the log output ("Configure Web"). In a Task, `name` describes the step ("Install Nginx"). Task names are optional but highly recommended for readability.
@@ -123,7 +147,7 @@ Running one command configures the entire stack in the correct order.
 
 ---
 
-## 6. 🧠 Knowledge Check (Quiz)
+## 7. 🧠 Knowledge Check (Quiz)
 
 ### Structure
 1.  **A Playbook starts with:**

@@ -47,4 +47,49 @@ To verify variable values during a run:
     var: my_var
 ```
 
+---
+
+## 🚀 Rollback and Backup Strategies
+
+Production-grade automation must be able to restore the system to a known good state if a configuration change fails.
+
+### The `block/rescue/always` Pattern
+This is the equivalent of `try/except/finally` in Python and is the standard for robust error recovery.
+
+```yaml
+- name: Application deployment with rollback
+  block:
+    - name: Create deployment backup
+      archive:
+        path: "/var/www/my_app"
+        dest: "/tmp/app_backup.tar.gz"
+        format: gz
+    
+    - name: Deploy new version (Potentially Dangerous)
+      unarchive:
+        src: "new_ver.tar.gz"
+        dest: "/var/www/my_app"
+
+  rescue:
+    - name: Log deployment failure
+      debug:
+        msg: "Deployment failed! Triggering rollback..."
+    
+    - name: Restore from backup
+      unarchive:
+        src: "/tmp/app_backup.tar.gz"
+        dest: "/var/www/my_app"
+        remote_src: yes
+    
+    - name: Fail deployment
+      fail:
+        msg: "Deployment failed and rollback completed."
+
+  always:
+    - name: Clean up temporary files
+      file:
+        path: "/tmp/app_backup.tar.gz"
+        state: absent
+```
+
 Please proceed to **[01-Failure-Strategies](./01-Failure-Strategies/README.md)**.
