@@ -19,14 +19,11 @@ graph LR
     B -->|Attributes| C[Output Values]
     style B fill:#f9f,stroke:#333,stroke-width:2px
 ```
-
 ### Key Pillars
 1.  **Abstraction**: Hide complex resource configuration details behind a simple interface. A user only needs to know *what* to ask for (inputs), not *how* it's built.
 2.  **Encapsulation**: Group related resources (e.g., VPC + Subnets + Route Tables + IGW) into one logical unit.
 3.  **Reusability**: Write code once, use it everywhere (Dev, Staging, Prod) by just changing the inputs.
-
 ---
-
 ## 2. Types of Modules
 
 | Type | Description | Example Source |
