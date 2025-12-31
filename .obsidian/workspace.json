@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/03-Terraform/03-State-Management/09-Advanced-Patterns/Advanced State Patterns.md",
+                "file": "2-Intermediate/03-Terraform/04-Modules/01-Module-Fundamentals/Terraform Module Fundamentals.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Advanced State Patterns"
+              "title": "Terraform Module Fundamentals"
             }
           }
         ]
@@ -203,11 +203,21 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
+    "2-Intermediate/03-Terraform/04-Modules/01-Module-Fundamentals/Module Fundamentals.md",
+    "2-Intermediate/03-Terraform/04-Modules/01-Module-Fundamentals/Terraform Module Fundamentals.md",
+    "00-Resources/04-Books-Guides/Prompt-Engineering/Effectively+Creating+Prompts.pdf",
+    "00-Resources/04-Books-Guides/Prompt-Engineering/Unconfirmed 504649.crdownload",
+    "00-Resources/04-Books-Guides/Prompt-Engineering/Top+5+Business+Ideas+Prompt.pdf",
+    "00-Resources/04-Books-Guides/Prompt-Engineering/Unconfirmed 516842.crdownload",
+    "00-Resources/04-Books-Guides/Prompt-Engineering/THE+PROMPT+ENGINEERING+GUIDE.pdf",
+    "00-Resources/04-Books-Guides/Prompt-Engineering/Unconfirmed 175546.crdownload",
+    "00-Resources/04-Books-Guides/Prompt-Engineering",
+    "2-Intermediate/03-Terraform/03-State-Management/10-Best-Practices/State Best Practices.md",
+    "2-Intermediate/03-Terraform/03-State-Management/09-Advanced-Patterns/Advanced State Patterns.md",
     "2-Intermediate/03-Terraform/03-State-Management/08-Troubleshooting/Troubleshooting State Issues.md",
     "2-Intermediate/03-Terraform/03-State-Management/07-State-Migration/State Migration & Versioning.md",
     "2-Intermediate/03-Terraform/03-State-Management/06-State-Security/State Security.md",
     "2-Intermediate/03-Terraform/03-State-Management/05-State-Operations/State Operations.md",
-    "2-Intermediate/03-Terraform/03-State-Management/09-Advanced-Patterns/Advanced State Patterns.md",
     "2-Intermediate/03-Terraform/03-State-Management/04-State-Locking/State Locking.md",
     "2-Intermediate/03-Terraform/03-State-Management/03-Remote-State-Backends/Remote State Backends.md",
     "2-Intermediate/03-Terraform/03-State-Management/03-Remote-State-Backends/images/s3-dynamodb-architecture.png",
@@ -228,18 +238,8 @@
     "2-Intermediate/03-Terraform/01-Fundamentals/10-Basic-Examples/README.md",
     "2-Intermediate/03-Terraform/01-Fundamentals/09-Terraform-Workflow/Terraform Workflow.md",
     "2-Intermediate/03-Terraform/01-Fundamentals/08-Data-Sources/Data Sources.md",
-    "2-Intermediate/03-Terraform/01-Fundamentals/07-Variables-and-Outputs/Variables and Outputs.md",
-    "2-Intermediate/03-Terraform/01-Fundamentals/06-Resources/Resources.md",
-    "2-Intermediate/01-Networking-VPC/10-Monitoring-and-Troubleshooting/README.md",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/10-Getting-Started-Guide",
     "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/09-Cloud-Provider-Comparison",
-    "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/08-VPC-Best-Practices",
-    "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/07-Multi-VPC-Strategies",
-    "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/06-VPC-Limits-and-Quotas",
-    "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/05-Default-vs-Custom-VPC",
-    "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/04-IP-Addressing-Basics",
-    "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/03-VPC-Components-Overview",
-    "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/02-VPC-vs-Traditional-Networks",
     "2-Intermediate/03-Terraform/Images/IaC.png",
     "2-Intermediate/16-FinOps/Images/cost-optimization.png",
     "2-Intermediate/15-FinOps/Images/cost-optimization.png",

@@ -54,7 +54,7 @@ graph TD
 
 9. **[Advanced Patterns](Advanced%20State%20Patterns.md)**: Workspaces for multi-environment management and remote state data sources for cross-stack references.
 
-10. **[Best Practices](./10-Best-Practices/README.md)**: The 7 golden rules for state management in production environments.
+10. **[Best Practices](State%20Best%20Practices.md)**: The 7 golden rules for state management in production environments.
 
 ---
 
