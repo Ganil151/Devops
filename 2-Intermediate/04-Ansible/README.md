@@ -39,7 +39,7 @@ This course is structured logically. It is recommended to follow the modules in 
 | **08** | [**Conditionals & Loops**](./08-Conditionals-and-Loops) | Advanced Logic | when, loops, blocks/rescue, custom failures |
 | **09** | [**Error Handling**](./09-Error-Handling) | Bulletproof Automation | Failure Strategies, Debugging, Handlers, Validation/Abortion |
 | **10** | [**Ansible Vault**](./10-Ansible-Vault) | Secret Management | CLI Operations, Automation Workflow, CI/CD Secrets, Security Best Practices |
-| **11** | [**Custom Modules**](./11-Custom-Modules) | Extending Ansible | Python, `AnsibleModule`, APIs |
+| **11** | [**Custom Modules**](./11-Custom-Modules) | Extending Ansible | Python Development, AnsibleModule Utility, Idempotency, Testing |
 
 ## 🚀 How to Use
 1.  **Read the README** in each folder. It contains Concepts, Diagrams, and Real-Life Scenarios.
