@@ -1,69 +1,50 @@
-# Load Balancing (ELB)
+# 07. Load Balancing (ALB, NLB, GLB)
 
-Elastic Load Balancing (ELB) automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses.
+Distribute traffic, ensure high availability, and secure your applications with AWS Elastic Load Balancing. This module explores everything from simple health checks to the complex routing of microservices.
 
-## ⚖️ Types of Load Balancers
-
-### 1. Application Load Balancer (ALB)
--   **Layer**: Layer 7 (Application).
--   **Protocols**: HTTP, HTTPS, gRPC.
--   **Routing**: Content-based (Path: `/images`, Host: `api.example.com`).
--   **Use Case**: Microservices, Containerized apps, Web applications.
-
-### 2. Network Load Balancer (NLB)
--   **Layer**: Layer 4 (Transport).
--   **Protocols**: TCP, UDP, TLS.
--   **Performance**: Ultra-high performance (millions of requests/sec). Low latency.
--   **Use Case**: Gaming, Real-time streaming, Static IP requirement.
-
-### 3. Gateway Load Balancer (GWLB)
--   **Layer**: Layer 3 (Network).
--   **Use Case**: Deploying and scaling third-party virtual appliances (Firewalls, IDS/IPS).
+## 📌 Key Concepts Covered
+- **ALB (Layer 7)**: Content-based routing, Path/Host rules, HTTP/HTTPS specialized.
+- **NLB (Layer 4)**: Millions of requests/sec, static IPs, ultra-low latency.
+- **GLB (Layer 3)**: Security appliance scaling and transparent inspection.
+- **Optimization**: Sticky sessions, connection draining, and SSL offloading.
 
 ---
 
-## 🎯 Important Concepts
-
-### Listeners
-A process that checks for connection requests using the protocol and port that you configure.
--   *Example*: Listen on HTTPS:443 -> Forward to Target Group A.
-
-### Target Groups
-A logical group of targets (Instances, IPs, or Lambda functions) that route requests to one or more registered targets.
--   **Health Checks**: The ELB pings targets in the group. If a target fails, it stops sending traffic to it.
-
-### Cross-Zone Load Balancing
--   **Enabled**: The LB distributes traffic evenly across all registered targets in all enabled Availability Zones.
--   **Disabled**: The LB distributes traffic evenly across the AZs, then to the targets within that AZ (can lead to imbalance if AZs have different target counts).
+## 📂 Sub-Modules
+1.  **[ELB Types and Fundamentals](./01-ELB-Types-and-Fundamentals/README.md)**
+    - The "Traffic Cop" architecture: Listeners, Target Groups, and Health Checks.
+2.  **[ALB Deep Dive: L7 Routing](./02-ALB-Deep-Dive-L7-Routing/README.md)**
+    - Path/Host rules, WAF integration, and the "Microservices Umbrella."
+3.  **[NLB and GLB Architecture](./03-NLB-and-GLB-Architecture/README.md)**
+    - Low-latency TCP/UDP power and the GENEVE protocol for security.
+4.  **[Advanced ELB Optimization](./04-Advanced-ELB-Optimization/README.md)**
+    - Managing session state, zero-downtime draining, and ACM certificate offloading.
 
 ---
 
-## 🏗️ Setup Workflow
+## ⚖️ Comparison at a Glance
 
-1.  **Select Load Balancer Type** (ALB vs NLB).
-2.  **Configure Listeners** (e.g., HTTP Port 80).
-3.  **Availability Zones**: Select at least two public subnets for HA.
-4.  **Security Group** (ALB only): Allow Inbound HTTP/HTTPS from `0.0.0.0/0`.
-5.  **Target Group**: Define where to send traffic (Instances, Port 80).
-6.  **Health Checks**: Define how to check if targets are healthy (e.g., `/health` path).
-
----
-
-## ❓ Interview Questions
-
-1.  **What is the difference between ALB and NLB?**
-    *   *Answer*: ALB operates at Layer 7 (HTTP/HTTPS) and supports path/host-based routing. NLB operates at Layer 4 (TCP/UDP), is faster, handles volatile traffic spikes, and provides static IPs.
-2.  **What is a "Sticky Session"?**
-    *   *Answer*: A feature that binds a user's session to a specific instance via a cookie. Useful for stateful applications.
-3.  **How do I direct traffic to different microservices based on URL?**
-    *   *Answer*: Use an ALB with **Path-Based Routing** rules (e.g., `/api/*` -> API Target Group).
+| Factor | ALB | NLB | GLB |
+| :--- | :--- | :--- | :--- |
+| **Layer** | 7 (App) | 4 (Transport) | 3 (Network) |
+| **Latency** | Milliseconds | Microseconds | N/A (Transparent) |
+| **IP Address** | Dynamic (DNS name) | Static (EIP) | Target-dependent |
+| **Routing** | Path/Host Headers | IP/Port only | Transparent pass |
 
 ---
 
-## 🧠 Quiz Snippet
+## 🛠️ Architecture Visualization
 
-1.  **Which Load Balancer allows for a static IP address?** `(Network Load Balancer)`
-2.  **What layer does ALB operate at?** `(Layer 7)`
-3.  **If an instance fails a health check, what does the ELB do?** `(Stops sending traffic to it)`
-4.  **Can an ALB route to a Lambda function?** `(Yes)`
-5.  **Which header does ALB add to preserve the client ID?** `(X-Forwarded-For)`
+```mermaid
+graph TD
+    User([User Request]) --> DNS[Route 53]
+    DNS --> ALB[ALB: myapp.com]
+    ALB -->|/api| TG1[API Target Group]
+    ALB -->|/static| TG2[S3/Static Target Group]
+    
+    User2([Volatile Traffic]) --> NLB[NLB: Static IP]
+    NLB -->|Port 1234| TG3[Gaming Cluster]
+```
+
+---
+[← Previous: Peering and TGW](../06-VPC-Peering-and-Transit-Gateway/README.md) | [Next: High Availability →](../08-High-Availability-and-Multi-Region/README.md)

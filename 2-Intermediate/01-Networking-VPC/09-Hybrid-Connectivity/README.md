@@ -1,72 +1,59 @@
-# Hybrid Connectivity
+# 09. Hybrid Connectivity (VPN and Direct Connect)
 
-Connecting your on-premises data center to your cloud VPC allows for hybrid cloud architectures, enabling you to leverage the cloud's scalability while maintaining legacy systems on-prem.
+Bring the power of the AWS cloud to your on-premises infrastructure. This module explores the technical details of establishing secure, private, and high-speed bridges between your data center and the VPC.
 
-## 🌉 AWS Site-to-Site VPN
-
-A secure connection over the **public internet** using IPsec tunnels.
-
-### Components
-1.  **Virtual Private Gateway (VGW)**: Attached to your VPC (AWS side).
-2.  **Customer Gateway (CGW)**: Represents your physical router/firewall (On-Prem side).
-3.  **VPN Connection**: The IPsec tunnel linking the VGW and CGW.
-
-### Characteristics
--   **Setup Time**: Minutes.
--   **Cost**: Low hourly fee per connection.
--   **Reliability**: Dependent on internet stability.
--   **Bandwidth**: Maximum 1.25 Gbps per tunnel.
+## 📌 Key Concepts Covered
+- **Site-to-Site VPN**: IPsec tunnels, IKE phases, and BGP dynamic routing over the internet.
+- **Direct Connect (DX)**: Dedicated fiber links, VIF types (Private/Public/Transit), and Macsec.
+- **Direct Connect Gateway**: Global connectivity and scaling hybrid links to multiple VPCs.
+- **Resiliency**: High availability models and BGP AS-Path prepending for failover.
 
 ---
 
-## 🔌 AWS Direct Connect (DX)
-
-A dedicated physical fiber connection between your network and AWS. It bypasses the public internet entirely.
-
-### Characteristics
--   **Setup Time**: Weeks to Months (Physical installation required).
--   **Cost**: High (Port hours + Data transfer).
--   **Reliability**: Extremely high (SLA backed).
--   **Bandwidth**: 1 Gbps, 10 Gbps, or 100 Gbps dedicated.
--   **Security**: Private connection (not encrypted by default, but stays off internet).
-
-### Connection Types
-1.  **Dedicated Connection**: Physical port owned by you.
-2.  **Hosted Connection**: Provided by an AWS Partner (APN) who shares their link.
+## 📂 Sub-Modules
+1.  **[VPN Site-to-Site Fundamentals](./01-VPN-Site-to-Site-Fundamentals/README.md)**
+    - VGW, CGW, and the dual-tunnel architecture for HA.
+2.  **[Direct Connect Deep Dive](./02-Direct-Connect-Deep-Dive/README.md)**
+    - Physical cross-connects, VLAN tagging, and Public vs Private VIF logic.
+3.  **[TGW and Hybrid Architectures](./03-TGW-and-Hybrid-Architectures/README.md)**
+    - Leveraging Direct Connect Gateway and Transit Gateway for enterprise scale.
+4.  **[Resiliency and Security in Hybrid](./04-Resiliency-and-Security-Hybrid/README.md)**
+    - Multi-location models, MACsec encryption, and VPN-over-DX patterns.
 
 ---
 
-## 📊 Comparison: VPN vs. Direct Connect
+## ⚖️ Comparison: VPN vs. Direct Connect
 
 | Feature | Site-to-Site VPN | Direct Connect |
 | :--- | :--- | :--- |
-| **Network Path** | Public Internet | Dedicated Private Fiber |
-| **Security** | Encrypted (IPsec) | Private (Unencrypted by default) |
-| **Throughput** | Up to 1.25 Gbps | Up to 100 Gbps |
-| **Latency** | Variable (Internet jitters) | Consistent, Ultra-low |
-| **Cost** | Low ($) | High ($$$) |
-| **Use Case** | Backup, Test/Dev, Small Offices | Big Data, Hybrid Workloads, Compliance |
-
-> [!TIP]
-> **VPN over Direct Connect**: For maximum security, you can establish an IPsec VPN tunnel *over* your Direct Connect link to get both privacy (DX) and encryption (VPN).
+| **Path** | Public Internet | Dedicated Fiber |
+| **Setup Time** | Minutes | Weeks/Months |
+| **Security** | Encrypted (IPsec) | Private (Enc optional) |
+| **Performance** | Variable | Consistent |
+| **Throughput** | 1.25 Gbps | Up to 100 Gbps |
 
 ---
 
-## ❓ Interview Questions
+## 🛠️ Architecture Visualization
 
-1.  **Can I access S3 buckets over Direct Connect?**
-    *   *Answer*: Yes, by using a **Public VIF** (Virtual Interface). Private VIFs are for accessing private IPs in your VPC.
-2.  **What is the maximum speed of a Site-to-Site VPN?**
-    *   *Answer*: 1.25 Gbps per tunnel. You can use ECMP (Equal Cost Multi-Path) with Transit Gateway to aggregate multiple tunnels for higher bandwidth.
-3.  **Does Direct Connect provide encryption by default?**
-    *   *Answer*: No. It is a private line, but traffic is not encrypted at Layer 3. You must add MACsec (Layer 2) or use a VPN (Layer 3) for encryption.
+```mermaid
+graph LR
+    subgraph On-Prem
+    R[Local Router]
+    end
+    
+    subgraph AWS
+    VGW[Virtual Private Gateway]
+    DXGW[Direct Connect Gateway]
+    TGW((Transit Gateway))
+    end
+    
+    R <==>|VPN: IPsec| VGW
+    R ---|DX: Fiber| DXGW
+    DXGW --- TGW
+    TGW --- VPC_A[VPC A]
+    TGW --- VPC_B[VPC B]
+```
 
 ---
-
-## 🧠 Quiz Snippet
-
-1.  **Which component represents your on-premises firewall in AWS?** `(Customer Gateway - CGW)`
-2.  **Which solution provides a consistent network experience?** `(Direct Connect)`
-3.  **How long does it take to provision a new Direct Connect?** `(Weeks to Months)`
-4.  **Can you have a backup VPN for your Direct Connect?** `(Yes, highly recommended for failover)`
-5.  **What does VGW stand for?** `(Virtual Private Gateway)`
+[← Previous: HA and Multi-Region](../08-High-Availability-and-Multi-Region/README.md) | [Next: Monitoring and Troubleshooting →](../10-Monitoring-and-Troubleshooting/README.md)

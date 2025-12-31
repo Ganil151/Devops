@@ -13,10 +13,10 @@ Follow these modules in order to master cloud networking:
 3.  **[03-Internet-and-NAT-Gateways](./03-Internet-and-NAT-Gateways/README.md)**: Attachments, packet flow, managed NAT, IPv6 egress, HA designs.
 4.  **[04-Routing-and-Route-Tables](./04-Routing-and-Route-Tables/README.md)**: Fundamentals, Priority logic (LPM), Ingress gates, Blackhole troubleshooting.
 5.  **[05-Network-Security-NACLs-SGs](./05-Network-Security-NACLs-SGs/README.md)**: Stateful SGs vs Stateless NACLs, layered defense, ephemeral port trap.
-6.  **[06-VPC-Peering-and-Transit-Gateway](./06-VPC-Peering-and-Transit-Gateway/README.md)**: Inter-connecting VPCs and on-prem networks.
-7.  **[07-Load-Balancing-ALB-NLB](./07-Load-Balancing-ALB-NLB/README.md)**: Distributing traffic for performance and HA.
-8.  **[08-High-Availability-and-Multi-Region](./08-High-Availability-and-Multi-Region/README.md)**: Designing for resilience and disaster recovery.
-9.  **[09-Hybrid-Connectivity](./09-Hybrid-Connectivity/README.md)**: VPNs and Direct Connect.
+6.  **[06-VPC-Peering-and-Transit-Gateway](./06-VPC-Peering-and-Transit-Gateway/README.md)**: [ACTIVE] Peering Lifecycle, DNS Support, Transit Gateway Hub-and-Spoke, Cost Optimization, Inter-connecting VPCs and on-prem networks.
+7.  **- [07-Load-Balancing-ALB-NLB](./07-Load-Balancing-ALB-NLB/README.md) - [ACTIVE] ALB/NLB/GLB deep dive, L7 Routing, Static IPs, SSL Offloading.
+- [08-High-Availability-and-Multi-Region](./08-High-Availability-and-Multi-Region/README.md) - [ACTIVE] RTO/RPO, Pilot Light vs Warm Standby, Global Accelerator, Inter-Region Peering.
+- [09-Hybrid-Connectivity](./09-Hybrid-Connectivity/README.md) - [ACTIVE] Site-to-Site VPN, Direct Connect, DX Gateway, Resiliency Models, BGP Priority.
 10. **[10-Monitoring-and-Troubleshooting](./10-Monitoring-and-Troubleshooting/README.md)**: Flow Logs and Reachability Analyzer.
 11. **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials.
 

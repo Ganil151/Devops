@@ -47,7 +47,7 @@ resource "aws_s3_bucket" "this" {
   tags   = local.common_tags
 }
 ```
-### Step 3: The Result (Outputs)
+### Step 3: The Result (<font color="#ff0000">Outputs</font>)
 Always output IDs and ARNs. It costs nothing and saves users from having to ask for them later.
 ```hcl
 output "bucket_id" {
@@ -60,9 +60,7 @@ output "bucket_arn" {
   value       = aws_s3_bucket.this.arn
 }
 ```
-
----
-
+___
 ## 3. Advanced Module Logic
 
 ### validation Logic Flow
@@ -79,10 +77,8 @@ graph TD
 
 ### `count` vs `for_each` inside Modules
 You often need to create multiple similar resources inside a module based on input.
-
 -   **Avoid `count` based on list length**: If items are removed from the middle of the list, Terraform may destroy/recreate resources due to index shifting.
 -   **Prefer `for_each`**: Use maps or sets where the key is stable (e.g., username, subnet ID).
-
 ```hcl
 # BAD (Risky)
 resource "aws_iam_user" "users" {
@@ -96,12 +92,10 @@ resource "aws_iam_user" "users" {
   name     = each.key
 }
 ```
-
----
-
+___
 ## 4. Real-Life Scenarios
 
-### Scenario 1: The Typo that Cost $1,000 (Validation)
+### Scenario 1: The Typo that Cost $1,000 (<font color="#ff0000">Validation</font>)
 **Problem**: An EC2 module accepts any string for `instance_type`. A junior dev typos `t3.large` as `m5.metal` (a very expensive bare-metal server).
 **Result**: The code is syntactically valid. AWS launches the server. The bill skyrockets.
 **The Fix**: Add validation to `variables.tf`:
@@ -111,8 +105,7 @@ validation {
   error_message = "Only t3 and t2 types are allowed."
 }
 ```
-
-### Scenario 2: The "Optional" Variable Confusion (Defaults)
+### Scenario 2: The "Optional" Variable Confusion (<font color="#ff0000">Defaults</font>)
 **Problem**: You want to make `logging_bucket` optional.
 **Solution**: Use `default = null`.
 ```hcl
@@ -128,17 +121,14 @@ resource "aws_s3_bucket_logging" "example" {
 }
 ```
 This creates the logging resource *only* if the user provides a bucket name.
-
-### Scenario 3: The Hardcoded Naming Conflict
-**Problem**: A module hardcodes `name = "my-app-server"`.
+### Scenario 3: The Hard-coded Naming Conflict
+**Problem**: A module hard-codes `name = "my-app-server"`.
 **Consequence**: You can only use this module ONCE in an entire AWS region. The second time you call it, AWS rejects the duplicate name.
 **The Fix**:
 1.  Accept a `name_prefix` variable.
 2.  Or use `random_id` resource.
 3.  Or use `name_prefix` argument in resources instead of `name`.
-
----
-
+___
 ## 5. ❓ Interview Questions
 
 1.  **What happens if you define a variable but don't use it in `main.tf`?**
