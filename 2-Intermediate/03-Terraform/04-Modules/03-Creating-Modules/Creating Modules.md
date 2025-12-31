@@ -7,7 +7,7 @@ When building a module from scratch, follow this 3-step cycle:
 ---
 ## 2. Step-by-Step: Building a Robust S3 Module
 
-### Step 1: The Interface (Inputs)
+### Step 1: The Interface (<font color="#ff0000">Inputs</font>)
 Use `validation` blocks to reject bad data *before* `terraform apply` runs. This is "<font color="#ffff00">Shift Left</font> " testing.
 ```hcl
 variable "bucket_name" {
@@ -30,8 +30,7 @@ variable "environment" {
   }
 }
 ```
-
-### Step 2: The Logic (Implementation)
+### Step 2: The Logic (<font color="#ff0000">Implementation</font>)
 Use `locals` to handle complex logic, tagging strategies, or conditional defaults so your resource blocks remain clean.
 ```hcl
 locals {
@@ -48,7 +47,6 @@ resource "aws_s3_bucket" "this" {
   tags   = local.common_tags
 }
 ```
-
 ### Step 3: The Result (Outputs)
 Always output IDs and ARNs. It costs nothing and saves users from having to ask for them later.
 ```hcl

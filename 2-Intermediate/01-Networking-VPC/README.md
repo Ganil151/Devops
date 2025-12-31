@@ -10,7 +10,7 @@ Follow these modules in order to master cloud networking:
 
 1.  **[01-VPC-Fundamentals](./01-VPC-Fundamentals/README.md)**: Core concepts, differences from traditional networks.
 2.  **[02-Subnetting-and-CIDR](./02-Subnetting-and-CIDR/README.md)**: Binary math, host calculation, Public/Private zoning, AWS reserved IPs.
-3.  **[03-Internet-and-NAT-Gateways](./03-Internet-and-NAT-Gateways/README.md)**: Connecting to the outside world.
+3.  **[03-Internet-and-NAT-Gateways](./03-Internet-and-NAT-Gateways/README.md)**: Attachments, packet flow, managed NAT, IPv6 egress, HA designs.
 4.  **[04-Routing-and-Route-Tables](./04-Routing-and-Route-Tables/README.md)**: Controlling traffic flow.
 5.  **[05-Network-Security-NACLs-SGs](./05-Network-Security-NACLs-SGs/README.md)**: Layered defense mechanisms.
 6.  **[06-VPC-Peering-and-Transit-Gateway](./06-VPC-Peering-and-Transit-Gateway/README.md)**: Inter-connecting VPCs and on-prem networks.
