@@ -35,7 +35,7 @@ This course is structured logically. It is recommended to follow the modules in 
 | **04** | [**Core Modules**](./04-Core-Modules) | The Toolkit | `apt`, `copy`, `service`, `systemd`, `git` |
 | **05** | [**Variables & Facts**](./05-Variables-and-Facts) | Handling Data | Hierarchy, Facts, Magic Vars, Dynamic Data |
 | **06** | [**Templates & Files**](./06-Templates-and-Files) | Dynamic Configs | Jinja2 Basics, Advanced Logic, Deploy Strategies, Safe Validation |
-| **07** | [**Ansible Roles**](./07-Ansible-Roles) | Reusable Code | Directory Structure, Galaxy, Collections |
+| **07** | [**Ansible Roles**](./07-Ansible-Roles) | Reusable Code | Structure, Dependencies, Galaxy, Molecule Testing |
 | **08** | [**Conditionals & Loops**](./08-Conditionals-and-Loops) | Advanced Logic | `when`, `loop`, `block`/`rescue` |
 | **09** | [**Error Handling**](./09-Error-Handling) | Bulletproof Automation | Debugging, Handlers, `ignore_errors` |
 | **10** | [**Ansible Vault**](./10-Ansible-Vault) | Secret Management | Encryption, CI/CD Integration |
