@@ -1,21 +1,14 @@
-# Creating Modules
-
 Building a module is more than just moving code into a folder. It involves creating a clean *interface* (variables) and ensuring *reliability* (validation).
-
 ## 1. The Module Creation Workflow
 When building a module from scratch, follow this 3-step cycle:
-
 1.  **Define Interface (`variables.tf`)**: What data do I need from the user?
 2.  **Implement Logic (`main.tf`)**: Create resources using those inputs.
 3.  **Expose Data (`outputs.tf`)**: What attributes will the user need back?
-
 ---
-
 ## 2. Step-by-Step: Building a Robust S3 Module
 
 ### Step 1: The Interface (Inputs)
 Use `validation` blocks to reject bad data *before* `terraform apply` runs. This is "Shift Left" testing.
-
 ```hcl
 variable "bucket_name" {
   type        = string
@@ -40,7 +33,6 @@ variable "environment" {
 
 ### Step 2: The Logic (Implementation)
 Use `locals` to handle complex logic, tagging strategies, or conditional defaults so your resource blocks remain clean.
-
 ```hcl
 locals {
   # Common tags for all resources in this module
