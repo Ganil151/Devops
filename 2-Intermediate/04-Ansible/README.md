@@ -33,7 +33,7 @@ This course is structured logically. It is recommended to follow the modules in 
 | **02** | [**Inventory Management**](./02-Inventory-Management) | The "Source of Truth" | Static, Patterns, Variables, Dynamic Plugins |
 | **03** | [**Basic Playbooks**](./03-Basic-Playbooks) | Your First Automation | YAML Syntax, Idempotency, Tasks |
 | **04** | [**Core Modules**](./04-Core-Modules) | The Toolkit | `apt`, `copy`, `service`, `systemd`, `git` |
-| **05** | [**Variables & Facts**](./05-Variables-and-Facts) | Handling Data | Precedence, `ansible_facts`, Magic Vars |
+| **05** | [**Variables & Facts**](./05-Variables-and-Facts) | Handling Data | Hierarchy, Facts, Magic Vars, Dynamic Data |
 | **06** | [**Templates & Files**](./06-Templates-and-Files) | Dynamic Configs | Jinja2, Loops, Filters, `synchronize` |
 | **07** | [**Ansible Roles**](./07-Ansible-Roles) | Reusable Code | Directory Structure, Galaxy, Collections |
 | **08** | [**Conditionals & Loops**](./08-Conditionals-and-Loops) | Advanced Logic | `when`, `loop`, `block`/`rescue` |
