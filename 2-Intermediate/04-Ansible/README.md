@@ -38,7 +38,7 @@ This course is structured logically. It is recommended to follow the modules in 
 | **07** | [**Ansible Roles**](./07-Ansible-Roles) | Reusable Code | Structure, Dependencies, Galaxy, Molecule Testing |
 | **08** | [**Conditionals & Loops**](./08-Conditionals-and-Loops) | Advanced Logic | when, loops, blocks/rescue, custom failures |
 | **09** | [**Error Handling**](./09-Error-Handling) | Bulletproof Automation | Failure Strategies, Debugging, Handlers, Validation/Abortion |
-| **10** | [**Ansible Vault**](./10-Ansible-Vault) | Secret Management | Encryption, CI/CD Integration |
+| **10** | [**Ansible Vault**](./10-Ansible-Vault) | Secret Management | CLI Operations, Automation Workflow, CI/CD Secrets, Security Best Practices |
 | **11** | [**Custom Modules**](./11-Custom-Modules) | Extending Ansible | Python, `AnsibleModule`, APIs |
 
 ## 🚀 How to Use
