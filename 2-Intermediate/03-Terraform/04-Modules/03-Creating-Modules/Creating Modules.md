@@ -8,7 +8,7 @@ When building a module from scratch, follow this 3-step cycle:
 ## 2. Step-by-Step: Building a Robust S3 Module
 
 ### Step 1: The Interface (Inputs)
-Use `validation` blocks to reject bad data *before* `terraform apply` runs. This is "<font color="#ffff00">Shift Left"</font> testing.
+Use `validation` blocks to reject bad data *before* `terraform apply` runs. This is "<font color="#ffff00">Shift Left</font> " testing.
 ```hcl
 variable "bucket_name" {
   type        = string
