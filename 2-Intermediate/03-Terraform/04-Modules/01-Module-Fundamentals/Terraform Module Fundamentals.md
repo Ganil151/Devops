@@ -47,8 +47,7 @@ graph LR
 ### Scenario 2: The "Works on My Machine" Drift (Standardization)
 **Problem**: Developer A creates a VPC with a NAT Gateway. Developer B creates one without, using a cheap NAT instance. Developer C forgets the private subnet route table.
 **Consequence**: Inconsistent environments leading to deployment failures in Production.
-**The Module Solution**: Senior Architects build a "Golden VPC" module. Developers simply call `module "vpc" { source = ".../golden-vpc" }`. Everyone gets the exact same, valid network topology.
-
+**The Module Solution**: Senior Architects build a "<font color="#ffc000">Golden VPC</font>" module. Developers simply call `module "vpc" { source = ".../golden-vpc" }`. Everyone gets the exact same, valid network topology.
 ### Scenario 3: The Multi-Step Provisioning Headache (Composition)
 **Problem**: Setting up an EKS cluster requires: VPC -> Security Groups -> IAM Roles -> EKS Control Plane -> Node Groups.
 **Old Way**: A 1,000-line `main.tf` file that is impossible to read or debug.

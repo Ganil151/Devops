@@ -4,7 +4,7 @@ Modules are the key to building scalable, standardized, and reusable infrastruct
 
 ## 📚 Learning Path
 
-1.  **[Module Fundamentals](Terraform%20Module%20Fundamentals.md)**: Introduction, types of modules, and core abstraction benefits.
+1.  **[Module Fundamentals](./01-Module-Fundamentals/README.md)**: Introduction, types of modules, and core abstraction benefits.
 2.  **[Module Structure](./02-Module-Structure/README.md)**: Standard layout and professional file organization.
 3.  **[Creating Modules](./03-Creating-Modules/README.md)**: Building from scratch, input validation, and logic.
 4.  **[Module Composition](./04-Module-Composition/README.md)**: Orchestrating multiple modules and handling dependencies.
