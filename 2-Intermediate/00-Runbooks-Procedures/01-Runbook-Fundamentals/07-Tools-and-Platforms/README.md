@@ -32,25 +32,386 @@ The "Docs as Code" approach.
 
 ---
 
-## 🏗️ Real-Life Scenario: The "Offline" Wiki
+## The Runbook Ecosystem
+
+```mermaid
+graph TD
+    Alert[Alert: PagerDuty/Datadog] --> Link[Contextual Link]
+    Link --> Store{Storage Platform}
+    
+    subgraph "Knowledge Bases"
+    Store --> Git[Git: GitHub/GitLab]
+    Store --> Wiki[Wiki: Confluence/Notion]
+    end
+    
+    subgraph "Execution Platforms"
+    Git --> Actions[GitHub Actions]
+    Wiki --> Manual[Manual Copy-Paste]
+    Store --> Execute[Executable: Jupyter/Transposit]
+    end
+```
+
+---
+
+## 🏗️ Real-Life Scenarios
+
+### Scenario 1: The "Offline" Wiki
 **Problem**: An SRE team keeps their recovery docs in a self-hosted Confluence instance.
-**Crisis**: The company's internal network goes down. The SREs need the runbook to fix the network, but the wiki is *on* the network.
+**Crisis**: The company's internal network goes down. The SREs need the runbook to fix the network, but the wiki is *on* that same network.
 **Outcome**: They are locked out of their own instructions.
-**Fix**: Move critical recovery runbooks to a Git repo hosted on a public platform (like GitHub) or use a tool that supports offline/Cached access.
+**Solution**: Move critical recovery runbooks to a Git repo hosted on a public platform (like GitHub) or ensure the tool supports offline cached access.
+**Result**: In the next network outage, the team accessed the docs via their local clones of the Git repo and resolved the issue.
+
+### Scenario 2: The "Interactive" Payoff
+**Problem**: Troubleshooting a complex database lag involved 15 different SQL queries. Engineers often mistyped the parameters when copy-pasting from a static document.
+**Solution**: Migration to **Executable Runbooks** (Jupyter Notebooks). The parameters (like `DB_ID`) are defined once at the top, and all 15 queries update automatically.
+**Result**: Reduced troubleshooting time by 60% and eliminated all syntax errors during the incident.
+
+### Scenario 3: The PR Guardrail
+**Problem**: An intern accidentally updated a runbook with a dangerous `rm -rf` command in a public Wiki. No one noticed until a senior engineer ran it a week later.
+**Solution**: Move to **Docs-as-Code** (Git-based). All changes now require a Pull Request (PR) and a "LGTM" (Looks Good To Me) from at least one other engineer.
+**Result**: Dangerous edits are caught during code review, significantly increasing operational safety.
 
 ---
 
 ## ❓ Interview Questions
-1.  **Why would an SRE prefer 'Docs as Code' over a Wiki?**
-    *   *Answer*: It allows for the same rigorous peer-review process as application code (Pull Requests), provides a clear version history, and ensures that documentation changes are deployed alongside the feature changes they describe.
-2.  **What is an 'Executable Runbook'?**
-    *   *Answer*: It's a document (like a Jupyter Notebook) where the instructions and the code snippets are combined in a way that the user can click a "Run" button to execute the fix directly within the UI.
+
+1.  **Why would an SRE prefer 'Docs as Code' (Git) over a traditional Wiki?**
+    - *Answer*: Git allows for the same rigorous peer-review process as application code (Pull Requests), provides a perfect version history, and ensures that documentation evolves alongside the features it describes.
+2.  **What is an 'Executable Runbook' and when should it be used?**
+    - *Answer*: It's a document (like a Jupyter Notebook) where instructions and code blocks are integrated. It should be used for complex, multi-step troubleshooting where manual parameter entry is error-prone.
+3.  **Explain the risk of 'Self-Hosting' your documentation platform.**
+    - *Answer*: If the infrastructure you are trying to fix is the same infrastructure that hosts your documentation, you face a "Circular Dependency." You can't fix the system without the docs, but you can't see the docs because the system is down.
+4.  **How do incident management tools like PagerDuty integrate with runbooks?**
+    - *Answer*: They use "Contextual Linking." Based on the alert type or tag, PagerDuty can automatically append a direct link to the specific runbook in the notification sent to the engineer.
+5.  **What is the benefit of using Markdown for runbooks?**
+    - *Answer*: It's platform-independent, lightweight, human-readable, and can be rendered by almost any Git host, editor, or static site generator. It supports embedded diagrams via Mermaid.
+6.  **What is a 'Document Cemetery'?**
+    - *Answer*: A Wiki or folder that has grown so large and unorganized that it's impossible to find useful information, leading to engineers ignoring it and creating their own "Shadow Docs."
 
 ---
 
-## 🧠 Quiz Snippet (5/50+)
-1.  **Which approach treats docs like code?** (Docs as Code)
-2.  **True/False: You should store production recovery docs in a private, local-only server.** (False - risk of lockout during network failure)
-3.  **Which format is used for Git-based documentation?** (Markdown)
-4.  **Can PagerDuty suggest a runbook?** (Yes, based on the alert type)
-5.  **What is a major downside of using PDFs for runbooks?** (Hard to update and version)
+## 🧠 Comprehensive Quiz (25 Questions)
+
+**1. Which approach involves managing documentation in the same repository as the source code?**
+- A) Wiki-First
+- B) Docs-as-Code
+- C) PDF-Centric
+- D) Physical Printouts
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**2. What is a major risk of a 'Self-Hosted' documentation wiki?**
+- A) It's too cheap
+- B) It might be inaccessible if the underlying network or infrastructure fails
+- C) It has too many colors
+- D) It's only for Linux users
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**3. Which format is the industry standard for Git-based runbooks?**
+- A) .docx
+- B) .md (Markdown)
+- C) .pdf
+- D) .xlsx
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**4. An 'Executable Runbook' allows you to:**
+- A) Read only
+- B) Run code blocks directly within the document interface
+- C) Print the doc
+- D) Delete the server
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**5. Which tool focuses on 'Alert Orchestration' and linking runbooks to notifications?**
+- A) Bitbucket
+- B) PagerDuty
+- C) VS Code
+- D) Chrome
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**6. 'Docs as Code' enables which quality control process?**
+- A) Printing
+- B) Peer Review via Pull Requests
+- C) Manual signing
+- D) Locking the file
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**7. Jupyter Notebooks are popular for which type of runbook?**
+- A) High-level SOPs
+- B) Complex, data-heavy troubleshooting
+- C) Meeting notes
+- D) HR policies
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**8. What is the main disadvantage of 'Confluence' or 'Notion' for technical runbooks?**
+- A) Too hard to use
+- B) Risk of becoming a "Document Cemetery" with outdated info
+- C) No search bar
+- D) No support for text
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**9. 'Mermaid' is a tool used for:**
+- A) Underwater monitoring
+- B) Rendering diagrams using text/code within Markdown
+- C) Sorting files
+- D) Encrypting passwords
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**10. Why should you avoid storing runbooks ONLY as PDFs?**
+- A) They are too small
+- B) They are static and difficult to version-control or update quickly
+- C) They don't support images
+- D) They are too modern
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**11. A 'Centralized' documentation store helps prevent:**
+- A) Too much light
+- B) Siloed / Shadow documentation
+- C) Fast resolution
+- D) High uptime
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**12. 'Transposit' or 'Runbear' are examples of:**
+- A) Databases
+- B) Specialized runbook automation platforms
+- C) Operating systems
+- D) Web browsers
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**13. Version history in Git is superior because it shows:**
+- A) Only the current state
+- B) Exactly what changed, by whom, and why (via commit messages)
+- C) The weather
+- D) The server temperature
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**14. What is a 'Hybrid' tool approach?**
+- A) Using only one tool
+- B) Using Git for technical docs and a Wiki for business policies
+- C) Using only paper
+- D) Using no tools
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**15. 'Sreachability' is the most critical feature when:**
+- A) You are on vacation
+- B) You are in the middle of a high-pressure incident
+- C) You are hiring
+- D) You are at lunch
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**16. True/False: VS Code has extensions to preview Markdown runbooks.**
+- A) True
+- B) False
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: A**
+
+</details>
+
+**17. 'Public' cloud Git providers (GitHub/GitLab) offer what advantage during internal network failures?**
+- A) They are faster
+- B) They remain accessible even if your company's data center or VPN is down
+- C) They have more themes
+- D) They are free
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**18. A 'README.md' file in a service's root directory is often used as:**
+- A) A legal contract
+- B) The entry point / high-level runbook for that service
+- C) A place for jokes
+- D) A temporary file
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**19. Why use 'Variables' in scripts within runbooks?**
+- A) To make them confusing
+- B) To allow the same script to work across different environments (Dev/Prod)
+- C) To hide data
+- D) To save space
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**20. Which tool is best for 'Collaborative' live editing?**
+- A) Notepad
+- B) Confluence / Google Docs / Notion
+- C) Command Line
+- D) FTP
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**21. 'CI/CD Pipelines' can be used to:**
+- A) Print documentation
+- B) Automatically validate and deploy documentation to a website
+- C) Charge customers
+- D) delete old code
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**22. 'Stale Docs' are a symptom of:**
+- A) Too much documentation
+- B) Poor maintenance processes and lack of Docs-as-Code integration
+- C) Fast servers
+- D) Good management
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**23. What is 'Markdown Linting'?**
+- A) Washing the code
+- B) Automated spelling and formatting checks for Markdown files
+- C) Deleting files
+- D) High-speed typing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**24. A 'Deep Link' in a runbook points to:**
+- A) The home page
+- B) A specific line or section relevant to the current alert
+- C) A different company
+- D) A news site
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**25. The final goal of choosing a platform is:**
+- A) To spend more money
+- B) To ensure the right info is accessible and actionable for the right people at the right time
+- C) to appease the IT department
+- D) to have many features
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>

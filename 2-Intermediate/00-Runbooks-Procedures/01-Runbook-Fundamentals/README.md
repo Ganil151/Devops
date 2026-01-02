@@ -18,10 +18,11 @@ Master the art of operational documentation to reduce MTTR, eliminate toil, and 
 ---
 
 ## 🏗️ Module Features
-- **50+ Total Quiz Questions**: Validating operational documentation skills.
-- **SRE Interview Prep**: Sophisticated Q&A for systems engineering roles.
-- **"Stories from the Field"**: Real-world scenarios on outages, audits, and automation.
-- **Visual Workflows**: Mermaid diagrams for hierarchies, lifecycles, and pipelines.
+- **250+ Specialized Quiz Questions**: Comprehensive validation of operational documentation skills.
+- **SRE Interview Prep**: 60+ sophisticated Q&A for systems engineering and ops roles.
+- **"Stories from the Field"**: 30+ real-world scenarios on outages, audits, and automation.
+- **Visual Workflows**: 10+ Mermaid diagrams for hierarchies, lifecycles, and pipelines.
+- **Actionable Blueprints**: Standardized Markdown templates and compliance checklists.
 
 ---
 

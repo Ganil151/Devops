@@ -18,10 +18,10 @@ A **Standard Operating Procedure (SOP)** is the blueprint for operational consis
 ---
 
 ## 🏗️ Module Features
-- **50+ Total Quiz Questions**: Validating operational documentation skills.
-- **SRE Interview Prep**: Sophisticated Q&A for systems engineering roles.
-- **"Stories from the Field"**: Real-world scenarios on audits, outages, and knowledge loss.
-- **Visual Workflows**: Mermaid diagrams for lifecycles, load reduction, and quality loops.
+- **250+ Total Quiz Questions**: Ensuring deep mastery of operational documentation principles.
+- **SRE Interview Prep**: Targeted Q&A for systems engineering and operational excellence roles.
+- **"Stories from the Field"**: Real-world scenarios covering audits, knowledge silos, and incident response.
+- **Visual Frameworks**: Mermaid diagrams for Docs-as-Code workflows, SDRY structures, and Gameday cycles.
 
 ---
 

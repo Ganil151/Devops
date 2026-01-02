@@ -18,10 +18,10 @@ In advanced DevOps, the ultimate goal is to move beyond manual intervention. Thi
 ---
 
 ## 🏗️ Module Features
-- **50+ Total Quiz Questions**: Validating auto-remediation expertise.
-- **SRE Interview Prep**: Advanced Q&A for Lead SRE and Platform Engineering roles.
-- **"War Stories"**: Real-world scenarios on automation disasters and successes.
-- **Visual Workflows**: Mermaid diagrams for closed loops, circuit breakers, and approval flows.
+- **250+ Total Quiz Questions**: Deep validation of advanced self-healing architectures.
+- **SRE Interview Prep**: 60+ targeted questions for Senior/Lead SRE roles.
+- **Real-World "War Stories"**: 30 production scenarios with problem/solution/outcome.
+- **Visual SRE Workflows**: Mermaid diagrams for closed loops, circuit breakers, and governance.
 
 ---
 

@@ -8,7 +8,7 @@ You will transition from "managing a server" to "orchestrating a cluster" using 
 
 ## 🗺️ The Intermediate Curriculum
 
-This level is organized into a progressive journey across 17 specialized modules. Each module now includes a curated **YouTube Lessons** collection for visual reinforcement.
+This level is organized into a progressive journey across 18 specialized modules. Each module now includes a curated **YouTube Lessons** collection for visual reinforcement.
 
 1.  **[00-Runbooks-Procedures](./00-Runbooks-Procedures/README.md)**: Moving from manual hacks to automated remediation.
 2.  **[01-Networking-VPC](./01-Networking-VPC/README.md)**: Advanced cloud networking, peering, and subnets.
@@ -27,6 +27,7 @@ This level is organized into a progressive journey across 17 specialized modules
 15. **[14-MCP](./14-MCP/README.md)**: Model Context Protocol for building Agentic AI tools.
 16. **[15-Blockchain](./15-Blockchain/README.md)**: Web3 DevOps and Smart Contract CI/CD.
 17. **[16-FinOps](./16-FinOps/README.md)**: Cost optimization, allocation, and Savings Plans.
+18. **[17-Cloud-Init](./17-Cloud-Init/README.md)**: Automated server initialization and cloud-config.
 
 ---
 

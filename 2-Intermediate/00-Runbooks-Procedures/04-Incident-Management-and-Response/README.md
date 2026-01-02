@@ -18,9 +18,9 @@ An incident is any unplanned interruption to an IT service. This module covers h
 ---
 
 ## 🏗️ Module Features
-- **50+ Total Quiz Questions**: Validating incident management expertise.
-- **SRE Interview Prep**: Advanced Q&A for Incident Commander and SRE Lead roles.
-- **"War Stories"**: Real-world scenarios on communication failures, hero syndrome, and burnout.
+- **250+ Total Quiz Questions**: Comprehensive mastery with collapsible answers.
+- **60+ SRE Interview Questions**: Advanced prep for Incident Commander and SRE Lead roles.
+- **30+ "War Stories"**: Real-world scenarios on communication failures, hero syndrome, and technical outages.
 - **Visual Workflows**: Mermaid diagrams for ICS hierarchy, mitigation decision trees, and improvement cycles.
 
 ---

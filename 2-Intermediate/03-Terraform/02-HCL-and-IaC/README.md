@@ -12,15 +12,17 @@ Welcome to the advanced study of Infrastructure as Code. This module focuses on 
 6.  **[CI/CD Pipeline Integration](./06-CI-CD-Pipeline-Integration/CI-CD%20Pipeline%20Integration.md)**: Automating init, plan, and apply.
 7.  **[Testing Strategies](./07-Testing-Strategies/Testing%20Strategies.md)**: Linting, scanning, and unit testing.
 8.  **[Documentation Standards](./08-Documentation-Standards/Documentation%20Standards.md)**: Automated READMEs and variable help.
-9.  **[Security Practices](Security%20Practices.md)**: State protection and secret management.
-10. **[Compliance & Governance](Compliance%20and%20Governance.md)**: Policy as Code (OPA/Sentinel).
+9.  **[Security Practices](./09-Security-Practices/Security%20Practices.md)**: State protection and secret management.
+10. **[Compliance & Governance](./10-Compliance-and-Governance/Compliance%20and%20Governance.md)**: Policy as Code (OPA/Sentinel).
 
 ---
 
 ## 🏗️ Module Features
-- **50+ Total Quiz Questions**: Validating advanced concepts.
-- **Automated Workflows**: Visualized via Mermaid diagrams.
-- **Enterprise Patterns**: Real-world solutions for common infrastructure challenges.
+- **250+ Advanced Quiz Questions**: 25 questions per topic, validating expertise.
+- **60+ High-Value Interview Questions**: Prepared for senior DevOps roles.
+- **30+ Real-Life Scenarios**: Solving actual production infrastructure challenges.
+- **Interactive Formatting**: Collapsible quiz answers for an enhanced learning experience.
+- **Automated Workflows**: Visualized via detailed Mermaid diagrams.
 
 ---
 

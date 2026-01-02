@@ -61,154 +61,286 @@ Become job-ready by mastering these common interview questions and testing your 
 - B) `terraform check`
 - C) `terraform preview`
 - D) `terraform plan`
-*Answer: D*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: D**
+
+</details>
 
 **2. What is the default file extension for Terraform configuration files?**
 - A) `.tf`
 - B) `.yaml`
 - C) `.hcl`
 - D) `.json`
-*Answer: A*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: A**
+
+</details>
 
 **3. Which file contains the "Source of Truth" for your infrastructure?**
 - A) `main.tf`
 - B) `terraform.tfvars`
 - C) `terraform.tfstate`
 - D) `backend.tf`
-*Answer: C*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: C**
+
+</details>
 
 **4. How do you provision multiple similar resources without repeating code?**
 - A) Use the `duplicate` block
 - B) Use `count` or `for_each`
 - C) Copy-paste the code
 - D) Use `multi_resource`
-*Answer: B*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
 
 **5. Which command initializes the working directory?**
 - A) `terraform start`
 - B) `terraform setup`
 - C) `terraform init`
 - D) `terraform build`
-*Answer: C*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: C**
+
+</details>
 
 **6. What does `terraform fmt` do?**
 - A) Fast-forward migrations
 - B) Format your configuration files to standard HCL style
 - C) Fix logical errors in your code
 - D) Find meta-data
-*Answer: B*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
 
 **7. Which block is used to fetch information from an existing resource not managed by the current Terraform code?**
 - A) `resource`
 - B) `variable`
 - C) `output`
 - D) `data`
-*Answer: D*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: D**
+
+</details>
 
 **8. Where should you NOT store your secrets?**
 - A) Environment Variables
 - B) `terraform.tfvars` committed to Git
 - C) AWS Secrets Manager
 - D) Variables with `sensitive = true`
-*Answer: B*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
 
 **9. What is the purpose of a "Backend"?**
 - A) To host the application's database
 - B) To define where the state file is stored
 - C) To write the logic for the API
 - D) To configure the web server
-*Answer: B*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
 
 **10. Which command removes all infrastructure managed by the current configuration?**
 - A) `terraform delete`
 - B) `terraform remove`
 - C) `terraform cleanup`
 - D) `terraform destroy`
-*Answer: D*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: D**
+
+</details>
 
 **11. What is HCL short for?**
 - A) High-speed Command Language
 - B) HashiCorp Configuration Language
 - C) Hybrid Cloud Logic
 - D) Hyper-Converged Layout
-*Answer: B*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
 
 **12. If you want to prevent a resource from being deleted, which lifecycle argument do you use?**
 - A) `prevent_destroy = true`
 - B) `ignore_changes = all`
 - C) `no_deletion = true`
 - D) `immutable = true`
-*Answer: A*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: A**
+
+</details>
 
 **13. Which command is used to download provider plugins?**
 - A) `terraform get`
 - B) `terraform fetch`
 - C) `terraform init`
 - D) `terraform install`
-*Answer: C*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: C**
+
+</details>
 
 **14. What is a "Module"?**
 - A) A single line of code
 - B) A set of configuration files in a specific directory
 - C) A specific type of cloud resource
 - D) A Terraform provider
-*Answer: B*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
 
 **15. Which character is used for comments in HCL?**
 - A) `#` or `//`
 - B) `--`
 - C) `/* */`
 - D) Both A and C
-*Answer: D*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: D**
+
+</details>
 
 **16. How do you pass a variable value via the command line?**
 - A) `-var="key=value"`
 - B) `--variable "key=value"`
 - C) `-v="key=value"`
 - D) `set key=value`
-*Answer: A*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: A**
+
+</details>
 
 **17. What is "State Drift"?**
 - A) When the code is pushed to a new branch
 - B) When the real infrastructure differs from the state file
 - C) When the cloud provider updates their API
 - D) When the state file grows too large
-*Answer: B*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
 
 **18. Which argument ensures that a new resource is created before the old one is destroyed?**
 - A) `recreate_first = true`
 - B) `safe_update = true`
 - C) `create_before_destroy = true`
 - D) `update_sequence = "new-first"`
-*Answer: C*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: C**
+
+</details>
 
 **19. What is the scope of a variable defined in a module?**
 - A) Global (accessible everywhere)
 - B) Local to that specific module
 - C) Only accessible in `main.tf`
 - D) Only accessible in the root module
-*Answer: B*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
 
 **20. Which command syncs the local state with the actual real-world infrastructure?**
 - A) `terraform sync`
 - B) `terraform refresh`
 - C) `terraform update`
 - D) `terraform check`
-*Answer: B*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
 
 **21. What happens if you run `terraform apply` and it crashes?**
 - A) All resources are deleted automatically
 - B) The state file becomes completely useless
 - C) Part of your infrastructure may be deployed; you should fix issues and re-run
 - D) You must manually delete everything and start over
-*Answer: C*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: C**
+
+</details>
 
 **22. Which flag is used to automatically approve the plan during apply?**
 - A) `-y`
 - B) `--force`
 - C) `-auto-approve`
 - D) `-silent`
-*Answer: C*
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: C**
+
+</details>
 
 ---
 
