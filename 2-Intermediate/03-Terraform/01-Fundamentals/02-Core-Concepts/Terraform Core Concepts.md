@@ -10,8 +10,23 @@ Terraform consists of two main parts:
 - **Providers**: Plugins that bridge HCL to cloud APIs.
 - **Resources**: The actual objects you want to manage (EC2, S3, etc.).
 - **Modules**: Reusable packages of configurations.
+- **Dependency Graph**: A mathematical structure (Directed Acyclic Graph) used to determine resource order.
 
-## Visualizing Terraform Architecture
+## The Terraform Dependency Graph (DAG)
+Terraform builds a map of all resources in your configuration to understand their relationships. This is called a **Directed Acyclic Graph (DAG)**.
+
+### Why it matters:
+1. **Parallelization**: Resources with no dependencies are created simultaneously to save time.
+2. **Order of Operations**: It ensures a VPC exists before a Subnet is created within it.
+3. **Efficiency**: Only changes the parts of the graph that are modified.
+
+```mermaid
+graph TD
+    VPC[aws_vpc.main] --> SubnetA[aws_subnet.alpha]
+    VPC --> SubnetB[aws_subnet.beta]
+    SubnetA --> EC2[aws_instance.web]
+    EC2 --> EIP[aws_eip.static_ip]
+```
 ```mermaid
 graph LR
     User([User]) --> CLI[Terraform CLI]

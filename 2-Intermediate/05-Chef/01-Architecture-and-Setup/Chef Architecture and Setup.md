@@ -1,5 +1,3 @@
-# Chef Architecture and Setup
-
 Chef is an Infrastructure as Code (IaC) tool that uses a **Master-Agent (Client-Server)** architecture to manage server configurations at scale.
 
 ---

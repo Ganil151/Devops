@@ -4,17 +4,52 @@ Chef is a powerful configuration management tool that treats infrastructure as c
 
 ---
 
+## 🏗️ Architecture Overview
+
+Chef operates on a **Pull-Based**, **Master-Agent** architecture involving three main components.
+
+```mermaid
+graph LR
+    subgraph Workstation
+        Knife[Knife CLI]
+        Code[Cookbooks/Policy]
+    end
+
+    subgraph Chef_Server
+        API[Chef Server API]
+        Store[Bookshelf & DB]
+    end
+
+    subgraph Node
+        Client[Chef Client]
+        System[Operating System]
+    end
+
+    Knife -->|Uploads Policy| API
+    API -->|Stores State| Store
+    Client -->|Pulls Policy (HTTPS)| API
+    Client -->|Configures| System
+```
+
 ## 🗺️ The Chef Learning Path
 
 Follow these modules in order to master Chef:
 
-1.  **[01-Architecture-and-Setup](./01-Architecture-and-Setup/README.md)**: Master the Master-Agent model and the Workstation/Server/Node relationships.
-2.  **[02-Cookbooks-and-Recipes](./02-Cookbooks-and-Recipes/README.md)**: Deep dive into the Ruby DSL and core Resources (package, service, template).
-3.  **[03-Attributes-and-Ohai](./03-Attributes-and-Ohai/README.md)**: Dynamic configuration using system profiling data.
-4.  **[04-Environments-and-Data-Bags](./04-Environments-and-Data-Bags/README.md)**: Managing stage-based releases and sharing global configuration data.
-5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for technical roles.
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architectural challenges.
-7.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
+### **[1. Architecture & Setup](./01-Architecture-and-Setup/)**
+Deep dive into the core components.
+*   **[01-Workstation](The%20Developer's%20Command%20Center.md)**: Your development cluster (Knife, ChefDK).
+*   **[02-Chef-Server](./01-Architecture-and-Setup/02-Chef-Server/README.md)**: The central brain and system of record.
+*   **[03-Nodes](./01-Architecture-and-Setup/03-Nodes/README.md)**: The managed servers runs the convergence loop.
+
+### 2. Core Concepts
+*   **[02-Cookbooks-and-Recipes](./02-Cookbooks-and-Recipes/README.md)**: Deep dive into the Ruby DSL and core Resources (package, service, template).
+*   **[03-Attributes-and-Ohai](./03-Attributes-and-Ohai/README.md)**: Dynamic configuration using system profiling data.
+*   **[04-Environments-and-Data-Bags](./04-Environments-and-Data-Bags/README.md)**: Managing stage-based releases and sharing global configuration data.
+
+### 3. Mastery
+*   **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for technical roles.
+*   **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architectural challenges.
+*   **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 

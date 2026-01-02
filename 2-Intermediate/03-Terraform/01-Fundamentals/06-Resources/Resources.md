@@ -17,6 +17,47 @@ Meta-arguments allow you to modify how Terraform handles resources:
 - **depends_on**: Explicitly defines the order of creation.
 - **lifecycle**: Modifies behavior (e.g., `prevent_destroy`).
 
+## Implicit vs Explicit Dependencies
+
+### 1. Implicit Dependencies
+The most common way to link resources. Terraform "reads" the code and automatically figures out the order when one resource references an attribute of another.
+
+**Example**:
+```hcl
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+}
+
+resource "aws_subnet" "frontend" {
+  vpc_id = aws_vpc.main.id # Reference creates implicit dependency
+  cidr_block = "10.0.1.0/24"
+}
+```
+
+```mermaid
+graph LR
+    VPC[aws_vpc.main] ---|Automatic Link| Subnet[aws_subnet.frontend]
+```
+
+### 2. Explicit Dependencies
+Used when there is a dependency that Terraform *cannot* see through code references (e.g., an application requires an S3 bucket to exist before starting, but doesn't reference its ID in the config).
+
+**Example**:
+```hcl
+resource "aws_instance" "app" {
+  ami           = "ami-xyz"
+  instance_type = "t3.micro"
+
+  depends_on = [aws_s3_bucket.data] # Manual link
+}
+```
+
+```mermaid
+graph LR
+    S3[aws_s3_bucket.data] -.->|Manually Defined| App[aws_instance.app]
+    style S3 stroke-dasharray: 5 5
+```
+
 ---
 
 ## 🏗️ Real-Life Scenario: Blue/Green Cleanup

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/03-Terraform/04-Modules/03-Creating-Modules/Creating Modules.md",
+                "file": "2-Intermediate/03-Terraform/01-Fundamentals/01-What-is-Terraform/What is Terraform.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Creating Modules"
+              "title": "What is Terraform"
             }
           }
         ]
@@ -88,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 254.5,
+    "width": 200,
     "collapsed": true
   },
   "right": {
@@ -203,6 +203,20 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
+    "2-Intermediate/03-Terraform/01-Fundamentals/02-Core-Concepts/Terraform Core Concepts.md",
+    "2-Intermediate/05-Chef/01-Architecture-and-Setup/01-Workstation/The Developer's Command Center.md",
+    "2-Intermediate/03-Terraform/01-Fundamentals/01-What-is-Terraform/What is Terraform.md",
+    "2-Intermediate/05-Chef/01-Architecture-and-Setup/01-Workstation/assets/chef_workstation_architecture.png",
+    "2-Intermediate/05-Chef/01-Architecture-and-Setup/01-Workstation/assets",
+    "2-Intermediate/05-Chef/01-Architecture-and-Setup/Chef Architecture and Setup.md",
+    "2-Intermediate/05-Chef/01-Architecture-and-Setup/03-Nodes/README.md",
+    "2-Intermediate/05-Chef/01-Architecture-and-Setup/02-Chef-Server/README.md",
+    "2-Intermediate/05-Chef/01-Architecture-and-Setup/03-Nodes",
+    "2-Intermediate/05-Chef/01-Architecture-and-Setup/02-Chef-Server",
+    "2-Intermediate/05-Chef/01-Architecture-and-Setup/01-Workstation",
+    "2-Intermediate/04-Ansible/11-Custom-Modules/01-Module-Development-Basics/README.md",
+    "2-Intermediate/03-Terraform/04-Modules/03-Creating-Modules/Creating Modules.md",
+    "2-Intermediate/03-Terraform/01-Fundamentals/01-What-is-Terraform",
     "2-Intermediate/02-Automation/04-Automation-Best-Practices/05-Observability-and-Logging/README.md",
     "2-Intermediate/02-Automation/04-Automation-Best-Practices/04-Failure-Handling-and-Atomicity/README.md",
     "2-Intermediate/02-Automation/04-Automation-Best-Practices/03-Parameterization-and-Secrets-Management/README.md",
@@ -219,11 +233,6 @@
     "2-Intermediate/02-Automation/03-Python-for-DevOps/03-Working-with-Data-JSON-YAML/README.md",
     "2-Intermediate/02-Automation/03-Python-for-DevOps/02-System-and-File-Operations/README.md",
     "2-Intermediate/02-Automation/03-Python-for-DevOps/01-Python-Environment-and-Basics/README.md",
-    "2-Intermediate/02-Automation/03-Python-for-DevOps/05-Cloud-Automation-Boto3-Deep-Dive",
-    "2-Intermediate/02-Automation/03-Python-for-DevOps/04-API-Mastery-with-Requests",
-    "2-Intermediate/02-Automation/03-Python-for-DevOps/03-Working-with-Data-JSON-YAML",
-    "2-Intermediate/02-Automation/03-Python-for-DevOps/02-System-and-File-Operations",
-    "2-Intermediate/02-Automation/03-Python-for-DevOps/01-Python-Environment-and-Basics",
     "2-Intermediate/02-Automation/02-Advanced-Bash-Automation/README.md",
     "2-Intermediate/02-Automation/02-Advanced-Bash-Automation/05-Scaling-Bash-Multiplexing-Parallelism/README.md",
     "2-Intermediate/02-Automation/02-Advanced-Bash-Automation/04-Data-Wrangling-with-Sed-and-Awk/README.md",
@@ -231,14 +240,6 @@
     "2-Intermediate/02-Automation/02-Advanced-Bash-Automation/02-Advanced-Argument-Parsing-Getopts/README.md",
     "2-Intermediate/02-Automation/02-Advanced-Bash-Automation/01-Robust-Execution-and-Traps/README.md",
     "2-Intermediate/02-Automation/01-Shell-Scripting-Basics/README.md",
-    "2-Intermediate/02-Automation/01-Shell-Scripting-Basics/05-Robust-Scripting-and-Error-Handling/README.md",
-    "2-Intermediate/02-Automation/01-Shell-Scripting-Basics/04-Shell-Functions-and-Modularity/README.md",
-    "2-Intermediate/02-Automation/01-Shell-Scripting-Basics/03-Logic-and-Flow-Control/README.md",
-    "2-Intermediate/02-Automation/01-Shell-Scripting-Basics/02-Variables-and-Data-Streams/README.md",
-    "2-Intermediate/02-Automation/01-Shell-Scripting-Basics/01-Shell-Environment-and-Execution/README.md",
-    "2-Intermediate/01-Networking-VPC/10-Monitoring-and-Troubleshooting/05-Advanced-Monitoring-Tools/README.md",
-    "2-Intermediate/01-Networking-VPC/10-Monitoring-and-Troubleshooting/04-Common-Troubleshooting-Scenarios/README.md",
-    "2-Intermediate/01-Networking-VPC/10-Monitoring-and-Troubleshooting/03-Traffic-Mirroring-Deep-Packet-Inspection/README.md",
     "2-Intermediate/03-Terraform/03-State-Management/03-Remote-State-Backends/images/s3-dynamodb-architecture.png",
     "2-Intermediate/03-Terraform/Images/IaC.png",
     "2-Intermediate/16-FinOps/Images/cost-optimization.png",
@@ -248,7 +249,6 @@
     "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/ed0ce770fbc5b3547eaf0893bbdafc5ae4c217c3eb5d6bd3de284e33dea0d299.png",
     "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/e9c55b9e21882239981c901d230e3c665126f4b022424db543b3c96433d6988f.png",
     "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/dee49482150458f1366eaaa4beecb2c539532f9a19811d34f66f644917d96aaf.png",
-    "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/cb92e22fa0f3a35b58859964cc59d62bd6eaa25d0623f6b7a28373153ed2d5dc.png",
     "Untitled.canvas"
   ]
 }
