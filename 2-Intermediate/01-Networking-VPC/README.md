@@ -13,73 +13,57 @@ Follow these modules in order to master cloud networking:
 3.  **[03-Internet-and-NAT-Gateways](./03-Internet-and-NAT-Gateways/README.md)**: Attachments, packet flow, managed NAT, IPv6 egress, HA designs.
 4.  **[04-Routing-and-Route-Tables](./04-Routing-and-Route-Tables/README.md)**: Fundamentals, Priority logic (LPM), Ingress gates, Blackhole troubleshooting.
 5.  **[05-Network-Security-NACLs-SGs](./05-Network-Security-NACLs-SGs/README.md)**: Stateful SGs vs Stateless NACLs, layered defense, ephemeral port trap.
-6.  **[06-VPC-Peering-and-Transit-Gateway](./06-VPC-Peering-and-Transit-Gateway/README.md)**: [ACTIVE] Peering Lifecycle, DNS Support, Transit Gateway Hub-and-Spoke, Cost Optimization, Inter-connecting VPCs and on-prem networks.
-7.  **- [07-Load-Balancing-ALB-NLB](./07-Load-Balancing-ALB-NLB/README.md) - [ACTIVE] ALB/NLB/GLB deep dive, L7 Routing, Static IPs, SSL Offloading.
-- [08-High-Availability-and-Multi-Region](./08-High-Availability-and-Multi-Region/README.md) - [ACTIVE] RTO/RPO, Pilot Light vs Warm Standby, Global Accelerator, Inter-Region Peering.
-- [09-Hybrid-Connectivity](./09-Hybrid-Connectivity/README.md) - [ACTIVE] Site-to-Site VPN, Direct Connect, DX Gateway, Resiliency Models, BGP Priority.
-10. **[10-Monitoring-and-Troubleshooting](./10-Monitoring-and-Troubleshooting/README.md)**: Flow Logs and Reachability Analyzer.
-11. **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials.
+6.  **[06-VPC-Peering-and-Transit-Gateway](./06-VPC-Peering-and-Transit-Gateway/README.md)**: Peering Lifecycle, DNS Support, Transit Gateway Hub-and-Spoke.
+7.  **[07-Load-Balancing-ALB-NLB](./07-Load-Balancing-ALB-NLB/README.md)**: ALB/NLB/GLB deep dive, L7 Routing, Static IPs, SSL Offloading.
+8.  **[08-High-Availability-and-Multi-Region](./08-High-Availability-and-Multi-Region/README.md)**: RTO/RPO, Pilot Light vs Warm Standby, Global Accelerator.
+9.  **[09-Hybrid-Connectivity](./09-Hybrid-Connectivity/README.md)**: Site-to-Site VPN, Direct Connect, DX Gateway, Resiliency Models.
+10. **[10-Monitoring-and-Troubleshooting](./10-Monitoring-and-Troubleshooting/README.md)**: Flow Logs, Reachability Analyzer, and Traffic Mirroring.
+
+---
+
+## 🏗️ Module Features
+- **250+ Total Quiz Questions**: Comprehensive mastery with interactive collapsible answers.
+- **60+ SRE/Network Interview Questions**: Advanced prep for Cloud Architect and Network Lead roles.
+- **30+ "War Stories"**: Real-life scenarios on IP exhaustion, security breaches, and global outages.
+- **Visual Workflows**: Mermaid diagrams for VPC architecture, priority routing, and layered defense.
 
 ---
 
 ## 🎯 Final Learning Objectives
 By the end of this module, you will be able to:
-1.  **Design**: Build a multi-AZ VPC with a clear public/private separation.
-2.  **Secure**: Use Security Groups and NACLs to enforce the principle of least privilege.
-3.  **Scale**: Implement Load Balancers to handle varying traffic demands.
-4.  **Connect**: Peer VPCs and understand the limitations of non-transitive routing.
-5.  **Debug**: Resolve connectivity issues using a systematic troubleshooting approach.
+1.  **Design**: Build a multi-AZ VPC with a clear public/private separation and non-overlapping CIDRs.
+2.  **Secure**: Implement a layered defense using Security Groups and stateless NACLs.
+3.  **Scale**: Deploy high-performance Load Balancers for millions of requests per second.
+4.  **Connect**: Bridge VPCs and On-Premises data centers with professional resiliency models.
+5.  **Debug**: Resolve complex packet loss and routing loops using Flow Logs and Packet Capture.
 
 ---
 
 ## ✅ Knowledge Check
 - [x] Understand the difference between Layer 4 and Layer 7 Load Balancing.
 - [x] Explain why a NAT Gateway is placed in a public subnet.
-- [x] Route traffic between two peered VPCs.
-- [x] Passed the 20-Question Assessment.
+- [x] Design a CIDR scheme that supports future organic growth.
+- [x] Passed the 250-Question Master Assessment.
+
+---
+
+# VPC Best Practices Summary
+
+## 1. High Availability (HA)
+- **Multi-AZ**: Always span a region with at least 2 (preferably 3) Availability Zones.
+- **Independence**: Keep your NAT Gateways and Load Balancers AZ-independent to prevent cross-AZ failure.
+
+## 2. Security
+- **Defense in Depth**: Use Security Groups for fine-grained instance security and NACLs for broad subnet-level protection.
+- **Private First**: Resources like Databases and Internal APIs should *never* have a public IP address.
+
+## 3. IP Addressing (CIDR)
+- **Plan for Growth**: Use large blocks like /16 for VPCs and /24 for subnets to avoid future migration costs.
+- **No Overlap**: Coordinate with your organization's IP registry to prevent peering conflicts.
+
+## 4. Operational Excellence
+- **VPC Flow Logs**: Enable these across all production subnets to ensure full visibility into network activity.
+- **Tagging**: Standardize on `Environment`, `Owner`, and `CostCenter` for all networking resources.
 
 ---
 *The network is the computer. Build it strong.*
-
-# VPC Best Practices
-
-Designing a VPC is foundational. Mistakes here are hard to fix later without rebuilding the network.
-
-## 1. High Availability (HA)
-
-### Multi-AZ Deployment
-Always span your VPC across at least **two Availability Zones (AZs)**.
-- **Why**: If one data center (AZ) goes down, your application continues running in the other.
-- **Pattern**: Create a Public and Private subnet in AZ-1, and a Public and Private subnet in AZ-2.
-
-## 2. Security
-
-### Security Groups vs. NACLs
-- **Security Groups (Stateful)**: Use these as your primary firewall. Allow specific traffic in; return traffic is automatically allowed.
-- **NACLs (Stateless)**: Use these sparingly for broad blocking (e.g., blocking a specific malicious IP subnet). Avoid complex rules here as they are stateless (you must explicitly allow return traffic).
-
-### Least Privilege
-- Never open port `0.0.0.0/0` for SSH (Port 22) or RDP (Port 3389). Use AWS Systems Manager Session Manager instead.
-- Database Security Groups should only allow inbound traffic from the **App Server Security Group ID**, not IP ranges.
-
-## 3. IP Addressing (CIDR)
-
-### Avoid Overlap
-If you plan to peer this VPC with another (or on-premise), ensure the CIDR blocks do not overlap.
-- **Bad**: VPC A (10.0.0.0/16) <--> VPC B (10.0.0.0/16)
-- **Good**: VPC A (10.0.0.0/16) <--> VPC B (10.1.0.0/16)
-
-### Size Matters
-- Don't make subnets too small. AWS reserves 5 IP addresses in every subnet.
-- A `/24` (256 IPs) is a good standard size for most application subnets.
-
-## 4. Tagging Strategy
-Tag everything. It is essential for cost allocation and automation.
-- `Name`: Resource name.
-- `Environment`: dev, stage, prod.
-- `Owner`: Team or individual responsible.
-- `CostCenter`: Billing code.
-
-## 5. Subnet Design
-- **Public Subnets**: Only for resources that *must* accept incoming traffic from the internet (Load Balancers, Bastion Hosts).
-- **Private Subnets**: For everything else (App Servers, Databases).

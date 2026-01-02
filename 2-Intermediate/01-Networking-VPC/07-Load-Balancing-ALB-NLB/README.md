@@ -1,24 +1,15 @@
-# 07. Load Balancing (ALB, NLB, GLB)
+# Load Balancing (ALB, NLB, GLB)
 
 Distribute traffic, ensure high availability, and secure your applications with AWS Elastic Load Balancing. This module explores everything from simple health checks to the complex routing of microservices.
 
-## 📌 Key Concepts Covered
-- **ALB (Layer 7)**: Content-based routing, Path/Host rules, HTTP/HTTPS specialized.
-- **NLB (Layer 4)**: Millions of requests/sec, static IPs, ultra-low latency.
-- **GLB (Layer 3)**: Security appliance scaling and transparent inspection.
-- **Optimization**: Sticky sessions, connection draining, and SSL offloading.
+## 📚 Learning Path
 
----
-
-## 📂 Sub-Modules
-1.  **[ELB Types and Fundamentals](./01-ELB-Types-and-Fundamentals/README.md)**
-    - The "Traffic Cop" architecture: Listeners, Target Groups, and Health Checks.
-2.  **[ALB Deep Dive: L7 Routing](./02-ALB-Deep-Dive-L7-Routing/README.md)**
-    - Path/Host rules, WAF integration, and the "Microservices Umbrella."
-3.  **[NLB and GLB Architecture](./03-NLB-and-GLB-Architecture/README.md)**
-    - Low-latency TCP/UDP power and the GENEVE protocol for security.
-4.  **[Advanced ELB Optimization](./04-Advanced-ELB-Optimization/README.md)**
-    - Managing session state, zero-downtime draining, and ACM certificate offloading.
+| # | Topic | Description | Key Concepts |
+| :--- | :--- | :--- | :--- |
+| **01** | [**ELB Fundamentals**](./01-ELB-Types-and-Fundamentals/README.md) | The Traffic Cop | Listeners, Target Groups, Health Checks |
+| **02** | [**ALB Deep Dive**](./02-ALB-Deep-Dive-L7-Routing/README.md) | Layer 7 Intelligence | Path/Host Rules, WAF, Microservices |
+| **03** | [**NLB & GLB**](./03-NLB-and-GLB-Architecture/README.md) | High Performance/Security | Millions of RPS, Static IPs, Appliances |
+| **04** | [**Optimization**](./04-Advanced-ELB-Optimization/README.md) | Pro Management | Sticky Sessions, SSL Offloading, Draining |
 
 ---
 
@@ -47,4 +38,362 @@ graph TD
 ```
 
 ---
-[← Previous: Peering and TGW](../06-VPC-Peering-and-Transit-Gateway/README.md) | [Next: High Availability →](../08-High-Availability-and-Multi-Region/README.md)
+
+## 🏗️ Real-Life Scenarios
+
+### Scenario 1: The "Zombie Instance" Outage
+**Problem**: An application server's CPU spiked to 100%, causing the application to hang. However, the server was still responding to TCP pings.
+**Crisis**: Users were being directed to a broken server that never loaded. Error rates spiked to 40%.
+**Outcome**: The default health check was only "Is the port open?" which passed even though the application was "Zombie."
+**Solution**: Configure **Deep Health Checks**. The ELB now checks a specific `/health` endpoint that queries the database and ensures the app logic is actually functional.
+**Result**: The broken instance was marked "Unhealthy" within 30 seconds and traffic was automatically rerouted to healthy nodes.
+
+### Scenario 2: The "Flash Sale" Bottleneck
+**Problem**: A gaming company launched a new item during a stream. Traffic spiked from 10k to 1 million requests per second in 60 seconds.
+**Crisis**: Their **Application Load Balancer (ALB)** couldn't scale fast enough, leading to "503 Service Unavailable" errors for the first 5 minutes of the sale.
+**Outcome**: Thousands of angry customers and lost revenue.
+**Solution**: Switched the gaming backend to a **Network Load Balancer (NLB)**. NLBs are designed to handle millions of requests per second with ultra-low latency and "Instant Scaling" compared to the slower pre-warming process of an ALB.
+**Result**: Subsequent flash sales were handled with zero errors and sub-millisecond network latency.
+
+### Scenario 3: The "Shopping Cart" Desync
+**Problem**: An e-commerce site used local server memory to store user sessions (shopping carts).
+**Crisis**: Users would add items to their cart, click "Checkout," and find their cart empty because the Load Balancer had sent the second request to a different server.
+**Outcome**: Frustrated users and abandoned checkouts.
+**Solution**: Enabled **Sticky Sessions** (Session Affinity) on the Target Group. This ensures that a user is consistently routed to the same server for the duration of their session. (Long-term fix: Move session data to Redis/DynamoDB).
+**Result**: Users experienced a seamless shopping experience, and the company eventually migrated to a stateless architecture.
+
+---
+
+## ❓ Interview Questions
+
+1.  **When would you choose an NLB over an ALB?**
+    - *Answer*: Choose **NLB** for ultra-low latency (microseconds), the need for a static IP address, or handling volatile traffic that spikes in seconds (e.g., millions of requests per second). Choose **ALB** for complex HTTP routing (Path/Host based) and integrated security like WAF.
+2.  **Explain 'Connection Draining' (Deregistration Delay).**
+    - *Answer*: Connection Draining allows a load balancer to stop sending *new* requests to an instance that is being decommissioned or marked unhealthy, while allowing existing "In-flight" requests to complete gracefully. This prevents users from being abruptly disconnected.
+3.  **What is the purpose of a 'Target Group'?**
+    - *Answer*: A Target Group is a logical collection of resources (EC2 instances, Containers, IP addresses, or Lambda functions) that receive traffic from a load balancer. It defines the health check settings and the routing protocol (HTTP/HTTPS/TCP).
+4.  **What is 'SSL/TLS Offloading' and why is it beneficial?**
+    - *Answer*: It is the process of terminating the encrypted connection at the Load Balancer rather than the individual servers. This saves CPU resources on the backend servers and simplifies certificate management, as you only need to install the certificate on the ELB (via AWS Certificate Manager).
+5.  **How does 'Cross-Zone Load Balancing' work?**
+    - *Answer*: By default, each load balancer node only distributes traffic to targets in its own Availability Zone. With **Cross-Zone Load Balancing** enabled, each node distributes traffic across all healthy targets in *all* enabled AZs, ensuring a more even load distribution.
+6.  **Can an Internal Load Balancer be reached from the public Internet?**
+    - *Answer*: No. An Internal Load Balancer only has private IP addresses and is only accessible from within the VPC or from connected networks (VPN/Direct Connect). It is commonly used for internal service-to-service communication.
+
+---
+
+## 🧠 Comprehensive Quiz (25 Questions)
+
+**1. At which OSI layer does the Application Load Balancer (ALB) operate?**
+- A) Layer 3
+- B) Layer 4
+- C) Layer 7
+- D) Layer 2
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: C**
+
+</details>
+
+**2. True/False: The Network Load Balancer (NLB) provides a static Elastic IP address.**
+- A) True
+- B) False
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: A**
+
+</details>
+
+**3. Which ELB type is best for routing based on the URL path (e.g., /api vs /images)?**
+- A) Classic Load Balancer
+- B) Network Load Balancer
+- C) Application Load Balancer
+- D) Gateway Load Balancer
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: C**
+
+</details>
+
+**4. 'Sticky Sessions' are also known as:**
+- A) Session Draining
+- B) Session Affinity
+- C) Session Scaling
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**5. Which protocol is used by the Gateway Load Balancer (GLB) to pass traffic to appliances?**
+- A) HTTP
+- B) GENEVE
+- C) TCP
+- D) UDP
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**6. True/False: You must manually scale an Elastic Load Balancer.**
+- A) False (It is a managed, auto-scaling service)
+- B) True
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: A**
+
+</details>
+
+**7. 'Deregistration Delay' (Connection Draining) helps achieve:**
+- A) Faster scaling
+- B) Zero-downtime deployments and graceful shutdown
+- C) Better encryption
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**8. What happens if an instance fails its health check?**
+- A) It is deleted
+- B) The ELB stops sending traffic to it
+- C) The ELB restarts it
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**9. ALB supports which of the following?**
+- A) HTTP/2
+- B) WebSocket
+- C) HTTPS
+- D) All of the above
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: D**
+
+</details>
+
+**10. How does a client typically connect to an ALB (since it has dynamic IPs)?**
+- A) Via its public IP
+- B) Via its assigned DNS Name (CNAME)
+- C) Via SSH
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**11. Which ELB is 'Transparent' to the application?**
+- A) ALB
+- B) NLB
+- C) Gateway Load Balancer (GLB)
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: C**
+
+</details>
+
+**12. 'SNI' (Server Name Indication) allows an ALB to:**
+- A) Run faster
+- B) Host multiple SSL certificates on a single listener
+- C) Block hackers
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**13. True/False: Target Groups can contain Lambda functions.**
+- A) True (ALB only)
+- B) False
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: A**
+
+</details>
+
+**14. Which metric determines if an ALB is overloaded?**
+- A) CPU Usage
+- B) LCU (Load Balancer Capacity Units)
+- C) Color of the icon
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**15. 'Internal' vs 'Internet-Facing' determines:**
+- A) The price
+- B) Whether the ELB has public or private IPs
+- C) The speed
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**16. True/False: You can route traffic based on HTTP Headers in an ALB.**
+- A) True
+- B) False
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: A**
+
+</details>
+
+**17. Target Group type 'IP' allows you to load balance to:**
+- A) Bare metal servers
+- B) On-premises servers via VPN/Direct Connect
+- C) Containers (Fargate)
+- D) All of the above
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: D**
+
+</details>
+
+**18. What is the standard HTTP port for health checks?**
+- A) 22
+- B) 80
+- C) 443
+- D) Any port the application responds on
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: D**
+
+</details>
+
+**19. Classic Load Balancers (CLB) are:**
+- A) The latest tech
+- B) Legacy (Avoid using for new projects)
+- C) Only for Windows
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**20. True/False: You can use a WAF (Web Application Firewall) with an NLB.**
+- A) False (WAF is for L7/ALB)
+- B) True
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: A**
+
+</details>
+
+**21. 'Cross-Zone Load Balancing' is ALWAYS enabled for:**
+- A) ALB
+- B) NLB (Optional, defaults to disabled)
+- C) Classic
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: A**
+
+</details>
+
+**22. How many 'Listeners' can an ALB have?**
+- A) 1
+- B) Multiple (e.g., one for 80, one for 443)
+- C) 1000
+- D) 0
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**23. SSL/TLS termination happens at the:**
+- A) Subnet
+- B) Load Balancer (Listener)
+- C) Database
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**24. A Load Balancer is the _____ of a highly available application.**
+- A) Shield
+- B) Entry Point / Load Distributor
+- C) Disk
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
+
+**25. Without a Load Balancer, scaling requires updating _____ records manually.**
+- A) Bank
+- B) DNS
+- C) Employee
+- D) nothing
+
+<details>
+<summary>Show Answer</summary>
+
+**Answer: B**
+
+</details>
