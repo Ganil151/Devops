@@ -65,10 +65,10 @@ graph TD
 
 ### ⚙️ [2. Intermediate: Automation & Orchestration](./2-Intermediate/README.md)
 *Moving from manual hacks to scalable systems.*
-- **IaC**: Terraform and Infrastructure as Code patterns.
-- **Config Management**: Ansible, Chef, and Automated Runbooks.
-- **K8s**: Kubernetes fundamentals, Pods, Services, and Helm.
+- **Configuration Management**: Centralized hub for Terraform, Ansible, Chef, Helm, and Cloud-Init.
 - **CI/CD**: Advanced Jenkins, GitLab pipelines, and GitLab Runners.
+- **K8s**: Kubernetes fundamentals, Pods, Services, and orchestration.
+- **Observability**: Monitoring, logging, and performance optimization.
 
 ### 🏛️ [3. Advanced: Enterprise Excellence](./3-Advanced/README.md)
 *Building mission-critical, high-availability platforms.*
@@ -88,6 +88,7 @@ graph TD
 
 ## 🛠️ Global Resources & Tools
 
+- **[Configuration Tools](./2-Intermediate/03-Configuration-Tools/README.md)**: Centralized hub for all configuration management tools (Terraform, Ansible, Chef, Helm, Cloud-Init).
 - **[00-Resources](./00-Resources/README.md)**: A goldmine of technical books, interview guides, multi-language scripts, and project showcases.
 - **[Quizzes](./Quizzes/README.md)**: Test your knowledge at every level with our tiered quiz collection and the final **Master Quiz**.
 - **[Recommended Videos](./Recommended_Videos.md)**: A curated list of top-tier video lessons to reinforce your visual learning.
