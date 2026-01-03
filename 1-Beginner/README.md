@@ -24,25 +24,24 @@ Instead of jumping into complex tools, we follow a 6-phase journey that mimics r
 
 ### 🛠️ Phase 3: The Developer Workflow
 *Learn to manage code and build artifacts efficiently.*
-9. **[Git & GitHub](./09-Git-GitHub/README.md)**: Version control and collaboration.
-10. **[Maven & Build Tools](./10-Maven/README.md)**: Creating deployable artifacts (JARs/WARs).
+9. **[Maven & Build Tools](./09-Maven/README.md)**: Creating deployable artifacts (JARs/WARs).
 
 ### 🐋 Phase 4: Containerization & Web Services
 *Modern packaging and high-availability plumbing.*
-11. **[Docker Basics](./11-Docker/README.md)**: Eliminating the "it works on my machine" problem.
-12. **[Nginx Web Server](./12-Nginx/Nginx%20Web%20Server.md)**: Reverse proxies, load balancing, and security.
+10. **[Docker Basics](./10-Docker/README.md)**: Eliminating the "it works on my machine" problem.
+11. **[Nginx Web Server](./11-Nginx/Nginx%20Web%20Server.md)**: Reverse proxies, load balancing, and security.
 
 ### ☁️ Phase 5: Cloud & Operations
 *Moving to production and managing the budget.*
-13. **[Basic CI/CD](./13-Basic-CI-CD/README.md)**: Automating your first push-to-deploy pipelines.
-14. **[Cloud Foundations](./14-Cloud-Foundations/README.md)**: Introduction to AWS, Azure, and GCP.
-15. **[FinOps Fundamentals](./15-FinOps/README.md)**: Tracking and optimizing cloud costs.
+12. **[Basic CI/CD](./12-Basic-CI-CD/README.md)**: Automating your first push-to-deploy pipelines.
+13. **[Cloud Foundations](./13-Cloud-Foundations/README.md)**: Introduction to AWS, Azure, and GCP.
+14. **[FinOps Fundamentals](./14-FinOps/README.md)**: Tracking and optimizing cloud costs.
 
 ### 🤖 Phase 6: Specialized Tech
 *Leveraging AI and modern paradigms in DevOps.*
-16. **[Prompt Engineering](./16-Prompt-Engineering/DevOps%20Prompt%20Engineering%20-%20Beginner%20Level.md)**: Using AI as your automation wingman.
-17. **[Model Context Protocol (MCP)](./17-MCP/Model%20Context%20Protocol%20(MCP)%20-%20Beginner%20Level.md)**: Advanced AI tool integration.
-18. **[Blockchain Fundamentals](Blockchain%20DevOps%20Fundamentals.md)**: Nodes, ledgers, and decentralized ops.
+15. **[Prompt Engineering](./15-Prompt-Engineering/DevOps%20Prompt%20Engineering%20-%20Beginner%20Level.md)**: Using AI as your automation wingman.
+16. **[Model Context Protocol (MCP)](./16-MCP/Model%20Context%20Protocol%20(MCP)%20-%20Beginner%20Level.md)**: Advanced AI tool integration.
+17. **[Blockchain Fundamentals](./17-Blockchain/Blockchain%20DevOps%20Fundamentals.md)**: Nodes, ledgers, and decentralized ops.
 
 ---
 
@@ -50,7 +49,7 @@ Instead of jumping into complex tools, we follow a 6-phase journey that mimics r
 By the end of this level, you will be able to:
 1.  **Navigate**: Confidently manage Linux/Unix servers via CLI and SSH.
 2.  **Understand**: Explain how a React frontend talks to a Python/Java backend via REST APIs.
-3.  **Collaborate**: Use Git branching strategies to work in teams.
+3.  **Collaborate**: Use version control systems (see [Repository Management](../2-Intermediate/04-Repository-Management/README.md)).
 4.  **Containerize**: Build, ship, and run any application using Docker.
 5.  **Scale**: Deploy a load-balanced web service using Nginx and Cloud basics.
 6.  **Acknowledge Costs**: Explain why a cloud bill looks the way it does.
