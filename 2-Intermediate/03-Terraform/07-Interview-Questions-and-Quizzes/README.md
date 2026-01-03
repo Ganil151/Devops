@@ -6,73 +6,65 @@ Become job-ready by mastering these common interview questions and testing your 
 
 ## 🎤 Top 20 Terraform Interview Questions
 
-<b>1. </b>
+<b>1. What is the difference between Terraform and Ansible?</b>
 <details>
 <summary>Show Answer</summary>
-Answer: * Terraform is a declarative Infrastructure as Code (IaC) tool primarily for provisioning infrastructure, whereas Ansible is more focused on configuration management. Terraform manages the lifecycle of resources, while Ansible manages the software inside them.
+Answer: Terraform is a declarative Infrastructure as Code (IaC) tool primarily for provisioning infrastructure, whereas Ansible is more focused on configuration management. Terraform manages the lifecycle of resources, while Ansible manages the software inside them.
+</details>
+
+<b>2. What are the four core Terraform commands?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: `init` (initialize provider), `plan` (preview changes), `apply` (deploy resources), and `destroy` (remove resources).
+</details>
+
+<b>3. What is a Terraform Provider?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A Provider is a plugin that Terraform uses to interact with cloud providers (AWS, Azure, GCP), SaaS providers, or other APIs.
+</details>
+
+<b>4. What is the purpose of the Terraform State file?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: It is the "source of truth" that records the mapping between your code and the actual resources deployed in the cloud.
+</details>
+
+<b>5. How do you define variables in Terraform?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Using the `variable "name" { ... }` block. You can specify a type, default value, and description.
 </details>
 
 
-<b>2. </b>
+<b>6. What is State Locking and why is it important?</b>
 <details>
 <summary>Show Answer</summary>
-Answer: * `init` (initialize provider), `plan` (preview changes), `apply` (deploy resources), and `destroy` (remove resources).
+Answer: State locking prevents multiple users from running Terraform at the same time on the same state file, which could corrupt the state. Backends like S3 (with DynamoDB) or Terraform Cloud handle this automatically.
 </details>
 
-
-<b>3. </b>
+<b>7. What are Terraform Modules?</b>
 <details>
 <summary>Show Answer</summary>
-Answer: * A Provider is a plugin that Terraform uses to interact with cloud providers (AWS, Azure, GCP), SaaS providers, or other APIs.
+Answer: Modules are containers for multiple resources that are used together. They allow for code reuse, standardization, and better organization.
 </details>
 
-
-<b>4. </b>
+<b>8. When should you use count vs for_each?</b>
 <details>
 <summary>Show Answer</summary>
-Answer: * It is the "source of truth" that records the mapping between your code and the actual resources deployed in the cloud.
+Answer: `count` is better for creating multiple identical resources, while `for_each` is better for creating resources based on a map or set of strings, allowing for more specific configurations.
 </details>
 
-
-<b>5. </b>
+<b>9. How do you handle secrets in Terraform?</b>
 <details>
 <summary>Show Answer</summary>
-Answer: * Using the `variable "name" { ... }` block. You can specify a type, default value, and description.
+Answer: Use environment variables (`TF_VAR_name`), secret management services (AWS Secrets Manager, HashiCorp Vault), or mark variables as `sensitive = true`. Never commit secrets to version control.
 </details>
 
-
-<b>6. </b>
+<b>10. What are Data Sources in Terraform?</b>
 <details>
 <summary>Show Answer</summary>
-Answer: * State locking prevents multiple users from running Terraform at the same time on the same state file, which could corrupt the state. Backends like S3 (with DynamoDB) or Terraform Cloud handle this automatically.
-</details>
-
-
-<b>7. </b>
-<details>
-<summary>Show Answer</summary>
-Answer: * Modules are containers for multiple resources that are used together. They allow for code reuse, standardization, and better organization.
-</details>
-
-
-<b>8. </b>
-<details>
-<summary>Show Answer</summary>
-Answer: * `count` is better for creating multiple identical resources, while `for_each` is better for creating resources based on a map or set of strings, allowing for more specific configurations.
-</details>
-
-
-<b>9. </b>
-<details>
-<summary>Show Answer</summary>
-Answer: * Use environment variables (`TF_VAR_name`), secret management services (AWS Secrets Manager, HashiCorp Vault), or mark variables as `sensitive = true`. Never commit secrets to version control.
-</details>
-
-
-<b>10. </b>
-<details>
-<summary>Show Answer</summary>
-Answer: * Data sources allow Terraform to use information defined outside of Terraform, or defined by another separate Terraform configuration (e.g., fetching an existing VPC ID).
+Answer: Data sources allow Terraform to use information defined outside of Terraform, or defined by another separate Terraform configuration (e.g., fetching an existing VPC ID).
 </details>
 
 
@@ -151,34 +143,50 @@ Answer: * A centralized repository for providers and community-contributed modul
 ## 🧠 Terraform Knowledge Quiz (20+ Questions)
 
 <b>1. Which command shows what Terraform will do before making any changes?</b>
+- A) terraform init
+- B) terraform apply
+- C) terraform show
+- D) terraform plan
 <details>
 <summary>Show Answer</summary>
 Answer: D
 </details>
 
-
 <b>2. What is the default file extension for Terraform configuration files?</b>
+- A) .tf
+- B) .hcl
+- C) .yaml
+- D) .json
 <details>
 <summary>Show Answer</summary>
 Answer: A
 </details>
 
-
 <b>3. Which file contains the "Source of Truth" for your infrastructure?</b>
+- A) main.tf
+- B) variables.tf
+- C) terraform.tfstate
+- D) outputs.tf
 <details>
 <summary>Show Answer</summary>
 Answer: C
 </details>
 
-
 <b>4. How do you provision multiple similar resources without repeating code?</b>
+- A) Copy and paste the resource block
+- B) Use count or for_each
+- C) Write separate .tf files
+- D) Use terraform apply multiple times
 <details>
 <summary>Show Answer</summary>
 Answer: B
 </details>
 
-
 <b>5. Which command initializes the working directory?</b>
+- A) terraform start
+- B) terraform begin
+- C) terraform init
+- D) terraform setup
 <details>
 <summary>Show Answer</summary>
 Answer: C

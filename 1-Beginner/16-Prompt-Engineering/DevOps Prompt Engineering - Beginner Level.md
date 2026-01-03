@@ -1,9 +1,7 @@
 Prompt Engineering is the practice of crafting effective inputs (prompts) to get the most accurate and useful output from an AI model. For DevOps, this means faster script generation, cleaner documentation, and quicker troubleshooting.
 
 ---
-
 ## 1. The Anatomy of a Great Prompt
-
 A "Good" prompt gives the AI enough context and structure to succeed. Use the **RTC (Role-Task-Constraint)** framework.
 
 ### The RTC Framework
@@ -23,7 +21,6 @@ graph TD
 ```
 
 ---
-
 ## 2. Practical Example: Script Generation
 **Poor Prompt:** "Write a script to delete old logs."
 *Result: Might delete everything, uses wrong path, no safety checks.*
@@ -38,7 +35,6 @@ graph TD
 ---
 
 ## 3. Interview Questions (Beginner)
-
 1. **What is 'Zero-Shot' prompting?**
    - Giving a task to the AI without any examples of how to do it.
 2. **Why is 'Context' important in DevOps prompts?**
@@ -49,7 +45,6 @@ graph TD
 ---
 
 ## 4. Knowledge Quiz
-
 1. **What does RTC stand for in prompt engineering?**
    - A) Run-Time Command
    - B) Role-Task-Constraint

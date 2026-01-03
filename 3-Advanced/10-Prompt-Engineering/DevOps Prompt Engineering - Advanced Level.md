@@ -1,14 +1,10 @@
-# DevOps Prompt Engineering - Advanced Level
-
 At the enterprise level, Prompt Engineering transitions from manual interaction to **Agentic Systems** that can plan, execute, and self-correct across highly complex environments.
 
 ---
-
 ## 1. Agentic Workflows
-
 Unlike standard prompts, an "Agent" uses a loop to verify its own work and use tools (CLI, API) to achieve a goal.
 
-### The ReAct Pattern (Reason + Act)
+### The React Pattern (Reason + Act)
 1. **Thought**: AI analyzes the environment.
 2. **Action**: AI executes a command (e.g., `aws ec2 describe-instances`).
 3. **Observation**: AI reads the command result.
@@ -39,7 +35,6 @@ In large-scale DevOps, we use multiple AI agents with specific roles working tog
 - **Agent C (Manager)**: Finalizes the code only when B approves.
 
 ---
-
 ## 3. Practical Example: Autonomous Security Audit
 
 **Comprehensive Enterprise Prompt:**
@@ -54,15 +49,12 @@ In large-scale DevOps, we use multiple AI agents with specific roles working tog
 > **Pipeline for Review**: [Insert YAML Here]"
 
 ---
-
 ## 4. Advanced Concepts
-
 - **System Prompts**: Creating a "Ghost in the Machine" that governs every interaction in a DevOps platform.
 - **Self-Healing Infrastructure**: Prompts that triggered by Prometheus alerts to automatically scale or restart services.
 - **Cost Governance**: Agents that analyze cloud bills and proactively suggest `gcloud`/`aws` commands to delete orphaned resources.
 
 ---
-
 ## Interview Questions (Advanced)
 
 1. **What is the difference between an LLM and an 'Agentic' system?**
@@ -93,7 +85,6 @@ In large-scale DevOps, we use multiple AI agents with specific roles working tog
    - C) Managing the cloud budget
 
 ---
-
 ## Case Studies
 1. **Project Phoenix**: Building an LLM-based agent that automatically resolves 90% of VPC routing issues.
 2. **CyberShield**: AI-native SDLC that scans and closes PRs with security flaws before they reach the main branch.

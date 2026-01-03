@@ -28,7 +28,7 @@ Day-by-day roadmaps to launch your chosen monetization path in 30 days.
 ### 👤 [01-Profile-Building](./01-Profile-Building/) - Build Your Professional Brand
 Establish a powerful online presence that attracts opportunities, clients, and high-paying jobs.
 
-- **[README.md](./01-Profile-Building/README.md)** - Complete guide to LinkedIn, GitHub, personal website, content strategy, speaking, and networking
+- **[README.md](Establish%20Your%20DevOps%20Brand.md)** - Complete guide to LinkedIn, GitHub, personal website, content strategy, speaking, and networking
 
 ---
 

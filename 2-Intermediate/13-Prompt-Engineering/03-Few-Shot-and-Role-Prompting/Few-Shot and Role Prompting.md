@@ -1,9 +1,6 @@
-# 03: Few-Shot and Role Prompting
-
 At the intermediate level, we move beyond "Zero-Shot" (single question) to more controlled and reliable techniques.
 
 ## 🎭 Role-Based Prompting
-
 Assigning a specific persona to the AI narrows its probability space to the relevant domain knowledge.
 
 | Persona | Context | Use Case |
@@ -16,9 +13,7 @@ Assigning a specific persona to the AI narrows its probability space to the rele
 ---
 
 ## 📋 Few-Shot Prompting
-
 Few-shot prompting involves providing the model with a few examples of the desired input/output format before asking the final task. This is the most effective way to ensure consistent code/config generation.
-
 ### Example: Generating Ansible Tasks
 > "Task: Generate Ansible tasks to install and configure Nginx.
 > **Example 1**:

@@ -20,6 +20,25 @@ graph TD
 style Core fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
+### 🔄 Terraform Workflow
+
+```mermaid
+flowchart TD
+    A[Write HCL Code] --> B[terraform init]
+    B --> C[terraform plan]
+    C --> D{Review Changes}
+    D -->|Approve| E[terraform apply]
+    D -->|Reject| F[Modify Code]
+    F --> C
+    E --> G[Infrastructure Deployed]
+    G --> H[terraform destroy]
+    H --> I[Infrastructure Removed]
+    
+    style A fill:#e1f5fe
+    style E fill:#c8e6c9
+    style H fill:#ffcdd2
+```
+
 ---
 
 ## 🛠️ 2. Essential Terraform Commands

@@ -1,9 +1,6 @@
-# 02: Runbook Automation
-
 Intermediate prompt engineering allows you to bridge the gap between "messy reality" (Slack logs, terminal output) and "structured operations" (Runbooks).
 
 ## 📝 The "Incident-to-Runbook" Pattern
-
 When a production incident happens, the details are often scattered. You can use LLMs to consolidate this into a repeatable procedure.
 
 ### Prompt Strategy:
@@ -25,7 +22,6 @@ When a production incident happens, the details are often scattered. You can use
 ---
 
 ## 🤖 Automating the Post-Mortem
-
 You can also use LLMs to draft the initial version of a Post-Mortem (Root Cause Analysis).
 - **Inputs**: CloudWatch Alarms, Jira Tickets, Slack History.
 - **Output**: Timeline of events, Root cause, Action items.

@@ -49,7 +49,7 @@ Highly advanced cloud patterns, Multi-Cloud strategy, and Global Scale Networkin
 ### 09. [Advanced Automation](./09-Advanced-Automation/README.md)
 Enterprise patterns for **Ansible** and **Terraform**, focusing on modularity and state management.
 
-### 10. [Prompt Engineering](./10-Prompt-Engineering/README.md)
+### 10. [Prompt Engineering](DevOps%20Prompt%20Engineering%20-%20Advanced%20Level.md)
 DevOps-specific AI integration architectures, Chain-of-Thought prompting, and automated runbook generation.
 
 ### 11. [Model Context Protocol (MCP)](./11-MCP/README.md)
