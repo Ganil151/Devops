@@ -6,19 +6,19 @@ Deepen your Terraform knowledge from basic HCL to enterprise-grade state managem
 
 ## 🏛️ Terraform Fundamentals
 
-*   **[Terraform Crash Course for Absolute Beginners](https://www.youtube.com/watch?v=SLB_c_ayRmc)** by *TechWorld with Nana*
-    *   *Focus*: Core concepts, state management, and AWS setup.
-*   **[Terraform Basics - Official HashiCorp Guide](https://www.youtube.com/watch?v=h970Zabcde)**
-    *   *Focus*: The standard workflow: Init, Plan, Apply.
+*   **[Terraform Crash Course for Absolute Beginners](https://www.youtube.com/watch?v=kYgLOJ94G9I)** by *Kubesimplify*
+    *   *Focus*: Core concepts, state management, and building your first project (2024).
+*   **[Terraform for Beginners: AWS Infrastructure as Code](https://www.youtube.com/watch?v=1T-h4U9t3pY)** by *Telusko*
+    *   *Focus*: The standard workflow (Init, Plan, Apply) and HCL syntax basics (2024).
 
 ---
 
 ## 📦 Modules & Advanced HCL
 
-*   **[Terraform Complete Course - Step by Step](https://www.youtube.com/watch?v=tK9Oc6AEnR4)**
-    *   *Focus*: Detailed look at HCL syntax, variables, outputs, and modules.
-*   **[Managing Cloud Infrastructure with Terraform & AWS](https://www.youtube.com/watch?v=RR25S8UvPik)**
-    *   *Focus*: Real-world implementation patterns for complex cloud architectures.
+*   **[Terraform with AWS Full Course](https://www.youtube.com/watch?v=kC-sRj0Yg2s)** by *Anton Babel*
+    *   *Focus*: Mastering modules, variables, outputs, and multi-environment setups.
+*   **[AWS re:Invent 2024: Terraform Best Practices & Patterns](https://www.youtube.com/watch?v=YbQ2s_C5l_w)**
+    *   *Focus*: Enterprise-grade implementation patterns for complex cloud architectures.
 
 ---
 

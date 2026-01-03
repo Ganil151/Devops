@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/03-Terraform/01-Fundamentals/04-Configuration-Language/Expressions.md",
+                "file": "2-Intermediate/03-Terraform/01-Fundamentals/10-Basic-Examples/Basic Examples.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Expressions"
+              "title": "Basic Examples"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.5
+    "width": 259.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -202,12 +203,17 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
+    "3-Advanced/09-Advanced-Automation/Spacelift/Quiz.md",
+    "3-Advanced/09-Advanced-Automation/Spacelift/Interview-Questions.md",
+    "3-Advanced/09-Advanced-Automation/Spacelift/README.md",
+    "3-Advanced/09-Advanced-Automation/Spacelift",
+    "2-Intermediate/03-Terraform/10-Notes/Number of Ec2 Instances.md",
+    "2-Intermediate/03-Terraform/01-Fundamentals/04-Configuration-Language/Expressions.md",
     "devops_continuous_learning_development_1767405372014.png",
     "README.md",
     "2-Intermediate/03-Terraform/11-Labs",
     "00-Resources/reformat_all_quizzes.py",
     "2-Intermediate/03-Terraform/01-Fundamentals/03-Installation-and-Setup/README.md",
-    "2-Intermediate/03-Terraform/01-Fundamentals/04-Configuration-Language/Expressions.md",
     "2-Intermediate/03-Terraform/02-HCL-and-IaC/04-Configuration-Patterns/Configuration Patterns.md",
     "2-Intermediate/03-Terraform/02-HCL-and-IaC/03-Environment-Management/Environment Management.md",
     "2-Intermediate/03-Terraform/02-HCL-and-IaC/01-IaC-Principles/Infrastructure as Code (IaC) Principles.md",
@@ -230,15 +236,11 @@
     "1-Beginner/15-FinOps/02-Cloud-Billing-Basics/Lesson 02-Cloud Billing Basics.md",
     "1-Beginner/15-FinOps/01-Introduction/Introduction to FinOps.md",
     "2-Intermediate/01-Networking-VPC/08-High-Availability-and-Multi-Region/04-Multi-Region-Networking/README.md",
-    "2-Intermediate/01-Networking-VPC/05-Network-Security-NACLs-SGs/01-Security-Groups-Stateful/README.md",
-    "2-Intermediate/01-Networking-VPC/01-VPC-Fundamentals/09-Cloud-Provider-Comparison/README.md",
-    "2-Intermediate/03-Terraform/05-Best-Practices/11-Zero-Downtime-Deployment/README.md",
     "2-Intermediate/03-Terraform/01-Fundamentals/11-Provisioners",
     "2-Intermediate/05-Chef/01-Architecture-and-Setup/01-Workstation/assets/chef_workstation_architecture.png",
     "2-Intermediate/05-Chef/01-Architecture-and-Setup/01-Workstation/assets",
     "2-Intermediate/05-Chef/01-Architecture-and-Setup/03-Nodes",
     "2-Intermediate/05-Chef/01-Architecture-and-Setup/02-Chef-Server",
-    "2-Intermediate/05-Chef/01-Architecture-and-Setup/01-Workstation",
     "2-Intermediate/03-Terraform/03-State-Management/03-Remote-State-Backends/images/s3-dynamodb-architecture.png",
     "2-Intermediate/03-Terraform/Images/IaC.png",
     "2-Intermediate/16-FinOps/Images/cost-optimization.png",
@@ -247,7 +249,6 @@
     "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/f0647ce85f5d2f7aa43d1664bae09706055480e3aa50bd1cf68d0bce459c2b79.png",
     "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/ed0ce770fbc5b3547eaf0893bbdafc5ae4c217c3eb5d6bd3de284e33dea0d299.png",
     "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/e9c55b9e21882239981c901d230e3c665126f4b022424db543b3c96433d6988f.png",
-    "2-Intermediate/09-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/dee49482150458f1366eaaa4beecb2c539532f9a19811d34f66f644917d96aaf.png",
     "Untitled.canvas"
   ]
 }

@@ -38,6 +38,16 @@ terraform {
 
 ---
 
+## 🚀 Collaborative IaC (Spacelift)
+
+Standard Terraform works fine for individuals, but teams need a "Management Plane."
+**[Explore the Spacelift Module](./Spacelift/README.md)** covering:
+- **Stacks & Contexts**: Organizing enterprise state.
+- **Policy as Code**: Writing OPA/Rego guardrails.
+- **Drift Detection**: Automatic self-healing of infrastructure.
+
+---
+
 ## ⚙️ Advanced Ansible (Configuration Management)
 
 ### Role Structure Architecture

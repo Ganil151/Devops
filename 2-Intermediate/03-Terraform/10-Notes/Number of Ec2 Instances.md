@@ -3,10 +3,7 @@ Terraform you can scale the number of EC2 instances in **two main ways**:
 ---
 
 #### Option 1: Using `count`
-
 The simplest method.
-
-
 ```hcl
 resource "aws_instance" "my_ec2" {   
 count         = var.instance_count   

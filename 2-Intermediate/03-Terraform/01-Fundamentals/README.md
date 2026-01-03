@@ -13,7 +13,7 @@ Welcome to the Foundations of Terraform. This module covers everything you need 
 7.  **[Variables and Outputs](./07-Variables-and-Outputs/Variables%20and%20Outputs.md)**: Parameterizing and extracting data.
 8.  **[Data Sources](./08-Data-Sources/Data%20Sources.md)**: Fetching existing infrastructure info.
 9.  **[Terraform Workflow](./09-Terraform-Workflow/Terraform%20Workflow.md)**: Init, Plan, Apply, and Destroy lifecycle.
-10. **[Basic Examples](./10-Basic-Examples/README.md)**: Hands-on templates for S3 and EC2.
+10. **[Basic Examples](Basic%20Examples.md)**: Hands-on templates for S3 and EC2.
 11. **[Provisioners](Terraform%20Provisioners.md)**: File, remote-exec, local-exec, and best practices (use as last resort!).
 
 ---

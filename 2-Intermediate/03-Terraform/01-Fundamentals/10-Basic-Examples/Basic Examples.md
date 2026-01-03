@@ -1,7 +1,4 @@
-# Basic Examples
-
-Practical examples to get you started with Terraform. These snippets are designed to be "Copy-Paste-Ready" while teaching the fundamental building blocks of infrastructure.
-
+Practical examples to get you started with Terraform. These snippets are designed to be "<font color="#ffff00">Copy-Paste-Ready</font>" while teaching the fundamental building blocks of infrastructure.
 ## 📚 Example Catalog
 
 | # | Example | Key Concepts | Resources Used |
@@ -12,7 +9,6 @@ Practical examples to get you started with Terraform. These snippets are designe
 | **04** | **[Local Files](#4-manipulating-local-files)** | Managing non-cloud resources | `local_file` |
 
 ---
-
 ## 🏗️ Resource Dependency Graph
 
 ```mermaid
@@ -27,7 +23,6 @@ style SG fill:#f9f,stroke:#333
 ```
 
 ---
-
 ## 🏗️ Real-Life Scenarios
 
 ### Scenario 1: The "Copy-Paste" Disaster
@@ -36,14 +31,12 @@ style SG fill:#f9f,stroke:#333
 **Outcome**: The deployment pipeline was blocked for 2 hours while they manually changed the code.
 **Solution**: Use the **Random Provider**. Add a `random_id` resource and append the hex result to the bucket name to guarantee uniqueness across the globe.
 **Result**: The team standardized on "Dynamic Naming" for all shared resources, eliminating naming conflicts forever.
-
 ### Scenario 2: The "Forgot the Firewall" Outage
 **Problem**: A developer deployed a "Basic EC2" from a tutorial.
 **Crisis**: They forgot to attach a Security Group. The instance was running, but they couldn't SSH into it or reach the web server.
 **Outcome**: The developer wasted 3 hours thinking the AMI was broken.
 **Solution**: Use **Implicit Dependencies**. By referencing `vpc_security_group_ids = [aws_security_group.web.id]`, Terraform ensures the firewall is created FIRST and attached correctly.
 **Result**: The team learned that "Standalone" resources are rare; infrastructure is a web of dependencies.
-
 ### Scenario 3: The "Accidental Deletion" Gameday
 **Problem**: During a training exercise, a junior admin ran `terraform destroy` on a "Basic Example" folder.
 **Crisis**: They didn't realize that a critical production database was (improperly) managed in that same folder.
