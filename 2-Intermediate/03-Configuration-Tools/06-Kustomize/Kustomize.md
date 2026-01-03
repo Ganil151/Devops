@@ -1,4 +1,4 @@
-# 🔧 Kustomize: Kubernetes Native Configuration Management
+# 🔧Kubernetes Native Configuration Management
 
 Kustomize is a Kubernetes-native configuration management tool that lets you customize raw, template-free YAML files for multiple purposes, leaving the original YAML untouched.
 

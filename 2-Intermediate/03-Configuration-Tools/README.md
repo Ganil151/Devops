@@ -20,7 +20,7 @@ This directory contains all configuration management and Infrastructure as Code 
 
 ### 📦 Container & Application Configuration
 - **[04-Helm](./04-Helm/README.md)**: Kubernetes package manager and templating
-- **[06-Kustomize](./06-Kustomize/README.md)**: Kubernetes native configuration management
+- **[06-Kustomize](Kustomize.md)**: Kubernetes native configuration management
 
 ### 🏠 Development Environment Management
 - **[10-Vagrant](./10-Vagrant/README.md)**: Development environment automation

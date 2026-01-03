@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/03-Configuration-Tools/06-Kustomize/README.md",
+                "file": "COMPREHENSIVE_ANALYSIS_REPORT.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "COMPREHENSIVE_ANALYSIS_REPORT"
             }
           }
         ]
@@ -203,6 +203,12 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
+    "4-Professional-Development/05-Niche-Roles/COMPREHENSIVE_GUIDE.md",
+    "4-Professional-Development/04-OpenSource-Tools/COMPREHENSIVE_GUIDE.md",
+    "ASSESSMENT_REPORT.md",
+    "4-Professional-Development/03-Content-Education/COMPREHENSIVE_GUIDE.md",
+    "4-Professional-Development/02-Consulting-Services/COMPREHENSIVE_GUIDE.md",
+    "2-Intermediate/03-Configuration-Tools/06-Kustomize/Kustomize.md",
     "2-Intermediate/03-Configuration-Tools/05-Cloud-Init/06-Real-Life-Scenarios/README.md",
     "2-Intermediate/03-Configuration-Tools/05-Cloud-Init/06-Real-Life-Scenarios",
     "2-Intermediate/03-Configuration-Tools/05-Cloud-Init/05-Interview-Questions-and-Quiz/README.md",
@@ -222,7 +228,6 @@
     "2-Intermediate/03-Configuration-Tools/08-SaltStack/README.md",
     "2-Intermediate/03-Configuration-Tools/07-Puppet/README.md",
     "4-Professional-Development/01-Profile-Building/Establish Your DevOps Brand.md",
-    "2-Intermediate/03-Configuration-Tools/06-Kustomize/README.md",
     "2-Intermediate/03-Configuration-Tools/11-Pulumi",
     "2-Intermediate/03-Configuration-Tools/10-Vagrant",
     "2-Intermediate/03-Configuration-Tools/09-Packer",
@@ -234,12 +239,7 @@
     "2-Intermediate/03-Configuration-Tools/04-Helm/03-Intermediate-Helm/README.md",
     "2-Intermediate/03-Configuration-Tools/04-Helm/01-Helm-Fundamentals/README.md",
     "2-Intermediate/03-Configuration-Tools/04-Helm/Youtube_Lessons.md",
-    "2-Intermediate/03-Configuration-Tools/04-Helm/README.md",
-    "2-Intermediate/03-Configuration-Tools/04-Helm/LEARNING_PATH_SUMMARY.md",
     "2-Intermediate/03-Configuration-Tools/03-Chef/01-Architecture-and-Setup/01-Workstation/assets/chef_workstation_architecture.png",
-    "2-Intermediate/03-Configuration-Tools/03-Chef/01-Architecture-and-Setup/03-Nodes/README.md",
-    "2-Intermediate/03-Configuration-Tools/03-Chef/01-Architecture-and-Setup/02-Chef-Server/README.md",
-    "2-Intermediate/03-Configuration-Tools/03-Chef/01-Architecture-and-Setup/01-Workstation/The Developer's Command Center.md",
     "2-Intermediate/03-Configuration-Tools/01-Terraform/03-State-Management/03-Remote-State-Backends/images/s3-dynamodb-architecture.png",
     "2-Intermediate/03-Configuration-Tools/01-Terraform/Images/IaC.png",
     "2-Intermediate/13-FinOps/Images/cost-optimization.png",
