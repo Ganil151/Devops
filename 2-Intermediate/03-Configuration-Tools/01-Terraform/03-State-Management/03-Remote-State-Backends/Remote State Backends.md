@@ -30,6 +30,7 @@ sequenceDiagram
 ## 🏗️ Real-Life Scenarios
 
 ### Scenario 1: The "Manual Bucket Removal" Disaster
+
 **Problem**: An over-eager engineer cleaned up what they thought was an "unused" S3 bucket named `tf-state-123`.
 **Crisis**: This bucket actually contained the state file for the company's entire production network.
 **Outcome**: Terraform could no longer plan or apply. The link between code and reality was destroyed.
@@ -37,6 +38,7 @@ sequenceDiagram
 **Result**: The team recovered the state file in 10 minutes from the S3 version history, avoiding a manual "import-everything" nightmare.
 
 ### Scenario 2: The "Cross-Cloud" Reliability Hit
+
 **Problem**: A company with a "Multi-Cloud" strategy used an AWS S3 backend for their Azure infrastructure.
 **Crisis**: AWS had a regional outage in `us-east-1` (where the bucket lived). 
 **Outcome**: Even though Azure was 100% fine, the team could NOT scale or update their Azure clusters because Terraform couldn't read the state from AWS.
@@ -44,6 +46,7 @@ sequenceDiagram
 **Result**: The team migrated to Azure Blob storage for state, ensuring their management layer shared the same fate as their infrastructure.
 
 ### Scenario 3: The "Dynamic Workspace" Scaling Issue
+
 **Problem**: A company was managing 100 identical customer environments. They tried to hardcode 100 different backend blocks.
 **Crisis**: The HCL became unmaintainable, and developers frequently made copy-paste errors, creating resources in the wrong customer's account.
 **Outcome**: Data leak risk and high operational overhead.
