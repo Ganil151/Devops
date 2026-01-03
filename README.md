@@ -25,6 +25,7 @@ Our curriculum is divided into four distinct tiers, each building upon the previ
 
 ```mermaid
 graph TD
+    classDef default color:#000;
     B[Beginner: Foundations] --> I[Intermediate: Automation]
     I --> A[Advanced: Enterprise]
     A --> P[Professional: Monetization]
@@ -45,10 +46,10 @@ graph TD
     P
     end
 
-    style B fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px
-    style I fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px
-    style A fill:#fff3e0,stroke:#f6ad55,stroke-width:2px
-    style P fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style B fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px,color:#000
+    style I fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000
+    style A fill:#fff3e0,stroke:#f6ad55,stroke-width:2px,color:#000
+    style P fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
 ```
 
 ---
