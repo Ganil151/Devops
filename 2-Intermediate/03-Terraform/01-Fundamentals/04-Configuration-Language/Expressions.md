@@ -370,7 +370,7 @@ Operators are special symbols used to perform operations on values (known as **O
 | :--- | :--- | :--- |
 | Arithmetic | `+`, `-`, `*`, `/`, `%` | Basic mathematical operations. |
 | Equality | `==`, `!=` | Logic checks (Equal/Not Equal). |
-| Comparison | `>`, `>=`, `<`, `<=` | Numeric relationships. |
+| Comparison | `&gt;`, `&gt;=`, `&lt;`, `&lt;=` | Numeric relationships. |
 | Logical | `&&`, `||`, `!` | Boolean logic (AND, OR, NOT). |
 
 #### 🏗️ Terraform Block Example (Math & Logic)
@@ -479,8 +479,8 @@ graph TD
 | Result Type | Syntax Template | Result |
 | :--- | :--- | :--- |
 | List | `[for item in var.list : upper(item)]` | A list of modified items. |
-| Map | `{for k, v in var.map : k => upper(v)}` | A map of key-value pairs. |
-| Filtering | `[for i in var.list : i if i > 10]` | A subset of the original list. |
+| Map | `{for k, v in var.map : k =&gt; upper(v)}` | A map of key-value pairs. |
+| Filtering | `[for i in var.list : i if i &gt; 10]` | A subset of the original list. |
 
 ---
 
@@ -695,28 +695,22 @@ graph TD
 ---
 
 ## 📝 9. Version Constraints (Production Locking)
-
 Version constraints are used to ensure that a project is only used with compatible versions of the Terraform CLI and provider plugins. Without constraints, a new version release could introduce breaking changes that destroy or corrupt your infrastructure.
-
 #### 📊 Constraint Operators
 
 | Operator | Name | Logic | Example |
 | :--- | :--- | :--- | :--- |
 | `=` | Exact | Only this specific version. | `= 1.5.0` |
 | `!=` | Exclude | Anything EXCEPT this version. | `!= 1.5.1` |
-| `>`, `>=` | Greater | Newer than (or equal to). | `>= 1.0.0` |
-| `<`, `<=` | Lesser | Older than (or equal to). | `<= 2.0.0` |
-| `~>` | Pessimistic | Allows only the rightmost component to increment. | `~> 1.5.0` |
-
+| `&gt;`, `&gt;=` | Greater | Newer than (or equal to). | `&gt;= 1.0.0` |
+| `&lt;`, `&lt;=` | Lesser | Older than (or equal to). | `&lt;= 2.0.0` |
+| `~&gt;` | Pessimistic | Allows only the rightmost component to increment. | `~&gt; 1.5.0` |
 #### 🏗️ The Pessimistic Constraint (`~>`) Deep Dive
 The `~>` operator is the **Production Standard**. It allows for safe patch updates (bug fixes) while blocking potentially breaking minor or major updates.
-
 - `~> 1.5.0`: Allows `1.5.1`, `1.5.99`, but **BLOCKS** `1.6.0`.
 - `~> 1.5`: Allows `1.6.0`, `1.9.0`, but **BLOCKS** `2.0.0`.
-
 #### 🏗️ Terraform Block Example (Production Standard)
 You can combine multiple constraints using a comma (which acts as an `AND` logic).
-
 ```hcl
 terraform {
   # CLI: Require at least 1.5.0, but stay within the 1.x branch
@@ -736,12 +730,12 @@ terraform {
 
 ```mermaid
 graph LR
-    V[Version Release: 1.5.2] --> C1{">= 1.5.0"}
-    C1 -- Pass --> C2{"~> 1.5.0"}
+    V[Version Release: 1.5.2] --> C1{"Version >= 1.5.0"}
+    C1 -- Pass --> C2{"Version ~> 1.5.0"}
     C2 -- Pass --> Install[Allow Installation]
 
-    V2[Version Release: 1.6.0] --> C3{">= 1.5.0"}
-    C3 -- Pass --> C4{"~> 1.5.0"}
+    V2[Version Release: 1.6.0] --> C3{"Version >= 1.5.0"}
+    C3 -- Pass --> C4{"Version ~> 1.5.0"}
     C4 -- Fail --> Block[Block Installation]
 
     style Install fill:#c8e6c9
@@ -751,7 +745,6 @@ graph LR
 ---
 
 ## 🛠️ 10. Built-in Functions
-
 Terraform provides a rich library of 100+ built-in functions to transform and manipulate data. These are essential for handling complex logic that literals and operators cannot address.
 
 #### 📊 Function Categories
@@ -842,7 +835,6 @@ resource "aws_instance" "app" {
   }
 }
 ```
-
 ### 🛡️ Scenario 2: Dynamic IAM Baseline
 **Problem**: Security requires that every "Admin" user gets a specific set of high-privilege permissions, while "Developers" get a restricted set. The users are provided in a single list with mixed roles.
 
@@ -885,7 +877,6 @@ locals {
 ```
 
 ---
-
 ## ❓ Interview Questions (Strategic Deep Dive)
 
 1.  **Why should you avoid using `count` for resources that are identified by names?**
@@ -953,28 +944,17 @@ Answer: <b>$${var.name}</b> or <b>\${var.name}</b>
 Answer: <b>Indented Heredoc</b> (It strips leading whitespace based on the closing delimiter)
 </details>
 
-
-
-
 <b>7. In template directives, what does <code>%{~ }</code> do?</b>
 <details>
 <summary>Show Answer</summary>
 Answer: <b>Strips whitespace</b> before the marker.
 </details>
-
-
-
-
 ### Part 3: Operators & Logic
-
 <b>8. What is the result of <code>true || false</code>?</b>
 <details>
 <summary>Show Answer</summary>
 Answer: <b>true</b>
 </details>
-
-
-
 
 <b>9. Which operator is used for inequality?</b>
 <details>
@@ -982,57 +962,35 @@ Answer: <b>true</b>
 Answer: <b>!=</b>
 </details>
 
-
-
-
 <b>10. In <code>A ? B : C</code>, which part is returned if A is false?</b>
 <details>
 <summary>Show Answer</summary>
 Answer: <b>C</b>
 </details>
-
-
-
-
 ### Part 4: For & Splat
-
 <b>11. What symbol is used in a "Splat" expression?</b>
 <details>
 <summary>Show Answer</summary>
 Answer: <b>[*]</b>
 </details>
 
-
-
-
 <b>12. How do you convert a List to a Map using a 'for' expression?</b>
 <details>
 <summary>Show Answer</summary>
-Answer: <b>{ for item in list : key => value }</b>
+Answer: <b>{ for item in list : key =&gt; value }</b>
 </details>
-
-
-
 
 <b>13. What does <code>...</code> do at the end of a 'for' map expression?</b>
 <details>
 <summary>Show Answer</summary>
 Answer: <b>Groups items by key</b> (Creates a map of lists)
 </details>
-
-
-
-
 ### Part 5: Functions & Blocks
-
 <b>14. Which function combines two maps into one?</b>
 <details>
 <summary>Show Answer</summary>
 Answer: <b>merge()</b>
 </details>
-
-
-
 
 <b>15. Which function is used to read the content of a file on disk?</b>
 <details>
@@ -1046,28 +1004,19 @@ Answer: <b>file()</b>
 Answer: <b>ingress.value</b>
 </details>
 
-
-
-
 <b>17. Which function turns a multi-level list into a single-level list?</b>
 <details>
 <summary>Show Answer</summary>
 Answer: <b>flatten()</b>
 </details>
-
-
-
-
 ### Part 6: Versioning & Advanced
 
-<b>18. What does <code>>= 1.0.0, < 2.0.0</code> mean?</b>
+<b>18. What does <code>&gt;= 1.0.0, &lt; 2.0.0</code> mean?</b>
+
 <details>
 <summary>Show Answer</summary>
 Answer: <b>Version 1.x only</b> (Greater than or equal to 1.0, but strictly less than 2.0)
 </details>
-
-
-
 
 <b>19. Which command is used to test expressions interactively?</b>
 <details>
@@ -1075,17 +1024,11 @@ Answer: <b>Version 1.x only</b> (Greater than or equal to 1.0, but strictly less
 Answer: <b>terraform console</b>
 </details>
 
-
-
-
 <b>20. What is <code>path.module</code>?</b>
 <details>
 <summary>Show Answer</summary>
 Answer: <b>The filesystem path</b> to the module directory where the expression is defined.
 </details>
-
-
-
 
 <b>21. Can you use <code>count</code> and <code>for_each</code> in the same resource block?</b>
 <details>
