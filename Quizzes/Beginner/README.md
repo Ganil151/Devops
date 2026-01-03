@@ -84,7 +84,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 04: Version Control (Git)
-**Study Resource**: [Git Fundamentals](../../1-Beginner/04-Git-GitHub/Git-Fundamentals/README.md)
+**Study Resource**: [Git Fundamentals](../../1-Beginner/09-Git-GitHub/README.md)
 
 9. Which tool is commonly used for version control in DevOps?
 - A) Git
@@ -101,7 +101,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 05: Data Formats (YAML & JSON)
-**Study Resource**: [Data Formats](../../1-Beginner/05-Data-Formats/README.md)
+**Study Resource**: [Data Formats](../../1-Beginner/06-Data-Formats/README.md)
 
 11. In YAML, how are lists (arrays) represented?
 - A) Using curly braces `{}`
@@ -118,7 +118,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 06: Docker Basics
-**Study Resource**: [Docker Basics](../../1-Beginner/06-Docker/README.md)
+**Study Resource**: [Docker Basics](../../1-Beginner/11-Docker/README.md)
 
 13. What is a container in DevOps?
 - A) A virtual machine
@@ -135,7 +135,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 07: Maven & Build Tools
-**Study Resource**: [Maven Basics](../../1-Beginner/07-Maven/README.md)
+**Study Resource**: [Maven Basics](../../1-Beginner/10-Maven/README.md)
 
 15. Which file is the primary configuration file for a Maven project?
 - A) package.json
@@ -152,7 +152,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 08: Basic CI/CD
-**Study Resource**: [CI/CD Basics](../../1-Beginner/08-Basic-CI-CD/README.md)
+**Study Resource**: [CI/CD Basics](../../1-Beginner/13-Basic-CI-CD/README.md)
 
 17. What does CI/CD stand for?
 - A) Continuous Integration/Continuous Delivery
@@ -169,7 +169,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 09: Cloud Foundations
-**Study Resource**: [Cloud Foundations](../../1-Beginner/09-Cloud-Foundations/README.md)
+**Study Resource**: [Cloud Foundations](../../1-Beginner/14-Cloud-Foundations/README.md)
 
 19. What is the fundamental security principle of "Least Privilege"?
 - A) Giving users access to everything by default

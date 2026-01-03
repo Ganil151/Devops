@@ -37,7 +37,7 @@ Production-ready blueprints and complex application stacks.
 ---
 
 ## 🎯 Navigating the Hub
-This hub exists alongside the main **[DevOps Roadmap](../../README.md)**. Use these files as you progress through the Beginner, Intermediate, and Advanced levels to see real-world implementation examples.
+This hub exists alongside the main **[DevOps Roadmap](../README.md)**. Use these files as you progress through the Beginner, Intermediate, and Advanced levels to see real-world implementation examples.
 
 ---
 **Standard**: All scripts are provided as enterprise-grade templates. Use with caution in production and always test in a sandbox environment.

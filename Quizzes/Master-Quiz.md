@@ -95,8 +95,8 @@ This master quiz covers essential concepts from across the entire DevOps reposit
 
 ## 🔗 Next Steps
 If you struggled with any section, return to the respective module:
-- **[Beginner Level](../../1-Beginner/)**
-- **[Intermediate Level](../../2-Intermediate/)**
-- **[Advanced Level](../../3-Advanced/)**
+- **[Beginner Level](../1-Beginner/)**
+- **[Intermediate Level](../2-Intermediate/)**
+- **[Advanced Level](../3-Advanced/)**
 
 *Congratulations on completing the Master Quiz! Continuous learning is the heart of DevOps.*
