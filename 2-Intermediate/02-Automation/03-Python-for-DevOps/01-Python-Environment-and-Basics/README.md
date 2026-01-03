@@ -13,8 +13,8 @@ graph TD
     Logic --> APIs[REST APIs: requests]
     Logic --> Config[Config: PyYAML/JSON]
     Logic --> OS[System: os/subprocess]
-    
-    Cloud -.-> Infra[Cloud Infrastructure]
+
+Cloud -.-> Infra[Cloud Infrastructure]
     APIs -.-> Services[Third-party Services]
     style Logic fill:#f9f,stroke:#333,stroke-width:2px
 ```

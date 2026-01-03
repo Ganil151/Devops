@@ -143,226 +143,150 @@ This guide covers Azure security services for identity management and threat pro
    - **AuthN:** Who are you? (Login)
    - **AuthZ:** What can you do? (Permissions/RBAC)
 
-### Advanced Level
-7. **What is Azure Key Vault used for?**
-   - Securely storing secrets (passwords), keys (encryption keys), and certificates.
-8. **What is Microsoft Defender for Cloud?**
-   - A Cloud Security Posture Management (CSPM) and Cloud Workload Protection Platform (CWPP). Monitors security state and detects threats.
-9. **Explain "Just-In-Time" (JIT) VM Access.**
-   - A Defender for Cloud feature that locks down management ports (22/3389) and opens them only on request for a limited time window.
-10. **What is Azure Sentinel?**
-    - A cloud-native SIEM (Security Information and Event Management) and SOAR solution for security analytics and threat intelligence.
-
----
-
-## Quiz: Azure Security
-
+<b>7. </b>
 <details>
-<summary><b>1. Entra ID was formerly known as:</b></summary>
-A) Azure Active Directory<br>
-B) Azure Identity<br>
-C) Windows Server AD<br>
-D) Azure Passport<br>
-<br>
-<b>Answer: A) Azure Active Directory</b>
+<summary>Show Answer</summary>
+Answer: A) Azure Active Directory</b>
 </details>
 
+
+<b>2. Which service stores secrets?</b>
 <details>
-<summary><b>2. Which service stores secrets?</b></summary>
-A) Key Vault<br>
-B) Storage Account<br>
-C) SQL DB<br>
-D) VM<br>
-<br>
-<b>Answer: A) Key Vault</b>
+<summary>Show Answer</summary>
+Answer: A) Key Vault</b>
 </details>
 
+
+<b>3. Managed Identities remove the need for:</b>
 <details>
-<summary><b>3. Managed Identities remove the need for:</b></summary>
-A) Storing credentials in code<br>
-B) Passwords entirely<br>
-C) RBAC<br>
-D) Identity<br>
-<br>
-<b>Answer: A) Storing credentials in code</b>
+<summary>Show Answer</summary>
+Answer: A) Storing credentials in code</b>
 </details>
 
+
+<b>4. RBAC stands for:</b>
 <details>
-<summary><b>4. RBAC stands for:</b></summary>
-A) Role-Based Access Control<br>
-B) Rule-Based Access Control<br>
-C) Remote Basic Access Control<br>
-D) Real Bad Access Control<br>
-<br>
-<b>Answer: A) Role-Based Access Control</b>
+<summary>Show Answer</summary>
+Answer: A) Role-Based Access Control</b>
 </details>
 
+
+<b>5. Which is a valid scope for RBAC?</b>
 <details>
-<summary><b>5. Which is a valid scope for RBAC?</b></summary>
-A) Subscription, Resource Group, Resource<br>
-B) Region<br>
-C) Internet<br>
-D) Laptop<br>
-<br>
-<b>Answer: A) Subscription, Resource Group, Resource</b>
+<summary>Show Answer</summary>
+Answer: A) Subscription, Resource Group, Resource</b>
 </details>
 
+
+<b>6. Conditional Access policies are enforced by:</b>
 <details>
-<summary><b>6. Conditional Access policies are enforced by:</b></summary>
-A) Azure AD (Entra ID)<br>
-B) Router<br>
-C) Firewall<br>
-D) ISP<br>
-<br>
-<b>Answer: A) Azure AD (Entra ID)</b>
+<summary>Show Answer</summary>
+Answer: A) Azure AD (Entra ID)</b>
 </details>
 
+
+<b>7. Azure DDoS Protection Standard is:</b>
 <details>
-<summary><b>7. Azure DDoS Protection Standard is:</b></summary>
-A) A paid service with advanced mitigation and cost protection<br>
-B) Free<br>
-C) Not available<br>
-D) For emails<br>
-<br>
-<b>Answer: A) A paid service with advanced mitigation and cost protection</b>
+<summary>Show Answer</summary>
+Answer: A) A paid service with advanced mitigation and cost protection</b>
 </details>
 
+
+<b>8. Which service scans container images for vulnerabilities?</b>
 <details>
-<summary><b>8. Which service scans container images for vulnerabilities?</b></summary>
-A) Defender for Containers (part of Defender for Cloud)<br>
-B) Docker<br>
-C) Kubernetes<br>
-D) S3<br>
-<br>
-<b>Answer: A) Defender for Containers (part of Defender for Cloud)</b>
+<summary>Show Answer</summary>
+Answer: A) Defender for Containers (part of Defender for Cloud)</b>
 </details>
 
+
+<b>9. To encrypt a Virtual Machine disk, use:</b>
 <details>
-<summary><b>9. To encrypt a Virtual Machine disk, use:</b></summary>
-A) Azure Disk Encryption (ADE)<br>
-B) SSL<br>
-C) SSH<br>
-D) VPN<br>
-<br>
-<b>Answer: A) Azure Disk Encryption (ADE)</b>
+<summary>Show Answer</summary>
+Answer: A) Azure Disk Encryption (ADE)</b>
 </details>
 
+
+<b>10. Service Principals are:</b>
 <details>
-<summary><b>10. Service Principals are:</b></summary>
-A) Identities for applications/services<br>
-B) The main admins<br>
-C) School principals<br>
-D) Servers<br>
-<br>
-<b>Answer: A) Identities for applications/services</b>
+<summary>Show Answer</summary>
+Answer: A) Identities for applications/services</b>
 </details>
 
+
+<b>11. Azure Policy is used for:</b>
 <details>
-<summary><b>11. Azure Policy is used for:</b></summary>
-A) Governance and Compliance (e.g. restrict regions)<br>
-B) Authentication<br>
-C) Networking<br>
-D) Storage<br>
-<br>
-<b>Answer: A) Governance and Compliance (e.g. restrict regions)</b>
+<summary>Show Answer</summary>
+Answer: A) Governance and Compliance (e.g. restrict regions)</b>
 </details>
 
+
+<b>12. "Blueprints" allows you to:</b>
 <details>
-<summary><b>12. "Blueprints" allows you to:</b></summary>
-A) Define a repeatable set of Azure resources (RG, Policy, RBAC) for environment setup<br>
-B) Draw pictures<br>
-C) Print files<br>
-D) Delete resources<br>
-<br>
-<b>Answer: A) Define a repeatable set of Azure resources (RG, Policy, RBAC) for environment setup</b>
+<summary>Show Answer</summary>
+Answer: A) Define a repeatable set of Azure resources (RG, Policy, RBAC) for environment setup</b>
 </details>
 
+
+<b>13. Azure Sentinel is a:</b>
 <details>
-<summary><b>13. Azure Sentinel is a:</b></summary>
-A) SIEM/SOAR solution<br>
-B) Firewall<br>
-C) Identity provider<br>
-D) Database<br>
-<br>
-<b>Answer: A) SIEM/SOAR solution</b>
+<summary>Show Answer</summary>
+Answer: A) SIEM/SOAR solution</b>
 </details>
 
+
+<b>14. MFA is enabled via:</b>
 <details>
-<summary><b>14. MFA is enabled via:</b></summary>
-A) Azure AD (Entra ID) / Conditional Access<br>
-B) Key Vault<br>
-C) VM settings<br>
-D) BIOS<br>
-<br>
-<b>Answer: A) Azure AD (Entra ID) / Conditional Access</b>
+<summary>Show Answer</summary>
+Answer: A) Azure AD (Entra ID) / Conditional Access</b>
 </details>
 
+
+<b>15. Secure Score helps you:</b>
 <details>
-<summary><b>15. Secure Score helps you:</b></summary>
-A) Understand your security posture and gives recommendations<br>
-B) Win a game<br>
-C) Pay less<br>
-D) Run faster<br>
-<br>
-<b>Answer: A) Understand your security posture and gives recommendations</b>
+<summary>Show Answer</summary>
+Answer: A) Understand your security posture and gives recommendations</b>
 </details>
 
+
+<b>16. Can Key Vault store SSL Certificates?</b>
 <details>
-<summary><b>16. Can Key Vault store SSL Certificates?</b></summary>
-A) Yes<br>
-B) No<br>
-<br>
-<b>Answer: A) Yes</b>
+<summary>Show Answer</summary>
+Answer: A) Yes</b>
 </details>
 
+
+<b>17. Which is an example of "Identity as the perimeter"?</b>
 <details>
-<summary><b>17. Which is an example of "Identity as the perimeter"?</b></summary>
-A) Using AuthN/AuthZ to control access regardless of network location<br>
-B) Firewalls<br>
-C) VPNs<br>
-D) Air gap<br>
-<br>
-<b>Answer: A) Using AuthN/AuthZ to control access regardless of network location</b>
+<summary>Show Answer</summary>
+Answer: A) Using AuthN/AuthZ to control access regardless of network location</b>
 </details>
 
+
+<b>18. Guest Users in Entra ID (B2B) allow:</b>
 <details>
-<summary><b>18. Guest Users in Entra ID (B2B) allow:</b></summary>
-A) Inviting external users to your tenant<br>
-B) Nothing<br>
-C) Free VMs<br>
-D) Root access<br>
-<br>
-<b>Answer: A) Inviting external users to your tenant</b>
+<summary>Show Answer</summary>
+Answer: A) Inviting external users to your tenant</b>
 </details>
 
+
+<b>19. Privileged Identity Management (PIM) provides:</b>
 <details>
-<summary><b>19. Privileged Identity Management (PIM) provides:</b></summary>
-A) Just-in-Time access to high-privilege roles (Admin)<br>
-B) Passwords<br>
-C) Keys<br>
-D) MFA<br>
-<br>
-<b>Answer: A) Just-in-Time access to high-privilege roles (Admin)</b>
+<summary>Show Answer</summary>
+Answer: A) Just-in-Time access to high-privilege roles (Admin)</b>
 </details>
 
+
+<b>20. What protocol does Azure AD use for modern auth?</b>
 <details>
-<summary><b>20. What protocol does Azure AD use for modern auth?</b></summary>
-A) OIDC / OAuth 2.0 / SAML<br>
-B) Kerberos (Legacy)<br>
-C) Telnet<br>
-D) HTTP<br>
-<br>
-<b>Answer: A) OIDC / OAuth 2.0 / SAML</b>
+<summary>Show Answer</summary>
+Answer: A) OIDC / OAuth 2.0 / SAML</b>
 </details>
 
+
+<b>21. Resource Locks prevent:</b>
 <details>
-<summary><b>21. Resource Locks prevent:</b></summary>
-A) Accidental deletion or modification of resources<br>
-B) Access<br>
-C) Viewing<br>
-D) Billing<br>
-<br>
-<b>Answer: A) Accidental deletion or modification of resources</b>
+<summary>Show Answer</summary>
+Answer: A) Accidental deletion or modification of resources</b>
 </details>
 
 
@@ -404,224 +328,148 @@ D) Billing<br>
    - **AuthN:** Who are you? (Login)
    - **AuthZ:** What can you do? (Permissions/RBAC)
 
-### Advanced Level
-7. **What is Azure Key Vault used for?**
-   - Securely storing secrets (passwords), keys (encryption keys), and certificates.
-8. **What is Microsoft Defender for Cloud?**
-   - A Cloud Security Posture Management (CSPM) and Cloud Workload Protection Platform (CWPP). Monitors security state and detects threats.
-9. **Explain "Just-In-Time" (JIT) VM Access.**
-   - A Defender for Cloud feature that locks down management ports (22/3389) and opens them only on request for a limited time window.
-10. **What is Azure Sentinel?**
-    - A cloud-native SIEM (Security Information and Event Management) and SOAR solution for security analytics and threat intelligence.
-
----
-
-## Quiz: Azure Security
-
+<b>7. </b>
 <details>
-<summary><b>1. Entra ID was formerly known as:</b></summary>
-A) Azure Active Directory<br>
-B) Azure Identity<br>
-C) Windows Server AD<br>
-D) Azure Passport<br>
-<br>
-<b>Answer: A) Azure Active Directory</b>
+<summary>Show Answer</summary>
+Answer: A) Azure Active Directory</b>
 </details>
 
+
+<b>2. Which service stores secrets?</b>
 <details>
-<summary><b>2. Which service stores secrets?</b></summary>
-A) Key Vault<br>
-B) Storage Account<br>
-C) SQL DB<br>
-D) VM<br>
-<br>
-<b>Answer: A) Key Vault</b>
+<summary>Show Answer</summary>
+Answer: A) Key Vault</b>
 </details>
 
+
+<b>3. Managed Identities remove the need for:</b>
 <details>
-<summary><b>3. Managed Identities remove the need for:</b></summary>
-A) Storing credentials in code<br>
-B) Passwords entirely<br>
-C) RBAC<br>
-D) Identity<br>
-<br>
-<b>Answer: A) Storing credentials in code</b>
+<summary>Show Answer</summary>
+Answer: A) Storing credentials in code</b>
 </details>
 
+
+<b>4. RBAC stands for:</b>
 <details>
-<summary><b>4. RBAC stands for:</b></summary>
-A) Role-Based Access Control<br>
-B) Rule-Based Access Control<br>
-C) Remote Basic Access Control<br>
-D) Real Bad Access Control<br>
-<br>
-<b>Answer: A) Role-Based Access Control</b>
+<summary>Show Answer</summary>
+Answer: A) Role-Based Access Control</b>
 </details>
 
+
+<b>5. Which is a valid scope for RBAC?</b>
 <details>
-<summary><b>5. Which is a valid scope for RBAC?</b></summary>
-A) Subscription, Resource Group, Resource<br>
-B) Region<br>
-C) Internet<br>
-D) Laptop<br>
-<br>
-<b>Answer: A) Subscription, Resource Group, Resource</b>
+<summary>Show Answer</summary>
+Answer: A) Subscription, Resource Group, Resource</b>
 </details>
 
+
+<b>6. Conditional Access policies are enforced by:</b>
 <details>
-<summary><b>6. Conditional Access policies are enforced by:</b></summary>
-A) Azure AD (Entra ID)<br>
-B) Router<br>
-C) Firewall<br>
-D) ISP<br>
-<br>
-<b>Answer: A) Azure AD (Entra ID)</b>
+<summary>Show Answer</summary>
+Answer: A) Azure AD (Entra ID)</b>
 </details>
 
+
+<b>7. Azure DDoS Protection Standard is:</b>
 <details>
-<summary><b>7. Azure DDoS Protection Standard is:</b></summary>
-A) A paid service with advanced mitigation and cost protection<br>
-B) Free<br>
-C) Not available<br>
-D) For emails<br>
-<br>
-<b>Answer: A) A paid service with advanced mitigation and cost protection</b>
+<summary>Show Answer</summary>
+Answer: A) A paid service with advanced mitigation and cost protection</b>
 </details>
 
+
+<b>8. Which service scans container images for vulnerabilities?</b>
 <details>
-<summary><b>8. Which service scans container images for vulnerabilities?</b></summary>
-A) Defender for Containers (part of Defender for Cloud)<br>
-B) Docker<br>
-C) Kubernetes<br>
-D) S3<br>
-<br>
-<b>Answer: A) Defender for Containers (part of Defender for Cloud)</b>
+<summary>Show Answer</summary>
+Answer: A) Defender for Containers (part of Defender for Cloud)</b>
 </details>
 
+
+<b>9. To encrypt a Virtual Machine disk, use:</b>
 <details>
-<summary><b>9. To encrypt a Virtual Machine disk, use:</b></summary>
-A) Azure Disk Encryption (ADE)<br>
-B) SSL<br>
-C) SSH<br>
-D) VPN<br>
-<br>
-<b>Answer: A) Azure Disk Encryption (ADE)</b>
+<summary>Show Answer</summary>
+Answer: A) Azure Disk Encryption (ADE)</b>
 </details>
 
+
+<b>10. Service Principals are:</b>
 <details>
-<summary><b>10. Service Principals are:</b></summary>
-A) Identities for applications/services<br>
-B) The main admins<br>
-C) School principals<br>
-D) Servers<br>
-<br>
-<b>Answer: A) Identities for applications/services</b>
+<summary>Show Answer</summary>
+Answer: A) Identities for applications/services</b>
 </details>
 
+
+<b>11. Azure Policy is used for:</b>
 <details>
-<summary><b>11. Azure Policy is used for:</b></summary>
-A) Governance and Compliance (e.g. restrict regions)<br>
-B) Authentication<br>
-C) Networking<br>
-D) Storage<br>
-<br>
-<b>Answer: A) Governance and Compliance (e.g. restrict regions)</b>
+<summary>Show Answer</summary>
+Answer: A) Governance and Compliance (e.g. restrict regions)</b>
 </details>
 
+
+<b>12. "Blueprints" allows you to:</b>
 <details>
-<summary><b>12. "Blueprints" allows you to:</b></summary>
-A) Define a repeatable set of Azure resources (RG, Policy, RBAC) for environment setup<br>
-B) Draw pictures<br>
-C) Print files<br>
-D) Delete resources<br>
-<br>
-<b>Answer: A) Define a repeatable set of Azure resources (RG, Policy, RBAC) for environment setup</b>
+<summary>Show Answer</summary>
+Answer: A) Define a repeatable set of Azure resources (RG, Policy, RBAC) for environment setup</b>
 </details>
 
+
+<b>13. Azure Sentinel is a:</b>
 <details>
-<summary><b>13. Azure Sentinel is a:</b></summary>
-A) SIEM/SOAR solution<br>
-B) Firewall<br>
-C) Identity provider<br>
-D) Database<br>
-<br>
-<b>Answer: A) SIEM/SOAR solution</b>
+<summary>Show Answer</summary>
+Answer: A) SIEM/SOAR solution</b>
 </details>
 
+
+<b>14. MFA is enabled via:</b>
 <details>
-<summary><b>14. MFA is enabled via:</b></summary>
-A) Azure AD (Entra ID) / Conditional Access<br>
-B) Key Vault<br>
-C) VM settings<br>
-D) BIOS<br>
-<br>
-<b>Answer: A) Azure AD (Entra ID) / Conditional Access</b>
+<summary>Show Answer</summary>
+Answer: A) Azure AD (Entra ID) / Conditional Access</b>
 </details>
 
+
+<b>15. Secure Score helps you:</b>
 <details>
-<summary><b>15. Secure Score helps you:</b></summary>
-A) Understand your security posture and gives recommendations<br>
-B) Win a game<br>
-C) Pay less<br>
-D) Run faster<br>
-<br>
-<b>Answer: A) Understand your security posture and gives recommendations</b>
+<summary>Show Answer</summary>
+Answer: A) Understand your security posture and gives recommendations</b>
 </details>
 
+
+<b>16. Can Key Vault store SSL Certificates?</b>
 <details>
-<summary><b>16. Can Key Vault store SSL Certificates?</b></summary>
-A) Yes<br>
-B) No<br>
-<br>
-<b>Answer: A) Yes</b>
+<summary>Show Answer</summary>
+Answer: A) Yes</b>
 </details>
 
+
+<b>17. Which is an example of "Identity as the perimeter"?</b>
 <details>
-<summary><b>17. Which is an example of "Identity as the perimeter"?</b></summary>
-A) Using AuthN/AuthZ to control access regardless of network location<br>
-B) Firewalls<br>
-C) VPNs<br>
-D) Air gap<br>
-<br>
-<b>Answer: A) Using AuthN/AuthZ to control access regardless of network location</b>
+<summary>Show Answer</summary>
+Answer: A) Using AuthN/AuthZ to control access regardless of network location</b>
 </details>
 
+
+<b>18. Guest Users in Entra ID (B2B) allow:</b>
 <details>
-<summary><b>18. Guest Users in Entra ID (B2B) allow:</b></summary>
-A) Inviting external users to your tenant<br>
-B) Nothing<br>
-C) Free VMs<br>
-D) Root access<br>
-<br>
-<b>Answer: A) Inviting external users to your tenant</b>
+<summary>Show Answer</summary>
+Answer: A) Inviting external users to your tenant</b>
 </details>
 
+
+<b>19. Privileged Identity Management (PIM) provides:</b>
 <details>
-<summary><b>19. Privileged Identity Management (PIM) provides:</b></summary>
-A) Just-in-Time access to high-privilege roles (Admin)<br>
-B) Passwords<br>
-C) Keys<br>
-D) MFA<br>
-<br>
-<b>Answer: A) Just-in-Time access to high-privilege roles (Admin)</b>
+<summary>Show Answer</summary>
+Answer: A) Just-in-Time access to high-privilege roles (Admin)</b>
 </details>
 
+
+<b>20. What protocol does Azure AD use for modern auth?</b>
 <details>
-<summary><b>20. What protocol does Azure AD use for modern auth?</b></summary>
-A) OIDC / OAuth 2.0 / SAML<br>
-B) Kerberos (Legacy)<br>
-C) Telnet<br>
-D) HTTP<br>
-<br>
-<b>Answer: A) OIDC / OAuth 2.0 / SAML</b>
+<summary>Show Answer</summary>
+Answer: A) OIDC / OAuth 2.0 / SAML</b>
 </details>
 
+
+<b>21. Resource Locks prevent:</b>
 <details>
-<summary><b>21. Resource Locks prevent:</b></summary>
-A) Accidental deletion or modification of resources<br>
-B) Access<br>
-C) Viewing<br>
-D) Billing<br>
-<br>
-<b>Answer: A) Accidental deletion or modification of resources</b>
+<summary>Show Answer</summary>
+Answer: A) Accidental deletion or modification of resources</b>
 </details>

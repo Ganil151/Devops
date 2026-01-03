@@ -104,7 +104,12 @@ CIDR uses slash notation to indicate network prefix length:
 **Example: Subnet 192.168.1.0/24 into 4 subnets**
 
 1. **Determine required subnet bits**: 4 subnets = 2² = 2 bits needed
-2. **New subnet mask**: /24 + 2 = /26 (255.255.255.192)
+<b>2. New subnet mask**: /24 + 2 = /26</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 255.255.255.192
+</details>
+
 3. **Calculate subnets**:
    ```
    Subnet 1: 192.168.1.0/26   (192.168.1.1 - 192.168.1.62)

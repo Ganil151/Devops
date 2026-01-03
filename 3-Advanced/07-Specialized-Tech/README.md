@@ -196,11 +196,36 @@ Architecture for low-latency, geographically distributed applications.
 | **Cloud Architect** | $100k-130k | $130k-180k | $180k-250k |
 
 ### In-Demand Skills
-1. Kubernetes + Cloud (AWS/GCP/Azure)
-2. Infrastructure as Code (Terraform, Pulumi)
-3. CI/CD (GitHub Actions, GitLab CI, ArgoCD)
-4. Observability (Prometheus, Grafana, Datadog)
-5. Security (DevSecOps, SAST/DAST)
+<b>1. Kubernetes + Cloud</b>
+<details>
+<summary>Show Answer</summary>
+Answer: AWS/GCP/Azure
+</details>
+
+<b>2. Infrastructure as Code</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Terraform, Pulumi
+</details>
+
+<b>3. CI/CD</b>
+<details>
+<summary>Show Answer</summary>
+Answer: GitHub Actions, GitLab CI, ArgoCD
+</details>
+
+<b>4. Observability</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Prometheus, Grafana, Datadog
+</details>
+
+<b>5. Security</b>
+<details>
+<summary>Show Answer</summary>
+Answer: DevSecOps, SAST/DAST
+</details>
+
 6. Specialized: ML, Blockchain, or FinOps
 
 ---
@@ -209,12 +234,27 @@ Architecture for low-latency, geographically distributed applications.
 
 ### Beginner → Intermediate (3-6 months)
 1. Master Kubernetes and Docker
-2. Learn one IaC tool (Terraform recommended)
+<b>2. Learn one IaC tool</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Terraform recommended
+</details>
+
 3. Understand CI/CD pipelines
-4. Basic cloud platform (AWS or GCP)
+<b>4. Basic cloud platform</b>
+<details>
+<summary>Show Answer</summary>
+Answer: AWS or GCP
+</details>
+
 
 ### Intermediate → Advanced (6-12 months)
-1. Choose specialization (MLOps, Web3, or SaaS)
+<b>1. Choose specialization</b>
+<details>
+<summary>Show Answer</summary>
+Answer: MLOps, Web3, or SaaS
+</details>
+
 2. Deep dive into chosen area
 3. Build production projects
 4. Contribute to open source
@@ -222,7 +262,12 @@ Architecture for low-latency, geographically distributed applications.
 ### Advanced → Expert (12+ months)
 1. Multi-cloud expertise
 2. Architecture and design patterns
-3. Thought leadership (blog, speak, teach)
+<b>3. Thought leadership</b>
+<details>
+<summary>Show Answer</summary>
+Answer: blog, speak, teach
+</details>
+
 4. Consulting or senior IC role
 
 ---

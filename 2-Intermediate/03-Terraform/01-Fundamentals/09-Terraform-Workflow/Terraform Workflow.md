@@ -96,392 +96,254 @@ This ensures that the *exact* changes you reviewed in the plan are the one being
 
 ## 🧠 Comprehensive Quiz (28 Questions)
 
-**1. Which command downloads providers?**
-- A) `terraform get`
-- B) `terraform download`
-- C) `terraform init`
-- D) `terraform install`
+<b>1. Which command downloads providers?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**2. Which command checks for syntax errors?**
-- A) `terraform check`
-- B) `terraform validate`
-- C) `terraform test`
-- D) `terraform lint`
 
 
+
+<b>2. Which command checks for syntax errors?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. Which command deletes all resources?**
-- A) `terraform delete`
-- B) `terraform remove`
-- C) `terraform destroy`
-- D) `terraform clean`
 
 
+
+<b>3. Which command deletes all resources?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**4. Is approval required for `terraform apply` by default?**
-- A) No, auto-applies
-- B) Yes, requires confirmation
-- C) Only in production
-- D) Only for destroy operations
 
 
+
+<b>4. Is approval required for `terraform apply` by default?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which command applies a saved plan file?**
-- A) `terraform execute <file>`
-- B) `terraform run <file>`
-- C) `terraform apply <file>`
-- D) `terraform deploy <file>`
 
 
+
+<b>5. Which command applies a saved plan file?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**6. What does `terraform fmt` do?**
-- A) Formats disk
-- B) Formats configuration files to standard style
-- C) Creates file system
-- D) Fixes errors
 
 
+
+<b>6. What does `terraform fmt` do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. How do you skip the approval prompt during apply?**
-- A) `-yes`
-- B) `-force`
-- C) `-auto-approve`
-- D) `-skip-confirm`
 
 
+
+<b>7. How do you skip the approval prompt during apply?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**8. Which command shows the current state?**
-- A) `terraform state`
-- B) `terraform show`
-- C) `terraform display`
-- D) `terraform view`
 
 
+
+<b>8. Which command shows the current state?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. What does `terraform output` do?**
-- A) Exports configuration
-- B) Displays output values from state
-- C) Saves plan to file
-- D) Prints logs
 
 
+
+<b>9. What does `terraform output` do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. How do you preview destroy operation?**
-- A) `terraform destroy -dry-run`
-- B) `terraform plan -destroy`
-- C) `terraform destroy --preview`
-- D) `terraform show destroy`
 
 
+
+<b>10. How do you preview destroy operation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Which command generates a dependency graph?**
-- A) `terraform graph`
-- B) `terraform diagram`
-- C) `terraform visualize`
-- D) `terraform map`
 
 
+
+<b>11. Which command generates a dependency graph?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. What does `terraform refresh` update?**
-- A) Provider plugins
-- B) The state file to match real infrastructure
-- C) Terraform version
-- D) Configuration files
 
 
+
+<b>12. What does `terraform refresh` update?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. Can you run `terraform plan` without `terraform init`?**
-- A) Yes, always
-- B) No, init must come first
-- C) Only for local files
-- D) Only with cached providers
 
 
+
+<b>13. Can you run `terraform plan` without `terraform init`?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What flag saves a plan to a file?**
-- A) `-save`
-- B) `-export`
-- C) `-out`
-- D) `-file`
 
 
+
+<b>14. What flag saves a plan to a file?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**15. Which command is purely local (doesn't contact providers)?**
-- A) `terraform plan`
-- B) `terraform apply`
-- C) `terraform validate`
-- D) `terraform refresh`
 
 
+
+<b>15. Which command is purely local (doesn't contact providers)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**16. What does `terraform init -upgrade` do?**
-- A) Upgrades Terraform CLI
-- B) Upgrades provider versions
-- C) Upgrades state file format
-- D) Upgrades all resources
 
 
+
+<b>16. What does `terraform init -upgrade` do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. How do you target a specific resource during apply?**
-- A) `-resource=name`
-- B) `-target=resource.name`
-- C) `-only=resource.name`
-- D) `-select=resource.name`
 
 
+
+<b>17. How do you target a specific resource during apply?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. What happens during `terraform init` if you already ran it?**
-- A) Error
-- B) Updates if needed, otherwise does nothing
-- C) Deletes and reinstalls everything
-- D) Prompts for confirmation
 
 
+
+<b>18. What happens during `terraform init` if you already ran it?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which command would you run first in a new Terraform project?**
-- A) `terraform apply`
-- B) `terraform plan`
-- C) `terraform init`
-- D) `terraform validate`
 
 
+
+<b>19. Which command would you run first in a new Terraform project?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**20. Can `terraform validate` detect logical errors in your infrastructure design?**
-- A) Yes, it validates all logic
-- B) No, only syntax and internal consistency
-- C) Only with `-deep` flag
-- D) Only in Terraform Cloud
 
 
+
+<b>20. Can `terraform validate` detect logical errors in your infrastructure design?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. What does `terraform workspace list` show?**
-- A) List of providers
-- B) List of workspaces
-- C) List of resources
-- D) List of modules
 
 
+
+<b>21. What does `terraform workspace list` show?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. How do you format all `.tf` files in a directory recursively?**
-- A) `terraform fmt`
-- B) `terraform fmt -recursive`
-- C) `terraform fmt -r`
-- D) `terraform fmt --all`
 
 
+
+<b>22. How do you format all `.tf` files in a directory recursively?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. What is the recommended practice before running apply?**
-- A) Always run destroy first
-- B) Run plan and review changes
-- C) Backup your computer
-- D) Restart Terraform
 
 
+
+<b>23. What is the recommended practice before running apply?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. Can you pipe `terraform plan` output to `terraform apply`?**
-- A) Yes, using shell pipes
-- B) No, must save plan to file first
-- C) Only on Linux
-- D) Only in interactive mode
 
 
+
+<b>24. Can you pipe `terraform plan` output to `terraform apply`?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. What does the `-var` flag do?**
-- A) Validates variables
-- B) Sets variable values from command line
-- C) Lists all variables
-- D) Creates new variables
 
 
+
+<b>25. What does the `-var` flag do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**26. Which command would you use to see the execution plan in a saved file?**
-- A) `terraform show planfile`
-- B) `terraform view planfile`
-- C) `terraform read planfile`
-- D) `terraform cat planfile`
 
 
+
+<b>26. Which command would you use to see the execution plan in a saved file?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**27. What does `terraform apply -refresh=false` do?**
-- A) Skips downloading providers
-- B) Skips refreshing state before applying
-- C) Disables all checks
-- D) Applies without plan
 
 
+
+<b>27. What does `terraform apply -refresh=false` do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**28. Can you undo a `terraform apply` automatically?**
-- A) Yes, using `terraform undo`
-- B) Yes, using `terraform rollback`
-- C) No, must manually restore or use version control
-- D) Yes, if within 5 minutes
 
 
+
+<b>28. Can you undo a `terraform apply` automatically?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
+
+
+

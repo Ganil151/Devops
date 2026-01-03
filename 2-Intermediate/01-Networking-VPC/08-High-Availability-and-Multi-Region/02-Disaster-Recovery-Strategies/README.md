@@ -25,8 +25,8 @@ graph LR
     A[Backup & Restore] --> B[Pilot Light]
     B --> C[Warm Standby]
     C --> D[Multi-Site Active-Active]
-    
-    subgraph Speed_Vs_Cost
+
+subgraph Speed_Vs_Cost
     direction TB
     S[Longer RTO / Low Cost]
     F[Shorter RTO / High Cost]
@@ -48,8 +48,8 @@ graph TD
     User((User)) -->|Traffic| GA[Global Accelerator]
     GA -->|Health Match| R1[Region: us-east-1]
     GA -->|Health Match| R2[Region: us-west-2]
-    
-    R1 <-->|RDS Cross-Region Replicas| R2
+
+R1 <-->|RDS Cross-Region Replicas| R2
 ```
 
 ---

@@ -11,13 +11,13 @@ graph TD
     Org[Organization] -->|Org-Level Access| Team[Team]
     Team -->|Project-Level Access| Proj[Project]
     Proj -->|Workspace-Level Access| WS[Workspace]
-    
-    subgraph "Team: Developers"
+
+subgraph "Team: Developers"
         User1
         User2
     end
-    
-    User1 --> Team
+
+User1 --> Team
 ```
 
 ## 2. Teams (The Central Unit)

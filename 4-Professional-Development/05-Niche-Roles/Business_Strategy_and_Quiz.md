@@ -17,27 +17,132 @@ Turn your technical expertise into a high-growth business or specialized career 
 
 ## 🧠 Business of DevOps Quiz (20+ Questions)
 
-1.  **What does 'LLC' stand for in business?** (Limited Liability Company)
-2.  **What is a 'Retainer' in consulting?** (A fixed monthly fee for ongoing availability/services)
-3.  **What is 'MRR'?** (Monthly Recurring Revenue)
-4.  **True/False: You should target everyone as a consultant.** (False - Niche down)
-5.  **What is 'Content Marketing'?** (Creating valuable content to attract and retain a specific audience)
-6.  **What is an 'MSA' (Master Services Agreement)?** (A foundational contract that outlines the relationship between client and consultant)
-7.  **What is a 'SOW' (Statement of Work)?** (A document that defines specific project deliverables, timelines, and costs)
-8.  **What is 'Inbound Lead Generation'?** (When clients find *you* because of your content/authority)
-9.  **What is 'Showback' in FinOps?** (Reporting costs back to departments without internal billing)
-10. **What is 'Chargeback'?** (Actually billing departments for their cloud usage)
-11. **What is 'Product-Market Fit'?** (When you have a product that satisfies a strong market demand)
-12. **Which social platform is best for B2B DevOps consulting leads?** (LinkedIn)
-13. **What is an 'Exit Strategy'?** (A plan for how an entrepreneur will sell their business/interest)
-14. **What is 'Scalability' in a business context?** (The ability to increase revenue without a proportional increase in costs)
-15. **What is a 'Lead Magnet'?** (A free resource offered in exchange for an email address)
-16. **True/False: You need 10,000 followers to start monetizing.** (False - 100 "True Fans" or 2 high-ticket clients is enough)
-17. **What is 'Proof of Work'?** (A public portfolio of projects/contributions that proves your skill)
-18. **What is 'Arbitrage' in a global consulting context?** (Hiring talent in lower-cost regions to deliver value to high-cost markets)
-19. **What is 'Technical Due Diligence'?** (Evaluating a company's technology stack/team before an investment or acquisition)
-20. **What is 'BFF' in API architecture?** (Backend For Frontend - a strategic pattern for specialized client needs)
-21. **True/False: Consulting revenue is usually 'Lumpy' (not consistent).** (True - hence the need for retainers/products)
+<b>1. What does 'LLC' stand for in business?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Limited Liability Company
+</details>
+
+<b>2. What is a 'Retainer' in consulting?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A fixed monthly fee for ongoing availability/services
+</details>
+
+<b>3. What is 'MRR'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Monthly Recurring Revenue
+</details>
+
+<b>4. True/False: You should target everyone as a consultant.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: False - Niche down
+</details>
+
+<b>5. What is 'Content Marketing'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Creating valuable content to attract and retain a specific audience
+</details>
+
+<b>6. What is an 'MSA'</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Master Services Agreement)?** (A foundational contract that outlines the relationship between client and consultant
+</details>
+
+<b>7. What is a 'SOW'</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Statement of Work)?** (A document that defines specific project deliverables, timelines, and costs
+</details>
+
+<b>8. What is 'Inbound Lead Generation'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: When clients find *you* because of your content/authority
+</details>
+
+<b>9. What is 'Showback' in FinOps?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Reporting costs back to departments without internal billing
+</details>
+
+<b>10. What is 'Chargeback'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Actually billing departments for their cloud usage
+</details>
+
+<b>11. What is 'Product-Market Fit'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: When you have a product that satisfies a strong market demand
+</details>
+
+<b>12. Which social platform is best for B2B DevOps consulting leads?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: LinkedIn
+</details>
+
+<b>13. What is an 'Exit Strategy'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A plan for how an entrepreneur will sell their business/interest
+</details>
+
+<b>14. What is 'Scalability' in a business context?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: The ability to increase revenue without a proportional increase in costs
+</details>
+
+<b>15. What is a 'Lead Magnet'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A free resource offered in exchange for an email address
+</details>
+
+<b>16. True/False: You need 10,000 followers to start monetizing.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: False - 100 "True Fans" or 2 high-ticket clients is enough
+</details>
+
+<b>17. What is 'Proof of Work'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A public portfolio of projects/contributions that proves your skill
+</details>
+
+<b>18. What is 'Arbitrage' in a global consulting context?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Hiring talent in lower-cost regions to deliver value to high-cost markets
+</details>
+
+<b>19. What is 'Technical Due Diligence'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Evaluating a company's technology stack/team before an investment or acquisition
+</details>
+
+<b>20. What is 'BFF' in API architecture?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Backend For Frontend - a strategic pattern for specialized client needs
+</details>
+
+<b>21. True/False: Consulting revenue is usually 'Lumpy'</b>
+<details>
+<summary>Show Answer</summary>
+Answer: not consistent).** (True - hence the need for retainers/products
+</details>
+
 
 ---
 

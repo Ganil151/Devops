@@ -12,8 +12,8 @@ graph TD
     Conv --> Verify[3. Idempotence: Run again, expect 0 changes]
     Verify --> Test[4. Verify: Run TestInfra/Ansible tests]
     Test --> Bye[5. Destroy: Clean up environment]
-    
-    style Conv fill:#ffaa00,color:#fff
+
+style Conv fill:#ffaa00,color:#fff
     style Test fill:#00aa00,color:#fff
 ```
 

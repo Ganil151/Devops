@@ -266,11 +266,36 @@ stream {
 ### TLS/SSL at Transport Layer
 ```bash
 # TLS Handshake Process
-1. Client Hello (supported ciphers, random number)
-2. Server Hello (chosen cipher, certificate, random number)
-3. Client Key Exchange (pre-master secret)
-4. Change Cipher Spec (both sides)
-5. Finished messages (encrypted)
+<b>1. Client Hello</b>
+<details>
+<summary>Show Answer</summary>
+Answer: supported ciphers, random number
+</details>
+
+<b>2. Server Hello</b>
+<details>
+<summary>Show Answer</summary>
+Answer: chosen cipher, certificate, random number
+</details>
+
+<b>3. Client Key Exchange</b>
+<details>
+<summary>Show Answer</summary>
+Answer: pre-master secret
+</details>
+
+<b>4. Change Cipher Spec</b>
+<details>
+<summary>Show Answer</summary>
+Answer: both sides
+</details>
+
+<b>5. Finished messages</b>
+<details>
+<summary>Show Answer</summary>
+Answer: encrypted
+</details>
+
 
 # TLS Configuration (Nginx)
 server {

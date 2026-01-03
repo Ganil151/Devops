@@ -44,317 +44,176 @@
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Who is the absolute authority in a 'Command' channel during an incident?**
-- A) The CEO
-- B) The Incident Commander (IC)
-- C) The fastest typer
-- D) The HR Manager
-
+<b>1. Who is the absolute authority in a 'Command' channel during an incident?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: The Incident Commander should be the most senior developer on the team.**
-- A) False - Any trained SRE can be an IC; it's about coordination, not just seniority.
-- B) True
 
+<b>2. True/False: The Incident Commander should be the most senior developer on the team.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**3. Which role is responsible for the '30,000-foot view' of the outage?**
-- A) Scribe
-- B) IC
-- C) Ops Lead
-- D) Customer Support
 
+<b>3. Which role is responsible for the '30,000-foot view' of the outage?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. The 'Ops Lead' reports directly to:**
-- A) The Engineers
-- B) The IC
-- C) Twitter
-- D) The Database
 
+<b>4. The 'Ops Lead' reports directly to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. What is the Scribe's primary tool?**
-- A) A hammer
-- B) A timestamped log (Slack, Google Doc, etc.)
-- C) A debugger
-- D) A phone
 
+<b>5. What is the Scribe's primary tool?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Shielding the Engineers' is the primary job of which role?**
-- A) IC
-- B) Comms Lead
-- C) Scribe
-- D) Security Lead
 
+<b>6. 'Shielding the Engineers' is the primary job of which role?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: A good IC asks for 'Technical Updates' every 5-10 minutes.**
-- A) True - To keep the timeline moving and catch roadblocks.
-- B) False
 
+<b>7. True/False: A good IC asks for 'Technical Updates' every 5-10 minutes.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. If a VP joins the war room and starts giving orders, what should the IC do?**
-- A) Obey immediately
-- B) Calmly remind them of the ICS structure and refer them to the Comms Lead
-- C) Log out
-- D) Cry
 
+<b>8. If a VP joins the war room and starts giving orders, what should the IC do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Maintain the integrity of the command structure.
-
+Answer: B** - Maintain the integrity of the command structure.
 </details>
 
-**9. 'Role Rotation' prevents:**
-- A) Over-specialization and 'Single Point of Failure' (Dave-syndrome)
-- B) Fast fixes
-- C) Low costs
-- D) happiness
 
+<b>9. 'Role Rotation' prevents:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**10. What does the IC do if the Ops Lead suggests a 'High Risk' action?**
-- A) Say "Yes" immediately
-- B) Ask for the "Verification/Rollback" plan before approving
-- C) Do it themselves
-- D) nothing
 
+<b>10. What does the IC do if the Ops Lead suggests a 'High Risk' action?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: The Scribe should record 'Failed' attempts at fixing the issue.**
-- A) True - Failures are vital data for the post-mortem.
-- B) False
 
+<b>11. True/False: The Scribe should record 'Failed' attempts at fixing the issue.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. The Comms Lead's 'Internal' audience typically includes:**
-- A) The site visitors
-- B) Executives and Marketing teams
-- C) Only other SREs
-- D) The ISP
 
+<b>12. The Comms Lead's 'Internal' audience typically includes:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A 'Shadow IC' is:**
-- A) A secret IC
-- B) A junior engineer learning the role by observing a lead IC
-- C) A bot
-- D) a ghost
 
+<b>13. A 'Shadow IC' is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What occurs when an IC is 'In the weeds'?**
-- A) The site gets fixed faster
-- B) They lose track of the big picture and fail to coordinate the team
-- C) The budget increases
-- D) nothing
 
+<b>14. What occurs when an IC is 'In the weeds'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. Which role is responsible for the 'Status Page'?**
-- A) IC
-- B) Comms Lead
-- C) Scribe
-- D) Junior Dev
 
+<b>15. Which role is responsible for the 'Status Page'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: Handover of the IC role should be done during a 'Quiet Period' of the incident.**
-- A) True - Never hand over during a critical rollback or migration.
-- B) False
 
+<b>16. True/False: Handover of the IC role should be done during a 'Quiet Period' of the incident.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'Decision Paralysis' is a risk for which role?**
-- A) Scribe
-- B) IC
-- C) Comms
-- D) Support
 
+<b>17. 'Decision Paralysis' is a risk for which role?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why have 'Sub-Channels' for Engineers?**
-- A) To hide from the IC
-- B) To allow technical collaboration without spamming the main 'Command' channel
-- C) To use more bandwidth
-- D) no reason
 
+<b>18. Why have 'Sub-Channels' for Engineers?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which phrase is typical for an IC?**
-- A) "I think it's the database."
-- B) "Ops Lead, do we have consensus on the rollback path?"
-- C) "Let me try to edit this YAML file."
-- D) "Who broke this?"
 
+<b>19. Which phrase is typical for an IC?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: The Scribe can also be the Ops Lead.**
-- A) False - You cannot do technical work and thorough documentation at the same time.
-- B) True
 
+<b>20. True/False: The Scribe can also be the Ops Lead.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'ICS' was originally adapted from:**
-- A) Firefighting and Emergency Response services
-- B) Video games
-- C) Schools
-- D) Libraries
 
+<b>21. 'ICS' was originally adapted from:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**22. 'Consensus-based' decision making in ICS means:**
-- A) Everyone votes
-- B) The IC listens to experts (Leads) then makes a firm decision
-- C) No decisions are made
-- D) checking Twitter
 
+<b>22. 'Consensus-based' decision making in ICS means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Which role verifies that 'Rollback' steps are prepared?**
-- A) Scribe
-- B) IC (by asking the Ops Lead)
-- C) Marketing
-- D) The Customer
 
+<b>23. Which role verifies that 'Rollback' steps are prepared?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Strategic Phase' of an incident is managed by:**
-- A) The Ops Lead
-- B) The IC
-- C) The intern
-- D) the cloud provider
 
+<b>24. The 'Strategic Phase' of an incident is managed by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. A successful IC creates a feeling of _____ and _____ in the war room.**
-- A) Fear and Panic
-- B) Calm and Order
-- C) Confusion and Speed
-- D) Boredom and Noise
 
+<b>25. A successful IC creates a feeling of _____ and _____ in the war room.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

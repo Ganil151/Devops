@@ -518,7 +518,12 @@ alert icmp any any -> $HOME_NET any (msg:"ICMP Ping detected"; sid:1000002;)
 **Objective:** Deploy and configure a firewall
 
 **Tasks:**
-1. Install firewall (pfSense/iptables)
+<b>1. Install firewall</b>
+<details>
+<summary>Show Answer</summary>
+Answer: pfSense/iptables
+</details>
+
 2. Configure security rules
 3. Test traffic filtering
 4. Monitor logs

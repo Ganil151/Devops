@@ -12,8 +12,8 @@ graph LR
     Remote -->|Execute Script| Logic[Custom Python/Bash]
     Logic -->|Return JSON| Remote
     Remote -->|Standard Out| Control
-    
-    style Logic fill:#ff4444,color:#fff
+
+style Logic fill:#ff4444,color:#fff
 ```
 
 ### How it works:

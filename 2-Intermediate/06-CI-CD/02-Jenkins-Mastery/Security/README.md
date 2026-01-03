@@ -14,7 +14,12 @@ Manage Jenkins > Configure Global Security
 2. LDAP
 3. Active Directory
 4. SAML
-5. OAuth (GitHub, Google, etc.)
+<b>5. OAuth</b>
+<details>
+<summary>Show Answer</summary>
+Answer: GitHub, Google, etc.
+</details>
+
 ```
 
 ### User Management

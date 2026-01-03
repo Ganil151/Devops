@@ -10,7 +10,12 @@ This comprehensive guide consolidates essential AWS networking concepts, providi
 3. [Part 3: Troubleshooting Network Issues](#part-3-troubleshooting-network-issues)
 4. [Part 4: Real-World Scenarios](#part-4-real-world-scenarios)
 5. [Part 5: Interview Preparation](#part-5-interview-preparation)
-6. [Part 6: Knowledge Quiz (20+ Questions)](#part-6-knowledge-quiz)
+<b>6. [Part 6: Knowledge Quiz</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 20+ Questions)](#part-6-knowledge-quiz
+</details>
+
 
 ---
 
@@ -180,195 +185,190 @@ When connectivity fails, follow this checklist to identify the root cause.
 ## Part 6: Knowledge Quiz
 
 <details>
-<summary><b>1. Which component is required for a subnet to be considered "Public"?</b></summary>
-A) NAT Gateway<br>
-B) Internet Gateway route<br>
-C) VPC Peering<br>
-D) VPN Connection<br>
-<br>
-<b>Answer: B.</b> A subnet is public if its route table sends internet traffic (0.0.0.0/0) to an Internet Gateway (IGW).
+<b>1. Which component is required for a subnet to be considered "Public"?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> A subnet is public if its route table sends internet traffic (0.0.0.0/0) to an Internet Gateway (IGW).
 </details>
 
-<details>
-<summary><b>2. True or False: One Security Group can be attached to multiple instances.</b></summary>
-A) True<br>
-B) False<br>
-<br>
-<b>Answer: A.</b> Use SGs as "roles" (e.g., "WebServers") and attach them to as many instances as fit that role.
-</details>
+
 
 <details>
-<summary><b>3. What is the maximum size of a VPC CIDR block?</b></summary>
-A) /28<br>
-B) /8<br>
-C) /16<br>
-D) /24<br>
-<br>
-<b>Answer: C.</b> The largest block AWS allows is /16 (65,536 IPs).
+<b>2. True or False: One Security Group can be attached to multiple instances.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A.</b> Use SGs as "roles" (e.g., "WebServers") and attach them to as many instances as fit that role.
 </details>
 
-<details>
-<summary><b>4. Are Network ACLs stateful or stateless?</b></summary>
-A) Stateful<br>
-B) Stateless<br>
-<br>
-<b>Answer: B.</b> Stateless. You must explicitly define both inbound and outbound rules.
-</details>
+
 
 <details>
-<summary><b>5. Which feature allows you to capture information about the IP traffic going to and from network interfaces in your VPC?</b></summary>
-A) CloudTrail<br>
-B) VPC Flow Logs<br>
-C) CloudWatch Metrics<br>
-D) Trusted Advisor<br>
-<br>
-<b>Answer: B.</b> VPC Flow Logs.
+<b>3. What is the maximum size of a VPC CIDR block?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C.</b> The largest block AWS allows is /16 (65,536 IPs).
 </details>
 
-<details>
-<summary><b>6. When peering VPCs, is the connection transitive? (If A peers B, and B peers C, can A talk to C?)</b></summary>
-A) Yes<br>
-B) No<br>
-<br>
-<b>Answer: B.</b> VPC Peering is non-transitive. A would need to peer directly with C.
-</details>
+
 
 <details>
-<summary><b>7. To save costs on NAT Gateways, what can you use for S3 traffic?</b></summary>
-A) Internet Gateway<br>
-B) VPC Peering<br>
-C) VPC Gateway Endpoint<br>
-D) Egress-Only Internet Gateway<br>
-<br>
-<b>Answer: C.</b> A VPC Gateway Endpoint for S3 allows internal access to S3 without passing through a NAT Gateway or the public internet, avoiding separate data processing charges.
+<b>4. Are Network ACLs stateful or stateless?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> Stateless. You must explicitly define both inbound and outbound rules.
 </details>
 
-<details>
-<summary><b>8. Which IP address is reserved by AWS in every subnet for the router?</b></summary>
-A) .1<br>
-B) .2<br>
-C) .3<br>
-D) .255<br>
-<br>
-<b>Answer: A.</b> The first IP (.0) is network, .1 is router, .2 is DNS, .3 is future use, and the last (.255) is broadcast.
-</details>
+
 
 <details>
-<summary><b>9. Can you change the CIDR block of a VPC after creating it?</b></summary>
-A) Yes, fully resizeable<br>
-B) No, primary CIDR is fixed<br>
-<br>
-<b>Answer: B.</b> The primary CIDR is fixed, but you can add *secondary* CIDR blocks to expand it.
+<b>5. Which feature allows you to capture information about the IP traffic going to and from network interfaces in your VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> VPC Flow Logs.
 </details>
 
-<details>
-<summary><b>10. What is the default limit of VPCs per region per account?</b></summary>
-A) 1<br>
-B) 5<br>
-C) 10<br>
-D) 20<br>
-<br>
-<b>Answer: B.</b> The default is 5, but this is a soft limit that can be raised.
-</details>
+
 
 <details>
-<summary><b>11. Traffic between instances in the same VPC is routed using:</b></summary>
-A) Public IPs<br>
-B) Private IPs<br>
-C) MAC Addresses<br>
-D) DNS Names only<br>
-<br>
-<b>Answer: B.</b> Private IPs.
+<b>6. When peering VPCs, is the connection transitive? (If A peers B, and B peers C, can A talk to C?)</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> VPC Peering is non-transitive. A would need to peer directly with C.
 </details>
 
-<details>
-<summary><b>12. Which has higher priority for evaluation: Security Groups or NACLs?</b></summary>
-A) Security Groups<br>
-B) NACLs<br>
-<br>
-<b>Answer: B.</b> NACLs act as the first layer of defense at the subnet boundary before traffic reaches the instance (Security Group).
-</details>
+
 
 <details>
-<summary><b>13. You need to allow an instance to download updates but prevent internet initiation. Use:</b></summary>
-A) Internet Gateway<br>
-B) Egress-Only Internet Gateway (IPv6) or NAT Gateway (IPv4)<br>
-C) VPN<br>
-D) Direct Connect<br>
-<br>
-<b>Answer: B.</b> NAT Gateway for IPv4 or Egress-Only IGW for IPv6.
+<b>7. To save costs on NAT Gateways, what can you use for S3 traffic?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C.</b> A VPC Gateway Endpoint for S3 allows internal access to S3 without passing through a NAT Gateway or the public internet, avoiding separate data processing charges.
 </details>
 
-<details>
-<summary><b>14. Security Groups evaluate rules using which logic?</b></summary>
-A) "OR" logic (any match allows)<br>
-B) "AND" logic (all must match)<br>
-<br>
-<b>Answer: A.</b> "OR" logic. If any rule permits the traffic, it is allowed.
-</details>
+
 
 <details>
-<summary><b>15. An ephemeral port range is typically:</b></summary>
-A) 0-1023<br>
-B) 1024-65535<br>
-C) 443-8443<br>
-D) 8080-9090<br>
-<br>
-<b>Answer: B.</b> Used for return traffic in stateless connections.
+<b>8. Which IP address is reserved by AWS in every subnet for the router?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A.</b> The first IP (.0) is network, .1 is router, .2 is DNS, .3 is future use, and the last (.255) is broadcast.
 </details>
 
-<details>
-<summary><b>16. How do you permit traffic from one specific EC2 instance to another dynamic instance?</b></summary>
-A) Allow source IP of first instance<br>
-B) Allow source Security Group ID of first instance<br>
-<br>
-<b>Answer: B.</b> Using the SG ID is dynamic and doesn't break if the instance IP changes.
-</details>
+
 
 <details>
-<summary><b>17. Which resource is required to enable an EC2 instance in a public subnet to have a public DNS name?</b></summary>
-A) Route 53<br>
-B) DNS Hostnames (VPC Attribute)<br>
-C) DHCP Options Set<br>
-D) Active Directory<br>
-<br>
-<b>Answer: B.</b> Identifying `enableDnsHostnames` attribute on the VPC.
+<b>9. Can you change the CIDR block of a VPC after creating it?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> The primary CIDR is fixed, but you can add *secondary* CIDR blocks to expand it.
 </details>
 
-<details>
-<summary><b>18. What is the scope of a VPC?</b></summary>
-A) Global<br>
-B) Regional<br>
-C) Zonal (Availability Zone)<br>
-D) Data Center<br>
-<br>
-<b>Answer: B.</b> A VPC spans an entire Region.
-</details>
+
 
 <details>
-<summary><b>19. What is the scope of a Subnet?</b></summary>
-A) Global<br>
-B) Regional<br>
-C) Zonal (Availability Zone)<br>
-D) Data Center<br>
-<br>
-<b>Answer: C.</b> A subnet resides entirely within one Availability Zone.
+<b>10. What is the default limit of VPCs per region per account?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> The default is 5, but this is a soft limit that can be raised.
 </details>
 
-<details>
-<summary><b>20. A "Default VPC" comes with:</b></summary>
-A) No subnets<br>
-B) Public subnets in each AZ and an Internet Gateway<br>
-C) Private subnets only<br>
-D) A NAT Gateway pre-provisioned<br>
-<br>
-<b>Answer: B.</b> It is designed to be immediately usable for public instances.
-</details>
+
 
 <details>
-<summary><b>21. Can you delete the "Main" Route Table of a VPC?</b></summary>
-A) Yes<br>
-B) No<br>
-<br>
-<b>Answer: B.</b> You can replace its associations or modify it, but you cannot delete the main route table.
+<b>11. Traffic between instances in the same VPC is routed using:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> Private IPs.
 </details>
+
+
+
+<details>
+<b>12. Which has higher priority for evaluation: Security Groups or NACLs?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> NACLs act as the first layer of defense at the subnet boundary before traffic reaches the instance (Security Group).
+</details>
+
+
+
+<details>
+<b>13. You need to allow an instance to download updates but prevent internet initiation. Use:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> NAT Gateway for IPv4 or Egress-Only IGW for IPv6.
+</details>
+
+
+
+<details>
+<b>14. Security Groups evaluate rules using which logic?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A.</b> "OR" logic. If any rule permits the traffic, it is allowed.
+</details>
+
+
+
+<details>
+<b>15. An ephemeral port range is typically:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> Used for return traffic in stateless connections.
+</details>
+
+
+
+<details>
+<b>16. How do you permit traffic from one specific EC2 instance to another dynamic instance?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> Using the SG ID is dynamic and doesn't break if the instance IP changes.
+</details>
+
+
+
+<details>
+<b>17. Which resource is required to enable an EC2 instance in a public subnet to have a public DNS name?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> Identifying `enableDnsHostnames` attribute on the VPC.
+</details>
+
+
+
+<details>
+<b>18. What is the scope of a VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> A VPC spans an entire Region.
+</details>
+
+
+
+<details>
+<b>19. What is the scope of a Subnet?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C.</b> A subnet resides entirely within one Availability Zone.
+</details>
+
+
+
+<details>
+<b>20. A "Default VPC" comes with:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> It is designed to be immediately usable for public instances.
+</details>
+
+
+
+<details>
+<b>21. Can you delete the "Main" Route Table of a VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B.</b> You can replace its associations or modify it, but you cannot delete the main route table.
+</details>
+
+

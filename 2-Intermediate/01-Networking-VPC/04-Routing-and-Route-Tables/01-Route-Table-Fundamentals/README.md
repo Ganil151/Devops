@@ -10,17 +10,17 @@ Every VPC comes with a **Main Route Table**, but for professional architectures,
 graph TD
     VPC[VPC (10.0.0.0/16)] --> MainRT[Main Route Table]
     VPC --> CustomRT[Custom Route Table]
-    
-    subgraph "Implicit Association"
+
+subgraph "Implicit Association"
     MainRT -.-> S1[Subnet 1]
     MainRT -.-> S3[Subnet 3]
     end
-    
-    subgraph "Explicit Association"
+
+subgraph "Explicit Association"
     CustomRT --> S2[Subnet 2]
     end
-    
-    style CustomRT fill:#3399ff,color:#fff
+
+style CustomRT fill:#3399ff,color:#fff
 ```
 
 ### 1. The Main Route Table

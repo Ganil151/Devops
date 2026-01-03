@@ -42,317 +42,176 @@
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which platform category does AWS Lambda belong to?**
-- A) Dedicated Server
-- B) Serverless Functions
-- C) Kubernetes Controller
-- D) Manual Console
-
+<b>1. Which platform category does AWS Lambda belong to?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: Serverless functions are excellent for simple, low-cost remediation.**
-- A) True
-- B) False
 
+<b>2. True/False: Serverless functions are excellent for simple, low-cost remediation.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**3. What is the execution time limit for a standard AWS Lambda function?**
-- A) 1 Minute
-- B) 15 Minutes
-- C) 24 Hours
-- D) Infinity
 
+<b>3. What is the execution time limit for a standard AWS Lambda function?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A Kubernetes Operator is best described as:**
-- A) A person in the data center
-- B) A custom controller encapsulating operational logic
-- C) A type of network cable
-- D) a log file
 
+<b>4. A Kubernetes Operator is best described as:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which tool is an 'Open Source' workflow orchestration engine for automation?**
-- A) Spotify
-- B) StackStorm
-- C) Word
-- D) Excel
 
+<b>5. Which tool is an 'Open Source' workflow orchestration engine for automation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Cold Start' latency refers to:**
-- A) Heating up the server
-- B) The initial delay when starting a serverless function after inactivity
-- C) The time it takes to wake up the SRE
-- D) network speed
 
+<b>6. 'Cold Start' latency refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: You should use Apache Airflow for a simple "Restart Pod" task.**
-- A) False - Use a simpler tool like a Lambda or a native K8s hook.
-- B) True
 
+<b>7. True/False: You should use Apache Airflow for a simple "Restart Pod" task.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**（Avoid over-engineering）
-
+Answer: A**（Avoid over-engineering）
 </details>
 
-**8. Which AWS service is used to 'Run Commands' directly on EC2 instances?**
-- A) S3
-- B) Systems Manager (SSM)
-- C) IAM
-- D) VPC
 
+<b>8. Which AWS service is used to 'Run Commands' directly on EC2 instances?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. 'KEDA' is used specifically within which environment?**
-- A) Windows Desktop
-- B) Kubernetes
-- C) iOS
-- D) Mainframe
 
+<b>9. 'KEDA' is used specifically within which environment?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What is a 'DAG' in the context of Airflow/Orchestration?**
-- A) A type of dog
-- B) Directed Acyclic Graph (Relationship of tasks)
-- C) Data Access Gateway
-- D) nothing
 
+<b>10. What is a 'DAG' in the context of Airflow/Orchestration?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: Ansible Tower can trigger playbooks based on Webhook events.**
-- A) True
-- B) False
 
+<b>11. True/False: Ansible Tower can trigger playbooks based on Webhook events.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. Which platform is 'Declarative' by nature?**
-- A) Lambda
-- B) Kubernetes Controller
-- C) Bash Scripts
-- D) Manual CLI
 
+<b>12. Which platform is 'Declarative' by nature?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. The main 'Pro' of Serverless is:**
-- A) They run forever
-- B) Zero infrastructure management
-- C) They are very slow
-- D) they are free
 
+<b>13. The main 'Pro' of Serverless is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What occurs when an automation platform's infrastructure is too complex?**
-- A) It becomes a target for remediation itself (Circular dependency)
-- B) It gets faster
-- C) It's cheaper
-- D) no one cares
 
+<b>14. What occurs when an automation platform's infrastructure is too complex?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**15. 'AWS Step Functions' are used for:**
-- A) Deleting files
-- B) Orchestrating multiple Lambdas into a workflow
-- C) Writing emails
-- D) calculating taxes
 
+<b>15. 'AWS Step Functions' are used for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: You must manage the OS and Patching of an AWS Lambda function.**
-- A) False - It's fully managed.
-- B) True
 
+<b>16. True/False: You must manage the OS and Patching of an AWS Lambda function.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'Azure Automation' uses 'Runbooks' often written in:**
-- A) Java
-- B) PowerShell / Python
-- C) HTML
-- D) Assembly
 
+<b>17. 'Azure Automation' uses 'Runbooks' often written in:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why use 'Operators' instead of simple scripts in K8s?**
-- A) They are easier to write
-- B) They handle complex state transitions and persistent resources natively
-- C) Scripts don't work in K8s
-- D) they are cheaper
 
+<b>18. Why use 'Operators' instead of simple scripts in K8s?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which platform is best for 'Cloud-Specific' tasks like snapshotting an EBS volume?**
-- A) StackStorm
-- B) AWS-native tools (Lambda/SSM)
-- C) Local Cron job
-- D) Notepad
 
+<b>19. Which platform is best for 'Cloud-Specific' tasks like snapshotting an EBS volume?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: A 'Warm' Lambda function executes faster than a 'Cold' one.**
-- A) True
-- B) False
 
+<b>20. True/False: A 'Warm' Lambda function executes faster than a 'Cold' one.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'EventBridge' targets include:**
-- A) Only other CloudWatch alarms
-- B) Lambda, SNS, SQS, Step Functions, and more
-- C) The printer
-- D) nothing
 
+<b>21. 'EventBridge' targets include:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Which is a drawback of using dedicated orchestration platforms?**
-- A) High performance
-- B) Maintenance of the platform itself
-- C) Zero features
-- D) too cheap
 
+<b>22. Which is a drawback of using dedicated orchestration platforms?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. 'Native Integration' means:**
-- A) Using 3rd party plugins
-- B) The tool is built into the ecosystem (e.g., CloudWatch and Lambda)
-- C) Using local languages
-- D) no integration
 
+<b>23. 'Native Integration' means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. A 'Webhook' is essentially:**
-- A) A type of fish
-- B) An HTTP POST request used to notify a system of an event
-- C) A secure tunnel
-- D) a broken link
 
+<b>24. A 'Webhook' is essentially:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Choosing the platform is about balancing _____ and _____.**
-- A) Color and Style
-- B) Power and Complexity
-- C) Speed and Distance
-- D) Start and Stop
 
+<b>25. Choosing the platform is about balancing _____ and _____.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

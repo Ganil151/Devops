@@ -31,8 +31,8 @@ graph TD
     Source -->|One static file| Copy[Module: copy]
     Source -->|One dynamic file| Templ[Module: template]
     Source -->|Thousands of files| Sync[Module: synchronize]
-    
-    Sync --> RSync[Uses rsync protocol]
+
+Sync --> RSync[Uses rsync protocol]
     Copy --> SSH[Uses standard SSH]
     Templ --> SSH
 ```

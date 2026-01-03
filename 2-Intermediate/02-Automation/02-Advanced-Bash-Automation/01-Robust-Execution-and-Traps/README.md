@@ -13,8 +13,8 @@ stateDiagram-v2
     Setup --> Process: Execution Logic
     Process --> Cleanup: trap "cleanup" EXIT
     Cleanup --> [*]
-    
-    Process --> Interrupted: SIGINT / SIGTERM
+
+Process --> Interrupted: SIGINT / SIGTERM
     Interrupted --> Cleanup
 ```
 

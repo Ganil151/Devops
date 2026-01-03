@@ -4,14 +4,14 @@
 graph TD
     Global[Global Standard Template] --> Service[Service-Specific Template]
     Global --> Infra[Infra-Specific Template]
-    
-    Service --> SOP1[User Auth SOP]
+
+Service --> SOP1[User Auth SOP]
     Service --> SOP2[Data Rotation SOP]
-    
-    Infra --> SOP3[VPC Peering SOP]
+
+Infra --> SOP3[VPC Peering SOP]
     Infra --> SOP4[IAM Audit SOP]
-    
-    subgraph "Core Consistency"
+
+subgraph "Core Consistency"
     Global
     end
 ```
@@ -58,319 +58,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the primary benefit of a standardized Header in every doc?**
-- A) It looks pretty
-- B) Fast search, ownership tracking, and instant context for the reader
-- C) It hides the content
-- D) It's required by Git
-
+<b>1. What is the primary benefit of a standardized Header in every doc?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: You should allow every team to invent their own unique document style.**
-- A) True
-- B) False
 
+<b>2. True/False: You should allow every team to invent their own unique document style.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - This increases "Cognitive Load" for the rest of the company.
-
+Answer: B** - This increases "Cognitive Load" for the rest of the company.
 </details>
 
-**3. 'Cognitive Load' in documentation refers to:**
-- A) How much the file weighs
-- B) The mental effort required to find and understand information in a document
-- C) The speed of the server
-- D) the number of users
 
+<b>3. 'Cognitive Load' in documentation refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. Which section of the template describes the severity of the business impact?**
-- A) Summary
-- B) SLO Impact (P0/P1/P2)
-- C) Prerequisites
-- D) Footer
 
+<b>4. Which section of the template describes the severity of the business impact?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. A 'Cookiecutter' is a tool used to:**
-- A) Bake cookies
-- B) Generate project structures and files from a template automatically
-- C) Edit images
-- D) delete old code
 
+<b>5. A 'Cookiecutter' is a tool used to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Metadata' in an SOP usually includes:**
-- A) Only the code
-- B) Title, ID, Owner, and Tags
-- C) Large images
-- D) random numbers
 
+<b>6. 'Metadata' in an SOP usually includes:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: Pre-commit hooks can enforce that an SOP has a 'Rollback' section before it's saved to the repo.**
-- A) True
-- B) False
 
+<b>7. True/False: Pre-commit hooks can enforce that an SOP has a 'Rollback' section before it's saved to the repo.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. 'Context-Switching' occurs when:**
-- A) You switch a light
-- B) A reader has to move between two different document styles and re-learn the layout
-- C) You reboot a laptop
-- D) you change the font
 
+<b>8. 'Context-Switching' occurs when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. What is 'In-line Example Text'?**
-- A) A mistake
-- B) Sample content provided within the template to guide the author on how to write each section
-- C) A hidden message
-- D) nothing
 
+<b>9. What is 'In-line Example Text'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. A 'Template Repository' on GitHub allows you to:**
-- A) Create a new repo with a pre-filled folder structure and boilerplate files
-- B) Delete old repos
-- C) Host a website
-- D) play a game
 
+<b>10. A 'Template Repository' on GitHub allows you to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**11. Why is 'Version Correlation' a good template field?**
-- A) To track money
-- B) To link the documentation to a specific software version
-- C) To hide the date
-- D) no reason
 
+<b>11. Why is 'Version Correlation' a good template field?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. 'Atomic Steps' should be formatted as:**
-- A) Paragraphs
-- B) Numbered lists
-- C) Bullet points
-- D) Secret codes
 
+<b>12. 'Atomic Steps' should be formatted as:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. True/False: The 'Rollback' section is optional in the global template.**
-- A) True
-- B) False - It should be mandatory for all operational SOPs.
 
+<b>13. True/False: The 'Rollback' section is optional in the global template.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What is the benefit of a 'Last Reviewed' date?**
-- A) It makes the file larger
-- B) It identifies potentially stale or outdated information that needs validation
-- C) It's a secret
-- D) it's the author's birthday
 
+<b>14. What is the benefit of a 'Last Reviewed' date?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Front Matter' is often used at the top of Markdown files to store:**
-- A) The main story
-- B) Metadata (Tags, Layout, Categories) in YAML format
-- C) Images
-- D) Links to Google
 
+<b>15. 'Front Matter' is often used at the top of Markdown files to store:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. Standardizing the template across 50 teams helps best with:**
-- A) Individual creativity
-- B) Cross-team incident response efficiency
-- C) Saving disk space
-- D) printing costs
 
+<b>16. Standardizing the template across 50 teams helps best with:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. 'Template Friction' refers to:**
-- A) How hard it is to type
-- B) How difficult or confusing the template is for an author to fill out
-- C) The speed of the mouse
-- D) a type of server
 
+<b>17. 'Template Friction' refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Which section of the template should come FIRST after the header?**
-- A) Step 1
-- B) Summary (Goal)
-- C) Credits
-- D) Appendix
 
+<b>18. Which section of the template should come FIRST after the header?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. True/False: You can use a Markdown Linter to check for 'H1 Heading' presence.**
-- A) True
-- B) False
 
+<b>19. True/False: You can use a Markdown Linter to check for 'H1 Heading' presence.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**20. 'Global Searchability' is improved by templates because:**
-- A) They are short
-- B) Every document uses the same keywords (e.g., 'Owner', 'Prerequisites') making it easier to parse
-- C) They hide text
-- D) nobody knows
 
+<b>20. 'Global Searchability' is improved by templates because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. A 'Service-Specific' template should:**
-- A) Be totally different
-- B) Inherit the Global Template and add a few specialized fields
-- C) Be empty
-- D) cost more
 
+<b>21. A 'Service-Specific' template should:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Why include 'Prerequisites' before the 'Steps'?**
-- A) It's a tradition
-- B) To ensure the engineer doesn't start a task they can't finish due to lack of access/tools
-- C) To make more work
-- D) No reason
 
+<b>22. Why include 'Prerequisites' before the 'Steps'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. 'Checklist Formatting' is better for:**
-- A) Long stories
-- B) Ensuring that every sub-step is mentally marked as done by the operator
-- C) Hiding information
-- D) images
 
+<b>23. 'Checklist Formatting' is better for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Outcome of Interest' section helps:**
-- A) Win a game
-- B) Define what the "Successful" state looks like after the SOP is run
-- C) Count letters
-- D) pay employees
 
+<b>24. The 'Outcome of Interest' section helps:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Excellence in organizational templates leads to:**
-- A) More files
-- B) Unified, professional, and predictable documentation that scales with the company
-- C) Lower salaries
-- D) boring work
 
+<b>25. Excellence in organizational templates leads to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

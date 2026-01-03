@@ -19,27 +19,132 @@ Deepen your Kubernetes mastery with these high-level technical and operational c
 
 ## 🧠 Advanced K8s Knowledge Quiz (20+ Questions)
 
-1.  **What is the default port for the Kubernetes API Server?** (6443)
-2.  **Which component is responsible for node-level resource management?** (Kubelet)
-3.  **What is a 'DaemonSet'?** (Ensures all/some nodes run a copy of a specific Pod)
-4.  **What is 'Taint' and 'Toleration' used for?** (Node-based scheduling constraints)
-5.  **True/False: A Service Mesh replaces the CNI.** (False)
-6.  **What is the purpose of 'Pod Disruption Budgets' (PDB)?** (Limits the number of Pods that can be down simultaneously)
-7.  **What is 'Horizontal Pod Autoscaler' (HPA) base scaling on?** (Typically CPU/Memory usage or custom metrics)
-8.  **What is 'Cluster Autoscaler'?** (Automatically adjusts the number of nodes in a cluster)
-9.  **Which component handles the distribution of traffic within the cluster?** (Kube-proxy)
-10. **What is an 'Operator' in Kubernetes?** (A method of packaging, deploying, and managing a Kubernetes application using CRDs)
-11. **What is 'RBAC'?** (Role-Based Access Control)
-12. **What is 'mTLS' in the context of Istio?** (Mutual TLS for encrypted service communication)
-13. **Which file stores the cluster-wide state?** (Etcd)
-14. **What is a 'PersistentVolumeClaim' (PVC)?** (A request for storage by a user)
-15. **What is 'Ingress'?** (An API object that manages external access to the services in a cluster)
-16. **What is the difference between 'NodePort' and 'LoadBalancer' service types?** (NodePort opens a port on every Node; LoadBalancer creates a cloud-specific balancer)
-17. **What is 'Vertical Pod Autoscaler' (VPA)?** (Adjusts the CPU and memory reservations for your pods)
-18. **What is 'Helm'?** (The package manager for Kubernetes)
-19. **What is 'CRD' stand for?** (Custom Resource Definition)
-20. **What is 'Namespace' used for?** (Logical isolation of resources within a cluster)
-21. **What is 'Cilium'?** (An open-source software for providing, securing and observing network connectivity between workloads)
+<b>1. What is the default port for the Kubernetes API Server?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 6443
+</details>
+
+<b>2. Which component is responsible for node-level resource management?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Kubelet
+</details>
+
+<b>3. What is a 'DaemonSet'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Ensures all/some nodes run a copy of a specific Pod
+</details>
+
+<b>4. What is 'Taint' and 'Toleration' used for?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Node-based scheduling constraints
+</details>
+
+<b>5. True/False: A Service Mesh replaces the CNI.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: False
+</details>
+
+<b>6. What is the purpose of 'Pod Disruption Budgets'</b>
+<details>
+<summary>Show Answer</summary>
+Answer: PDB)?** (Limits the number of Pods that can be down simultaneously
+</details>
+
+<b>7. What is 'Horizontal Pod Autoscaler'</b>
+<details>
+<summary>Show Answer</summary>
+Answer: HPA) base scaling on?** (Typically CPU/Memory usage or custom metrics
+</details>
+
+<b>8. What is 'Cluster Autoscaler'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Automatically adjusts the number of nodes in a cluster
+</details>
+
+<b>9. Which component handles the distribution of traffic within the cluster?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Kube-proxy
+</details>
+
+<b>10. What is an 'Operator' in Kubernetes?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A method of packaging, deploying, and managing a Kubernetes application using CRDs
+</details>
+
+<b>11. What is 'RBAC'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Role-Based Access Control
+</details>
+
+<b>12. What is 'mTLS' in the context of Istio?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Mutual TLS for encrypted service communication
+</details>
+
+<b>13. Which file stores the cluster-wide state?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Etcd
+</details>
+
+<b>14. What is a 'PersistentVolumeClaim'</b>
+<details>
+<summary>Show Answer</summary>
+Answer: PVC)?** (A request for storage by a user
+</details>
+
+<b>15. What is 'Ingress'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: An API object that manages external access to the services in a cluster
+</details>
+
+<b>16. What is the difference between 'NodePort' and 'LoadBalancer' service types?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: NodePort opens a port on every Node; LoadBalancer creates a cloud-specific balancer
+</details>
+
+<b>17. What is 'Vertical Pod Autoscaler'</b>
+<details>
+<summary>Show Answer</summary>
+Answer: VPA)?** (Adjusts the CPU and memory reservations for your pods
+</details>
+
+<b>18. What is 'Helm'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: The package manager for Kubernetes
+</details>
+
+<b>19. What is 'CRD' stand for?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Custom Resource Definition
+</details>
+
+<b>20. What is 'Namespace' used for?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Logical isolation of resources within a cluster
+</details>
+
+<b>21. What is 'Cilium'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: An open-source software for providing, securing and observing network connectivity between workloads
+</details>
+
 
 ---
 

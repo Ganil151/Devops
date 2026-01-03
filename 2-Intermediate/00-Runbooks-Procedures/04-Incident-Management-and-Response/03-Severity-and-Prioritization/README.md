@@ -42,317 +42,176 @@
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which severity level is reserved for a "Total Site Outage"?**
-- A) P1
-- B) P0
-- C) P2
-- D) P3
-
+<b>1. Which severity level is reserved for a "Total Site Outage"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: Standardizing severity levels helps prevent emotional arguments during a crisis.**
-- A) True
-- B) False
 
+<b>2. True/False: Standardizing severity levels helps prevent emotional arguments during a crisis.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**3. If 20% of users cannot log in, this is likely a:**
-- A) P3
-- B) P1 (High Impact)
-- C) P4
-- D) Success
 
+<b>3. If 20% of users cannot log in, this is likely a:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. 'Response Time SLA' for a P0 should ideally be:**
-- A) 1 Hour
-- B) Immediate (< 5-15 mins)
-- C) Next Day
-- D) 1 Week
 
+<b>4. 'Response Time SLA' for a P0 should ideally be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. What is 'Alert Fatigue'?**
-- A) Being tired of the color blue
-- B) Desensitization caused by too many low-priority pages
-- C) A broken speaker
-- D) nothing
 
+<b>5. What is 'Alert Fatigue'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. A 'P3' (Low) incident is typically resolved:**
-- A) Immediately
-- B) During the next business day/week
-- C) Never
-- D) in 5 minutes
 
+<b>6. A 'P3' (Low) incident is typically resolved:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: 'Revenue Impact' is a valid metric to judge severity.**
-- A) True
-- B) False
 
+<b>7. True/False: 'Revenue Impact' is a valid metric to judge severity.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. 'SLA' stands for:**
-- A) System Level Action
-- B) Service Level Agreement
-- C) Standard Logic Area
-- D) Security Log Access
 
+<b>8. 'SLA' stands for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. Who has the final authority to declare or change an incident's severity?**
-- A) The Customer
-- B) The Incident Commander (IC)
-- C) The Marketing Intern
-- D) HR
 
+<b>9. Who has the final authority to declare or change an incident's severity?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What occurs during 'Automatic Escalation'?**
-- A) The site is deleted
-- B) Additional management/engineers are notified after a time limit is exceeded
-- C) The price increases
-- D) nothing
 
+<b>10. What occurs during 'Automatic Escalation'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: A typo on the homepage is a P1 incident.**
-- A) False - It's usually a P3 or P4.
-- B) True
 
+<b>11. True/False: A typo on the homepage is a P1 incident.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. 'Blast Radius' helps determine:**
-- A) The color of the site
-- B) The number of affected users/services (and thus the severity)
-- C) Network speed
-- D) nothing
 
+<b>12. 'Blast Radius' helps determine:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A 'P2' incident might be:**
-- A) Site Down
-- B) Slow performance for a subset of users
-- C) Feature request for a new button
-- D) Coffee is cold
 
+<b>13. A 'P2' incident might be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What is the main danger of 'Severity Inflation'?**
-- A) Too many meetings
-- B) Real emergencies being ignored due to alert fatigue
-- C) High cloud bills
-- D) nothing
 
+<b>14. What is the main danger of 'Severity Inflation'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Urgency' in the Matrix refers to:**
-- A) How much we like the feature
-- B) The speed with which the business requires a resolution
-- C) The age of the code
-- D) nothing
 
+<b>15. 'Urgency' in the Matrix refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: Legal and Compliance violations should be high priority (P1).**
-- A) True
-- B) False
 
+<b>16. True/False: Legal and Compliance violations should be high priority (P1).</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'Trivial' (P4) items are stored in:**
-- A) The main alert channel
-- B) The Product Backlog
-- C) The trash
-- D) a secret file
 
+<b>17. 'Trivial' (P4) items are stored in:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why use a 'Pre-defined' table for severity?**
-- A) To look professional
-- B) To remove subjectivity and bias during an emotional incident
-- C) To save disk space
-- D) no reason
 
+<b>18. Why use a 'Pre-defined' table for severity?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. An 'Internal-Only' P1 means:**
-- A) No one cares
-- B) A critical tool used by the company is broken (e.g., cannot deploy code)
-- C) The lights are off
-- D) nothing
 
+<b>19. An 'Internal-Only' P1 means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: Every P0 incident must have a Post-Mortem.**
-- A) True
-- B) False
 
+<b>20. True/False: Every P0 incident must have a Post-Mortem.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Response' SLA vs 'Resolution' SLA:**
-- A) They are the same
-- B) Response is how fast we start; Resolution is how fast we fix
-- C) Resolution is the price
-- D) nothing
 
+<b>21. 'Response' SLA vs 'Resolution' SLA:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Which severity would you assign to a 'Broken Login' for 100% of users?**
-- A) P0/P1
-- B) P3
-- C) P4
-- D) P2
 
+<b>22. Which severity would you assign to a 'Broken Login' for 100% of users?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**23. 'Shadowing' an IC during a P1 outage is for:**
-- A) Spying
-- B) Educational purposes (Learning how to handle severity calls)
-- C) Deleting code
-- D) nothing
 
+<b>23. 'Shadowing' an IC during a P1 outage is for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Impact' axis on a matrix covers:**
-- A) How hard the crash was
-- B) The extent of the damage (Users, Revenue, Data)
-- C) The length of the name
-- D) nothing
 
+<b>24. The 'Impact' axis on a matrix covers:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. A disciplined SRE team treats severity as a ____ for their ____.**
-- A) Map / Code
-- B) Guardrail / Attention
-- C) Law / Salary
-- D) Game / Play
 
+<b>25. A disciplined SRE team treats severity as a ____ for their ____.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

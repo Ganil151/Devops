@@ -7,7 +7,12 @@ Provisioners are a last-resort mechanism for executing scripts or commands on lo
 
 ### Why Avoid Provisioners?
 
-1. **Break Terraform's Declarative Model**: Provisioners are imperative (procedural steps)
+<b>1. Break Terraform's Declarative Model**: Provisioners are imperative</b>
+<details>
+<summary>Show Answer</summary>
+Answer: procedural steps
+</details>
+
 2. **Poor Error Handling**: Failed provisioners can leave resources in unknown states
 3. **No Idempotence Guarantee**: Running twice might cause different results
 4. **State Management Issues**: Provisioner results aren't tracked in state
@@ -336,7 +341,12 @@ sequenceDiagram
 
 **What Happened**:
 1. Instance created successfully
-2. Provisioner failed (script error)
+<b>2. Provisioner failed</b>
+<details>
+<summary>Show Answer</summary>
+Answer: script error
+</details>
+
 3. Terraform marked resource as "tainted" but didn't destroy it
 4. Team had to manually SSH in to fix or destroy instance manually
 
@@ -547,355 +557,230 @@ ingress {
 
 ## Comprehensive Quiz (25 Questions)
 
-**1. What type of provisioner copies files to a remote machine?**
-- A) `remote-exec`
-- B) `file`
-- C) `local-exec`
-- D) `copy`
-
-
+<b>1. What type of provisioner copies files to a remote machine?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. Which provisioner runs commands on your local machine?**
-- A) `remote-exec`
-- B) `file`
-- C) `local-exec`
-- D) `ssh-exec`
 
 
+
+<b>2. Which provisioner runs commands on your local machine?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**3. What is the default behavior when a provisioner fails?**
-- A) Continue silently
-- B) Mark resource as tainted and error
-- C) Retry automatically
-- D) Rollback resource creation
 
 
+
+<b>3. What is the default behavior when a provisioner fails?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. How do you specify a destroy-time provisioner?**
-- A) `timing = destroy`
-- B) `when = destroy`
-- C) `on_destroy = true`
-- D) `lifecycle = destroy`
 
 
+
+<b>4. How do you specify a destroy-time provisioner?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. What protocol does remote-exec use for Linux instances?**
-- A) HTTP
-- B) WinRM
-- C) SSH
-- D) Telnet
 
 
+
+<b>5. What protocol does remote-exec use for Linux instances?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**6. What is HashiCorp's recommendation regarding provisioners?**
-- A) Use them extensively
-- B) Use as a last resort
-- C) Required for all resources
-- D) Only use on Fridays
 
 
+
+<b>6. What is HashiCorp's recommendation regarding provisioners?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. What does on_failure = continue do?**
-- A) Retries the provisioner
-- B) Logs error but continues Terraform execution
-- C) Skips the provisioner
-- D) Sends an email
 
 
+
+<b>7. What does on_failure = continue do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. How do you reference the resource being provisioned?**
-- A) `this`
-- B) `self`
-- C) `resource`
-- D) `current`
 
 
+
+<b>8. How do you reference the resource being provisioned?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. What is a null_resource?**
-- A) An empty EC2 instance
-- B) A placeholder for running provisioners without a real resource
-- C) A deleted resource
-- D) A state file backup
 
 
+
+<b>9. What is a null_resource?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What is the better alternative to remote-exec for instance setup?**
-- A) Manual SSH
-- B) User Data / Cloud-Init
-- C) FTP
-- D) Email instructions
 
 
+
+<b>10. What is the better alternative to remote-exec for instance setup?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. How do you upload an entire directory with file provisioner?**
-- A) Use wildcards
-- B) Source path with trailing slash
-- C) Compress and upload
-- D) Not possible
 
 
+
+<b>11. How do you upload an entire directory with file provisioner?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. What is the default timeout for connections?**
-- A) 1 minute
-- B) 5 minutes
-- C) 10 minutes
-- D) No timeout
 
 
+
+<b>12. What is the default timeout for connections?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. Which protocol is used for Windows provisioners?**
-- A) SSH
-- B) RDP
-- C) WinRM
-- D) FTP
 
 
+
+<b>13. Which protocol is used for Windows provisioners?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**14. What does triggers do in null_resource?**
-- A) Starts the resource
-- B) Forces recreation when values change
-- C) Sets alarms
-- D) Validates configuration
 
 
+
+<b>14. What does triggers do in null_resource?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. Can provisioners access Terraform outputs?**
-- A) Yes, using interpolation
-- B) No, not possible
-- C) Only with special configuration
-- D) Only in Terraform Cloud
 
 
+
+<b>15. Can provisioners access Terraform outputs?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**16. What happens to a resource if its provisioner fails by default?**
-- A) Resource is destroyed
-- B) Resource is created but marked as tainted
-- C) Nothing, continues normally
-- D) State file is deleted
 
 
+
+<b>16. What happens to a resource if its provisioner fails by default?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. How do you connect to a private instance via bastion?**
-- A) Not possible
-- B) Use bastion_host in connection block
-- C) Manual SSH tunneling
-- D) VPN only
 
 
+
+<b>17. How do you connect to a private instance via bastion?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. What is the risk of using provisioners?**
-- A) Faster deployments
-- B) Poor error handling and non-idempotent behavior
-- C) Lower costs
-- D) No risks
 
 
+
+<b>18. What is the risk of using provisioners?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Can you use environment variables with local-exec?**
-- A) No
-- B) Yes, with environment block
-- C) Only on Linux
-- D) Only with Python
 
 
+
+<b>19. Can you use environment variables with local-exec?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. What keyword specifies inline commands for remote-exec?**
-- A) `commands`
-- B) `inline`
-- C) `script`
-- D) `execute`
 
 
+
+<b>20. What keyword specifies inline commands for remote-exec?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. How do you run a script file with remote-exec?**
-- A) `inline = ["script.sh"]`
-- B) `script = "script.sh"`
-- C) `file = "script.sh"`
-- D) `run = "script.sh"`
 
 
+
+<b>21. How do you run a script file with remote-exec?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. What is the purpose of connection blocks?**
-- A) Connect to database
-- B) Define how to connect to remote resource for provisioners
-- C) Network configuration
-- D) VPN setup
 
 
+
+<b>22. What is the purpose of connection blocks?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Can provisioners be used with data sources?**
-- A) Yes, always
-- B) No, only resources
-- C) Only with special flag
-- D) Only in modules
 
 
+
+<b>23. Can provisioners be used with data sources?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. What is the better tool for building custom AMIs?**
-- A) Provisioners
-- B) Packer
-- C) Photoshop
-- D) Docker
 
 
+
+<b>24. What is the better tool for building custom AMIs?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. When do creation-time provisioners run?**
-- A) During every apply
-- B) Only when resource is first created
-- C) During destroy
-- D) Every hour
 
 
+
+<b>25. When do creation-time provisioners run?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+
 
 ---
 

@@ -11,8 +11,8 @@ graph LR
     Subnet[IPv6 Subnet] --> RT[Route Table]
     RT -->|::/0| EIGW[Egress-Only IGW]
     EIGW --> Internet((Public Internet))
-    
-    style EIGW fill:#663399,color:#fff
+
+style EIGW fill:#663399,color:#fff
 ```
 
 ### Key Differences:

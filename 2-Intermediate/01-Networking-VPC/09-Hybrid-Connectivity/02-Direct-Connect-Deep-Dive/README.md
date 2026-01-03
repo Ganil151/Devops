@@ -20,14 +20,14 @@ To actually send traffic, you must create a **VIF**:
 graph TD
     OnPrem[On-Prem Router] --- DX_Fiber[Direct Connect Fiber]
     DX_Fiber --- DX_Router[AWS DX Router]
-    
-    subgraph Logical_Layers
+
+subgraph Logical_Layers
     DX_Router --> PVIF[Private VIF]
     DX_Router --> PubVIF[Public VIF]
     DX_Router --> TVIF[Transit VIF]
     end
-    
-    PVIF --> VPC[VPC Private Subnet]
+
+PVIF --> VPC[VPC Private Subnet]
     PubVIF --> S3[AWS Public Services: S3/Dynamo]
     TVIF --> TGW[Transit Gateway]
 ```

@@ -504,7 +504,12 @@ aws s3api get-public-access-block --bucket my-bucket-name
 
 S3 bucket names are globally unique. Solutions:
 1. Choose a different name
-2. Use random suffix (this module does this automatically)
+<b>2. Use random suffix</b>
+<details>
+<summary>Show Answer</summary>
+Answer: this module does this automatically
+</details>
+
 3. Delete the existing bucket if you own it
 
 ### Versioning Issues

@@ -22,9 +22,24 @@ If the same variable `http_port` is defined in 3 places, which one wins?
 
 1.  **Host Vars** (Most Specific) - Wins!
 2.  **Playbook Vars**
-3.  **Group Vars** (Child Group)
-4.  **Group Vars** (Parent Group)
-5.  **Group Vars** (`all`) (Least Specific)
+<b>3. Group Vars</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Child Group
+</details>
+
+<b>4. Group Vars</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Parent Group
+</details>
+
+<b>5. Group Vars</b>
+<details>
+<summary>Show Answer</summary>
+Answer: `all`) (Least Specific
+</details>
+
 
 ## Real-Life Scenarios
 

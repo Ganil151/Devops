@@ -14,8 +14,8 @@ graph TD
     Q2 -- No --> Q3{Is it a Syntax Error?}
     Q3 -- Yes --> Fix[Fix Code & Validate]
     Q3 -- No --> Debug[Enable TF_LOG=DEBUG]
-    
-    Cloud -->|403 Forbidden| IAM[Check Permissions]
+
+Cloud -->|403 Forbidden| IAM[Check Permissions]
     Cloud -->|409 Conflict| State[Check for existing resource]
 ```
 

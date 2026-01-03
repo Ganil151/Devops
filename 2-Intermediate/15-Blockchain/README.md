@@ -43,4 +43,3 @@ By the end of this module, you will be able to:
 
 ---
 **Ready for the Enterprises?** Once you've mastered the lifecycle, move to the **[Advanced Level](../../3-Advanced/12-Blockchain/README.md)** to explore Node Operations and Validator management.
-

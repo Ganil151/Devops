@@ -13,13 +13,13 @@ graph LR
     User[DevOps Engineer] -->|Writes YAML| Control[Control Node]
     Control -->|SSH| Web1[Web Server]
     Control -->|WinRM| Win1[Windows DB]
-    
-    subgraph Managed Nodes
+
+subgraph Managed Nodes
     Web1
     Win1
     end
-    
-    style Control fill:#ee0000,color:#fff
+
+style Control fill:#ee0000,color:#fff
 ```
 
 ---

@@ -365,7 +365,12 @@ spec:
 **Use Case**: Test new version on highest-ordinal pod before full rollout.
 
 **Workflow:**
-1. Set partition to N-1 (update only last pod)
+<b>1. Set partition to N-1</b>
+<details>
+<summary>Show Answer</summary>
+Answer: update only last pod
+</details>
+
 2. Monitor metrics and logs
 3. If successful, gradually decrease partition
 4. Set partition to 0 for full rollout

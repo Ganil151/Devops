@@ -93,7 +93,12 @@ In every subnet, AWS reserves 5 IP addresses:
 ### Example: 10.0.1.0/24
 1.  **10.0.1.0**: Network address
 2.  **10.0.1.1**: VPC router
-3.  **10.0.1.2**: DNS server (Amazon-provided)
+<b>3. 10.0.1.2**: DNS server</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Amazon-provided
+</details>
+
 4.  **10.0.1.3**: Reserved for future use
 5.  **10.0.1.255**: Broadcast address
 
@@ -111,10 +116,30 @@ In every subnet, AWS reserves 5 IP addresses:
 - New prefix: /16 + 2 = /18
 
 **Result**:
-1.  10.0.0.0/18 (10.0.0.0 - 10.0.63.255)
-2.  10.0.64.0/18 (10.0.64.0 - 10.0.127.255)
-3.  10.0.128.0/18 (10.0.128.0 - 10.0.191.255)
-4.  10.0.192.0/18 (10.0.192.0 - 10.0.255.255)
+<b>1. 10.0.0.0/18</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 10.0.0.0 - 10.0.63.255
+</details>
+
+<b>2. 10.0.64.0/18</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 10.0.64.0 - 10.0.127.255
+</details>
+
+<b>3. 10.0.128.0/18</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 10.0.128.0 - 10.0.191.255
+</details>
+
+<b>4. 10.0.192.0/18</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 10.0.192.0 - 10.0.255.255
+</details>
+
 
 ---
 
@@ -147,8 +172,32 @@ AWS supports IPv6 with /56 CIDR blocks:
 ---
 
 ## 🧠 Quiz Snippet (5/20+)
-1.  **How many bits in an IPv4 address?** (32)
-2.  **True/False: 192.168.1.0 is a valid host IP.** (False - it's the network address)
-3.  **What is the subnet mask for /16?** (255.255.0.0)
-4.  **How many IPs does AWS reserve per subnet?** (5)
-5.  **What is the loopback address range?** (127.0.0.0/8)
+<b>1. How many bits in an IPv4 address?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 32
+</details>
+
+<b>2. True/False: 192.168.1.0 is a valid host IP.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: False - it's the network address
+</details>
+
+<b>3. What is the subnet mask for /16?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 255.255.0.0
+</details>
+
+<b>4. How many IPs does AWS reserve per subnet?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 5
+</details>
+
+<b>5. What is the loopback address range?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 127.0.0.0/8
+</details>

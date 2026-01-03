@@ -64,7 +64,12 @@ Total: **11 containers**
 5. visits-service
 6. genai-service
 7. api-gateway
-8. tracing-server (Zipkin)
+<b>8. tracing-server</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Zipkin
+</details>
+
 9. admin-server
 10. prometheus-server
 11. grafana-server

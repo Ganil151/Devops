@@ -5,18 +5,18 @@ graph TD
     Common[Base SOPs: VPN, SSO, SSH] --> SOP1[Task SOP: Deploy Cluster]
     Common --> SOP2[Task SOP: DB Migration]
     Common --> SOP3[Task SOP: App Patching]
-    
-    subgraph "The Source of Truth"
+
+subgraph "The Source of Truth"
     Common
     end
-    
-    subgraph "Specific Procedures"
+
+subgraph "Specific Procedures"
     SOP1
     SOP2
     SOP3
     end
-    
-    style Common fill:#f9f,stroke:#333
+
+style Common fill:#f9f,stroke:#333
 ```
 
 ---
@@ -62,319 +62,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What does SDRY stand for?**
-- A) Simple Documentation Rows Yearly
-- B) Single Source of Truth / Don't Repeat Yourself
-- C) Standard Documentation Rule Yesterday
-- D) System Data Retrieval Yield
-
+<b>1. What does SDRY stand for?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**（The documentation equivalent of DRY in coding）
-
+Answer: B**（The documentation equivalent of DRY in coding）
 </details>
 
-**2. True/False: You should copy-paste instructions to make each document 'Self-Contained' and avoid links.**
-- A) True
-- B) False
 
+<b>2. True/False: You should copy-paste instructions to make each document 'Self-Contained' and avoid links.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - This creates a maintenance nightmare. Use links or transclusion.
-
+Answer: B** - This creates a maintenance nightmare. Use links or transclusion.
 </details>
 
-**3. 'Modular Documentation' means:**
-- A) One giant file for everything
-- B) Breaking documentation into small, reusable components or topics
-- C) Using many images
-- D) writing in code
 
+<b>3. 'Modular Documentation' means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A 'Base SOP' is best used for:**
-- A) One-time experiments
-- B) Highly specific app features
-- C) Fundamental tasks like "Connecting to VPN" or "Setting up AWS CLI"
-- D) Marketing materials
 
+<b>4. A 'Base SOP' is best used for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**5. 'Transclusion' refers to:**
-- A) Translating docs into other languages
-- B) Dynamically including the content of one file inside another at build time
-- C) Deleting old docs
-- D) Printing docs
 
+<b>5. 'Transclusion' refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. The "Copy-Paste Trap" lead to:**
-- A) Faster writing
-- B) Documentation drift and stale instructions
-- C) Better security
-- D) lower costs
 
+<b>6. The "Copy-Paste Trap" lead to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Updating a 'Base SOP' once results in:**
-- A) No changes elsewhere
-- B) All referencing documents being updated automatically (upon build)
-- C) The file being deleted
-- D) more work
 
+<b>7. Updating a 'Base SOP' once results in:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. Which of these is a 'Single Source of Truth'?**
-- A) 5 different files with the same login info
-- B) One central 'Authentication Guide' linked by 50 files
-- C) A Slack message
-- D) A sticky note
 
+<b>8. Which of these is a 'Single Source of Truth'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. SDRY is the documentation version of which programming principle?**
-- A) KISS (Keep It Simple Stupid)
-- B) DRY (Don't Repeat Yourself)
-- C) YAGNI (You Ain't Gonna Need It)
-- D) SOLID
 
+<b>9. SDRY is the documentation version of which programming principle?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. True/False: Transclusion ensures that if you update a script, the doc showing that script is automatically updated.**
-- A) True
-- B) False
 
+<b>10. True/False: Transclusion ensures that if you update a script, the doc showing that script is automatically updated.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**11. Descriptive Links (e.g., "[Connect to VPN](../base/vpn.md)") are better because:**
-- A) They are longer
-- B) They tell the user exactly what to expect before they click
-- C) They use more characters
-- D) they look like code
 
+<b>11. Descriptive Links (e.g., "[Connect to VPN](../base/vpn.md)") are better because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. 'Maintenance Debt' in documentation increases when:**
-- A) You use SDRY
-- B) You copy-paste instructions across multiple files
-- C) You use MkDocs
-- D) you delete old files
 
+<b>12. 'Maintenance Debt' in documentation increases when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A 'Global Header/Footer' is an example of:**
-- A) A mistake
-- B) SDRY (one file defines the menu/links for all pages)
-- C) Passive writing
-- D) a linter
 
+<b>13. A 'Global Header/Footer' is an example of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. If a task is used in more than __ places, it should probably be centralized.**
-- A) 1
-- B) 3
-- C) 10
-- D) 100
 
+<b>14. If a task is used in more than __ places, it should probably be centralized.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** (The 'Rule of Three')
-
+Answer: B** (The 'Rule of Three')
 </details>
 
-**15. 'Shared Variables' in MkDocs (e.g., `$VERSION`) allow you to:**
-- A) Calculate math
-- B) Update a value in one config file and see it change everywhere in the docs
-- C) Hide text
-- D) share passwords
 
+<b>15. 'Shared Variables' in MkDocs (e.g., `$VERSION`) allow you to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: SDRY makes the initial writing phase longer but saves time in the long run.**
-- A) True
-- B) False
 
+<b>16. True/False: SDRY makes the initial writing phase longer but saves time in the long run.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - Planning modularity takes effort upfront.
-
+Answer: A** - Planning modularity takes effort upfront.
 </details>
 
-**17. 'Reference Documentation' usually contains:**
-- A) Life stories
-- B) Static information like API specs or tool configs that change rarely
-- C) Daily news
-- D) only images
 
+<b>17. 'Reference Documentation' usually contains:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. A 'Nested List' of instructions is NOT SDRY if:**
-- A) It's short
-- B) It's 100% identical in 10 other files
-- C) It's in color
-- D) it's for seniors
 
+<b>18. A 'Nested List' of instructions is NOT SDRY if:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. 'Documentation Health' is measured by:**
-- A) The number of pages
-- B) The accuracy and consistency of instructions across the portal
-- C) The file size
-- D) the number of authors
 
+<b>19. 'Documentation Health' is measured by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: It's okay to have "near-duplicate" docs for Dev vs Prod if only 1 line changes.**
-- A) False - Use variables or a centralized doc with "If/Then" logic.
-- B) True
 
+<b>20. True/False: It's okay to have "near-duplicate" docs for Dev vs Prod if only 1 line changes.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Content Fragments' are:**
-- A) Broken files
-- B) Small pieces of Markdown intended to be transcluded into larger docs
-- C) Emails
-- D) website titles
 
+<b>21. 'Content Fragments' are:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Which section of an SOP is the best place to link to a Base SOP?**
-- A) The Footer
-- B) Prerequisites
-- C) In the middle of a command
-- D) Nowhere
 
+<b>22. Which section of an SOP is the best place to link to a Base SOP?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. 'Centralization' helps with Compliance because:**
-- A) It hides files
-- B) It's easier to verify and audit one "Authoritative" source
-- C) It's faster to read
-- D) it's cheaper
 
+<b>23. 'Centralization' helps with Compliance because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Rule of Three' suggests:**
-- A) Read the doc 3 times
-- B) Use 3 authors
-- C) If you repeat something 3 times, refactor it into a reusable component
-- D) delete 3 files a week
 
+<b>24. The 'Rule of Three' suggests:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**25. The ultimate enemy of SDRY is:**
-- A) Linux
-- B) Manual Copy-Pasting and lack of documentation planning
-- C) Git
-- D) Markdown
 
+<b>25. The ultimate enemy of SDRY is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

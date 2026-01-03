@@ -8,8 +8,8 @@ graph TD
     Measure --> Debrief[Debrief: Identify Doc Gaps]
     Debrief --> Iterate[Iterate: Update SOPs & Alerts]
     Iterate --> Plan
-    
-    subgraph "Testing the Documentation"
+
+subgraph "Testing the Documentation"
     Observe
     Measure
     Debrief
@@ -59,319 +59,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the main purpose of a 'Gameday'?**
-- A) To play video games
-- B) To test response systems, monitoring, and documentation in a safe environment
-- C) To find out who to blame for outages
-- D) To update HR records
-
+<b>1. What is the main purpose of a 'Gameday'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: Documentation should be updated after every major incident where it was found to be lacking.**
-- A) True
-- B) False
 
+<b>2. True/False: Documentation should be updated after every major incident where it was found to be lacking.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - This is the "Feedback Loop."
-
+Answer: A** - This is the "Feedback Loop."
 </details>
 
-**3. The 'Junior Test' verifies documentation by:**
-- A) Making sure juniors work harder
-- B) Ensuring a person with less context can follow the guide successfully without help
-- C) Deleting simple docs
-- D) Asking for money
 
+<b>3. The 'Junior Test' verifies documentation by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. When should you ideally test a 'Rollback Plan'?**
-- A) Only during a real catastrophe
-- B) During a scheduled Gameday or drill
-- C) Never
-- D) Once a year
 
+<b>4. When should you ideally test a 'Rollback Plan'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. A 'Scribe' in a Gameday is responsible for:**
-- A) Fixing the servers
-- B) Documenting gaps in the SOP and observing engineer behavior
-- C) Buying lunch
-- D) Calling the CEO
 
+<b>5. A 'Scribe' in a Gameday is responsible for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Tribal Knowledge' is dangerous because:**
-- A) It is too fast
-- B) It exists only in people's heads and is not captured in the documentation
-- C) It is always wrong
-- D) It's formal
 
+<b>6. 'Tribal Knowledge' is dangerous because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Which metric is most improved by regularly tested SOPs?**
-- A) Line of code count
-- B) MTTR (Mean Time to Repair)
-- C) Email volume
-- D) CPU temperature
 
+<b>7. Which metric is most improved by regularly tested SOPs?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. In the Gameday Lifecycle, what comes after 'Observe'?**
-- A) Plan
-- B) Measure (and then Debrief)
-- C) Inject
-- D) Sleep
 
+<b>8. In the Gameday Lifecycle, what comes after 'Observe'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. True/False: A Gameday failure is a bad thing for the team.**
-- A) True
-- B) False - It's a "Success" if you find a bug before it hits Production.
 
+<b>9. True/False: A Gameday failure is a bad thing for the team.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. 'Iteration' in the context of documentation means:**
-- A) Copying files
-- B) Continuously updating and improving docs based on test results
-- C) Deleting the whole wiki
-- D) writing in Greek
 
+<b>10. 'Iteration' in the context of documentation means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Why should the author of an SOP NOT be the one testing it in a Gameday?**
-- A) They are too busy
-- B) They have "Implicit Knowledge" and will unconsciously skip broken steps without noticing
-- C) They aren't allowed in the room
-- D) It's a legal rule
 
+<b>11. Why should the author of an SOP NOT be the one testing it in a Gameday?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. A 'Debrief' session occurs:**
-- A) Before the Gameday
-- B) After the Gameday to discuss what was learned and what needs fixing
-- C) Once a month
-- D) only for seniors
 
+<b>12. A 'Debrief' session occurs:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. 'Stress Testing' documentation refers to:**
-- A) Pressing the keyboard hard
-- B) Using the doc under time pressure or simulate chaotic environments
-- C) Printing it 100 times
-- D) hiding it
 
+<b>13. 'Stress Testing' documentation refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. Which document should have a mandatory Gameday test?**
-- A) The holiday calendar
-- B) Disaster Recovery (DR) plans
-- C) The cafeteria menu
-- D) Personnel files
 
+<b>14. Which document should have a mandatory Gameday test?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. True/False: Post-mortem reviews should identify specific line numbers or sections in the SOP that failed.**
-- A) True
-- B) False
 
+<b>15. True/False: Post-mortem reviews should identify specific line numbers or sections in the SOP that failed.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**16. 'Confidence Inflation' is the risk that:**
-- A) Money loses value
-- B) Teams *feel* prepared but their documentation is actually stale and untested
-- C) Everyone is too happy
-- D) documentation is too long
 
+<b>16. 'Confidence Inflation' is the risk that:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. 'Chaos Engineering' is related to Gamedays because:**
-- A) They both cause chaos
-- B) It is the practice of automating the "Inject Fault" part of the cycle
-- C) It's a marketing term
-- D) it's about deleting users
 
+<b>17. 'Chaos Engineering' is related to Gamedays because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. A 'Documentation Bug' is:**
-- A) An insect on the paper
-- B) An error, missing step, or outdated instruction in the wiki
-- C) A typo only
-- D) a virus
 
+<b>18. A 'Documentation Bug' is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. 'Time to Success' is a metric that measures:**
-- A) How long a meeting lasts
-- B) How long it takes to solve an incident using the documentation
-- C) How long it takes to write a page
-- D) salary over time
 
+<b>19. 'Time to Success' is a metric that measures:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: You should test if your 'Communication' steps in the SOP work (e.g., Slack channels).**
-- A) True
-- B) False
 
+<b>20. True/False: You should test if your 'Communication' steps in the SOP work (e.g., Slack channels).</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Drift' in documentation happens because:**
-- A) The document moves
-- B) The underlying system changes but the documentation is not updated
-- C) Of the wind
-- D) authors leave
 
+<b>21. 'Drift' in documentation happens because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Gameday Scope' defines:**
-- A) The length of the day
-- B) Exactly which systems and SOPs are being tested
-- C) The budget
-- D) the colors of the repo
 
+<b>22. 'Gameday Scope' defines:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Why include 'Success Criteria' for a Gameday?**
-- A) To win a prize
-- B) To objectively know if the documentation and response met the goal
-- C) To end the meeting
-- D) no reason
 
+<b>23. Why include 'Success Criteria' for a Gameday?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. 'Documentation Maintenance' is:**
-- A) Cleaning the server
-- B) The ongoing effort to keep SOPs tested and current
-- C) Typing fast
-- D) printing
 
+<b>24. 'Documentation Maintenance' is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The ultimate result of Testing and Iteration is:**
-- A) More files
-- B) High Operational Excellence and team psychological safety
-- C) More meetings
-- D) lower CPU usage
 
+<b>25. The ultimate result of Testing and Iteration is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

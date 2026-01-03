@@ -75,9 +75,19 @@ Start from zero and justify each expense every period.
 **Console Steps:**
 1. Navigate to AWS Budgets
 2. Click "Create budget"
-3. Select budget type (Cost, Usage, Savings Plans, Reservations)
+<b>3. Select budget type</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Cost, Usage, Savings Plans, Reservations
+</details>
+
 4. Set budget amount and period
-5. Configure alert thresholds (50%, 80%, 100%)
+<b>5. Configure alert thresholds</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 50%, 80%, 100%
+</details>
+
 6. Add notification recipients
 
 **AWS CLI Example:**
@@ -111,7 +121,12 @@ aws budgets create-budget \
 1. Go to Cost Management + Billing
 2. Select "Budgets"
 3. Click "Add"
-4. Set scope (subscription, resource group)
+<b>4. Set scope</b>
+<details>
+<summary>Show Answer</summary>
+Answer: subscription, resource group
+</details>
+
 5. Define budget amount and reset period
 6. Configure alert conditions
 
@@ -132,7 +147,12 @@ az consumption budget create \
 1. Go to Cloud Billing → Budgets & alerts
 2. Click "Create budget"
 3. Set scope and amount
-4. Configure alert thresholds (%)
+<b>4. Configure alert thresholds</b>
+<details>
+<summary>Show Answer</summary>
+Answer: %
+</details>
+
 5. Connect to Pub/Sub for automation
 
 ---

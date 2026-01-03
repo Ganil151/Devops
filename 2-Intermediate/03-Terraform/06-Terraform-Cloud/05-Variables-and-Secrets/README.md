@@ -35,8 +35,8 @@ graph TD
     Project[Variable Set (Global)] --> Org[Variable Set (Org-Wide)]
     Org --> Workspace[Workspace Specific Variables]
     Workspace --> Run[Run-Specific (API only)]
-    
-    style Run fill:#f96,stroke:#333
+
+style Run fill:#f96,stroke:#333
     style Workspace fill:#9f6,stroke:#333
 ```
 *   **Rule**: More specific overrides less specific. A Workspace Variable overwrites a Global Variable Set.

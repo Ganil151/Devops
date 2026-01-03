@@ -91,352 +91,227 @@ resource "aws_instance" "euro_server" {
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Where can you find official Terraform providers?**
-- A) GitHub only
-- B) Terraform Registry
-- C) npm repository
-- D) Docker Hub
-
-
+<b>1. Where can you find official Terraform providers?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. Which block specifies the provider version constraint?**
-- A) `provider`
-- B) `version`
-- C) `required_providers`
-- D) `terraform_version`
 
 
+
+<b>2. Which block specifies the provider version constraint?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**3. Do you need to download provider binaries from GitHub manually?**
-- A) Yes, always
-- B) No, `terraform init` does it automatically
-- C) Only for custom providers
-- D) Only on first use
 
 
+
+<b>3. Do you need to download provider binaries from GitHub manually?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. Can you use multiple providers in one configuration?**
-- A) No, only one provider per project
-- B) Yes, you can use multiple different providers
-- C) Only in modules
-- D) Only with Terraform Cloud
 
 
+
+<b>4. Can you use multiple providers in one configuration?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. What is the default provider source namespace?**
-- A) `terraform/`
-- B) `official/`
-- C) `hashicorp/`
-- D) `registry/`
 
 
+
+<b>5. What is the default provider source namespace?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**6. Where are provider plugins stored after `terraform init`?**
-- A) `/usr/local/bin`
-- B) `.terraform/providers/`
-- C) `~/.terraform.d/`
-- D) In system PATH
 
 
+
+<b>6. Where are provider plugins stored after `terraform init`?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. What does the `~>` version constraint mean?**
-- A) Exactly this version
-- B) Any version
-- C) Pessimistic constraint (allows rightmost version component to increment)
-- D) Greater than or equal to
 
 
+
+<b>7. What does the `~>` version constraint mean?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**8. How do you specify a provider alias?**
-- A) `provider "aws" { name = "east" }`
-- B) `provider "aws" { alias = "east" }`
-- C) `provider "aws-east"`
-- D) `provider "aws" as "east"`
 
 
+
+<b>8. How do you specify a provider alias?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. What file locks provider versions?**
-- A) `terraform.lock`
-- B) `.terraform.lock.hcl`
-- C) `provider.lock`
-- D) `versions.tf`
 
 
+
+<b>9. What file locks provider versions?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. Can you configure a provider without specifying it in required_providers?**
-- A) Yes, but it's deprecated practice
-- B) No, you must always declare it
-- C) Only for hashicorp providers
-- D) Only in Terraform 0.12 and earlier
 
 
+
+<b>10. Can you configure a provider without specifying it in required_providers?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**11. How do you use a provider alias in a resource?**
-- A) `provider = "aws.east"`
-- B) `provider = aws.east`
-- C) `alias = "east"`
-- D) `use_provider = "east"`
 
 
+
+<b>11. How do you use a provider alias in a resource?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. What protocol do providers use to communicate with Terraform Core?**
-- A) HTTP
-- B) gRPC/Plugin Protocol
-- C) REST API
-- D) WebSocket
 
 
+
+<b>12. What protocol do providers use to communicate with Terraform Core?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. Which environment variable prefix is used for provider authentication in AWS?**
-- A) `TF_VAR_`
-- B) `TERRAFORM_`
-- C) `AWS_`
-- D) `PROVIDER_`
 
 
+
+<b>13. Which environment variable prefix is used for provider authentication in AWS?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**14. Can a provider configuration reference variables?**
-- A) No, providers must be static
-- B) Yes, but only for credentials
-- C) Yes, you can use variables in provider blocks
-- D) Only with Terraform 1.0+
 
 
+
+<b>14. Can a provider configuration reference variables?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**15. What is a "community provider"?**
-- A) A provider built by HashiCorp
-- B) A provider built and maintained by third parties
-- C) A free provider
-- D) A provider for social media
 
 
+
+<b>15. What is a "community provider"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. How many provider configurations can you have for the same provider type?**
-- A) Only one
-- B) Maximum two
-- C) Unlimited (using aliases)
-- D) One per region
 
 
+
+<b>16. How many provider configurations can you have for the same provider type?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**17. What happens if the provider version constraint can't be satisfied?**
-- A) Uses the latest version anyway
-- B) Terraform init fails with an error
-- C) Uses a cached version
-- D) Prompts user to choose
 
 
+
+<b>17. What happens if the provider version constraint can't be satisfied?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Where should you typically configure provider credentials?**
-- A) Hardcoded in provider block
-- B) In Git repository
-- C) Environment variables or credential files
-- D) In terraform.tfstate
 
 
+
+<b>18. Where should you typically configure provider credentials?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**19. What is the purpose of the provider source attribute?**
-- A) To specify authentication source
-- B) To specify where to download the provider from
-- C) To link to documentation
-- D) To define the code repository
 
 
+
+<b>19. What is the purpose of the provider source attribute?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. Can you skip the provider block if using required_providers?**
-- A) No, always needed
-- B) Yes, if using default configuration
-- C) Only for AWS
-- D) Only in modules
 
 
+
+<b>20. Can you skip the provider block if using required_providers?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. What format are provider plugins distributed in?**
-- A) Docker containers
-- B) Compiled binary executables
-- C) Python packages
-- D) JavaScript modules
 
 
+
+<b>21. What format are provider plugins distributed in?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Which command updates the provider lock file?**
-- A) `terraform update`
-- B) `terraform init -upgrade`
-- C) `terraform lock`
-- D) `terraform refresh`
 
 
+
+<b>22. Which command updates the provider lock file?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Can you create a custom provider?**
-- A) No, only HashiCorp can
-- B) Yes, using the Terraform Plugin SDK
-- C) Only with special license
-- D) Only for internal use
 
 
+
+<b>23. Can you create a custom provider?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. What does a provider do?**
-- A) Stores state
-- B) Translates Terraform calls to API calls
-- C) Validates HCL syntax
-- D) Manages backend storage
 
 
+
+<b>24. What does a provider do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. What happens if you remove a provider that's still in use?**
-- A) Terraform removes associated resources
-- B) Terraform shows validation error
-- C) Resources become orphaned
-- D) Nothing, provider is optional
 
 
+
+<b>25. What happens if you remove a provider that's still in use?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+

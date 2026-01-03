@@ -44,7 +44,12 @@ Server authentication token: [Select from credentials]
 
 ### Create SonarQube Token Credential
 1. Go to **Manage Jenkins > Manage Credentials**
-2. Select appropriate domain (usually Global)
+<b>2. Select appropriate domain</b>
+<details>
+<summary>Show Answer</summary>
+Answer: usually Global
+</details>
+
 3. Click **Add Credentials**
 
 ```

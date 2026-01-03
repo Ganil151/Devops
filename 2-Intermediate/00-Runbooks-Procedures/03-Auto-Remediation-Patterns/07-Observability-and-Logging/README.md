@@ -44,317 +44,176 @@
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Why is 'Every Action' logging mandatory in SRE automation?**
-- A) To make the logs larger
-- B) For auditability, compliance, and post-mortem analysis
-- C) To hide errors
-- D) to use more disk space
-
+<b>1. Why is 'Every Action' logging mandatory in SRE automation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. Structured Logging (JSON) is preferred because:**
-- A) It is colorful
-- B) It is easily searchable and aggregatable by tools like ELK/Datadog
-- C) It uses less space
-- D) it is the only way to write code
 
+<b>2. Structured Logging (JSON) is preferred because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. True/False: You should log which specific alert triggered the remediation.**
-- A) True
-- B) False
 
+<b>3. True/False: You should log which specific alert triggered the remediation.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - This links the "Cause" to the "Action."
-
+Answer: A** - This links the "Cause" to the "Action."
 </details>
 
-**4. A 'Success Notification' should ideally be sent to:**
-- A) A high-priority pager (PagerDuty)
-- B) A low-priority Slack channel (e.g., #ops-log)
-- C) No one
-- D) the customer
 
+<b>4. A 'Success Notification' should ideally be sent to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which metric measures how much time automation saves compared to a human?**
-- A) CPU Usage
-- B) MTTR Improvement (Manual vs. Auto)
-- C) Disk Space
-- D) latency
 
+<b>5. Which metric measures how much time automation saves compared to a human?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'False Positive Rate' should ideally be:**
-- A) > 50%
-- B) As low as possible (typically < 5%)
-- C) 100%
-- D) ignore this metric
 
+<b>6. 'False Positive Rate' should ideally be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: Every failed auto-remediation must trigger a human alert.**
-- A) True
-- B) False
 
+<b>7. True/False: Every failed auto-remediation must trigger a human alert.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. An 'Audit Trail' helps during a post-mortem to:**
-- A) Blame the author
-- B) Reconstruct the timeline of events including automated actions
-- C) Delete files
-- D) celebrate
 
+<b>8. An 'Audit Trail' helps during a post-mortem to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. What is a 'Notification Rollup'?**
-- A) Deleting notifications
-- B) Combining many similar events into a single summary message
-- C) Increasing the volume of alerts
-- D) reading alerts out loud
 
+<b>9. What is a 'Notification Rollup'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. 'Structured Data' helps calculate:**
-- A) Remediation Success Rates
-- B) The price of a laptop
-- C) The color of the sky
-- D) nothing
 
+<b>10. 'Structured Data' helps calculate:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**11. True/False: You should log the specific VERSION of the remediation script that ran.**
-- A) True
-- B) False
 
+<b>11. True/False: You should log the specific VERSION of the remediation script that ran.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - Essential for debugging "Regression" in automation logic.
-
+Answer: A** - Essential for debugging "Regression" in automation logic.
 </details>
 
-**12. A 'Toil Dashboard' typically displays:**
-- A) Employee names
-- B) Time saved through automation and frequency of fixed incidents
-- C) Future weather
-- D) code snippets
 
+<b>12. A 'Toil Dashboard' typically displays:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. Which tool is commonly used to visualize remediation logs?**
-- A) Grafana
-- B) Paint
-- C) Calculator
-- D) Spotify
 
+<b>13. Which tool is commonly used to visualize remediation logs?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**14. What occurs when logs are NOT centralized?**
-- A) They are easy to find
-- B) You lose visibility when a container/server is deleted (Ephemeral data loss)
-- C) They get faster
-- D) no one cares
 
+<b>14. What occurs when logs are NOT centralized?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Escalation Rate' measures:**
-- A) How fast the company grows
-- B) How often automation fails and passes control to a human
-- C) The height of the server
-- D) nothing
 
+<b>15. 'Escalation Rate' measures:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: High 'False Positive' rates lead to Alert Fatigue.**
-- A) True
-- B) False
 
+<b>16. True/False: High 'False Positive' rates lead to Alert Fatigue.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'Verification Evidence' in a log might include:**
-- A) The author's signature
-- B) A snippet of the successful health check response
-- C) A picture of the server
-- D) nothing
 
+<b>17. 'Verification Evidence' in a log might include:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why is 'Trigger_Duration' important to log?**
-- A) To see how long the script took
-- B) To see how long the outage lasted before the automation fixed it
-- C) To save money
-- D) it's not important
 
+<b>18. Why is 'Trigger_Duration' important to log?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which channel is best for 'Critical Automation Failures'?**
-- A) PagerDuty (On-call phone)
-- B) Personal Email
-- C) A physical sticky note
-- D) a hidden slack channel
 
+<b>19. Which channel is best for 'Critical Automation Failures'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**20. True/False: Remediation logs should be kept for at least 30-90 days for compliance audits.**
-- A) True
-- B) False
 
+<b>20. True/False: Remediation logs should be kept for at least 30-90 days for compliance audits.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Drift Detection' in logs can show:**
-- A) Changes in weather
-- B) If automation is frequently acting on the same resource (indicating a deeper issue)
-- C) New hires
-- D) nothing
 
+<b>21. 'Drift Detection' in logs can show:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. A 'Silent Failure' is one where:**
-- A) No noise is made
-- B) The task fails but no log or alert is generated
-- C) The task works perfectly
-- D) the user logs out
 
+<b>22. A 'Silent Failure' is one where:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - The worst kind of failure.
-
+Answer: B** - The worst kind of failure.
 </details>
 
-**23. 'Log Ingestion' refers to:**
-- A) Deleting logs
-- B) The process of sending logs from a source to a central storage system
-- C) Reading logs
-- D) writing logs in a book
 
+<b>23. 'Log Ingestion' refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Human Impact' of logging is:**
-- A) More work
-- B) Increased trust in the automation system
-- C) More meetings
-- D) nothing
 
+<b>24. The 'Human Impact' of logging is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. High-performance Observability makes automation _____ and _____.**
-- A) Slow and Weak
-- B) Transparent and Trustworthy
-- C) Hidden and Fast
-- D) Manual and Hard
 
+<b>25. High-performance Observability makes automation _____ and _____.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

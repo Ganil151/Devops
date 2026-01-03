@@ -64,28 +64,28 @@ After mastering these fundamentals, progress to:
 ```mermaid
 graph TD
     App[Application]
-    
-    subgraph Relational [Relational / SQL]
+
+subgraph Relational [Relational / SQL]
         Schema[Fixed Schema]
         Table1[Table: Users]
         Table2[Table: Orders]
         Rel[Relationships]
         Table1 --- Rel --- Table2
     end
-    
-    subgraph NonRelational [NoSQL]
+
+subgraph NonRelational [NoSQL]
         Doc[Document Store]
         KV[Key-Value Store]
         Graph[Graph DB]
     end
-    
-    App -->|Structured Transasctions| Relational
+
+App -->|Structured Transasctions| Relational
     App -->|Flexible/High Scale| NonRelational
-    
-    classDef sql fill:#e3f2fd,stroke:#0d47a1
+
+classDef sql fill:#e3f2fd,stroke:#0d47a1
     classDef nosql fill:#fff3e0,stroke:#e65100
-    
-    class Relational sql
+
+class Relational sql
     class NonRelational nosql
 ```
 
@@ -137,229 +137,148 @@ graph TD
 8.  **Define "indexes" in a database.**
     -   Data structures (like a B-Tree) that improve the speed of data retrieval operations on a table at the cost of additional writes and storage space.
 
-### Advanced Level
-9.  **What is the CAP Theorem?**
-    -   In a distributed system, you can only pick 2 out of 3: **Consistency** (every read receives the most recent write), **Availability** (every request receives a response), **Partition Tolerance** (system continues despite network message drops).
-10. **Explain "Eventual Consistency".**
-    -   A consistency model where, given enough time, all updates will propagate through the system and all replicas will be consistent. (CP vs AP systems).
-11. **What is "Normalization" vs "Denormalization"?**
-    -   **Normalization:** Organizing data to reduce redundancy (splitting tables). Good for write efficiency and integrity.
-    -   **Denormalization:** Combining tables to reduce joins. Good for read performance, often used in NoSQL or Data Warehousing.
-12. **How does Amazon Aurora differ from standard RDS?**
-    -   Aurora separate compute from storage. The storage layer is shared across 3 AZs with 6 copies of data. It allows faster replication, auto-scaling storage, and faster failover than standard RDS.
-13. **What is an "In-Memory" database (e.g., Redis/ElastiCache) used for?**
-    -   Caching frequently accessed data to provide microsecond latency, relieving load on the main disk-based database (RDS/DynamoDB).
-
----
-
-## Quiz: Database Fundamentals
-
+<b>9. </b>
 <details>
-<summary><b>1. Which database type is best for complex relationships and transactions (e.g., ERP systems)?</b></summary>
-A) NoSQL<br>
-B) Relational (SQL)<br>
-C) Flat File<br>
-D) Excel<br>
-<br>
-<b>Answer: B) Relational (SQL)</b>
+<summary>Show Answer</summary>
+Answer: B) Relational (SQL)</b>
 </details>
 
+
+<b>2. Scaling a database by adding more power (CPU/RAM) to a single server is called:</b>
 <details>
-<summary><b>2. Scaling a database by adding more power (CPU/RAM) to a single server is called:</b></summary>
-A) Horizontal Scaling<br>
-B) Vertical Scaling<br>
-C) Diagonal Scaling<br>
-D) Sharding<br>
-<br>
-<b>Answer: B) Vertical Scaling</b>
+<summary>Show Answer</summary>
+Answer: B) Vertical Scaling</b>
 </details>
 
+
+<b>3. DynamoDB is an example of which type of database?</b>
 <details>
-<summary><b>3. DynamoDB is an example of which type of database?</b></summary>
-A) Relational<br>
-B) Key-Value / Document (NoSQL)<br>
-C) Graph<br>
-D) In-Memory<br>
-<br>
-<b>Answer: B) Key-Value / Document (NoSQL)</b>
+<summary>Show Answer</summary>
+Answer: B) Key-Value / Document (NoSQL)</b>
 </details>
 
+
+<b>4. In RDS Multi-AZ, the standby instance is primarily used for:</b>
 <details>
-<summary><b>4. In RDS Multi-AZ, the standby instance is primarily used for:</b></summary>
-A) Serving read traffic<br>
-B) High Availability (Failover)<br>
-C) Analytics<br>
-D) Backups only<br>
-<br>
-<b>Answer: B) High Availability (Failover)</b>
+<summary>Show Answer</summary>
+Answer: B) High Availability (Failover)</b>
 </details>
 
+
+<b>5. Which property ensures that a transaction is "all or nothing"?</b>
 <details>
-<summary><b>5. Which property ensures that a transaction is "all or nothing"?</b></summary>
-A) Atomicity<br>
-B) Consistency<br>
-C) Isolation<br>
-D) Durability<br>
-<br>
-<b>Answer: A) Atomicity</b>
+<summary>Show Answer</summary>
+Answer: A) Atomicity</b>
 </details>
 
+
+<b>6. Which service provides a managed Redis or Memcached environment?</b>
 <details>
-<summary><b>6. Which service provides a managed Redis or Memcached environment?</b></summary>
-A) RDS<br>
-B) DynamoDB<br>
-C) ElastiCache<br>
-D) Redshift<br>
-<br>
-<b>Answer: C) ElastiCache</b>
+<summary>Show Answer</summary>
+Answer: C) ElastiCache</b>
 </details>
 
+
+<b>7. "SQL" stands for:</b>
 <details>
-<summary><b>7. "SQL" stands for:</b></summary>
-A) Strong Query Language<br>
-B) Structured Query Language<br>
-C) Simple Question Language<br>
-D) Server Query Log<br>
-<br>
-<b>Answer: B) Structured Query Language</b>
+<summary>Show Answer</summary>
+Answer: B) Structured Query Language</b>
 </details>
 
+
+<b>8. A "Join" operation is a key feature of:</b>
 <details>
-<summary><b>8. A "Join" operation is a key feature of:</b></summary>
-A) Key-Value Stores<br>
-B) Relational Databases<br>
-C) Object Storage<br>
-D) DNS<br>
-<br>
-<b>Answer: B) Relational Databases</b>
+<summary>Show Answer</summary>
+Answer: B) Relational Databases</b>
 </details>
 
+
+<b>9. Which AWS service is a data warehouse solution (OLAP)?</b>
 <details>
-<summary><b>9. Which AWS service is a data warehouse solution (OLAP)?</b></summary>
-A) RDS<br>
-B) DynamoDB<br>
-C) Redshift<br>
-D) Neptune<br>
-<br>
-<b>Answer: C) Redshift</b>
+<summary>Show Answer</summary>
+Answer: C) Redshift</b>
 </details>
 
+
+<b>10. In the CAP theorem, "P" stands for:</b>
 <details>
-<summary><b>10. In the CAP theorem, "P" stands for:</b></summary>
-A) Performance<br>
-B) Partition Tolerance<br>
-C) Persistence<br>
-D) Privacy<br>
-<br>
-<b>Answer: B) Partition Tolerance</b>
+<summary>Show Answer</summary>
+Answer: B) Partition Tolerance</b>
 </details>
 
+
+<b>11. What is the main benefit of "Read Replicas"?</b>
 <details>
-<summary><b>11. What is the main benefit of "Read Replicas"?</b></summary>
-A) Automatic Failover<br>
-B) Reduced Write Latency<br>
-C) Improved Read Performance (Offloading)<br>
-D) Strong Consistency<br>
-<br>
-<b>Answer: C) Improved Read Performance (Offloading)</b>
+<summary>Show Answer</summary>
+Answer: C) Improved Read Performance (Offloading)</b>
 </details>
 
+
+<b>12. MongoDB is a popular examples of a:</b>
 <details>
-<summary><b>12. MongoDB is a popular examples of a:</b></summary>
-A) Relational DB<br>
-B) Document Store<br>
-C) Graph DB<br>
-D) Time Series DB<br>
-<br>
-<b>Answer: B) Document Store</b>
+<summary>Show Answer</summary>
+Answer: B) Document Store</b>
 </details>
 
+
+<b>13. Amazon Aurora is compatible with which two database engines?</b>
 <details>
-<summary><b>13. Amazon Aurora is compatible with which two database engines?</b></summary>
-A) Oracle and SQL Server<br>
-B) MySQL and PostgreSQL<br>
-C) MongoDB and Cassandra<br>
-D) Redis and Memcached<br>
-<br>
-<b>Answer: B) MySQL and PostgreSQL</b>
+<summary>Show Answer</summary>
+Answer: B) MySQL and PostgreSQL</b>
 </details>
 
+
+<b>14. Which statement adds data to a SQL table?</b>
 <details>
-<summary><b>14. Which statement adds data to a SQL table?</b></summary>
-A) SELECT<br>
-B) INSERT<br>
-C) UPDATE<br>
-D) DELETE<br>
-<br>
-<b>Answer: B) INSERT</b>
+<summary>Show Answer</summary>
+Answer: B) INSERT</b>
 </details>
 
+
+<b>15. Data "Durability" refers to:</b>
 <details>
-<summary><b>15. Data "Durability" refers to:</b></summary>
-A) Speed of access<br>
-B) Data not disappearing over time<br>
-C) Uptime of the server<br>
-D) Encryption strength<br>
-<br>
-<b>Answer: B) Data not disappearing over time</b>
+<summary>Show Answer</summary>
+Answer: B) Data not disappearing over time</b>
 </details>
 
+
+<b>16. Which strategy is most effective for handling un-predictable, massive traffic spikes for a simple lookup app?</b>
 <details>
-<summary><b>16. Which strategy is most effective for handling un-predictable, massive traffic spikes for a simple lookup app?</b></summary>
-A) RDS with auto-scaling storage<br>
-B) Provisioned DynamoDB<br>
-C) DynamoDB On-Demand<br>
-D) EC2 with SQLite<br>
-<br>
-<b>Answer: C) DynamoDB On-Demand</b>
+<summary>Show Answer</summary>
+Answer: C) DynamoDB On-Demand</b>
 </details>
 
+
+<b>17. "Columns" in a NoSQL Document store are typically referred to as:</b>
 <details>
-<summary><b>17. "Columns" in a NoSQL Document store are typically referred to as:</b></summary>
-A) Attributes / Fields<br>
-B) Tables<br>
-C) Relations<br>
-D) Shards<br>
-<br>
-<b>Answer: A) Attributes / Fields</b>
+<summary>Show Answer</summary>
+Answer: A) Attributes / Fields</b>
 </details>
 
+
+<b>18. Graph databases (like Amazon Neptune) are optimized for:</b>
 <details>
-<summary><b>18. Graph databases (like Amazon Neptune) are optimized for:</b></summary>
-A) Financial transactions<br>
-B) Analyzing complex relationships (social networks, fraud detection)<br>
-C) Video storage<br>
-D) Key-Value lookups<br>
-<br>
-<b>Answer: B) Analyzing complex relationships (social networks, fraud detection)</b>
+<summary>Show Answer</summary>
+Answer: B) Analyzing complex relationships (social networks, fraud detection)</b>
 </details>
 
+
+<b>19. Database Migration Service (DMS) helps you:</b>
 <details>
-<summary><b>19. Database Migration Service (DMS) helps you:</b></summary>
-A) Migrate databases to AWS with minimal downtime<br>
-B) Design database schemas<br>
-C) Write SQL queries<br>
-D) Install Oracle on your laptop<br>
-<br>
-<b>Answer: A) Migrate databases to AWS with minimal downtime</b>
+<summary>Show Answer</summary>
+Answer: A) Migrate databases to AWS with minimal downtime</b>
 </details>
 
+
+<b>20. Which command modifies the structure of an existing table (e.g., adding a column)?</b>
 <details>
-<summary><b>20. Which command modifies the structure of an existing table (e.g., adding a column)?</b></summary>
-A) UPDATE TABLE<br>
-B) ALTER TABLE<br>
-C) CHANGE TABLE<br>
-D) MODIFY TABLE<br>
-<br>
-<b>Answer: B) ALTER TABLE</b>
+<summary>Show Answer</summary>
+Answer: B) ALTER TABLE</b>
 </details>
 
+
+<b>21. "OLTP" stands for:</b>
 <details>
-<summary><b>21. "OLTP" stands for:</b></summary>
-A) Online Text Processing<br>
-B) Online Transaction Processing<br>
-C) Offline Table Protocol<br>
-D) One Time Loading Process<br>
-<br>
-<b>Answer: B) Online Transaction Processing</b>
+<summary>Show Answer</summary>
+Answer: B) Online Transaction Processing</b>
 </details>

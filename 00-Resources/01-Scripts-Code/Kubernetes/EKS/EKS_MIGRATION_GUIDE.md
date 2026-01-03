@@ -500,7 +500,12 @@ aws ec2 describe-security-groups --filters "Name=group-name,Values=*petclinic*"
 - **Total Estimate**: ~$200/month for 2 t3.large nodes
 
 ### Cost Saving Tips
-1. Use Spot Instances for worker nodes (50-70% savings)
+<b>1. Use Spot Instances for worker nodes</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 50-70% savings
+</details>
+
 2. Enable cluster autoscaler to scale down during low usage
 3. Use smaller instance types (t3.medium) if sufficient
 

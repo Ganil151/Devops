@@ -41,317 +41,176 @@
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which event source is based on pattern matching in text files?**
-- A) Metrics-Based
-- B) Log-Based
-- C) Trace-Based
-- D) Synthetic
-
+<b>1. Which event source is based on pattern matching in text files?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: Event-driven architecture is generally more resource-efficient than periodic polling.**
-- A) True
-- B) False
 
+<b>2. True/False: Event-driven architecture is generally more resource-efficient than periodic polling.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - It only executes when an event occurs.
-
+Answer: A** - It only executes when an event occurs.
 </details>
 
-**3. What is the standard data format for events in modern routing platforms (like EventBridge)?**
-- A) XML
-- B) JSON
-- C) CSV
-- D) YAML
 
+<b>3. What is the standard data format for events in modern routing platforms (like EventBridge)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A 'Threshold' (e.g., > 95%) is associated with which trigger type?**
-- A) Log-Based
-- B) Metrics-Based
-- C) Synthetic
-- D) Manual
 
+<b>4. A 'Threshold' (e.g., > 95%) is associated with which trigger type?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which tool is a common target for remediation events in AWS?**
-- A) AWS Lambda
-- B) AWS S3
-- C) AWS IAM
-- D) AWS Billing
 
+<b>5. Which tool is a common target for remediation events in AWS?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - it runs the "Act" code.
-
+Answer: A** - it runs the "Act" code.
 </details>
 
-**6. 'Synthetic Monitoring' involves:**
-- A) Monitoring real users
-- B) Simulating user actions with automated probes
-- C) Checking the temperature of the server
-- D) reading emails
 
+<b>6. 'Synthetic Monitoring' involves:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: Trace-based triggers help identify bottlenecks in distributed systems.**
-- A) True
-- B) False
 
+<b>7. True/False: Trace-based triggers help identify bottlenecks in distributed systems.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. KEDA is a CNCF project used to scale:**
-- A) Windows laptops
-- B) Kubernetes pods based on external events
-- C) Database storage
-- D) coffee machines
 
+<b>8. KEDA is a CNCF project used to scale:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. 'Alertmanager' is used in the Prometheus ecosystem to:**
-- A) Store metrics
-- B) Group, deduplicate, and route alerts to targets
-- C) Compile code
-- D) edit images
 
+<b>9. 'Alertmanager' is used in the Prometheus ecosystem to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What is 'Event Latency'?**
-- A) Use the time it takes for an event to travel from source to target
-- B) The price of the event
-- C) The size of the file
-- D) no reason
 
+<b>10. What is 'Event Latency'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**11. Which platform is known for 'Workflow Automation' based on triggers (triggers/actions)?**
-- A) StackStorm
-- B) Microsoft Word
-- C) Google Maps
-- D) Zoom
 
+<b>11. Which platform is known for 'Workflow Automation' based on triggers (triggers/actions)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. True/False: 'Log-Based' triggers can be expensive due to the high volume of logs processed.**
-- A) True
-- B) False
 
+<b>12. True/False: 'Log-Based' triggers can be expensive due to the high volume of logs processed.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**13. A 'Message Queue' (like SQS) is often used as a:**
-- A) Database
-- B) Buffer to ensure remediation events aren't lost during spikes
-- C) Text editor
-- D) web server
 
+<b>13. A 'Message Queue' (like SQS) is often used as a:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What occurs when an 'Alert Storm' happens?**
-- A) It rains
-- B) Hundreds of related alerts fire at once, potentially triggering too many automations
-- C) The server gets faster
-- D) the internet turns off
 
+<b>14. What occurs when an 'Alert Storm' happens?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Pattern Matching' in log-based triggers often uses:**
-- A) Magic
-- B) Regular Expressions (Regex)
-- C) Random numbers
-- D) colors
 
+<b>15. 'Pattern Matching' in log-based triggers often uses:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: Synthetic tests can detect 'Zombie' services that are running but not working.**
-- A) True
-- B) False
 
+<b>16. True/False: Synthetic tests can detect 'Zombie' services that are running but not working.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'EventBridge' allows for 'Content-Based Routing'. This means:**
-- A) Routing based on the author
-- B) Routing based on the data inside the event (e.g., "Only route if Priority=High")
-- C) Routing based on the font size
-- D) routing based on the day of the week
 
+<b>17. 'EventBridge' allows for 'Content-Based Routing'. This means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Which AWS service provides 'Distributed Tracing' data?**
-- A) EC2
-- B) X-Ray
-- C) GuardDuty
-- D) Route 53
 
+<b>18. Which AWS service provides 'Distributed Tracing' data?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. A 'False Positive' trigger is one that:**
-- A) Works perfectly
-- B) Triggers remediation when there is actually no problem
-- C) Ignores a real problem
-- D) saves money
 
+<b>19. A 'False Positive' trigger is one that:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: You should always allow 'Write' access to your remediation Lambda for all resources.**
-- A) False - Use the Principle of Least Privilege.
-- B) True
 
+<b>20. True/False: You should always allow 'Write' access to your remediation Lambda for all resources.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Event-Driven' systems are often described as:**
-- A) Sequential
-- B) Asynchronous
-- C) Synchronous
-- D) Linear
 
+<b>21. 'Event-Driven' systems are often described as:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Which tool is best for 'Infrastructure' event monitoring?**
-- A) Prometheus Alertmanager
-- B) VS Code
-- C) Spotify
-- D) Slack
 
+<b>22. Which tool is best for 'Infrastructure' event monitoring?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**23. 'Deduplication' in event routing prevents:**
-- A) Finding new bugs
-- B) Running the same remediation task multiple times for the same issue
-- C) Saving data
-- D) high costs
 
+<b>23. 'Deduplication' in event routing prevents:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Observer' in an event-driven system is:**
-- A) The SRE
-- B) The monitoring tool (e.g., CloudWatch)
-- C) The CEO
-- D) the customer
 
+<b>24. The 'Observer' in an event-driven system is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Event-Driven Triggers are the 'Eyes' of...**
-- A) The developer
-- B) The Auto-Remediation Loop
-- C) The customer
-- D) the office
 
+<b>25. Event-Driven Triggers are the 'Eyes' of...</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

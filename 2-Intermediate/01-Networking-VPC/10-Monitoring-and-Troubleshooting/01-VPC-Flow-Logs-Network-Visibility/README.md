@@ -12,8 +12,8 @@ graph LR
     FL --> CWL["CloudWatch Logs"]
     FL --> S3["Amazon S3"]
     FL --> KDF["Kinesis Data Firehose"]
-    
-    CWL --> CWI["CloudWatch Insights"]
+
+CWL --> CWI["CloudWatch Insights"]
     S3 --> Athena["Amazon Athena"]
 ```
 

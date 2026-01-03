@@ -319,7 +319,12 @@ Answer these questions to guide your choice:
 ### Starting Point
 
 **New Project**:
-1. Start simple (usually RDS)
+<b>1. Start simple</b>
+<details>
+<summary>Show Answer</summary>
+Answer: usually RDS
+</details>
+
 2. Add NoSQL as specific needs arise
 3. Don't over-engineer
 
@@ -350,9 +355,24 @@ Ready to implement? Choose your path:
 
 **Exercise**: Design the database architecture for these applications:
 
-1. **Food delivery app** (restaurants, orders, delivery tracking)
-2. **Video streaming platform** (users, videos, watch history, recommendations)
-3. **Project management tool** (teams, tasks, timelines, comments)
+<b>1. Food delivery app</b>
+<details>
+<summary>Show Answer</summary>
+Answer: restaurants, orders, delivery tracking
+</details>
+
+<b>2. Video streaming platform</b>
+<details>
+<summary>Show Answer</summary>
+Answer: users, videos, watch history, recommendations
+</details>
+
+<b>3. Project management tool</b>
+<details>
+<summary>Show Answer</summary>
+Answer: teams, tasks, timelines, comments
+</details>
+
 
 
 ---
@@ -397,220 +417,191 @@ Ready to implement? Choose your path:
 ### Intermediate Level
 4.  **Explain "Polyglot Persistence".**
     -   Using different databases for different parts of an application typically based on the specific needs of each component (e.g., Redis for caching, PostgreSQL for payments, Mongo for catalog).
-5.  **What is the trade-off of "Denormalization"?**
-    -   **Benefit:** Faster reads (no joins needed).
-    -   **Cost:** Slower writes (update data in multiple places) and risk of data inconsistency (updates might fail in one spot).
-
----
-
-## Part 4: Knowledge Quiz
-
+<b>5. </b>
 <details>
-<summary><b>1. Which feature implies a Relational Database is the best choice?</b></summary>
-A) Flexible Schema<br>
-B) Unstructured Data<br>
-C) Complex relationships & JOINs<br>
-D) Infinite horizontal scaling<br>
-<br>
-<b>Answer: C) Complex relationships & JOINs</b>
+<summary>Show Answer</summary>
+Answer: C) Complex relationships & JOINs</b>
 </details>
 
-<details>
-<summary><b>2. If your application requires handling millions of requests per second with single-digit millisecond latency, choose:</b></summary>
-A) Redshift<br>
-B) DynamoDB (NoSQL)<br>
-C) RDS (Relational)<br>
-D) Glacier<br>
-<br>
-<b>Answer: B) DynamoDB (NoSQL)</b>
-</details>
+
+
 
 <details>
-<summary><b>3. E-Commerce Order Processing (Payments) typically requires:</b></summary>
-A) Eventual Consistency<br>
-B) Strong ACID Transactions<br>
-C) Graph relationships<br>
-D) Approximate correctness<br>
-<br>
-<b>Answer: B) Strong ACID Transactions</b>
+<b>2. If your application requires handling millions of requests per second with single-digit millisecond latency, choose:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) DynamoDB (NoSQL)</b>
 </details>
 
-<details>
-<summary><b>4. Which is a valid reason to choose NoSQL?</b></summary>
-A) You love writing SQL<br>
-B) Your data schema changes constantly (e.g., varying product attributes)<br>
-C) You need complex reporting<br>
-D) You have very little data<br>
-<br>
-<b>Answer: B) Your data schema changes constantly</b>
-</details>
+
 
 <details>
-<summary><b>5. For a recommendation engine (e.g., "People who bought this also bought..."), the best specialized DB is:</b></summary>
-A) Key-Value<br>
-B) Document<br>
-C) Graph (Neptune)<br>
-D) Relational<br>
-<br>
-<b>Answer: C) Graph (Neptune)</b>
+<b>3. E-Commerce Order Processing (Payments) typically requires:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Strong ACID Transactions</b>
 </details>
 
-<details>
-<summary><b>6. What is the primary use case for Amazon ElastiCache?</b></summary>
-A) Long-term archival<br>
-B) In-memory caching to speed up read-heavy workloads<br>
-C) Complex transactions<br>
-D) Video storage<br>
-<br>
-<b>Answer: B) In-memory caching to speed up read-heavy workloads</b>
-</details>
+
 
 <details>
-<summary><b>7. "Data Warehousing" (like Redshift) is optimized for:</b></summary>
-A) Transaction processing (OLTP)<br>
-B) Analytical processing (OLAP) & massive aggregations<br>
-C) Real-time chat<br>
-D) Session management<br>
-<br>
-<b>Answer: B) Analytical processing (OLAP) & massive aggregations</b>
+<b>4. Which is a valid reason to choose NoSQL?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Your data schema changes constantly</b>
 </details>
 
-<details>
-<summary><b>8. Which is an example of "structured" data?</b></summary>
-A) A tweet<br>
-B) A video file<br>
-C) An employee record with fixed fields (ID, Name, Dept)<br>
-D) A blog post<br>
-<br>
-<b>Answer: C) An employee record with fixed fields</b>
-</details>
+
 
 <details>
-<summary><b>9. If you need to search through petabytes of text logs, use:</b></summary>
-A) RDS<br>
-B) OpenSearch / Elasticsearch<br>
-C) ElastiCache<br>
-D) Neptune<br>
-<br>
-<b>Answer: B) OpenSearch / Elasticsearch</b>
+<b>5. For a recommendation engine (e.g., "People who bought this also bought..."), the best specialized DB is:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Graph (Neptune)</b>
 </details>
 
-<details>
-<summary><b>10. A major cost factor for DynamoDB is:</b></summary>
-A) Number of Tables<br>
-B) Read/Write Capacity Units (Throughput)<br>
-C) Number of users<br>
-D) Idle time<br>
-<br>
-<b>Answer: B) Read/Write Capacity Units (Throughput)</b>
-</details>
+
 
 <details>
-<summary><b>11. Relational Databases scale best:</b></summary>
-A) Vertically (Scale Up)<br>
-B) Horizontally (Scale Out)<br>
-C) Diagonally<br>
-D) Randomly<br>
-<br>
-<b>Answer: A) Vertically (Scale Up)</b>
+<b>6. What is the primary use case for Amazon ElastiCache?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) In-memory caching to speed up read-heavy workloads</b>
 </details>
 
-<details>
-<summary><b>12. You need to store "Session State" for a web app. Best choice?</b></summary>
-A) Redshift<br>
-B) Key-Value Store (Redis/DynamoDB)<br>
-C) Graph DB<br>
-D) Cold Storage<br>
-<br>
-<b>Answer: B) Key-Value Store (Redis/DynamoDB)</b>
-</details>
+
 
 <details>
-<summary><b>13. Which scenario might force a migration from NoSQL back to SQL?</b></summary>
-A) Need for faster reads<br>
-B) Need for strict regulatory compliance, audit trails, and complex reporting<br>
-C) Need for more flexibility<br>
-D) Need for horizontal scaling<br>
-<br>
-<b>Answer: B) Need for strict regulatory compliance, audit trails, and complex reporting</b>
+<b>7. "Data Warehousing" (like Redshift) is optimized for:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Analytical processing (OLAP) & massive aggregations</b>
 </details>
 
-<details>
-<summary><b>14. "Time Series" data (like sensor readings) is best stored in:</b></summary>
-A) A specialized Time Series DB (Timestream) or Column store<br>
-B) A Graph DB<br>
-C) A Cache<br>
-D) A Ledger<br>
-<br>
-<b>Answer: A) A specialized Time Series DB (Timestream) or Column store</b>
-</details>
+
 
 <details>
-<summary><b>15. Why avoid "Premature Optimization"?</b></summary>
-A) Checklists are bad<br>
-B) You shouldn't pick a complex NoSQL system if a simple SQL setup works fine initially<br>
-C) SQL is always faster<br>
-D) NoSQL is always cheaper<br>
-<br>
-<b>Answer: B) You shouldn't pick a complex NoSQL system if a simple SQL setup works fine initially</b>
+<b>8. Which is an example of "structured" data?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) An employee record with fixed fields</b>
 </details>
 
-<details>
-<summary><b>16. Which ensures "Referential Integrity"?</b></summary>
-A) Foreign Keys (Relational)<br>
-B) Embedding Data (NoSQL)<br>
-C) Sharding<br>
-D) Caching<br>
-<br>
-<b>Answer: A) Foreign Keys (Relational)</b>
-</details>
+
 
 <details>
-<summary><b>17. ACID stands for:</b></summary>
-A) Atomicity, Consistency, Isolation, Durability<br>
-B) Accuracy, Cost, Integrity, Data<br>
-C) Availability, Consistency, Isolation, Database<br>
-D) Always Check Integrity Daily<br>
-<br>
-<b>Answer: A) Atomicity, Consistency, Isolation, Durability</b>
+<b>9. If you need to search through petabytes of text logs, use:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) OpenSearch / Elasticsearch</b>
 </details>
 
-<details>
-<summary><b>18. In the CAP theorem, which property do distributed NoSQL databases typically sacrifice?</b></summary>
-A) Partition Tolerance<br>
-B) Availability (sometimes)<br>
-C) Strong Consistency (often)<br>
-D) Speed<br>
-<br>
-<b>Answer: C) Strong Consistency (often)</b>
-</details>
+
 
 <details>
-<summary><b>19. Hybrid architectures involve:</b></summary>
-A) Using paper and digital<br>
-B) Using multiple specialized databases (Polyglot Persistence)<br>
-C) Using only one database for everything<br>
-D) Using Excel as a database<br>
-<br>
-<b>Answer: B) Using multiple specialized databases (Polyglot Persistence)</b>
+<b>10. A major cost factor for DynamoDB is:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Read/Write Capacity Units (Throughput)</b>
 </details>
 
-<details>
-<summary><b>20. Which cost model allows "Pay per Request"?</b></summary>
-A) RDS Provisioned<br>
-B) DynamoDB On-Demand<br>
-C) Reserved Instances<br>
-D) Dedicated Host<br>
-<br>
-<b>Answer: B) DynamoDB On-Demand</b>
-</details>
+
 
 <details>
-<summary><b>21. "Schema Migration" is a pain point primarily for:</b></summary>
-A) NoSQL<br>
-B) Relational Databases<br>
-C) Key-Value Stores<br>
-D) Flat files<br>
-<br>
-<b>Answer: B) Relational Databases</b>
+<b>11. Relational Databases scale best:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A) Vertically (Scale Up)</b>
 </details>
+
+
+
+<details>
+<b>12. You need to store "Session State" for a web app. Best choice?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Key-Value Store (Redis/DynamoDB)</b>
+</details>
+
+
+
+<details>
+<b>13. Which scenario might force a migration from NoSQL back to SQL?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Need for strict regulatory compliance, audit trails, and complex reporting</b>
+</details>
+
+
+
+<details>
+<b>14. "Time Series" data (like sensor readings) is best stored in:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A) A specialized Time Series DB (Timestream) or Column store</b>
+</details>
+
+
+
+<details>
+<b>15. Why avoid "Premature Optimization"?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) You shouldn't pick a complex NoSQL system if a simple SQL setup works fine initially</b>
+</details>
+
+
+
+<details>
+<b>16. Which ensures "Referential Integrity"?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A) Foreign Keys (Relational)</b>
+</details>
+
+
+
+<details>
+<b>17. ACID stands for:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A) Atomicity, Consistency, Isolation, Durability</b>
+</details>
+
+
+
+<details>
+<b>18. In the CAP theorem, which property do distributed NoSQL databases typically sacrifice?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Strong Consistency (often)</b>
+</details>
+
+
+
+<details>
+<b>19. Hybrid architectures involve:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Using multiple specialized databases (Polyglot Persistence)</b>
+</details>
+
+
+
+<details>
+<b>20. Which cost model allows "Pay per Request"?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) DynamoDB On-Demand</b>
+</details>
+
+
+
+<details>
+<b>21. "Schema Migration" is a pain point primarily for:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Relational Databases</b>
+</details>
+
+

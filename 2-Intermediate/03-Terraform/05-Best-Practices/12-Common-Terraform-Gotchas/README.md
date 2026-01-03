@@ -33,8 +33,6 @@ Learn from others' mistakes! This guide covers the most common pitfalls, unexpec
 
 **Why It's Bad**: Terraform relies on state file integrity. Manual edits can break the checksums, cause inconsistencies, or lead to resource deletion.
 
-
-
 **The Right Way**:
 ```bash
 # Use terraform state commands
@@ -65,8 +63,8 @@ terraform {
     bucket = "my-terraform-state"
     key    = "prod/terraform.tfstate"
     region = "us-east-1"
-    
-    dynamodb_table = "terraform-locks"  # State locking
+
+dynamodb_table = "terraform-locks"  # State locking
     encrypt        = true
   }
 }
@@ -120,11 +118,11 @@ resource "aws_db_instance" "main" {
 resource "aws_instance" "app" {
   ami           = "ami-12345"
   instance_type = "t3.micro"
-  
-  # Explicit dependency
+
+# Explicit dependency
   depends_on = [aws_db_instance.main]
-  
-  # OR use implicit dependency
+
+# OR use implicit dependency
   user_data = templatefile("init.sh", {
     db_endpoint = aws_db_instance.main.endpoint  # Creates implicit dependency
   })
@@ -139,8 +137,8 @@ resource "aws_instance" "app" {
 ```hcl
 resource "aws_security_group" "app" {
   name = "app-sg"
-  
-  ingress {
+
+ingress {
     from_port       = 443
     to_port         = 443
     protocol        = "tcp"
@@ -150,8 +148,8 @@ resource "aws_security_group" "app" {
 
 resource "aws_security_group" "alb" {
   name = "alb-sg"
-  
-  egress {
+
+egress {
     from_port       = 443
     to_port         = 443
     protocol        = "tcp"
@@ -220,8 +218,8 @@ variable "regions" {
 
 resource "aws_instance" "web" {
   for_each = toset(var.regions)  # Convert list to set
-  
-  ami           = "ami-12345"
+
+ami           = "ami-12345"
   instance_type = "t3.micro"
 }
 ```
@@ -248,7 +246,12 @@ resource "aws_db_instance" "main" {
 
 **The Right Approach**:
 1. Never commit `.tfstate` files
-2. Encrypt state file at rest (S3 encryption)
+<b>2. Encrypt state file at rest</b>
+<details>
+<summary>Show Answer</summary>
+Answer: S3 encryption
+</details>
+
 3. Use IAM roles to limit access
 4. For truly sensitive data, use AWS Secrets Manager:
 ```hcl
@@ -448,8 +451,8 @@ resource "aws_instance" "servers" {
 ```hcl
 resource "aws_instance" "servers" {
   for_each = toset(var.instance_names)  # Convert list to set
-  
-  tags = {
+
+tags = {
     Name = each.key  # "web", "api", or "db"
   }
 }
@@ -463,8 +466,8 @@ resource "aws_instance" "servers" {
 ```hcl
 resource "aws_instance" "web" {
   count = 3
-  
-  tags = {
+
+tags = {
     Name = "web-server-${count.index}"  # Results in: web-server-0, web-server-1, web-server-2
   }
 }
@@ -474,8 +477,8 @@ resource "aws_instance" "web" {
 ```hcl
 resource "aws_instance" "web" {
   count = 3
-  
-  tags = {
+
+tags = {
     Name = "web-server-${count.index + 1}"  # Results in: web-server-1, web-server-2, web-server-3
   }
 }
@@ -495,8 +498,8 @@ module "database" {
 
 module "application" {
   source = "./modules/app"
-  
-  depends_on = [module.database.db_instance]  # ERROR: Can't reference module resource
+
+depends_on = [module.database.db_instance]  # ERROR: Can't reference module resource
 }
 ```
 
@@ -521,8 +524,8 @@ module "application" {
 resource "aws_instance" "app" {
   ami           = "ami-12345"
   instance_type = "t3.micro"
-  
-  lifecycle {
+
+lifecycle {
     replace_triggered_by = [aws_ami.custom.id]  # If AMI doesn't exist yet, error!
   }
 }
@@ -542,8 +545,8 @@ resource "aws_instance" "app" {
 ```hcl
 resource "aws_instance" "web" {
   # ... other config ...
-  
-  lifecycle {
+
+lifecycle {
     ignore_changes = [ami]  # Allow manual AMI updates
   }
 }
@@ -627,313 +630,159 @@ terraform {
 
 ## Comprehensive Quiz (22 Questions)
 
-**1. What command should you use to modify state instead of editing manually?**
-- A) `vim terraform.tfstate`
-- B) `terraform state`
-- C) `terraform edit`
-- D) Direct JSON modification
-
-
+<b>1. What command should you use to modify state instead of editing manually?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. What happens if you commit terraform.tfstate to Git?**
-- A) Everything works fine
-- B) Merge conflicts and exposed secrets
-- C) Faster deployments
-- D) Automatic backups
 
-
+<b>2. What happens if you commit terraform.tfstate to Git?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. How do you create an implicit dependency?**
-- A) Use `depends_on`
-- B) Reference one resource's attribute in another
-- C) Place resources in same file
-- D) Use `link` meta-argument
 
-
+<b>3. How do you create an implicit dependency?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. Can you use variables in module source?**
-- A) Yes, always
-- B) No, source must be literal string
-- C) Only with Terraform Cloud
-- D) Only for local modules
 
-
+<b>4. Can you use variables in module source?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. What does count.index start at?**
-- A) 1
-- B) 0
-- C) -1
-- D) Random
 
-
+<b>5. What does count.index start at?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. What breaks when changing from count to for_each?**
-- A) Nothing
-- B) Resource addresses change, causing recreation
-- C) State file corrupts
-- D) Provider fails
 
-
+<b>6. What breaks when changing from count to for_each?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Where are sensitive variables stored in plain text?**
-- A) Nowhere, they're encrypted
-- B) Only in console output
-- C) In the state file
-- D) In .terraform directory
 
-
+<b>7. Where are sensitive variables stored in plain text?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**8. How do you fix a circular dependency in security groups?**
-- A) Can't be fixed
-- B) Use separate security group rule resources
-- C) Merge the security groups
-- D) Use depends_on
 
-
+<b>8. How do you fix a circular dependency in security groups?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. What should you commit to version control?**
-- A) terraform.tfstate
-- B) .terraform directory
-- C) .terraform.lock.hcl
-- D) terraform.tfvars with passwords
 
-
+<b>9. What should you commit to version control?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**10. What does for_each require?**
-- A) A list
-- B) A map or set
-- C) A string
-- D) An integer
 
-
+<b>10. What does for_each require?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. How do you prevent accidental resource destruction?**
-- A) `protect = true`
-- B) `prevent_destroy = true` in lifecycle
-- C) `no_delete = true`
-- D) `immutable = true`
 
-
+<b>11. How do you prevent accidental resource destruction?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. What converts a list to a set?**
-- A) `tomap()`
-- B) `list_to_set()`
-- C) `toset()`
-- D) `convert()`
 
-
+<b>12. What converts a list to a set?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**13. When are module sources resolved?**
-- A) During plan
-- B) During apply
-- C) During init
-- D) During validation
 
-
+<b>13. When are module sources resolved?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**14. What does sensitive = true do?**
-- A) Encrypts state file
-- B) Hides value in console output only
-- C) Prevents Git commits
-- D) Enables encryption at rest
 
-
+<b>14. What does sensitive = true do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. How do you lock provider versions?**
-- A) In variables.tf
-- B) In required_providers block with version constraint
-- C) In backend configuration
-- D) Can't lock versions
 
-
+<b>15. How do you lock provider versions?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. What is the risk of manual state file edits?**
-- A) Faster deployments
-- B) Breaks checksums and causes inconsistencies
-- C) Improves performance
-- D) No risk
 
-
+<b>16. What is the risk of manual state file edits?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. How do you move a resource address in state?**
-- A) Manual edit
-- B) `terraform state mv`
-- C) `terraform move`
-- D) `terraform relocate`
 
-
+<b>17. How do you move a resource address in state?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. What happens with default_tags and resource tags conflict?**
-- A) Resource tags always win
-- B) Default tags always win
-- C) Results in duplicate or conflicting tags
-- D) Terraform errors
 
-
+<b>18. What happens with default_tags and resource tags conflict?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**19. How do you recover from lost state file?**
-- A) Recreate all resources
-- B) Restore from backup or manually import
-- C) It's impossible
-- D) Use terraform refresh
 
-
+<b>19. How do you recover from lost state file?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. What creates implicit dependency between modules?**
-- A) depends_on between modules
-- B) Passing outputs as inputs
-- C) Same file placement
-- D) Module naming
 
-
+<b>20. What creates implicit dependency between modules?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. Why might "it worked yesterday" fail today?**
-- A) Cloud provider outage
-- B) Unlocked provider version updated with breaking changes
-- C) State file corruption
-- D) Network issues
 
-
+<b>21. Why might "it worked yesterday" fail today?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. What is the proper way to handle secrets?**
-- A) Store in tfstate
-- B) Commit to Git
-- C) Use external secret management (Secrets Manager, Vault)
-- D) Hard-code in .tf files
 
-
+<b>22. What is the proper way to handle secrets?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
+
 
 ---
 

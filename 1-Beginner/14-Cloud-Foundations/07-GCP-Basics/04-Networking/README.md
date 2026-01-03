@@ -155,221 +155,148 @@ This guide covers GCP networking for secure and scalable cloud connectivity.
 6. **What is Cloud NAT?**
    - Managed service for "Network Address Translation". Allows private instances to access the internet (outbound) without public IPs.
 
-### Advanced Level
-7. **What is "Private Google Access"?**
-   - Access Google APIs (Storage, BigQuery) from private IPs in a subnet, without needing Internet access.
-8. **Explain "Firewall Insights".**
-   - Tool to visualize and optimize firewall usage (e.g., finding unused rules called "Shadowed rules").
-9. **Difference between Dedicated vs. Partner Interconnect.**
-   - **Dedicated:** Direct physical link to Google (requires meeting Google at a colocation).
-   - **Partner:** Connect via a service provider (ISP/MSP). Easier if you aren't in a Google colo.
-
----
-
-## Quiz: GCP Networking
-
+<b>7. </b>
 <details>
-<summary><b>1. In GCP, a VPC Network is:</b></summary>
-A) Global<br>
-B) Regional<br>
-C) Zonal<br>
-D) Local<br>
-<br>
-<b>Answer: A) Global</b>
+<summary>Show Answer</summary>
+Answer: A) Global</b>
 </details>
 
+
+<b>2. Subnets in GCP are:</b>
 <details>
-<summary><b>2. Subnets in GCP are:</b></summary>
-A) Regional<br>
-B) Global<br>
-C) Zonal<br>
-D) Universal<br>
-<br>
-<b>Answer: A) Regional</b>
+<summary>Show Answer</summary>
+Answer: A) Regional</b>
 </details>
 
+
+<b>3. Which LB uses a single Anycast IP worldwide?</b>
 <details>
-<summary><b>3. Which LB uses a single Anycast IP worldwide?</b></summary>
-A) HTTP(S) Load Balancer<br>
-B) Network LB<br>
-C) Internal LB<br>
-D) DNS<br>
-<br>
-<b>Answer: A) HTTP(S) Load Balancer</b>
+<summary>Show Answer</summary>
+Answer: A) HTTP(S) Load Balancer</b>
 </details>
 
+
+<b>4. Firewall rules are:</b>
 <details>
-<summary><b>4. Firewall rules are:</b></summary>
-A) Stateful<br>
-B) Stateless<br>
-C) Optional<br>
-D) Paid<br>
-<br>
-<b>Answer: A) Stateful</b>
+<summary>Show Answer</summary>
+Answer: A) Stateful</b>
 </details>
 
+
+<b>5. To allow VMs without public IPs to reach the internet:</b>
 <details>
-<summary><b>5. To allow VMs without public IPs to reach the internet:</b></summary>
-A) Cloud NAT<br>
-B) Cloud VPN<br>
-C) VPC Peering<br>
-D) Cloud Router<br>
-<br>
-<b>Answer: A) Cloud NAT</b>
+<summary>Show Answer</summary>
+Answer: A) Cloud NAT</b>
 </details>
 
+
+<b>6. Shared VPC allows:</b>
 <details>
-<summary><b>6. Shared VPC allows:</b></summary>
-A) Centralized network control across multiple projects<br>
-B) Sharing passwords<br>
-C) Free internet<br>
-D) Merging companies<br>
-<br>
-<b>Answer: A) Centralized network control across multiple projects</b>
+<summary>Show Answer</summary>
+Answer: A) Centralized network control across multiple projects</b>
 </details>
 
+
+<b>7. Cloud DNS is:</b>
 <details>
-<summary><b>7. Cloud DNS is:</b></summary>
-A) A scalable, reliable, managed DNS service (Authoritative)<br>
-B) A firewall<br>
-C) A LB<br>
-D) A VM<br>
-<br>
-<b>Answer: A) A scalable, reliable, managed DNS service (Authoritative)</b>
+<summary>Show Answer</summary>
+Answer: A) A scalable, reliable, managed DNS service (Authoritative)</b>
 </details>
 
+
+<b>8. Cloud Armor provides:</b>
 <details>
-<summary><b>8. Cloud Armor provides:</b></summary>
-A) WAF (Web App Firewall) and DDoS protection<br>
-B) Encryption<br>
-C) Storage<br>
-D) VPN<br>
-<br>
-<b>Answer: A) WAF (Web App Firewall) and DDoS protection</b>
+<summary>Show Answer</summary>
+Answer: A) WAF (Web App Firewall) and DDoS protection</b>
 </details>
 
+
+<b>9. VPC Peering is transitive:</b>
 <details>
-<summary><b>9. VPC Peering is transitive:</b></summary>
-A) False (If A-B and B-C, A cannot talk to C)<br>
-B) True<br>
-<br>
-<b>Answer: A) False (If A-B and B-C, A cannot talk to C)</b>
+<summary>Show Answer</summary>
+Answer: A) False (If A-B and B-C, A cannot talk to C)</b>
 </details>
 
+
+<b>10. Default Network creates:</b>
 <details>
-<summary><b>10. Default Network creates:</b></summary>
-A) One subnet in every region automatically<br>
-B) Nothing<br>
-C) One subnet in US<br>
-D) A public IP<br>
-<br>
-<b>Answer: A) One subnet in every region automatically</b>
+<summary>Show Answer</summary>
+Answer: A) One subnet in every region automatically</b>
 </details>
 
+
+<b>11. Target Tags in firewalls allow:</b>
 <details>
-<summary><b>11. Target Tags in firewalls allow:</b></summary>
-A) Applying rules to specific instances<br>
-B) Tagging photos<br>
-C) Nothing<br>
-D) Pricing<br>
-<br>
-<b>Answer: A) Applying rules to specific instances</b>
+<summary>Show Answer</summary>
+Answer: A) Applying rules to specific instances</b>
 </details>
 
+
+<b>12. Cloud Router is used for:</b>
 <details>
-<summary><b>12. Cloud Router is used for:</b></summary>
-A) Dynamic routing (BGP) with VPN/Interconnect<br>
-B) Static routing<br>
-C) Wi-Fi<br>
-D) DHCP<br>
-<br>
-<b>Answer: A) Dynamic routing (BGP) with VPN/Interconnect</b>
+<summary>Show Answer</summary>
+Answer: A) Dynamic routing (BGP) with VPN/Interconnect</b>
 </details>
 
+
+<b>13. Premium Tier Network:</b>
 <details>
-<summary><b>13. Premium Tier Network:</b></summary>
-A) Uses Google's global backbone (Current default)<br>
-B) Uses public internet mostly<br>
-C) Is slow<br>
-D) Is free<br>
-<br>
-<b>Answer: A) Uses Google's global backbone (Current default)</b>
+<summary>Show Answer</summary>
+Answer: A) Uses Google's global backbone (Current default)</b>
 </details>
 
+
+<b>14. Private Google Access allows:</b>
 <details>
-<summary><b>14. Private Google Access allows:</b></summary>
-A) Accessing Google APIs from private IPs<br>
-B) Accessing internet<br>
-C) Accessing AWS<br>
-D) Nothing<br>
-<br>
-<b>Answer: A) Accessing Google APIs from private IPs</b>
+<summary>Show Answer</summary>
+Answer: A) Accessing Google APIs from private IPs</b>
 </details>
 
+
+<b>15. Legacy Networks (Non-VPC) are:</b>
 <details>
-<summary><b>15. Legacy Networks (Non-VPC) are:</b></summary>
-A) Deprecated<br>
-B) Recommended<br>
-C) Faster<br>
-D) Better<br>
-<br>
-<b>Answer: A) Deprecated</b>
+<summary>Show Answer</summary>
+Answer: A) Deprecated</b>
 </details>
 
+
+<b>16. Can overlapping subnets exist in the SAME VPC?</b>
 <details>
-<summary><b>16. Can overlapping subnets exist in the SAME VPC?</b></summary>
-A) No<br>
-B) Yes<br>
-<br>
-<b>Answer: A) No</b>
+<summary>Show Answer</summary>
+Answer: A) No</b>
 </details>
 
+
+<b>17. Packet Mirroring is used for:</b>
 <details>
-<summary><b>17. Packet Mirroring is used for:</b></summary>
-A) Inspecting traffic (IDS/IPS), troubleshooting<br>
-B) Copying files<br>
-C) Backups<br>
-D) DNS<br>
-<br>
-<b>Answer: A) Inspecting traffic (IDS/IPS), troubleshooting</b>
+<summary>Show Answer</summary>
+Answer: A) Inspecting traffic (IDS/IPS), troubleshooting</b>
 </details>
 
+
+<b>18. Backend Services group:</b>
 <details>
-<summary><b>18. Backend Services group:</b></summary>
-A) Backends (Instance groups, NEGs) for Load Balancing<br>
-B) Databases<br>
-C) Admins<br>
-D) Logs<br>
-<br>
-<b>Answer: A) Backends (Instance groups, NEGs) for Load Balancing</b>
+<summary>Show Answer</summary>
+Answer: A) Backends (Instance groups, NEGs) for Load Balancing</b>
 </details>
 
+
+<b>19. Serverless VPC Access allows:</b>
 <details>
-<summary><b>19. Serverless VPC Access allows:</b></summary>
-A) Cloud Functions/App Engine to access VPC resources<br>
-B) VPC to access internet<br>
-C) Security<br>
-D) Nothing<br>
-<br>
-<b>Answer: A) Cloud Functions/App Engine to access VPC resources</b>
+<summary>Show Answer</summary>
+Answer: A) Cloud Functions/App Engine to access VPC resources</b>
 </details>
 
+
+<b>20. Which protocol does Ping use?</b>
 <details>
-<summary><b>20. Which protocol does Ping use?</b></summary>
-A) ICMP (Must be allowed in Firewall, usually 'deny' by default)<br>
-B) TCP<br>
-C) UDP<br>
-D) HTTP<br>
-<br>
-<b>Answer: A) ICMP (Must be allowed in Firewall, usually 'deny' by default)</b>
+<summary>Show Answer</summary>
+Answer: A) ICMP (Must be allowed in Firewall, usually 'deny' by default)</b>
 </details>
 
+
+<b>21. Max throughput of Cloud VPN tunnel?</b>
 <details>
-<summary><b>21. Max throughput of Cloud VPN tunnel?</b></summary>
-A) 3 Gbps<br>
-B) 100 Gbps<br>
-C) 1 Mbps<br>
-D) 10 Gbps<br>
-<br>
-<b>Answer: A) 3 Gbps (HA VPN supports pairing tunnels for more)</b>
+<summary>Show Answer</summary>
+Answer: A) 3 Gbps (HA VPN supports pairing tunnels for more)</b>
 </details>

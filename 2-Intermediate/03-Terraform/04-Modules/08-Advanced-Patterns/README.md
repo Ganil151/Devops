@@ -24,8 +24,8 @@ Best for creating non-identical resources where keys matter.
 module "s3_buckets" {
   source   = "./modules/s3"
   for_each = toset(["assets", "logs", "backups"])
-  
-  name = "${each.key}-bucket-v1"
+
+name = "${each.key}-bucket-v1"
 }
 ```
 
@@ -35,8 +35,8 @@ Best for simple flags or identical copies.
 module "workers" {
   source = "./modules/ec2"
   count  = 3
-  
-  name = "worker-${count.index}"
+
+name = "worker-${count.index}"
 }
 ```
 
@@ -48,8 +48,8 @@ Sometimes you need to generate nested blocks (like `ingress` rules in a Security
 ```hcl
 resource "aws_security_group" "this" {
   name = "dynamic-sg"
-  
-  # The Iterator
+
+# The Iterator
   dynamic "ingress" {
     for_each = var.ingress_rules # List of objects
     content {
@@ -103,8 +103,8 @@ locals {
 module "app" {
   source   = "./modules/app"
   for_each = local.regions
-  
-  region        = each.key
+
+region        = each.key
   instance_type = each.value.instance_size
 }
 ```

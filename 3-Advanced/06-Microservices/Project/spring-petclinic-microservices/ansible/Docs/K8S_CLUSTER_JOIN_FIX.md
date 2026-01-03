@@ -105,7 +105,12 @@ If these fail, the security groups are likely blocking traffic.
 ## Next Steps
 
 1. **Verify Security Groups** in AWS Console or Terraform code
-2. **Update Security Groups** to allow required ports (see above)
+<b>2. Update Security Groups** to allow required ports</b>
+<details>
+<summary>Show Answer</summary>
+Answer: see above
+</details>
+
 3. **Re-run the playbooks**:
    ```bash
    # First ensure master is initialized

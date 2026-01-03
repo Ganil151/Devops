@@ -7,8 +7,8 @@ graph LR
     Scan --> Link[Link Checker]
     Link -- Pass --> Build[Build: MkDocs/Hugo]
     Build --> Deploy[Deploy: S3/GitHub Pages]
-    
-    subgraph "CI Checks"
+
+subgraph "CI Checks"
     Lint
     Scan
     Link
@@ -57,321 +57,176 @@ graph LR
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which SSG is written in Python and is highly popular for SRE documentation?**
-- A) Hugo
-- B) MkDocs
-- C) Docusaurus
-- D) WordPress
-
+<b>1. Which SSG is written in Python and is highly popular for SRE documentation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**（Particularly with the 'Material' theme）
-
+Answer: B**（Particularly with the 'Material' theme）
 </details>
 
-**2. True/False: Static sites require a database to serve content.**
-- A) True
-- B) False
 
+<b>2. True/False: Static sites require a database to serve content.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - They are pre-built HTML/JS files.
-
+Answer: B** - They are pre-built HTML/JS files.
 </details>
 
-**3. What is the main benefit of 'Hugo' over other SSGs?**
-- A) It's easy to learn
-- B) Extreme build speed (thousands of pages in seconds)
-- C) It uses React
-- D) It's owned by Microsoft
 
+<b>3. What is the main benefit of 'Hugo' over other SSGs?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A 'Markdown Linter' primarily checks for:**
-- A) Content accuracy
-- B) Formatting, heading levels, and syntax consistency
-- C) Spelling only
-- D) Secret keys
 
+<b>4. A 'Markdown Linter' primarily checks for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which tool scans for leaked passwords specifically?**
-- A) Markdown-lint
-- B) Gitleaks / TruffleHog
-- C) Hugo
-- D) Google Chrome
 
+<b>5. Which tool scans for leaked passwords specifically?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Out-of-Band' hosting means hosting docs:**
-- A) On a guitar
-- B) On infrastructure separate from the systems being documented
-- C) Locally on your laptop only
-- D) Hidden from everyone
 
+<b>6. 'Out-of-Band' hosting means hosting docs:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. 'Vale' is known as a:**
-- A) Prose Linter (checking voice and tone)
-- B) Database engine
-- C) Compiler
-- D) Browser
 
+<b>7. 'Vale' is known as a:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. PR Previews are useful because they:**
-- A) Save money
-- B) Show how the doc will render in the browser before merging
-- C) Delete old files
-- D) share passwords
 
+<b>8. PR Previews are useful because they:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. Why use 'Material for MkDocs'?**
-- A) It's the only theme
-- B) It provides an industry-standard, clean, and mobile-friendly UI out of the box
-- C) It's free of charge for everyone
-- D) it uses AI
 
+<b>9. Why use 'Material for MkDocs'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What does 'CI' stand for in a documentation pipeline?**
-- A) Code Integration
-- B) Continuous Integration
-- C) Constant Improvement
-- D) Client Input
 
+<b>10. What does 'CI' stand for in a documentation pipeline?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: You can use GitHub Actions to automatically deploy your MkDocs site.**
-- A) True
-- B) False
 
+<b>11. True/False: You can use GitHub Actions to automatically deploy your MkDocs site.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. A 'Link Checker' fails a build if it finds a:**
-- A) Long link
-- B) Broken or 404 URL
-- C) New link
-- D) link to the homepage
 
+<b>12. A 'Link Checker' fails a build if it finds a:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. Docusaurus is built on which framework?**
-- A) Angular
-- B) React
-- C) Vue
-- D) Django
 
+<b>13. Docusaurus is built on which framework?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. 'In-repository' documentation is easier to keep updated because:**
-- A) It's smaller
-- B) It changes in the same Pull Request as the code it describes
-- C) It's private
-- D) it's for juniors
 
+<b>14. 'In-repository' documentation is easier to keep updated because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. Which of these is a hosting provider suitable for static sites?**
-- A) Oracle DB
-- B) Netlify / Vercel
-- C) Slack
-- D) Zoom
 
+<b>15. Which of these is a hosting provider suitable for static sites?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. 'Lunr.js' is often used in MkDocs for:**
-- A) Sending emails
-- B) Client-side full-text search
-- C) Generating images
-- D) deleting files
 
+<b>16. 'Lunr.js' is often used in MkDocs for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. Why is 'Versioned Documentation' important?**
-- A) To make more work
-- B) To match the documentation to specific versions of the software (v1 vs v2)
-- C) To hide mistakes
-- D) it's a legal rule
 
+<b>17. Why is 'Versioned Documentation' important?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. 'Inclusive Language' checks in Vale look for:**
-- A) Large files
-- B) Bias, gendered terms, or non-inclusive terminology in clinical writing
-- C) Fast code
-- D) internet speed
 
+<b>18. 'Inclusive Language' checks in Vale look for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. True/False: Hugo requires a Python environment to run.**
-- A) True
-- B) False - It's a single binary written in Go.
 
+<b>19. True/False: Hugo requires a Python environment to run.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. 'Front Matter' is used to define:**
-- A) The end of a doc
-- B) Metadata (Title, Tags, Layout) for the SSG to use
-- C) The code block
-- D) images
 
+<b>20. 'Front Matter' is used to define:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. A 'Custom Domain' for documentation helps by:**
-- A) Making it look professional and being easy to remember (e.g., docs.company.com)
-- B) Speeding up the site
-- C) Hiding the host
-- D) printing
 
+<b>21. A 'Custom Domain' for documentation helps by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**22. 'Documentation as Code' (DaC) treats docs like:**
-- A) Books
-- B) Software code (Linting, Testing, Deploying)
-- C) Emails
-- D) images
 
+<b>22. 'Documentation as Code' (DaC) treats docs like:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Why use a 'Dead-Link' checker?**
-- A) It looks for zombie movies
-- B) To ensure that engineers don't follow broken URLs during a crisis
-- C) To delete files
-- D) it's a rule
 
+<b>23. Why use a 'Dead-Link' checker?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Build Artifact' of an SSG is usually:**
-- A) A .zip file of the source
-- B) A folder containing HTML, CSS, and JS files
-- C) A PDF
-- D) a video
 
+<b>24. The 'Build Artifact' of an SSG is usually:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The ultimate goal of specialized documentation tooling is:**
-- A) To use fancy tools
-- B) To minimize documentation rot and maximize accessibility for the whole engineering team
-- C) To save disk space
-- D) to satisfy auditors
 
+<b>25. The ultimate goal of specialized documentation tooling is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

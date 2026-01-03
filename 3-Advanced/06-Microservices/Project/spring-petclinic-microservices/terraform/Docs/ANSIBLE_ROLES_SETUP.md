@@ -3,7 +3,12 @@
 ## Overview
 
 The updated Ansible configuration uses proper roles structure to:
-1. **common-prereqs**: Install and configure all K8s prerequisites (kernel modules, container runtime, kubelet)
+<b>1. common-prereqs**: Install and configure all K8s prerequisites</b>
+<details>
+<summary>Show Answer</summary>
+Answer: kernel modules, container runtime, kubelet
+</details>
+
 2. **k8s_master**: Initialize the Kubernetes control plane
 3. **k8s_worker**: Join worker nodes to the cluster
 

@@ -158,8 +158,32 @@ aws ec2 create-default-vpc
 ---
 
 ## 🧠 Quiz Snippet (5/20+)
-1.  **What is the CIDR of the default VPC?** (172.31.0.0/16)
-2.  **True/False: Default VPC subnets are private.** (False - they're public)
-3.  **Should you use default VPC for production?** (No)
-4.  **Can you recreate a deleted default VPC?** (Yes - via AWS CLI)
-5.  **Do instances in default VPC get public IPs automatically?** (Yes)
+<b>1. What is the CIDR of the default VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 172.31.0.0/16
+</details>
+
+<b>2. True/False: Default VPC subnets are private.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: False - they're public
+</details>
+
+<b>3. Should you use default VPC for production?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: No
+</details>
+
+<b>4. Can you recreate a deleted default VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Yes - via AWS CLI
+</details>
+
+<b>5. Do instances in default VPC get public IPs automatically?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Yes
+</details>

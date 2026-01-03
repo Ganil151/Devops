@@ -148,219 +148,148 @@ This guide covers GCP security services for identity management and data protect
 6. **Explain VPC Service Controls.**
    - Creates a security perimeter around your resources (buckets, datasets) to constrain data within the boundary.
 
-### Advanced Level
-7. **What is Binary Authorization?**
-   - Supply-chain security. Ensures only trusted/signed container images are deployed to GKE.
-8. **What is "Workload Identity"?**
-   - recommended way for GKE workloads to authenticate to GCP APIs. It maps K8s Service Accounts to GCP Service Accounts.
-9. **Difference between CMEK vs CSEK.**
-   - **CMEK:** Customer-Managed (You manage key in KMS, Google uses it).
-   - **CSEK:** Customer-Supplied (You keep the key, send it with request, Google never stores it).
-
----
-
-## Quiz: GCP Security
-
+<b>7. </b>
 <details>
-<summary><b>1. IAM permissions are assigned via:</b></summary>
-A) Roles<br>
-B) Directly to users<br>
-C) Groups only<br>
-D) Emails<br>
-<br>
-<b>Answer: A) Roles</b>
+<summary>Show Answer</summary>
+Answer: A) Roles</b>
 </details>
 
+
+<b>2. Lowest privilege Basic Role is:</b>
 <details>
-<summary><b>2. Lowest privilege Basic Role is:</b></summary>
-A) Viewer<br>
-B) Editor<br>
-C) Owner<br>
-D) Admin<br>
-<br>
-<b>Answer: A) Viewer</b>
+<summary>Show Answer</summary>
+Answer: A) Viewer</b>
 </details>
 
+
+<b>3. Service Accounts key files are usually:</b>
 <details>
-<summary><b>3. Service Accounts key files are usually:</b></summary>
-A) JSON<br>
-B) XML<br>
-C) YAML<br>
-D) Binary<br>
-<br>
-<b>Answer: A) JSON</b>
+<summary>Show Answer</summary>
+Answer: A) JSON</b>
 </details>
 
+
+<b>4. Which service stores API keys and passwords?</b>
 <details>
-<summary><b>4. Which service stores API keys and passwords?</b></summary>
-A) Secret Manager<br>
-B) Storage<br>
-C) IAM<br>
-D) Compute<br>
-<br>
-<b>Answer: A) Secret Manager</b>
+<summary>Show Answer</summary>
+Answer: A) Secret Manager</b>
 </details>
 
+
+<b>5. Security Command Center is:</b>
 <details>
-<summary><b>5. Security Command Center is:</b></summary>
-A) Central dashboard for vulnerability and threat reporting<br>
-B) A firewall<br>
-C) A specialized VM<br>
-D) A police station<br>
-<br>
-<b>Answer: A) Central dashboard for vulnerability and threat reporting</b>
+<summary>Show Answer</summary>
+Answer: A) Central dashboard for vulnerability and threat reporting</b>
 </details>
 
+
+<b>6. IAP stands for:</b>
 <details>
-<summary><b>6. IAP stands for:</b></summary>
-A) Identity-Aware Proxy<br>
-B) Internet Access Protocol<br>
-C) Internal App Proxy<br>
-D) Identity Access Point<br>
-<br>
-<b>Answer: A) Identity-Aware Proxy</b>
+<summary>Show Answer</summary>
+Answer: A) Identity-Aware Proxy</b>
 </details>
 
+
+<b>7. Predefined Roles are maintained by:</b>
 <details>
-<summary><b>7. Predefined Roles are maintained by:</b></summary>
-A) Google<br>
-B) You<br>
-C) Nobody<br>
-D) AI<br>
-<br>
-<b>Answer: A) Google</b>
+<summary>Show Answer</summary>
+Answer: A) Google</b>
 </details>
 
+
+<b>8. Can you use IAM Conditions?</b>
 <details>
-<summary><b>8. Can you use IAM Conditions?</b></summary>
-A) Yes (e.g., grant access only on weekdays or based on IP)<br>
-B) No<br>
-<br>
-<b>Answer: A) Yes (e.g., grant access only on weekdays or based on IP)</b>
+<summary>Show Answer</summary>
+Answer: A) Yes (e.g., grant access only on weekdays or based on IP)</b>
 </details>
 
+
+<b>9. Organization Policy Service allows:</b>
 <details>
-<summary><b>9. Organization Policy Service allows:</b></summary>
-A) Setting constraints across the hierarchy (e.g., "Disable Serial Port Access" or "Restrict Locations")<br>
-B) RBAC<br>
-C) Billing<br>
-D) Nothing<br>
-<br>
-<b>Answer: A) Setting constraints across the hierarchy (e.g., "Disable Serial Port Access" or "Restrict Locations")</b>
+<summary>Show Answer</summary>
+Answer: A) Setting constraints across the hierarchy (e.g., "Disable Serial Port Access" or "Restrict Locations")</b>
 </details>
 
+
+<b>10. Data at rest in GCP is encrypted:</b>
 <details>
-<summary><b>10. Data at rest in GCP is encrypted:</b></summary>
-A) By default<br>
-B) Never<br>
-C) Only if paid<br>
-D) Only in US<br>
-<br>
-<b>Answer: A) By default</b>
+<summary>Show Answer</summary>
+Answer: A) By default</b>
 </details>
 
+
+<b>11. Cloud DLP (Data Loss Prevention) helps:</b>
 <details>
-<summary><b>11. Cloud DLP (Data Loss Prevention) helps:</b></summary>
-A) Discover, classify, and redact sensitive data (PII, Credit Cards)<br>
-B) Delete data<br>
-C) Lose data<br>
-D) Save money<br>
-<br>
-<b>Answer: A) Discover, classify, and redact sensitive data (PII, Credit Cards)</b>
+<summary>Show Answer</summary>
+Answer: A) Discover, classify, and redact sensitive data (PII, Credit Cards)</b>
 </details>
 
+
+<b>12. What is the "Organization" node?</b>
 <details>
-<summary><b>12. What is the "Organization" node?</b></summary>
-A) The root node of the GCP resource hierarchy<br>
-B) A folder<br>
-C) A project<br>
-D) A user<br>
-<br>
-<b>Answer: A) The root node of the GCP resource hierarchy</b>
+<summary>Show Answer</summary>
+Answer: A) The root node of the GCP resource hierarchy</b>
 </details>
 
+
+<b>13. Access Transparency Logs do what?</b>
 <details>
-<summary><b>13. Access Transparency Logs do what?</b></summary>
-A) Log when Google Support accesses your content<br>
-B) Make logs transparent<br>
-C) Delete logs<br>
-D) Nothing<br>
-<br>
-<b>Answer: A) Log when Google Support accesses your content</b>
+<summary>Show Answer</summary>
+Answer: A) Log when Google Support accesses your content</b>
 </details>
 
+
+<b>14. Cloud Armor Policies are attached to:</b>
 <details>
-<summary><b>14. Cloud Armor Policies are attached to:</b></summary>
-A) Load Balancer Backend Services<br>
-B) VMs<br>
-C) VPCs<br>
-D) Buckets<br>
-<br>
-<b>Answer: A) Load Balancer Backend Services</b>
+<summary>Show Answer</summary>
+Answer: A) Load Balancer Backend Services</b>
 </details>
 
+
+<b>15. Is MFA supported in Cloud Identity?</b>
 <details>
-<summary><b>15. Is MFA supported in Cloud Identity?</b></summary>
-A) Yes (2-Step Verification)<br>
-B) No<br>
-<br>
-<b>Answer: A) Yes (2-Step Verification)</b>
+<summary>Show Answer</summary>
+Answer: A) Yes (2-Step Verification)</b>
 </details>
 
+
+<b>16. Shielded VMs use:</b>
 <details>
-<summary><b>16. Shielded VMs use:</b></summary>
-A) vTPM and Secure Boot<br>
-B) Antivirus<br>
-C) Firewalls<br>
-D) Magic<br>
-<br>
-<b>Answer: A) vTPM and Secure Boot</b>
+<summary>Show Answer</summary>
+Answer: A) vTPM and Secure Boot</b>
 </details>
 
+
+<b>17. Which principle should you follow for IAM?</b>
 <details>
-<summary><b>17. Which principle should you follow for IAM?</b></summary>
-A) Least Privilege<br>
-B) Most Privilege<br>
-C) All Access<br>
-D) Random Access<br>
-<br>
-<b>Answer: A) Least Privilege</b>
+<summary>Show Answer</summary>
+Answer: A) Least Privilege</b>
 </details>
 
+
+<b>18. Workload Identity Federation allows:</b>
 <details>
-<summary><b>18. Workload Identity Federation allows:</b></summary>
-A) AWS/Azure/On-prem identities to access GCP resources without service account keys<br>
-B) Merging clouds<br>
-C) Sharing passwds<br>
-D) Nothing<br>
-<br>
-<b>Answer: A) AWS/Azure/On-prem identities to access GCP resources without service account keys</b>
+<summary>Show Answer</summary>
+Answer: A) AWS/Azure/On-prem identities to access GCP resources without service account keys</b>
 </details>
 
+
+<b>19. Event Threat Detection is part of:</b>
 <details>
-<summary><b>19. Event Threat Detection is part of:</b></summary>
-A) Security Command Center Premium<br>
-B) Free tier<br>
-C) Compute Engine<br>
-D) GKE<br>
-<br>
-<b>Answer: A) Security Command Center Premium</b>
+<summary>Show Answer</summary>
+Answer: A) Security Command Center Premium</b>
 </details>
 
+
+<b>20. Recaptcha Enterprise helps prevent:</b>
 <details>
-<summary><b>20. Recaptcha Enterprise helps prevent:</b></summary>
-A) Bot attacks and fraud<br>
-B) Viruses<br>
-C) DDoS<br>
-D) Spam<br>
-<br>
-<b>Answer: A) Bot attacks and fraud</b>
+<summary>Show Answer</summary>
+Answer: A) Bot attacks and fraud</b>
 </details>
 
+
+<b>21. Does GCP have a Directory Service?</b>
 <details>
-<summary><b>21. Does GCP have a Directory Service?</b></summary>
-A) Cloud Identity (or Managed Service for Microsoft AD)<br>
-B) No<br>
-<br>
-<b>Answer: A) Cloud Identity (or Managed Service for Microsoft AD)</b>
+<summary>Show Answer</summary>
+Answer: A) Cloud Identity (or Managed Service for Microsoft AD)</b>
 </details>

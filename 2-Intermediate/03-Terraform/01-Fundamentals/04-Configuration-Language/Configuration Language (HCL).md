@@ -1,23 +1,36 @@
-HashiCorp Configuration Language (HCL) is designed to be human-readable and machine-friendly for defining infrastructure.
-## Syntax Basics
+## Configuration Language (HCL) Basics
+
+HashiCorp Configuration Language (HCL) is designed to be human-readable and machine-friendly for defining infrastructure. It strikes a balance between the simplicity of JSON and the power of a full programming language.
+
+### 📜 Core Syntax
 ```hcl
 # Block syntax
 resource "resource_type" "local_name" {
   argument_name = "value"
 }
 ```
+
+### 💎 Expressions & Logic
+For a deep dive into how Terraform handles data, logic, and transformations, see the comprehensive guide:
+👉 **[Detailed Terraform Expressions Guide](Expressions.md)**
+
+---
+
 ## Data Types
+Terraform values are categorized into primitives and complex structures:
 - **String**: `"t3.micro"`
 - **Number**: `10`
 - **Boolean**: `true`
 - **List**: `["us-east-1a", "us-east-1b"]`
 - **Map**: `{ Name = "Web", Env = "Dev" }`
+- **Object**: Complex nested structures.
 
 ## Functions & Expressions
 Terraform provides over 100 built-in functions (no custom functions allowed).
 - **upper("hello")** -> "HELLO"
-- **element(list, index)** -> retrieves an item.
-- **lookup(map, key, default)** -> safe map retrieval.
+- **element(list, index)** -> retrieves an item from a list.
+- **lookup(map, key, default)** -> safe retrieval of a map key.
+- **Ternary Logic**: `var.env == "prod" ? 1 : 0`
 
 ## HCL Expression Evaluation
 
@@ -76,352 +89,227 @@ resource "aws_instance" "app" {
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the extension for Terraform files?**
-- A) `.terraform`
-- B) `.hcl`
-- C) `.tf`
-- D) `.tfconfig`
-
-
+<b>1. What is the extension for Terraform files?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**2. Which data type stores a key-value pair?**
-- A) List
-- B) Map
-- C) Set
-- D) Object
 
 
+
+<b>2. Which data type stores a key-value pair?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. What is the purpose of 'Locals'?**
-- A) To define output values
-- B) To handle internal logic/reusable expressions
-- C) To create resources
-- D) To import modules
 
 
+
+<b>3. What is the purpose of 'Locals'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. How do you comment a single line in HCL?**
-- A) `/* comment */`
-- B) `-- comment`
-- C) `# or //`
-- D) `<!-- comment -->`
 
 
+
+<b>4. How do you comment a single line in HCL?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**5. What is interpolation in Terraform?**
-- A) Importing modules
-- B) The `${}` syntax to include variables/results in strings
-- C) Copying files
-- D) Migrating state
 
 
+
+<b>5. What is interpolation in Terraform?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. Which function converts a string to uppercase?**
-- A) `uppercase()`
-- B) `upper()`
-- C) `toUpper()`
-- D) `caps()`
 
 
+
+<b>6. Which function converts a string to uppercase?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. What is the syntax for a conditional expression?**
-- A) `if condition then value`
-- B) `condition ? true_val : false_val`
-- C) `switch(condition)`
-- D) `case condition of`
 
 
+
+<b>7. What is the syntax for a conditional expression?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. Can you nest blocks in HCL?**
-- A) No, only top-level blocks
-- B) Yes, HCL supports nested blocks
-- C) Only in modules
-- D) Only with special syntax
 
 
+
+<b>8. Can you nest blocks in HCL?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. What does the `length()` function return?**
-- A) Size of infrastructure
-- B) Length of a list, map, or string
-- C) Number of resources
-- D) State file size
 
 
+
+<b>9. What does the `length()` function return?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. How do you define a list in HCL?**
-- A) `list("a", "b")`
-- B) `["a", "b"]`
-- C) `{"a", "b"}`
-- D) `("a", "b")`
 
 
+
+<b>10. How do you define a list in HCL?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. What keyword defines reusable internal values?**
-- A) `vars`
-- B) `constants`
-- C) `locals`
-- D) `internals`
 
 
+
+<b>11. What keyword defines reusable internal values?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**12. Which character starts a heredoc string?**
-- A) `"""`
-- B) `<<<`
-- C) `<<EOF`
-- D) `---`
 
 
+
+<b>12. Which character starts a heredoc string?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**13. Can HCL files use JSON format?**
-- A) No, only HCL syntax
-- B) Yes, with `.tf.json` extension
-- C) Only in Terraform Cloud
-- D) Only for variables
 
 
+
+<b>13. Can HCL files use JSON format?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What function joins list elements into a string?**
-- A) `concat()`
-- B) `merge()`
-- C) `join()`
-- D) `combine()`
 
 
+
+<b>14. What function joins list elements into a string?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**15. How do you access a map value?**
-- A) `map.key` or `map["key"]`
-- B) `map->key`
-- C) `map@key`
-- D) `get(map, key)`
 
 
+
+<b>15. How do you access a map value?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**16. What does `coalesce()` function do?**
-- A) Merges lists
-- B) Returns the first non-null argument
-- C) Combines maps
-- D) Validates data
 
 
+
+<b>16. What does `coalesce()` function do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. Which are valid primitive types in HCL?**
-- A) int, float, char
-- B) string, number, bool
-- C) varchar, integer, boolean
-- D) text, decimal, flag
 
 
+
+<b>17. Which are valid primitive types in HCL?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. How do you create a multi-line string?**
-- A) Use triple quotes `"""`
-- B) Use heredoc syntax `<<EOF ... EOF`
-- C) Use backslash continuation
-- D) Use pipe `|`
 
 
+
+<b>18. How do you create a multi-line string?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. What does `flatten()` do?**
-- A) Removes whitespace
-- B) Converts nested lists into a single flat list
-- C) Compresses files
-- D) Simplifies expressions
 
 
+
+<b>19. What does `flatten()` do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. Can you use arithmetic operations in HCL?**
-- A) No, not supported
-- B) Yes, +, -, *, /, % are supported
-- C) Only addition
-- D) Only with special functions
 
 
+
+<b>20. Can you use arithmetic operations in HCL?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. What is the `for` expression syntax?**
-- A) `for item in list`
-- B) `[for item in list : expression]`
-- C) `foreach(list, item)`
-- D) `map(list, function)`
 
 
+
+<b>21. What is the `for` expression syntax?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. How do you reference a local value?**
-- A) `var.name`
-- B) `local.name`
-- C) `locals.name`
-- D) `@name`
 
 
+
+<b>22. How do you reference a local value?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. What does `merge()` function do?**
-- A) Combines lists
-- B) Merges two or more maps
-- C) Joins strings
-- D) Concatenates files
 
 
+
+<b>23. What does `merge()` function do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. Can you define functions in `.tf` files?**
-- A) Yes, using `function` block
-- B) No, only built-in functions available
-- C) Only in modules
-- D) Only with Terraform 1.0+
 
 
+
+<b>24. Can you define functions in `.tf` files?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. What is the operator for NOT equals?**
-- A) `<>`
-- B) `!=`
-- C) `/=`
-- D) `~=`
 
 
+
+<b>25. What is the operator for NOT equals?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+

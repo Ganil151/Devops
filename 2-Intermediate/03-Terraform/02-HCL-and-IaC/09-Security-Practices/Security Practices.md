@@ -126,325 +126,227 @@ Your CI runner should not have `AdministratorAccess`. It should only have permis
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which attribute is used to prevent secrets from being printed in the console?**
-- A) secret = true
-- B) hidden = true
-- C) sensitive = true
-- D) private = true
-
+<b>1. Which attribute is used to prevent secrets from being printed in the console?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C** - `sensitive = true` masks the value in CLI output.
-
+Answer: C** - `sensitive = true` masks the value in CLI output.
 </details>
 
-**2. True/False: If a variable is marked 'sensitive', it is encrypted in the .tfstate file.**
-- A) True
-- B) False
 
+
+
+<b>2. True/False: If a variable is marked 'sensitive', it is encrypted in the .tfstate file.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - The state file still contains the plaintext value; you must protect the state file itself.
-
+Answer: B** - The state file still contains the plaintext value; you must protect the state file itself.
 </details>
 
-**3. What is the most secure way for GitHub Actions to authenticate with AWS?**
-- A) Hardcoded Access Keys in providers.tf
-- B) Storing keys in GitHub Secrets
-- C) Using OIDC (OpenID Connect) to assume a role
-- D) Sharing the root account password
 
+
+
+<b>3. What is the most secure way for GitHub Actions to authenticate with AWS?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**4. Why should you enable S3 Versioning on your state bucket?**
-- A) To make it faster
-- B) To recover from accidental state corruption or deletion
-- C) To save money
-- D) To satisfy AWS defaults
 
+
+
+<b>4. Why should you enable S3 Versioning on your state bucket?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which tool is specifically designed to scan HCL for security vulnerabilities?**
-- A) TFLint
-- B) tfsec / Checkov
-- C) terraform fmt
-- D) infracost
 
+
+
+<b>5. Which tool is specifically designed to scan HCL for security vulnerabilities?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. "Least Privilege" for a Terraform CI runner means:**
-- A) Giving it AdministratorAccess
-- B) Giving it the minimum permissions required to manage specific resources
-- C) Giving it no permissions
-- D) Using a shared login
 
+
+
+<b>6. "Least Privilege" for a Terraform CI runner means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. In the S3 backend, what does `encrypt = true` do?**
-- A) Encrypts the code
-- B) Enables server-side encryption for the state file at rest
-- C) Encrypts the console output
-- D) Requires a password to run terraform
 
+
+
+<b>7. In the S3 backend, what does `encrypt = true` do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. Where is the most dangerous place to store a database password?**
-- A) AWS Secrets Manager
-- B) A variable marked 'sensitive'
-- C) Hardcoded in main.tf and committed to GitHub
-- D) An encrypted S3 bucket
 
+
+
+<b>8. Where is the most dangerous place to store a database password?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**9. What is the benefit of using a DynamoDB table with the S3 backend?**
-- A) It stores the state
-- B) it provides "State Locking" to prevent concurrent runs from corrupting the state
-- C) It's faster than S3
-- D) It's cheaper
 
+
+
+<b>9. What is the benefit of using a DynamoDB table with the S3 backend?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. Which command displays the full state, including sensitive values?**
-- A) terraform validate
-- B) terraform state pull (or viewing the .tfstate file directly)
-- C) terraform plan
-- D) terraform output
 
+
+
+<b>10. Which command displays the full state, including sensitive values?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. "OIDC" stands for:**
-- A) Only Internal Data Center
-- B) OpenID Connect
-- C) Output Integrity Data Code
-- D) Operational Interaction Data Cloud
 
+
+
+<b>11. "OIDC" stands for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. When using `jsondecode(data.aws_secretsmanager_secret_version.creds.secret_string)`, where does the data come from?**
-- A) The local machine
-- B) AWS Secrets Manager during runtime
-- C) The state file only
-- D) A hardcoded list
 
+
+
+<b>12. When using `jsondecode(data.aws_secretsmanager_secret_version.creds.secret_string)`, where does the data come from?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A "Publicly Accessible" S3 bucket for state is:**
-- A) Good for team sharing
-- B) A massive security risk that exposes your entire infrastructure secrets
-- C) Faster to access
-- D) Required by Terraform
 
+
+
+<b>13. A "Publicly Accessible" S3 bucket for state is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. Which flag in an `output` block is required if it references a sensitive variable?**
-- A) private = true
-- B) sensitive = true
-- C) hidden = true
-- D) mask = true
 
+
+
+<b>14. Which flag in an `output` block is required if it references a sensitive variable?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. Static analysis tools (tfsec/Checkov) should ideally run:**
-- A) Once a year
-- B) Only after an incident
-- C) In the CI/CD pipeline on every Pull Request
-- D) Only on the senior dev's computer
 
+
+
+<b>15. Static analysis tools (tfsec/Checkov) should ideally run:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**16. If your state file is compromised, you should:**
-- A) Do nothing
-- B) Immediately rotate all credentials stored in or managed by that state file
-- C) Delete the state file and start over
-- D) Change the cloud provider
 
+
+
+<b>16. If your state file is compromised, you should:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. "Credential Rotation" is easier with Terraform because:**
-- A) It's not
-- B) You can update the secret in one place and let Terraform propagate it
-- C) Terraform does it automatically
-- D) It uses fewer passwords
 
+
+
+<b>17. "Credential Rotation" is easier with Terraform because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why use a "Service Principal" (Azure) or "IAM Role" (AWS) for CI?**
-- A) To avoid using personal user accounts and leverage identity-based security
-- B) To save money
-- C) To make it harder to log in
-- D) To bypass MFA
 
+
+
+<b>18. Why use a "Service Principal" (Azure) or "IAM Role" (AWS) for CI?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**19. What is the risk of "Long-lived" access keys?**
-- A) They expire too fast
-- B) If stolen, they provide permanent access until manually revoked
-- C) They take up space
-- D) They are hard to type
 
+
+
+<b>19. What is the risk of "Long-lived" access keys?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. A "Backend" in Terraform is:**
-- A) The cloud console
-- B) Where the state file is stored and how it's locked
-- C) The source code
-- D) The database
 
+
+
+<b>20. A "Backend" in Terraform is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. "IAM Policies" should be:**
-- A) Broad and permissive
-- B) Granular and restricted (Least Privilege)
-- C) Created once and never changed
-- D) Managed by everyone
 
+
+
+<b>21. "IAM Policies" should be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. "Data Encryption at Rest" applies to:**
-- A) Only the code
-- B) The state file and any cloud storage used by Terraform
-- C) Only output variables
-- D) The internet connection
 
+
+
+<b>22. "Data Encryption at Rest" applies to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Which tool can help you manage secrets across multiple tools including Terraform?**
-- A) HashiCorp Vault
-- B) Notepad
-- C) Excel
-- D) Git
 
+
+
+<b>23. Which tool can help you manage secrets across multiple tools including Terraform?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**24. "Drift Detection" can also be a security feature because:**
-- A) It finds lost code
-- B) It identifies unauthorized manual changes made in the cloud console
-- C) It's faster
-- D) It's cheaper
 
+
+
+<b>24. "Drift Detection" can also be a security feature because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Security should be considered as:**
-- A) An afterthought
-- B) A continuous process integrated into the development lifecycle
-- C) Only for Production
-- D) The responsibility of only one person
 
+
+
+<b>25. Security should be considered as:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+

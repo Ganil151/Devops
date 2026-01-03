@@ -84,7 +84,12 @@ fi
 ## How to Apply
 
 1. Open your Jenkinsfile
-2. Find the "Verify Docker Deployment" stage (around line 398)
+<b>2. Find the "Verify Docker Deployment" stage</b>
+<details>
+<summary>Show Answer</summary>
+Answer: around line 398
+</details>
+
 3. Replace the health check sections (lines 424-446) with the new code above
 4. Save and test
 

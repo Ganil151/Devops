@@ -44,317 +44,176 @@
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the primary goal of Chaos Engineering?**
-- A) To break things for fun
-- B) To find weaknesses in a system by injecting controlled failures
-- C) To delete old logs
-- D) To replace human testers
-
+<b>1. What is the primary goal of Chaos Engineering?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**（Learn from failure）
-
+Answer: B**（Learn from failure）
 </details>
 
-**2. True/False: You should always start chaos experiments in Production first.**
-- A) True
-- B) False - Start in Staging to ensure your "Stop Button" works.
 
+<b>2. True/False: You should always start chaos experiments in Production first.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. In chaos engineering, 'Blast Radius' refers to:**
-- A) The price of the software
-- B) The maximum number of users or services affected by an experiment
-- C) The size of the server room
-- D) the length of the code
 
+<b>3. In chaos engineering, 'Blast Radius' refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A 'Gameday' is a:**
-- A) Holiday
-- B) Scheduled event where teams validate their runbooks and automation
-- C) Video game competition
-- D) day with no work
 
+<b>4. A 'Gameday' is a:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which tool is famous for killing random pods in Netflix's infrastructure?**
-- A) Gremlin
-- B) Chaos Monkey
-- C) Litmus
-- D) Jenkins
 
+<b>5. Which tool is famous for killing random pods in Netflix's infrastructure?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Steady State' is defined as:**
-- A) A system that never changes
-- B) The normal, healthy behavior of your system metrics
-- C) A broken server
-- D) a fast network
 
+<b>6. 'Steady State' is defined as:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: If a chaos experiment causes a total outage, it was a success.**
-- A) True - You found a major weakness that needs fixing.
-- B) False
 
+<b>7. True/False: If a chaos experiment causes a total outage, it was a success.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - Even if the outage is painful, finding it during a controlled test is better than during a real peak-traffic window.
-
+Answer: A** - Even if the outage is painful, finding it during a controlled test is better than during a real peak-traffic window.
 </details>
 
-**8. What is 'Continuous Chaos'?**
-- A) A system that is always broken
-- B) Running random failure experiments automatically and constantly
-- C) A bad management style
-- D) no testing
 
+<b>8. What is 'Continuous Chaos'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. The 'Stop Button' (Abort) in chaos engineering must be:**
-- A) Hard to find
-- B) Immediate and reliable to stop the experiment
-- C) A physical button
-- D) deleted
 
+<b>9. The 'Stop Button' (Abort) in chaos engineering must be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. 'Injection of Latency' is an example of which chaos experiment?**
-- A) Pod Killer
-- B) Network Chaos
-- C) Disk Fill
-- D) CPU Spike
 
+<b>10. 'Injection of Latency' is an example of which chaos experiment?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Which platform is specifically for 'Kubernetes-Native' chaos engineering?**
-- A) Excel
-- B) Litmus Chaos
-- C) Windows
-- D) Spotify
 
+<b>11. Which platform is specifically for 'Kubernetes-Native' chaos engineering?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. True/False: You should inform the whole company before running a Gameday.**
-- A) True - Communication prevents panic.
-- B) False
 
+<b>12. True/False: You should inform the whole company before running a Gameday.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**13. A 'Hypothesis' in a chaos experiment describes:**
-- A) How much it will cost
-- B) What you expect will happen when the failure is injected (e.g., "The LB will reroute traffic")
-- C) Who wrote the code
-- D) nothing
 
+<b>13. A 'Hypothesis' in a chaos experiment describes:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What occurs at Level 1 of the Chaos Maturity Model?**
-- A) Automated testing
-- B) No intentional failure testing at all
-- C) Fast recovery
-- D) continuous chaos
 
+<b>14. What occurs at Level 1 of the Chaos Maturity Model?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Gremlin' is a popular:**
-- A) Operating system
-- B) Chaos Engineering as a Service (SaaS) platform
-- C) Browser
-- D) email client
 
+<b>15. 'Gremlin' is a popular:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: You should automate chaos experiments so they run in your CI/CD pipeline.**
-- A) True - Validate resilience before code is even merged.
-- B) False
 
+<b>16. True/False: You should automate chaos experiments so they run in your CI/CD pipeline.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'Observability' is key during chaos experiments because:**
-- A) It makes the screen look cool
-- B) You need to see exactly how the metrics react to the failure
-- C) It captures errors
-- D) it's free
 
+<b>17. 'Observability' is key during chaos experiments because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why use 'Canary' releases with Chaos Engineering?**
-- A) To see birds
-- B) To run experiments only on a small subset of "Canary" traffic
-- C) To make money
-- D) no reason
 
+<b>18. Why use 'Canary' releases with Chaos Engineering?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. A 'Disk Fill' experiment tests:**
-- A) How much storage you have
-- B) The auto-cleanup remediation scripts (Pattern 2)
-- C) The price of hard drives
-- D) network speed
 
+<b>19. A 'Disk Fill' experiment tests:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: Success in Chaos Engineering means nothing broke.**
-- A) False - Success is defined by *learning* something, even if the system collapsed.
-- B) True
 
+<b>20. True/False: Success in Chaos Engineering means nothing broke.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Drift' in a system means:**
-- A) The system is moving
-- B) The configuration has changed over time, potentially breaking old automations
-- C) New users
-- D) nothing
 
+<b>21. 'Drift' in a system means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Which is NOT a standard chaos experiment?**
-- A) Killing a database replica
-- B) Deleting the CEO's email
-- C) Blocking a specific port
-- D) Throttling CPU
 
+<b>22. Which is NOT a standard chaos experiment?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. 'Post-Experiment Analysis' involves:**
-- A) Blaming the junior engineer
-- B) Comparing the actual results with the initial hypothesis to find gaps
-- C) Deleting the logs
-- D) going home
 
+<b>23. 'Post-Experiment Analysis' involves:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Human Factor' in Gamedays is:**
-- A) Annoying
-- B) Critical, as it tests team communication and decision-making during crises
-- C) Only for managers
-- D) nothing
 
+<b>24. The 'Human Factor' in Gamedays is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Chaos Engineering turns 'Unknown Failures' into ______ _______.**
-- A) Known Successes
-- B) Known Weaknesses
-- C) More Crashes
-- D) Fast Code
 
+<b>25. Chaos Engineering turns 'Unknown Failures' into ______ _______.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

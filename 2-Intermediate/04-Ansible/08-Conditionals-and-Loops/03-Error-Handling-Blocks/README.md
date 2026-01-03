@@ -11,8 +11,8 @@ graph TD
     Task2 -->|Failure| Rescue[Rescue Block]
     Rescue --> Always[Always Block]
     Task2 -->|Success| Always
-    
-    style Rescue fill:#ff4444,color:#fff
+
+style Rescue fill:#ff4444,color:#fff
     style Always fill:#3399ff,color:#fff
 ```
 

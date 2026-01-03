@@ -8,14 +8,14 @@ A Playbook is a YAML file containing a list of **Plays**. Each Play maps a group
 graph TD
     PB[Playbook.yml] --> Play1[Play 1: Configure Web]
     PB --> Play2[Play 2: Configure DB]
-    
-    Play1 --> Hosts1[Hosts: webservers]
+
+Play1 --> Hosts1[Hosts: webservers]
     Play1 --> Tasks1[Tasks]
-    
-    Tasks1 --> Task1[Task 1: Install Nginx]
+
+Tasks1 --> Task1[Task 1: Install Nginx]
     Tasks1 --> Task2[Task 2: Start Service]
-    
-    Task1 --> Mod1[Module: apt]
+
+Task1 --> Mod1[Module: apt]
     Task2 --> Mod2[Module: service]
 ```
 
@@ -26,13 +26,13 @@ graph TD
   hosts: webservers
   become: true                      # <--- Run as root (sudo)
 
-  tasks:                            # <--- The Task List
+tasks:                            # <--- The Task List
     - name: Ensure Nginx is installed
       apt:                          # <--- The Module
         name: nginx
         state: present              # <--- Desired State
 
-    - name: Ensure Nginx is running
+- name: Ensure Nginx is running
       service:
         name: nginx
         state: started

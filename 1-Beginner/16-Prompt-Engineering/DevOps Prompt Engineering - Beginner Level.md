@@ -62,8 +62,14 @@ graph TD
    - C) Role
    - D) Example
 
-3. **True/False: AI models always suggest the most secure code by default.**
-   - Answer: **False**. You must explicitly constrain it to use security best practices.
+<b>3. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: **False**. You must explicitly constrain it to use security best practices.
+</details>
+
+
+
 
 ---
 

@@ -336,8 +336,18 @@ Price at 10-20% of value = $100-200/month
 - **Revenue**: Drive traffic to paid versions
 
 **Publishing Process**:
-1. Create GitHub repo (public)
-2. Tag releases (v1.0.0)
+<b>1. Create GitHub repo</b>
+<details>
+<summary>Show Answer</summary>
+Answer: public
+</details>
+
+<b>2. Tag releases</b>
+<details>
+<summary>Show Answer</summary>
+Answer: v1.0.0
+</details>
+
 3. Add to registry via GitHub integration
 4. Promote paid "Pro" version in README
 

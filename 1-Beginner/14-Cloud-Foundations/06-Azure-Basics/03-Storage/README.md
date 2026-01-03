@@ -68,7 +68,6 @@ az disk create \
   --size-gb 128 \
   --sku Premium_LRS
 
-
 ## Real World Scenarios
 
 ### Scenario 1: Big Data Lake
@@ -108,224 +107,151 @@ az disk create \
 6. **When would you use "Ultra Disk"?**
    - For mission-critical I/O intensive workloads (e.g., SAP HANA, top-tier SQL).
 
-### Advanced Level
-7. **What is Azure NetApp Files?**
-   - Enterprise-class, high-performance file storage service (Powered by NetApp). Used for extremely demanding workloads.
-8. **Explain "Immutable Storage" (WORM).**
-   - Write Once, Read Many. Prevents data modification or deletion for a specified period (Legal hold).
-9. **How does Azure Data Lake Storage Gen2 differ from Blob Storage?**
-   - Gen2 is built on Blob Storage but adds a hierarchical namespace (folders), making it optimized for Big Data analytics.
-10. **What is a "Shared Access Signature" (SAS)?**
-    - A URI that grants restricted access rights to Azure Storage resources (e.g., read-only for 1 hour).
-
----
-
-## Quiz: Azure Storage
-
+<b>7. </b>
 <details>
-<summary><b>1. Default storage redundancy (lowest cost)?</b></summary>
-A) LRS (Locally Redundant Storage)<br>
-B) GRS (Geo-Redundant Storage)<br>
-C) ZRS (Zone-Redundant Storage)<br>
-D) RA-GRS<br>
-<br>
-<b>Answer: A) LRS (Locally Redundant Storage)</b>
+<summary>Show Answer</summary>
+Answer: A) LRS (Locally Redundant Storage)</b>
 </details>
 
+
+<b>2. Which tier has the highest retrieval cost?</b>
 <details>
-<summary><b>2. Which tier has the highest retrieval cost?</b></summary>
-A) Archive<br>
-B) Cool<br>
-C) Hot<br>
-D) Premium<br>
-<br>
-<b>Answer: A) Archive</b>
+<summary>Show Answer</summary>
+Answer: A) Archive</b>
 </details>
 
+
+<b>3. Azure Files usually uses which port?</b>
 <details>
-<summary><b>3. Azure Files usually uses which port?</b></summary>
-A) 445 (SMB)<br>
-B) 80<br>
-C) 22<br>
-D) 443<br>
-<br>
-<b>Answer: A) 445 (SMB)</b>
+<summary>Show Answer</summary>
+Answer: A) 445 (SMB)</b>
 </details>
 
+
+<b>4. Which tool is best for moving 100TB of data physically to Azure?</b>
 <details>
-<summary><b>4. Which tool is best for moving 100TB of data physically to Azure?</b></summary>
-A) Azure Data Box<br>
-B) AzCopy<br>
-C) Upload via Browser<br>
-D) FTP<br>
-<br>
-<b>Answer: A) Azure Data Box</b>
+<summary>Show Answer</summary>
+Answer: A) Azure Data Box</b>
 </details>
 
+
+<b>5. Can you host a static website on Azure Blob Storage?</b>
 <details>
-<summary><b>5. Can you host a static website on Azure Blob Storage?</b></summary>
-A) Yes<br>
-B) No<br>
-<br>
-<b>Answer: A) Yes</b>
+<summary>Show Answer</summary>
+Answer: A) Yes</b>
 </details>
 
+
+<b>6. What is "AzCopy"?</b>
 <details>
-<summary><b>6. What is "AzCopy"?</b></summary>
-A) Command-line utility to copy data to/from Azure Storage<br>
-B) A printer<br>
-C) A backup service<br>
-D) A virus<br>
-<br>
-<b>Answer: A) Command-line utility to copy data to/from Azure Storage</b>
+<summary>Show Answer</summary>
+Answer: A) Command-line utility to copy data to/from Azure Storage</b>
 </details>
 
+
+<b>7. ZRS replicates data across:</b>
 <details>
-<summary><b>7. ZRS replicates data across:</b></summary>
-A) 3 Availability Zones in the same region<br>
-B) 3 Regions<br>
-C) 3 Racks<br>
-D) 3 Continents<br>
-<br>
-<b>Answer: A) 3 Availability Zones in the same region</b>
+<summary>Show Answer</summary>
+Answer: A) 3 Availability Zones in the same region</b>
 </details>
 
+
+<b>8. Premium SSDs are backed by:</b>
 <details>
-<summary><b>8. Premium SSDs are backed by:</b></summary>
-A) Solid State Drives<br>
-B) Tape<br>
-C) HDD<br>
-D) Floppy<br>
-<br>
-<b>Answer: A) Solid State Drives</b>
+<summary>Show Answer</summary>
+Answer: A) Solid State Drives</b>
 </details>
 
+
+<b>9. Which service allows syncing on-prem Windows Servers with Azure Files?</b>
 <details>
-<summary><b>9. Which service allows syncing on-prem Windows Servers with Azure Files?</b></summary>
-A) Azure File Sync<br>
-B) OneDrive<br>
-C) Dropbox<br>
-D) Robocopy<br>
-<br>
-<b>Answer: A) Azure File Sync</b>
+<summary>Show Answer</summary>
+Answer: A) Azure File Sync</b>
 </details>
 
+
+<b>10. Is Data Lake Gen2 compatible with Hadoop (HDFS)?</b>
 <details>
-<summary><b>10. Is Data Lake Gen2 compatible with Hadoop (HDFS)?</b></summary>
-A) Yes, via ABFS driver<br>
-B) No<br>
-<br>
-<b>Answer: A) Yes, via ABFS driver</b>
+<summary>Show Answer</summary>
+Answer: A) Yes, via ABFS driver</b>
 </details>
 
+
+<b>11. What is the max size of a Block Blob?</b>
 <details>
-<summary><b>11. What is the max size of a Block Blob?</b></summary>
-A) Approx 4.75 TB (Higher with recent updates, but standard answer)<br>
-B) 1 GB<br>
-C) 100 MB<br>
-D) Unlimited<br>
-<br>
-<b>Answer: A) Approx 4.75 TB (Higher with recent updates, but standard answer)</b>
+<summary>Show Answer</summary>
+Answer: A) Approx 4.75 TB (Higher with recent updates, but standard answer)</b>
 </details>
 
+
+<b>12. Storage Explorer is:</b>
 <details>
-<summary><b>12. Storage Explorer is:</b></summary>
-A) A desktop GUI app for managing Azure Storage<br>
-B) A CLI<br>
-C) A web portal<br>
-D) A paid service<br>
-<br>
-<b>Answer: A) A desktop GUI app for managing Azure Storage</b>
+<summary>Show Answer</summary>
+Answer: A) A desktop GUI app for managing Azure Storage</b>
 </details>
 
+
+<b>13. Soft Delete allows you to:</b>
 <details>
-<summary><b>13. Soft Delete allows you to:</b></summary>
-A) Recover deleted blobs for a retention period<br>
-B) Delete quickly<br>
-C) Delete quietly<br>
-D) Compress data<br>
-<br>
-<b>Answer: A) Recover deleted blobs for a retention period</b>
+<summary>Show Answer</summary>
+Answer: A) Recover deleted blobs for a retention period</b>
 </details>
 
+
+<b>14. Can you use Azure AD to authenticate to Blob Storage?</b>
 <details>
-<summary><b>14. Can you use Azure AD to authenticate to Blob Storage?</b></summary>
-A) Yes (RBAC)<br>
-B) No, only Key<br>
-C) No, only SAS<br>
-D) Only via VPN<br>
-<br>
-<b>Answer: A) Yes (RBAC)</b>
+<summary>Show Answer</summary>
+Answer: A) Yes (RBAC)</b>
 </details>
 
+
+<b>15. Which redundancy option protects against a region-wide disaster?</b>
 <details>
-<summary><b>15. Which redundancy option protects against a region-wide disaster?</b></summary>
-A) GRS or GZRS<br>
-B) LRS<br>
-C) ZRS<br>
-D) None<br>
-<br>
-<b>Answer: A) GRS or GZRS</b>
+<summary>Show Answer</summary>
+Answer: A) GRS or GZRS</b>
 </details>
 
+
+<b>16. Shared Disks allow:</b>
 <details>
-<summary><b>16. Shared Disks allow:</b></summary>
-A) Mapping a single Managed Disk to multiple VMs simultaneously (Clustering)<br>
-B) Sharing files via HTTP<br>
-C) Sharing passwords<br>
-D) Free disks<br>
-<br>
-<b>Answer: A) Mapping a single Managed Disk to multiple VMs simultaneously (Clustering)</b>
+<summary>Show Answer</summary>
+Answer: A) Mapping a single Managed Disk to multiple VMs simultaneously (Clustering)</b>
 </details>
 
+
+<b>17. How many keys does a Storage Account have by default?</b>
 <details>
-<summary><b>17. How many keys does a Storage Account have by default?</b></summary>
-A) 2 (Primary and Secondary)<br>
-B) 1<br>
-C) 5<br>
-D) 0<br>
-<br>
-<b>Answer: A) 2 (Primary and Secondary)</b>
+<summary>Show Answer</summary>
+Answer: A) 2 (Primary and Secondary)</b>
 </details>
 
+
+<b>18. Azure Queue Storage is for:</b>
 <details>
-<summary><b>18. Azure Queue Storage is for:</b></summary>
-A) Storing large numbers of messages (for decoupling)<br>
-B) Storing videos<br>
-C) Storing tables<br>
-D) Storing code<br>
-<br>
-<b>Answer: A) Storing large numbers of messages (for decoupling)</b>
+<summary>Show Answer</summary>
+Answer: A) Storing large numbers of messages (for decoupling)</b>
 </details>
 
+
+<b>19. Table Storage is:</b>
 <details>
-<summary><b>19. Table Storage is:</b></summary>
-A) A NoSQL key-value store<br>
-B) A SQL database<br>
-C) A spreadsheet<br>
-D) A file server<br>
-<br>
-<b>Answer: A) A NoSQL key-value store</b>
+<summary>Show Answer</summary>
+Answer: A) A NoSQL key-value store</b>
 </details>
 
+
+<b>20. Access Tiers apply to which kind of storage?</b>
 <details>
-<summary><b>20. Access Tiers apply to which kind of storage?</b></summary>
-A) Blob Storage (and Data Lake)<br>
-B) Managed Disks<br>
-C) Queue Storage<br>
-D) Table Storage<br>
-<br>
-<b>Answer: A) Blob Storage (and Data Lake)</b>
+<summary>Show Answer</summary>
+Answer: A) Blob Storage (and Data Lake)</b>
 </details>
 
+
+<b>21. Ephemeral OS Disks:</b>
 <details>
-<summary><b>21. Ephemeral OS Disks:</b></summary>
-A) Store OS on the local VM cache (faster, lower cost, but data lost if VM moves)<br>
-B) Persist forever<br>
-C) Are slow<br>
-D) Are expensive<br>
-<br>
-<b>Answer: A) Store OS on the local VM cache (faster, lower cost, but data lost if VM moves)</b>
+<summary>Show Answer</summary>
+Answer: A) Store OS on the local VM cache (faster, lower cost, but data lost if VM moves)</b>
 </details>
+
 
 This guide covers Azure storage services for data management and persistence.

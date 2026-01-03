@@ -634,69 +634,93 @@ Use a **Bastion Host** (Jump Box) or AWS Systems Manager Session Manager.
 
 # 🧠 Knowledge Quiz
 
-**1. To launch an RDS instance, what is the minimum number of Availability Zones required for the DB Subnet Group?**
-A) 1
-B) 2
-C) 3
-D) All AZs in the region
-> **Answer: B** - A DB Subnet Group must cover at least two Availability Zones to support Multi-AZ deployments.
+<b>1. To launch an RDS instance, what is the minimum number of Availability Zones required for the DB Subnet Group?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - A DB Subnet Group must cover at least two Availability Zones to support Multi-AZ deployments.
+</details>
 
-**2. Which CLI command is used to retrieve the endpoint of your new RDS instance?**
-A) `aws rds get-endpoint`
-B) `aws rds describe-db-instances`
-C) `aws ec2 describe-instances`
-D) `aws rds describe-db-endpoints`
-> **Answer: B** - The endpoint is found within the output of the describe-db-instances command.
 
-**3. You are trying to connect to your RDS MySQL instance but get "Access Denied for user 'admin'". What is the most likely cause?**
-A) Security Group is blocking port 3306
-B) The database is still creating
-C) Wrong Master Password
-D) The instance is in a private subnet
-> **Answer: C** - "Access Denied" implies connectivity is successful (network is fine), but authentication failed.
 
-**4. True or False: Changing the instance type (e.g., from t3.micro to m5.large) causes downtime.**
-> **Answer: True** - Scaling compute (vertical scaling) requires a reboot of the instance, causing a short outage (unless using Multi-AZ where it fails over).
 
-**5. What is the default port for MySQL?**
-A) 5432
-B) 1433
-C) 3306
-D) 8080
-> **Answer: C** - 3306 is the standard port for MySQL and MariaDB.
+<b>2. Which CLI command is used to retrieve the endpoint of your new RDS instance?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - The endpoint is found within the output of the describe-db-instances command.
+</details>
 
-**6. Which feature allows you to view the exact SQL queries causing high load on your database?**
-A) VPC Flow Logs
-B) Performance Insights
-C) CloudTrail
-D) Trusted Advisor
-> **Answer: B** - Performance Insights visualizes database load and filters by SQL statements.
 
-**7. When you delete an RDS instance, what is the best practice to ensure you can restore data later?**
-A) Download the data to your laptop
-B) Create a Read Replica first
-C) Create a Final Snapshot
-D) Convert it to a toggle-stop state
-> **Answer: C** - A Final Snapshot captures the state of the database immediately before deletion.
 
-**8. Why is it recommended to use a CNAME (DNS endpoint) instead of an IP address to connect to RDS?**
-A) IP addresses cost money
-B) Use of IP is prohibited by IAM
-C) The underlying IP address can change during failover or maintenance
-D) It is faster
-> **Answer: C** - AWS manages the DNS entries; the IP can change, but the endpoint remains constant.
 
-**9. How many days of automated backups does RDS keep by default if not specified?**
-A) 0 (Disabled)
-B) 1 day
-C) 7 days
-D) 35 days
-> **Answer: C** - By default (console), it's 7 days. (Note: CLI default might differ, but generally 7 is the standard expectation for production).
+<b>3. You are trying to connect to your RDS MySQL instance but get "Access Denied for user 'admin'". What is the most likely cause?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - "Access Denied" implies connectivity is successful (network is fine), but authentication failed.
+</details>
 
-**10. Can you stop an RDS instance indefinitely?**
-A) Yes
-B) No, it auto-starts after 7 days
-C) No, it auto-starts after 24 hours
-D) Only if you use Aurora
-> **Answer: B** - Stopped instances automatically start after 7 days to ensure they don't fall behind on maintenance updates.
+
+
+
+<b>4. True or False: Changing the instance type (e.g., from t3.micro to m5.large) causes downtime.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: True** - Scaling compute (vertical scaling) requires a reboot of the instance, causing a short outage (unless using Multi-AZ where it fails over).
+</details>
+
+
+
+
+<b>5. What is the default port for MySQL?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - 3306 is the standard port for MySQL and MariaDB.
+</details>
+
+
+
+
+<b>6. Which feature allows you to view the exact SQL queries causing high load on your database?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - Performance Insights visualizes database load and filters by SQL statements.
+</details>
+
+
+
+
+<b>7. When you delete an RDS instance, what is the best practice to ensure you can restore data later?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - A Final Snapshot captures the state of the database immediately before deletion.
+</details>
+
+
+
+
+<b>8. Why is it recommended to use a CNAME (DNS endpoint) instead of an IP address to connect to RDS?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - AWS manages the DNS entries; the IP can change, but the endpoint remains constant.
+</details>
+
+
+
+
+<b>9. How many days of automated backups does RDS keep by default if not specified?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - By default (console), it's 7 days. (Note: CLI default might differ, but generally 7 is the standard expectation for production).
+</details>
+
+
+
+
+<b>10. Can you stop an RDS instance indefinitely?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - Stopped instances automatically start after 7 days to ensure they don't fall behind on maintenance updates.
+</details>
+
+
+
 

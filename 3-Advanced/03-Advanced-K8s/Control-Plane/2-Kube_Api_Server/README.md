@@ -52,7 +52,12 @@ Every API request goes through multiple stages:
 1. API server receives request
 2. Checks authentication plugins in order
 3. First successful authentication is used
-4. Extracts user information (username, UID, groups)
+<b>4. Extracts user information</b>
+<details>
+<summary>Show Answer</summary>
+Answer: username, UID, groups
+</details>
+
 5. Passes to authorization layer
 
 ### 2. Authorization
@@ -116,7 +121,12 @@ roleRef:
 3. **ServiceAccount**: Automatically adds ServiceAccount to pods
 4. **DefaultStorageClass**: Adds default storage class to PVCs
 5. **ResourceQuota**: Enforces resource quotas
-6. **PodSecurityPolicy**: Enforces pod security policies (deprecated in 1.25)
+<b>6. PodSecurityPolicy**: Enforces pod security policies</b>
+<details>
+<summary>Show Answer</summary>
+Answer: deprecated in 1.25
+</details>
+
 7. **MutatingAdmissionWebhook**: Calls external webhooks for mutation
 8. **ValidatingAdmissionWebhook**: Calls external webhooks for validation
 

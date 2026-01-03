@@ -15,17 +15,17 @@ graph LR
         Code[Cookbooks/Policy]
     end
 
-    subgraph Chef_Server
+subgraph Chef_Server
         API[Chef Server API]
         Store[Bookshelf & DB]
     end
 
-    subgraph Node
+subgraph Node
         Client[Chef Client]
         System[Operating System]
     end
 
-    Knife -->|Uploads Policy| API
+Knife -->|Uploads Policy| API
     API -->|Stores State| Store
     Client -->|Pulls Policy (HTTPS)| API
     Client -->|Configures| System

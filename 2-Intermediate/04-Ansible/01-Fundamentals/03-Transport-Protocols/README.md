@@ -12,8 +12,8 @@ Ansible uses the standard **OpenSSH** client. It doesn't write its own crypto.
 sequenceDiagram
     participant Control as Control Node
     participant Remote as Managed Node
-    
-    Control->>Remote: SSH Connect (Authenticate)
+
+Control->>Remote: SSH Connect (Authenticate)
     Control->>Remote: SFTP/SCP (Upload Module)
     Control->>Remote: SSH Exec (Run Python Script)
     Remote-->>Control: JSON Result

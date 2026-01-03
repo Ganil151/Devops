@@ -23,8 +23,8 @@ graph LR
     Users[Users] --> LB[Load Balancer]
     LB -->|Active| Blue[Blue Environment v1.0]
     LB -.->|Standby| Green[Green Environment v2.0]
-    
-    style Blue fill:#4299e1,color:#fff
+
+style Blue fill:#4299e1,color:#fff
     style Green fill:#48bb78,color:#fff
     style LB fill:#f6ad55,color:#000
 ```
@@ -50,13 +50,13 @@ resource "aws_lb_target_group" "green" {
 
 resource "aws_lb_listener_rule" "main" {
   listener_arn = aws_lb_listener.front_end.arn
-  
-  action {
+
+action {
     type             = "forward"
     target_group_arn = var.active_env == "blue" ? aws_lb_target_group.blue.arn : aws_lb_target_group.green.arn
   }
-  
-  condition {
+
+condition {
     path_pattern {
       values = ["/*"]
     }
@@ -81,8 +81,8 @@ graph TD
     F --> H{More to replace?}
     H -->|Yes| C
     H -->|No| I[All instances on v2.0]
-    
-    style A fill:#e53e3e,color:#fff
+
+style A fill:#e53e3e,color:#fff
     style I fill:#38a169,color:#fff
 ```
 
@@ -93,8 +93,8 @@ resource "aws_launch_template" "app" {
   name_prefix   = "app-"
   image_id      = var.ami_id
   instance_type = "t3.micro"
-  
-  lifecycle {
+
+lifecycle {
     create_before_destroy = true
   }
 }
@@ -106,13 +106,13 @@ resource "aws_autoscaling_group" "app" {
   min_size            = 3
   health_check_type   = "ELB"
   health_check_grace_period = 300
-  
-  launch_template {
+
+launch_template {
     id      = aws_launch_template.app.id
     version = "$Latest"
   }
-  
-  # Zero-downtime configuration
+
+# Zero-downtime configuration
   wait_for_capacity_timeout = "10m"
   instance_refresh {
     strategy = "Rolling"
@@ -137,8 +137,8 @@ graph LR
     V1[Schema v1.0<br/>App v1.0] --> V1_5[Schema v1.5<br/>Compatible with both<br/>App v1.0]
     V1_5 --> V2_stage1[Schema v1.5<br/>App v2.0]
     V2_stage1 --> V2_final[Schema v2.0<br/>App v2.0<br/>Cleanup old columns]
-    
-    style V1 fill:#e53e3e,color:#fff
+
+style V1 fill:#e53e3e,color:#fff
     style V1_5 fill:#f6ad55,color:#000
     style V2_final fill:#38a169,color:#fff
 ```
@@ -151,8 +151,8 @@ graph LR
 # Phase 1: Add new column without removing old
 resource "aws_db_instance" "main" {
   apply_immediately = false  # Apply during maintenance window
-  
-  # Use blue/green deployment for RDS
+
+# Use blue/green deployment for RDS
   blue_green_update {
     enabled = true
   }
@@ -169,8 +169,8 @@ Route a small percentage of traffic to the new version first.
 resource "aws_lb_listener_rule" "canary" {
   listener_arn = aws_lb_listener.front_end.arn
   priority     = 100
-  
-  action {
+
+action {
     type             = "forward"
     forward {
       target_group {
@@ -198,8 +198,8 @@ Forces Terraform to create the replacement resource before destroying the old on
 resource "aws_instance" "web" {
   ami           = var.ami_id
   instance_type = "t3.micro"
-  
-  lifecycle {
+
+lifecycle {
     create_before_destroy = true
   }
 }
@@ -217,8 +217,8 @@ Prevents accidental deletion of critical resources.
 ```hcl
 resource "aws_db_instance" "production" {
   identifier = "prod-db"
-  
-  lifecycle {
+
+lifecycle {
     prevent_destroy = true
   }
 }
@@ -231,8 +231,8 @@ Useful when external systems modify resources (like autoscaling).
 ```hcl
 resource "aws_autoscaling_group" "app" {
   desired_capacity = 3
-  
-  lifecycle {
+
+lifecycle {
     ignore_changes = [desired_capacity]  # Let autoscaling adjust this
   }
 }
@@ -252,16 +252,16 @@ resource "aws_autoscaling_group" "app" {
 ```hcl
 resource "aws_launch_template" "app" {
   # ... configuration ...
-  
-  lifecycle {
+
+lifecycle {
     create_before_destroy = true
   }
 }
 
 resource "aws_autoscaling_group" "app" {
   # ... configuration ...
-  
-  instance_refresh {
+
+instance_refresh {
     strategy = "Rolling"
     preferences {
       min_healthy_percentage = 75  # Always keep 75% instances healthy
@@ -318,8 +318,8 @@ resource "aws_lb_target_group" "v2" {
 
 resource "aws_lb_listener_rule" "main" {
   listener_arn = aws_lb_listener.front_end.arn
-  
-  action {
+
+action {
     type = "forward"
     forward {
       target_group {
@@ -336,7 +336,12 @@ resource "aws_lb_listener_rule" "main" {
 ```
 
 **Deployment Process**:
-1. Deploy v2 target group (weight: 0%)
+<b>1. Deploy v2 target group</b>
+<details>
+<summary>Show Answer</summary>
+Answer: weight: 0%
+</details>
+
 2. Gradually shift: 90/10, 50/50, 10/90
 3. Monitor errors at each step
 4. Finally: 0/100
@@ -426,355 +431,180 @@ Always validate zero-downtime patterns in staging before production.
 
 ## Comprehensive Quiz (25 Questions)
 
-**1. What does "zero-downtime deployment" mean?**
-- A) Deploying at midnight
-- B) Updating infrastructure without service interruption
-- C) Using zero servers
-- D) Deploying to zero users
-
-
+<b>1. What does "zero-downtime deployment" mean?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. Which lifecycle argument creates new resources before destroying old ones?**
-- A) `prevent_destroy`
-- B) `ignore_changes`
-- C) `create_before_destroy`
-- D) `replace_triggered_by`
 
-
+<b>2. Which lifecycle argument creates new resources before destroying old ones?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**3. In Blue/Green deployment, when do you destroy the Blue environment?**
-- A) Before creating Green
-- B) Immediately after creating Green
-- C) After Green is validated and serving all traffic
-- D) Never destroy it
 
-
+<b>3. In Blue/Green deployment, when do you destroy the Blue environment?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**4. What is the purpose of connection draining?**
-- A) Speed up deployments
-- B) Allow in-flight requests to complete before instance termination
-- C) Reduce costs
-- D) Improve security
 
-
+<b>4. What is the purpose of connection draining?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which is NOT a zero-downtime deployment strategy?**
-- A) Blue/Green
-- B) Rolling Update
-- C) Canary
-- D) Hard Stop and Start
 
-
+<b>5. Which is NOT a zero-downtime deployment strategy?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**6. What percentage of traffic typically goes to canary deployment initially?**
-- A) 50%
-- B) 5-10%
-- C) 100%
-- D) 0%
 
-
+<b>6. What percentage of traffic typically goes to canary deployment initially?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. What does deregistration_delay control?**
-- A) How long to wait before deleting a target group
-- B) How long to wait before deregistering an instance from load balancer
-- C) Database connection timeouts
-- D) DNS propagation time
 
-
+<b>7. What does deregistration_delay control?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. In ASG rolling updates, what does min_healthy_percentage = 90 mean?**
-- A) Only 90% of instances work
-- B) Keep at least 90% of desired capacity healthy during updates
-- C) 90% uptime SLA
-- D) 90% connection success rate
 
-
+<b>8. In ASG rolling updates, what does min_healthy_percentage = 90 mean?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. What is the Expand-Contract pattern used for?**
-- A) Scaling autoscaling groups
-- B) Database schema changes without downtime
-- C) Network expansion
-- D) Cost optimization
 
-
+<b>9. What is the Expand-Contract pattern used for?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. Which health check type is better for zero-downtime deployments?**
-- A) EC2 status checks
-- B) ELB/Target Group health checks
-- C) Manual checks
-- D) No health checks
 
-
+<b>10. Which health check type is better for zero-downtime deployments?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. What happens if you update an AMI without create_before_destroy?**
-- A) Nothing changes
-- B) Terraform creates new instances first
-- C) Terraform destroys old instances before creating new ones (downtime)
-- D) Automatic rollback
 
-
+<b>11. What happens if you update an AMI without create_before_destroy?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**12. How do you test a new version with 10% of traffic?**
-- A) Use 10 servers
-- B) Use target group weights (90/10 split)
-- C) DNS round-robin
-- D) Randomly drop 90% of requests
 
-
+<b>12. How do you test a new version with 10% of traffic?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. What is health_check_grace_period?**
-- A) Time to wait before first health check
-- B) Time between health checks
-- C) Maximum check duration
-- D) Cooldown after failure
 
-
+<b>13. What is health_check_grace_period?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**14. Which should you do FIRST in database schema migration?**
-- A) Drop old columns
-- B) Update application code
-- C) Add new columns (Expand phase)
-- D) Stop the database
 
-
+<b>14. Which should you do FIRST in database schema migration?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**15. What is the risk of shared state between Blue/Green environments?**
-- A) Slower deployments
-- B) Accidental destruction of active environment
-- C) Higher costs
-- D) Increased latency
 
-
+<b>15. What is the risk of shared state between Blue/Green environments?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. How long should deregistration_delay typically be?**
-- A) 0 seconds
-- B) 30-300 seconds (depending on request duration)
-- C) 24 hours
-- D) 1 second
 
-
+<b>16. How long should deregistration_delay typically be?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. What does instance_warmup define?**
-- A) Server temperature
-- B) Time for new instance to start serving traffic
-- C) CPU usage threshold
-- D) Memory allocation
 
-
+<b>17. What does instance_warmup define?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. In rolling updates, what happens if health check fails?**
-- A) Continue anyway
-- B) Rollback deployment
-- C) Skip that instance
-- D) Wait indefinitely
 
-
+<b>18. In rolling updates, what happens if health check fails?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. What is the benefit of target group weights?**
-- A) Reduce server count
-- B) Gradual traffic shifting between versions
-- C) Free SSL certificates
-- D) Faster DNS resolution
 
-
+<b>19. What is the benefit of target group weights?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. Which is true about prevent_destroy lifecycle?**
-- A) Prevents creating resources
-- B) Prevents destroying resources (safety for production)
-- C) Prevents updating resources
-- D) Prevents reading state
 
-
+<b>20. Which is true about prevent_destroy lifecycle?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. Why use separate Terraform workspaces for Blue/Green?**
-- A) Faster execution
-- B) Complete state isolation between environments
-- C) Required by AWS
-- D) Reduces costs
 
-
+<b>21. Why use separate Terraform workspaces for Blue/Green?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. What should healthy_threshold be set to?**
-- A) 1 (immediately mark healthy)
-- B) 2-3 consecutive successful checks
-- C) 100
-- D) 0
 
-
+<b>22. What should healthy_threshold be set to?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. What does apply_immediately = false do for RDS?**
-- A) Never applies changes
-- B) Applies during next maintenance window (reduces downtime)
-- C) Applies instantly
-- D) Requires manual approval
 
-
+<b>23. What does apply_immediately = false do for RDS?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. In three-phase database migration, when do you drop old columns?**
-- A) Phase 1
-- B) Phase 2
-- C) Phase 3 (after validation)
-- D) Never
 
-
+<b>24. In three-phase database migration, when do you drop old columns?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**25. What is the purpose of wait_for_capacity_timeout in ASG?**
-- A) Limit deployment time
-- B) Wait for desired capacity to be met before continuing
-- C) Set health check interval
-- D) Define cooldown period
 
-
+<b>25. What is the purpose of wait_for_capacity_timeout in ASG?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
 
 ---
 

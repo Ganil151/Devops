@@ -11,8 +11,8 @@ graph LR
     Vars[Variables] --> Engine[Jinja2 Engine]
     Template[Template File .j2] --> Engine
     Engine --> Result[Final Config File]
-    
-    style Engine fill:#ff4444,color:#fff
+
+style Engine fill:#ff4444,color:#fff
 ```
 
 ### 1. Variables: `{{ ... }}`

@@ -15,13 +15,13 @@ graph LR
         Test --> Plan[Terraform Plan]
         Plan --> Review[Human Review]
     end
-    
-    subgraph "Merge (CD)"
+
+subgraph "Merge (CD)"
         Merge[Merge to Main] --> Apply[Terraform Apply]
         Apply --> Smoke[Smoke Tests]
     end
-    
-    Review --> Merge
+
+Review --> Merge
 ```
 
 ---
@@ -50,18 +50,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: hashicorp/setup-terraform@v2
-      
-      - name: Terraform Init
+
+- name: Terraform Init
         run: terraform init
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-      - name: Terraform Plan
+- name: Terraform Plan
         id: plan
         run: terraform plan -no-color
-        
-      - name: Update Pull Request
+
+- name: Update Pull Request
         uses: actions/github-script@v6
         if: github.event_name == 'pull_request'
         with:

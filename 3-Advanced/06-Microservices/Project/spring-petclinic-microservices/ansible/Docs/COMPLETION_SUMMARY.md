@@ -154,12 +154,22 @@ Created comprehensive configuration for each server group:
    ./validate-setup.sh
    ```
 
-2. **Run Common Setup** (5-10 min)
+<b>2. Run Common Setup</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 5-10 min
+</details>
+
    ```bash
    ansible-playbook playbooks/common.yml
    ```
 
-3. **Deploy MySQL** (10-15 min)
+<b>3. Deploy MySQL</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 10-15 min
+</details>
+
    ```bash
    ansible-playbook playbooks/mysql.yml
    ```
@@ -283,9 +293,24 @@ ansible/
 **Current Status:** ✅ **READY FOR DEPLOYMENT**
 
 You have a fully configured Ansible environment ready to:
-1. Deploy base infrastructure (common.yml)
-2. Set up MySQL databases (mysql.yml)
-3. Begin Kubernetes cluster deployment (next phase)
+<b>1. Deploy base infrastructure</b>
+<details>
+<summary>Show Answer</summary>
+Answer: common.yml
+</details>
+
+<b>2. Set up MySQL databases</b>
+<details>
+<summary>Show Answer</summary>
+Answer: mysql.yml
+</details>
+
+<b>3. Begin Kubernetes cluster deployment</b>
+<details>
+<summary>Show Answer</summary>
+Answer: next phase
+</details>
+
 
 **What's Working:**
 - ✅ All inventory hosts reachable

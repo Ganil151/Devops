@@ -12,8 +12,6 @@ Maven is a build automation tool used primarily for Java projects. It handles de
 - Use Maven profiles for environment management
 - Debug build issues with dependency trees
 
-
-
 ## 📖 The Maven Lifecycle
 
 A build lifecycle is a well-defined sequence of phases.

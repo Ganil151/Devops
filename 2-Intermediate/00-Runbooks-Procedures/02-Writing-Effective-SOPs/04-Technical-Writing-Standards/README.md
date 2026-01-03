@@ -4,17 +4,17 @@
 graph TD
     A[Wall of Text] --> B[Cognitive Overload]
     A --> C[Missed Warnings]
-    
-    D[Structured Layout] --> E[Bold: Key Actions]
+
+D[Structured Layout] --> E[Bold: Key Actions]
     D --> F[Code Blocks: CLI Commands]
     D --> G[Alerts: Critical Dangers]
-    
-    E --> H[Visual Discoverability]
+
+E --> H[Visual Discoverability]
     F --> H
     G --> H
     H --> I[Rapid & Safe Execution]
-    
-    style A fill:#fbb,stroke:#333
+
+style A fill:#fbb,stroke:#333
     style D fill:#bfb,stroke:#333
 ```
 
@@ -61,321 +61,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which mood is preferred for operational commands?**
-- A) Passive
-- B) Imperative (Active)
-- C) Questioning
-- D) Poetic
-
+<b>1. Which mood is preferred for operational commands?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**（e.g., "Run the script"）
-
+Answer: B**（e.g., "Run the script"）
 </details>
 
-**2. True/False: You should combine as many actions as possible into one step to save space.**
-- A) True
-- B) False
 
+<b>2. True/False: You should combine as many actions as possible into one step to save space.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Use "One Thought, One Number" for clarity.
-
+Answer: B** - Use "One Thought, One Number" for clarity.
 </details>
 
-**3. 'Visual Discoverability' is improved by using:**
-- A) Invisible text
-- B) Bolding, code blocks, and alerts
-- C) Only one font
-- D) No images
 
+<b>3. 'Visual Discoverability' is improved by using:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A 'Wall of Text' is dangerous because:**
-- A) It's too long to read
-- B) Critical warnings and steps can be easily missed during a high-stress outage
-- C) It uses too much memory
-- D) It's hard to print
 
+<b>4. A 'Wall of Text' is dangerous because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. 'Code Blocks' are essential for CLI commands because:**
-- A) They are colorful
-- B) They make the command stand out from the text and are easy to copy-paste
-- C) They hide the code
-- D) they use less ink
 
+<b>5. 'Code Blocks' are essential for CLI commands because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. Which of these is an 'Atomic' step?**
-- A) "Fix the server and call Bob"
-- B) "**Verify** the CPU usage is below 80%"
-- C) "Go to the website and look for the error then try to fix it"
-- D) "Think about the problem"
 
+<b>6. Which of these is an 'Atomic' step?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Why use '> [!WARNING]' or alert boxes?**
-- A) To make the doc more exciting
-- B) To physically separate dangerous steps from the standard flow
-- C) To use up space
-- D) to hide text
 
+<b>7. Why use '> [!WARNING]' or alert boxes?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. 'Plain Language' ensures:**
-- A) The doc is boring
-- B) The instructions are understood by everyone, including non-native speakers
-- C) No one reads it
-- D) computers can't read it
 
+<b>8. 'Plain Language' ensures:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. In 'Step 1: Restart App', the word 'Restart' is a:**
-- A) Noun
-- B) Verb (Imperative)
-- C) Adjective
-- D) Pronoun
 
+<b>9. In 'Step 1: Restart App', the word 'Restart' is a:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. True/False: You should use 'We' or 'I' frequently in an SOP.**
-- A) True
-- B) False - SOPs should be objective and task-focused.
 
+<b>10. True/False: You should use 'We' or 'I' frequently in an SOP.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. 'Scanning' a document means:**
-- A) Using a scanner machine
-- B) Quickly reading headers and bold text to find the relevant section
-- C) Deleting the file
-- D) reading every word slowly
 
+<b>11. 'Scanning' a document means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. 'Active' writing (John ran) is better than 'Passive' (The race was run by John) because:**
-- A) It is shorter and more direct
-- B) It's more formal
-- C) It's more creative
-- D) it's for juniors
 
+<b>12. 'Active' writing (John ran) is better than 'Passive' (The race was run by John) because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**13. A 'Decision Point' in writing should be represented by:**
-- A) A long paragraph
-- B) A clear 'If/Then/Else' structure or a diagram
-- C) A secret code
-- D) nothing
 
+<b>13. A 'Decision Point' in writing should be represented by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. 'Redundancy' in writing (using too many words to say the same thing) should be:**
-- A) Encouraged
-- B) Eliminated for speed and clarity
-- C) Used only in headings
-- D) ignored
 
+<b>14. 'Redundancy' in writing (using too many words to say the same thing) should be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. Technical writing for operations is optimized for:**
-- A) Entertainment
-- B) Utility and Speed
-- C) Legal reasons only
-- D) marketing
 
+<b>15. Technical writing for operations is optimized for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. Why avoid idioms like 'Piece of cake' or 'Down the drain'?**
-- A) They are too funny
-- B) They can be confusing for non-native speakers or translated incorrectly by tools
-- C) They take up too much space
-- D) they are not allowed by Git
 
+<b>16. Why avoid idioms like 'Piece of cake' or 'Down the drain'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. 'Numbered Lists' imply:**
-- A) A random order
-- B) A specific, sequential order of operations
-- C) A grocery list
-- D) unimportant info
 
+<b>17. 'Numbered Lists' imply:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. 'Bullet Points' are used for:**
-- A) Unordered lists or collections of items
-- B) Strict sequences
-- C) Only for titles
-- D) to kill the text
 
+<b>18. 'Bullet Points' are used for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**19. True/False: Jargon should always be explained or avoided in a general SOP.**
-- A) True
-- B) False
 
+<b>19. True/False: Jargon should always be explained or avoided in a general SOP.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - Never assume everyone knows the acronyms.
-
+Answer: A** - Never assume everyone knows the acronyms.
 </details>
 
-**20. A 'Call to Action' (CTA) in an SOP is:**
-- A) A phone call
-- B) The specific command the user must run
-- C) A request for help
-- D) a link to a website
 
+<b>20. A 'Call to Action' (CTA) in an SOP is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. 'Cognitive Overload' occurs when the text is:**
-- A) Too simple
-- B) Dense, disorganized, and lacks clear hierarchy
-- C) In Markdown
-- D) in colors
 
+<b>21. 'Cognitive Overload' occurs when the text is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Which part of 'Check logs for Errors' is the object?**
-- A) Check
-- B) Logs
-- C) Errors
-- D) For
 
+<b>22. Which part of 'Check logs for Errors' is the object?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Why use 'Bold' for UI elements (e.g., "**Click the OK button**")?**
-- A) To make the text darker
-- B) To clearly distinguish between what to type and what to click in the UI
-- C) To hide the text
-- D) it's a rule
 
+<b>23. Why use 'Bold' for UI elements (e.g., "</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Verb' in a step should ideally be:**
-- A) At the end
-- B) At the beginning (Imperative)
-- C) Omitted
-- D) capitalized
 
+<b>24. The 'Verb' in a step should ideally be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Excellence in technical writing leads to:**
-- A) More pages
-- B) Lower MTTR and higher psychological safety for the team
-- C) Lower salary
-- D) boring work
 
+<b>25. Excellence in technical writing leads to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

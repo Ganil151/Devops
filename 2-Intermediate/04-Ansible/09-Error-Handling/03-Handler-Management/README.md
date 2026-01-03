@@ -8,10 +8,10 @@ Handlers are a specialized form of task that run only when they receive a "notif
 graph LR
     T1[Task: Config Update] -->|Reports 'Changed'| Notify[Send Notification]
     Notify -->|Add to Queue| Queue[Handler Queue]
-    
-    T2[Task: Install App] -->|Reports 'OK'| NoNotify[No Notification]
-    
-    Queue -->|Process at End| H1[Handler: Restart Service]
+
+T2[Task: Install App] -->|Reports 'OK'| NoNotify[No Notification]
+
+Queue -->|Process at End| H1[Handler: Restart Service]
 ```
 
 ### 1. The Trigger (`notify`)
@@ -66,8 +66,8 @@ handlers:
   - name: Restart SSH
     service: name=sshd state=restarted
     listen: security_change
-    
-  - name: Restart Firewall
+
+- name: Restart Firewall
     service: name=ufw state=restarted
     listen: security_change
 ```

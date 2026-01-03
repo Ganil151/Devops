@@ -100,112 +100,71 @@ This tells the JVM to use a percentage of the container's memory limit, rather t
 6. **What is the significance of the Maven Wrapper (`mvnw`)?**
    - Allows running Maven builds without having Maven installed on the machine/agent. It downloads the correct version automatically.
 
-### Advanced Level
-7. **Explain Spring Boot "Profiles".**
-   - Ways to segregate parts of app config. `-Dspring.profiles.active=prod` loads `application-prod.properties`.
-8. **How does "Dependency Injection" aid testing?**
-   - You can inject "Mock" objects instead of real databases/services during unit tests without changing the code.
-9. **Explain JVM Container Awareness.**
-   - Older Java versions saw **Host** memory/CPU, not **Container** limits, causing OOMs. New versions (`-XX:+UseContainerSupport`) respect cgroups.
-
----
-
-## Quiz: Spring Boot for DevOps
-
+<b>7. </b>
 <details>
-<summary><b>1. Major feature of Spring Boot over legacy Spring?</b></summary>
-A) Embedded Server (Run as JAR)<br>
-B) Requires XML config<br>
-C) Slower<br>
-D) Only supports WAR<br>
-<br>
-<b>Answer: A) Embedded Server (Run as JAR)</b>
+<summary>Show Answer</summary>
+Answer: A) Embedded Server (Run as JAR)</b>
 </details>
 
+
+<b>2. Standard config file name?</b>
 <details>
-<summary><b>2. Standard config file name?</b></summary>
-A) application.properties<br>
-B) config.xml<br>
-C) settings.json<br>
-D) spring.conf<br>
-<br>
-<b>Answer: A) application.properties</b>
+<summary>Show Answer</summary>
+Answer: A) application.properties</b>
 </details>
 
+
+<b>3. Which command runs the packaged application?</b>
 <details>
-<summary><b>3. Which command runs the packaged application?</b></summary>
-A) java -jar app.jar<br>
-B) node app.jar<br>
-C) python app.jar<br>
-D) run app.jar<br>
-<br>
-<b>Answer: A) java -jar app.jar</b>
+<summary>Show Answer</summary>
+Answer: A) java -jar app.jar</b>
 </details>
 
+
+<b>4. Spring Actuator is used for?</b>
 <details>
-<summary><b>4. Spring Actuator is used for?</b></summary>
-A) Health checks and Metrics<br>
-B) Database connection<br>
-C) UI Design<br>
-D) Animation<br>
-<br>
-<b>Answer: A) Health checks and Metrics</b>
+<summary>Show Answer</summary>
+Answer: A) Health checks and Metrics</b>
 </details>
 
+
+<b>5. Maven build file is called:</b>
 <details>
-<summary><b>5. Maven build file is called:</b></summary>
-A) pom.xml<br>
-B) package.json<br>
-C) build.gradle<br>
-D) Makefile<br>
-<br>
-<b>Answer: A) pom.xml (Project Object Model)</b>
+<summary>Show Answer</summary>
+Answer: A) pom.xml (Project Object Model)</b>
 </details>
 
+
+<b>6. Environment Variables have [High/Low] priority over properties file?</b>
 <details>
-<summary><b>6. Environment Variables have [High/Low] priority over properties file?</b></summary>
-A) High (Override file)<br>
-B) Low (Files win)<br>
-<br>
-<b>Answer: A) High (Override file)</b>
+<summary>Show Answer</summary>
+Answer: A) High (Override file)</b>
 </details>
 
+
+<b>7. Why use `mvnw` (Wrapper)?</b>
 <details>
-<summary><b>7. Why use `mvnw` (Wrapper)?</b></summary>
-A) Ensures consistent Maven version between developers/CI<br>
-B) It is faster<br>
-C) It is smaller<br>
-D) It converts to Gradle<br>
-<br>
-<b>Answer: A) Ensures consistent Maven version between developers/CI</b>
+<summary>Show Answer</summary>
+Answer: A) Ensures consistent Maven version between developers/CI</b>
 </details>
 
+
+<b>8. Java Heap Memory error in Docker is usually code:</b>
 <details>
-<summary><b>8. Java Heap Memory error in Docker is usually code:</b></summary>
-A) 137 (OOM Kill)<br>
-B) 0<br>
-C) 404<br>
-D) 500<br>
-<br>
-<b>Answer: A) 137 (OOM Kill)</b>
+<summary>Show Answer</summary>
+Answer: A) 137 (OOM Kill)</b>
 </details>
 
+
+<b>9. Which creates a native binary (no JVM needed)?</b>
 <details>
-<summary><b>9. Which creates a native binary (no JVM needed)?</b></summary>
-A) GraalVM Native Image<br>
-B) Maven<br>
-C) Tomcat<br>
-D) Jenkins<br>
-<br>
-<b>Answer: A) GraalVM Native Image</b>
+<summary>Show Answer</summary>
+Answer: A) GraalVM Native Image</b>
 </details>
 
+
+<b>10. Default port for Spring Boot?</b>
 <details>
-<summary><b>10. Default port for Spring Boot?</b></summary>
-A) 8080<br>
-B) 80<br>
-C) 3000<br>
-D) 5000<br>
-<br>
-<b>Answer: A) 8080</b>
+<summary>Show Answer</summary>
+Answer: A) 8080</b>
 </details>

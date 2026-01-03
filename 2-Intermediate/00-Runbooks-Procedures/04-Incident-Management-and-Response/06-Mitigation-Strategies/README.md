@@ -63,17 +63,17 @@ graph TD
     Start{Incident Detected} --> Recent{Recent Deploy?}
     Recent -- Yes --> Rollback[Rollback]
     Recent -- No --> Feature{Specific Feature?}
-    
-    Feature -- Yes --> Flag[Disable Feature Flag]
+
+Feature -- Yes --> Flag[Disable Feature Flag]
     Feature -- No --> Infra{Infrastructure Issue?}
-    
-    Infra -- Yes --> Reroute[Reroute Traffic]
+
+Infra -- Yes --> Reroute[Reroute Traffic]
     Infra -- No --> Load{High Load?}
-    
-    Load -- Yes --> Scale[Scale Up]
+
+Load -- Yes --> Scale[Scale Up]
     Load -- No --> Patch[Emergency Patch]
-    
-    style Rollback fill:#0f0,stroke:#333,stroke-width:2px
+
+style Rollback fill:#0f0,stroke:#333,stroke-width:2px
     style Patch fill:#f66,stroke:#333,stroke-width:2px
 ```
 
@@ -142,317 +142,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the primary focus of the Mitigation phase?**
-- A) Finding the root cause
-- B) Stopping the service impact (Stopping the bleeding)
-- C) Writing a post-mortem
-- D) Blaming the developer
-
+<b>1. What is the primary focus of the Mitigation phase?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: Speed is more important than perfection during mitigation.**
-- A) True
-- B) False
 
+<b>2. True/False: Speed is more important than perfection during mitigation.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**3. Which mitigation strategy is usually the FASTEST?**
-- A) Emergency Patch
-- B) Rollback
-- C) Scaling
-- D) Rewrite the app
 
+<b>3. Which mitigation strategy is usually the FASTEST?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A 'Feature Flag' allows you to:**
-- A) Change the logo
-- B) Toggle a specific functionality off without a full deployment
-- C) Delete the database
-- D) nothing
 
+<b>4. A 'Feature Flag' allows you to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. 'Rolling back' a Kubernetes deployment is done with:**
-- A) git delete
-- B) kubectl rollout undo
-- C) rm -rf /
-- D) help
 
+<b>5. 'Rolling back' a Kubernetes deployment is done with:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Traffic Rerouting' is best used when:**
-- A) The code has a typo
-- B) An entire data center or region is failing
-- C) A user is angry
-- D) nothing
 
+<b>6. 'Traffic Rerouting' is best used when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: You should always debug for 1 hour before rolling back.**
-- A) False - Rollback immediately if a recent deploy caused the issue.
-- B) True
 
+<b>7. True/False: You should always debug for 1 hour before rolling back.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. 'Horizontal Scaling' involves:**
-- A) Making the server bigger (CPU/RAM)
-- B) Adding more instances (replicas) of the service
-- C) Buying a wider monitor
-- D) nothing
 
+<b>8. 'Horizontal Scaling' involves:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. An 'Emergency Patch' is generally:**
-- A) The safest option
-- B) The riskiest option
-- C) The cheapest option
-- D) always green
 
+<b>9. An 'Emergency Patch' is generally:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What is 'Blast Radius' in mitigation?**
-- A) The size of an explosion
-- B) The portion of the system or users affected by a change or an outage
-- C) The server room door
-- D) nothing
 
+<b>10. What is 'Blast Radius' in mitigation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: If a database migration can't be reverted, you might be forced to Hotfix.**
-- A) True - This is a common scenario.
-- B) False
 
+<b>11. True/False: If a database migration can't be reverted, you might be forced to Hotfix.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. 'Failover' refers to:**
-- A) Failing a test
-- B) Automatically switching traffic to a redundant standby system
-- C) Deleting a service
-- D) nothing
 
+<b>12. 'Failover' refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. Why use 'Canary Deployments' to prevent mitigation crises?**
-- A) To test birds
-- B) To release code to only 1% of users first to detect bugs early
-- C) To make it look cool
-- D) nothing
 
+<b>13. Why use 'Canary Deployments' to prevent mitigation crises?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. If you have 100% error rates after a deploy, you should:**
-- A) Read the code
-- B) **Rollback immediately**
-- C) Ask the user to wait
-- D) restart the database
 
+<b>14. If you have 100% error rates after a deploy, you should:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Surgical Mitigation' means:**
-- A) Using a scalpel on a server
-- B) Fixing only the specific broken component (like via a feature flag)
-- C) Fixing everything at once
-- D) nothing
 
+<b>15. 'Surgical Mitigation' means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: Root cause analysis happens *during* the mitigation phase.**
-- A) False - It happens after the incident is mitigated.
-- B) True
 
+<b>16. True/False: Root cause analysis happens *during* the mitigation phase.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'DNS Propagation' time affects which strategy?**
-- A) Scaling
-- B) Traffic Rerouting
-- C) Rollback
-- D) Coding
 
+<b>17. 'DNS Propagation' time affects which strategy?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. What is the 'MTTR' target during mitigation?**
-- A) As long as it takes
-- B) **Zero (or as close as possible)**
-- C) 24 hours
-- D) none
 
+<b>18. What is the 'MTTR' target during mitigation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. A 'Circuit Breaker' is an automated way to:**
-- A) Turn off the lights
-- B) Stop traffic to a failing service to prevent cascading failure
-- C) Speed up the site
-- D) nothing
 
+<b>19. A 'Circuit Breaker' is an automated way to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: You should always communicate your mitigation plan to the Incident Commander.**
-- A) True
-- B) False
 
+<b>20. True/False: You should always communicate your mitigation plan to the Incident Commander.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Shadow Traffic' helps test fixes by:**
-- A) Using dark mode
-- B) Mirroring real production traffic to a test service without impacting users
-- C) Hiding traffic
-- D) nothing
 
+<b>21. 'Shadow Traffic' helps test fixes by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Rate Limiting' can be a mitigation strategy against:**
-- A) Slow code
-- B) Sudden traffic surges or DDoS attacks
-- C) High prices
-- D) nothing
 
+<b>22. 'Rate Limiting' can be a mitigation strategy against:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Under-mitigating means:**
-- A) Fixing too fast
-- B) Applying a partial fix that doesn't fully stop the user impact
-- C) Forgetting to log
-- D) nothing
 
+<b>23. Under-mitigating means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Mitigation First' mindset is core to which philosophy?**
-- A) Waterfall
-- B) SRE (Site Reliability Engineering)
-- C) Agile
-- D) nothing
 
+<b>24. The 'Mitigation First' mindset is core to which philosophy?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Mitigation is to an incident what _____ is to a doctor.**
-- A) Surgery
-- B) First Aid (Stop the bleeding)
-- C) Nutrition
-- D) Billing
 
+<b>25. Mitigation is to an incident what _____ is to a doctor.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

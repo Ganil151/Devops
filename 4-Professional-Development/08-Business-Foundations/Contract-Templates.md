@@ -6,9 +6,24 @@ Ready-to-use contract templates specifically designed for DevOps consultants. Cu
 
 ## 📋 Table of Contents
 
-1. [Master Services Agreement (MSA)](#msa)
-2. [Statement of Work (SOW)](#sow)
-3. [Non-Disclosure Agreement (NDA)](#nda)
+<b>1. [Master Services Agreement</b>
+<details>
+<summary>Show Answer</summary>
+Answer: MSA)](#msa
+</details>
+
+<b>2. [Statement of Work</b>
+<details>
+<summary>Show Answer</summary>
+Answer: SOW)](#sow
+</details>
+
+<b>3. [Non-Disclosure Agreement</b>
+<details>
+<summary>Show Answer</summary>
+Answer: NDA)](#nda
+</details>
+
 4. [Independent Contractor Agreement](#contractor)
 5. [Remote Work Contract Addendum](#remote-work) - NEW! 🌍
 6. [International Contractor Agreement](#international) - NEW! 🌐

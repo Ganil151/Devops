@@ -30,15 +30,15 @@ graph TD
     User((User)) --> GA[Global Accelerator]
     GA --> RegionA[Region: us-east-1]
     GA --> RegionB[Region: eu-west-1]
-    
-    subgraph RegionA
+
+subgraph RegionA
     ALB_A --- EC2_A
     end
     subgraph RegionB
     ALB_B --- EC2_B
     end
-    
-    EC2_A <-->|Replication| EC2_B
+
+EC2_A <-->|Replication| EC2_B
 ```
 
 ---
@@ -87,317 +87,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which metric refers to the maximum acceptable time to restore service?**
-- A) RPO
-- B) RTO
-- C) SLA
-- D) MTTR
-
+<b>1. Which metric refers to the maximum acceptable time to restore service?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: Multi-AZ architecture protects against a total region failure.**
-- A) True
-- B) False (Only protects against AZ failure)
 
+<b>2. True/False: Multi-AZ architecture protects against a total region failure.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. Which DR strategy has the SHORTEST RTO?**
-- A) Backup and Restore
-- B) Pilot Light
-- C) Multi-site (Active-Active)
-- D) Warm Standby
 
+<b>3. Which DR strategy has the SHORTEST RTO?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**4. AWS Global Accelerator provides how many static Anycast IP addresses?**
-- A) 1
-- B) 2
-- C) 5
-- D) 10
 
+<b>4. AWS Global Accelerator provides how many static Anycast IP addresses?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. 'Anycast' allows multiple servers to share the same IP across:**
-- A) Different floors
-- B) Different global geographic locations
-- C) The same rack
-- D) nothing
 
+<b>5. 'Anycast' allows multiple servers to share the same IP across:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. RPO refers to:**
-- A) Data loss (measured in time)
-- B) Response time
-- C) Cost
-- D) nothing
 
+<b>6. RPO refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**7. True/False: Route 53 is a Global service.**
-- A) True
-- B) False
 
+<b>7. True/False: Route 53 is a Global service.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. Which service is best for avoiding DNS caching issues during failover?**
-- A) CloudFront
-- B) Global Accelerator
-- C) Shield
-- D) nothing
 
+<b>8. Which service is best for avoiding DNS caching issues during failover?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. 'Pilot Light' DR keeps which component running at all times?**
-- A) Web servers
-- B) All servers at full scale
-- C) The Database (Smallest scale)
-- D) nothing
 
+<b>9. 'Pilot Light' DR keeps which component running at all times?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**10. How far apart are Availability Zones typically located?**
-- A) Miles apart (to avoid single disaster impact)
-- B) In the same room
-- C) In different countries
-- D) nothing
 
+<b>10. How far apart are Availability Zones typically located?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**11. Which option is the MOST expensive DR strategy?**
-- A) Backup/Restore
-- B) Pilot Light
-- C) Active-Active
-- D) Warm Standby
 
+<b>11. Which option is the MOST expensive DR strategy?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**12. 'Split-Brain' is a condition where:**
-- A) The computer is fast
-- B) Two isolated regions both believe they are the primary, leading to data corruption
-- C) The monitor breaks
-- D) nothing
 
+<b>12. 'Split-Brain' is a condition where:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. True/False: You pay for data transfer between Availability Zones.**
-- A) True
-- B) False
 
+<b>13. True/False: You pay for data transfer between Availability Zones.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**14. A 'Region' consists of at least how many AZs?**
-- A) 1
-- B) 2
-- C) 3 (Standard for modern regions)
-- D) 10
 
+<b>14. A 'Region' consists of at least how many AZs?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**15. 'Geoproximity Routing' in Route 53 sends users to:**
-- A) The cheapest region
-- B) The closest physical region
-- C) A random region
-- D) nothing
 
+<b>15. 'Geoproximity Routing' in Route 53 sends users to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: Global Accelerator is a Layer 7 service.**
-- A) False (Layer 4 - Network/Transport)
-- B) True
 
+<b>16. True/False: Global Accelerator is a Layer 7 service.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. What is the benefit of 'Edge Locations' for Networking?**
-- A) Storage
-- B) Reduces latency by moving content/entry points closer to users
-- C) More CPUs
-- D) nothing
 
+<b>17. What is the benefit of 'Edge Locations' for Networking?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. 'Fault Tolerance' means a system can:**
-- A) Be fixed easily
-- B) Continue operating even if a component fails
-- C) Send error emails
-- D) nothing
 
+<b>18. 'Fault Tolerance' means a system can:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which DR strategy uses the most automation?**
-- A) Backup/Restore
-- B) Active-Active
-- C) Pilot Light
-- D) nothing
 
+<b>19. Which DR strategy uses the most automation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: VPCs are Global.**
-- A) False (VPCs are Regional)
-- B) True
 
+<b>20. True/False: VPCs are Global.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Anycast' routing is based on:**
-- A) Name
-- B) BGP (Border Gateway Protocol) and Latency
-- C) Cost
-- D) nothing
 
+<b>21. 'Anycast' routing is based on:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. How many 'Active' regions are in a Warm Standby setup?**
-- A) 1
-- B) 2 (But the 2nd is scaled down)
-- C) 5
-- D) 0
 
+<b>22. How many 'Active' regions are in a Warm Standby setup?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Data replication between regions is usually:**
-- A) Synchronous (Near zero latency)
-- B) Asynchronous (Subject to speed of light/network latency)
-- C) Manual
-- D) nothing
 
+<b>23. Data replication between regions is usually:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. Multi-Region is primarily for:**
-- A) Saving money
-- B) Business Continuity/DR and Global Performance
-- C) Training
-- D) nothing
 
+<b>24. Multi-Region is primarily for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. A highly available network is the _____ of a resilient business.**
-- A) Paint
-- B) Insurance Policy
-- C) Foundation
-- D) nothing
 
+<b>25. A highly available network is the _____ of a resilient business.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>

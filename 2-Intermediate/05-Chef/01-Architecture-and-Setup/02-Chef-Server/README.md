@@ -29,7 +29,7 @@ graph TD
         Node[Chef Client]
     end
 
-    subgraph "Chef Server"
+subgraph "Chef Server"
         Nginx[Nginx LB]
         Erchef[Erchef API]
         Postgres[(PostgreSQL\nMetadata)]
@@ -38,7 +38,7 @@ graph TD
         MQ[RabbitMQ]
     end
 
-    WS -->|HTTPS Request| Nginx
+WS -->|HTTPS Request| Nginx
     Node -->|HTTPS Request| Nginx
     Nginx --> Erchef
     Erchef -->|Authz| Postgres
@@ -85,7 +85,7 @@ graph TD
     *   C) Solr
     *   D) RabbitMQ
 
-    <details><summary>Click for Answer</summary>B) Bookshelf</details>
+<details><summary>Click for Answer</summary>B) Bookshelf</details>
 
 2.  **Which component is the web server that routes requests?**
     *   A) Apache
@@ -93,7 +93,7 @@ graph TD
     *   C) Nginx
     *   D) HAProxy
 
-    <details><summary>Click for Answer</summary>C) Nginx</details>
+<details><summary>Click for Answer</summary>C) Nginx</details>
 
 3.  **What listens on port 443 on the Chef Server?**
     *   A) Solr
@@ -101,7 +101,7 @@ graph TD
     *   C) Erchef
     *   D) PostgreSQL
 
-    <details><summary>Click for Answer</summary>B) Nginx</details>
+<details><summary>Click for Answer</summary>B) Nginx</details>
 
 4.  **The "System of Record" for metadata (nodes, data bags) is:**
     *   A) Solr
@@ -109,7 +109,7 @@ graph TD
     *   C) PostgreSQL
     *   D) Flat files
 
-    <details><summary>Click for Answer</summary>C) PostgreSQL</details>
+<details><summary>Click for Answer</summary>C) PostgreSQL</details>
 
 5.  **You want to find all nodes with more than 8GB of RAM. Which component services this query?**
     *   A) Bookshelf
@@ -117,7 +117,7 @@ graph TD
     *   C) Bifrost
     *   D) Nginx
 
-    <details><summary>Click for Answer</summary>B) Solr / Elasticsearch</details>
+<details><summary>Click for Answer</summary>B) Solr / Elasticsearch</details>
 
 6.  **To restart all Chef Server services, you run:**
     *   A) `systemctl restart chef`
@@ -125,7 +125,7 @@ graph TD
     *   C) `service chef restart`
     *   D) `knife server restart`
 
-    <details><summary>Click for Answer</summary>B) chef-server-ctl restart</details>
+<details><summary>Click for Answer</summary>B) chef-server-ctl restart</details>
 
 7.  **What does `chef-server-ctl reconfigure` do?**
     *   A) Reinstalls the RPM/DEB package.
@@ -133,7 +133,7 @@ graph TD
     *   C) Deletes all data.
     *   D) Reboots the machine.
 
-    <details><summary>Click for Answer</summary>B) Applies the change in /etc/opscode/chef-server.rb...</details>
+<details><summary>Click for Answer</summary>B) Applies the change in /etc/opscode/chef-server.rb...</details>
 
 8.  **What represents a physical or virtual machine within the Chef Server?**
     *   A) A Client
@@ -141,13 +141,13 @@ graph TD
     *   C) A User
     *   D) A Databag
 
-    <details><summary>Click for Answer</summary>B) A Node Object</details>
+<details><summary>Click for Answer</summary>B) A Node Object</details>
 
 9.  **True or False: The Chef Server pushes configurations to the nodes immediately when you upload a cookbook.**
     *   A) True
     *   B) False
 
-    <details><summary>Click for Answer</summary>B) False (Chef is Pull-based)</details>
+<details><summary>Click for Answer</summary>B) False (Chef is Pull-based)</details>
 
 10. **What is a "Data Bag"?**
     *   A) A backpack for the Chef.
@@ -155,7 +155,7 @@ graph TD
     *   C) A temporary cache.
     *   D) A log file.
 
-    <details><summary>Click for Answer</summary>B) Global arbitrary JSON data...</details>
+<details><summary>Click for Answer</summary>B) Global arbitrary JSON data...</details>
 
 11. **Which organization created Chef?**
     *   A) Puppet Labs
@@ -163,7 +163,7 @@ graph TD
     *   C) Opscode (now Chef/Progress)
     *   D) Google
 
-    <details><summary>Click for Answer</summary>C) Opscode (now Chef/Progress)</details>
+<details><summary>Click for Answer</summary>C) Opscode (now Chef/Progress)</details>
 
 12. **What is `Bifrost` responsible for?**
     *   A) Searching
@@ -171,7 +171,7 @@ graph TD
     *   C) Routing
     *   D) Storage
 
-    <details><summary>Click for Answer</summary>B) Authorization (ACLs)</details>
+<details><summary>Click for Answer</summary>B) Authorization (ACLs)</details>
 
 13. **What acts as the message bus between Erchef and the Indexer?**
     *   A) Kafka
@@ -179,7 +179,7 @@ graph TD
     *   C) RabbitMQ
     *   D) ZeroMQ
 
-    <details><summary>Click for Answer</summary>C) RabbitMQ</details>
+<details><summary>Click for Answer</summary>C) RabbitMQ</details>
 
 14. **Where can you view the Chef Server web UI?**
     *   A) Chef Dashboard
@@ -187,7 +187,7 @@ graph TD
     *   C) Knife UI
     *   D) It has no UI.
 
-    <details><summary>Click for Answer</summary>B) Chef Manage (Legacy) or Chef Automate</details>
+<details><summary>Click for Answer</summary>B) Chef Manage (Legacy) or Chef Automate</details>
 
 15. **What is a Chef "Organization"?**
     *   A) A company.
@@ -195,7 +195,7 @@ graph TD
     *   C) A folder on disk.
     *   D) A group of users.
 
-    <details><summary>Click for Answer</summary>B) A multi-tenant scope within the Chef Server...</details>
+<details><summary>Click for Answer</summary>B) A multi-tenant scope within the Chef Server...</details>
 
 16. **Which command creates a new organization on the server?**
     *   A) `knife org create`
@@ -203,7 +203,7 @@ graph TD
     *   C) `useradd org`
     *   D) `chef org new`
 
-    <details><summary>Click for Answer</summary>B) chef-server-ctl org-create</details>
+<details><summary>Click for Answer</summary>B) chef-server-ctl org-create</details>
 
 17. **If `knife ssl check` fails, what is the likely issue?**
     *   A) The server is down.
@@ -211,7 +211,7 @@ graph TD
     *   C) You have the wrong password.
     *   D) The internet is down.
 
-    <details><summary>Click for Answer</summary>B) The workstation doesn't trust the Chef Server's self-signed certificate.</details>
+<details><summary>Click for Answer</summary>B) The workstation doesn't trust the Chef Server's self-signed certificate.</details>
 
 18. **What is the command to create a user on the Chef Server via CLI?**
     *   A) `chef-server-ctl user-create`
@@ -219,16 +219,16 @@ graph TD
     *   C) `adduser`
     *   D) `chef user new`
 
-    <details><summary>Click for Answer</summary>A) `chef-server-ctl user-create` (Server-side) or `knife` (if admin)</details>
+<details><summary>Click for Answer</summary>A) `chef-server-ctl user-create` (Server-side) or `knife` (if admin)</details>
 
 19. **Can a node belong to multiple environments?**
     *   A) Yes
     *   B) No
 
-    <details><summary>Click for Answer</summary>B) No (A node belongs to exactly one environment)</details>
+<details><summary>Click for Answer</summary>B) No (A node belongs to exactly one environment)</details>
 
 20. **Can a node have multiple roles?**
     *   A) Yes
     *   B) No
 
-    <details><summary>Click for Answer</summary>A) Yes (Run-list can contain many roles)</details>
+<details><summary>Click for Answer</summary>A) Yes (Run-list can contain many roles)</details>

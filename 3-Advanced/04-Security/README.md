@@ -30,12 +30,12 @@ flowchart LR
     subgraph "Traditional Approach"
         T1[Plan] --> T2[Code] --> T3[Build] --> T4[Test] --> T5[Deploy] --> T6[❌ Security Check]
     end
-    
-    subgraph "DevSecOps Approach ✓"
+
+subgraph "DevSecOps Approach ✓"
         D1[Plan<br/>🔒 Threat Model] --> D2[Code<br/>🔒 SAST] --> D3[Build<br/>🔒 SCA] --> D4[Test<br/>🔒 DAST] --> D5[Deploy<br/>🔒 IaC Scan] --> D6[Operate<br/>🔒 Runtime]
     end
-    
-    style T6 fill:#ffcdd2
+
+style T6 fill:#ffcdd2
     style D1 fill:#c8e6c9
     style D2 fill:#c8e6c9
     style D3 fill:#c8e6c9
@@ -67,34 +67,34 @@ graph TB
         SAST --> CODE_SEC[Secure Code]
         SECRET --> CODE_SEC
     end
-    
-    subgraph "Dependency Security"
+
+subgraph "Dependency Security"
         SCA[SCA<br/>Snyk, Dependency-Check]
         LICENSE[License Check<br/>FOSSA, Black Duck]
         SCA --> DEP_SEC[Secure Dependencies]
         LICENSE --> DEP_SEC
     end
-    
-    subgraph "Infrastructure Security"
+
+subgraph "Infrastructure Security"
         CONTAINER[Container Scan<br/>Trivy, Clair]
         IAC[IaC Scan<br/>Checkov, tfsec]
         CONTAINER --> INFRA_SEC[Secure Infrastructure]
         IAC --> INFRA_SEC
     end
-    
-    subgraph "Runtime Security"
+
+subgraph "Runtime Security"
         RUNTIME[Runtime Protection<br/>Falco, Aqua]
         POLICY[Policy Enforcement<br/>OPA, Gatekeeper]
         RUNTIME --> RUN_SEC[Secure Operations]
         POLICY --> RUN_SEC
     end
-    
-    CODE_SEC --> SECURE[Secure Application]
+
+CODE_SEC --> SECURE[Secure Application]
     DEP_SEC --> SECURE
     INFRA_SEC --> SECURE
     RUN_SEC --> SECURE
-    
-    style SECURE fill:#c8e6c9
+
+style SECURE fill:#c8e6c9
 ```
 
 ### Tool Categories
@@ -374,7 +374,12 @@ Track these metrics to measure DevSecOps maturity:
 ### ✅ Solutions
 
 1. Enforce security gates in CI/CD
-2. Use secrets managers (Vault, cloud providers)
+<b>2. Use secrets managers</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Vault, cloud providers
+</details>
+
 3. Break builds on security violations
 4. Implement least privilege everywhere
 5. Automated dependency updates

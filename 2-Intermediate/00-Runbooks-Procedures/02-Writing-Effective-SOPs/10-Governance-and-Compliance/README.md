@@ -8,8 +8,8 @@ graph TD
     Pub --> Monitor[Monitor: LastReviewed Date]
     Monitor -- Expired --> Recert[Recertification Cycle]
     Recert --> Peer
-    
-    subgraph "The Audit Trail"
+
+subgraph "The Audit Trail"
     Draft
     Peer
     Appr
@@ -60,319 +60,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. How often should a 'Critical' SOP ideally be reviewed?**
-- A) Once in a lifetime
-- B) Every 6-12 months
-- C) After every employee leaves
-- D) Every 10 years
-
+<b>1. How often should a 'Critical' SOP ideally be reviewed?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**（To prevent "Documentation Rot"）
-
+Answer: B**（To prevent "Documentation Rot"）
 </details>
 
-**2. True/False: It is okay to put 'Temporary' passwords in documentation if they are changed 24 hours later.**
-- A) True
-- B) False
 
+<b>2. True/False: It is okay to put 'Temporary' passwords in documentation if they are changed 24 hours later.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Secrets should **never** enter the documentation repository.
-
+Answer: B** - Secrets should **never** enter the documentation repository.
 </details>
 
-**3. 'Segregation of Duties' (SoD) ensures that:**
-- A) One person does everything
-- B) Multiple people are involved in the creation and approval process to prevent errors or fraud
-- C) Everyone has the same salary
-- D) the office is clean
 
+<b>3. 'Segregation of Duties' (SoD) ensures that:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. What does 'Documentation Rot' mean?**
-- A) The paper is old
-- B) The instructions become inaccurate as the underlying system changes over time
-- C) The file is deleted
-- D) a virus in the wiki
 
+<b>4. What does 'Documentation Rot' mean?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. An 'Audit Trail' in Git is primarily provided by:**
-- A) The file name
-- B) Commit History and Author metadata
-- C) The number of lines
-- D) the font size
 
+<b>5. An 'Audit Trail' in Git is primarily provided by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. Which tool helps automate secrect detection in Markdown files?**
-- A) Microsoft Word
-- B) Gitleaks / TruffleHog
-- C) MkDocs
-- D) Google Search
 
+<b>6. Which tool helps automate secrect detection in Markdown files?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. 'Non-Repudiation' in an audit means:**
-- A) You can't find the file
-- B) A user cannot deny that they made a specific change because there is a verified record of it
-- C) You can delete files secretly
-- D) everything is free
 
+<b>7. 'Non-Repudiation' in an audit means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. Metadata like `LastReviewed: 2023-10-01` helps:**
-- A) Calculate the company's age
-- B) Automated scripts identify docs that are due for a recertification check
-- C) Hide the author
-- D) save space
 
+<b>8. Metadata like `LastReviewed: 2023-10-01` helps:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. True/False: A documentation portal should have restricted access based on Role-Based Access Control (RBAC).**
-- A) True
-- B) False
 
+<b>9. True/False: A documentation portal should have restricted access based on Role-Based Access Control (RBAC).</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - Only authorized people should read or edit sensitive operational docs.
-
+Answer: A** - Only authorized people should read or edit sensitive operational docs.
 </details>
 
-**10. 'Compliance' in documentation means:**
-- A) Writing a lot
-- B) Adhering to legal, technical, and organizational standards and policies
-- C) Using colors
-- D) being nice to the boss
 
+<b>10. 'Compliance' in documentation means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Why link an SOP change to a Jira/ServiceNow ticket?**
-- A) To increase ticket count
-- B) To provide "Traceability" – proving why and under what authority the doc was changed
-- C) To make more work
-- D) No reason
 
+<b>11. Why link an SOP change to a Jira/ServiceNow ticket?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. 'Recertification' is the process of:**
-- A) Getting a degree
-- B) Re-verifying and re-approving an existing document to confirm it is still accurate
-- C) Deleting files
-- D) moving to a new cloud
 
+<b>12. 'Recertification' is the process of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. In a highly regulated environment, who should approve a 'Finance' SOP?**
-- A) The intern
-- B) A SME (Subject Matter Expert) and a Compliance Officer
-- C) The janitor
-- D) nobody
 
+<b>13. In a highly regulated environment, who should approve a 'Finance' SOP?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. A 'Secret Manager' is used in SOPs to:**
-- A) Keep stories secret
-- B) Securely store and retrieve actual keys/passwords that are only referenced in the doc
-- C) Delete files
-- D) hide the team members
 
+<b>14. A 'Secret Manager' is used in SOPs to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. True/False: 'Docs-as-Code' makes compliance easier because it uses the same audit tools as software development.**
-- A) True
-- B) False
 
+<b>15. True/False: 'Docs-as-Code' makes compliance easier because it uses the same audit tools as software development.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**16. 'Governance' provides:**
-- A) Money
-- B) The framework of rules and procedures by which an organization is controlled
-- C) Fast internet
-- D) coffee
 
+<b>16. 'Governance' provides:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. 'Staleness' is a metric that measures:**
-- A) The age of the office bread
-- B) The time elapsed since the last review or update of a document
-- C) The number of pages
-- D) the font color
 
+<b>17. 'Staleness' is a metric that measures:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why use 'Protected Branches' for a documentation repository?**
-- A) To save disk space
-- B) To ensure that no one can push changes without an approved Peer Review (PR)
-- C) To hide the repo
-- D) it's a rule
 
+<b>18. Why use 'Protected Branches' for a documentation repository?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which of these is a 'Red Flag' for an auditor?**
-- A) A doc with a table of contents
-- B) Hardcoded passwords or local file paths (e.g., C:\Users\Bob\Secret.key)
-- C) Use of Markdown
-- D) high-quality images
 
+<b>19. Which of these is a 'Red Flag' for an auditor?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: An SOP can be considered 'Compliant' if it has never been tested.**
-- A) False - Testing (Gamedays) is a core component of operational compliance.
-- B) True
 
+<b>20. True/False: An SOP can be considered 'Compliant' if it has never been tested.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Separation of Environments' in docs means:**
-- A) Different folders for Dev and Prod instructions to prevent accidental actions
-- B) Using two laptops
-- C) Different fonts
-- D) printing
 
+<b>21. 'Separation of Environments' in docs means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**22. If a secret scanner finds an API key in a doc, what is the first action?**
-- A) Hide the file
-- B) Block the commit and Rotate the secret immediately
-- C) Ignore it
-- D) delete the repo
 
+<b>22. If a secret scanner finds an API key in a doc, what is the first action?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. 'Traceability' allows an auditor to follow a change from:**
-- A) Start to finish
-- B) Requirement -> Approval -> Implementation -> Verification
-- C) A to B
-- D) Google to Facebook
 
+<b>23. 'Traceability' allows an auditor to follow a change from:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Definition of Done' (DoD) for a task should include:**
-- A) Sleeping
-- B) Updating the relevant documentation and verifying it
-- C) Sending an email
-- D) nothing
 
+<b>24. The 'Definition of Done' (DoD) for a task should include:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The ultimate result of good Governance and Compliance is:**
-- A) More bureaucracy
-- B) Trust, Security, and verifiable Operational Integrity
-- C) Fewer pages
-- D) being boring
 
+<b>25. The ultimate result of good Governance and Compliance is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

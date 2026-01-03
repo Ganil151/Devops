@@ -50,15 +50,15 @@ graph TD
     Res --> FW{failed_when set?}
     FW -->|Yes| EvalF[Evaluate Custom Fail]
     FW -->|No| DefaultF[Check RC != 0]
-    
-    EvalF -->|Match| Fail[Status: FAILED]
+
+EvalF -->|Match| Fail[Status: FAILED]
     DefaultF -->|Match| Fail
-    
-    Res --> CW{changed_when set?}
+
+Res --> CW{changed_when set?}
     CW -->|Yes| EvalC[Evaluate Custom Changed]
     CW -->|No| DefaultC[Check Module Changed]
-    
-    EvalC -->|Match| Changed[Status: CHANGED]
+
+EvalC -->|Match| Changed[Status: CHANGED]
     DefaultC -->|Match| Changed
 ```
 

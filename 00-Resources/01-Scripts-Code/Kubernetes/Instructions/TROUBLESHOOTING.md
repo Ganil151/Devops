@@ -206,7 +206,12 @@ This will check:
 1. Node status
 2. Control plane pods
 3. All system pods
-4. Network plugin (Calico)
+<b>4. Network plugin</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Calico
+</details>
+
 5. CoreDNS
 6. Pending/Failed pods
 7. Recent events
@@ -328,6 +333,11 @@ kube-scheduler-k8s-master-server            1/1     Running   0          1h
 Please run the diagnostic commands above and share:
 1. `kubectl get nodes` output
 2. `kubectl get pods -n kube-system` output
-3. `kubectl get pods -n calico-system` output (if exists)
+<b>3. `kubectl get pods -n calico-system` output</b>
+<details>
+<summary>Show Answer</summary>
+Answer: if exists
+</details>
+
 
 This will help me identify exactly what needs to be fixed! 🔧

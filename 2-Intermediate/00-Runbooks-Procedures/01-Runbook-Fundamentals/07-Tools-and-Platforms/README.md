@@ -38,13 +38,13 @@ The "Docs as Code" approach.
 graph TD
     Alert[Alert: PagerDuty/Datadog] --> Link[Contextual Link]
     Link --> Store{Storage Platform}
-    
-    subgraph "Knowledge Bases"
+
+subgraph "Knowledge Bases"
     Store --> Git[Git: GitHub/GitLab]
     Store --> Wiki[Wiki: Confluence/Notion]
     end
-    
-    subgraph "Execution Platforms"
+
+subgraph "Execution Platforms"
     Git --> Actions[GitHub Actions]
     Wiki --> Manual[Manual Copy-Paste]
     Store --> Execute[Executable: Jupyter/Transposit]
@@ -93,325 +93,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which approach involves managing documentation in the same repository as the source code?**
-- A) Wiki-First
-- B) Docs-as-Code
-- C) PDF-Centric
-- D) Physical Printouts
-
+<b>1. Which approach involves managing documentation in the same repository as the source code?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. What is a major risk of a 'Self-Hosted' documentation wiki?**
-- A) It's too cheap
-- B) It might be inaccessible if the underlying network or infrastructure fails
-- C) It has too many colors
-- D) It's only for Linux users
 
+<b>2. What is a major risk of a 'Self-Hosted' documentation wiki?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. Which format is the industry standard for Git-based runbooks?**
-- A) .docx
-- B) .md (Markdown)
-- C) .pdf
-- D) .xlsx
 
+<b>3. Which format is the industry standard for Git-based runbooks?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. An 'Executable Runbook' allows you to:**
-- A) Read only
-- B) Run code blocks directly within the document interface
-- C) Print the doc
-- D) Delete the server
 
+<b>4. An 'Executable Runbook' allows you to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which tool focuses on 'Alert Orchestration' and linking runbooks to notifications?**
-- A) Bitbucket
-- B) PagerDuty
-- C) VS Code
-- D) Chrome
 
+<b>5. Which tool focuses on 'Alert Orchestration' and linking runbooks to notifications?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Docs as Code' enables which quality control process?**
-- A) Printing
-- B) Peer Review via Pull Requests
-- C) Manual signing
-- D) Locking the file
 
+<b>6. 'Docs as Code' enables which quality control process?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Jupyter Notebooks are popular for which type of runbook?**
-- A) High-level SOPs
-- B) Complex, data-heavy troubleshooting
-- C) Meeting notes
-- D) HR policies
 
+<b>7. Jupyter Notebooks are popular for which type of runbook?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. What is the main disadvantage of 'Confluence' or 'Notion' for technical runbooks?**
-- A) Too hard to use
-- B) Risk of becoming a "Document Cemetery" with outdated info
-- C) No search bar
-- D) No support for text
 
+<b>8. What is the main disadvantage of 'Confluence' or 'Notion' for technical runbooks?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. 'Mermaid' is a tool used for:**
-- A) Underwater monitoring
-- B) Rendering diagrams using text/code within Markdown
-- C) Sorting files
-- D) Encrypting passwords
 
+<b>9. 'Mermaid' is a tool used for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. Why should you avoid storing runbooks ONLY as PDFs?**
-- A) They are too small
-- B) They are static and difficult to version-control or update quickly
-- C) They don't support images
-- D) They are too modern
 
+<b>10. Why should you avoid storing runbooks ONLY as PDFs?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. A 'Centralized' documentation store helps prevent:**
-- A) Too much light
-- B) Siloed / Shadow documentation
-- C) Fast resolution
-- D) High uptime
 
+<b>11. A 'Centralized' documentation store helps prevent:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. 'Transposit' or 'Runbear' are examples of:**
-- A) Databases
-- B) Specialized runbook automation platforms
-- C) Operating systems
-- D) Web browsers
 
+<b>12. 'Transposit' or 'Runbear' are examples of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. Version history in Git is superior because it shows:**
-- A) Only the current state
-- B) Exactly what changed, by whom, and why (via commit messages)
-- C) The weather
-- D) The server temperature
 
+<b>13. Version history in Git is superior because it shows:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What is a 'Hybrid' tool approach?**
-- A) Using only one tool
-- B) Using Git for technical docs and a Wiki for business policies
-- C) Using only paper
-- D) Using no tools
 
+<b>14. What is a 'Hybrid' tool approach?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Sreachability' is the most critical feature when:**
-- A) You are on vacation
-- B) You are in the middle of a high-pressure incident
-- C) You are hiring
-- D) You are at lunch
 
+<b>15. 'Sreachability' is the most critical feature when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: VS Code has extensions to preview Markdown runbooks.**
-- A) True
-- B) False
 
+<b>16. True/False: VS Code has extensions to preview Markdown runbooks.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'Public' cloud Git providers (GitHub/GitLab) offer what advantage during internal network failures?**
-- A) They are faster
-- B) They remain accessible even if your company's data center or VPN is down
-- C) They have more themes
-- D) They are free
 
+<b>17. 'Public' cloud Git providers (GitHub/GitLab) offer what advantage during internal network failures?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. A 'README.md' file in a service's root directory is often used as:**
-- A) A legal contract
-- B) The entry point / high-level runbook for that service
-- C) A place for jokes
-- D) A temporary file
 
+<b>18. A 'README.md' file in a service's root directory is often used as:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Why use 'Variables' in scripts within runbooks?**
-- A) To make them confusing
-- B) To allow the same script to work across different environments (Dev/Prod)
-- C) To hide data
-- D) To save space
 
+<b>19. Why use 'Variables' in scripts within runbooks?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. Which tool is best for 'Collaborative' live editing?**
-- A) Notepad
-- B) Confluence / Google Docs / Notion
-- C) Command Line
-- D) FTP
 
+<b>20. Which tool is best for 'Collaborative' live editing?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. 'CI/CD Pipelines' can be used to:**
-- A) Print documentation
-- B) Automatically validate and deploy documentation to a website
-- C) Charge customers
-- D) delete old code
 
+<b>21. 'CI/CD Pipelines' can be used to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Stale Docs' are a symptom of:**
-- A) Too much documentation
-- B) Poor maintenance processes and lack of Docs-as-Code integration
-- C) Fast servers
-- D) Good management
 
+<b>22. 'Stale Docs' are a symptom of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. What is 'Markdown Linting'?**
-- A) Washing the code
-- B) Automated spelling and formatting checks for Markdown files
-- C) Deleting files
-- D) High-speed typing
 
+<b>23. What is 'Markdown Linting'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. A 'Deep Link' in a runbook points to:**
-- A) The home page
-- B) A specific line or section relevant to the current alert
-- C) A different company
-- D) A news site
 
+<b>24. A 'Deep Link' in a runbook points to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The final goal of choosing a platform is:**
-- A) To spend more money
-- B) To ensure the right info is accessible and actionable for the right people at the right time
-- C) to appease the IT department
-- D) to have many features
 
+<b>25. The final goal of choosing a platform is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

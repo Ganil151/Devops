@@ -32,11 +32,11 @@ In complex environments, different teams or environments (Dev, Test, Prod) might
 graph TD
     PB[Playbook Run] --> ID1[--vault-id dev@.dev_pass]
     PB --> ID2[--vault-id prod@.prod_pass]
-    
-    ID1 --> Match1{File tagged 'dev'?}
+
+ID1 --> Match1{File tagged 'dev'?}
     ID2 --> Match2{File tagged 'prod'?}
-    
-    Match1 -->|Yes| Decrypt1[Use .dev_pass]
+
+Match1 -->|Yes| Decrypt1[Use .dev_pass]
     Match2 -->|Yes| Decrypt2[Use .prod_pass]
 ```
 

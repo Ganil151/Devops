@@ -11,8 +11,8 @@ graph LR
     H[Ansible Galaxy Hub] -->|Download| C[Control Node]
     C -->|Distribute| R1[Remote 1]
     C -->|Distribute| R2[Remote 2]
-    
-    subgraph "Standard Roles"
+
+subgraph "Standard Roles"
     R_Nginx[geerlingguy.nginx]
     R_Docker[geerlingguy.docker]
     end
@@ -53,7 +53,7 @@ Instead of running individual install commands, list your dependencies in a `req
 roles:
   - name: geerlingguy.nginx
     version: 3.1.1
-    
+
 collections:
   - name: community.aws
     version: 1.5.0

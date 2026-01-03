@@ -170,7 +170,12 @@ aws cloudwatch put-metric-alarm \
 **Attempted Fix**: Create multiple route tables (doesn't work - subnets need all routes).
 **Actual Fix**: 
 1. Requested increase to 200 routes
-2. Implemented route summarization (reduced to 40 routes)
+<b>2. Implemented route summarization</b>
+<details>
+<summary>Show Answer</summary>
+Answer: reduced to 40 routes
+</details>
+
 3. Migrated to Transit Gateway for future scalability
 **Lesson**: Plan for growth and understand limits before hitting them.
 
@@ -185,8 +190,32 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## 🧠 Quiz Snippet (5/20+)
-1.  **What is the default VPC limit per region?** (5)
-2.  **True/False: You can have unlimited routes per route table.** (False - default 50, max 1,000)
-3.  **How many IGWs can attach to one VPC?** (1)
-4.  **What is the max VPC peering connections per VPC?** (125)
-5.  **Can you increase the security groups per VPC limit?** (Yes)
+<b>1. What is the default VPC limit per region?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 5
+</details>
+
+<b>2. True/False: You can have unlimited routes per route table.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: False - default 50, max 1,000
+</details>
+
+<b>3. How many IGWs can attach to one VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 1
+</details>
+
+<b>4. What is the max VPC peering connections per VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 125
+</details>
+
+<b>5. Can you increase the security groups per VPC limit?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Yes
+</details>

@@ -110,10 +110,25 @@ spec:
 
 **Development Workflow**:
 
-1. **Write Contracts** (Solidity, Rust, Vyper)
-2. **Test Locally** (Hardhat, Foundry)
+<b>1. Write Contracts</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Solidity, Rust, Vyper
+</details>
+
+<b>2. Test Locally</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Hardhat, Foundry
+</details>
+
 3. **Deploy to Testnet**
-4. **Audit** (Manual + Automated)
+<b>4. Audit</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Manual + Automated
+</details>
+
 5. **Deploy to Mainnet**
 6. **Monitor & Verify**
 

@@ -10,7 +10,12 @@ Monitoring tells you *if* a system is failing; Observability helps you understan
 1. [Observability Overview](./README.md)
 2. [📺 YouTube Lessons](./Youtube_Lessons.md)
 3. [❓ Interview Questions & Quiz](./Interview_Questions_and_Quiz.md)
-4. [📈 Datadog (Enterprise SaaS)](./06-Datadog-SaaS/README.md)
+<b>4. [📈 Datadog</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Enterprise SaaS)](./06-Datadog-SaaS/README.md
+</details>
+
 
 A complete observability strategy requires correlating three distinct types of data:
 
@@ -55,17 +60,17 @@ OpenTelemetry is the industry standard for standardizing how we collect telemetr
 graph LR
     App1[App: Python] --> SDK1[OTel SDK]
     App2[App: Java] --> SDK2[OTel SDK]
-    
-    SDK1 --> Collector[OTel Collector]
+
+SDK1 --> Collector[OTel Collector]
     SDK2 --> Collector
-    
-    subgraph Processing
+
+subgraph Processing
         Collector --> P1[Batching]
         Collector --> P2[Resource Attribution]
         Collector --> P3[Tail-based Sampling]
     end
-    
-    Processing --> Prometheus[(Prometheus)]
+
+Processing --> Prometheus[(Prometheus)]
     Processing --> Tempo[(Grafana Tempo)]
     Processing --> Loki[(Grafana Loki)]
 ```

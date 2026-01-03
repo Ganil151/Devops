@@ -13,14 +13,14 @@ Sentinel allows you to move from "Ticket-based" provisioning to "Self-Service" p
 graph LR
     Plan[Terraform Plan] -->|JSON| Sentinel[Sentinel Engine]
     Sentinel -->|Check Rules| Decisions
-    
-    subgraph "Decisions"
+
+subgraph "Decisions"
         Pass[Pass]
         Soft[Soft Fail]
         Hard[Hard Fail]
     end
-    
-    Pass --> Apply[Terraform Apply]
+
+Pass --> Apply[Terraform Apply]
     Soft --> Manual[Human Override]
     Manual --> Apply
     Hard --> Reject[Run Cancelled]

@@ -171,8 +171,18 @@ switch(config-if)# spanning-tree portfast
 switch(config-if)# spanning-tree bpduguard enable
 
 # Root Bridge Selection
-1. Lowest Bridge Priority (default 32768)
-2. Lowest MAC Address (tie-breaker)
+<b>1. Lowest Bridge Priority</b>
+<details>
+<summary>Show Answer</summary>
+Answer: default 32768
+</details>
+
+<b>2. Lowest MAC Address</b>
+<details>
+<summary>Show Answer</summary>
+Answer: tie-breaker
+</details>
+
 
 # Path Cost Calculation
 10 Mbps:     100

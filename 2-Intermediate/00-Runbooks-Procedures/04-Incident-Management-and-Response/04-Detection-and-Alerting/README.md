@@ -101,317 +101,176 @@ Escalation: If not resolved in 15 min, page DBA team
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What does MTTD stand for?**
-- A) Maximum Time To Deploy
-- B) Mean Time To Detect
-- C) Monthly Total Task Duration
-- D) Mobile Transition To Data
-
+<b>1. What does MTTD stand for?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: Synthetic monitoring simulates real user behavior.**
-- A) True
-- B) False
 
+<b>2. True/False: Synthetic monitoring simulates real user behavior.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**3. Which detection source is the MOST proactive?**
-- A) User Reports
-- B) Automated Monitoring/Alerting
-- C) Internal Stumble (Discovery)
-- D) Social Media
 
+<b>3. Which detection source is the MOST proactive?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. 'Alert Fatigue' is dangerous because:**
-- A) It makes the data center hot
-- B) It causes engineers to ignore or miss real, critical outages
-- C) It uses too much battery
-- D) the alerts are too loud
 
+<b>4. 'Alert Fatigue' is dangerous because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. A 'Signal-to-Noise' ratio of 50% means:**
-- A) Everything is perfect
-- B) Half of your alerts are useless "Noise" that shouldn't have fired
-- C) You have 50 servers
-- D) nothing
 
+<b>5. A 'Signal-to-Noise' ratio of 50% means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. Which tool is commonly used for 'Log Correlation' and alerting?**
-- A) Paint
-- B) ELK Stack (Elasticsearch, Logstash, Kibana)
-- C) Calculator
-- D) Word
 
+<b>6. Which tool is commonly used for 'Log Correlation' and alerting?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: You should alert every time CPU hits 10% usage.**
-- A) False - This is 'Noise.'
-- B) True
 
+<b>7. True/False: You should alert every time CPU hits 10% usage.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. A 'Runbook Link' in an alert helps:**
-- A) Save money
-- B) Reduce MTTR by giving the engineer immediate instructions
-- C) Decorate the alert
-- D) nothing
 
+<b>8. A 'Runbook Link' in an alert helps:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. 'Alert Grouping' prevents:**
-- A) Deleting data
-- B) Getting 1,000 separate notifications for a single network failure
-- C) Fast network
-- D) nothing
 
+<b>9. 'Alert Grouping' prevents:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What is 'MTTR's relationship to MTTD?**
-- A) They are the same
-- B) Total Downtime = MTTD + MTTR
-- C) MTTD is always bigger
-- D) no relationship
 
+<b>10. What is 'MTTR's relationship to MTTD?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: User tickets are the best way to find a database deadlock.**
-- A) False - Database monitoring should catch it much faster.
-- B) True
 
+<b>11. True/False: User tickets are the best way to find a database deadlock.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. 'Latency' monitoring measures:**
-- A) The size of the server
-- B) The time it takes for a request to be processed
-- C) The cost of the site
-- D) nothing
 
+<b>12. 'Latency' monitoring measures:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A 'False Positive' is an alert that:**
-- A) Fired correctly
-- B) Fires when there is actually no problem (Crying Wolf)
-- C) Didn't fire at all
-- D) is green
 
+<b>13. A 'False Positive' is an alert that:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What occurs during 'External Discovery'?**
-- A) A user tells you the site is down before you know it
-- B) You find a bug in development
-- C) The cloud provider fixes it
-- D) nothing
 
+<b>14. What occurs during 'External Discovery'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - This indicates a monitoring gap.
-
+Answer: A** - This indicates a monitoring gap.
 </details>
 
-**15. 'Dashboard Links' in alerts provide:**
-- A) A list of movies
-- B) Immediate visual context for the metrics that triggered the alert
-- C) A way to logout
-- D) nothing
 
+<b>15. 'Dashboard Links' in alerts provide:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: Alerts should be sent to the company's 'Main' Slack channel.**
-- A) False - Use a dedicated #ops-alerts channel to avoid distracting everyone.
-- B) True
 
+<b>16. True/False: Alerts should be sent to the company's 'Main' Slack channel.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'Heartbeat Monitoring' checks if:**
-- A) The engineer is awake
-- B) The service is still alive and sending signals
-- C) The user is happy
-- D) the price changed
 
+<b>17. 'Heartbeat Monitoring' checks if:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why use 'Multi-Region' monitoring?**
-- A) To spend more money
-- B) To detect outages that only affect specific geographic locations
-- C) To make the site faster
-- D) no reason
 
+<b>18. Why use 'Multi-Region' monitoring?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. An 'Actionable' alert is one where:**
-- A) You can read it
-- B) The person receiving it knows exactly what action to take to fix it
-- C) It's colorful
-- D) it's old
 
+<b>19. An 'Actionable' alert is one where:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: Paging a sleeping engineer for a 'Low' disk alert (80%) is encouraged.**
-- A) False - Only page for critical, immediate threats (P0/P1).
-- B) True
 
+<b>20. True/False: Paging a sleeping engineer for a 'Low' disk alert (80%) is encouraged.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Sliding Windows' in alerting help:**
-- A) Clean the glass
-- B) Prevent alerts from firing due to tiny, momentary spikes in metrics
-- C) Make the site faster
-- D) nothing
 
+<b>21. 'Sliding Windows' in alerting help:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'User Sentiment' monitoring looks at:**
-- A) The news
-- B) Keywords on social media (Twitter/X) to detect "hidden" outages
-- C) User birthdays
-- D) nothing
 
+<b>22. 'User Sentiment' monitoring looks at:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. 'Log Ingestion' is the process of:**
-- A) Deleting logs
-- B) Collecting logs from servers into a central monitoring system
-- C) Writing logs on paper
-- D) reading logs
 
+<b>23. 'Log Ingestion' is the process of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Golden Signals' of monitoring are:**
-- A) Cost, Time, Effort, Luck
-- B) Latency, Traffic, Errors, and Saturation
-- C) CPU, RAM, Disk, Network
-- D) Red, Green, Blue, Yellow
 
+<b>24. The 'Golden Signals' of monitoring are:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Detection is the _____ of the Incident Management lifecycle.**
-- A) End
-- B) Foundation/Start
-- C) Middle
-- D) Prize
 
+<b>25. Detection is the _____ of the Incident Management lifecycle.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

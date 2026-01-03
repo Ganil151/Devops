@@ -40,317 +40,176 @@
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the fundamental goal of SRE in relation to failures?**
-- A) To prevent all failures at all costs
-- B) To build systems that recover without human intervention
-- C) To hire more people to fix things faster
-- D) To ignore minor errors
-
+<b>1. What is the fundamental goal of SRE in relation to failures?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**（Focus on Self-Healing and Resilience）
-
+Answer: B**（Focus on Self-Healing and Resilience）
 </details>
 
-**2. True/False: Complex security incidents are excellent candidates for fully automated remediation.**
-- A) True
-- B) False
 
+<b>2. True/False: Complex security incidents are excellent candidates for fully automated remediation.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Security incidents usually require high-stakes human judgment and forensic investigation.
-
+Answer: B** - Security incidents usually require high-stakes human judgment and forensic investigation.
 </details>
 
-**3. 'Toil' is characterized by being:**
-- A) Strategic and creative
-- B) Manual, repetitive, and tactical
-- C) High-value project work
-- D) coding new features
 
+<b>3. 'Toil' is characterized by being:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. The '80/20 Rule' in SRE suggests:**
-- A) SREs should work 80 hours a week
-- B) Automate the 80% of routine tasks to focus on the 20% complex ones
-- C) 80% of code is bugs
-- D) only 20% of servers need monitoring
 
+<b>4. The '80/20 Rule' in SRE suggests:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. A 'Circuit Breaker' in automation is designed to:**
-- A) Speed up the process
-- B) Stop the automation if it is failing repeatedly or causing harm
-- C) Turn off the servers at night
-- D) encrypt data
 
+<b>5. A 'Circuit Breaker' in automation is designed to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. Which is an example of 'Proactive Self-Healing'?**
-- A) Restarting a crashed app
-- B) Predictive scaling 30 mins before a known traffic spike
-- C) Reading logs after an outage
-- D) manual patching
 
+<b>6. Which is an example of 'Proactive Self-Healing'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: Automation should always escalate to a human if the fix doesn't work after X attempts.**
-- A) True
-- B) False
 
+<b>7. True/False: Automation should always escalate to a human if the fix doesn't work after X attempts.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. 'Zero-Touch Operations' means:**
-- A) You never have to touch the keyboard
-- B) Routine issues are handled entirely by code/automation
-- C) The company has no servers
-- D) everything is manual
 
+<b>8. 'Zero-Touch Operations' means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. In the 'Toil Reduction Ladder', what is the step after 'Manual Runbook'?**
-- A) Fully Automated
-- B) Semi-Automated (Human triggers a script)
-- C) Self-Healing
-- D) Retirement
 
+<b>9. In the 'Toil Reduction Ladder', what is the step after 'Manual Runbook'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What is the biggest danger of 'Invisible Failures' in automation?**
-- A) The systems is too fast
-- B) The root cause is never found, leading to a massive future collapse
-- C) It saves too much money
-- D) users are too happy
 
+<b>10. What is the biggest danger of 'Invisible Failures' in automation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. 'Safety Checks' in remediation scripts are used to:**
-- A) Slow down the script
-- B) Verify that it is safe to proceed (e.g., checking if 50% of nodes are already down)
-- C) Change the color of the logs
-- D) email the CEO
 
+<b>11. 'Safety Checks' in remediation scripts are used to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. True/False: Automation increases the 'Maintenance Tax' of the documentation system.**
-- A) True - You must now maintain both the code and the docs.
-- B) False
 
+<b>12. True/False: Automation increases the 'Maintenance Tax' of the documentation system.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**13. What is 'Cascading Failure' in the context of automation?**
-- A) A waterfall
-- B) When an automated fix in one system causes a new failure in a dependent system
-- C) A successful fix
-- D) printing 1000 pages
 
+<b>13. What is 'Cascading Failure' in the context of automation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. A 'Cooldown Period' in an auto-restart script prevents:**
-- A) Overheating of CPUs
-- B) Frequent "Flapping" (rapid restart loops)
-- C) High energy bills
-- D) users from logging in
 
+<b>14. A 'Cooldown Period' in an auto-restart script prevents:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. Self-Healing infrastructure (like K8s) uses a 'Desired State' loop. What is the 'Act' part of that loop?**
-- A) Reading a book
-- B) Changing the actual state to match the desired state (e.g., launching a new pod)
-- C) Comparing numbers
-- D) deleting the config
 
+<b>15. Self-Healing infrastructure (like K8s) uses a 'Desired State' loop. What is the 'Act' part of that loop?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: If a task happens only once a year, it is a high-priority candidate for automation.**
-- A) False - Automation is for high-frequency tasks.
-- B) True
 
+<b>16. True/False: If a task happens only once a year, it is a high-priority candidate for automation.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'Operational Maturity' is often measured by:**
-- A) Total headcount
-- B) The percentage of incidents handled by automation vs. humans
-- C) The number of office plants
-- D) company age
 
+<b>17. 'Operational Maturity' is often measured by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why is 'Observability' critical for Self-Healing?**
-- A) To watch movies
-- B) Because you cannot fix what you cannot detect accurately
-- C) To hide the errors
-- D) no reason
 
+<b>18. Why is 'Observability' critical for Self-Healing?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which SRE role focuses most on building these self-healing systems?**
-- A) Support Desk
-- B) Software Engineer (Reliability)
-- C) Marketing Manager
-- D) Hardware technician
 
+<b>19. Which SRE role focuses most on building these self-healing systems?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. 'Human-in-the-Loop' automation means:**
-- A) A human does the whole task
-- B) Automation performs the task but requires a human to "Approve" the final step
-- C) A human is inside the computer
-- D) no automation at all
 
+<b>20. 'Human-in-the-Loop' automation means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. A 'State Engine' helps with self-healing by:**
-- A) Tracking the current state of a resource and deciding the next transition
-- B) Playing music
-- C) Sending spam
-- D) saving space
 
+<b>21. A 'State Engine' helps with self-healing by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**22. True/False: Self-healing systems should log every action they take for auditability.**
-- A) True
-- B) False
 
+<b>22. True/False: Self-healing systems should log every action they take for auditability.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**23. 'Remediation Debt' occurs when:**
-- A) You owe money to a vendor
-- B) Automated fixes are "brittle" or outdated and need significant rework
-- C) You have too many servers
-- D) the office is closed
 
+<b>23. 'Remediation Debt' occurs when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Act' in 'Observe-Analyze-Act' is:**
-- A) The theory
-- B) The execution of the fix or state change
-- C) The alert
-- D) the browser
 
+<b>24. The 'Act' in 'Observe-Analyze-Act' is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The core philosophy of SRE is to treat 'Operations' as a _____ problem.**
-- A) HR
-- B) Software Engineering
-- C) Marketing
-- D) Physical
 
+<b>25. The core philosophy of SRE is to treat 'Operations' as a _____ problem.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

@@ -764,7 +764,12 @@ You should see log entries for each test webhook received.
 For each repository, follow these steps:
 
 1. **Go to Docker Hub**: https://hub.docker.com/
-2. **Navigate to Repository**: Click on the repository (e.g., `ganil151/customers-service`)
+<b>2. Navigate to Repository**: Click on the repository</b>
+<details>
+<summary>Show Answer</summary>
+Answer: e.g., `ganil151/customers-service`
+</details>
+
 3. **Go to Webhooks Tab**: Click "Webhooks" in the repository menu
 4. **Create Webhook**:
    - **Webhook name**: `k8s-deployment-trigger`

@@ -126,317 +126,176 @@ Thank on-call engineers publicly. Celebrate successful incident responses.
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the main goal of a 'Primary' on-call engineer?**
-- A) To write new features
-- B) To be the first responder to production alerts
-- C) To manage the budget
-- D) To ignore Slack
-
+<b>1. What is the main goal of a 'Primary' on-call engineer?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: You should handle a P0 incident alone to show you are a 'Senior' engineer.**
-- A) False - Always escalate and call for backup for P0/P1.
-- B) True
 
+<b>2. True/False: You should handle a P0 incident alone to show you are a 'Senior' engineer.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**3. The '15-Minute Rule' states you should escalate if:**
-- A) You are hungry
-- B) You are stuck for 15 minutes without progress
-- C) 15 minutes have passed since you woke up
-- D) nothing
 
+<b>3. The '15-Minute Rule' states you should escalate if:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A 'Secondary' on-call role is:**
-- A) Optional
-- B) A backup to ensure someone always responds to critical alerts
-- C) Someone who only works during the day
-- D) nothing
 
+<b>4. A 'Secondary' on-call role is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. 'Comp Time' refers to:**
-- A) Computer time
-- B) Time off given to engineers after working late-night incidents
-- C) Bonus money
-- D) nothing
 
+<b>5. 'Comp Time' refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. What is the first thing you should do at the start of an on-call shift?**
-- A) Go to sleep
-- B) Perform a 'Test Page' to verify your notifications work
-- C) Delete files
-- D) nothing
 
+<b>6. What is the first thing you should do at the start of an on-call shift?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: High alert volume (noise) is a primary cause of burnout.**
-- A) True
-- B) False
 
+<b>7. True/False: High alert volume (noise) is a primary cause of burnout.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. 'Emergency Bypass' on a phone allows:**
-- A) You to play games
-- B) Alert sounds to play even if the phone is on 'Silent' or 'Do Not Disturb'
-- C) Hacking
-- D) nothing
 
+<b>8. 'Emergency Bypass' on a phone allows:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. A 'Handoff' document should include:**
-- A) Your favorite movies
-- B) Ongoing issues, recent deployments, and 'noisy' alerts
-- C) A list of recipes
-- D) nothing
 
+<b>9. A 'Handoff' document should include:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What is 'Toil' in the context of on-call?**
-- A) Hard work
-- B) Manual, repetitive, and non-creative tasks that can be automated
-- C) Reading books
-- D) nothing
 
+<b>10. What is 'Toil' in the context of on-call?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: On-call rotations should include at least 6-8 people to be sustainable.**
-- A) True - Any fewer leads to high frequency and burnout.
-- B) False
 
+<b>11. True/False: On-call rotations should include at least 6-8 people to be sustainable.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. 'MTTR' stands for:**
-- A) Minimum Time To Rest
-- B) Mean Time To Recovery
-- C) Maximum Task Time Remaining
-- D) nothing
 
+<b>12. 'MTTR' stands for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A 'Warm Handoff' is:**
-- A) A handoff done in a hot room
-- B) A live meeting between the outgoing and incoming on-call engineers
-- C) An email
-- D) nothing
 
+<b>13. A 'Warm Handoff' is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. Why is 'Sustainability' important for on-call?**
-- A) To save electricity
-- B) To prevent engineer turnover and ensure long-term system reliability
-- C) To make it slow
-- D) no reason
 
+<b>14. Why is 'Sustainability' important for on-call?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. If your pager doesn't fire during a test, you should:**
-- A) Ignore it
-- B) Resolve the notification issue immediately before starting your shift
-- C) Wait for an outage
-- D) nothing
 
+<b>15. If your pager doesn't fire during a test, you should:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: Auto-remediation can reduce the number of midnight pages.**
-- A) True
-- B) False
 
+<b>16. True/False: Auto-remediation can reduce the number of midnight pages.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'Alert Fatigue' happens when:**
-- A) You drink too much coffee
-- B) You receive so many low-priority alerts that you start ignoring them
-- C) The monitor is too bright
-- D) nothing
 
+<b>17. 'Alert Fatigue' happens when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. What is 'Follow-the-Sun' rotation?**
-- A) Running around the sun
-- B) Distributing on-call to global teams so people only work during their local daytime
-- C) Working at night
-- D) nothing
 
+<b>18. What is 'Follow-the-Sun' rotation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. A 'Shadow Shift' is when:**
-- A) You work in the dark
-- B) A new engineer observes an experienced engineer handle on-call
-- C) You hide from the team
-- D) nothing
 
+<b>19. A 'Shadow Shift' is when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: You should have access to production credentials *before* your shift starts.**
-- A) True
-- B) False
 
+<b>20. True/False: You should have access to production credentials *before* your shift starts.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Escalation Policies' define:**
-- A) How to use an elevator
-- B) Who to call if the primary/secondary don't respond
-- C) How to get a raise
-- D) nothing
 
+<b>21. 'Escalation Policies' define:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Post-Shift Debrief' is for:**
-- A) Complaining
-- B) Reviewing the week's alerts to identify and remove "Noise"
-- C) Getting a bonus
-- D) nothing
 
+<b>22. 'Post-Shift Debrief' is for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Under-reporting on-call effort leads to:**
-- A) More help
-- B) Leadership thinking on-call is "Easy" and not providing resources/comp
-- C) Better code
-- D) nothing
 
+<b>23. Under-reporting on-call effort leads to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. Which tool is commonly used to manage on-call rotations?**
-- A) Spotify
-- B) PagerDuty (or Opsgenie/VictorOps)
-- C) Excel
-- D) Notepad
 
+<b>24. Which tool is commonly used to manage on-call rotations?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Sustainability is the _____ of SRE operations.**
-- A) End
-- B) Foundation
-- C) Prize
-- D) Enemy
 
+<b>25. Sustainability is the _____ of SRE operations.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

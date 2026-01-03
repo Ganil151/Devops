@@ -6,341 +6,303 @@ Become job-ready by mastering these common interview questions and testing your 
 
 ## 🎤 Top 20 Terraform Interview Questions
 
-### 🔰 Basic Questions
-1. **What is Terraform and how does it differ from other IaC tools like Ansible?**
-   - *Answer:* Terraform is a declarative Infrastructure as Code (IaC) tool primarily for provisioning infrastructure, whereas Ansible is more focused on configuration management. Terraform manages the lifecycle of resources, while Ansible manages the software inside them.
-2. **What are the main steps in the Terraform workflow?**
-   - *Answer:* `init` (initialize provider), `plan` (preview changes), `apply` (deploy resources), and `destroy` (remove resources).
-3. **What is a "Provider" in Terraform?**
-   - *Answer:* A Provider is a plugin that Terraform uses to interact with cloud providers (AWS, Azure, GCP), SaaS providers, or other APIs.
-4. **What is the `terraform.tfstate` file?**
-   - *Answer:* It is the "source of truth" that records the mapping between your code and the actual resources deployed in the cloud.
-5. **How do you define a variable in Terraform?**
-   - *Answer:* Using the `variable "name" { ... }` block. You can specify a type, default value, and description.
+<b>1. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * Terraform is a declarative Infrastructure as Code (IaC) tool primarily for provisioning infrastructure, whereas Ansible is more focused on configuration management. Terraform manages the lifecycle of resources, while Ansible manages the software inside them.
+</details>
 
-### ⚙️ Intermediate Questions
-6. **Explain the concept of "State Locking". Why is it important?**
-   - *Answer:* State locking prevents multiple users from running Terraform at the same time on the same state file, which could corrupt the state. Backends like S3 (with DynamoDB) or Terraform Cloud handle this automatically.
-7. **What are Terraform Modules and why would you use them?**
-   - *Answer:* Modules are containers for multiple resources that are used together. They allow for code reuse, standardization, and better organization.
-8. **What is the difference between `count` and `for_each`?**
-   - *Answer:* `count` is better for creating multiple identical resources, while `for_each` is better for creating resources based on a map or set of strings, allowing for more specific configurations.
-9. **How do you manage secrets in Terraform?**
-   - *Answer:* Use environment variables (`TF_VAR_name`), secret management services (AWS Secrets Manager, HashiCorp Vault), or mark variables as `sensitive = true`. Never commit secrets to version control.
-10. **What is a "Data Source" in Terraform?**
-    - *Answer:* Data sources allow Terraform to use information defined outside of Terraform, or defined by another separate Terraform configuration (e.g., fetching an existing VPC ID).
 
-### 🚀 Advanced-ish Questions
-11. **Explain the use of `lifecycle` blocks.**
-    - *Answer:* Used to control how Terraform treats specific resources, such as `create_before_destroy`, `prevent_destroy`, or `ignore_changes`.
-12. **What is "Drift" and how does Terraform handle it?**
-    - *Answer:* Drift occurs when the real-world infrastructure changes independently of Terraform (e.g., manual console change). Running `terraform plan` or `terraform refresh` detects this drift.
-13. **What is a Remote Backend?**
-    - *Answer:* Storing the state file in a remote location (S3, GCS, Terraform Cloud) rather than locally, enabling team collaboration and security.
-14. **How do you perform a "Targeted Apply"?**
-    - *Answer:* Use the `-target` flag: `terraform apply -target=aws_instance.web`. Note: This is usually for troubleshooting and not recommended for routine use.
-15. **What is the `terraform init` command actually doing?**
-    - *Answer:* It initializes the working directory, downloads provider plugins, and sets up the backend for state management.
-16. **How do you handle multi-environment setups (Dev/Staging/Prod)?**
-    - *Answer:* Using Terraform Workspaces, or more commonly, separate directory structures or separate state files for each environment.
-17. **What is the purpose of `outputs.tf`?**
-    - *Answer:* To expose information about your infrastructure (like an IP address or DNS name) so it can be used by developers or other Terraform modules.
-18. **What happens if a `terraform apply` fails midway?**
-    - *Answer:* Terraform will have updated the state for the resources it successfully created or modified. You should fix the error and run `apply` again; Terraform will pick up where it left off.
-19. **Can you explain "Implicit" vs "Explicit" dependencies?**
-    - *Answer:* Implicit dependencies are automatically handled by Terraform when one resource references another. Explicit dependencies are manually defined using the `depends_on` argument.
-20. **What is the Terraform registry?**
-    - *Answer:* A centralized repository for providers and community-contributed modules.
+<b>2. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * `init` (initialize provider), `plan` (preview changes), `apply` (deploy resources), and `destroy` (remove resources).
+</details>
+
+
+<b>3. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * A Provider is a plugin that Terraform uses to interact with cloud providers (AWS, Azure, GCP), SaaS providers, or other APIs.
+</details>
+
+
+<b>4. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * It is the "source of truth" that records the mapping between your code and the actual resources deployed in the cloud.
+</details>
+
+
+<b>5. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * Using the `variable "name" { ... }` block. You can specify a type, default value, and description.
+</details>
+
+
+<b>6. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * State locking prevents multiple users from running Terraform at the same time on the same state file, which could corrupt the state. Backends like S3 (with DynamoDB) or Terraform Cloud handle this automatically.
+</details>
+
+
+<b>7. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * Modules are containers for multiple resources that are used together. They allow for code reuse, standardization, and better organization.
+</details>
+
+
+<b>8. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * `count` is better for creating multiple identical resources, while `for_each` is better for creating resources based on a map or set of strings, allowing for more specific configurations.
+</details>
+
+
+<b>9. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * Use environment variables (`TF_VAR_name`), secret management services (AWS Secrets Manager, HashiCorp Vault), or mark variables as `sensitive = true`. Never commit secrets to version control.
+</details>
+
+
+<b>10. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * Data sources allow Terraform to use information defined outside of Terraform, or defined by another separate Terraform configuration (e.g., fetching an existing VPC ID).
+</details>
+
+
+<b>11. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * Used to control how Terraform treats specific resources, such as `create_before_destroy`, `prevent_destroy`, or `ignore_changes`.
+</details>
+
+
+<b>12. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * Drift occurs when the real-world infrastructure changes independently of Terraform (e.g., manual console change). Running `terraform plan` or `terraform refresh` detects this drift.
+</details>
+
+
+<b>13. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * Storing the state file in a remote location (S3, GCS, Terraform Cloud) rather than locally, enabling team collaboration and security.
+</details>
+
+
+<b>14. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * Use the `-target` flag: `terraform apply -target=aws_instance.web`. Note: This is usually for troubleshooting and not recommended for routine use.
+</details>
+
+
+<b>15. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * It initializes the working directory, downloads provider plugins, and sets up the backend for state management.
+</details>
+
+
+<b>16. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * Using Terraform Workspaces, or more commonly, separate directory structures or separate state files for each environment.
+</details>
+
+
+<b>17. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * To expose information about your infrastructure (like an IP address or DNS name) so it can be used by developers or other Terraform modules.
+</details>
+
+
+<b>18. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * Terraform will have updated the state for the resources it successfully created or modified. You should fix the error and run `apply` again; Terraform will pick up where it left off.
+</details>
+
+
+<b>19. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * Implicit dependencies are automatically handled by Terraform when one resource references another. Explicit dependencies are manually defined using the `depends_on` argument.
+</details>
+
+
+<b>20. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: * A centralized repository for providers and community-contributed modules.
+</details>
+
 
 ---
 
 ## 🧠 Terraform Knowledge Quiz (20+ Questions)
 
-**1. Which command shows what Terraform will do before making any changes?**
-- A) `terraform apply`
-- B) `terraform check`
-- C) `terraform preview`
-- D) `terraform plan`
-
+<b>1. Which command shows what Terraform will do before making any changes?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**2. What is the default file extension for Terraform configuration files?**
-- A) `.tf`
-- B) `.yaml`
-- C) `.hcl`
-- D) `.json`
 
+<b>2. What is the default file extension for Terraform configuration files?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**3. Which file contains the "Source of Truth" for your infrastructure?**
-- A) `main.tf`
-- B) `terraform.tfvars`
-- C) `terraform.tfstate`
-- D) `backend.tf`
 
+<b>3. Which file contains the "Source of Truth" for your infrastructure?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**4. How do you provision multiple similar resources without repeating code?**
-- A) Use the `duplicate` block
-- B) Use `count` or `for_each`
-- C) Copy-paste the code
-- D) Use `multi_resource`
 
+<b>4. How do you provision multiple similar resources without repeating code?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which command initializes the working directory?**
-- A) `terraform start`
-- B) `terraform setup`
-- C) `terraform init`
-- D) `terraform build`
 
+<b>5. Which command initializes the working directory?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**6. What does `terraform fmt` do?**
-- A) Fast-forward migrations
-- B) Format your configuration files to standard HCL style
-- C) Fix logical errors in your code
-- D) Find meta-data
 
+<b>6. What does `terraform fmt` do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Which block is used to fetch information from an existing resource not managed by the current Terraform code?**
-- A) `resource`
-- B) `variable`
-- C) `output`
-- D) `data`
 
+<b>7. Which block is used to fetch information from an existing resource not managed by the current Terraform code?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**8. Where should you NOT store your secrets?**
-- A) Environment Variables
-- B) `terraform.tfvars` committed to Git
-- C) AWS Secrets Manager
-- D) Variables with `sensitive = true`
 
+<b>8. Where should you NOT store your secrets?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. What is the purpose of a "Backend"?**
-- A) To host the application's database
-- B) To define where the state file is stored
-- C) To write the logic for the API
-- D) To configure the web server
 
+<b>9. What is the purpose of a "Backend"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. Which command removes all infrastructure managed by the current configuration?**
-- A) `terraform delete`
-- B) `terraform remove`
-- C) `terraform cleanup`
-- D) `terraform destroy`
 
+<b>10. Which command removes all infrastructure managed by the current configuration?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**11. What is HCL short for?**
-- A) High-speed Command Language
-- B) HashiCorp Configuration Language
-- C) Hybrid Cloud Logic
-- D) Hyper-Converged Layout
 
+<b>11. What is HCL short for?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. If you want to prevent a resource from being deleted, which lifecycle argument do you use?**
-- A) `prevent_destroy = true`
-- B) `ignore_changes = all`
-- C) `no_deletion = true`
-- D) `immutable = true`
 
+<b>12. If you want to prevent a resource from being deleted, which lifecycle argument do you use?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**13. Which command is used to download provider plugins?**
-- A) `terraform get`
-- B) `terraform fetch`
-- C) `terraform init`
-- D) `terraform install`
 
+<b>13. Which command is used to download provider plugins?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**14. What is a "Module"?**
-- A) A single line of code
-- B) A set of configuration files in a specific directory
-- C) A specific type of cloud resource
-- D) A Terraform provider
 
+<b>14. What is a "Module"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. Which character is used for comments in HCL?**
-- A) `#` or `//`
-- B) `--`
-- C) `/* */`
-- D) Both A and C
 
+<b>15. Which character is used for comments in HCL?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**16. How do you pass a variable value via the command line?**
-- A) `-var="key=value"`
-- B) `--variable "key=value"`
-- C) `-v="key=value"`
-- D) `set key=value`
 
+<b>16. How do you pass a variable value via the command line?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. What is "State Drift"?**
-- A) When the code is pushed to a new branch
-- B) When the real infrastructure differs from the state file
-- C) When the cloud provider updates their API
-- D) When the state file grows too large
 
+<b>17. What is "State Drift"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Which argument ensures that a new resource is created before the old one is destroyed?**
-- A) `recreate_first = true`
-- B) `safe_update = true`
-- C) `create_before_destroy = true`
-- D) `update_sequence = "new-first"`
 
+<b>18. Which argument ensures that a new resource is created before the old one is destroyed?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**19. What is the scope of a variable defined in a module?**
-- A) Global (accessible everywhere)
-- B) Local to that specific module
-- C) Only accessible in `main.tf`
-- D) Only accessible in the root module
 
+<b>19. What is the scope of a variable defined in a module?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. Which command syncs the local state with the actual real-world infrastructure?**
-- A) `terraform sync`
-- B) `terraform refresh`
-- C) `terraform update`
-- D) `terraform check`
 
+<b>20. Which command syncs the local state with the actual real-world infrastructure?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. What happens if you run `terraform apply` and it crashes?**
-- A) All resources are deleted automatically
-- B) The state file becomes completely useless
-- C) Part of your infrastructure may be deployed; you should fix issues and re-run
-- D) You must manually delete everything and start over
 
+<b>21. What happens if you run `terraform apply` and it crashes?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**22. Which flag is used to automatically approve the plan during apply?**
-- A) `-y`
-- B) `--force`
-- C) `-auto-approve`
-- D) `-silent`
 
+<b>22. Which flag is used to automatically approve the plan during apply?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
+
 
 ---
 

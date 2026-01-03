@@ -26,19 +26,19 @@ Choosing between **VPC Peering** and **Transit Gateway** isn't just about featur
 *   **Transit Gateway**: Supports 8500 MTU for VPC-to-VPC traffic. If your traffic traverses a VPN or TGW Peering, it drops to 1500 MTU.
 
 ### 2. Multi-Region Optimization
-Peering Transit Gateways across regions is more efficient than building a complex VPN mesh. 
+Peering Transit Gateways across regions is more efficient than building a complex VPN mesh.
 
 ```mermaid
 graph LR
     subgraph Region_A [US-East-1]
     TGW_A((TGW A)) --- VPC_1[VPC 1]
     end
-    
-    subgraph Region_B [EU-West-1]
+
+subgraph Region_B [EU-West-1]
     TGW_B((TGW B)) --- VPC_2[VPC 2]
     end
-    
-    TGW_A <==>|TGW Peering| TGW_B
+
+TGW_A <==>|TGW Peering| TGW_B
 ```
 
 ---

@@ -141,8 +141,6 @@ tail -f /var/log/syslog
 
 ---
 
-
-
 ---
 
 ## ✅ Knowledge Check

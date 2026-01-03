@@ -28,7 +28,12 @@ graph LR
 Maven is mainly used to build and manage Java projects, especially large-scale ones. It simplifies packaging, testing, and deploying Java applications. With Maven, developers can manage complex projects more easily using predefined lifecycles and project structures.
 ## How to install Maven
 The installation of Maven includes the following Steps:
-1. Verify whether your system has Java installed or not. If not, then install Java (Link for Java Installation )
+<b>1. Verify whether your system has Java installed or not. If not, then install Java</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Link for Java Installation
+</details>
+
 2. Check Java environmental variable is set or not. if not then set java environmental variable(link to install java and setting environmental variable)
 3. Download maven from the official website.
 4. Unpack your maven zip at any place in your system.

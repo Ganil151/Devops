@@ -89,8 +89,12 @@ Test your knowledge of Intermediate Prompt Engineering for DevOps.
     - C) Browse the live web
     - D) Speak in multiple languages
 
-11. **True/False: For code-related tasks, a higher temperature increases accuracy.**
-    - Answer: **False**.
+<b>11. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: **False**.
+</details>
+
 
 12. **Which of these is a valid 'Constraint' in a prompt?**
     - A) "Write it quickly"

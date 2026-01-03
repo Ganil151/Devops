@@ -20,8 +20,8 @@ graph TD
     subgraph Peering_VS_TGW
         direction LR
         A1[VPC A] <-->|Peering| B1[VPC B]
-        
-        A2[VPC C] --- TGW((TGW))
+
+A2[VPC C] --- TGW((TGW))
         B2[VPC D] --- TGW
         C2[VPC E] --- TGW
     end
@@ -73,317 +73,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. VPC Peering is:**
-- A) Transitive
-- B) Non-Transitive
-- C) Only for the same account
-- D) Only for the same region
-
+<b>1. VPC Peering is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. Which connectivity option has NO data processing fees?**
-- A) Transit Gateway
-- B) VPC Peering
-- C) NAT Gateway
-- D) VPN Gateway
 
+<b>2. Which connectivity option has NO data processing fees?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. In a Transit Gateway, 'Associations' determine:**
-- A) Which VPCs can see the weather
-- B) Which TGW route table is used for traffic from an attachment
-- C) The cost of the VPC
-- D) nothing
 
+<b>3. In a Transit Gateway, 'Associations' determine:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. True/False: You can peer two VPCs with the same CIDR block.**
-- A) True
-- B) False (Overlapping CIDRs are not supported)
 
+<b>4. True/False: You can peer two VPCs with the same CIDR block.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Transit Gateway uses which architectural model?**
-- A) Mesh
-- B) Hub-and-Spoke
-- C) Ring
-- D) Line
 
+<b>5. Transit Gateway uses which architectural model?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. To resolve private hostnames over peering, you must enable:**
-- A) HTTP
-- B) DNS Resolution Support
-- C) FTP
-- D) ICMP
 
+<b>6. To resolve private hostnames over peering, you must enable:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: Transit Gateway supports transitive routing between attached VPCs.**
-- A) True
-- B) False
 
+<b>7. True/False: Transit Gateway supports transitive routing between attached VPCs.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. What is the standard bandwidth limit for a single VPC Peering connection?**
-- A) 1 Gbps
-- B) 100 Gbps (Backbone capacity)
-- C) 50 Mbps
-- D) 0
 
+<b>8. What is the standard bandwidth limit for a single VPC Peering connection?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B (Limited only by instance/bandwidth quotas)**
-
+Answer: B (Limited only by instance/bandwidth quotas)
 </details>
 
-**9. VPC Peering traffic travels over:**
-- A) The Public Internet
-- B) The private Cloud Provider backbone
-- C) A physical cable you buy
-- D) nothing
 
+<b>9. VPC Peering traffic travels over:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. How many Transit Gateways can be peered with each other?**
-- A) 0
-- B) Multiple (across regions or accounts)
-- C) 1
-- D) 1000
 
+<b>10. How many Transit Gateways can be peered with each other?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Which option is best for connecting 100+ VPCs?**
-- A) VPC Peering
-- B) Transit Gateway (TGW)
-- C) VPN
-- D) NACL
 
+<b>11. Which option is best for connecting 100+ VPCs?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. 'Propagation' in TGW means:**
-- A) Spreading a virus
-- B) Automatically adding a VPC's CIDR to the TGW route table
-- C) Deleting a VPC
-- D) nothing
 
+<b>12. 'Propagation' in TGW means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. True/False: Security Groups can reference SGs in a peered VPC.**
-- A) True
-- B) False
 
+<b>13. True/False: Security Groups can reference SGs in a peered VPC.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A (AWS only)**
-
+Answer: A (AWS only)
 </details>
 
-**14. The MTU (Maximum Transmission Unit) for inter-region peering is:**
-- A) 1500 bytes
-- B) 9001 bytes (Jumbo frames)
-- C) 0
-- D) nothing
 
+<b>14. The MTU (Maximum Transmission Unit) for inter-region peering is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**15. Cost of an AWS Transit Gateway attachment (per hour)?**
-- A) $0.05
-- B) $0.01
-- C) $1.00
-- D) Free
 
+<b>15. Cost of an AWS Transit Gateway attachment (per hour)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A (Check latest pricing for exactness, but it's approximately $0.05)**
-
+Answer: A (Check latest pricing for exactness, but it's approximately $0.05)
 </details>
 
-**16. True/False: You must accept a peering request for it to become active.**
-- A) True
-- B) False
 
+<b>16. True/False: You must accept a peering request for it to become active.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. Which service is essentially a 'Cloud Router'?**
-- A) NAT Gateway
-- B) Transit Gateway
-- C) S3
-- D) nothing
 
+<b>17. Which service is essentially a 'Cloud Router'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. To connect VPC A and B via Peering, the CIDR blocks must be:**
-- A) Same
-- B) Non-overlapping
-- C) Large
-- D) nothing
 
+<b>18. To connect VPC A and B via Peering, the CIDR blocks must be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which connectivity option allows for 'Centralized Security' (Traffic Inspection)?**
-- A) Peering
-- B) Transit Gateway (with a Security VPC)
-- C) VPN
-- D) nothing
 
+<b>19. Which connectivity option allows for 'Centralized Security' (Traffic Inspection)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: Transit Gateway supports multicast traffic.**
-- A) True (In specific AWS regions/configs)
-- B) False
 
+<b>20. True/False: Transit Gateway supports multicast traffic.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Requester' and 'Accepter' are terms used in:**
-- A) TGW
-- B) VPC Peering
-- C) Load Balancing
-- D) nothing
 
+<b>21. 'Requester' and 'Accepter' are terms used in:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. How many 'Attachments' can a Transit Gateway have?**
-- A) 5
-- B) 1000s (Scalable)
-- C) 1
-- D) 0
 
+<b>22. How many 'Attachments' can a Transit Gateway have?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. If two peered VPCs are in different regions, the traffic is:**
-- A) Encrypted automatically on the AWS backbone
-- B) Sent over open Internet
-- C) Extremely slow
-- D) nothing
 
+<b>23. If two peered VPCs are in different regions, the traffic is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**24. VPC Peering is a _____ relationship.**
-- A) Master-Slave
-- B) Peer-to-Peer
-- C) Parent-Child
-- D) nothing
 
+<b>24. VPC Peering is a _____ relationship.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Reliable connectivity is the _____ of a multi-VPC architecture.**
-- A) Roof
-- B) Nervous System
-- C) Carpet
-- D) nothing
 
+<b>25. Reliable connectivity is the _____ of a multi-VPC architecture.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

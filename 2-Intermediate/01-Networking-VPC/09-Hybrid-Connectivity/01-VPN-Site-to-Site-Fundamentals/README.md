@@ -18,11 +18,11 @@ graph LR
     subgraph AWS_Cloud [AWS VPC]
         VGW[Virtual Private Gateway]
     )
-    
-    CGW <==>|Tunnel 1: IPsec| VGW
+
+CGW <==>|Tunnel 1: IPsec| VGW
     CGW <==>|Tunnel 2: IPsec| VGW
-    
-    style CGW fill:#f96,stroke:#333
+
+style CGW fill:#f96,stroke:#333
     style VGW fill:#69c,stroke:#333
 ```
 

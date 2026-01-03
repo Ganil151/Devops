@@ -21,8 +21,8 @@ graph TB
         PROC[Process<br>30%] --> SUCCESS
         CULT[Culture<br>60%] --> SUCCESS
     end
-    
-    style CULT fill:#2ecc71,stroke:#27ae60,color:#fff
+
+style CULT fill:#2ecc71,stroke:#27ae60,color:#fff
     style SUCCESS fill:#9b59b6,stroke:#8e44ad,color:#fff
 ```
 
@@ -47,8 +47,8 @@ graph LR
     AWARENESS[👀 Awareness<br>Know costs exist] --> UNDERSTANDING[🧠 Understanding<br>Know what costs]
     UNDERSTANDING --> ACTION[⚡ Action<br>Optimize regularly]
     ACTION --> OWNERSHIP[💪 Ownership<br>Own the outcome]
-    
-    style AWARENESS fill:#e74c3c,stroke:#c0392b,color:#fff
+
+style AWARENESS fill:#e74c3c,stroke:#c0392b,color:#fff
     style UNDERSTANDING fill:#f39c12,stroke:#d68910,color:#fff
     style ACTION fill:#3498db,stroke:#2980b9,color:#fff
     style OWNERSHIP fill:#2ecc71,stroke:#27ae60,color:#fff
@@ -78,9 +78,24 @@ graph LR
 - **Forecast**: On track ✅
 
 ### Top Spending Services
-1. EC2: $5,200 (42%)
-2. RDS: $3,100 (25%)
-3. S3: $1,800 (14%)
+<b>1. EC2: $5,200</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 42%
+</details>
+
+<b>2. RDS: $3,100</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 25%
+</details>
+
+<b>3. S3: $1,800</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 14%
+</details>
+
 
 ### Optimization Opportunities
 - 🔴 3 unused EBS volumes ($120/month)
@@ -102,8 +117,8 @@ graph TB
         DIR --> LEAD[Team Leads<br>Team Budgets]
         LEAD --> ENG[Engineers<br>Resource Decisions]
     end
-    
-    style CTO fill:#e74c3c,stroke:#c0392b,color:#fff
+
+style CTO fill:#e74c3c,stroke:#c0392b,color:#fff
     style DIR fill:#f39c12,stroke:#d68910,color:#fff
     style LEAD fill:#3498db,stroke:#2980b9,color:#fff
     style ENG fill:#2ecc71,stroke:#27ae60,color:#fff
@@ -141,8 +156,8 @@ graph TB
         FAIR --> TIMELY[Timely Rewards<br>Quarterly or faster]
         TIMELY --> MEANINGFUL[Meaningful Value<br>Worth the effort]
     end
-    
-    style CLEAR fill:#3498db,stroke:#2980b9,color:#fff
+
+style CLEAR fill:#3498db,stroke:#2980b9,color:#fff
     style FAIR fill:#2ecc71,stroke:#27ae60,color:#fff
     style TIMELY fill:#f39c12,stroke:#d68910,color:#fff
     style MEANINGFUL fill:#9b59b6,stroke:#8e44ad,color:#fff
@@ -152,21 +167,21 @@ graph TB
 
 ```yaml
 Savings Sharing Program:
-  
-  Eligibility:
+
+Eligibility:
     - Teams with >$10K monthly cloud spend
     - Implemented approved optimization
-    
-  Calculation:
+
+Calculation:
     - Baseline: Previous 3-month average
     - Savings: Baseline - Current spend
     - Team share: 20% of savings
-    
-  Payout:
+
+Payout:
     - Frequency: Quarterly
     - Form: Team budget for tools/training
-    
-  Example:
+
+Example:
     - Previous average: $50,000/month
     - New average: $40,000/month
     - Monthly savings: $10,000
@@ -196,8 +211,8 @@ graph LR
         L201 --> L301[FinOps 301<br>Architecture]
         L301 --> CERT[Certification<br>FinOps Practitioner]
     end
-    
-    style L101 fill:#3498db,stroke:#2980b9,color:#fff
+
+style L101 fill:#3498db,stroke:#2980b9,color:#fff
     style L201 fill:#2ecc71,stroke:#27ae60,color:#fff
     style L301 fill:#f39c12,stroke:#d68910,color:#fff
     style CERT fill:#9b59b6,stroke:#8e44ad,color:#fff
@@ -256,14 +271,14 @@ graph TB
         CENTRAL --> CH2[Champion<br>Backend Team]
         CENTRAL --> CH3[Champion<br>Data Team]
         CENTRAL --> CH4[Champion<br>Mobile Team]
-        
-        CH1 --> T1[Team<br>Members]
+
+CH1 --> T1[Team<br>Members]
         CH2 --> T2[Team<br>Members]
         CH3 --> T3[Team<br>Members]
         CH4 --> T4[Team<br>Members]
     end
-    
-    style CENTRAL fill:#9b59b6,stroke:#8e44ad,color:#fff
+
+style CENTRAL fill:#9b59b6,stroke:#8e44ad,color:#fff
 ```
 
 ### Champion Benefits
@@ -289,11 +304,36 @@ graph TB
 
 ### Survey Questions
 
-1. "I understand how my work impacts cloud costs" (1-5)
-2. "I have access to the cost information I need" (1-5)
-3. "My team actively considers cost in decisions" (1-5)
-4. "I feel empowered to suggest optimizations" (1-5)
-5. "FinOps practices are valued in my organization" (1-5)
+<b>1. "I understand how my work impacts cloud costs"</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 1-5
+</details>
+
+<b>2. "I have access to the cost information I need"</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 1-5
+</details>
+
+<b>3. "My team actively considers cost in decisions"</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 1-5
+</details>
+
+<b>4. "I feel empowered to suggest optimizations"</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 1-5
+</details>
+
+<b>5. "FinOps practices are valued in my organization"</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 1-5
+</details>
+
 
 ---
 
@@ -328,7 +368,12 @@ Create a savings sharing proposal:
 ### Exercise 3: Champion Program Launch
 
 Plan a champion program:
-1. Identify potential champions (1 per team)
+<b>1. Identify potential champions</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 1 per team
+</details>
+
 2. Define roles and responsibilities
 3. Create training plan
 

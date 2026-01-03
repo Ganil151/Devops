@@ -19,27 +19,132 @@ Master the art of high-level security governance and DevSecOps patterns.
 
 ## 🧠 Security Knowledge Quiz (20+ Questions)
 
-1.  **What does 'SAST' stand for?** (Static Application Security Testing)
-2.  **What does 'DAST' stand for?** (Dynamic Application Security Testing)
-3.  **What is a 'WAF'?** (Web Application Firewall)
-4.  **Which tool is used for container image scanning?** (e.g., Trivy, Snyk, Clair)
-5.  **True/False: IAM Role is more secure than IAM User for EC2.** (True)
-6.  **What is 'Least Privilege'?** (Granting only the bare minimum permissions needed for a task)
-7.  **What is 'Encryption at Rest'?** (Protecting data stored on disks using cryptographic keys)
-8.  **What is 'Encryption in Transit'?** (Protecting data moving over the network, e.g., TLS)
-9.  **What is a 'CVE'?** (Common Vulnerabilities and Exposures)
-10. **What is 'Penetration Testing'?** (Simulated cyber-attack to find vulnerabilities)
-11. **What is 'Multi-Factor Authentication' (MFA)?** (Requiring two or more verification methods)
-12. **What is 'VPC Flow Logs'?** (Captures information about IP traffic going to and from network interfaces)
-13. **What is 'Cloud Custodian'?** (An open-source tool for managing cloud resources and policies)
-14. **What is 'AWS GuardDuty'?** (Managed threat detection service)
-15. **What is 'OIDC'?** (OpenID Connect - an authentication layer on top of OAuth 2.0)
-16. **What is 'RBAC'?** (Role-Based Access Control)
-17. **What is 'Network Policy' in Kubernetes?** (Controls traffic flow between Pods)
-18. **What is 'Secure Coding'?** (Writing code that is resistant to common security vulnerabilities)
-19. **What is 'Vulnerability Management'?** (The process of identifying, evaluating, and remediating security weaknesses)
-20. **What is 'Identity Federation'?** (Linking a user's identity across multiple independent systems)
-21. **What is 'Security Group' primarily used for?** (Acts as a virtual firewall for your EC2 instance)
+<b>1. What does 'SAST' stand for?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Static Application Security Testing
+</details>
+
+<b>2. What does 'DAST' stand for?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Dynamic Application Security Testing
+</details>
+
+<b>3. What is a 'WAF'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Web Application Firewall
+</details>
+
+<b>4. Which tool is used for container image scanning?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: e.g., Trivy, Snyk, Clair
+</details>
+
+<b>5. True/False: IAM Role is more secure than IAM User for EC2.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: True
+</details>
+
+<b>6. What is 'Least Privilege'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Granting only the bare minimum permissions needed for a task
+</details>
+
+<b>7. What is 'Encryption at Rest'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Protecting data stored on disks using cryptographic keys
+</details>
+
+<b>8. What is 'Encryption in Transit'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Protecting data moving over the network, e.g., TLS
+</details>
+
+<b>9. What is a 'CVE'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Common Vulnerabilities and Exposures
+</details>
+
+<b>10. What is 'Penetration Testing'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Simulated cyber-attack to find vulnerabilities
+</details>
+
+<b>11. What is 'Multi-Factor Authentication'</b>
+<details>
+<summary>Show Answer</summary>
+Answer: MFA)?** (Requiring two or more verification methods
+</details>
+
+<b>12. What is 'VPC Flow Logs'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Captures information about IP traffic going to and from network interfaces
+</details>
+
+<b>13. What is 'Cloud Custodian'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: An open-source tool for managing cloud resources and policies
+</details>
+
+<b>14. What is 'AWS GuardDuty'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Managed threat detection service
+</details>
+
+<b>15. What is 'OIDC'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: OpenID Connect - an authentication layer on top of OAuth 2.0
+</details>
+
+<b>16. What is 'RBAC'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Role-Based Access Control
+</details>
+
+<b>17. What is 'Network Policy' in Kubernetes?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Controls traffic flow between Pods
+</details>
+
+<b>18. What is 'Secure Coding'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Writing code that is resistant to common security vulnerabilities
+</details>
+
+<b>19. What is 'Vulnerability Management'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: The process of identifying, evaluating, and remediating security weaknesses
+</details>
+
+<b>20. What is 'Identity Federation'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Linking a user's identity across multiple independent systems
+</details>
+
+<b>21. What is 'Security Group' primarily used for?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Acts as a virtual firewall for your EC2 instance
+</details>
+
 
 ---
 

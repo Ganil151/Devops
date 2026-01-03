@@ -608,73 +608,93 @@ Ready to create your first DynamoDB table?
 
 # 🧠 Knowledge Quiz
 
-**1. Which attribute MUST every item in a DynamoDB table have?**
-A) Sort Key
-B) CreatedDate
-C) Primary Key
-D) TTL Accessor
-> **Answer: C** - Every item is uniquely identified by its Primary Key.
+<b>1. Which attribute MUST every item in a DynamoDB table have?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - Every item is uniquely identified by its Primary Key.
+</details>
 
-**2. You need to create an index on an existing table to query by a different attribute. Which index type should you use?**
-A) Local Secondary Index (LSI)
-B) Primary Index
-C) Global Secondary Index (GSI)
-D) Reverse Index
-> **Answer: C** - GSIs can be created after the table exists; LSIs cannot.
 
-**3. Which capacity mode is best for unpredictable, spiky workloads where you don't want to manage scaling?**
-A) Provisioned
-B) On-Demand
-C) Reserved
-D) Spot Instances
-> **Answer: B** - On-Demand mode instantly accommodates traffic spikes.
 
-**4. What is the maximum size of a single item in DynamoDB?**
-A) 4 KB
-B) 64 KB
-C) 400 KB
-D) 16 MB
-> **Answer: C** - The limit for a single item (including attribute names) is 400 KB.
 
-**5. How does DynamoDB handle data durability?**
-A) You must configure RAID
-B) It replicates data across 3 Availability Zones automatically
-C) It backs up to tape daily
-D) It relies on the user to duplicate data
-> **Answer: B** - DynamoDB automatically replicates data across three separate AZs in the region.
+<b>2. You need to create an index on an existing table to query by a different attribute. Which index type should you use?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - GSIs can be created after the table exists; LSIs cannot.
+</details>
 
-**6. Which feature allows you to automatically delete items after a specific timestamp?**
-A) Auto-Delete
-B) TTL (Time To Live)
-C) Garbage Collection
-D) Lifecycle Policy
-> **Answer: B** - TTL expires items based on a number attribute (Unix timestamp).
 
-**7. A "ThrottlingException" usually means:**
-A) The internet is down
-B) You exceeded your provisioned throughput limits
-C) The database is full
-D) Your query syntax is wrong
-> **Answer: B** - Throttling occurs when read/write rates exceed the allocated capacity units.
 
-**8. To optimize costs for a table with very low usage (e.g., 1 read per hour), which mode should you choose?**
-A) Provisioned 100 RCU
-B) Provisioned 5 RCU
-C) On-Demand
-D) Reserved Capacity
-> **Answer: C** - On-Demand charges per request, so you pay almost nothing for very low usage.
 
-**9. What is the primary use case for DynamoDB Streams?**
-A) Streaming video
-B) Triggering events (like Lambda) based on data changes
-C) Backing up data to S3
-D) Compressing data
-> **Answer: B** - Streams capture insert/update/delete events to trigger downstream processing.
+<b>3. Which capacity mode is best for unpredictable, spiky workloads where you don't want to manage scaling?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - On-Demand mode instantly accommodates traffic spikes.
+</details>
 
-**10. In a Partition Key + Sort Key design, can multiple items share the same Partition Key?**
-A) No, Partition Keys must be unique
-B) Yes, provided they have different Sort Keys
-C) Yes, they are duplicates
-D) Only if they are in different regions
-> **Answer: B** - In a composite key schema, uniqueness is defined by the combination of Partition Key + Sort Key.
+
+
+
+<b>4. What is the maximum size of a single item in DynamoDB?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - The limit for a single item (including attribute names) is 400 KB.
+</details>
+
+
+
+
+<b>5. How does DynamoDB handle data durability?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - DynamoDB automatically replicates data across three separate AZs in the region.
+</details>
+
+
+
+
+<b>6. Which feature allows you to automatically delete items after a specific timestamp?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - TTL expires items based on a number attribute (Unix timestamp).
+</details>
+
+
+
+
+<b>7. A "ThrottlingException" usually means:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - Throttling occurs when read/write rates exceed the allocated capacity units.
+</details>
+
+
+
+
+<b>8. To optimize costs for a table with very low usage (e.g., 1 read per hour), which mode should you choose?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - On-Demand charges per request, so you pay almost nothing for very low usage.
+</details>
+
+
+
+
+<b>9. What is the primary use case for DynamoDB Streams?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - Streams capture insert/update/delete events to trigger downstream processing.
+</details>
+
+
+
+
+<b>10. In a Partition Key + Sort Key design, can multiple items share the same Partition Key?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - In a composite key schema, uniqueness is defined by the combination of Partition Key + Sort Key.
+</details>
+
+
+
 

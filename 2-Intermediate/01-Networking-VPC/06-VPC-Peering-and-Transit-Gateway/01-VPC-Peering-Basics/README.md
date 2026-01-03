@@ -10,8 +10,8 @@ A peering connection connects exactly two VPCs. It is not a broad network entry 
 ```mermaid
 graph LR
     VPC_A[VPC A - 10.0.0.0/16] <-->|peering-id| VPC_B[VPC B - 10.1.0.0/16]
-    
-    style VPC_A fill:#f9f,stroke:#333
+
+style VPC_A fill:#f9f,stroke:#333
     style VPC_B fill:#bbf,stroke:#333
 ```
 

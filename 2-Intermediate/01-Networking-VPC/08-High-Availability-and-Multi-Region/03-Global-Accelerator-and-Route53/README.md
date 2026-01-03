@@ -4,7 +4,7 @@ To handle global traffic and regional failover, you need more than just a VPC. Y
 
 ## AWS Global Accelerator
 
-**Global Accelerator (GA)** is a service that improves the availability and performance of your applications with local or global users. 
+**Global Accelerator (GA)** is a service that improves the availability and performance of your applications with local or global users.
 
 ### How it Works
 1.  **Static Anycast IPs**: You receive two static IP addresses that are broadcast from every AWS Edge Location globally.
@@ -16,8 +16,8 @@ graph LR
     User([User]) -->|Closest Edge| Edge[Anycast IP]
     Edge -->|AWS Private Backbone| RegionA[us-east-1 ALB]
     Edge -.->|Failover| RegionB[eu-west-1 ALB]
-    
-    style Edge fill:#f96,stroke:#333
+
+style Edge fill:#f96,stroke:#333
 ```
 
 ---

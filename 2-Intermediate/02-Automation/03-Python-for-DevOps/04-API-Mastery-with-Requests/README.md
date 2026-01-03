@@ -28,7 +28,7 @@ sequenceDiagram
     participant Script as Python Script
     participant API as External API (Slack/PagerDuty)
 
-    Script->>API: 1. Auth Request
+Script->>API: 1. Auth Request
     alt Success
         API-->>Script: 2. 200 OK + JSON
         Script->>Script: 3. Process Data
@@ -44,10 +44,10 @@ Always check status codes and implement timeouts.
 ```python
 try:
     response = requests.get("https://api.example.com/data", timeout=5)
-    
-    # Check for HTTP errors (4xx, 5xx)
+
+# Check for HTTP errors (4xx, 5xx)
     response.raise_for_status()
-    
+
 except requests.exceptions.HTTPError as err:
     print(f"HTTP Error: {err}")
 except requests.exceptions.Timeout:

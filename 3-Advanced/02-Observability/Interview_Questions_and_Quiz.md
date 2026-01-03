@@ -19,31 +19,156 @@ Master the art of debugging distributed systems with advanced observability patt
 
 ## 🧠 Observability Knowledge Quiz (20+ Questions)
 
-1.  **What does 'SLA' stand for?** (Service Level Agreement)
-2.  **Which tool is primarily used for visualization in the Kube-Prometheus-Stack?** (Grafana)
-3.  **What is 'PromQL'?** (The query language for Prometheus)
-4.  **What is a 'Metric' in observability?** (A numerical representation of data measured over intervals)
-5.  **True/False: Logs are better for high-level trends than metrics.** (False)
-6.  **What is 'Distributed Tracing'?** (Tracking a single request as it passes through multiple microservices)
-7.  **What is a 'Span' in tracing?** (The basic building block of a trace; represents a unit of work)
-8.  **Which library is the industry standard for tracing?** (OpenTelemetry)
-9.  **What is 'Sampling' in tracing?** (Capturing only a percentage of traces to save storage/bandwidth)
-10. **What is an 'Alertmanager'?** (The component that handles deduplication and routing of alerts from Prometheus)
-11. **What is 'TSDB'?** (Time Series Database)
-12. **Which component of ELK stores the data?** (Elasticsearch)
-13. **What is 'Loki'?** (A log-aggregation system inspired by Prometheus)
-14. **What is 'Saturation' in SRE?** (How "full" your service is; measure of system constraints)
-15. **What is 'White-box Monitoring'?** (Monitoring based on internal logs/metrics from the application)
-16. **What is 'Black-box Monitoring'?** (Monitoring from the outside, like health checks or probes)
-17. **What is an 'Exporter' in Prometheus?** (A component that translates system metrics into Prometheus format)
-18. **What is 'Service Level Indicator' (SLI)?** (A quantitative measure of some aspect of the level of service)
-19. **What is 'MTTR'?** (Mean Time To Resolution)
-20. **Which tool is used for tracing in AWS?** (X-Ray)
-21. **What is 'OpenTelemetry Collector'?** (A vendor-agnostic proxy that receives, processes, and exports telemetry data)
-22. **What is a CloudWatch 'Metric Filter'?** (A feature that turns log patterns into numerical metrics)
-23. **What is the Datadog 'Unified Service Tagging'?** (Using env, service, and version tags to correlate all telemetry)
-24. **True/False: Datadog can monitor multiple cloud providers in one dashboard.** (True)
-25. **What is 'DogStatsD'?** (A metrics aggregation service that sends custom metrics to the Datadog Agent)
+<b>1. What does 'SLA' stand for?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Service Level Agreement
+</details>
+
+<b>2. Which tool is primarily used for visualization in the Kube-Prometheus-Stack?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Grafana
+</details>
+
+<b>3. What is 'PromQL'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: The query language for Prometheus
+</details>
+
+<b>4. What is a 'Metric' in observability?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A numerical representation of data measured over intervals
+</details>
+
+<b>5. True/False: Logs are better for high-level trends than metrics.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: False
+</details>
+
+<b>6. What is 'Distributed Tracing'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Tracking a single request as it passes through multiple microservices
+</details>
+
+<b>7. What is a 'Span' in tracing?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: The basic building block of a trace; represents a unit of work
+</details>
+
+<b>8. Which library is the industry standard for tracing?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: OpenTelemetry
+</details>
+
+<b>9. What is 'Sampling' in tracing?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Capturing only a percentage of traces to save storage/bandwidth
+</details>
+
+<b>10. What is an 'Alertmanager'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: The component that handles deduplication and routing of alerts from Prometheus
+</details>
+
+<b>11. What is 'TSDB'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Time Series Database
+</details>
+
+<b>12. Which component of ELK stores the data?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Elasticsearch
+</details>
+
+<b>13. What is 'Loki'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A log-aggregation system inspired by Prometheus
+</details>
+
+<b>14. What is 'Saturation' in SRE?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: How "full" your service is; measure of system constraints
+</details>
+
+<b>15. What is 'White-box Monitoring'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Monitoring based on internal logs/metrics from the application
+</details>
+
+<b>16. What is 'Black-box Monitoring'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Monitoring from the outside, like health checks or probes
+</details>
+
+<b>17. What is an 'Exporter' in Prometheus?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A component that translates system metrics into Prometheus format
+</details>
+
+<b>18. What is 'Service Level Indicator'</b>
+<details>
+<summary>Show Answer</summary>
+Answer: SLI)?** (A quantitative measure of some aspect of the level of service
+</details>
+
+<b>19. What is 'MTTR'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Mean Time To Resolution
+</details>
+
+<b>20. Which tool is used for tracing in AWS?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: X-Ray
+</details>
+
+<b>21. What is 'OpenTelemetry Collector'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A vendor-agnostic proxy that receives, processes, and exports telemetry data
+</details>
+
+<b>22. What is a CloudWatch 'Metric Filter'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A feature that turns log patterns into numerical metrics
+</details>
+
+<b>23. What is the Datadog 'Unified Service Tagging'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Using env, service, and version tags to correlate all telemetry
+</details>
+
+<b>24. True/False: Datadog can monitor multiple cloud providers in one dashboard.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: True
+</details>
+
+<b>25. What is 'DogStatsD'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A metrics aggregation service that sends custom metrics to the Datadog Agent
+</details>
+
 
 ---
 

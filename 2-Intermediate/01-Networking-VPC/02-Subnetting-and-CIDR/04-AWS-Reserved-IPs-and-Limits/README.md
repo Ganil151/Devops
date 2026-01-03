@@ -22,8 +22,8 @@ graph TD
     Range --> R3[.3 - AWS Service Reserved]
     Range --> R255[.255 - Broadcast]
     Range --> Usable[.4 to .254 - Available for Instances]
-    
-    style R0 fill:#ccc
+
+style R0 fill:#ccc
     style R1 fill:#ffcc00
     style R2 fill:#3399ff
     style R3 fill:#ccc

@@ -24,19 +24,19 @@ graph TB
         op1[Data]:::user --- op2[Applications]:::user --- op3[Runtime]:::user --- op4[Middleware]:::user --- op5[O/S]:::user --- op6[Virtualization]:::user --- op7[Servers]:::user --- op8[Storage]:::user --- op9[Networking]:::user
     end
 
-    subgraph IaaS [IaaS]
+subgraph IaaS [IaaS]
         iaas1[Data]:::user --- iaas2[Applications]:::user --- iaas3[Runtime]:::user --- iaas4[Middleware]:::user --- iaas5[O/S]:::user --- iaas6[Virtualization]:::provider --- iaas7[Servers]:::provider --- iaas8[Storage]:::provider --- iaas9[Networking]:::provider
     end
 
-    subgraph PaaS [PaaS]
+subgraph PaaS [PaaS]
         paas1[Data]:::user --- paas2[Applications]:::user --- paas3[Runtime]:::provider --- paas4[Middleware]:::provider --- paas5[O/S]:::provider --- paas6[Virtualization]:::provider --- paas7[Servers]:::provider --- paas8[Storage]:::provider --- paas9[Networking]:::provider
     end
 
-    subgraph SaaS [SaaS]
+subgraph SaaS [SaaS]
         saas1[Data]:::user --- saas2[Applications]:::provider --- saas3[Runtime]:::provider --- saas4[Middleware]:::provider --- saas5[O/S]:::provider --- saas6[Virtualization]:::provider --- saas7[Servers]:::provider --- saas8[Storage]:::provider --- saas9[Networking]:::provider
     end
 
-    classDef user fill:#2563eb,color:#fff,stroke:#1d4ed8;
+classDef user fill:#2563eb,color:#fff,stroke:#1d4ed8;
     classDef provider fill:#ea580c,color:#fff,stroke:#c2410c;
 ```
 
@@ -231,26 +231,26 @@ graph LR
         Config[Configuration]
     end
 
-    subgraph PaaS_Platform [PaaS Platform]
+subgraph PaaS_Platform [PaaS Platform]
         subgraph Build_System [Build System]
             Builder[Build Service]
             Registry[Artifact Registry]
         end
 
-        subgraph Runtime_Environment [Runtime Environment]
+subgraph Runtime_Environment [Runtime Environment]
             Router[Router / LB]
             App[Application Instance]
             AutoScaler[Auto Scaler]
         end
-        
-        subgraph Managed_Services [Managed Services]
+
+subgraph Managed_Services [Managed Services]
             DB[(Database)]
             Cache[Cache]
             Logs[Log Aggregation]
         end
     end
 
-    Code -->|Push| Builder
+Code -->|Push| Builder
     Builder -->|Store Image| Registry
     Registry -->|Deploy| App
     Router -->|Traffic| App
@@ -259,11 +259,11 @@ graph LR
     App -.->|Logs| Logs
     AutoScaler -.->|Scale| App
 
-    classDef dev fill:#dbeafe,stroke:#3b82f6
+classDef dev fill:#dbeafe,stroke:#3b82f6
     classDef platform fill:#f3f4f6,stroke:#6b7280
     classDef service fill:#fef3c7,stroke:#d97706
-    
-    class Code,Config dev
+
+class Code,Config dev
     class Builder,Registry,Router,App,AutoScaler platform
     class DB,Cache,Logs service
 ```
@@ -478,25 +478,25 @@ Use Cases: Enterprise container platforms, hybrid deployments
 ```mermaid
 graph TB
     User[User via Browser/Mobile] -- Internet --> LB[Load Balancer]
-    
-    subgraph SaaS_Stack [SaaS Application Stack]
+
+subgraph SaaS_Stack [SaaS Application Stack]
         LB --> Web[Web Server Tier]
         Web --> App[App Server Tier]
-        
-        subgraph Multi_Tenancy [Multi-Tenancy Logic]
+
+subgraph Multi_Tenancy [Multi-Tenancy Logic]
             App -- Tenant Config --> Config[Configuration]
             App -- Tenant Data --> DB[(Shared Database)]
         end
-        
-        DB -.->|Logical Separation| TenantA[Tenant A Data]
+
+DB -.->|Logical Separation| TenantA[Tenant A Data]
         DB -.->|Logical Separation| TenantB[Tenant B Data]
     end
 
-    classDef user fill:#bfdbfe,stroke:#3b82f6
+classDef user fill:#bfdbfe,stroke:#3b82f6
     classDef stack fill:#f3f4f6,stroke:#6b7280
     classDef comp fill:#ffffff,stroke:#9ca3af
 
-    class User user
+class User user
     class Web,App,Config,DB comp
 ```
 
@@ -805,31 +805,31 @@ graph LR
         Timer[Scheduler]
     end
 
-    Trigger((Trigger))
+Trigger((Trigger))
 
-    subgraph Serverless_Platform [Serverless Platform]
+subgraph Serverless_Platform [Serverless Platform]
         Func[Function Instance]
     end
 
-    subgraph Backend_Services [Backend Services]
+subgraph Backend_Services [Backend Services]
         DB[(Database)]
         API[External API]
     end
 
-    HTTP --> Trigger
+HTTP --> Trigger
     Storage --> Trigger
     DB_Stream --> Trigger
     Timer --> Trigger
-    
-    Trigger -->|Invoke| Func
+
+Trigger -->|Invoke| Func
     Func -->|Read/Write| DB
     Func -->|Call| API
 
-    classDef source fill:#dbeafe,stroke:#3b82f6
+classDef source fill:#dbeafe,stroke:#3b82f6
     classDef platform fill:#f3f4f6,stroke:#6b7280
     classDef backend fill:#fef3c7,stroke:#d97706
-    
-    class HTTP,Storage,DB_Stream,Timer source
+
+class HTTP,Storage,DB_Stream,Timer source
     class Func platform
     class DB,API backend
 ```
@@ -842,8 +842,8 @@ import json
 def lambda_handler(event, context):
     # Process the event
     name = event.get('name', 'World')
-    
-    return {
+
+return {
         'statusCode': 200,
         'body': json.dumps(f'Hello {name}!')
     }
@@ -855,8 +855,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     name = req.params.get('name')
     if not name:
         name = 'World'
-    
-    return func.HttpResponse(f"Hello {name}!")
+
+return func.HttpResponse(f"Hello {name}!")
 
 # Google Cloud Functions Example
 def hello_world(request):
@@ -906,7 +906,7 @@ graph TB
         i7[Infrastructure]:::provider
     end
 
-    subgraph PaaS
+subgraph PaaS
         p1[Data]:::user
         p2[Application]:::user
         p3[Runtime]:::provider
@@ -916,7 +916,7 @@ graph TB
         p7[Infrastructure]:::provider
     end
 
-    subgraph FaaS
+subgraph FaaS
         f1[Data]:::user
         f2[Functions]:::user
         f3[Runtime]:::provider
@@ -926,7 +926,7 @@ graph TB
         f7[Infrastructure]:::provider
     end
 
-    subgraph SaaS
+subgraph SaaS
         s1[Data]:::user
         s2[Application]:::provider
         s3[Runtime]:::provider
@@ -936,7 +936,7 @@ graph TB
         s7[Infrastructure]:::provider
     end
 
-    classDef user fill:#2563eb,color:#fff,stroke:#1d4ed8;
+classDef user fill:#2563eb,color:#fff,stroke:#1d4ed8;
     classDef provider fill:#ea580c,color:#fff,stroke:#c2410c;
 ```
 
@@ -1154,279 +1154,176 @@ This comprehensive guide covers all major cloud service models, helping organiza
 6. **Who is responsible for data security in SaaS?**
    - The Customer (managing user access and data classification), although the Provider secures the underlying platform and application code.
 
-### Advanced Level
-7. **Explain the "Pizza as a Service" analogy.**
-   - **Made at Home (On-Prem):** You do everything (dough, toppings, oven, table).
-   - **Take & Bake (IaaS):** You rent the kitchen/tools, but bring ingredients.
-   - **Delivery (PaaS):** You buy the pizza, but set the table.
-   - **Dining Out (SaaS):** Everything is done for you.
-8. **What are the limitations of FaaS?**
-   - Cold start latency, execution time limits (e.g., 15 mins on Lambda), and stateless nature (cannot store session data in memory).
-9. **How does "Vendor Lock-in" vary across service models?**
-   - Lowest in IaaS (can migrate VMs relatively easily). Highest in SaaS (hard to export proprietary data formats) and FaaS (code coupled to vendor triggers/APIs).
-10. **What is Kubernetes in the context of service models?**
-    - It's a container orchestrator. Managed K8s (EKS/AKS) is often considered a blend of IaaS and PaaS (sometimes called CaaS - Container as a Service).
-11. **Why is SaaS generally considered the most secure against "user-error" vulnerabilities?**
-    - Because the vendor manages almost everything (OS, patching, application security), leaving less room for the customer to misconfigure servers or firewalls compared to IaaS.
-12. **In an IaaS model, if the underlying physical server fails, whose responsibility is it to restore the VM?**
-    - The Cloud Provider is responsible for the physical hardware, but they usually provide a new host. The Customer is responsible for their HA configuration (e.g., auto-scaling) to handle the reboot/failover.
-13. **Describe a scenario where FaaS is NOT a good fit.**
-    - Long-running processes (e.g., a 2-hour data crunching job), applications requiring persistent WebSocket connections, or legacy apps with complex stateful dependencies.
-14. **What is "Shadow IT" and which service model contributes to it most?**
-    - Unauthorized use of software/devices by employees. SaaS contributes most because it's so easy for users to sign up for tools (DropBox, Trello) without IT approval.
-15. **How does resource pooling differ between IaaS and SaaS?**
-    - In IaaS, you might share physical hardware but have isolated VMs. In SaaS, you often share the same application instance and database (multi-tenancy) with logical separation.
-
----
-
-## Quiz: Service Models
-
+<b>7. </b>
 <details>
-<summary><b>1. Microsoft Azure Virtual Machines is an example of:</b></summary>
-A) SaaS<br>
-B) PaaS<br>
-C) IaaS<br>
-D) FaaS<br>
-<br>
-<b>Answer: C) IaaS</b>
+<summary>Show Answer</summary>
+Answer: C) IaaS</b>
 </details>
 
+
+<b>2. In which model does the vendor manage the Runtime, Middleware, and OS, but NOT the Application?</b>
 <details>
-<summary><b>2. In which model does the vendor manage the Runtime, Middleware, and OS, but NOT the Application?</b></summary>
-A) IaaS<br>
-B) PaaS<br>
-C) SaaS<br>
-D) On-Premises<br>
-<br>
-<b>Answer: B) PaaS</b>
+<summary>Show Answer</summary>
+Answer: B) PaaS</b>
 </details>
 
+
+<b>3. Google Drive / Dropbox are examples of:</b>
 <details>
-<summary><b>3. Google Drive / Dropbox are examples of:</b></summary>
-A) IaaS<br>
-B) PaaS<br>
-C) SaaS<br>
-D) Database<br>
-<br>
-<b>Answer: C) SaaS</b>
+<summary>Show Answer</summary>
+Answer: C) SaaS</b>
 </details>
 
+
+<b>4. Which model allows a user to deploy code without managing ANY servers?</b>
 <details>
-<summary><b>4. Which model allows a user to deploy code without managing ANY servers?</b></summary>
-A) IaaS<br>
-B) FaaS (Serverless)<br>
-C) On-Premises<br>
-D) Hybrid<br>
-<br>
-<b>Answer: B) FaaS (Serverless)</b>
+<summary>Show Answer</summary>
+Answer: B) FaaS (Serverless)</b>
 </details>
 
+
+<b>5. AWS RDS (Relational Database Service) is primarily considered:</b>
 <details>
-<summary><b>5. AWS RDS (Relational Database Service) is primarily considered:</b></summary>
-A) IaaS (because it's a server)<br>
-B) PaaS (because AWS manages the OS/Patching)<br>
-C) SaaS<br>
-D) FaaS<br>
-<br>
-<b>Answer: B) PaaS</b>
+<summary>Show Answer</summary>
+Answer: B) PaaS</b>
 </details>
 
+
+<b>6. Which has the highest level of customer management responsibility?</b>
 <details>
-<summary><b>6. Which has the highest level of customer management responsibility?</b></summary>
-A) SaaS<br>
-B) PaaS<br>
-C) IaaS<br>
-D) On-Premises<br>
-<br>
-<b>Answer: D) On-Premises</b>
+<summary>Show Answer</summary>
+Answer: D) On-Premises</b>
 </details>
 
+
+<b>7. "Pay-per-execution" is a pricing model most associated with:</b>
 <details>
-<summary><b>7. "Pay-per-execution" is a pricing model most associated with:</b></summary>
-A) IaaS<br>
-B) SaaS<br>
-C) FaaS<br>
-D) PaaS<br>
-<br>
-<b>Answer: C) FaaS</b>
+<summary>Show Answer</summary>
+Answer: C) FaaS</b>
 </details>
 
+
+<b>8. In the Shared Responsibility Model, who patches the OS in IaaS?</b>
 <details>
-<summary><b>8. In the Shared Responsibility Model, who patches the OS in IaaS?</b></summary>
-A) The Cloud Provider<br>
-B) The Customer<br>
-C) The Internet<br>
-D) It happens automatically<br>
-<br>
-<b>Answer: B) The Customer</b>
+<summary>Show Answer</summary>
+Answer: B) The Customer</b>
 </details>
 
+
+<b>9. Which is a disadvantage of SaaS?</b>
 <details>
-<summary><b>9. Which is a disadvantage of SaaS?</b></summary>
-A) High maintenance<br>
-B) High upfront cost<br>
-C) Limited customization<br>
-D) Requires hardware purchase<br>
-<br>
-<b>Answer: C) Limited customization</b>
+<summary>Show Answer</summary>
+Answer: C) Limited customization</b>
 </details>
 
+
+<b>10. If you need to install a custom kernel module, which model MUST you use?</b>
 <details>
-<summary><b>10. If you need to install a custom kernel module, which model MUST you use?</b></summary>
-A) PaaS<br>
-B) SaaS<br>
-C) IaaS<br>
-D) FaaS<br>
-<br>
-<b>Answer: C) IaaS</b>
+<summary>Show Answer</summary>
+Answer: C) IaaS</b>
 </details>
 
+
+<b>11. What does the "S" in SaaS stand for?</b>
 <details>
-<summary><b>11. What does the "S" in SaaS stand for?</b></summary>
-A) System<br>
-B) Storage<br>
-C) Software<br>
-D) Security<br>
-<br>
-<b>Answer: C) Software</b>
+<summary>Show Answer</summary>
+Answer: C) Software</b>
 </details>
 
+
+<b>12. Why choose PaaS?</b>
 <details>
-<summary><b>12. Why choose PaaS?</b></summary>
-A) To build a data center<br>
-B) To focus on application code and speed up development<br>
-C) To manage network switches<br>
-D) To avoid paying for cloud<br>
-<br>
-<b>Answer: B) To focus on application code and speed up development</b>
+<summary>Show Answer</summary>
+Answer: B) To focus on application code and speed up development</b>
 </details>
 
+
+<b>13. Salesforce is the classic example of:</b>
 <details>
-<summary><b>13. Salesforce is the classic example of:</b></summary>
-A) IaaS<br>
-B) PaaS<br>
-C) SaaS<br>
-D) FaaS<br>
-<br>
-<b>Answer: C) SaaS</b>
+<summary>Show Answer</summary>
+Answer: C) SaaS</b>
 </details>
 
+
+<b>14. AWS Lambda is:</b>
 <details>
-<summary><b>14. AWS Lambda is:</b></summary>
-A) IaaS<br>
-B) PaaS<br>
-C) SaaS<br>
-D) FaaS<br>
-<br>
-<b>Answer: D) FaaS</b>
+<summary>Show Answer</summary>
+Answer: D) FaaS</b>
 </details>
 
+
+<b>15. Which model has the highest risk of "Cold Start" latency?</b>
 <details>
-<summary><b>15. Which model has the highest risk of "Cold Start" latency?</b></summary>
-A) IaaS<br>
-B) PaaS<br>
-C) FaaS<br>
-D) SaaS<br>
-<br>
-<b>Answer: C) FaaS</b>
+<summary>Show Answer</summary>
+Answer: C) FaaS</b>
 </details>
 
+
+<b>16. In IaaS, "Scalability" refers to:</b>
 <details>
-<summary><b>16. In IaaS, "Scalability" refers to:</b></summary>
-A) Editing code faster<br>
-B) Adding more VMs (Scale Out) or bigger VMs (Scale Up)<br>
-C) Buying more software licenses<br>
-D) Reducing costs<br>
-<br>
-<b>Answer: B) Adding more VMs (Scale Out) or bigger VMs (Scale Up)</b>
+<summary>Show Answer</summary>
+Answer: B) Adding more VMs (Scale Out) or bigger VMs (Scale Up)</b>
 </details>
 
+
+<b>17. Which requires the least technical expertise to use?</b>
 <details>
-<summary><b>17. Which requires the least technical expertise to use?</b></summary>
-A) IaaS<br>
-B) PaaS<br>
-C) FaaS<br>
-D) SaaS<br>
-<br>
-<b>Answer: D) SaaS</b>
+<summary>Show Answer</summary>
+Answer: D) SaaS</b>
 </details>
 
+
+<b>18. Google App Engine is an example of:</b>
 <details>
-<summary><b>18. Google App Engine is an example of:</b></summary>
-A) IaaS<br>
-B) PaaS<br>
-C) SaaS<br>
-D) Hardware<br>
-<br>
-<b>Answer: B) PaaS</b>
+<summary>Show Answer</summary>
+Answer: B) PaaS</b>
 </details>
 
+
+<b>19. Moving from IaaS to PaaS usually results in:</b>
 <details>
-<summary><b>19. Moving from IaaS to PaaS usually results in:</b></summary>
-A) More control, higher cost<br>
-B) Less control, less management overhead<br>
-C) More hardware management<br>
-D) Slower deployment<br>
-<br>
-<b>Answer: B) Less control, less management overhead</b>
+<summary>Show Answer</summary>
+Answer: B) Less control, less management overhead</b>
 </details>
 
+
+<b>20. Which layer is managed by the provider in ALL cloud models (IaaS, PaaS, SaaS, FaaS)?</b>
 <details>
-<summary><b>20. Which layer is managed by the provider in ALL cloud models (IaaS, PaaS, SaaS, FaaS)?</b></summary>
-A) Data<br>
-B) Application<br>
-C) Physical Infrastructure (Hardware/Facilities)<br>
-D) Operating System<br>
-<br>
-<b>Answer: C) Physical Infrastructure (Hardware/Facilities)</b>
+<summary>Show Answer</summary>
+Answer: C) Physical Infrastructure (Hardware/Facilities)</b>
 </details>
 
+
+<b>21. Which model typically uses a "Multi-Tenant" architecture at the application level?</b>
 <details>
-<summary><b>21. Which model typically uses a "Multi-Tenant" architecture at the application level?</b></summary>
-A) IaaS<br>
-B) PaaS<br>
-C) FaaS<br>
-D) SaaS<br>
-<br>
-<b>Answer: D) SaaS</b>
+<summary>Show Answer</summary>
+Answer: D) SaaS</b>
 </details>
 
+
+<b>22. You want to run a legacy Windows app that requires registry tweaks. You should use:</b>
 <details>
-<summary><b>22. You want to run a legacy Windows app that requires registry tweaks. You should use:</b></summary>
-A) SaaS<br>
-B) PaaS<br>
-C) IaaS<br>
-D) FaaS<br>
-<br>
-<b>Answer: C) IaaS</b>
+<summary>Show Answer</summary>
+Answer: C) IaaS</b>
 </details>
 
+
+<b>23. Which service model has the MOST vendor lock-in regarding data portability?</b>
 <details>
-<summary><b>23. Which service model has the MOST vendor lock-in regarding data portability?</b></summary>
-A) IaaS<br>
-B) PaaS<br>
-C) SaaS<br>
-D) Bare Metal<br>
-<br>
-<b>Answer: C) SaaS</b>
+<summary>Show Answer</summary>
+Answer: C) SaaS</b>
 </details>
 
+
+<b>24. Who is responsible for securing the code in a PaaS model?</b>
 <details>
-<summary><b>24. Who is responsible for securing the code in a PaaS model?</b></summary>
-A) The Provider<br>
-B) The Customer<br>
-C) The Government<br>
-D) No one<br>
-<br>
-<b>Answer: B) The Customer</b>
+<summary>Show Answer</summary>
+Answer: B) The Customer</b>
 </details>
 
+
+<b>25. "Focus on business logic, ignore the server" best describes:</b>
 <details>
-<summary><b>25. "Focus on business logic, ignore the server" best describes:</b></summary>
-A) IaaS<br>
-B) Virtualization<br>
-C) FaaS (Serverless)<br>
-D) On-Premises<br>
-<br>
-<b>Answer: C) FaaS (Serverless)</b>
+<summary>Show Answer</summary>
+Answer: C) FaaS (Serverless)</b>
 </details>

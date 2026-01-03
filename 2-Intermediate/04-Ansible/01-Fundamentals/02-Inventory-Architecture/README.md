@@ -9,8 +9,8 @@ graph LR
     Source1[Static File] -->|Parses| Engine[Inventory Engine]
     Source2[Cloud API] -->|Plugin| Engine
     Source3[CMDB] -->|Script| Engine
-    
-    Engine -->|List of Hosts| Playbook[Ansible Playbook]
+
+Engine -->|List of Hosts| Playbook[Ansible Playbook]
 ```
 
 ### Static Inventory (`hosts.ini` / `hosts.yml`)

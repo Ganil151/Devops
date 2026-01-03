@@ -27,7 +27,12 @@ ansible mysql -i inventory.ini -m shell \
 1. **Removed escaped quotes** around the SQL query
 2. **Used single quotes** for the `-e` parameter
 3. **Used escaped double quotes** (`\"`) around the variable in the WHERE clause
-4. **Simplified SELECT** to only get User column (we don't need Host for the grep)
+<b>4. Simplified SELECT** to only get User column</b>
+<details>
+<summary>Show Answer</summary>
+Answer: we don't need Host for the grep
+</details>
+
 
 ## Full Corrected Section
 

@@ -45,8 +45,8 @@ graph TD
     C --> D[Execution: Steps & Expected Output]
     D --> E[Verification: Proof of Resolution]
     E --> F[Rollback: Safety Net]
-    
-    style A fill:#f9f,stroke:#333
+
+style A fill:#f9f,stroke:#333
     style F fill:#fbb,stroke:#333
 ```
 
@@ -91,321 +91,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which section tells you the severity of the problem?**
-- A) Prerequisites
-- B) Alert Context
-- C) Rollback
-- D) Footer
-
+<b>1. Which section tells you the severity of the problem?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: Runbooks should be written in long, conversational paragraphs to explain the 'Why'.**
-- A) True
-- B) False
 
+<b>2. True/False: Runbooks should be written in long, conversational paragraphs to explain the 'Why'.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Use short, active, imperative verbs and bullet points for speed.
-
+Answer: B** - Use short, active, imperative verbs and bullet points for speed.
 </details>
 
-**3. What tool can be used to automatically enforce a documentation template?**
-- A) A Pre-commit hook or Linter
-- B) A Spreadsheet
-- C) A physical stamp
-- D) A phone call
 
+<b>3. What tool can be used to automatically enforce a documentation template?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**4. 'Expected Output' in a template should ideally be:**
-- A) A screenshot
-- B) Text-based code block showing the terminal result
-- C) An audio recording
-- D) Omitted to save space
 
+<b>4. 'Expected Output' in a template should ideally be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which naming convention is most useful for an SRE team?**
-- A) `runbook.doc`
-- B) `RB-DB-05: Postgres_Connection_Limit`
-- C) `Instructions_v2.txt`
-- D) `My_Notes.md`
 
+<b>5. Which naming convention is most useful for an SRE team?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. The 'Rollback' section is critical for:**
-- A) Saving money
-- B) Returning the system to a safe state if the fix fails or causes side effects
-- C) Showing the history of the app
-- D) Meeting the CEO
 
+<b>6. The 'Rollback' section is critical for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Where should 'Required Permissions' be listed?**
-- A) At the very end
-- B) In the Prerequisites section near the top
-- C) In a separate file
-- D) Nowhere
 
+<b>7. Where should 'Required Permissions' be listed?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. Why are 'Copy-Pasteable' code blocks essential?**
-- A) To prevent syntax/manual typing errors during high-stress outages
-- B) To make the file look better
-- C) To follow legal rules
-- D) To save disk space
 
+<b>8. Why are 'Copy-Pasteable' code blocks essential?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**9. A template helps 'Standardize' documentation across:**
-- A) Only one person
-- B) The entire engineering organization
-- C) Only the managers
-- D) The customers
 
+<b>9. A template helps 'Standardize' documentation across:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. Which word is an 'Active Verb' suitable for a runbook?**
-- A) Consider
-- B) Restart
-- C) Think
-- D) Hope
 
+<b>10. Which word is an 'Active Verb' suitable for a runbook?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. The 'Alert Link' in the template connects the doc to:**
-- A) Social media
-- B) The real-time monitoring data that triggered the incident
-- C) The company home page
-- D) A news article
 
+<b>11. The 'Alert Link' in the template connects the doc to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. True/False: Metadata (Owner, Version) should be hidden at the bottom of the page.**
-- A) True
-- B) False
 
+<b>12. True/False: Metadata (Owner, Version) should be hidden at the bottom of the page.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - It should be visible at the top for accountability and context.
-
+Answer: B** - It should be visible at the top for accountability and context.
 </details>
 
-**13. A 'Table of Contents' is most useful for:**
-- A) Short runbooks (1 page)
-- B) Long, complex runbooks (5+ pages) with multiple recovery paths
-- C) Every document
-- D) No document
 
+<b>13. A 'Table of Contents' is most useful for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. 'Redundancy' in a template means:**
-- A) Having the same information in two places
-- B) Having multiple ways to access the document (Safe but not part of formatting)
-- C) Including extra, useless sections (Avoid this)
-- D) using images
 
+<b>14. 'Redundancy' in a template means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**15. 'Actionable' steps are the core of which section?**
-- A) Metadata
-- B) Runbook Steps
-- C) Rollback
-- D) Glossary
 
+<b>15. 'Actionable' steps are the core of which section?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. What is the risk of a 'Non-Standard' format?**
-- A) The computer will crash
-- B) Engineers will waste valuable time during outages searching for basic information
-- C) It's cheaper
-- D) It's more creative
 
+<b>16. What is the risk of a 'Non-Standard' format?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. 'Verification' proves that:**
-- A) You read the doc
-- B) The issue is actually resolved and the system is healthy
-- C) You are at work
-- D) The clock is right
 
+<b>17. 'Verification' proves that:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why use 'Markdown' for templates?**
-- A) It's colorful
-- B) It's lightweight, version-controllable, and renders consistently across tools
-- C) It's owned by Microsoft
-- D) It's only for Linux
 
+<b>18. Why use 'Markdown' for templates?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. A 'Template Registry' is:**
-- A) A list of employees
-- B) A central repository where the approved runbook templates are stored
-- C) A type of database
-- D) A website for news
 
+<b>19. A 'Template Registry' is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: 'Rollback' steps should be tested as often as 'Fix' steps.**
-- A) True
-- B) False
 
+<b>20. True/False: 'Rollback' steps should be tested as often as 'Fix' steps.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - An untested rollback is an invisible risk.
-
+Answer: A** - An untested rollback is an invisible risk.
 </details>
 
-**21. 'Searchability' is improved by:**
-- A) Using more images
-- B) Using consistent headers and keywords (Metadata) in the template
-- C) Making the file private
-- D) deleting the file
 
+<b>21. 'Searchability' is improved by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Which section describes the 'Desired State' after the fix?**
-- A) Introduction
-- B) Verification
-- C) Prerequisites
-- D) Footer
 
+<b>22. Which section describes the 'Desired State' after the fix?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. 'Bullet Points' are preferred over paragraphs because:**
-- A) They are easier to skim and process while under stress
-- B) They use less ink
-- C) They look like code
-- D) paragraphs are illegal
 
+<b>23. 'Bullet Points' are preferred over paragraphs because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**24. A 'Category' tag (e.g., NET, DB, APP) helps in:**
-- A) Naming the team
-- B) Faster filtering and navigation in the knowledge base
-- C) Billing
-- D) Security
 
+<b>24. A 'Category' tag (e.g., NET, DB, APP) helps in:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The ultimate goal of the Standard Template is:**
-- A) To make writing harder
-- B) To minimize human error and maximize speed during operational tasks
-- C) to please the manager
-- D) to have more files
 
+<b>25. The ultimate goal of the Standard Template is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

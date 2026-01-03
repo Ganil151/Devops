@@ -319,9 +319,19 @@ df -h /
 ## ⚠️ **Important Notes**
 
 1. **Volume Modification Limits**: You can only modify a volume once every 6 hours
-2. **Filesystem Type**: Amazon Linux 2023 uses XFS (use `xfs_growfs`), older versions use ext4 (use `resize2fs`)
+<b>2. Filesystem Type**: Amazon Linux 2023 uses XFS</b>
+<details>
+<summary>Show Answer</summary>
+Answer: use `xfs_growfs`), older versions use ext4 (use `resize2fs`
+</details>
+
 3. **Backup First**: Always create snapshots before resizing
-4. **Cost**: Larger volumes cost more (gp3: $0.08/GB/month)
+<b>4. Cost**: Larger volumes cost more</b>
+<details>
+<summary>Show Answer</summary>
+Answer: gp3: $0.08/GB/month
+</details>
+
 5. **Performance**: gp3 is faster and cheaper than gp2
 
 ---
@@ -368,7 +378,12 @@ df -h /
 ## 📝 **Next Steps**
 
 1. Decide which method to use based on your needs
-2. Create snapshots of existing volumes (optional but recommended)
+<b>2. Create snapshots of existing volumes</b>
+<details>
+<summary>Show Answer</summary>
+Answer: optional but recommended
+</details>
+
 3. Resize volumes using chosen method
 4. Update Terraform configuration for future deployments
 5. Verify all instances have correct volume sizes

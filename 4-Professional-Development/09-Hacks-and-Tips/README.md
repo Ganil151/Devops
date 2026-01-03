@@ -6,7 +6,12 @@ Practical, battle-tested strategies to accelerate your DevOps monetization journ
 
 ## 📋 Table of Contents
 
-1. [Quick Wins (First 30 Days)](#quick-wins)
+<b>1. [Quick Wins</b>
+<details>
+<summary>Show Answer</summary>
+Answer: First 30 Days)](#quick-wins
+</details>
+
 2. [Client Acquisition Hacks](#client-acquisition)
 3. [Pricing & Negotiation Strategies](#pricing)
 4. [Productivity & Time Management](#productivity)
@@ -201,22 +206,47 @@ Coffee/Zoom sometime? [2-3 time options]
 ```
 I analyzed 50 startup AWS bills. Here are the 5 most common wastes:
 
-1. Unattached EBS volumes ($2k-10k/month)
+<b>1. Unattached EBS volumes</b>
+<details>
+<summary>Show Answer</summary>
+Answer: $2k-10k/month
+</details>
+
    → Set up automated cleanup with this script: [link]
 
-2. Over-provisioned RDS instances (40% waste)
+<b>2. Over-provisioned RDS instances</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 40% waste
+</details>
+
    → Use this sizing calculator: [link]
 
-3. No Reserved Instances (30-70% overpaying)
+<b>3. No Reserved Instances</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 30-70% overpaying
+</details>
+
    → Here's my RI buying strategy: [link]
 
-4. Expensive data transfer (10-20% of bill)
+<b>4. Expensive data transfer</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 10-20% of bill
+</details>
+
    → 3 quick fixes: [link]
 
-5. Unused Elastic IPs ($3.60 each/month)
+<b>5. Unused Elastic IPs</b>
+<details>
+<summary>Show Answer</summary>
+Answer: $3.60 each/month
+</details>
+
    → Find them with: aws ec2 describe-addresses --query...
 
-Saved one client $60k/year by fixing these. 
+Saved one client $60k/year by fixing these.
 
 DM me your AWS bill screenshot (blur the account ID) and I'll spot your top 3 wastes for free.
 ```
@@ -421,17 +451,32 @@ Even if I only save you half of what I projected, you still 2x your investment."
 **Hack**: Create once, sell many times
 
 **Examples**:
-1. **Terraform Modules** ($500-2,000 each)
+<b>1. Terraform Modules</b>
+<details>
+<summary>Show Answer</summary>
+Answer: $500-2,000 each
+</details>
+
    - Create: 8 hours
    - Sell: 50+ times
    - Revenue: $25k-100k
 
-2. **Runbook Templates** ($200-500 each)
+<b>2. Runbook Templates</b>
+<details>
+<summary>Show Answer</summary>
+Answer: $200-500 each
+</details>
+
    - Create: 4 hours
    - Sell: 100+ times
    - Revenue: $20k-50k
 
-3. **Video Course** ($99-299)
+<b>3. Video Course</b>
+<details>
+<summary>Show Answer</summary>
+Answer: $99-299
+</details>
+
    - Create: 40 hours
    - Sell: 500+ times
    - Revenue: $50k-150k
@@ -448,7 +493,12 @@ Even if I only save you half of what I projected, you still 2x your investment."
 
 **Build Your Swipe File**:
 1. Save 20 high-performing posts in your niche
-2. Identify patterns (structure, hooks, CTAs)
+<b>2. Identify patterns</b>
+<details>
+<summary>Show Answer</summary>
+Answer: structure, hooks, CTAs
+</details>
+
 3. Create templates
 4. Fill in with your expertise
 
@@ -746,7 +796,12 @@ Make sense? Any questions?"
 - Become THE expert
 
 **How to Choose**:
-1. Industry you understand (former employer, passion)
+<b>1. Industry you understand</b>
+<details>
+<summary>Show Answer</summary>
+Answer: former employer, passion
+</details>
+
 2. Technology you're expert in
 3. Problem you've solved multiple times
 
@@ -774,9 +829,24 @@ Make sense? Any questions?"
 - YouTube series
 
 **Talk Structure** (20-30 minutes):
-1. Problem (5 min)
-2. Your solution (15 min)
-3. Results/Case study (5 min)
+<b>1. Problem</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 5 min
+</details>
+
+<b>2. Your solution</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 15 min
+</details>
+
+<b>3. Results/Case study</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 5 min
+</details>
+
 4. CTA: "DM me for the full playbook"
 
 **Result**: 20-100 leads per talk, 2-5 clients
@@ -796,9 +866,24 @@ Make sense? Any questions?"
 **How**:
 1. Repurpose your best content
 2. Add 20-30% new material
-3. Hire editor on Upwork ($500-1,000)
-4. Design cover on Fiverr ($50-200)
-5. Publish on Amazon KDP (free)
+<b>3. Hire editor on Upwork</b>
+<details>
+<summary>Show Answer</summary>
+Answer: $500-1,000
+</details>
+
+<b>4. Design cover on Fiverr</b>
+<details>
+<summary>Show Answer</summary>
+Answer: $50-200
+</details>
+
+<b>5. Publish on Amazon KDP</b>
+<details>
+<summary>Show Answer</summary>
+Answer: free
+</details>
+
 
 **Title Formula**:
 "The [Audience] Guide to [Outcome]: [Unique Approach]"
@@ -918,9 +1003,19 @@ Make sense? Any questions?"
 **The Challenge**: "30 Days to $30k"
 
 **Rules**:
-1. Offer free audit to 30 companies (1 per day)
+<b>1. Offer free audit to 30 companies</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 1 per day
+</details>
+
 2. Deliver incredible value
-3. Convert 10% to paid projects ($30k average)
+<b>3. Convert 10% to paid projects</b>
+<details>
+<summary>Show Answer</summary>
+Answer: $30k average
+</details>
+
 4. Result: 3 clients × $30k = $90k in pipeline
 
 **Email Template**:

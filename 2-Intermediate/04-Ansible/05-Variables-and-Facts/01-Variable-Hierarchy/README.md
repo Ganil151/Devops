@@ -14,8 +14,8 @@ graph BT
     L4 --> L5[Role Vars]
     L5 --> L6[Registered Vars]
     L6 --> L7[Extra Vars CLI]
-    
-    style L7 fill:#ee0000,color:#fff,stroke:#333,stroke-width:2px
+
+style L7 fill:#ee0000,color:#fff,stroke:#333,stroke-width:2px
 ```
 
 ### Key Precedence Levels (Simplified)

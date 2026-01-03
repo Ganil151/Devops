@@ -10,14 +10,14 @@ A **Play** maps a group of **Hosts** to a list of **Tasks**.
 graph TD
     File[site.yml] --> Play1[Play 1: Configure Database]
     File --> Play2[Play 2: Configure Web Server]
-    
-    Play1 --> Hosts1[Hosts: dbservers]
+
+Play1 --> Hosts1[Hosts: dbservers]
     Play1 --> Tasks1[Task List]
-    
-    Tasks1 --> T1[Task: Install Postgres]
+
+Tasks1 --> T1[Task: Install Postgres]
     Tasks1 --> T2[Task: Start Service]
-    
-    Play2 --> Hosts2[Hosts: webservers]
+
+Play2 --> Hosts2[Hosts: webservers]
     Play2 --> Tasks2[Task List]
     Tasks2 --> T3[Task: Install Nginx]
 ```

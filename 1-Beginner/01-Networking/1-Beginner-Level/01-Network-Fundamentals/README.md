@@ -245,7 +245,12 @@ Device4 ──── Device3
 When you access a website (www.example.com):
 
 1. **Application Layer**: Browser creates HTTP request
-2. **Transport Layer**: TCP adds port information (80/443)
+<b>2. Transport Layer**: TCP adds port information</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 80/443
+</details>
+
 3. **Network Layer**: IP adds source/destination addresses
 4. **Data Link Layer**: Ethernet adds MAC addresses
 5. **Physical Layer**: Electrical signals transmitted over cable

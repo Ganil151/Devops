@@ -134,7 +134,12 @@ I hope [project/session] has been valuable for you! I'd love to feature your fee
 Would you mind writing a brief testimonial (3-5 sentences) about:
 1. What problem we solved together
 2. What you learned or achieved
-3. What results you've seen (if applicable)
+<b>3. What results you've seen</b>
+<details>
+<summary>Show Answer</summary>
+Answer: if applicable
+</details>
+
 
 No pressure if you're busy - I know your time is valuable!
 

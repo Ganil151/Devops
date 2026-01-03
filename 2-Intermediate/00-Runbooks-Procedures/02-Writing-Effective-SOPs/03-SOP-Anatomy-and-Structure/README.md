@@ -7,8 +7,8 @@ graph TD
     Verify1 --> Steps[Execution: Step-by-Step Fix]
     Steps --> Verify2[Post-Verification: Confirm Success]
     Verify2 --> Rollback[Rollback: Emergency Exit]
-    
-    subgraph "The Safe Path"
+
+subgraph "The Safe Path"
     Steps
     Verify2
     Rollback
@@ -57,321 +57,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which section lists the required IAM permissions and CLI tools?**
-- A) Metadata
-- B) Prerequisites
-- C) Resolution
-- D) Footer
-
+<b>1. Which section lists the required IAM permissions and CLI tools?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: Metadata should include the 'Owner' or team responsible for the document.**
-- A) True
-- B) False
 
+<b>2. True/False: Metadata should include the 'Owner' or team responsible for the document.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - This ensures you know who to contact if the SDR needs updating.
-
+Answer: A** - This ensures you know who to contact if the SDR needs updating.
 </details>
 
-**3. Why include 'Expected Output' after a terminal command?**
-- A) To make the doc longer
-- B) To provide a checkpoint that confirms the step was successful before moving on
-- C) To show off the code
-- D) It's optional
 
+<b>3. Why include 'Expected Output' after a terminal command?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. The 'Remediation' section is primarily for:**
-- A) Explaining the history of the app
-- B) Step-by-step instructions to fix the problem
-- C) Listing team members
-- D) Budgeting
 
+<b>4. The 'Remediation' section is primarily for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. A 'Rollback' plan is essential because:**
-- A) It saves money
-- B) It provides a safe exit strategy if the remediation steps fail or cause new issues
-- C) It's required by the CEO
-- D) It's for juniors only
 
+<b>5. A 'Rollback' plan is essential because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Initial Verification' helps confirm:**
-- A) The engineer is awake
-- B) That the problem described in the alert is actually happening
-- C) The date
-- D) The server location
 
+<b>6. 'Initial Verification' helps confirm:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Metadata like 'SLO Impact' tells the reader:**
-- A) How much money the site makes
-- B) Which service level objectives are at risk during or after this procedure
-- C) The server OS
-- D) The author's name only
 
+<b>7. Metadata like 'SLO Impact' tells the reader:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. Code blocks in an SOP should be:**
-- A) Screenshots
-- B) Plain text / Markdown code blocks for easy copy-pasting
-- C) Links to other files
-- D) Avoided
 
+<b>8. Code blocks in an SOP should be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. 'Atomic Steps' means each numbered step should:**
-- A) Contain 10 different tasks
-- B) Be a single, clear action that leads to a measurable result
-- C) Be a paragraph of text
-- D) use complex language
 
+<b>9. 'Atomic Steps' means each numbered step should:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. A 'Warning' about production downtime should be placed:**
-- A) At the very end of the document
-- B) Clearly at the top or immediately before the high-risk step
-- C) In the footer
-- D) In a separate email
 
+<b>10. A 'Warning' about production downtime should be placed:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. 'Final Verification' occurs:**
-- A) Before the fix
-- B) After the remediation steps to prove the system is back to healthy state
-- C) Once a year
-- D) Only for auditors
 
+<b>11. 'Final Verification' occurs:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. True/False: An SOP Identifier (e.g., SOP-DB-01) makes documentation searchable.**
-- A) True
-- B) False
 
+<b>12. True/False: An SOP Identifier (e.g., SOP-DB-01) makes documentation searchable.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**13. Which section is best for 'Critical Safety' notices?**
-- A) Glossary
-- B) Prerequisites / Alerts
-- C) History
-- D) Appendix
 
+<b>13. Which section is best for 'Critical Safety' notices?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. If a step fails, the 'Rollback' instructions are used to:**
-- A) Delete the logs
-- B) Safely undo changes and return to the last known good state
-- C) Fix the document
-- D) call a meeting
 
+<b>14. If a step fails, the 'Rollback' instructions are used to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Subject Matter Experts' (SMEs) are usually listed in:**
-- A) The Rollback
-- B) The Metadata (Owner/Author section)
-- C) The Code blocks
-- D) The header image
 
+<b>15. 'Subject Matter Experts' (SMEs) are usually listed in:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. Why use 'Imperative' verbs (Check, Run, Stop) in steps?**
-- A) To be mean
-- B) To provide clear, directive instructions that reduce ambiguity
-- C) They look cooler
-- D) No reason
 
+<b>16. Why use 'Imperative' verbs (Check, Run, Stop) in steps?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. 'Environment Specific' instructions belong in:**
-- A) Every SOP regardless
-- B) Specific sections or separate SOPs for Dev/Staging/Prod
-- C) Only in the code
-- D) Nowhere
 
+<b>17. 'Environment Specific' instructions belong in:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. A 'Troubleshooting' section within an SOP handles:**
-- A) New feature ideas
-- B) Common edge cases or "What if this step fails?" scenarios
-- C) Personnel issues
-- D) Payroll
 
+<b>18. A 'Troubleshooting' section within an SOP handles:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. 'Linkability' in an SOP refers to:**
-- A) Linking to social media
-- B) Providing deep links to relevant dashboards, logs, or external tools
-- C) Using many files
-- D) deleting links
 
+<b>19. 'Linkability' in an SOP refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: Standardizing the anatomy of all SOPs reduces 'Cognitive Load' for engineers.**
-- A) True
-- B) False
 
+<b>20. True/False: Standardizing the anatomy of all SOPs reduces 'Cognitive Load' for engineers.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Visual Aids' (like Mermaid diagrams) are best used for:**
-- A) Decoration
-- B) Explaining complex logical flows or decision trees in the SOP
-- C) Hiding text
-- D) printing
 
+<b>21. 'Visual Aids' (like Mermaid diagrams) are best used for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Pre-flight Checks' is another term for:**
-- A) Vacation
-- B) Prerequisites and initial verification
-- C) Final cleanup
-- D) Salary review
 
+<b>22. 'Pre-flight Checks' is another term for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Why specify 'Tool Versions' (e.g., Python 3.9+)?**
-- A) To be difficult
-- B) To avoid compatibility issues where an older/newer tool fails to run the command correctly
-- C) It's a Git rule
-- D) To use more numbers
 
+<b>23. Why specify 'Tool Versions' (e.g., Python 3.9+)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Audience' of an SOP should be:**
-- A) Only the CEO
-- B) Clearly defined (e.g., "For SRE On-Call Engineers")
-- C) Everyone in the world
-- D) Nobody
 
+<b>24. The 'Audience' of an SOP should be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The core purpose of the SOP structure is:**
-- A) To make writing harder
-- B) To guide the user from a state of 'Problem' to 'Resolved' with maximum safety
-- C) To fill up a Wiki
-- D) to show off
 
+<b>25. The core purpose of the SOP structure is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

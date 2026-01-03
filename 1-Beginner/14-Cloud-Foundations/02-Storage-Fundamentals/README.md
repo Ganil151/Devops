@@ -8,32 +8,32 @@ Comprehensive guide to cloud storage types, services, and best practices across 
 ```mermaid
 graph TD
     User[User/Application]
-    
-    subgraph Block [Block Storage]
+
+subgraph Block [Block Storage]
         OS[OS Boot Volume]
         DB[Database Files]
     end
-    
-    subgraph File [File Storage]
+
+subgraph File [File Storage]
         Shared[Shared Docs]
         CMS[Content Mgmt]
     end
-    
-    subgraph Object [Object Storage]
+
+subgraph Object [Object Storage]
         Media[Images/Video]
         Backup[Archived Data]
         Web[Static Website]
     end
-    
-    User -->|Mount Drive iSCSI/NVMe| Block
+
+User -->|Mount Drive iSCSI/NVMe| Block
     User -->|Mount Network Share NFS/SMB| File
     User -->|REST API HTTP| Object
-    
-    classDef block fill:#e3f2fd,stroke:#0d47a1
+
+classDef block fill:#e3f2fd,stroke:#0d47a1
     classDef file fill:#fff3e0,stroke:#e65100
     classDef object fill:#f3e5f5,stroke:#4a148c
-    
-    class Block block
+
+class Block block
     class File file
     class Object object
 ```
@@ -459,224 +459,148 @@ This comprehensive guide covers cloud storage fundamentals, services, and best p
 8.  **What is the use case for "Transfer Acceleration"?**
     -   Using the AWS Edge Network (CloudFront edge locations) to upload data to S3 faster from long distances.
 
-### Advanced Level
-9.  **How does "Cross-Region Replication" aid in Disaster Recovery (DR)?**
-    -   It automatically duplicates every object uploaded to a bucket in Region A to a backup bucket in Region B. If Region A goes down, data is safe and accessible in Region B.
-10. **Explain the performance implications of "Partitioning" or "Prefixing" in S3 (historical context).**
-    -   Historically, creating random prefixes helped distribute keys across S3 partitions to avoid IOPS hotspots. S3 auto-scales improved this, but it's still relevant for massive loads (>3500 PUTs/sec per prefix).
-11. **What is an "Immutable Bucket" (Object Lock)?**
-    -   A WORM (Write Once Read Many) configuration where objects cannot be deleted or overwritten for a fixed retention period. Critical for legal hold and ransomware protection.
-12. **How does Block Storage (EBS) Multi-Attach work?**
-    -   Allows a single EBS volume to be attached to multiple EC2 instances within the same AZ. Useful for clustered applications like SAP or Oracle RAC that manage their own write coordination.
-13. **What happens to the "Instance Store" (Ephemeral Storage) when you stop an instance?**
-    -   It is lost. Instance Store is physically attached to the host hardware. If the VM moves host (stop/start), that data is wiped. Only EBS persists.
-
----
-
-## Quiz: Storage Fundamentals
-
+<b>9. </b>
 <details>
-<summary><b>1. Which storage type is best for hosting a static website?</b></summary>
-A) Block Storage<br>
-B) File Storage<br>
-C) Object Storage (S3)<br>
-D) Tape Drive<br>
-<br>
-<b>Answer: C) Object Storage (S3)</b>
+<summary>Show Answer</summary>
+Answer: C) Object Storage (S3)</b>
 </details>
 
+
+<b>2. If a database requires sub-millisecond disk latency, which storage should you use?</b>
 <details>
-<summary><b>2. If a database requires sub-millisecond disk latency, which storage should you use?</b></summary>
-A) AWS S3<br>
-B) AWS EFS<br>
-C) AWS EBS (Block Storage)<br>
-D) AWS Glacier<br>
-<br>
-<b>Answer: C) AWS EBS (Block Storage)</b>
+<summary>Show Answer</summary>
+Answer: C) AWS EBS (Block Storage)</b>
 </details>
 
+
+<b>3. S3 Standard storage allows you to mount the bucket as a drive on your OS natively for high performance DB I/O. (True/False)</b>
 <details>
-<summary><b>3. S3 Standard storage allows you to mount the bucket as a drive on your OS natively for high performance DB I/O. (True/False)</b></summary>
-A) True<br>
-B) False<br>
-<br>
-<b>Answer: B) False</b>
+<summary>Show Answer</summary>
+Answer: B) False</b>
 </details>
 
+
+<b>4. Which storage tier is the cheapest "Archive" solution?</b>
 <details>
-<summary><b>4. Which storage tier is the cheapest "Archive" solution?</b></summary>
-A) S3 Standard<br>
-B) S3 Intelligent-Tiering<br>
-C) S3 Glacier Deep Archive<br>
-D) EBS General Purpose<br>
-<br>
-<b>Answer: C) S3 Glacier Deep Archive</b>
+<summary>Show Answer</summary>
+Answer: C) S3 Glacier Deep Archive</b>
 </details>
 
+
+<b>5. To share files between 100 Linux servers simultaneously, you should use:</b>
 <details>
-<summary><b>5. To share files between 100 Linux servers simultaneously, you should use:</b></summary>
-A) EBS<br>
-B) Instance Store<br>
-C) EFS (Elastic File System)<br>
-D) Glacier<br>
-<br>
-<b>Answer: C) EFS (Elastic File System)</b>
+<summary>Show Answer</summary>
+Answer: C) EFS (Elastic File System)</b>
 </details>
 
+
+<b>6. What does "11 9s" refer to in S3?</b>
 <details>
-<summary><b>6. What does "11 9s" refer to in S3?</b></summary>
-A) Availability<br>
-B) Durability<br>
-C) Speed<br>
-D) Cost<br>
-<br>
-<b>Answer: B) Durability</b>
+<summary>Show Answer</summary>
+Answer: B) Durability</b>
 </details>
 
+
+<b>7. EBS Volumes are scoped to which boundary level?</b>
 <details>
-<summary><b>7. EBS Volumes are scoped to which boundary level?</b></summary>
-A) Global<br>
-B) Region<br>
-C) Availability Zone (AZ)<br>
-D) Server Rack<br>
-<br>
-<b>Answer: C) Availability Zone (AZ)</b>
+<summary>Show Answer</summary>
+Answer: C) Availability Zone (AZ)</b>
 </details>
 
+
+<b>8. S3 Buckets are scoped to which boundary level (for naming uniqueness)?</b>
 <details>
-<summary><b>8. S3 Buckets are scoped to which boundary level (for naming uniqueness)?</b></summary>
-A) Global<br>
-B) Region<br>
-C) AZ<br>
-D) VPC<br>
-<br>
-<b>Answer: A) Global</b>
+<summary>Show Answer</summary>
+Answer: A) Global</b>
 </details>
 
+
+<b>9. What feature protects S3 objects from accidental deletion?</b>
 <details>
-<summary><b>9. What feature protects S3 objects from accidental deletion?</b></summary>
-A) Acceleration<br>
-B) Versioning<br>
-C) Encryption<br>
-D) Compression<br>
-<br>
-<b>Answer: B) Versioning</b>
+<summary>Show Answer</summary>
+Answer: B) Versioning</b>
 </details>
 
+
+<b>10. Block storage data is persistently stored even after the instance terminates IF:</b>
 <details>
-<summary><b>10. Block storage data is persistently stored even after the instance terminates IF:</b></summary>
-A) It is an Instance Store volume<br>
-B) The "Delete on Termination" flag is unchecked<br>
-C) It is formatted as NTFS<br>
-D) It never persists<br>
-<br>
-<b>Answer: B) The "Delete on Termination" flag is unchecked</b>
+<summary>Show Answer</summary>
+Answer: B) The "Delete on Termination" flag is unchecked</b>
 </details>
 
+
+<b>11. Which S3 feature allows you to use a custom domain name for objects?</b>
 <details>
-<summary><b>11. Which S3 feature allows you to use a custom domain name for objects?</b></summary>
-A) Static Website Hosting + DNS<br>
-B) Versioning<br>
-C) Encryption<br>
-D) MFA Delete<br>
-<br>
-<b>Answer: A) Static Website Hosting + DNS</b>
+<summary>Show Answer</summary>
+Answer: A) Static Website Hosting + DNS</b>
 </details>
 
+
+<b>12. EBS Snapshots are stored in:</b>
 <details>
-<summary><b>12. EBS Snapshots are stored in:</b></summary>
-A) The same EBS volume<br>
-B) S3 (managed by AWS, effectively)<br>
-C) EFS<br>
-D) RAM<br>
-<br>
-<b>Answer: B) S3 (managed by AWS, effectively)</b>
+<summary>Show Answer</summary>
+Answer: B) S3 (managed by AWS, effectively)</b>
 </details>
 
+
+<b>13. Can you attach one EBS volume to an instance in a different Availability Zone?</b>
 <details>
-<summary><b>13. Can you attach one EBS volume to an instance in a different Availability Zone?</b></summary>
-A) Yes<br>
-B) No<br>
-<br>
-<b>Answer: B) No</b>
+<summary>Show Answer</summary>
+Answer: B) No</b>
 </details>
 
+
+<b>14. Which is NOT a valid access method for S3?</b>
 <details>
-<summary><b>14. Which is NOT a valid access method for S3?</b></summary>
-A) REST API<br>
-B) AWS CLI<br>
-C) AWS Console<br>
-D) iSCSI Protocol<br>
-<br>
-<b>Answer: D) iSCSI Protocol</b>
+<summary>Show Answer</summary>
+Answer: D) iSCSI Protocol</b>
 </details>
 
+
+<b>15. Data "Re-hydration" time is a key consideration for which storage class?</b>
 <details>
-<summary><b>15. Data "Re-hydration" time is a key consideration for which storage class?</b></summary>
-A) S3 Standard<br>
-B) S3 Glacier<br>
-C) EBS<br>
-D) EFS<br>
-<br>
-<b>Answer: B) S3 Glacier</b>
+<summary>Show Answer</summary>
+Answer: B) S3 Glacier</b>
 </details>
 
+
+<b>16. Instance Store provides:</b>
 <details>
-<summary><b>16. Instance Store provides:</b></summary>
-A) Permanent storage<br>
-B) Ephemeral (Temporary) storage with very high performance<br>
-C) Network storage<br>
-D) Backup storage<br>
-<br>
-<b>Answer: B) Ephemeral (Temporary) storage with very high performance</b>
+<summary>Show Answer</summary>
+Answer: B) Ephemeral (Temporary) storage with very high performance</b>
 </details>
 
+
+<b>17. Which Azure service maps to AWS S3?</b>
 <details>
-<summary><b>17. Which Azure service maps to AWS S3?</b></summary>
-A) Azure Files<br>
-B) Azure Blob Storage<br>
-C) Azure Disk<br>
-D) Azure Archive<br>
-<br>
-<b>Answer: B) Azure Blob Storage</b>
+<summary>Show Answer</summary>
+Answer: B) Azure Blob Storage</b>
 </details>
 
+
+<b>18. What is the max file size in S3?</b>
 <details>
-<summary><b>18. What is the max file size in S3?</b></summary>
-A) 1 GB<br>
-B) 5 TB<br>
-C) Unlimited<br>
-D) 100 MB<br>
-<br>
-<b>Answer: B) 5 TB</b>
+<summary>Show Answer</summary>
+Answer: B) 5 TB</b>
 </details>
 
+
+<b>19. Lifecycle rules can be applied to current versions and _____ versions.</b>
 <details>
-<summary><b>19. Lifecycle rules can be applied to current versions and _____ versions.</b></summary>
-A) Future<br>
-B) Previous (Non-current)<br>
-C) Deleted<br>
-D) Imaginary<br>
-<br>
-<b>Answer: B) Previous (Non-current)</b>
+<summary>Show Answer</summary>
+Answer: B) Previous (Non-current)</b>
 </details>
 
+
+<b>20. Use cases for Block Storage include:</b>
 <details>
-<summary><b>20. Use cases for Block Storage include:</b></summary>
-A) Boot volumes and databases<br>
-B) YouTube video hosting<br>
-C) CDN Origin<br>
-D) Log archiving<br>
-<br>
-<b>Answer: A) Boot volumes and databases</b>
+<summary>Show Answer</summary>
+Answer: A) Boot volumes and databases</b>
 </details>
 
+
+<b>21. Which encryption key management option allows the customer to keep full control of the key material outside of AWS?</b>
 <details>
-<summary><b>21. Which encryption key management option allows the customer to keep full control of the key material outside of AWS?</b></summary>
-A) SSE-S3<br>
-B) SSE-KMS<br>
-C) SSE-C (Customer Provided)<br>
-D) Plaintext<br>
-<br>
-<b>Answer: C) SSE-C (Customer Provided)</b>
+<summary>Show Answer</summary>
+Answer: C) SSE-C (Customer Provided)</b>
 </details>

@@ -58,11 +58,50 @@ Test your mastery of diagnostic, simulation, and scanning tools.
 
 ## ✅ Answers
 
-1. **C** (Packet Tracer simulates; GNS3 runs real code)
-2. **B** (Simulation Mode)
-3. **D** (Crossover - connecting like devices)
-4. **B** (GNS3 VM is much more stable)
-5. **C** (Wireshark)
-6. **B** (`-O`)
-7. **C** (Tcpdump)
-8. **B** (SYN -> SYN-ACK -> ACK)
+<b>1. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Packet Tracer simulates; GNS3 runs real code
+</details>
+
+<b>2. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Simulation Mode
+</details>
+
+<b>3. D</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Crossover - connecting like devices
+</details>
+
+<b>4. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: GNS3 VM is much more stable
+</details>
+
+<b>5. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Wireshark
+</details>
+
+<b>6. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: `-O`
+</details>
+
+<b>7. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Tcpdump
+</details>
+
+<b>8. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: SYN -> SYN-ACK -> ACK
+</details>

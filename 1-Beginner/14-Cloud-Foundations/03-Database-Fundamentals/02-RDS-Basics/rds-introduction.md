@@ -384,69 +384,93 @@ Ready to create your first RDS database?
 
 # 🧠 Knowledge Quiz
 
-**1. Which responsibility is handled by ONLY the customer in the RDS shared responsibility model?**
-A) OS patching
-B) Database schema design
-C) Hardware provisioning
-D) Database software installation
-> **Answer: B** - AWS manages hardware, OS, and software; you manage the data and schema.
+<b>1. Which responsibility is handled by ONLY the customer in the RDS shared responsibility model?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - AWS manages hardware, OS, and software; you manage the data and schema.
+</details>
 
-**2. You need to improve the performance of a read-heavy news website running on RDS MySQL. What is the best solution?**
-A) Enable Multi-AZ
-B) Create Read Replicas
-C) Use Provisioned IOPS
-D) Increase instance size
-> **Answer: B** - Read Replicas are designed to offload read traffic.
 
-**3. What is the maximum backup retention period in RDS?**
-A) 7 days
-B) 14 days
-C) 30 days
-D) 35 days
-> **Answer: D** - RDS supports automated backups with retention up to 35 days.
 
-**4. Which RDS feature provides synchronous replication for disaster recovery?**
-A) Read Replicas
-B) Multi-AZ
-C) Snapshots
-D) Global Tables
-> **Answer: B** - Multi-AZ replicates data synchronously to a standby instance.
 
-**5. Which database engine is compatible with SQL Server?**
-A) Aurora
-B) MariaDB
-C) Oracle
-D) Amazon RDS for SQL Server
-> **Answer: D** - RDS supports native Microsoft SQL Server engines.
+<b>2. You need to improve the performance of a read-heavy news website running on RDS MySQL. What is the best solution?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - Read Replicas are designed to offload read traffic.
+</details>
 
-**6. You want to stop paying for an RDS instance but keep the data for later use. What should you do?**
-A) Stop the instance (for up to 7 days)
-B) Delete the instance and skip the final snapshot
-C) Take a final snapshot and delete the instance
-D) Change the instance class to db.t2.micro
-> **Answer: C** - Snapshots persist even after the instance is deleted and incur much lower storage costs.
 
-**7. Which storage type is best for high-performance, I/O-intensive workloads?**
-A) General Purpose (gp3)
-B) Provisioned IOPS (io1/io2)
-C) Magnetic
-D) Cold HDD
-> **Answer: B** - Provisioned IOPS provides guaranteed I/O performance.
 
-**8. True or False: You can force a failover of a Multi-AZ RDS instance by rebooting it with failover optional.**
-> **Answer: True** - You can manually trigger a failover by rebooting with the "Reboot with failover" option, which is useful for testing.
 
-**9. What happens to the endpoint string when a Multi-AZ failover occurs?**
-A) It changes to the IP of the standby
-B) It remains the same (CNAME record updates automatically)
-C) You must manually update your application config
-D) It becomes read-only
-> **Answer: B** - The DNS endpoint remains the same; AWS updates the DNS record to point to the new primary.
+<b>3. What is the maximum backup retention period in RDS?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: D** - RDS supports automated backups with retention up to 35 days.
+</details>
 
-**10. Which monitoring tool would you use to see deep visibility into OS metrics like swap usage and process lists?**
-A) CloudWatch Metrics
-B) CloudTrail
-C) Enhanced Monitoring
-D) VPC Flow Logs
-> **Answer: C** - Enhanced Monitoring provides real-time OS-level metrics.
+
+
+
+<b>4. Which RDS feature provides synchronous replication for disaster recovery?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - Multi-AZ replicates data synchronously to a standby instance.
+</details>
+
+
+
+
+<b>5. Which database engine is compatible with SQL Server?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: D** - RDS supports native Microsoft SQL Server engines.
+</details>
+
+
+
+
+<b>6. You want to stop paying for an RDS instance but keep the data for later use. What should you do?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - Snapshots persist even after the instance is deleted and incur much lower storage costs.
+</details>
+
+
+
+
+<b>7. Which storage type is best for high-performance, I/O-intensive workloads?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - Provisioned IOPS provides guaranteed I/O performance.
+</details>
+
+
+
+
+<b>8. True or False: You can force a failover of a Multi-AZ RDS instance by rebooting it with failover optional.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: True** - You can manually trigger a failover by rebooting with the "Reboot with failover" option, which is useful for testing.
+</details>
+
+
+
+
+<b>9. What happens to the endpoint string when a Multi-AZ failover occurs?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - The DNS endpoint remains the same; AWS updates the DNS record to point to the new primary.
+</details>
+
+
+
+
+<b>10. Which monitoring tool would you use to see deep visibility into OS metrics like swap usage and process lists?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - Enhanced Monitoring provides real-time OS-level metrics.
+</details>
+
+
+
 

@@ -53,8 +53,8 @@ output "db_password" {
     data "aws_secretsmanager_secret_version" "db_creds" {
       secret_id = "prod/db/password"
     }
-    
-    resource "aws_db_instance" "this" {
+
+resource "aws_db_instance" "this" {
       password = data.aws_secretsmanager_secret_version.db_creds.secret_string
     }
     ```
@@ -67,8 +67,8 @@ graph LR
     TF[Terraform Code] -->|Reference| Data[Data Source]
     Data -.->|Fetch at Runtime| AWS
     Data -->|Inject| Res[Resource (DB)]
-    
-    style Dev fill:#f9f,stroke:#333
+
+style Dev fill:#f9f,stroke:#333
     style AWS fill:#ff9,stroke:#333
     style TF fill:#9f9,stroke:#333
 ```

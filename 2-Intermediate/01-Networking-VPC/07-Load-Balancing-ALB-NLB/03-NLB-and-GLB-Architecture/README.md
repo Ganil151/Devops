@@ -39,8 +39,8 @@ sequenceDiagram
     participant GatewayLB
     participant Firewall
     participant App
-    
-    User->>GatewayLB: Original Packet
+
+User->>GatewayLB: Original Packet
     GatewayLB->>Firewall: GENEVE Wrapped Packet
     Note over Firewall: Inspect/Filter
     Firewall->>GatewayLB: GENEVE Wrapped Corrected

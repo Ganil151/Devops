@@ -116,7 +116,12 @@ kubectl top pods
 ### What We're Fixing:
 
 1. **Resource Limits**: Added memory/CPU limits to prevent OOM kills
-2. **Probe Timeouts**: Already increased (60s initial delay)
+<b>2. Probe Timeouts**: Already increased</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 60s initial delay
+</details>
+
 3. **Monitoring**: Will watch resource usage closely
 
 ### Resource Allocation Strategy:
@@ -145,8 +150,18 @@ kubectl top pods
 
 ## 📋 Next Steps After Terraform Apply
 
-1. ✅ Terraform creates instances (5-10 min)
-2. ⏳ Wait for K8s initialization (10-15 min)
+<b>1. ✅ Terraform creates instances</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 5-10 min
+</details>
+
+<b>2. ⏳ Wait for K8s initialization</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 10-15 min
+</details>
+
 3. ✅ I'll update deployment files with resource limits
 4. ✅ You deploy applications
 5. ✅ Verify all pods are Running

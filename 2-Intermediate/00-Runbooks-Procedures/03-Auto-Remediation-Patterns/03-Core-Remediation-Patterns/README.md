@@ -41,317 +41,176 @@
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which remediation pattern is best for fixing a memory leak in a stateless app?**
-- A) DNS Flush
-- B) Service Restarter
-- C) Disk Cleanup
-- D) Vertical Scaling
-
+<b>1. Which remediation pattern is best for fixing a memory leak in a stateless app?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: You should delete all files in `/var/log` if the disk is full.**
-- A) True
-- B) False
 
+<b>2. True/False: You should delete all files in `/var/log` if the disk is full.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Only delete rotated, old, or archived logs.
-
+Answer: B** - Only delete rotated, old, or archived logs.
 </details>
 
-**3. What does HPA stand for in Kubernetes?**
-- A) High Power Automation
-- B) Horizontal Pod Autoscaler
-- C) Heavy Process Archiver
-- D) Helpful Person Assistant
 
+<b>3. What does HPA stand for in Kubernetes?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. Which signal is commonly used to tell a process to 'Reload Config' without a full restart?**
-- A) SIGTERM
-- B) SIGHUP
-- C) SIGKILL
-- D) SIGINT
 
+<b>4. Which signal is commonly used to tell a process to 'Reload Config' without a full restart?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. 'Pattern 3' (Proactive Scaling) is triggered by:**
-- A) A service crash
-- B) Metrics trending toward a threshold (e.g., CPU > 80%) or predictive schedules
-- C) Someone deleting a file
-- D) bad weather
 
+<b>5. 'Pattern 3' (Proactive Scaling) is triggered by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Connection Pool Exhaustion' usually results in:**
-- A) Disk Full errors
-- B) "Too Many Connections" or timeout errors from the database
-- C) Fast response times
-- D) computer reboots
 
+<b>6. 'Connection Pool Exhaustion' usually results in:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: Graceful restarts should 'Drain' connections before killing the process.**
-- A) True
-- B) False
 
+<b>7. True/False: Graceful restarts should 'Drain' connections before killing the process.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - This prevents dropping user requests.
-
+Answer: A** - This prevents dropping user requests.
 </details>
 
-**8. Deleting cache files is an example of:**
-- A) Pattern 1 (Restarter)
-- B) Pattern 2 (Storage Cleanup)
-- C) Pattern 5 (DNS Flush)
-- D) A mistake
 
+<b>8. Deleting cache files is an example of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. 'Upper Limits' in auto-scaling are essential for:**
-- A) Speeding up the network
-- B) Budget and resource protection
-- C) Hiding logs
-- D) no reason
 
+<b>9. 'Upper Limits' in auto-scaling are essential for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. When a DNS entry is updated during failover, an app might fail because of:**
-- A) Lack of memory
-- B) Stale DNS Cache (Pattern 5)
-- C) CPU spikes
-- D) disk space
 
+<b>10. When a DNS entry is updated during failover, an app might fail because of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Which tool can automate Pattern 2 (Disk Cleanup) on Linux?**
-- A) Excel
-- B) Logrotate (or a custom Cron job)
-- C) Notepad
-- D) Slack
 
+<b>11. Which tool can automate Pattern 2 (Disk Cleanup) on Linux?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. True/False: 'Stateless' applications are easier to auto-remediate than 'Stateful' ones.**
-- A) True
-- B) False
 
+<b>12. True/False: 'Stateless' applications are easier to auto-remediate than 'Stateful' ones.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - Restarts don't risk data corruption in stateless apps.
-
+Answer: A** - Restarts don't risk data corruption in stateless apps.
 </details>
 
-**13. A 'Memory Leak' is best handled by vertical scaling (more RAM) as a:**
-- A) Permanent solution
-- B) Temporary "Safety Net" until the code is fixed
-- C) Waste of time
-- D) secret
 
+<b>13. A 'Memory Leak' is best handled by vertical scaling (more RAM) as a:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What occurs during a 'Rollout Restart' in Kubernetes?**
-- A) The whole cluster reboots
-- B) All pods are deleted at once
-- C) Pods are replaced one by one to ensure zero downtime
-- D) The database is cleared
 
+<b>14. What occurs during a 'Rollout Restart' in Kubernetes?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**15. 'Pattern 4' (Reset Pool) is better than a restart because:**
-- A) Restarts are too fast
-- B) It is less disruptive and faster for high-traffic apps
-- C) It uses more memory
-- D) it looks cooler
 
+<b>15. 'Pattern 4' (Reset Pool) is better than a restart because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: You should test your Disk Cleanup script on a production DB first.**
-- A) False - Test in Staging to ensure you don't delete critical data.
-- B) True
 
+<b>16. True/False: You should test your Disk Cleanup script on a production DB first.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'Saturation' is a metric that measures:**
-- A) Water content
-- B) How close a resource (CPU/Disk) is to its maximum capacity
-- C) The number of users
-- D) response time
 
+<b>17. 'Saturation' is a metric that measures:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Auto Scaling Groups (ASG) are specific to:**
-- A) Azure
-- B) AWS
-- C) Google Cloud
-- D) On-premise only
 
+<b>18. Auto Scaling Groups (ASG) are specific to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which pattern fixes 'Thread Hangs' in a JVM application?**
-- A) DNS Flush
-- B) Service Restarter (Pattern 1)
-- C) More Disk
-- D) Shorter cables
 
+<b>19. Which pattern fixes 'Thread Hangs' in a JVM application?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: 'Predictive Scaling' uses ML/Historic data to scale BEFORE the traffic arrives.**
-- A) True
-- B) False
 
+<b>20. True/False: 'Predictive Scaling' uses ML/Historic data to scale BEFORE the traffic arrives.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Zombie Processes' are best handled by:**
-- A) More memory
-- B) Pattern 1 (Targeted process restart or cleanup)
-- C) DNS Flush
-- D) magic
 
+<b>21. 'Zombie Processes' are best handled by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Zipping' logs instead of deleting them is part of which pattern?**
-- A) Pattern 1
-- B) Pattern 2 (Intelligent Cleanup)
-- C) Pattern 4
-- D) none
 
+<b>22. 'Zipping' logs instead of deleting them is part of which pattern?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Why is 'Connection Leaking' dangerous?**
-- A) It costs money
-- B) It eventually saturates the DB connection limit, causing a total outage
-- C) It's slow
-- D) it's messy
 
+<b>23. Why is 'Connection Leaking' dangerous?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The command `dscacheutil -flushcache` is used on:**
-- A) Linux
-- B) macOS
-- C) Windows
-- D) Android
 
+<b>24. The command `dscacheutil -flushcache` is used on:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Core Remediation Patterns aim to:**
-- A) Replace human SREs
-- B) Standardize the response to common "Toil" triggers
-- C) Make code harder to read
-- D) cause outages
 
+<b>25. Core Remediation Patterns aim to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

@@ -15,8 +15,8 @@ graph TD
     VPC_C[VPC C] --- TGW
     VPN[Customer VPN] --- TGW
     DX[Direct Connect] --- TGW
-    
-    style TGW fill:#ff9900,color:#fff
+
+style TGW fill:#ff9900,color:#fff
 ```
 
 ### 2. TGW Attachments

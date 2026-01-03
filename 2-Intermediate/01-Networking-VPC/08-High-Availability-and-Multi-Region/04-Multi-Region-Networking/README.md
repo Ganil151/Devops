@@ -1,6 +1,6 @@
 # 04. Multi-Region Networking
 
-Building a global application isn't just about deploying code in two places; it's about **connecting those places reliably and securely.** 
+Building a global application isn't just about deploying code in two places; it's about **connecting those places reliably and securely.**
 
 ## Connecting Regions
 
@@ -24,8 +24,8 @@ graph LR
     subgraph Region_B [Virginia]
     VPC2 --- TGW2((TGW Virginia))
     end
-    
-    TGW1 <==>|TGW Peering| TGW2
+
+TGW1 <==>|TGW Peering| TGW2
 ```
 
 ## Global VPC Patterns

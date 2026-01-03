@@ -38,7 +38,7 @@ Every module should have a `README.md` with these sections:
 module "vpc" {
   source = "git::https://github.com/acme/vpc.git?ref=v1.0.0"
 
-  env     = "prod"
+env     = "prod"
   regions = ["us-east-1"]
 }
 ```
@@ -58,8 +58,8 @@ graph LR
     User -->|HTTPS| ALB[Load Balancer]
     ALB -->|HTTP| EC2[Web Server]
     EC2 -->|TCP 5432| RDS[Database]
-    
-    subgraph "Private Subnet"
+
+subgraph "Private Subnet"
         EC2
         RDS
     end

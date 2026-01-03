@@ -15,8 +15,8 @@ graph TD
     Role --> Files[files/]
     Role --> Templates[templates/]
     Role --> Meta[meta/main.yml]
-    
-    style Role fill:#ee0000,color:#fff
+
+style Role fill:#ee0000,color:#fff
 ```
 
 ### Directory Breakdown

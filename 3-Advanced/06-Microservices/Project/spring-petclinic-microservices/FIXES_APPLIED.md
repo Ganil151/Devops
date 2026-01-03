@@ -54,7 +54,12 @@ Updated files to use kustomize instead:
 1. `base/kustomization.yaml`
 2. `base/services/api-gateway.yml`
 3. `base/services/customers-services.yml`
-4. `base/services/all-services.yaml` (NEW)
+<b>4. `base/services/all-services.yaml`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: NEW
+</details>
+
 5. `fix-deployment.sh`
 6. `scripts/Fixes/fix-config-server.sh`
 7. `scripts/Fixes/fix-node-labels.sh`

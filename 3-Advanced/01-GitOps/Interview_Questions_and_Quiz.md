@@ -19,27 +19,132 @@ Enhance your GitOps expertise with these professional preparation materials.
 
 ## 🧠 GitOps Knowledge Quiz (20+ Questions)
 
-1.  **Which CNCF project is a popular GitOps tool?** (ArgoCD)
-2.  **What is the "source of truth" in GitOps?** (The Git Repository)
-3.  **True/False: GitOps requires a pull-based reconciliation loop.** (True)
-4.  **What does 'Self-Healing' mean in a GitOps context?** (Automatic correction of manual cluster changes)
-5.  **Which file format is most commonly used for GitOps manifests?** (YAML)
-6.  **What is the purpose of the ArgoCD 'Sync' button?** (Manually trigger a reconciliation)
-7.  **How do you define a 'Project' in ArgoCD?** (A logical grouping of applications with RBAC/Source constraints)
-8.  **What is an ArgoCD 'Application'?** (A CRD that links a source repo to a destination cluster)
-9.  **Which tool encrypts secrets so they can be safely stored in Git?** (Sealed Secrets)
-10. **What is 'Progressive Delivery' in GitOps?** (Using Canary or Blue/Green deployments with tools like Argo Rollouts)
-11. **What is the default sync policy in ArgoCD?** (Manual)
-12. **Can GitOps be used for Infrastructure as Code?** (Yes, e.g., with Terraform Cloud/Enterprise or Atlantis)
-13. **What is 'Manifest Generation'?** (Using Kustomize or Helm to produce raw YAML from templates)
-14. **What is 'Pruning' in ArgoCD?** (Removing resources from the cluster that no longer exist in Git)
-15. **What is a 'Sync Wave'?** (A way to order the application of manifests in a single sync)
-16. **How does ArgoCD handle 'Out of Sync' status?** (By highlighting the diff between Git and Cluster)
-17. **What is the 'Declarative Setup' of ArgoCD?** (An ArgoCD Application that manages other ArgoCD Applications)
-18. **Which component provides the UI for ArgoCD?** (Argocd-server)
-19. **What is 'Reconciliation Time'?** (The interval at which the controller checks for drift)
-20. **Can ArgoCD manage multiple clusters?** (Yes, it can target remote clusters via Kubeconfig)
-21. **What is 'Automated Pruning'?** (Automatically deleting resources that are removed from Git)
+<b>1. Which CNCF project is a popular GitOps tool?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: ArgoCD
+</details>
+
+<b>2. What is the "source of truth" in GitOps?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: The Git Repository
+</details>
+
+<b>3. True/False: GitOps requires a pull-based reconciliation loop.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: True
+</details>
+
+<b>4. What does 'Self-Healing' mean in a GitOps context?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Automatic correction of manual cluster changes
+</details>
+
+<b>5. Which file format is most commonly used for GitOps manifests?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: YAML
+</details>
+
+<b>6. What is the purpose of the ArgoCD 'Sync' button?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Manually trigger a reconciliation
+</details>
+
+<b>7. How do you define a 'Project' in ArgoCD?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A logical grouping of applications with RBAC/Source constraints
+</details>
+
+<b>8. What is an ArgoCD 'Application'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A CRD that links a source repo to a destination cluster
+</details>
+
+<b>9. Which tool encrypts secrets so they can be safely stored in Git?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Sealed Secrets
+</details>
+
+<b>10. What is 'Progressive Delivery' in GitOps?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Using Canary or Blue/Green deployments with tools like Argo Rollouts
+</details>
+
+<b>11. What is the default sync policy in ArgoCD?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Manual
+</details>
+
+<b>12. Can GitOps be used for Infrastructure as Code?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Yes, e.g., with Terraform Cloud/Enterprise or Atlantis
+</details>
+
+<b>13. What is 'Manifest Generation'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Using Kustomize or Helm to produce raw YAML from templates
+</details>
+
+<b>14. What is 'Pruning' in ArgoCD?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Removing resources from the cluster that no longer exist in Git
+</details>
+
+<b>15. What is a 'Sync Wave'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A way to order the application of manifests in a single sync
+</details>
+
+<b>16. How does ArgoCD handle 'Out of Sync' status?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: By highlighting the diff between Git and Cluster
+</details>
+
+<b>17. What is the 'Declarative Setup' of ArgoCD?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: An ArgoCD Application that manages other ArgoCD Applications
+</details>
+
+<b>18. Which component provides the UI for ArgoCD?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Argocd-server
+</details>
+
+<b>19. What is 'Reconciliation Time'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: The interval at which the controller checks for drift
+</details>
+
+<b>20. Can ArgoCD manage multiple clusters?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Yes, it can target remote clusters via Kubeconfig
+</details>
+
+<b>21. What is 'Automated Pruning'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Automatically deleting resources that are removed from Git
+</details>
+
 
 ---
 

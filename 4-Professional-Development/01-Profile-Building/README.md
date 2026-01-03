@@ -121,7 +121,7 @@ Tech Stack: Kubernetes, AWS, Terraform, ArgoCD, Prometheus, Grafana
 ```
 Hi [Name],
 
-I'm updating my LinkedIn profile and would really appreciate a recommendation from you. 
+I'm updating my LinkedIn profile and would really appreciate a recommendation from you.
 
 We worked together on [specific project] where we [achievement]. Your perspective on [specific skill] would be valuable.
 
@@ -209,7 +209,12 @@ What's your preference?
 ```
 How to get your first DevOps job with no experience:
 
-1. Build projects (not tutorials)
+<b>1. Build projects</b>
+<details>
+<summary>Show Answer</summary>
+Answer: not tutorials
+</details>
+
    → Deploy real apps to AWS/GCP
 
 2. Contribute to open source
@@ -541,8 +546,18 @@ MIT License - see LICENSE file
 
 **Publish Once, Share Everywhere**:
 1. Write blog post on your website
-2. Share on LinkedIn (with excerpt)
-3. Post on Twitter (thread)
+<b>2. Share on LinkedIn</b>
+<details>
+<summary>Show Answer</summary>
+Answer: with excerpt
+</details>
+
+<b>3. Post on Twitter</b>
+<details>
+<summary>Show Answer</summary>
+Answer: thread
+</details>
+
 4. Submit to Dev.to, Hashnode
 5. Share in relevant Slack/Discord communities
 6. Email to newsletter subscribers

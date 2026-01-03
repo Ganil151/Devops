@@ -100,13 +100,23 @@ Youtube-Lessons/
 ### For Beginners
 
 1. Start with **General DevOps** notes to understand concepts
-2. Move to **CI/CD** basic projects (basic_v1, basic_v2)
+<b>2. Move to **CI/CD** basic projects</b>
+<details>
+<summary>Show Answer</summary>
+Answer: basic_v1, basic_v2
+</details>
+
 3. Progress to **Kubernetes** course
 4. Practice with **Projects**
 
 ### For Intermediate Learners
 
-1. Review **CI/CD** advanced projects (Netflix Clone, Amazon Prime)
+<b>1. Review **CI/CD** advanced projects</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Netflix Clone, Amazon Prime
+</details>
+
 2. Deep dive into **Kubernetes** course
 3. Implement **Terraform** projects
 4. Build custom pipelines
@@ -258,7 +268,12 @@ If you need to download videos for offline viewing:
 
 Found useful content from YouTube? Add it here:
 
-1. Identify appropriate category (Kubernetes, CI/CD, etc.)
+<b>1. Identify appropriate category</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Kubernetes, CI/CD, etc.
+</details>
+
 2. Create subdirectory with clear name
 3. Add README explaining content
 4. Update this index

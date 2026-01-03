@@ -124,325 +124,227 @@ resource "aws_security_group" "web" {
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which keyword is typically used for "Feature Flags" to enable/disable resources?**
-- A) loop
-- B) count
-- C) toggle
-- D) switch
-
+<b>1. Which keyword is typically used for "Feature Flags" to enable/disable resources?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - `count = var.enabled ? 1 : 0` is the standard pattern.
-
+Answer: B** - `count = var.enabled ? 1 : 0` is the standard pattern.
 </details>
 
-**2. What is the main risk of using `count` for a list of resources?**
-- A) It's slow
-- B) Removing an item from the middle causes shifts and resource replacement
-- C) It doesn't support AWS
-- D) It's deprecated
 
+
+
+<b>2. What is the main risk of using `count` for a list of resources?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Because it relies on numeric indices, removing item 1 makes item 2 become item 1, triggering a replacement.
-
+Answer: B** - Because it relies on numeric indices, removing item 1 makes item 2 become item 1, triggering a replacement.
 </details>
 
-**3. True/False: You can use `count` and `for_each` in the same resource block.**
-- A) True
-- B) False
 
+
+
+<b>3. True/False: You can use `count` and `for_each` in the same resource block.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - They are mutually exclusive.
-
+Answer: B** - They are mutually exclusive.
 </details>
 
-**4. Which block is used to iterate and generate nested sections inside a resource?**
-- A) loop
-- B) dynamic
-- C) generate
-- D) nested
 
+
+
+<b>4. Which block is used to iterate and generate nested sections inside a resource?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. What does the `toset()` function do in the context of `for_each`?**
-- A) Deletes the list
-- B) Converts a list of strings into a set of unique strings for iteration
-- C) Sorts the list alphabetically
-- D) Encrypts the data
 
+
+
+<b>5. What does the `toset()` function do in the context of `for_each`?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. The "DRY" principle stands for:**
-- A) Do Repeat Yourself
-- B) Don't Repeat Yourself
-- C) Deploy Resources Yearly
-- D) Data Resources Yield
 
+
+
+<b>6. The "DRY" principle stands for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Which block is best for combining multiple variables into a single reusable string?**
-- A) variables
-- B) outputs
-- C) locals
-- D) resources
 
+
+
+<b>7. Which block is best for combining multiple variables into a single reusable string?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**8. What does `lookup(var.my_map, "key", "default")` do?**
-- A) Searches Google for the key
-- B) Returns the value for "key" in the map, or "default" if the key doesn't exist
-- C) Deletes the key from the map
-- D) Only works for lists
 
+
+
+<b>8. What does `lookup(var.my_map, "key", "default")` do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. "Composition" in Terraform refers to:**
-- A) Writing code in a specific style
-- B) Assembling large systems from small, reusable modules
-- C) Compiling the HCL code
-- D) Decompressing state files
 
+
+
+<b>9. "Composition" in Terraform refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What is the iterator variable name inside a `dynamic "ingress" {}` block by default?**
-- A) each
-- B) loop
-- C) ingress
-- D) value
 
+
+
+<b>10. What is the iterator variable name inside a `dynamic "ingress" {}` block by default?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C** - It defaults to the name of the dynamic block.
-
+Answer: C** - It defaults to the name of the dynamic block.
 </details>
 
-**11. Which meta-argument is safer for managing a collection of independent resources?**
-- A) count
-- B) for_each
-- C) depends_on
-- D) lifecycle
 
+
+
+<b>11. Which meta-argument is safer for managing a collection of independent resources?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. Locals are calculated:**
-- A) Only once during runtime
-- B) Every time they are referenced
-- C) By the user in the CLI
-- D) After the apply is finished
 
+
+
+<b>12. Locals are calculated:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. The ternary operator syntax in HCL is:**
-- A) if...else
-- B) condition ? true_val : false_val
-- C) check -> result
-- D) selector(condition)
 
+
+
+<b>13. The ternary operator syntax in HCL is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. Why use Dynamic Blocks for Security Group rules?**
-- A) To increase security
-- B) to avoid repeating identical port configuration blocks manually
-- C) because AWS requires it
-- D) to make the state file smaller
 
+
+
+<b>14. Why use Dynamic Blocks for Security Group rules?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. What happens if the collection provided to `for_each` is empty?**
-- A) Error
-- B) Terraform creates one default resource
-- C) Terraform creates zero resources
-- D) It asks the user for input
 
+
+
+<b>15. What happens if the collection provided to `for_each` is empty?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**16. "Inheritance" is generally avoided in Terraform in favor of:**
-- A) Copying files
-- B) Module Composition
-- C) Global variables
-- D) Bash scripts
 
+
+
+<b>16. "Inheritance" is generally avoided in Terraform in favor of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. Which function merges two or more maps together?**
-- A) combine()
-- B) merge()
-- C) add()
-- D) join()
 
+
+
+<b>17. Which function merges two or more maps together?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Using `locals` for tagging helps prevent:**
-- A) High latency
-- B) Missing or inconsistent tags across multiple resources
-- C) Resource deletion
-- D) SSH failures
 
+
+
+<b>18. Using `locals` for tagging helps prevent:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. To access the key in a `for_each` loop, you use:**
-- A) each.key
-- B) each.value
-- C) item.id
-- D) self.key
 
+
+
+<b>19. To access the key in a `for_each` loop, you use:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**20. Dynamic blocks can be used within:**
-- A) Only resource blocks
-- B) only data blocks
-- C) Most blocks that support nested configuration groups
-- D) Only locals
 
+
+
+<b>20. Dynamic blocks can be used within:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**21. What is the purpose of `can()` or `try()` functions?**
-- A) To run bash scripts
-- B) To safely handle potential errors or missing attributes in complex logic
-- C) To validate user passwords
-- D) To repeat a task
 
+
+
+<b>21. What is the purpose of `can()` or `try()` functions?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. "Naming Conventions" are easily enforced using:**
-- A) Manual checks only
-- B) Locals that construct names from standard prefixes/suffixes
-- C) Naming providers
-- D) Random IDs only
 
+
+
+<b>22. "Naming Conventions" are easily enforced using:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Splitting a huge `main.tf` into `compute.tf`, `network.tf`, and `storage.tf` is an example of:**
-- A) Module creation
-- B) File-based organization (HCL loads all anyway)
-- C) Increasing cost
-- D) Performance optimization
 
+
+
+<b>23. Splitting a huge `main.tf` into `compute.tf`, `network.tf`, and `storage.tf` is an example of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The `element(list, index)` function is useful for:**
-- A) Deleting an element
-- B) Safely wrapping around a list if the index exceeds length
-- C) Adding an element
-- D) Filtering a list
 
+
+
+<b>24. The `element(list, index)` function is useful for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. A "Wrapper Module" is often used to:**
-- A) Hide code from developers
-- B) Provide a simplified interface over a complex third-party module
-- C) Slow down execution
-- D) Backup state files
 
+
+
+<b>25. A "Wrapper Module" is often used to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+

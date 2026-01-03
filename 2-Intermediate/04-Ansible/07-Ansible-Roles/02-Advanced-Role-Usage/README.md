@@ -10,8 +10,8 @@ Dependencies allow you to link roles together. If Role A depends on Role B, Ansi
 graph LR
     App[Role: my_app] -->|Depends on| DB[Role: postgresql]
     App -->|Depends on| Proxy[Role: nginx]
-    
-    subgraph "Execution Order"
+
+subgraph "Execution Order"
     DB --> Proxy --> App
     end
 ```

@@ -11,14 +11,14 @@ graph TD
     VPC --> RT[Route Tables]
     VPC --> SG[Security Groups]
     VPC --> NACL[Network ACLs]
-    
-    Subnets --> PublicSub[Public Subnets]
+
+Subnets --> PublicSub[Public Subnets]
     Subnets --> PrivateSub[Private Subnets]
-    
-    PublicSub --> NAT[NAT Gateway]
+
+PublicSub --> NAT[NAT Gateway]
     PrivateSub --> ENI[Elastic Network Interfaces]
-    
-    style VPC fill:#e1f5ff,stroke:#333,stroke-width:3px
+
+style VPC fill:#e1f5ff,stroke:#333,stroke-width:3px
     style IGW fill:#ffeb3b,stroke:#333,stroke-width:2px
     style NAT fill:#4caf50,stroke:#333,stroke-width:2px
 ```
@@ -182,8 +182,8 @@ sequenceDiagram
     participant NACL as Network ACL
     participant SG as Security Group
     participant EC2 as EC2 Instance
-    
-    User->>IGW: HTTP Request
+
+User->>IGW: HTTP Request
     IGW->>RT: Check Route (0.0.0.0/0)
     RT->>NACL: Forward to Subnet
     NACL->>NACL: Check Inbound Rules
@@ -222,8 +222,32 @@ sequenceDiagram
 ---
 
 ## 🧠 Quiz Snippet (5/20+)
-1.  **How many IGWs can attach to one VPC?** (One)
-2.  **True/False: NAT Gateways are free.** (False - $0.045/hour + data)
-3.  **What is an ENI?** (Elastic Network Interface - virtual network card)
-4.  **Are Security Groups stateful or stateless?** (Stateful)
-5.  **What is the limit for security groups per VPC?** (2,500)
+<b>1. How many IGWs can attach to one VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: One
+</details>
+
+<b>2. True/False: NAT Gateways are free.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: False - $0.045/hour + data
+</details>
+
+<b>3. What is an ENI?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Elastic Network Interface - virtual network card
+</details>
+
+<b>4. Are Security Groups stateful or stateless?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Stateful
+</details>
+
+<b>5. What is the limit for security groups per VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 2,500
+</details>

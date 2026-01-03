@@ -11,8 +11,8 @@ graph TD
     Internet((Internet)) --> IGW[Internet Gateway]
     IGW -->|Gateway Route Table| FW[Firewall Appliance / Middlebox]
     FW -->|Subnet Route Table| App[Application Servers]
-    
-    style FW fill:#ff6666,color:#fff
+
+style FW fill:#ff6666,color:#fff
 ```
 
 ### 1. Gateway Route Tables

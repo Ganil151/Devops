@@ -41,319 +41,227 @@
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the primary format used in Docs-as-Code?**
-- A) Microsoft Word
-- B) Markdown
-- C) PDF
-- D) Excel
-
+<b>1. What is the primary format used in Docs-as-Code?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**（Because it is text-based, portable, and git-friendly）
-
+Answer: B**（Because it is text-based, portable, and git-friendly）
 </details>
 
-**2. True/False: You should use passive language like "The server could be restarted" in an SOP.**
-- A) True
-- B) False
 
+
+
+<b>2. True/False: You should use passive language like "The server could be restarted" in an SOP.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Use the **Imperative Mood**: "Restart the server."
-
+Answer: B** - Use the **Imperative Mood**: "Restart the server."
 </details>
 
-**3. 'Atomic Steps' in an SOP mean:**
-- A) Very small steps
-- B) One discrete action per numbered point
-- C) Steps involving nuclear power
-- D) many steps in one paragraph
 
+
+
+<b>3. 'Atomic Steps' in an SOP mean:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. What is the role of CI/CD in a documentation workflow?**
-- A) To write the docs for you
-- B) To lint for errors, check for broken links, and build the static site
-- C) To delete old files
-- D) to send emails
 
+
+
+<b>4. What is the role of CI/CD in a documentation workflow?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Mermaid.js allows you to create:**
-- A) Websites
-- B) Diagrams-as-Code using text-based definitions
-- C) Databases
-- D) code compilers
 
+
+
+<b>5. Mermaid.js allows you to create:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'SDRY' stands for:**
-- A) Some Documents Really Yesterday
-- B) Single Source of Truth / Don't Repeat Yourself
-- C) Simple Data Retrieval Yield
-- D) System Doc Ready Yearly
 
+
+
+<b>6. 'SDRY' stands for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Which section of an SOP identifies 'Who' is responsible for a service?**
-- A) Prerequisites
-- B) Metadata Header (Owner)
-- C) Remediation
-- D) Appendix
 
+
+
+<b>7. Which section of an SOP identifies 'Who' is responsible for a service?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. True/False: You should include 'Expected Output' for every CLI command in a runbook.**
-- A) True
-- B) False
 
+
+
+<b>8. True/False: You should include 'Expected Output' for every CLI command in a runbook.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - This is "Outcome-Based" writing; it verifies the operator is on the right track.
-
+Answer: A** - This is "Outcome-Based" writing; it verifies the operator is on the right track.
 </details>
 
-**9. 'Cognitive Load' during an incident is REDUCED by:**
-- A) Long paragraphs
-- B) Consistent formatting and clear, bolded commands
-- C) Complex words
-- D) hiding secrets
 
+
+
+<b>9. 'Cognitive Load' during an incident is REDUCED by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What tool helps track 'Who' changed a document in a Docs-as-Code setup?**
-- A) Word Track Changes
-- B) Git History / Blame
-- C) Slack
-- D) printer logs
 
+
+
+<b>10. What tool helps track 'Who' changed a document in a Docs-as-Code setup?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. A 'Prerequisite' section should list:**
-- A) The history of the app
-- B) Required IAM permissions, VPN access, and tools
-- C) The author's name
-- D) links to YouTube
 
+
+
+<b>11. A 'Prerequisite' section should list:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. When should you choose documentation in a 'Ticket' over a 'Full SOP'?**
-- A) For every task
-- B) For non-repetitive, one-off operational tasks
-- C) Never
-- D) only for juniors
 
+
+
+<b>12. When should you choose documentation in a 'Ticket' over a 'Full SOP'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. 'Transclusion' refers to:**
-- A) Hiding text
-- B) Dynamically including the content of one file inside another at build time
-- C) Changing fonts
-- D) translating to Spanish
 
+
+
+<b>13. 'Transclusion' refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What is the benefit of a 'Rollback' section?**
-- A) It makes the doc longer
-- B) It provides a safe "Undo" path if the remediation steps fail
-- C) It's for senior engineers only
-- D) no reason
 
+
+
+<b>14. What is the benefit of a 'Rollback' section?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. True/False: Technical writing should prioritize "Speed of Understanding" over "Linguistic Elegance."**
-- A) True
-- B) False
 
+
+
+<b>15. True/False: Technical writing should prioritize "Speed of Understanding" over "Linguistic Elegance."</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**16. 'Diagram Drift' happens when:**
-- A) The diagram moves on the page
-- B) The architecture changes but the image file isn't updated
-- C) The mouse is broken
-- D) the printer is out of ink
 
+
+
+<b>16. 'Diagram Drift' happens when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. 'Linter' tools like Vale help enforce:**
-- A) Code speed
-- B) Consistency in style, brand voice, and terminology
-- C) Server security
-- D) user passwords
 
+
+
+<b>17. 'Linter' tools like Vale help enforce:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. A 'Static Site Generator' (SSG) like MkDocs is used to:**
-- A) Compile Python
-- B) Turn Markdown files into a fast, searchable web portal
-- C) Host a database
-- D) edit videos
 
+
+
+<b>18. A 'Static Site Generator' (SSG) like MkDocs is used to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. 'Outcome-Based Steps' tell the reader:**
-- A) What to do next
-- B) What the system response should look like after an action is taken
-- C) Who to call
-- D) the price of the server
 
+
+
+<b>19. 'Outcome-Based Steps' tell the reader:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: You should never combine two unrelated commands in a single step.**
-- A) True
-- B) False
 
+
+
+<b>20. True/False: You should never combine two unrelated commands in a single step.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - This preserves "Atomicity."
-
+Answer: A** - This preserves "Atomicity."
 </details>
 
-**21. 'Tribal Knowledge' is a bottleneck because:**
-- A) It's too technical
-- B) It only exists in one person's mind and isn't documented for the team
-- C) It's wrong
-- D) it's ancient
 
+
+
+<b>21. 'Tribal Knowledge' is a bottleneck because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Gamedays' are used to:**
-- A) Have fun
-- B) Stress-test documentation and response workflows in a safe environment
-- C) Write code
-- D) interview people
 
+
+
+<b>22. 'Gamedays' are used to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Why use 'Bold' for commands in a runbook?**
-- A) It looks aggressive
-- B) To make the essential actions stand out during a quick "Scan" of the document
-- C) To save space
-- D) it's a rule
 
+
+
+<b>23. Why use 'Bold' for commands in a runbook?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. 'Metadata' help with:**
-- A) Storytelling
-- B) Programmatic search, auditing, and ownership tracking
-- C) Hiding files
-- D) nothing
 
+
+
+<b>24. 'Metadata' help with:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The ultimate goal of high-performance documentation is:**
-- A) To have 1,000 pages
-- B) To reduce MTTR and increase operational reliability
-- C) To win an award
-- D) to make more work
 
+
+
+<b>25. The ultimate goal of high-performance documentation is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+

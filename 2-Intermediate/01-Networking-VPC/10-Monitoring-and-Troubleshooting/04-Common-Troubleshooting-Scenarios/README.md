@@ -11,14 +11,14 @@ graph TD
     Start[Connectivity Issue] --> Public[Is it a Public Resource?]
     Public -->|Yes| IGW[Check: IGW, Public IP, Route 0.0.0.0/0]
     Public -->|No| Private[Check: NAT GW, Peering, TGW, VGW]
-    
-    IGW --> Security[Check Security Layers]
+
+IGW --> Security[Check Security Layers]
     Private --> Security
-    
-    Security --> SG[Security Group: Stateful/Allowed?]
+
+Security --> SG[Security Group: Stateful/Allowed?]
     SG --> NACL[NACL: Stateless/Rules Correct?]
-    
-    NACL --> OS[Check OS Level]
+
+NACL --> OS[Check OS Level]
     OS --> Firewall[iptables / Windows Firewall]
     Firewall --> App[App Listening on Port?]
 ```

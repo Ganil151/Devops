@@ -332,7 +332,12 @@ Structure:
 ### Marketing Strategy
 1. **Pre-launch**: Build email list with free chapter
 2. **Launch**: 50% discount for first week
-3. **Ongoing**: Affiliate program (20% commission)
+<b>3. Ongoing**: Affiliate program</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 20% commission
+</details>
+
 
 ---
 
@@ -399,7 +404,12 @@ Structure:
 ### Multi-Platform Strategy
 
 #### **Content Repurposing**
-1. **Write Blog Post** (2,000 words)
+<b>1. Write Blog Post</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 2,000 words
+</details>
+
 2. **Extract**: 5 Twitter threads
 3. **Record**: YouTube video version
 4. **Create**: LinkedIn carousel

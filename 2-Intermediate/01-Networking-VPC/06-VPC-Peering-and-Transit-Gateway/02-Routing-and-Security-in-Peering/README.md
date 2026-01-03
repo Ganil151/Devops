@@ -11,8 +11,8 @@ graph LR
     A[VPC A] <-->|Peer 1| B[VPC B]
     B <-->|Peer 2| C[VPC C]
     A -.->|Illegal Hop| C
-    
-    style B fill:#3399ff,color:#fff
+
+style B fill:#3399ff,color:#fff
 ```
 
 ### Why?

@@ -571,12 +571,12 @@ steps:
   # Build Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/devops-app:$BUILD_ID', '.']
-  
-  # Push to Container Registry
+
+# Push to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/devops-app:$BUILD_ID']
-  
-  # Deploy to Cloud Run
+
+# Deploy to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - 'run'
@@ -707,7 +707,7 @@ resource "google_compute_instance" "devops_vm" {
   machine_type = "e2-medium"
   zone         = var.zone
 
-  boot_disk {
+boot_disk {
     initialize_params {
       image = "ubuntu-os-cloud/ubuntu-2004-lts"
       size  = 20
@@ -715,27 +715,27 @@ resource "google_compute_instance" "devops_vm" {
     }
   }
 
-  network_interface {
+network_interface {
     network = "default"
     access_config {
       // Ephemeral public IP
     }
   }
 
-  tags = ["http-server", "https-server"]
+tags = ["http-server", "https-server"]
 
-  metadata_startup_script = file("startup-script.sh")
+metadata_startup_script = file("startup-script.sh")
 }
 
 resource "google_storage_bucket" "devops_bucket" {
   name     = "${var.project_id}-devops-bucket"
   location = var.region
 
-  versioning {
+versioning {
     enabled = true
   }
 
-  lifecycle_rule {
+lifecycle_rule {
     condition {
       age = 30
     }
@@ -890,212 +890,141 @@ This comprehensive GCP fundamentals guide provides DevOps engineers with essenti
 6. **What is "Cloud Shell"?**
    - An interactive shell environment for GCP. It is a temporary VM (5GB home dir) with all tools pre-installed.
 
-### Advanced Level
-7. **What is "Config Connector"?**
-   - Move from imperative `gcloud` scripts to declarative K8s manifests for GCP resources.
-8. **Explain "Google Cloud Marketplace".**
-   - A store to deploy functional software packages (GitLab, WordPress, etc.) or buy SaaS services integrated with GCP billing.
-9. **How do you handle Quotas?**
-   - Monitoring Usage vs Limits. Requesting increases via Console. Using "Quota Sharing" is not a thing, but you manage distribution across projects.
-
----
-
-## Quiz: GCP Fundamentals
-
+<b>7. </b>
 <details>
-<summary><b>1. Hierarchy Top Level Node?</b></summary>
-A) Organization<br>
-B) Project<br>
-C) Folder<br>
-D) User<br>
-<br>
-<b>Answer: A) Organization</b>
+<summary>Show Answer</summary>
+Answer: A) Organization</b>
 </details>
 
+
+<b>2. Each resource belongs to exactly one...?</b>
 <details>
-<summary><b>2. Each resource belongs to exactly one...?</b></summary>
-A) Project<br>
-B) Folder<br>
-C) User<br>
-D) Region<br>
-<br>
-<b>Answer: A) Project</b>
+<summary>Show Answer</summary>
+Answer: A) Project</b>
 </details>
 
+
+<b>3. Regional resources include:</b>
 <details>
-<summary><b>3. Regional resources include:</b></summary>
-A) App Engine, Subnets<br>
-B) VMs (Zonal)<br>
-C) Images (Global/Multi-regional)<br>
-D) Firewalls (Global)<br>
-<br>
-<b>Answer: A) App Engine, Subnets</b>
+<summary>Show Answer</summary>
+Answer: A) App Engine, Subnets</b>
 </details>
 
+
+<b>4. Default VPC mode is?</b>
 <details>
-<summary><b>4. Default VPC mode is?</b></summary>
-A) Auto Mode (One subnet per region)<br>
-B) Custom Mode<br>
-C) Legacy<br>
-D) None<br>
-<br>
-<b>Answer: A) Auto Mode (One subnet per region)</b>
+<summary>Show Answer</summary>
+Answer: A) Auto Mode (One subnet per region)</b>
 </details>
 
+
+<b>5. To init the gcloud CLI locally?</b>
 <details>
-<summary><b>5. To init the gcloud CLI locally?</b></summary>
-A) gcloud init<br>
-B) gcloud start<br>
-C) gcloud login<br>
-D) gcloud setup<br>
-<br>
-<b>Answer: A) gcloud init (also handles login)</b>
+<summary>Show Answer</summary>
+Answer: A) gcloud init (also handles login)</b>
 </details>
 
+
+<b>6. Cloud Billing Account is linked to:</b>
 <details>
-<summary><b>6. Cloud Billing Account is linked to:</b></summary>
-A) One or more Projects<br>
-B) A VM<br>
-C) A Bucket<br>
-D) Nothing<br>
-<br>
-<b>Answer: A) One or more Projects</b>
+<summary>Show Answer</summary>
+Answer: A) One or more Projects</b>
 </details>
 
+
+<b>7. Service Account Email format?</b>
 <details>
-<summary><b>7. Service Account Email format?</b></summary>
-A) name@project-id.iam.gserviceaccount.com<br>
-B) user@gmail.com<br>
-C) admin@company.com<br>
-D) root@local<br>
-<br>
-<b>Answer: A) name@project-id.iam.gserviceaccount.com</b>
+<summary>Show Answer</summary>
+Answer: A) name@project-id.iam.gserviceaccount.com</b>
 </details>
 
+
+<b>8. Can you move a Project to a different Folder?</b>
 <details>
-<summary><b>8. Can you move a Project to a different Folder?</b></summary>
-A) Yes<br>
-B) No<br>
-<br>
-<b>Answer: A) Yes</b>
+<summary>Show Answer</summary>
+Answer: A) Yes</b>
 </details>
 
+
+<b>9. Pricing Calculator helps to:</b>
 <details>
-<summary><b>9. Pricing Calculator helps to:</b></summary>
-A) Estimate costs<br>
-B) Pay bills<br>
-C) Generate invoices<br>
-D) Mine crypto<br>
-<br>
-<b>Answer: A) Estimate costs</b>
+<summary>Show Answer</summary>
+Answer: A) Estimate costs</b>
 </details>
 
+
+<b>10. Free Tier includes:</b>
 <details>
-<summary><b>10. Free Tier includes:</b></summary>
-A) $300 Credit (90 days) + Always Free limits<br>
-B) Unlimited everything<br>
-C) Nothing<br>
-D) A free laptop<br>
-<br>
-<b>Answer: A) $300 Credit (90 days) + Always Free limits</b>
+<summary>Show Answer</summary>
+Answer: A) $300 Credit (90 days) + Always Free limits</b>
 </details>
 
+
+<b>11. Where do you enable APIs?</b>
 <details>
-<summary><b>11. Where do you enable APIs?</b></summary>
-A) "APIs & Services" Dashboard<br>
-B) Compute Engine<br>
-C) IAM<br>
-D) Storage<br>
-<br>
-<b>Answer: A) "APIs & Services" Dashboard</b>
+<summary>Show Answer</summary>
+Answer: A) "APIs & Services" Dashboard</b>
 </details>
 
+
+<b>12. Global resources include:</b>
 <details>
-<summary><b>12. Global resources include:</b></summary>
-A) Images, Snapshots, VPC Networks, Firewalls, Routes<br>
-B) VMs<br>
-C) Disks<br>
-D) Subnets<br>
-<br>
-<b>Answer: A) Images, Snapshots, VPC Networks, Firewalls, Routes</b>
+<summary>Show Answer</summary>
+Answer: A) Images, Snapshots, VPC Networks, Firewalls, Routes</b>
 </details>
 
+
+<b>13. Zonal resources include:</b>
 <details>
-<summary><b>13. Zonal resources include:</b></summary>
-A) VM Instances, Persistent Disks<br>
-B) VPC<br>
-C) Images<br>
-D) Subnets<br>
-<br>
-<b>Answer: A) VM Instances, Persistent Disks</b>
+<summary>Show Answer</summary>
+Answer: A) VM Instances, Persistent Disks</b>
 </details>
 
+
+<b>14. Cloud Console is:</b>
 <details>
-<summary><b>14. Cloud Console is:</b></summary>
-A) A web-based GUI<br>
-B) A CLI<br>
-C) An API<br>
-D) A VM<br>
-<br>
-<b>Answer: A) A web-based GUI</b>
+<summary>Show Answer</summary>
+Answer: A) A web-based GUI</b>
 </details>
 
+
+<b>15. Marketplace solutions often include:</b>
 <details>
-<summary><b>15. Marketplace solutions often include:</b></summary>
-A) "Click to Deploy" functionality<br>
-B) Free hardware<br>
-C) Nothing<br>
-D) Viruses<br>
-<br>
-<b>Answer: A) "Click to Deploy" functionality</b>
+<summary>Show Answer</summary>
+Answer: A) "Click to Deploy" functionality</b>
 </details>
 
+
+<b>16. IAM Policy Binding connects:</b>
 <details>
-<summary><b>16. IAM Policy Binding connects:</b></summary>
-A) Member(s), Role, and Condition (optional)<br>
-B) VMs and Disks<br>
-C) Projects and Billing<br>
-D) Network cables<br>
-<br>
-<b>Answer: A) Member(s), Role, and Condition (optional)</b>
+<summary>Show Answer</summary>
+Answer: A) Member(s), Role, and Condition (optional)</b>
 </details>
 
+
+<b>17. Support Plans levels?</b>
 <details>
-<summary><b>17. Support Plans levels?</b></summary>
-A) Basic, Standard, Enhanced, Premium<br>
-B) Free, Paid<br>
-C) Good, Better, Best<br>
-D) A, B, C<br>
-<br>
-<b>Answer: A) Basic, Standard, Enhanced, Premium</b>
+<summary>Show Answer</summary>
+Answer: A) Basic, Standard, Enhanced, Premium</b>
 </details>
 
+
+<b>18. Can you undelete a Project?</b>
 <details>
-<summary><b>18. Can you undelete a Project?</b></summary>
-A) Yes, within 30 days usually (pending operations)<br>
-B) No, instant deletion<br>
-C) Only within 1 hour<br>
-D) Only if you pay<br>
-<br>
-<b>Answer: A) Yes, within 30 days usually (pending operations)</b>
+<summary>Show Answer</summary>
+Answer: A) Yes, within 30 days usually (pending operations)</b>
 </details>
 
+
+<b>19. Budgets and Alerts can send notifications to:</b>
 <details>
-<summary><b>19. Budgets and Alerts can send notifications to:</b></summary>
-A) Email and Pub/Sub (for programmatic action)<br>
-B) SMS only<br>
-C) Mail<br>
-D) Nowhere<br>
-<br>
-<b>Answer: A) Email and Pub/Sub (for programmatic action)</b>
+<summary>Show Answer</summary>
+Answer: A) Email and Pub/Sub (for programmatic action)</b>
 </details>
 
+
+<b>20. "Spot VMs" are the successor to:</b>
 <details>
-<summary><b>20. "Spot VMs" are the successor to:</b></summary>
-A) Preemptible VMs (Wait, mostly yes, Spot is the new model with dynamic pricing)<br>
-B) Standard VMs<br>
-C) Sole-tenant<br>
-D) None<br>
-<br>
-<b>Answer: A) Preemptible VMs (Wait, mostly yes, Spot is the new model with dynamic pricing)</b>
+<summary>Show Answer</summary>
+Answer: A) Preemptible VMs (Wait, mostly yes, Spot is the new model with dynamic pricing)</b>
 </details>

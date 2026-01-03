@@ -45,8 +45,8 @@ graph TB
         AUTO --> INT[🎤 Interviews & Quizzes]
         INT --> REAL[🛠️ Real-Life Scenarios]
     end
-    
-    style CA fill:#3498db,stroke:#2980b9,color:#fff
+
+style CA fill:#3498db,stroke:#2980b9,color:#fff
     style OPT fill:#2ecc71,stroke:#27ae60,color:#fff
     style RI fill:#9b59b6,stroke:#8e44ad,color:#fff
     style SC fill:#f39c12,stroke:#d68910,color:#fff
@@ -161,4 +161,3 @@ Start with **[Lesson 01: Cost Allocation Strategies](./01-Cost-Allocation/README
 
 After completing the Intermediate level:
 - 📕 [Advanced FinOps](../../3-Advanced/13-FinOps/README.md) - Enterprise frameworks and culture
-

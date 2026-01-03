@@ -16,8 +16,8 @@ graph TD
     Core -- "Read/Write" --> State[(tfstate file)]
     Core -- "Plugin Protocol" --> Provider[Cloud Providers: AWS / Azure / GCP]
     Provider -- "API Calls" --> Cloud["Cloud Infrastructure (EC2, S3, etc.)"]
-    
-    style Core fill:#f9f,stroke:#333,stroke-width:2px
+
+style Core fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
 ---

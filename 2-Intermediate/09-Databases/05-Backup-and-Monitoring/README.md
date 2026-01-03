@@ -185,8 +185,8 @@ mysqldump --single-transaction \
 # Verify backup
 if [ $? -eq 0 ]; then
   echo "Backup completed successfully: $BACKUP_DIR/full_backup_$DATE.sql.gz"
-  
-  # Remove backups older than 30 days
+
+# Remove backups older than 30 days
   find $BACKUP_DIR -name "full_backup_*.sql.gz" -mtime +30 -delete
 else
   echo "Backup failed!" >&2
@@ -269,17 +269,17 @@ SLAVE_HOST="10.0.1.11"
 # Check master health
 if ! mysql -h $MASTER_HOST -e "SELECT 1" > /dev/null 2>&1; then
   echo "Master is down, initiating failover..."
-  
-  # Promote slave to master
+
+# Promote slave to master
   mysql -h $SLAVE_HOST -e "STOP SLAVE; RESET SLAVE ALL; SET GLOBAL read_only = OFF;"
-  
-  # Update application configuration
+
+# Update application configuration
   sed -i "s/$MASTER_HOST/$SLAVE_HOST/g" /etc/app/database.conf
-  
-  # Restart application
+
+# Restart application
   systemctl restart myapp
-  
-  echo "Failover completed"
+
+echo "Failover completed"
 fi
 ```
 
@@ -357,16 +357,16 @@ groups:
       severity: critical
     annotations:
       summary: "MySQL instance is down"
-      
-  - alert: MySQLSlowQueries
+
+- alert: MySQLSlowQueries
     expr: rate(mysql_global_status_slow_queries[5m]) > 0.1
     for: 2m
     labels:
       severity: warning
     annotations:
       summary: "High number of slow queries"
-      
-  - alert: MySQLReplicationLag
+
+- alert: MySQLReplicationLag
     expr: mysql_slave_lag_seconds > 30
     for: 1m
     labels:
@@ -500,8 +500,8 @@ BEGIN
   INSERT INTO archived_orders 
   SELECT * FROM orders 
   WHERE created_at < DATE_SUB(NOW(), INTERVAL 7 YEAR);
-  
-  DELETE FROM orders 
+
+DELETE FROM orders 
   WHERE created_at < DATE_SUB(NOW(), INTERVAL 7 YEAR);
 END;
 ```

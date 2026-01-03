@@ -185,327 +185,227 @@ sequenceDiagram
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which command ensures HCL syntax is correct in a CI pipeline?**
-- A) terraform apply
-- B) terraform validate
-- C) terraform show
-- D) terraform output
-
+<b>1. Which command ensures HCL syntax is correct in a CI pipeline?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - `validate` checks syntax and internal consistency.
-
+Answer: B** - `validate` checks syntax and internal consistency.
 </details>
 
-**2. What is the purpose of `checkov` or `tfsec`?**
-- A) Speeding up the plan
-- B) Static security scanning for misconfigurations
-- C) Managing state files
-- D) Creating backups
 
+
+
+<b>2. What is the purpose of `checkov` or `tfsec`?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. Which tool posts cost estimates as PR comments?**
-- A) TFLint
-- B) Checkov
-- C) Infracost
-- D) Atlantis
 
+
+
+<b>3. Which tool posts cost estimates as PR comments?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**4. Why is `-auto-approve` used in CD pipelines but NOT on local machines?**
-- A) It makes it faster
-- B) To skip manual interaction in an automated environment
-- C) It's more secure
-- D) It's shorter to type
 
+
+
+<b>4. Why is `-auto-approve` used in CD pipelines but NOT on local machines?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Atlantis automates Terraform via:**
-- A) Email
-- B) Pull Request comments (e.g. `atlantis plan`)
-- C) The CLI only
-- D) AWS Console
 
+
+
+<b>5. Atlantis automates Terraform via:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. What is the risk of not using a saved plan file (`-out=tfplan`) in CI?**
-- A) The apply might execute different changes than those approved in the plan
-- B) It uses more disk space
-- C) It's slower
-- D) It deletes the state file
 
+
+
+<b>6. What is the risk of not using a saved plan file (`-out=tfplan`) in CI?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**7. "Least Privilege" in CI means:**
-- A) Giving the CI runner full Administrator access
-- B) Giving only the minimum permissions required to manage the target resources
-- C) Limiting the number of pipelines
-- D) Using only one cloud account
 
+
+
+<b>7. "Least Privilege" in CI means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. Which tool finds provider-specific errors (like an invalid EC2 instance type)?**
-- A) Terraform validate
-- B) TFLint
-- C) Checkov
-- D) Pre-commit
 
+
+
+<b>8. Which tool finds provider-specific errors (like an invalid EC2 instance type)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. How should you pass sensitive database passwords to Terraform in CI?**
-- A) Hardcode them in main.tf
-- B) Use CI/CD Secrets mapped to `TF_VAR_` environment variables
-- C) Put them in a public .tfvars file
-- D) Commit them to README.md
 
+
+
+<b>9. How should you pass sensitive database passwords to Terraform in CI?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What does "Red-Green-Refactor" mean for IaC pipelines?**
-- A) Color-coding servers
-- B) A development cycle: fail test, pass test, clean up code
-- C) Deleting resources often
-- D) Using multiple regions
 
+
+
+<b>10. What does "Red-Green-Refactor" mean for IaC pipelines?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Which stage follows `terraform init` in a typical CI pipeline?**
-- A) terraform apply
-- B) terraform validate / static analysis
-- C) terraform destroy
-- D) terraform graph
 
+
+
+<b>11. Which stage follows `terraform init` in a typical CI pipeline?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. "Drift Detection" is best achieved by:**
-- A) Running 'terraform plan' on a schedule and alerting on differences
-- B) Manual inspection of the console
-- C) Asking developers
-- D) Turning off the internet
 
+
+
+<b>12. "Drift Detection" is best achieved by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**13. What is the benefit of a "Manual Gate" before Production Apply?**
-- A) It's slower
-- B) It provides a final human check (Audit/Safety) before irreversible changes
-- C) It reduces cost
-- D) It's required by law
 
+
+
+<b>13. What is the benefit of a "Manual Gate" before Production Apply?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. Atlantis uses "Locking" to prevent:**
-- A) Hackers
-- B) Concurrent terraform runs on the same state file by different PRs
-- C) Password loss
-- D) Billing errors
 
+
+
+<b>14. Atlantis uses "Locking" to prevent:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. "Infrastructure as Code" enables CI/CD by:**
-- A) making infra configurations machine-readable and scriptable
-- B) making infra faster
-- C) reducing server count
-- D) increasing cost
 
+
+
+<b>15. "Infrastructure as Code" enables CI/CD by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**16. Which CI tool is natively integrated with GitHub?**
-- A) Jenkins
-- B) GitHub Actions
-- C) GitLab CI
-- D) CircleCI
 
+
+
+<b>16. Which CI tool is natively integrated with GitHub?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. What does the `continue-on-error: true` flag do in a GitHub Action step?**
-- A) Stops the pipeline immediately
-- B) Allows subsequent steps to run even if this one fails
-- C) Deletes the logs
-- D) Automatically fixes the error
 
+
+
+<b>17. What does the `continue-on-error: true` flag do in a GitHub Action step?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why use `terraform init` in every CI run?**
-- A) To create new state
-- B) To download necessary providers and modules for the runner
-- C) To delete local files
-- D) To check the cloud budget
 
+
+
+<b>18. Why use `terraform init` in every CI run?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. What is a "Runner" in the context of GitHub Actions or GitLab?**
-- A) A person who deploys code
-- B) The virtual machine/container where pipeline steps are executed
-- C) A fast server
-- D) The database
 
+
+
+<b>19. What is a "Runner" in the context of GitHub Actions or GitLab?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. "Idempotency" check in CI verifies that:**
-- A) Code runs fast
-- B) Re-running the apply on an unchanged system results in 'No changes'
-- C) The server is healthy
-- D) Costs are low
 
+
+
+<b>20. "Idempotency" check in CI verifies that:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. Which tool provides a "Terraform Cloud" alternative for CI/CD?**
-- A) Scalr / Spacelift / Env0
-- B) VS Code
-- C) Notepad++
-- D) Excel
 
+
+
+<b>21. Which tool provides a "Terraform Cloud" alternative for CI/CD?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**22. "Compliance as Code" in pipelines uses tools like:**
-- A) Infracost
-- B) Sentinel / OPA (Open Policy Agent)
-- C) Terraform fmt
-- D) Git
 
+
+
+<b>22. "Compliance as Code" in pipelines uses tools like:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. What is the output format of `terraform plan` when using `-out`?**
-- A) JSON
-- B) Binary (Proprietary Terraform format)
-- C) YAML
-- D) Plain text
 
+
+
+<b>23. What is the output format of `terraform plan` when using `-out`?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. "Gated Deployments" refer to:**
-- A) Using firewalls
-- B) Requiring approvals or passing tests before moving to the next environment
-- C) Locking Git branches
-- D) Using physical security
 
+
+
+<b>24. "Gated Deployments" refer to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. A "Pipeline failure" should ideally:**
-- A) be ignored
-- B) block the Pull Request from being merged
-- C) trigger a manual apply
-- D) delete the code
 
+
+
+<b>25. A "Pipeline failure" should ideally:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+

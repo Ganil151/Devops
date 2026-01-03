@@ -99,350 +99,227 @@ Terraform will create the new instance first and only delete the old one once th
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which block defines a real-world object in Terraform?**
-- A) `provider`
-- B) `module`
-- C) `resource`
-- D) `variable`
-
-
+<b>1. Which block defines a real-world object in Terraform?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**2. What meta-argument handles multiple identical resources?**
-- A) `multiple`
-- B) `count`
-- C) `repeat`
-- D) `duplicate`
 
 
+
+<b>2. What meta-argument handles multiple identical resources?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. True/False: Resources are provisioned exactly in the order they appear in the file.**
-- A) True
-- B) False - Terraform builds a dependency graph
 
 
+
+<b>3. True/False: Resources are provisioned exactly in the order they appear in the file.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. Which lifecycle meta-argument prevents resource deletion?**
-- A) `no_delete`
-- B) `protect`
-- C) `prevent_destroy`
-- D) `ignore_destroy`
 
 
+
+<b>4. Which lifecycle meta-argument prevents resource deletion?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**5. What command lists all resources in the state?**
-- A) `terraform list`
-- B) `terraform resources`
-- C) `terraform state list`
-- D) `terraform show resources`
 
 
+
+<b>5. What command lists all resources in the state?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**6. How do you create an implicit dependency between resources?**
-- A) Use `depends_on`
-- B) Reference one resource's attribute in another
-- C) Put them in the same file
-- D) Use the `link` meta-argument
 
 
+
+<b>6. How do you create an implicit dependency between resources?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. What is the syntax for referencing a resource attribute?**
-- A) `${resource_type.resource_name.attribute}`
-- B) `resource_type.resource_name.attribute`
-- C) `resource.resource_name.attribute`
-- D) `@resource_type.resource_name.attribute`
 
 
+
+<b>7. What is the syntax for referencing a resource attribute?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. Which meta-argument creates resources based on a map or set?**
-- A) `count`
-- B) `for_each`
-- C) `map`
-- D) `iterate`
 
 
+
+<b>8. Which meta-argument creates resources based on a map or set?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. What does `create_before_destroy = true` do?**
-- A) Deletes the old resource first
-- B) Creates new resource before deleting the old one
-- C) Prevents creation of new resources
-- D) Creates a backup before destroying
 
 
+
+<b>9. What does `create_before_destroy = true` do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. When should you use `depends_on`?**
-- A) Always, for every resource
-- B) When there's a dependency Terraform can't automatically detect
-- C) Never, implicit dependencies are always better
-- D) Only with provider resources
 
 
+
+<b>10. When should you use `depends_on`?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. What is the first argument in a resource block?**
-- A) Resource name
-- B) Resource type
-- C) Provider name
-- D) Resource ID
 
 
+
+<b>11. What is the first argument in a resource block?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. What is the second argument in a resource block?**
-- A) Resource type
-- B) Resource ID
-- C) Resource name (local identifier)
-- D) Provider
 
 
+
+<b>12. What is the second argument in a resource block?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**13. Can you have multiple resources with the same type but different names?**
-- A) No, each type can only appear once
-- B) Yes, as long as names are unique within that type
-- C) Only in different files
-- D) Only with modules
 
 
+
+<b>13. Can you have multiple resources with the same type but different names?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What does `ignore_changes` do in a lifecycle block?**
-- A) Prevents all changes to the resource
-- B) Ignores specific attributes during updates
-- C) Deletes the resource
-- D) Skips validation
 
 
+
+<b>14. What does `ignore_changes` do in a lifecycle block?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. How do you access a resource created with count?**
-- A) `resource_type.resource_name`
-- B) `resource_type.resource_name[index]`
-- C) `resource_type[index].resource_name`
-- D) `resource_type.resource_name.count`
 
 
+
+<b>15. How do you access a resource created with count?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. What happens if you reference a non-existent resource attribute?**
-- A) Terraform assigns a default value
-- B) Terraform shows an error during plan/apply
-- C) The value is null
-- D) Terraform ignores it
 
 
+
+<b>16. What happens if you reference a non-existent resource attribute?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. Can a resource depend on a module output?**
-- A) No, only on resources
-- B) Yes, you can reference module outputs
-- C) Only with explicit depends_on
-- D) Only in Terraform 1.0+
 
 
+
+<b>17. Can a resource depend on a module output?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. What is the purpose of resource meta-arguments?**
-- A) To define resource attributes
-- B) To modify how Terraform handles the resource lifecycle
-- C) To authenticate with providers
-- D) To validate configuration
 
 
+
+<b>18. What is the purpose of resource meta-arguments?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which is NOT a valid lifecycle meta-argument?**
-- A) `create_before_destroy`
-- B) `prevent_destroy`
-- C) `ignore_changes`
-- D) `delete_after_create`
 
 
+
+<b>19. Which is NOT a valid lifecycle meta-argument?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**20. How does Terraform handle resources with no dependencies?**
-- A) Creates them sequentially
-- B) Creates them in parallel
-- C) Skips them
-- D) Requires manual intervention
 
 
+
+<b>20. How does Terraform handle resources with no dependencies?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. What value does `count.index` start at?**
-- A) 1
-- B) 0
-- C) -1
-- D) Random
 
 
+
+<b>21. What value does `count.index` start at?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Can you use expressions in resource type or name arguments?**
-- A) Yes, for both
-- B) Yes for type, no for name
-- C) No for type, yes for name
-- D) No, they must be literal strings
 
 
+
+<b>22. Can you use expressions in resource type or name arguments?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**23. What does `each.key` reference when using for_each?**
-- A) The resource type
-- B) The current iteration's key from the map/set
-- C) The resource name
-- D) The provider
 
 
+
+<b>23. What does `each.key` reference when using for_each?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. If a resource block is removed, when is the resource destroyed?**
-- A) Immediately
-- B) During the next `terraform apply`
-- C) After 24 hours
-- D) Never, must use `terraform destroy`
 
 
+
+<b>24. If a resource block is removed, when is the resource destroyed?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. What is a common use case for `ignore_changes`?**
-- A) Preventing all updates
-- B) Ignoring attributes managed outside Terraform (e.g., autoscaling)
-- C) Skipping validation
-- D) Faster deployments
 
 
+
+<b>25. What is a common use case for `ignore_changes`?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+

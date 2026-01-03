@@ -44,4 +44,3 @@ By the end of this module, you will be able to:
 
 ---
 **Ready for the Future?** Proceed to the **[Advanced Level](../../3-Advanced/11-MCP/README.md)** to see how MCP scales to enterprise environments.
-

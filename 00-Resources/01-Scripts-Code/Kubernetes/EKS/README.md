@@ -591,7 +591,12 @@ kubectl top pods -A
 
 ### Cost Optimization Tips
 
-1. **Use Spot Instances** (50-70% savings)
+<b>1. Use Spot Instances</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 50-70% savings
+</details>
+
    ```hcl
    capacity_type = "SPOT"
    ```
@@ -609,7 +614,12 @@ kubectl top pods -A
    - Stop cluster nights/weekends
    - Use Lambda or scheduled scaling
 
-5. **Use Reserved Instances** (for production)
+<b>5. Use Reserved Instances</b>
+<details>
+<summary>Show Answer</summary>
+Answer: for production
+</details>
+
    - 1-year commitment: 30% savings
    - 3-year commitment: 60% savings
 

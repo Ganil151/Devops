@@ -18,18 +18,18 @@ In OSS, Terraform runs on your laptop and commits state to S3. In TFC, Terraform
 graph LR
     User[Developer] -->|Push| VCS[GitHub/GitLab]
     VCS -->|Webhook| TFC[HCP Terraform]
-    
-    subgraph "HCP Terraform Platform"
+
+subgraph "HCP Terraform Platform"
         Plan[Plan Runner]
         Policy[Policy Check]
         Apply[Apply Runner]
         State[State Store]
-        
-        Plan --> Policy --> Apply
+
+Plan --> Policy --> Apply
         Apply --> State
     end
-    
-    Apply -->|API Calls| AWS[AWS/Azure/GCP]
+
+Apply -->|API Calls| AWS[AWS/Azure/GCP]
 ```
 
 ---

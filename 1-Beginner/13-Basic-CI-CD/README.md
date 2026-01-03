@@ -19,8 +19,6 @@ CI/CD stands for Continuous Integration and Continuous Delivery (or Deployment).
 - Troubleshoot failed builds using logs
 - Secure pipelines with secrets management
 
-
-
 ## 📖 Essential CI/CD Pipeline Stages
 ![Pipeline](./images/pipeline.png)
 
@@ -45,8 +43,8 @@ graph TD
     Runner --> Checkout["fa:fa-download Checkout Code"]
     Checkout --> Steps["fa:fa-list-check Run Steps (Scripts/Actions)"]
     Steps --> Result["fa:fa-check-circle Result (Success/Fail)"]
-    
-    style Trigger fill:#ffeb3b,stroke:#333,stroke-width:2px
+
+style Trigger fill:#ffeb3b,stroke:#333,stroke-width:2px
     style Result fill:#4caf50,stroke:#333,stroke-width:2px
 ```
 

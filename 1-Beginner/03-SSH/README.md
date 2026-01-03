@@ -12,8 +12,6 @@ SSH (Secure Shell) is the industry standard for securely communicating with a re
 - Harden SSH server configuration
 - Troubleshoot common connection issues
 
-
-
 ## 📂 Module Structure
 
 ### 🔰 Beginner Level

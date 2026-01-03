@@ -19,12 +19,12 @@ graph LR
     Internet((Internet)) -- Inbound traffic --> NACL{NACL - Subnet}
     NACL -- Allow --> SG{SG - Instance}
     SG -- Allow --> Instance[EC2]
-    
-    Instance -- Outbound traffic --> SG2{SG - Instance}
+
+Instance -- Outbound traffic --> SG2{SG - Instance}
     SG2 -- Allow --> NACL2{NACL - Subnet}
     NACL2 -- Allow --> Internet
-    
-    style NACL fill:#cc0000,color:#fff
+
+style NACL fill:#cc0000,color:#fff
     style SG fill:#ff9900,color:#fff
 ```
 

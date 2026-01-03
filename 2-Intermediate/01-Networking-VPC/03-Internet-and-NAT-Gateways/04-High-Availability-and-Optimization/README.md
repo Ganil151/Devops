@@ -4,7 +4,7 @@ Designing gateways is not just about connectivity; it is about ensuring that a f
 
 ## The NAT Gateway Single-Zone Fallacy
 
-Many developers deploy a single NAT Gateway in "Subnet A" and point all routes from all AZs to it. 
+Many developers deploy a single NAT Gateway in "Subnet A" and point all routes from all AZs to it.
 
 ### Why this is BAD:
 1.  **Single Point of Failure**: If Availability Zone 1 goes down, the NAT Gateway in Subnet A dies. Even if your App Servers in Zone 2 are healthy, they lose internet connectivity and crash.
@@ -26,11 +26,11 @@ graph TD
             PrivB --> NAT_B
         end
     end
-    
-    NAT_A --> IGW[Internet Gateway]
+
+NAT_A --> IGW[Internet Gateway]
     NAT_B --> IGW
-    
-    style NAT_A fill:#ccffcc
+
+style NAT_A fill:#ccffcc
     style NAT_B fill:#ccffcc
 ```
 

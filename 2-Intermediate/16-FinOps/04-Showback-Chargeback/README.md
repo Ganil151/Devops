@@ -203,7 +203,12 @@ graph TB
 - **Optimization Savings**: $12,000 implemented
 
 ### Top Concerns
-1. ⚠️ Data team overspent by $8,000 (EMR costs)
+<b>1. ⚠️ Data team overspent by $8,000</b>
+<details>
+<summary>Show Answer</summary>
+Answer: EMR costs
+</details>
+
 2. ⚠️ Untagged resources: 12% of spend
 
 ### Next Month Forecast

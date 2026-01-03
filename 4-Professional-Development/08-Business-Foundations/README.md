@@ -118,7 +118,12 @@ Transform your DevOps expertise into a legitimate, profitable business. This com
 
 **How to Get**:
 1. Visit [IRS EIN Application](https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online)
-2. Complete online form (10 minutes)
+<b>2. Complete online form</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 10 minutes
+</details>
+
 3. Receive EIN immediately
 
 **When You Need It**:
@@ -592,7 +597,12 @@ Late payments will incur a 1.5% monthly interest charge.
 **When It Makes Sense**: $75k+ net profit
 
 **How It Works**:
-1. Pay yourself "reasonable salary" (W-2)
+<b>1. Pay yourself "reasonable salary"</b>
+<details>
+<summary>Show Answer</summary>
+Answer: W-2
+</details>
+
 2. Take remaining profit as distributions
 3. Distributions avoid 15.3% self-employment tax
 

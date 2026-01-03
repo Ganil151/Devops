@@ -42,317 +42,176 @@
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Verification should occur:**
-- A) Before the action
-- B) During the action
-- C) After the action, allowing time for stabilization
-- D) Never
-
+<b>1. Verification should occur:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**2. True/False: If a script returns an exit code of 0, the remediation is guaranteed to be successful.**
-- A) True
-- B) False
 
+<b>2. True/False: If a script returns an exit code of 0, the remediation is guaranteed to be successful.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - The command ran, but the problem may still exist.
-
+Answer: B** - The command ran, but the problem may still exist.
 </details>
 
-**3. Which verification method is best for ensuring a DB is actually working?**
-- A) Checking the process name
-- B) Performing a "Canary" write/read query
-- C) Checking the server temperature
-- D) looking at the icon color
 
+<b>3. Which verification method is best for ensuring a DB is actually working?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**（Synthetic Transaction）
-
+Answer: B**（Synthetic Transaction）
 </details>
 
-**4. A 'Rollback' is used to:**
-- A) Delete all data
-- B) Revert the system to a previous "Known Good" state
-- C) Speed up the CPU
-- D) notify the user
 
+<b>4. A 'Rollback' is used to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. What is the Kubernetes command for a rollback?**
-- A) kubectl delete
-- B) kubectl rollout undo
-- C) kubectl restart
-- D) kubectl edit
 
+<b>5. What is the Kubernetes command for a rollback?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Stabilization Time' (Sleep) is needed because:**
-- A) SREs need a break
-- B) Services take time to initialize and metrics take time to reflect changes
-- C) It saves electricity
-- D) it's a rule
 
+<b>6. 'Stabilization Time' (Sleep) is needed because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: Verification should have a 'Timeout' (e.g., 5 mins) to prevent it from waiting forever.**
-- A) True
-- B) False
 
+<b>7. True/False: Verification should have a 'Timeout' (e.g., 5 mins) to prevent it from waiting forever.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. Which is an example of a 'Config Rollback'?**
-- A) Deleting the server
-- B) Reverting a Git commit and re-applying the config
-- C) Changing the font
-- D) restarting the app
 
+<b>8. Which is an example of a 'Config Rollback'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. 'Synthetic Transactions' mimic:**
-- A) The developer
-- B) The actual end-user behavior (e.g., Login/Purchase)
-- C) The CPU
-- D) the network
 
+<b>9. 'Synthetic Transactions' mimic:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. If verification fails, the system should immediately:**
-- A) Try the same fix again 100 times
-- B) Escalate to a human and/or trigger a rollback
-- C) Shutdown everything
-- D) do nothing
 
+<b>10. If verification fails, the system should immediately:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: 'Multi-Sample' verification means checking the health multiple times before deciding.**
-- A) True
-- B) False
 
+<b>11. True/False: 'Multi-Sample' verification means checking the health multiple times before deciding.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - Prevents "Flapping" false positives.
-
+Answer: A** - Prevents "Flapping" false positives.
 </details>
 
-**12. 'Hysteresis' in verification prevents:**
-- A) High costs
-- B) 'Ping-pong' states where the system toggles between remediation and normal
-- C) Slow network
-- D) memory leaks
 
+<b>12. 'Hysteresis' in verification prevents:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A 'Read-Only' database state after a restart is a failure of:**
-- A) The Act stage
-- B) The Verification stage (if not checked)
-- C) The Log stage
-- D) none
 
+<b>13. A 'Read-Only' database state after a restart is a failure of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. 'Desired State' in GitOps is usually stored in:**
-- A) Slack
-- B) A Version Control System (like Git)
-- C) RAM
-- D) the browser
 
+<b>14. 'Desired State' in GitOps is usually stored in:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. What occurs during a 'Canary Verification'?**
-- A) A bird is used
-- B) The fix is verified on a tiny subset of traffic before being fully accepted
-- C) The whole site reboots
-- D) code is deleted
 
+<b>15. What occurs during a 'Canary Verification'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: You should rollback a change if it causes a 10% increase in error rates, even if it "Fixed" the primary issue.**
-- A) True - The fix introduced a regression.
-- B) False
 
+<b>16. True/False: You should rollback a change if it causes a 10% increase in error rates, even if it "Fixed" the primary issue.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'End-to-End' (e2e) verification is:**
-- A) Fast
-- B) Comprehensive (checks the whole path from user to DB)
-- C) For developers only
-- D) cheap
 
+<b>17. 'End-to-End' (e2e) verification is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why log the results of a FAILED verification?**
-- A) To blame people
-- B) To give the on-call engineer context on what the automation attempted
-- C) It's required by law
-- D) no reason
 
+<b>18. Why log the results of a FAILED verification?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. 'kubectl rollout undo' targets which resource?**
-- A) Pods
-- B) Deployment / ReplicaSet
-- C) ConfigMaps
-- D) Nodes
 
+<b>19. 'kubectl rollout undo' targets which resource?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: Rollbacks should be as automated as the remediation itself.**
-- A) True
-- B) False
 
+<b>20. True/False: Rollbacks should be as automated as the remediation itself.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. A 'State Transition' in a rollback means:**
-- A) Moving from one version to another
-- B) Moving to a different country
-- C) Changing the name
-- D) nothing
 
+<b>21. A 'State Transition' in a rollback means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**22. 'Post-Conditions' are checked in:**
-- A) The Decide stage
-- B) The Verification stage
-- C) The Act stage
-- D) The Plan stage
 
+<b>22. 'Post-Conditions' are checked in:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Why use 'Deduplication' in Notify?**
-- A) To see more logs
-- B) To ensure the on-call isn't spammed with 100 "Rollback Successful" messages for one event
-- C) To save space
-- D) it's a bug
 
+<b>23. Why use 'Deduplication' in Notify?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. 'Service Degradation' as a result of a fix is a trigger for:**
-- A) Success
-- B) Rollback
-- C) Celebration
-- D) nothing
 
+<b>24. 'Service Degradation' as a result of a fix is a trigger for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Verification is the bridge between _____ and _____.**
-- A) Code and Data
-- B) Automation and Reliability
-- C) SRE and Developer
-- D) Start and Stop
 
+<b>25. Verification is the bridge between _____ and _____.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

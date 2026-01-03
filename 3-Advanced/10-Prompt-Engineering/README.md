@@ -97,4 +97,3 @@ In large-scale DevOps, we use multiple AI agents with specific roles working tog
 ## Case Studies
 1. **Project Phoenix**: Building an LLM-based agent that automatically resolves 90% of VPC routing issues.
 2. **CyberShield**: AI-native SDLC that scans and closes PRs with security flaws before they reach the main branch.
-

@@ -79,7 +79,7 @@ graph TB
         S2 --> DB
     end
 
-    subgraph "Cloud Computing"
+subgraph "Cloud Computing"
         User2[User] --> DNS[Cloud DNS]
         DNS --> CLB[Elastic Load Balancer]
         CLB --> ASG[Auto Scaling Group]
@@ -90,14 +90,14 @@ graph TB
         VM2 --> RDS
         VM3 --> RDS
     end
-    
-    style FW fill:#ffcdd2,stroke:#b71c1c,color:#000000
+
+style FW fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style LB fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style S1 fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style S2 fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style DB fill:#ffcdd2,stroke:#b71c1c,color:#000000
-    
-    style DNS fill:#e3f2fd,stroke:#0d47a1,color:#000000
+
+style DNS fill:#e3f2fd,stroke:#0d47a1,color:#000000
     style CLB fill:#e3f2fd,stroke:#0d47a1,color:#000000
     style ASG fill:#e3f2fd,stroke:#0d47a1,color:#000000
     style VM1 fill:#e3f2fd,stroke:#0d47a1,color:#000000
@@ -113,19 +113,19 @@ graph TB
         OP_App[Applications] --- OP_Data[Data] --- OP_Run[Runtime] --- OP_Mid[Middleware] --- OP_OS[O/S] --- OP_Virt[Virtualization] --- OP_Serv[Servers] --- OP_Stor[Storage] --- OP_Net[Networking]
     end
 
-    subgraph "IaaS"
+subgraph "IaaS"
         I_App[Applications] --- I_Data[Data] --- I_Run[Runtime] --- I_Mid[Middleware] --- I_OS[O/S] --- I_Virt[Virtualization] --- I_Serv[Servers] --- I_Stor[Storage] --- I_Net[Networking]
     end
 
-    subgraph "PaaS"
+subgraph "PaaS"
         P_App[Applications] --- P_Data[Data] --- P_Run[Runtime] --- P_Mid[Middleware] --- P_OS[O/S] --- P_Virt[Virtualization] --- P_Serv[Servers] --- P_Stor[Storage] --- P_Net[Networking]
     end
 
-    subgraph "SaaS"
+subgraph "SaaS"
         S_App[Applications] --- S_Data[Data] --- S_Run[Runtime] --- S_Mid[Middleware] --- S_OS[O/S] --- S_Virt[Virtualization] --- S_Serv[Servers] --- S_Stor[Storage] --- S_Net[Networking]
     end
 
-    %% On-Premises: All User Managed
+%% On-Premises: All User Managed
     style OP_App fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style OP_Data fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style OP_Run fill:#ffcdd2,stroke:#b71c1c,color:#000000
@@ -136,7 +136,7 @@ graph TB
     style OP_Stor fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style OP_Net fill:#ffcdd2,stroke:#b71c1c,color:#000000
 
-    %% IaaS: Provider manages Infrastructure
+%% IaaS: Provider manages Infrastructure
     style I_App fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style I_Data fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style I_Run fill:#ffcdd2,stroke:#b71c1c,color:#000000
@@ -147,7 +147,7 @@ graph TB
     style I_Stor fill:#e3f2fd,stroke:#0d47a1,color:#000000
     style I_Net fill:#e3f2fd,stroke:#0d47a1,color:#000000
 
-    %% PaaS: Provider manages Runtime/Middleware/OS
+%% PaaS: Provider manages Runtime/Middleware/OS
     style P_App fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style P_Data fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style P_Run fill:#e3f2fd,stroke:#0d47a1,color:#000000
@@ -158,7 +158,7 @@ graph TB
     style P_Stor fill:#e3f2fd,stroke:#0d47a1,color:#000000
     style P_Net fill:#e3f2fd,stroke:#0d47a1,color:#000000
 
-    %% SaaS: Provider manages Everything
+%% SaaS: Provider manages Everything
     style S_App fill:#e3f2fd,stroke:#0d47a1,color:#000000
     style S_Data fill:#e3f2fd,stroke:#0d47a1,color:#000000
     style S_Run fill:#e3f2fd,stroke:#0d47a1,color:#000000
@@ -196,13 +196,13 @@ graph LR
         Hardware --> Maintenance
     end
 
-    subgraph OpEx [OpEx Model]
+subgraph OpEx [OpEx Model]
         No_Upfront[No Upfront Cost] --> Subscription
         Subscription --> Pay_As_You_Go
         Pay_As_You_Go --> Cost_Optimization
     end
 
-    style CapEx fill:#ffcdd2,stroke:#b71c1c
+style CapEx fill:#ffcdd2,stroke:#b71c1c
     style OpEx fill:#e3f2fd,stroke:#0d47a1
 ```
 
@@ -624,276 +624,176 @@ This comprehensive guide provides the foundation for understanding cloud computi
 6. **Describe the Shared Responsibility Model.**
    - Security obligations are shared between provider (security *of* the cloud) and customer (security *in* the cloud).
 
-### Advanced Level
-7. **What is a "Noisy Neighbor" in cloud computing?**
-   - A tenant in a shared environment monopolizing resources, degrading performance for others.
-8. **Explain the concept of "Cloud Native".**
-   - Building applications specifically for cloud environments using microservices, containers, CI/CD, and DevOps practices.
-9. **What is the difference between RTO and RPO?**
-   - RTO (Recovery Time Objective): Max acceptable downtime. RPO (Recovery Point Objective): Max acceptable data loss (time).
-10. **How does Serverless differ from PaaS?**
-    - Serverless scales to zero and is event-driven (pay-per-invocation). PaaS usually charges for running resources/instances heavily.
-11. **Explain the benefits of a Multi-Cloud strategy.**
-    - Avoids vendor lock-in, leverages best-of-breed services from different providers (e.g., Google for AI, AWS for compute), and improves redundancy/availability.
-12. **What are the cost implications of Data Transfer (Egress) fees?**
-    - Moving data *out* of the cloud (egress) usually incurs costs, while moving data *in* (ingress) is typically free. High egress can significantly impact TCO for data-heavy apps.
-13. **Describe the role of a Cloud Access Security Broker (CASB).**
-    - A policy enforcement point between cloud consumers and providers to manage security, compliance, data protection, and threat detection.
-14. **What is Infrastructure as Code (IaC) and why is it essential for cloud?**
-    - Managing infrastructure using code (e.g., Terraform) instead of manual configuration. It enables version control, reproducibility, automation, and rapid disaster recovery.
-15. **What is the difference between Availability and Durability?**
-    - Availability is uptime (system is running). Durability is data integrity (data is not lost). S3 offers 99.99% availability but 99.999999999% durability.
-
----
-
-## Quiz: Cloud Basics
-
+<b>7. </b>
 <details>
-<summary><b>1. Which characteristic allows users to provision resources automatically without human intervention?</b></summary>
-A) Broad Network Access<br>
-B) Resource Pooling<br>
-C) On-Demand Self-Service<br>
-D) Measured Service<br>
-<br>
-<b>Answer: C) On-Demand Self-Service</b>
+<summary>Show Answer</summary>
+Answer: C) On-Demand Self-Service</b>
 </details>
 
+
+<b>2. Scaling resources outward by adding more instances is known as:</b>
 <details>
-<summary><b>2. Scaling resources outward by adding more instances is known as:</b></summary>
-A) Vertical Scaling<br>
-B) Horizontal Scaling<br>
-C) Diagonal Scaling<br>
-D) Inverse Scaling<br>
-<br>
-<b>Answer: B) Horizontal Scaling</b>
+<summary>Show Answer</summary>
+Answer: B) Horizontal Scaling</b>
 </details>
 
+
+<b>3. Which model represents "Pay-as-you-go" pricing?</b>
 <details>
-<summary><b>3. Which model represents "Pay-as-you-go" pricing?</b></summary>
-A) CapEx<br>
-B) OpEx<br>
-C) FixedEx<br>
-D) UpfrontEx<br>
-<br>
-<b>Answer: B) OpEx</b>
+<summary>Show Answer</summary>
+Answer: B) OpEx</b>
 </details>
 
+
+<b>4. In the Shared Responsibility Model, who is responsible for physical security of data centers?</b>
 <details>
-<summary><b>4. In the Shared Responsibility Model, who is responsible for physical security of data centers?</b></summary>
-A) The Customer<br>
-B) The Cloud Provider<br>
-C) The Government<br>
-D) The ISP<br>
-<br>
-<b>Answer: B) The Cloud Provider</b>
+<summary>Show Answer</summary>
+Answer: B) The Cloud Provider</b>
 </details>
 
+
+<b>5. Which virtualization type runs directly on the bare metal hardware?</b>
 <details>
-<summary><b>5. Which virtualization type runs directly on the bare metal hardware?</b></summary>
-A) Type 2 Hypervisor<br>
-B) Type 1 Hypervisor<br>
-C) Containerization<br>
-D) Para-virtualization<br>
-<br>
-<b>Answer: B) Type 1 Hypervisor</b>
+<summary>Show Answer</summary>
+Answer: B) Type 1 Hypervisor</b>
 </details>
 
+
+<b>6. Which benefit allows a cloud application to survive a data center failure?</b>
 <details>
-<summary><b>6. Which benefit allows a cloud application to survive a data center failure?</b></summary>
-A) Elasticity<br>
-B) Cost Optimization<br>
-C) High Availability (Disaster Recovery)<br>
-D) Latency<br>
-<br>
-<b>Answer: C) High Availability (Disaster Recovery)</b>
+<summary>Show Answer</summary>
+Answer: C) High Availability (Disaster Recovery)</b>
 </details>
 
+
+<b>7. What technology allows multiple operating systems to run on a single physical server?</b>
 <details>
-<summary><b>7. What technology allows multiple operating systems to run on a single physical server?</b></summary>
-A) Networking<br>
-B) Virtualization<br>
-C) Compilation<br>
-D) Encryption<br>
-<br>
-<b>Answer: B) Virtualization</b>
+<summary>Show Answer</summary>
+Answer: B) Virtualization</b>
 </details>
 
+
+<b>8. Which cloud deployment model is restricted to a specific organization?</b>
 <details>
-<summary><b>8. Which cloud deployment model is restricted to a specific organization?</b></summary>
-A) Public Cloud<br>
-B) Private Cloud<br>
-C) Hybrid Cloud<br>
-D) Community Cloud<br>
-<br>
-<b>Answer: B) Private Cloud</b>
+<summary>Show Answer</summary>
+Answer: B) Private Cloud</b>
 </details>
 
+
+<b>9. Which is NOT a standard cloud service model?</b>
 <details>
-<summary><b>9. Which is NOT a standard cloud service model?</b></summary>
-A) IaaS<br>
-B) PaaS<br>
-C) SaaS<br>
-D) HaaS (Hardware as a Service) - <i>(Note: Sometimes used, but usually IaaS covers this)</i><br>
-<br>
-<b>Answer: D) HaaS (in standard NIST definition contexts)</b>
+<summary>Show Answer</summary>
+Answer: D) HaaS (in standard NIST definition contexts)</b>
 </details>
 
+
+<b>10. What does RPO stand for in Disaster Recovery?</b>
 <details>
-<summary><b>10. What does RPO stand for in Disaster Recovery?</b></summary>
-A) Recovery Point Objective<br>
-B) Recovery Process Output<br>
-C) Restore Point Option<br>
-D) Reliable Performance Outcome<br>
-<br>
-<b>Answer: A) Recovery Point Objective</b>
+<summary>Show Answer</summary>
+Answer: A) Recovery Point Objective</b>
 </details>
 
+
+<b>11. Docker is an example of what technology?</b>
 <details>
-<summary><b>11. Docker is an example of what technology?</b></summary>
-A) Hypervisor<br>
-B) Containerization<br>
-C) Serverless<br>
-D) SaaS<br>
-<br>
-<b>Answer: B) Containerization</b>
+<summary>Show Answer</summary>
+Answer: B) Containerization</b>
 </details>
 
+
+<b>12. Which capability allows resources to appear unlimited to the consumer?</b>
 <details>
-<summary><b>12. Which capability allows resources to appear unlimited to the consumer?</b></summary>
-A) Measured Service<br>
-B) Rapid Elasticity<br>
-C) Resource Pooling<br>
-D) Broad Network Access<br>
-<br>
-<b>Answer: B) Rapid Elasticity</b>
+<summary>Show Answer</summary>
+Answer: B) Rapid Elasticity</b>
 </details>
 
+
+<b>13. Which is an example of SaaS?</b>
 <details>
-<summary><b>13. Which is an example of SaaS?</b></summary>
-A) AWS EC2<br>
-B) Google App Engine<br>
-C) Gmail<br>
-D) Linux<br>
-<br>
-<b>Answer: C) Gmail</b>
+<summary>Show Answer</summary>
+Answer: C) Gmail</b>
 </details>
 
+
+<b>14. Moving from on-premises to cloud shifts responsibility of hardware maintenance to:</b>
 <details>
-<summary><b>14. Moving from on-premises to cloud shifts responsibility of hardware maintenance to:</b></summary>
-A) The IT Team<br>
-B) The Cloud Provider<br>
-C) The DevOps Engineer<br>
-D) The End User<br>
-<br>
-<b>Answer: B) The Cloud Provider</b>
+<summary>Show Answer</summary>
+Answer: B) The Cloud Provider</b>
 </details>
 
+
+<b>15. Which allows users to sign in once and access multiple applications?</b>
 <details>
-<summary><b>15. Which allows users to sign in once and access multiple applications?</b></summary>
-A) MFA<br>
-B) SSO (Single Sign-On)<br>
-C) IAM<br>
-D) VPN<br>
-<br>
-<b>Answer: B) SSO (Single Sign-On)</b>
+<summary>Show Answer</summary>
+Answer: B) SSO (Single Sign-On)</b>
 </details>
 
+
+<b>16. What is the primary benefit of Edge Computing?</b>
 <details>
-<summary><b>16. What is the primary benefit of Edge Computing?</b></summary>
-A) Infinite Storage<br>
-B) Reduced Latency<br>
-C) Cheaper Compute<br>
-D) Better UI<br>
-<br>
-<b>Answer: B) Reduced Latency</b>
+<summary>Show Answer</summary>
+Answer: B) Reduced Latency</b>
 </details>
 
+
+<b>17. Which is a characteristic of "Cloud Native" apps?</b>
 <details>
-<summary><b>17. Which is a characteristic of "Cloud Native" apps?</b></summary>
-A) Monolithic architecture<br>
-B) Microservices architecture<br>
-C) Manual deployment<br>
-D) Dependent on specific hardware<br>
-<br>
-<b>Answer: B) Microservices architecture</b>
+<summary>Show Answer</summary>
+Answer: B) Microservices architecture</b>
 </details>
 
+
+<b>18. What does "Multi-Tenancy" mean?</b>
 <details>
-<summary><b>18. What does "Multi-Tenancy" mean?</b></summary>
-A) Multiple clouds used by one user<br>
-B) Multiple users sharing the same resource/infrastructure<br>
-C) Multiple data centers<br>
-D) Multiple passwords<br>
-<br>
-<b>Answer: B) Multiple users sharing the same resource/infrastructure</b>
+<summary>Show Answer</summary>
+Answer: B) Multiple users sharing the same resource/infrastructure</b>
 </details>
 
+
+<b>19. AWS Lambda is an example of:</b>
 <details>
-<summary><b>19. AWS Lambda is an example of:</b></summary>
-A) IaaS<br>
-B) PaaS<br>
-C) FaaS (Serverless)<br>
-D) SaaS<br>
-<br>
-<b>Answer: C) FaaS (Serverless)</b>
+<summary>Show Answer</summary>
+Answer: C) FaaS (Serverless)</b>
 </details>
 
+
+<b>20. Which compliance standard relates to healthcare data?</b>
 <details>
-<summary><b>20. Which compliance standard relates to healthcare data?</b></summary>
-A) GDPR<br>
-B) PCI DSS<br>
-C) HIPAA<br>
-D) ISO 27001<br>
-<br>
-848: <b>Answer: C) HIPAA</b>
-849: </details>
-850: 
-851: <details>
-852: <summary><b>21. What is the main advantage of a Hybrid Cloud?</b></summary>
-853: A) It's free<br>
-854: B) Flexibility to keep sensitive data private while scaling public workloads<br>
-855: C) It doesn't require internet<br>
-856: D) It uses only one provider<br>
-857: <br>
-858: <b>Answer: B) Flexibility to keep sensitive data private while scaling public workloads</b>
-859: </details>
-860: 
-861: <details>
-862: <summary><b>22. Which service model provides the most control over the infrastructure?</b></summary>
-863: A) SaaS<br>
-864: B) PaaS<br>
-865: C) IaaS<br>
-866: D) FaaS<br>
-867: <br>
-868: <b>Answer: C) IaaS</b>
-869: </details>
-870: 
-871: <details>
-872: <summary><b>23. "Vendor Lock-in" is most difficult to resolve in which model?</b></summary>
-873: A) IaaS<br>
-874: B) PaaS<br>
-875: C) SaaS<br>
-876: D) Hybrid Cloud<br>
-877: <br>
-878: <b>Answer: C) SaaS</b>
-879: </details>
-880: 
-881: <details>
-882: <summary><b>24. What best describes "Elasticity"?</b></summary>
-883: A) Manual scaling<br>
-884: B) Automatic, rapid scaling of resources based on demand<br>
-885: C) Fixed resource allocation<br>
-886: D) Long-term contract<br>
-887: <br>
-888: <b>Answer: B) Automatic, rapid scaling of resources based on demand</b>
-889: </details>
-890: 
-891: <details>
-892: <summary><b>25. Which is a benefit of "Serverless" computing for developers?</b></summary>
-893: A) Managing OS updates<br>
-894: B) Focus on business logic code without managing servers<br>
-895: C) Controlling physical hardware<br>
-896: D) Installing database software<br>
-897: <br>
-898: <b>Answer: B) Focus on business logic code without managing servers</b>
-899: </details>
+<summary>Show Answer</summary>
+Answer: C) HIPAA</b>
+</details>
+
+
+<b>21. What is the main advantage of a Hybrid Cloud?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Flexibility to keep sensitive data private while scaling public workloads</b>
+</details>
+
+
+<b>22. Which service model provides the most control over the infrastructure?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) IaaS</b>
+</details>
+
+
+<b>23. "Vendor Lock-in" is most difficult to resolve in which model?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) SaaS</b>
+</details>
+
+
+<b>24. What best describes "Elasticity"?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Automatic, rapid scaling of resources based on demand</b>
+</details>
+
+
+<b>25. Which is a benefit of "Serverless" computing for developers?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Focus on business logic code without managing servers</b>
+</details>

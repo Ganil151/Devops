@@ -18,8 +18,8 @@ graph TD
     GetState --> Compare{Matches Desired State?}
     Compare -->|Yes| OK[Return changed: False]
     Compare -->|No| CheckMode{Check Mode?}
-    
-    CheckMode -->|Yes| WouldChange[Return changed: True, NO Action]
+
+CheckMode -->|Yes| WouldChange[Return changed: True, NO Action]
     CheckMode -->|No| Action[Perform Change]
     Action --> Success[Return changed: True]
 ```

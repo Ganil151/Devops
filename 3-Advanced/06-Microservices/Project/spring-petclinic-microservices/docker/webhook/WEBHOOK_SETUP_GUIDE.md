@@ -110,7 +110,12 @@ curl ifconfig.me
 For **each Docker image repository**:
 
 1. Go to [Docker Hub](https://hub.docker.com/)
-2. Navigate to your repository (e.g., `ganil151/customers-service`)
+<b>2. Navigate to your repository</b>
+<details>
+<summary>Show Answer</summary>
+Answer: e.g., `ganil151/customers-service`
+</details>
+
 3. Click on **"Webhooks"** tab
 4. Click **"Create Webhook"**
 5. Fill in:

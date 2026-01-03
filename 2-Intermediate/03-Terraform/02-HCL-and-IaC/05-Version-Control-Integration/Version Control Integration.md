@@ -153,325 +153,227 @@ graph LR
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which file contains downloaded provider plugins and should be ignored by Git?**
-- A) .terraform/
-- B) providers.tf
-- C) main.tf
-- D) .git/
-
+<b>1. Which file contains downloaded provider plugins and should be ignored by Git?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - This directory is local and platform-specific.
-
+Answer: A** - This directory is local and platform-specific.
 </details>
 
-**2. True/False: The `.terraform.lock.hcl` file should be committed to Git.**
-- A) True
-- B) False
 
+
+
+<b>2. True/False: The `.terraform.lock.hcl` file should be committed to Git.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - It ensures provider version consistency across the team.
-
+Answer: A** - It ensures provider version consistency across the team.
 </details>
 
-**3. What is the main risk of committing `terraform.tfstate` to a public repository?**
-- A) The file will get too big
-- B) It contains plain-text secrets (passwords, keys, etc.)
-- C) Git doesn't support .tfstate files
-- D) It's slow to upload
 
+
+
+<b>3. What is the main risk of committing `terraform.tfstate` to a public repository?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. In a GitFlow workflow, which branch usually represents the "Production" state?**
-- A) feature/
-- B) develop/
-- C) main (or master)
-- D) hotfix/
 
+
+
+<b>4. In a GitFlow workflow, which branch usually represents the "Production" state?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**5. What does `terraform fmt` do?**
-- A) Runs the plan
-- B) Automatically rewrites HCL code to follow standard formatting and indentation
-- C) Deletes unused variables
-- D) Deploys resources
 
+
+
+<b>5. What does `terraform fmt` do?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. Which tool helps detect secrets in your code *before* you commit them?**
-- A) Terraform Plan
-- B) Pre-commit hooks (e.g. detect-secrets)
-- C) Git Push
-- D) AWS Console
 
+
+
+<b>6. Which tool helps detect secrets in your code *before* you commit them?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. "GitOps" means that the source of truth for infrastructure is:**
-- A) The AWS Console
-- B) The Git Repository
-- C) The developer's local machine
-- D) A PDF documentation
 
+
+
+<b>7. "GitOps" means that the source of truth for infrastructure is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. Why is it important to see a `terraform plan` output in a Pull Request?**
-- A) To check for spelling errors
-- B) To understand the actual impact of code changes on live infrastructure
-- C) To speed up the merge
-- D) To reduce Git storage
 
+
+
+<b>8. Why is it important to see a `terraform plan` output in a Pull Request?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. Which command checks for syntax errors but doesn't connect to the internet or cloud?**
-- A) terraform apply
-- B) terraform validate
-- C) terraform plan
-- D) terraform init
 
+
+
+<b>9. Which command checks for syntax errors but doesn't connect to the internet or cloud?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. A standard `.gitignore` for Terraform should include:**
-- A) main.tf
-- B) variables.tf
-- C) *.tfstate
-- D) providers.tf
 
+
+
+<b>10. A standard `.gitignore` for Terraform should include:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**11. What is a "Short-lived branch" in Git?**
-- A) A branch that exists for years
-- B) A branch created for a specific feature/fix and deleted after merge
-- C) A branch with only one file
-- D) The main branch
 
+
+
+<b>11. What is a "Short-lived branch" in Git?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. "Infrastructure drift" can be prevented in a team by:**
-- A) Only allowing one person to use Terraform
-- B) Using GitOps and forbidding manual changes in the cloud console
-- C) Turning off the cloud console
-- D) Deleting the state file often
 
+
+
+<b>12. "Infrastructure drift" can be prevented in a team by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. Which file is used for local debugging overrides and should be ignored by Git?**
-- A) main.tf
-- B) override.tf
-- C) versions.tf
-- D) outputs.tf
 
+
+
+<b>13. Which file is used for local debugging overrides and should be ignored by Git?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. Pull Request reviews for IaC should focus on:**
-- A) Logic, security, and the Plan output
-- B) Variable namings only
-- C) Who wrote the code
-- D) How fast the code runs
 
+
+
+<b>14. Pull Request reviews for IaC should focus on:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**15. What does the "auto-approve" flag do in a CD pipeline?**
-- A) Asks the user for a password
-- B) Skips the manual "yes" confirmation during apply
-- C) Automatically corrects code errors
-- D) Emails the manager
 
+
+
+<b>15. What does the "auto-approve" flag do in a CD pipeline?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. "Trunk-Based Development" differs from GitFlow by:**
-- A) Having more branches
-- B) Using a single long-lived branch (main) with frequent small pushes
-- C) Not using Git at all
-- D) Only using local branches
 
+
+
+<b>16. "Trunk-Based Development" differs from GitFlow by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. If a secret is leaked to Git history, you should:**
-- A) Delete the commit and pretend it didn't happen
-- B) Immediately rotate/revoke the secret and then purge Git history
-- C) Just change the password later
-- D) Do nothing if the repo is private
 
+
+
+<b>17. If a secret is leaked to Git history, you should:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. The `.terraform.lock.hcl` file is generated by which command?**
-- A) terraform plan
-- B) terraform apply
-- C) terraform init
-- D) terraform fmt
 
+
+
+<b>18. The `.terraform.lock.hcl` file is generated by which command?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**19. Which hook ensures your code indentation is always correct?**
-- A) terraform_validate
-- B) terraform_fmt
-- C) detect-secrets
-- D) pre-commit-terraform
 
+
+
+<b>19. Which hook ensures your code indentation is always correct?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. GitOps relies on which principle?**
-- A) Manual deployments
-- B) Declarative infrastructure stored in version control
-- C) Frequent local applies
-- D) No code reviews
 
+
+
+<b>20. GitOps relies on which principle?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. "Continuous Integration" (CI) for Terraform typically includes:**
-- A) Creating resources
-- B) Formatting, Validation, and Planning
-- C) Billing review
-- D) Deleting old modules
 
+
+
+<b>21. "Continuous Integration" (CI) for Terraform typically includes:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. "Continuous Deployment" (CD) for Terraform typically includes:**
-- A) Writing code
-- B) Running 'terraform apply' after a merge to main
-- C) Reviewing logs
-- D) Scaling servers manually
 
+
+
+<b>22. "Continuous Deployment" (CD) for Terraform typically includes:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Why use `!example.tfvars` in `.gitignore`?**
-- A) To ignore example files
-- B) To EXPLICITLY ALLOW example files while ignoring all other .tfvars
-- C) To mark it as important
-- D) To delete it
 
+
+
+<b>23. Why use `!example.tfvars` in `.gitignore`?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. What is the benefit of a `gitGraph` in documentation?**
-- A) It makes the code faster
-- B) It visualizes the branching and merging strategy for the team
-- C) It stores Git history
-- D) It replaces the Git UI
 
+
+
+<b>24. What is the benefit of a `gitGraph` in documentation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. A "Source of Truth" in GitOps means:**
-- A) The senior dev is always right
-- B) The state of the infrastructure is defined solely by the code in Git
-- C) The cloud console is the leader
-- D) Documentation is the lead
 
+
+
+<b>25. A "Source of Truth" in GitOps means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+

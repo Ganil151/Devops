@@ -151,317 +151,176 @@ Assign owners and due dates. Follow up in sprint planning.
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. The primary goal of a post-mortem is:**
-- A) To find someone to fire
-- B) To learn from the failure and prevent it from happening again
-- C) To celebrate a successful fix
-- D) To update the marketing budget
-
+<b>1. The primary goal of a post-mortem is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: In a blameless culture, any mistake is the system's fault.**
-- A) True
-- B) False
 
+<b>2. True/False: In a blameless culture, any mistake is the system's fault.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**3. Which technique is used to find the 'Root Cause'?**
-- A) The Three Stooges
-- B) The Five Whys
-- C) The Seven Dwarfs
-- D) nothing
 
+<b>3. Which technique is used to find the 'Root Cause'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A post-mortem should ideally be written within:**
-- A) 1 month
-- B) 24 to 48 hours
-- C) 5 minutes
-- D) never
 
+<b>4. A post-mortem should ideally be written within:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. 'Action Items' in a post-mortem MUST have:**
-- A) A cool name
-- B) An Owner and a Due Date
-- C) A lot of words
-- D) nothing
 
+<b>5. 'Action Items' in a post-mortem MUST have:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. Blameless language focuses on:**
-- A) "Who"
-- B) "What" and "How" (The facts and the system)
-- C) Feelings
-- D) nothing
 
+<b>6. Blameless language focuses on:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: Only engineers should read the post-mortem.**
-- A) False - Share internally with the whole company (Leadership, Product, Sales) for transparency.
-- B) True
 
+<b>7. True/False: Only engineers should read the post-mortem.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. The 'Timeline' in a post-mortem should include:**
-- A) What people ate for lunch
-- B) Every significant event with a timestamp
-- C) Only the fix
-- D) nothing
 
+<b>8. The 'Timeline' in a post-mortem should include:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. What is an 'Executive Summary' in a post-mortem?**
-- A) A list of managers
-- B) A 2-3 sentence overview of what happened, the impact, and the root cause
-- C) A bill
-- D) nothing
 
+<b>9. What is an 'Executive Summary' in a post-mortem?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. 'Root Cause' is usually found at which 'Why' in the Five Whys?**
-- A) The first why
-- B) Usually around the 4th or 5th why
-- C) Never
-- D) the 100th why
 
+<b>10. 'Root Cause' is usually found at which 'Why' in the Five Whys?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: Post-mortems are only for massive outages (P0).**
-- A) False - You can perform them for any significant lesson-learned (even P2/P3).
-- B) True
 
+<b>11. True/False: Post-mortems are only for massive outages (P0).</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. 'Systemic Change' means:**
-- A) Changing the font
-- B) Fixing the underlying processes or tools to prevent whole classes of bugs
-- C) Changing your name
-- D) nothing
 
+<b>12. 'Systemic Change' means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A 'Post-Mortem Meeting' is where:**
-- A) People sleep
-- B) Stakeholders discuss the incident timeline and action items blamelessly
-- C) Decisions are hidden
-- D) nothing
 
+<b>13. A 'Post-Mortem Meeting' is where:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. If action items aren't tracked, the result is:**
-- A) Better code
-- B) The same incident happening again (The 'loop')
-- C) More money
-- D) nothing
 
+<b>14. If action items aren't tracked, the result is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Blameless' language: Instead of "The dev forgot the config," use:**
-- A) "The dev is lazy"
-- B) "The configuration management process lacked a validation step"
-- C) Nothing
-- D) "It was magic"
 
+<b>15. 'Blameless' language: Instead of "The dev forgot the config," use:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: You should include 'What Went Well' in the report.**
-- A) True - It's important to recognize good response behavior.
-- B) False
 
+<b>16. True/False: You should include 'What Went Well' in the report.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'Dark Debt' refers to:**
-- A) Money owed to criminals
-- B) Hidden systemic complexities that lead to unexpected failures
-- C) A broken monitor
-- D) nothing
 
+<b>17. 'Dark Debt' refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Who should lead the Post-Mortem meeting?**
-- A) The person who caused the bug
-- B) Usually the Incident Commander or an SRE Lead
-- C) The janitor
-- D) the customer
 
+<b>18. Who should lead the Post-Mortem meeting?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. A 'Corrective Action' is:**
-- A) A post on Twitter
-- B) An action item that fixes the root cause
-- C) A bonus
-- D) nothing
 
+<b>19. A 'Corrective Action' is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: You can use ChatGPT to help draft a post-mortem from Slack logs.**
-- A) True - It's a great tool for summarizing timelines.
-- B) False
 
+<b>20. True/False: You can use ChatGPT to help draft a post-mortem from Slack logs.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Information Decay' is why we do post-mortems:**
-- A) Slowly over a year
-- B) Quickly (within 48 hrs) because people forget details
-- C) Never
-- D) monthly
 
+<b>21. 'Information Decay' is why we do post-mortems:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Gamedays' are often result from:**
-- A) Boredom
-- B) Post-mortem action items to "Practice" certain failure scenarios
-- C) Hobbies
-- D) nothing
 
+<b>22. 'Gamedays' are often result from:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Under-reporting an incident leads to:**
-- A) Faster fixes
-- B) Skewed reliability data and missed learning opportunities
-- C) More trust
-- D) nothing
 
+<b>23. Under-reporting an incident leads to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Blameless' SRE culture was famously pioneered by:**
-- A) Microsoft
-- B) Google
-- C) Yahoo
-- D) Apple
 
+<b>24. The 'Blameless' SRE culture was famously pioneered by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. A post-mortem is the _____ of the learning loop.**
-- A) Start
-- B) Closure/Completion
-- C) Middle
-- D) Enemy
 
+<b>25. A post-mortem is the _____ of the learning loop.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

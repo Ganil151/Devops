@@ -51,4 +51,3 @@ By the end of this module, you will be able to:
 
 ---
 *Secure the gateway. Rule the traffic.*
-

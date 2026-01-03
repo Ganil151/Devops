@@ -11,23 +11,23 @@ graph TB
         subgraph "Bridge Network default"
             C1[Container 1<br/>172.17.0.2] <--> C2[Container 2<br/>172.17.0.3]
         end
-        
-        subgraph "Custom Bridge Network"
+
+subgraph "Custom Bridge Network"
             C3[Container 3] <--> C4[Container 4]
         end
-        
-        subgraph "Host Network"
+
+subgraph "Host Network"
             C5[Container 5<br/>Uses Host IP]
         end
-        
-        C6[Container 6<br/>None Network<br/>No Network]
+
+C6[Container 6<br/>None Network<br/>No Network]
     end
-    
-    Bridge --> Router[Host Network Interface]
+
+Bridge --> Router[Host Network Interface]
     Host --> Router
     Router <--> Internet[External Network]
-    
-    style Bridge fill:#e3f2fd,color:#000000
+
+style Bridge fill:#e3f2fd,color:#000000
     style Host fill:#f3e5f5,color:#000000
     style C6 fill:#ffcdd2,color:#000000
 ```
@@ -419,9 +419,6 @@ docker service create \
   --replicas 3 \
   nginx
 ```
-
-
-
 
 > [!NOTE]
 > Overlay networks are primarily used in Docker Swarm or Kubernetes environments for multi-host container communication.

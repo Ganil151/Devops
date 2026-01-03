@@ -78,12 +78,12 @@ graph TD
     Logs --> ExitCode{Check Exit Code}
     ExitCode -- 137 --> OOM[Out of Memory - Increase Limits]
     ExitCode -- 1 / 2 --> Config[Config/App Error - Check logs]
-    
-    Exited -- Yes --> Network{Can you connect?}
+
+Exited -- Yes --> Network{Can you connect?}
     Network -- No --> Inspect[Check 'docker inspect' for IP/Ports]
     Inspect --> Bind[Check if App binds to 0.0.0.0, not localhost]
-    
-    style Start fill:#f9f,stroke:#333
+
+style Start fill:#f9f,stroke:#333
     style OOM fill:#f66,stroke:#333
     style Config fill:#f66,stroke:#333
     style Bind fill:#f66,stroke:#333
@@ -200,7 +200,12 @@ graph TD
 7. a
 8. c
 9. c
-10. b (It shows both stdout and stderr)
+<b>10. b</b>
+<details>
+<summary>Show Answer</summary>
+Answer: It shows both stdout and stderr
+</details>
+
 11. b
 12. b
 13. c

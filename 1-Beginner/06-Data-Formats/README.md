@@ -11,8 +11,6 @@ In DevOps, we almost never configure systems through a GUI. Instead, we use **De
 - Query JSON data using `jq`
 - Convert data between YAML and JSON formats
 
-
-
 ## 📖 YAML (YAML Ain't Markup Language)
 YAML is the industry standard for DevOps tools like Kubernetes, Ansible, and Docker Compose. It is designed to be human-readable.
 
@@ -34,7 +32,7 @@ Reduce repetition by defining a block once and reusing it.
 default_settings: &defaults
   timeout: 30
   retries: 3
-  
+
 # Use the alias
 service_a:
   <<: *defaults
@@ -53,7 +51,7 @@ service_b:
 script: |
   echo "Line 1"
   echo "Line 2"
-  
+
 description: >
   This is a very long sentence that spans multiple lines
   in the file but will be read as a single line.
@@ -298,29 +296,99 @@ python3 -c 'import sys, yaml, json; print(json.dumps(yaml.safe_load(sys.stdin.re
 ### 🔑 Quiz Answer Key
 
 **Part 1: Syntax & Rules**
-1. **B) Tab** (YAML forbids tabs for indentation)
-2. **B) `"key": "value"`** (JSON requires double quotes for keys and strings)
-3. **C) No** (Standard JSON does not support comments)
-4. **B) `-`** (Dash denotes a list item)
-5. **C) `#`** (Hash denotes a comment)
+<b>1. B) Tab</b>
+<details>
+<summary>Show Answer</summary>
+Answer: YAML forbids tabs for indentation
+</details>
+
+<b>2. B) `"key": "value"`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: JSON requires double quotes for keys and strings
+</details>
+
+<b>3. C) No</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Standard JSON does not support comments
+</details>
+
+<b>4. B) `-`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Dash denotes a list item
+</details>
+
+<b>5. C) `#`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Hash denotes a comment
+</details>
+
 
 **Part 2: Data Types & Structures**
-6. **B) Date** (JSON has no native Date type; usually strings are used)
-7. **C) A Literal Block Scalar** (Preserves newlines)
-8. **B) Anchors** (Defines a reusable block)
-9. **C) Aliases** (References an anchor)
-10. **B) `{}`** (Curly braces denote an object/dictionary)
+<b>6. B) Date</b>
+<details>
+<summary>Show Answer</summary>
+Answer: JSON has no native Date type; usually strings are used
+</details>
+
+<b>7. C) A Literal Block Scalar</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Preserves newlines
+</details>
+
+<b>8. B) Anchors</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Defines a reusable block
+</details>
+
+<b>9. C) Aliases</b>
+<details>
+<summary>Show Answer</summary>
+Answer: References an anchor
+</details>
+
+<b>10. B) `{}`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Curly braces denote an object/dictionary
+</details>
+
 
 **Part 3: Tooling (jq & yq)**
 11. **C) `jq`**
 12. **A) `jq .version file.json`**
-13. **B) YAML files** (Though modern versions handle JSON/XML too)
+<b>13. B) YAML files</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Though modern versions handle JSON/XML too
+</details>
+
 14. **B) Pretty-printed (formatted) JSON**
-15. **B) Yes, often used for this purpose** (`yq -o=json`)
+<b>15. B) Yes, often used for this purpose</b>
+<details>
+<summary>Show Answer</summary>
+Answer: `yq -o=json`
+</details>
+
 
 **Part 4: Real-World Scenarios**
 16. **B) It supports comments and is easier for humans to read**
 17. **A) It is easier for Javascript (and many languages) to parse natively**
-18. **B) `grep "192.168.1.5" config.yaml`** (Fastest for simple existence check)
-19. **A) A missing or extra comma** (Very common JSON syntax error)
+<b>18. B) `grep "192.168.1.5" config.yaml`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Fastest for simple existence check
+</details>
+
+<b>19. A) A missing or extra comma</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Very common JSON syntax error
+</details>
+
 20. **B) To ensure the configuration syntax is correct before applying it to production**

@@ -221,8 +221,18 @@ Offer to join startup advisory boards:
 **Engagement**: Per-candidate or monthly retainer
 
 **Process**:
-1. Resume review and technical screening (30 min)
-2. Live coding/architecture session (60 min)
+<b>1. Resume review and technical screening</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 30 min
+</details>
+
+<b>2. Live coding/architecture session</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 60 min
+</details>
+
 3. Detailed written assessment
 4. Hiring recommendation
 

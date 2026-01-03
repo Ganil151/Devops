@@ -47,9 +47,24 @@ docker compose ps
 ```
 
 ### Check Connectivity
-1. **Frontend:** `curl -I http://localhost` (Should return 200 or 301)
-2. **API:** `curl http://localhost/api/about` (Should return JSON with visitor count)
-3. **Redis:** `docker compose exec redis redis-cli ping` (Should return PONG)
+<b>1. Frontend:** `curl -I http://localhost`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Should return 200 or 301
+</details>
+
+<b>2. API:** `curl http://localhost/api/about`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Should return JSON with visitor count
+</details>
+
+<b>3. Redis:** `docker compose exec redis redis-cli ping`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Should return PONG
+</details>
+
 
 ---
 

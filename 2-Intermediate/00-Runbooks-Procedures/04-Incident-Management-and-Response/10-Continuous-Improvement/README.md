@@ -12,8 +12,8 @@ graph LR
     Implement --> Monitor[Monitor Effectiveness]
     Monitor --> Measure[Measure Impact]
     Measure --> Incident
-    
-    style Actions fill:#f96,stroke:#333,stroke-width:2px
+
+style Actions fill:#f96,stroke:#333,stroke-width:2px
 ```
 
 ---
@@ -142,317 +142,176 @@ Rotate on-call roles so everyone learns.
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. The main goal of Continuous Improvement is to:**
-- A) Blame developers
-- B) Ensure the same incident never happens twice
-- C) Buy more servers
-- D) nothing
-
+<b>1. The main goal of Continuous Improvement is to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: 'MTTR' should ideally decrease over time.**
-- A) True
-- B) False
 
+<b>2. True/False: 'MTTR' should ideally decrease over time.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**3. A 'Repeat Incident' rate of 50% indicates:**
-- A) Success
-- B) Failure to learn from post-mortems and implement action items
-- C) Good luck
-- D) nothing
 
+<b>3. A 'Repeat Incident' rate of 50% indicates:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. Where should Post-Mortem 'Action Items' be tracked?**
-- A) A secret notebook
-- B) The main team Sprint/Backlog (Jira/board)
-- C) In email only
-- D) never
 
+<b>4. Where should Post-Mortem 'Action Items' be tracked?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. 'MTTD' stands for:**
-- A) Maximum Time To Deploy
-- B) Mean Time To Detect
-- C) Monthly Total Task Duration
-- D) nothing
 
+<b>5. 'MTTD' stands for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. An 'Incident Review Board' meeting is usually held:**
-- A) Every minute
-- B) Monthly or Quarterly
-- C) Never
-- D) only when the CEO is angry
 
+<b>6. An 'Incident Review Board' meeting is usually held:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: Gamedays are for practicing response to simulated failures.**
-- A) True
-- B) False
 
+<b>7. True/False: Gamedays are for practicing response to simulated failures.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. 'SLA' stands for:**
-- A) Super Low Alerting
-- B) Service Level Agreement
-- C) Secret Logic App
-- D) nothing
 
+<b>8. 'SLA' stands for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. What is the target rate for Repeat Incidents?**
-- A) 100%
-- B) < 10%
-- C) 50%
-- D) 0% (in a perfect world)
 
+<b>9. What is the target rate for Repeat Incidents?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. 'Root Cause' fix meant to prevent a whole class of errors is:**
-- A) A Band-Aid
-- B) A Systemic Fix
-- C) A typo
-- D) nothing
 
+<b>10. 'Root Cause' fix meant to prevent a whole class of errors is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: You should reward engineers for finding systemic bugs.**
-- A) True
-- B) False
 
+<b>11. True/False: You should reward engineers for finding systemic bugs.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. 'Runbook Reviews' ensure that:**
-- A) The font is pretty
-- B) The instructions for fixing incidents are still accurate and useful
-- C) The pages are numbered
-- D) nothing
 
+<b>12. 'Runbook Reviews' ensure that:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. 'Knowledge Sharing' involves:**
-- A) Keeping secrets
-- B) Rotating on-call and sharing post-mortem lessons with the whole team
-- C) Deleting docs
-- D) nothing
 
+<b>13. 'Knowledge Sharing' involves:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. If MTTR is increasing month-over-month, the team should:**
-- A) Hire more people
-- B) Investigate if the system is becoming too complex or if runbooks are outdated
-- C) Ignore it
-- D) nothing
 
+<b>14. If MTTR is increasing month-over-month, the team should:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'MTTD' measures the efficiency of:**
-- A) The developers
-- B) The monitoring and alerting systems
-- C) The CEO
-- D) nothing
 
+<b>15. 'MTTD' measures the efficiency of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: Feature development should stop if reliability falls below a certain threshold.**
-- A) True (Error Budget policy)
-- B) False
 
+<b>16. True/False: Feature development should stop if reliability falls below a certain threshold.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. 'Trend Analysis' looks at:**
-- A) Fashion
-- B) Metric data over a long period to identify patterns
-- C) Today's news
-- D) nothing
 
+<b>17. 'Trend Analysis' looks at:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why include 'Product Managers' in incident reviews?**
-- A) To bore them
-- B) To help them understand the 'Reliability Cost' of new features
-- C) To make them code
-- D) no reason
 
+<b>18. Why include 'Product Managers' in incident reviews?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. A 'Post-Mortem Action Item' without an owner is:**
-- A) A ghost item that likely won't be fixed
-- B) A group task
-- C) A prize
-- D) nothing
 
+<b>19. A 'Post-Mortem Action Item' without an owner is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**20. True/False: Continuous Improvement is the 'feedback loop' of SRE.**
-- A) True
-- B) False
 
+<b>20. True/False: Continuous Improvement is the 'feedback loop' of SRE.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Blamelessness' is a prerequisite for:**
-- A) Faster coding
-- B) Honest, accurate data for improvement
-- C) More money
-- D) nothing
 
+<b>21. 'Blamelessness' is a prerequisite for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Toil Reduction' is an example of:**
-- A) Marketing
-- B) Continuous Improvement (Automating the repetitive manual work)
-- C) Sales
-- D) nothing
 
+<b>22. 'Toil Reduction' is an example of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Under-investing in reliability leads to:**
-- A) 'Technical Debt' and frequent catastrophic failures
-- B) Faster features
-- C) Better UI
-- D) nothing
 
+<b>23. Under-investing in reliability leads to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**24. The 'SRE' mindset treats operations as:**
-- A) A necessary evil
-- B) A software engineering problem
-- C) An afterthought
-- D) a joke
 
+<b>24. The 'SRE' mindset treats operations as:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Reliable systems are not built; they are _____.**
-- A) Bought
-- B) **Cultivated through Continuous Improvement**
-- C) Found
-- D) Static
 
+<b>25. Reliable systems are not built; they are _____.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

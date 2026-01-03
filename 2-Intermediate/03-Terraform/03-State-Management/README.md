@@ -17,8 +17,8 @@ graph TD
     Troubleshoot --> Advanced[9. Advanced Patterns]
     Advanced --> Best[10. Best Practices]
     Best --> Master([Master State Management])
-    
-    style Start fill:#51cf66
+
+style Start fill:#51cf66
     style Fund fill:#e7f5ff
     style LocalRemote fill:#e7f5ff
     style Backends fill:#e7f5ff
@@ -36,52 +36,231 @@ graph TD
 
 ## 📚 Learning Path
 
-1. **[State Fundamentals](./01-State-Fundamentals/State%20Fundamentals.md)**: Understanding what state is, why we need it, the anatomy of the `.tfstate` file, and the code-state-cloud sync cycle.
-
-2. **[Local vs. Remote State](./02-Local-vs-Remote-State/Local%20vs.%20Remote%20State.md)**: Choosing the right storage strategy for your team, backend configurations, and cross-stack references.
-
-3. **[Remote State Backends](./03-Remote-State-Backends/Remote%20State%20Backends.md)**: Configuring S3 + DynamoDB, Azure Blob, GCS, and Terraform Cloud backends with encryption and locking.
-
-4. **[State Locking](./04-State-Locking/State%20Locking.md)**: Protecting against concurrent modifications, understanding DynamoDB locking schema, and handling stuck locks.
-
-5. **[State Operations](./05-State-Operations/State%20Operations.md)**: Mastering CLI commands - `list`, `show`, `mv`, `rm`, `import`, and declarative imports (Terraform 1.5+).
-
-6. **[State Security](./06-State-Security/State%20Security.md)**: Protecting sensitive data with encryption (KMS), IAM policies, secrets management, and defending against attack vectors.
-
-7. **[State Migration & Versioning](./07-State-Migration-Versioning/State%20Migration%20&%20Versioning.md)**: Moving between backends, state versioning, and recovering from backups.
-
-8. **[Troubleshooting](./08-Troubleshooting/Troubleshooting%20State%20Issues.md)**: Handling drift detection, corrupted state, stuck locks, and state recovery procedures.
-
-9. **[Advanced Patterns](Advanced%20State%20Patterns.md)**: Workspaces for multi-environment management and remote state data sources for cross-stack references.
-
-10. **[Best Practices](State%20Best%20Practices.md)**: The 7 golden rules for state management in production environments.
+| # | Topic | Description | Key Concepts |
+| :--- | :--- | :--- | :--- |
+| **01** | [**Fundamentals**](./01-State-Fundamentals/State%20Fundamentals.md) | Understanding State | Anatomy, Metadata, Sync Cycle |
+| **02** | [**Local vs. Remote**](./02-Local-vs-Remote-State/Local%20vs.%20Remote%20State.md) | Storage Strategies | Backends, Multi-user, Sharing |
+| **03** | [**Remote Backends**](./03-Remote-State-Backends/Remote%20State%20Backends.md) | Standard Implementation | S3/DynamoDB, Azure, GCS, Cloud |
+| **04** | [**State Locking**](./04-State-Locking/State%20Locking.md) | Concurrency Control | DynamoDB Schema, Stuck Locks |
+| **05** | [**State Operations**](./05-State-Operations/State%20Operations.md) | CLI Mastery | mv, rm, import, show, list |
+| **06** | [**State Security**](./06-State-Security/State%20Security.md) | Protection | KMS, Secrets, Attack Vectors |
+| **07** | [**Migration**](./07-State-Migration/State%20Migration%20&%20Versioning.md) | Backend Switching | move, push, backup, versioning |
+| **08** | [**Troubleshooting**](./08-Troubleshooting/Troubleshooting%20State%20Issues.md) | Recovery | Drift, Corruption, Stuck Lock fix |
+| **09** | [**Advanced Patterns**](./09-Advanced-Patterns/Advanced%20State%20Patterns.md) | Scaling | Workspaces, Remote Data Sources |
+| **10** | [**Best Practices**](./10-Best-Practices/State%20Best%20Practices.md) | Production Rules | The 7 Golden Rules |
 
 ---
 
 ## 🏗️ Module Features
-
-- **70+ Total Quiz Questions**: Comprehensive validation of state mechanics knowledge across all modules
-- **Real-World Scenarios**: Practical "Stories from the Trenches" for every topic with actual solutions
-- **Workflow Diagrams**: 15+ Mermaid diagrams visualizing locking, migration, security pipelines, and operations
-- **Master CLI Guide**: Professional commands for day-to-day state management with examples
-- **Security Deep-Dive**: Attack vectors, hacking tools (TruffleHog, Pacu, Nmap), and defense strategies
-- **Hands-On Examples**: AWS CLI, Terraform HCL, and real configuration snippets
+- **250+ Total Quiz Questions**: Comprehensive mastery with interactive collapsible answers.
+- **60+ High-Stakes Interview Questions**: Advanced prep for DevOps and Cloud Architect roles.
+- **30+ Real-Life "War Stories"**: Lessons learned from state corruption, leaked secrets, and global lock outages.
+- **15+ Visual Workflows**: Mermaid diagrams visualizing locking logic, security pipelines, and migration flows.
 
 ---
 
 ## 🎯 What You'll Learn
-
-By completing this module, you will:
-- ✅ Understand how Terraform tracks infrastructure state
-- ✅ Configure secure remote backends with encryption and locking
-- ✅ Perform safe state operations (import, move, remove)
-- ✅ Implement state security best practices
-- ✅ Troubleshoot and recover from state issues
-- ✅ Use advanced patterns like workspaces and data sources
-- ✅ Defend against state-based security threats
+By the end of this module, you will:
+- ✅ **Design**: Configure secure, highly-available remote backends.
+- ✅ **Operate**: Master complex CLI commands to manipulate state without losing data.
+- ✅ **Protect**: Implement encryption-at-rest and in-transit for sensitive infrastructure metadata.
+- ✅ **Recover**: Systematically diagnose and fix corrupted states and stuck locking sessions.
 
 ---
 
-## 📺 YouTube Lessons
+## ❓ Master Interview Questions
 
-For visual reinforcement, check out the **[📺 YouTube Lessons](../Youtube_Lessons.md)** in the parent directory.
+1.  **Why is Terraform State considered a 'Security Liability'?**
+    - *Answer*: State files often contain sensitive information in plain text (even if encrypted at rest), such as database passwords, SSH keys, or API tokens generated during resource creation. If an attacker gains access to the state file, they have the keys to your entire infrastructure.
+2.  **Explain the difference between 'Implicit' and 'Explicit' dependency in state.**
+    - *Answer*: Implicit dependencies are discovered by Terraform by analyzing resource references (e.g., `vpc_id = aws_vpc.main.id`). Explicit dependencies are manually defined using the `depends_on` meta-argument. Terraform uses both to build the Directed Acyclic Graph (DAG) saved in the state.
+3.  **What is 'State Drift' and how do you resolve it?**
+    - *Answer*: Drift occurs when the actual infrastructure in the cloud differs from what is recorded in the state file (usually due to manual changes in the console). You resolve it by running `terraform plan` to identify differences and then either `terraform apply` to overwrite changes or `terraform import` to update the state to match reality.
+4.  **Can you run Terraform without a state file?**
+    - *Answer*: Technically, no. Terraform always creates a state file. However, you can use a `null` backend or a local file you delete, but you lose the ability to manage existing resources safely. Terraform's entire value proposition relies on state.
+5.  **How do you handle 'Workspaces' vs. 'File-Based' environment separation?**
+    - *Answer*: Workspaces are built-in and store multiple states in one backend. File-based separation (different directories/folders) is often preferred for production because it provides better isolation and prevents a mistake in "Dev" from accidentally affecting "Prod" via shared backend logic.
+6.  **What is the 'import' block in Terraform 1.5+?**
+    - *Answer*: It is an evolution of the `terraform import` command. It allows for "Declarative Imports" inside your HCL code. You specify the resource ID and the target address, and Terraform can even generate the HCL code for you using the `-generate-config-out` flag.
+
+---
+
+## 🧠 Master Assessment (25 Questions)
+
+<b>1. Terraform State is stored in which file format?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>2. True/False: By default, sensitive outputs are hidden in the state file.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A
+</details>
+
+
+<b>3. Which command updates the state file to match real-world infrastructure?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>4. Locking the state prevents:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>5. Which AWS service is commonly used for State Locking?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>6. The 'serial' number in a state file is used for:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>7. True/False: Local state is recommended for production environments.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>8. Which command is used to move a resource from one address to another in state?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>9. 'Remote State Data Source' allows you to:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>10. What happens if a state file is 'Corrupted'?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>11. Which block is used to configure where state is stored?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>12. 'terraform state rm' will:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>13. How do you 'force-unlock' a state if the process crashed?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>14. True/False: You should commit your '.tfstate' file to Git.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A
+</details>
+
+
+<b>15. Which command lists all resources currently tracked in the state?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>16. 'State Versioning' in S3 allows you to:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>17. What is the 'terraform.tfstate.backup' file?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>18. Azure backends use which service for state storage?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>19. In Terraform 1.5, 'import' is a:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>20. True/False: Workspaces share the same state file.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A
+</details>
+
+
+<b>21. 'Sensitive' attributes in state are:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C
+</details>
+
+
+<b>22. Which command shows a human-readable version of the state?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>23. 'terraform_remote_state' is a:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+<b>24. State is the '_____ of Truth' for Terraform.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A
+</details>
+
+
+<b>25. Losing your state file is a '_____ Event'.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B
+</details>
+
+
+---
+*The state is the mind of the manager. Protect it well.*

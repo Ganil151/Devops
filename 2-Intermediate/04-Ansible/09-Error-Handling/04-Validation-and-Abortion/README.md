@@ -45,8 +45,8 @@ graph TD
     Assert -->|Pass| Verify[Run 'wait_for' checks]
     Verify -->|Timeout| Abort
     Verify -->|Success| Main[Execute Core Tasks]
-    
-    style Abort fill:#ff4444,color:#fff
+
+style Abort fill:#ff4444,color:#fff
 ```
 
 ---

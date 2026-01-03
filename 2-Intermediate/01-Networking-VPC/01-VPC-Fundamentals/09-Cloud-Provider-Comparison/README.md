@@ -146,12 +146,12 @@ graph TD
     OnPrem[On-Premises] -->|VPN| AWS[AWS VPC]
     OnPrem -->|VPN| Azure[Azure VNet]
     OnPrem -->|VPN| GCP[GCP VPC]
-    
-    AWS <-->|VPN/Direct Connect| Azure
+
+AWS <-->|VPN/Direct Connect| Azure
     AWS <-->|VPN/Interconnect| GCP
     Azure <-->|ExpressRoute| GCP
-    
-    style OnPrem fill:#e1f5ff,stroke:#333,stroke-width:2px
+
+style OnPrem fill:#e1f5ff,stroke:#333,stroke-width:2px
 ```
 
 ---
@@ -178,8 +178,32 @@ graph TD
 ---
 
 ## 🧠 Quiz Snippet (5/20+)
-1.  **Which cloud has global VPCs?** (GCP)
-2.  **True/False: Azure VNets can be larger than AWS VPCs.** (True - /8 vs /16)
-3.  **Which provider has free NAT?** (GCP - Cloud NAT)
-4.  **What is Azure's equivalent of AWS Security Groups?** (Network Security Groups)
-5.  **Can GCP subnets span regions?** (Yes)
+<b>1. Which cloud has global VPCs?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: GCP
+</details>
+
+<b>2. True/False: Azure VNets can be larger than AWS VPCs.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: True - /8 vs /16
+</details>
+
+<b>3. Which provider has free NAT?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: GCP - Cloud NAT
+</details>
+
+<b>4. What is Azure's equivalent of AWS Security Groups?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Network Security Groups
+</details>
+
+<b>5. Can GCP subnets span regions?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Yes
+</details>

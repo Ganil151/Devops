@@ -51,13 +51,13 @@ graph TD
     Split --> P2[Worker 2]
     Split --> P3[Worker 3]
     Split --> PN[...]
-    
-    P1 --> Result1[Log 1]
+
+P1 --> Result1[Log 1]
     P2 --> Result2[Log 2]
     P3 --> Result3[Log 3]
     PN --> ResultN[...]
-    
-    Result1 & Result2 & Result3 & ResultN --> Aggregator[Consolidated Report]
+
+Result1 & Result2 & Result3 & ResultN --> Aggregator[Consolidated Report]
 ```
 
 ---

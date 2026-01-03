@@ -41,317 +41,176 @@
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the primary purpose of a 'Circuit Breaker' in automation?**
-- A) To make the code run faster
-- B) To disable automation when its failure rate exceeds a threshold
-- C) To encrypt passwords
-- D) To turn off the monitor
-
+<b>1. What is the primary purpose of a 'Circuit Breaker' in automation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**（Safety protection）
-
+Answer: B**（Safety protection）
 </details>
 
-**2. In a Circuit Breaker, what does the 'OPEN' state represent?**
-- A) The automation is working normally
-- B) The automation is disabled due to previous failures
-- C) The server is being built
-- D) The database is clear
 
+<b>2. In a Circuit Breaker, what does the 'OPEN' state represent?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. True/False: You should allow automation to restart 100% of your production servers if they all fail a health check.**
-- A) True
-- B) False - This could cause a total outage; use **Fleet Limits**.
 
+<b>3. True/False: You should allow automation to restart 100% of your production servers if they all fail a health check.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A 'Cooldown Period' prevents:**
-- A) Server overheating
-- B) 'Flapping' (rapid, repeated automation triggers)
-- C) High electricity bills
-- D) users from seeing logs
 
+<b>4. A 'Cooldown Period' prevents:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which guardrail ensures automation doesn't run during a 'Manual Deployment'?**
-- A) Retry Throttling
-- B) Maintenance Window Filter
-- C) Cost Alert
-- D) DNS Flush
 
+<b>5. Which guardrail ensures automation doesn't run during a 'Manual Deployment'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. What is the 'Blast Radius' of a script that can restart every server in a company?**
-- A) Small
-- B) Critical / Entire Infrastructure
-- C) No blast radius
-- D) Only one laptop
 
+<b>6. What is the 'Blast Radius' of a script that can restart every server in a company?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. 'Least Privilege' in auto-remediation means:**
-- A) Only senior SREs can run code
-- B) The automation script only has the specific permissions it needs to fix the targeted resource
-- C) No one has any permissions
-- D) everyone is an admin
 
+<b>7. 'Least Privilege' in auto-remediation means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. True/False: Automation should always prioritize 'Safety' over 'Speed of Recovery'.**
-- A) True
-- B) False
 
+<b>8. True/False: Automation should always prioritize 'Safety' over 'Speed of Recovery'.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - A slow recovery is better than an automated total destruction of the environment.
-
+Answer: A** - A slow recovery is better than an automated total destruction of the environment.
 </details>
 
-**9. The 'Half-Open' state in a circuit breaker is used to:**
-- A) Take a break
-- B) Test if the underlying problem is gone before fully enabling the automation
-- C) Delete old data
-- D) notify the CEO
 
+<b>9. The 'Half-Open' state in a circuit breaker is used to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What is a 'Dead-Man's Switch'?**
-- A) A type of battery
-- B) An emergency global kill-switch for all automation
-- C) A broken server
-- D) a secret password
 
+<b>10. What is a 'Dead-Man's Switch'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. 'Retry Throttling' typically limits actions based on:**
-- A) The price of the server
-- B) A time window (e.g., max 3 restarts per hour)
-- C) The weather
-- D) the user's name
 
+<b>11. 'Retry Throttling' typically limits actions based on:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. True/False: Every auto-remediation should have a manual escape hatch for a human to take over.**
-- A) True
-- B) False
 
+<b>12. True/False: Every auto-remediation should have a manual escape hatch for a human to take over.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**13. A 'Quorum Check' in automation ensures:**
-- A) That the automation has a majority vote to proceed
-- B) That enough healthy servers remain to serve traffic before the script kills another one
-- C) That the SRE is awake
-- D) that the lights are on
 
+<b>13. A 'Quorum Check' in automation ensures:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What occurs when automation is 'Runaway'?**
-- A) It deletes itself
-- B) It executes repeatedly, consuming resources or failing, without stopping
-- C) It works perfectly
-- D) it's very fast
 
+<b>14. What occurs when automation is 'Runaway'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Hysteresis' in scaling logic prevented:**
-- A) High latency
-- B) 'Ping-ponging' (scaling up and down too rapidly)
-- C) Cost savings
-- D) low CPU
 
+<b>15. 'Hysteresis' in scaling logic prevented:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: You should store your Global Kill Switch in the same system that is failing.**
-- A) False - Use a diverse, highly available system (like a feature flag or simple static file).
-- B) True
 
+<b>16. True/False: You should store your Global Kill Switch in the same system that is failing.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. Which is an example of 'Environmental Safety'?**
-- A) Locking the data center door
-- B) Disabling remediation if the staging cluster is currently failing
-- C) Using green energy
-- D) recycling laptops
 
+<b>17. Which is an example of 'Environmental Safety'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. 'Audit Trails' are required for safety because:**
-- A) They look professional
-- B) They allow humans to retroactively see what caused a 'Runaway' incident
-- C) They save space
-- D) they are free
 
+<b>18. 'Audit Trails' are required for safety because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. A 'Fail-Safe' state for automation is usually:**
-- A) Fully enabled
-- B) Disabled / Return to Human Control
-- C) Auto-rebooting
-- D) deleting everything
 
+<b>19. A 'Fail-Safe' state for automation is usually:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: You should implement 'Cost Guardrails' for cloud-based auto-scaling.**
-- A) True
-- B) False
 
+<b>20. True/False: You should implement 'Cost Guardrails' for cloud-based auto-scaling.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Dry Run' mode helps with safety by:**
-- A) Saving water
-- B) Executing the logic and logging what WOULD have happened without actually making changes
-- C) Speeding up the code
-- D) cleaning the server
 
+<b>21. 'Dry Run' mode helps with safety by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Cascade Protection' stops automation if:**
-- A) The logs are full
-- B) Downstream systems (like DBs) are already under high stress
-- C) It's raining
-- D) the user logs out
 
+<b>22. 'Cascade Protection' stops automation if:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Why use 'Exponential Backoff' in retries?**
-- A) To make the script slower
-- B) To reduce pressure on a failing system by increasing the wait time between attempts
-- C) To save memory
-- D) no reason
 
+<b>23. Why use 'Exponential Backoff' in retries?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'CLOSED' state in a circuit breaker is:**
-- A) The "Stopped" state
-- B) The "Normal / Pass-through" state
-- C) The "Error" state
-- D) the "Building" state
 
+<b>24. The 'CLOSED' state in a circuit breaker is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Excellence in SRE Safety Guardrails means:**
-- A) No automation at all
-- B) Automation that is "Self-Aware" of its limits and risk
-- C) Automation that never fails
-- D) more meetings
 
+<b>25. Excellence in SRE Safety Guardrails means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

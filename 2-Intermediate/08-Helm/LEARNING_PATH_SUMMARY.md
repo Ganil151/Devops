@@ -202,7 +202,12 @@ Week 17-18: Capstone Project + Advanced Techniques
 ### Continuous Learning:
 1. **Stay Updated** - Follow Helm releases and new features
 2. **Community Engagement** - Participate in Helm community discussions
-3. **Specialization** - Focus on specific areas (security, performance, etc.)
+<b>3. Specialization** - Focus on specific areas</b>
+<details>
+<summary>Show Answer</summary>
+Answer: security, performance, etc.
+</details>
+
 4. **Teaching** - Share knowledge through blogs, talks, or training
 
 ### Advanced Specializations:

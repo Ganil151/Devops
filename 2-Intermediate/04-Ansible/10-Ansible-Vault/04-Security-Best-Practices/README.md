@@ -31,8 +31,8 @@ Where should you store your secrets?
 graph LR
     V[Ansible Vault] -->|Pros| P1[Simple, No External Dep]
     V -->|Cons| C1[Static Secrets, Manual Rotation]
-    
-    K[HashiCorp Vault / AWS KMS] -->|Pros| P2[Dynamic Rotation, Audit Logs]
+
+K[HashiCorp Vault / AWS KMS] -->|Pros| P2[Dynamic Rotation, Audit Logs]
     K -->|Cons| C2[Complex Setup, Cost]
 ```
 

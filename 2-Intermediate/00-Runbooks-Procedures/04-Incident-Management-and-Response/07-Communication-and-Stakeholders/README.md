@@ -126,317 +126,176 @@ Don't blame vendors or external factors.
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the most important rule of incident communication?**
-- A) Use the most technical terms possible
-- B) Never admit an error
-- C) **Acknowledge the issue immediately**
-- D) Only update after it's fixed
-
+<b>1. What is the most important rule of incident communication?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**2. True/False: Silence during an incident build customer trust.**
-- A) False - Silence creates panic.
-- B) True
 
+<b>2. True/False: Silence during an incident build customer trust.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**3. Who is responsible for shielding engineers from interruptions during a crisis?**
-- A) The Scribe
-- B) The Incident Commander (IC) or Comms Lead
-- C) The CEO
-- D) The customer
 
+<b>3. Who is responsible for shielding engineers from interruptions during a crisis?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. External status updates should avoid:**
-- A) Time stamps
-- B) Technical Jargon (e.g., Kubernetes, Pods, Endpoints)
-- C) Apologies
-- D) help links
 
+<b>4. External status updates should avoid:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. How often should you provide a status page update during a major outage?**
-- A) Every 5 seconds
-- B) Every 15-30 minutes
-- C) Once a day
-- D) Never
 
+<b>5. How often should you provide a status page update during a major outage?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'ETA' stands for Estimated Time of Arrival. In SRE, you should:**
-- A) Always promise a 10-minute fix
-- B) Be realistic and conservative with ETAs
-- C) Guess
-- D) nothing
 
+<b>6. 'ETA' stands for Estimated Time of Arrival. In SRE, you should:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: Internal stakeholders (CEOs, PMs) should be in the technical War Room channel.**
-- A) False - Keep them in a separate #incident-updates channel to avoid distracting engineers.
-- B) True
 
+<b>7. True/False: Internal stakeholders (CEOs, PMs) should be in the technical War Room channel.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. An initial status page post should be live within:**
-- A) 1 hour
-- B) **5 minutes** of verification
-- C) 2 days
-- D) never
 
+<b>8. An initial status page post should be live within:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. When an incident is resolved, you should:**
-- A) Delete the status page logs
-- B) Update the status page to 'Resolved' and mention a Post-Mortem is coming
-- C) Say nothing
-- D) party
 
+<b>9. When an incident is resolved, you should:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. 'Stakeholders' include:**
-- A) Only the engineers
-- B) Anyone affected by the incident (Customers, Support, Executives, Partners)
-- C) The janitor
-- D) nothing
 
+<b>10. 'Stakeholders' include:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: It is okay to blame a 3rd party vendor on your public status page.**
-- A) False - Take ownership of your service reliability.
-- B) True
 
+<b>11. True/False: It is okay to blame a 3rd party vendor on your public status page.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. 'Internal War Room' communication is for:**
-- A) Marketing
-- B) Technical coordination between responders
-- C) Chatting about food
-- D) nothing
 
+<b>12. 'Internal War Room' communication is for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A 'Scribe' helps communication by:**
-- A) Fixing bugs
-- B) Documenting the timeline and decisions in real-time
-- C) Making coffee
-- D) nothing
 
+<b>13. A 'Scribe' helps communication by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What is the risk of an 'Over-Optimistic' ETA?**
-- A) None
-- B) Losing trust when the deadline is missed
-- C) Making the site faster
-- D) nothing
 
+<b>14. What is the risk of an 'Over-Optimistic' ETA?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Triage' updates are usually sent to:**
-- A) Everyone on Earth
-- B) The Incident Response team and internal leadership
-- C) My mom
-- D) nothing
 
+<b>15. 'Triage' updates are usually sent to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: You should use a 'Template' for status page updates to save time.**
-- A) True
-- B) False
 
+<b>16. True/False: You should use a 'Template' for status page updates to save time.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. The Comms Lead 'translates' technical data into:**
-- A) French
-- B) Business/User-friendly language
-- C) Code
-- D) nothing
 
+<b>17. The Comms Lead 'translates' technical data into:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why is a 'Next Update' time better than a 'Fix' time?**
-- A) It's lazier
-- B) It manages expectations and reduces follow-up questions
-- C) It's more colorful
-- D) no reason
 
+<b>18. Why is a 'Next Update' time better than a 'Fix' time?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which role confirms the content of an external update?**
-- A) The Scribe
-- B) The Incident Commander (IC)
-- C) The customer
-- D) HR
 
+<b>19. Which role confirms the content of an external update?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: Proactive communication reduces the load on the customer support team.**
-- A) True
-- B) False
 
+<b>20. True/False: Proactive communication reduces the load on the customer support team.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Information Silos' are dangerous because:**
-- A) They are made of grain
-- B) They prevent different teams from knowing the current status/plan
-- C) They use too much data
-- D) nothing
 
+<b>21. 'Information Silos' are dangerous because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Post-Outage' communication is:**
-- A) Not needed
-- B) The Post-Mortem/RCA document shared with stakeholders
-- C) A joke
-- D) nothing
 
+<b>22. 'Post-Outage' communication is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. If you have NO ETA, you should say:**
-- A) "It will be 10 minutes"
-- B) "We are still investigating the root cause and will provide an update in 20 minutes."
-- C) Nothing
-- D) "I don't know"
 
+<b>23. If you have NO ETA, you should say:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Official' channel for an incident should be:**
-- A) A secret
-- B) Clearly defined at the start (e.g., #incident-123)
-- C) Email only
-- D) nothing
 
+<b>24. The 'Official' channel for an incident should be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Communication is the _____ of a successful incident response.**
-- A) Accessory
-- B) Backbone/Lifeline
-- C) End
-- D) Enemy
 
+<b>25. Communication is the _____ of a successful incident response.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

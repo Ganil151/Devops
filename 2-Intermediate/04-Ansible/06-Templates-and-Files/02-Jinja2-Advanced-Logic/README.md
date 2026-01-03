@@ -47,8 +47,8 @@ graph TD
     Logic -->|If Statement| Check{Condition True?}
     Check -->|Yes| Include[Included Text]
     Check -->|No| Skip[Omitted]
-    
-    Logic -->|For Loop| Iterate[Iterate over List]
+
+Logic -->|For Loop| Iterate[Iterate over List]
     Iterate --> Append[Append Rendered String]
     Append --> More{More items?}
     More -->|Yes| Iterate

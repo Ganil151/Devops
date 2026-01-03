@@ -32,8 +32,8 @@ graph TD
     DNS --> ALB[ALB: myapp.com]
     ALB -->|/api| TG1[API Target Group]
     ALB -->|/static| TG2[S3/Static Target Group]
-    
-    User2([Volatile Traffic]) --> NLB[NLB: Static IP]
+
+User2([Volatile Traffic]) --> NLB[NLB: Static IP]
     NLB -->|Port 1234| TG3[Gaming Cluster]
 ```
 
@@ -83,317 +83,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. At which OSI layer does the Application Load Balancer (ALB) operate?**
-- A) Layer 3
-- B) Layer 4
-- C) Layer 7
-- D) Layer 2
-
+<b>1. At which OSI layer does the Application Load Balancer (ALB) operate?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**2. True/False: The Network Load Balancer (NLB) provides a static Elastic IP address.**
-- A) True
-- B) False
 
+<b>2. True/False: The Network Load Balancer (NLB) provides a static Elastic IP address.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**3. Which ELB type is best for routing based on the URL path (e.g., /api vs /images)?**
-- A) Classic Load Balancer
-- B) Network Load Balancer
-- C) Application Load Balancer
-- D) Gateway Load Balancer
 
+<b>3. Which ELB type is best for routing based on the URL path (e.g., /api vs /images)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**4. 'Sticky Sessions' are also known as:**
-- A) Session Draining
-- B) Session Affinity
-- C) Session Scaling
-- D) nothing
 
+<b>4. 'Sticky Sessions' are also known as:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which protocol is used by the Gateway Load Balancer (GLB) to pass traffic to appliances?**
-- A) HTTP
-- B) GENEVE
-- C) TCP
-- D) UDP
 
+<b>5. Which protocol is used by the Gateway Load Balancer (GLB) to pass traffic to appliances?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. True/False: You must manually scale an Elastic Load Balancer.**
-- A) False (It is a managed, auto-scaling service)
-- B) True
 
+<b>6. True/False: You must manually scale an Elastic Load Balancer.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**7. 'Deregistration Delay' (Connection Draining) helps achieve:**
-- A) Faster scaling
-- B) Zero-downtime deployments and graceful shutdown
-- C) Better encryption
-- D) nothing
 
+<b>7. 'Deregistration Delay' (Connection Draining) helps achieve:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. What happens if an instance fails its health check?**
-- A) It is deleted
-- B) The ELB stops sending traffic to it
-- C) The ELB restarts it
-- D) nothing
 
+<b>8. What happens if an instance fails its health check?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. ALB supports which of the following?**
-- A) HTTP/2
-- B) WebSocket
-- C) HTTPS
-- D) All of the above
 
+<b>9. ALB supports which of the following?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**10. How does a client typically connect to an ALB (since it has dynamic IPs)?**
-- A) Via its public IP
-- B) Via its assigned DNS Name (CNAME)
-- C) Via SSH
-- D) nothing
 
+<b>10. How does a client typically connect to an ALB (since it has dynamic IPs)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Which ELB is 'Transparent' to the application?**
-- A) ALB
-- B) NLB
-- C) Gateway Load Balancer (GLB)
-- D) nothing
 
+<b>11. Which ELB is 'Transparent' to the application?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**12. 'SNI' (Server Name Indication) allows an ALB to:**
-- A) Run faster
-- B) Host multiple SSL certificates on a single listener
-- C) Block hackers
-- D) nothing
 
+<b>12. 'SNI' (Server Name Indication) allows an ALB to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. True/False: Target Groups can contain Lambda functions.**
-- A) True (ALB only)
-- B) False
 
+<b>13. True/False: Target Groups can contain Lambda functions.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**14. Which metric determines if an ALB is overloaded?**
-- A) CPU Usage
-- B) LCU (Load Balancer Capacity Units)
-- C) Color of the icon
-- D) nothing
 
+<b>14. Which metric determines if an ALB is overloaded?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Internal' vs 'Internet-Facing' determines:**
-- A) The price
-- B) Whether the ELB has public or private IPs
-- C) The speed
-- D) nothing
 
+<b>15. 'Internal' vs 'Internet-Facing' determines:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: You can route traffic based on HTTP Headers in an ALB.**
-- A) True
-- B) False
 
+<b>16. True/False: You can route traffic based on HTTP Headers in an ALB.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. Target Group type 'IP' allows you to load balance to:**
-- A) Bare metal servers
-- B) On-premises servers via VPN/Direct Connect
-- C) Containers (Fargate)
-- D) All of the above
 
+<b>17. Target Group type 'IP' allows you to load balance to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**18. What is the standard HTTP port for health checks?**
-- A) 22
-- B) 80
-- C) 443
-- D) Any port the application responds on
 
+<b>18. What is the standard HTTP port for health checks?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**19. Classic Load Balancers (CLB) are:**
-- A) The latest tech
-- B) Legacy (Avoid using for new projects)
-- C) Only for Windows
-- D) nothing
 
+<b>19. Classic Load Balancers (CLB) are:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: You can use a WAF (Web Application Firewall) with an NLB.**
-- A) False (WAF is for L7/ALB)
-- B) True
 
+<b>20. True/False: You can use a WAF (Web Application Firewall) with an NLB.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Cross-Zone Load Balancing' is ALWAYS enabled for:**
-- A) ALB
-- B) NLB (Optional, defaults to disabled)
-- C) Classic
-- D) nothing
 
+<b>21. 'Cross-Zone Load Balancing' is ALWAYS enabled for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**22. How many 'Listeners' can an ALB have?**
-- A) 1
-- B) Multiple (e.g., one for 80, one for 443)
-- C) 1000
-- D) 0
 
+<b>22. How many 'Listeners' can an ALB have?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. SSL/TLS termination happens at the:**
-- A) Subnet
-- B) Load Balancer (Listener)
-- C) Database
-- D) nothing
 
+<b>23. SSL/TLS termination happens at the:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. A Load Balancer is the _____ of a highly available application.**
-- A) Shield
-- B) Entry Point / Load Distributor
-- C) Disk
-- D) nothing
 
+<b>24. A Load Balancer is the _____ of a highly available application.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Without a Load Balancer, scaling requires updating _____ records manually.**
-- A) Bank
-- B) DNS
-- C) Employee
-- D) nothing
 
+<b>25. Without a Load Balancer, scaling requires updating _____ records manually.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

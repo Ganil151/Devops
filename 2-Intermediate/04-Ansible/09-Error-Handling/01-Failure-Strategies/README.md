@@ -55,14 +55,14 @@ graph TD
     Result -->|Success| Next[Continue on Host]
     Result -->|Unreachable| UR{ignore_unreachable?}
     Result -->|Failed| FE{ignore_errors?}
-    
-    UR -->|Yes| Next
+
+UR -->|Yes| Next
     UR -->|No| Drop[Remove Host from Play]
-    
-    FE -->|Yes| Next
+
+FE -->|Yes| Next
     FE -->|No| MF{Check max_fail_percentage}
-    
-    MF -->|Exceeded| Abort[ABORT Playbook on ALL Hosts]
+
+MF -->|Exceeded| Abort[ABORT Playbook on ALL Hosts]
     MF -->|Within Limit| Drop
 ```
 

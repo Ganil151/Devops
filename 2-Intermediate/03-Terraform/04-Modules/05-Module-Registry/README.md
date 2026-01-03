@@ -33,8 +33,8 @@ The syntax is: `<NAMESPACE>/<NAME>/<PROVIDER>`
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.1.0"  # CRITICAL: Always Pin This!
-  
-  # Inputs
+
+# Inputs
   name = "my-vpc"
   cidr = "10.0.0.0/16"
 }

@@ -64,11 +64,36 @@ All services include:
 
 The Jenkins pipeline deploys in this order:
 
-1. **MySQL Secret** (credentials)
-2. **Config Server** (configuration management)
-3. **Discovery Server** (service registry)
-4. **Microservices** (customers, visits, vets)
-5. **API Gateway** (entry point)
+<b>1. MySQL Secret</b>
+<details>
+<summary>Show Answer</summary>
+Answer: credentials
+</details>
+
+<b>2. Config Server</b>
+<details>
+<summary>Show Answer</summary>
+Answer: configuration management
+</details>
+
+<b>3. Discovery Server</b>
+<details>
+<summary>Show Answer</summary>
+Answer: service registry
+</details>
+
+<b>4. Microservices</b>
+<details>
+<summary>Show Answer</summary>
+Answer: customers, visits, vets
+</details>
+
+<b>5. API Gateway</b>
+<details>
+<summary>Show Answer</summary>
+Answer: entry point
+</details>
+
 
 ---
 
@@ -306,7 +331,12 @@ kubectl delete service customers-service
 2. **Wait for readiness**: Use `kubectl rollout status` between deployments
 3. **Use secrets**: Never hardcode passwords in deployment files
 4. **Monitor resources**: Adjust limits based on actual usage
-5. **Use namespaces**: Separate environments (dev, staging, prod)
+<b>5. Use namespaces**: Separate environments</b>
+<details>
+<summary>Show Answer</summary>
+Answer: dev, staging, prod
+</details>
+
 6. **Version images**: Always use specific image tags, not `latest`
 7. **Health probes**: Ensure all services have proper health checks
 8. **Resource limits**: Set appropriate CPU/memory limits

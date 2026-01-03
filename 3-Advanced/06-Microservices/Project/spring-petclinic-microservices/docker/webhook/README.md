@@ -119,23 +119,14 @@ For your current setup, **Kubernetes Master is the best choice** because:
 1. **Already has cluster access** - No need to expose credentials elsewhere
 2. **Firewall controlled** - Only port 9000 needs to be opened
 3. **Local kubectl** - No remote API calls needed
-4. **Isolated from build process** - Jenkins can't accidentally affect deployments
+<b>4. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: ** Because the webhook's job is to **update Kubernetes deployments**, not to build images. The Kubernetes Master already has the tools (`kubectl`) and permissions to manage deployments, making it the natural and secure choice for receiving deployment webhooks.
+</details>
 
-### Best Practices:
 
-- Use HTTPS for webhook endpoint (with nginx reverse proxy)
-- Validate webhook signatures from Docker Hub
-- Restrict port 9000 to Docker Hub IP ranges only
-- Use systemd to manage webhook receiver as a service
-- Monitor webhook logs for suspicious activity
 
----
-
-## Summary
-
-**Question:** Why use Kubernetes Master for webhooks when Jenkins/Docker is on a different server?
-
-**Answer:** Because the webhook's job is to **update Kubernetes deployments**, not to build images. The Kubernetes Master already has the tools (`kubectl`) and permissions to manage deployments, making it the natural and secure choice for receiving deployment webhooks.
 
 **Jenkins Server Role:** Build → Test → Push to Docker Hub (DONE)  
 **Kubernetes Master Role:** Receive webhook → Update deployment → Manage pods (ONGOING)

@@ -82,323 +82,176 @@ quadrantChart
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which scenario focuses most on speed to recovery?**
-- A) Service Request
-- B) Incident Response
-- C) Disaster Recovery
-- D) Maintenance
-
+<b>1. Which scenario focuses most on speed to recovery?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: You should have a runbook for every single possible action in your company.**
-- A) True
-- B) False
 
+<b>2. True/False: You should have a runbook for every single possible action in your company.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Avoid documentation bloat; focus on high-risk and high-frequency tasks.
-
+Answer: B** - Avoid documentation bloat; focus on high-risk and high-frequency tasks.
 </details>
 
-**3. What is the primary focus of 'Disaster Recovery' runbooks?**
-- A) Changing passwords
-- B) Large-scale system restoration (e.g., regional failover)
-- C) Deleting logs
-- D) Onboarding interns
 
+<b>3. What is the primary focus of 'Disaster Recovery' runbooks?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A 'Service Request' scenario usually starts with:**
-- A) A system crash
-- B) An internal ticket or user request
-- C) A power outage
-- D) A physical fire
 
+<b>4. A 'Service Request' scenario usually starts with:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which tool is best for linking an Alert to its corresponding Runbook?**
-- A) Microsoft Word
-- B) Monitoring Dashboards (Grafana, PagerDuty, Datadog)
-- C) Excel
-- D) Email
 
+<b>5. Which tool is best for linking an Alert to its corresponding Runbook?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Documentation Bloat' leads to:**
-- A) Faster resolution
-- B) Increased MTTR due to difficulty in finding relevant documents
-- C) Lower costs
-- D) Better morale
 
+<b>6. 'Documentation Bloat' leads to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. In the 'Frequency vs. Risk' matrix, which quadrant is the best candidate for FULL automation?**
-- A) Low Frequency / Low Risk
-- B) High Frequency / Low Risk
-- C) Low Frequency / High Risk
-- D) High Frequency / High Risk
 
+<b>7. In the 'Frequency vs. Risk' matrix, which quadrant is the best candidate for FULL automation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Low risk makes it safe to automate, and high frequency makes it worth the effort.
-
+Answer: B** - Low risk makes it safe to automate, and high frequency makes it worth the effort.
 </details>
 
-**8. What is the goal of a 'Gameday'?**
-- A) To win a prize
-- B) To validate runbooks and team readiness by simulating real failure scenarios
-- C) To play video games
-- D) To fix real production bugs
 
+<b>8. What is the goal of a 'Gameday'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. 'Routine Maintenance' runbooks are triggered by:**
-- A) Alarms
-- B) Scheduled calendar events or intervals
-- C) Security breaches
-- D) New hires
 
+<b>9. 'Routine Maintenance' runbooks are triggered by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What is 'Contextual Linking'?**
-- A) Using many links
-- B) Placing a direct runbook link inside an alert notification
-- C) Linking to the company home page
-- D) Linking to a PDF
 
+<b>10. What is 'Contextual Linking'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Which scenario type is most likely to be audited for compliance?**
-- A) Disaster Recovery and Security Incident Response
-- B) Checking the weather
-- C) Coffee machine maintenance
-- D) Internal blog posting
 
+<b>11. Which scenario type is most likely to be audited for compliance?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. A 'Firefighter' runbook refers to:**
-- A) A runbook for people puting out real fires
-- B) A runbook for urgent, high-stress incident response
-- C) A legal document
-- D) A training manual
 
+<b>12. A 'Firefighter' runbook refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. Why is 'Tag-based mapping' useful for runbooks?**
-- A) It's for social media
-- B) It allows alerts to automatically find and link to the correct runbook
-- C) It makes files smaller
-- D) It's required by Git
 
+<b>13. Why is 'Tag-based mapping' useful for runbooks?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. An 'Operational Scenario' is:**
-- A) A movie script
-- B) A specific situation that requires a documented procedure to handle
-- C) A type of server
-- D) A cloud region
 
+<b>14. An 'Operational Scenario' is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. True/False: Service Requests are usually reactive.**
-- A) True
-- B) False - They are often predictable and proactive.
 
+<b>15. True/False: Service Requests are usually reactive.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. 'Disaster Recovery' usually involves:**
-- A) Fixing a typo
-- B) Restoring service after major infrastructure failure
-- C) Updating the RAM on one server
-- D) changing a password
 
+<b>16. 'Disaster Recovery' usually involves:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. 'Analysis Paralysis' in SRE is caused by:**
-- A) Too many clear runbooks
-- B) Too many alerts without clear guidance or documentation
-- C) Not enough servers
-- D) Fast internet
 
+<b>17. 'Analysis Paralysis' in SRE is caused by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Which scenario is most critical for 'Business Continuity'?**
-- A) Patching a dev server
-- B) Disaster Recovery
-- C) Renaming a repository
-- D) Updating a Slack profile
 
+<b>18. Which scenario is most critical for 'Business Continuity'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Why should you review your 'Scenarios' periodically?**
-- A) To make sure they are still relevant and use current tech
-- B) To save disk space
-- C) To change the font
-- D) To add more words
 
+<b>19. Why should you review your 'Scenarios' periodically?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**20. A 'P1 Incident' usually corresponds to:**
-- A) A minor bug
-- B) A critical system outage affecting many users
-- C) A new feature request
-- D) An internal meeting
 
+<b>20. A 'P1 Incident' usually corresponds to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. 'Reactive' maintenance happens:**
-- A) Before an error
-- B) After an error has occurred
-- C) During lunch
-- D) Monthly
 
+<b>21. 'Reactive' maintenance happens:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Which role is most likely to execute a 'Service Request' runbook?**
-- A) A Security Auditor
-- B) An Operations/DevOps Engineer or Service Desk analyst
-- C) The Marketing team
-- D) The CFO
 
+<b>22. Which role is most likely to execute a 'Service Request' runbook?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. 'Shadow IT' occurs when:**
-- A) You work at night
-- B) Teams create their own undocumented procedures because official ones are too slow/complex
-- C) The power is off
-- D) You use dark mode
 
+<b>23. 'Shadow IT' occurs when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. 'Playbook' in many organizations is synonymous with:**
-- A) A game
-- B) An automated runbook
-- C) A social media post
-- D) a resume
 
+<b>24. 'Playbook' in many organizations is synonymous with:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The goal of mapping scenarios to runbooks is:**
-- A) To have 1,000 links
-- B) To provide the right information at the right time
-- C) to make the team read more
-- D) to satisfy management
 
+<b>25. The goal of mapping scenarios to runbooks is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

@@ -10,11 +10,11 @@ Unlike Security Groups, NACLs are **Stateless** and operate at the **Subnet Leve
 graph TD
     Subnet[Subnet Boundary] -- Inbound --> NACL{NACL}
     NACL -- Allow Rule 100 --> Instances[EC2 Instances]
-    
-    Instances -- Outbound --> NACL
+
+Instances -- Outbound --> NACL
     NACL -- Blocked if no Outbound Rule! --> Internet((Internet))
-    
-    style NACL fill:#cc0000,color:#fff
+
+style NACL fill:#cc0000,color:#fff
 ```
 
 ### 1. Stateless Behavior

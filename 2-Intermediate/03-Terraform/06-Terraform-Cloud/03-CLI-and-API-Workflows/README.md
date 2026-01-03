@@ -82,19 +82,19 @@ If you use Jenkins, GitLab CI, or GitHub Actions *without* the native VCS bindin
 graph TD
     User[Developer] --> CLI[Local CLI]
     User --> VCS[Git Push]
-    
-    subgraph "Entry Points"
+
+subgraph "Entry Points"
         CLI
         VCS --> Pipeline[Jenkins/Actions]
         Pipeline -->|CLI Driven| TFC_Run
     end
-    
-    subgraph "HCP Terraform"
+
+subgraph "HCP Terraform"
         TFC_Run[Remote Execution]
         API[TFC API]
     end
-    
-    CLI -->|Stream Logs| TFC_Run
+
+CLI -->|Stream Logs| TFC_Run
     Pipeline -->|TF_TOKEN| TFC_Run
     User -->|Curl| API
 ```

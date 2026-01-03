@@ -52,321 +52,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which format is the industry standard for Docs-as-Code?**
-- A) .pdf
-- B) .md (Markdown)
-- C) .docx
-- D) .txt
-
+<b>1. Which format is the industry standard for Docs-as-Code?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: In a DaC model, documentation updates should skip the peer-review process to save time.**
-- A) True
-- B) False
 
+<b>2. True/False: In a DaC model, documentation updates should skip the peer-review process to save time.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Peer review via Pull Requests is critical for accuracy.
-
+Answer: B** - Peer review via Pull Requests is critical for accuracy.
 </details>
 
-**3. What is the main purpose of a 'Linter' in the documentation pipeline?**
-- A) To compress files
-- B) To check for formatting, syntax, and style consistency
-- C) To delete old versions
-- D) To add images
 
+<b>3. What is the main purpose of a 'Linter' in the documentation pipeline?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. 'Atomic Updates' means that:**
-- A) Changes are very fast
-- B) Code and matching documentation are updated in a single commit/PR
-- C) Documents are very small
-- D) Documents are radioactive
 
+<b>4. 'Atomic Updates' means that:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which tool turns Markdown into a searchable website?**
-- A) SQL Server
-- B) Static Site Generator (SSG)
-- C) Photoshop
-- D) Excel
 
+<b>5. Which tool turns Markdown into a searchable website?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** (e.g., MkDocs, Hugo)
-
+Answer: B** (e.g., MkDocs, Hugo)
 </details>
 
-**6. 'Syncing Docs with Code' is easiest when:**
-- A) They are in different countries
-- B) They are in the same Git repository
-- C) You use paper
-- D) You never update them
 
+<b>6. 'Syncing Docs with Code' is easiest when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. A 'Link Checker' in a CI pipeline prevents:**
-- A) Too many links
-- B) "Dead Links" that lead to 404 errors
-- C) Links to the competition
-- D) Faster internet
 
+<b>7. A 'Link Checker' in a CI pipeline prevents:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. Pull Request (PR) logs provide what for an auditor?**
-- A) Money
-- B) An immutable record of approvals and changes
-- C) A list of jokes
-- D) A new computer
 
+<b>8. Pull Request (PR) logs provide what for an auditor?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. Why is a 'Binary' format (like .docx) bad for Git?**
-- A) Git cannot track it
-- B) Git cannot easily "Diff" it to show line-by-line changes
-- C) It makes Git faster
-- D) It's free
 
+<b>9. Why is a 'Binary' format (like .docx) bad for Git?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What is 'Git Blame'?**
-- A) A command to find who to fire
-- B) A command to see who last changed specific lines in a file
-- C) A type of error
-- D) A cloud provider
 
+<b>10. What is 'Git Blame'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. The 'Cycle Time' of documentation refers to:**
-- A) How long it takes to read
-- B) The time from writing a doc change to it being live in production
-- C) The rotation of the earth
-- D) server speed
 
+<b>11. The 'Cycle Time' of documentation refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. True/False: Markdown supports diagrams through tools like Mermaid.**
-- A) True
-- B) False
 
+<b>12. True/False: Markdown supports diagrams through tools like Mermaid.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**13. Which of these is a popular SSG?**
-- A) MySQL
-- B) MkDocs
-- C) Windows
-- D) Slack
 
+<b>13. Which of these is a popular SSG?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. An 'Internal Doc Portal' improves:**
-- A) Coffee quality
-- B) Discoverability and searchability for all engineers
-- C) Server heat
-- D) CPU usage
 
+<b>14. An 'Internal Doc Portal' improves:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Branching' for documentation allows you to:**
-- A) Work on new procedures without affecting the 'Live' documentation
-- B) Save space
-- C) Delete files
-- D) share passwords
 
+<b>15. 'Branching' for documentation allows you to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**16. 'Secret Scanning' in DaC protects against:**
-- A) Too much light
-- B) Accidental exposure of credentials (API keys, etc.) in Git
-- C) Fast deployments
-- D) slow internet
 
+<b>16. 'Secret Scanning' in DaC protects against:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. Why is 'Version Control' essential for runbooks?**
-- A) To make them longer
-- B) To allow rollbacks to old procedures if a new one is found to be incorrect
-- C) To hide errors
-- D) To satisfy management
 
+<b>17. Why is 'Version Control' essential for runbooks?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. A 'Headless CMS' is which type of approach?**
-- A) Traditional Wiki
-- B) Often used with DaC to separate content from presentation
-- C) No content at all
-- D) Only for experts
 
+<b>18. A 'Headless CMS' is which type of approach?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. 'YAML Front Matter' is used in Markdown files to:**
-- A) Write code
-- B) Store metadata like Title, Author, and Tags
-- C) Add images
-- D) delete files
 
+<b>19. 'YAML Front Matter' is used in Markdown files to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: DaC works best when documentation is automated where possible.**
-- A) True
-- B) False
 
+<b>20. True/False: DaC works best when documentation is automated where possible.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** (e.g., auto-generating API docs)
-
+Answer: A** (e.g., auto-generating API docs)
 </details>
 
-**21. What is 'Documentation Debt'?**
-- A) Money owed for printing
-- B) The accumulation of outdated, inaccurate, or missing documentation
-- C) The cost of Git
-- D) A loan
 
+<b>21. What is 'Documentation Debt'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Pre-commit hooks' can check:**
-- A) The weather
-- B) Documentation quality/formatting BEFORE the code is even pushed to Git
-- C) The server status
-- D) The time
 
+<b>22. 'Pre-commit hooks' can check:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Which role usually manages the 'Docs Pipeline'?**
-- A) Marketing
-- B) DevOps / SRE / Platform Engineer
-- C) The CEO
-- D) Only interns
 
+<b>23. Which role usually manages the 'Docs Pipeline'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. 'Contextual Docs' means:**
-- A) Docs that are very long
-- B) Docs that live right where the work happens (IDE, Code Repo)
-- C) Docs in a different country
-- D) Docs in a book
 
+<b>24. 'Contextual Docs' means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The final goal of the Docs-as-Code Lifecycle is:**
-- A) To use more tools
-- B) To make high-quality, reliable information an integral part of the software development process
-- C) To spend more money
-- D) To have more Git repos
 
+<b>25. The final goal of the Docs-as-Code Lifecycle is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

@@ -241,11 +241,31 @@ sudo cp -r /etc/kubernetes/pki /etc/kubernetes/pki.backup
 
 ## 🎯 Next Steps (In Order)
 
-1. ✅ Read **QUICK_START.md** (10 min)
-2. ✅ Use **IMPLEMENTATION_CHECKLIST.md** (track progress)
-3. ✅ Run ansible playbook (15 min)
+<b>1. ✅ Read **QUICK_START.md</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 10 min
+</details>
+
+<b>2. ✅ Use **IMPLEMENTATION_CHECKLIST.md</b>
+<details>
+<summary>Show Answer</summary>
+Answer: track progress
+</details>
+
+<b>3. ✅ Run ansible playbook</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 15 min
+</details>
+
 4. ✅ Verify cluster is Ready
-5. ✅ Deploy applications (5 min)
+<b>5. ✅ Deploy applications</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 5 min
+</details>
+
 6. ✅ Verify pods are Running
 7. ✅ Test service connectivity
 8. ✅ Run `full-diagnostic.sh` to verify all is well

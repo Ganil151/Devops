@@ -554,7 +554,12 @@ Use for:
 # Execution Speed (Fastest to Slowest)
 1. Go, Rust, C/C++
 2. Java, C#
-3. JavaScript (V8)
+<b>3. JavaScript</b>
+<details>
+<summary>Show Answer</summary>
+Answer: V8
+</details>
+
 4. Python, Ruby
 5. Shell scripts
 

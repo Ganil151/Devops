@@ -34,11 +34,11 @@ graph TD
     Alert[Alert Fires] --> Verify{Is it real?}
     Verify -- No --> FalsePositive[Tune Alert]
     Verify -- Yes --> Assess{Severity?}
-    
-    Assess -- P0/P1 --> Assemble[Assemble Full ICS Team]
+
+Assess -- P0/P1 --> Assemble[Assemble Full ICS Team]
     Assess -- P2/P3 --> OnCall[On-Call Handles]
-    
-    Assemble --> WarRoom[Create War Room]
+
+Assemble --> WarRoom[Create War Room]
     WarRoom --> StatusPage[Update Status Page]
     StatusPage --> Investigate[Begin Investigation]
 ```
@@ -109,317 +109,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Triage is the step that follows immediately after:**
-- A) Resolution
-- B) Detection
-- C) Post-Mortem
-- D) Coding
-
+<b>1. Triage is the step that follows immediately after:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: You should always spend at least 30 minutes in Triage to be thorough.**
-- A) False - P0 triage should take < 5 minutes.
-- B) True
 
+<b>2. True/False: You should always spend at least 30 minutes in Triage to be thorough.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**3. 'Verification' means checking if:**
-- A) You have a backup
-- B) The alert is real and production is actually impacted
-- C) The code is pretty
-- D) nothing
 
+<b>3. 'Verification' means checking if:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. For a P0 incident, which team structure is required?**
-- A) Single Engineer
-- B) Full ICS Activation (IC, Ops, Comms, Scribe)
-- C) HR
-- D) Support only
 
+<b>4. For a P0 incident, which team structure is required?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which is a common triage mistake?**
-- A) Checking logs
-- B) Premature Diagnosis (assuming the cause)
-- C) Asking for help
-- D) Using a timer
 
+<b>5. Which is a common triage mistake?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. A 'War Room' is:**
-- A) A place to fight colleagues
-- B) A dedicated communication channel for incident response coordination
-- C) A server room
-- D) none of the above
 
+<b>6. A 'War Room' is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: You should verify the incident in Staging first.**
-- A) False - Verify in Production where the impact is happening.
-- B) True
 
+<b>7. True/False: You should verify the incident in Staging first.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. 'Analysis Paralysis' leads to:**
-- A) Faster fixes
-- B) Increased downtime due to indecision
-- C) Better logs
-- D) more sleep
 
+<b>8. 'Analysis Paralysis' leads to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. The 'Scope' of an incident refers to:**
-- A) The size of the screen
-- B) The breadth of impact (which services and how many users are affected)
-- C) The price
-- D) nothing
 
+<b>9. The 'Scope' of an incident refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. What is a 'False Positive' in triage?**
-- A) A successful fix
-- B) An alert that fired when there was no real problem
-- C) A bug
-- D) a green light
 
+<b>10. What is a 'False Positive' in triage?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: The Scribe role should be assigned during the Triage phase.**
-- A) True - For P0/P1 incidents, documentation must start immediately.
-- B) False
 
+<b>11. True/False: The Scribe role should be assigned during the Triage phase.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. When should you update the 'Status Page'?**
-- A) Only after it's fixed
-- B) As soon as the incident is verified for P0/P1
-- C) Never
-- D) weekly
 
+<b>12. When should you update the 'Status Page'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A 'Triage Checklist' helps prevent:**
-- A) Coding errors
-- B) Human error and "Skipping steps" under pressure
-- C) Cost
-- D) nothing
 
+<b>13. A 'Triage Checklist' helps prevent:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. If a junior engineer is stuck for 15 minutes, they should:**
-- A) Keep trying alone
-- B) Escalate to the team or IC
-- C) Go to lunch
-- D) restart their PC
 
+<b>14. If a junior engineer is stuck for 15 minutes, they should:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Impact' vs. 'Urgency': Which one refers to the "Rate of Change"?**
-- A) Impact
-- B) Urgency
-- C) Neither
-- D) Both
 
+<b>15. 'Impact' vs. 'Urgency': Which one refers to the "Rate of Change"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: You should find the 'Root Cause' before you finish Triage.**
-- A) False - Diagnosis happens during investigation/mitigation; Triage is for assessment.
-- B) True
 
+<b>16. True/False: You should find the 'Root Cause' before you finish Triage.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. The 'Stakeholder Notification' for a P0 should happen:**
-- A) Within 24 hours
-- B) Immediately during or right after Triage
-- C) Only if they ask
-- D) monthly
 
+<b>17. The 'Stakeholder Notification' for a P0 should happen:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why use a 'Dedicated' Slack channel for an incident?**
-- A) To hide from the boss
-- B) To keep incident communication separate from daily chat noise
-- C) To use more RAM
-- D) no reason
 
+<b>18. Why use a 'Dedicated' Slack channel for an incident?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which role confirms 'Incidents' on the status page?**
-- A) Ops Lead
-- B) Communications Lead (with IC approval)
-- C) HR
-- D) The customer
 
+<b>19. Which role confirms 'Incidents' on the status page?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: Triage must be a calm, data-driven process.**
-- A) True
-- B) False
 
+<b>20. True/False: Triage must be a calm, data-driven process.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Hero Syndrome' in triage often leads to:**
-- A) Faster MTTR
-- B) Delayed escalation and longer outages
-- C) Higher salary
-- D) better code
 
+<b>21. 'Hero Syndrome' in triage often leads to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Context Gathering' involves:**
-- A) Reading a book
-- B) Looking at recent deployments and health metric dashboards
-- C) Checking vacation schedules
-- D) nothing
 
+<b>22. 'Context Gathering' involves:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Under-escalation is a risk of:**
-- A) Low risk
-- B) High Pride/Ego or poor culture
-- C) Speed
-- D) automation
 
+<b>23. Under-escalation is a risk of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'ICS Hierarchy' is activated for which priorities?**
-- A) P4 only
-- B) P0 and P1
-- C) P3
-- D) nothing
 
+<b>24. The 'ICS Hierarchy' is activated for which priorities?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Triage is about _____ information to make _____ decisions.**
-- A) Hiding / slow
-- B) Filtering / rapid, accurate
-- C) Deleting / expensive
-- D) Ignoring / bad
 
+<b>25. Triage is about _____ information to make _____ decisions.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

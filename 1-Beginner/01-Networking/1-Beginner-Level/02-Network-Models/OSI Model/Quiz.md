@@ -130,23 +130,117 @@ Test your knowledge of the OSI and TCP/IP models with these 20 questions.
 
 ## ✅ Answers
 
-1. **B** (Network)
-2. **B** (Switch)
-3. **C** (Segment)
-4. **C** (Application)
-5. **B** (Transport)
-6. **B** (Layer 2)
-7. **B** (Presentation)
-8. **A** (Physical)
-9. **C** (Router)
-10. **B** (Session)
-11. **B** (Network)
-12. **C** (DNS)
-13. **B** (UDP)
-14. **C** (Layer 4 - Transport/Ports)
+<b>1. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Network
+</details>
+
+<b>2. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Switch
+</details>
+
+<b>3. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Segment
+</details>
+
+<b>4. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Application
+</details>
+
+<b>5. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Transport
+</details>
+
+<b>6. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Layer 2
+</details>
+
+<b>7. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Presentation
+</details>
+
+<b>8. A</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Physical
+</details>
+
+<b>9. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Router
+</details>
+
+<b>10. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Session
+</details>
+
+<b>11. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Network
+</details>
+
+<b>12. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: DNS
+</details>
+
+<b>13. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: UDP
+</details>
+
+<b>14. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Layer 4 - Transport/Ports
+</details>
+
 15. **B**
-16. **B** (Traceroute)
-17. **C** (DNS issue)
-18. **B** (Layer 4)
-19. **C** (ARP)
-20. **C** (Presentation/Application)
+<b>16. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Traceroute
+</details>
+
+<b>17. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: DNS issue
+</details>
+
+<b>18. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Layer 4
+</details>
+
+<b>19. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: ARP
+</details>
+
+<b>20. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Presentation/Application
+</details>

@@ -130,221 +130,148 @@ This guide covers GCP compute services for scalable application deployment.
 6. **Explain "Shielded VMs".**
    - VMs hardened by a set of security controls (Secure Boot, vTPM, Integrity Monitoring) to defend against rootkits/bootkits.
 
-### Advanced Level
-7. **What is GKE Autopilot?**
-   - A mode of operation in GKE where Google manages the node configuration, scaling, and security. You pay for pods resources, not nodes.
-8. **Discounts: Sustained Use vs. Committed Use.**
-   - **Sustained:** Automatic discount for running VMs for a significant portion of the month.
-   - **Committed:** Contract for 1 or 3 years for deeper discounts (like AWS Reserved Instances).
-9. **What is "Sole-tenant nodes"?**
-   - Physical servers dedicated to your project only. Used for compliance (BYOL) or strict isolation requirements.
-
----
-
-## Quiz: GCP Compute
-
+<b>7. </b>
 <details>
-<summary><b>1. What is the command to create a VM?</b></summary>
-A) gcloud compute instances create<br>
-B) gcloud vm create<br>
-C) gcloud create instance<br>
-D) gcloud maker vm<br>
-<br>
-<b>Answer: A) gcloud compute instances create</b>
+<summary>Show Answer</summary>
+Answer: A) gcloud compute instances create</b>
 </details>
 
+
+<b>2. Which service is best for event-driven serverless functions?</b>
 <details>
-<summary><b>2. Which service is best for event-driven serverless functions?</b></summary>
-A) Cloud Functions<br>
-B) Compute Engine<br>
-C) GKE<br>
-D) Bare Metal<br>
-<br>
-<b>Answer: A) Cloud Functions</b>
+<summary>Show Answer</summary>
+Answer: A) Cloud Functions</b>
 </details>
 
+
+<b>3. Live Migration is a feature of:</b>
 <details>
-<summary><b>3. Live Migration is a feature of:</b></summary>
-A) Compute Engine<br>
-B) Cloud Storage<br>
-C) VPC<br>
-D) None<br>
-<br>
-<b>Answer: A) Compute Engine</b>
+<summary>Show Answer</summary>
+Answer: A) Compute Engine</b>
 </details>
 
+
+<b>4. GKE stands for:</b>
 <details>
-<summary><b>4. GKE stands for:</b></summary>
-A) Google Kubernetes Engine<br>
-B) Google Kernel Engine<br>
-C) Global Kubernetes Environment<br>
-D) Great King Edward<br>
-<br>
-<b>Answer: A) Google Kubernetes Engine</b>
+<summary>Show Answer</summary>
+Answer: A) Google Kubernetes Engine</b>
 </details>
 
+
+<b>5. For auto-scaling VMs, you should use:</b>
 <details>
-<summary><b>5. For auto-scaling VMs, you should use:</b></summary>
-A) Managed Instance Groups (MIG)<br>
-B) Unmanaged Instance Groups<br>
-C) Just many VMs<br>
-D) Cron script<br>
-<br>
-<b>Answer: A) Managed Instance Groups (MIG)</b>
+<summary>Show Answer</summary>
+Answer: A) Managed Instance Groups (MIG)</b>
 </details>
 
+
+<b>6. Cloud Run scales to:</b>
 <details>
-<summary><b>6. Cloud Run scales to:</b></summary>
-A) Zero (0)<br>
-B) One (1)<br>
-C) Min 2<br>
-D) Infinity only<br>
-<br>
-<b>Answer: A) Zero (0)</b>
+<summary>Show Answer</summary>
+Answer: A) Zero (0)</b>
 </details>
 
+
+<b>7. App Engine "Standard" environment is optimized for:</b>
 <details>
-<summary><b>7. App Engine "Standard" environment is optimized for:</b></summary>
-A) Rapid scaling and specific languages (Python, Java, Go, etc.)<br>
-B) Custom containers<br>
-C) Windows Server<br>
-D) GPUs<br>
-<br>
-<b>Answer: A) Rapid scaling and specific languages (Python, Java, Go, etc.)</b>
+<summary>Show Answer</summary>
+Answer: A) Rapid scaling and specific languages (Python, Java, Go, etc.)</b>
 </details>
 
+
+<b>8. Preemptible VMs can be stopped by Google after:</b>
 <details>
-<summary><b>8. Preemptible VMs can be stopped by Google after:</b></summary>
-A) 24 hours (or sooner if needed)<br>
-B) 1 hour<br>
-C) 7 days<br>
-D) Never<br>
-<br>
-<b>Answer: A) 24 hours (or sooner if needed)</b>
+<summary>Show Answer</summary>
+Answer: A) 24 hours (or sooner if needed)</b>
 </details>
 
+
+<b>9. Which GKE mode manages nodes for you?</b>
 <details>
-<summary><b>9. Which GKE mode manages nodes for you?</b></summary>
-A) Autopilot<br>
-B) Standard<br>
-C) Legacy<br>
-D) Manual<br>
-<br>
-<b>Answer: A) Autopilot</b>
+<summary>Show Answer</summary>
+Answer: A) Autopilot</b>
 </details>
 
+
+<b>10. To run a Windows Server, you use:</b>
 <details>
-<summary><b>10. To run a Windows Server, you use:</b></summary>
-A) Compute Engine<br>
-B) Cloud Functions<br>
-C) App Engine Standard<br>
-D) BigQuery<br>
-<br>
-<b>Answer: A) Compute Engine</b>
+<summary>Show Answer</summary>
+Answer: A) Compute Engine</b>
 </details>
 
+
+<b>11. What is a "Custom Machine Type"?</b>
 <details>
-<summary><b>11. What is a "Custom Machine Type"?</b></summary>
-A) You pick exact CPU and RAM count<br>
-B) A robot<br>
-C) A painted server<br>
-D) A legacy type<br>
-<br>
-<b>Answer: A) You pick exact CPU and RAM count</b>
+<summary>Show Answer</summary>
+Answer: A) You pick exact CPU and RAM count</b>
 </details>
 
+
+<b>12. Cloud Functions 2nd Gen is built on:</b>
 <details>
-<summary><b>12. Cloud Functions 2nd Gen is built on:</b></summary>
-A) Cloud Run and Eventarc<br>
-B) App Engine<br>
-C) Bare Metal<br>
-D) Angular<br>
-<br>
-<b>Answer: A) Cloud Run and Eventarc</b>
+<summary>Show Answer</summary>
+Answer: A) Cloud Run and Eventarc</b>
 </details>
 
+
+<b>13. Which command connects simply to a VM via SSH?</b>
 <details>
-<summary><b>13. Which command connects simply to a VM via SSH?</b></summary>
-A) gcloud compute ssh [INSTANCE_NAME]<br>
-B) ssh root@ip<br>
-C) gcloud connect<br>
-D) gcloud login<br>
-<br>
-<b>Answer: A) gcloud compute ssh [INSTANCE_NAME]</b>
+<summary>Show Answer</summary>
+Answer: A) gcloud compute ssh [INSTANCE_NAME]</b>
 </details>
 
+
+<b>14. "Committed Use Discounts" require:</b>
 <details>
-<summary><b>14. "Committed Use Discounts" require:</b></summary>
-A) 1 or 3 year contract<br>
-B) Upfront payment only<br>
-C) Using Spot instances<br>
-D) None<br>
-<br>
-<b>Answer: A) 1 or 3 year contract</b>
+<summary>Show Answer</summary>
+Answer: A) 1 or 3 year contract</b>
 </details>
 
+
+<b>15. Does Compute Engine support GPUs?</b>
 <details>
-<summary><b>15. Does Compute Engine support GPUs?</b></summary>
-A) Yes (NVIDIA Tesla, etc.)<br>
-B) No<br>
-<br>
-<b>Answer: A) Yes (NVIDIA Tesla, etc.)</b>
+<summary>Show Answer</summary>
+Answer: A) Yes (NVIDIA Tesla, etc.)</b>
 </details>
 
+
+<b>16. What is "Cloud Shell"?</b>
 <details>
-<summary><b>16. What is "Cloud Shell"?</b></summary>
-A) Temporary VM with gcloud/tools pre-installed, accessible via browser<br>
-B) A storage service<br>
-C) A database<br>
-D) A cost tool<br>
-<br>
-<b>Answer: A) Temporary VM with gcloud/tools pre-installed, accessible via browser</b>
+<summary>Show Answer</summary>
+Answer: A) Temporary VM with gcloud/tools pre-installed, accessible via browser</b>
 </details>
 
+
+<b>17. Which is a regional resource?</b>
 <details>
-<summary><b>17. Which is a regional resource?</b></summary>
-A) Global Address<br>
-B) Static IP (can be regional or global)<br>
-C) Disk (Zonal or Regional)<br>
-D) Subnet (Regional)<br>
-<br>
-<b>Answer: D) Subnet (Regional)</b>
+<summary>Show Answer</summary>
+Answer: D) Subnet (Regional)</b>
 </details>
 
+
+<b>18. Can you run containers on Compute Engine (COs)?</b>
 <details>
-<summary><b>18. Can you run containers on Compute Engine (COs)?</b></summary>
-A) Yes, using "Container-Optimized OS"<br>
-B) No<br>
-<br>
-<b>Answer: A) Yes, using "Container-Optimized OS"</b>
+<summary>Show Answer</summary>
+Answer: A) Yes, using "Container-Optimized OS"</b>
 </details>
 
+
+<b>19. Auto-healing in MIGs relies on:</b>
 <details>
-<summary><b>19. Auto-healing in MIGs relies on:</b></summary>
-A) Health Checks<br>
-B) Magic<br>
-C) Manual intervention<br>
-D) Billing<br>
-<br>
-<b>Answer: A) Health Checks</b>
+<summary>Show Answer</summary>
+Answer: A) Health Checks</b>
 </details>
 
+
+<b>20. Does stopping a VM stop billing?</b>
 <details>
-<summary><b>20. Does stopping a VM stop billing?</b></summary>
-A) Yes for compute, No for storage (disk)<br>
-B) Yes for everything<br>
-C) No<br>
-D) Only on weekends<br>
-<br>
-<b>Answer: A) Yes for compute, No for storage (disk)</b>
+<summary>Show Answer</summary>
+Answer: A) Yes for compute, No for storage (disk)</b>
 </details>
 
+
+<b>21. Max duration of a Cloud Function?</b>
 <details>
-<summary><b>21. Max duration of a Cloud Function?</b></summary>
-A) 9 minutes (1st gen), 60 mins (2nd gen)<br>
-B) 10 seconds<br>
-C) 24 hours<br>
-D) Unlimited<br>
-<br>
-<b>Answer: A) 9 minutes (1st gen), 60 mins (2nd gen)</b>
+<summary>Show Answer</summary>
+Answer: A) 9 minutes (1st gen), 60 mins (2nd gen)</b>
 </details>

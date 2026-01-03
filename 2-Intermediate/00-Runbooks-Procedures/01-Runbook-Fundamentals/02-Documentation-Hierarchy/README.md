@@ -35,13 +35,13 @@ Not all documentation is created equal. Understanding the difference between an 
 graph TD
     SOP[SOP: Strategy & Policy] --> RB[Runbook: Step-by-Step Instructions]
     RB --> PB[Playbook: Automated Execution]
-    
-    subgraph "Human-Centric"
+
+subgraph "Human-Centric"
     SOP
     RB
     end
-    
-    subgraph "Machine-Centric"
+
+subgraph "Machine-Centric"
     PB
     end
 ```
@@ -87,323 +87,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which document is most likely to be written in YAML or Python?**
-- A) SOP
-- B) Runbook
-- C) Playbook
-- D) Wiki
-
+<b>1. Which document is most likely to be written in YAML or Python?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**2. An SOP (Standard Operating Procedure) primarily targets:**
-- A) The CPU
-- B) Junior Engineers only
-- C) Management, Auditors, and high-level Strategy
-- D) Only the intern
 
+<b>2. An SOP (Standard Operating Procedure) primarily targets:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**3. If you need step-by-step human instructions to "Reset a User Password," you look at a:**
-- A) Code Comment
-- B) Runbook
-- C) Business Plan
-- D) SOP
 
+<b>3. If you need step-by-step human instructions to "Reset a User Password," you look at a:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. True/False: A Playbook is more flexible than a Runbook for handling unexpected errors.**
-- A) True
-- B) False
 
+<b>4. True/False: A Playbook is more flexible than a Runbook for handling unexpected errors.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Humans (using Runbooks) are better at adapting to unexpected scenarios than static code.
-
+Answer: B** - Humans (using Runbooks) are better at adapting to unexpected scenarios than static code.
 </details>
 
-**5. Which layer defines 'Who is authorized to approve production changes'?**
-- A) Runbook
-- B) SOP
-- C) Playbook
-- D) Shell Script
 
+<b>5. Which layer defines 'Who is authorized to approve production changes'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. The "Human-in-the-Loop" philosophy specifically values which layer?**
-- A) The BIOS
-- B) The Runbook
-- C) The compiler
-- D) The API
 
+<b>6. The "Human-in-the-Loop" philosophy specifically values which layer?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. A "Playbook" is ideally:**
-- A) A PDF file with 50 pages
-- B) An executable script or automation task
-- C) A physical book
-- D) A recorded meeting
 
+<b>7. A "Playbook" is ideally:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. What is the risk of having a Playbook WITHOUT a Runbook?**
-- A) The code runs too fast
-- B) If the automation fails, the human doesn't know the manual recovery steps
-- C) It saves too much time
-- D) There is no risk
 
+<b>8. What is the risk of having a Playbook WITHOUT a Runbook?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. "Policy Compliance" is the main goal of which layer?**
-- A) Playbook
-- B) Runbook
-- C) SOP
-- D) Debugger
 
+<b>9. "Policy Compliance" is the main goal of which layer?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**10. Which layer is most likely to be audited by a regulator like SOC2?**
-- A) Runbook
-- B) SOP
-- C) Neither
-- D) Both
 
+<b>10. Which layer is most likely to be audited by a regulator like SOC2?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D** - Auditors check if policies (SOP) exist and if they are followed (Runbook logs).
-
+Answer: D** - Auditors check if policies (SOP) exist and if they are followed (Runbook logs).
 </details>
 
-**11. A "Prerequisite" section is most common in a:**
-- A) Playbook
-- B) Runbook
-- C) Variable
-- D) Header file
 
+<b>11. A "Prerequisite" section is most common in a:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. True/False: Ansible is a tool used to create Playbooks.**
-- A) True
-- B) False
 
+<b>12. True/False: Ansible is a tool used to create Playbooks.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**13. Which layer is considered "Machine-Centric"?**
-- A) SOP
-- B) Playbook
-- C) Runbook
-- D) Tutorial
 
+<b>13. Which layer is considered "Machine-Centric"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. A Runbook is "Actionable," while an SOP is:**
-- A) Useless
-- B) Strategic / Governing
-- C) Automated
-- D) Emotional
 
+<b>14. A Runbook is "Actionable," while an SOP is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. What is "Tribal Knowledge" in this context?**
-- A) Binary code
-- B) Steps that are NOT in the SOP, Runbook, or Playbook
-- C) The cloud provider's API
-- D) High-level architecture
 
+<b>15. What is "Tribal Knowledge" in this context?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. "Separation of Concerns" in documentation means:**
-- A) Deleting all files
-- B) Putting policies in SOPs and technical steps in Runbooks
-- C) Everyone writes their own docs
-- D) Using only one file for everything
 
+<b>16. "Separation of Concerns" in documentation means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. If a process is "Frequent and Lower-Risk," you should move toward:**
-- A) More SOPs
-- B) Full Playbook Automation
-- C) Manual checks
-- D) Hiring more people
 
+<b>17. If a process is "Frequent and Lower-Risk," you should move toward:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. A "Reference Document" (like a diagram) belongs in which layer?**
-- A) Runbook
-- B) Playbook
-- C) It can be linked in any, but usually supports the Runbook
-- D) Trash
 
+<b>18. A "Reference Document" (like a diagram) belongs in which layer?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**19. Why should Runbooks be 'Version Controlled'?**
-- A) To save space
-- B) To ensure the steps match the current version of the software/infrastructure
-- C) Because Git is free
-- D) To hide history
 
+<b>19. Why should Runbooks be 'Version Controlled'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. An 'Executable Runbook' (like a Jupyter Notebook) sits between:**
-- A) SOP and Blog
-- B) Runbook and Playbook
-- C) Manager and Dev
-- D) Local and Cloud
 
+<b>20. An 'Executable Runbook' (like a Jupyter Notebook) sits between:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. "Compliance drift" happens when:**
-- A) The cloud is slow
-- B) The actual Technical procedures (Runbooks) no longer match the Policy (SOP)
-- C) The team changes
-- D) The weather changes
 
+<b>21. "Compliance drift" happens when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Which layer provides the 'BIG WHY' for a task?**
-- A) Playbook
-- B) SOP
-- C) Runbook
-- D) Script
 
+<b>22. Which layer provides the 'BIG WHY' for a task?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. A "Call-Out" or "Escalation" procedure is part of a:**
-- A) Playbook
-- B) Runbook / SOP
-- C) Variable
-- D) Database
 
+<b>23. A "Call-Out" or "Escalation" procedure is part of a:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. "Cognitive Load" is reduced most by which layer during a crisis?**
-- A) SOP
-- B) Runbook
-- C) Financial Report
-- D) Employee Handbook
 
+<b>24. "Cognitive Load" is reduced most by which layer during a crisis?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The ultimate goal of the Hierarchy is:**
-- A) To have more files
-- B) High Reliability, Clear Compliance, and Fast Resolution
-- C) To spend more time writing
-- D) To replace all people
 
+<b>25. The ultimate goal of the Hierarchy is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

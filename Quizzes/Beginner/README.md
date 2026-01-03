@@ -260,4 +260,3 @@ S3. B
 
 ### 🚀 Level Up your Troubleshooting!
 Ready for a bigger challenge? Try our **[Advanced Networking Scenarios Quiz](./Networking-Scenarios.md)** with 20+ real-world DevOps networking problems!
-

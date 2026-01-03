@@ -138,10 +138,25 @@ Ensures that concurrent transactions (occurring at the same time) execute indepe
 - **Phantom Reads**: New rows appearing in a query set during a transaction.
 
 **Isolation Levels (Trade-off between Performance vs Strictness)**:
-1. **Read Uncommitted** (Fastest, Dangerous)
-2. **Read Committed** (Default in many DBs)
+<b>1. Read Uncommitted</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Fastest, Dangerous
+</details>
+
+<b>2. Read Committed</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Default in many DBs
+</details>
+
 3. **Repeatable Read**
-4. **Serializable** (Slowest, safest)
+<b>4. Serializable</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Slowest, safest
+</details>
+
 
 ### 4. **D**urability ("Permanence")
 Guarantees that once a transaction has been committed, it will remain committed even in the case of a catastrophic system failure (e.g., power outage, crash, or disk failure).
@@ -377,219 +392,191 @@ Now that you understand database fundamentals, continue your learning:
 ### Intermediate Level
 4.  **Describe the CAP Theorem. Which two does a traditional SQL database usually choose?**
     -   CAP stands for Consistency, Availability, and Partition Tolerance. In a distributed system, you can only pick two. Traditional SQL databases (like MySQL) generally choose **CA** (Consistency and Availability) in a single node, or **CP** (Consistency and Partition Tolerance) in a cluster, sacrificing availability during a network partition to ensure data is correct.
-5.  **What is Database Normalization?**
-    -   The process of organizing data to minimize redundancy and dependency. It involves dividing large tables into smaller, related tables (e.g., 1NF, 2NF, 3NF) to ensure data integrity.
-
----
-
-## Part 4: Knowledge Quiz
-
+<b>5. </b>
 <details>
-<summary><b>1. Which ACID property ensures that a transaction is "all or nothing"?</b></summary>
-A) Atomicity<br>
-B) Consistency<br>
-C) Isolation<br>
-D) Durability<br>
-<br>
-<b>Answer: A) Atomicity</b>
+<summary>Show Answer</summary>
+Answer: A) Atomicity</b>
 </details>
 
-<details>
-<summary><b>2. In a Relational Database, what represents a single record of data?</b></summary>
-A) Column<br>
-B) Table<br>
-C) Row<br>
-D) Schema<br>
-<br>
-<b>Answer: C) Row</b>
-</details>
+
+
 
 <details>
-<summary><b>3. Which type of database is best suited for social networks with complex relationships?</b></summary>
-A) Key-Value<br>
-B) Relational<br>
-C) Graph<br>
-D) Column-Family<br>
-<br>
-<b>Answer: C) Graph</b>
+<b>2. In a Relational Database, what represents a single record of data?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Row</b>
 </details>
 
-<details>
-<summary><b>4. What allows a database to recover committed transactions after a power failure?</b></summary>
-A) Isolation<br>
-B) Consistency<br>
-C) Durability<br>
-D) Atomicity<br>
-<br>
-<b>Answer: C) Durability</b>
-</details>
+
 
 <details>
-<summary><b>5. "Eventual Consistency" is a common characteristic of which type of database?</b></summary>
-A) Strong SQL systems<br>
-B) Many NoSQL systems (AP systems)<br>
-C) Local Excel files<br>
-D) In-memory arrays<br>
-<br>
-<b>Answer: B) Many NoSQL systems (AP systems)</b>
+<b>3. Which type of database is best suited for social networks with complex relationships?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Graph</b>
 </details>
 
-<details>
-<summary><b>6. What SQL command is used to modify existing data?</b></summary>
-A) INSERT<br>
-B) MODIFY<br>
-C) UPDATE<br>
-D) CHANGE<br>
-<br>
-<b>Answer: C) UPDATE</b>
-</details>
+
 
 <details>
-<summary><b>7. Which normalization goal focuses on eliminating redundant data?</b></summary>
-A) Data Redundancy<br>
-B) Data Efficiency<br>
-C) Data Integrity<br>
-D) Data Consistency<br>
-<br>
-<b>Answer: A) Data Redundancy</b>
+<b>4. What allows a database to recover committed transactions after a power failure?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Durability</b>
 </details>
 
-<details>
-<summary><b>8. A "Foreign Key" constraint enforces:</b></summary>
-A) Uniqueness<br>
-B) Referential Integrity<br>
-C) Null values<br>
-D) Indexing<br>
-<br>
-<b>Answer: B) Referential Integrity</b>
-</details>
+
 
 <details>
-<summary><b>9. Which isolation level prevents "Dirty Reads"?</b></summary>
-A) Read Uncommitted<br>
-B) Read Committed<br>
-C) Unrestricted<br>
-D) None<br>
-<br>
-<b>Answer: B) Read Committed (and higher)</b>
+<b>5. "Eventual Consistency" is a common characteristic of which type of database?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Many NoSQL systems (AP systems)</b>
 </details>
 
-<details>
-<summary><b>10. In CAP Theorem, if you choose Availability and Partition Tolerance (AP), what do you sacrifice?</b></summary>
-A) Speed<br>
-B) Consistency (Strong)<br>
-C) Security<br>
-D) Storage<br>
-<br>
-<b>Answer: B) Consistency (Strong)</b>
-</details>
+
 
 <details>
-<summary><b>11. DynamoDB is an example of which NoSQL type?</b></summary>
-A) Graph<br>
-B) Key-Value / Document<br>
-C) Relational<br>
-D) Analytical<br>
-<br>
-<b>Answer: B) Key-Value / Document</b>
+<b>6. What SQL command is used to modify existing data?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) UPDATE</b>
 </details>
 
-<details>
-<summary><b>12. Which SQL clause is used to filter records?</b></summary>
-A) SELECT<br>
-B) FROM<br>
-C) WHERE<br>
-D) GROUP BY<br>
-<br>
-<b>Answer: C) WHERE</b>
-</details>
+
 
 <details>
-<summary><b>13. Vertical Scaling means:</b></summary>
-A) Adding more servers<br>
-B) Adding more CPU/RAM to an existing server<br>
-C) Buying a taller rack<br>
-D) Splitting the database<br>
-<br>
-<b>Answer: B) Adding more CPU/RAM to an existing server</b>
+<b>7. Which normalization goal focuses on eliminating redundant data?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A) Data Redundancy</b>
 </details>
 
-<details>
-<summary><b>14. Which is NOT a standard CRUD operation?</b></summary>
-A) Create<br>
-B) Read<br>
-C) Undo<br>
-D) Delete<br>
-<br>
-<b>Answer: C) Undo</b>
-</details>
+
 
 <details>
-<summary><b>15. Using an index typically makes ______ slower.</b></summary>
-A) Reads<br>
-B) Writes<br>
-C) Backups<br>
-D) Logins<br>
-<br>
-<b>Answer: B) Writes (because the index must also be updated)</b>
+<b>8. A "Foreign Key" constraint enforces:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Referential Integrity</b>
 </details>
 
-<details>
-<summary><b>16. What is a connection pool?</b></summary>
-A) A place to swim<br>
-B) A cache of database connections reused by clients<br>
-C) A list of failed queries<br>
-D) A type of join<br>
-<br>
-<b>Answer: B) A cache of database connections reused by clients</b>
-</details>
+
 
 <details>
-<summary><b>17. Which represents a Many-to-Many relationship in a relational DB?</b></summary>
-A) A single Foreign Key<br>
-B) A Junction (Join) Table<br>
-C) A JSON column<br>
-D) Primary Key only<br>
-<br>
-<b>Answer: B) A Junction (Join) Table</b>
+<b>9. Which isolation level prevents "Dirty Reads"?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Read Committed (and higher)</b>
 </details>
 
-<details>
-<summary><b>18. "Sharding" is a method of:</b></summary>
-A) Vertical Scaling<br>
-B) Horizontal Partitioning<br>
-C) Data Encryption<br>
-D) Backup<br>
-<br>
-<b>Answer: B) Horizontal Partitioning</b>
-</details>
+
 
 <details>
-<summary><b>19. In SQL, `DROP TABLE` will:</b></summary>
-A) Empty the table but keep the structure<br>
-B) Delete the table structure and data permanently<br>
-C) Archive the table<br>
-D) Add a new column<br>
-<br>
-<b>Answer: B) Delete the table structure and data permanently</b>
+<b>10. In CAP Theorem, if you choose Availability and Partition Tolerance (AP), what do you sacrifice?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Consistency (Strong)</b>
 </details>
 
-<details>
-<summary><b>20. Which Amazon service is a managed relational database?</b></summary>
-A) DynamoDB<br>
-B) RDS<br>
-C) Redshift<br>
-D) ElastiCache<br>
-<br>
-<b>Answer: B) RDS</b>
-</details>
+
 
 <details>
-<summary><b>21. A "NULL" value in a database represents:</b></summary>
-A) Zero<br>
-B) An empty string<br>
-C) Missing or unknown data<br>
-D) An error<br>
-<br>
-<b>Answer: C) Missing or unknown data</b>
+<b>11. DynamoDB is an example of which NoSQL type?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Key-Value / Document</b>
 </details>
+
+
+
+<details>
+<b>12. Which SQL clause is used to filter records?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) WHERE</b>
+</details>
+
+
+
+<details>
+<b>13. Vertical Scaling means:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Adding more CPU/RAM to an existing server</b>
+</details>
+
+
+
+<details>
+<b>14. Which is NOT a standard CRUD operation?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Undo</b>
+</details>
+
+
+
+<details>
+<b>15. Using an index typically makes ______ slower.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Writes (because the index must also be updated)</b>
+</details>
+
+
+
+<details>
+<b>16. What is a connection pool?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) A cache of database connections reused by clients</b>
+</details>
+
+
+
+<details>
+<b>17. Which represents a Many-to-Many relationship in a relational DB?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) A Junction (Join) Table</b>
+</details>
+
+
+
+<details>
+<b>18. "Sharding" is a method of:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Horizontal Partitioning</b>
+</details>
+
+
+
+<details>
+<b>19. In SQL, `DROP TABLE` will:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Delete the table structure and data permanently</b>
+</details>
+
+
+
+<details>
+<b>20. Which Amazon service is a managed relational database?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) RDS</b>
+</details>
+
+
+
+<details>
+<b>21. A "NULL" value in a database represents:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Missing or unknown data</b>
+</details>
+
+

@@ -73,317 +73,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the default destination in every VPC route table?**
-- A) 0.0.0.0/0
-- B) The VPC CIDR (Local Route)
-- C) 8.8.8.8
-- D) nothing
-
+<b>1. What is the default destination in every VPC route table?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: You can delete the 'Local' route in an AWS Route Table.**
-- A) True
-- B) False
 
+<b>2. True/False: You can delete the 'Local' route in an AWS Route Table.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. Which route wins if both match? 10.0.0.0/16 or 10.0.1.0/24?**
-- A) 10.0.0.0/16
-- B) 10.0.1.0/24 (Longest Prefix Match)
-- C) Neither
-- D) It depends on creation time
 
+<b>3. Which route wins if both match? 10.0.0.0/16 or 10.0.1.0/24?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A route destination of '0.0.0.0/0' represents:**
-- A) Internal traffic
-- B) The Public Internet
-- C) An error
-- D) nothing
 
+<b>4. A route destination of '0.0.0.0/0' represents:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. What is the status of a route if its target (PCX, IGW, etc.) is deleted?**
-- A) Active
-- B) Blackhole
-- C) Pending
-- D) Deleted
 
+<b>5. What is the status of a route if its target (PCX, IGW, etc.) is deleted?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. How many subnets can be associated with a single route table?**
-- A) Only 1
-- B) Up to 5
-- C) Multiple
-- D) 0
 
+<b>6. How many subnets can be associated with a single route table?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**7. True/False: A subnet without an explicit association uses the Main Route Table.**
-- A) True
-- B) False
 
+<b>7. True/False: A subnet without an explicit association uses the Main Route Table.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. Target ID prefix for an Internet Gateway in a route table is:**
-- A) nat-
-- B) igw-
-- C) pcx-
-- D) tgw-
 
+<b>8. Target ID prefix for an Internet Gateway in a route table is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. Target ID prefix for a VPC Peering connection is:**
-- A) vgw-
-- B) pcx-
-- C) nat-
-- D) nothing
 
+<b>9. Target ID prefix for a VPC Peering connection is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. Which table is created automatically with every VPC?**
-- A) Custom Route Table
-- B) Main Route Table
-- C) NACL Table
-- D) nothing
 
+<b>10. Which table is created automatically with every VPC?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: You can have different routes for the same destination in one table.**
-- A) False (Destinations must be unique)
-- B) True
 
+<b>11. True/False: You can have different routes for the same destination in one table.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. When using a NAT Gateway, the route destination `0.0.0.0/0` points to:**
-- A) igw-xxxx
-- B) nat-xxxx
-- C) local
-- D) nothing
 
+<b>12. When using a NAT Gateway, the route destination `0.0.0.0/0` points to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. In a public subnet, the route destination `0.0.0.0/0` points to:**
-- A) nat-xxxx
-- B) igw-xxxx
-- C) s3-xxxx
-- D) nothing
 
+<b>13. In a public subnet, the route destination `0.0.0.0/0` points to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What happens to packets that don't match any route in the table?**
-- A) They are sent to the internet
-- B) They are dropped
-- C) They go to the main table
-- D) nothing
 
+<b>14. What happens to packets that don't match any route in the table?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Priority' in routing is determined by:**
-- A) Cost
-- B) Specificity (More specific = Higher priority)
-- C) Name
-- D) Alphabetic order
 
+<b>15. 'Priority' in routing is determined by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: Route tables are regional resources.**
-- A) True
-- B) False
 
+<b>16. True/False: Route tables are regional resources.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. Which service allows you to connect a VPC to an On-Premises network?**
-- A) Virtual Private Gateway (VGW)
-- B) Internet Gateway
-- C) NAT Gateway
-- D) nothing
 
+<b>17. Which service allows you to connect a VPC to an On-Premises network?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**18. Target ID for a Transit Gateway is:**
-- A) tgw-
-- B) vpc-
-- C) eni-
-- D) nothing
 
+<b>18. Target ID for a Transit Gateway is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**19. Can you edit the 'Local' route destination?**
-- A) Yes
-- B) No (It is fixed to the VPC CIDR)
-- C) Only if the VPC is empty
-- D) nothing
 
+<b>19. Can you edit the 'Local' route destination?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: You can associate a Route Table with a Gateway.**
-- A) True (Ingress Routing)
-- B) False
 
+<b>20. True/False: You can associate a Route Table with a Gateway.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Propagation' in route tables refers to:**
-- A) Viruses
-- B) Automatically adding routes from a VPN or Direct Connect
-- C) Deleting routes
-- D) nothing
 
+<b>21. 'Propagation' in route tables refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. How many 'Main' route tables can a VPC have?**
-- A) 1
-- B) 5
-- C) unlimited
-- D) 0
 
+<b>22. How many 'Main' route tables can a VPC have?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**23. Which tool can help you visualize the path of a packet through route tables?**
-- A) VPC Reachability Analyzer
-- B) CloudWatch
-- C) IAM
-- D) nothing
 
+<b>23. Which tool can help you visualize the path of a packet through route tables?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**24. A route table is most similar to a:**
-- A) Phonebook
-- B) Map/GPS for network packets
-- C) Password manager
-- D) nothing
 
+<b>24. A route table is most similar to a:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Reliable routing requires avoiding '_____' where traffic never reaches its destination.**
-- A) Speed bumps
-- B) Blackholes
-- C) Green zones
-- D) nothing
 
+<b>25. Reliable routing requires avoiding '_____' where traffic never reaches its destination.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

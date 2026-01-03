@@ -405,7 +405,12 @@ Comprehensive guide to tools, platforms, and resources for cloud cost optimizati
 ## 🎓 Learning & Community Resources
 
 ### Certifications
-1. **FinOps Certified Practitioner** - FinOps Foundation ($300)
+<b>1. FinOps Certified Practitioner** - FinOps Foundation</b>
+<details>
+<summary>Show Answer</summary>
+Answer: $300
+</details>
+
    - [finops.org/certification](https://www.finops.org/certification/)
 2. **AWS Certified Cloud Practitioner** - Includes billing/pricing
 3. **AWS Certified Solutions Architect** - Cost optimization focus
@@ -432,11 +437,36 @@ Comprehensive guide to tools, platforms, and resources for cloud cost optimizati
 
 Create a `finops-toolkit` repository with:
 
-1. **Cost Analysis Scripts** (Python/Boto3)
-2. **Unused Resource Finder** (Bash/AWS CLI)
-3. **RI Utilization Reporter** (Python)
-4. **Cost Dashboard Templates** (Excel/Google Sheets)
-5. **Tagging Compliance Checker** (Python)
+<b>1. Cost Analysis Scripts</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Python/Boto3
+</details>
+
+<b>2. Unused Resource Finder</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Bash/AWS CLI
+</details>
+
+<b>3. RI Utilization Reporter</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Python
+</details>
+
+<b>4. Cost Dashboard Templates</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Excel/Google Sheets
+</details>
+
+<b>5. Tagging Compliance Checker</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Python
+</details>
+
 
 ### Recommended Tech Stack for Consultants
 

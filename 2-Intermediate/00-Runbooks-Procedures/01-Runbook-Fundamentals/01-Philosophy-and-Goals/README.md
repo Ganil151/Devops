@@ -63,325 +63,176 @@ graph LR
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the primary metric that Runbooks aim to reduce?**
-- A) CAPEX
-- B) MTTR (Mean Time To Recovery)
-- C) Lines of Code
-- D) Number of Employees
-
+<b>1. What is the primary metric that Runbooks aim to reduce?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. "Tribal Knowledge" is best described as:**
-- A) Ancient history
-- B) Information known by individuals but not officially documented
-- C) Encrypted database passwords
-- D) Public documentation
 
+<b>2. "Tribal Knowledge" is best described as:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. Who is the ideal 'Target Audience' for a production runbook?**
-- A) The person who wrote it
-- B) A competent engineer who is currently tired, stressed, or on-call at 3 AM
-- C) Only the CTO
-- D) An automated bot (always)
 
+<b>3. Who is the ideal 'Target Audience' for a production runbook?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. True/False: Runbooks should be kept in a separate, physical binder away from the code.**
-- A) True
-- B) False
 
+<b>4. True/False: Runbooks should be kept in a separate, physical binder away from the code.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - "Docs as Code" means they should live near the system they support.
-
+Answer: B** - "Docs as Code" means they should live near the system they support.
 </details>
 
-**5. Which DevOps pillar is most supported by high-quality runbooks?**
-- A) Culture
-- B) Automation
-- C) Measurement
-- D) Sharing / Reliability
 
+<b>5. Which DevOps pillar is most supported by high-quality runbooks?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**6. A 'Paved Path' in runbook philosophy refers to:**
-- A) A road to the data center
-- B) A standardized, pre-validated route to solving a problem
-- C) A mandatory physical training
-- D) Using only AWS
 
+<b>6. A 'Paved Path' in runbook philosophy refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. What happens to MTTR when a team has zero documentation?**
-- A) It decreases
-- B) It increases significantly due to trial-and-error
-- C) It stays the same
-- D) It becomes zero
 
+<b>7. What happens to MTTR when a team has zero documentation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. "Analysis Paralysis" occurs when:**
-- A) The engineer is too fast
-- B) There are too many choices and no clear guidance during a crisis
-- C) The computer is turned off
-- D) The runbook is too short
 
+<b>8. "Analysis Paralysis" occurs when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. Why is 'Democratization of Knowledge' important?**
-- A) To make sure everyone is a manager
-- B) To prevent single points of failure (people) in the team
-- C) To increase the number of Slack channels
-- D) To simplify the payroll
 
+<b>9. Why is 'Democratization of Knowledge' important?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. A 'Golden Path' execution means:**
-- A) Using gold-plated servers
-- B) Selecting the most efficient, lowest-risk sequence of actions
-- C) Hiring the most expensive consultants
-- D) Followingevery possible path
 
+<b>10. A 'Golden Path' execution means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. In SRE, what is the 'On-Call' burden?**
-- A) The weight of the phone
-- B) The physical and mental stress of responding to system failures
-- C) The cost of the data plan
-- D) The number of meetings
 
+<b>11. In SRE, what is the 'On-Call' burden?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. When should you update a runbook?**
-- A) Once every 5 years
-- B) Each time an incident occurs and the runbook steps were unclear or outdated
-- C) Only when the CEO asks
-- D) Never; documentation shouldn't change
 
+<b>12. When should you update a runbook?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. What is the value of Runbooks for Audit Compliance?**
-- A) They hide errors
-- B) They provide a repeatable, documented process that auditors can verify
-- C) They make the team look bigger
-- D) They replace the need for backups
 
+<b>13. What is the value of Runbooks for Audit Compliance?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. A runbook that describes a manual fix is often the first step toward:**
-- A) Hiring more people
-- B) Full automation (Auto-remediation)
-- C) Deleting the service
-- D) Moving to a different cloud
 
+<b>14. A runbook that describes a manual fix is often the first step toward:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. "Cognitive Load" refers to:**
-- A) The amount of RAM in a server
-- B) The mental effort required to process information and make decisions
-- C) The file size of the runbook
-- D) Troubleshooting network latency
 
+<b>15. "Cognitive Load" refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. Which of these is NOT a goal of a runbook?**
-- A) Reducing stress
-- B) Standardizing procedures
-- C) Impressing the client with complex language
-- D) Preserving knowledge
 
+<b>16. Which of these is NOT a goal of a runbook?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**17. What is an 'Automated Runbook' (or Playbook)?**
-- A) A PDF file
-- B) A set of scripts that automatically execute in response to an alert
-- C) A voice recording
-- D) A physical robot
 
+<b>17. What is an 'Automated Runbook' (or Playbook)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why should you avoid 'Vague' steps like "Investigate logs"?**
-- A) Logs are boring
-- B) It doesn't help a stressed engineer know WHICH logs to check or WHAT to look for
-- C) It's too short
-- D) It's 3 AM
 
+<b>18. Why should you avoid 'Vague' steps like "Investigate logs"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. In a 'Post-Mortem' (Blameless Post-Incident Review), runbooks are often:**
-- A) Burned
-- B) Updated with new learnings from the incident
-- C) Used as evidence to fire people
-- D) Ignored
 
+<b>19. In a 'Post-Mortem' (Blameless Post-Incident Review), runbooks are often:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. What is a 'Scenario-Based' runbook?**
-- A) A fictional story
-- B) A procedure written for a specific failure mode (e.g., "Full Disk", "High CPU")
-- C) A list of employees
-- D) A diagram of the office
 
+<b>20. What is a 'Scenario-Based' runbook?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. "Siloed Knowledge" is the opposite of:**
-- A) Shared Documentation
-- B) Coding
-- C) Cloud Computing
-- D) Marketing
 
+<b>21. "Siloed Knowledge" is the opposite of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**22. How do runbooks improve team morale?**
-- A) They provide free coffee
-- B) They reduce the anxiety of being on-call by providing a safety net
-- C) They eliminate all work
-- D) They provide more vacations
 
+<b>22. How do runbooks improve team morale?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Which tool is commonly used to host modern 'Markdown-based' runbooks?**
-- A) GitHub/GitLab
-- B) Microsoft Word
-- C) Notepad
-- D) Physical folders
 
+<b>23. Which tool is commonly used to host modern 'Markdown-based' runbooks?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**24. A 'Living Document' means:**
-- A) The document grows physically
-- B) The document is continuously updated to reflect the latest system state
-- C) The document has pictures of animals
-- D) The document is read aloud
 
+<b>24. A 'Living Document' means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Runbooks are most critical during which phase of the Incident Lifecycle?**
-- A) Brainstorming
-- B) Identification and Containment/Resolution
-- C) Hiring
-- D) Billing
 
+<b>25. Runbooks are most critical during which phase of the Incident Lifecycle?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

@@ -9,18 +9,18 @@ Ansible is unique because it is **Agentless**. You do not install software on th
 ```mermaid
 graph TD
     User((System Admin)) -->|Runs CLI| Control[Control Node (Laptop / Jenkins)]
-    
-    subgraph "Managed Infrastructure"
+
+subgraph "Managed Infrastructure"
     Web1[Web Server]
     DB1[Database]
     Switch[Cisco Switch]
     end
-    
-    Control -->|SSH| Web1
+
+Control -->|SSH| Web1
     Control -->|SSH| DB1
     Control -->|HTTPS/API| Switch
-    
-    style Control fill:#ee0000,color:#fff
+
+style Control fill:#ee0000,color:#fff
 ```
 
 ## Requirements
@@ -32,10 +32,30 @@ The Control Node **MUST** be a POSIX-compliant system (Linux, macOS, BSD).
 ## Configuration (`ansible.cfg`)
 
 Ansible's behavior is controlled by `ansible.cfg`. It searches in this specific order:
-1.  `ANSIBLE_CONFIG` (Environment Variable)
-2.  `./ansible.cfg` (Current directory - **Industry Standard**)
-3.  `~/.ansible.cfg` (User home)
-4.  `/etc/ansible/ansible.cfg` (Global default)
+<b>1. `ANSIBLE_CONFIG`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Environment Variable
+</details>
+
+<b>2. `./ansible.cfg`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Current directory - **Industry Standard**
+</details>
+
+<b>3. `~/.ansible.cfg`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: User home
+</details>
+
+<b>4. `/etc/ansible/ansible.cfg`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Global default
+</details>
+
 
 ### Key Parameters
 ```ini

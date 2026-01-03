@@ -74,352 +74,227 @@ graph LR
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the name of the Terraform state file?**
-- A) `state.tf`
-- B) `terraform.state`
-- C) `terraform.tfstate`
-- D) `.tfstate`
-
-
+<b>1. What is the name of the Terraform state file?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**2. Where does Terraform Core look for providers by default?**
-- A) Local directory
-- B) Terraform Registry
-- C) GitHub
-- D) Provider's official website
 
 
+
+<b>2. Where does Terraform Core look for providers by default?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. What happens if the state file is out of sync with reality?**
-- A) Terraform crashes
-- B) Terraform updates its plan to match the current configuration with reality
-- C) Resources are automatically deleted
-- D) Nothing, Terraform ignores the difference
 
 
+
+<b>3. What happens if the state file is out of sync with reality?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. Is it recommended to store state files in Git?**
-- A) Yes, for version control
-- B) No, it contains secrets and changes frequently
-- C) Only in private repositories
-- D) Yes, but only with encryption
 
 
+
+<b>4. Is it recommended to store state files in Git?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. What is the 'Declarative' approach in Terraform?**
-- A) You define step-by-step instructions
-- B) You define the *What* (desired state), and Terraform figures out the *How*
-- C) You write code in Python
-- D) You manually configure each resource
 
 
+
+<b>5. What is the 'Declarative' approach in Terraform?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. What data structure does Terraform use to determine resource order?**
-- A) Binary Search Tree
-- B) Linked List
-- C) Directed Acyclic Graph (DAG)
-- D) Hash Table
 
 
+
+<b>6. What data structure does Terraform use to determine resource order?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**7. What are the two main components of Terraform architecture?**
-- A) Frontend and Backend
-- B) Terraform Core and Providers
-- C) Client and Server
-- D) State and Configuration
 
 
+
+<b>7. What are the two main components of Terraform architecture?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. What file extension is used for Terraform configuration files?**
-- A) `.tfconfig`
-- B) `.hcl`
-- C) `.tf`
-- D) `.terraform`
 
 
+
+<b>8. What file extension is used for Terraform configuration files?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**9. Which component handles the actual API calls to cloud providers?**
-- A) Terraform Core
-- B) Terraform CLI
-- C) State File
-- D) Provider Plugins
 
 
+
+<b>9. Which component handles the actual API calls to cloud providers?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**10. What is the primary benefit of the DAG in Terraform?**
-- A) Better error messages
-- B) Parallelization and correct ordering of resource operations
-- C) Smaller state files
-- D) Faster configuration parsing
 
 
+
+<b>10. What is the primary benefit of the DAG in Terraform?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Can Terraform's DAG contain cycles (circular dependencies)?**
-- A) Yes, Terraform handles them automatically
-- B) Yes, but only in modules
-- C) No, Terraform will error if a cycle is detected
-- D) Yes, but performance degrades
 
 
+
+<b>11. Can Terraform's DAG contain cycles (circular dependencies)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**12. What information does the state file contain?**
-- A) Only resource IDs
-- B) Resource mappings, metadata, and dependencies
-- C) Only configuration code
-- D) Provider authentication credentials
 
 
+
+<b>12. What information does the state file contain?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. How does Terraform determine which resources can be created in parallel?**
-- A) Random selection
-- B) By analyzing the DAG for independent resources
-- C) All resources are always created sequentially
-- D) Based on alphabetical order
 
 
+
+<b>13. How does Terraform determine which resources can be created in parallel?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What happens when you reference one resource attribute in another resource?**
-- A) Terraform creates an error
-- B) Terraform creates an implicit dependency
-- C) Resources are created in random order
-- D) Nothing, dependencies must be explicit
 
 
+
+<b>14. What happens when you reference one resource attribute in another resource?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. Where is the Terraform state file stored by default?**
-- A) Cloud storage
-- B) Terraform Cloud
-- C) Local directory (terraform.tfstate)
-- D) In-memory only
 
 
+
+<b>15. Where is the Terraform state file stored by default?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**16. What is the role of Terraform Core?**
-- A) Making API calls to providers
-- B) Parsing configuration, building graph, and managing state
-- C) Storing secrets
-- D) Hosting the registry
 
 
+
+<b>16. What is the role of Terraform Core?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. What language does Terraform use for configuration?**
-- A) YAML
-- B) JSON only
-- C) HashiCorp Configuration Language (HCL)
-- D) Python
 
 
+
+<b>17. What language does Terraform use for configuration?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**18. If a VPC must exist before creating a subnet, what ensures proper order?**
-- A) Manual timing
-- B) The DAG and dependency graph
-- C) Provider API
-- D) Alphabetical resource names
 
 
+
+<b>18. If a VPC must exist before creating a subnet, what ensures proper order?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. How many providers can a single Terraform configuration use?**
-- A) Only one
-- B) Maximum of three
-- C) Multiple providers (unlimited)
-- D) Two (primary and backup)
 
 
+
+<b>19. How many providers can a single Terraform configuration use?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**20. What type of graph structure does Terraform use?**
-- A) Cyclic graph
-- B) Undirected graph
-- C) Directed Acyclic Graph (DAG)
-- D) Tree structure
 
 
+
+<b>20. What type of graph structure does Terraform use?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**21. What is stored in the `.terraform` directory after `terraform init`?**
-- A) State files
-- B) Configuration backups
-- C) Provider plugins and modules
-- D) Log files only
 
 
+
+<b>21. What is stored in the `.terraform` directory after `terraform init`?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**22. Can Terraform manage resources across multiple cloud providers simultaneously?**
-- A) No, one provider per project
-- B) Yes, using multiple provider blocks
-- C) Only with Terraform Cloud
-- D) Only AWS and Azure
 
 
+
+<b>22. Can Terraform manage resources across multiple cloud providers simultaneously?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. What happens if Terraform Core cannot reach a provider plugin?**
-- A) Uses cached data
-- B) Initialization or apply will fail
-- C) Automatically downloads from internet
-- D) Switches to alternative provider
 
 
+
+<b>23. What happens if Terraform Core cannot reach a provider plugin?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. What is the relationship between Terraform configuration files and the state file?**
-- A) They are identical
-- B) Configuration defines desired state; state file tracks actual state
-- C) State file contains backup of configuration
-- D) No relationship
 
 
+
+<b>24. What is the relationship between Terraform configuration files and the state file?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Why is the DAG described as "Acyclic"?**
-- A) It can process in any direction
-- B) It has no circular dependencies (no cycles)
-- C) It's faster than cyclic graphs
-- D) It uses less memory
 
 
+
+<b>25. Why is the DAG described as "Acyclic"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+

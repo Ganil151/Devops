@@ -933,61 +933,336 @@ Test your knowledge with these real-world scenarios and technical questions.
 
 ### 🔑 Answer Key
 
-1. **A/B** (301/302 Redirection loops)
-2. **C** (Unauthorized)
-3. **B** (HSTS)
-4. **B** (Bad Gateway / Upstream failure)
-5. **C** (QUIC / 0-RTT)
-6. **B** (Resource created)
-7. **C** (Certificate)
-8. **B** (openssl)
-9. **B** (80)
-10. **D** (GET and PUT)
-11. **B** (TTL)
-12. **B** (CNAME)
-13. **C** (MX record)
-14. **B** (Reverse DNS)
-15. **C** (DNSSEC)
-16. **C** (13 clusters)
-17. **B** (dig +trace)
-18. **B** (DoH)
-19. **A** (53)
-20. **C** (CAA)
-21. **C** (Discover)
-22. **A** (DHCP Relay)
-23. **B** (Option 3)
-24. **B** (APIPA / DHCP failure)
-25. **B** (UDP)
-26. **B** (Reservation)
-27. **B** (Client accepts offer)
-28. **B** (Stateless address config)
-29. **A** (67)
-30. **B** (Lease Time)
-31. **B** (UDP)
-32. **C** (SYN-ACK)
-33. **C** (TCP)
-34. **C** (1500)
-35. **B** (BBR)
-36. **B** (Window Scaling)
-37. **B** (UDP - 8 bytes)
-38. **B** (TCP congestion / HOL blocking)
-39. **C** (RST)
-40. **C** (FIN)
-41. **C** (Firewall blocking ICMP)
-42. **C** (Time Exceeded / TTL expiration)
-43. **B** (PMTUD)
-44. **B** (Unreachable)
-45. **C** (MTR)
-46. **B** (Optimal route notification)
-47. **C** (ICMP)
-48. **B** (NACLs/SGs must allow ICMP specifically)
-49. **B** (No ports in ICMP)
-50. **B** (Netcat / ss)
-51. **C** (ICMP)
-52. **C** (Port 443, UDP for HTTP/3)
-53. **B** (IP to MAC)
-54. **B** (Port closed/Service down)
-55. **C** (Application Layer)
+<b>1. A/B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 301/302 Redirection loops
+</details>
+
+<b>2. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Unauthorized
+</details>
+
+<b>3. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: HSTS
+</details>
+
+<b>4. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Bad Gateway / Upstream failure
+</details>
+
+<b>5. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: QUIC / 0-RTT
+</details>
+
+<b>6. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Resource created
+</details>
+
+<b>7. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Certificate
+</details>
+
+<b>8. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: openssl
+</details>
+
+<b>9. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 80
+</details>
+
+<b>10. D</b>
+<details>
+<summary>Show Answer</summary>
+Answer: GET and PUT
+</details>
+
+<b>11. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: TTL
+</details>
+
+<b>12. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: CNAME
+</details>
+
+<b>13. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: MX record
+</details>
+
+<b>14. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Reverse DNS
+</details>
+
+<b>15. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: DNSSEC
+</details>
+
+<b>16. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 13 clusters
+</details>
+
+<b>17. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: dig +trace
+</details>
+
+<b>18. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: DoH
+</details>
+
+<b>19. A</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 53
+</details>
+
+<b>20. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: CAA
+</details>
+
+<b>21. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Discover
+</details>
+
+<b>22. A</b>
+<details>
+<summary>Show Answer</summary>
+Answer: DHCP Relay
+</details>
+
+<b>23. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Option 3
+</details>
+
+<b>24. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: APIPA / DHCP failure
+</details>
+
+<b>25. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: UDP
+</details>
+
+<b>26. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Reservation
+</details>
+
+<b>27. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Client accepts offer
+</details>
+
+<b>28. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Stateless address config
+</details>
+
+<b>29. A</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 67
+</details>
+
+<b>30. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Lease Time
+</details>
+
+<b>31. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: UDP
+</details>
+
+<b>32. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: SYN-ACK
+</details>
+
+<b>33. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: TCP
+</details>
+
+<b>34. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 1500
+</details>
+
+<b>35. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: BBR
+</details>
+
+<b>36. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Window Scaling
+</details>
+
+<b>37. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: UDP - 8 bytes
+</details>
+
+<b>38. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: TCP congestion / HOL blocking
+</details>
+
+<b>39. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: RST
+</details>
+
+<b>40. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: FIN
+</details>
+
+<b>41. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Firewall blocking ICMP
+</details>
+
+<b>42. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Time Exceeded / TTL expiration
+</details>
+
+<b>43. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: PMTUD
+</details>
+
+<b>44. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Unreachable
+</details>
+
+<b>45. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: MTR
+</details>
+
+<b>46. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Optimal route notification
+</details>
+
+<b>47. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: ICMP
+</details>
+
+<b>48. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: NACLs/SGs must allow ICMP specifically
+</details>
+
+<b>49. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: No ports in ICMP
+</details>
+
+<b>50. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Netcat / ss
+</details>
+
+<b>51. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: ICMP
+</details>
+
+<b>52. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Port 443, UDP for HTTP/3
+</details>
+
+<b>53. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: IP to MAC
+</details>
+
+<b>54. B</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Port closed/Service down
+</details>
+
+<b>55. C</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Application Layer
+</details>
+
 
 ---
 

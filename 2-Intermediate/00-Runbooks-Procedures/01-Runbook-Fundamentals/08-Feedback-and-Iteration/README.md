@@ -39,8 +39,8 @@ graph TD
     Gap -- Yes --> Update[Update PR]
     Update --> PeerReview[Peer Review]
     PeerReview --> Merge[Merge & Deploy]
-    
-    Gap -- No --> Chaos[Gameday / Chaos Engineering]
+
+Gap -- No --> Chaos[Gameday / Chaos Engineering]
     Chaos --> Test[Find Edge Cases]
     Test --> Update
 ```
@@ -86,323 +86,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the primary source of feedback for runbooks in a mature SRE team?**
-- A) Customer reviews
-- B) Blameless Post-Mortems
-- C) Twitter/X
-- D) The marketing department
-
+<b>1. What is the primary source of feedback for runbooks in a mature SRE team?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: If a runbook is clear to the person who wrote it, it is considered complete.**
-- A) True
-- B) False
 
+<b>2. True/False: If a runbook is clear to the person who wrote it, it is considered complete.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - It must be clear to the person who will *use* it during an emergency.
-
+Answer: B** - It must be clear to the person who will *use* it during an emergency.
 </details>
 
-**3. 'Implicit Knowledge' is dangerous because:**
-- A) It is encrypted
-- B) It is not written down, making it inaccessible to the rest of the team
-- C) It is too long
-- D) It's stored in a database
 
+<b>3. 'Implicit Knowledge' is dangerous because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. A 'Gameday' is a simulated failure exercise used to:**
-- A) Play games
-- B) Validate that runbooks are accurate and the team is prepared
-- C) Test the internet speed
-- D) Fire people
 
+<b>4. A 'Gameday' is a simulated failure exercise used to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. What should happen to a runbook that is found to be 2 years old and never used?**
-- A) Keep it just in case
-- B) Re-verify its accuracy and delete if no longer relevant (Clean up Doc Rot)
-- C) Rename it to "Old"
-- D) Print it
 
+<b>5. What should happen to a runbook that is found to be 2 years old and never used?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. Which policy ensures documentation is updated alongside features?**
-- A) HR Policy
-- B) Definition of Done (DoD)
-- C) Password Policy
-- D) Dress Code
 
+<b>6. Which policy ensures documentation is updated alongside features?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. 'Blameless' feedback focuses on:**
-- A) Who messed up
-- B) Why the system and documentation allowed the mistake to happen
-- C) The cost of the mistake
-- D) Finding a new hire
 
+<b>7. 'Blameless' feedback focuses on:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. What does "Iterative" indicate in runbook maintenance?**
-- A) Doing it once
-- B) Constant, small improvements over time based on real usage
-- C) Deleting and starting over every week
-- D) hiring a writer
 
+<b>8. What does "Iterative" indicate in runbook maintenance?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. Why should junior engineers be involved in runbook testing?**
-- A) To give them busy work
-- B) They lack the "Implicit Knowledge" of seniors and can spot missing steps easily
-- C) They can type faster
-- D) They don't have PR review rights
 
+<b>9. Why should junior engineers be involved in runbook testing?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. 'Documentation Rot' is best prevented by:**
-- A) More servers
-- B) Regular testing, PR-based reviews, and automated feedback loops
-- C) Longer documents
-- D) Less code
 
+<b>10. 'Documentation Rot' is best prevented by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. A 'Follow-up Action' in a post-mortem often includes:**
-- A) A vacation
-- B) A specific task to update or create a runbook for the failure mode
-- C) A party
-- D) A password reset
 
+<b>11. A 'Follow-up Action' in a post-mortem often includes:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. True/False: You should wait for a real outage to test your runbooks.**
-- A) True
-- B) False
 
+<b>12. True/False: You should wait for a real outage to test your runbooks.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Proactive Gamedays are much safer.
-
+Answer: B** - Proactive Gamedays are much safer.
 </details>
 
-**13. Which of these is a sign of a high-quality feedback culture?**
-- A) Fear of suggesting changes
-- B) Engineers proactively fixing typos they find in docs
-- C) Ignoring errors
-- D) Long Slack threads instead of doc updates
 
+<b>13. Which of these is a sign of a high-quality feedback culture?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. 'Feedback Fatigue' occurs when:**
-- A) There are too many people helping
-- B) There are too many noisy, irrelevant requests for feedback
-- C) The server is down
-- D) The doc is too short
 
+<b>14. 'Feedback Fatigue' occurs when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. Peer Review for documentation:**
-- A) Slows things down for no reason
-- B) Increases accuracy and spreads knowledge across the team
-- C) Is only for code
-- D) Is optional
 
+<b>15. Peer Review for documentation:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. 'Stale' documentation often leads to:**
-- A) Higher salaries
-- B) Incorrect actions that worsen an incident
-- C) Fast resolution
-- D) better coffee
 
+<b>16. 'Stale' documentation often leads to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. What is 'Validation' in the context of a runbook?**
-- A) Checking the spelling
-- B) Proving the steps actually resolve the issue in a real or staging environment
-- C) Sending it to the CEO
-- D) Printing it
 
+<b>17. What is 'Validation' in the context of a runbook?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Why would you 'Sunset' (Delete) a runbook?**
-- A) The sun went down
-- B) The service it describes has been decommissioned or fully automated
-- C) To save space in Git
-- D) To hide history
 
+<b>18. Why would you 'Sunset' (Delete) a runbook?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. A 'Version History' in documentation helps:**
-- A) Show off
-- B) Contextualize changes and allow for rollbacks if a new procedure is wrong
-- C) hide errors
-- D) increase cost
 
+<b>19. A 'Version History' in documentation helps:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. What is a 'Documentation Audit'?**
-- A) A tax review
-- B) A periodic review to ensure all critical services have accurate, up-to-date runbooks
-- C) A meeting about Slack
-- D) A hardware check
 
+<b>20. What is a 'Documentation Audit'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. 'Institutional Knowledge' is knowledge that is:**
-- A) Kept by one person
-- B) Shared across the organization via documentation and culture
-- C) In a museum
-- D) on the internet
 
+<b>21. 'Institutional Knowledge' is knowledge that is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. How does automation simplify feedback?**
-- A) It removes human feedback entirely
-- B) It can automatically flag docs that haven't been modified in a long time
-- C) It writes the docs for you
-- D) It doesn't
 
+<b>22. How does automation simplify feedback?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. 'Shadow IT' documentation should be:**
-- A) Banned
-- B) Integrated into the official, searchable knowledge base
-- C) Deleted
-- D) Ignored
 
+<b>23. 'Shadow IT' documentation should be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. Which metric shows if your feedback loop is working?**
-- A) Document count
-- B) Average age of documentation and MTTR trends
-- C) Ticket count
-- D) Employee age
 
+<b>24. Which metric shows if your feedback loop is working?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The ultimate goal of Feedback and Iteration is:**
-- A) To have a 100% perfect document
-- B) To minimize risk and maximize speed to resolution over time
-- C) to make people work harder
-- D) to satisfy auditors
 
+<b>25. The ultimate goal of Feedback and Iteration is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

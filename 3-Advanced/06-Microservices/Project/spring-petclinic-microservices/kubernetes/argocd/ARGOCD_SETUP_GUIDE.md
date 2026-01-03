@@ -108,7 +108,12 @@ argocd account update-password
 You have two options:
 
 #### Option A: Create Application via UI
-1. Open ArgoCD UI (https://<node-ip>:30443)
+<b>1. Open ArgoCD UI</b>
+<details>
+<summary>Show Answer</summary>
+Answer: https://<node-ip>:30443
+</details>
+
 2. Click "New App"
 3. Fill in:
    - **Application Name**: `spring-petclinic`
@@ -148,7 +153,12 @@ Developer → Git Push → ArgoCD detects change → Auto-sync to K8s
 
 1. **Make changes** to your deployment YAML files
 2. **Commit and push** to Git repository
-3. **ArgoCD automatically detects** the changes (every 3 minutes by default)
+<b>3. ArgoCD automatically detects** the changes</b>
+<details>
+<summary>Show Answer</summary>
+Answer: every 3 minutes by default
+</details>
+
 4. **ArgoCD syncs** the changes to your cluster
 5. **Monitor** the deployment in ArgoCD UI
 
@@ -341,9 +351,24 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 2. ✅ Configure Git repository
 3. ✅ Create ArgoCD application
 4. ✅ Test GitOps workflow
-5. ✅ Set up multi-environment (optional)
-6. ✅ Configure notifications (optional)
-7. ✅ Integrate with Jenkins (optional)
+<b>5. ✅ Set up multi-environment</b>
+<details>
+<summary>Show Answer</summary>
+Answer: optional
+</details>
+
+<b>6. ✅ Configure notifications</b>
+<details>
+<summary>Show Answer</summary>
+Answer: optional
+</details>
+
+<b>7. ✅ Integrate with Jenkins</b>
+<details>
+<summary>Show Answer</summary>
+Answer: optional
+</details>
+
 
 ## Additional Resources
 

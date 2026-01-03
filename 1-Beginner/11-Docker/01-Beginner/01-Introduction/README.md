@@ -149,7 +149,12 @@ brew install --cask docker
 
 1. Download **Docker Desktop** from [docker.com](https://www.docker.com/products/docker-desktop)
 2. Run the installer
-3. Enable WSL 2 backend (recommended)
+<b>3. Enable WSL 2 backend</b>
+<details>
+<summary>Show Answer</summary>
+Answer: recommended
+</details>
+
 4. Restart your computer
 
 ### Verify Installation

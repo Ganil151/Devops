@@ -36,16 +36,16 @@ graph TD
     Client((External Client)) --> ALB[Application Load Balancer - Public Subnet]
     ALB --> App[App Servers - Private Subnet]
     App --> DB[Databases - Isolated Private Subnet]
-    
-    subgraph "Public Zone"
+
+subgraph "Public Zone"
     ALB
     end
-    
-    subgraph "Private Zone"
+
+subgraph "Private Zone"
     App
     end
-    
-    subgraph "Data Zone"
+
+subgraph "Data Zone"
     DB
     end
 ```

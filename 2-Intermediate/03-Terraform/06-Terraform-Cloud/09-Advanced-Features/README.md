@@ -14,8 +14,8 @@ graph TD
     TFC[HCP Terraform] -->|1. Scheduled Health Check| Real[Real Infrastructure]
     Real -->|2. Current Config| TFC
     TFC -->|3. Compare with State| Diff{Diff?}
-    
-    Diff -->|Yes| Alert[Mark 'Drifted' + Notify]
+
+Diff -->|Yes| Alert[Mark 'Drifted' + Notify]
     Diff -->|No| Healthy[Mark 'Healthy']
 ```
 

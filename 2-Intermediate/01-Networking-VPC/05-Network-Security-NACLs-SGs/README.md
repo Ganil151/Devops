@@ -20,8 +20,8 @@ graph TD
     Internet((Public Internet)) --> NACL{Network ACL - Subnet}
     NACL -- Allow Rule --> SG{Security Group - Instance}
     SG -- Allow Rule --> App[Application Instance]
-    
-    style NACL fill:#cc0000,color:#fff
+
+style NACL fill:#cc0000,color:#fff
     style SG fill:#ff9900,color:#fff
 ```
 
@@ -71,317 +71,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Security Groups are enforced at which level?**
-- A) Subnet
-- B) Instance (ENI)
-- C) VPC
-- D) Account
-
+<b>1. Security Groups are enforced at which level?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: Network ACLs (NACLs) are stateful.**
-- A) True
-- B) False
 
+<b>2. True/False: Network ACLs (NACLs) are stateful.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. Which component supports 'Deny' rules?**
-- A) Security Group
-- B) Network ACL
-- C) Both
-- D) Neither
 
+<b>3. Which component supports 'Deny' rules?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. What is the evaluation order for NACL rules?**
-- A) Highest number to lowest
-- B) Lowest number to highest
-- C) Random
-- D) Alphabetical
 
+<b>4. What is the evaluation order for NACL rules?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. True/False: If an SG allows inbound traffic on port 80, outbound traffic on the same connection is automatically allowed.**
-- A) True (Stateful)
-- B) False
 
+<b>5. True/False: If an SG allows inbound traffic on port 80, outbound traffic on the same connection is automatically allowed.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**6. 'Ephemeral Ports' typically fall into which range?**
-- A) 1-1024
-- B) 1024-65535
-- C) 80-443
-- D) 22-23
 
+<b>6. 'Ephemeral Ports' typically fall into which range?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. How many Security Groups can be attached to a single network interface (ENI)?**
-- A) 1
-- B) 5
-- C) Unlimited
-- D) 0
 
+<b>7. How many Security Groups can be attached to a single network interface (ENI)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B (Standard limit)**
-
+Answer: B (Standard limit)
 </details>
 
-**8. When multiple SGs are attached to an instance, the effective policy is:**
-- A) The most restrictive
-- B) The union of all allow rules (Permissive)
-- C) Only the first one
-- D) nothing
 
+<b>8. When multiple SGs are attached to an instance, the effective policy is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. True/False: A NACL can be associated with multiple subnets.**
-- A) True
-- B) False
 
+<b>9. True/False: A NACL can be associated with multiple subnets.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**10. What happens if a packet doesn't match any rule in a NACL?**
-- A) It is allowed
-- B) It is dropped by the default '*' (Deny All) rule
-- C) It goes to the SG
-- D) nothing
 
+<b>10. What happens if a packet doesn't match any rule in a NACL?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Which is a best practice for Database security?**
-- A) Allow `0.0.0.0/0` on port 3306
-- B) Allow only the security group of the Application tier
-- C) Use no SG
-- D) nothing
 
+<b>11. Which is a best practice for Database security?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. 'Stateless' means the firewall does NOT:**
-- A) Use electricity
-- B) Track the state of a connection
-- C) Allow inbound traffic
-- D) nothing
 
+<b>12. 'Stateless' means the firewall does NOT:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. In a 3-Tier architecture, which tier should be in a public subnet?**
-- A) Database
-- B) Load Balancer
-- C) Internal Application
-- D) nothing
 
+<b>13. In a 3-Tier architecture, which tier should be in a public subnet?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. True/False: You can change the 'Default NACL' to deny all traffic.**
-- A) True
-- B) False
 
+<b>14. True/False: You can change the 'Default NACL' to deny all traffic.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**15. What rule number is evaluated first in a NACL?**
-- A) 100
-- B) 1
-- C) 32768
-- D) *
 
+<b>15. What rule number is evaluated first in a NACL?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. 'Source' in a Security Group rule can be:**
-- A) An IP range
-- B) Another Security Group ID
-- C) A Prefix List
-- D) All of the above
 
+<b>16. 'Source' in a Security Group rule can be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**17. If a NACL denies traffic on port 80, but the SG allows it, what happens?**
-- A) Traffic is allowed
-- B) Traffic is denied (NACL is the first line of defense)
-- C) The computer crashes
-- D) nothing
 
+<b>17. If a NACL denies traffic on port 80, but the SG allows it, what happens?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Security Group rules are only:**
-- A) Deny
-- B) Allow
-- C) Log only
-- D) nothing
 
+<b>18. Security Group rules are only:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. True/False: You can add tags to Security Groups.**
-- A) True
-- B) False
 
+<b>19. True/False: You can add tags to Security Groups.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**20. 'Ingress' rules control:**
-- A) Outbound traffic
-- B) Inbound traffic
-- C) Internal traffic
-- D) nothing
 
+<b>20. 'Ingress' rules control:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. NACLs are primarily used for:**
-- A) Fine-grained instance security
-- B) Coarse-grained subnet security (like a fence around a building)
-- C) DNS
-- D) nothing
 
+<b>21. NACLs are primarily used for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Which port range do servers use to respond to clients?**
-- A) Well-known ports (0-1023)
-- B) Ephemeral ports (1024-65535)
-- C) Port 0
-- D) nothing
 
+<b>22. Which port range do servers use to respond to clients?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Total number of rules allowed in a NACL (default)?**
-- A) 20
-- B) 100
-- C) unlimited
-- D) 0
 
+<b>23. Total number of rules allowed in a NACL (default)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A (AWS Default, increaseable via quota)**
-
+Answer: A (AWS Default, increaseable via quota)
 </details>
 
-**24. A Security Group acts at Layer _____ of the OSI Model.**
-- A) 2
-- B) 4
-- C) 7
-- D) 1
 
+<b>24. A Security Group acts at Layer _____ of the OSI Model.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Without a layered defense, a single bug can lead to a _____.**
-- A) Promotion
-- B) Systemic Breach
-- C) New computer
-- D) nothing
 
+<b>25. Without a layered defense, a single bug can lead to a _____.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

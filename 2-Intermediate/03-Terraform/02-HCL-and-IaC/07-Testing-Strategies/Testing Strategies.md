@@ -137,325 +137,227 @@ deny[msg] {
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which testing layer is the fastest and cheapest to run?**
-- A) End-to-End (Terratest)
-- B) Integration Testing
-- C) Static Analysis (Validate/Lints)
-- D) Manual Testing
-
+<b>1. Which testing layer is the fastest and cheapest to run?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C** - Static analysis runs in seconds without any cloud calls.
-
+Answer: C** - Static analysis runs in seconds without any cloud calls.
 </details>
 
-**2. What is the standard language used by Terratest?**
-- A) HCL
-- B) Python
-- C) Go (Golang)
-- D) JavaScript
 
+
+
+<b>2. What is the standard language used by Terratest?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**3. True/False: Since Terraform 1.6, you can write native tests in HCL.**
-- A) True
-- B) False
 
+
+
+<b>3. True/False: Since Terraform 1.6, you can write native tests in HCL.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - The `terraform test` framework uses `.tftest.hcl` files.
-
+Answer: A** - The `terraform test` framework uses `.tftest.hcl` files.
 </details>
 
-**4. What check is performed by `terraform fmt -check`?**
-- A) Security scanning
-- B) Syntax validation
-- C) Code formatting compliance
-- D) Cost estimation
 
+
+
+<b>4. What check is performed by `terraform fmt -check`?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**5. Which tool focuses on identifying security misconfigurations like unencrypted buckets?**
-- A) TFLint
-- B) checkov / tfsec
-- C) Terratest
-- D) Infracost
 
+
+
+<b>5. Which tool focuses on identifying security misconfigurations like unencrypted buckets?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. The `assert` block in native Terraform testing requires which two attributes?**
-- A) input and output
-- B) condition and error_message
-- C) test and result
-- D) if and then
 
+
+
+<b>6. The `assert` block in native Terraform testing requires which two attributes?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. "End-to-End Testing" involves:**
-- A) Only checking syntax
-- B) Provisioning real resources, verifying them, and then destroying them
-- C) Writing documentation
-- D) Reading state files
 
+
+
+<b>7. "End-to-End Testing" involves:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. Policy as Code (PaC) tools like OPA/Sentinel run during which phase?**
-- A) init
-- B) Between Plan and Apply
-- C) After Apply
-- D) During coding
 
+
+
+<b>8. Policy as Code (PaC) tools like OPA/Sentinel run during which phase?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - They act as a gatekeeper for the plan.
-
+Answer: B** - They act as a gatekeeper for the plan.
 </details>
 
-**9. What does the `defer` keyword do in a Go Terratest script?**
-- A) It deletes the code
-- B) It ensures a command (like `terraform destroy`) runs at the very end of the test function
-- C) It skips the test
-- D) It speeds up the test
 
+
+
+<b>9. What does the `defer` keyword do in a Go Terratest script?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. Which command is used to run the native Terraform testing framework?**
-- A) terraform run tests
-- B) terraform test
-- C) terraform check
-- D) terraform verify
 
+
+
+<b>10. Which command is used to run the native Terraform testing framework?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. TFLint is specifically useful for:**
-- A) Managing multiple regions
-- B) Finding cloud-provider-specific errors that 'validate' misses
-- C) Encrypting state files
-- D) Formatting code
 
+
+
+<b>11. TFLint is specifically useful for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. In the testing pyramid, "Integration Tests" sit between:**
-- A) Static and Unit tests
-- B) Unit and E2E tests
-- C) Manual and Automated tests
-- D) Plan and Apply
 
+
+
+<b>12. In the testing pyramid, "Integration Tests" sit between:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. What is a "Mock" in infrastructure testing?**
-- A) A funny comment
-- B) A fake resource definition that simulates cloud behavior without cost
-- C) A type of provider
-- D) A backup file
 
+
+
+<b>13. What is a "Mock" in infrastructure testing?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. Sentinel is a proprietary policy language for:**
-- A) AWS
-- B) HashiCorp Cloud/Enterprise
-- C) Google Cloud
-- D) Microsoft Azure
 
+
+
+<b>14. Sentinel is a proprietary policy language for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. Rego is the language used by:**
-- A) Terratest
-- B) Open Policy Agent (OPA)
-- C) Ansible
-- D) Docker
 
+
+
+<b>15. Rego is the language used by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. What is the benefit of "Test Driven Development" (TDD) for IaC?**
-- A) It ensures requirements are defined before implementation
-- B) It makes the cloud faster
-- C) It reduces the number of variables
-- D) It's cheaper
 
+
+
+<b>16. What is the benefit of "Test Driven Development" (TDD) for IaC?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. "Teardown" in testing refers to:**
-- A) writing code
-- B) Destroying the temporary infrastructure created for the test
-- C) Renaming resources
-- D) Closing the laptop
 
+
+
+<b>17. "Teardown" in testing refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Terratest is best used for testing:**
-- A) Single variables
-- B) Complex, multi-resource Terraform Modules
-- C) Only local files
-- D) README content
 
+
+
+<b>18. Terratest is best used for testing:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Why should you use `terraform test` over manual checks?**
-- A) To avoid human error and ensure repeatable verification of logic
-- B) Because it's required by law
-- C) Because it saves disk space
-- D) because it's newer
 
+
+
+<b>19. Why should you use `terraform test` over manual checks?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**20. A "Smoke Test" for infrastructure typically involves:**
-- A) Burning a server
-- B) A quick verification that the core service is up and responding
-- C) A full security audit
-- D) Stress testing the CPU
 
+
+
+<b>20. A "Smoke Test" for infrastructure typically involves:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. "Compliance as Code" ensures that:**
-- A) Infrastructure follows legal and organizational rules automatically
-- B) Developers are paid on time
-- C) Licenses are expired
-- D) Only one region is used
 
+
+
+<b>21. "Compliance as Code" ensures that:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**22. Which command is the first line of defense in an IaC pipeline?**
-- A) terraform apply
-- B) terraform fmt -check / terraform validate
-- C) terraform destroy
-- D) terraform output
 
+
+
+<b>22. Which command is the first line of defense in an IaC pipeline?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. What does "Stateless Testing" mean?**
-- A) No US states are involved
-- B) Testing the code without creating a persistent .tfstate file
-- C) Using only local variables
-- D) testing without an internet connection
 
+
+
+<b>23. What does "Stateless Testing" mean?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The `terraform test` command runs files with which extension?**
-- A) .test
-- B) .tftest.hcl
-- C) .spec.tf
-- D) .go
 
+
+
+<b>24. The `terraform test` command runs files with which extension?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. "Static Code Analysis" is performed on:**
-- A) Running servers
-- B) The source code itself without execution
-- C) The cloud billing data
-- D) Log files
 
+
+
+<b>25. "Static Code Analysis" is performed on:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+

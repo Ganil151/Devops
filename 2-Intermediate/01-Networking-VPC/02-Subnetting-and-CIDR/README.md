@@ -19,8 +19,8 @@ Subnetting is the practice of dividing a VPC's IP address range into smaller, ma
 graph TD
     VPC["VPC (10.0.0.0/16)"] --> Pub["Public Zone (IGW Route)"]
     VPC --> Priv["Private Zone (NAT GW Route)"]
-    
-    subgraph "Subretting Logic"
+
+subgraph "Subretting Logic"
     Pub --> S1["Subnet A (10.0.1.0/24)"]
     Priv --> S2["Subnet B (10.0.2.0/24)"]
     end
@@ -72,319 +72,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. How many bits are in an IPv4 address?**
-- A) 16
-- B) 32
-- C) 64
-- D) 128
-
+<b>1. How many bits are in an IPv4 address?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. A /24 subnet contains how many TOTAL IP addresses?**
-- A) 16
-- B) 256
-- C) 1024
-- D) 65536
 
+<b>2. A /24 subnet contains how many TOTAL IP addresses?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. How many IPs are reserved by AWS in every subnet?**
-- A) 2
-- B) 3
-- C) 5
-- D) 0
 
+<b>3. How many IPs are reserved by AWS in every subnet?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**4. Which IP is typically the VPC DNS server in a subnet?**
-- A) .0
-- B) .1
-- C) .2
-- D) .3
 
+<b>4. Which IP is typically the VPC DNS server in a subnet?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**5. True/False: A /28 subnet is LARGER than a /24 subnet.**
-- A) True
-- B) False
 
+<b>5. True/False: A /28 subnet is LARGER than a /24 subnet.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. What is the largest CIDR block allowed for a VPC?**
-- A) /8
-- B) /16
-- C) /24
-- D) /32
 
+<b>6. What is the largest CIDR block allowed for a VPC?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Usable IPs in a /27 subnet (32 IPs):**
-- A) 32
-- B) 30
-- C) 27
-- D) 251
 
+<b>7. Usable IPs in a /27 subnet (32 IPs):</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C (32 - 5 = 27)**
-
+Answer: C (32 - 5 = 27)
 </details>
 
-**8. RFC 1918 range for 10.x.x.x starts at:**
-- A) 10.0.0.0/8
-- B) 10.0.0.0/16
-- C) 172.16.0.0/12
-- D) nothing
 
+<b>8. RFC 1918 range for 10.x.x.x starts at:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**9. 'Zoning' refers to partitioning a network based on:**
-- A) Color
-- B) Security levels (Public/Private/Data)
-- C) Speed
-- D) nothing
 
+<b>9. 'Zoning' refers to partitioning a network based on:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. CIDR stands for:**
-- A) Cloud Integrated Data Routing
-- B) Classless Inter-Domain Routing
-- C) Central IP Distribution Rule
-- D) nothing
 
+<b>10. CIDR stands for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. True/False: You can have two subnets with overlapping IPs in the same VPC.**
-- A) False
-- B) True
 
+<b>11. True/False: You can have two subnets with overlapping IPs in the same VPC.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. Host bits in a /22 subnet:**
-- A) 22
-- B) 10 (32 - 22)
-- C) 32
-- D) nothing
 
+<b>12. Host bits in a /22 subnet:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A /16 VPC can be divided into how many /24 subnets?**
-- A) 16
-- B) 256
-- C) 100
-- D) 1
 
+<b>13. A /16 VPC can be divided into how many /24 subnets?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. The last IP in an AWS subnet block (e.g., .255 in a /24) is reserved for:**
-- A) The router
-- B) Network broadcasting (even if not used)
-- C) The admin
-- D) nothing
 
+<b>14. The last IP in an AWS subnet block (e.g., .255 in a /24) is reserved for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Subnet Mask' for a /24 in decimal is:**
-- A) 255.0.0.0
-- B) 255.255.255.0
-- C) 255.255.0.0
-- D) nothing
 
+<b>15. 'Subnet Mask' for a /24 in decimal is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: You can move a subnet from zone A to zone B.**
-- A) False (Subnets are fixed to one AZ)
-- B) True
 
+<b>16. True/False: You can move a subnet from zone A to zone B.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. What is the impact of choosing a /28 for a database subnet?**
-- A) It's very secure
-- B) You might run out of IPs for read-replicas or maintenance
-- C) It's faster
-- D) nothing
 
+<b>17. What is the impact of choosing a /28 for a database subnet?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Binary: 2^8 equals:**
-- A) 128
-- B) 256
-- C) 512
-- D) nothing
 
+<b>18. Binary: 2^8 equals:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which subnet type is used for 'Bastion Hosts'?**
-- A) Private
-- B) Public
-- C) Database
-- D) nothing
 
+<b>19. Which subnet type is used for 'Bastion Hosts'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: You can add multiple IPv4 CIDR blocks to a single VPC.**
-- A) True (Secondary CIDRs)
-- B) False
 
+<b>20. True/False: You can add multiple IPv4 CIDR blocks to a single VPC.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. A CIDR block of '0.0.0.0/0' represents:**
-- A) Nothing
-- B) All possible IP addresses (The entire Internet)
-- C) local traffic
-- D) nothing
 
+<b>21. A CIDR block of '0.0.0.0/0' represents:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. How many host IPs are in a /30 subnet?**
-- A) 4
-- B) 2 (Wait, AWS subtracts 5, so this would be -1 usable)
-- C) 1
-- D) 0
 
+<b>22. How many host IPs are in a /30 subnet?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B (4 total, but AWS requirement is minimum /28 for subnets)**
-
+Answer: B (4 total, but AWS requirement is minimum /28 for subnets)
 </details>
 
-**23. 'Subnet Fragmentation' occurs when:**
-- A) The cable breaks
-- B) You create many small, non-contiguous IP ranges that waste space
-- C) IPs are deleted
-- D) nothing
 
+<b>23. 'Subnet Fragmentation' occurs when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. Which is the most common CIDR for an enterprise VPC?**
-- A) /32
-- B) /16
-- C) /8
-- D) /24
 
+<b>24. Which is the most common CIDR for an enterprise VPC?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Subnetting is to a VPC what _____ is to an office building.**
-- A) Painting
-- B) Partitioning desks/rooms
-- C) Cleaning
-- D) Insurance
 
+<b>25. Subnetting is to a VPC what _____ is to an office building.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

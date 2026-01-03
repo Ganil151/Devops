@@ -108,325 +108,227 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which language is used to write policies for Open Policy Agent (OPA)?**
-- A) HCL
-- B) Python
-- C) Rego
-- D) YAML
-
+<b>1. Which language is used to write policies for Open Policy Agent (OPA)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**2. Where in the Terraform lifecycle does Policy as Code typically run?**
-- A) During terraform init
-- B) After the Plan but before the Apply
-- C) After the Apply is complete
-- D) Only on the developer's laptop
 
+
+
+<b>2. Where in the Terraform lifecycle does Policy as Code typically run?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - PaC evaluates the JSON plan file.
-
+Answer: B** - PaC evaluates the JSON plan file.
 </details>
 
-**3. What is the primary benefit of "Shifting Compliance Left"?**
-- A) It makes the code faster
-- B) It catches policy violations earlier in the development lifecycle (before deployment)
-- C) It reduces the number of variables
-- D) It's easier to write
 
+
+
+<b>3. What is the primary benefit of "Shifting Compliance Left"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. True/False: HashiCorp Sentinel is an open-source tool available in the Terraform OSS CLI.**
-- A) True
-- B) False
 
+
+
+<b>4. True/False: HashiCorp Sentinel is an open-source tool available in the Terraform OSS CLI.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Sentinel is part of Terraform Cloud/Enterprise.
-
+Answer: B** - Sentinel is part of Terraform Cloud/Enterprise.
 </details>
 
-**5. A policy that "Warns but Allows" a deployment is called a:**
-- A) Hard Mandate
-- B) Soft Mandate
-- C) Advisory
-- D) Error
 
+
+
+<b>5. A policy that "Warns but Allows" a deployment is called a:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. "Governance" in Cloud computing refers to:**
-- A) Controlling the weather
-- B) Ensuring infrastructure follows security, cost, and organizational rules
-- C) The CEO's office
-- D) Billing only
 
+
+
+<b>6. "Governance" in Cloud computing refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Which tool allows you to schedule a drift detection check?**
-- A) Terraform console
-- B) CI/CD pipeline (e.g. GitHub Actions) with a cron trigger
-- C) terraform fmt
-- D) VS Code
 
+
+
+<b>7. Which tool allows you to schedule a drift detection check?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. What does a "Hard Mandate" do when a policy fails?**
-- A) Sends an email but continues
-- B) Immediately blocks the deployment
-- C) Deletes the state file
-- D) Reboots the server
 
+
+
+<b>8. What does a "Hard Mandate" do when a policy fails?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. Why use mandatory tagging as a governance rule?**
-- A) To make the console look colorful
-- B) To ensure cost attribution, ownership, and resource tracking
-- C) To speed up deployments
-- D) It's required by the cloud provider
 
+
+
+<b>9. Why use mandatory tagging as a governance rule?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. OPA treats the Terraform plan as what file format for evaluation?**
-- A) PDF
-- B) JSON
-- C) YAML
-- D) binary
 
+
+
+<b>10. OPA treats the Terraform plan as what file format for evaluation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. "Compliance as Code" enables:**
-- A) Manual audits every month
-- B) Automated, continuous auditing and enforcement
-- C) More meetings
-- D) Deleting resources
 
+
+
+<b>11. "Compliance as Code" enables:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. Which attribute would you check to prevent "Public S3 Buckets" via policy?**
-- A) bucket_name
-- B) acl or public_access_block configuration
-- C) region
-- D) provider
 
+
+
+<b>12. Which attribute would you check to prevent "Public S3 Buckets" via policy?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A "Detailed Exit Code" of 2 in a scheduled plan indicates:**
-- A) Succeeded with no changes
-- B) Succeeded with changes (Drift detected)
-- C) Failed with error
-- D) Wrong version
 
+
+
+<b>13. A "Detailed Exit Code" of 2 in a scheduled plan indicates:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. Sentinel policies are usually managed in which block in Terraform Cloud?**
-- A) Workspace settings
-- B) Policy Sets
-- C) Team management
-- D) Billing
 
+
+
+<b>14. Sentinel policies are usually managed in which block in Terraform Cloud?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. "Ad-hoc compliance" is risky because it is:**
-- A) Automated
-- B) Manual, inconsistent, and error-prone
-- C) Too expensive
-- D) Fast
 
+
+
+<b>15. "Ad-hoc compliance" is risky because it is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. Which industry-standard framework is often used for cloud governance?**
-- A) NIST / CIS Benchmarks
-- B) HTML
-- C) SQL
-- D) Agile
 
+
+
+<b>16. Which industry-standard framework is often used for cloud governance?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. "Internal Service Level Agreements (SLAs)" can be tracked using:**
-- A) Only Excel
-- B) Drift detection and uptime monitoring via IaC
-- C) Emails
-- D) Phone calls
 
+
+
+<b>17. "Internal Service Level Agreements (SLAs)" can be tracked using:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. What is the risk of having NO governance in a large team?**
-- A) Too many servers
-- B) Security vulnerabilities, cost overruns, and inconsistent configurations
-- C) Fast deployments
-- D) Low bills
 
+
+
+<b>18. What is the risk of having NO governance in a large team?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. A "Policy Override" is:**
-- A) Deleting the policy
-- B) A manual approval to skip a soft mandate for a specific deployment
-- C) Changing the password
-- D) Updating Terraform
 
+
+
+<b>19. A "Policy Override" is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. Which cloud provider has its own built-in "Policies" service?**
-- A) AWS (AWS Config / Service Control Policies)
-- B) Azure (Azure Policy)
-- C) GCP (Organization Policy Service)
-- D) All of the above
 
+
+
+<b>20. Which cloud provider has its own built-in "Policies" service?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**21. "Declarative Compliance" means:**
-- A) Asking for permission
-- B) Defining the allowed state in code and letting the engine enforce it
-- C) Writing long emails
-- D) Checking the console daily
 
+
+
+<b>21. "Declarative Compliance" means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Benefit of using OPA over internal cloud-specific policies?**
-- A) It's cheaper
-- B) It's cloud-agnostic and can enforce rules across multiple providers with one language
-- C) It's faster
-- D) It's built-in
 
+
+
+<b>22. Benefit of using OPA over internal cloud-specific policies?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. "Budget Governance" prevents:**
-- A) Deployments during holidays
-- B) Resources that exceed a defined cost threshold
-- C) Deleting servers
-- D) Changing regions
 
+
+
+<b>23. "Budget Governance" prevents:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The term "ClickOps" describes:**
-- A) Using Terraform
-- B) Making manual changes in the cloud console (a governance anti-pattern)
-- C) Fast typing
-- D) Gaming
 
+
+
+<b>24. The term "ClickOps" describes:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. A good Governance strategy should be:**
-- A) Invisible
-- B) Transparent, Automated, and Scalable
-- C) Manual
-- D) Complex
 
+
+
+<b>25. A good Governance strategy should be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+

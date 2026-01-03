@@ -17,8 +17,8 @@ graph TD
     subgraph "Parallelism = 10 (Default)"
         A1[Res 1] & A2[Res 2] & A3[Res 3] --> API[Cloud API]
     end
-    
-    subgraph "Parallelism = 100"
+
+subgraph "Parallelism = 100"
         B1[Res 1..100] --"Too many requests"--> API2[Cloud API]
         API2 --"429 Too Many Requests"--> Err[Failure]
     end

@@ -42,22 +42,22 @@ graph TB
     subgraph VPC [Virtual Private Cloud]
         IGW[Internet Gateway]
         NAT[NAT Gateway]
-        
-        subgraph Public_Zone [Public Subnet 10.0.1.0/24]
+
+subgraph Public_Zone [Public Subnet 10.0.1.0/24]
             Web[Web Server]
             LB[Load Balancer]
         end
-        
-        subgraph Private_Zone [Private Subnet 10.0.2.0/24]
+
+subgraph Private_Zone [Private Subnet 10.0.2.0/24]
             App[App Server]
             end
-        
-        subgraph Data_Zone [Database Subnet 10.0.3.0/24]
+
+subgraph Data_Zone [Database Subnet 10.0.3.0/24]
             DB[(Database)]
         end
     end
 
-    Internet((Internet)) <--> IGW
+Internet((Internet)) <--> IGW
     IGW <--> LB
     LB <--> Web
     Web <--> App
@@ -65,11 +65,11 @@ graph TB
     App -.-> NAT
     NAT -.-> IGW
 
-    classDef public fill:#e3f2fd,stroke:#0d47a1
+classDef public fill:#e3f2fd,stroke:#0d47a1
     classDef private fill:#fff3e0,stroke:#e65100
     classDef data fill:#f3e5f5,stroke:#4a148c
-    
-    class Public_Zone public
+
+class Public_Zone public
     class Private_Zone private
     class Data_Zone data
 ```
@@ -173,13 +173,13 @@ Three-Tier Architecture:
     - Public subnets
     - Load balancers
     - Web servers
-  
-  Application Tier:
+
+Application Tier:
     - Private subnets
     - Application servers
     - Auto scaling groups
-  
-  Database Tier:
+
+Database Tier:
     - Private subnets
     - Database servers
     - Backup systems
@@ -361,224 +361,148 @@ This comprehensive guide covers cloud networking fundamentals, security, and imp
 10. **What is "DNS Resolution"?**
     -   Translating human-readable domain names (www.google.com) into IP addresses (142.250.x.x) so computers can connect.
 
-### Advanced Level
-11. **How does a Content Delivery Network (CDN) work with a VPC?**
-    -   The CDN pushes content to edge locations globally. It doesn't sit *inside* the VPC but caches content from an Origin (S3 or Load Balancer) that sits in the VPC.
-12. **Describe the "Hub and Spoke" network topology in cloud.**
-    -   A central "Hub" VPC handles common services (logging, firewall inspection, transit gateway). Multiple "Spoke" VPCs (app, dev, prod) connect only to the Hub effectively isolating environment while sharing shared services.
-13. **What is a "Transit Gateway"?**
-    -   A network transit hub that connects VPCs and on-premises networks. It solves the complexity of mesh VPC peering by acting as a central router.
-14. **How do you troubleshoot network connectivity issues in a cloud environment?**
-    -   Check Security Groups (inbound/outbound), NACLs, Route Tables (is there a route to IGW?), and finally VPC Flow Logs to see rejected packets.
-15. **What is "Anycast IP" in the context of Google Cloud Load Balancing?**
-    -   A single global IP address is advertised from multiple locations worldwide. Traffic routes to the nearest physical location naturally via BGP, simplifying global DNS management.
-
----
-
-## Quiz: Basic Networking
-
+<b>11. </b>
 <details>
-<summary><b>1. A /24 CIDR block provides approximately how many usable IP addresses?</b></summary>
-A) 65,000<br>
-B) 251-256 (Depending on provider reserved IPs)<br>
-C) 1,000<br>
-D) 10<br>
-<br>
-<b>Answer: B) 251-256 (Depending on provider reserved IPs)</b>
+<summary>Show Answer</summary>
+Answer: B) 251-256 (Depending on provider reserved IPs)</b>
 </details>
 
+
+<b>2. Which component allows a Private Subnet to access the internet for updates?</b>
 <details>
-<summary><b>2. Which component allows a Private Subnet to access the internet for updates?</b></summary>
-A) Internet Gateway<br>
-B) VPC Peering<br>
-C) NAT Gateway<br>
-D) Switch<br>
-<br>
-<b>Answer: C) NAT Gateway</b>
+<summary>Show Answer</summary>
+Answer: C) NAT Gateway</b>
 </details>
 
+
+<b>3. Security Groups are _____ , meaning return traffic is automatically allowed.</b>
 <details>
-<summary><b>3. Security Groups are _____ , meaning return traffic is automatically allowed.</b></summary>
-A) Stateless<br>
-B) Stateful<br>
-C) Angry<br>
-D) Open<br>
-<br>
-<b>Answer: B) Stateful</b>
+<summary>Show Answer</summary>
+Answer: B) Stateful</b>
 </details>
 
+
+<b>4. Which is a characteristic of Direct Connect / ExpressRoute?</b>
 <details>
-<summary><b>4. Which is a characteristic of Direct Connect / ExpressRoute?</b></summary>
-A) Uses public internet<br>
-B) Unpredictable latency<br>
-C) Private, dedicated physical connection<br>
-D) Free of charge<br>
-<br>
-<b>Answer: C) Private, dedicated physical connection</b>
+<summary>Show Answer</summary>
+Answer: C) Private, dedicated physical connection</b>
 </details>
 
+
+<b>5. VPC Peering connections are transitive by default. (True/False)</b>
 <details>
-<summary><b>5. VPC Peering connections are transitive by default. (True/False)</b></summary>
-A) True<br>
-B) False<br>
-<br>
-<b>Answer: B) False</b>
+<summary>Show Answer</summary>
+Answer: B) False</b>
 </details>
 
+
+<b>6. What is the primary function of a Route Table?</b>
 <details>
-<summary><b>6. What is the primary function of a Route Table?</b></summary>
-A) To block hackers<br>
-B) To determine where network traffic is directed<br>
-C) To store database records<br>
-D) To balance load<br>
-<br>
-<b>Answer: B) To determine where network traffic is directed</b>
+<summary>Show Answer</summary>
+Answer: B) To determine where network traffic is directed</b>
 </details>
 
+
+<b>7. Which service blocks specific IP addresses at the subnet level?</b>
 <details>
-<summary><b>7. Which service blocks specific IP addresses at the subnet level?</b></summary>
-A) Security Group<br>
-B) Network ACL (NACL)<br>
-C) IAM Policy<br>
-D) CloudTrail<br>
-<br>
-<b>Answer: B) Network ACL (NACL)</b>
+<summary>Show Answer</summary>
+Answer: B) Network ACL (NACL)</b>
 </details>
 
+
+<b>8. A bastion host (jump box) is typically placed in which subnet?</b>
 <details>
-<summary><b>8. A bastion host (jump box) is typically placed in which subnet?</b></summary>
-A) Private Subnet<br>
-B) Database Subnet<br>
-C) Public Subnet<br>
-D) No Subnet<br>
-<br>
-<b>Answer: C) Public Subnet</b>
+<summary>Show Answer</summary>
+Answer: C) Public Subnet</b>
 </details>
 
+
+<b>9. To distribute traffic across multiple EC2 instances, you should use:</b>
 <details>
-<summary><b>9. To distribute traffic across multiple EC2 instances, you should use:</b></summary>
-A) Auto Scaling Group<br>
-B) Load Balancer<br>
-C) SNS<br>
-D) CloudWatch<br>
-<br>
-<b>Answer: B) Load Balancer</b>
+<summary>Show Answer</summary>
+Answer: B) Load Balancer</b>
 </details>
 
+
+<b>10. Which protocol is ping based on?</b>
 <details>
-<summary><b>10. Which protocol is ping based on?</b></summary>
-A) TCP<br>
-B) UDP<br>
-C) ICMP<br>
-D) HTTP<br>
-<br>
-<b>Answer: C) ICMP</b>
+<summary>Show Answer</summary>
+Answer: C) ICMP</b>
 </details>
 
+
+<b>11. What is the default route (0.0.0.0/0) usually pointed to for internet access?</b>
 <details>
-<summary><b>11. What is the default route (0.0.0.0/0) usually pointed to for internet access?</b></summary>
-A) Local<br>
-B) Internet Gateway (IGW)<br>
-C) Another Instance<br>
-D) Loopback<br>
-<br>
-<b>Answer: B) Internet Gateway (IGW)</b>
+<summary>Show Answer</summary>
+Answer: B) Internet Gateway (IGW)</b>
 </details>
 
+
+<b>12. You have overlapping CIDR blocks. Can you set up VPC peering?</b>
 <details>
-<summary><b>12. You have overlapping CIDR blocks. Can you set up VPC peering?</b></summary>
-A) Yes, easily<br>
-B) Yes, with a proxy<br>
-C) No, overlapping CIDRs generally prevent peering<br>
-D) Only on Tuesdays<br>
-<br>
-<b>Answer: C) No, overlapping CIDRs generally prevent peering</b>
+<summary>Show Answer</summary>
+Answer: C) No, overlapping CIDRs generally prevent peering</b>
 </details>
 
+
+<b>13. Which DNS record type maps a domain name to an IPv4 address?</b>
 <details>
-<summary><b>13. Which DNS record type maps a domain name to an IPv4 address?</b></summary>
-A) A Record<br>
-B) CNAME<br>
-C) MX Record<br>
-D) AAAA Record<br>
-<br>
-<b>Answer: A) A Record</b>
+<summary>Show Answer</summary>
+Answer: A) A Record</b>
 </details>
 
+
+<b>14. In a "Hub and Spoke" model, the Hub VPC contains:</b>
 <details>
-<summary><b>14. In a "Hub and Spoke" model, the Hub VPC contains:</b></summary>
-A) Only databases<br>
-B) Shared services (Firewalls, VPN termination)<br>
-C) Nothing<br>
-D) All production data<br>
-<br>
-<b>Answer: B) Shared services (Firewalls, VPN termination)</b>
+<summary>Show Answer</summary>
+Answer: B) Shared services (Firewalls, VPN termination)</b>
 </details>
 
+
+<b>15. Why use Private Subnets for Databases?</b>
 <details>
-<summary><b>15. Why use Private Subnets for Databases?</b></summary>
-A) It makes them faster<br>
-B) Security isolation; so they are not directly accessible from the internet<br>
-C) It's cheaper<br>
-D) Databases don't run in public subnets<br>
-<br>
-<b>Answer: B) Security isolation; so they are not directly accessible from the internet</b>
+<summary>Show Answer</summary>
+Answer: B) Security isolation; so they are not directly accessible from the internet</b>
 </details>
 
+
+<b>16. What is the scope of a VPC?</b>
 <details>
-<summary><b>16. What is the scope of a VPC?</b></summary>
-A) Global<br>
-B) Regional<br>
-C) Availability Zone<br>
-D) Rack<br>
-<br>
-<b>Answer: B) Regional</b>
+<summary>Show Answer</summary>
+Answer: B) Regional</b>
 </details>
 
+
+<b>17. What allows you to view rejected traffic packets in a VPC?</b>
 <details>
-<summary><b>17. What allows you to view rejected traffic packets in a VPC?</b></summary>
-A) VPC Flow Logs<br>
-B) CloudTrail<br>
-C) IAM Logs<br>
-D) System Logs<br>
-<br>
-<b>Answer: A) VPC Flow Logs</b>
+<summary>Show Answer</summary>
+Answer: A) VPC Flow Logs</b>
 </details>
 
+
+<b>18. Transit Gateway is used to:</b>
 <details>
-<summary><b>18. Transit Gateway is used to:</b></summary>
-A) Connect a single VPC to internet<br>
-B) Simplify connectivity between many VPCs and on-prem networks (Hub-style interconnection)<br>
-C) Store data<br>
-D) Secure files<br>
-<br>
-<b>Answer: B) Simplify connectivity between many VPCs and on-prem networks (Hub-style interconnection)</b>
+<summary>Show Answer</summary>
+Answer: B) Simplify connectivity between many VPCs and on-prem networks (Hub-style interconnection)</b>
 </details>
 
+
+<b>19. Which command traces the path of a network packet?</b>
 <details>
-<summary><b>19. Which command traces the path of a network packet?</b></summary>
-A) ping<br>
-B) traceroute / tracert<br>
-C) telnet<br>
-D) nslookup<br>
-<br>
-<b>Answer: B) traceroute / tracert</b>
+<summary>Show Answer</summary>
+Answer: B) traceroute / tracert</b>
 </details>
 
+
+<b>20. Does a Security Group deny traffic by default?</b>
 <details>
-<summary><b>20. Does a Security Group deny traffic by default?</b></summary>
-A) Yes (Implicit Deny)<br>
-B) No (Implicit Allow)<br>
-<br>
-<b>Answer: A) Yes (Implicit Deny)</b>
+<summary>Show Answer</summary>
+Answer: A) Yes (Implicit Deny)</b>
 </details>
 
+
+<b>21. Ephemeral ports are:</b>
 <details>
-<summary><b>21. Ephemeral ports are:</b></summary>
-A) Permanent ports<br>
-B) Temporary ports used for the client-side of a connection<br>
-C) Only for UDP<br>
-D) Blocked by default<br>
-<br>
-<b>Answer: B) Temporary ports used for the client-side of a connection</b>
+<summary>Show Answer</summary>
+Answer: B) Temporary ports used for the client-side of a connection</b>
 </details>

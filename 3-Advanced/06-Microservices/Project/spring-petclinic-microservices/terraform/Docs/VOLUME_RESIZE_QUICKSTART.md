@@ -3,7 +3,12 @@
 ## ✅ What I've Done
 
 1. **Updated EC2 Module** - Added `root_block_device` configuration
-2. **Added Variables** - `root_volume_size` (default: 20 GB) and `root_volume_type` (default: gp3)
+<b>2. Added Variables** - `root_volume_size`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: default: 20 GB) and `root_volume_type` (default: gp3
+</details>
+
 3. **Created Guide** - Comprehensive guide at `terraform/EC2_VOLUME_RESIZE_GUIDE.md`
 
 ## 🚀 Quick Commands

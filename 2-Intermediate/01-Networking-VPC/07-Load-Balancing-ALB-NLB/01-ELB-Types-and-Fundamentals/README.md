@@ -28,8 +28,8 @@ graph LR
     TG --> HealthCheck{Health Check Pass?}
     HealthCheck -->|Yes| T1[Target: EC2-A]
     HealthCheck -->|Yes| T2[Target: EC2-B]
-    
-    style Listener fill:#f96,stroke:#333
+
+style Listener fill:#f96,stroke:#333
     style TG fill:#69c,stroke:#333
 ```
 

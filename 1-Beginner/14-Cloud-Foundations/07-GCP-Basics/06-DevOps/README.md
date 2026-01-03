@@ -204,220 +204,148 @@ This guide covers GCP DevOps services for continuous integration and deployment 
 6. **What are "Substitutions" in Cloud Build?**
    - Variables (like `$PROJECT_ID`, `$COMMIT_SHA`) used in the build configuration files.
 
-### Advanced Level
-7. **Infrastructure as Code options in GCP?**
-   - **Terraform:** Industry standard (Google Provider).
-   - **Deployment Manager:** Native GCP tool (YAML/Jinja) - entering maintenance mode.
-   - **Config Connector:** Manage GCP resources using Kubernetes YAML manifests.
-8. **What is Google Cloud's "Operations Suite"?**
-   - Formerly Stackdriver. Includes Monitoring, Logging, Trace, Error Reporting, Debugger, Profiler.
-9. **How to minimize container build times?**
-   - Use Kaniko cache. Use smaller base images. Order Dockerfile layers (least changing first).
-
----
-
-## Quiz: GCP DevOps
-
+<b>7. </b>
 <details>
-<summary><b>1. Default file name for Cloud Build configuration?</b></summary>
-A) cloudbuild.yaml<br>
-B) build.json<br>
-C) gcp-pipeline.yml<br>
-D) docker-compose.yml<br>
-<br>
-<b>Answer: A) cloudbuild.yaml</b>
+<summary>Show Answer</summary>
+Answer: A) cloudbuild.yaml</b>
 </details>
 
+
+<b>2. Artifact Registry stores:</b>
 <details>
-<summary><b>2. Artifact Registry stores:</b></summary>
-A) Docker images, npm, Maven, Python packages<br>
-B) Source code only<br>
-C) Logs<br>
-D) VMs<br>
-<br>
-<b>Answer: A) Docker images, npm, Maven, Python packages</b>
+<summary>Show Answer</summary>
+Answer: A) Docker images, npm, Maven, Python packages</b>
 </details>
 
+
+<b>3. Cloud Source Repositories supports:</b>
 <details>
-<summary><b>3. Cloud Source Repositories supports:</b></summary>
-A) Git<br>
-B) SVN<br>
-C) CVS<br>
-D) Mercurial<br>
-<br>
-<b>Answer: A) Git</b>
+<summary>Show Answer</summary>
+Answer: A) Git</b>
 </details>
 
+
+<b>4. Which tool replaces Stackdriver?</b>
 <details>
-<summary><b>4. Which tool replaces Stackdriver?</b></summary>
-A) Google Cloud Operations Suite<br>
-B) Cloud Watch<br>
-C) Azure Monitor<br>
-D) Splunk<br>
-<br>
-<b>Answer: A) Google Cloud Operations Suite</b>
+<summary>Show Answer</summary>
+Answer: A) Google Cloud Operations Suite</b>
 </details>
 
+
+<b>5. To deploy to GKE using Cloud Build, you interact with:</b>
 <details>
-<summary><b>5. To deploy to GKE using Cloud Build, you interact with:</b></summary>
-A) kubectl (via a builder image) or GKE Autopilot<br>
-B) SSH<br>
-C) FTP<br>
-D) Email<br>
-<br>
-<b>Answer: A) kubectl (via a builder image) or GKE Autopilot</b>
+<summary>Show Answer</summary>
+Answer: A) kubectl (via a builder image) or GKE Autopilot</b>
 </details>
 
+
+<b>6. Cloud Deploy targets:</b>
 <details>
-<summary><b>6. Cloud Deploy targets:</b></summary>
-A) GKE, Cloud Run, Anthos<br>
-B) Compute Engine<br>
-C) App Engine<br>
-D) Firebase<br>
-<br>
-<b>Answer: A) GKE, Cloud Run, Anthos</b>
+<summary>Show Answer</summary>
+Answer: A) GKE, Cloud Run, Anthos</b>
 </details>
 
+
+<b>7. Terraform state should be stored in:</b>
 <details>
-<summary><b>7. Terraform state should be stored in:</b></summary>
-A) GCS Bucket (Remote Backend)<br>
-B) Git<br>
-C) Local laptop<br>
-D) Public website<br>
-<br>
-<b>Answer: A) GCS Bucket (Remote Backend)</b>
+<summary>Show Answer</summary>
+Answer: A) GCS Bucket (Remote Backend)</b>
 </details>
 
+
+<b>8. Cloud Build pricing is based on:</b>
 <details>
-<summary><b>8. Cloud Build pricing is based on:</b></summary>
-A) Build minutes (120 free/day)<br>
-B) Number of builds<br>
-C) Storage<br>
-D) Users<br>
-<br>
-<b>Answer: A) Build minutes (120 free/day)</b>
+<summary>Show Answer</summary>
+Answer: A) Build minutes (120 free/day)</b>
 </details>
 
+
+<b>9. Error Reporting aggregates:</b>
 <details>
-<summary><b>9. Error Reporting aggregates:</b></summary>
-A) Crashes and exceptions from logs<br>
-B) User complaints<br>
-C) Billing errors<br>
-D) Network errors<br>
-<br>
-<b>Answer: A) Crashes and exceptions from logs</b>
+<summary>Show Answer</summary>
+Answer: A) Crashes and exceptions from logs</b>
 </details>
 
+
+<b>10. Cloud Trace helps with:</b>
 <details>
-<summary><b>10. Cloud Trace helps with:</b></summary>
-A) Latency analysis (Distributed Tracing)<br>
-B) Drawing<br>
-C) Logging<br>
-D) Security<br>
-<br>
-<b>Answer: A) Latency analysis (Distributed Tracing)</b>
+<summary>Show Answer</summary>
+Answer: A) Latency analysis (Distributed Tracing)</b>
 </details>
 
+
+<b>11. Can Cloud Build access private VPC resources?</b>
 <details>
-<summary><b>11. Can Cloud Build access private VPC resources?</b></summary>
-A) Yes, via Private Pools<br>
-B) No<br>
-<br>
-<b>Answer: A) Yes, via Private Pools</b>
+<summary>Show Answer</summary>
+Answer: A) Yes, via Private Pools</b>
 </details>
 
+
+<b>12. Deployment Manager uses:</b>
 <details>
-<summary><b>12. Deployment Manager uses:</b></summary>
-A) YAML or Python/Jinja templates<br>
-B) HCL<br>
-C) C++<br>
-D) Java<br>
-<br>
-<b>Answer: A) YAML or Python/Jinja templates</b>
+<summary>Show Answer</summary>
+Answer: A) YAML or Python/Jinja templates</b>
 </details>
 
+
+<b>13. "Prometheus" managed service in GCP?</b>
 <details>
-<summary><b>13. "Prometheus" managed service in GCP?</b></summary>
-A) Managed Service for Prometheus (part of Monitoring)<br>
-B) Function<br>
-C) Database<br>
-D) None<br>
-<br>
-<b>Answer: A) Managed Service for Prometheus (part of Monitoring)</b>
+<summary>Show Answer</summary>
+Answer: A) Managed Service for Prometheus (part of Monitoring)</b>
 </details>
 
+
+<b>14. Cloud Profiler measures:</b>
 <details>
-<summary><b>14. Cloud Profiler measures:</b></summary>
-A) CPU and Memory usage of code functions (Continuous Profiling)<br>
-B) User profiles<br>
-C) Disk speed<br>
-D) Network speed<br>
-<br>
-<b>Answer: A) CPU and Memory usage of code functions (Continuous Profiling)</b>
+<summary>Show Answer</summary>
+Answer: A) CPU and Memory usage of code functions (Continuous Profiling)</b>
 </details>
 
+
+<b>15. Skaffold is used for:</b>
 <details>
-<summary><b>15. Skaffold is used for:</b></summary>
-A) Local Kubernetes development loop (iterative build/deploy)<br>
-B) Production<br>
-C) Testing only<br>
-D) Nothing<br>
-<br>
-<b>Answer: A) Local Kubernetes development loop (iterative build/deploy)</b>
+<summary>Show Answer</summary>
+Answer: A) Local Kubernetes development loop (iterative build/deploy)</b>
 </details>
 
+
+<b>16. Config Connector lets you:</b>
 <details>
-<summary><b>16. Config Connector lets you:</b></summary>
-A) Manage GCP resources using K8s manifests<br>
-B) Connect wires<br>
-C) Connect databases<br>
-D) Nothing<br>
-<br>
-<b>Answer: A) Manage GCP resources using K8s manifests</b>
+<summary>Show Answer</summary>
+Answer: A) Manage GCP resources using K8s manifests</b>
 </details>
 
+
+<b>17. Can you run Cloud Build locally?</b>
 <details>
-<summary><b>17. Can you run Cloud Build locally?</b></summary>
-A) Yes, using `cloud-build-local` (though deprecated/limited, mostly test via submission)<br>
-B) No<br>
-<br>
-<b>Answer: A) Yes, using `cloud-build-local` (though deprecated/limited, mostly test via submission)</b>
+<summary>Show Answer</summary>
+Answer: A) Yes, using `cloud-build-local` (though deprecated/limited, mostly test via submission)</b>
 </details>
 
+
+<b>18. Cloud Deploy "Promote" action:</b>
 <details>
-<summary><b>18. Cloud Deploy "Promote" action:</b></summary>
-A) Moves a release from one stage to next (e.g., Staging -> Prod)<br>
-B) Advertises it<br>
-C) Deletes it<br>
-D) Builds it<br>
-<br>
-<b>Answer: A) Moves a release from one stage to next (e.g., Staging -> Prod)</b>
+<summary>Show Answer</summary>
+Answer: A) Moves a release from one stage to next (e.g., Staging -> Prod)</b>
 </details>
 
+
+<b>19. Is Container Registry deprecated?</b>
 <details>
-<summary><b>19. Is Container Registry deprecated?</b></summary>
-A) Yes, in favor of Artifact Registry<br>
-B) No<br>
-<br>
-<b>Answer: A) Yes, in favor of Artifact Registry</b>
+<summary>Show Answer</summary>
+Answer: A) Yes, in favor of Artifact Registry</b>
 </details>
 
+
+<b>20. Log Sink destination can be:</b>
 <details>
-<summary><b>20. Log Sink destination can be:</b></summary>
-A) Storage Bucket, Pub/Sub, BigQuery, Another Project<br>
-B) Printer<br>
-C) Email<br>
-D) None<br>
-<br>
-<b>Answer: A) Storage Bucket, Pub/Sub, BigQuery, Another Project</b>
+<summary>Show Answer</summary>
+Answer: A) Storage Bucket, Pub/Sub, BigQuery, Another Project</b>
 </details>
 
+
+<b>21. SL I / SLO / SLA?</b>
 <details>
-<summary><b>21. SL I / SLO / SLA?</b></summary>
-A) Indicator (Metric), Objective (Goal), Agreement (Contract)<br>
-B) Terms<br>
-C) Acronyms<br>
-D) Nothing<br>
-<br>
-<b>Answer: A) Indicator (Metric), Objective (Goal), Agreement (Contract)</b>
+<summary>Show Answer</summary>
+Answer: A) Indicator (Metric), Objective (Goal), Agreement (Contract)</b>
 </details>

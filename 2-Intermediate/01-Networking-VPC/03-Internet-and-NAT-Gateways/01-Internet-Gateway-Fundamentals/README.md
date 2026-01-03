@@ -14,8 +14,8 @@ graph LR
     Subnet --> RT[Route Table]
     RT -->|0.0.0.0/0| IGW[Internet Gateway]
     IGW --> Internet((Public Internet))
-    
-    style IGW fill:#ff9900,color:#fff
+
+style IGW fill:#ff9900,color:#fff
 ```
 
 ### Attachment Logic

@@ -12,8 +12,8 @@ graph LR
     Address --> O2[10101000]
     Address --> O3[00000001]
     Address --> O4[00000001]
-    
-    subgraph "Octet 1"
+
+subgraph "Octet 1"
     O1
     end
     subgraph "Octet 2"
@@ -55,8 +55,8 @@ graph TD
     Bit3 --- Bit2[4]
     Bit2 --- Bit1[2]
     Bit1 --- Bit0[1]
-    
-    Example["Octet: 10101000"]
+
+Example["Octet: 10101000"]
     Result["128 + 0 + 32 + 0 + 8 + 0 + 0 + 0 = 168"]
 ```
 

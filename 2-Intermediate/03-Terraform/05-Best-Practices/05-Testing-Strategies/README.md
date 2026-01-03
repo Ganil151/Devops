@@ -38,7 +38,7 @@ Introduced in Terraform 1.6, this allows you to write tests in HCL.
 run "verify_website_response" {
   command = apply
 
-  assert {
+assert {
     condition     = output.status_code == 200
     error_message = "Website returned non-200 status code"
   }

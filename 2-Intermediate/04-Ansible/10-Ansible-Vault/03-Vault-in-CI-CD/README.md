@@ -10,13 +10,13 @@ The modern standard is to use a dedicated secret manager (like Jenkins Credentia
 graph TD
     SM[Secret Manager] -->|Inject| Job[CI Job / Runner]
     Repo[Git Repo] -->|Clone| Job
-    
-    subgraph "CI Job"
+
+subgraph "CI Job"
     Temp[Temporary Env Var / File]
     Run[ansible-playbook --vault-password-file Temp]
     end
-    
-    Job --> Temp
+
+Job --> Temp
     Temp --> Run
     Run --> Cleanup[Delete Temp File]
 ```

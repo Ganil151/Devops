@@ -15,8 +15,8 @@ graph TD
     Play[Playbook Dir] --> Lib[library/]
     Play --> Role[roles/role_name/library/]
     System[~/.ansible/plugins/modules] --> Search[Search Path]
-    
-    Lib --> Search
+
+Lib --> Search
     Role --> Search
 ```
 

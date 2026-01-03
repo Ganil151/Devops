@@ -3,7 +3,12 @@
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
 2. [Installation Methods](#installation-methods)
-3. [Using eksctl (Recommended)](#using-eksctl-recommended)
+<b>3. [Using eksctl</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Recommended)](#using-eksctl-recommended
+</details>
+
 4. [Using AWS CLI and kubectl](#using-aws-cli-and-kubectl)
 5. [Using Terraform](#using-terraform)
 6. [Cluster Configuration](#cluster-configuration)

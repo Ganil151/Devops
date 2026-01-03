@@ -331,7 +331,12 @@ Complete a maturity assessment for your organization:
 ### Exercise 2: Roadmap Planning
 
 Create a 6-month implementation roadmap:
-1. Define current state (Crawl/Walk/Run)
+<b>1. Define current state</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Crawl/Walk/Run
+</details>
+
 2. Set target state
 3. Identify key initiatives
 

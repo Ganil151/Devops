@@ -15,12 +15,12 @@ graph LR
         Source["Source ENI (App Instance)"]
     end
 
-    subgraph "Security VPC"
+subgraph "Security VPC"
         Target["Target (NLB / Monitoring ENI)"]
         Scanner["Security Appliance (IDS/IPS)"]
     end
 
-    Source -.-> |Mirrored Packets (VXLAN)| Target
+Source -.-> |Mirrored Packets (VXLAN)| Target
     Target --> Scanner
 ```
 

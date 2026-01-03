@@ -5,11 +5,11 @@ graph TD
     Stress[High Stress Situation] --> Brain[Reduced Mental Capacity]
     Brain --> ManualSearch[Searching Long Docs]
     ManualSearch --> Errors[Human Error / Delays]
-    
-    Brain --> AtomicSOP[Reading Atomic SOP]
+
+Brain --> AtomicSOP[Reading Atomic SOP]
     AtomicSOP --> Action[Quick Mitigation]
-    
-    style ManualSearch fill:#fbb,stroke:#333
+
+style ManualSearch fill:#fbb,stroke:#333
     style AtomicSOP fill:#bfb,stroke:#333
 ```
 
@@ -56,321 +56,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the primary goal of an SOP in a DevOps environment?**
-- A) To write a book
-- B) To reduce cognitive load and ensure predictable outcomes
-- C) To fill up the hard drive
-- D) To satisfy the boss
-
+<b>1. What is the primary goal of an SOP in a DevOps environment?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: A longer document is always better than a shorter one for incident response.**
-- A) True
-- B) False
 
+<b>2. True/False: A longer document is always better than a shorter one for incident response.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Short, atomic, and clear is the goal for outages.
-
+Answer: B** - Short, atomic, and clear is the goal for outages.
 </details>
 
-**3. The '3 AM Test' measures:**
-- A) If the document is colorful
-- B) If the document is actionable and clear under maximum stress/exhaustion
-- C) If the engineer is awake
-- D) If the server time is correct
 
+<b>3. The '3 AM Test' measures:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. Documentation acts as a 'Security Control' because:**
-- A) It is encrypted
-- B) It prevents engineers from having to 'guess' security-sensitive configurations
-- C) It is written by the security team
-- D) It's kept in a safe
 
+<b>4. Documentation acts as a 'Security Control' because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. 'Scalability through Silence' means:**
-- A) Not talking to your teammates
-- B) Using docs to allow juniors to work independently without interrupting seniors
-- C) Working at night
-- D) Using silent computers
 
+<b>5. 'Scalability through Silence' means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. If an engineer follows a flawed SOP and causes an outage, a 'Blameless' culture blames:**
-- A) The engineer
-- B) The Documentation / Process
-- C) The manager
-- D) The weather
 
+<b>6. If an engineer follows a flawed SOP and causes an outage, a 'Blameless' culture blames:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. 'Cognitive Load' increases when:**
-- A) Information is well-organized
-- B) Information is scattered, long-winded, or confusing during a crisis
-- C) You go to sleep
-- D) The server is fast
 
+<b>7. 'Cognitive Load' increases when:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. 'Tribal Knowledge' refers to:**
-- A) Knowledge of history
-- B) Information known only to a few individuals and not documented
-- C) A type of database
-- D) Public documentation
 
+<b>8. 'Tribal Knowledge' refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. Atomic SOPs are:**
-- A) Large and radioactive
-- B) Small, focused on a single specific task or alert
-- C) Scientific papers
-- D) General notes
 
+<b>9. Atomic SOPs are:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. Why is 'Guessing' a database password a security risk?**
-- A) It's hard to do
-- B) It indicates a failure in documentation and secret management that leads to drift
-- C) It's fun
-- D) It's not a risk
 
+<b>10. Why is 'Guessing' a database password a security risk?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. The 'Definition of Done' for a new feature should include:**
-- A) A party
-- B) Updated and tested documentation (SOP)
-- C) A new keyboard
-- D) deleting old code
 
+<b>11. The 'Definition of Done' for a new feature should include:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. True/False: Theory and history should be the first sections in an emergency SOP.**
-- A) True
-- B) False - Action steps should be first.
 
+<b>12. True/False: Theory and history should be the first sections in an emergency SOP.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. A 'Knowledge Silo' usually causes:**
-- A) More money
-- B) Increased MTTR when the 'expert' is unavailable
-- C) Faster deployments
-- D) Better security
 
+<b>13. A 'Knowledge Silo' usually causes:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. What is 'Institutional Knowledge'?**
-- A) Knowledge stored in a museum
-- B) Knowledge that is documented and shared across the entire organization
-- C) Knowledge known by the CEO only
-- D) Knowledge in a book
 
+<b>14. What is 'Institutional Knowledge'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Stress-resilient' documentation works best when it is:**
-- A) Complicated
-- B) Visual and step-by-step
-- C) Secret
-- D) Long
 
+<b>15. 'Stress-resilient' documentation works best when it is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. 'Predictability' in SRE means:**
-- A) Knowing what will happen at 5 PM
-- B) Ensuring the same action always results in the same outcome via standardized SOPs
-- C) Predicting stock prices
-- D) Having no errors
 
+<b>16. 'Predictability' in SRE means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. Why is 'Cloning Expertise' through SOPs valuable?**
-- A) For biological science
-- B) To enable everyone to perform at the level of the most experienced engineer
-- C) To fire experts
-- D) To make people work faster
 
+<b>17. Why is 'Cloning Expertise' through SOPs valuable?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. An 'Operational Requirement' is:**
-- A) A recommendation
-- B) A mandatory standard for how a system is managed and documented
-- C) A type of server
-- D) A legal contract
 
+<b>18. An 'Operational Requirement' is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. 'Document Rot' describes:**
-- A) Physical paper getting old
-- B) Digital documentation that is no longer accurate as the system evolves
-- C) Deleted files
-- D) new files
 
+<b>19. 'Document Rot' describes:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: Empathy for the 'tired' engineer is a core part of the SOP mindset.**
-- A) True
-- B) False
 
+<b>20. True/False: Empathy for the 'tired' engineer is a core part of the SOP mindset.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Drift' occurs when the real system state differs from:**
-- A) The cloud
-- B) The documented SOP or expected state
-- C) The target market
-- D) the past
 
+<b>21. 'Drift' occurs when the real system state differs from:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. Which role is responsible for maintaining the SOP 'Philosophy'?**
-- A) The SRE Lead / Manager
-- B) The Marketing intern
-- C) The janitor
-- D) Only the new hires
 
+<b>22. Which role is responsible for maintaining the SOP 'Philosophy'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - Culture starts from the top.
-
+Answer: A** - Culture starts from the top.
 </details>
 
-**23. 'Shadow Procedures' are:**
-- A) Nighttime work
-- B) Undocumented habits that haven't been peer-reviewed or standardized
-- C) Security tricks
-- D) Automated scripts
 
+<b>23. 'Shadow Procedures' are:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. The 'Cognitive Load' gap is bridged by:**
-- A) Taking a nap
-- B) High-quality, searchable, and atomic documentation
-- C) Faster computers
-- D) More meetings
 
+<b>24. The 'Cognitive Load' gap is bridged by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The ultimate result of a documentation-first philosophy is:**
-- A) More files
-- B) Higher reliability and a lower-stress environment for engineers
-- C) Higher costs
-- D) slower deployments
 
+<b>25. The ultimate result of a documentation-first philosophy is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

@@ -323,11 +323,21 @@ kubectl delete pvc mysql-data-mysql-0
 
 1. **Always use Secrets** for sensitive data like passwords
 2. **Configure resource limits** to prevent resource exhaustion
-3. **Implement health checks** (liveness and readiness probes)
+<b>3. Implement health checks</b>
+<details>
+<summary>Show Answer</summary>
+Answer: liveness and readiness probes
+</details>
+
 4. **Use subPath** when mounting to avoid issues with lost+found directory
 5. **Regular backups** are critical for production databases
 6. **Monitor storage usage** to prevent running out of disk space
-7. **Use appropriate storage class** (SSD for production databases)
+<b>7. Use appropriate storage class</b>
+<details>
+<summary>Show Answer</summary>
+Answer: SSD for production databases
+</details>
+
 
 ---
 

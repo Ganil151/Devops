@@ -20,10 +20,10 @@ Ideal for restarting services when config changes.
 graph TD
     T1[Task: Copy Nginx Config] -->|Changed| Notify[Flag: restart_nginx]
     T1 -->|OK| NoNotify[Do Nothing]
-    
-    T2[Task: Install PHP] --> Next
-    
-    Notify --> End{End of Play}
+
+T2[Task: Install PHP] --> Next
+
+Notify --> End{End of Play}
     End -->|Flag Exists| H1[Handler: Restart Nginx]
 ```
 

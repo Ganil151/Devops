@@ -287,7 +287,12 @@ kubectl get pods -n calico-system
 ### 4.1 Access Jenkins Dashboard
 
 1. Open browser: `http://<master-server-ip>:8080`
-2. Enter initial admin password (from step 2.2)
+<b>2. Enter initial admin password</b>
+<details>
+<summary>Show Answer</summary>
+Answer: from step 2.2
+</details>
+
 3. Install suggested plugins
 4. Create admin user
 5. Configure Jenkins URL
@@ -597,7 +602,12 @@ curl -X POST http://localhost:9090/-/reload
 ### 7.2 Configure Grafana Dashboards
 
 1. **Access Grafana:** `http://<monitoring-server-ip>:3000`
-2. **Login:** admin/admin (change password)
+<b>2. Login:** admin/admin</b>
+<details>
+<summary>Show Answer</summary>
+Answer: change password
+</details>
+
 
 #### Add Prometheus Data Source
 1. **Configuration** → **Data Sources** → **Add data source**

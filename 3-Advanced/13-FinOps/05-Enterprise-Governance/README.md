@@ -478,7 +478,12 @@ graph TB
 ### Exercise 1: Policy Design
 
 Create a governance policy for:
-1. Required tags (5 minimum)
+<b>1. Required tags</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 5 minimum
+</details>
+
 2. Approved instance types
 3. Approved regions
 4. Budget limits by environment

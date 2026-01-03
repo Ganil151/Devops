@@ -145,37 +145,47 @@ aws dynamodb delete-table --table-name Music
 
 # 🧠 Knowledge Quiz
 
-**1. Which command retrieves items based on the Primary Key?**
-A) `scan`
-B) `query`
-C) `get-item`
-D) `fetch`
-> **Answer: C** - `get-item` retrieves a single item using its full primary key. `query` retrieves a collection of items sharing the same Partition Key.
+<b>1. Which command retrieves items based on the Primary Key?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - `get-item` retrieves a single item using its full primary key. `query` retrieves a collection of items sharing the same Partition Key.
+</details>
 
-**2. You want to store a JSON object in a DynamoDB attribute. Which data type should you use?**
-A) S (String)
-B) M (Map)
-C) L (List)
-D) B (Binary)
-> **Answer: B** - The Map (M) data type allows nesting of JSON-like sub-documents.
 
-**3. What happens if you try to `PutItem` with the same Primary Key as an existing item?**
-A) It throws an error "ItemExistsException"
-B) It overwrites the existing item completely
-C) It appends to the existing item
-D) It creates a duplicate
-> **Answer: B** - By default, `PutItem` replaces the entire item. You can use `ConditionExpression` to prevent this if needed.
 
-**4. Which API operation is the most expensive in terms of Read Capacity Units?**
-A) `GetItem`
-B) `Query`
-C) `Scan`
-D) `BatchGetItem`
-> **Answer: C** - `Scan` reads every item in the table, consuming capacity for the entire dataset size.
 
-**5. How are On-Demand write costs calculated?**
-A) Per hour
-B) Per Write Request Unit (WRU)
-C) Per GB stored
-D) Per instance size
-> **Answer: B** - You pay for every write request (1 KB chunk).
+<b>2. You want to store a JSON object in a DynamoDB attribute. Which data type should you use?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - The Map (M) data type allows nesting of JSON-like sub-documents.
+</details>
+
+
+
+
+<b>3. What happens if you try to `PutItem` with the same Primary Key as an existing item?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - By default, `PutItem` replaces the entire item. You can use `ConditionExpression` to prevent this if needed.
+</details>
+
+
+
+
+<b>4. Which API operation is the most expensive in terms of Read Capacity Units?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C** - `Scan` reads every item in the table, consuming capacity for the entire dataset size.
+</details>
+
+
+
+
+<b>5. How are On-Demand write costs calculated?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B** - You pay for every write request (1 KB chunk).
+</details>
+
+
+

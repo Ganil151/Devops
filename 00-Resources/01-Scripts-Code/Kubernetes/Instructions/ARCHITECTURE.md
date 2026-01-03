@@ -654,7 +654,12 @@ sequenceDiagram
 Start services in order:
 1. Config Server
 2. Discovery Server
-3. Business Services (Customers, Vets, Visits, GenAI)
+<b>3. Business Services</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Customers, Vets, Visits, GenAI
+</details>
+
 4. API Gateway
 5. Optional: Monitoring services
 

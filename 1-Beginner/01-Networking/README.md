@@ -60,12 +60,37 @@ While there are 7 layers, DevOps engineers focus on these core areas:
 ## 4. Linux Networking Diagnostic Methodology
 When a connection fails, follow this "inside-out" approach common in Linux administration:
 
-1.  **Check Local Interface**: Is the NIC up? (`ip link`)
-2.  **Check Local IP**: Does the machine have the expected IP? (`ip addr`)
-3.  **Check Local Routing**: Is there a default gateway? (`ip route`)
+<b>1. Check Local Interface**: Is the NIC up?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: `ip link`
+</details>
+
+<b>2. Check Local IP**: Does the machine have the expected IP?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: `ip addr`
+</details>
+
+<b>3. Check Local Routing**: Is there a default gateway?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: `ip route`
+</details>
+
 4.  **Check Remote Reachability**: Can you ping the gateway? Can you ping `8.8.8.8`?
-5.  **Check DNS**: Can you resolve a hostname? (`dig google.com`)
-6.  **Check Application Port**: Is the service actually listening on the target port? (`ss -tuln`)
+<b>5. Check DNS**: Can you resolve a hostname?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: `dig google.com`
+</details>
+
+<b>6. Check Application Port**: Is the service actually listening on the target port?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: `ss -tuln`
+</details>
+
 
 ## 5. Security & Stability Best Practices
 Based on industry standards and the *Linux Command Line* guide:

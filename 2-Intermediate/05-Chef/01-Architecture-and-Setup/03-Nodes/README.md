@@ -29,7 +29,7 @@ sequenceDiagram
     participant Ohai
     participant Server as Chef Server
 
-    Note over Node: Run Starts
+Note over Node: Run Starts
     Node->>Server: 1. Authenticate (RSA Key)
     Node->>Ohai: 2. Gather Facts
     Ohai-->>Node: Return Attributes (JSON)
@@ -89,7 +89,7 @@ sequenceDiagram
     *   C) Verify Phase
     *   D) Build Phase
 
-    <details><summary>Click for Answer</summary>B) Converge Phase</details>
+<details><summary>Click for Answer</summary>B) Converge Phase</details>
 
 2.  **What port does the Chef Client listen on?**
     *   A) 443
@@ -97,7 +97,7 @@ sequenceDiagram
     *   C) It does not listen on any port (Pull model).
     *   D) 22
 
-    <details><summary>Click for Answer</summary>C) It does not listen on any port (it executes and initiates connection out).</details>
+<details><summary>Click for Answer</summary>C) It does not listen on any port (it executes and initiates connection out).</details>
 
 3.  **How often does the Chef Client run by default?**
     *   A) Every 5 minutes
@@ -105,7 +105,7 @@ sequenceDiagram
     *   C) Once a day
     *   D) Only when manually triggered
 
-    <details><summary>Click for Answer</summary>B) Every 30 minutes (usually with a splay)</details>
+<details><summary>Click for Answer</summary>B) Every 30 minutes (usually with a splay)</details>
 
 4.  **What is "Splay"?**
     *   A) A typo for Display.
@@ -113,7 +113,7 @@ sequenceDiagram
     *   C) The time it takes to download cookbooks.
     *   D) A type of attribute.
 
-    <details><summary>Click for Answer</summary>B) A random time interval...</details>
+<details><summary>Click for Answer</summary>B) A random time interval...</details>
 
 5.  **The file that contains the unique client name and validation key path on the node is:**
     *   A) `client.rb`
@@ -121,7 +121,7 @@ sequenceDiagram
     *   C) `metadata.rb`
     *   D) `node.json`
 
-    <details><summary>Click for Answer</summary>A) client.rb</details>
+<details><summary>Click for Answer</summary>A) client.rb</details>
 
 6.  **Attributes gathered by Ohai are called:**
     *   A) Default Attributes
@@ -129,7 +129,7 @@ sequenceDiagram
     *   C) Automatic Attributes
     *   D) Normal Attributes
 
-    <details><summary>Click for Answer</summary>C) Automatic Attributes (Highest precedence)</details>
+<details><summary>Click for Answer</summary>C) Automatic Attributes (Highest precedence)</details>
 
 7.  **What happens if a resource fails during the run?**
     *   A) It skips it and continues.
@@ -137,7 +137,7 @@ sequenceDiagram
     *   C) It retries infinitely.
     *   D) It reboots the server.
 
-    <details><summary>Click for Answer</summary>B) The entire run stops immediately...</details>
+<details><summary>Click for Answer</summary>B) The entire run stops immediately...</details>
 
 8.  **Where does the client cache cookbooks?**
     *   A) `/tmp`
@@ -145,7 +145,7 @@ sequenceDiagram
     *   C) `/home/user`
     *   D) Use RAM only
 
-    <details><summary>Click for Answer</summary>B) /var/chef/cache</details>
+<details><summary>Click for Answer</summary>B) /var/chef/cache</details>
 
 9.  **To run chef-client locally using a local repository instead of a server, you use:**
     *   A) `chef-client --local`
@@ -153,7 +153,7 @@ sequenceDiagram
     *   C) `chef-solo` (Legacy)
     *   D) `chef-apply`
 
-    <details><summary>Click for Answer</summary>B) `chef-client -z` (Recommended modern way)</details>
+<details><summary>Click for Answer</summary>B) `chef-client -z` (Recommended modern way)</details>
 
 10. **The list of resources built during the compile phase is called:**
     *   A) The Run List
@@ -161,7 +161,7 @@ sequenceDiagram
     *   C) The Attribute Map
     *   D) The Recipe Book
 
-    <details><summary>Click for Answer</summary>B) The Resource Collection</details>
+<details><summary>Click for Answer</summary>B) The Resource Collection</details>
 
 11. **Which attribute type has the HIGHEST precedence?**
     *   A) Default
@@ -169,7 +169,7 @@ sequenceDiagram
     *   C) Normal
     *   D) Automatic (Ohai)
 
-    <details><summary>Click for Answer</summary>D) Automatic (Ohai)</details>
+<details><summary>Click for Answer</summary>D) Automatic (Ohai)</details>
 
 12. **Which attribute type has the LOWEST precedence?**
     *   A) Default
@@ -177,7 +177,7 @@ sequenceDiagram
     *   C) Role Default
     *   D) Environment Default
 
-    <details><summary>Click for Answer</summary>A) Default (specifically Attribute file default)</details>
+<details><summary>Click for Answer</summary>A) Default (specifically Attribute file default)</details>
 
 13. **What is the command to bootstrap a windows node?**
     *   A) `knife bootstrap windows ...`
@@ -185,7 +185,7 @@ sequenceDiagram
     *   C) It's not possible.
     *   D) `chef install windows`
 
-    <details><summary>Click for Answer</summary>B) knife bootstrap ... (typically using WinRM)</details>
+<details><summary>Click for Answer</summary>B) knife bootstrap ... (typically using WinRM)</details>
 
 14. **What ensures the authenticity of the Chef Server/Client communication?**
     *   A) Plain text passwords.
@@ -193,7 +193,7 @@ sequenceDiagram
     *   C) IP Whitelisting.
     *   D) Magic.
 
-    <details><summary>Click for Answer</summary>B) RSA Key Pairs</details>
+<details><summary>Click for Answer</summary>B) RSA Key Pairs</details>
 
 15. **If you change an attribute in a cookbook, when does the node see the change?**
     *   A) Immediately.
@@ -201,7 +201,7 @@ sequenceDiagram
     *   C) After you restart the server.
     *   D) Never.
 
-    <details><summary>Click for Answer</summary>B) After upload AND next client run.</details>
+<details><summary>Click for Answer</summary>B) After upload AND next client run.</details>
 
 16. **What is a "Notification" in a recipe?**
     *   A) An email sent to the admin.
@@ -209,7 +209,7 @@ sequenceDiagram
     *   C) A log message.
     *   D) A pop-up on the screen.
 
-    <details><summary>Click for Answer</summary>B) A mechanism for one resource to tell another...</details>
+<details><summary>Click for Answer</summary>B) A mechanism for one resource to tell another...</details>
 
 17. **"Subscribes" is the opposite of:**
     *   A) Notifies
@@ -217,7 +217,7 @@ sequenceDiagram
     *   C) Listening
     *   D) Ignoring
 
-    <details><summary>Click for Answer</summary>A) Notifies (Same mechanism, different perspective)</details>
+<details><summary>Click for Answer</summary>A) Notifies (Same mechanism, different perspective)</details>
 
 18. **Can you run chef-client as a non-root user?**
     *   A) No, it requires root.
@@ -225,7 +225,7 @@ sequenceDiagram
     *   C) Yes, it automatically gains root.
     *   D) No, it won't start.
 
-    <details><summary>Click for Answer</summary>B) Yes, but with limited permissions.</details>
+<details><summary>Click for Answer</summary>B) Yes, but with limited permissions.</details>
 
 19. **What is the default location for the chef-client configuration on Linux?**
     *   A) `/etc/chef/client.rb`
@@ -233,7 +233,7 @@ sequenceDiagram
     *   C) `~/.chef/config.rb`
     *   D) `/var/log/chef`
 
-    <details><summary>Click for Answer</summary>A) /etc/chef/client.rb</details>
+<details><summary>Click for Answer</summary>A) /etc/chef/client.rb</details>
 
 20. **What is "Chef Solo"?**
     *   A) A version of Chef that sings.
@@ -241,4 +241,4 @@ sequenceDiagram
     *   C) The new name for Chef Workstation.
     *   D) A single user license.
 
-    <details><summary>Click for Answer</summary>B) A legacy equivalent of Chef Client...</details>
+<details><summary>Click for Answer</summary>B) A legacy equivalent of Chef Client...</details>

@@ -14,8 +14,18 @@ A practical, step-by-step guide to creating your first production-ready VPC.
 ## Step 1: Plan Your VPC
 
 ### Design Decisions
-1.  **CIDR Block**: 10.0.0.0/16 (65,536 IPs)
-2.  **Availability Zones**: 2 (us-east-1a, us-east-1b)
+<b>1. CIDR Block**: 10.0.0.0/16</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 65,536 IPs
+</details>
+
+<b>2. Availability Zones**: 2</b>
+<details>
+<summary>Show Answer</summary>
+Answer: us-east-1a, us-east-1b
+</details>
+
 3.  **Subnet Strategy**: Public + Private per AZ
 4.  **NAT Strategy**: One NAT Gateway per AZ
 
@@ -39,7 +49,12 @@ Private Subnets:
 ### Via AWS Console
 1. Navigate to **VPC Dashboard**
 2. Click **Create VPC**
-3. Select **VPC and more** (creates subnets, route tables, gateways automatically)
+<b>3. Select **VPC and more</b>
+<details>
+<summary>Show Answer</summary>
+Answer: creates subnets, route tables, gateways automatically
+</details>
+
 4. Configure:
    - **Name**: `production-vpc`
    - **IPv4 CIDR**: `10.0.0.0/16`
@@ -290,8 +305,32 @@ aws ec2 release-address --allocation-id $EIP_B
 ---
 
 ## 🧠 Final Quiz (5/20+)
-1.  **What is the first step in creating a VPC?** (Planning CIDR and subnet allocation)
-2.  **True/False: You must wait for NAT Gateway to be available before creating routes.** (True)
-3.  **Should you enable DNS support in VPC?** (Yes)
-4.  **How many AZs minimum for production?** (2)
-5.  **What command creates a VPC via CLI?** (`aws ec2 create-vpc`)
+<b>1. What is the first step in creating a VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Planning CIDR and subnet allocation
+</details>
+
+<b>2. True/False: You must wait for NAT Gateway to be available before creating routes.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: True
+</details>
+
+<b>3. Should you enable DNS support in VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Yes
+</details>
+
+<b>4. How many AZs minimum for production?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 2
+</details>
+
+<b>5. What command creates a VPC via CLI?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: `aws ec2 create-vpc`
+</details>

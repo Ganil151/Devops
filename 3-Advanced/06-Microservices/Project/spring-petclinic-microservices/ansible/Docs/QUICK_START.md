@@ -175,7 +175,12 @@ ansible/
    ansible mysql -m shell -a "systemctl status mysqld"
    ```
 
-5. **Next:** Create Kubernetes playbooks (k8s-master.yml, k8s-workers.yml)
+<b>5. Next:** Create Kubernetes playbooks</b>
+<details>
+<summary>Show Answer</summary>
+Answer: k8s-master.yml, k8s-workers.yml
+</details>
+
 
 ---
 

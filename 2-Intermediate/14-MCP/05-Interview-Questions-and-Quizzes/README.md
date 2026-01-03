@@ -59,8 +59,12 @@ Test your knowledge of the Model Context Protocol (MCP) and its role in Agentic 
    - C) Python Class
    - D) Markdown Table
 
-6. **True/False: MCP is a proprietary protocol that only works with one AI model.**
-   - Answer: **False**.
+<b>6. </b>
+<details>
+<summary>Show Answer</summary>
+Answer: **False**.
+</details>
+
 
 7. **What happens during the 'Discovery' phase?**
    - A) The user searches for AI models

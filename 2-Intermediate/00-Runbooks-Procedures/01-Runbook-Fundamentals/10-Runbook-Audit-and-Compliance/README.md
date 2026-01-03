@@ -36,8 +36,8 @@ graph LR
     Publish --> Audit[Periodic Audit/Gameday]
     Audit --> Update[Feedback Loop/Update]
     Update --> SecretScan
-    
-    subgraph "Regulatory Guardrails"
+
+subgraph "Regulatory Guardrails"
     SecretScan
     PeerReview
     Audit
@@ -86,321 +86,176 @@ graph LR
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. What is the standard review frequency for critical runbooks in regulated industries?**
-- A) Every week
-- B) Every 6-12 months
-- C) Only when an error occurs
-- D) Every 10 years
-
+<b>1. What is the standard review frequency for critical runbooks in regulated industries?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: Storing passwords in a runbook is acceptable if the wiki is private.**
-- A) True
-- B) False
 
+<b>2. True/False: Storing passwords in a runbook is acceptable if the wiki is private.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Privacy is not security; use a dedicated Secrets Manager.
-
+Answer: B** - Privacy is not security; use a dedicated Secrets Manager.
 </details>
 
-**3. Which Git feature provides a timeline of who changed a document?**
-- A) git push
-- B) git blame / History
-- C) git clone
-- D) git init
 
+<b>3. Which Git feature provides a timeline of who changed a document?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. 'Separation of Duties' means:**
-- A) Working in different offices
-- B) Ensuring the person who writes a procedure cannot approve it themselves
-- C) Working at different times
-- D) Having two computers
 
+<b>4. 'Separation of Duties' means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Why is a 'Draft' runbook usually not compliant for an audit?**
-- A) It's too short
-- B) It hasn't been officially reviewed, approved, and finalized
-- C) It's written in pencil
-- D) It's on a local drive
 
+<b>5. Why is a 'Draft' runbook usually not compliant for an audit?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Traceability' in an audit refers to:**
-- A) Drawing lines
-- B) Being able to track a procedure back to its source, author, and approval history
-- C) Finding a file
-- D) Printing a doc
 
+<b>6. 'Traceability' in an audit refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. Which tool can automatically find secrets (passwords) leaked in documentation?**
-- A) Excel
-- B) TruffleHog / GitLeaks
-- C) Calculator
-- D) Chrome
 
+<b>7. Which tool can automatically find secrets (passwords) leaked in documentation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**8. SOC2 and ISO 27001 are examples of:**
-- A) Programming languages
-- B) Security and Compliance Frameworks
-- C) Operating systems
-- D) Cloud providers
 
+<b>8. SOC2 and ISO 27001 are examples of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. In a 'Compliance Lifecycle', what follows 'Peer Review'?**
-- A) Deletion
-- B) Publication/Approval
-- C) Writing more
-- D) Vacation
 
+<b>9. In a 'Compliance Lifecycle', what follows 'Peer Review'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. Metadata like 'Last Reviewed Date' is important for:**
-- A) Aesthetics
-- B) Proving to auditors that the documentation is actively maintained
-- C) Making the file larger
-- D) Hiding history
 
+<b>10. Metadata like 'Last Reviewed Date' is important for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. An 'Immutable' audit log means the log:**
-- A) Can be changed by anyone
-- B) Cannot be changed or deleted once written
-- C) Is written in code
-- D) Is very long
 
+<b>11. An 'Immutable' audit log means the log:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. True/False: Auditors prefer manual signatures on paper over digital Git logs.**
-- A) True
-- B) False - Digital logs are more precise and harder to forge.
 
+<b>12. True/False: Auditors prefer manual signatures on paper over digital Git logs.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. 'Read-Only' access for runbooks should be given to:**
-- A) Everyone in the company (if appropriate)
-- B) Only the CEO
-- C) Only the auditors
-- D) Nobody
 
+<b>13. 'Read-Only' access for runbooks should be given to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A** - Broad read access democratizes knowledge, while write access is restricted for compliance.
-
+Answer: A** - Broad read access democratizes knowledge, while write access is restricted for compliance.
 </details>
 
-**14. What is a 'Findings Report' from an auditor?**
-- A) A list of things they liked
-- B) A document detailing gaps or non-compliance issues (e.g., outdated runbooks)
-- C) A bill
-- D) A news article
 
+<b>14. What is a 'Findings Report' from an auditor?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Least Privilege' applies to documentation by:**
-- A) Giving everyone Admin rights
-- B) Only giving 'Write' or 'Edit' access to those who strictly need it for their role
-- C) Giving no one access
-- D) Using one shared password
 
+<b>15. 'Least Privilege' applies to documentation by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. 'Governance' in SRE refers to:**
-- A) The company's legal department
-- B) The rules and processes that ensure systems are reliable, secure, and compliant
-- C) The government
-- D) the office manager
 
+<b>16. 'Governance' in SRE refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. Why is referencing a 'Secrets Manager' better than hardcoding a password?**
-- A) It's faster to type
-- B) It ensures credentials can be rotated without updating every single runbook
-- C) It's free
-- D) It's required by Git
 
+<b>17. Why is referencing a 'Secrets Manager' better than hardcoding a password?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. A 'Stale' runbook is a compliance risk because:**
-- A) It uses old fonts
-- B) It might describe an insecure or deprecated process
-- C) It's too short
-- D) It's in Markdown
 
+<b>18. A 'Stale' runbook is a compliance risk because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. 'Role-Based Access Control' (RBAC) helps manage:**
-- A) Salary
-- B) Permissions to view or edit specific categories of runbooks
-- C) The office layout
-- D) The lunch menu
 
+<b>19. 'Role-Based Access Control' (RBAC) helps manage:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: Compliance is only necessary for large banks.**
-- A) True
-- B) False - Any company handling user data or requiring high reliability (SaaS, Healthcare, etc.) needs it.
 
+<b>20. True/False: Compliance is only necessary for large banks.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. A 'Pre-commit hook' can assist compliance by:**
-- A) Deleting code
-- B) Blocking commits that contain plain-text passwords or lack required headers
-- C) Sending emails
-- D) checking the time
 
+<b>21. A 'Pre-commit hook' can assist compliance by:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. 'Evidence' in a documentation audit includes:**
-- A) Screenshots of Git PRs and Gameday logs
-- B) Verbal promises
-- C) Coffee cups
-- D) the company logo
 
+<b>22. 'Evidence' in a documentation audit includes:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**23. 'Auditor Access' means:**
-- A) Giving the auditor full Admin rights
-- B) Providing restricted, Read-Only access to the documentation and its history
-- C) Letting them use your desk
-- D) Sending them a hard drive
 
+<b>23. 'Auditor Access' means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. 'Version Pinning' in a runbook refers to:**
-- A) Using the same version of a tool forever
-- B) Specifying exactly which version of a script or binary the runbook was tested with
-- C) Pinning a file in Slack
-- D) using a physical pin
 
+<b>24. 'Version Pinning' in a runbook refers to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. The ultimate goal of Runbook Compliance is:**
-- A) To pass an audit
-- B) To ensure operational safety, security, and institutional reliability
-- C) To make more work
-- D) to use Git
 
+<b>25. The ultimate goal of Runbook Compliance is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

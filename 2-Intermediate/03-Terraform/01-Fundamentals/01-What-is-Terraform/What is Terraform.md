@@ -55,282 +55,181 @@ graph LR
 
 ## 🧠 Comprehensive Quiz (20 Questions)
 
-**1. Who created Terraform?**
-- A) Google
-- B) Amazon
-- C) HashiCorp
-- D) Microsoft
-
-
+<b>1. Who created Terraform?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**2. What language does Terraform use for configuration?**
-- A) YAML
-- B) HCL (HashiCorp Configuration Language)
-- C) JSON only
-- D) XML
 
 
+
+<b>2. What language does Terraform use for configuration?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. Is Terraform Declarative or Imperative?**
-- A) Imperative
-- B) Declarative
-- C) Procedural
-- D) Functional
 
 
+
+<b>3. Is Terraform Declarative or Imperative?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. Name one advantage of using IaC.**
-- A) More expensive
-- B) Version control and consistency
-- C) Requires more manual work
-- D) Slower deployments
 
 
+
+<b>4. Name one advantage of using IaC.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Can Terraform manage on-premise infrastructure?**
-- A) No, only cloud
-- B) Yes, with appropriate providers like VMware or OpenStack
-- C) Only with AWS
-- D) Only virtual machines
 
 
+
+<b>5. Can Terraform manage on-premise infrastructure?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. What does IaC stand for?**
-- A) Internet as Code
-- B) Infrastructure and Configuration
-- C) Infrastructure as Code
-- D) Integrated Application Code
 
 
+
+<b>6. What does IaC stand for?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**7. Which of these is NOT a primary benefit of Terraform?**
-- A) Multi-cloud support
-- B) State management
-- C) Compiling code to machine language
-- D) Plan before apply
 
 
+
+<b>7. Which of these is NOT a primary benefit of Terraform?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**8. How many providers does Terraform support?**
-- A) Only the big 3 clouds
-- B) About 50
-- C) 1000+
-- D) Only HashiCorp providers
 
 
+
+<b>8. How many providers does Terraform support?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**9. What approach does Terraform use?**
-- A) Specify steps to create resources
-- B) Describe desired state, Terraform figures out steps
-- C) Manual point-and-click
-- D) Command-line scripts
 
 
+
+<b>9. What approach does Terraform use?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. Terraform is best suited for:**
-- A) Application code deployment
-- B) Infrastructure provisioning
-- C) Database queries
-- D) Frontend development
 
 
+
+<b>10. Terraform is best suited for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. What is a key difference between Terraform and CloudFormation?**
-- A) CloudFormation is multi-cloud, Terraform is not
-- B) Terraform is multi-cloud, CloudFormation is AWS-only
-- C) Terraform doesn't use JSON
-- D) No difference
 
 
+
+<b>11. What is a key difference between Terraform and CloudFormation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. Can Terraform manage Kubernetes resources?**
-- A) No, only cloud providers
-- B) Yes, through the Kubernetes provider
-- C) Only EKS on AWS
-- D) Only with Helm
 
 
+
+<b>12. Can Terraform manage Kubernetes resources?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. What does "immutable infrastructure" mean in Terraform context?**
-- A) Infrastructure that never changes
-- B) Replace rather than modify resources
-- C) Infrastructure without variables
-- D) Static IP addresses
 
 
+
+<b>13. What does "immutable infrastructure" mean in Terraform context?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. Terraform was released in:**
-- A) 2010
-- B) 2014
-- C) 2018
-- D) 2020
 
 
+
+<b>14. Terraform was released in:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. Which is a valid Terraform use case?**
-- A) Writing frontend React code
-- B) Provisioning a VPC and subnets
-- C) Compiling Java applications
-- D) Running unit tests
 
 
+
+<b>15. Which is a valid Terraform use case?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. Terraform can manage:**
-- A) Only AWS EC2 instances
-- B) Cloud, SaaS, on-prem, and even DNS providers
-- C) Only virtual machines
-- D) Only networking
 
 
+
+<b>16. Terraform can manage:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. What makes Terraform "cloud-agnostic"?**
-- A) It doesn't use clouds
-- B) It works with multiple cloud providers
-- C) It only works locally
-- D) It requires no authentication
 
 
+
+<b>17. What makes Terraform "cloud-agnostic"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Terraform is:**
-- A) A paid commercial product
-- B) Open-source with optional commercial features
-- C) Closed source
-- D) Only for enterprises
 
 
+
+<b>18. Terraform is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. What is Terraform LEAST suitable for?**
-- A) Managing infrastructure
-- B) Writing business logic in applications
-- C) Multi-cloud deployments
-- D) Version-controlled infrastructure
 
 
+
+<b>19. What is Terraform LEAST suitable for?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. The main benefit of "Plan before Apply" is:**
-- A) Faster execution
-- B) Preview changes before they happen
-- C) Automatic rollback
-- D) Better syntax highlighting
 
 
+
+<b>20. The main benefit of "Plan before Apply" is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+

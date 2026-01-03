@@ -58,317 +58,176 @@ Visibility is the foundation of a reliable cloud network. This module covers the
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which tool captures IP traffic metadata (Src, Dest, Port)?**
-- A) CloudTrail
-- B) VPC Flow Logs
-- C) Inspector
-- D) Config
-
+<b>1. Which tool captures IP traffic metadata (Src, Dest, Port)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: VPC Flow Logs capture the full packet payload.**
-- A) True
-- B) False (Metadata only)
 
+<b>2. True/False: VPC Flow Logs capture the full packet payload.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. 'Reachability Analyzer' is a _____ analysis tool.**
-- A) Dynamic (Sends real packets)
-- B) Static/Automated Reasoning (Analyzes config)
-- C) Manual
-- D) nothing
 
+<b>3. 'Reachability Analyzer' is a _____ analysis tool.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. To see the actual content of an HTTP request, you must use:**
-- A) Flow Logs
-- B) Traffic Mirroring
-- C) Route Table
-- D) nothing
 
+<b>4. To see the actual content of an HTTP request, you must use:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Flow Log status 'NODATA' means:**
-- A) The network is broken
-- B) No traffic happened during the interval
-- C) You are out of money
-- D) nothing
 
+<b>5. Flow Log status 'NODATA' means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. Which tool helps find 'Circular Routes' or 'Blackholes' quickly?**
-- A) IAM
-- B) Reachability Analyzer
-- C) S3
-- D) nothing
 
+<b>6. Which tool helps find 'Circular Routes' or 'Blackholes' quickly?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: You can publish Flow Logs to an S3 bucket.**
-- A) True
-- B) False
 
+<b>7. True/False: You can publish Flow Logs to an S3 bucket.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. Traffic Mirroring uses which protocol to encapsulate traffic?**
-- A) HTTP
-- B) VXLAN (Port 4789)
-- C) SSH
-- D) nothing
 
+<b>8. Traffic Mirroring uses which protocol to encapsulate traffic?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. 'SKIPDATA' in a flow log indicates:**
-- A) Success
-- B) Traffic was not recorded due to an internal error or limit
-- C) The user skipped the log
-- D) nothing
 
+<b>9. 'SKIPDATA' in a flow log indicates:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. Which AWS service is best for querying Flow Logs using SQL?**
-- A) Lambda
-- B) Amazon Athena
-- C) DynamoDB
-- D) nothing
 
+<b>10. Which AWS service is best for querying Flow Logs using SQL?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. 'Mirror Filter' in Traffic Mirroring determines:**
-- A) The color of the packets
-- B) Which traffic should be captured (Inbound/Outbound/Ports)
-- C) The price
-- D) nothing
 
+<b>11. 'Mirror Filter' in Traffic Mirroring determines:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. True/False: Reachability analyzer tells you IF an SG is blocking traffic.**
-- A) True
-- B) False
 
+<b>12. True/False: Reachability analyzer tells you IF an SG is blocking traffic.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**13. Which component stores the captured packets in Traffic Mirroring?**
-- A) The Internet
-- B) A Mirror Target (ENI or NLB)
-- C) A piece of paper
-- D) nothing
 
+<b>13. Which component stores the captured packets in Traffic Mirroring?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. Flow Log field 'action' contains which two values?**
-- A) GOOD / BAD
-- B) ACCEPT / REJECT
-- C) START / STOP
-- D) nothing
 
+<b>14. Flow Log field 'action' contains which two values?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. 'Network Access Analyzer' helps identify:**
-- A) Slow servers
-- B) Unintended network access paths (e.g., Internet to DB)
-- C) Employee passwords
-- D) nothing
 
+<b>15. 'Network Access Analyzer' helps identify:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: You can enable Flow Logs for a specific ENI.**
-- A) True
-- B) False
 
+<b>16. True/False: You can enable Flow Logs for a specific ENI.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. VPC Flow Logs are _____ available to the client.**
-- A) Instantly (Real-time)
-- B) After a 1-minute or 10-minute aggregation window
-- C) Next week
-- D) nothing
 
+<b>17. VPC Flow Logs are _____ available to the client.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. Which tool provides a 'Global Topology' view?**
-- A) Reachability Analyzer
-- B) Network Manager
-- C) VPC Lattice
-- D) nothing
 
+<b>18. Which tool provides a 'Global Topology' view?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Traffic Mirroring is often used for:**
-- A) Watching movies
-- B) Intrusion Detection Systems (IDS)
-- C) Backups
-- D) nothing
 
+<b>19. Traffic Mirroring is often used for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: CloudWatch Logs Insights can be used to visualize Flow Log trends.**
-- A) True
-- B) False
 
+<b>20. True/False: CloudWatch Logs Insights can be used to visualize Flow Log trends.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Asymmetric Routing' means:**
-- A) Traffic is fast
-- B) The return path is different from the request path (and often blocked)
-- C) The network is balanced
-- D) nothing
 
+<b>21. 'Asymmetric Routing' means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. How many 'Hops' does Reachability Analyzer show?**
-- A) 1
-- B) All components in the path (IGW, NACL, SG, etc.)
-- C) 0
-- D) 100
 
+<b>22. How many 'Hops' does Reachability Analyzer show?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. 'Log Format' in Flow Logs can be:**
-- A) Plain text only
-- B) Default or Custom (Adding fields like VPC-ID, Subnet-ID)
-- C) An image
-- D) nothing
 
+<b>23. 'Log Format' in Flow Logs can be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. Monitoring is the _____ of the network team.**
-- A) Eyes
-- B) Hands
-- C) Feet
-- D) nothing
 
+<b>24. Monitoring is the _____ of the network team.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**25. A well-monitored VPC reduces _____ (Mean Time To Repair).**
-- A) Costs
-- B) MTTR
-- C) Staff
-- D) nothing
 
+<b>25. A well-monitored VPC reduces _____ (Mean Time To Repair).</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

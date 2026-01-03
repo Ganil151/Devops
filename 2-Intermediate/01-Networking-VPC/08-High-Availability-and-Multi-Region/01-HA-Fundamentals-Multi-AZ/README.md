@@ -25,8 +25,8 @@ graph TD
             App_B --> DB_Standby[(DB Standby)]
         end
     end
-    
-    User((User)) -->|Traffic| LB{Load Balancer}
+
+User((User)) -->|Traffic| LB{Load Balancer}
     LB --> App_A
     LB --> App_B
 ```

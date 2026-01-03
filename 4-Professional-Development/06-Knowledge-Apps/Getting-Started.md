@@ -344,24 +344,49 @@ Limited to first 50 members.
 1. Create landing page with problem/solution
 2. Collect 50-100 email signups
 3. Interview 10 potential users
-4. Validate pricing ($X/month acceptable?)
+<b>4. Validate pricing</b>
+<details>
+<summary>Show Answer</summary>
+Answer: $X/month acceptable?
+</details>
+
 
 #### **Phase 2: MVP** (Weeks 3-8)
-1. Build core feature only (no nice-to-haves)
-2. Manual onboarding (no self-service yet)
+<b>1. Build core feature only</b>
+<details>
+<summary>Show Answer</summary>
+Answer: no nice-to-haves
+</details>
+
+<b>2. Manual onboarding</b>
+<details>
+<summary>Show Answer</summary>
+Answer: no self-service yet
+</details>
+
 3. Beta test with 10-20 users
 4. Iterate based on feedback
 
 #### **Phase 3: Launch** (Week 9)
 1. Product Hunt launch
 2. Hacker News "Show HN"
-3. Reddit (r/devops, r/kubernetes)
+<b>3. Reddit</b>
+<details>
+<summary>Show Answer</summary>
+Answer: r/devops, r/kubernetes
+</details>
+
 4. Direct outreach to beta signups
 
 #### **Phase 4: Growth** (Months 3-12)
 1. Add self-service onboarding
 2. Implement requested features
-3. Content marketing (SEO blog posts)
+<b>3. Content marketing</b>
+<details>
+<summary>Show Answer</summary>
+Answer: SEO blog posts
+</details>
+
 4. Integration partnerships
 
 ### Micro-SaaS Tech Stack
@@ -408,10 +433,30 @@ Limited to first 50 members.
 ### Getting Started in Web3
 
 **Learning Path** (2-3 months):
-1. Understand blockchain basics (Ethereum, consensus)
-2. Run a local node (Geth, Prysm)
-3. Deploy a smart contract (Hardhat, Foundry)
-4. Set up monitoring (Prometheus, Grafana)
+<b>1. Understand blockchain basics</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Ethereum, consensus
+</details>
+
+<b>2. Run a local node</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Geth, Prysm
+</details>
+
+<b>3. Deploy a smart contract</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Hardhat, Foundry
+</details>
+
+<b>4. Set up monitoring</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Prometheus, Grafana
+</details>
+
 
 **First Client**:
 - Join Web3 Discord communities
@@ -489,7 +534,12 @@ Limited to first 50 members.
 - Secrets management needs improvement
 
 ### Recommendations
-1. Hire DevSecOps engineer (critical)
+<b>1. Hire DevSecOps engineer</b>
+<details>
+<summary>Show Answer</summary>
+Answer: critical
+</details>
+
 2. Implement database optimization plan
 3. Conduct security audit before Series A
 4. Budget $200k for infrastructure improvements

@@ -17,7 +17,7 @@ sequenceDiagram
     participant N as NAT Gateway (EIP: 3.4.5.6)
     participant I as Internet (8.8.8.8)
 
-    P->>N: Request (Src: 10.0.2.5)
+P->>N: Request (Src: 10.0.2.5)
     N->>I: Translated Request (Src: 3.4.5.6)
     I-->>N: Response (Dst: 3.4.5.6)
     N-->>P: Response (Dst: 10.0.2.5)

@@ -12,8 +12,8 @@ The number of IP addresses in a CIDR block is determined by the number of bits r
 graph TD
     Prefix["/24"] --> Bits["32 - 24 = 8 Host Bits"]
     Bits --> Calc["2^8 = 256 IPs"]
-    
-    Prefix2["/28"] --> Bits2["32 - 28 = 4 Host Bits"]
+
+Prefix2["/28"] --> Bits2["32 - 28 = 4 Host Bits"]
     Bits2 --> Calc2["2^4 = 16 IPs"]
 ```
 
@@ -39,8 +39,8 @@ graph LR
     VPC["VPC: 10.0.0.0/16"] --> S1["Subnet 1: 10.0.1.0/24"]
     VPC --> S2["Subnet 2: 10.0.2.0/24"]
     VPC --> S3["Subnet 3: 10.0.3.0/24"]
-    
-    subgraph "Host Ranges"
+
+subgraph "Host Ranges"
     S1 --- R1["10.0.1.0 - 10.0.1.255"]
     S2 --- R2["10.0.2.0 - 10.0.2.255"]
     end

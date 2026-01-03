@@ -70,325 +70,227 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which principle ensures a script produces the same result no matter how many times it's run?**
-- A) Immutability
-- B) Idempotency
-- C) Versioning
-- D) Scaling
-
+<b>1. Which principle ensures a script produces the same result no matter how many times it's run?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Idempotency ensures the target state is reached regardless of the starting state.
-
+Answer: B** - Idempotency ensures the target state is reached regardless of the starting state.
 </details>
 
-**2. What is the primary characteristic of "Declarative" IaC?**
-- A) You specify the exact steps to take
-- B) You specify the desired end state
-- C) You must write logic loops for every resource
-- D) You must manually approve every API call
 
+
+
+<b>2. What is the primary characteristic of "Declarative" IaC?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Declarative tools like Terraform focus on the "What" rather than the "How."
-
+Answer: B** - Declarative tools like Terraform focus on the "What" rather than the "How."
 </details>
 
-**3. What is "Configuration Drift"?**
-- A) When code version is updated
-- B) When resources move between regions
-- C) When manual changes make live infra different from code
-- D) When cloud provider prices change
 
+
+
+<b>3. What is "Configuration Drift"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C** - Manual "hotfixes" are the leading cause of drift.
-
+Answer: C** - Manual "hotfixes" are the leading cause of drift.
 </details>
 
-**4. True/False: Immutable infrastructure focuses on patching existing servers.**
-- A) True
-- B) False
 
+
+
+<b>4. True/False: Immutable infrastructure focuses on patching existing servers.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Immutability favors replacing resources rather than modifying them.
-
+Answer: B** - Immutability favors replacing resources rather than modifying them.
 </details>
 
-**5. Which of these is a benefit of Version Control for IaC?**
-- A) Faster internet speeds
-- B) Ability to rollback to previous states
-- C) Automatic cloud account creation
-- D) Reduced cloud costs
 
+
+
+<b>5. Which of these is a benefit of Version Control for IaC?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Git history allows you to see who changed what and revert if needed.
-
+Answer: B** - Git history allows you to see who changed what and revert if needed.
 </details>
 
-**6. Why is IaC considered "Software Engineering for Infrastructure"?**
-- A) Because it uses Java
-- B) Because it applies SDLC practices (Review, Versioning, Testing) to infra
-- C) Because it requires a PhD in Computer Science
-- D) Because it only works on Windows
 
+
+
+<b>6. Why is IaC considered "Software Engineering for Infrastructure"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. "Snowflake Servers" are a result of:**
-- A) Cold weather data centers
-- B) Manual, non-reproducible configurations
-- C) Using only Terraform
-- D) High-availability clusters
 
+
+
+<b>7. "Snowflake Servers" are a result of:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B** - Each snowflake is unique and impossible to recreate exactly.
-
+Answer: B** - Each snowflake is unique and impossible to recreate exactly.
 </details>
 
-**8. What happens if you run an idempotent script on a system that is already in the desired state?**
-- A) It errors out
-- B) It creates duplicate resources
-- C) It makes no changes
-- D) It deletes everything
 
+
+
+<b>8. What happens if you run an idempotent script on a system that is already in the desired state?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**9. Which tool is most famous for Declarative IaC?**
-- A) Ansible
-- B) Bash Scripts
-- C) Terraform
-- D) Chef
 
+
+
+<b>9. Which tool is most famous for Declarative IaC?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**10. What does "Single Source of Truth" refer to in IaC?**
-- A) The AWS Console
-- B) The versioned configuration code
-- C) The senior engineer's memory
-- D) The billing dashboard
 
+
+
+<b>10. What does "Single Source of Truth" refer to in IaC?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Peer review of IaC code helps prevent:**
-- A) Security misconfigurations
-- B) High latency
-- C) Tool installation errors
-- D) Keyboard failures
 
+
+
+<b>11. Peer review of IaC code helps prevent:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**12. Disaster Recovery is faster with IaC because:**
-- A) Code runs faster than humans
-- B) Infrastructure can be recreated instantly from code template
-- C) Cloud providers give discounts for IaC
-- D) It prevents hardware failures
 
+
+
+<b>12. Disaster Recovery is faster with IaC because:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. In the "IaC Workflow," what follows "Automated Plan"?**
-- A) Automated Apply
-- B) Peer Review
-- C) Deleting the code
-- D) Manual resource creation
 
+
+
+<b>13. In the "IaC Workflow," what follows "Automated Plan"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**14. Multi-environment consistency means:**
-- A) Dev, Stage, and Prod are identical in size
-- B) Dev, Stage, and Prod use the same configuration logic
-- C) Only one environment is allowed at a time
-- D) Users access all environments simultaneously
 
+
+
+<b>14. Multi-environment consistency means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. What is "Infrastructure Disposal" in immutability?**
-- A) Deleting old code
-- B) Terminating old resources instead of updating them
-- C) Recycling old servers
-- D) Moving to a different cloud
 
+
+
+<b>15. What is "Infrastructure Disposal" in immutability?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. Which of these is NOT an IaC principle?**
-- A) Idempotency
-- B) Manual hotfixing
-- C) Declarative code
-- D) Versioning
 
+
+
+<b>16. Which of these is NOT an IaC principle?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. Auditability in IaC is achieved through:**
-- A) CloudWatch logs
-- B) Git commit history
-- C) Monthly reports
-- D) Password rotation
 
+
+
+<b>17. Auditability in IaC is achieved through:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. "Day 0" operations typically refer to:**
-- A) Ongoing maintenance
-- B) Initial provisioning and architecture setup
-- C) Decommissioning
-- D) Billing review
 
+
+
+<b>18. "Day 0" operations typically refer to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. What is a "Snowflake" in technical terms?**
-- A) A cloud region in a cold climate
-- B) A server that has been uniquely modified by hand
-- C) A temporary resource
-- D) A high-performance instance
 
+
+
+<b>19. What is a "Snowflake" in technical terms?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. Declarative code says:**
-- A) "Do A, then B, then C"
-- B) "I want 3 servers in US-East-1"
-- C) "If server exists, skip; else create"
-- D) "Update all packages"
 
+
+
+<b>20. Declarative code says:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**21. Why is mutability considered "Bad" for scaling?**
-- A) It's too fast
-- B) It's cheap
-- C) It leads to inconsistent states across multiple nodes
-- D) It only works for small files
 
+
+
+<b>21. Why is mutability considered "Bad" for scaling?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: C**
-
+Answer: C
 </details>
 
-**22. "Time to Market" is reduced by IaC through:**
-- A) Faster typing
-- B) Automation of repetitive provisioning tasks
-- C) Using fewer servers
-- D) Outsourcing work
 
+
+
+<b>22. "Time to Market" is reduced by IaC through:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**23. Which lifecycle stage follows "Peer Review"?**
-- A) Coding
-- B) Automated Apply
-- C) Deleting Git repo
-- D) Plan
 
+
+
+<b>23. Which lifecycle stage follows "Peer Review"?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. GitOps is a practice that uses:**
-- A) Git as the source of truth for infrastructure
-- B) Only Git for all company operations
-- C) Manual commands stored in Git
-- D) No automation whatsoever
 
+
+
+<b>24. GitOps is a practice that uses:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**25. Does IaC replace the cloud provider's UI?**
-- A) No, it's irrelevant
-- B) Yes, it's the primary way to manage resources at scale
-- C) Only for S3 buckets
-- D) Manual UI is always faster
 
+
+
+<b>25. Does IaC replace the cloud provider's UI?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
+
+
+

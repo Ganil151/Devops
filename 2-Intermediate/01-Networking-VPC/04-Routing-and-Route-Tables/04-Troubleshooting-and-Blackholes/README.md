@@ -11,8 +11,8 @@ graph LR
     Subnet[Subnet Traffic] --> RT[Route Table]
     RT -->|0.0.0.0/0| BH["Target: nat-123 (Blackhole)"]
     BH --> Fail[Traffic Dropped]
-    
-    style BH fill:#000,color:#fff
+
+style BH fill:#000,color:#fff
 ```
 
 ### Common Causes of Blackholes:

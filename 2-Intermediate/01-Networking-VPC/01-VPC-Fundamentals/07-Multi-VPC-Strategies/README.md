@@ -47,8 +47,8 @@ graph TD
     VPC1[Production VPC] <-->|Peering| VPC2[Staging VPC]
     VPC1 <-->|Peering| VPC3[Dev VPC]
     VPC2 <-->|Peering| VPC3
-    
-    style VPC1 fill:#ff9999,stroke:#333,stroke-width:2px
+
+style VPC1 fill:#ff9999,stroke:#333,stroke-width:2px
     style VPC2 fill:#ffeb3b,stroke:#333,stroke-width:2px
     style VPC3 fill:#4caf50,stroke:#333,stroke-width:2px
 ```
@@ -65,8 +65,8 @@ graph TD
     TGW --> VPC3[Dev VPC]
     TGW --> VPC4[Shared Services VPC]
     TGW --> OnPrem[On-Premises via VPN]
-    
-    style TGW fill:#9c27b0,stroke:#333,stroke-width:3px
+
+style TGW fill:#9c27b0,stroke:#333,stroke-width:3px
 ```
 
 **Pros**: Scales to thousands of VPCs, transitive routing, centralized management
@@ -79,12 +79,12 @@ graph TD
     Shared[Shared Services VPC] -->|Peering| Prod[Production VPC]
     Shared -->|Peering| Stage[Staging VPC]
     Shared -->|Peering| Dev[Dev VPC]
-    
-    Shared --> AD[Active Directory]
+
+Shared --> AD[Active Directory]
     Shared --> DNS[DNS Servers]
     Shared --> Monitor[Monitoring Tools]
-    
-    style Shared fill:#2196f3,stroke:#333,stroke-width:2px
+
+style Shared fill:#2196f3,stroke:#333,stroke-width:2px
 ```
 
 **Use Case**: Centralized services (AD, DNS, logging, monitoring)
@@ -180,8 +180,32 @@ graph TD
 ---
 
 ## 🧠 Quiz Snippet (5/20+)
-1.  **Is VPC Peering transitive?** (No)
-2.  **True/False: Transit Gateway can connect VPCs across regions.** (True)
-3.  **What is the formula for full mesh peering connections?** (n*(n-1)/2)
-4.  **Should production and development share a VPC?** (No)
-5.  **What is the cost of VPC Peering?** (Free, except data transfer)
+<b>1. Is VPC Peering transitive?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: No
+</details>
+
+<b>2. True/False: Transit Gateway can connect VPCs across regions.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: True
+</details>
+
+<b>3. What is the formula for full mesh peering connections?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: n*(n-1)/2
+</details>
+
+<b>4. Should production and development share a VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: No
+</details>
+
+<b>5. What is the cost of VPC Peering?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Free, except data transfer
+</details>

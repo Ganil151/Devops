@@ -27,37 +27,37 @@ Examples:
 ```mermaid
 graph TB
     Internet((Internet))
-    
-    subgraph "Public Cloud Provider"
+
+subgraph "Public Cloud Provider"
         LB[Load Balancer]
-        
-        subgraph "Tenant A"
+
+subgraph "Tenant A"
             VM_A[Virtual Machine]
             DB_A[Database]
         end
-        
-        subgraph "Tenant B"
+
+subgraph "Tenant B"
             VM_B[Virtual Machine]
             DB_B[Database]
         end
-        
-        subgraph "Shared Resources"
+
+subgraph "Shared Resources"
             Storage[Object Storage]
             Net[Networking Infrastructure]
         end
     end
 
-    Internet --> LB
+Internet --> LB
     LB --> VM_A
     LB --> VM_B
-    
-    VM_A --> DB_A
+
+VM_A --> DB_A
     VM_B --> DB_B
-    
-    VM_A -.-> Storage
+
+VM_A -.-> Storage
     VM_B -.-> Storage
 
-    style LB fill:#e3f2fd,stroke:#0d47a1
+style LB fill:#e3f2fd,stroke:#0d47a1
     style VM_A fill:#fff9c4,stroke:#fbc02d
     style VM_B fill:#f8bbd0,stroke:#c2185b
     style Storage fill:#e0e0e0,stroke:#616161
@@ -168,25 +168,25 @@ graph TB
         FW[Firewall / VPN]
     end
 
-    subgraph "Private Cloud Data Center"
+subgraph "Private Cloud Data Center"
         Mgmt[Cloud Management Platform]
-        
-        subgraph "Compute Resources"
+
+subgraph "Compute Resources"
             Hyper[Hypervisor Cluster]
             VM1[Virtual Machine 1]
             VM2[Virtual Machine 2]
         end
-        
-        subgraph "Storage Resources"
+
+subgraph "Storage Resources"
             SAN[(SAN Storage)]
         end
-        
-        subgraph "Network Resources"
+
+subgraph "Network Resources"
             Switch[Virtual Switch]
         end
     end
 
-    User((Internal User)) --> FW
+User((Internal User)) --> FW
     FW --> Mgmt
     Mgmt -.-> Hyper
     Hyper --> VM1
@@ -196,7 +196,7 @@ graph TB
     VM1 --> SAN
     VM2 --> SAN
 
-    style FW fill:#ffcdd2,stroke:#b71c1c,color:#000000
+style FW fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style Mgmt fill:#e1f5fe,stroke:#0277bd,color:#000000
     style Hyper fill:#e8f5e9,stroke:#2e7d32,color:#000000
     style VM1 fill:#fff9c4,stroke:#fbc02d,color:#000000
@@ -313,25 +313,25 @@ graph TB
         Pub_DB[Managed Database]
     end
 
-    subgraph "Private Cloud (On-Premises)"
+subgraph "Private Cloud (On-Premises)"
         Priv_App[Legacy Application]
         Priv_DB[Sensitive Database]
         Priv_Store[Local Storage]
     end
 
-    Internet((Internet)) --> Pub_LB
+Internet((Internet)) --> Pub_LB
     Pub_LB --> Pub_App
     Pub_App --> Pub_DB
-    
-    %% Hybrid Connectivity
+
+%% Hybrid Connectivity
     Pub_App <== "VPN / Direct Connect" ==> Priv_App
     Pub_App <== "Secure Tunnel" ==> Priv_DB
 
-    style Pub_LB fill:#e3f2fd,stroke:#0d47a1,color:#000000
+style Pub_LB fill:#e3f2fd,stroke:#0d47a1,color:#000000
     style Pub_App fill:#e3f2fd,stroke:#0d47a1,color:#000000
     style Pub_DB fill:#e3f2fd,stroke:#0d47a1,color:#000000
-    
-    style Priv_App fill:#ffcdd2,stroke:#b71c1c,color:#000000
+
+style Priv_App fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style Priv_DB fill:#ffcdd2,stroke:#b71c1c,color:#000000
     style Priv_Store fill:#ffcdd2,stroke:#b71c1c,color:#000000
 ```
@@ -460,45 +460,45 @@ Strategy Types:
 ```mermaid
 graph TB
     Internet((Internet))
-    
-    subgraph "Cloud Provider A (e.g., AWS)"
+
+subgraph "Cloud Provider A (e.g., AWS)"
         LB_A[Load Balancer]
         App_A[Compute Service]
         Store_A[Object Storage]
     end
-    
-    subgraph "Cloud Provider B (e.g., Azure)"
+
+subgraph "Cloud Provider B (e.g., Azure)"
         LB_B[Load Balancer]
         App_B[Compute Service]
         Auth_B[Identity Service]
     end
-    
-    subgraph "Cloud Provider C (e.g., GCP)"
+
+subgraph "Cloud Provider C (e.g., GCP)"
         Analytics_C[Big Data / AI]
     end
 
-    Internet --> LB_A
+Internet --> LB_A
     Internet --> LB_B
-    
-    LB_A --> App_A
+
+LB_A --> App_A
     LB_B --> App_B
-    
-    App_A --> Store_A
+
+App_A --> Store_A
     App_A --> Auth_B
     App_A --> Analytics_C
-    
-    App_B --> Auth_B
+
+App_B --> Auth_B
     App_B --> Analytics_C
 
-    style LB_A fill:#ffecb3,stroke:#ff6f00,color:#000000
+style LB_A fill:#ffecb3,stroke:#ff6f00,color:#000000
     style App_A fill:#ffecb3,stroke:#ff6f00,color:#000000
     style Store_A fill:#ffecb3,stroke:#ff6f00,color:#000000
-    
-    style LB_B fill:#e1f5fe,stroke:#01579b,color:#000000
+
+style LB_B fill:#e1f5fe,stroke:#01579b,color:#000000
     style App_B fill:#e1f5fe,stroke:#01579b,color:#000000
     style Auth_B fill:#e1f5fe,stroke:#01579b,color:#000000
-    
-    style Analytics_C fill:#fce4ec,stroke:#880e4f,color:#000000
+
+style Analytics_C fill:#fce4ec,stroke:#880e4f,color:#000000
 ```
 
 ### Advantages
@@ -626,40 +626,40 @@ graph TB
         Org3[Organization C<br/>(e.g., Research Lab)]
     end
 
-    subgraph "Community Cloud"
+subgraph "Community Cloud"
         IAM[Community Identity & Access]
-        
-        subgraph "Shared Resources"
+
+subgraph "Shared Resources"
             App[Shared Application]
             Data[Shared Data Lake]
         end
-        
-        subgraph "Governance"
+
+subgraph "Governance"
             Policy[Compliance Policy]
             Audit[Audit Logs]
         end
     end
 
-    Org1 --> IAM
+Org1 --> IAM
     Org2 --> IAM
     Org3 --> IAM
-    
-    IAM --> App
+
+IAM --> App
     IAM --> Data
-    
-    App -.-> Policy
+
+App -.-> Policy
     Data -.-> Audit
 
-    style Org1 fill:#e1f5fe,stroke:#0277bd,color:#000000
+style Org1 fill:#e1f5fe,stroke:#0277bd,color:#000000
     style Org2 fill:#e1f5fe,stroke:#0277bd,color:#000000
     style Org3 fill:#e1f5fe,stroke:#0277bd,color:#000000
-    
-    style IAM fill:#fff9c4,stroke:#fbc02d,color:#000000
-    
-    style App fill:#e8f5e9,stroke:#2e7d32,color:#000000
+
+style IAM fill:#fff9c4,stroke:#fbc02d,color:#000000
+
+style App fill:#e8f5e9,stroke:#2e7d32,color:#000000
     style Data fill:#e8f5e9,stroke:#2e7d32,color:#000000
-    
-    style Policy fill:#f3e5f5,stroke:#7b1fa2,color:#000000
+
+style Policy fill:#f3e5f5,stroke:#7b1fa2,color:#000000
     style Audit fill:#f3e5f5,stroke:#7b1fa2,color:#000000
 ```
 
@@ -772,23 +772,23 @@ graph TB
 ```mermaid
 flowchart TD
     Start[Start Selection] --> Security{Strict Security / Compliance?}
-    
-    Security -- Yes --> Private[Private Cloud]
+
+Security -- Yes --> Private[Private Cloud]
     Security -- No --> Cost{Budget Constraint?}
-    
-    Cost -- Limited --> Public[Public Cloud]
+
+Cost -- Limited --> Public[Public Cloud]
     Cost -- Flexible --> Integration{Legacy Integration?}
-    
-    Integration -- Yes --> Hybrid[Hybrid Cloud]
+
+Integration -- Yes --> Hybrid[Hybrid Cloud]
     Integration -- No --> Scale{Global Scale Needed?}
-    
-    Scale -- Yes --> Multi[Multi-Cloud / Public]
+
+Scale -- Yes --> Multi[Multi-Cloud / Public]
     Scale -- No --> Comm{Specific Industry Group?}
-    
-    Comm -- Yes --> Community[Community Cloud]
+
+Comm -- Yes --> Community[Community Cloud]
     Comm -- No --> Public
 
-    style Private fill:#ffecb3
+style Private fill:#ffecb3
     style Public fill:#e1f5fe
     style Hybrid fill:#f8bbd0
     style Community fill:#dcedc8
@@ -962,276 +962,176 @@ This comprehensive guide covers all major cloud deployment models, helping organ
 6. **What is Vendor Lock-in?**
    - Difficulty in moving from one cloud provider to another due to dependency on proprietary tools/APIs.
 
-### Advanced Level
-7. **Explain the "Multi-Cloud" strategy.**
-   - Using services from two or more public cloud providers (e.g., AWS + Azure) to avoid lock-in or leverage best-of-breed features (e.g., Google for AI, AWS for compute).
-8. **What are the challenges of a Multi-Cloud environment?**
-   - Complexity in management, security consistency, data transfer costs, and need for diverse skill sets.
-9. **How does a Virtual Private Cloud (VPC) differ from a Private Cloud?**
-   - VPC is a logically isolated section *within* a public cloud. A Private Cloud is dedicated infrastructure (physical isolation or dedicated hardware).
-10. **What is "Data Sovereignty"?**
-    - The concept that data is subject to the laws of the country in which it is physically located. Important for deployment model selection.
-11. **Why is a "Community Cloud" more cost-effective than a Private Cloud?**
-    - Costs are shared among several organizations with similar requirements, rather than one organization bearing the entire capital expenditure.
-12. **In a Hybrid Cloud, what is "Cloud Bursting" and what triggers it?**
-    - It's an automated configuration where an application runs on a private cloud until it reaches 100% capacity (limit threshold), then "bursts" or scales out to a public cloud to handle the excess traffic.
-13. **What is the main security risk of Multi-Tenant Public Clouds?**
-    - Data leakage or side-channel attacks where a malicious tenant on the same physical server might attempt to access data from another tenant (though hypervisors are very secure today).
-14. **Describe a situation where "Data Sovereignty" forces a company to use a Private Cloud.**
-    - If a country's law states that citizens' tax records cannot leave the country, and no major Public Cloud provider has a data center within that country's borders.
-15. **What is the role of a "Direct Connect" or "ExpressRoute" in Hybrid Cloud?**
-    - It provides a dedicated, private network connection between an on-premises data center and the cloud provider, bypassing the public internet for better security and consistent performance.
-
----
-
-## Quiz: Deployment Models
-
+<b>7. </b>
 <details>
-<summary><b>1. Which deployment model offers the highest level of control and security?</b></summary>
-A) Public Cloud<br>
-B) Private Cloud<br>
-C) Hybrid Cloud<br>
-D) Community Cloud<br>
-<br>
-<b>Answer: B) Private Cloud</b>
+<summary>Show Answer</summary>
+Answer: B) Private Cloud</b>
 </details>
 
+
+<b>2. AWS, Azure, and Google Cloud are examples of:</b>
 <details>
-<summary><b>2. AWS, Azure, and Google Cloud are examples of:</b></summary>
-A) Private Cloud<br>
-B) Public Cloud<br>
-C) Community Cloud<br>
-D) Personal Cloud<br>
-<br>
-<b>Answer: B) Public Cloud</b>
+<summary>Show Answer</summary>
+Answer: B) Public Cloud</b>
 </details>
 
+
+<b>3. A startup wants to launch an app with zero upfront infrastructure cost. Which model is best?</b>
 <details>
-<summary><b>3. A startup wants to launch an app with zero upfront infrastructure cost. Which model is best?</b></summary>
-A) Private Cloud<br>
-B) Hybrid Cloud<br>
-C) Public Cloud<br>
-D) Bare Metal<br>
-<br>
-<b>Answer: C) Public Cloud</b>
+<summary>Show Answer</summary>
+Answer: C) Public Cloud</b>
 </details>
 
+
+<b>4. Providing cloud services to a specific group of organizations with shared concerns (e.g., banks) is:</b>
 <details>
-<summary><b>4. Providing cloud services to a specific group of organizations with shared concerns (e.g., banks) is:</b></summary>
-A) Public Cloud<br>
-B) Private Cloud<br>
-C) Community Cloud<br>
-D) Hybrid Cloud<br>
-<br>
-<b>Answer: C) Community Cloud</b>
+<summary>Show Answer</summary>
+Answer: C) Community Cloud</b>
 </details>
 
+
+<b>5. Which model involves connecting on-premises infrastructure with a public cloud?</b>
 <details>
-<summary><b>5. Which model involves connecting on-premises infrastructure with a public cloud?</b></summary>
-A) Multi-Cloud<br>
-B) Hybrid Cloud<br>
-C) Community Cloud<br>
-D) Private Cloud<br>
-<br>
-<b>Answer: B) Hybrid Cloud</b>
+<summary>Show Answer</summary>
+Answer: B) Hybrid Cloud</b>
 </details>
 
+
+<b>6. What is a primary disadvantage of Private Cloud?</b>
 <details>
-<summary><b>6. What is a primary disadvantage of Private Cloud?</b></summary>
-A) Low Security<br>
-B) High Upfront Cost (CapEx)<br>
-C) No Control<br>
-D) Slow Performance<br>
-<br>
-<b>Answer: B) High Upfront Cost (CapEx)</b>
+<summary>Show Answer</summary>
+Answer: B) High Upfront Cost (CapEx)</b>
 </details>
 
+
+<b>7. Using AWS for storage and Azure for AI services simultaneously is an example of:</b>
 <details>
-<summary><b>7. Using AWS for storage and Azure for AI services simultaneously is an example of:</b></summary>
-A) Hybrid Cloud<br>
-B) Multi-Cloud<br>
-C) Community Cloud<br>
-D) Private Cloud<br>
-<br>
-<b>Answer: B) Multi-Cloud</b>
+<summary>Show Answer</summary>
+Answer: B) Multi-Cloud</b>
 </details>
 
+
+<b>8. In a Public Cloud, hardware maintenance is the responsibility of:</b>
 <details>
-<summary><b>8. In a Public Cloud, hardware maintenance is the responsibility of:</b></summary>
-A) The Customer<br>
-B) The Cloud Provider<br>
-C) The ISP<br>
-D) No one<br>
-<br>
-<b>Answer: B) The Cloud Provider</b>
+<summary>Show Answer</summary>
+Answer: B) The Cloud Provider</b>
 </details>
 
+
+<b>9. Creating an isolated network within AWS (VPC) is considered:</b>
 <details>
-<summary><b>9. Creating an isolated network within AWS (VPC) is considered:</b></summary>
-A) Private Cloud<br>
-B) Public Cloud resource with private isolation<br>
-C) Community Cloud<br>
-D) Hybrid Cloud<br>
-<br>
-<b>Answer: B) Public Cloud resource with private isolation</b>
+<summary>Show Answer</summary>
+Answer: B) Public Cloud resource with private isolation</b>
 </details>
 
+
+<b>10. Which is a key benefit of Hybrid Cloud?</b>
 <details>
-<summary><b>10. Which is a key benefit of Hybrid Cloud?</b></summary>
-A) Simplicity<br>
-B) Flexibility to move workloads<br>
-C) Zero Cost<br>
-D) No Internet required<br>
-<br>
-<b>Answer: B) Flexibility to move workloads</b>
+<summary>Show Answer</summary>
+Answer: B) Flexibility to move workloads</b>
 </details>
 
+
+<b>11. "Cloud Bursting" allows you to:</b>
 <details>
-<summary><b>11. "Cloud Bursting" allows you to:</b></summary>
-A) Destroy the cloud<br>
-B) Scale from private to public cloud during peak demand<br>
-C) Switch providers daily<br>
-D) Run offline<br>
-<br>
-<b>Answer: B) Scale from private to public cloud during peak demand</b>
+<summary>Show Answer</summary>
+Answer: B) Scale from private to public cloud during peak demand</b>
 </details>
 
+
+<b>12. Which model typically has the "Pay-as-you-go" pricing structure?</b>
 <details>
-<summary><b>12. Which model typically has the "Pay-as-you-go" pricing structure?</b></summary>
-A) On-Premises<br>
-B) Public Cloud<br>
-C) Hosted Private Cloud (usually fixed)<br>
-D) Managed Private Cloud<br>
-<br>
-<b>Answer: B) Public Cloud</b>
+<summary>Show Answer</summary>
+Answer: B) Public Cloud</b>
 </details>
 
+
+<b>13. Who manages the security OF the cloud in a Public Cloud model?</b>
 <details>
-<summary><b>13. Who manages the security OF the cloud in a Public Cloud model?</b></summary>
-A) Customer<br>
-B) Provider<br>
-C) Government<br>
-D) Hacker<br>
-<br>
-<b>Answer: B) Provider</b>
+<summary>Show Answer</summary>
+Answer: B) Provider</b>
 </details>
 
+
+<b>14. Which factor often drives the decision to use Multi-Cloud?</b>
 <details>
-<summary><b>14. Which factor often drives the decision to use Multi-Cloud?</b></summary>
-A) Avoiding Vendor Lock-in<br>
-B) It's cheaper<br>
-C) It's simpler<br>
-D) Less security needed<br>
-<br>
-<b>Answer: A) Avoiding Vendor Lock-in</b>
+<summary>Show Answer</summary>
+Answer: A) Avoiding Vendor Lock-in</b>
 </details>
 
+
+<b>15. Compliance with strict data residency laws often favors which model?</b>
 <details>
-<summary><b>15. Compliance with strict data residency laws often favors which model?</b></summary>
-A) Public Cloud (Global)<br>
-B) Private Cloud / Local Data Centers<br>
-C) Internet<br>
-D) CDN<br>
-<br>
-<b>Answer: B) Private Cloud / Local Data Centers</b>
+<summary>Show Answer</summary>
+Answer: B) Private Cloud / Local Data Centers</b>
 </details>
 
+
+<b>16. What is the biggest challenge of Hybrid Cloud?</b>
 <details>
-<summary><b>16. What is the biggest challenge of Hybrid Cloud?</b></summary>
-A) Lack of features<br>
-B) Complexity of management and connectivity<br>
-C) Too cheap<br>
-D) Too fast<br>
-<br>
-<b>Answer: B) Complexity of management and connectivity</b>
+<summary>Show Answer</summary>
+Answer: B) Complexity of management and connectivity</b>
 </details>
 
+
+<b>17. Which organization type typically uses Community Cloud?</b>
 <details>
-<summary><b>17. Which organization type typically uses Community Cloud?</b></summary>
-A) Solo developer<br>
-B) Retail competitor<br>
-C) Government agencies or Healthcare consortiums<br>
-D) Gaming company<br>
-<br>
-<b>Answer: C) Government agencies or Healthcare consortiums</b>
+<summary>Show Answer</summary>
+Answer: C) Government agencies or Healthcare consortiums</b>
 </details>
 
+
+<b>18. Can you run a Private Cloud on Public Cloud infrastructure?</b>
 <details>
-<summary><b>18. Can you run a Private Cloud on Public Cloud infrastructure?</b></summary>
-A) No, never<br>
-B) Yes, using Virtual Private Cloud (VPC) or Dedicated Hosts<br>
-C) Only in Antarctica<br>
-D) Yes, but it becomes Public<br>
-<br>
-<b>Answer: B) Yes, using Virtual Private Cloud (VPC) or Dedicated Hosts</b>
+<summary>Show Answer</summary>
+Answer: B) Yes, using Virtual Private Cloud (VPC) or Dedicated Hosts</b>
 </details>
 
+
+<b>19. Which cloud model requires the most customer involvement in maintenance?</b>
 <details>
-<summary><b>19. Which cloud model requires the most customer involvement in maintenance?</b></summary>
-A) SaaS<br>
-B) PaaS<br>
-C) Public IaaS<br>
-D) On-Premises / Private Cloud<br>
-<br>
-<b>Answer: D) On-Premises / Private Cloud</b>
+<summary>Show Answer</summary>
+Answer: D) On-Premises / Private Cloud</b>
 </details>
 
+
+<b>20. "Economies of scale" is a primary advantage of:</b>
 <details>
-<summary><b>20. "Economies of scale" is a primary advantage of:</b></summary>
-A) Private Cloud<br>
-B) Public Cloud<br>
-C) Community Cloud<br>
-D) Personal Cloud<br>
-<br>
-<b>Answer: B) Public Cloud</b>
+<summary>Show Answer</summary>
+Answer: B) Public Cloud</b>
 </details>
 
+
+<b>21. Which model supports "Data Sovereignty" most effectively when no public region exists locally?</b>
 <details>
-<summary><b>21. Which model supports "Data Sovereignty" most effectively when no public region exists locally?</b></summary>
-A) Public Cloud<br>
-B) Private Cloud (On-Premises)<br>
-C) Internet<br>
-D) SaaS<br>
-<br>
-<b>Answer: B) Private Cloud (On-Premises)</b>
+<summary>Show Answer</summary>
+Answer: B) Private Cloud (On-Premises)</b>
 </details>
 
+
+<b>22. What is the main complexity introduced by Multi-Cloud?</b>
 <details>
-<summary><b>22. What is the main complexity introduced by Multi-Cloud?</b></summary>
-A) It's too fast<br>
-B) Management overhead and interconnectivity skills<br>
-C) Limited storage<br>
-D) Only supports Linux<br>
-<br>
-<b>Answer: B) Management overhead and interconnectivity skills</b>
+<summary>Show Answer</summary>
+Answer: B) Management overhead and interconnectivity skills</b>
 </details>
 
+
+<b>23. "Cloud Bursting" is a feature primarily associated with:</b>
 <details>
-<summary><b>23. "Cloud Bursting" is a feature primarily associated with:</b></summary>
-A) Private Cloud<br>
-B) Community Cloud<br>
-C) Hybrid Cloud<br>
-D) Bare Metal<br>
-<br>
-<b>Answer: C) Hybrid Cloud</b>
+<summary>Show Answer</summary>
+Answer: C) Hybrid Cloud</b>
 </details>
 
+
+<b>24. A group of hospitals sharing a cloud for medical research is an example of:</b>
 <details>
-<summary><b>24. A group of hospitals sharing a cloud for medical research is an example of:</b></summary>
-A) Public Cloud<br>
-B) Private Cloud<br>
-C) Community Cloud<br>
-D) Personal Cloud<br>
-<br>
-<b>Answer: C) Community Cloud</b>
+<summary>Show Answer</summary>
+Answer: C) Community Cloud</b>
 </details>
 
+
+<b>25. Which deployment model has the highest risk of "Vendor Lock-in"?</b>
 <details>
-<summary><b>25. Which deployment model has the highest risk of "Vendor Lock-in"?</b></summary>
-A) Multi-Cloud<br>
-B) Public Cloud (Single Provider with proprietary services)<br>
-C) OpenStack Private Cloud<br>
-D) Hybrid Cloud<br>
-<br>
-<b>Answer: B) Public Cloud (Single Provider with proprietary services)</b>
+<summary>Show Answer</summary>
+Answer: B) Public Cloud (Single Provider with proprietary services)</b>
 </details>

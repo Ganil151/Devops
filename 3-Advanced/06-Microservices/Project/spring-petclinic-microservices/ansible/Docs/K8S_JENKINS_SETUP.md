@@ -84,9 +84,24 @@ The updated Jenkins pipeline now supports:
 5. Docker Build & Push
 6. Provision or Reuse Docker-Server
 7. Bootstrap Docker-Server
-8. Deploy to Docker-Server (when DEPLOYMENT_TARGET = 'docker' or 'both')
-9. Verify Docker Deployment (when DEPLOYMENT_TARGET = 'docker' or 'both')
-10. Configure MySQL Database (when CONFIGURE_MYSQL = true)
+<b>8. Deploy to Docker-Server</b>
+<details>
+<summary>Show Answer</summary>
+Answer: when DEPLOYMENT_TARGET = 'docker' or 'both'
+</details>
+
+<b>9. Verify Docker Deployment</b>
+<details>
+<summary>Show Answer</summary>
+Answer: when DEPLOYMENT_TARGET = 'docker' or 'both'
+</details>
+
+<b>10. Configure MySQL Database</b>
+<details>
+<summary>Show Answer</summary>
+Answer: when CONFIGURE_MYSQL = true
+</details>
+
 11. Setup Kubernetes Master (when DEPLOYMENT_TARGET = 'kubernetes' or 'both')  ✨ NEW
 12. Setup Kubernetes Workers (when DEPLOYMENT_TARGET = 'kubernetes' or 'both') ✨ NEW
 13. Deploy to Kubernetes (when DEPLOYMENT_TARGET = 'kubernetes' or 'both')    ✨ NEW
@@ -155,10 +170,20 @@ The playbooks use variables from `ansible/group_vars/k8s_master.yml`:
 
 **This is normal!** The `petclinic_vets` database exists but has no tables because:
 
-1. **Ansible creates the databases** (✅ Done)
+<b>1. Ansible creates the databases</b>
+<details>
+<summary>Show Answer</summary>
+Answer: ✅ Done
+</details>
+
    - `petclinic_customers`, `petclinic_vets`, `petclinic_visits`
 
-2. **Spring Boot creates the tables** (Happens when apps start)
+<b>2. Spring Boot creates the tables</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Happens when apps start
+</details>
+
    - Each microservice uses JPA/Hibernate to automatically create its schema
    - Tables are created when the Spring app first connects to MySQL
 

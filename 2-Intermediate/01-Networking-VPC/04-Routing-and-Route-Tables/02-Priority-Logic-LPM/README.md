@@ -13,8 +13,8 @@ graph TD
     Packet[Packet Destination: 10.0.1.50] --> R1{Match 10.0.0.0/16?}
     R1 -->|Yes| R2{Match 10.0.1.0/24?}
     R2 -->|Yes| R3{Match 10.0.1.50/32?}
-    
-    R3 -->|No| Winner2[Winner: 10.0.1.0/24]
+
+R3 -->|No| Winner2[Winner: 10.0.1.0/24]
     R3 -->|Yes| Winner3[Winner: 10.0.1.50/32]
 ```
 

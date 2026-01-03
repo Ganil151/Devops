@@ -777,7 +777,6 @@ Get-AzVM -ResourceGroupName "DevOpsRG" -Name "DevOpsVM" -Status
 
 ### Azure REST API
 
-
 ## Real World Scenarios
 
 ### Scenario 1: Multi-Region Compliance
@@ -815,226 +814,152 @@ Get-AzVM -ResourceGroupName "DevOpsRG" -Name "DevOpsVM" -Status
 6. **How do you move resources between Resource Groups?**
    - Using the `az resource move` command or the Portal. Both source and destination RGs must be in the same tenant.
 
-### Advanced Level
-7. **What is Azure Arc?**
-   - A bridge that extends the Azure platform to help you build applications and services with the flexibility to run across datacenters, edge, and multi-cloud environments.
-8. **Explain the difference between Azure Policy and RBAC.**
-   - **RBAC:** Focuses on *user actions* (Who can do what?).
-   - **Policy:** Focuses on *resource properties* (What can be created/modified? e.g., enforce tagging, restrict regions).
-9. **What are "Management Groups"?**
-   - Containers for managing access, policy, and compliance for multiple subscriptions. They sit above subscriptions in the hierarchy.
-10. **How does Azure Cost Management differ from Billing?**
-    - Billing is about invoicing and payment. Cost Management is about analyzing spend, setting budgets, and optimizing costs.
-
----
-
-## Quiz: Azure Fundamentals
-
+<b>7. </b>
 <details>
-<summary><b>1. Which command group manages Azure Resources?</b></summary>
-A) az vm<br>
-B) az resource<br>
-C) az group<br>
-D) az storage<br>
-<br>
-<b>Answer: B) az resource (or az group for the container)</b>
+<summary>Show Answer</summary>
+Answer: B) az resource (or az group for the container)</b>
 </details>
 
+
+<b>2. What is the scope of a Resource Group?</b>
 <details>
-<summary><b>2. What is the scope of a Resource Group?</b></summary>
-A) Global<br>
-B) Region<br>
-C) Subscription<br>
-D) Tenant<br>
-<br>
-<b>Answer: C) Subscription (It lives within a subscription, though resources inside can be in different regions)</b>
+<summary>Show Answer</summary>
+Answer: C) Subscription (It lives within a subscription, though resources inside can be in different regions)</b>
 </details>
 
+
+<b>3. Which service provides a browser-based shell?</b>
 <details>
-<summary><b>3. Which service provides a browser-based shell?</b></summary>
-A) Azure Cloud Shell<br>
-B) PowerShell<br>
-C) Bash<br>
-D) CMD<br>
-<br>
-<b>Answer: A) Azure Cloud Shell</b>
+<summary>Show Answer</summary>
+Answer: A) Azure Cloud Shell</b>
 </details>
 
+
+<b>4. Availability Zones protect against:</b>
 <details>
-<summary><b>4. Availability Zones protect against:</b></summary>
-A) Region failure<br>
-B) Datacenter failure<br>
-C) Human error<br>
-D) Billing issues<br>
-<br>
-<b>Answer: B) Datacenter failure</b>
+<summary>Show Answer</summary>
+Answer: B) Datacenter failure</b>
 </details>
 
+
+<b>5. Which is NOT a valid Azure subscription support plan?</b>
 <details>
-<summary><b>5. Which is NOT a valid Azure subscription support plan?</b></summary>
-A) Developer<br>
-B) Standard<br>
-C) Professional Direct<br>
-D) Enterprise Premium Plus<br>
-<br>
-<b>Answer: D) Enterprise Premium Plus</b>
+<summary>Show Answer</summary>
+Answer: D) Enterprise Premium Plus</b>
 </details>
 
+
+<b>6. "Tags" in Azure are:</b>
 <details>
-<summary><b>6. "Tags" in Azure are:</b></summary>
-A) Name/Value pairs for organizing resources<br>
-B) Price stickers<br>
-C) Security rules<br>
-D) DNS records<br>
-<br>
-<b>Answer: A) Name/Value pairs for organizing resources</b>
+<summary>Show Answer</summary>
+Answer: A) Name/Value pairs for organizing resources</b>
 </details>
 
+
+<b>7. Azure Marketplace is:</b>
 <details>
-<summary><b>7. Azure Marketplace is:</b></summary>
-A) A shop for buying hardware<br>
-B) An online store for certified cloud applications and services<br>
-C) A job board<br>
-D) A forum<br>
-<br>
-<b>Answer: B) An online store for certified cloud applications and services</b>
+<summary>Show Answer</summary>
+Answer: B) An online store for certified cloud applications and services</b>
 </details>
 
+
+<b>8. Which file format is used for ARM templates?</b>
 <details>
-<summary><b>8. Which file format is used for ARM templates?</b></summary>
-A) XML<br>
-B) JSON<br>
-C) YAML<br>
-D) CSV<br>
-<br>
-<b>Answer: B) JSON</b>
+<summary>Show Answer</summary>
+Answer: B) JSON</b>
 </details>
 
+
+<b>9. To delete a Resource Group and all resources inside it:</b>
 <details>
-<summary><b>9. To delete a Resource Group and all resources inside it:</b></summary>
-A) az group delete<br>
-B) az rm -rf<br>
-C) az delete<br>
-D) az destroy<br>
-<br>
-<b>Answer: A) az group delete</b>
+<summary>Show Answer</summary>
+Answer: A) az group delete</b>
 </details>
 
+
+<b>10. Can a resource exist in multiple Resource Groups?</b>
 <details>
-<summary><b>10. Can a resource exist in multiple Resource Groups?</b></summary>
-A) Yes<br>
-B) No<br>
-<br>
-<b>Answer: B) No</b>
+<summary>Show Answer</summary>
+Answer: B) No</b>
 </details>
 
+
+<b>11. Azure Service Health provides:</b>
 <details>
-<summary><b>11. Azure Service Health provides:</b></summary>
-A) Personalized guidance and support when Azure service issues affect you<br>
-B) Doctor appointments<br>
-C) Server CPU usage<br>
-D) Billing info<br>
-<br>
-<b>Answer: A) Personalized guidance and support when Azure service issues affect you</b>
+<summary>Show Answer</summary>
+Answer: A) Personalized guidance and support when Azure service issues affect you</b>
 </details>
 
+
+<b>12. Which tool analyzes your Azure usage and provides recommendations?</b>
 <details>
-<summary><b>12. Which tool analyzes your Azure usage and provides recommendations?</b></summary>
-A) Azure Advisor<br>
-B) Azure Manager<br>
-C) Azure Helper<br>
-D) Clippy<br>
-<br>
-<b>Answer: A) Azure Advisor</b>
+<summary>Show Answer</summary>
+Answer: A) Azure Advisor</b>
 </details>
 
+
+<b>13. Azure Sovereign Clouds include:</b>
 <details>
-<summary><b>13. Azure Sovereign Clouds include:</b></summary>
-A) Azure Government & Azure China<br>
-B) Azure Space<br>
-C) Azure Mars<br>
-D) Azure Home<br>
-<br>
-<b>Answer: A) Azure Government & Azure China</b>
+<summary>Show Answer</summary>
+Answer: A) Azure Government & Azure China</b>
 </details>
 
+
+<b>14. What is the SLA for a single VM with Premium SSD?</b>
 <details>
-<summary><b>14. What is the SLA for a single VM with Premium SSD?</b></summary>
-A) 99.9%<br>
-B) 100%<br>
-C) 95%<br>
-D) 99%<br>
-<br>
-<b>Answer: A) 99.9%</b>
+<summary>Show Answer</summary>
+Answer: A) 99.9%</b>
 </details>
 
+
+<b>15. Azure "Spot" VMs offer discounts up to:</b>
 <details>
-<summary><b>15. Azure "Spot" VMs offer discounts up to:</b></summary>
-A) 90%<br>
-B) 50%<br>
-C) 10%<br>
-D) 30%<br>
-<br>
-<b>Answer: A) 90%</b>
+<summary>Show Answer</summary>
+Answer: A) 90%</b>
 </details>
 
+
+<b>16. CapEx vs OpEx: Azure is primarily:</b>
 <details>
-<summary><b>16. CapEx vs OpEx: Azure is primarily:</b></summary>
-A) OpEx (Operational Expenditure)<br>
-B) CapEx (Capital Expenditure)<br>
-<br>
-<b>Answer: A) OpEx (Operational Expenditure)</b>
+<summary>Show Answer</summary>
+Answer: A) OpEx (Operational Expenditure)</b>
 </details>
 
+
+<b>17. Which resource type is Global?</b>
 <details>
-<summary><b>17. Which resource type is Global?</b></summary>
-A) Traffic Manager Profile<br>
-B) Virtual Machine<br>
-C) Storage Account<br>
-D) VNet<br>
-<br>
-<b>Answer: A) Traffic Manager Profile (and Azure AD, DNS)</b>
+<summary>Show Answer</summary>
+Answer: A) Traffic Manager Profile (and Azure AD, DNS)</b>
 </details>
 
+
+<b>18. IoT Hub is used for:</b>
 <details>
-<summary><b>18. IoT Hub is used for:</b></summary>
-A) Managing IoT devices and bidirectional communication<br>
-B) Internet browsing<br>
-C) Networking<br>
-D) Storage<br>
-<br>
-<b>Answer: A) Managing IoT devices and bidirectional communication</b>
+<summary>Show Answer</summary>
+Answer: A) Managing IoT devices and bidirectional communication</b>
 </details>
 
+
+<b>19. Azure DevOps includes:</b>
 <details>
-<summary><b>19. Azure DevOps includes:</b></summary>
-A) Boards, Repos, Pipelines, Test Plans, Artifacts<br>
-B) Just Git<br>
-C) Just CI/CD<br>
-D) Just Jira<br>
-<br>
-<b>Answer: A) Boards, Repos, Pipelines, Test Plans, Artifacts</b>
+<summary>Show Answer</summary>
+Answer: A) Boards, Repos, Pipelines, Test Plans, Artifacts</b>
 </details>
 
+
+<b>20. Access to Azure Preview features is:</b>
 <details>
-<summary><b>20. Access to Azure Preview features is:</b></summary>
-A) Controlled via "Preview Features" blade<br>
-B) Impossible<br>
-C) Automatic<br>
-D) Costly<br>
-<br>
-<b>Answer: A) Controlled via "Preview Features" blade</b>
+<summary>Show Answer</summary>
+Answer: A) Controlled via "Preview Features" blade</b>
 </details>
 
+
+<b>21. Azure "Cloud Shell" persists files in:</b>
 <details>
-<summary><b>21. Azure "Cloud Shell" persists files in:</b></summary>
-A) An Azure File Share<br>
-B) Local RAM<br>
-C) S3<br>
-D) Nowhere<br>
-<br>
-<b>Answer: A) An Azure File Share</b>
+<summary>Show Answer</summary>
+Answer: A) An Azure File Share</b>
 </details>
+
 
 This comprehensive Azure fundamentals guide provides DevOps engineers with essential knowledge for effectively using Microsoft Azure services in cloud infrastructure and application deployment workflows.
 
@@ -1075,223 +1000,148 @@ This comprehensive Azure fundamentals guide provides DevOps engineers with essen
 6. **How do you move resources between Resource Groups?**
    - Using the `az resource move` command or the Portal. Both source and destination RGs must be in the same tenant.
 
-### Advanced Level
-7. **What is Azure Arc?**
-   - A bridge that extends the Azure platform to help you build applications and services with the flexibility to run across datacenters, edge, and multi-cloud environments.
-8. **Explain the difference between Azure Policy and RBAC.**
-   - **RBAC:** Focuses on *user actions* (Who can do what?).
-   - **Policy:** Focuses on *resource properties* (What can be created/modified? e.g., enforce tagging, restrict regions).
-9. **What are "Management Groups"?**
-   - Containers for managing access, policy, and compliance for multiple subscriptions. They sit above subscriptions in the hierarchy.
-10. **How does Azure Cost Management differ from Billing?**
-    - Billing is about invoicing and payment. Cost Management is about analyzing spend, setting budgets, and optimizing costs.
-
----
-
-## Quiz: Azure Fundamentals
-
+<b>7. </b>
 <details>
-<summary><b>1. Which command group manages Azure Resources?</b></summary>
-A) az vm<br>
-B) az resource<br>
-C) az group<br>
-D) az storage<br>
-<br>
-<b>Answer: B) az resource (or az group for the container)</b>
+<summary>Show Answer</summary>
+Answer: B) az resource (or az group for the container)</b>
 </details>
 
+
+<b>2. What is the scope of a Resource Group?</b>
 <details>
-<summary><b>2. What is the scope of a Resource Group?</b></summary>
-A) Global<br>
-B) Region<br>
-C) Subscription<br>
-D) Tenant<br>
-<br>
-<b>Answer: C) Subscription (It lives within a subscription, though resources inside can be in different regions)</b>
+<summary>Show Answer</summary>
+Answer: C) Subscription (It lives within a subscription, though resources inside can be in different regions)</b>
 </details>
 
+
+<b>3. Which service provides a browser-based shell?</b>
 <details>
-<summary><b>3. Which service provides a browser-based shell?</b></summary>
-A) Azure Cloud Shell<br>
-B) PowerShell<br>
-C) Bash<br>
-D) CMD<br>
-<br>
-<b>Answer: A) Azure Cloud Shell</b>
+<summary>Show Answer</summary>
+Answer: A) Azure Cloud Shell</b>
 </details>
 
+
+<b>4. Availability Zones protect against:</b>
 <details>
-<summary><b>4. Availability Zones protect against:</b></summary>
-A) Region failure<br>
-B) Datacenter failure<br>
-C) Human error<br>
-D) Billing issues<br>
-<br>
-<b>Answer: B) Datacenter failure</b>
+<summary>Show Answer</summary>
+Answer: B) Datacenter failure</b>
 </details>
 
+
+<b>5. Which is NOT a valid Azure subscription support plan?</b>
 <details>
-<summary><b>5. Which is NOT a valid Azure subscription support plan?</b></summary>
-A) Developer<br>
-B) Standard<br>
-C) Professional Direct<br>
-D) Enterprise Premium Plus<br>
-<br>
-<b>Answer: D) Enterprise Premium Plus</b>
+<summary>Show Answer</summary>
+Answer: D) Enterprise Premium Plus</b>
 </details>
 
+
+<b>6. "Tags" in Azure are:</b>
 <details>
-<summary><b>6. "Tags" in Azure are:</b></summary>
-A) Name/Value pairs for organizing resources<br>
-B) Price stickers<br>
-C) Security rules<br>
-D) DNS records<br>
-<br>
-<b>Answer: A) Name/Value pairs for organizing resources</b>
+<summary>Show Answer</summary>
+Answer: A) Name/Value pairs for organizing resources</b>
 </details>
 
+
+<b>7. Azure Marketplace is:</b>
 <details>
-<summary><b>7. Azure Marketplace is:</b></summary>
-A) A shop for buying hardware<br>
-B) An online store for certified cloud applications and services<br>
-C) A job board<br>
-D) A forum<br>
-<br>
-<b>Answer: B) An online store for certified cloud applications and services</b>
+<summary>Show Answer</summary>
+Answer: B) An online store for certified cloud applications and services</b>
 </details>
 
+
+<b>8. Which file format is used for ARM templates?</b>
 <details>
-<summary><b>8. Which file format is used for ARM templates?</b></summary>
-A) XML<br>
-B) JSON<br>
-C) YAML<br>
-D) CSV<br>
-<br>
-<b>Answer: B) JSON</b>
+<summary>Show Answer</summary>
+Answer: B) JSON</b>
 </details>
 
+
+<b>9. To delete a Resource Group and all resources inside it:</b>
 <details>
-<summary><b>9. To delete a Resource Group and all resources inside it:</b></summary>
-A) az group delete<br>
-B) az rm -rf<br>
-C) az delete<br>
-D) az destroy<br>
-<br>
-<b>Answer: A) az group delete</b>
+<summary>Show Answer</summary>
+Answer: A) az group delete</b>
 </details>
 
+
+<b>10. Can a resource exist in multiple Resource Groups?</b>
 <details>
-<summary><b>10. Can a resource exist in multiple Resource Groups?</b></summary>
-A) Yes<br>
-B) No<br>
-<br>
-<b>Answer: B) No</b>
+<summary>Show Answer</summary>
+Answer: B) No</b>
 </details>
 
+
+<b>11. Azure Service Health provides:</b>
 <details>
-<summary><b>11. Azure Service Health provides:</b></summary>
-A) Personalized guidance and support when Azure service issues affect you<br>
-B) Doctor appointments<br>
-C) Server CPU usage<br>
-D) Billing info<br>
-<br>
-<b>Answer: A) Personalized guidance and support when Azure service issues affect you</b>
+<summary>Show Answer</summary>
+Answer: A) Personalized guidance and support when Azure service issues affect you</b>
 </details>
 
+
+<b>12. Which tool analyzes your Azure usage and provides recommendations?</b>
 <details>
-<summary><b>12. Which tool analyzes your Azure usage and provides recommendations?</b></summary>
-A) Azure Advisor<br>
-B) Azure Manager<br>
-C) Azure Helper<br>
-D) Clippy<br>
-<br>
-<b>Answer: A) Azure Advisor</b>
+<summary>Show Answer</summary>
+Answer: A) Azure Advisor</b>
 </details>
 
+
+<b>13. Azure Sovereign Clouds include:</b>
 <details>
-<summary><b>13. Azure Sovereign Clouds include:</b></summary>
-A) Azure Government & Azure China<br>
-B) Azure Space<br>
-C) Azure Mars<br>
-D) Azure Home<br>
-<br>
-<b>Answer: A) Azure Government & Azure China</b>
+<summary>Show Answer</summary>
+Answer: A) Azure Government & Azure China</b>
 </details>
 
+
+<b>14. What is the SLA for a single VM with Premium SSD?</b>
 <details>
-<summary><b>14. What is the SLA for a single VM with Premium SSD?</b></summary>
-A) 99.9%<br>
-B) 100%<br>
-C) 95%<br>
-D) 99%<br>
-<br>
-<b>Answer: A) 99.9%</b>
+<summary>Show Answer</summary>
+Answer: A) 99.9%</b>
 </details>
 
+
+<b>15. Azure "Spot" VMs offer discounts up to:</b>
 <details>
-<summary><b>15. Azure "Spot" VMs offer discounts up to:</b></summary>
-A) 90%<br>
-B) 50%<br>
-C) 10%<br>
-D) 30%<br>
-<br>
-<b>Answer: A) 90%</b>
+<summary>Show Answer</summary>
+Answer: A) 90%</b>
 </details>
 
+
+<b>16. CapEx vs OpEx: Azure is primarily:</b>
 <details>
-<summary><b>16. CapEx vs OpEx: Azure is primarily:</b></summary>
-A) OpEx (Operational Expenditure)<br>
-B) CapEx (Capital Expenditure)<br>
-<br>
-<b>Answer: A) OpEx (Operational Expenditure)</b>
+<summary>Show Answer</summary>
+Answer: A) OpEx (Operational Expenditure)</b>
 </details>
 
+
+<b>17. Which resource type is Global?</b>
 <details>
-<summary><b>17. Which resource type is Global?</b></summary>
-A) Traffic Manager Profile<br>
-B) Virtual Machine<br>
-C) Storage Account<br>
-D) VNet<br>
-<br>
-<b>Answer: A) Traffic Manager Profile (and Azure AD, DNS)</b>
+<summary>Show Answer</summary>
+Answer: A) Traffic Manager Profile (and Azure AD, DNS)</b>
 </details>
 
+
+<b>18. IoT Hub is used for:</b>
 <details>
-<summary><b>18. IoT Hub is used for:</b></summary>
-A) Managing IoT devices and bidirectional communication<br>
-B) Internet browsing<br>
-C) Networking<br>
-D) Storage<br>
-<br>
-<b>Answer: A) Managing IoT devices and bidirectional communication</b>
+<summary>Show Answer</summary>
+Answer: A) Managing IoT devices and bidirectional communication</b>
 </details>
 
+
+<b>19. Azure DevOps includes:</b>
 <details>
-<summary><b>19. Azure DevOps includes:</b></summary>
-A) Boards, Repos, Pipelines, Test Plans, Artifacts<br>
-B) Just Git<br>
-C) Just CI/CD<br>
-D) Just Jira<br>
-<br>
-<b>Answer: A) Boards, Repos, Pipelines, Test Plans, Artifacts</b>
+<summary>Show Answer</summary>
+Answer: A) Boards, Repos, Pipelines, Test Plans, Artifacts</b>
 </details>
 
+
+<b>20. Access to Azure Preview features is:</b>
 <details>
-<summary><b>20. Access to Azure Preview features is:</b></summary>
-A) Controlled via "Preview Features" blade<br>
-B) Impossible<br>
-C) Automatic<br>
-D) Costly<br>
-<br>
-<b>Answer: A) Controlled via "Preview Features" blade</b>
+<summary>Show Answer</summary>
+Answer: A) Controlled via "Preview Features" blade</b>
 </details>
 
+
+<b>21. Azure "Cloud Shell" persists files in:</b>
 <details>
-<summary><b>21. Azure "Cloud Shell" persists files in:</b></summary>
-A) An Azure File Share<br>
-B) Local RAM<br>
-C) S3<br>
-D) Nowhere<br>
-<br>
-<b>Answer: A) An Azure File Share</b>
+<summary>Show Answer</summary>
+Answer: A) An Azure File Share</b>
 </details>

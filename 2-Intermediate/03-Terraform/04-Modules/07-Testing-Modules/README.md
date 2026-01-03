@@ -42,11 +42,11 @@ provider "aws" {
 run "verify_bucket_name" {
   command = plan  # Unit Test (no cost)
 
-  variables {
+variables {
     bucket_name = "my-test-bucket-123"
   }
 
-  assert {
+assert {
     condition     = aws_s3_bucket.this.bucket == "my-test-bucket-123"
     error_message = "Bucket name did not match input"
   }
@@ -55,7 +55,7 @@ run "verify_bucket_name" {
 run "verify_status_code" {
   command = apply # Integration Test (creates resources)
 
-  assert {
+assert {
     condition     = data.http.website.status_code == 200
     error_message = "Website is not reachable"
   }
@@ -74,13 +74,13 @@ func TestTerraformAwsHelloWorldExample(t *testing.T) {
 		TerraformDir: "../examples/hello-world",
 	})
 
-	// 2. Cleanup when test ends
+// 2. Cleanup when test ends
 	defer terraform.Destroy(t, terraformOptions)
 
-	// 3. Init and Apply
+// 3. Init and Apply
 	terraform.InitAndApply(t, terraformOptions)
 
-	// 4. Validate
+// 4. Validate
 	output := terraform.Output(t, terraformOptions, "instance_url")
 	http_helper.HttpGetWithRetry(t, output, nil, 200, "Hello World", 30, 5*time.Second)
 }

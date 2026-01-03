@@ -32,14 +32,14 @@ graph LR
     subgraph On-Prem
     R[Local Router]
     end
-    
-    subgraph AWS
+
+subgraph AWS
     VGW[Virtual Private Gateway]
     DXGW[Direct Connect Gateway]
     TGW((Transit Gateway))
     end
-    
-    R <==>|VPN: IPsec| VGW
+
+R <==>|VPN: IPsec| VGW
     R ---|DX: Fiber| DXGW
     DXGW --- TGW
     TGW --- VPC_A[VPC A]
@@ -92,317 +92,176 @@ graph LR
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Site-to-Site VPN traffic travels over:**
-- A) Dedicated Fiber
-- B) The Public Internet
-- C) A satellite link
-- D) nothing
-
+<b>1. Site-to-Site VPN traffic travels over:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: Direct Connect (DX) is encrypted by default.**
-- A) True
-- B) False (It is a private link, but not encrypted unless you use MACsec or VPN-over-DX)
 
+<b>2. True/False: Direct Connect (DX) is encrypted by default.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. Which component represents YOUR physical router in the AWS Console?**
-- A) VGW
-- B) Customer Gateway (CGW)
-- C) NAT Gateway
-- D) IGW
 
+<b>3. Which component represents YOUR physical router in the AWS Console?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**4. How many tunnels are created for a single AWS Site-to-Site VPN connection?**
-- A) 1
-- B) 2 (For High Availability)
-- C) 5
-- D) 10
 
+<b>4. How many tunnels are created for a single AWS Site-to-Site VPN connection?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which protocol is used for dynamic routing between AWS and On-Prem?**
-- A) HTTP
-- B) BGP
-- C) FTP
-- D) DHCP
 
+<b>5. Which protocol is used for dynamic routing between AWS and On-Prem?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. Maximum throughput for a single VPN tunnel?**
-- A) 100 Mbps
-- B) 1.25 Gbps
-- C) 10 Gbps
-- D) nothing
 
+<b>6. Maximum throughput for a single VPN tunnel?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: Direct Connect can take weeks or months to set up.**
-- A) True (Requires physical fiber installation)
-- B) False
 
+<b>7. True/False: Direct Connect can take weeks or months to set up.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. 'Public VIF' is used to connect to:**
-- A) Your private EC2 instances
-- B) Public AWS services (S3, DynamoDB) without the Internet
-- C) Google.com
-- D) nothing
 
+<b>8. 'Public VIF' is used to connect to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. Direct Connect bandwidth options include:**
-- A) 1 Gbps
-- B) 10 Gbps
-- C) 100 Gbps
-- D) All of the above
 
+<b>9. Direct Connect bandwidth options include:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: D**
-
+Answer: D
 </details>
 
-**10. Which service allows connecting one DX to multiple regions and accounts?**
-- A) NAT Gateway
-- B) Direct Connect Gateway
-- C) CloudFront
-- D) nothing
 
+<b>10. Which service allows connecting one DX to multiple regions and accounts?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. 'MACsec' operates at which OSI layer?**
-- A) Layer 7
-- B) Layer 2 (Data Link)
-- C) Layer 3
-- D) nothing
 
+<b>11. 'MACsec' operates at which OSI layer?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. 'IPsec' is used by which connectivity type?**
-- A) Direct Connect
-- B) Site-to-Site VPN
-- C) Peering
-- D) nothing
 
+<b>12. 'IPsec' is used by which connectivity type?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. True/False: You can use a VPN as a backup for a Direct Connect link.**
-- A) True
-- B) False
 
+<b>13. True/False: You can use a VPN as a backup for a Direct Connect link.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**14. A 'Cross-Connect' is:**
-- A) A physical cable connecting two routers in a DX location
-- B) A software bug
-- C) A type of VPN
-- D) nothing
 
+<b>14. A 'Cross-Connect' is:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**15. 'LAG' (Link Aggregation Group) is used to:**
-- A) Slow down the network
-- B) Bundle multiple DX connections for more bandwidth/redundancy
-- C) Connect to Azure
-- D) nothing
 
+<b>15. 'LAG' (Link Aggregation Group) is used to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. True/False: Direct Connect Gateway supports transitive routing between two VPCs.**
-- A) False (Use Transit Gateway for that)
-- B) True
 
+<b>16. True/False: Direct Connect Gateway supports transitive routing between two VPCs.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**17. Which is the most cost-effective for a temporary connection?**
-- A) Direct Connect
-- B) Site-to-Site VPN
-- C) Dedicated Fiber
-- D) nothing
 
+<b>17. Which is the most cost-effective for a temporary connection?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. BGP 'AS Number' is used for:**
-- A) Authentication
-- B) Path identification and loop prevention
-- C) Naming the router
-- D) nothing
 
+<b>18. BGP 'AS Number' is used for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. What is the 'VIF' in Direct Connect?**
-- A) Very Important File
-- B) Virtual Interface
-- C) Vantage IP Filter
-- D) nothing
 
+<b>19. What is the 'VIF' in Direct Connect?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: You can connect to AWS from your office using 'WIFI'.**
-- A) True (If using Client VPN)
-- B) False
 
+<b>20. True/False: You can connect to AWS from your office using 'WIFI'.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Transit VIF' is required to connect to:**
-- A) An EC2
-- B) A Transit Gateway
-- C) S3
-- D) nothing
 
+<b>21. 'Transit VIF' is required to connect to:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. How many 'Transit Virtual Interfaces' can you have per Direct Connect connection?**
-- A) 1
-- B) 50
-- C) 100
-- D) 0
 
+<b>22. How many 'Transit Virtual Interfaces' can you have per Direct Connect connection?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A (Usually only one Transit VIF is allowed per DX connection)**
-
+Answer: A (Usually only one Transit VIF is allowed per DX connection)
 </details>
 
-**23. Direct Connect 'Locations' are usually:**
-- A) In your backyard
-- B) Major third-party carrier hotels (like Equinix or Coresite)
-- C) Inside the AWS Console
-- D) nothing
 
+<b>23. Direct Connect 'Locations' are usually:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. A Hybrid Network is a _____ between On-Prem and Cloud.**
-- A) Fence
-- B) Bridge
-- C) Wall
-- D) nothing
 
+<b>24. A Hybrid Network is a _____ between On-Prem and Cloud.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. Redundant paths are the _____ of a mission-critical hybrid link.**
-- A) Secret
-- B) Lifeline
-- C) Decoration
-- D) nothing
 
+<b>25. Redundant paths are the _____ of a mission-critical hybrid link.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

@@ -23,10 +23,10 @@ TFC runs OPA natively. You connect a "Policy Set" pointing to a Git repo contain
 graph TD
     Plan[Terraform Plan JSON] -->|Input| Engine[OPA Engine]
     Rego[Rego Policy] -->|Rules| Engine
-    
-    Engine -->|Evaluation| Result
-    
-    subgraph "TFC Enforcement"
+
+Engine -->|Evaluation| Result
+
+subgraph "TFC Enforcement"
         Result -->|Allow| Apply
         Result -->|Deny| Block[Block Run]
     end
@@ -50,15 +50,15 @@ deny[msg] {
     # 1. Find all resources of type aws_security_group
     r := tfplan.resource_changes[_]
     r.type == "aws_security_group"
-    
-    # 2. Check each ingress rule
+
+# 2. Check each ingress rule
     ingress := r.change.after.ingress[_]
     cidr := ingress.cidr_blocks[_]
-    
-    # 3. Condition: CIDR is open to world
+
+# 3. Condition: CIDR is open to world
     cidr == "0.0.0.0/0"
-    
-    # 4. Message to return
+
+# 4. Message to return
     msg := sprintf("Security Group %v allows open access to world", [r.address])
 }
 ```

@@ -160,7 +160,12 @@ If you answered 3+, you're ready to start. If not, spend 2-4 weeks learning the 
 
 **Essential Scripts & Tools**:
 
-1. **Cost Analysis Script** (Python)
+<b>1. Cost Analysis Script</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Python
+</details>
+
 ```python
 # analyze_costs.py
 import boto3
@@ -205,7 +210,12 @@ aws ec2 describe-addresses \
   --output table
 ```
 
-3. **Cost Dashboard Template** (Excel/Google Sheets)
+<b>3. Cost Dashboard Template</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Excel/Google Sheets
+</details>
+
 - Monthly spend by service
 - Trend analysis (MoM, YoY)
 - Budget vs. actual
@@ -306,7 +316,12 @@ FinOps Certified Practitioner
 ### Week 11: Convert Assessments to Paid Engagements
 
 **After Delivering Free Assessment**:
-1. **Schedule Results Call** (30-45 minutes)
+<b>1. Schedule Results Call</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 30-45 minutes
+</details>
+
 2. **Present Findings**:
    - Current spend breakdown
    - Waste identification

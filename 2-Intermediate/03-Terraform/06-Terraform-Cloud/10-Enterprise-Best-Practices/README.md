@@ -19,8 +19,8 @@ A Landing Zone is the foundational infrastructure where applications land.
         Core[Core - TFC Admin] -->|Manages| Net[Networking Hub]
         Net -->|Peered| App1[App 1 Spoke]
         Net -->|Peered| App2[App 2 Spoke]
-        
-        Core -->|Policies| All[All Workspaces]
+
+Core -->|Policies| All[All Workspaces]
     ```
 
 ---

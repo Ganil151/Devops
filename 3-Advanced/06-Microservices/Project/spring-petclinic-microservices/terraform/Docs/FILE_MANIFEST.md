@@ -279,13 +279,48 @@ spring-petclinic-microservices/
 
 ## 🚀 Quick Start Path
 
-1. Read: `START_HERE.md` (5 min)
-2. Read: `QUICK_START.md` (10 min)
-3. Review: `IMPLEMENTATION_CHECKLIST.md` (5 min)
-4. Run: `cd ansible && ansible-playbook ...` (15 min)
-5. Verify: `kubectl get nodes` (1 min)
-6. Deploy: `bash kubernetes/scripts/setup-cluster-and-deploy.sh` (5 min)
-7. Test: `bash scripts/full-diagnostic.sh` (2 min)
+<b>1. Read: `START_HERE.md`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 5 min
+</details>
+
+<b>2. Read: `QUICK_START.md`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 10 min
+</details>
+
+<b>3. Review: `IMPLEMENTATION_CHECKLIST.md`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 5 min
+</details>
+
+<b>4. Run: `cd ansible && ansible-playbook ...`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 15 min
+</details>
+
+<b>5. Verify: `kubectl get nodes`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 1 min
+</details>
+
+<b>6. Deploy: `bash kubernetes/scripts/setup-cluster-and-deploy.sh`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 5 min
+</details>
+
+<b>7. Test: `bash scripts/full-diagnostic.sh`</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 2 min
+</details>
+
 
 **Total**: ~45 minutes to fully working cluster
 

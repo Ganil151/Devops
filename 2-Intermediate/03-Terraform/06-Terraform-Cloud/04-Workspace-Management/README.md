@@ -41,8 +41,8 @@ If you update the Network (e.g., change Subnet IDs), the App needs to know.
 graph TD
     Net[Network Workspace] -->|Success| DB[Database Workspace]
     DB -->|Success| App[App Workspace]
-    
-    subgraph "The Chain"
+
+subgraph "The Chain"
         Net
         DB
         App

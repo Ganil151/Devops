@@ -11,8 +11,8 @@ graph TD
     User((User/Script)) --> Shell[Shell: Bash/Zsh/Dash]
     Shell --> Kernel[Kernel: System Calls]
     Kernel --> Hardware[Hardware: CPU/RAM/Disk]
-    
-    style Shell fill:#f9f,stroke:#333,stroke-width:2px
+
+style Shell fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
 ## 🏗️ The Shebang (`#!`)

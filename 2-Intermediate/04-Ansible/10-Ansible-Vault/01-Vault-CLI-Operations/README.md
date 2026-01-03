@@ -12,8 +12,8 @@ graph TD
     Encrypt --> Secret[Encrypted Data]
     Secret --> Decrypt[ansible-vault decrypt/view]
     Decrypt --> Plain
-    
-    style Encrypt fill:#ff4444,color:#fff
+
+style Encrypt fill:#ff4444,color:#fff
     style Decrypt fill:#3399ff,color:#fff
 ```
 

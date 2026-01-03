@@ -12,8 +12,8 @@ graph LR
     SG --> Instance[EC2 Instance]
     Instance -- "Response (Random Port)" --> SG
     SG -- "Allowed Automatically" --> Client
-    
-    style SG fill:#ff9900,color:#fff
+
+style SG fill:#ff9900,color:#fff
 ```
 
 ### 1. Stateful Behavior

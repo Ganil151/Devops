@@ -153,7 +153,12 @@ sudo gitlab-ctl restart
    - Shared projects
    - Group-level settings
 
-4. **Admin Area** (Admin users only)
+<b>4. Admin Area</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Admin users only
+</details>
+
    - System settings
    - User management
    - System monitoring

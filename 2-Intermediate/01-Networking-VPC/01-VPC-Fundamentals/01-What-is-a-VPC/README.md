@@ -63,8 +63,32 @@ Built on redundant infrastructure across multiple data centers (Availability Zon
 ---
 
 ## 🧠 Quiz Snippet (5/50+)
-1.  **What does VPC stand for?** (Virtual Private Cloud)
-2.  **True/False: A VPC requires physical hardware setup.** (False - it's software-defined)
-3.  **What provides isolation in a VPC?** (Logical isolation through SDN)
-4.  **Can you change a VPC's IP range after creation?** (No - CIDR is immutable in most clouds)
-5.  **What is the main advantage of VPC over physical networks?** (Speed, scalability, and cost efficiency)
+<b>1. What does VPC stand for?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Virtual Private Cloud
+</details>
+
+<b>2. True/False: A VPC requires physical hardware setup.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: False - it's software-defined
+</details>
+
+<b>3. What provides isolation in a VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Logical isolation through SDN
+</details>
+
+<b>4. Can you change a VPC's IP range after creation?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: No - CIDR is immutable in most clouds
+</details>
+
+<b>5. What is the main advantage of VPC over physical networks?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Speed, scalability, and cost efficiency
+</details>

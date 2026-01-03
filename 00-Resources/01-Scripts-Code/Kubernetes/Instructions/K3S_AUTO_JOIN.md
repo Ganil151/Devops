@@ -14,7 +14,12 @@ The K3s setup now includes **automatic worker node joining** using AWS services.
    - Type: SecureString (encrypted)
    - Region: Auto-detected from EC2 metadata
 
-3. **Tags itself** (via Terraform)
+<b>3. Tags itself</b>
+<details>
+<summary>Show Answer</summary>
+Answer: via Terraform
+</details>
+
    - Tag: `Role=k3s-server`
    - Used by agents to discover server IP
 

@@ -43,9 +43,24 @@ aws ecr create-pull-through-cache-rule \
 Access ECR privately from your VPC without traversing the public internet.
 
 Requires two types of endpoints:
-1.  **Interface Endpoint for ECR API** (`com.amazonaws.region.ecr.api`)
-2.  **Interface Endpoint for Docker Registry APIs** (`com.amazonaws.region.ecr.dkr`)
-3.  *(Optional)* **Gateway Endpoint for S3** (Required because ECR stores layers in S3)
+<b>1. Interface Endpoint for ECR API</b>
+<details>
+<summary>Show Answer</summary>
+Answer: `com.amazonaws.region.ecr.api`
+</details>
+
+<b>2. Interface Endpoint for Docker Registry APIs</b>
+<details>
+<summary>Show Answer</summary>
+Answer: `com.amazonaws.region.ecr.dkr`
+</details>
+
+<b>3. *(Optional)* **Gateway Endpoint for S3</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Required because ECR stores layers in S3
+</details>
+
 
 ## Cross-Account Access
 

@@ -24,8 +24,8 @@ graph TD
     AWS_Region --> DX2[DX Location 2]
     DX1 --- OnPrem_Router_A[Customer Router A]
     DX2 --- OnPrem_Router_B[Customer Router B]
-    
-    style DX1 fill:#f96,stroke:#333
+
+style DX1 fill:#f96,stroke:#333
     style DX2 fill:#f96,stroke:#333
 ```
 

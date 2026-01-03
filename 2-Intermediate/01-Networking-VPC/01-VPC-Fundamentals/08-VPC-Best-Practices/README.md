@@ -141,7 +141,7 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = true
   enable_dns_support   = true
 
-  tags = {
+tags = {
     Name        = "production-vpc"
     Environment = "prod"
     ManagedBy   = "terraform"
@@ -222,8 +222,32 @@ stage-data-a-private   (Staging data tier, AZ-A, private subnet)
 ---
 
 ## 🧠 Quiz Snippet (5/20+)
-1.  **Should databases be in public or private subnets?** (Private)
-2.  **True/False: You should use 0.0.0.0/0 as source in security groups.** (False - use specific CIDRs)
-3.  **What is the minimum number of AZs for high availability?** (2)
-4.  **Are S3 VPC Endpoints free?** (Yes - gateway endpoints are free)
-5.  **Should you use Infrastructure as Code for VPCs?** (Yes)
+<b>1. Should databases be in public or private subnets?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Private
+</details>
+
+<b>2. True/False: You should use 0.0.0.0/0 as source in security groups.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: False - use specific CIDRs
+</details>
+
+<b>3. What is the minimum number of AZs for high availability?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: 2
+</details>
+
+<b>4. Are S3 VPC Endpoints free?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Yes - gateway endpoints are free
+</details>
+
+<b>5. Should you use Infrastructure as Code for VPCs?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Yes
+</details>

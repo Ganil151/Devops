@@ -21,14 +21,14 @@ graph TD
         IGW[Internet Gateway]
         NAT[NAT Gateway]
     end
-    
-    subgraph "Private Subnet (Trusted)"
+
+subgraph "Private Subnet (Trusted)"
         App[App Instance]
     end
-    
-    Internet((Public Internet))
-    
-    Internet <--> IGW
+
+Internet((Public Internet))
+
+Internet <--> IGW
     IGW <--> NAT
     App -->|Outbound Only| NAT
 ```
@@ -79,319 +79,176 @@ graph TD
 
 ## 🧠 Comprehensive Quiz (25 Questions)
 
-**1. Which gateway is required for a subnet to be considered 'Public'?**
-- A) NAT Gateway
-- B) Internet Gateway (IGW)
-- C) Transit Gateway
-- D) Customer Gateway
-
+<b>1. Which gateway is required for a subnet to be considered 'Public'?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**2. True/False: NAT Gateways support inbound connection requests from the Internet.**
-- A) True
-- B) False (Outbound only)
 
+<b>2. True/False: NAT Gateways support inbound connection requests from the Internet.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**3. What must be attached to a NAT Gateway for it to function?**
-- A) A Public IP (Elastic IP)
-- B) A Database
-- C) A VPN
-- D) A password
 
+<b>3. What must be attached to a NAT Gateway for it to function?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**4. In which type of subnet must a NAT Gateway be deployed?**
-- A) Private Subnet
-- B) Public Subnet
-- C) Database Subnet
-- D) It doesn't matter
 
+<b>4. In which type of subnet must a NAT Gateway be deployed?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**5. Which gateway is scaled automatically by the cloud provider (AWS)?**
-- A) NAT Instance
-- B) NAT Gateway
-- C) VPN Gateway
-- D) nothing
 
+<b>5. Which gateway is scaled automatically by the cloud provider (AWS)?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**6. 'Egress-Only Internet Gateway' is used for which protocol?**
-- A) IPv4
-- B) IPv6
-- C) FTP
-- D) ICMP
 
+<b>6. 'Egress-Only Internet Gateway' is used for which protocol?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**7. True/False: Internet Gateways are highly available by default across a region.**
-- A) True
-- B) False
 
+<b>7. True/False: Internet Gateways are highly available by default across a region.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**8. What is the main cost component of a NAT Gateway?**
-- A) The number of routes
-- B) Hourly charge + Data processing charge (per GB)
-- C) The color of the cable
-- D) nothing
 
+<b>8. What is the main cost component of a NAT Gateway?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**9. A private instance uses which target in its route table to get to the internet?**
-- A) `igw-xxxx`
-- B) `nat-xxxx`
-- C) `vgw-xxxx`
-- D) `pcx-xxxx`
 
+<b>9. A private instance uses which target in its route table to get to the internet?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**10. How many NAT Gateways can you have per Availability Zone?**
-- A) 1
-- B) Multiple (but usually one per AZ is sufficient for HA)
-- C) 0
-- D) 100
 
+<b>10. How many NAT Gateways can you have per Availability Zone?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**11. Which component allows 'Many-to-1' IP translation?**
-- A) IGW
-- B) NAT Gateway
-- C) Route Table
-- D) NACL
 
+<b>11. Which component allows 'Many-to-1' IP translation?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**12. 'IGW' stands for:**
-- A) Integrated Global Web
-- B) Internet Gateway
-- C) Internal Gateway Web
-- D) nothing
 
+<b>12. 'IGW' stands for:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**13. True/False: You must manually scale a NAT Gateway when traffic increases.**
-- A) False (Managed NAT scales automatically)
-- B) True
 
+<b>13. True/False: You must manually scale a NAT Gateway when traffic increases.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**14. If a NAT Gateway's Elastic IP is deleted, what happens?**
-- A) It stays working
-- B) The NAT Gateway stops functioning and outbound traffic fails
-- C) It gets a new IP automatically
-- D) nothing
 
+<b>14. If a NAT Gateway's Elastic IP is deleted, what happens?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**15. Which is more cost-effective for VERY low traffic: NAT Gateway or NAT Instance?**
-- A) NAT Gateway
-- B) NAT Instance (A small EC2 t3.nano is cheaper but manual)
-- C) IGW
-- D) nothing
 
+<b>15. Which is more cost-effective for VERY low traffic: NAT Gateway or NAT Instance?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**16. 'Source/Dest Check' must be disabled for which type of gateway?**
-- A) Internet Gateway
-- B) NAT Instance (Custom EC2 NAT)
-- C) NAT Gateway
-- D) nothing
 
+<b>16. 'Source/Dest Check' must be disabled for which type of gateway?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**17. What is the bandwidth limit of a single AWS NAT Gateway?**
-- A) 1 Gbps
-- B) Up to 100 Gbps (Burst)
-- C) 100 Mbps
-- D) nothing
 
+<b>17. What is the bandwidth limit of a single AWS NAT Gateway?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**18. To connect a VPC to the internet, the VPC status must be:**
-- A) Pending
-- B) Attached to an IGW
-- C) Deleted
-- D) nothing
 
+<b>18. To connect a VPC to the internet, the VPC status must be:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**19. Which gateway type provides 'Stateful' NAT?**
-- A) IGW
-- B) NAT Gateway
-- C) NACL
-- D) nothing
 
+<b>19. Which gateway type provides 'Stateful' NAT?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**20. True/False: You can use a NAT Gateway to connect to a VPN.**
-- A) True (If the VPN client is on a private instance)
-- B) False
 
+<b>20. True/False: You can use a NAT Gateway to connect to a VPN.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**21. 'Destination' `0.0.0.0/0` in a route table means:**
-- A) My local network
-- B) All traffic not destined for the VPC (The Internet)
-- C) Errors
-- D) nothing
 
+<b>21. 'Destination' `0.0.0.0/0` in a route table means:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**22. How many Internet Gateways can you attach to ONE VPC?**
-- A) 1
-- B) 5
-- C) 10
-- D) Unlimited
 
+<b>22. How many Internet Gateways can you attach to ONE VPC?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: A**
-
+Answer: A
 </details>
 
-**23. 'Static IP' required by a NAT Gateway is called:**
-- A) DHCP
-- B) Elastic IP (EIP)
-- C) Private IP
-- D) nothing
 
+<b>23. 'Static IP' required by a NAT Gateway is called:</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**24. Which is a managed service?**
-- A) NAT Instance
-- B) NAT Gateway
-- C) SSH Tunnel
-- D) nothing
 
+<b>24. Which is a managed service?</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>
 
-**25. A NAT Gateway is the _____ of your private network.**
-- A) Speaker
-- B) Bodyguard/Outbound Proxy
-- C) Brain
-- D) Enemy
 
+<b>25. A NAT Gateway is the _____ of your private network.</b>
 <details>
 <summary>Show Answer</summary>
-
-**Answer: B**
-
+Answer: B
 </details>

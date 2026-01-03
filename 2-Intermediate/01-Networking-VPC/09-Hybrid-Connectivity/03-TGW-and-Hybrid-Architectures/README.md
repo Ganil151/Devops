@@ -15,8 +15,8 @@ graph LR
     DXGW --- VPC_1[VPC 1: Ireland]
     DXGW --- VPC_2[VPC 2: Virginia]
     DXGW --- VPC_3[VPC 3: Tokyo]
-    
-    style DXGW fill:#ff9900,color:#fff
+
+style DXGW fill:#ff9900,color:#fff
 ```
 
 ## Scaling with Transit Gateway (TGW)

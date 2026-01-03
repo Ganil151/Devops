@@ -10,7 +10,6 @@ To solve this, Docker provides three ways to mount data from the host into the c
 
 ![Docker-Storage-Arch](../../../../1-Beginner/Images/dockerStorageArch.png)
 
-
 ### Storage Types Comparison
 
 | Type | Location | Managed By | Use Case | Performance | Portability |
@@ -297,23 +296,22 @@ graph LR
             API[Backend API Container]
             TEST[Test Runner Container]
         end
-        
-        subgraph "Volumes & Mounts"
+
+subgraph "Volumes & Mounts"
             SRC[<b>Source Code</b><br/>Bind Mount]
             DEPS["<b>node_modules</b><br/>Named Volume"]
         end
     end
-    
-    SRC --- WEB & API & TEST
+
+SRC --- WEB & API & TEST
     DEPS --- WEB & API
-    
-    style SRC fill:#fff3e0,stroke:#e65100,color:#000000
+
+style SRC fill:#fff3e0,stroke:#e65100,color:#000000
     style DEPS fill:#e8f5e9,stroke:#1b5e20,color:#000000
     style WEB fill:#e3f2fd,stroke:#1565c0,color:#000000
     style API fill:#f3e5f5,stroke:#7b1fa2,color:#000000
     style TEST fill:#fce4ec,stroke:#c2185b,color:#000000
 ```
-
 
 ## Backup and Restore
 

@@ -11,16 +11,16 @@ graph LR
     Dev[Developer] -->|1. Push Feature| Branch[Feature Branch]
     Branch -->|2. Open PR| VCS[GitHub]
     VCS -->|3. Webhook| TFC[HCP Terraform]
-    
-    subgraph "HCP Terraform"
+
+subgraph "HCP Terraform"
         Spec[Speculative Plan]
         Sentinel[Policy Check]
     end
-    
-    TFC --> Spec
+
+TFC --> Spec
     Spec -->|4. Status Check| VCS
-    
-    VCS -->|5. Merge to Main| Main[Main Branch]
+
+VCS -->|5. Merge to Main| Main[Main Branch]
     Main -->|6. Webhook| TFC2[HCP Terraform]
     TFC2 -->|7. Apply| Cloud[AWS]
 ```

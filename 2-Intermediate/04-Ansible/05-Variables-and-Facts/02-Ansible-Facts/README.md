@@ -10,8 +10,8 @@ When a play starts, Ansible implicitly runs the `setup` module to gather system 
 sequenceDiagram
     participant C as Control Node
     participant R as Remote Node
-    
-    C->>R: SSH Connect
+
+C->>R: SSH Connect
     C->>R: Execute 'setup' module
     R-->>C: JSON Data (IP, OS, RAM, CPU...)
     Note over C: Store as 'ansible_facts'

@@ -18,7 +18,7 @@ sequenceDiagram
     participant N as NACL (Subnet Gate)
     participant S as Server (Port 80)
 
-    C->>N: SYN (To: 80) - [NACL Inbound: ALLOW]
+C->>N: SYN (To: 80) - [NACL Inbound: ALLOW]
     N->>S: SYN
     S->>N: SYN/ACK (To: 55000)
     N-->>C: [NACL Outbound: Needs 1024-65535!]

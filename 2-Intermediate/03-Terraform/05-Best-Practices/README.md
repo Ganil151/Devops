@@ -23,25 +23,25 @@ Mastering Terraform is about more than just writing HCL; it's about building a r
 graph TD
     User[Developer] --> VC[Version Control]
     VC --> CI[CI/CD Pipeline]
-    
-    subgraph "The Module Factory"
+
+subgraph "The Module Factory"
         CI --> Test[Testing Strategies]
         Test --> Sec[Security Scan]
         Sec --> Doc[Auto-Docs]
     end
-    
-    subgraph "The Deployment"
+
+subgraph "The Deployment"
         Doc --> Plan[Terraform Plan]
         Plan --> Apply[Terraform Apply]
         Apply --> Obs[Monitoring & Observability]
     end
-    
-    subgraph "Foundations"
+
+subgraph "Foundations"
         Code[Code Organization]
         Name[Naming Conventions]
     end
-    
-    Code -.-> VC
+
+Code -.-> VC
     Name -.-> Code
 ```
 

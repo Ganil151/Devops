@@ -83,8 +83,8 @@ graph TD
     OnPrem <-->|MPLS| Branch[Branch Offices]
     VPC <-->|VPC Peering| VPC2[Secondary VPC]
     VPC <-->|Internet Gateway| Internet[Internet]
-    
-    style OnPrem fill:#e1f5ff,stroke:#333,stroke-width:2px
+
+style OnPrem fill:#e1f5ff,stroke:#333,stroke-width:2px
     style VPC fill:#fff3cd,stroke:#333,stroke-width:2px
 ```
 
@@ -120,8 +120,32 @@ graph TD
 ---
 
 ## 🧠 Quiz Snippet (5/20+)
-1.  **What does SDN stand for?** (Software-Defined Networking)
-2.  **True/False: VPCs require physical routers.** (False - virtual/software-based)
-3.  **What is CapEx?** (Capital Expenditure - upfront hardware costs)
-4.  **What is OpEx?** (Operational Expenditure - pay-as-you-go costs)
-5.  **How long does it take to provision a VPC?** (Minutes)
+<b>1. What does SDN stand for?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Software-Defined Networking
+</details>
+
+<b>2. True/False: VPCs require physical routers.</b>
+<details>
+<summary>Show Answer</summary>
+Answer: False - virtual/software-based
+</details>
+
+<b>3. What is CapEx?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Capital Expenditure - upfront hardware costs
+</details>
+
+<b>4. What is OpEx?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Operational Expenditure - pay-as-you-go costs
+</details>
+
+<b>5. How long does it take to provision a VPC?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: Minutes
+</details>

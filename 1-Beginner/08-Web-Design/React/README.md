@@ -122,115 +122,71 @@ server {
 6. **What is "Tree Shaking"?**
    - Remove unused code during the build process to minimize bundle size.
 
-### Advanced Level
-7. **How do you handle runtime configuration in a Dockerized React app?**
-   - Since variables are baked at build time, use a shell script entrypoint to substitute placeholders in JS files or generate a `config.js` file when the container starts.
-8. **What is Server-Side Rendering (SSR) vs Client-Side Rendering (CSR)?**
-   - **CSR:** Browser downloads empty HTML + JS, then renders. Slow initial load, fast interaction.
-   - **SSR (Next.js):** Server generates HTML. Fast initial load, better SEO.
-9. **How would you cache React assets?**
-   - Long-term caching (1 year) for filenames with hashes (`main.a1b2.js`). No-cache for `index.html` so users get new updates immediately.
-
----
-
-## Quiz: React for DevOps
-
+<b>7. </b>
 <details>
-<summary><b>1. React is primarily a library for:</b></summary>
-A) Database management<br>
-B) User Interfaces (Frontend)<br>
-C) Backend APIs<br>
-D) Operating Systems<br>
-<br>
-<b>Answer: B) User Interfaces (Frontend)</b>
+<summary>Show Answer</summary>
+Answer: B) User Interfaces (Frontend)</b>
 </details>
 
+
+<b>2. The command `npm run build` typically creates:</b>
 <details>
-<summary><b>2. The command `npm run build` typically creates:</b></summary>
-A) A binary executable<br>
-B) A directory of static files (HTML/CSS/JS)<br>
-C) A Docker image<br>
-D) A Python script<br>
-<br>
-<b>Answer: B) A directory of static files (HTML/CSS/JS)</b>
+<summary>Show Answer</summary>
+Answer: B) A directory of static files (HTML/CSS/JS)</b>
 </details>
 
+
+<b>3. Which Docker image is best for SERVING a production React app?</b>
 <details>
-<summary><b>3. Which Docker image is best for SERVING a production React app?</b></summary>
-A) node:latest<br>
-B) nginx:alpine<br>
-C) ubuntu:latest<br>
-D) python:alpine<br>
-<br>
-<b>Answer: B) nginx:alpine</b>
+<summary>Show Answer</summary>
+Answer: B) nginx:alpine</b>
 </details>
 
+
+<b>4. In a Multi-Stage build, the Node.js layer is used for:</b>
 <details>
-<summary><b>4. In a Multi-Stage build, the Node.js layer is used for:</b></summary>
-A) Compiling/Building the code<br>
-B) Serving the website to users<br>
-C) Database<br>
-D) Firewall<br>
-<br>
-<b>Answer: A) Compiling/Building the code</b>
+<summary>Show Answer</summary>
+Answer: A) Compiling/Building the code</b>
 </details>
 
+
+<b>5. "Client-Side Routing" means:</b>
 <details>
-<summary><b>5. "Client-Side Routing" means:</b></summary>
-A) The browser handles URL changes without requesting new HTML from server<br>
-B) The server routes traffic<br>
-C) Router hardware<br>
-D) GPS<br>
-<br>
-<b>Answer: A) The browser handles URL changes without requesting new HTML from server</b>
+<summary>Show Answer</summary>
+Answer: A) The browser handles URL changes without requesting new HTML from server</b>
 </details>
 
+
+<b>6. JSX stands for:</b>
 <details>
-<summary><b>6. JSX stands for:</b></summary>
-A) JavaScript XML<br>
-B) Java Syntax Extension<br>
-C) JSON Xylophone<br>
-D) Just Shell X<br>
-<br>
-<b>Answer: A) JavaScript XML</b>
+<summary>Show Answer</summary>
+Answer: A) JavaScript XML</b>
 </details>
 
+
+<b>7. `node_modules` folder should be:</b>
 <details>
-<summary><b>7. `node_modules` folder should be:</b></summary>
-A) Checked into Git<br>
-B) Ignored (.gitignore)<br>
-C) Deployed to production<br>
-D) Edite manually<br>
-<br>
-<b>Answer: B) Ignored (.gitignore)</b>
+<summary>Show Answer</summary>
+Answer: B) Ignored (.gitignore)</b>
 </details>
 
+
+<b>8. Environment variables in React (by default) are injected at:</b>
 <details>
-<summary><b>8. Environment variables in React (by default) are injected at:</b></summary>
-A) Runtime<br>
-B) Build time<br>
-C) Never<br>
-D) Database time<br>
-<br>
-<b>Answer: B) Build time</b>
+<summary>Show Answer</summary>
+Answer: B) Build time</b>
 </details>
 
+
+<b>9. To fix 404s on refresh in Nginx, use:</b>
 <details>
-<summary><b>9. To fix 404s on refresh in Nginx, use:</b></summary>
-A) try_files $uri /index.html;<br>
-B) error_page 404 /404.html;<br>
-C) rewrite ^(.*)$ /home;<br>
-D) return 200;<br>
-<br>
-<b>Answer: A) try_files $uri /index.html;</b>
+<summary>Show Answer</summary>
+Answer: A) try_files $uri /index.html;</b>
 </details>
 
+
+<b>10. Webpack is a:</b>
 <details>
-<summary><b>10. Webpack is a:</b></summary>
-A) Module Bundler<br>
-B) Web Server<br>
-C) Database<br>
-D) Browser<br>
-<br>
-<b>Answer: A) Module Bundler</b>
+<summary>Show Answer</summary>
+Answer: A) Module Bundler</b>
 </details>

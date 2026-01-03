@@ -319,10 +319,30 @@ Modern applications often use **both**:
 ```
 
 **Example Architecture**:
-1. **RDS**: Critical transactional data (orders, payments)
-2. **DynamoDB**: High-throughput reads (product catalog)
-3. **ElastiCache**: Caching layer (session data, frequent queries)
-4. **Neptune**: Recommendation engine (user relationships)
+<b>1. RDS**: Critical transactional data</b>
+<details>
+<summary>Show Answer</summary>
+Answer: orders, payments
+</details>
+
+<b>2. DynamoDB**: High-throughput reads</b>
+<details>
+<summary>Show Answer</summary>
+Answer: product catalog
+</details>
+
+<b>3. ElastiCache**: Caching layer</b>
+<details>
+<summary>Show Answer</summary>
+Answer: session data, frequent queries
+</details>
+
+<b>4. Neptune**: Recommendation engine</b>
+<details>
+<summary>Show Answer</summary>
+Answer: user relationships
+</details>
+
 
 ## Migration Considerations
 
@@ -435,215 +455,191 @@ Pay only for what you use
 ### Intermediate Level
 4.  **Explain "Sharding" in the context of NoSQL.**
     -   Sharding is a method of horizontal partitioning. Data is distributed across multiple machines based on a "Shard Key" (e.g., UserID). This allows the database to exceed the storage and throughput limits of a single server.
-5.  **Why are JOINs generally avoided or expensive in distributed NoSQL systems?**
-    -   In a distributed system, data for "Table A" and "Table B" might live on different physical servers. Joining them requires moving large amounts of data over the network ("shuffling"), which is slow and inefficient compared to a local join on a single SQL server.
-
----
-
-## Part 4: Knowledge Quiz
-
+<b>5. </b>
 <details>
-<summary><b>1. Relational databases store data in:</b></summary>
-A) Documents<br>
-B) Graphs<br>
-C) Tables with Rows and Columns<br>
-D) Key-Value pairs<br>
-<br>
-<b>Answer: C) Tables with Rows and Columns</b>
+<summary>Show Answer</summary>
+Answer: C) Tables with Rows and Columns</b>
 </details>
 
-<details>
-<summary><b>2. Which is a characteristic of most NoSQL databases?</b></summary>
-A) Rigid Schema<br>
-B) Vertical Scaling predominantly<br>
-C) Horizontal Scaling<br>
-D) Complex JOIN support<br>
-<br>
-<b>Answer: C) Horizontal Scaling</b>
-</details>
+
+
 
 <details>
-<summary><b>3. DynamoDB is best described as:</b></summary>
-A) Relational<br>
-B) Key-Value / Document<br>
-C) Graph<br>
-D) In-Memory only<br>
-<br>
-<b>Answer: B) Key-Value / Document</b>
+<b>2. Which is a characteristic of most NoSQL databases?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Horizontal Scaling</b>
 </details>
 
-<details>
-<summary><b>4. SQL stands for:</b></summary>
-A) Standard Query Logic<br>
-B) Structured Query Language<br>
-C) Simple Question Language<br>
-D) Strong Query List<br>
-<br>
-<b>Answer: B) Structured Query Language</b>
-</details>
+
 
 <details>
-<summary><b>5. Which database type is optimized for deep relationship traversal (e.g., social graphs)?</b></summary>
-A) Document<br>
-B) Column-Family<br>
-C) Graph<br>
-D) Relational<br>
-<br>
-<b>Answer: C) Graph</b>
+<b>3. DynamoDB is best described as:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Key-Value / Document</b>
 </details>
 
-<details>
-<summary><b>6. "Vertical Scaling" involves:</b></summary>
-A) Adding more servers to the cluster<br>
-B) Increasing the power (CPU/RAM) of a single server<br>
-C) Deleting old data<br>
-D) Moving to the cloud<br>
-<br>
-<b>Answer: B) Increasing the power (CPU/RAM) of a single server</b>
-</details>
+
 
 <details>
-<summary><b>7. ACID guarantees are strongest in:</b></summary>
-A) Typical NoSQL systems<br>
-B) Relational (SQL) systems<br>
-C) File systems<br>
-D) Caches<br>
-<br>
-<b>Answer: B) Relational (SQL) systems</b>
+<b>4. SQL stands for:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Structured Query Language</b>
 </details>
 
-<details>
-<summary><b>8. A JSON object fits best into which type of database?</b></summary>
-A) Document Store<br>
-B) Relational Store<br>
-C) Graph Store<br>
-D) Column Store<br>
-<br>
-<b>Answer: A) Document Store</b>
-</details>
+
 
 <details>
-<summary><b>9. If you need to store Session Data with extremely fast lookup, use:</b></summary>
-A) Redshift<br>
-B) MySQL<br>
-C) Redis / DynamoDB (Key-Value)<br>
-D) Neptune<br>
-<br>
-<b>Answer: C) Redis / DynamoDB (Key-Value)</b>
+<b>5. Which database type is optimized for deep relationship traversal (e.g., social graphs)?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Graph</b>
 </details>
 
-<details>
-<summary><b>10. Changing the schema in a Relational Database usually requires:</b></summary>
-A) Nothing, it's automatic<br>
-B) A migration (ALTER TABLE)<br>
-C) Deleting the database<br>
-D) A restart only<br>
-<br>
-<b>Answer: B) A migration (ALTER TABLE)</b>
-</details>
+
 
 <details>
-<summary><b>11. Which is easier to scale to Terabytes/Petabytes of active data?</b></summary>
-A) MySQL<br>
-B) PostgreSQL<br>
-C) Cassandra/DynamoDB (NoSQL)<br>
-D) SQLite<br>
-<br>
-<b>Answer: C) Cassandra/DynamoDB (NoSQL)</b>
+<b>6. "Vertical Scaling" involves:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Increasing the power (CPU/RAM) of a single server</b>
 </details>
 
-<details>
-<summary><b>12. "Denormalization" means:</b></summary>
-A) Cleaning data<br>
-B) Duplicating data to optimize read performance (common in NoSQL)<br>
-C) Compressing data<br>
-D) Encrypting data<br>
-<br>
-<b>Answer: B) Duplicating data to optimize read performance</b>
-</details>
+
 
 <details>
-<summary><b>13. Amazon RDS manages which type of database?</b></summary>
-A) NoSQL<br>
-B) Graph<br>
-C) Relational<br>
-D) Ledger<br>
-<br>
-<b>Answer: C) Relational</b>
+<b>7. ACID guarantees are strongest in:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Relational (SQL) systems</b>
 </details>
 
-<details>
-<summary><b>14. Which is a downside of NoSQL?</b></summary>
-A) Slow performance<br>
-B) Rigid schema<br>
-C) Often lacks standardized query language and complex joins<br>
-D) Cannot scale<br>
-<br>
-<b>Answer: C) Often lacks standardized query language and complex joins</b>
-</details>
+
 
 <details>
-<summary><b>15. Why might a startup choose NoSQL initially?</b></summary>
-A) Better ACID transactions<br>
-B) Rapid development with flexible data models<br>
-C) It has been around longer<br>
-D) It helps with SQL training<br>
-<br>
-<b>Answer: B) Rapid development with flexible data models</b>
+<b>8. A JSON object fits best into which type of database?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A) Document Store</b>
 </details>
 
-<details>
-<summary><b>16. Which AWS service is equivalent to MongoDB?</b></summary>
-A) RDS<br>
-B) DocumentDB<br>
-C) ElastiCache<br>
-D) Redshift<br>
-<br>
-<b>Answer: B) DocumentDB</b>
-</details>
+
 
 <details>
-<summary><b>17. In a Document store, related data is often:</b></summary>
-A) Joined from another table<br>
-B) Nested within the same document<br>
-C) Stored in a separate file<br>
-D) Deleted<br>
-<br>
-<b>Answer: B) Nested within the same document</b>
+<b>9. If you need to store Session Data with extremely fast lookup, use:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Redis / DynamoDB (Key-Value)</b>
 </details>
 
-<details>
-<summary><b>18. Relational databases are "Schema-on-______"</b></summary>
-A) Read<br>
-B) Write<br>
-<br>
-<b>Answer: B) Write (Validation happens when you save data)</b>
-</details>
+
 
 <details>
-<summary><b>19. NoSQL databases are often "Schema-on-______"</b></summary>
-A) Read<br>
-B) Write<br>
-<br>
-<b>Answer: A) Read (Validation logic is often in the application code)</b>
+<b>10. Changing the schema in a Relational Database usually requires:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) A migration (ALTER TABLE)</b>
 </details>
 
-<details>
-<summary><b>20. Which use case is NOT ideal for standard Relational DBs?</b></summary>
-A) User Accounts<br>
-B) Managing Inventory<br>
-C) Storing massive, unstructured IoT logs<br>
-D) Processing Payments<br>
-<br>
-<b>Answer: C) Storing massive, unstructured IoT logs</b>
-</details>
+
 
 <details>
-<summary><b>21. CAP Theorem states you can't satisfy which three simultaneously?</b></summary>
-A) Consistency, Availability, Performance<br>
-B) Consistency, Availability, Partition Tolerance<br>
-C) Cost, Availability, Performance<br>
-D) Consistency, Accuracy, Partitioning<br>
-<br>
-<b>Answer: B) Consistency, Availability, Partition Tolerance</b>
+<b>11. Which is easier to scale to Terabytes/Petabytes of active data?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Cassandra/DynamoDB (NoSQL)</b>
 </details>
+
+
+
+<details>
+<b>12. "Denormalization" means:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Duplicating data to optimize read performance</b>
+</details>
+
+
+
+<details>
+<b>13. Amazon RDS manages which type of database?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Relational</b>
+</details>
+
+
+
+<details>
+<b>14. Which is a downside of NoSQL?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Often lacks standardized query language and complex joins</b>
+</details>
+
+
+
+<details>
+<b>15. Why might a startup choose NoSQL initially?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Rapid development with flexible data models</b>
+</details>
+
+
+
+<details>
+<b>16. Which AWS service is equivalent to MongoDB?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) DocumentDB</b>
+</details>
+
+
+
+<details>
+<b>17. In a Document store, related data is often:</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Nested within the same document</b>
+</details>
+
+
+
+<details>
+<b>18. Relational databases are "Schema-on-______"</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Write (Validation happens when you save data)</b>
+</details>
+
+
+
+<details>
+<b>19. NoSQL databases are often "Schema-on-______"</b>
+<details>
+<summary>Show Answer</summary>
+Answer: A) Read (Validation logic is often in the application code)</b>
+</details>
+
+
+
+<details>
+<b>20. Which use case is NOT ideal for standard Relational DBs?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: C) Storing massive, unstructured IoT logs</b>
+</details>
+
+
+
+<details>
+<b>21. CAP Theorem states you can't satisfy which three simultaneously?</b>
+<details>
+<summary>Show Answer</summary>
+Answer: B) Consistency, Availability, Partition Tolerance</b>
+</details>
+
+
