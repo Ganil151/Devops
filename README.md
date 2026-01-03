@@ -1,5 +1,7 @@
 # ♾️ The Master DevOps Platform: Zero to Enterprise & Beyond
 
+![Continuous Learning, Continuous Development](./devops_continuous_learning_development_1767405372014.png)
+
 Welcome to the **Ultimate DevOps Learning & Implementation Platform**. This repository is a structured, multi-tier roadmap designed to transform individuals into high-level DevOps Architects and help them monetize their expertise in the global market.
 
 ---
