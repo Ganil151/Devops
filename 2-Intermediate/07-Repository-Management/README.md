@@ -214,10 +214,10 @@ graph LR
 
 ### Prerequisites
 - **[Git Basics](../../1-Beginner/09-Git-GitHub/)** - Fundamental Git knowledge
-- **[CI/CD Fundamentals](../04-CI-CD/)** - Pipeline integration concepts
+- **[CI/CD Fundamentals](../08-CI-CD/)** - Pipeline integration concepts
 
 ### Next Steps
-- **[Advanced CI/CD](../04-CI-CD/)** - Repository-triggered pipelines
+- **[Advanced CI/CD](../08-CI-CD/)** - Repository-triggered pipelines
 - **[Security](../../3-Advanced/04-Security/)** - Repository security hardening
 - **[Enterprise Cloud](../../3-Advanced/08-Enterprise-Cloud/)** - Cloud repository strategies
 

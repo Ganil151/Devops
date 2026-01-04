@@ -78,7 +78,7 @@ graph TB
 ---
 
 ## 🔗 Next Steps
-- **[Helm Charts](../08-Helm/)** - Package your K8s apps for reuse.
+- **[Helm Charts](../06-Configuration-Tools/04-Helm/)** - Package your K8s apps for reuse.
 - **[Observability Foundations](../10-Observability-Foundations/)** - Monitor your cluster health.
 
 ---

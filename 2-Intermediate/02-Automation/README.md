@@ -10,13 +10,14 @@ Automation is the multiplier that allows one DevOps engineer to manage thousands
 | **02** | [**Advanced Bash**](./02-Advanced-Bash-Automation/README.md) | Scaling Logic | jq, sed, awk, xargs |
 | **03** | [**Python for DevOps**](./03-Python-for-DevOps/README.md) | API & SDKs | Boto3, Requests, venv |
 | **04** | [**Best Practices**](./04-Automation-Best-Practices/README.md) | Standards | Idempotency, Secrets |
+| **05** | [**Ansible Mastery**](./05-Ansible/README.md) | Config Management | Playbooks, Roles, Vault |
 
 ---
 
 ## 🏗️ Module Features
-- **100+ Total Quiz Questions**: Interactive mastery of Shell, Bash, and Python.
-- **24+ High-Stakes Interview Questions**: Targeted prep for SRE and Platform roles.
-- **12+ Real-Life "War Stories"**: Lessons learned from production-scale automation failures and successes.
+- **[100+ Total Quiz Questions](./06-Interview-Questions-and-Quizzes/)**: Interactive mastery of Shell, Bash, and Python.
+- **[24+ High-Stakes Interview Questions](./06-Interview-Questions-and-Quizzes/)**: Targeted prep for SRE and Platform roles.
+- **[12+ Real-Life "War Stories"](./07-Real-Life-Scenarios/)**: Lessons learned from production-scale automation failures and successes.
 *   **Visual Workflows**: Mermaid diagrams for script lifecycles, data flows, and idempotency patterns.
 
 ```mermaid

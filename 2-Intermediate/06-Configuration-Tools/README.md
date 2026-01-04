@@ -11,9 +11,10 @@ This directory contains all configuration management and Infrastructure as Code 
 - **[05-Cloud-Init](./05-Cloud-Init/)**: Cloud instance initialization and configuration
 - **[09-Packer](./09-Packer/README.md)**: Automated machine image building
 - **[11-Pulumi](./11-Pulumi/README.md)**: Modern IaC with programming languages
+- **[12-Vendor-Tools](./12-Vendor-Tools/README.md)**: Cloud-native IaC (CloudFormation, ARM, Deployment Manager, etc.)
 
 ### ⚙️ Configuration Management  
-- **[02-Ansible](./02-Ansible/README.md)**: Agentless configuration management and automation
+- **[02-Ansible](../../02-Automation/Ansible/README.md)**: Agentless configuration management and automation
 - **[03-Chef](./03-Chef/README.md)**: Infrastructure automation with Ruby DSL
 - **[07-Puppet](./07-Puppet/README.md)**: Enterprise configuration management platform
 - **[08-SaltStack](./08-SaltStack/README.md)**: Event-driven infrastructure automation
@@ -39,6 +40,8 @@ This directory contains all configuration management and Infrastructure as Code 
 9. **Packer** - Automated image building
 10. **Vagrant** - Development environment consistency
 11. **Pulumi** - Modern IaC with programming languages
+12. **Vendor Tools** - Cloud-native IaC (AWS, Azure, GCP)
+
 
 ---
 
