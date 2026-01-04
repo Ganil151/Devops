@@ -11,10 +11,24 @@
             "id": "3b0e4a985e699d8d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "2-Intermediate/Labs/01-Day/Day 1 Terraform Fundamentals, Architecture, and Setup.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Day 1 Terraform Fundamentals, Architecture, and Setup"
             }
           }
         ]
