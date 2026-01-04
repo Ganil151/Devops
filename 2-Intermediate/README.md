@@ -10,21 +10,22 @@ You will transition from "managing a server" to "orchestrating a cluster" using 
 
 This level is organized into a progressive journey across 15 specialized modules. Each module now includes a curated **YouTube Lessons** collection for visual reinforcement.
 
-1.  **[00-Runbooks-Procedures](./00-Runbooks-Procedures/README.md)**: Moving from manual hacks to automated remediation.
-2.  **[01-Networking-VPC](./01-Networking-VPC/README.md)**: Advanced cloud networking, peering, and subnets.
-3.  **[02-Automation](./02-Automation/README.md)**: Python for DevOps and scripting patterns.
-4.  **[03-Configuration-Tools](./03-Configuration-Tools/README.md)**: IaC and configuration management (Terraform, Ansible, Chef, Helm, Cloud-Init).
-5.  **[04-Repository-Management](./04-Repository-Management/README.md)**: Complete version control systems (Git, GitLab, Bitbucket, Azure DevOps, Mercurial, SVN).
-6.  **[05-CI-CD](./05-CI-CD/README.md)**: Advanced delivery pipelines (Jenkins, GitLab, GitLab Runner).
-7.  **[06-Kubernetes](./06-Kubernetes/README.md)**: Orchestrating container fleets (Pods, Services, Deployments).
-8.  **[07-Databases](./07-Databases/README.md)**: Complete database management (SQL, NoSQL, managed services, DevOps practices).
-9.  **[08-Observability-Foundations](./08-Observability-Foundations/README.md)**: Metrics, Logs, and the Four Golden Signals.
-10. **[09-API-Gateways-Security](./09-API-Gateways-Security/README.md)**: Traffic control, JWT auth, and Nginx/Kong.
-11. **[10-Cloud-Engineering](./10-Cloud-Engineering/README.md)**: Cloud patterns, Landing Zones, and architectural best practices.
-12. **[11-Prompt-Engineering](./11-Prompt-Engineering/README.md)**: AI-driven troubleshooting and runbook generation.
-13. **[12-MCP](./12-MCP/README.md)**: Model Context Protocol for building Agentic AI tools.
-14. **[13-Blockchain](./13-Blockchain/README.md)**: Web3 DevOps and Smart Contract CI/CD.
-15. **[14-FinOps](./14-FinOps/README.md)**: Cost optimization, allocation, and Savings Plans.
+1.  **[01-Networking](./01-Networking/README.md)**: Advanced cloud networking, VPC peering, and subnets.
+2.  **[02-Automation](./02-Automation/README.md)**: Python for DevOps, scripting patterns, and Ansible.
+3.  **[03-Container-Orchestration](./03-Container-Orchestration/README.md)**: Orchestrating container fleets with Kubernetes.
+4.  **[04-Linux](./04-Linux/README.md)**: Intermediate System Administration, services, and logs.
+5.  **[05-Runbooks-Procedures](./05-Runbooks-Procedures/README.md)**: Automated remediation and operational excellence.
+6.  **[06-Configuration-Tools](./06-Configuration-Tools/README.md)**: IaC and configuration management (Terraform, Chef, Helm).
+7.  **[07-Repository-Management](./07-Repository-Management/README.md)**: Complete version control systems (GitLab, Bitbucket, Azure DevOps).
+8.  **[08-CI-CD](./08-CI-CD/README.md)**: Advanced delivery pipelines (Jenkins, GitLab CI).
+9.  **[09-Databases](./09-Databases/README.md)**: SQL, NoSQL, and database DevOps practices.
+10. **[10-Observability-Foundations](./10-Observability-Foundations/README.md)**: Metrics, Logs, and Tracing.
+11. **[11-API-Gateways-Security](./11-API-Gateways-Security/README.md)**: Traffic control, JWT auth, and Kong.
+12. **[12-Cloud-Engineering](./12-Cloud-Engineering/README.md)**: Cloud patterns and Landing Zones.
+13. **[13-Prompt-Engineering](./13-Prompt-Engineering/README.md)**: AI-driven troubleshooting.
+14. **[14-MCP](./14-MCP/README.md)**: Model Context Protocol for Agentic AI.
+15. **[15-Blockchain](./15-Blockchain/README.md)**: Web3 DevOps and Smart Contract CI/CD.
+16. **[16-FinOps](./16-FinOps/README.md)**: Cost optimization and allocation.
 
 ---
 

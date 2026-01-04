@@ -6,42 +6,30 @@ Instead of jumping into complex tools, we follow a 6-phase journey that mimics r
 
 ---
 
-## 🗺️ The 6-Phase Learning Journey
+## 🗺️ The Learning Roadmap
 
-### 🏗️ Phase 1: The Core Foundation
-*Understand the environment where all software lives.*
+### 📦 Phase 1: Core Infrastructure
 1. **[Networking Foundations](./01-Networking/README.md)**: How data travels across the wire.
-2. **[Linux Basics & SysAdmin](./02-Linux-Basics/README.md)**: Master the operating system of the cloud.
-3. **[SSH & Remote Access](./03-SSH/README.md)**: Securely managing servers from anywhere.
-4. **[Windows Basics](./04-Windows-Basics/README.md)**: Essential Windows Server knowledge for enterprise environments.
+2. **[Automation Basics](./02-Automation/README.md)**: Introduction to scripting and automation.
+3. **[Linux Basics & Linux SSH](./03-Linux/README.md)**: Master the operating system and secure access.
+4. **[Container Orchestration](./04-Container-Orchestration/README.md)**: Modern application packaging with Docker.
+5. **[Windows Basics](./05-Windows-Basics/README.md)**: Essential Windows Server knowledge.
 
 ### 🧩 Phase 2: Application & Data
-*The "What" before the "How." Learn how modern apps work.*
-5. **[API Basics](./05-API-Basics/README.md)**: Understanding HTTP, REST, and Status Codes.
-6. **[Data Formats (YAML & JSON)](./06-Data-Formats/README.md)**: The languages used for configuration.
-7. **[Software Stack Foundations](./07-Software-Stack/Software%20Stack%20Foundations.md)**: Frontend vs Backend, Runtimes, and Frameworks.
-8. **[Web-Design & Frameworks](./08-Web-Design/Web%20Design%20&%20Frameworks.md)**: Deep dive into Flask, Django, and React.
+6. **[API Basics](./06-API-Basics/README.md)**: Understanding HTTP, REST, and Status Codes.
+7. **[Data Formats (YAML & JSON)](./07-Data-Formats/README.md)**: Configuration languages.
+8. **[Software Stack Foundations](./08-Software-Stack/Software%20Stack%20Foundations.md)**: Frontend vs Backend, Runtimes, and Frameworks.
+9. **[Web-Design & Frameworks](./09-Web-Design/Web%20Design%20&%20Frameworks.md)**: Deep dive into Flask, Django, and React.
+10. **[Maven & Build Tools](./10-Maven/README.md)**: Creating deployable artifacts.
 
-### 🛠️ Phase 3: The Developer Workflow
-*Learn to manage code and build artifacts efficiently.*
-9. **[Maven & Build Tools](./09-Maven/README.md)**: Creating deployable artifacts (JARs/WARs).
-
-### 🐋 Phase 4: Containerization & Web Services
-*Modern packaging and high-availability plumbing.*
-10. **[Docker Basics](./10-Docker/README.md)**: Eliminating the "it works on my machine" problem.
-11. **[Nginx Web Server](./11-Nginx/Nginx%20Web%20Server.md)**: Reverse proxies, load balancing, and security.
-
-### ☁️ Phase 5: Cloud & Operations
-*Moving to production and managing the budget.*
-12. **[Basic CI/CD](./12-Basic-CI-CD/README.md)**: Automating your first push-to-deploy pipelines.
-13. **[Cloud Foundations](./13-Cloud-Foundations/README.md)**: Introduction to AWS, Azure, and GCP.
-14. **[FinOps Fundamentals](./14-FinOps/README.md)**: Tracking and optimizing cloud costs.
-
-### 🤖 Phase 6: Specialized Tech
-*Leveraging AI and modern paradigms in DevOps.*
-15. **[Prompt Engineering](./15-Prompt-Engineering/DevOps%20Prompt%20Engineering%20-%20Beginner%20Level.md)**: Using AI as your automation wingman.
-16. **[Model Context Protocol (MCP)](./16-MCP/Model%20Context%20Protocol%20(MCP)%20-%20Beginner%20Level.md)**: Advanced AI tool integration.
-17. **[Blockchain Fundamentals](./17-Blockchain/Blockchain%20DevOps%20Fundamentals.md)**: Nodes, ledgers, and decentralized ops.
+### ☁️ Phase 3: Operations & Specialized Tech
+11. **[Nginx Web Server](./11-Nginx/Nginx%20Web%20Server.md)**: Reverse proxies and load balancing.
+12. **[Basic CI/CD](./12-Basic-CI-CD/README.md)**: Automating your first pipelines.
+13. **[Cloud Foundations](./13-Cloud-Foundations/README.md)**: Intro to AWS, Azure, and GCP.
+14. **[FinOps Fundamentals](./14-FinOps/README.md)**: Tracking cloud costs.
+15. **[Prompt Engineering](./15-Prompt-Engineering/DevOps%20Prompt%20Engineering%20-%20Beginner%20Level.md)**: AI as your wingman.
+16. **[Model Context Protocol (MCP)](./16-MCP/Model%20Context%20Protocol%20(MCP)%20-%20Beginner%20Level.md)**: AI tool integration.
+17. **[Blockchain Fundamentals](./17-Blockchain/Blockchain%20DevOps%20Fundamentals.md)**: Nodes and decentralized ops.
 
 ---
 

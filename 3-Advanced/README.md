@@ -22,47 +22,53 @@ Each module below now includes:
 - **[NEW] ❓ Interview & Quizzes**: 20+ questions per module to prep for enterprise roles.
 - **[NEW] 🏗️ Real-Life Scenarios**: Practical architecture and troubleshooting challenges.
 
-### 01. [GitOps with ArgoCD](./01-GitOps/README.md)
-Master the art of declarative deployment. Learn how to manage clusters by syncing them with Git using pull-based reconciliation.
+### 01. [Networking](./01-Networking/README.md)
+Advanced enterprise networking, Global Scale VPC, and Performance Tuning.
 
-### 02. [Observability & Monitoring](./02-Observability/README.md)
-Deep dive into the 3 Pillars: Metrics (Prometheus), Logs (ELK), and Traces (OpenTelemetry/X-Ray).
+### 02. [Automation](./02-Automation/README.md)
+Enterprise patterns for **Ansible** and **Terraform**, focusing on modularity and remote state management.
 
-### 03. [Advanced Kubernetes](./03-Advanced-K8s/README.md)
-Extending K8s with Operators, CRDs, and managing service-to-service communication with **Service Mesh**.
+### 03. [Container Orchestration](./03-Container-Orchestration/README.md)
+Advanced Kubernetes with Operators, CRDs, and **Service Mesh** implementations.
 
-### 04. [Enterprise Security (DevSecOps)](./04-Security/README.md)
-Building a "Security as Code" culture. Includes SAST, DAST, Container Scanning, and Compliance automation.
+### 04. [Linux](./04-Linux/README.md)
+Advanced Security, Kernel Hardening, and Performance Tracing (`eBPF`/`perf`).
 
-### 05. [Identity & Governance](./05-Identity-Governance/README.md)
-Mastering IAM, permissions, and automated compliance audits.
+### 05. [GitOps with ArgoCD](./05-GitOps/README.md)
+Declarative deployment using pull-based reconciliation.
 
-### 06. [Microservices Architecture](./06-Microservices/README.md)
-Solving the operational challenges of distributed systems, including Service Discovery and API Gateways.
+### 06. [Observability & Monitoring](./06-Observability/README.md)
+Deep dive into the 3 Pillars: Metrics (Prometheus), Logs (ELK), and Traces (OpenTelemetry).
 
-### 07. [Specialized Technology](./07-Specialized-Tech/README.md)
-The cutting edge of DevOps. Includes **AI/ML Integration (MLOps)**, **Web3 DevOps**, and **Edge Computing**.
+### 07. [Enterprise Security (DevSecOps)](./07-Security/README.md)
+Security as Code: SAST, DAST, and Compliance automation.
 
-### 08. [Enterprise Cloud Architecture](./08-Enterprise-Cloud/README.md)
-Highly advanced cloud patterns, Multi-Cloud strategy, and Global Scale Networking.
+### 08. [Identity & Governance](./08-Identity-Governance/README.md)
+Mastering IAM, Permissions, and automated Compliance Audits.
 
-### 09. [Advanced Automation](./09-Advanced-Automation/README.md)
-Enterprise patterns for **Ansible** and **Terraform**, focusing on modularity and state management.
+### 09. [Microservices Architecture](./09-Microservices/README.md)
+Service Discovery, API Gateways, and distributed system operational challenges.
 
-### 10. [Prompt Engineering](DevOps%20Prompt%20Engineering%20-%20Advanced%20Level.md)
-DevOps-specific AI integration architectures, Chain-of-Thought prompting, and automated runbook generation.
+### 10. [Specialized Technology](./10-Specialized-Tech/README.md)
+Cutting edge: **AI/ML Integration (MLOps)**, **Web3**, and **Edge Computing**.
 
-### 11. [Model Context Protocol (MCP)](./11-MCP/README.md)
-Standardized communication between LLMs and real-world data sources for agentic automation.
+### 11. [Enterprise Cloud Architecture](./11-Enterprise-Cloud/README.md)
+High-availability multi-cloud patterns and global infrastructure.
 
-### 12. [Blockchain Ops & Security](./12-Blockchain/README.md)
-Running production-grade Validator nodes and securing decentralized infrastructure.
+### 12. [Prompt Engineering](./12-Prompt-Engineering/DevOps%20Prompt%20Engineering%20-%20Advanced%20Level.md)
+AI integration architectures and automated runbook generation.
 
-### 13. [Enterprise FinOps](./13-FinOps/README.md)
-Unit economics, cloud financial governance, and building a cost-aware engineering culture.
+### 13. [Model Context Protocol (MCP)](./13-MCP/README.md)
+Standardized communication for Agentic AI automation.
 
-### 14. [Advanced API Architectures](./14-Advanced-API-Architectures/README.md)
-High-performance gRPC, GraphQL patterns, and Event-Driven architecture at global scale.
+### 14. [Blockchain Ops & Security](./14-Blockchain/README.md)
+Validator nodes and decentralized infrastructure.
+
+### 15. [Enterprise FinOps](./15-FinOps/README.md)
+Unit economics and cost-aware engineering culture.
+
+### 16. [Advanced API Architectures](./16-Advanced-API-Architectures/README.md)
+gRPC, GraphQL, and Event-Driven architecture at global scale.
 
 ---
 

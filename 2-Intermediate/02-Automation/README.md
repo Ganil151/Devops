@@ -19,6 +19,23 @@ Automation is the multiplier that allows one DevOps engineer to manage thousands
 - **12+ Real-Life "War Stories"**: Lessons learned from production-scale automation failures and successes.
 *   **Visual Workflows**: Mermaid diagrams for script lifecycles, data flows, and idempotency patterns.
 
+```mermaid
+graph LR
+    Start([Start]) --> Check{State Exists?}
+    Check -- Yes (Idempotent) --> Skip[Skip / No-Op]
+    Check -- No --> Action[Perform Action]
+    Action --> Verify{Verify}
+    Verify -- Success --> Log[Log Success]
+    Verify -- Fail --> Alert[Trigger Alert]
+    Skip --> Log
+    Alert --> Stop([Stop / Exit 1])
+    Log --> Stop([End / Exit 0])
+    
+    style Start fill:#2ecc71,stroke:#27ae60,color:#fff
+    style Check fill:#3498db,stroke:#2980b9,color:#fff
+    style Stop fill:#e74c3c,stroke:#c0392b,color:#fff
+```
+
 ---
 
 ## 🏗️ The Automation-First Mindset

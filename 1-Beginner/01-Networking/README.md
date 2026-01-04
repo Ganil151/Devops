@@ -15,20 +15,20 @@ Networking is the plumbing of the internet. For a DevOps engineer, understanding
 - **[06-Basic-Troubleshooting](./1-Beginner-Level/06-Basic-Troubleshooting/)**: Diagnosing connectivity issues.
 
 ### 🚀 Intermediate Level
-- **[01-DNS-DHCP](./2-Intermediate-Level/01-DNS-DHCP/)**: Core network services.
-- **[02-VLANs-Switching](./2-Intermediate-Level/02-VLANs-Switching/)**: Layer 2 segmentation.
-- **[03-Advanced-Routing](./2-Intermediate-Level/03-Advanced-Routing/)**: OSPF, BGP, Static routing.
-- **[04-Network-Security](./2-Intermediate-Level/04-Network-Security/)**: Firewalls, VPNs, Security Groups.
-- **[05-VPN-Technologies](./2-Intermediate-Level/05-VPN-Technologies/)**: Remote access and Site-to-Site.
-- **[06-Load-Balancing](./2-Intermediate-Level/06-Load-Balancing/)**: Distributing traffic.
+- **[01-VPC-Fundamentals](../../2-Intermediate/Networking/01-VPC-Fundamentals/)**: Core network services.
+- **[02-Subnetting-and-CIDR](../../2-Intermediate/Networking/02-Subnetting-and-CIDR/)**: Layer 2 segmentation.
+- **[03-Internet-and-NAT-Gateways](../../2-Intermediate/Networking/03-Internet-and-NAT-Gateways/)**: OSPF, BGP, Static routing.
+- **[04-Routing-and-Route-Tables](../../2-Intermediate/Networking/04-Routing-and-Route-Tables/)**: Firewalls, VPNs, Security Groups.
+- **[05-Network-Security-NACLs-SGs](../../2-Intermediate/Networking/05-Network-Security-NACLs-SGs/)**: Remote access and Site-to-Site.
+- **[06-VPC-Peering-and-Transit-Gateway](../../2-Intermediate/Networking/06-VPC-Peering-and-Transit-Gateway/)**: Distributing traffic.
 
 ### 🛡️ Advanced Level
-- **[01-Cloud-Networking](./3-Advanced-Level/01-Cloud-Networking/)**: VPCs, Cloud Load Balancers.
-- **[02-Container-Networking](./3-Advanced-Level/02-Container-Networking/)**: Docker and CNI.
-- **[03-Service-Mesh](./3-Advanced-Level/03-Service-Mesh/)**: Istio, Linkerd.
-- **[04-SDN-NFV](./3-Advanced-Level/04-SDN-NFV/)**: Software Defined Networking.
-- **[05-Network-Automation](./3-Advanced-Level/05-Network-Automation/)**: NetDevOps.
-- **[06-Performance-Optimization](./3-Advanced-Level/06-Performance-Optimization/)**: Tuning and latency reduction.
+- **[01-Cloud-Networking](../../3-Advanced/Networking/01-Cloud-Networking/)**: VPCs, Cloud Load Balancers.
+- **[02-Container-Networking](../../3-Advanced/Networking/02-Container-Networking/)**: Docker and CNI.
+- **[03-Service-Mesh](../../3-Advanced/Networking/03-Service-Mesh/)**: Istio, Linkerd.
+- **[04-SDN-NFV](../../3-Advanced/Networking/04-SDN-NFV/)**: Software Defined Networking.
+- **[05-Network-Automation](../../3-Advanced/Networking/05-Network-Automation/)**: NetDevOps.
+- **[06-Performance-Optimization](../../3-Advanced/Networking/06-Performance-Optimization/)**: Tuning and latency reduction.
 
 ---
 
