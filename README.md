@@ -104,27 +104,28 @@ graph TD
 ### Beginner Level
 | Module | Status | Module | Status |
 | :--- | :--- | :--- | :--- |
-| 01-Networking | ⭐⭐⭐⭐⭐ | 10-Docker | ⭐⭐⭐⭐⭐ |
-| 02-Linux-Basics | ⭐⭐⭐⭐ | 11-Nginx | ⭐⭐⭐ |
-| 03-SSH | ⭐⭐⭐⭐ | 12-Basic-CI-CD | ⭐⭐⭐ |
-| 05-API-Basics | ⭐⭐⭐⭐⭐ | 13-Cloud-Foundations | ⭐⭐⭐⭐ |
-| 06-Data-Formats | ⭐⭐⭐⭐⭐ | 14-FinOps | ⭐⭐⭐⭐ |
+| 01-Networking | ⭐⭐⭐⭐⭐ | 10-Maven | ⭐⭐⭐⭐⭐ |
+| 03-Linux | ⭐⭐⭐⭐ | 11-Nginx | ⭐⭐⭐ |
+| 05-Windows-Basics | ⭐⭐⭐⭐ | 12-Basic-CI-CD | ⭐⭐⭐ |
+| 06-API-Basics | ⭐⭐⭐⭐⭐ | 13-Cloud-Foundations | ⭐⭐⭐⭐ |
+| 07-Data-Formats | ⭐⭐⭐⭐⭐ | 14-FinOps | ⭐⭐⭐⭐ |
 
 ### Intermediate Level
 | Module | Status | Module | Status |
 | :--- | :--- | :--- | :--- |
-| 01-Networking-VPC | ⭐⭐⭐⭐⭐ | 06-Kubernetes | ⭐⭐⭐⭐⭐ |
-| 02-Automation | ⭐⭐⭐⭐⭐ | 07-Databases | ⭐⭐⭐⭐⭐ |
-| 03-Configuration | ⭐⭐⭐⭐⭐ | 10-Cloud-Eng | ⭐⭐⭐⭐⭐ |
-| 04-Repo-Management | ⭐⭐⭐⭐⭐ | 14-FinOps | ⭐⭐⭐⭐⭐ |
+| 01-Networking | ⭐⭐⭐⭐⭐ | 06-Kubernetes | ⭐⭐⭐⭐⭐ |
+| 03-Automation | ⭐⭐⭐⭐⭐ | 08-Databases | ⭐⭐⭐⭐⭐ |
+| 05-Configuration | ⭐⭐⭐⭐⭐ | 12-Cloud-Eng | ⭐⭐⭐⭐⭐ |
+| 07-Repo-Management | ⭐⭐⭐⭐⭐ | 16-FinOps | ⭐⭐⭐⭐⭐ |
 
 ### Advanced Level
 | Module | Status | Module | Status |
 | :--- | :--- | :--- | :--- |
-| 01-GitOps | ⭐⭐⭐⭐⭐ | 04-Security | ⭐⭐⭐⭐⭐ |
-| 02-Observability | ⭐⭐⭐⭐⭐ | 08-Ent-Cloud | ⭐⭐⭐⭐⭐ |
-| 03-Advanced-K8s | ⭐⭐⭐⭐⭐ | 13-FinOps | ⭐⭐⭐⭐⭐ |
-| 06-Microservices | ⭐⭐⭐⭐ | 14-API-Arch | ⭐⭐⭐⭐⭐ |
+| 01-Networking | ⭐⭐⭐⭐⭐ | 06-GitOps | ⭐⭐⭐⭐⭐ |
+| 03-Linux | ⭐⭐⭐⭐⭐ | 07-Observability | ⭐⭐⭐⭐⭐ |
+| 04-K8s-Orchestration | ⭐⭐⭐⭐⭐ | 09-Microservices | ⭐⭐⭐⭐ |
+| 07-Security | ⭐⭐⭐⭐⭐ | 11-Ent-Cloud | ⭐⭐⭐⭐⭐ |
+| 15-FinOps | ⭐⭐⭐⭐⭐ | 16-API-Arch | ⭐⭐⭐⭐⭐ |
 
 </details>
 
@@ -134,9 +135,9 @@ graph TD
 
 ### **Perfect Consolidation achieved with Zero Duplication**
 
-- **[Repository Management Hub](./2-Intermediate/04-Repository-Management/README.md)**: Centralized 6 VCS technologies (Git, GitLab, Bitbucket, Azure DevOps, Mercurial, SVN).
-- **[Database Management Hub](./2-Intermediate/07-Databases/README.md)**: Consolidated SQL, NoSQL, and Managed Services from across the platform.
-- **[Configuration Tools Hub](./2-Intermediate/03-Configuration-Tools/README.md)**: Enterprise patterns for 11+ tools (Terraform, Ansible, Chef, Helm, etc.).
+- **[Repository Management Hub](./2-Intermediate/1-Beginner-Level/07-Repository-Management/README.md)**: Centralized 6 VCS technologies (Git, GitLab, Bitbucket, Azure DevOps, Mercurial, SVN).
+- **[Database Management Hub](./2-Intermediate/1-Beginner-Level/08-Databases/README.md)**: Consolidated SQL, NoSQL, and Managed Services from across the platform.
+- **[Configuration Tools Hub](./2-Intermediate/2-Intermediate-Level/05-Configuration-Tools/README.md)**: Enterprise patterns for 11+ tools (Terraform, Ansible, Chef, Helm, etc.).
 - **[Quizzes & Assessments](./Quizzes/README.md)**: Master Quiz + 100+ tiered questions and 200+ interview Q&As.
 - **[Recommended Videos](./Recommended_Videos.md)**: Curated YouTube curriculum mapped to each learning level.
 
@@ -163,7 +164,7 @@ graph TD
 ## 🚀 Getting Started
 
 1. **Placement**: Take the **[Master Quiz](./Quizzes/README.md)** to find your starting level.
-2. **Foundations**: If new, start with **[Networking](./1-Beginner/01-Networking/README.md)**.
+2. **Foundations**: If new, start with **[Networking](./1-Beginner/1-Beginner-Level/01-Networking/README.md)**.
 3. **Automation**: If experienced, dive into **[Intermediate Automation](./2-Intermediate/README.md)**.
 4. **Monetization**: Senior architects should explore **[Professional Development](./4-Professional-Development/README.md)**.
 

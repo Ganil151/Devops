@@ -10,171 +10,115 @@ You will transition from "managing a server" to "orchestrating a cluster" using 
 
 ## 🗺️ The Intermediate Curriculum
 
-This level is organized into a progressive journey across **16 specialized modules**. Many modules include curated **YouTube Lessons** for visual reinforcement and hands-on learning.
+This level is organized into a tiered journey across **16 specialized modules**. Many modules include curated **YouTube Lessons** for visual reinforcement and hands-on learning.
 
 ---
 
-### 1️⃣ [01-Networking](./01-Networking/README.md)
-**Advanced Cloud Networking, VPC Architecture & Security**
-- VPC fundamentals, subnetting, and CIDR blocks
-- Internet and NAT Gateways, Route Tables
-- Network Security with NACLs and Security Groups
-- VPC Peering and Transit Gateway architectures
-- Load balancing (ALB/NLB) and hybrid connectivity
-- 📺 [YouTube Lessons](./01-Networking/Youtube_Lessons.md)
+### 🌱 Beginner Level (Intermediate Tier)
 
----
-
-### 2️⃣ [02-Linux](./02-Linux/README.md)
+#### 1️⃣ [02-Linux](./1-Beginner-Level/02-Linux/README.md)
 **Intermediate System Administration & Security**
-- Advanced system administration techniques
 - Master systemd, signals, and process lifecycle
 - SSH hardening, key management, and tunneling
 - System logs, diagnostic tools, and kernel observability
-- 📚 Interview Questions & Quiz included
+
+#### 2️⃣ [01-Networking](./1-Beginner-Level/01-Networking/README.md)
+**Advanced Cloud Networking, VPC Architecture & Security**
+- VPC fundamentals, subnetting, and CIDR blocks
+- Internet and NAT Gateways, Route Tables
+- VPC Peering and Transit Gateway architectures
+
+#### 3️⃣ [07-Repository-Management](./1-Beginner-Level/07-Repository-Management/README.md)
+**Enterprise Version Control & Repository Architecture**
+- Git, GitLab, Bitbucket, and Azure DevOps Repos
+- Enterprise branching models (GitFlow, Trunk-based)
+- 📚 Interview Questions and Consolidation Summary
+
+#### 4️⃣ [08-Databases](./1-Beginner-Level/08-Databases/README.md)
+**SQL, NoSQL & Database DevOps Practices**
+- PostgreSQL, MySQL, MariaDB, and Amazon RDS
+- NoSQL scaling (MongoDB, Redis, DynamoDB)
+- Backup strategies, replication, and disaster recovery
+
+#### 5️⃣ [04-Runbooks-Procedures](./1-Beginner-Level/04-Runbooks-Procedures/README.md)
+**Automated Remediation & Operational Excellence**
+- Writing effective Standard Operating Procedures (SOPs)
+- Auto-remediation patterns and self-healing strategies
+- Incident management and response workflows
 
 ---
 
-### 3️⃣ [03-Automation](./03-Automation/README.md)
+### ⚙️ Intermediate Level (Intermediate Tier)
+
+#### 6️⃣ [03-Automation](./2-Intermediate-Level/03-Automation/README.md)
 **Python for DevOps, Scripting Patterns & Ansible**
 - Advanced Bash scripting and automation patterns
 - Python for infrastructure automation
 - Ansible playbooks, roles, and vault
-- Automation best practices and SRE standards
-- 📺 [YouTube Lessons](./03-Automation/Youtube_Lessons.md)
 
----
-
-### 4️⃣ [04-Runbooks-Procedures](./04-Runbooks-Procedures/README.md)
-**Automated Remediation & Operational Excellence**
-- Runbook fundamentals and interactive templates
-- Writing effective Standard Operating Procedures (SOPs)
-- Auto-remediation patterns and self-healing strategies
-- Incident management and response workflows
-- 📺 [YouTube Lessons](./04-Runbooks-Procedures/Youtube_Lessons.md)
-
----
-
-### 5️⃣ [05-Container-Orchestration](./05-Container-Orchestration/README.md)
-**Orchestrating Container Fleets with Kubernetes**
-- Kubernetes cluster architecture and control plane
-- Pods, Deployments, Services, and Core Networking
-- ConfigMaps, Secrets, and Persistent Storage
-- StatefulSets, Jobs, and Managed Kubernetes (EKS/GKE)
-- Ingress Controllers, Service Mesh, and Cluster Ops
-- 📺 [YouTube Lessons](./05-Container-Orchestration/Youtube_Lessons.md)
-
----
-
-### 6️⃣ [06-Configuration-Tools](./06-Configuration-Tools/README.md)
+#### 7️⃣ [05-Configuration-Tools](./2-Intermediate-Level/05-Configuration-Tools/README.md)
 **Infrastructure as Code & Configuration Management**
 - **Terraform** - Provisioning, state mastery, and modular design
-- **Chef** - Infrastructure automation with Ruby DSL
-- **Helm** - Kubernetes package management and templating
-- **Ansible** - Scalable agentless configuration
-- **Packer** - Automated machine image pipelines
-- **Pulumi** - Modern IaC with programming languages
-- Additional tools: Cloud-Init, Kustomize, Puppet, Vagrant
+- **Chef, Helm, Ansible, Packer, Pulumi**
+- Cloud-Init, Kustomize, Puppet, Vagrant
 
----
-
-### 7️⃣ [07-Repository-Management](./07-Repository-Management/README.md)
-**Enterprise Version Control & Repository Architecture**
-- Git & GitHub - Modern distributed version control
-- GitLab - Complete DevOps platform integration
-- Bitbucket - Atlassian ecosystem collaboration
-- Azure DevOps Repos - Microsoft enterprise VCS
-- Mercurial & SVN - Legacy and specialized systems
-- Enterprise branching models (GitFlow, Trunk-based)
-- 📚 Interview Questions and Consolidation Summary
-
----
-
-### 8️⃣ [08-Databases](./08-Databases/README.md)
-**SQL, NoSQL & Database DevOps Practices**
-- Database lifecycle and DevOps integration
-- PostgreSQL administration and performance tuning
-- MySQL, MariaDB, and Amazon RDS
-- NoSQL scaling (MongoDB, Redis, DynamoDB)
-- Backup strategies, replication, and disaster recovery
-- 📺 [YouTube Lessons](./08-Databases/Youtube_Lessons.md)
-
----
-
-### 9️⃣ [09-CI-CD](./09-CI-CD/README.md)
+#### 8️⃣ [09-CI-CD](./2-Intermediate-Level/09-CI-CD/README.md)
 **Advanced Continuous Integration & Delivery Pipelines**
-- CI/CD fundamentals and pipeline security
-- Jenkins mastery - Shared Libraries & Pipeline as Code
+- Jenkins mastery - Pipeline as Code
 - GitHub Actions & GitLab CI for modern workflows
-- Static analysis (SonarQube) and Quality Gates
 - Deployment strategies (Blue/Green, Canary)
-- 📺 [YouTube Lessons](./09-CI-CD/Youtube_Lessons.md)
 
----
-
-### 🔟 [10-Observability-Foundations](./10-Observability-Foundations/README.md)
-**Metrics, Logs & Distributed Tracing**
-- Monitoring principles and metrics collection (Prometheus)
-- Centralized log management (ELK/Loki)
-- Distributed tracing (Jaeger/Zipkin)
-- AWS CloudWatch and Cloud-native observability
-- 📺 [YouTube Lessons](./10-Observability-Foundations/Youtube_Lessons.md)
-
----
-
-### 1️⃣1️⃣ [11-API-Gateways-Security](./11-API-Gateways-Security/README.md)
-**Traffic Control, Authentication & API Management**
-- API Gateway architecture (Kong, NGINX, AWS)
-- JWT, OAuth2, and AuthN/AuthZ patterns
-- Traffic control, rate limiting, and WAF
-- API documentation (Swagger/OpenAPI)
-- 📺 [YouTube Lessons](./11-API-Gateways-Security/Youtube_Lessons.md)
-
----
-
-### 1️⃣2️⃣ [12-Cloud-Engineering](./12-Cloud-Engineering/README.md)
+#### 9️⃣ [12-Cloud-Engineering](./2-Intermediate-Level/12-Cloud-Engineering/README.md)
 **Cloud Patterns & Landing Zones**
 - Multi-cloud architecture and landing zones
 - Edge computing and Content Delivery (CloudFront)
 - IAM Governance and fine-grained security
-- Serverless architectures and lambda patterns
-- 📺 [YouTube Lessons](./12-Cloud-Engineering/Youtube_Lessons.md)
 
----
-
-### 1️⃣3️⃣ [13-Prompt-Engineering](./13-Prompt-Engineering/README.md)
+#### 🔟 [13-Prompt-Engineering](./2-Intermediate-Level/13-Prompt-Engineering/README.md)
 **AI-Driven Troubleshooting & Automation**
 - Chain-of-Thought prompting for complex SRE tasks
 - Automated runbook generation with AI agents
 - Optimization for code generation and refactoring
-- 📺 [YouTube Lessons](./13-Prompt-Engineering/Youtube_Lessons.md)
 
 ---
 
-### 1️⃣4️⃣ [14-MCP](./14-MCP/README.md)
+### 🏛️ Advance Level (Intermediate Tier)
+
+#### 1️⃣1️⃣ [06-Container-Orchestration](./3-Advance-Level/06-Container-Orchestration/README.md)
+**Orchestrating Container Fleets with Kubernetes**
+- Kubernetes cluster architecture and control plane
+- Pods, Deployments, Services, and Core Networking
+- Ingress Controllers, Service Mesh, and Cluster Ops
+
+#### 1️⃣2️⃣ [10-Observability-Foundations](./3-Advance-Level/10-Observability-Foundations/README.md)
+**Metrics, Logs & Distributed Tracing**
+- Monitoring principles and metrics collection (Prometheus)
+- Centralized log management (ELK/Loki)
+- Distributed tracing (Jaeger/Zipkin)
+
+#### 1️⃣3️⃣ [11-API-Gateways-Security](./3-Advance-Level/11-API-Gateways-Security/README.md)
+**Traffic Control, Authentication & API Management**
+- API Gateway architecture (Kong, NGINX, AWS)
+- JWT, OAuth2, and AuthN/AuthZ patterns
+- Traffic control, rate limiting, and WAF
+
+#### 1️⃣4️⃣ [14-MCP](./3-Advance-Level/14-MCP/README.md)
 **Model Context Protocol for Agentic AI**
 - MCP fundamentals and architectural standards
 - Scaling AI agents with context-aware servers
 - MCP integration with Cloud & K8s ecosystems
-- 📺 [YouTube Lessons](./14-MCP/Youtube_Lessons.md)
 
----
-
-### 1️⃣5️⃣ [15-Blockchain](./15-Blockchain/README.md)
+#### 1️⃣5️⃣ [15-Blockchain](./3-Advance-Level/15-Blockchain/README.md)
 **Web3 DevOps & Smart Contract CI/CD**
 - Blockchain development foundations and nodes
 - Smart contract security scanning and CI/CD
 - Testing strategies for DApps and decentralized infra
-- 📺 [YouTube Lessons](./15-Blockchain/Youtube_Lessons.md)
 
----
-
-### 1️⃣6️⃣ [16-FinOps](./16-FinOps/README.md)
+#### 1️⃣6️⃣ [16-FinOps](./3-Advance-Level/16-FinOps/README.md)
 **Cloud Cost Optimization & Financial Operations**
 - Cloud cost allocation, tagging, and visibility
 - Optimization techniques for compute and storage
 - FinOps automation and governance models
-- 📺 [YouTube Lessons](./16-FinOps/Youtube_Lessons.md)
 
 ---
 
@@ -198,28 +142,24 @@ By the end of this level, you will be able to:
 
 ## 📊 Recommended Learning Path
 
-### Phase 1: Foundation (Weeks 1-4)
-1. **Networking** - Cloud network architecture (01)
-2. **Linux** - Intermediate system administration (02)
-3. **Automation** - Scripting and Ansible (03)
+### Phase 1: Beginner (Weeks 1-4)
+1. **Linux** - Intermediate administration (02)
+2. **Networking** - Cloud architecture (01)
+3. **Repository Management** - Enterprise Git (07)
+4. **Databases** - Database DevOps (08)
+5. **Runbooks** - Operational excellence (04)
 
-### Phase 2: Orchestration (Weeks 5-8)
-4. **Runbooks** - Operational excellence & Procedures (04)
-5. **Container Orchestration** - Kubernetes mastery (05)
-6. **Configuration Tools** - Terraform and IaC (06)
+### Phase 2: Intermediate (Weeks 5-10)
+6. **Automation** - Scripting & Ansible (03)
+7. **Configuration Tools** - Terraform & IaC (05)
+8. **CI/CD** - Advanced automated pipelines (09)
+9. **Cloud Engineering** - Architecture & Patterns (12)
+10. **Prompt Engineering** - AI-driven automation (13)
 
-### Phase 3: Delivery (Weeks 9-12)
-7. **Repository Management** - Enterprise Git workflows (07)
-8. **Databases** - Database DevOps practices (08)
-9. **CI/CD** - Advanced automated pipelines (09)
-
-### Phase 4: Observability & Security (Weeks 13-16)
-10. **Observability** - Metrics, Logs, and Tracing (10)
-11. **API Gateways** - Traffic management & Security (11)
-12. **Cloud Engineering** - Architecture & Cloud Patterns (12)
-
-### Phase 5: Emerging Technologies (Weeks 17-20)
-13. **Prompt Engineering** - AI-driven automation (13)
+### Phase 3: Advance (Weeks 11-16)
+11. **Container Orchestration** - Kubernetes mastery (06)
+12. **Observability** - Metrics, Logs, & Tracing (10)
+13. **API Gateways** - Security & Traffic (11)
 14. **MCP** - Agentic AI integration (14)
 15. **Blockchain** - Web3 DevOps (15)
 16. **FinOps** - Cost optimization (16)
@@ -255,18 +195,9 @@ Modules in this level prepare you for:
 Most modules include curated YouTube lessons - look for `Youtube_Lessons.md` files in each module directory.
 
 ### 🧪 Hands-On Labs
-Each module contains:
-- Interview questions and quizzes
-- Real-life scenarios
-- Practical exercises
-- Architecture diagrams
+Each module contains interview questions, quizzes, real-life scenarios, and architecture diagrams.
 
 🔍 **Looking for structured Day-by-Day training?** Check out the [Labs](./Labs) directory for organized daily tasks and deep dives.
-
-### 🔍 Quick Reference
-- [Consolidation summaries](./07-Repository-Management/CONSOLIDATION_SUMMARY.md) for complex topics
-- Mermaid diagrams for visual learning
-- Best practices and standards documentation
 
 ---
 

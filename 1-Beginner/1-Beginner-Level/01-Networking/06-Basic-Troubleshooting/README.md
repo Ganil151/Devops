@@ -848,9 +848,8 @@ Before proceeding, ensure you can:
 
 ## 🔗 Next Steps
 
-- **[Intermediate Level](../../Intermediate-Level/)** - Advanced troubleshooting techniques
-- **[Network Security](../../Intermediate-Level/Network-Security/)** - Security-focused diagnostics
-- **[Performance Optimization](../../Advanced-Level/Performance-Optimization/)** - Advanced performance analysis
+- **[Intermediate Level](../../../../2-Intermediate/README.md)** - Advanced troubleshooting techniques
+- **[Advanced Level](../../../../3-Advanced/README.md)** - Enterprise architectures and observability
 
 ---
 

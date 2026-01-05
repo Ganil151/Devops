@@ -14,7 +14,7 @@ This directory contains all configuration management and Infrastructure as Code 
 - **[12-Vendor-Tools](./12-Vendor-Tools/README.md)**: Cloud-native IaC (CloudFormation, ARM, Deployment Manager, etc.)
 
 ### ⚙️ Configuration Management  
-- **[02-Ansible](../../02-Automation/Ansible/README.md)**: Agentless configuration management and automation
+- **[02-Ansible](../03-Automation/05-Ansible/README.md)**: Agentless configuration management and automation
 - **[03-Chef](./03-Chef/README.md)**: Infrastructure automation with Ruby DSL
 - **[07-Puppet](./07-Puppet/README.md)**: Enterprise configuration management platform
 - **[08-SaltStack](./08-SaltStack/README.md)**: Event-driven infrastructure automation
@@ -58,4 +58,4 @@ This directory contains all configuration management and Infrastructure as Code 
 
 ---
 
-**Return to**: [Intermediate Level](../README.md)
+**Return to**: [Intermediate Level](../../README.md)

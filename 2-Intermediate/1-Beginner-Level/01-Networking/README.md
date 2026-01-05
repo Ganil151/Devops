@@ -7,12 +7,12 @@ Networking is the plumbing of the internet. For a DevOps engineer, understanding
 ## 📂 Module Structure
 
 ### 🔰 Beginner Level
-- **[01-Network-Fundamentals](../../1-Beginner/Networking/01-Network-Fundamentals/)**: Basics of networking.
-- **[02-Network-Models](../../1-Beginner/Networking/02-Network-Models/)**: OSI and TCP/IP models.
-- **[03-IP-Addressing](../../1-Beginner/Networking/03-IP-Addressing/)**: IPv4, IPv6, Subnetting.
-- **[04-Basic-Protocols](../../1-Beginner/Networking/04-Basic-Protocols/)**: TCP, UDP, HTTP, DNS.
-- **[05-Network-Devices](../../1-Beginner/Networking/05-Network-Devices/)**: Routers, Switches, Firewalls.
-- **[06-Basic-Troubleshooting](../../1-Beginner/Networking/06-Basic-Troubleshooting/)**: Diagnosing connectivity issues.
+- **[01-Network-Fundamentals](../../../1-Beginner/1-Beginner-Level/01-Networking/01-Network-Fundamentals/)**: Basics of networking.
+- **[02-Network-Models](../../../1-Beginner/1-Beginner-Level/01-Networking/02-Network-Models/)**: OSI and TCP/IP models.
+- **[03-IP-Addressing](../../../1-Beginner/1-Beginner-Level/01-Networking/03-IP-Addressing/)**: IPv4, IPv6, Subnetting.
+- **[04-Basic-Protocols](../../../1-Beginner/1-Beginner-Level/01-Networking/04-Basic-Protocols/)**: TCP, UDP, HTTP, DNS.
+- **[05-Network-Devices](../../../1-Beginner/1-Beginner-Level/01-Networking/05-Network-Devices/)**: Routers, Switches, Firewalls.
+- **[06-Basic-Troubleshooting](../../../1-Beginner/1-Beginner-Level/01-Networking/06-Basic-Troubleshooting/)**: Diagnosing connectivity issues.
 
 ### 🚀 Intermediate Level
 - **[01-VPC-Fundamentals](./01-VPC-Fundamentals/)**: Core network services.
@@ -129,4 +129,4 @@ Mastering theory is only half the battle. You must master the diagnostic and sca
 
 ---
 
- **Next Step**: Learn how to securely log into these networked systems in the [Linux Basics Module](../02-Linux-Basics/README.md).
+ **Next Step**: Learn how to securely log into these networked systems in the [Linux Module](../02-Linux/README.md).

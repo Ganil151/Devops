@@ -426,4 +426,4 @@ Before proceeding, ensure you can:
 
 ---
 
-*Next: [Basic Protocols](../Basic-Protocols/) - Learn essential network protocols*
+*Next: [Basic Protocols](../04-Basic-Protocols/) - Learn essential network protocols*

@@ -310,4 +310,4 @@ Before proceeding, ensure you can:
 
 ---
 
-*Next: [IP Addressing](../IP-Addressing/) - Learn about network addressing and subnetting*
+*Next: [Network Models](../02-Network-Models/) - Deep dive into OSI and TCP/IP models*

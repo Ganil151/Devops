@@ -592,9 +592,8 @@ Before proceeding, ensure you can:
 
 ## 🔗 Next Steps
 
-- **[Basic Troubleshooting](../Basic-Troubleshooting/)** - Network diagnostic techniques
-- **[Intermediate Level](../../Intermediate-Level/)** - Advanced device configurations
-- **[Network Security](../../Intermediate-Level/Network-Security/)** - Security appliances
+- **[Basic Troubleshooting](../06-Basic-Troubleshooting/)** - Network diagnostic techniques
+- **[Intermediate Level](../../../../2-Intermediate/README.md)** - Advanced concepts
 
 ---
 

@@ -1280,9 +1280,9 @@ Before proceeding, ensure you can:
 
 ## 🔗 Next Steps
 
-- **[Network Devices](../Network-Devices/)** - Learn about network infrastructure
-- **[Basic Troubleshooting](../Basic-Troubleshooting/)** - Develop diagnostic skills
-- **[Intermediate Level](../../Intermediate-Level/)** - Advanced protocol concepts
+- **[Network Devices](../05-Network-Devices/)** - Learn about network infrastructure
+- **[Basic Troubleshooting](../06-Basic-Troubleshooting/)** - Develop diagnostic skills
+- **[Intermediate Level](../../../2-Intermediate-Level/)** - Advanced concepts
 
 ---
 
