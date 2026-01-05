@@ -14,33 +14,33 @@ This level is organized into a tiered journey across **16 specialized modules**.
 
 ---
 
-### 🌱 Beginner Level (Intermediate Tier)
+### 🌱 Phase 1: Foundations (Intermediate Tier)
 
-#### 1️⃣ [02-Linux](./1-Beginner-Level/02-Linux/README.md)
+#### 1️⃣ [02-Linux](./01-Phase-1/02-Linux/README.md)
 **Intermediate System Administration & Security**
 - Master systemd, signals, and process lifecycle
 - SSH hardening, key management, and tunneling
 - System logs, diagnostic tools, and kernel observability
 
-#### 2️⃣ [01-Networking](./1-Beginner-Level/01-Networking/README.md)
+#### 2️⃣ [01-Networking](./01-Phase-1/01-Networking/README.md)
 **Advanced Cloud Networking, VPC Architecture & Security**
 - VPC fundamentals, subnetting, and CIDR blocks
 - Internet and NAT Gateways, Route Tables
 - VPC Peering and Transit Gateway architectures
 
-#### 3️⃣ [07-Repository-Management](./1-Beginner-Level/07-Repository-Management/README.md)
+#### 3️⃣ [07-Repository-Management](./01-Phase-1/07-Repository-Management/README.md)
 **Enterprise Version Control & Repository Architecture**
 - Git, GitLab, Bitbucket, and Azure DevOps Repos
 - Enterprise branching models (GitFlow, Trunk-based)
 - 📚 Interview Questions and Consolidation Summary
 
-#### 4️⃣ [08-Databases](./1-Beginner-Level/08-Databases/README.md)
+#### 4️⃣ [08-Databases](./01-Phase-1/08-Databases/README.md)
 **SQL, NoSQL & Database DevOps Practices**
 - PostgreSQL, MySQL, MariaDB, and Amazon RDS
 - NoSQL scaling (MongoDB, Redis, DynamoDB)
 - Backup strategies, replication, and disaster recovery
 
-#### 5️⃣ [04-Runbooks-Procedures](./1-Beginner-Level/04-Runbooks-Procedures/README.md)
+#### 5️⃣ [04-Runbooks-Procedures](./01-Phase-1/04-Runbooks-Procedures/README.md)
 **Automated Remediation & Operational Excellence**
 - Writing effective Standard Operating Procedures (SOPs)
 - Auto-remediation patterns and self-healing strategies
@@ -48,33 +48,33 @@ This level is organized into a tiered journey across **16 specialized modules**.
 
 ---
 
-### ⚙️ Intermediate Level (Intermediate Tier)
+### ⚙️ Phase 2: Core Skills (Intermediate Tier)
 
-#### 6️⃣ [03-Automation](./2-Intermediate-Level/03-Automation/README.md)
+#### 6️⃣ [03-Automation](./02-Phase-2/03-Automation/README.md)
 **Python for DevOps, Scripting Patterns & Ansible**
 - Advanced Bash scripting and automation patterns
 - Python for infrastructure automation
 - Ansible playbooks, roles, and vault
 
-#### 7️⃣ [05-Configuration-Tools](./2-Intermediate-Level/05-Configuration-Tools/README.md)
+#### 7️⃣ [05-Configuration-Tools](./02-Phase-2/05-Configuration-Tools/README.md)
 **Infrastructure as Code & Configuration Management**
 - **Terraform** - Provisioning, state mastery, and modular design
 - **Chef, Helm, Ansible, Packer, Pulumi**
 - Cloud-Init, Kustomize, Puppet, Vagrant
 
-#### 8️⃣ [09-CI-CD](./2-Intermediate-Level/09-CI-CD/README.md)
+#### 8️⃣ [09-CI-CD](./02-Phase-2/09-CI-CD/README.md)
 **Advanced Continuous Integration & Delivery Pipelines**
 - Jenkins mastery - Pipeline as Code
 - GitHub Actions & GitLab CI for modern workflows
 - Deployment strategies (Blue/Green, Canary)
 
-#### 9️⃣ [12-Cloud-Engineering](./2-Intermediate-Level/12-Cloud-Engineering/README.md)
+#### 9️⃣ [12-Cloud-Engineering](./02-Phase-2/12-Cloud-Engineering/README.md)
 **Cloud Patterns & Landing Zones**
 - Multi-cloud architecture and landing zones
 - Edge computing and Content Delivery (CloudFront)
 - IAM Governance and fine-grained security
 
-#### 🔟 [13-Prompt-Engineering](./2-Intermediate-Level/13-Prompt-Engineering/README.md)
+#### 🔟 [13-Prompt-Engineering](./02-Phase-2/13-Prompt-Engineering/README.md)
 **AI-Driven Troubleshooting & Automation**
 - Chain-of-Thought prompting for complex SRE tasks
 - Automated runbook generation with AI agents
@@ -82,39 +82,39 @@ This level is organized into a tiered journey across **16 specialized modules**.
 
 ---
 
-### 🏛️ Advance Level (Intermediate Tier)
+### 🏛️ Phase 3: Advanced Concepts (Intermediate Tier)
 
-#### 1️⃣1️⃣ [06-Container-Orchestration](./3-Advance-Level/06-Container-Orchestration/README.md)
+#### 1️⃣1️⃣ [06-Container-Orchestration](./03-Phase-3/06-Container-Orchestration/README.md)
 **Orchestrating Container Fleets with Kubernetes**
 - Kubernetes cluster architecture and control plane
 - Pods, Deployments, Services, and Core Networking
 - Ingress Controllers, Service Mesh, and Cluster Ops
 
-#### 1️⃣2️⃣ [10-Observability-Foundations](./3-Advance-Level/10-Observability-Foundations/README.md)
+#### 1️⃣2️⃣ [10-Observability-Foundations](./03-Phase-3/10-Observability-Foundations/README.md)
 **Metrics, Logs & Distributed Tracing**
 - Monitoring principles and metrics collection (Prometheus)
 - Centralized log management (ELK/Loki)
 - Distributed tracing (Jaeger/Zipkin)
 
-#### 1️⃣3️⃣ [11-API-Gateways-Security](./3-Advance-Level/11-API-Gateways-Security/README.md)
+#### 1️⃣3️⃣ [11-API-Gateways-Security](./03-Phase-3/11-API-Gateways-Security/README.md)
 **Traffic Control, Authentication & API Management**
 - API Gateway architecture (Kong, NGINX, AWS)
 - JWT, OAuth2, and AuthN/AuthZ patterns
 - Traffic control, rate limiting, and WAF
 
-#### 1️⃣4️⃣ [14-MCP](./3-Advance-Level/14-MCP/README.md)
+#### 1️⃣4️⃣ [14-MCP](./03-Phase-3/14-MCP/README.md)
 **Model Context Protocol for Agentic AI**
 - MCP fundamentals and architectural standards
 - Scaling AI agents with context-aware servers
 - MCP integration with Cloud & K8s ecosystems
 
-#### 1️⃣5️⃣ [15-Blockchain](./3-Advance-Level/15-Blockchain/README.md)
+#### 1️⃣5️⃣ [15-Blockchain](./03-Phase-3/15-Blockchain/README.md)
 **Web3 DevOps & Smart Contract CI/CD**
 - Blockchain development foundations and nodes
 - Smart contract security scanning and CI/CD
 - Testing strategies for DApps and decentralized infra
 
-#### 1️⃣6️⃣ [16-FinOps](./3-Advance-Level/16-FinOps/README.md)
+#### 1️⃣6️⃣ [16-FinOps](./03-Phase-3/16-FinOps/README.md)
 **Cloud Cost Optimization & Financial Operations**
 - Cloud cost allocation, tagging, and visibility
 - Optimization techniques for compute and storage

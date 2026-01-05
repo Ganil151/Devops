@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/Labs/02-Day/task.md",
+                "file": "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/02-Local-vs-Remote-State/Local vs. Remote State.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "task"
+              "title": "Local vs. Remote State"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.5
+    "width": 259.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -200,8 +201,13 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/02-Local-vs-Remote-State/Images/local_vs_remote.png",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/02-Local-vs-Remote-State/Images",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/01-State-Fundamentals/State Fundamentals.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/01-State-Fundamentals/Images/terraform_state_cycle.png",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/01-State-Fundamentals/Images",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Successfully/Ansible/spms_ansible_v1/spms-app/ansible/roles/docker/tasks/main.yml",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Successfully/Ansible/spms_ansible_v1/spms-app/ansible/roles/tasks/main.yml",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Successfully/Ansible/spms_ansible_v1/spms-app/ansible/roles/docker/tasks",
@@ -210,9 +216,6 @@
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Ec2/jenkins/single_jenkins_v1/jenkins-app/scripts/terraform/terraform.sh",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Successfully/SPMS_CICD/APP/scripts/bash/worker.sh",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Successfully/SPMS_CICD/APP/scripts/bash/master.sh",
-    "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Successfully/Webhook/spms_webhook_v2/spms-app/scripts/worker.sh",
-    "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Successfully/Webhook/spms_webhook_v2/spms-app/scripts/master.sh",
-    "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Successfully/Webhook/spms_webhook_v2/modules/vpc/variables.tf",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Successfully/Webhook/spms_webhook_v2/README.md",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Successfully/Webhook/webhook_docker_v1/README.md",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Successfully/Webhook/webhook_docker_v2/README.md",
@@ -243,11 +246,9 @@
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Dev/MySql_CICD/README.md",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Dev/Kube_CICD/README.md",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Dev/JENKIINS_CICD/README.md",
-    "2-Intermediate/09-CI-CD/CICD_Lessons/Notes/Agil-Methodology/Images/Agile-Development-Stages.png",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Notes/README1.md",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Notes/SPMS Notes.md",
     "2-Intermediate/09-CI-CD/CICD_Lessons/Sis_Lessons/Notes/README.md",
-    "2-Intermediate/09-CI-CD/CICD_Lessons/Notes/s3/variable.tf.md",
     "Untitled.canvas"
   ]
 }

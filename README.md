@@ -135,9 +135,9 @@ graph TD
 
 ### **Perfect Consolidation achieved with Zero Duplication**
 
-- **[Repository Management Hub](./2-Intermediate/1-Beginner-Level/07-Repository-Management/README.md)**: Centralized 6 VCS technologies (Git, GitLab, Bitbucket, Azure DevOps, Mercurial, SVN).
-- **[Database Management Hub](./2-Intermediate/1-Beginner-Level/08-Databases/README.md)**: Consolidated SQL, NoSQL, and Managed Services from across the platform.
-- **[Configuration Tools Hub](./2-Intermediate/2-Intermediate-Level/05-Configuration-Tools/README.md)**: Enterprise patterns for 11+ tools (Terraform, Ansible, Chef, Helm, etc.).
+- **[Repository Management Hub](./2-Intermediate/01-Phase-1/07-Repository-Management/README.md)**: Centralized 6 VCS technologies (Git, GitLab, Bitbucket, Azure DevOps, Mercurial, SVN).
+- **[Database Management Hub](./2-Intermediate/01-Phase-1/08-Databases/README.md)**: Consolidated SQL, NoSQL, and Managed Services from across the platform.
+- **[Configuration Tools Hub](./2-Intermediate/02-Phase-2/05-Configuration-Tools/README.md)**: Enterprise patterns for 11+ tools (Terraform, Ansible, Chef, Helm, etc.).
 - **[Quizzes & Assessments](./Quizzes/README.md)**: Master Quiz + 100+ tiered questions and 200+ interview Q&As.
 - **[Recommended Videos](./Recommended_Videos.md)**: Curated YouTube curriculum mapped to each learning level.
 
@@ -164,7 +164,7 @@ graph TD
 ## 🚀 Getting Started
 
 1. **Placement**: Take the **[Master Quiz](./Quizzes/README.md)** to find your starting level.
-2. **Foundations**: If new, start with **[Networking](./1-Beginner/1-Beginner-Level/01-Networking/README.md)**.
+2. **Foundations**: If new, start with **[Networking](./1-Beginner/01-Phase-1/01-Networking/README.md)**.
 3. **Automation**: If experienced, dive into **[Intermediate Automation](./2-Intermediate/README.md)**.
 4. **Monetization**: Senior architects should explore **[Professional Development](./4-Professional-Development/README.md)**.
 
