@@ -15,10 +15,10 @@ A Kubernetes Cluster is:
 ## Cluster Architecture
 
 ### High-Level Architecture
-![High-Level Arch](../../Images/KubeClusterArch.png)
+![High-Level Arch](../Images/KubeClusterArch.png)
 
 ### Component Interaction
-![Component Interaction](../../Images/kubeComponent.png)
+![Component Interaction](../Images/kubeComponent.png)
 
 
 ## Cluster Components

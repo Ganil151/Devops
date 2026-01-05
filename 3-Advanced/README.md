@@ -65,7 +65,7 @@ High-availability multi-cloud patterns and global infrastructure.
 #### 11. [Specialized Technology](./3-Advance-Level/10-Specialized-Tech/README.md)
 Cutting edge: **AI/ML Integration (MLOps)**, **Web3**, and **Edge Computing**.
 
-#### 12. [Prompt Engineering](./3-Advance-Level/12-Prompt-Engineering/DevOps%20Prompt%20Engineering%20-%20Advanced%20Level.md)
+#### 12. [Prompt Engineering](./3-Advance-Level/12-Prompt-Engineering/README.md)
 AI integration architectures and automated runbook generation.
 
 #### 13. [Model Context Protocol (MCP)](./3-Advance-Level/13-MCP/README.md)

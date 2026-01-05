@@ -28,10 +28,10 @@ Master Windows Server administration, PowerShell scripting, and key Windows-spec
 ### 04. [Data Formats (YAML & JSON)](./1-Beginner-Level/07-Data-Formats/README.md)
 Master the syntax of YAML and JSON, the "language" of DevOps configuration.
 
-### 05. [Software Stack Foundations](./1-Beginner-Level/08-Software-Stack/Software%20Stack%20Foundations.md)
+### 05. [Software Stack Foundations](./1-Beginner-Level/08-Software-Stack/README.md)
 Understand Frontend, Backend, Frameworks, and Runtimes. Know the "What" before you "How."
 
-### 06. [Web-Design & Frameworks](./1-Beginner-Level/09-Web-Design/Web%20Design%20&%20Frameworks.md)
+### 06. [Web-Design & Frameworks](./1-Beginner-Level/09-Web-Design/README.md)
 Explore modern Python web frameworks like Flask and Django. Learn how applications are structured.
 
 ### 07. [Cloud Foundations](./1-Beginner-Level/13-Cloud-Foundations/README.md)
@@ -40,7 +40,7 @@ Introduction to Compute, Storage, and Networking in the cloud (AWS/Azure/GCP).
 ### 08. [API Basics](./2-Intermediate-Level/06-API-Basics/README.md)
 Fundamentals of how software talks to each other. HTTP Methods, Status Codes, and REST principles.
 
-### 09. [Nginx Web Server](./2-Intermediate-Level/11-Nginx/Nginx%20Web%20Server.md)
+### 09. [Nginx Web Server](./2-Intermediate-Level/11-Nginx/README.md)
 Comprehensive guide to Nginx: Reverse Proxy, Load Balancing, and Security.
 
 ### 10. [Maven & Build Tools](./2-Intermediate-Level/10-Maven/README.md)
@@ -52,7 +52,7 @@ Introduction to scripting and automating repetitive tasks.
 ### 12. [Basic CI/CD](./2-Intermediate-Level/12-Basic-CI-CD/README.md)
 Automating your first tasks using simple pipelines.
 
-### 13. [Prompt Engineering](./2-Intermediate-Level/15-Prompt-Engineering/DevOps%20Prompt%20Engineering%20-%20Beginner%20Level.md)
+### 13. [Prompt Engineering](./2-Intermediate-Level/15-Prompt-Engineering/README.md)
 Leverage AI assistants for documentation, scripting, and troubleshooting.
 
 ### 14. [Container Orchestration](./3-Advance-Level/04-Container-Orchestration/README.md)
@@ -61,10 +61,10 @@ Introduction to containerization and orchestration. Modern application packaging
 ### 15. [FinOps Fundamentals](./3-Advance-Level/14-FinOps/README.md)
 Introduction to Cloud Financial Operations and cost visibility.
 
-### 16. [Model Context Protocol (MCP)](./3-Advance-Level/16-MCP/Model%20Context%20Protocol%20(MCP)%20-%20Beginner%20Level.md)
+### 16. [Model Context Protocol (MCP)](./3-Advance-Level/16-MCP/README.md)
 AI tool integration using the MCP standard.
 
-### 17. [Blockchain Fundamentals](./3-Advance-Level/17-Blockchain/Blockchain%20DevOps%20Fundamentals.md)
+### 17. [Blockchain Fundamentals](./3-Advance-Level/17-Blockchain/README.md)
 Understand decentralized ledgers and nodes from a DevOps perspective.
 
 ---

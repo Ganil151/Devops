@@ -3,7 +3,7 @@
 Deepen your understanding of cluster management, infrastructure as code, and automated configuration.
 
 ## Module 01: Kubernetes Core
-**Study Resource**: [Kubernetes Modules](../../2-Intermediate/07-Kubernetes/README.md)
+**Study Resource**: [Kubernetes Modules](../../2-Intermediate/3-Advance-Level/06-Container-Orchestration/README.md)
 
 1. What is Kubernetes primarily used for?
 - A) Container orchestration
@@ -44,7 +44,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 02: Helm & Application Packaging
-**Study Resource**: [Helm Packaging](../../2-Intermediate/08-Helm/README.md)
+**Study Resource**: [Helm Packaging](../../2-Intermediate/2-Intermediate-Level/05-Configuration-Tools/04-Helm/README.md)
 
 7. What is Helm in Kubernetes?
 - A) A container runtime
@@ -79,7 +79,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 03: Ansible & Configuration Management
-**Study Resource**: [Ansible Automation](../../2-Intermediate/04-Ansible/README.md)
+**Study Resource**: [Ansible Automation](../../2-Intermediate/2-Intermediate-Level/03-Automation/05-Ansible/README.md)
 
 12. What is Ansible used for in DevOps?
 - A) Container building
@@ -114,7 +114,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 4: Terraform (Infrastructure as Code)
-**Study Resource**: [Terraform IaC](../../2-Intermediate/03-Terraform/README.md)
+**Study Resource**: [Terraform IaC](../../2-Intermediate/2-Intermediate-Level/05-Configuration-Tools/01-Terraform/README.md)
 
 17. What is Infrastructure as Code (IaC)?
 - A) Writing code for hardware
@@ -149,7 +149,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 05: CI/CD Pipelines & Testing
-**Study Resource**: [Intermediate CI/CD](../../2-Intermediate/06-CI-CD/README.md)
+**Study Resource**: [Intermediate CI/CD](../../2-Intermediate/2-Intermediate-Level/09-CI-CD/README.md)
 
 22. What is the difference between Continuous Delivery and Continuous Deployment?
 - A) They are the same
@@ -178,7 +178,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 06: Cloud Networking (VPC & Routing)
-**Study Resource**: [VPC Networking](../../2-Intermediate/01-Networking-VPC/README.md)
+**Study Resource**: [VPC Networking](../../2-Intermediate/1-Beginner-Level/01-Networking/README.md)
 
 26. Which CIDR notation represents a network with 256 IP addresses?
 - A) /32
@@ -207,7 +207,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 07: Managed Databases & Serverless
-**Study Resource**: [Cloud Foundations - AWS Basics](../../1-Beginner/14-Cloud-Foundations/README.md)
+**Study Resource**: [Cloud Foundations](../../1-Beginner/1-Beginner-Level/13-Cloud-Foundations/README.md)
 
 30. What is a primary advantage of using a Managed Database service (like Amazon RDS) instead of running a DB on a VM?
 - A) It is always free
@@ -242,7 +242,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 08: Scripting & Advanced Config (Chef)
-**Study Resource**: [Chef Automation](../../2-Intermediate/05-Chef/README.md) & [Automation Foundations](../../2-Intermediate/02-Automation/README.md)
+**Study Resource**: [Chef Automation](../../2-Intermediate/2-Intermediate-Level/05-Configuration-Tools/03-Chef/README.md) & [Automation Foundations](../../2-Intermediate/2-Intermediate-Level/03-Automation/README.md)
 
 35. In a Bash script, which variable contains the exit status of the most recently executed command?
 - A) `$@`

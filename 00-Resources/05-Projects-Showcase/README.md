@@ -44,17 +44,17 @@ This directory serves as the gallery for high-complexity, end-to-end DevOps proj
 
 ## 🔝 Featured Projects
 
-### 1. [Spring Petclinic Microservices](../../2-Intermediate/05-CI-CD/CICD_Lessons/Sis_Lessons/Successfully/SPMS_CICD/README.md)
+### 1. [Spring Petclinic Microservices](./Archive/SPMS_CICD/README.md)
 - **Tech Stack**: Java 21, Spring Boot, MySQL, Kubernetes.
 - **Highlights**: Full CI/CD via Jenkins, Multi-module Maven setup, EKS Deployment, and Prometheus/Grafana monitoring.
 - **Blueprint Type**: Enterprise Microservices Architecture.
 
-### 2. [Netflix Clone CI/CD](../../2-Intermediate/05-CI-CD/CICD_Lessons/Youtube_Lessons/Dev/Netflix-Clone-CICD-Pipeline/README.md)
+### 2. [Netflix Clone CI/CD](./Archive/Netflix-Clone-CICD-Pipeline/README.md)
 - **Tech Stack**: React, Docker, Jenkins, SonarQube, Trivy.
 - **Highlights**: Complete DevSecOps pipeline with static code analysis and image vulnerability scanning.
 - **Blueprint Type**: Modern Web App Delivery.
 
-### 3. [Amazon Prime Clone](../../2-Intermediate/05-CI-CD/CICD_Lessons/Youtube_Lessons/Dev/Amazon-Prime-Clone/README.md)
+### 3. [Amazon Prime Clone](./Archive/Amazon-Prime-Clone/README.md)
 - **Tech Stack**: Node.js, Terraform, AWS (S3, CloudFront).
 - **Highlights**: Infrastructure as Code (IaC) for static site hosting and global content delivery.
 - **Blueprint Type**: Cloud-Native Frontend Hosting.
@@ -63,7 +63,7 @@ This directory serves as the gallery for high-complexity, end-to-end DevOps proj
 
 ## 📂 Specialized Application Stacks
 
-### [Microservices](../../3-Advanced/06-Microservices/README.md)
+### [Microservices](../../3-Advanced/2-Intermediate-Level/09-Microservices/README.md)
 Deep-dive into distributed systems, circuit breakers, and service mesh.
 
 ### [Multi-Tier Apps](./Multi_Tier_Apps/README.md)

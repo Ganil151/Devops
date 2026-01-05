@@ -243,10 +243,10 @@ All old directories have been removed after successful consolidation.
 
 ## 🔗 Related Documentation
 
-- [Docker Documentation](../../1-Beginner/03-Docker/README.md) - Comprehensive Docker guide
-- [Kubernetes Documentation](../../2-Intermediate/01-Kubernetes/) - K8s concepts
-- [CI/CD Documentation](../../2-Intermediate/05-CI-CD/) - Pipeline guides
-- [Terraform Documentation](../../2-Intermediate/04-Terraform/) - IaC guides
+- [Docker Documentation](../../1-Beginner/3-Advance-Level/04-Container-Orchestration/Docker/README.md) - Comprehensive Docker guide
+- [Kubernetes Documentation](../../2-Intermediate/3-Advance-Level/06-Container-Orchestration/README.md) - K8s concepts
+- [CI/CD Documentation](../../2-Intermediate/2-Intermediate-Level/09-CI-CD/README.md) - Pipeline guides
+- [Terraform Documentation](../../2-Intermediate/2-Intermediate-Level/05-Configuration-Tools/01-Terraform/README.md) - IaC guides
 
 ## 📚 Additional Resources
 

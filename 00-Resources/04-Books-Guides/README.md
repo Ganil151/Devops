@@ -1,20 +1,27 @@
-# DevOps & Engineering Resources Hub
+# Books, Guides & Checklists
 
-This directory contains a collection of auxiliary learning materials, templates, and tools to support your DevOps journey.
+A collection of literature, professional guides, and checklists to support your DevOps journey.
+
+## 📚 Core Literature
+- [The Linux Command Line](./The%20Linux%20Command%20Line%20-%20A%20Complete%20Introduction.pdf)
+- [DevOps For Beginners](./DevOps%20For%20Beginners%20-%20Joseph%20Joyner.pdf)
+- [Nmap Cookbook](./Book%20-%20Nmap%20Cookbook%20The%20Fat-free%20Guide%20to%20Network%20Scanning-1.pdf)
+- [DevOps Automation Cookbook](./DevOps%20Automation%20Cookbook.pdf)
+
+## 🛠️ Operational Guides
+- [DevOps Production Checklist](./Checklist.md)
+- [DevOps Directory MindMap](./DevOps-Directory-MindMap.md)
+- [DevOps Interview Q&A](./DevopsInterviewQ&A.pdf)
+
+## 📂 Specialized Resources
+- [Docker Resources](./Docker/)
+- [Languages (Go, Python)](./Languages/)
+- [Prompt Engineering](./Prompt-Engineering/)
+- [Testing & Security](./Testing/)
+- [Web Design](./WebDesign/)
+
+## 📄 Careers
+- [Resume Templates & Examples](./) (Check the `.docx` files in this directory)
 
 ---
-
-## 📂 Resource Categories
-
-- **[Books](./Books/README.md)**: A curated collection of industry-standard DevOps and Cloud literature.
-- **[Checklists](./Checklist.md)**: Practical checklists for production readiness, security audits, and deployment.
-- **[Mind Maps](./DevOps-Directory-MindMap.md)**: Visual overviews of the DevOps ecosystem and library structure.
-- **[Resume Templates](./Resume/README.md)**: Guidance on building a professional Cloud/DevOps resume.
-- **[Slides](./Slides/README.md)**: Educational presentations on various DevOps topics.
-- **[Testing Templates](./Testing/README.md)**: Reusable patterns for code coverage, quality gates, and image scanning.
-- **[Web & Design](./WebDesign/README.md)**: Resources for frontend and visual engineering in DevOps.
-
----
-
-## 🎯 How to Use These Resources
-Use these materials as reference points when building your own projects or preparing for certification/interviews. They are designed to complement the core 3-level roadmap.
+**Global Hub**: Back to [Resources Hub](../README.md).
