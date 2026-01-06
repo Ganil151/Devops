@@ -9,6 +9,24 @@ Terraform's job is to make the **Real World** match your **Desired State (Code)*
 
 ---
 
+## 🛡️ Security & Reliability Features
+
+1.  **Immutability**: While the state file changes, previous versions should be immutable (achieved via Versioning) to allow rollbacks.
+2.  **Validation**: Terraform performs a schema check and a serial number check against the state file before every operation to ensure integrity.
+3.  **Sensitive Data Marking**: The state file is the valid source of truth for "Sensitivity". Even if your terminal output hides a password, the State File **must** record it to manage it, making encryption critical.
+4.  **Locking Mechanism**: The state file format supports a "Lock" metadata field that backends use to prevent race conditions.
+
+---
+
+## 🌟 Best Practices
+
+1.  **Never Edit Manually**: The `.tfstate` file contains calculated hashes and dependency graphs. Editing it manually breaks these calculations and can corrupt the state permanently. Use `terraform state` commands instead.
+2.  **Commit Code, Not State**: Never `git commit` your `terraform.tfstate` file. It contains secrets and environment-specific IDs. Add `*.tfstate` and `*.tfstate.backup` to your `.gitignore`.
+3.  **Review Plans**: Always review the `terraform plan` output. It essentially shows you the "Diff" between your Code and the State. Understanding this Diff prevents accidental deletions.
+4.  **Backup Before Operations**: If performing dangerous operations like `state mv` or `import`, confirm you have a backup (or meaningful S3 version) to restore from if things go wrong.
+
+---
+
 ## 🏗️ Real-Life Scenarios
 
 ### Scenario 1: The "Ghost" Resource Outage

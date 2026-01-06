@@ -66,7 +66,15 @@ Transitioning from Local to Remote is a standard Terraform workflow:
 **Result**: State is now encrypted at rest with KMS, and only the specific CI/CD IAM role has the "Get" permission. The company passed the follow-up audit.
 
 ---
-## 🛡️ Best Practices
+## 🛡️ Security & Reliability Features
+
+1.  **State Encryption**: Local state is plain text. Remote backends (S3) support Server-Side Encryption (AES-256) to protect sensitive data like RDS passwords.
+2.  **Access Control**: Remote backends allow granular IAM policies (e.g., "Developers can Plan, CI/CD can Apply"). Local state relies solely on OS file permissions.
+3.  **Durability**: S3 provides 99.999999999% durability. A local laptop hard drive can fail, get stolen, or be corrupted easily.
+4.  **Transport Security**: Remote backends use TLS (HTTPS) for all state operations, protecting data in transit.
+
+---
+## 🌟 Best Practices
 1.  **Enable Versioning**: Always enable S3 Bucket Versioning. If state gets corrupted, you can simply download a previous version from the S3 console.
 2.  **Use Flexible Config**: Don't hardcode the `bucket` and `key` if you reuse code. Use `terraform init -backend-config=config.hcl` for dynamic environments.
 3.  **Least Privilege**: The CI/CD runner should be the **only** entity with `s3:DeleteObject` (or even `s3:PutObject`) permissions on the state bucket. Developers should only have `read` access if possible.
