@@ -1,8 +1,6 @@
 Automating the Terraform lifecycle ensures reliable, repeatable, and audited deployments.
-
 ## The Automated Workflow
 To achieve "Continuous Deployment" for infrastructure, we typically use a 5-step pipeline:
-
 1.  **Validate**: Ensures the code is syntactically correct.
     *   Command: `terraform validate`
 2.  **Lint & Security Scan**: Checks for best practices and security holes.
@@ -97,7 +95,6 @@ checkov -d .
 # Failed checks:
 # CKV_AWS_20: "S3 Bucket has an ACL defined which allows public access."
 ```
-
 **TFLint**: Finds provider-specific errors that `terraform validate` misses (like invalid instance types).
 ```bash
 tflint --init
@@ -105,7 +102,6 @@ tflint
 # Output:
 # Error: "t2.nanoo" is an invalid instance type (aws_instance_invalid_type)
 ```
-
 ### 2. Cost Estimation
 **Infracost**: Generates a bill estimate from your plan file.
 ```bash
@@ -117,7 +113,6 @@ infracost breakdown --path .
 # ├─ Instance usage (Linux/UNIX, t3.medium)    +$30.00
 # └─ Storage (EBS, 100GB)                      +$10.00
 ```
-
 ### 3. Pull Request Automation (Atlantis)
 **Atlantis** is a server that listens to webhooks from GitHub/GitLab. It runs Terraform commands inside your PRs.
 
@@ -155,17 +150,14 @@ sequenceDiagram
 **Solution**:
 1.  **Immediate Fix**: Revert the Merge Commit in Git. The pipeline runs again and applies the *previous* state, fixing production.
 2.  **Long-term Fix**: Update the pipeline to use the saved plan strategy (`-out=tfplan`). The Apply phase should strictly execute what was planned in the PR phase.
-
 ### Scenario 2: The Silent Access Violation
 **Problem**: A developer added an S3 bucket with a public-read ACL to their configuration. The `terraform plan` completed successfully, and the change was merged. 24 hours later, sensitive data was exposed.
 **Solution**: Integrate **Security Scanning** (like Checkov, Tfsec, or Terrascan) into the CI pipeline. The pipeline should automatically fail if high-severity security violations (like public S3 buckets) are detected, preventing the code from ever being merged.
-
 ### Scenario 3: The Expensive Mistake
 **Problem**: A team member accidentally changed a database instance type from `t3.micro` to `m5.large` in a dev environment. They didn't realize this would increase the monthly cost by $400 until the AWS bill arrived.
 **Solution**: Implement **Infracost** in the PR pipeline. Infracost automatically calculates the price difference of every infrastructure change and posts it as a comment on the PR, allowing reviewers to catch expensive mistakes before they are applied.
 
 ---
-
 ## ❓ Interview Questions
 
 1.  **What is Atlantis and how does it improve the Terraform workflow?**

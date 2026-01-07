@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/10-Best-Practices/State Best Practices.md",
+                "file": "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/02-HCL-and-IaC/06-CI-CD-Pipeline-Integration/CI-CD Pipeline Integration.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "State Best Practices"
+              "title": "CI-CD Pipeline Integration"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.5
+    "width": 259.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -202,16 +203,36 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/04-Day/main.tf",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day/04-Day/tfplan",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/06-Day-Project_Structure/challenges.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day-Input_Output_Local_Veriables/challenges.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/03-Day/challenges.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/04-Day/challenges.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/07-Day-Type_Constraints/challenges.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/07-Day-Type_Constraints/main.tf",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/07-Day-Type_Constraints/task.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/07-Day-Type_Constraints/README.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/06-Day-Project_Structure",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day-Input_Output_Local_Veriables/variables.tf",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day-Input_Output_Local_Veriables/tfplan",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day-Input_Output_Local_Veriables/task.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day-Input_Output_Local_Veriables/README.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day-Input_Output_Local_Veriables/output.tf",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day-Input_Output_Local_Veriables/backend.tf",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day-Input_Output_Local_Veriables/providers.tf",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day-Input_Output_Local_Veriables/locals.tf",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day-Input_Output_Local_Veriables/main.tf",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day-Input_Output_Local_Veriables",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/02-HCL-and-IaC/02-Project-Structure/Project Structure.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day/README.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/02-HCL-and-IaC/01-IaC-Principles/Infrastructure as Code (IaC) Principles.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/02-HCL-and-IaC/01-IaC-Principles/declarative_vs_procedural.png",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/02-HCL-and-IaC/01-IaC-Principles/iac_workflow.png",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/02-HCL-and-IaC/01-IaC-Principles/snowflake_vs_cattle.png",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/04-Modules/01-Module-Fundamentals/Terraform Module Fundamentals.md",
+    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/10-Best-Practices/State Best Practices.md",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day/04-Day/task.md",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day/04-Day/README.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day/04-Day",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day/main.tf",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day/tfplan",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day/task.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day/README.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/05-Day",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/Labs/task.md",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/02-Commands/10-Show.md",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/02-Commands/11-Output.md",
@@ -221,23 +242,6 @@
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/02-Commands/06-State.md",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/02-Commands/05-Destroy.md",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/02-Commands/04-Apply.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/02-Commands/02-Validate.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/REORGANIZATION-SUMMARY.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/12-Provisioners/Terraform Provisioners.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/12-Provisioners",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/11-Basic-Examples/Basic Examples.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/11-Basic-Examples",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/10-Terraform-Workflow/Terraform Workflow.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/10-Terraform-Workflow",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/09-Data-Sources/Data Sources.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/09-Data-Sources",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/08-Variables-and-Outputs/Variables and Outputs.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/08-Variables-and-Outputs",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/07-Resources/Resources.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/06-Providers/Providers.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/05-Configuration-Language/Expressions.md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/05-Configuration-Language/Configuration Language (HCL).md",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/01-Fundamentals/04-Installation-and-Setup/README.md",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/09-Advanced-Patterns/multi_layer_architecture.png",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/09-Advanced-Patterns/directory_vs_workspaces.png",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/08-Troubleshooting/images/troubleshooting_flow.svg",
@@ -245,9 +249,6 @@
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/06-State-Security/terraform_security_threat_model.svg",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/05-State-Operations/terraform_state_operations_flow.svg",
     "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/05-State-Operations/images/state_operations_workflow.png",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/04-State-Locking/images/locking_race_condition.png",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/04-State-Locking/images/state_locking_lifecycle.png",
-    "2-Intermediate/02-Phase-2/05-Configuration-Tools/01-Terraform/03-State-Management/03-Remote-State-Backends/images/s3_dynamodb_backend.png",
     "Untitled.canvas"
   ]
 }

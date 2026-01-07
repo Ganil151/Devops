@@ -31,14 +31,12 @@ graph TD
 **Outcome**: The company failed the security audit.
 **Solution**: Moved all secrets to **AWS Secrets Manager** and enabled **S3 Bucket Encryption with KMS**. 
 **Result**: The state file still technically contains the data, but it is now encrypted at rest with a key that only the CI/CD pipeline and the Head of Security can access.
-
 ### Scenario 2: The "Monolith" Bottleneck
 **Problem**: A growing retail company had everything (VPC, DB, EKS, Apps) in one giant state file.
 **Crisis**: Every time the "App Team" wanted to change a small tag on their container, they had to wait 15 minutes for a full VPC/Database refresh.
 **Outcome**: Developers started bypassing Terraform and making manual changes to move faster, causing massive drift.
 **Solution**: **State Decomposition**. The SRE team split the monolith into four separate projects: `networking`, `datastore`, `platform`, and `apps`.
 **Result**: Plan times dropped from 15 minutes to 45 seconds. Development velocity increased by 10x.
-
 ### Scenario 3: The "Accidental State Overwrite"
 **Problem**: During a manual migration, a developer ran `terraform state push old_state.json` instead of the new one.
 **Crisis**: The state was rolled back to a version from three months ago. Terraform now "thought" that 50 new production instances didn't exist and would try to delete them if `apply` was run.
