@@ -1,4 +1,4 @@
-# State Best Practices: The DevOps Golden Rules
+# The DevOps Golden Rules
 
 State is the "Mind" of your infrastructure. If it becomes corrupted, insecure, or out of sync, your entire automation strategy fails. Following these best practices ensures that your infrastructure remains predictable, secure, and ready for team collaboration.
 
@@ -25,7 +25,6 @@ graph TD
 ---
 
 ## 🏗️ Real-Life Scenarios
-
 ### Scenario 1: The "Secret" Leak Audit
 **Problem**: An internal security audit found that the company's Terraform code for an RDS database used a plain-text variable for the `password`.
 **Crisis**: Even though they added the variable to the `.gitignore`, the auditor proved the password was still in plain text in the `.tfstate` file stored in a shared developer bucket.
