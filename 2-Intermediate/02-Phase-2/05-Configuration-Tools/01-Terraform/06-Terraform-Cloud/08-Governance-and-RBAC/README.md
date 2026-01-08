@@ -1,197 +1,149 @@
+![TFC Architecture](../01-Introduction-and-Architecture/tfc_architecture.png)
+
 # Governance and RBAC
 
-Scaling Terraform to 50 developers requires structure. You cannot give everyone Admin access.
+Scaling Infrastructure as Code from a single developer to a 100+ person engineering organization requires robust governance. HCP Terraform provides enterprise-grade **<font color="#92d050">Role-Based Access Control (RBAC)</font>** and project-based isolation to ensure that teams have exactly the permissions they need—and no more.
 
-## 1. The Permission Hierarchy
+---
 
-TFC permissions flow down from the Organization to the Workspace.
+## 🏗️ 1. The Multi-Tenant Hierarchy
+
+Permissions in HCP Terraform are hierarchical. They flow from the top-level Organization down through Projects to individual Workspaces.
 
 ```mermaid
 graph TD
-    Org[Organization] -->|Org-Level Access| Team[Team]
-    Team -->|Project-Level Access| Proj[Project]
-    Proj -->|Workspace-Level Access| WS[Workspace]
+    Org[Organization Admin] --> TeamA[Team: Networking]
+    Org --> TeamB[Team: Payments]
 
-subgraph "Team: Developers"
-        User1
-        User2
+    subgraph "Project: Core Infra"
+        TeamA -->|Admin| VPC[VPC Workspace]
+        TeamA -->|Admin| DNS[DNS Workspace]
     end
 
-User1 --> Team
+    subgraph "Project: Fintech App"
+        TeamB -->|Write| API[API Gateway Workspace]
+        TeamB -->|Write| DB[RDS Workspace]
+        TeamA -->|Read Only| API
+    end
 ```
 
-## 2. Teams (The Central Unit)
+### Key Components:
+- **Organizations**: The top-level secure boundary for your company.
+- **Projects**: Logical "folders" used to group related workspaces. RBAC is most efficient when applied at the Project level.
+- **Teams**: Groups of users mapped to specific roles. **<font color="#ffc000">Never assign permissions to individuals</font>**; always assign them to Teams.
 
-Don't assign permissions to users directly. Assign them to **Teams**.
+---
 
-| Team Role | Description | Typical Use |
+## 🔐 2. Permission Levels & Granularity
+
+HCP Terraform offers granular control over what a team can do within a workspace. These permissions are **additive**: if a user is in multiple teams with different access levels, they receive the **highest** level of access.
+
+| Level | Capability | Typical User |
 | :--- | :--- | :--- |
-| **Owners** | Full Admin access. Can manage billing and policies. | DevOps Leads (2-3 people max). |
-| **Developers** | Can read/write code, trigger runs in specific workspaces. | App Developers. |
-| **Viewers** | Read-only. Can see logs but cannot trigger runs. | Auditors, Managers. |
+| **Read** | View plan outputs and state JSON. | Auditors, Junior Developers, Support. |
+| **Plan** | Trigger speculative plans but NOT applies. | Developers testing code in PR branches. |
+| **Write** | Trigger and approve applies; manage variables. | Tech Leads, SREs. |
+| **Admin** | Full control over workspace settings & RBAC. | Platform Engineering Leads. |
+
+### Project-Based Inheritance
+By using **Projects**, you can grant a team "Write" access to 50 workspaces at once. This centralizes management and ensures that new workspaces automatically inherit corporate safety standards.
 
 ---
 
-## 3. Workstream RBAC (Projects)
+## 🏢 3. Enterprise Identity: SSO & SCIM
 
-"Projects" are folders for workspaces. You assign Team permissions to a Project, and it cascades to all workspaces inside.
+For large organizations, manual user management is a security risk. HCP Terraform integrates with modern Identity Providers (Okta, Azure AD, PingIdentity).
 
-*   **Setup**:
-    *   Create Project: `Payments-App`
-    *   Assign Team `Payments-Devs` -> **Write** access.
-    *   Assign Team `Networking` -> **Read** access.
-*   **Result**: The Payments team handles their own infrastructure but can't touch the Networking project.
-
----
-
-## 4. SSO (Single Sign-On)
-
-Enterprise TFC integrates with your Identity Provider (IdP) via SAML 2.0.
-
-*   **Supported IdPs**: Okta, Azure AD, OneLogin, etc.
-*   **Team Mapping**: You map an "AD Group" (e.g., `group-cloud-admins`) to a "TFC Team" (`Owners`).
-*   **Benefits**:
-    *   JIT (Just-in-Time) provisioning.
-    *   Instant revocation: Disable user in Okta -> Disabled in TFC.
+- **SAML SSO**: Users login using their corporate credentials. TFC session tokens are linked to their active IdP sessions.
+- **Team Mapping**: Automatically map Active Directory groups (e.g., `AD-Group-DevOps`) directly to TFC Teams based on SAML assertions.
+- **SCIM (Provisioning)**: 
+    - **Automated Joiners**: When a user is added to an HR system group, their TFC account is created instantly.
+    - **Zero-Latency Revocation**: The moment a user is disabled in the IdP, their TFC access, active sessions, and API tokens are revoked.
 
 ---
 
-## 5. Real-Life Scenarios
+## 🚀 4. Real-Life Scenarios
 
-### Scenario 1: "The Intern"
-**Problem**: An intern deleted the Production workspace while trying to clean up their test environment.
-**Solution**: Moved interns to a `Viewers` team globally, and gave them `Admin` access ONLY on a specific `Sandbox` Project.
-**Outcome**: Safe experimentation.
+### Scenario 1: The "Intern" Safety Net
+*   **The Incident**: A new intern was learning Terraform and accidentally ran `terraform destroy` on the production billing workspace.
+*   **The Fix**: Implemented **Project Isolation**. Interns are placed in a `Trial` team with "Admin" access to a Sandbox project, but only "Read" access to the Production project.
+*   **Outcome**: The intern can learn without risking the company's uptime.
 
-### Scenario 2: "The Contractor"
-**Problem**: A contractor needed access to upgrade the RDS database, but you didn't want them seeing the VPC Networking codes.
-**Solution**: Granted the contractor's account Guest access specifically to the `Database-Workspace` only. No access to the rest of the Organization.
-
-### Scenario 3: "Audit Time"
-**Problem**: Compliance auditor asked: "Who can decrypt the production database secrets?"
-**Solution**: Showed the TFC TeamSettings.
-*   Only the `Owners` team has access to the `production` workspace variables.
-*   The `Developers` team has `Plan` access but not `Variable` access.
-*   Auditor satisfied.
+### Scenario 2: The Compliance Audit Trail
+*   **The Incident**: A SOC2 audit required proof of **<font color="#ff0000">Separation of Duties</font>**. They needed to see that the people writing the firewall code weren't the ones approving its deployment.
+*   **The Fix**: Configured a "Security-Ops" team with `Write` (apply) permissions and a "Network-Dev" team with `Plan` permissions.
+*   **Outcome**: Every deployment now requires a "double signature" (Git Merge approval + TFC Apply approval).
 
 ---
 
-## 6. ❓ Interview Questions
+## ❓ 5. Interview Questions (Expert Deep Dive)
 
-1.  **What is the difference between "Project" and "Workspace"?**
-    *   **Answer**: A Project is a container (folder) that holds multiple Workspaces. Permissions applied to a Project inherit down to its Workspaces.
+1.  **If a user is in two teams, one with "Read" and one with "Write" access to the same workspace, what is their effective permission?**
+    <details>
+    <summary>Show Answer</summary>
+    The **highest (most permissive)** assignment wins. In this case, the user will have **Write** access. Permission sets in HCP Terraform are strictly additive.
+    </details>
 
-2.  **How do you automate Team creation?**
-    *   **Answer**: Use the `tfe_team` and `tfe_team_access` resources in the Terraform Provider for specific configuration.
+2.  **What is the difference between an "Email Invitation" and "SSO Provisioning"?**
+    <details>
+    <summary>Show Answer</summary>
+    Email invitations require manual account creation and confirmation. SSO provisioning (via SAML/SCIM) allows the user to simply click a tile in their dashboard (like Okta) and be instantly authenticated into the Org based on their corporate identity, without ever creating a separate password.
+    </details>
 
-3.  **If a user is in two teams, which permission wins?**
-    *   **Answer**: The *highest* permission wins. If Team A has Read and Team B has Admin, the user has Admin.
+3.  **Explain "Team API Tokens" vs. "User API Tokens."**
+    <details>
+    <summary>Show Answer</summary>
+    **User Tokens** are tied to an individual person. If that person leaves, the token is invalidated, breaking any automation they built. **Team Tokens** are persistent service accounts tied to the Team entity, making them the standard for CI/CD pipelines (Jenkins, GitHub Actions).
+    </details>
 
-4.  **Can you force 2FA?**
-    *   **Answer**: Yes, Org Admins can enforce 2FA for all members (unless using SSO, where the IdP handles it).
+4.  **Can you restrict a team to ONLY be able to read state but not sensitive variables?**
+    <details>
+    <summary>Show Answer</summary>
+    **Yes**. In the granular permission settings of a workspace, you can specifically disable "Manage Variables" while enabling "Read Runs" and "Read State." This is a common pattern for "State-Only" auditors.
+    </details>
 
-5.  **What is a "Run Task" permission?**
-    *   **Answer**: A specific permission level enabling a team to manage third-party integrations (like Snyk) without having full admin rights.
-
-6.  **Does TFC support SCIM?**
-    *   **Answer**: Yes (in Business Tier), allowing automatic user provisioning and de-provisioning from the IdP.
-
-7.  **What is an "API Token" owner?**
-    *   **Answer**: Every API token belongs to a user or a team. If that user leaves and is deleted, the token stops working. Use "Team API Tokens" for CI/CD systems.
-
-8.  **Can I restrict which modules a team can use?**
-    *   **Answer**: Not directly, but you can use Sentinel policies to restrict module sources to the Private Registry only.
-
-9.  **How do you handle "Break Glass" access?**
-    *   **Answer**: Create a specific `BreakGlass` team with Admin rights, usually empty. Add users temporarily during incidents, which creates an audit trail.
-
-10. **The "Manage Policies" permission resides where?**
-    *   **Answer**: Usually at the Organization level (Policy Owners), separate from Workspace Admins.
+5.  **How does "Just-in-Time" (JIT) provisioning work in TFC?**
+    <details>
+    <summary>Show Answer</summary>
+    JIT provisioning creates a user's record in HCP Terraform the first time they successfully authenticate via SAML SSO. If Team Mapping is configured, they are also automatically placed into the correct Teams based on their directory group memberships.
+    </details>
 
 ---
 
-## 7. 🧠 Knowledge Check (Quiz)
+## 🧠 6. Knowledge Check (Quiz)
 
-### Structure
-1.  **The hierarchy is:**
-    *   [x] Org -> Project -> Workspace.
-    *   [ ] Workspace -> Org -> Project.
+### Hierarchy & Projects
+1.  **The recommended level for assigning team permissions is:**
+    - [ ] Workspace.
+    - [x] **Project**.
+2.  **Adding a workspace to a Project means it:**
+    - [x] **Inherits the RBAC settings** of that Project.
+    - [ ] Becomes public.
+3.  **The highest level in the TFC organizational structure is:**
+    - [ ] Project.
+    - [x] **Organization**.
 
-2.  **To manage users at scale:**
-    *   [x] Use Teams.
-    *   [ ] Assign permissions to each email.
+### Identity & Teams
+4.  **SSO (Single Sign-On) in HCP Terraform primarily uses:**
+    - [x] **SAML 2.0**.
+    - [ ] Basic Auth.
+5.  **Adding a user to the "Owners" team gives them:**
+    - [ ] Access to all .tf files.
+    - [x] **Full administrative control over the entire Organization**, including billing.
+6.  **"Plan Only" access is ideal for:**
+    - [x] **Developers testing PRs** who shouldn't have the power to deploy to Prod.
+    - [ ] The CEO.
 
-3.  **SSO uses which protocol?**
-    *   [x] SAML.
-    *   [ ] LDAP.
+---
 
-4.  **Team API Tokens are good for:**
-    *   [x] CI/CD Pipelines (Jenkins).
-    *   [ ] Individual developers.
+## 📖 7. Final Summary Checklist
 
-### Access Control
-5.  **"Plan Only" access allows:**
-    *   [x] Running `terraform plan` but not `apply`.
-    *   [ ] Applying changes.
+✅ **Project-First RBAC**: Manage your teams at the Project level, not the Workspace level.
+✅ **Least Privilege**: Default developers to "Plan" access; promote to "Write" for seniors only.
+✅ **SSO Integration**: Connect Okta/Azure AD to automate the joiner/leaver/mover process.
+✅ **SCIM Revocation**: Ensure SCIM is enabled to instantly kill access when a user leaves the company.
+✅ **Service Accounts**: Use **Team Tokens** for all CI/CD pipelines to ensure long-term stability.
 
-6.  **If I remove a user from the IdP (Okta):**
-    *   [x] They lose TFC access (if SSO/SCIM is configured).
-    *   [ ] They keep access until manually deleted.
-
-7.  **Can you restrict access to specific Variables?**
-    *   [x] Yes, permissions separate "Runs" from "Variables".
-    *   [ ] No.
-
-8.  **Who can see the State file?**
-    *   [x] Anyone with Read access to the workspace (implied).
-    *   [ ] Only Admins.
-
-9.  **Project-level permissions:**
-    *   [x] Cascade to all contained workspaces.
-    *   [ ] Apply only to the folder itself.
-
-10. **2FA Enforcement is:**
-    *   [x] An Organization Setting.
-    *   [ ] A Personal Setting.
-
-### Scenarios
-11. **Best practice for Team naming:**
-    *   [x] `Role-Context` (e.g., `Dev-Payments`).
-    *   [ ] Just names (`Bob's Team`).
-
-12. **To grant a consultant temporary access:**
-    *   [x] Invite them to a restricted Team, then remove later.
-    *   [ ] Give them the admin password.
-
-13. **If a run works locally but fails in CI:**
-    *   [x] Check the permissions of the CI's API Token.
-    *   [ ] Reboot the internet.
-
-14. **Why separate "Policy Admins" from "Infra Admins"?**
-    *   [x] Separation of Duties (Compliance).
-    *   [ ] No reason.
-
-15. **User Tokens vs Team Tokens:**
-    *   [x] User tokens expire when the user leaves; Team tokens persist.
-    *   [ ] They are identical.
-
-### General
-16. **Is RBAC available on the Free Tier?**
-    *   [x] Limited (basic Teams). Full granularity requires paid tiers.
-    *   [ ] No.
-
-17. **Can you map multiple IdP groups to one TFC Team?**
-    *   [x] Yes.
-    *   [ ] No.
-
-18. **The `tfe_organization_membership` resource manages:**
-    *   [x] Inviting users to the Org.
-    *   [ ] Billing.
-
-19. **Does Terraform Code (`tfe` provider) support managing Teams?**
-    *   [x] Yes (Admin-as-Code).
-    *   [ ] No.
-
-20. **Audit Logs show:**
-    *   [x] Who changed permissions and triggered runs.
-    *   [ ] Only errors.
+---
+**Module Status**: ✅ Comprehensive Verified
+**Last Updated**: 2026-01-08

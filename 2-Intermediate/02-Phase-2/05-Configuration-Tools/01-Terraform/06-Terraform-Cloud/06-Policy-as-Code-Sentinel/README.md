@@ -1,209 +1,192 @@
+![TFC Architecture](../01-Introduction-and-Architecture/tfc_architecture.png)
+
 # Policy as Code (Sentinel)
 
-Sentinel is HashiCorp's embedded policy-as-code framework. It runs logic **against the Terraform Plan** to prevent bad infrastructure from being created.
+Sentinel is HashiCorp's proprietary functional policy framework. In HCP Terraform, it acts as an automated **<font color="#ff0000">Gatekeeper</font>** that intercepts the "Plan" before it can be "Applied," ensuring that every infrastructure change complies with corporate security, cost, and operational standards.
 
-## 1. Guardrails vs Gatekeepers
+---
 
-*   **Gatekeeper**: A human reviewer. Slow, error-prone, sleeps at night.
-*   **Guardrail**: Automated policy. Instant, consistent, always on.
+## 🏗️ 1. The Policy Enforcement Pipeline
 
-Sentinel allows you to move from "Ticket-based" provisioning to "Self-Service" provisioning by embedding the rules into the platform.
+Sentinel policies run automatically after the `terraform plan` is finished. If a policy fails, the infrastructure life-cycle is halted based on the enforcement level.
 
 ```mermaid
 graph LR
-    Plan[Terraform Plan] -->|JSON| Sentinel[Sentinel Engine]
+    Plan[Plan Finished] -->|Export JSON| Sentinel[Sentinel Engine]
     Sentinel -->|Check Rules| Decisions
 
-subgraph "Decisions"
-        Pass[Pass]
-        Soft[Soft Fail]
-        Hard[Hard Fail]
+    subgraph "Enforcement Levels"
+        Advisory[Advisory: Warn Only]
+        Soft[Soft Mandatory: Manager Override]
+        Hard[Hard Mandatory: Blocked]
     end
 
-Pass --> Apply[Terraform Apply]
-    Soft --> Manual[Human Override]
-    Manual --> Apply
-    Hard --> Reject[Run Cancelled]
+    Decisions --> Advisory
+    Decisions --> Soft
+    Decisions --> Hard
+
+    Advisory --> Apply[Safe to Apply]
+    Soft -->|Override Granted| Apply
+    Hard -->|Stop| Reject[Rejected / Error]
 ```
 
----
-
-## 2. Enforcement Levels
-
-You can set the strictness of each policy:
-
-| Level | Behavior | Use Case |
-| :--- | :--- | :--- |
-| **Advisory** | Warns the user but allows the run to proceed. | Coding standards, deprecation warnings. |
-| **Soft Mandatory** | Blocks the run unless an Admin overrides it. | Cost thresholds, non-critical compliance. |
-| **Hard Mandatory** | Blocks the run. Cannot be overridden. | Security violations (Open 0.0.0.0/0), Missing Tags. |
+### Strategic Value:
+- **Scalability**: One security team can write rules that 1,000 developers must follow, without being a manual bottleneck.
+- **Compliance**: Proof of "policy-at-source" for auditors (SOC2, HIPAA).
+- **Cost Control**: Automatic rejection of oversized instances (e.g., `p3.16xlarge`) in development environments.
 
 ---
 
-## 3. Sentinel Language (Basic Syntax)
+## 🛠️ 2. Enforcement Levels & Import Logic
 
-Sentinel looks like Go or Python but is specialized for data traversal.
+### 1. Enforcement Levels
+| Level | Security Impact | Operational Impact | Use Case |
+| :--- | :--- | :--- | :--- |
+| **Advisory** | Log Warnings | No block. | Best practices (e.g., "Missing optional tag"). |
+| **Soft Mandatory** | Audit Trail | Requires Admin/Manager "Click-to-Approve". | Cost thresholds, non-standard regions. |
+| **Hard Mandatory** | Absolute Guardrail | Permanent failure; no override possible. | Critical security (e.g., "Public S3 Buckets"). |
 
-**Example: Restrict EC2 Instance Types**
+### 2. The Four Key Imports
+Sentinel gains its power by inspecting four distinct data streams from a Terraform run:
+1.  **tfplan**: Proposed changes (what *will* happen).
+2.  **tfstate**: Current state (what *is* there now).
+3.  **tfconfig**: Source code (how it was written, e.g., module versions).
+4.  **tfrun**: Metadata (who is running it, the workspace name, the cost delta).
 
+---
+
+## 💻 3. Simple Sentinel Logic (Restrict Regions)
+
+Sentinel uses a language that feels like a mix of Python and Go.
 ```sentinel
 import "tfplan/v2" as tfplan
 
-# Get all aws_instance resources
-instances = filter tfplan.resource_changes as _, rc {
-    rc.type is "aws_instance" and
-    (rc.change.actions contains "create" or rc.change.actions contains "update")
-}
+# 1. Define allowed regions
+allowed_regions = ["us-east-1", "eu-central-1"]
 
-# Allowed types
-allowed_types = ["t3.micro", "t3.small", "t3.medium"]
-
-# Rule: All instances must use allowed types
+# 2. Rule: Every provider must use allowed region
 main = rule {
-    all instances as _, instance {
-        instance.change.after.instance_type in allowed_types
+    all tfplan.resource_changes as _, rc {
+        rc.provider_name is not "aws" or
+        rc.change.after.region in allowed_regions
     }
 }
 ```
 
 ---
 
-## 4. Real-Life Scenarios
+## 4. The Fail-Closed Security Model
 
-### Scenario 1: "The Expensive Instance"
-**Problem**: Developers kept spinning up `p3.16xlarge` instances ($24/hr) for "testing" and forgetting them.
-**Solution**: A **Soft Mandatory** Sentinel policy restricts instance types to `t3.*` in the Dev environment.
-**Outcome**: If a dev *really* needs a GPU instance for ML, they can request an override (providing justification in the override comment), but they can't do it accidentally.
-
-### Scenario 2: "The Friday Deploy"
-**Problem**: Deployments on Friday afternoon break production, ruining the weekend.
-**Solution**: A **Hard Mandatory** policy that checks the `time` import.
-*   Rule: `day_of_week not in ["Friday", "Saturday", "Sunday"]`.
-*   Outcome: No Production deploys allowed on weekends.
-
-### Scenario 3: "Mandatory Tags"
-**Problem**: Finance couldn't allocate cloud bills because 30% of resources had no `Owner` tag.
-**Solution**: **Hard Mandatory** policy checking `rc.change.after.tags` contains `Owner`.
-**Outcome**: 100% cost attribution. The pipeline simply won't build untagged resources.
+Sentinel operates on a "fail-closed" principle. This means that if the Sentinel policy engine cannot execute (e.g., due to misconfiguration, network issues preventing policy download, or an error in the policy itself), the Terraform run is automatically blocked. This prevents un-policed infrastructure changes, ensuring security posture is maintained even under adverse conditions.
 
 ---
 
-## 5. ❓ Interview Questions
+## 5. Cross-Workspace Data Validation
 
-1.  **What data does Sentinel access?**
-    *   **Answer**: It accesses the `tfplan` (state changes), `tfstate` (current state), `tfrun` (workspace info like Cost estimates), and standard imports like `time`, `http`, and `json`.
-
-2.  **How do you test Sentinel policies?**
-    *   **Answer**: Use the `sentinel test` CLI. It allows you to mock the `tfplan` data and assert that your policy passes or fails as expected (Unit Testing for Policy).
-
-3.  **Can Sentinel check costs?**
-    *   **Answer**: Yes, by importing `tfrun`, you can access the "Cost Estimation" data and block runs if the `proposed_monthly_cost` exceeds limit.
-
-4.  **Where do you store Sentinel code?**
-    *   **Answer**: In a Git repository (Policy Set). TFC connects to the repo exactly like it connects to workspaces.
-
-5.  **Soft vs Hard Mandatory?**
-    *   **Answer**: Soft allows override (human judgement), Hard does not (absolute compliance).
-
-6.  **Does Sentinel run before or after `terraform apply`?**
-    *   **Answer**: Before. It runs between `Plan` and `Apply`.
-
-7.  **Can Sentinel make HTTP requests?**
-    *   **Answer**: Yes, using the `http` import. You could check an external CMDB or ticket system before allowing a deploy.
-
-8.  **What is a "Policy Set"?**
-    *   **Answer**: A collection of policies grouped together and applied to specific Workspaces or the whole Organization.
-
-9.  **Sentinal vs OPA?**
-    *   **Answer**: Sentinel is HashiCorp proprietary (Enterprise features). OPA is open-source (Rego language). TFC supports both now.
-
-10. **How do you debug a failed Sentinel check?**
-    *   **Answer**: TFC UI shows the trace output: which rule returned `false`. You can replicate it locally using `sentinel apply -trace`.
+While Sentinel policies are typically applied to a single workspace or a policy set, advanced use cases can involve cross-workspace data validation. Using the `http` import, a Sentinel policy in one workspace can query the state of another workspace (via the HCP Terraform API) to enforce dependencies or ensure unique resource naming across an organization. This enables complex, distributed policy enforcement.
 
 ---
 
-## 6. 🧠 Knowledge Check (Quiz)
+## 6. Sentinel vs. Rego Syntax
 
-### Concepts
-1.  **Sentinel runs against:**
-    *   [x] The Terraform Plan.
-    *   [ ] The applied resources.
+Both Sentinel and Rego (Open Policy Agent's language) are policy-as-code frameworks. While both are declarative, they have distinct syntaxes and ecosystems:
+- **Sentinel**: HashiCorp's proprietary language, designed specifically for HashiCorp products (Terraform, Vault, Consul, Nomad). It has a more imperative feel, resembling Python/Go, and includes built-in imports for Terraform-specific data (`tfplan`, `tfstate`, `tfconfig`, `tfrun`).
+- **Rego**: An open-source declarative query language used by OPA. It's more general-purpose, often used for Kubernetes admission control, API authorization, and microservice policies. Its syntax is based on Datalog.
 
-2.  **Hard Mandatory means:**
-    *   [x] Non-negotiable. No overrides.
-    *   [ ] Override with Admin permission.
+Choosing between them often depends on your existing ecosystem and specific policy needs.
 
-3.  **Advisory policies:**
-    *   [x] Do not block the run.
-    *   [ ] Block the run.
+---
 
-4.  **A "Policy Set" can be applied to:**
-    *   [x] All workspaces or specific workspaces.
-    *   [ ] Only one workspace.
+## 🚀 7. Real-Life Scenarios
 
-### Syntax & Features
-5.  **Sentinel looks most like:**
-    *   [x] Validating JSON/Objects with rules.
-    *   [ ] Bash scripts.
+### Scenario 1: The "Friday Afternoon" Save
+*   **The Incident**: A developer tried to push a major database change at 4:30 PM on a Friday.
+*   **The Policy**: A **Hard Mandatory** policy checks the `time` import. If the current time is between Friday 4 PM and Monday 8 AM, the apply is blocked.
+*   **Outcome**: The team stayed out of "incidental on-call" and the change was safely reviewed on Monday morning.
 
-6.  **To block expensive resources, check:**
-    *   [x] `tfrun.cost_estimate`.
-    *   [ ] `tfplan.resources`.
+### Scenario 2: The "Open Port 22" Breach
+*   **The Incident**: A testing script accidentally added an ingress rule allowing `0.0.0.0/0` (The World) to SSH into production instances.
+*   **The Policy**: A **Hard Mandatory** security policy scans all `aws_security_group` resources. It rejects any rule where the CIDR is `0.0.0.0/0` and the port is `22`.
+*   **Outcome**: The run was cancelled instantly. The security vulnerability never reached the cloud.
 
-7.  **Can Sentinel check the time of day?**
-    *   [x] Yes (Time import).
-    *   [ ] No.
+### Scenario 3: The "Sneaky" Expensive Service
+*   **The Incident**: An engineer switched an RDS instance to Multi-AZ with Provisioned IOPS, tripling the cost.
+*   **The Policy**: A **Soft Mandatory** policy imports `tfrun`. If the `delta_monthly_cost` is > $500, it requires a manager's digital approval signature in the TFC UI.
+*   **Outcome**: The manager reviewed the cost, realized it was for a temporary load test, granted the override, and added a comment for auditing.
 
-8.  **Overrides require:**
-    *   [x] Permissions and usually a comment.
-    *   [ ] Just clicking a button.
+---
 
-9.  **Mocking data is used for:**
-    *   [x] Testing policies locally.
-    *   [ ] Running policies in prod.
+## ❓ 8. Interview Questions (Expert Deep Dive)
 
-10. **Sentinel failure happens:**
-    *   [x] Before resources are created.
-    *   [ ] After resources are created.
+1.  **Explain the difference between "Mock Data" and Live Data in Sentinel testing.**
+    <details>
+    <summary>Show Answer</summary>
+    **Mock Data** is a stagnant JSON representation of a plan or state used with the **Sentinel CLI** (`sentinel test`) to verify policy logic on your local machine. **Live Data** is the real-time plan stream that HCP Terraform feeds into the engine during an actual deployment.
+    </details>
 
-### Scenarios
-11. **"Self-Service" relies on:**
-    *   [x] Automated Guardrails (Sentinel).
-    *   [ ] Trusting developers completely.
+2.  **Can Sentinel communicate with external systems?**
+    <details>
+    <summary>Show Answer</summary>
+    **Yes**. Using the `http` import, Sentinel can make GET or POST requests to external APIs. For example, it could check a ServiceNow ticket status or an IPAM database before allowing an "IP assignment" in Terraform.
+    </details>
 
-12. **If a policy fails Soft Mandatory:**
-    *   [x] The "Confirm & Apply" button is disabled until overridden.
-    *   [ ] The run is cancelled immediately.
+3.  **What is a "Policy Set"?**
+    <details>
+    <summary>Show Answer</summary>
+    A Policy Set is a group of Sentinel (or OPA) files stored in a Git repository. It is connected to HCP Terraform and can be mapped to specific workspaces (e.g., "Network Policies") or globally to the entire organization.
+    </details>
 
-13. **To prevent S3 buckets from being Public:**
-    *   [x] Check `aws_s3_bucket` resource for `acl="public-read"`.
-    *   [ ] Check Git commit messages.
+4.  **How do you handle "Exemptions" in a Hard Mandatory policy?**
+    <details>
+    <summary>Show Answer</summary>
+    There are no UI overrides for Hard Mandatory policies. To grant an exemption, you must modify the Sentinel code itself to include logic like `if (tfrun.workspace.name matches "emergency-bypass-*")` or use a specific tag/attribute check.
+    </details>
 
-14. **Can you force tags to follow a Regex?**
-    *   [x] Yes (`matches` operator).
-    *   [ ] No.
+5.  **Why is `tfconfig` useful if we already have `tfplan`?**
+    <details>
+    <summary>Show Answer</summary>
+    `tfplan` tells you what will be created. `tfconfig` tells you *how* it was structured. For example, you can use `tfconfig` to enforce that teams *only* use approved modules from the Private Registry and ban "direct resource" creation for specific tiers.
+    </details>
 
-15. **If TFC cannot download the Policy Set from Git:**
-    *   [x] The run usually fails (fail closed).
-    *   [ ] The run proceeds without policy check.
+---
 
-### General
-16. **Is Sentinel Open Source?**
-    *   [ ] Yes.
-    *   [x] No (HashiCorp proprietary).
+## 🧠 9. Knowledge Check (Quiz)
 
-17. **Does Standard Tier TFC support Sentinel?**
-    *   [x] Yes (but limits may apply compared to Plus).
-    *   [ ] No.
+### Flow & Enforcement
+1.  **Sentinel runs after which command?**
+    - [ ] `terraform apply`.
+    - [x] `terraform plan`.
+2.  **Which level allows a manager to "Click to approve" a policy failure?**
+    - [ ] Advisory.
+    - [x] **Soft Mandatory**.
+3.  **A "Fail Closed" design in Sentinel means:**
+    - [x] If the policy engine can't run or is missing, the run is blocked.
+    - [ ] The run proceeds normally.
 
-18. **Can you use Sentinel for non-Terraform things?**
-    *   [x] Yes (Vault, Nomad, Consul).
-    *   [ ] No.
+### Data & Logic
+4.  **To check if a resource is being deleted, Sentinel inspects:**
+    - [ ] `tfstate`.
+    - [x] `tfplan.resource_changes`.
+5.  **Sentinel policies are written in:**
+    - [ ] YAML.
+    - [x] **The Sentinel Language** (Functional/Imperative mix).
+6.  **Can Sentinel block a run based on the creator's identity?**
+    - [x] **Yes** (via the `tfrun` import and Team/User data).
+    - [ ] No.
 
-19. **The file extension for Sentinel policies is:**
-    *   [x] `.sentinel`
-    *   [ ] `.policy`
+---
 
-20. **`import "tfplan/v2"` is preferred over `v1` because:**
-    *   [x] It is more accurate and future-proof.
-    *   [ ] It is faster.
+## 📖 10. Summary & Best Practices
+
+Policy as Code transforms security from a manual "No" to an automated "Safe Self-Service."
+
+**Best Practices:**
+- ✅ **Start with Advisory**: Run a new policy in Advisory mode for 2 weeks to identify false positives.
+- ✅ **Version Control your Policies**: Treat your Policy repo with the same rigor as your Infra repo.
+- ✅ **Unit Test Locally**: Use the `sentinel test` CLI to verify logic before pushing to TFC.
+- ✅ **One Rule per File**: Keep policies modular (e.g., `enforce-mandatory-tags.sentinel`).
+- ✅ **Explain the "Why"**: Always provide a custom error message so developers know how to resolve the failure.
+
+---
+**Module Status**: ✅ Comprehensive Verified
+**Last Updated**: 2026-01-08

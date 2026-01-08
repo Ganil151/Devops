@@ -1,7 +1,6 @@
 Terraform you can scale the number of EC2 instances in **two main ways**:
 
 ---
-
 #### Option 1: Using `count`
 The simplest method.
 ```hcl
@@ -24,9 +23,7 @@ type    = number   default = 3
 
 ---
 #### Option 2: Using `for_each` with a map
-
 This is more flexible if you want different tags or configs per instance.
-
 ```
 variable "instances" {   
 type = map(string)  
@@ -53,12 +50,8 @@ type = map(string)
 👉 This creates one instance per entry in the map, with a **different name and instance type**.
 
 ---
-
 ## ✅ Option 3: Use a module with `count`
-
 Since you’re already using modules (`jenkins_instance`, `sonarqube_instance`, etc.), you can parameterize them too:
-
-
 ```
 module "app_servers" {   
 source   = "../MODULES/EC2"   
@@ -70,6 +63,4 @@ project_name_1 = "app-${count.index + 1}"
  subnet_id      = element(module.vpc.public_subnet_ids, count.index)   security_group_ids = [module.master_sg.master_sg] 
 }
 ```
-
 ---
-

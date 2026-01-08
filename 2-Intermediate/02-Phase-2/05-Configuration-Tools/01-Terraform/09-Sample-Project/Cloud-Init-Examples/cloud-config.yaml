@@ -1,0 +1,44 @@
+#cloud-config
+
+# Set the system hostname dynamically
+hostname: ${hostname}
+
+# Create a dedicated administrative user
+users:
+  - name: ${admin_user}
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups: sudo
+    shell: /bin/bash
+    lock_passwd: true
+
+# Install essential packages
+packages:
+  - nginx
+  - curl
+  - htop
+
+# Write a custom index.html for Nginx
+write_files:
+  - path: /var/www/html/index.html
+    owner: www-data:www-data
+    permissions: '0644'
+    content: |
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Cloud-Init Demo</title>
+          <style>
+              body { font-family: sans-serif; text-align: center; background-color: #232f3e; color: white; margin-top: 100px; }
+              .badge { display: inline-block; background-color: #38a169; padding: 10px 20px; border-radius: 5px; }
+          </style>
+      </head>
+      <body>
+          <h1>${web_message}</h1>
+          <div class="badge">Bootstrap Complete</div>
+      </body>
+      </html>
+
+# Final run commands
+runcmd:
+  - [ systemctl, restart, nginx ]
+  - [ echo, "Infrastructure Bootstrap Finished at $(date)" ]

@@ -1,16 +1,10 @@
-# Code Organization Best Practices
-
 Organization isn't just about being tidy; it's about **survival** at scale. A well-organized Terraform codebase minimizes "Blast Radius," enables team collaboration, and simplifies debugging.
-
 ## 1. The Direct Correlation: Structure vs. Risk
-
 As your infrastructure grows, your code structure **must** evolve.
-
 ### Evolution 1: The "Small" Project (Monolith)
 *   **Use Case**: Personal projects, Proof of Concept (PoC).
 *   **State**: Single state file.
 *   **Risk**: High (One error can destroy everything).
-
 ```text
 my-project/
 ├── main.tf       # All resources
@@ -19,12 +13,10 @@ my-project/
 ├── terraform.tfvars
 └── README.md
 ```
-
 ### Evolution 2: The "Medium" Project (Environment Split)
 *   **Use Case**: Startups, single team.
 *   **State**: Separate state per environment.
 *   **Risk**: Medium (Dev cannot break Prod).
-
 ```mermaid
 graph TD
     Root --> Env[Environments]
