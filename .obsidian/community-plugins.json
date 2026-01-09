@@ -4,5 +4,11 @@
   "obsidian-emoji-toolbar",
   "obsidian-shellcommands",
   "mermaid-tools",
-  "mermaid-popup"
+  "mermaid-popup",
+  "mermaid-themes",
+  "obsidian-linter",
+  "code-emitter",
+  "table-editor-obsidian",
+  "obsidian-git",
+  "obsidian-mind-map"
 ]

@@ -62,10 +62,8 @@ Meta-arguments are special parameters that change how Terraform treats a resourc
 - **`for_each`**: Creates multiple instances based on a map or list (better for unique settings).
 - **`depends_on`**: Manually forces the order of creation.
 - **`lifecycle`**: Controls specialized behaviors like `prevent_destroy` or `create_before_destroy`.
-
 ---
 ## 🔗 3. Implicit vs. Explicit Dependencies
-
 ### Implicit Dependencies (Automatic)
 Terraform is smart. If Resource B references an attribute from Resource A (e.g., `vpc_id = aws_vpc.main.id`), Terraform automatically knows it must create the VPC first.
 
@@ -82,9 +80,7 @@ graph LR
     S3[aws_s3_bucket.data] -.->|Manually Defined| App[aws_instance.app]
     style S3 stroke-dasharray: 5 5,fill:#3498db,color:#fff
 ```
-
 ---
-
 ## 🌟 Real-Life Scenarios
 
 ### Scenario 1: The Multi-Region/Account Strategy
@@ -107,11 +103,10 @@ resource "aws_instance" "euro_server" {
 ```
 ### Scenario 2: Blue/Green Deployment with Zero Downtime
 **Problem**: Updating an EC2 instance's AMI usually destroys it first, causing several minutes of downtime.
-**Solution**: Use `lifecycle { create_before_destroy = true }`. Terraform will spin up the "Green" instance first, ensure it's healthy, and only then terminate the "Blue" instance.
+**Solution**: Use `lifecycle { create_before_destroy = true }`. Terraform will spin up the "<font color="#00b050">Green</font>" instance first, ensure it's healthy, and only then terminate the "<font color="#0070c0">Blue</font>" instance.
 
 ---
 ## 🎤 Interview Questions (Junior to Senior)
-
 ### Beginner
 1.  **What does `terraform init` do to providers?**
     - It downloads the provider binaries from the registry into the `.terraform` folder based on your configuration.

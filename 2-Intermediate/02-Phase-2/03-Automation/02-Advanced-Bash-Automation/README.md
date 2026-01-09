@@ -6,7 +6,7 @@ Move beyond "one-liners" to resilient, production-grade automation scripts that 
 
 | # | Topic | Description | Key Tools |
 | :--- | :--- | :--- | :--- |
-| **01** | [**Robust Execution**](./01-Robust-Execution-and-Traps/README.md) | Defensive Programming | set -euo pipefail, Traps, Lockfiles |
+| **01** | [**Robust Execution**](Robust%20Execution%20and%20Traps.md) | Defensive Programming | set -euo pipefail, Traps, Lockfiles |
 | **02** | [**Argument Parsing**](./02-Advanced-Argument-Parsing-Getopts/README.md) | CLI Interfaces | getopts, long-flags, usage menus |
 | **03** | [**JSON with JQ**](./03-JSON-Processing-with-JQ/README.md) | API Integration | Filtering, Selecting, Mapping |
 | **04** | [**Sed and Awk**](./04-Data-Wrangling-with-Sed-and-Awk/README.md) | Text Powerhouses | Stream editing, Column processing |

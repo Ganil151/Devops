@@ -1,160 +1,241 @@
-# Day 5: Terraform Project Structure and Organization
+# Day 6: Terraform Project Structure and Organization
 
 ## Overview
-This lab demonstrates proper Terraform project organization using multiple files, variables, locals, and outputs. Learn how to structure a maintainable and scalable Terraform codebase following industry best practices.
+This lab demonstrates proper Terraform project organization using multiple files, variables, locals, and outputs. Learn how to structure a maintainable and scalable Terraform codebase following industry best practices with VPC, subnets, and S3 bucket resources.
 
 ## 📚 Related Fundamentals
 Before diving into this lab, review these foundational concepts:
-- [Terraform Core Concepts](../../01-Fundamentals/03-Core-Concepts/Terraform%20Core%20Concepts.md) - Understanding Terraform basics
-- [Variables and Outputs](../../01-Fundamentals/08-Variables-and-Outputs/Variables%20and%20Outputs.md) - Input variables and output values
-- [Providers](../../01-Fundamentals/06-Providers/Providers.md) - Provider configuration and management
-- [Terraform Commands](../../01-Fundamentals/02-Commands/README.md) - CLI commands reference
-- [Configuration Language (HCL)](../../01-Fundamentals/05-Configuration-Language/Configuration%20Language%20(HCL).md) - HCL syntax and structure
+- [Terraform Core Concepts](../../../01-Fundamentals/03-Core-Concepts/README.md) - Understanding Terraform basics
+- [Variables and Outputs](../../../01-Fundamentals/08-Variables-and-Outputs/README.md) - Input variables and output values
+- [Providers](../../../01-Fundamentals/06-Providers/README.md) - Provider configuration and management
+- [Terraform Commands](../../../01-Fundamentals/02-Commands/README.md) - CLI commands reference
+- [Configuration Language (HCL)](../../../01-Fundamentals/05-Configuration-Language/README.md) - HCL syntax and structure
 
 ## File Structure Explanation
 
 ```
-05-Day/
+06-Day-Project_Structure/
 ├── .terraform/                 # Terraform working directory (auto-generated)
 │   ├── providers/              # Downloaded provider binaries
 │   └── terraform.tfstate       # Local state file (if using local backend)
 ├── .terraform.lock.hcl         # Provider version lock file
-├── backend.tf                  # Backend configuration
+├── backend.tf                  # Backend and provider requirements
+├── challenges.md               # Lab challenges and exercises
 ├── locals.tf                   # Local values and computed expressions
-├── main.tf                     # Primary resource definitions
+├── main.tf                     # Main configuration file
 ├── output.tf                   # Output value definitions
 ├── providers.tf                # Provider configurations
 ├── README.md                   # Project documentation
-├── task.md                     # Learning tasks and exercises
+├── storage.tf                  # S3 bucket resources
+├── terraform.tfvars            # Variable values
 ├── tfplan                      # Terraform execution plan (generated)
-└── variables.tf                # Input variable definitions
+├── variables.tf                # Input variable definitions
+└── vpc.tf                      # VPC and networking resources
 ```
+
 ## File-by-File Breakdown
 
-### 1. **providers.tf** - Provider Configuration
+### 1. **backend.tf** - Backend Configuration & Requirements
 ```hcl
 terraform {
+  required_version = ">= 1.0"
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 6.0"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.0"
+    }
   }
-}
 
-provider "aws" {
-  region = "us-east-1"
+  backend "s3" {
+    bucket       = "gsmash-demo-bucket-name-123456"
+    key          = "dev/terraform.tfstate"
+    region       = "us-east-1"
+    encrypt      = true
+    use_lockfile = true
+  }
 }
 ```
 **Purpose**: 
-- Defines required providers and their versions
-- Configures provider settings (region, credentials, etc.)
-- Separates provider logic from resource definitions
+- Defines Terraform and provider version requirements
+- Configures remote state storage in S3
+- Enables state locking for team collaboration
 
-**🔗 Learn More**: [Providers Deep Dive](../../01-Fundamentals/06-Providers/Providers.md)
-### 2. **backend.tf** - State Management
+### 2. **providers.tf** - Provider Configuration
 ```hcl
-terraform {
-  backend "s3" {
-    bucket         = "gsmash-demo-bucket-name-123456"
-    key            = "dev/terraform.tfstate"
-    region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "gsmash-demo-lock-table"
+provider "aws" {
+  region = var.region
+
+  default_tags {
+    tags = local.common_tags
   }
 }
 ```
 **Purpose**:
-- Configures remote state storage in S3
-- Enables state locking with DynamoDB
-- Isolates backend configuration for easy environment switching
+- Configures AWS provider with dynamic region
+- Applies default tags to all resources automatically
+- Separates provider logic from resource definitions
+
 ### 3. **variables.tf** - Input Variables
 ```hcl
 variable "environment" {
-  description = "The name of the environment this infra resource belongs to."
+  description = "Environment name (dev, staging, production)"
   type        = string
-  default     = "dev"
+  default     = "staging"
+  
+  validation {
+    condition     = contains(["dev", "staging", "production"], var.environment)
+    error_message = "Environment must be dev, staging, or production."
+  }
 }
 
-variable "region" {
-  description = "The AWS region to deploy resources in."
+variable "vpc_cidr" {
+  description = "CIDR block for VPC"
   type        = string
-  default     = "us-east-1"
-}
-
-variable "bucket_name" {
-  description = "The name of the channel."
-  type        = string
-  default     = "demo_bucket"
+  default     = "10.0.0.0/16"
+  
+  validation {
+    condition     = can(cidrhost(var.vpc_cidr, 0))
+    error_message = "VPC CIDR must be a valid IPv4 CIDR block."
+  }
 }
 ```
 **Purpose**:
-- Defines configurable input parameters
+- Defines configurable input parameters with validation
 - Provides descriptions and type constraints
 - Sets default values for common scenarios
 - Enables reusability across environments
 
-**🔗 Learn More**: [Variables and Outputs Guide](../../01-Fundamentals/08-Variables-and-Outputs/Variables%20and%20Outputs.md)
-
 ### 4. **locals.tf** - Local Values
 ```hcl
 locals {
-  common_tags = {
-    Project     = "Terraform-Gsmash-Demo"
+  # Common tags to be applied to all resources
+  common_tags = merge(var.tags, {
     Environment = var.environment
-    Owner       = "Gsmash"
-  }
+    Project     = var.project_name
+    Owner       = var.owner
+    ManagedBy   = "terraform"
+    CreatedDate = formatdate("YYYY-MM-DD", timestamp())
+  })
 
-  full_bucket_name = "${var.bucket_name}-${var.environment}-${random_string.suffix.result}"
+  # Naming convention for resources
+  name_prefix = "${var.project_name}-${var.environment}"
+  
+  # Storage configuration
+  bucket_name = "${local.name_prefix}-${random_id.bucket_suffix.hex}"
+}
+
+# Random suffix for globally unique resource names
+resource "random_id" "bucket_suffix" {
+  byte_length = 4
+
+  keepers = {
+    project = var.project_name
+    environment = var.environment
+  }
 }
 ```
 **Purpose**:
 - Defines computed values and expressions
-- Creates reusable tag sets
-- Combines variables into complex expressions
-- Reduces code duplication
+- Creates reusable tag sets with dynamic values
+- Implements consistent naming conventions
+- Reduces code duplication across resources
 
-### 5. **main.tf** - Resource Definitions
+### 5. **vpc.tf** - VPC and Networking Resources
 ```hcl
-resource "aws_s3_bucket" "demo_bucket" {
-  bucket = local.full_bucket_name
-  
+# VPC
+resource "aws_vpc" "main" {
+  cidr_block           = var.vpc_cidr
+  enable_dns_hostnames = true
+  enable_dns_support   = true
+
   tags = merge(local.common_tags, {
-    Name = "Demo Bucket"
+    Name = local.vpc_name
   })
 }
 
-resource "random_string" "suffix" {
-  length  = 8
-  special = false
-  upper   = false
+# Public Subnets
+resource "aws_subnet" "public" {
+  count                   = length(var.availability_zones)
+  vpc_id                  = aws_vpc.main.id
+  cidr_block              = cidrsubnet(var.vpc_cidr, 8, count.index)
+  availability_zone       = var.availability_zones[count.index]
+  map_public_ip_on_launch = true
+
+  tags = merge(local.common_tags, {
+    Name = "${local.name_prefix}-public-subnet-${count.index + 1}"
+    Type = "Public"
+  })
 }
 ```
 **Purpose**:
-- Contains primary infrastructure resources
-- Uses variables and locals for configuration
+- Creates VPC with DNS support enabled
+- Provisions public subnets across multiple AZs
+- Uses dynamic CIDR calculation with cidrsubnet()
 - Implements consistent tagging strategy
 
-### 6. **output.tf** - Output Values
+### 6. **storage.tf** - S3 Bucket Resources
 ```hcl
-output "bucket_name" {
-  description = "Name of the S3 Bucket"
-  value       = aws_s3_bucket.demo_bucket.bucket
+# S3 Bucket
+resource "aws_s3_bucket" "main" {
+  bucket = local.bucket_name
+
+  tags = merge(local.common_tags, {
+    Name = local.bucket_name
+    Purpose = "General storage"
+    Environment = var.environment
+  })
 }
 
-output "bucket_arn" {
-  description = "ARN of the S3 bucket"
-  value       = aws_s3_bucket.demo_bucket.arn
+# S3 Bucket Versioning
+resource "aws_s3_bucket_versioning" "main" {
+  bucket = aws_s3_bucket.main.id
+
+  versioning_configuration {
+    status = "Enabled"
+  }
 }
 
-output "environment" {
-  description = "Environment from input variable"
-  value       = var.environment
+# S3 Bucket Server-Side Encryption
+resource "aws_s3_bucket_server_side_encryption_configuration" "main" {
+  bucket = aws_s3_bucket.main.id  
+
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
+    bucket_key_enabled = true
+  }
+}
+```
+**Purpose**:
+- Creates S3 bucket with security best practices
+- Enables versioning for data protection
+- Configures server-side encryption
+- Blocks public access for security
+
+### 7. **output.tf** - Output Values
+```hcl
+# VPC Outputs
+output "vpc_id" {
+  description = "ID of the VPC"
+  value       = aws_vpc.main.id
 }
 
-output "tags" {
-  description = "Tags from local variable"
-  value       = local.common_tags
+# Subnet Outputs
+output "public_subnet_ids" {
+  description = "IDs of the public subnets"
+  value       = aws_subnet.public[*].id
+}
+
+# S3 Outputs
+output "s3_bucket_name" {
+  description = "Name of the S3 bucket"
+  value       = aws_s3_bucket.main.bucket
 }
 ```
 **Purpose**:
@@ -163,27 +244,35 @@ output "tags" {
 - Enables integration with external systems
 - Documents key infrastructure outputs
 
-## Auto-Generated Files
+### 8. **terraform.tfvars** - Variable Values
+```hcl
+# Project Configuration
+project_name = "aws-terraform-course"
+environment  = "dev"
+region       = "us-east-1"
 
-### **.terraform/** Directory
-- **Purpose**: Terraform's working directory
-- **Contents**: Downloaded providers, modules, cached data
-- **Management**: Auto-generated, should be in `.gitignore`
+# Network Configuration
+vpc_cidr           = "10.0.0.0/16"
+availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
 
-### **.terraform.lock.hcl**
-- **Purpose**: Locks provider versions for consistency
-- **Contents**: Exact provider versions and checksums
-- **Management**: Should be committed to version control
-
-### **tfplan** File
-- **Purpose**: Stores execution plan from `terraform plan`
-- **Contents**: Planned changes in binary format
-- **Management**: Temporary file, can be deleted after apply
+# Tags
+tags = {
+  Owner      = "Gsmash"
+  Department = "Engineering"
+  CostCenter = "Engineering-001"
+  Project    = "TerraformLearning"
+}
+```
+**Purpose**:
+- Provides actual values for variables
+- Environment-specific configuration
+- Separates values from variable definitions
+- Enables easy environment switching
 
 ## Benefits of This Structure
 
 ### 1. **Separation of Concerns**
-- Each file has a specific purpose
+- Each file has a specific purpose (networking, storage, variables)
 - Easy to locate and modify specific configurations
 - Reduces merge conflicts in team environments
 
@@ -197,52 +286,32 @@ output "tags" {
 - Locals reduce code duplication
 - Modular structure supports code reuse
 
-### 4. **Collaboration**
-- Team members can work on different files simultaneously
-- Clear file purposes reduce confusion
-- Standardized structure improves onboarding
+### 4. **Security & Best Practices**
+- Default tags applied automatically via provider
+- Input validation for critical variables
+- Secure S3 configuration with encryption
 
-## Best Practices Demonstrated
+## Key Features Demonstrated
 
-### Variable Management
-- Descriptive variable names and descriptions
-- Appropriate default values
-- Type constraints for validation
+### Advanced Variable Management
+- Input validation with custom conditions
+- Type constraints and descriptions
+- Environment-aware default values
 
-### Tagging Strategy
-- Consistent tagging using locals
-- Environment-aware tag values
-- Merge function for combining tag sets
+### Dynamic Resource Creation
+- Count-based subnet creation across AZs
+- Dynamic CIDR block calculation
+- Random resource naming for uniqueness
 
-### Resource Naming
-- Dynamic naming using variables and locals
-- Environment-specific resource names
-- Unique identifiers to prevent conflicts
+### Comprehensive Tagging Strategy
+- Provider-level default tags
+- Resource-specific tag merging
+- Timestamp and computed tag values
 
-### State Management
-- Remote state storage for team collaboration
-- State locking to prevent conflicts
-- Environment-specific state file paths
-
-## Common Patterns
-
-### 1. **Environment Parameterization**
-```hcl
-# Use variables for environment-specific values
-bucket = "${var.project}-${var.environment}-bucket"
-```
-
-### 2. **Tag Standardization**
-```hcl
-# Apply consistent tags across all resources
-tags = local.common_tags
-```
-
-### 3. **Resource Dependencies**
-```hcl
-# Reference other resources using interpolation
-bucket = aws_s3_bucket.demo_bucket.bucket
-```
+### Security Best Practices
+- S3 bucket encryption and versioning
+- Public access blocking
+- State file encryption in backend
 
 ## Workflow Commands
 
@@ -250,61 +319,79 @@ bucket = aws_s3_bucket.demo_bucket.bucket
    ```bash
    terraform init
    ```
-   **🔗 Reference**: [Init Command Guide](../../01-Fundamentals/02-Commands/01-Init.md)
 
 2. **Validate Configuration**:
    ```bash
    terraform validate
    ```
-   **🔗 Reference**: [Validate Command Guide](../../01-Fundamentals/02-Commands/02-Validate.md)
 
 3. **Plan Changes**:
    ```bash
    terraform plan -out=tfplan
    ```
-   **🔗 Reference**: [Plan Command Guide](../../01-Fundamentals/02-Commands/03-Plan.md)
 
 4. **Apply Changes**:
    ```bash
    terraform apply tfplan
    ```
-   **🔗 Reference**: [Apply Command Guide](../../01-Fundamentals/02-Commands/04-Apply.md)
 
 5. **View Outputs**:
    ```bash
    terraform output
    ```
-   **🔗 Reference**: [Output Command Guide](../../01-Fundamentals/02-Commands/11-Output.md)
+
+6. **Destroy Resources**:
+   ```bash
+   terraform destroy
+   ```
 
 ## Key Learning Objectives
 
 1. **File Organization**: Understand the purpose of each Terraform file type
-2. **Variable Usage**: Learn to parameterize configurations effectively
-3. **Local Values**: Use locals for computed expressions and reusability
-4. **Output Management**: Expose important values for external consumption
-5. **Best Practices**: Apply industry-standard project structure patterns
+2. **Variable Management**: Learn advanced variable usage with validation
+3. **Local Values**: Use locals for computed expressions and naming conventions
+4. **Resource Dependencies**: Understand implicit and explicit dependencies
+5. **Security Practices**: Implement encryption, tagging, and access controls
+6. **Dynamic Configuration**: Use count, for_each, and functions effectively
+
+## Common Patterns Demonstrated
+
+### 1. **Environment Parameterization**
+```hcl
+name_prefix = "${var.project_name}-${var.environment}"
+```
+
+### 2. **Dynamic Resource Naming**
+```hcl
+bucket_name = "${local.name_prefix}-${random_id.bucket_suffix.hex}"
+```
+
+### 3. **Consistent Tagging**
+```hcl
+tags = merge(local.common_tags, {
+  Name = "specific-resource-name"
+})
+```
+
+### 4. **CIDR Calculation**
+```hcl
+cidr_block = cidrsubnet(var.vpc_cidr, 8, count.index)
+```
 
 ## Next Steps
 
 After mastering this structure:
 - Learn about Terraform modules for further organization
-- Explore workspace management for multiple environments ([Workspace Commands](../../01-Fundamentals/02-Commands/12-Workspace.md))
+- Explore workspace management for multiple environments
 - Implement automated testing and validation
-- Study advanced state management techniques ([State Commands](../../01-Fundamentals/02-Commands/06-State.md))
+- Study advanced state management techniques
+- Practice with more complex multi-tier architectures
 
-## 🔗 Additional Resources
+## Troubleshooting Tips
 
-### Fundamentals Review
-- [Terraform Workflow](../../01-Fundamentals/10-Terraform-Workflow/Terraform%20Workflow.md) - Complete development workflow
-- [Basic Examples](../../01-Fundamentals/11-Basic-Examples/Basic%20Examples.md) - Simple configuration examples
-- [Data Sources](../../01-Fundamentals/09-Data-Sources/Data%20Sources.md) - Using external data
-- [Resources](../../01-Fundamentals/07-Resources/Resources.md) - Resource management
+1. **Provider Inconsistent Plan Errors**: Ensure consistent tagging between provider default_tags and resource tags
+2. **Undeclared Resource Errors**: Verify all referenced resources exist in the configuration
+3. **CIDR Conflicts**: Use terraform console to test cidrsubnet() calculations
+4. **State Lock Issues**: Check S3 bucket and ensure proper permissions
 
-### Command References
-- [Commands Quick Reference](../../01-Fundamentals/02-Commands/21-Quick-Reference.md) - Cheat sheet
-- [Format Command](../../01-Fundamentals/02-Commands/09-Fmt.md) - Code formatting
-- [Show Command](../../01-Fundamentals/02-Commands/10-Show.md) - Inspecting state and plans
-
-### Previous Labs
-- [Day 4: Remote State Management](../04-Day/README.md) - S3 backend configuration
-- [Day 3: Variables and Locals](../03-Day/README.md) - Variable usage patterns
+This project structure provides a solid foundation for scalable, maintainable Terraform configurations while demonstrating industry best practices for infrastructure as code.

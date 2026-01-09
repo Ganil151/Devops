@@ -1,101 +1,46 @@
-# Robust Execution and Traps
+# 🛡️ Robust Execution and Traps Module
 
-Production-grade scripts must handle errors silently, clean up after themselves, and prevent parallel execution of critical tasks.
+This module covers production-grade bash scripting techniques for building resilient automation that can handle errors, interruptions, and system signals gracefully.
 
-## 🚀 The Resilient Script Lifecycle
+## 📚 Module Structure
 
-Advanced automation handles unexpected interruptions and system signals to maintain system integrity.
+| File | Description | Focus Area |
+|------|-------------|------------|
+| **[01-Robust-Execution-and-Traps.md](./01-Robust-Execution-and-Traps.md)** | Core concepts and fundamentals | Basic patterns, strict mode, traps |
+| **[02-Visual-Architecture-Diagrams.md](./02-Visual-Architecture-Diagrams.md)** | Visual representations and flows | Diagrams, flowcharts, architecture |
+| **[03-Advanced-Patterns-and-Examples.md](./03-Advanced-Patterns-and-Examples.md)** | Deep dive and production examples | Advanced techniques, real-world scenarios |
 
-```mermaid
-stateDiagram-v2
-    [*] --> Initialize: set -euo pipefail
-    Initialize --> Setup: Create Temp Files / Lockfiles
-    Setup --> Process: Execution Logic
-    Process --> Cleanup: trap "cleanup" EXIT
-    Cleanup --> [*]
+## 🎯 Learning Path
 
-Process --> Interrupted: SIGINT / SIGTERM
-    Interrupted --> Cleanup
-```
+1. **Start Here**: Read the main concepts in `01-Robust-Execution-and-Traps.md`
+2. **Visualize**: Study the diagrams in `02-Visual-Architecture-Diagrams.md`
+3. **Master**: Implement advanced patterns from `03-Advanced-Patterns-and-Examples.md`
 
-## 🛠️ The "Strict Mode" Settings
+## 🔑 Key Concepts Covered
 
-Fail-fast behavior is essential to stop a script before it does damage with undefined variables or failed pipe segments.
+- **Strict Mode**: `set -euo pipefail` for fail-fast behavior
+- **Signal Management**: Trap handlers for graceful cleanup
+- **Atomic Operations**: Lockfiles and race condition prevention
+- **Resource Management**: Comprehensive cleanup strategies
+- **Error Handling**: Advanced patterns for production environments
+
+## 🚀 Quick Reference
 
 ```bash
+# Essential robust script header
 #!/bin/bash
 set -euo pipefail
-```
 
-- **`-e` (errexit)**: Stol immediately on any non-zero exit code.
-- **`-u` (nounset)**: Exit if any variable is called before it is defined.
-- **`-o pipefail`**: Ensures that the exit code of a pipeline is the value of the last command to exit with a non-zero status.
-
-## 🪤 Signal Management (Traps)
-
-The `trap` command ensures that a cleanup function runs regardless of how the script ends.
-
-```bash
-# Define a cleanup function
+# Cleanup function
 cleanup() {
     local status=$?
-    echo "[$(date +'%Y-%m-%d %H:%M:%S')] Cleaning up..."
-    [[ -f "$LOCKFILE" ]] && rm -f "$LOCKFILE"
+    # Cleanup logic here
     exit $status
 }
 
-# Attach function to EXIT and common interruption signals
+# Signal handlers
 trap cleanup EXIT SIGINT SIGTERM
 ```
 
-> [!TIP]
-> Use `trap - EXIT` to clear a trap once it is no longer needed (e.g., at the very end of a successful script if you want different terminal behavior).
-
-## 🔒 Atomicity and Lockfiles
-
-To prevent two instances of a script from running simultaneously (which could corrupt data or lead to race conditions), use a lockfile.
-
-```bash
-LOCKFILE="/tmp/service_deploy.lock"
-
-# Check if lock exists or use flock for atomic locking
-if ! mkdir "$LOCKFILE" 2>/dev/null; then
-    echo "Error: Another deployment is already in progress." >&2
-    exit 1
-fi
-```
-
 ---
-
-## 📖 Stories from the Field: The Memory Hog
-
-**Scenario**: A nightly backup script was using a temporary directory to compress 500GB of logs.
-**Problem**: The script was killed by the OOM (Out of Memory) killer or interrupted by a sysadmin.
-**Outcome**: Because no `trap` was used, the temporary directory (filled with 500GB of data) remained on the disk. After 3 nights, the disk was 100% full, crashing the production database.
-**Resolution**: Added a `trap` to remove the temporary directory on `EXIT`.
-**Prevention**: Never create temporary files without a corresponding `trap` cleanup.
-
----
-
-## ❓ Interview Questions
-
-1. **What is the difference between `trap "cmd" EXIT` and `trap "cmd" ERR`?**
-   * *Answer*: `EXIT` triggers whenever the script finishes (success or failure). `ERR` only triggers when a command fails (non-zero exit).
-2. **How do you handle a command that is EXPECTED to fail occasionally within `set -e`?**
-   * *Answer*: Append `|| true` to the command, or wrap it in an `if` block. `[ -f missing_file ] || true`.
-3. **What is `flock` and why is it better than `mkdir` for locking?**
-   * *Answer*: `flock` is an external tool that manages file locks at the kernel level. It handles "stale locks" automatically if the process crashes, as the kernel releases the lock when the file descriptor closes.
-4. **When would you NOT use `set -e`?**
-   * *Answer*: In interactive shell sessions where you want to keep working after a failure, or in complex scripts where you have manual error handling logic that is more sophisticated than a simple exit.
-5. **How do you pass the script's exit code through a trap function?**
-   * *Answer*: Capture it using `local status=$?` at the very start of the trap function and then `exit $status`.
-
----
-
-## 🧠 Quiz
-
-1. **Which flag ensures a script fails if a variable is used but not defined?** `(-u)`
-2. **What signal is sent by the `kill <pid>` command by default?** `(SIGTERM - 15)`
-3. **True/False: A trap on EXIT will run even if the script finishes successfully.** `(True)`
-4. **What is the result of `false | true` if `pipefail` is enabled?** `(Failure - Returns non-zero)`
-5. **Which command is used to catch and handle system signals?** `(trap)`
+[⬅️ Back to Advanced Bash Automation](../README.md)

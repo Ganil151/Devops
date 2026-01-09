@@ -93,7 +93,8 @@ Follow these modules in order to master Terraform:
 8.  **[08-Real-Life-Scenarios](./08-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architecture challenges.
 9.  **[09-Sample-Project](./09-Sample-Project/)**: A hands-on deployment example.
 10. **[10-Notes](./10-Notes/)**: Extra tips and quick references.
-11. **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
+11. **[11-Cost-Management](./11-Cost-Management/README.md)**: Strategies for optimizing cloud spend and implementing FinOps.
+12. **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 
