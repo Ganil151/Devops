@@ -1,28 +1,18 @@
 # 📁 Basic File Manipulation
-
 > **"In DevOps, 80% of automation involves creating, moving, copying, and deleting files. Master these operations, and you've mastered the foundation."**
-
 ## 📚 Overview
-
 File manipulation is the bread and butter of system administration and DevOps. Whether you're deploying applications, managing configurations, or organizing logs, you'll constantly be working with files and directories.
-
 ![File Operations](../../assets/file_operations.png)
-
 ## 🎓 Learning Objectives
-
 By the end of this module, you will:
-
 - ✅ Create files and directories efficiently
 - ✅ Copy files and directories with precision
 - ✅ Move and rename files safely
 - ✅ Delete files and directories correctly
 - ✅ Understand file operation flags and options
 - ✅ Execute safe file operations in production
-
 ## 🛠️ Essential File Commands
-
 ### Command Overview
-
 ```mermaid
 mindmap
   root((File<br/>Operations))
@@ -46,11 +36,8 @@ mindmap
       rmdir dirs
       rm -rf recursive
 ```
-
 ## 📝 Creating Files: `touch`
-
 ### Basic Usage
-
 ```bash
 # Create a single file
 touch file.txt
@@ -64,9 +51,7 @@ touch file{1..10}.txt
 # Create files in subdirectory
 touch /tmp/testfile.txt
 ```
-
 ### Advanced Usage
-
 ```bash
 # Update timestamp only (don't create if doesn't exist)
 touch -c existing_file.txt
@@ -83,9 +68,7 @@ touch -a file.txt
 # Update only modification time
 touch -m file.txt
 ```
-
 ### Real-World DevOps Use Case
-
 ```bash
 #!/bin/bash
 # Create log rotation marker
@@ -106,11 +89,8 @@ if [ ! -f "$MARKER" ] || [ $(find "$MARKER" -mtime +1) ]; then
     echo "Logs rotated successfully"
 fi
 ```
-
 ## 📂 Creating Directories: `mkdir`
-
 ### Basic Usage
-
 ```bash
 # Create single directory
 mkdir mydir
@@ -124,9 +104,7 @@ mkdir -p path/to/deep/directory
 # Create with specific permissions
 mkdir -m 755 secure_dir
 ```
-
 ### Directory Structure Creation
-
 ```bash
 # Create project structure
 mkdir -p project/{src,tests,docs,config}
@@ -138,9 +116,7 @@ mkdir -p project/{src,tests,docs,config}
 # ├── docs/
 # └── config/
 ```
-
 ### DevOps Application: Project Scaffolding
-
 ```bash
 #!/bin/bash
 # Project initialization script
@@ -159,17 +135,12 @@ touch "$PROJECT_NAME"/config/{development.env,production.env}
 echo "✅ Project '$PROJECT_NAME' scaffolding complete!"
 tree "$PROJECT_NAME"
 ```
-
 ## 📋 Copying Files: `cp`
-
 ### Basic Syntax
-
 ```bash
 cp [options] source destination
 ```
-
 ### Common Operations
-
 ```bash
 # Copy file
 cp file.txt file_backup.txt
@@ -195,7 +166,6 @@ cp -i file.txt existing_file.txt
 # Archive mode (recursive + preserve attributes + preserve symlinks)
 cp -a source/ destination/
 ```
-
 ### Flags Explained
 
 | Flag | Description | Use Case |
@@ -207,7 +177,6 @@ cp -a source/ destination/
 | `-u` | Update (copy only if source is newer) | Incremental backups |
 | `-a` | Archive (same as -dR --preserve=all) | Complete directory backups |
 | `-n` | No-clobber (never overwrite) | Safe copy operations |
-
 ### Copy Operation Flow
 
 ```mermaid
@@ -242,7 +211,6 @@ flowchart TD
 ```
 
 ### DevOps Example: Configuration Backup
-
 ```bash
 #!/bin/bash
 # Automated configuration backup script
@@ -263,13 +231,9 @@ ls -t | tail -n +8 | xargs rm -rf
 
 echo "✅ Nginx configuration backed up to $BACKUP_DIR/nginx_$TIMESTAMP"
 ```
-
 ## 🚚 Moving/Renaming Files: `mv`
-
 The `mv` command serves two purposes: **moving** and **renaming** files.
-
 ###  Basic Usage
-
 ```bash
 # Rename a file
 mv oldname.txt newname.txt
@@ -298,9 +262,7 @@ mv -u source.txt destination.txt
 # Verbose output
 mv -v source.txt destination.txt
 ```
-
 ### Move vs. Rename
-
 ```mermaid
 graph LR
     A[mv command] --> B{Same directory?}
@@ -314,9 +276,7 @@ graph LR
     style C fill:#06A77D,stroke:#333,stroke-width:2px,color:#fff
     style D fill:#2E86AB,stroke:#333,stroke-width:2px,color:#fff
 ```
-
 ### Bulk Renaming Example
-
 ```bash
 #!/bin/bash
 # Rename all .txt files to .md
@@ -328,9 +288,7 @@ done
 # Alternative using rename command (if available)
 rename 's/\.txt$/.md/' *.txt
 ```
-
 ### DevOps Use Case: Log Rotation
-
 ```bash
 #!/bin/bash
 # Rotate application logs
@@ -358,15 +316,10 @@ fi
 # Compress archives older than 1 day
 find "$ARCHIVE_DIR" -name "*.log" -mtime +1 -exec gzip {} \;
 ```
-
 ## 🗑️ Deleting Files: `rm`
-
 ### ⚠️ Warning: No Undo!
-
 Unlike GUI file managers, `rm` does **not** move files to trash. Deletion is permanent!
-
 ### Basic Usage
-
 ```bash
 # Delete a file
 rm file.txt
@@ -386,7 +339,6 @@ rm -f file.txt
 # Remove directory and contents (DANGEROUS!)
 rm -rf directory/
 ```
-
 ### Flags and Safety
 
 | Flag | Description | Safety Level |
@@ -397,9 +349,7 @@ rm -rf directory/
 | `-f` | Force (no prompts, ignore errors) | 🔴 Dangerous |
 | `-r` | Recursive (delete directories) | 🔴 Dangerous |
 | `-rf` | Force recursive deletion | 🔴 **VERY DANGEROUS** |
-
 ### Safe Deletion Practices
-
 ```bash
 # ❌ DANGEROUS - Never do this as root
 rm -rf /
@@ -420,9 +370,7 @@ rm -rI directory/
 # ✅ BEST - Create alias for safety
 alias rm='rm -i'
 ```
-
 ### Deletion Decision Flow
-
 ```mermaid
 flowchart TD
     Start([Need to delete?]) --> A{Is data critical?}
@@ -455,7 +403,6 @@ flowchart TD
 ```
 
 ### DevOps Example: Cleanup Old Builds
-
 ```bash
 #!/bin/bash
 # Safe cleanup of old build artifacts
@@ -478,11 +425,8 @@ else
     echo "❌ Deletion cancelled"
 fi
 ```
-
 ## 🏆 Real-World DevOps Story
-
 ### 💡 **The Production Disaster That Never Happened**
-
 **Scenario**: A junior DevOps engineer was tasked with cleaning up old log files on a production server.
 
 **What They Almost Did**:
@@ -492,7 +436,6 @@ fi
 cd /var/log
 rm -rf old logs  # TYPO: space between "old" and "logs"
 ```
-
 This would have deleted:
 1. `/var/log/old` directory
 2 `/root` directory (from `logs` being interpreted as a separate argument)
@@ -505,9 +448,7 @@ alias rm='rm -I'
 # The system prompted:
 # rm: remove all arguments recursively? 
 ```
-
 Seeing "all arguments recursively", they realized the mistake and hit `Ctrl+C`.
-
 **Lesson Learned**:
 - Always use `-I` or `-i` flags
 - Double-check paths before `rm -rf`
@@ -521,11 +462,8 @@ alias rm='rm -I'
 alias cp='cp -i'
 alias mv='mv -i'
 ```
-
 ## 🎓 Interview Questions
-
-### Q1: What's the difference between `cp -r` and `cp -a`?
-
+#### Q1: What's the difference between `cp -r` and `cp -a`?
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -555,9 +493,7 @@ alias mv='mv -i'
 
 **DevOps Use**: Always use `-a` for configuration backups to maintain exact permissions.
 </details>
-
-### Q2: How do you safely delete a directory with unknown contents?
-
+#### Q2: How do you safely delete a directory with unknown contents?
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -588,9 +524,7 @@ rm -ri /path/to/directory  # Confirms each file
 rm -rf /path/to/directory  # Without investigation
 ```
 </details>
-
-### Q3: What happens if you `mv` a file to itself?
-
+#### Q3: What happens if you `mv` a file to itself?
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -613,9 +547,7 @@ mv /path/to/file.txt ./file.txt
 
 If you're already in `/path/to/`, this will also error with the same message.
 </details>
-
-### Q4: How do you rename multiple files at once?
-
+#### Q4: How do you rename multiple files at once?
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -652,9 +584,7 @@ for file in *\ *; do
 done
 ```
 </details>
-
-### Q5: What's the difference between `rm` and `rmdir`?
-
+#### Q5: What's the difference between `rm` and `rmdir`?
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -698,7 +628,6 @@ rmdir test  # Now succeeds
 </details>
 
 ## 📝 Quiz
-
 1. **Which command creates a new empty file?**
    - [ ] a) `create file.txt`
    - [x] b) `touch file.txt`
@@ -820,21 +749,14 @@ rmdir test  # Now succeeds
     - [x] d) `cp -a`
 
 **Answers**: 1-b, 2-b, 3-c, 4-b, 5-c, 6-c, 7-b, 8-c, 9-a, 10-b, 11-b, 12-b, 13-b, 14-b, 15-d, 16-a, 17-c, 18-d, 19-b, 20-d
-
 ## 🔗 Next Steps
-
 Continue to: **[Hidden Files](../04-Hidden-Files/README.md)** →
-
 ## 📚 Additional Resources
-
 - [GNU Coreutils Manual](https://www.gnu.org/software/coreutils/manual/)
 - [Linux File Operations Best Practices](https://www.kernel.org/doc/html/latest/filesystems/)
 - [rsync: Advanced File Copying](https://rsync.samba.org/)
-
 ---
-
 **📌 Pro Tip**: Create a `safe-rm` alias that always asks for confirmation:
-
 ```bash
 # Add to ~/.bashrc
 alias rm='rm -I'
@@ -844,5 +766,4 @@ alias mv='mv -i'
 # For times when you really mean it
 alias forcerm='command rm'
 ```
-
-🚨 **Remember**: **There is NO undo for `rm`**. When in doubt, backup first!
+## 🚨 **Remember**: There is NO undo for <font color="#ff0000">rm</font>. When in doubt, backup first!
