@@ -2,28 +2,7 @@
 
 > **"A script that talks to itself is fine. A script that talks to you is powerful. A script that listens to you is professional."**
 
-```mermaid
-graph TD
-    subgraph Input_Sources ["📥 SHELL INPUT CHANNELS"]
-        direction LR
-        P[Positional Arguments] -->|CLI Params| S[Script Logic]
-        I[Interactive Prompts] -->|Stdin / Keyboard| S
-        F[File Redirection] -->|Stdin / < File| S
-    end
-
-    subgraph Positional_Map ["🧩 $ VARIABLE MAPPING"]
-        direction TB
-        Zero["$0: script.sh"]
-        One["$1: First"]
-        Two["$2: Second"]
-        Count["$#: Count (2)"]
-        All["$@: [First, Second]"]
-    end
-    
-    style One fill:#3b82f6,color:#fff
-    style Count fill:#10b981,color:#fff
-    style Input_Sources fill:#0f172a,stroke:#3b82f6,color:#fff
-```
+![Shell Input Architecture](./input_channels_mapping.svg)
 
 ## 📚 Overview
 

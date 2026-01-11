@@ -2,27 +2,7 @@
 
 > **"With great power comes great responsibility. Don't `chmod 777` your problems away; you're just inviting new ones."**
 
-```mermaid
-graph TD
-    subgraph Anatomy ["🧬 PERMISSION STRING ANATOMY"]
-        direction LR
-        T[-/d/l] -->|Type| Meta[Meta]
-        U[rwx] -->|Owner| User[User]
-        G[r-x] -->|Group| Group[Group]
-        O[r--] -->|Others| World[World]
-        
-        style U fill:#ef4444,color:#fff
-        style G fill:#f59e0b,color:#fff
-        style O fill:#3b82f6,color:#fff
-    end
-
-    subgraph Binary_Logic ["🔢 THE OCTAL MATH"]
-        direction RL
-        R[Read: 4]
-        W[Write: 2]
-        X[Exec: 1]
-    end
-```
+![Permission Architecture](./permission_architecture.svg)
 
 ## 📚 Overview
 

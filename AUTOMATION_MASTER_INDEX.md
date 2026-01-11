@@ -93,7 +93,7 @@ timeline
 
 **🔑 Key Concepts**: Dotfiles, hidden files, configuration, .bashrc, .profile  
 **⏱️ Time**: 2-3 hours  
-** Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -108,7 +108,7 @@ timeline
 
 **🔑 Key Concepts**: grep, find basics, locate, pattern matching  
 **⏱️ Time**: 3-4 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -123,7 +123,7 @@ timeline
 
 **🔑 Key Concepts**: less, more, head, tail, log monitoring  
 **⏱️ Time**: 2-3 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -138,7 +138,7 @@ timeline
 
 **🔑 Key Concepts**: man command, documentation, help flags, info pages  
 **⏱️ Time**: 2 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -153,7 +153,7 @@ timeline
 
 **🔑 Key Concepts**: which, type, whereis, PATH, built-ins  
 **⏱️ Time**: 3 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -168,7 +168,7 @@ timeline
 
 **🔑 Key Concepts**: Variable declaration, scope, special variables, environment  
 **⏱️ Time**: 4 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -183,7 +183,7 @@ timeline
 
 **🔑 Key Concepts**: Vim modes, navigation, editing, survival commands  
 **⏱️ Time**: 3-4 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -198,7 +198,7 @@ timeline
 
 **🔑 Key Concepts**: chmod, chown, umask, permissions, ownership  
 **⏱️ Time**: 4-5 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -213,7 +213,7 @@ timeline
 
 **🔑 Key Concepts**: Script structure, error handling, exit codes, best practices  
 **⏱️ Time**: 5-6 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -228,7 +228,7 @@ timeline
 
 **🔑 Key Concepts**: read command, input validation, interactive scripts  
 **⏱️ Time**: 3-4 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -243,7 +243,7 @@ timeline
 
 **🔑 Key Concepts**: Function definition, parameters, return values, scope  
 **⏱️ Time**: 4-5 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -258,7 +258,7 @@ timeline
 
 **🔑 Key Concepts**: if/else, test conditions, comparisons, logical operators  
 **⏱️ Time**: 5 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -273,7 +273,7 @@ timeline
 
 **🔑 Key Concepts**: for loops, while loops, iteration, loop control  
 **⏱️ Time**: 4-5 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
@@ -288,7 +288,7 @@ timeline
 
 **🔑 Key Concepts**: Streams, redirection, pipes, file descriptors  
 **⏱️ Time**: 4-5 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 

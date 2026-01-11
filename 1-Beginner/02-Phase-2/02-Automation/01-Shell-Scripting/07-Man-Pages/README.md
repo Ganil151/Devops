@@ -2,24 +2,7 @@
 
 > **"Give a person a fish, you feed them for a day. Teach them to use `man`, and they solve their own problems forever."**
 
-```mermaid
-graph TD
-    subgraph Manual_Architecture ["📚 UNIX MANUAL STRUCTURE"]
-        direction TB
-        Main[man command] --> S1[Section 1: User Cmds]
-        Main --> S5[Section 5: File Formats]
-        Main --> S8[Section 8: Admin Cmds]
-        
-        S1 --> S1_Ex[ls, grep, cat]
-        S5 --> S5_Ex[/etc/passwd, .ssh/config]
-        S8 --> S8_Ex[iptables, useradd]
-        
-        style Manual_Architecture fill:#0f172a,stroke:#3b82f6,color:#fff
-        style S1 fill:#1e293b,color:#fff
-        style S5 fill:#1e293b,color:#fff
-        style S8 fill:#1e293b,color:#fff
-    end
-```
+![Unix Manual Structure](./man_pages_structure.svg)
 
 ## 📚 Overview
 
@@ -28,23 +11,16 @@ The name comes from **Manual**. Before Google and Stack Overflow, there were Man
 For a DevOps engineer, `man` is the final word when shell scripts behave differently across Ubuntu, CentOS, or macOS.
 
 ---
-
 ## 🎓 Learning Objectives
-
 By the end of this module, you will:
-
 - ✅ Understand the **Sectional Hierarchy** of the Linux manual.
 - ✅ Decode the **SYNOPSIS** syntax (Optional vs. Required flags).
 - ✅ Conduct keyword searches using `apropos`.
 - ✅ Access built-in shell documentation using `help`.
 - ✅ Export documentation for offline sharing or auditing.
-
 ---
-
 ## 🔍 How to Read a Man Page (The Secret Language)
-
 The `SYNOPSIS` section is often the most confusing for beginners, but it follows strict rules.
-
 ### 🧩 Decoding Synopsis Rules:
 | Notation | Meaning | Example |
 |----------|---------|---------|
@@ -54,15 +30,12 @@ The `SYNOPSIS` section is often the most confusing for beginners, but it follows
 | `< >` (Angle) | **Required** parameters | `<path>` |
 | `...` (Ellipsis) | Can be repeated | `[file...]` |
 | `\|` (Pipe) | Choose ONE option | `[-a \| -b]` |
-
 **Example Analysis (`mkdir`):**
 `mkdir [OPTION]... DIRECTORY...`
 *Translation*: You can choose zero or more options, then you MUST provide one or more directory names.
 
 ---
-
 ## 🗺️ The 8 Essential Sections
-
 Sometimes the same name exists in multiple sections (e.g., `printf` is a shell command and a C function). Use the section number to be specific.
 
 | Section | Topic | DevOps Relevance |
@@ -73,7 +46,6 @@ Sometimes the same name exists in multiple sections (e.g., `printf` is a shell c
 | **4** | Devices | Special files like `/dev/null` or `/dev/sda`. |
 | **5** | **File Formats** | Content structure of `/etc/passwd` or `crontab`. |
 | **8** | **System Admin** | Root-level tools: `reboot`, `iptables`, `visudo`. |
-
 **Commands:**
 ```bash
 man 1 printf  # Shell command manual
@@ -82,23 +54,19 @@ man 5 crontab # Description of a crontab file structure (Not the command!)
 ```
 
 ---
-
 ## 🛠️ Performance & Search Hacks
-
 ### 1. `apropos` - The Keyword Search
 Don't know the command name? Search the one-line descriptions.
 ```bash
 # Find all tools related to "partition"
 apropos partition
 ```
-
 ### 2. `man -k` - Regex Search
 Equivalent to `apropos`, but powerful with regex.
 ```bash
 # Find any command starting with 'net' that involves 'config'
 man -k "^net.*config"
 ```
-
 ### 3. `help` - The Shell Built-in Secret
 Some commands (like `cd`, `history`, `alias`) aren't separate binaries; they are part of the shell. `man` might not find them or might show a generic bash page.
 ```bash
@@ -107,40 +75,31 @@ help cd
 ```
 
 ---
-
-## 🏆 Real-World DevOps Case Study
+## 🏆 **Real-World DevOps Case Study**
 
 ### 💡 **The YAML Validator Mystery**
-
 **The Scenario**: A junior engineer was trying to use a new tool called `yq` in a CI/CD pipeline. The online documentation showed a specific `--indent` flag, but when they ran the script, it crashed: `Error: unknown flag: --indent`.
-
 **The Investigation**:
 They ran `man yq` on the runner and searched for "indent":
 1. `/indent` (Search forward)
 2. Found: `deprecated: use --indent-2 in version 3.x`.
-
 **The Discovery**:
 The online blog post they followed was for `yq` version 4.x, but the Amazon Linux image they were using had version 3.x. The local `man` page was the only place with the correct truth.
-
 **The Fix**:
 They updated the script to use the version-appropriate flag, ensuring the pipeline passed immediately.
 
 ---
-
 ## 🎓 Interview Questions
-
 #### Q1: What is the difference between `man 1 crontab` and `man 5 crontab`?
 <details>
 <summary>Click to reveal answer</summary>
 Section 1 describes the **executable command** (`crontab -e`) and its options. Section 5 describes the **configuration file format** (The 5-star syntax: `* * * * *`). This is a common point of confusion when learning automation scheduling.
 </details>
-
 #### Q2: What is the `mandb` command?
 <details>
 <summary>Click to reveal answer</summary>
 `mandb` creates or updates the index databases used by `apropos` and `whatis`. If you just installed a new tool and `apropos` can't find it, running `mandb` as sudo will refresh the manual cache.
 </details>
-
 #### Q3: How do you save a man page to a text file for documentation?
 <details>
 <summary>Click to reveal answer</summary>
@@ -151,9 +110,7 @@ The `col -b` command is necessary to strip out the backspaces and bold formattin
 </details>
 
 ---
-
 ## 📝 Knowledge Check
-
 1. **In a synopsis, what does `[ ]` represent?**
    - [ ] a) Variable data
    - [x] b) Optional parameters

@@ -2,20 +2,7 @@
 
 > **"If you have to type it twice, script it once. If you have to script it twice, automate it for life."**
 
-```mermaid
-graph TD
-    subgraph Execution_Lifecycle ["⚙️ FROM TEXT TO PROCESS"]
-        direction TB
-        File[📄 script.sh] -->|chmod +x| Exec[🚀 Executable File]
-        Exec -->|./script.sh| Kernel{🐧 Linux Kernel}
-        Kernel -->|Reads #! Shebang| Interp[🐚 Interpreter: /bin/bash]
-        Interp -->|Line-by-Line| OS[🖥️ System Operations]
-        
-        style Execution_Lifecycle fill:#0f172a,stroke:#3b82f6,color:#fff
-        style Kernel fill:#ef4444,color:#fff
-        style Interp fill:#2563eb,color:#fff
-    end
-```
+![Scripting Lifecycle](./scripting_lifecycle.svg)
 
 ## 📚 Overview
 

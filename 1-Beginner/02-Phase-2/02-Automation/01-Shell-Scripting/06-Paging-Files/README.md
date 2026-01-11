@@ -1,24 +1,11 @@
 # 📜 Paging Files (Mastering Large Data Streams)
-
 > **"A senior engineer never drinks from the firehose. They use a pager to sip precisely what is needed."**
 
-```mermaid
-graph TD
-    subgraph Pager_Architecture ["🔍 THE PAGING ECOSYSTEM"]
-        direction LR
-        Disk[([� 100GB Log File])] -->|File Descriptor| Kernel{🐧 Linux Kernel}
-        Kernel -->|Memory-Mapped / Buffer| Pager[📜 Pager: LESS]
-        Pager -->|ViewPort| Screen[🖥️ User Terminal]
-        
-        style Pager_Architecture fill:#0f172a,stroke:#3b82f6,stroke-width:2px,color:#fff
-        style Disk fill:#1e293b,color:#fff
-        style Kernel fill:#334155,color:#fff
-        style Pager fill:#2563eb,color:#fff
-        style Screen fill:#10b981,color:#fff
-    end
-```
+![Paging Ecosystem Architecture](./paging_ecosystem.svg)
+
 ## 📚 Overview
 In the DevOps world, log files are the "black boxes" of our infrastructure. When an application crashes, it doesn't leave a note; it leaves a 40GB trace. Attempting to `cat` or `nano` such a file will lock up your terminal or crash your server. **Paging Utilities** allow you to navigate these massive data streams with surgical precision, constant memory usage, and powerful search capabilities.
+
 ## 🎓 Learning Objectives
 By the end of this module, you will:
 - ✅ Understand the **Memory Mechanics** of Pagers (Lazy Loading).
@@ -26,6 +13,7 @@ By the end of this module, you will:
 - ✅ Efficiently monitor live log rotations using `tail -F`.
 - ✅ Perform **Reverse Searching** and **Filtering** inside active streams.
 - ✅ Combine `head` and `tail` for range-based data extraction.
+
 ---
 ## 🏗️ Memory Mechanics: Why Pagers Matter
 Most text editors (Notepad, Nano, VS Code) are **"Eager Loaders"**. They attempt to read the entire file into RAM before showing you the first line. 
@@ -70,6 +58,7 @@ export LESS="-R -S -M -i"
 # -M: Show verbose prompt with line %
 # -i: Case-insensitive search
 ```
+
 ---
 ### 2. `tail` - Real-time Forensics
 `tail` is your eyes on a live system.
@@ -82,12 +71,14 @@ Usually used to check CSV headers or configuration metadata.
 # Get the JSON schema but not the 1M records
 head -n 20 data.json
 ```
+
 ### 4. `watch` - The Observer
 Runs a command repeatedly and highlights the differences.
 ```bash
 # Watch disk space usage every 1 second
 watch -d -n 1 df -h
 ```
+
 ---
 ## 🪜 Decision Logic: Which tool to use?
 
@@ -109,11 +100,9 @@ graph TD
 ```
 
 ---
-
 ## 🏆 Real-World DevOps Case Study
 
-### � **The Incident: The Silent Disk Exhaustion**
-
+### 🚨 **The Incident: The Silent Disk Exhaustion**
 **The Scenario**: A Postgres database stopped accepting connections. The logs were growing at 500MB per minute. The support team tried to `grep` the file, but it was too slow because the disk `I/O` was saturated.
 
 **The Solution**:
@@ -151,7 +140,6 @@ Explain: `head` takes the first 520, then `tail` takes the last 20 of *that* sub
 ---
 
 ## 📝 Knowledge Check
-
 1. **Which `less` command hides lines that don't match your keyword?**
    - [ ] a) `/`
    - [ ] b) `?`

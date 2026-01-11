@@ -2,30 +2,7 @@
 
 > **"In Unix, everything is a file. If it isn't a file, it's a stream. If it isn't a stream, it's a pipe."**
 
-```mermaid
-graph LR
-    subgraph Streams ["🌊 DATA FLOW ARCHITECTURE"]
-        direction LR
-        K[⌨️ Keyboard] -->|Stdin: 0| P[⚙️ PROCESS]
-        P -->|Stdout: 1| S[🖥️ Screen / File]
-        P -->|Stderr: 2| E[⚠️ Error Log / Screen]
-        
-        P -->|Pipe: '| P2[⚙️ PROCESS 2]
-    end
-
-    subgraph Redirection_Logic ["🛠️ REDIRECTION TOOLS"]
-        direction TB
-        Overwrite["> Overwrite"]
-        Append[">> Append"]
-        Merge["2>&1 Merge"]
-        Void["/dev/null Trash"]
-    end
-    
-    style P fill:#3b82f6,color:#fff
-    style S fill:#10b981,color:#fff
-    style E fill:#ef4444,color:#fff
-    style Streams fill:#0f172a,stroke:#3b82f6,color:#fff
-```
+![I/O Stream Architecture](./io_stream_architecture.svg)
 
 ## 📚 Overview
 

@@ -39,10 +39,7 @@ This is your central navigation hub for **180 automation topics** across three i
 ```
 cd 1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/
 ```
-- ✅ **01-Introduction** - [START HERE](./1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/01-Introduction/README.md)
-- ✅ **02-Terminal-and-Finder** - [View](./1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/02-Terminal-and-Finder/README.md)
-- ✅ **03-Basic-File-Manipulation** - [View](./1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/README.md)
-- 📝 **04-17** - Coming soon
+- ✅ **01-17** - [Beginner Phase Complete](./1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/)
 
 #### Python Automation
 ```
@@ -68,7 +65,7 @@ graph LR
     A --> C[Python: 60]
     A --> D[Go: 60]
     
-    B --> B1[3 Complete<br/>5%]
+    B --> B1[17 Complete<br/>28.3%]
     C --> C1[0 Complete<br/>0%]
     D --> D1[0 Complete<br/>0%]
     
@@ -82,10 +79,10 @@ graph LR
 
 | Language | Topics | Complete | Estimated Hours |
 |----------|--------|----------|-----------------|
-| **Shell** | 60 | 3 (5%) | 235-290h |
+| **Shell** | 60 | 17 (28.3%) | 235-290h |
 | **Python** | 60 | 0 (0%) | 280-340h |
 | **Go** | 60 | 0 (0%) | 290-360h |
-| **TOTAL** | **180** | **3 (1.7%)** | **805-990h** |
+| **TOTAL** | **180** | **17 (9.4%)** | **805-990h** |
 
 ---
 
@@ -93,10 +90,9 @@ graph LR
 
 ### 1. **Complete Beginner**
 **Never automated before? Start here:**
-1. Shell Scripting 01 - Introduction
-2. Shell Scripting 02-17 (complete beginner)
-3. Python Basics 01-17 (add Python skills)
-4. Go Basics 01-05 (exposure to compiled language)
+1. Shell Scripting 01-17 (Beginner Mastery)
+2. Python Basics 01-17 (add Python skills)
+3. Go Basics 01-05 (exposure to compiled language)
 
 ### 2. **DevOps Engineer Track**
 **Goal: Production automation skills**
@@ -307,7 +303,7 @@ cd ~/devops-automation
 
 ---
 
-**Last Updated**: 2026-01-10  
+**Last Updated**: 2026-01-11  
 **Total Topics**: 180  
 **Languages**: 3  
 **Career Paths**: 9  

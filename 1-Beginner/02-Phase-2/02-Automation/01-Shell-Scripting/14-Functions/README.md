@@ -2,23 +2,7 @@
 
 > **"Don't Repeat Yourself (DRY). If you type the same logic twice, you've inherited a maintenance nightmare. If you make it a function, you've built a tool."**
 
-```mermaid
-graph TD
-    subgraph Modular_Architecture ["🏗️ SCRIPT DESIGN: MONOLITH VS MODULAR"]
-        direction LR
-        Monolith[🍝 Spaghetti Code<br/>Global State<br/>Redundant Logic]
-        Modular[🧱 Function Library<br/>Clean Scopes<br/>Reusable Units]
-    end
-
-    subgraph Library_Flow ["📚 FUNCTION SOURCING"]
-        Lib[utils.sh] -->|source / .| Main[deploy.sh]
-        Main -->|Call lib_func| Res[Result]
-    end
-    
-    style Monolith fill:#450a0a,color:#fca5a5
-    style Modular fill:#064e3b,color:#6ee7b7
-    style Lib fill:#1e40af,color:#fff
-```
+![Modular Script Architecture](./modular_architecture.svg)
 
 ## 📚 Overview
 

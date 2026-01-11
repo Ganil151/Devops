@@ -1,190 +1,127 @@
-# 💻 Programs and Commands (Execution Architecture)
+# 💻 Programs and Commands (The DevOps Execution Layer)
+> **"Linux is an orchestra of small, specialized programs. Mastering the shell means knowing how to conduct them."**
 
-> **"Not all commands are created equal. Knowing what executes is half the battle."**
-
-```mermaid
-graph TD
-    subgraph Execution_Hierarchy ["⚡ COMMAND RESOLUTION ORDER"]
-        direction TB
-        Start[User types: lsa] --> Keyword{1. Keyword?}
-        Keyword -->|No| Alias{2. Alias?}
-        Alias -->|No| Func{3. Function?}
-        Func -->|No| Builtin{4. Built-in?}
-        Builtin -->|No| Hash{5. Hash Cache?}
-        Hash -->|No| Path{6. Search PATH}
-        
-        Keyword -->|Yes| RunK[Run Control Logic]
-        Alias -->|Yes| RunA[Run Alias]
-        Func -->|Yes| RunF[Run Function]
-        Builtin -->|Yes| RunB[Run Built-in]
-        Hash -->|Yes| RunH[Run Cached Binary]
-        Path -->|Found| RunP[Run External Binary]
-        Path -->|Null| Error[❌ Command Not Found]
-        
-        style Start fill:#3b82f6,color:#fff
-        style Error fill:#ef4444,color:#fff
-        style RunB fill:#10b981,color:#fff
-        style Execution_Hierarchy fill:#0f172a,stroke:#3b82f6,color:#fff
-    end
-```
-
+![Command Resolution Order](./command_resolution_order.svg)
 ## 📚 Overview
-
-When you type a command in your terminal, the shell (Bash/Zsh) doesn't just "run a file." It performs a complex lookup procedure to decide which logic to execute. Understanding this **Command Resolution Order** is critical for DevOps engineers to debug PATH issues, avoid naming collisions, and ensure scripts behave predictably across different environments.
-
----
-
+In the Linux ecosystem, a "command" is rarely a single monolithic entity. Modern infrastructure relies on the seamless interaction between **Shell Built-ins** and **External Binaries**. To build reliable automation, a DevOps engineer must understand how the shell identifies these programs, where they live, and how to harness the "Power Toolkit" (`grep`, `sed`, `awk`, `curl`, `jq`) to process data at scale.
 ## 🎓 Learning Objectives
-
 By the end of this module, you will:
-
-- ✅ Identify the **4 Categories** of commands (Built-in, External, Alias, Function).
-- ✅ Master the shell's **Search Precedence** logic.
-- ✅ Audit command sources using `type`, `which`, and `hash`.
-- ✅ Understand the **Security Implications** of `PATH` manipulation.
-- ✅ Debug "Ghost Commands" caused by caching.
-
----
-
-## 🏗️ The Four Pillars of Execution
-
-### 1. Shell Keywords & Built-ins
-These are compiled directly into the shell binary (e.g., `bash`).
-- **Precedence**: Extremely High.
-- **Speed**: Fastest (No process creation).
-- **Example**: `cd`, `echo`, `if`, `while`.
-- **Note**: `cd` MUST be a built-in because a child process cannot change the parent's directory.
-
-### 2. Aliases & Functions
-User-defined shortcuts and logic blocks residing in memory (`.bashrc`).
-- **Precedence**: Aliases are applied first during text expansion.
-- **Speed**: Very Fast (Memory-based).
-- **Example**: `alias ll='ls -la'`, `function git_sync() { ... }`.
-
-### 3. Hash Table (The Cache)
-To avoid searching the disk every time, the shell remembers where it found a binary last time in a "Hash Table".
-- **Precedence**: Higher than disk search.
-- **Gotcha**: If you move a binary to a different folder, the shell might still try to run it from the old path until you clear the hash.
-- **Command**: `hash` (view cache), `hash -d cmd` (delete one), `hash -r` (reset all).
-
-### 4. External Binaries (The Disk)
-Files located in directories listed in your `$PATH`.
-- **Precedence**: Lowest (Last resort).
-- **Speed**: Slower (Requires `fork()` and `exec()`).
-- **Example**: `grep`, `docker`, `terraform`.
+- ✅ Distinguish between **Internal (Built-in)** and **External** execution.
+- ✅ Master the **Command Resolution Order** to prevent "Ghost Command" bugs.
+- ✅ Understand the core DevOps toolkit: Data filtering, stream editing, and API interaction.
+- ✅ Implement defensive `PATH` management in automation scripts.
+- ✅ Use `type` and `which` to audit execution sources.
 
 ---
+## 🏗️ Execution Architecture: Built-ins vs. Externals
 
-## 🛠️ Investigative Tools
+### 1. Shell Built-ins (The "Internal" Engine)
+Built-ins are commands compiled directly into the shell (Bash, Zsh) binary.
+- **Speed**: Extremely fast (no new process is created).
+- **Control**: They can modify the shell's own state (e.g., changing directories or setting variables).
+- **Identify with**: `type command_name`.
+- **Examples**: `cd`, `echo`, `export`, `alias`, `read`, `history`.
+### 2. External Programs (The "Disk" Binaries)
+These are independent files residing on the filesystem.
+- **Speed**: Slower (the shell must `fork()` a new process and `exec()` the binary).
+- **Scope**: They cannot change the parent shell's environment variables or current directory.
+- **Identify with**: `which command_name`.
+- **Examples**: `ls`, `grep`, `docker`, `terraform`, `jq`.
 
-### `type` - The Only Source of Truth
-Never use `which` to verify what is actually running. `which` only searches for files on disk. `type` understands aliases and built-ins.
+---
+## 🛠️ The DevOps Power Toolkit
+DevOps automation is essentially the art of **Data Plumbing**. These five tools are the industry standard for processing infrastructure data.
+### 1. `grep` (The Filter)
+Search for text patterns using Regular Expressions.
+- **Usage**: `grep -r "ERROR" /var/log/`
+- **Automation Tip**: Use `grep -q` (quiet mode) in `if` statements to check for the existence of a string without printing it.
+### 2. `sed` (The Stream Editor)
+Transform text on the fly.
+- **Usage**: `sed -i 's/localhost/db.production.internal/g' config.yaml`
+- **Automation Tip**: Perfect for dynamically updating configuration files during a CI/CD deployment.
+### 3. `awk` (The Report Generator)
+Powerful field-based text processing.
+- **Usage**: `awk '{print $1}' access.log` (Extracts only the IP addresses from a web log).
+- **Automation Tip**: Use `awk` when you need to perform math on logs (e.g., summing up file sizes).
+### 4. `curl` (The API Requester)
+Transfer data to or from a server.
+- **Usage**: `curl -X POST -d @payload.json https://api.ops.com/deploy`
+- **Automation Tip**: The backbone of interacting with Cloud APIs, Slack hooks, and health endpoints.
+### 5. `jq` (The JSON Processor)
+The gold standard for handling JSON data in the shell.
+- **Usage**: `curl ... | jq '.instances[0].id'`
+- **Automation Tip**: Essential for Cloud engineering where every API response is a complex JSON object.
 
+---
+## � Practical Automation Examples
+
+### Example A: The Conditional API Check
+Checking if a service is healthy before proceeding with a script.
 ```bash
-$ type cd
-cd is a shell builtin
-
-$ type ll
-ll is aliased to `ls -alF`
-
-$ type -a python
-python is /usr/local/bin/python
-python is /usr/bin/python
+# Using curl and grep for status validation
+if curl -s --head http://localhost:8080 | grep "200 OK" > /dev/null; then
+    echo "✅ Service is UP"
+else
+    echo "❌ Service is DOWN"
+    exit 1
+fi
+```
+### Example B: Dynamic Config Update
+Injecting an environment variable into a template.
+```bash
+# Using sed to replace a placeholder with a variable
+DB_HOST="db-01.internal"
+sed "s/DB_PLACEHOLDER/$DB_HOST/" template.conf > production.conf
 ```
 
-### `PATH` - The Road Map
-The `$PATH` variable is a colon-separated list of directories. The shell searches them from **Left to Right**.
+---
+## 📑 The DevOps Command Cheat Sheet
 
-```bash
-$ echo $PATH
-/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-```
-
-⚠️ **SECURITY WARNING**: Never put `.` (current directory) at the start of your PATH. An attacker could place a malicious `ls` binary in a folder, and if you `cd` there and type `ls`, you'd run their virus instead of the real command.
+| Command | Category | DevOps Use Case | Primary Flag |
+|---------|----------|-----------------|--------------|
+| `type` | Built-in | Check if a command is an alias or binary | `-a` (show all) |
+| `which` | External | Find path to an external binary | `-a` (show all) |
+| `grep` | External | Filter logs or check config values | `-E` (Extended Regex) |
+| `sed` | External | Find-and-replace in files | `-i` (in-place edit) |
+| `awk` | External | Column/Field extraction | `-F` (field separator) |
+| `jq` | External | Parse Cloud API responses | `-r` (raw output) |
+| `curl` | External | Webhooks, API calls, Health checks | `-s` (silent mode) |
+| `export`| Built-in | Set environment variables | `-n` (remove export) |
 
 ---
-
-## 🏆 Real-World DevOps Case Study
-
-### 💡 **The Case of the Outdated Tool**
-
-**The Scenario**: A platform team upgraded their global `terraform` binary from `0.12` to `1.5` in `/usr/bin/`. However, one engineer's machine kept running `0.12`. 
+## 🏆 Real-World DevOps Story
+### � **The Ghost of the Old Version**
+**The Scenario**: An SRE updated a custom deployment tool from version 1.0 to 2.0. They placed the new binary in `/usr/local/bin/`. However, the automation scripts were still running version 1.0.
 
 **The Investigation**:
-1. Engineer ran `which terraform` -> Result: `/usr/bin/terraform`.
-2. Engineer ran `terraform version` -> Result: `0.12`.
-3. Team Lead ran `type -a terraform`.
+They ran `which deploy-tool` and it pointed to `/usr/local/bin/deploy-tool` (Version 2.0).
+They ran `type deploy-tool` and discovered:
+`deploy-tool is hashed (/usr/bin/deploy-tool)`
 
 **The Discovery**:
-```bash
-$ type -a terraform
-terraform is /home/user/bin/terraform
-terraform is /usr/bin/terraform
-```
-The engineer had an old version in their personal `~/bin/` folder. Because `~/bin/` appeared earlier in their `$PATH` than `/usr/bin/`, the shell chose the old one every time.
+Because the shell had run the old version (located in `/usr/bin/`) earlier in the session, it had **hashed** (cached) the location. Even though the new version was earlier in the `$PATH`, the shell skipped the search and went straight to the cached old version.
 
 **The Fix**:
-The engineer removed the local binary and updated their `$PATH` structure.
+They ran `hash -d deploy-tool` to clear the cache. For future scripts, they added `hash -r` at the start of upgrade routines to ensure the shell re-scanned the `$PATH`.
 
 ---
-
-## 🎓 Interview Questions
-
-#### Q1: Why does `which cd` return nothing, but `type cd` works?
-<details>
-<summary>Click to reveal answer</summary>
-`which` is an external tool that only searches the filesystem (`$PATH`) for executable files. `cd` is a shell built-in; it doesn't exist as a separate file on disk. `type` is a shell built-in itself, so it has internal knowledge of the shell's state.
-</details>
-
-#### Q2: How do you bypass an alias temporarily?
-<details>
-<summary>Click to reveal answer</summary>
-Prepend a backslash `\` to the command:
-```bash
-\ls  # Runs the real binary, ignoring any 'ls' alias.
-```
-Alternatively, use the full path: `/bin/ls`.
-</details>
-
-#### Q3: What is the "Hash" in shell execution?
-<details>
-<summary>Click to reveal answer</summary>
-The shell caches the absolute path of external binaries it has found in the PATH to avoid expensive disk lookups. If you install a new version of a tool in a different directory during a session, you might need to run `hash -r` to force the shell to look again.
-</details>
-
----
-
 ## 📝 Knowledge Check
+1. **Which command identifies if `cd` is a built-in or a binary?**
+   - [ ] a) `which cd`
+   - [x] b) `type cd`
+   - [ ] c) `whereis cd`
 
-1. **What is the search order for commands?**
-   - [ ] a) Path -> Alias -> Built-in
-   - [x] b) Alias -> Function -> Built-in -> Path
-   - [ ] c) Built-in -> Path -> Alias
-   - [ ] d) Random
+2. **Why is `jq` essential for modern DevOps?**
+   - [ ] a) It speeds up the shell
+   - [x] b) It parses JSON returned by Cloud APIs
+   - [ ] c) It replaces the need for `grep`
 
-2. **Which command is used to clear the shell's path cache?**
-   - [ ] a) `clear`
-   - [ ] b) `reset path`
-   - [x] c) `hash -r`
-   - [ ] d) `rehash`
+3. **What happens if you use `sed -i`?**
+   - [ ] a) It prints the change to the screen
+   - [x] b) It modifies the file directly (In-place)
+   - [ ] c) It ignores case sensitivity
 
-3. **Where should you check for the "Truth" about a command?**
-   - [ ] a) `which`
-   - [ ] b) `whereis`
-   - [x] c) `type`
-   - [ ] d) `ls`
+**Answers**: 1-b, 2-b, 3-b
 
-4. **Why is `cd` a built-in?**
-   - [ ] a) To save space
-   - [x] b) Because a child process cannot change the parent's environment
-   - [ ] c) Because it is faster
-   - [ ] d) It isn't, it's a binary
-
-**Answers**: 1-b, 2-c, 3-c, 4-b
-
-## 🔗 Additional Resources
-- [GNU Bash: Command Search and Execution](https://www.gnu.org/software/bash/manual/html_node/Command-Search-and-Execution.html)
-- [How the Shell Finds Commands](https://www.linux.com/training-tutorials/how-bash-shell-finds-commands/)
-
----
-**📌 Pro Tip**: Use `command -v <cmd>` in your shell scripts instead of `which`. It is more portable and handles built-ins better.
+## 🔗 Next Steps
+Continue to: **[Basic Variables](../09-Basic-Variables/README.md)** →

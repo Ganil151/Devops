@@ -2,30 +2,7 @@
 
 > **"A script without conditionals is just a list. A script with conditionals is a decision-maker."**
 
-```mermaid
-graph TD
-    subgraph Decision_Engine ["🛣️ SCRIPT LOGIC FLOW"]
-        direction TB
-        Input[Check State] --> Test{Condition?}
-        Test -->|TRUE| Success[✅ Action A]
-        Test -->|FALSE| Failure[❌ Action B]
-        
-        Success --> Next[Continue]
-        Failure --> Next
-    end
-
-    subgraph Boolean_Logic ["🧩 OPERATOR TYPES"]
-        direction LR
-        File[File: -f, -d, -x]
-        Str[String: ==, !=, -z]
-        Int[Integer: -eq, -gt, -lt]
-    end
-    
-    style Test fill:#f59e0b,stroke:#000
-    style Success fill:#10b981,color:#fff
-    style Failure fill:#ef4444,color:#fff
-    style Decision_Engine fill:#0f172a,stroke:#3b82f6,color:#fff
-```
+![Conditional Logic Flow](./conditional_logic_flow.svg)
 
 ## 📚 Overview
 

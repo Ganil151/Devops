@@ -2,27 +2,7 @@
 
 > **"Hardcoding is a technical debt you pay every day. Variables are the currency of automation."**
 
-```mermaid
-graph TD
-    subgraph Var_Anatomy ["📝 VARIABLE ANATOMY"]
-        direction LR
-        K[KEY] --> Eq[=]
-        Eq --> V["Value (String / Integer)"]
-        
-        style K fill:#3b82f6,color:#fff
-        style V fill:#10b981,color:#fff
-        style Eq fill:#64748b,color:#fff
-    end
-
-    subgraph Scope_Engine ["🌐 SCOPE MANAGEMENT"]
-        Local[Local Variable] -->|export| Env[Environment Variable]
-        Env -->|Child Fork| Sub[Sub-processes / Scripts]
-        
-        style Local fill:#475569,color:#fff
-        style Env fill:#2563eb,color:#fff
-        style Sub fill:#059669,color:#fff
-    end
-```
+![Shell Variable Mechanics](./variable_mechanics.svg)
 
 ## 📚 Overview
 

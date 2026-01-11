@@ -2,27 +2,7 @@
 
 > **"If you do it more than 3 times, write a loop. If you do it more than 10 times, rewrite the loop to be parallel."**
 
-```mermaid
-graph TD
-    subgraph Loop_Mechanics ["⚙️ ITERATION CONTROL"]
-        direction TB
-        Start[Enter Loop] --> Cond{Has Items?}
-        Cond -->|Yes| Logic[Process Item]
-        Logic --> Next[Next Item]
-        Next --> Cond
-        Cond -->|No| End[Exit Loop]
-    end
-
-    subgraph Flow_Interrupts ["⚡ INTERRUPTORS"]
-        direction LR
-        B[Break: Exit NOW]
-        C[Continue: Skip to Next]
-    end
-    
-    style Cond fill:#f59e0b,stroke:#000
-    style Logic fill:#10b981,color:#fff
-    style Flow_Interrupts fill:#0f172a,stroke:#3b82f6,color:#fff
-```
+![Iteration Control](./iteration_mechanics.svg)
 
 ## 📚 Overview
 

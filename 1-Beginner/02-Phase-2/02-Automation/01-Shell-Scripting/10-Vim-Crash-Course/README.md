@@ -2,27 +2,7 @@
 
 > **"I've been using Vim for about 2 years now, mostly because I can't figure out how to exit it. But once you learn, you never go back."**
 
-```mermaid
-stateDiagram-v2
-    [*] --> Normal: Open Vim
-    
-    Normal --> Insert: "i, a, o, s"
-    Insert --> Normal: "Esc"
-    
-    Normal --> Visual: "v, V, Ctrl-v"
-    Visual --> Normal: "Esc"
-    
-    Normal --> Command: ":"
-    Command --> Normal: "Enter / Esc"
-    
-    Command --> [*]: ":wq" (Save & Exit)
-    Command --> [*]: ":q!" (Force Exit)
-
-    note right of Normal: Navigation, Delete, Copy, Paste
-    note right of Insert: Free-text Editing
-    note right of Visual: Highlighting, Block Indent
-    note right of Command: Global Search, Replace, Files
-```
+![Vim Modes State Diagram](./vim_modes_state.svg)
 
 ## 📚 Overview
 
