@@ -1,233 +1,84 @@
-# 🕵️ Hidden Files (Dotfiles) Mastery
+# 🕵️ Hidden Files (Dotfiles Mastery)
 > **"In Linux, what you don't see controls everything you do. The invisible configuration layer."**
-
 ![Dotfiles Iceberg Theory](./dotfiles_iceberg.svg)
-
 ## 📚 Overview
 In the Unix/Linux world, files starting with a dot (`.`) are "hidden" from normal view. These aren't just for secrets; they represent the **nervous system** of your user environment. From shell behavior (`.bashrc`) to identity management (`.ssh`) and version control (`.git`), mastering dotfiles is what separates a casual user from a DevOps professional.
-
-### 🏛️ The "Bug" That Became a Feature
-Why do hidden files start with `.`? 
-In the early days of Unix, the creators wrote code to hide the current directory `.` and parent directory `..` from the `ls` command output.
-
-The code was essentially:
-```c
-if (filename[0] == '.') return; // Skip
-```
-They intended to skip *only* `.` and `..`, but this lazy coding accidentally hid *any* file starting with a dot. Users started using this "bug" to hide configuration files, and it became a permanent standard.
-
 ## 🎓 Learning Objectives
 By the end of this module, you will:
-- ✅ Understand the "dotfile" ecosystem and XDG Base Directory standards
-- ✅ Master critical configurations: `.bashrc` vs `.profile` vs `.bash_profile`
-- ✅ Audit hidden files for security vulnerabilities
-- ✅ Manage dotfiles professionally using **Git** and **GNU Stow**
-- ✅ Detect malicious hidden files used by attackers
-
+- ✅ Identify the **Core Dotfiles** that control system behavior.
+- ✅ Master the `ls -a` command to reveal hidden architecture.
+- ✅ Understand the difference between **Login** and **Interactive** shells.
+- ✅ Guard against **Malicious Dotfiles** and security vulnerabilities.
+- ✅ Manage dotfiles using **Version Control** (Git) and **GNU Stow**.
 ---
-
-## 🏗️ The Iceberg Theory of Configuration
-Most of a Linux system's user customization happens below the surface. As shown in the diagram above, your visible files (Documents, Projects) are just the surface. The invisible layer beneath dictates your shell's personality, your security credentials, and your tools' behaviors.
-
-## 🔍 Seeing the Unseen
-### Basic vs Advanced Detection
-The `ls` command ignores dotfiles by default. 
+## 🏗️ The Dotfile Hierarchy
+### 1. The Big Three
+| File | Role | DevOps Purpose |
+|------|------|----------------|
+| **`.bashrc`** | Shell Config | Aliases, custom prompts, and PATH exports. |
+| **`.ssh/`** | Security Identity | Storing keys for remote server access. |
+| **`.gitconfig`**| VCS Identity | Global Git user name and email settings. |
+### 2. Detection Logic
+Hidden files are just a convention. The shell and `ls` simply ignore them by default unless the `-a` (all) flag is passed.
 ```bash
-# Standard listing (Clean view)
-$ ls
-Desktop  Documents  Downloads
-
-# Reveal hidden files (The "God Mode" view)
-$ ls -a
-.  ..  .bash_history  .bashrc  .git  .ssh  .config
-
-# Reveal HIDDEN files ONLY (Advanced)
-$ ls -ld .?*
-.bashrc .ssh .config
+# See everything, including the invisible layer
+ls -lah ~
 ```
-
-## 🛠️ Critical DevOps Dotfiles Explained
-### 1. The Shell Startup Chain
-Bash loads files in a specific order depending on how you log in.
-
-| File | Loaded When? | Purpose |
-|------|--------------|---------|
-| `.bash_profile` | **Login Shell** (SSH, GUI Login) | Environment variables (`PATH`, `USER`) |
-| `.bashrc` | **Non-Login Shell** (New Terminal Tab) | Aliases, Prompt, History settings |
-| `.profile` | **Fallback** | Used if `.bash_profile` is missing (dash/sh compatible) |
-| `.bash_logout` | **Exit** | Cleanup tasks when logging out |
-
-**Best Practice**: Put almost everything in `.bashrc`, and source it from `.bash_profile`.
-```bash
-# Inside ~/.bash_profile
-if [ -f ~/.bashrc ]; then
-    source ~/.bashrc
-fi
-```
-
-### 2. The Credential Vault: `.ssh/`
-This directory keys to your infrastructure.
-
-| File | Purpose | Security Level |
-|------|---------|----------------|
-| `id_rsa` | **Private Key**. Your identity. | 🔴 CRITICAL (600) |
-| `id_rsa.pub` | **Public Key**. Your lock. | 🟢 PUBLIC (644) |
-| `known_hosts` | Fingerprints of trusted servers. | 🟡 IMPORTANT |
-| `authorized_keys`| Public keys allowed to log into THIS machine. | 🔴 CRITICAL (600) |
-| `config` | SSH shortcuts and options. | 🟢 SAFE |
-
-### 3. Modern Configs: `~/.config/`
-Historically, home directories were cluttered with `~/.vimrc`, `~/.gitconfig`, `~/.npmrc`.
-The **XDG Base Directory Specification** standardized this. Modern apps place configs in `~/.config/appname/`.
-
-**Example**:
-- Old: `~/.nvimrc`
-- New: `~/.config/nvim/init.vim`
-
-## 🔒 Security & Forensics
-### Finding Malicious Dotfiles
-Attackers love dotfiles because admins rarely check them. 
-
-**Suspicious Indicators**:
-1.  **Space Dot**: Files named `. ` (dot space) or `.. ` (dot dot space). Visually look like current/parent directory but are files.
-2.  **Symlink Hijacking**: `.bash_history` pointed to `/dev/null` (prevents history logging).
-3.  **Hidden Scripts**: `.systemd-service.sh` in the home folder.
-
-**Audit Command**:
-```bash
-# Find all hidden files modified in the last 7 days
-find ~ -name ".*" -mtime -7 -ls
-```
-
-### The `.env` Trap
-In modern DevOps, we store secrets (API keys, passwords) in `.env` files.
-**⛔ DANGER:** Never commit `.env` files to Git!
-**✅ BEST PRACTICE:**
-1. Add `.env` to `.gitignore`.
-2. Commit a `.env.example` with dummy values.
-
-## 📋 Dotfiles Management as Code
-Experienced engineers treat their shell configuration like software. They store their dotfiles in Git!
-
-### Method 1: The Symlink Script (Manual)
-```bash
-mkdir ~/dotfiles
-mv ~/.bashrc ~/dotfiles/bashrc
-ln -s ~/dotfiles/bashrc ~/.bashrc
-```
-
-### Method 2: GNU Stow (Professional)
-`stow` is a symlink farm manager.
-
-**Setup**:
-```
-~/dotfiles/
-├── bash/
-│   ├── .bashrc
-│   └── .bash_profile
-├── git/
-│   └── .gitconfig
-└── vim/
-    └── .vimrc
-```
-
-**Deploy**:
-```bash
-cd ~/dotfiles
-stow bash  # Automatically symlinks contents of bash/ to ~/
-stow git
-stow vim
-```
-
 ---
-
+## 🚀 Practical Examples for Automation
+### Example A: The `.bashrc` Power-up
+Adding a custom alias to speed up Docker commands.
+```bash
+# Add this to your ~/.bashrc
+alias dps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
+```
+### Example B: Git Global Setup
+Ensuring every commit you make is properly attributed.
+```bash
+git config --global user.name "Ganil"
+git config --global user.email "ganil@example.com"
+```
+---
+## 🔐 Forensic Audit: The Hidden Threat
+Because dotfiles are hidden, attackers often use them to hide malware or backdoors.
+- **`.hidden_script`**: A script that runs every time you log in.
+- **`.ssh/authorized_keys`**: Adding an attacker's key to gain permanent access.
+**Audit Command:**
+```bash
+find ~ -maxdepth 1 -name ".*" -ls
+```
+---
+## 📑 The Dotfile Cheat Sheet
+| File/Folder | Purpose |
+|-------------|---------|
+| `~/.bashrc` | Interactive non-login shell config. |
+| `~/.profile`| Login shell settings. |
+| `~/.ssh/` | Private and Public SSH keys. |
+| `~/.bash_history` | Record of every command you typed. |
+| `~/.gitconfig` | Global Git configuration. |
+| `~/.vimrc` | Custom Vim settings. |
+---
 ## 🏆 Real-World DevOps Story
-#### 💡 **The Missing History Mystery**
-**Scenario**: A senior engineer logged into a jump server and realized standard commands like `ls` were behaving strangely (showing colorful output by default). They typed `history` to see who logged in before, but the history was empty.
-
-**The Investigation**:
-They ran `ls -la`. They noticed `.bash_history` was a **symlink**.
-`lrwxrwxrwx 1 root root 9 Jan 10 02:00 .bash_history -> /dev/null`
-
+### 💡 **The Ghost In The Shell**
+**The Scenario**: An engineer's terminal started running very slowly every morning. They checked CPU and RAM, but everything looked fine.
 **The Discovery**:
-An intruder had compromised the server and "hidden their tracks" by redirecting the history file so commands wouldn't be saved to disk. 
-
+They looked at their `~/.bashrc` and found a line added by a "helpful" script that was trying to update 100 different packages *every time* a new terminal was opened.
 **The Fix**:
-1. Server isolated for forensics.
-2. Implemented **Immutable** bash history logs sent to remote syslog.
-3. Added file integrity monitoring (FIM) for all dotfiles.
-
+By cleaning the `~/.bashrc` and moving that logic to a weekly cron job, the engineer restored their terminal performance instantly.
 ---
-
-## 🎓 Interview Questions
-#### Q1: What is the difference between specific `.` and `..`?
-<details>
-<summary>Click to reveal answer</summary>
-- `.` represents the **current directory**. When you run `./script.sh`, you are saying "run the script located in current directory".
-- `..` represents the **parent directory**. `cd ..` moves you up one level.
-</details>
-
-#### Q2: Why define aliases in `.bashrc` instead of `.bash_profile`?
-<details>
-<summary>Click to reveal answer</summary>
-`.bash_profile` is only read once when you log in (Login Shell). `.bashrc` is read every time you open a new terminal window. If you put aliases in `.bash_profile`, simple terminal windows often won't see them.
-</details>
-
-#### Q3: How do you harden permissions for `.ssh`?
-<details>
-<summary>Click to reveal answer</summary>
-SSH requires strict permissions:
-- `~/.ssh` directory: **700** (`drwx------`)
-- `~/.ssh/id_rsa` (Private): **600** (`-rw-------`)
-- `~/.ssh/id_rsa.pub` (Public): **644** (`-rw-r--r--`)
-- `~/.ssh/authorized_keys`: **600** (`-rw-------`)
-</details>
-
----
-
-## 📝 Quiz
-1. **Which command reveals hidden files?**
-   - [ ] a) `ls -h`
-   - [x] b) `ls -a`
-   - [ ] c) `show hidden`
-   - [ ] d) `view -a`
-
-2. **Where should you store application configuration according to modern standards?**
-   - [ ] a) `~/`
-   - [ ] b) `/etc`
-   - [x] c) `~/.config/`
-   - [ ] d) `~/.local`
-
-3. **What is `.gitignore` used for?**
-   - [ ] a) Ignoring Git errors
-   - [x] b) Preventing files from being tracked
-   - [ ] c) Deleting files
-   - [ ] d) Hiding files from users
-
-4. **Which file is loaded for non-login interactive shells?**
-   - [ ] a) `.bash_profile`
-   - [x] b) `.bashrc`
-   - [ ] c) `.profile`
-   - [ ] d) `.login`
-
-5. **Why do hidden files start with a dot?**
-   - [ ] a) It was a planned security feature
-   - [x] b) It was a historical coding bug in `ls`
-   - [ ] c) It stands for "Delete"
-   - [ ] d) It stands for "Data"
-
-**Answers**: 1-b, 2-c, 3-b, 4-b, 5-b
-
+## 📝 Knowledge Check
+1. **Which flag allows `ls` to show hidden files?**
+   - [ ] a) `-h`
+   - [x] b) `-a`
+   - [ ] c) `-l`
+2. **Where are your SSH keys usually stored?**
+   - [ ] a) `~/ssh`
+   - [x] b) `~/.ssh`
+   - [ ] c) `/etc/ssh`
+3. **What is the purpose of `.bash_history`?**
+   - [x] a) It stores a list of previously run commands
+   - [ ] b) It hides your browsing history
+   - [ ] c) It predicts your next command
+**Answers**: 1-b, 2-b, 3-a
 ## 🔗 Next Steps
 Continue to: **[Searching in Files](../05-Searching-in-Files/README.md)** →
-
-## 📚 Additional Resources
-- [The XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
-- [Dotfiles.github.io](https://dotfiles.github.io/)
-- [GNU Stow Manual](https://www.gnu.org/software/stow/)
-
----
-**📌 Pro Tip**: Create a local `.bin` folder for your personal scripts and add it to your path in `.bashrc`.
-```bash
-export PATH="$HOME/.bin:$PATH"
-```
