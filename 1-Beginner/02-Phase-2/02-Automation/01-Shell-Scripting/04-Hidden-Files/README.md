@@ -123,7 +123,6 @@ The **XDG Base Directory Specification** standardized this. Modern apps place co
 
 ### Finding Malicious Dotfiles
 Attackers love dotfiles because admins rarely check them. 
-
 **Suspicious Indicators**:
 1.  **Space Dot**: Files named `. ` (dot space) or `.. ` (dot dot space). Visually look like current/parent directory but are files.
 2.  **Symlink Hijacking**: `.bash_history` pointed to `/dev/null` (prevents history logging).
@@ -134,26 +133,20 @@ Attackers love dotfiles because admins rarely check them.
 # Find all hidden files modified in the last 7 days
 find ~ -name ".*" -mtime -7 -ls
 ```
-
 ### The `.env` Trap
 In modern DevOps, we store secrets (API keys, passwords) in `.env` files.
-
 **⛔ DANGER:** Never commit `.env` files to Git!
 **✅ BEST PRACTICE:**
 1. Add `.env` to `.gitignore`.
 2. Commit a `.env.example` with dummy values.
-
 ## 📋 Dotfiles Management as Code
-
 Experienced engineers treat their shell configuration like software. They store their dotfiles in Git!
-
 ### Method 1: The Symlink Script (Manual)
 ```bash
 mkdir ~/dotfiles
 mv ~/.bashrc ~/dotfiles/bashrc
 ln -s ~/dotfiles/bashrc ~/.bashrc
 ```
-
 ### Method 2: GNU Stow (Professional)
 `stow` is a symlink farm manager.
 
@@ -176,23 +169,18 @@ stow bash  # Automatically symlinks contents of bash/ to ~/
 stow git
 stow vim
 ```
-
 This allows you to manage modular configurations and sync them across machines using GitHub.
-
 ## 🏆 Real-World DevOps Story
 
-### 💡 **The Missing History Mystery**
-
+#### 💡 **The Missing History Mystery**
 **Scenario**: A senior engineer logged into a jump server and realized standard commands like `ls` were behaving strangely (showing colorful output by default, which wasn't standard). They typed `history` to see who logged in before, but the history was empty.
 
 **The Investigation**:
 They ran `ls -la`.
 They noticed `.bash_history` was a **symlink**.
-
 ```bash
 lrwxrwxrwx 1 root root 9 Jan 10 02:00 .bash_history -> /dev/null
 ```
-
 **The Discovery**:
 An intruder had compromised the server and "hidden their tracks" by redirecting the history file so commands wouldn't be saved to disk. Because they only modified a hidden file, previous admins hadn't noticed.
 
@@ -200,10 +188,9 @@ An intruder had compromised the server and "hidden their tracks" by redirecting 
 1. Server isolated for forensics.
 2. Implemented **Immutable** bash history logs sent to remote syslog.
 3. Added file integrity monitoring (FIM) for all dotfiles.
-
 ## 🎓 Interview Questions
 
-### Q1: What is the difference between specific `.` and `..`?
+#### Q1: What is the difference between specific `.` and `..`?
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -211,8 +198,7 @@ An intruder had compromised the server and "hidden their tracks" by redirecting 
 - `..` represents the **parent directory**. `cd ..` moves you up one level.
 These are actual directory entries present in every folder on the filesystem.
 </details>
-
-### Q2: Why define aliases in `.bashrc` instead of `.bash_profile`?
+#### Q2: Why define aliases in `.bashrc` instead of `.bash_profile`?
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -220,8 +206,7 @@ These are actual directory entries present in every folder on the filesystem.
 `.bashrc` is read every time you open a new terminal window or run a new shell (Interactive Non-Login Shell).
 If you put aliases in `.bash_profile`, simple terminal windows often won't see them.
 </details>
-
-### Q3: How do you harden permissions for `.ssh`?
+#### Q3: How do you harden permissions for `.ssh`?
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -231,9 +216,7 @@ SSH requires strict permissions or it will refuse to work (Permission denied):
 - `~/.ssh/id_rsa.pub` (Public): **644** (`-rw-r--r--`) - Public can read.
 - `~/.ssh/authorized_keys`: **600** (`-rw-------`).
 </details>
-
 ## 📝 Quiz
-
 1. **Which command reveals hidden files?**
    - [ ] a) `ls -h`
    - [x] b) `ls -a`

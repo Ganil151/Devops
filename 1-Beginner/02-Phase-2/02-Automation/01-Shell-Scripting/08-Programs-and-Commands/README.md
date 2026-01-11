@@ -1,190 +1,190 @@
-# 💻 Programs and Commands (Execution Flow)
+# 💻 Programs and Commands (Execution Architecture)
 
-> **"Not all commands are created equal."**
+> **"Not all commands are created equal. Knowing what executes is half the battle."**
 
-![Programs Banner](../../assets/programs_banner.png)
+```mermaid
+graph TD
+    subgraph Execution_Hierarchy ["⚡ COMMAND RESOLUTION ORDER"]
+        direction TB
+        Start[User types: lsa] --> Keyword{1. Keyword?}
+        Keyword -->|No| Alias{2. Alias?}
+        Alias -->|No| Func{3. Function?}
+        Func -->|No| Builtin{4. Built-in?}
+        Builtin -->|No| Hash{5. Hash Cache?}
+        Hash -->|No| Path{6. Search PATH}
+        
+        Keyword -->|Yes| RunK[Run Control Logic]
+        Alias -->|Yes| RunA[Run Alias]
+        Func -->|Yes| RunF[Run Function]
+        Builtin -->|Yes| RunB[Run Built-in]
+        Hash -->|Yes| RunH[Run Cached Binary]
+        Path -->|Found| RunP[Run External Binary]
+        Path -->|Null| Error[❌ Command Not Found]
+        
+        style Start fill:#3b82f6,color:#fff
+        style Error fill:#ef4444,color:#fff
+        style RunB fill:#10b981,color:#fff
+        style Execution_Hierarchy fill:#0f172a,stroke:#3b82f6,color:#fff
+    end
+```
 
 ## 📚 Overview
 
-When you type `ls` or `cd`, magic happens. But *what* exactly executes? Is it a file on the disk? A function in your shell? An alias? Understanding the **Command Resolution Order** is critical for debugging why a script works on your machine but fails in CI/CD.
+When you type a command in your terminal, the shell (Bash/Zsh) doesn't just "run a file." It performs a complex lookup procedure to decide which logic to execute. Understanding this **Command Resolution Order** is critical for DevOps engineers to debug PATH issues, avoid naming collisions, and ensure scripts behave predictably across different environments.
+
+---
 
 ## 🎓 Learning Objectives
 
 By the end of this module, you will:
 
-- ✅ Distinguish between Alias, Function, Built-in, and External Binary
-- ✅ Understand the `PATH` environment variable
-- ✅ Use `type`, `which`, and `whereis` to investigate commands
-- ✅ Master the order of execution precedence
+- ✅ Identify the **4 Categories** of commands (Built-in, External, Alias, Function).
+- ✅ Master the shell's **Search Precedence** logic.
+- ✅ Audit command sources using `type`, `which`, and `hash`.
+- ✅ Understand the **Security Implications** of `PATH` manipulation.
+- ✅ Debug "Ghost Commands" caused by caching.
 
-## 🏗️ Command Resolution Order
+---
 
-The shell follows a strict hierarchy when checking what to run:
+## 🏗️ The Four Pillars of Execution
 
-```mermaid
-graph TD
-    Start[User types: lsa] --> Alias{1. Is it an Alias?}
-    Alias -- Yes --> RunAlias[Run Alias]
-    Alias -- No --> Func{2. Is it a Function?}
-    
-    Func -- Yes --> RunFunc[Run Function]
-    Func -- No --> Builtin{3. Is it a Built-in?}
-    
-    Builtin -- Yes --> RunBuiltin[Run Shell Built-in]
-    Builtin -- No --> Hash{4. Is it in Hash Cache?}
-    
-    Hash -- Yes --> RunHash[Run Cached Binary]
-    Hash -- No --> Path{5. Search PATH}
-    
-    Path -- Found --> RunBin[Run External Binary]
-    Path -- Not Found --> Error[❌ 'Command not found']
-    
-    style Alias fill:#f1c40f,stroke:#333
-    style Start fill:#3498db,color:#fff
-    style Error fill:#e74c3c,color:#fff
-```
+### 1. Shell Keywords & Built-ins
+These are compiled directly into the shell binary (e.g., `bash`).
+- **Precedence**: Extremely High.
+- **Speed**: Fastest (No process creation).
+- **Example**: `cd`, `echo`, `if`, `while`.
+- **Note**: `cd` MUST be a built-in because a child process cannot change the parent's directory.
 
-## 🔍 Investigation Tools
+### 2. Aliases & Functions
+User-defined shortcuts and logic blocks residing in memory (`.bashrc`).
+- **Precedence**: Aliases are applied first during text expansion.
+- **Speed**: Very Fast (Memory-based).
+- **Example**: `alias ll='ls -la'`, `function git_sync() { ... }`.
 
-### 1. `type` - The Truth Teller
-The most robust way to see what a command is.
+### 3. Hash Table (The Cache)
+To avoid searching the disk every time, the shell remembers where it found a binary last time in a "Hash Table".
+- **Precedence**: Higher than disk search.
+- **Gotcha**: If you move a binary to a different folder, the shell might still try to run it from the old path until you clear the hash.
+- **Command**: `hash` (view cache), `hash -d cmd` (delete one), `hash -r` (reset all).
+
+### 4. External Binaries (The Disk)
+Files located in directories listed in your `$PATH`.
+- **Precedence**: Lowest (Last resort).
+- **Speed**: Slower (Requires `fork()` and `exec()`).
+- **Example**: `grep`, `docker`, `terraform`.
+
+---
+
+## 🛠️ Investigative Tools
+
+### `type` - The Only Source of Truth
+Never use `which` to verify what is actually running. `which` only searches for files on disk. `type` understands aliases and built-ins.
 
 ```bash
 $ type cd
 cd is a shell builtin
 
-$ type grep
-grep is /usr/bin/grep
-
 $ type ll
 ll is aliased to `ls -alF`
+
+$ type -a python
+python is /usr/local/bin/python
+python is /usr/bin/python
 ```
 
-### 2. `which` - The Binary Finder
-Only searches for **external binaries** in your PATH. It ignores aliases and built-ins.
-
-```bash
-$ which python3
-/usr/bin/python3
-```
-
-### 3. `PATH` - The Map
-The exact list of directories the shell searches for binaries, separated by colons (`:`).
+### `PATH` - The Road Map
+The `$PATH` variable is a colon-separated list of directories. The shell searches them from **Left to Right**.
 
 ```bash
 $ echo $PATH
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 ```
 
-## 🧠 Types of Commands
+⚠️ **SECURITY WARNING**: Never put `.` (current directory) at the start of your PATH. An attacker could place a malicious `ls` binary in a folder, and if you `cd` there and type `ls`, you'd run their virus instead of the real command.
 
-| Type | Description | Optimization | Example |
-|------|-------------|--------------|---------|
-| **Alias** | Shortcut for another command text. | Fast text replacement. | `ll` |
-| **Function** | Code block loaded in shell memory. | Very Fast execution. | `mkdir_cd` |
-| **Built-in** | Compiled into the shell binary itself. | Fastest (no process fork). | `cd`, `echo` |
-| **Binary** | Separate executable file on disk. | Slowest (requires creating new process). | `grep`, `docker` |
+---
 
-## 🏆 Real-World DevOps Story
+## 🏆 Real-World DevOps Case Study
 
-### 💡 **The Phantom Python**
+### 💡 **The Case of the Outdated Tool**
 
-**Scenario**: A CI/CD pipeline was failing with `ImportError: No module named requests`, even though the engineer insisted they installed it.
+**The Scenario**: A platform team upgraded their global `terraform` binary from `0.12` to `1.5` in `/usr/bin/`. However, one engineer's machine kept running `0.12`. 
 
-**The Debug**:
-The engineer ran `pip install requests` and it said "Requirement already satisfied".
-Then they ran `python script.py` and it failed.
+**The Investigation**:
+1. Engineer ran `which terraform` -> Result: `/usr/bin/terraform`.
+2. Engineer ran `terraform version` -> Result: `0.12`.
+3. Team Lead ran `type -a terraform`.
 
 **The Discovery**:
-They used `type -a python`:
-
 ```bash
-$ type -a python
-python is /usr/local/bin/python (Python 3.9)
-python is /usr/bin/python       (Python 2.7)
+$ type -a terraform
+terraform is /home/user/bin/terraform
+terraform is /usr/bin/terraform
 ```
-
-And `type pip`:
-```bash
-$ type pip
-pip is /usr/local/bin/pip (linked to Python 3.9)
-```
-
-**The Issue**: `python` invoked Python 2.7, but `pip` installed to Python 3.9. They were mismatched.
+The engineer had an old version in their personal `~/bin/` folder. Because `~/bin/` appeared earlier in their `$PATH` than `/usr/bin/`, the shell chose the old one every time.
 
 **The Fix**:
-They updated the script to explicitly use `python3` instead of `python`.
+The engineer removed the local binary and updated their `$PATH` structure.
+
+---
 
 ## 🎓 Interview Questions
 
-### Q1: Why is `cd` a shell built-in?
+#### Q1: Why does `which cd` return nothing, but `type cd` works?
 <details>
 <summary>Click to reveal answer</summary>
-
-Because built-ins run inside the current shell process. An external binary runs in a **child process**. A child process cannot change the working directory of its parent. If `cd` were a binary, it would change its own directory and then exit, leaving your shell exactly where it was.
+`which` is an external tool that only searches the filesystem (`$PATH`) for executable files. `cd` is a shell built-in; it doesn't exist as a separate file on disk. `type` is a shell built-in itself, so it has internal knowledge of the shell's state.
 </details>
 
-### Q2: How do you bypass an alias to run the real command?
+#### Q2: How do you bypass an alias temporarily?
 <details>
 <summary>Click to reveal answer</summary>
-
-Quote the command or use a backslash:
+Prepend a backslash `\` to the command:
 ```bash
-\ls
-# OR
-'ls'
+\ls  # Runs the real binary, ignoring any 'ls' alias.
 ```
-This forces the shell to skip alias lookup and go straight to functions/built-ins/path.
+Alternatively, use the full path: `/bin/ls`.
 </details>
 
-### Q3: What happens if I have two scripts with the same name in my PATH?
+#### Q3: What is the "Hash" in shell execution?
 <details>
 <summary>Click to reveal answer</summary>
-
-The shell executes the one found in the directory that appears **earlier** in the PATH variable. This is why `/usr/local/bin` is usually before `/usr/bin`—so user-installed versions override system defaults.
+The shell caches the absolute path of external binaries it has found in the PATH to avoid expensive disk lookups. If you install a new version of a tool in a different directory during a session, you might need to run `hash -r` to force the shell to look again.
 </details>
-
-## 📝 Quiz
-
-1. **Which command runs fastest?**
-   - [ ] a) External Binary
-   - [ ] b) Alias
-   - [x] c) Shell Built-in
-   - [ ] d) Script
-
-2. **Which tool shows if a command is an alias?**
-   - [ ] a) `which`
-   - [x] b) `type`
-   - [ ] c) `whereis`
-   - [ ] d) `locate`
-
-3. **What separator is used in the PATH variable?**
-   - [ ] a) Comma (`,`)
-   - [ ] b) Semicolon (`;`)
-   - [x] c) Colon (`:`)
-   - [ ] d) Space
-
-4. **If `node` is in `/bin` and `/usr/local/bin`, and PATH=`/bin:/usr/local/bin`, which runs?**
-   - [x] a) `/bin/node`
-   - [ ] b) `/usr/local/bin/node`
-   - [ ] c) Both
-   - [ ] d) Random
-
-5. **`which cd` usually returns nothing. Why?**
-   - [ ] a) `cd` is not installed
-   - [x] b) `cd` is a built-in, not a binary
-   - [ ] c) `cd` is hidden
-   - [ ] d) Permission denied
-
-**Answers**: 1-c, 2-b, 3-c, 4-a, 5-b
-
-## 🔗 Next Steps
-
-Continue to: **[Basic Variables](../09-Basic-Variables/README.md)** →
-
-## 📚 Additional Resources
-- [Bash Reference: Command Search](https://www.gnu.org/software/bash/manual/html_node/Command-Search-and-Execution.html)
-- [The PATH Variable](http://www.linfo.org/path_env_var.html)
 
 ---
-**📌 Pro Tip**: Use `type -a command_name` to see ALL locations containing that command, not just the first one found!
+
+## 📝 Knowledge Check
+
+1. **What is the search order for commands?**
+   - [ ] a) Path -> Alias -> Built-in
+   - [x] b) Alias -> Function -> Built-in -> Path
+   - [ ] c) Built-in -> Path -> Alias
+   - [ ] d) Random
+
+2. **Which command is used to clear the shell's path cache?**
+   - [ ] a) `clear`
+   - [ ] b) `reset path`
+   - [x] c) `hash -r`
+   - [ ] d) `rehash`
+
+3. **Where should you check for the "Truth" about a command?**
+   - [ ] a) `which`
+   - [ ] b) `whereis`
+   - [x] c) `type`
+   - [ ] d) `ls`
+
+4. **Why is `cd` a built-in?**
+   - [ ] a) To save space
+   - [x] b) Because a child process cannot change the parent's environment
+   - [ ] c) Because it is faster
+   - [ ] d) It isn't, it's a binary
+
+**Answers**: 1-b, 2-c, 3-c, 4-b
+
+## 🔗 Additional Resources
+- [GNU Bash: Command Search and Execution](https://www.gnu.org/software/bash/manual/html_node/Command-Search-and-Execution.html)
+- [How the Shell Finds Commands](https://www.linux.com/training-tutorials/how-bash-shell-finds-commands/)
+
+---
+**📌 Pro Tip**: Use `command -v <cmd>` in your shell scripts instead of `which`. It is more portable and handles built-ins better.

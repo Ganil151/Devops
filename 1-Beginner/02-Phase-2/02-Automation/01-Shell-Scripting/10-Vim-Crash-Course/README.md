@@ -1,179 +1,177 @@
-# 📝 Vim Crash Course
+# 📝 Vim Crash Course (The DevOps Survival Editor)
 
-> **"I've been using Vim for about 2 years now, mostly because I can't figure out how to exit it."**
+> **"I've been using Vim for about 2 years now, mostly because I can't figure out how to exit it. But once you learn, you never go back."**
 
-![Vim Banner](../../assets/vim_banner.png)
+```mermaid
+stateDiagram-v2
+    [*] --> Normal: Open Vim
+    
+    Normal --> Insert: "i, a, o, s"
+    Insert --> Normal: "Esc"
+    
+    Normal --> Visual: "v, V, Ctrl-v"
+    Visual --> Normal: "Esc"
+    
+    Normal --> Command: ":"
+    Command --> Normal: "Enter / Esc"
+    
+    Command --> [*]: ":wq" (Save & Exit)
+    Command --> [*]: ":q!" (Force Exit)
+
+    note right of Normal: Navigation, Delete, Copy, Paste
+    note right of Insert: Free-text Editing
+    note right of Visual: Highlighting, Block Indent
+    note right of Command: Global Search, Replace, Files
+```
 
 ## 📚 Overview
 
-Vim (Vi IMproved) is the ubiquitous text editor of the Linux world. It is installed on almost every server by default. Unlike Notepad or VS Code, it is **modal**, meaning keys do different things depending on which "mode" you are in. Mastering Vim is a superpower for DevOps engineers who need to edit configs on remote servers.
+Vim (Vi IMproved) is the ubiquitous text editor of the Linux world. It is installed on almost every server, container, and IoT device by default. Unlike Notepad or VS Code, it is **modal**, meaning keys do different things depending on which "mode" you are in. 
+
+Mastering Vim isn't just about editing files; it's about **editing code at the speed of thought** without ever touching your mouse.
+
+---
 
 ## 🎓 Learning Objectives
 
 By the end of this module, you will:
 
-- ✅ Understand the 3 Core Modes: Normal, Insert, Command
-- ✅ Create, edit, and save files without a mouse
-- ✅ Navigate effortlessly (`h`, `j`, `k`, `l`)
-- ✅ Perform bulk actions (copy, paste, delete lines)
-- ✅ **Successfully exit Vim** (The most important skill!)
+- ✅ Pivot between the **4 Essential Modes** fluently.
+- ✅ Navigate code using **Motions** (`w, e, b, G, gg`) instead of arrows.
+- ✅ Perform surgical edits using **Counts** (e.g., "Delete 5 lines").
+- ✅ Master **Search and Replace** across entire files.
+- ✅ Manage **Visual Blocks** to mass-comment code.
 
-## 🏗️ The Three Modes of Vim
+---
 
-```mermaid
-stateDiagram-v2
-    [*] --> NormalMatch: Open File
-    
-    NormalMatch --> InsertMode: Press 'i', 'a', 'o'
-    InsertMode --> NormalMatch: Press 'Esc'
-    
-    NormalMatch --> CommandMode: Press ':'
-    CommandMode --> NormalMatch: Press 'Enter' or 'Esc'
-    
-    CommandMode --> [*]: :wq or :q!
-    
-    state NormalMatch {
-        direction LR
-        note: "Navigation & Manipulation (h, j, k, l, dd, yy)"
-    }
-    state InsertMode {
-        direction LR
-        note: "Typing Text"
-    }
-    state CommandMode {
-        direction LR
-        note: "Save, Quit, Search (:w, :q, /text)"
-    }
-```
+## 🕹️ The Home Row Philosophy (Navigation)
 
-## 🛠️ The Survival Kit (Cheat Sheet)
+In Vim, you never use arrow keys. You keep your hands on the "Home Row" (`asdf jkl;`). This minimizes physical movement and maximizes speed.
 
-### 1. File Operation (Command Mode)
-| Keystrokes | Action | Pneumonic |
-|------------|--------|-----------|
-| `:w` | **W**rite (Save) | |
-| `:q` | **Q**uit | |
-| `:wq` | Write and Quit | |
-| `:q!` | Quit **without** saving | Force Quit |
+| Key | Action | Mental Model |
+|-----|--------|--------------|
+| `h` | ⬅️ Left | |
+| `j` | ⬇️ Down | Looks like a downward arrow |
+| `k` | ⬆️ Up | |
+| `l` | ➡️ Right | |
+| `w` | **Next Word** | Jump by words, not chars |
+| `b` | **Back a Word** | |
+| `0` | **Start of Line** | |
+| `$` | **End of Line** | Regular Expression standard |
 
-### 2. Changing Modes
+---
+
+## 🛠️ The Power User Toolkit
+
+### 1. The Survival Modes
+- **NORMAL mode (Esc)**: For moving and deleting. This is where you spend 90% of your time.
+- **INSERT mode (i)**: For typing. Use `Esc` to get out the second you stop typing.
+- **VISUAL mode (v)**: For highlighting. Use `Ctrl-v` to select columns (perfect for indentation).
+- **COMMAND mode (:)**: For system actions like `:w` (save) or `:q` (quit).
+
+### 2. Surgical Editing (Normal Mode)
+Vim uses a "Verb + Motion" grammar.
+- `d` (Delete) + `w` (Word) = `dw` (Delete word).
+- `c` (Change) + `i` (Inside) + `"` (Quotes) = `ci"` (Delete everything inside quotes and start typing).
+
 | Key | Action |
 |-----|--------|
-| `Esc` | Go to Normal Mode (Spam this if stuck) |
-| `i` | **I**nsert mode (before cursor) |
-| `a` | **A**ppend mode (after cursor) |
-| `o` | **O**pen new line below |
+| `u` | **Undo** |
+| `Ctrl+r`| **Redo** |
+| `.` | **Repeat** (Repeats your last action - the best tool in Vim!) |
+| `x` | Delete single character |
+| `dd`| Delete entire line (3dd = delete 3 lines) |
+| `yy`| "Yank" (Copy) line |
+| `p` | Paste below |
 
-### 3. Navigation (Normal Mode)
-Never use arrow keys! Keep hands on the home row.
+---
 
-| Key | Direction |
-|-----|-----------|
-| `h` | ⬅️ Left |
-| `j` | ⬇️ Down |
-| `k` | ⬆️ Up |
-| `l` | ➡️ Right |
-| `gg` | Go to top |
-| `G` | Go to bottom |
+### 3. Search & Replace (Command Mode)
+Don't scroll looking for text. Jump to it.
 
-### 4. Editing (Normal Mode)
-| Key | Action |
-|-----|--------|
-| `dd` | **D**elete (cut) current line |
-| `yy` | **Y**ank (copy) current line |
-| `p` | **P**aste below |
-| `u` | **U**ndo |
+- Search: `/keyword` (Press `n` for next match).
+- **Global Replace**: `:%s/old/new/g`
+- **Global Replace with Confirmation**: `:%s/old/new/gc`
 
-## 🏆 Real-World DevOps Story
+---
 
-### 💡 **The Firewall Emergency**
+## 🏆 Real-World DevOps Case Study
 
-**Scenario**: A production database was getting hammered by traffic from a specific subnet. The GUI firewall tool was unresponsive due to load. 
+### 🚨 **The YAML Tab Tragedy**
+
+**The Scenario**: A Kubernetes deployment was failing with an `indentation error`. The YAML file was 200 lines long, and the error was "Somewhere near line 150". 
 
 **The Fix**:
-The SysAdmin SSH'd into the gateway.
-1. `vim /etc/iptables.rules`
-2. `G` (Jump to bottom)
-3. `o` (Open new line)
-4. Typed the rule to drop the subnet.
-5. `Esc` + `:wq`
-6. Reloaded firewall.
+A DevOps engineer SSH'd in and used Vim maneuvers:
+1. `vim deployment.yaml`
+2. `:set number` (Show line numbers)
+3. `150G` (Jump directly to line 150)
+4. Found that 10 lines were indented with tabs instead of spaces.
+5. `Ctrl-v` (Visual Block mode) to select the leading tab column.
+6. `d` to delete the block.
+7. `Esc` + `:wq`
 
-**Time taken**: 15 seconds.
-**Alternative**: Waiting for GUI to load (would have taken 10 mins).
+**Outcome**: Deployment succeeded in under 60 seconds.
+**Lesson**: Visual Block mode allows you to edit entire columns of text simultaneously, a feature traditional editors often hide behind complex menus.
 
-**Lesson**: On a burning server, Vim is often the only tool that works fast enough.
+---
 
 ## 🎓 Interview Questions
 
-### Q1: How do you replace all occurrences of a word in Vim?
+#### Q1: How do you jump to the end of a very long file?
 <details>
 <summary>Click to reveal answer</summary>
-
-Use the substitution command:
-`:%s/old_word/new_word/g`
-- `%`: Entire file
-- `s`: Substitute
-- `g`: Global (all occurrences on line)
+Press `G` (Capital G) in Normal mode. To jump back to the top, press `gg`.
 </details>
 
-### Q2: What is the difference between `i` and `a`?
+#### Q2: What is the difference between `:q` and `:q!`?
 <details>
 <summary>Click to reveal answer</summary>
-
-- `i` (Insert): Starts typing **before** the cursor character.
-- `a` (Append): Starts typing **after** the cursor character.
-Useful when you want to add a semicolon at the end of a line (`Shift+A` jumps to end and enters insert mode).
+`:q` will quit only if there are no unsaved changes. If you have modified the file, Vim will block you. `:q!` is a "force quit"—it discards all unsaved changes and exits immediately.
 </details>
 
-### Q3: Why use HJKL instead of arrow keys?
+#### Q3: How do you indent a block of code in Vim?
 <details>
 <summary>Click to reveal answer</summary>
-
-Efficiency. Your fingers are already on the home row. Moving your hand to arrow keys takes time. Once you get muscle memory for HJKL, you navigate code at the speed of thought.
+1. Enter Visual mode (`v` or `V`).
+2. Highlight the lines.
+3. Press `>` to indent right or `<` to indent left.
 </details>
-
-## 📝 Quiz
-
-1. **Which key exits Insert Mode?**
-   - [ ] a) `Ctrl + C`
-   - [x] b) `Esc`
-   - [ ] c) `Enter`
-   - [ ] d) `:q`
-
-2. **How do you save and quit?**
-   - [ ] a) `Ctrl + S`
-   - [ ] b) `:save`
-   - [x] c) `:wq`
-   - [ ] d) `:exit`
-
-3. **What does `dd` do?**
-   - [ ] a) Duplicate line
-   - [x] b) Delete/Cut line
-   - [ ] c) Debug mode
-   - [ ] d) Date insert
-
-4. **Which key moves the cursor DOWN?**
-   - [ ] a) `h`
-   - [ ] b) `k`
-   - [x] c) `j`
-   - [ ] d) `l`
-
-5. **How do you undo the last change?**
-   - [ ] a) `Ctrl + Z`
-   - [x] b) `u`
-   - [ ] c) `:undo`
-   - [ ] d) `r`
-
-**Answers**: 1-b, 2-c, 3-b, 4-c, 5-b
-
-## 🔗 Next Steps
-
-Continue to: **[File Permissions](../11-File-Permissions/README.md)** →
-
-## 📚 Additional Resources
-- [Vim Adventures (Game)](https://vim-adventures.com/)
-- [OpenVim (Interactive Tutorial)](https://www.openvim.com/)
 
 ---
-**📌 Pro Tip**: If you accidentally press `Ctrl+S`, your terminal will freeze (legacy flow control). Press `Ctrl+Q` to unfreeze it!
+
+## 📝 Knowledge Check
+
+1. **How do you enter "Visual Block" mode?**
+   - [ ] a) `v`
+   - [ ] b) `V`
+   - [x] c) `Ctrl + v`
+   - [ ] d) `Alt + v`
+
+2. **What does the `.` (dot) key do in Normal mode?**
+   - [ ] a) Deletes a character
+   - [ ] b) Moves to the end of the line
+   - [x] c) Repeats the last editing command
+   - [ ] d) Saves the file
+
+3. **Which command allows you to search for the word 'production'?**
+   - [ ] a) `:find production`
+   - [x] b) `/production`
+   - [ ] c) `f production`
+   - [ ] d) `s/production`
+
+4. **How do you "Yank" (Copy) a line?**
+   - [ ] a) `cc`
+   - [x] b) `yy`
+   - [ ] c) `pp`
+   - [ ] d) `dd`
+
+**Answers**: 1-c, 2-c, 3-b, 4-b
+
+## 🔗 Additional Resources
+- [Vim Cheat Sheet (Interactive)](https://vim.rtorr.com/)
+- [Vim Genius](http://vimgenius.com/)
+- [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
+
+---
+**📌 Pro Tip**: Run `vimtutor` in your terminal right now. It is a 30-minute interactive lesson built into most Linux systems that will teach you 90% of what you need to know.
