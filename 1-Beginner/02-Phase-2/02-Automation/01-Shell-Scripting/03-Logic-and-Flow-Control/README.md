@@ -16,8 +16,15 @@ fi
 -   **File Operators**: `-f` (file), `-d` (directory), `-s` (not empty).
 -   **String Operators**: `-z` (empty string), `-n` (not empty), `==` (equals).
 -   **Integer Operators**: `-eq` (equal), `-ne` (not equal), `-gt` (greater than), `-lt` (less than).
+
+### **Test Operators Reference**
+![Test Operators Reference](../../assets/test_operators.svg)
 > [!TIP]
 > Use `[[ ... ]]` (extended test) in Bash for more powerful features like regex matching and easier logical operators (`&&` and `||`).
+
+### The Case Statement
+For complex conditional logic with multiple patterns, `case` is cleaner than nested `if`s.
+![Case Logic Flow](../../assets/case_logic.svg)
 ## 🔄 Loops (For and While)
 ### For Loops
 Best for iterating over a predefined list of items.
@@ -39,7 +46,7 @@ done
 echo "DB is UP!"
 ```
 ## 📊 Deployment Logic Flow
-![Deployment Logic Flow](../deployment_logic_flow.svg)
+![Deployment Logic Flow](../../assets/deployment_logic_flow.svg)
 
 ---
 ## 📖 Stories from the Field: The "Infinite" Loop

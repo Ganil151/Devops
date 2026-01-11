@@ -28,7 +28,7 @@ Professional scripts verify their environment before performing any action.
 ---
 ## 🗺️ Visualizing the Script Workflow
 Understanding the execution lifecycle allows you to predict where a failure might occur.
-![Script Workflow](./script-workflow.svg)
+![Script Workflow](./assets/script-workflow.svg)
 ___
 ## 🌊 Following the Data Flow
 Automation scripts are "Data Pipelines." They ingest information, transform it, and push it to a destination. To master a script, follow these data carriers:
@@ -47,7 +47,7 @@ This represents "System Feedback." The script is asking the OS a question and st
 
 ## 🏗️ Script Hierarchy Summary
 
-![Script Hierarchy](./script-hierarchy.svg)
+![Script Hierarchy](./assets/script-hierarchy.svg)
 
 ---
 

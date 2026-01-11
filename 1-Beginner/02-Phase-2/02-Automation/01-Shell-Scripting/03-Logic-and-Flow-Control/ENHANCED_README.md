@@ -27,7 +27,7 @@ else
 fi
 ```
 ### **Test Operators Comprehensive Reference**
-![Test Operators](../test_operators.svg)
+![Test Operators](../../assets/test_operators.svg)
 ### **Advanced Conditional Patterns**
 ```bash
 # Modern Bash extended test [[ ]]
@@ -53,6 +53,9 @@ else
     exit 1
 fi
 ```
+
+### **Case Statement Logic**
+![Case Logic](../../assets/case_logic.svg)
 ---
 ## 🔄 Loops (For, While, Until)
 ### **For Loop Patterns**
@@ -115,7 +118,7 @@ done
 ```
 ---
 ## 📊 DevOps Deployment Logic Flow
-![Deployment Logic Flow](../deployment_logic_flow.svg)
+![Deployment Logic Flow](../../assets/deployment_logic_flow.svg)
 
 ---
 ## 📖 Stories from the Field: The "Infinite" Loop

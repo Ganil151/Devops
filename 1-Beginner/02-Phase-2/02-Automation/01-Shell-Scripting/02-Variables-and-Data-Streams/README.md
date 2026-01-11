@@ -62,7 +62,7 @@ graph TB
 ## 🌊 Standard Streams & Redirection
 Bash manages three primary data streams for every process, enabling powerful data flow control.
 ### **Stream Architecture**
-![Stream Architecture](../stream_architecture.svg)
+![Stream Architecture](../../assets/stream_architecture.svg)
 **Data Flow in Shell Processes:**
 - **stdin (FD 0)**: Input from keyboard, files, pipes, or here documents
 - **stdout (FD 1)**: Normal program output to terminal, files, or pipes
@@ -107,7 +107,7 @@ command | tee -a output.log
 ---
 ## 🔗 Pipes and Command Substitution
 ### **Pipeline Architecture**
-![Pipeline Architecture](../pipeline_architecture.svg)
+![Pipeline Architecture](../../assets/pipeline_architecture.svg)
 ### **Pipeline Examples and Patterns**
 ```bash
 # Basic pipeline - count error lines in log

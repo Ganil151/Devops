@@ -1,0 +1,48 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .box { fill: #2d2d2d; stroke: #4caf50; stroke-width: 2; rx: 8; ry: 8; }
+      .box-trigger { fill: #2d2d2d; stroke: #2196f3; stroke-width: 2; }
+      .box-api { fill: #2d2d2d; stroke: #e91e63; stroke-width: 2; }
+      .text { fill: #e0e0e0; font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; text-anchor: middle; }
+      .title { fill: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; font-size: 20px; font-weight: bold; text-anchor: middle; }
+      .arrow { stroke: #aaa; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#aaa" />
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" class="bg" />
+  <text x="400" y="40" class="title">DevOps Micro-Service Architecture</text>
+
+  <!-- External Triggers -->
+  <rect x="50" y="100" width="150" height="60" class="box-trigger" />
+  <text x="125" y="135" class="text">Git Webhooks</text>
+
+  <rect x="50" y="180" width="150" height="60" class="box-trigger" />
+  <text x="125" y="215" class="text">Scheduled Tasks</text>
+
+  <!-- API Hub -->
+  <rect x="320" y="120" width="160" height="120" class="box-api" />
+  <text x="400" y="170" class="text">Bottle / Tornado</text>
+  <text x="400" y="190" class="text" style="font-size:11px; fill:#ff4081;">REST Entry Point</text>
+
+  <!-- Workers -->
+  <rect x="600" y="100" width="150" height="60" class="box" />
+  <text x="675" y="135" class="text">Backup Script</text>
+
+  <rect x="600" y="180" width="150" height="60" class="box" />
+  <text x="675" y="215" class="text">Cleanup Script</text>
+
+  <rect x="600" y="260" width="150" height="60" class="box" />
+  <text x="675" y="295" class="text">Alert Logic</text>
+
+  <!-- Connections -->
+  <path d="M 200 130 L 320 170" class="arrow" />
+  <path d="M 200 210 L 320 190" class="arrow" />
+
+  <path d="M 480 170 L 600 130" class="arrow" />
+  <path d="M 480 180 L 600 210" class="arrow" />
+  <path d="M 480 190 L 600 290" class="arrow" />
+</svg>
