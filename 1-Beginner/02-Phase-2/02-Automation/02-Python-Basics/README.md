@@ -3,6 +3,20 @@
 
 Python is the "glue" of the DevOps world. Its readability, vast ecosystem of libraries, and cross-platform compatibility make it the primary choice for complex automation that exceeds the capabilities of Shell scripting.
 
+![Python DevOps Hub](./assets/python_devops_hub.png)
+
+---
+
+## 🗺️ Learning Path
+
+![Python Learning Path](./assets/python_learning_path.png)
+
+---
+
+## 🌐 Python DevOps Ecosystem
+
+![Python Ecosystem](./assets/python_ecosystem.png)
+
 ---
 
 ## 🎯 Learning Objectives
@@ -49,6 +63,32 @@ graph TD
 ---
 
 ## 📂 Curriculum Topics
+
+### 🟢 Beginner Fundamentals (Modules 1-17)
+
+| # | Module | Description |
+|---|--------|-------------|
+| 01 | [Python Fundamentals](./01-Python-Fundamentals/README.md) | Variables, data types, control flow, PEP 8 |
+| 02 | [Data Structures](./02-Data-Structures/README.md) | Lists, dicts, sets, tuples - choosing wisely |
+| 03 | [Functions and Modules](./03-Functions-and-Modules/README.md) | Functions, imports, packages |
+| 04 | [File Operations](./04-File-Operations/README.md) | Reading, writing, context managers |
+| 05 | [Error Handling](./05-Error-Handling/README.md) | try/except, custom exceptions, retries |
+| 06 | [Working with JSON](./06-Working-with-JSON/README.md) | Parsing, serialization, API data |
+| 07 | [Working with YAML](./07-Working-with-YAML/README.md) | K8s manifests, Ansible configs |
+| 08 | [Environment Variables](./08-Environment-Variables/README.md) | os.environ, python-dotenv, 12-factor |
+| 09 | [Command Line Arguments](./09-Command-Line-Arguments/README.md) | argparse, CLI tool creation |
+| 10 | [Subprocess Module](./10-Subprocess-Module/README.md) | Shell commands, output capture |
+| 11 | [Pathlib Basics](./11-Pathlib-Basics/README.md) | Modern cross-platform paths |
+| 12 | [Datetime Operations](./12-Datetime-Operations/README.md) | Timestamps, timezones, scheduling |
+| 13 | [Regular Expressions](./13-Regular-Expressions/README.md) | Log parsing, pattern matching |
+| 14 | [Logging Basics](./14-Logging-Basics/README.md) | Professional logging setup |
+| 15 | [Virtual Environments](./15-Virtual-Environments/README.md) | Dependency isolation with venv |
+| 16 | [Package Management](./16-Package-Management/README.md) | pip, requirements.txt |
+| 17 | [First Automation Script](./17-First-Automation-Script/README.md) | Complete capstone project |
+
+---
+
+### 🌐 Web & API Topics
 
 ### 1. **[Working with the Web](./01-Working-with-the-Web.md)**
 - **HTTP Requests**: Mastering GET/POST with the `requests` library.
