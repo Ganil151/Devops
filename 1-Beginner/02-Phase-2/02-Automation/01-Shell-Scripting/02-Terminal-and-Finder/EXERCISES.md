@@ -16,10 +16,8 @@
 **Document**: Write down the absolute path of your home directory.
 
 ---
-
 ## Exercise 2: Path Detective (Intermediate)
 **Objective**: Understand absolute vs relative paths.
-
 **Tasks**:
 1. Create this directory structure in `/tmp`:
    ```
@@ -30,13 +28,11 @@
 4. Navigate to `scripts` using `..` notation
 5. From `scripts`, navigate to `/tmp` using an absolute path
 6. Navigate back to `scripts` using a relative path from `/tmp`
-
 **Challenge**: Write the relative path from `/tmp/devops-lab/scripts` to `/tmp/devops-lab/configs`
 
 **Answer**: `../configs`
 
 ---
-
 ## Exercise 3: The Lost Files Mission (Practical)
 **Objective**: Use `ls` flags to find specific files.
 
