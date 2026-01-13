@@ -60,6 +60,36 @@ sed -i 's/^PermitRootLogin yes/PermitRootLogin no/' /opt/app/config.ini
 
 ---
 
+## 🛠️ Hands-On Exercise: Log Miner
+
+**Objective**: Extract specific data from a messy log file using `sed` and `awk`.
+
+**Step 1: Create Dummy Log**
+```bash
+cat <<EOF > data.log
+ERROR 2023-10-01 DB_TIMEOUT (500ms)
+INFO  2023-10-01 STARTUP
+ERROR 2023-10-02 CONNECTION_REFUSED (100ms)
+DEBUG 2023-10-02 VAR_A=1
+ERROR 2023-10-03 DB_TIMEOUT (600ms)
+EOF
+```
+
+**Step 2: Clean and Filter**
+Use `sed` to remove the parentheses around the duration.
+```bash
+sed 's/[()]//g' data.log
+```
+
+**Step 3: Analyze with Awk**
+Pipe the clean output to `awk` to find the average time of errors.
+```bash
+sed 's/[()]//g' data.log | awk '/ERROR/ { sum += $4; count++ } END { print "Avg Error Time:", sum/count, "ms" }'
+```
+*Expected Result*: `Avg Error Time: 400 ms`
+
+---
+
 ## ❓ Interview Questions
 
 1. **What does the `-i` flag in `sed` do?**
@@ -82,3 +112,7 @@ sed -i 's/^PermitRootLogin yes/PermitRootLogin no/' /opt/app/config.ini
 3. **Which `sed` command deletes the 5th line of a file?** `(sed '5d' file)`
 4. **True/False: `awk` can perform arithmetic operations.** `(True)`
 5. **How do you replace 'foo' with 'bar' globally using `sed`?** `(sed 's/foo/bar/g' file)`
+
+---
+
+[⬅️ Previous: JSON with JQ](../03-JSON-Processing-with-JQ/README.md) | [Next: Multiplexing and Parallelism](../05-Scaling-Bash-Multiplexing-Parallelism/README.md)

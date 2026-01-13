@@ -41,23 +41,24 @@ Master Python fundamentals and basic automation scripts.
 
 | # | Topic | Description | Key Learning | Hours |
 |---|-------|-------------|--------------|-------|
-| 01 | **Python Fundamentals** | Syntax, data types, control flow | First Python script, PEP 8 | 4-5h |
-| 02 | **Data Structures** | Lists, dicts, sets, tuples | Choosing right data structure | 4-5h |
-| 03 | **Functions and Modules** | Functions, imports, packages | Code organization | 4-5h |
-| 04 | **File Operations** | Reading/writing files | Config file handling | 3-4h |
-| 05 | **Error Handling** | try/except, custom exceptions | Robust error handling | 3-4h |
-| 06 | **Working with JSON** | JSON parsing, serialization | API data handling | 2-3h |
-| 07 | **Working with YAML** | YAML config files | K8s manifests, configs | 2-3h |
-| 08 | **Environment Variables** | os.environ, python-dotenv | 12-factor apps | 2-3h |
-| 09 | **Command Line Arguments** | argparse, sys.argv | CLI tool creation | 3-4h |
-| 10 | **Subprocess Module** | Running shell commands | Shell integration | 4-5h |
-| 11 | **Pathlib Basics** | Modern path handling | Cross-platform paths | 3h |
-| 12 | **Datetime Operations** | Date/time manipulation | Log timestamps | 3h |
-| 13 | **Regular Expressions** | Pattern matching | Log parsing | 4-5h |
-| 14 | **Logging Basics** | Logging module | Professional logging | 3-4h |
-| 15 | **Virtual Environments** | venv, virtualenv | Dependency isolation | 2-3h |
-| 16 | **Package Management** | pip, requirements.txt | Reproducible environments | 3h |
-| 17 | **First Automation Script** | Complete deployment script | Real-world automation | 5-6h |
+| 00 | **[Prerequisites](./Part-1-Fundamentals/00-Prerequisites/README.md)** | Setup, Pip, Venv | Installation, Path, Environments | 2-3h |
+| 01 | **[Python Fundamentals](./Part-1-Fundamentals/01-Python-Fundamentals/README.md)** | Syntax, data types, control flow | First Python script, PEP 8 | 4-5h |
+| 02 | **[Data Structures](./Part-1-Fundamentals/02-Data-Structures/README.md)** | Lists, dicts, sets, tuples | Choosing right data structure | 4-5h |
+| 03 | **[Functions and Modules](./Part-1-Fundamentals/03-Functions-and-Modules/README.md)** | Functions, imports, packages | Code organization | 4-5h |
+| 04 | **[File Operations](./Part-1-Fundamentals/04-File-Operations/README.md)** | Reading/writing files | Config file handling | 3-4h |
+| 05 | **[Error Handling](./Part-1-Fundamentals/05-Error-Handling/README.md)** | try/except, custom exceptions | Robust error handling | 3-4h |
+| 06 | **[Working with JSON](./Part-3-Data-Structures/06-Working-with-JSON/README.md)** | JSON parsing, serialization | API data handling | 2-3h |
+| 07 | **[Working with YAML](./Part-3-Data-Structures/07-Working-with-YAML/README.md)** | YAML config files | K8s manifests, configs | 2-3h |
+| 08 | **[Environment Variables](./Part-2-System-Operations/08-Environment-Variables/README.md)** | os.environ, python-dotenv | 12-factor apps | 2-3h |
+| 09 | **[Command Line Arguments](./Part-2-System-Operations/09-Command-Line-Arguments/README.md)** | argparse, sys.argv | CLI tool creation | 3-4h |
+| 10 | **[Subprocess Module](./Part-2-System-Operations/10-Subprocess-Module/README.md)** | Running shell commands | Shell integration | 4-5h |
+| 11 | **[Pathlib Basics](./Part-2-System-Operations/11-Pathlib-Basics/README.md)** | Modern path handling | Cross-platform paths | 3h |
+| 12 | **[Datetime Operations](./Part-3-Data-Structures/12-Datetime-Operations/README.md)** | Date/time manipulation | Log timestamps | 3h |
+| 13 | **[Regular Expressions](./Part-3-Data-Structures/13-Regular-Expressions/README.md)** | Pattern matching | Log parsing | 4-5h |
+| 14 | **[Logging Basics](./Part-4-Professional-Standards/14-Logging-Basics/README.md)** | Logging module | Professional logging | 3-4h |
+| 15 | **[Virtual Environments](./Part-4-Professional-Standards/15-Virtual-Environments/README.md)** | venv, virtualenv | Dependency isolation | 2-3h |
+| 16 | **[Package Management](./Part-4-Professional-Standards/16-Package-Management/README.md)** | pip, requirements.txt | Reproducible environments | 3h |
+| 17 | **[First Automation Script](./Part-4-Professional-Standards/17-First-Automation-Script/README.md)** | Complete deployment script | Real-world automation | 5-6h |
 
 ---
 

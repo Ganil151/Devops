@@ -19,6 +19,20 @@ done
 shift $((OPTIND -1))
 ```
 
+## 📊 Argument Parsing Logic
+
+```mermaid
+graph TD
+    Start([User Input: -e prod -v]) --> GetOpts{getopts loop}
+    GetOpts -- Found Flag --> Case{Check Flag}
+    Case -- e --> SetEnv[Set ENV = prod]
+    Case -- v --> SetVerb[Set VERBOSE = true]
+    Case -- \? --> Error[Usage Error]
+    SetEnv & SetVerb & Error --> GetOpts
+    GetOpts -- Done --> Shift[Shift Args]
+    Shift --> Main[Execute Logic]
+```
+
 ### Option String Explained
 - `"ev"`: Only `-e` and `-v` are allowed. Neither takes a value.
 - `"e:v"`: `-e` requires a value (stored in `$OPTARG`), `-v` does not.
@@ -76,6 +90,27 @@ done
 
 ---
 
+## 🛠️ Hands-On Exercise: The Universal Deploy Tool
+
+**Objective**: Create a script named `deploy_tool.sh` that accepts an environment (`-e`), a version (`-v`), and a dry-run flag (`-d`).
+
+**Step 1: Boilerplate**
+Start with strict mode (`set -euo pipefail`) and a `usage` function.
+
+**Step 2: The Loop**
+Implement `getopts "e:v:d"`:
+- `-e`: Required. Sets `$TARGET_ENV`.
+- `-v`: Optional. Sets `$VERSION`. Default to "latest".
+- `-d`: Boolean. Sets `$DRY_RUN` to "true".
+
+**Step 3: Validation**
+After the loop, check if `$TARGET_ENV` is empty. If so, call `usage`.
+
+**Step 4: Execution Logic**
+If `$DRY_RUN` is true, simple `echo "Would deploy..."`. Otherwise, `echo "Deploying..."`.
+
+---
+
 ## ❓ Interview Questions
 
 1. **What is the purpose of `shift $((OPTIND - 1))` after a `getopts` loop?**
@@ -98,3 +133,7 @@ done
 3. **Which variable tracks the current index of the argument being parsed?** `($OPTIND)`
 4. **True/False: `getopts` is an external Linux command.** `(False - it is a shell built-in)`
 5. **How do you suppress default error messages in `getopts`?** `(Start the option string with a colon)`
+
+---
+
+[⬅️ Previous: Robust Execution](../01-Robust-Execution-and-Traps/README.md) | [Next: JSON with JQ](../03-JSON-Processing-with-JQ/README.md)

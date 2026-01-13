@@ -1,19 +1,14 @@
 # Functions and Modules
 *Building Reusable, Organized Automation Code*
-
 Functions and modules transform scripts into maintainable automation tools. They enable code reuse, testing, and collaboration across teams.
 
 ---
-
 ## 🎯 Learning Objectives
-
 - Define and call functions with various argument types
 - Create and import custom modules
 - Organize code into packages
 - Apply best practices for reusable automation code
-
 ---
-
 ## 📊 Module Organization Architecture
 
 ```mermaid
@@ -42,11 +37,9 @@ flowchart TD
 ```
 
 ---
-
 ## 📚 Core Concepts
 
 ### 1. Function Basics
-
 ```python
 # Basic function definition
 def check_server_health(hostname):
@@ -66,9 +59,7 @@ is_healthy = check_server_health("web-01")
 deploy_application("api-service", "production", version="2.3.1")
 deploy_application("api-service", "staging")  # Uses default version
 ```
-
 ### 2. Argument Types
-
 ```python
 # Positional arguments
 def create_user(username, role, team):
@@ -101,9 +92,7 @@ def deploy(app, *servers, **options):
 
 deploy("api", "web-01", "web-02", port=443, ssl=True)
 ```
-
 ### 3. Return Values
-
 ```python
 # Single return
 def get_cpu_usage(server):
@@ -130,9 +119,7 @@ def analyze_logs(log_file):
 stats = analyze_logs("/var/log/app.log")
 print(f"Error rate: {stats['error_rate']}%")
 ```
-
 ### 4. Lambda Functions
-
 ```python
 # Quick, single-expression functions
 servers = [
@@ -150,13 +137,9 @@ high_cpu = list(filter(lambda s: s["cpu"] > 80, servers))
 # Transform data
 names = list(map(lambda s: s["name"].upper(), servers))
 ```
-
 ---
-
 ## 📦 Modules and Imports
-
 ### Creating Modules
-
 ```python
 # server_utils.py
 """Utilities for server management."""
@@ -181,9 +164,7 @@ class ServerConnection:
     def connect(self):
         self.connected = True
 ```
-
 ### Importing Modules
-
 ```python
 # Method 1: Import entire module
 import server_utils
@@ -232,26 +213,27 @@ __all__ = ["important_function", "AnotherClass"]
 # Usage
 from mypackage import important_function
 ```
-
 ---
-
 ## 🛠️ Hands-On Exercises
 
-### Exercise 1: Health Check Function
-```python
-# Create a function that checks multiple aspects of server health
-# TODO: Implement check_health function
-# - Takes: hostname, checks (list of check types)
-# - Returns: dictionary with results for each check
-# - Available checks: "cpu", "memory", "disk", "network"
+### Exercise 1: Multi-Service Health Checker
 
-def check_health(hostname, checks):
-    pass
+**Scenario**: You are maintaining a fleet of Linux servers and need a unified way to report their status. Instead of running three different shell scripts, you need a single Python function that aggregates CPU, Memory, Disk, and Network health.
 
-# Test
-result = check_health("web-01", ["cpu", "memory"])
-# Expected: {"cpu": {"status": "ok", "value": 45}, "memory": {...}}
-```
+**The Challenge**:
+- Create a function `check_health(hostname, checks)`
+- `checks` is a list of services to inspect (e.g., `['cpu', 'disk']`)
+- Return a dictionary where keys are the service names and values are standardized status objects.
+
+#### 🏗️ How to Implement It
+1.  **Define the Structure**: Initialize an empty `results` dictionary.
+2.  **Iterate**: Loop through each item in the `checks` input list.
+3.  **Simulate**: Use `random` to generate mock values (since we don't have real `psutil` access yet/this is a simulation).
+4.  **Normalize**: Ensure every check returns a format like `{'status': 'ok', 'value': 85}`.
+5.  **Return**: Pass the `results` dictionary back to the caller.
+
+#### 🚀 How to Apply It
+In production, you would replace the "mock" logic with `psutil` calls. You would run this script via **Cron** or a **Systemd Timer** every 5 minutes and ship the JSON logs to **Elasticsearch** or **Datadog**.
 
 <details>
 <summary>💡 Solution</summary>
@@ -260,9 +242,15 @@ result = check_health("web-01", ["cpu", "memory"])
 import random
 
 def check_health(hostname, checks):
-    """Perform specified health checks on a server."""
+    """
+    Perform specified health checks on a server.
+    Args:
+        hostname (str): Name of server
+        checks (list): List of metrics to check ['cpu', 'memory', 'disk', 'network']
+    """
     results = {}
     
+    # Mock functions to simulate real system checks
     check_functions = {
         "cpu": lambda: random.randint(20, 95),
         "memory": lambda: random.randint(30, 90),
@@ -273,39 +261,45 @@ def check_health(hostname, checks):
     for check in checks:
         if check in check_functions:
             value = check_functions[check]()
+            # Determine status based on thresholds
             if check == "network":
                 status = "ok" if value else "error"
             else:
                 status = "ok" if value < 80 else "warning" if value < 90 else "critical"
+            
             results[check] = {"status": status, "value": value}
         else:
             results[check] = {"status": "unknown", "value": None}
     
     return results
 
-# Test
-result = check_health("web-01", ["cpu", "memory", "network"])
-print(result)
+# Test the function
+server_status = check_health("prod-web-01", ["cpu", "memory", "network"])
+print(f"Health Report for prod-web-01: {server_status}")
 ```
 </details>
 
-### Exercise 2: Decorator for Retry Logic
-```python
-# Create a retry decorator for flaky operations
-# TODO: Implement retry decorator
-# - Takes max_attempts and delay parameters
-# - Retries function if it raises an exception
-# - Returns result on success, re-raises on final failure
+---
 
-def retry(max_attempts=3, delay=1):
-    pass
+### Exercise 2: The "Chaos" Retry Decorator
 
-# Usage
-@retry(max_attempts=3, delay=2)
-def call_flaky_api():
-    # Simulated API call that sometimes fails
-    pass
-```
+**Scenario**: You are interacting with AWS APIs (Boto3) which are prone to random "ThrottlingException" or "ConnectionReset" errors. Hardcoding retry loops in every single function creates messy, unreadable code.
+
+**The Challenge**:
+- Create a `@retry` decorator that can wrapper *any* function.
+- It must accept `max_attempts` and `delay` configuration.
+- It must catch exceptions, log a warning, wait, and try again.
+- It must raise the exception if all attempts fail (don't swallow errors silently!).
+
+#### 🏗️ How to Implement It
+1.  **Import Functools**: Use `@functools.wraps` to preserve your function's name and documentation.
+2.  **Outer Layer**: Define `retry(max_attempts, delay)` to accept the simplified config.
+3.  **Wrapper**: Inside the wrapper, use a `for attempt in range()` loop.
+4.  **Try/Except**: Put the function call inside a try block. If it succeeds, return immediately.
+5.  **Backoff**: If it catches an exception, `time.sleep(delay)` and continue the loop.
+
+#### 🚀 How to Apply It
+Wrap your **AWS Boto3** calls or **HTTP Requests** with this decorator. It keeps your business logic (e.g., "Create Instance") clean and separated from your error handling logic ("Retry 3 times").
 
 <details>
 <summary>💡 Solution</summary>
@@ -313,9 +307,12 @@ def call_flaky_api():
 ```python
 import time
 import functools
+import random
 
 def retry(max_attempts=3, delay=1):
-    """Retry decorator for handling transient failures."""
+    """
+    Decorator that retries a function if it raises an exception.
+    """
     def decorator(func):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
@@ -325,92 +322,107 @@ def retry(max_attempts=3, delay=1):
                     return func(*args, **kwargs)
                 except Exception as e:
                     last_exception = e
-                    print(f"Attempt {attempt}/{max_attempts} failed: {e}")
+                    print(f"⚠️ Attempt {attempt}/{max_attempts} failed: {e}")
                     if attempt < max_attempts:
                         time.sleep(delay)
+            # If we get here, all retries exhausted
+            print("❌ All retries exhausted.")
             raise last_exception
         return wrapper
     return decorator
 
-# Test
-import random
+# Usage Example
+@retry(max_attempts=3, delay=2)
+def connect_to_database():
+    # Simulate a flaky connection that fails 70% of the time
+    if random.random() < 0.7:
+        raise ConnectionError("Database Connection Timeout")
+    return "Connected!"
 
-@retry(max_attempts=3, delay=1)
-def call_flaky_api():
-    if random.random() < 0.7:  # 70% chance of failure
-        raise ConnectionError("API temporarily unavailable")
-    return {"status": "success", "data": [1, 2, 3]}
-
+# Run it
 try:
-    result = call_flaky_api()
-    print(f"Success: {result}")
+    print(connect_to_database())
 except ConnectionError:
-    print("All retries exhausted")
+    print("Failed to connect after retries.")
 ```
 </details>
 
-### Exercise 3: Config Module
-```python
-# Create a configuration module structure
-# TODO: Create these files:
-# - config/__init__.py
-# - config/settings.py
-# - config/loader.py
+---
 
-# The module should:
-# 1. Load configuration from environment or file
-# 2. Provide default values
-# 3. Validate required settings
-```
+### Exercise 3: The 12-Factor Config Module
+
+**Scenario**: Your team is hardcoding API keys and database passwords in Python scripts, which is a security nightmare. You need a centralized way to load configuration from **Environment Variables** (The 12-Factor App methodology).
+
+**The Challenge**:
+- Create a professional package structure `config/`.
+- `settings.py`: A class defining defaults and required keys.
+- `loader.py`: A tool to read `os.environ`.
+- `__init__.py`: The public API.
+
+#### 🏗️ How to Implement It
+1.  **Directory**: Create `config/` folder.
+2.  **Settings Class**: Define `REQUIRED_KEYS` (e.g., `["DB_PASS", "API_KEY"]`).
+3.  **Loader**: Write a function that scans `os.environ` for variables starting with `APP_` (namespacing).
+4.  **Validation**: In `__init__`, check if all required keys are present. If not, raise an error immediately (Fail Fast).
+
+#### � How to Apply It
+Import this at the very top of your application: `from config import settings`. This ensures that your app **cannot** even start if it lacks the necessary credentials, preventing runtime crashes later on.
 
 <details>
 <summary>💡 Solution</summary>
 
 ```python
-# config/__init__.py
-from .settings import Settings
-from .loader import load_config
-
-__all__ = ["Settings", "load_config"]
-
-# config/settings.py
+# ---------------------------
+# File: config/settings.py
+# ---------------------------
 class Settings:
-    REQUIRED_KEYS = ["DATABASE_URL", "API_KEY"]
+    REQUIRED_KEYS = ["API_KEY", "DB_HOST"]
     
     DEFAULTS = {
-        "LOG_LEVEL": "INFO",
         "TIMEOUT": 30,
-        "RETRIES": 3
+        "DEBUG": False,
+        "REGION": "us-east-1"
     }
     
-    def __init__(self, **kwargs):
-        # Apply defaults
+    def __init__(self, env_data):
+        # 1. Load Defaults
         for key, value in self.DEFAULTS.items():
-            setattr(self, key.lower(), kwargs.get(key, value))
-        
-        # Apply provided settings
-        for key, value in kwargs.items():
-            setattr(self, key.lower(), value)
-    
-    def validate(self):
-        missing = []
-        for key in self.REQUIRED_KEYS:
-            if not hasattr(self, key.lower()) or getattr(self, key.lower()) is None:
-                missing.append(key)
-        if missing:
-            raise ValueError(f"Missing required config: {missing}")
+            setattr(self, key, value)
+            
+        # 2. Override with Env Data
+        for key, value in env_data.items():
+            # Convert keys to match internal names if needed
+            setattr(self, key, value)
 
-# config/loader.py
+    def validate(self):
+        # 3. Check Required Keys
+        missing = [k for k in self.REQUIRED_KEYS if not hasattr(self, k)]
+        if missing:
+            raise ValueError(f"Missing required config vars: {missing}")
+
+# ---------------------------
+# File: config/loader.py
+# ---------------------------
 import os
 
-def load_config(env_prefix="APP"):
-    """Load configuration from environment variables."""
-    config = {}
-    for key, value in os.environ.items():
-        if key.startswith(f"{env_prefix}_"):
-            config_key = key[len(env_prefix) + 1:]
-            config[config_key] = value
-    return config
+def load_from_env(prefix="MYAPP"):
+    """Reads all env vars starting with prefix"""
+    data = {}
+    for key, val in os.environ.items():
+        if key.startswith(f"{prefix}_"):
+            clean_key = key.replace(f"{prefix}_", "")
+            data[clean_key] = val
+    return data
+
+# ---------------------------
+# File: config/__init__.py
+# ---------------------------
+# from .loader import load_from_env
+# from .settings import Settings
+
+# env_data = load_from_env()
+# config = Settings(env_data)
+# config.validate()  # Fail fast if invalid
 ```
 </details>
 

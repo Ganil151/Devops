@@ -1,6 +1,6 @@
 # ♾️ The Master DevOps Platform: Zero to Enterprise & Beyond
 
-![Continuous Learning, Continuous Development](./devops_continuous_learning_development_1767405372014.png)
+![DevOps Continuous Learning](./assets/devops_platform_banner.svg)
 
 Welcome to the **Ultimate DevOps Learning & Implementation Platform**. This repository is a structured, multi-tier roadmap designed to transform individuals into high-level DevOps Architects and help them monetize their expertise in the global market.
 
@@ -135,9 +135,9 @@ graph TD
 
 ### **Perfect Consolidation achieved with Zero Duplication**
 
-- **[Repository Management Hub](./2-Intermediate/01-Phase-1/07-Repository-Management/README.md)**: Centralized 6 VCS technologies (Git, GitLab, Bitbucket, Azure DevOps, Mercurial, SVN).
-- **[Database Management Hub](./2-Intermediate/01-Phase-1/08-Databases/README.md)**: Consolidated SQL, NoSQL, and Managed Services from across the platform.
-- **[Configuration Tools Hub](./2-Intermediate/02-Phase-2/05-Configuration-Tools/README.md)**: Enterprise patterns for 11+ tools (Terraform, Ansible, Chef, Helm, etc.).
+- **[Repository Management Hub](./2-Intermediate/01-Phase-1/04-Repository-Management/README.md)**: Centralized 6 VCS technologies (Git, GitLab, Bitbucket, Azure DevOps, Mercurial, SVN).
+- **[Database Management Hub](./2-Intermediate/01-Phase-1/05-Databases/README.md)**: Consolidated SQL, NoSQL, and Managed Services from across the platform.
+- **[Configuration Tools Hub](./2-Intermediate/02-Phase-2/02-Configuration-Tools/README.md)**: Enterprise patterns for 11+ tools (Terraform, Ansible, Chef, Helm, etc.).
 - **[Quizzes & Assessments](./Quizzes/README.md)**: Master Quiz + 100+ tiered questions and 200+ interview Q&As.
 - **[Recommended Videos](./Recommended_Videos.md)**: Curated YouTube curriculum mapped to each learning level.
 

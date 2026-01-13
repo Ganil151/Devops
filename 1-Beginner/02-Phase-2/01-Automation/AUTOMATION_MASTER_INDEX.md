@@ -38,7 +38,7 @@ timeline
 ### Topics Overview
 
 #### 01. Introduction
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/01-Introduction/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/`  
 **🎯 Learning Goals**:
 - Understand shell scripting fundamentals
 - Learn about different shell types (Bash, Zsh, Sh)
@@ -53,7 +53,7 @@ timeline
 ---
 
 #### 02. Terminal and Finder
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/02-Terminal-and-Finder/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/02-Terminal-and-Finder/`  
 **🎯 Learning Goals**:
 - Master terminal navigation (cd, ls, pwd)
 - Understand Unix filesystem hierarchy
@@ -66,9 +66,8 @@ timeline
 **✅ Status**: Complete
 
 ---
-
 #### 03. Basic File Manipulation
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/`  
 **🎯 Learning Goals**:
 - Create files and directories (touch, mkdir)
 - Copy files safely (cp with flags)
@@ -81,9 +80,8 @@ timeline
 **✅ Status**: Complete
 
 ---
-
 #### 04. Hidden Files
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/04-Hidden-Files/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/04-Hidden-Files/`  
 **🎯 Learning Goals**:
 - Understand dotfiles (.bashrc, .profile, .gitignore)
 - View hidden files (ls -a)
@@ -98,7 +96,7 @@ timeline
 ---
 
 #### 05. Searching in Files
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/05-Searching-in-Files/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/`  
 **🎯 Learning Goals**:
 - Use grep for pattern matching
 - Search files with find command basics
@@ -113,7 +111,7 @@ timeline
 ---
 
 #### 06. Paging Files
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/06-Paging-Files/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/06-Paging-Files/`  
 **🎯 Learning Goals**:
 - View large files with less and more
 - Use head and tail for file excerpts
@@ -128,7 +126,7 @@ timeline
 ---
 
 #### 07. Man Pages
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/07-Man-Pages/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/07-Man-Pages/`  
 **🎯 Learning Goals**:
 - Read and navigate manual pages
 - Understand man page sections (1-9)
@@ -143,7 +141,7 @@ timeline
 ---
 
 #### 08. Programs and Commands
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/08-Programs-and-Commands/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/08-Programs-and-Commands/`  
 **🎯 Learning Goals**:
 - Understand command types (built-in, external, alias)
 - Use which, type, whereis commands
@@ -158,11 +156,11 @@ timeline
 ---
 
 #### 09. Basic Variables
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/09-Basic-Variables/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/09-Basic-Variables/`  
 **🎯 Learning Goals**:
 - Declare and use variables
 - Understand variable scope (local vs. global)
-- Use special variables ($?, $@, $#, $$)
+- Use special variables ($?, $@, $#,  )
 - Environment variables (export)
 - Variable naming conventions
 
@@ -171,9 +169,8 @@ timeline
 **✅ Status**: Complete
 
 ---
-
 #### 10. Vim Crash Course
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/10-Vim-Crash-Course/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/10-Vim-Crash-Course/`  
 **🎯 Learning Goals**:
 - Basic vim modes (normal, insert, visual)
 - Essential navigation (h,j,k,l)
@@ -188,7 +185,7 @@ timeline
 ---
 
 #### 11. File Permissions
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/11-File-Permissions/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/11-File-Permissions/`  
 **🎯 Learning Goals**:
 - Understand rwxrwxrwx permission structure
 - Use chmod (symbolic and octal notation)
@@ -201,9 +198,8 @@ timeline
 **✅ Status**: Complete
 
 ---
-
 #### 12. Finally Scripting
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/12-Finally-Scripting/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/12-Finally-Scripting/`  
 **🎯 Learning Goals**:
 - Write your first real automation script
 - Implement error handling basics
@@ -218,7 +214,7 @@ timeline
 ---
 
 #### 13. User Input
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/13-User-Input/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/13-User-Input/`  
 **🎯 Learning Goals**:
 - Read user input with read command
 - Handle interactive prompts
@@ -233,7 +229,7 @@ timeline
 ---
 
 #### 14. Functions
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/14-Functions/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/14-Functions/`  
 **🎯 Learning Goals**:
 - Define and call functions
 - Pass parameters to functions
@@ -248,7 +244,7 @@ timeline
 ---
 
 #### 15. Conditionals
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/15-Conditionals/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/15-Conditionals/`  
 **🎯 Learning Goals**:
 - Master if/elif/else statements
 - Use test conditions ([ ], [[ ]])
@@ -263,7 +259,7 @@ timeline
 ---
 
 #### 16. For Loops
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/16-For-Loops/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/16-For-Loops/`  
 **🎯 Learning Goals**:
 - Iterate over lists with for loops
 - Loop through files and directories
@@ -278,7 +274,7 @@ timeline
 ---
 
 #### 17. Input/Output
-**📂 Path**: `1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/17-Input-Output/`  
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/`  
 **🎯 Learning Goals**:
 - Understand standard streams (stdin, stdout, stderr)
 - Redirect output (>, >>)
@@ -292,516 +288,131 @@ timeline
 
 ---
 
-## 🟡 LEVEL 2: INTERMEDIATE (18 Topics)
-**Target Audience**: Comfortable with basic scripting  
-**Duration**: 3-4 weeks  
+## 🟡 LEVEL 2 & 3: INTERMEDIATE & ADVANCED (7 Core Modules)
+**Target Audience**: DevOps Engineers, SREs  
+**Duration**: 8-10 weeks  
 **Prerequisites**: Completed Beginner level
 
 ### Module Structure
 
 ```mermaid
 timeline
-    title Intermediate Learning Path
-    section Data Structures
-        Week 1 : Case Statements
-               : Indexed Arrays
-               : Associative Arrays
-               : IFS Variable
-    section Advanced Commands
-        Week 2 : Command Substitution
-               : Arithmetic
-               : Process Substitution
-               : Text Tools (cut, tr)
-    section Power Tools
-        Week 3 : sed, awk, grep
-               : Find Advanced
-               : Bash Arguments
-               : Pipe Status
-    section Optimization
-        Week 4 : Timing
-               : Sourcing
-               : Curlies vs Parens
-               : Parameter Expansion
+    title Advanced Automation Path
+    section Scripting Mastery
+        Week 1 : Intermediate Shell (Functions, Arrays)
+        Week 2 : Advanced Bash (jq, sed, awk, xargs)
+    section Languages & Tools
+        Week 3 : Python for DevOps (APIs, Boto3)
+        Week 4 : Ansible (Playbooks, Roles)
+    section Professional Standards
+        Week 5 : Best Practices (Idempotency, Security)
+        Week 6 : Cost & Scenarios (Infracost, Real-World)
 ```
 
 ### Topics Overview
 
-#### 01. Case Statements
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/01-Case-Statements/`  
+#### 01. Intermediate Shell Scripting
+**📂 Path**: `2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/`  
 **🎯 Learning Goals**:
-- Master case/esac pattern matching
-- Create menu-driven interfaces
-- Use glob patterns in case
-- Handle multiple conditions elegantly
-- Build interactive CLI tools
+- Implement Bash Strict Mode (`set -euo pipefail`)
+- Master functions and local variable scope
+- Use advanced loops and array iterations
+- Handle input/output robustly
 
-**🔑 Key Concepts**: case/esac, pattern matching, menu systems  
-**⏱️ Time**: 3-4 hours  
-**📝 Status**: Planned
-
----
-
-#### 02. Indexed Arrays
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/02-Indexed-Arrays/`  
-**🎯 Learning Goals**:
-- Declare and initialize arrays
-- Access array elements by index
-- Iterate through arrays
-- Modify array contents
-- Use array operations
-
-**🔑 Key Concepts**: Array syntax, indexing, iteration, array operations  
-**⏱️ Time**: 4-5 hours  
-**📝 Status**: Planned
-
----
-
-#### 03. Associative Arrays
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/03-Associative-Arrays/`  
-**🎯 Learning Goals**:
-- Create key-value pair arrays
-- Access elements by key
-- Iterate through keys and values
-- Use associative arrays for configuration
-- Implement hash map patterns
-
-**🔑 Key Concepts**: Key-value pairs, hash maps, declare -A  
-**⏱️ Time**: 4-5 hours  
-**📝 Status**: Planned
-
----
-
-#### 04. IFS Variable
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/04-IFS-Variable/`  
-**🎯 Learning Goals**:
-- Understand Internal Field Separator
-- Parse CSV and delimited data
-- Control word splitting
-- Save and restore IFS
-- Use IFS for data processing
-
-**🔑 Key Concepts**: IFS, field separation, data parsing, word splitting  
-**⏱️ Time**: 3-4 hours  
-**📝 Status**: Planned
-
----
-
-#### 05. Command Substitution
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/05-Command-Substitution/`  
-**🎯 Learning Goals**:
-- Use $() for command substitution
-- Understand backticks (legacy method)
-- Nest command substitutions
-- Capture command output
-- Use in variable assignments
-
-**🔑 Key Concepts**: $(), backticks, output capture, nesting  
-**⏱️ Time**: 3-4 hours  
-**📝 Status**: Planned
-
----
-
-#### 06. Arithmetic Expression
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/06-Arithmetic-Expression/`  
-**🎯 Learning Goals**:
-- Perform arithmetic with $(( ))
-- Use let and expr commands
-- Understand operator precedence
-- Handle decimal arithmetic (bc, awk)
-- Implement calculations in scripts
-
-**🔑 Key Concepts**: $(( )), let, expr, bc, arithmetic operators  
-**⏱️ Time**: 4 hours  
-**📝 Status**: Planned
-
----
-
-#### 07. Process Substitution
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/07-Process-Substitution/`  
-**🎯 Learning Goals**:
-- Use <() for process substitution
-- Compare files with diff <()
-- Create temporary FIFOs
-- Feed process output as files
-- Advanced piping techniques
-
-**🔑 Key Concepts**: <(), >(), process substitution, FIFOs  
-**⏱️ Time**: 4-5 hours  
-**📝 Status**: Planned
-
----
-
-#### 08. Cut and Tr
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/08-Cut-and-Tr/`  
-**🎯 Learning Goals**:
-- Extract columns with cut
-- Transform characters with tr
-- Parse structured data
-- Delete and squeeze characters
-- Process log files
-
-**🔑 Key Concepts**: cut, tr, column extraction, character transformation  
-**⏱️ Time**: 3-4 hours  
-**📝 Status**: Planned
-
----
-
-#### 09. Sed, Awk, Grep
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/09-Sed-Awk-Grep/`  
-**🎯 Learning Goals**:
-- Master grep patterns
-- Edit streams with sed
-- Process data with awk
-- Combine all three tools
-- Advanced regex patterns
-
-**🔑 Key Concepts**: grep, sed, awk, stream editing, text processing  
+**🔑 Key Concepts**: Strict Mode, Functions, Arrays, Loops, logic tables  
 **⏱️ Time**: 6-8 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
-#### 10. Find Command
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/10-Find-Command/`  
+#### 02. Advanced Bash Automation
+**📂 Path**: `2-Intermediate/02-Phase-2/01-Automation/02-Advanced-Bash-Automation/`  
 **🎯 Learning Goals**:
-- Advanced find operations
-- Use -exec and -execdir
-- Combine multiple conditions
-- Find by time, size, permissions
-- Optimize find performance
+- Parse JSON with `jq`
+- Wrangle data with `sed` and `awk`
+- Scale scripts with `xargs` and parallelism
+- Handle signals and traps for robust execution
+- Parse complex arguments with `getopts`
 
-**🔑 Key Concepts**: find, -exec, predicates, optimization  
+**🔑 Key Concepts**: jq, sed, awk, xargs, traps, getopts  
+**⏱️ Time**: 10-12 hours  
+**✅ Status**: Complete
+
+---
+
+#### 03. Python for DevOps
+**📂 Path**: `2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/`  
+**🎯 Learning Goals**:
+- Set up isolated Virtual Environments
+- Interact with the OS (`os`, `sys`, `subprocess`)
+- Manipulate Files and Paths (`pathlib`)
+- Interact with Web APIs (`requests`)
+- Automate Cloud Resources (AWS `boto3`)
+
+**🔑 Key Concepts**: venv, pip, requests, boto3, pathlib, json/yaml  
+**⏱️ Time**: 15-20 hours  
+**✅ Status**: Complete
+
+---
+
+#### 04. Automation Best Practices
+**📂 Path**: `2-Intermediate/02-Phase-2/01-Automation/04-Automation-Best-Practices/`  
+**🎯 Learning Goals**:
+- Design Idempotent scripts
+- Manage Secrets securely
+- Implement proper Logging and Observability
+- Handle failures gracefully (Atomicity)
+- Structure projects for maintainability
+
+**🔑 Key Concepts**: Idempotency, Secrets Management, Logging, Atomicity  
 **⏱️ Time**: 5-6 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
 
-#### 11. Bash Arguments
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/11-Bash-Arguments/`  
+#### 05. Ansible Automation
+**📂 Path**: `2-Intermediate/02-Phase-2/01-Automation/05-Ansible/`  
 **🎯 Learning Goals**:
-- Handle positional parameters
-- Use $@, $*, $#, $0
-- Implement shift for argument processing
-- Parse options with getopts
-- Create professional CLI interfaces
+- Write modular Playbooks
+- Organize code with Roles
+- Manage Inventory (Static & Dynamic)
+- Use Templates (Jinja2)
+- Handle Variables and Facts
 
-**🔑 Key Concepts**: Positional parameters, $@, $*, getopts, shift  
-**⏱️ Time**: 5-6 hours  
-**📝 Status**: Planned
+**🔑 Key Concepts**: Playbooks, Roles, Inventory, Jinja2, Ansible Galaxy  
+**⏱️ Time**: 10-15 hours  
+**✅ Status**: In Progress
 
 ---
 
-#### 12. Pipe Status
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/12-Pipe-Status/`  
+#### 06. Real Life Scenarios
+**📂 Path**: `2-Intermediate/02-Phase-2/01-Automation/07-Real-Life-Scenarios/`  
 **🎯 Learning Goals**:
-- Understand PIPESTATUS array
-- Use set -o pipefail
-- Check exit status of piped commands
-- Debug pipeline failures
-- Implement robust error handling
+- Solve "War Room" scenarios
+- Debug production outages
+- Optimize legacy scripts
+- Learn from "The Unset Variable Disaster"
+- Implement "The Recursive Delete Guard"
 
-**🔑 Key Concepts**: PIPESTATUS, set -o pipefail, pipeline debugging  
+**🔑 Key Concepts**: Troubleshooting, debugging, post-mortems  
+**⏱️ Time**: 4-5 hours  
+**✅ Status**: Complete
+
+---
+
+#### 07. Infracost Automation
+**📂 Path**: `2-Intermediate/02-Phase-2/01-Automation/08-Infracost-Automation/`  
+**🎯 Learning Goals**:
+- Estimate Cloud Costs in Pull Requests
+- Integrate Infracost with Terraform
+- Automate budget checks
+- Optimize cloud spend via CI/CD
+
+**🔑 Key Concepts**: FinOps, Infracost, CI/CD integration, cost estimation  
 **⏱️ Time**: 3-4 hours  
-**📝 Status**: Planned
+**✅ Status**: Complete
 
 ---
-
-#### 13. Timing Commands
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/13-Timing-Commands/`  
-**🎯 Learning Goals**:
-- Measure execution time with time
-- Use date for timestamps
-- Calculate time differences
-- Benchmark scripts
-- Implement timeouts
-
-**🔑 Key Concepts**: time command, date, benchmarking, timeouts  
-**⏱️ Time**: 3 hours  
-**📝 Status**: Planned
-
----
-
-####  14. Sourcing Code
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/14-Sourcing-Code/`  
-**🎯 Learning Goals**:
-- Understand source vs. execution
-- Create reusable libraries
-- Use . and source commands
-- Manage environment configuration
-- Build modular scripts
-
-**🔑 Key Concepts**: source, ., library creation, modular design  
-**⏱️ Time**: 4 hours  
-**📝 Status**: Planned
-
----
-
-#### 15. Curlies vs. Parens
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/15-Curlies-vs-Parens/`  
-**🎯 Learning Goals**:
-- Understand { } vs. ( ) grouping
-- Master subshell concepts
-- Use command grouping
-- Understand variable scope in subshells
-- Choose appropriate grouping method
-
-**🔑 Key Concepts**: { }, ( ), subshells, command grouping, scope  
-**⏱️ Time**: 4-5 hours  
-**📝 Status**: Planned
-
----
-
-#### 16. Return vs. Output
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/16-Return-vs-Output/`  
-**🎯 Learning Goals**:
-- Understand return vs. echo
-- Use exit codes effectively
-- Capture function output
-- Implement proper function design
-- Handle function results
-
-**🔑 Key Concepts**: return, echo, exit codes, function output  
-**⏱️ Time**: 3-4 hours  
-**📝 Status**: Planned
-
----
-
-#### 17. Parameter Expansion
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/17-Parameter-Expansion/`  
-**🎯 Learning Goals**:
-- Master ${var} expansions
-- Use default values (:-, :=, :?, :+)
-- Perform string manipulation
-- Extract substrings
-- Implement pattern matching
-
-**🔑 Key Concepts**: ${var}, default values, string manipulation, pattern matching  
-**⏱️ Time**: 5-6 hours  
-**📝 Status**: Planned
-
----
-
-#### 18. Array Expansion
-**📂 Path**: `2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/18-Array-Expansion/`  
-**🎯 Learning Goals**:
-- Use ${arr[@]} vs. ${arr[*]}
-- Array slicing and extraction
-- Manipulate array elements
-- Implement array operations
-- Advanced array techniques
-
-**🔑 Key Concepts**: ${arr[@]}, array slicing, expansion, operations  
-**⏱️ Time**: 4-5 hours  
-**📝 Status**: Planned
-
----
-
-## 🔴 LEVEL 3: ADVANCED (25 Topics)
-**Target Audience**: Experienced scripters seeking mastery  
-**Duration**: 5-6 weeks  
-**Prerequisites**: Completed Intermediate level
-
-### Module Structure
-
-```mermaid
-timeline
-    title Advanced Learning Path
-    section Pattern Mastery
-        Week 1-2 : Globbing (Basic, Extended)
-                 : Glob Options
-                 : Brace Expansion
-                 : Numeric Expansions
-    section Advanced I/O
-        Week 3 : Printf
-               : Date Formatting
-               : Regex
-               : Mapfile
-    section Expert Techniques
-        Week 4 : Test Operators
-               : Special Strings
-               : Signals & Traps
-               : Named Pipes
-    section Customization
-        Week 5 : Colors & Cursor
-               : TTY Detection
-               : PS1 & Customization
-               : Readline
-    section Pitfalls & Debugging
-        Week 6 : Common Pitfalls
-               : Forkbomb
-               : Debugging Session
-```
-
-### Topics Overview
-
-#### 01. Basic Globbing
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/01-Basic-Globbing/`  
-**🎯 Learning Goals**:
-- Master *, ?, [ ] patterns
-- Understand glob expansion
-- Use character classes
-- Match file patterns
-- Avoid glob pitfalls
-
-**🔑 Key Concepts**: *, ?, [ ], glob expansion, pattern matching  
-**⏱️ Time**: 4 hours  
-**📝 Status**: Planned
-
----
-
-#### 02. Extended Globbing
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/02-Extended-Globbing/`  
-**🎯 Learning Goals**:
-- Enable extglob option
-- Use @(), +(), *(), !(), ?()
-- Implement complex patterns
-- Combine extended patterns
-- Advanced file matching
-
-**🔑 Key Concepts**: extglob, @(), +(), *(), !(), ?()  
-**⏱️ Time**: 5-6 hours  
-**📝 Status**: Planned
-
----
-
-#### 03. Glob Shell Options
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/03-Glob-Shell-Options/`  
-**🎯 Learning Goals**:
-- Master shopt globbing options
-- Use nullglob, failglob, dotglob
-- Implement globstar for recursive matching
-- Control glob behavior
-- Optimize pattern matching
-
-**🔑 Key Concepts**: shopt, nullglob, failglob, dotglob, globstar  
-**⏱️ Time**: 4-5 hours  
-**📝 Status**: Planned
-
----
-
-#### 04. Brace Expansion
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/04-Brace-Expansion/`  
-**🎯 Learning Goals**:
-- Generate sequences with { }
-- Create file/directory combinations
-- Use nested brace expansions
-- Combine with other expansions
-- Optimize bulk operations
-
-**🔑 Key Concepts**: {a,b,c}, brace expansion, sequences  
-**⏱️ Time**: 3-4 hours  
-**📝 Status**: Planned
-
----
-
-#### 05. Braces and Globbing
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/05-Braces-and-Globbing/`  
-**🎯 Learning Goals**:
-- Combine braces with globs
-- Create complex file patterns
-- Understand expansion order
-- Optimize pattern combinations
-- Advanced file selection
-
-**🔑 Key Concepts**: Combined expansions, pattern optimization  
-**⏱️ Time**: 4 hours  
-**📝 Status**: Planned
-
----
-
-#### 06. Numeric Brace Expansion
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/06-Numeric-Brace-Expansion/`  
-**🎯 Learning Goals**:
-- Generate number sequences {1..100}
-- Use step increments {0..100..5}
-- Create zero-padded numbers {01..99}
-- Implement reverse sequences
-- Automate numbered tasks
-
-**🔑 Key Concepts**: {1..n}, step increments, zero-padding  
-**⏱️ Time**: 3 hours  
-**📝 Status**: Planned
-
----
-
-#### 07. Understanding Printf
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/07-Understanding-Printf/`  
-**🎯 Learning Goals**:
-- Master printf formatting
-- Use format specifiers (%s, %d, %f, %x)
-- Control width and precision
-- Align output
-- Create formatted reports
-
-**🔑 Key Concepts**: printf, format specifiers, width, precision  
-**⏱️ Time**: 5 hours  
-**📝 Status**: Planned
-
----
-
-#### 08. Date Formatting
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/08-Date-Formatting/`  
-**🎯 Learning Goals**:
-- Use date command with formats
-- Parse and manipulate dates
-- Calculate date differences
-- Work with timestamps
-- Implement date-based logic
-
-**🔑 Key Concepts**: date, strftime, timestamps, date arithmetic  
-**⏱️ Time**: 4-5 hours  
-**📝 Status**: Planned
-
----
-
-#### 09. Regular Expressions
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/09-Regular-Expressions/`  
-**🎯 Learning Goals**:
-- Master POSIX regex
-- Use =~ operator in [[ ]]
-- Capture groups with BASH_REMATCH
-- Implement validation patterns
-- Advanced text matching
-
-**🔑 Key Concepts**: Regex, =~, BASH_REMATCH, pattern validation  
-**⏱️ Time**: 6-8 hours  
-**📝 Status**: Planned
-
----
-
-#### 10. Using Mapfile
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/10-Using-Mapfile/`  
-**🎯 Learning Goals**:
-- Read files into arrays with mapfile
-- Use readarray (alias for mapfile)
-- Process files line by line efficiently
-- Handle large files
-- Implement safe file reading
-
-**🔑 Key Concepts**: mapfile, readarray, efficient file processing  
-**⏱️ Time**: 4 hours  
-**📝 Status**: Planned
-
----
-
-#### 11. Brackets vs. Test
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/11-Brackets-vs-Test/`  
-**🎯 Learning Goals**:
-- Understand test vs. [ ] vs. [[ ]]
-- Use (( )) for arithmetic tests
-- Choose appropriate test syntax
-- Avoid common pitfalls
-- Implement portable tests
-
-**🔑 Key Concepts**: test, [ ], [[ ]], (( )), portability  
-**⏱️ Time**: 5 hours  
-**📝 Status**: Planned
-
----
-
-#### 12. Special Strings
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/12-Special-Strings/`  
-**🎯 Learning Goals**:
 - Use $'...' ANSI-C quoting
 - Implement escape sequences
 - Handle special characters
@@ -966,75 +577,31 @@ timeline
 
 #### 23. Pitfall: String Length
 **📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/23-Pitfall-String-Length/`  
-**🎯 Learning Goals**:
-- Use ${#var} correctly
-- Handle Unicode and multibyte characters
-- Understand byte vs. character count
-- Avoid length calculation errors
-- Implement proper string handling
-
-**🔑 Key Concepts**: ${#var}, string length, Unicode, multibyte  
-**⏱️ Time**: 3 hours  
-**📝 Status**: Planned
-
----
-
-#### 24. Forkbomb
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/24-Forkbomb/`  
-**🎯 Learning Goals**:
-- Understand :(){ :|:& };:
-- Learn how forkbombs work
-- Implement ulimit protection
-- Recover from forkbombs
-- Prevent resource exhaustion
-
-**🔑 Key Concepts**: Forkbomb, resource limits, ulimit, protection  
-**⏱️ Time**: 2-3 hours  
-**📝 Status**: Planned
-
----
-
-#### 25. Bonus Debugging Session
-**📂 Path**: `3-Advanced/02-Phase-2/02-Automation/01-Shell-Scripting/25-Bonus-Debugging-Session/`  
-**🎯 Learning Goals**:
-- Debug real-world scripts
-- Use set -x, set -e, set -u
-- Implement comprehensive error handling
-- Create debugging strategies
-- Master troubleshooting techniques
-
-**🔑 Key Concepts**: Debugging, set options, troubleshooting, error handling  
-**⏱️ Time**: 6-8 hours  
-**📝 Status**: Planned
-
----
-
-## 📊 Progress Dashboard
+## 🎓 Complete Learning Statistics
 
 ### Overall Statistics
 
 ```mermaid
 pie title Completion Status
-    "Completed" : 3
-    "In Progress" : 0
-    "Planned" : 57
+    "Completed (Beginner)" : 3
+    "Completed (Int/Adv)" : 6
+    "In Progress" : 1
+    "Planned" : 14
 ```
 
 ### Level Breakdown
 
-| Level | Total Topics | Completed | In Progress | Planned | Progress % |
-|-------|--------------|-----------|-------------|---------|------------|
-| 🟢 Beginner | 17 | 3 | 0 | 14 | 17.6% |
-| 🟡 Intermediate | 18 | 0 | 0 | 18 | 0% |
-| 🔴 Advanced | 25 | 0 | 0 | 25 | 0% |
-| **TOTAL** | **60** | **3** | **0** | **57** | **5%** |
+| Level | Topics/Modules | Completed | In Progress | Planned |
+|-------|----------------|-----------|-------------|---------|
+| 🟢 Beginner | 17 | 3 | 0 | 14 |
+| 🟡 Intermediate/Adv | 7 | 6 | 1 | 0 |
+| **TOTAL** | **24** | **9** | **1** | **14** |
 
 ### Estimated Time to Completion
 
 - **Beginner**: 55-70 hours
-- **Intermediate**: 75-90 hours
-- **Advanced**: 105-130 hours
-- **Total**: **235-290 hours** (approx. 6-7 weeks full-time)
+- **Intermediate/Adv**: 50-70 hours
+- **Total**: **105-140 hours** (approx. 3-4 weeks full-time)
 
 ## 🎯 Learning Paths
 
@@ -1043,47 +610,44 @@ pie title Completion Status
 
 **Recommended Sequence**:
 1. Complete all Beginner topics
-2. Intermediate: Focus on sed/awk/grep, find, bash arguments, parameter expansion
-3. Advanced: Signals/traps, regex, printf, date formatting, debugging
+2. Master **Intermediate Shell Scripting** & **Advanced Bash Automation**
+3. Learn **Python for DevOps** (Critical skill)
+4. Implement **Automation Best Practices**
 
 ### Path 2: System Administrator Track
 **Focus**: Server management, maintenance, monitoring
 
 **Recommended Sequence**:
 1. Complete all Beginner topics
-2. Intermediate: Arrays, IFS, text processing tools
-3. Advanced: Named pipes, trap signals, customization
+2. Focus on **Real Life Scenarios** for troubleshooting
+3. Master **Intermediate Shell Scripting** for tasks
+4. Learn **Ansible Automation** for config management
 
-### Path 3: Security Specialist Track
-**Focus**: Security scripting, auditing, hardening
+### Path 3: FinOps/Cloud Engineer
+**Focus**: Cost optimization, Cloud management
 
 **Recommended Sequence**:
-1. Complete all Beginner topics (focus on permissions)
-2. Intermediate: grep/sed/awk for log analysis, find command
-3. Advanced: Regex, special strings, debugging, pitfalls
+1. Complete Beginner topics
+2. **Python for DevOps** (Boto3/API)
+3. **Infracost Automation**
+4. **Automation Best Practices** (Secrets/Idempotency)
 
 ## 📚 Additional Resources
 
 ### Books
 - "Learning the bash Shell" - O'Reilly
 - "Bash Cookbook" - O'Reilly
-- "Linux Command Line and Shell Scripting Bible" - Wiley
+- "Python for DevOps" - O'Reilly
 
 ### Online Resources
 - [GNU Bash Manual](https://www.gnu.org/software/bash/manual/)
-- [ShellCheck - Linting Tool](https://www.shellcheck.net/)
-- [Bash Hackers Wiki](https://wiki.bash-hackers.org/)
-- [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/)
-
-### Tools
-- **ShellCheck**: Static analysis for shell scripts
-- **explainshell.com**: Explain shell commands
-- **bashdb**: Bash debugger
-- **tldr**: Simplified man pages
+- [ShellCheck](https://www.shellcheck.net/)
+- [Python 3 Documentation](https://docs.python.org/3/)
+- [Ansible Documentation](https://docs.ansible.com/)
 
 ## 🎓 Certification Path
 
-After completing all 60 topics, you'll be prepared for:
+After completing this curriculum, you'll be prepared for:
 - Linux Foundation Certified System Administrator (LFCS)
 - Red Hat Certified System Administrator (RHCSA)
 - AWS DevOps Engineer Professional (scripting portion)
@@ -1094,9 +658,9 @@ Found an error or want to improve content? Contributions welcome!
 
 ---
 
-**Last Updated**: 2026-01-10  
-**Version**: 1.0.0  
+**Last Updated**: 2026-01-13  
+**Version**: 2.0.0  
 **Maintained by**: DevOps Learning Team  
-**Status**: 5% Complete (3/60 topics) 🚧
+**Status**: 37% Complete (9/24 modules) 🚧
 
-**📌 Remember**: Shell scripting mastery is a journey, not a destination. Practice daily, automate everything, and never stop learning! 🚀
+**📌 Remember**: Automation is a journey. Start simple, scale fast! 🚀

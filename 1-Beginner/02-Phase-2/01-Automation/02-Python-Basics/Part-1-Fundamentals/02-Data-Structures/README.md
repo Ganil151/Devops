@@ -4,16 +4,35 @@
 Choosing the right data structure is critical for automation scripts. The difference between a `list` and a `dict` can mean the difference between O(n) and O(1) lookups—crucial when processing thousands of log entries.
 
 ---
+## 🧠 Visual Guide
 
+```mermaid
+graph TD
+    Root((Data Structures)) --> Seq["Sequences / Ordered"]
+    Root --> Map["Mappings / Key-Value"]
+    Root --> SetGroup["Sets / Unordered"]
+
+    Seq --> L["List<br/>['web-01']<br/>Mutable"]
+    Seq --> T["Tuple<br/>('db', 5432)<br/>Immutable"]
+
+    Map --> D["Dict<br/>{'ip': '1.2.3.4'}<br/>Mutable"]
+
+    SetGroup --> S["Set<br/>{'user1'}<br/>Unique"]
+
+    style Root fill:#f9f,stroke:#333,stroke-width:2px
+    style L fill:#306998,stroke:#ffe873,color:#fff
+    style T fill:#306998,stroke:#ffe873,color:#fff
+    style D fill:#306998,stroke:#ffe873,color:#fff
+    style S fill:#306998,stroke:#ffe873,color:#fff
+```
+
+---
 ## 🎯 Learning Objectives
-
 - Master Python's built-in data structures
 - Choose the optimal structure for each use case
 - Perform common operations efficiently
 - Apply data structures to DevOps scenarios
-
 ---
-
 ## 📊 Data Structure Decision Tree
 
 ```mermaid
@@ -35,13 +54,10 @@ flowchart TD
 ```
 
 ---
-
 ## 📚 Core Data Structures
 
 ### 1. Lists - Ordered, Mutable Collections
-
 **Use Case**: Server inventories, log entries, task queues
-
 ```python
 # Creating lists
 servers = ["web-01", "web-02", "api-01"]
@@ -64,11 +80,8 @@ reversed_list = servers[::-1]    # Reverse
 healthy_servers = [s for s in servers if "web" in s]
 uppercase_names = [s.upper() for s in servers]
 ```
-
 ### 2. Dictionaries - Key-Value Mappings
-
 **Use Case**: Configuration, API responses, server metadata
-
 ```python
 # Creating dictionaries
 server_config = {
@@ -95,11 +108,8 @@ for key, value in server_config.items():
 env_vars = {"DB_HOST": "localhost", "DB_PORT": "5432"}
 uppercase_keys = {k.lower(): v for k, v in env_vars.items()}
 ```
-
 ### 3. Sets - Unique, Unordered Collections
-
 **Use Case**: Deduplication, membership testing, finding differences
-
 ```python
 # Creating sets
 active_servers = {"web-01", "web-02", "api-01"}
@@ -118,11 +128,8 @@ if "web-01" in active_servers:
 log_ips = ["10.0.0.1", "10.0.0.2", "10.0.0.1", "10.0.0.3"]
 unique_ips = set(log_ips)  # {'10.0.0.1', '10.0.0.2', '10.0.0.3'}
 ```
-
 ### 4. Tuples - Ordered, Immutable Collections
-
 **Use Case**: Fixed configurations, function returns, dictionary keys
-
 ```python
 # Creating tuples
 server_coords = (40.7128, -74.0060)  # Lat, Long
@@ -146,7 +153,6 @@ print(web_server.name)  # "web-01"
 ```
 
 ---
-
 ## 📈 Performance Comparison
 
 ```mermaid
@@ -174,9 +180,7 @@ graph LR
 | Memory | Low | High | Medium |
 
 ---
-
 ## 🛠️ Hands-On Exercises
-
 ### Exercise 1: Server Inventory Management
 ```python
 # Create a server inventory system
@@ -231,7 +235,6 @@ print(find_by_role("web"))
 #  {'name': 'web-02', 'ip': '10.0.1.52', 'role': 'web'}]
 ```
 </details>
-
 ### Exercise 2: Log Deduplication
 ```python
 # Deduplicate and analyze these log entries
@@ -274,7 +277,6 @@ post_ips = {entry["ip"] for entry in log_entries if entry["method"] == "POST"}
 print(f"IPs making POST: {post_ips}")
 ```
 </details>
-
 ### Exercise 3: Configuration Merger
 ```python
 # Merge these configuration dictionaries
@@ -330,9 +332,7 @@ print(f"Final config: {final_config}")
 </details>
 
 ---
-
 ## 📖 Real-World Story: The 10x Speedup
-
 **Scenario**: A log analysis script took 45 minutes to find duplicate error patterns across 10GB of logs.
 
 **Problem**: The script used a `list` to store seen patterns and checked membership with `if pattern in seen_list`.
@@ -342,7 +342,6 @@ print(f"Final config: {final_config}")
 **Outcome**: Runtime dropped from 45 minutes to 4 minutes—a 10x improvement from understanding data structures.
 
 ---
-
 ## ❓ Interview Questions
 
 1. **When would you use a tuple instead of a list?**
@@ -361,7 +360,6 @@ print(f"Final config: {final_config}")
    > List comprehension `[x for x in range(1000)]` creates list in memory. Generator `(x for x in range(1000))` yields items lazily.
 
 ---
-
 ## 🧠 Quiz
 
 1. Which data structure allows duplicate values?

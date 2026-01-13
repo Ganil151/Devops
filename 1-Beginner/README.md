@@ -37,7 +37,7 @@ Instead of jumping into complex tools, we follow a tiered journey that mimics re
 By the end of this level, you will be able to:
 1.  **Navigate**: Confidently manage Linux/Unix servers via CLI and SSH.
 2.  **Understand**: Explain how a React frontend talks to a Python/Java backend via REST APIs.
-3.  **Collaborate**: Use version control systems (see [Repository Management](../2-Intermediate/01-Phase-1/07-Repository-Management/README.md)).
+3.  **Collaborate**: Use version control systems (see [Repository Management](../2-Intermediate/01-Phase-1/04-Repository-Management/README.md)).
 4.  **Containerize**: Build, ship, and run any application using Docker.
 5.  **Scale**: Deploy a load-balanced web service using Nginx and Cloud basics.
 6.  **Acknowledge Costs**: Explain why a cloud bill looks the way it does.

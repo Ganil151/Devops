@@ -11,6 +11,9 @@ When shell scripts become too complex or require heavy API interaction, Python i
 | **03** | [**Data Manipulation**](./03-Working-with-Data-JSON-YAML/README.md) | Config Processing | json, yaml, Dicts/Sets |
 | **04** | [**API Mastery**](./04-API-Mastery-with-Requests/README.md) | Service Integration | requests, HTTP, Webhooks |
 | **05** | [**Cloud Automation**](./05-Cloud-Automation-Boto3-Deep-Dive/README.md) | AWS Programming | Boto3, Sessions, Clients/Resources |
+| **06** | [**Serverless Boto3**](./06-Serverless-Boto3-Lambda/README.md) | Lambda Automation | Handlers, Events, Warm Starts |
+| **07** | [**Testing & Mocking**](./07-Testing-Automation-with-Pytest/README.md) | Quality Assurance | Pytest, Fixtures, Repo/Moto |
+| **08** | [**Capstone: S3 Guardian**](./08-Capstone-Project-S3-Auditor/README.md) | **Build a CLI Tool** | **Synthesizing all skills** |
 
 ---
 

@@ -73,6 +73,36 @@ Result1 & Result2 & Result3 & ResultN --> Aggregator[Consolidated Report]
 
 ---
 
+## 🛠️ Hands-On Exercise: Parallel Ping Sweeper
+
+**Objective**: Use `xargs` to speed up a network scan by 5x.
+
+**Step 1: Create a Dummy Hosts File**
+```bash
+# Generate 20 fake IPs (192.168.1.1 to 192.168.1.20)
+for i in {1..20}; do echo "192.168.1.$i" >> hosts.txt; done
+```
+
+**Step 2: Sequential Scan (The Slow Way)**
+Time how long it takes to check them one by one.
+```bash
+time for ip in $(cat hosts.txt); do
+    # Simulate work with sleep
+    sleep 1
+    echo "Checked $ip"
+done
+```
+*Expected Result*: Takes ~20 seconds.
+
+**Step 3: Parallel Scan (The Fast Way)**
+Use `xargs` to run 5 checks at a time.
+```bash
+time cat hosts.txt | xargs -P 5 -I {} bash -c 'sleep 1; echo "Checked {}"'
+```
+*Expected Result*: Takes ~4 seconds (20 tasks / 5 parallel threads = 4 rounds).
+
+---
+
 ## ❓ Interview Questions
 
 1. **What is the difference between `xargs -P` and GNU Parallel?**
@@ -95,3 +125,7 @@ Result1 & Result2 & Result3 & ResultN --> Aggregator[Consolidated Report]
 3. **Where is the SSH Multiplexing configuration usually stored?** `(~/.ssh/config)`
 4. **What does `wait -n` do?** `(Waits for ANY single background job to finish, then continues)`
 5. **Which tool is more advanced than `xargs` for complex parallel logic?** `(GNU Parallel)`
+
+---
+
+[⬅️ Previous: Sed and Awk](../04-Data-Wrangling-with-Sed-and-Awk/README.md) | [Return to Index](../README.md)
