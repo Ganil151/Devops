@@ -208,7 +208,6 @@ touch script.sh config.conf README.md
 **Question**: What's the difference between `*`, `?`, and `[...]`?
 
 ---
-
 ## Exercise 9: The Disaster Recovery Drill (Critical Thinking)
 **Objective**: Recover from common mistakes safely.
 

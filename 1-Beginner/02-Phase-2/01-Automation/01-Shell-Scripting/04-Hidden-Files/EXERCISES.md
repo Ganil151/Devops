@@ -31,7 +31,6 @@
 **Challenge**: Document the order in which these files are loaded.
 
 ---
-
 ## Exercise 3: Custom Alias Creation (Practical)
 **Objective**: Enhance productivity with custom aliases.
 
@@ -113,7 +112,6 @@ What should the permissions be?
 5. Verify: `cat ~/.gitconfig`
 
 ---
-
 ## Exercise 6: Environment Variable Export (Advanced)
 **Objective**: Manage environment variables via dotfiles.
 
@@ -140,7 +138,6 @@ function awsprofile() {
 ```
 
 ---
-
 ## Exercise 7: Dotfile Version Control (Professional)
 **Objective**: Manage dotfiles with Git for portability.
 
@@ -169,7 +166,6 @@ function awsprofile() {
 5. Commit: `git add . && git commit -m "Initial dotfiles"`
 
 ---
-
 ## Exercise 8: Security Audit (Critical)
 **Objective**: Find and secure sensitive hidden files.
 

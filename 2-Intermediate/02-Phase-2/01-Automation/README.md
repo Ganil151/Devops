@@ -6,7 +6,7 @@ Automation is the multiplier that allows one DevOps engineer to manage thousands
 
 | # | Topic | Description | Key Tools |
 | :--- | :--- | :--- | :--- |
-| **01** | [**Shell Scripting**](Shell%20Scripting%20Basics.md) | Foundation | Bash, POSIX shell, Pipes |
+| **01** | [**Intermediate Shell Scripting**](./01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md) | Foundation | Bash, Functions, Loops |
 | **02** | [**Advanced Bash**](./02-Advanced-Bash-Automation/README.md) | Scaling Logic | jq, sed, awk, xargs |
 | **03** | [**Python for DevOps**](./03-Python-for-DevOps/README.md) | API & SDKs | Boto3, Requests, venv |
 | **04** | [**Best Practices**](./04-Automation-Best-Practices/README.md) | Standards | Idempotency, Secrets |

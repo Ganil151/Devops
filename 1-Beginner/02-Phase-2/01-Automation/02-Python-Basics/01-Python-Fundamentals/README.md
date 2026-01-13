@@ -1,18 +1,13 @@
 # Python Fundamentals
 *The Foundation of DevOps Automation*
-
 Python's clean syntax and readability make it the #1 language for automation. This module covers the essential building blocks every DevOps engineer needs.
 
 ---
-
 ## 🐍 Python at a Glance
-
 ![Python DevOps Hub](../assets/python_devops_hub.png)
 
 ---
-
 ## 🎯 Learning Objectives
-
 After completing this module, you will be able to:
 - Write syntactically correct Python code
 - Work with variables and data types
@@ -21,7 +16,6 @@ After completing this module, you will be able to:
 - Execute Python scripts from the command line
 
 ---
-
 ## 📊 Python Execution Flow
 
 ```mermaid
@@ -42,11 +36,8 @@ flowchart TD
 ---
 
 ## 📚 Core Concepts
-
 ### 1. Variables and Data Types
-
 Python is dynamically typed - you don't declare types explicitly.
-
 ```python
 # Numeric Types
 instance_count = 5          # int
@@ -62,9 +53,7 @@ is_healthy = True            # bool
 # None Type
 connection = None            # NoneType
 ```
-
 ### 2. String Operations for DevOps
-
 ```python
 # String formatting (f-strings - Python 3.6+)
 hostname = "web-server"
@@ -85,9 +74,7 @@ server {
 }
 """
 ```
-
 ### 3. Control Flow
-
 ```python
 # Conditional statements
 status_code = 503
@@ -145,9 +132,7 @@ mindmap
       Standard library first
       Third party second
 ```
-
 ### Quick PEP 8 Reference
-
 ```python
 # ✅ Good
 def calculate_cpu_usage(process_id):
@@ -159,9 +144,7 @@ def CalculateCPUUsage( processId ):
     maxCpuPercent=100
     return getUsage(processId)/maxCpuPercent
 ```
-
 ---
-
 ## 🛠️ Hands-On Exercises
 
 ### Exercise 1: Variable Basics

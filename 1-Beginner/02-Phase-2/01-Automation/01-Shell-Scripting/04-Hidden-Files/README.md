@@ -13,11 +13,11 @@ By the end of this module, you will:
 ---
 ## 🏗️ The Dotfile Hierarchy
 ### 1. The Big Three
-| File | Role | DevOps Purpose |
-|------|------|----------------|
-| **`.bashrc`** | Shell Config | Aliases, custom prompts, and PATH exports. |
-| **`.ssh/`** | Security Identity | Storing keys for remote server access. |
-| **`.gitconfig`**| VCS Identity | Global Git user name and email settings. |
+| File         | Role              | DevOps Purpose                             |
+| ------------ | ----------------- | ------------------------------------------ |
+| `.bashrc`    | Shell Config      | Aliases, custom prompts, and PATH exports. |
+| `.ssh/`      | Security Identity | Storing keys for remote server access.     |
+| `.gitconfig` | VCS Identity      | Global Git user name and email settings.   |
 ### 2. Detection Logic
 Hidden files are just a convention. The shell and `ls` simply ignore them by default unless the `-a` (all) flag is passed.
 ```bash
@@ -57,6 +57,7 @@ find ~ -maxdepth 1 -name ".*" -ls
 | `~/.bash_history` | Record of every command you typed. |
 | `~/.gitconfig` | Global Git configuration. |
 | `~/.vimrc` | Custom Vim settings. |
+
 ---
 ## 🏆 Real-World DevOps Story
 ### 💡 **The Ghost In The Shell**
@@ -65,6 +66,7 @@ find ~ -maxdepth 1 -name ".*" -ls
 They looked at their `~/.bashrc` and found a line added by a "helpful" script that was trying to update 100 different packages *every time* a new terminal was opened.
 **The Fix**:
 By cleaning the `~/.bashrc` and moving that logic to a weekly cron job, the engineer restored their terminal performance instantly.
+
 ---
 ## 📝 Knowledge Check
 1. **Which flag allows `ls` to show hidden files?**
