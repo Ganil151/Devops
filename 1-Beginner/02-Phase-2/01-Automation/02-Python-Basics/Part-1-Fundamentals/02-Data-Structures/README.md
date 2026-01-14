@@ -55,100 +55,191 @@ flowchart TD
 ---
 ## 📚 Core Data Structures
 
-### 1. Lists - Ordered, Mutable Collections
-**Use Case**: Server inventories, log entries, task queues
+Data structures are the specialized formats for organizing, processing, and retrieving data. In Python, mastering Lists, Sets, Dictionaries, and Tuples is non-negotiable for writing efficient automation scripts.
+
+### Visual Comparison
+
+![List vs Tuple](./assets/list_vs_tuple.png)
+*Fig 1: Lists are mutable dynamic arrays, while Tuples are immutable fixed sequences.*
+
+![Dict vs Set](./assets/dict_vs_set.png)
+*Fig 2: Dictionaries map keys to values; Sets are unordered collections of unique elements.*
+
+---
+
+### 1. Lists (`list`)
+**Definition & Syntax**:
+Lists are ordered sequences that can hold a variety of object types. They are mutable, meaning you can modify them after creation.
 ```python
-# Creating lists
-servers = ["web-01", "web-02", "api-01"]
-ports = [80, 443, 8080]
-mixed = ["server", 8080, True, {"env": "prod"}]
-
-# Common operations
-servers.append("db-01")          # Add to end
-servers.insert(0, "lb-01")       # Insert at position
-servers.remove("web-02")         # Remove by value
-last = servers.pop()             # Remove and return last
-servers.extend(["cache-01"])     # Add multiple items
-
-# Slicing
-first_two = servers[:2]          # First two items
-last_two = servers[-2:]          # Last two items
-reversed_list = servers[::-1]    # Reverse
-
-# List comprehensions (DevOps favorite!)
-healthy_servers = [s for s in servers if "web" in s]
-uppercase_names = [s.upper() for s in servers]
+# Syntax: Square brackets []
+inventory = ["web-01", "db-01", "cache-01"]
+mixed_types = [1, "two", 3.0, [4, 5]]
 ```
-### 2. Dictionaries - Key-Value Mappings
-**Use Case**: Configuration, API responses, server metadata
+
+**Key Characteristics**:
+- **Mutability**: ✅ Mutable (Add, remove, change items)
+- **Ordering**: ✅ Ordered (Insertion order is preserved)
+- **Indexing**: ✅ Indexable (Access via `[0]`, `[-1]`)
+- **Duplicates**: ✅ Allowed
+
+**Common Methods**:
+| Method | Description | Example |
+| :--- | :--- | :--- |
+| `.append(x)` | Adds an item to the end | `servers.append('web-02')` |
+| `.extend(iter)` | Appends all items from iterable | `servers.extend(['db-02', 'db-03'])` |
+| `.pop(i)` | Removes and returns item at index | `last = servers.pop()` |
+| `.remove(x)` | Removes first occurrence of x | `servers.remove('web-01')` |
+| `.sort()` | Sorts list in place | `servers.sort()` |
+
+**Performance (Big O)**:
+| Operation | Complexity | Note |
+| :--- | :--- | :--- |
+| Access `[i]` | O(1) | Instant access |
+| Append | O(1) | Amortized constant time |
+| Insert/Delete | O(n) | Requires shifting elements |
+| Search `x in list` | O(n) | Linear scan |
+
+**DevOps Use Case**:
+*Storing ordered steps in a deployment pipeline or a list of servers to patch sequentially.*
 ```python
-# Creating dictionaries
+# DevOps Example: Rolling Restart
+servers = ["app-01", "app-02", "app-03"]
+for server in servers:
+    print(f"Stopping {server}...")
+    print(f"Patching {server}...")
+    print(f"Starting {server}...")
+```
+
+---
+### 2. Dictionaries (`dict`)
+**Definition & Syntax**:
+Dictionaries are key-value mappings that allow fast data retrieval based on keys. Keys must be immutable (str, int, tuple), while values can be anything.
+```python
+# Syntax: Curly braces {} with key:value pairs
 server_config = {
-    "hostname": "web-prod-01",
-    "ip": "10.0.1.50",
-    "port": 443,
-    "ssl": True,
-    "tags": ["production", "web"]
+    "hostname": "nginx-01",
+    "ip": "192.168.1.10",
+    "role": "load_balancer"
 }
-
-# Accessing values
-hostname = server_config["hostname"]
-port = server_config.get("port", 80)  # With default
-
-# Modifying
-server_config["region"] = "us-east-1"  # Add new key
-server_config.update({"cpu": 4, "memory": 16})  # Merge
-
-# Iteration
-for key, value in server_config.items():
-    print(f"{key}: {value}")
-
-# Dictionary comprehensions
-env_vars = {"DB_HOST": "localhost", "DB_PORT": "5432"}
-uppercase_keys = {k.lower(): v for k, v in env_vars.items()}
 ```
-### 3. Sets - Unique, Unordered Collections
-**Use Case**: Deduplication, membership testing, finding differences
+
+**Key Characteristics**:
+- **Mutability**: ✅ Mutable
+- **Ordering**: ✅ Ordered (Since Python 3.7+)
+- **Indexing**: ❌ Not indexable by integer (Access via Key)
+- **Duplicates**: ❌ Keys must be unique
+
+**Common Methods**:
+| Method | Description | Example |
+| :--- | :--- | :--- |
+| `.get(k, d)` | Returns value for key, or default | `cfg.get('port', 80)` |
+| `.keys()` | Returns a view of keys | `list(cfg.keys())` |
+| `.values()` | Returns a view of values | `list(cfg.values())` |
+| `.items()` | Returns (key, value) pairs | `for k,v in cfg.items():` |
+| `.update(other)` | Merges another dict | `cfg.update({'env': 'prod'})` |
+
+**Performance (Big O)**:
+| Operation | Complexity | Note |
+| :--- | :--- | :--- |
+| Access `d[k]` | O(1) | Average case (hashing) |
+| Insert `d[k]=v` | O(1) | Average case |
+| Delete `del d[k]` | O(1) | Average case |
+| Search `k in d` | O(1) | Very fast lookup |
+
+**DevOps Use Case**:
+*Storing configuration maps, environment variables, or parsing JSON responses from APIs.*
 ```python
-# Creating sets
-active_servers = {"web-01", "web-02", "api-01"}
-monitored_servers = {"web-01", "db-01", "api-01"}
-
-# Set operations
-common = active_servers & monitored_servers      # Intersection
-all_servers = active_servers | monitored_servers # Union
-unmonitored = active_servers - monitored_servers # Difference
-
-# Membership testing (O(1) - very fast!)
-if "web-01" in active_servers:
-    print("Server is active")
-
-# Deduplication
-log_ips = ["10.0.0.1", "10.0.0.2", "10.0.0.1", "10.0.0.3"]
-unique_ips = set(log_ips)  # {'10.0.0.1', '10.0.0.2', '10.0.0.3'}
-```
-### 4. Tuples - Ordered, Immutable Collections
-**Use Case**: Fixed configurations, function returns, dictionary keys
-```python
-# Creating tuples
-server_coords = (40.7128, -74.0060)  # Lat, Long
-connection_info = ("db.example.com", 5432, "mydb")
-
-# Unpacking
-host, port, database = connection_info
-
-# As dictionary keys (lists can't do this!)
-server_versions = {
-    ("web-01", "nginx"): "1.19.0",
-    ("web-01", "python"): "3.9.0",
-    ("api-01", "python"): "3.10.0"
+# DevOps Example: Environment Lookup
+envs = {
+    "dev": "10.0.0.5",
+    "stage": "10.0.0.6",
+    "prod": "10.0.0.7"
 }
+target_ip = envs.get("prod") # Instant O(1) lookup
+```
 
-# Named tuples for clarity
-from collections import namedtuple
-Server = namedtuple("Server", ["name", "ip", "port"])
-web_server = Server("web-01", "10.0.1.50", 443)
-print(web_server.name)  # "web-01"
+---
+
+### 3. Sets (`set`)
+**Definition & Syntax**:
+Sets are unordered collections of unique keys. They are essentially dictionaries with only keys and no values.
+```python
+# Syntax: Curly braces {} or set() constructor
+active_users = {"root", "ubuntu", "ec2-user"}
+# Note: {} creates a dict, set() creates an empty set
+empty_set = set() 
+```
+
+**Key Characteristics**:
+- **Mutability**: ✅ Mutable
+- **Ordering**: ❌ Unordered (No guaranteed order)
+- **Indexing**: ❌ Not indexable
+- **Duplicates**: ❌ Not allowed (Automatically removed)
+
+**Common Methods**:
+| Method | Description | Example |
+| :--- | :--- | :--- |
+| `.add(element)` | Adds an element | `ips.add('1.2.3.4')` |
+| `.remove(element)` | Removes element (Error if missing) | `ips.remove('1.2.3.4')` |
+| `.discard(element)` | Removes element (No error if missing) | `ips.discard('1.2.3.4')` |
+| `.union(other)` | Returns combined set | `s1 | s2` |
+| `.intersection(other)` | Returns common elements | `s1 & s2` |
+
+**Performance (Big O)**:
+| Operation | Complexity | Note |
+| :--- | :--- | :--- |
+| Add | O(1) | Average case |
+| Remove | O(1) | Average case |
+| Search `x in s` | O(1) | massive speed advantage over lists |
+
+**DevOps Use Case**:
+*Filtering duplicate log entries or finding commonalities between two lists of resources (e.g., security group rules).*
+```python
+# DevOps Example: Security Group Audit
+allowed_ips = {"10.0.0.1", "10.0.0.2"}
+incoming_request = "10.0.0.3"
+
+if incoming_request not in allowed_ips:
+    print(f"BLOCK: {incoming_request}") # O(1) check
+```
+
+---
+### 4. Tuples (`tuple`)
+**Definition & Syntax**:
+Tuples are ordered, **immutable** sequences. Once created, they cannot be changed. They are often used for fixed data that shouldn't be tampered with.
+```python
+# Syntax: Parentheses ()
+db_connection = ("127.0.0.1", 5432)
+single_item = ("value",) # Note the comma
+```
+
+**Key Characteristics**:
+- **Mutability**: ❌ Immutable (Cannot change)
+- **Ordering**: ✅ Ordered
+- **Indexing**: ✅ Indexable
+- **Duplicates**: ✅ Allowed
+
+**Common Methods**:
+| Method | Description | Example |
+| :--- | :--- | :--- |
+| `.count(x)` | Returns number of occurrences | `coords.count(0)` |
+| `.index(x)` | Returns index of first occurrence | `coords.index(5432)` |
+| *Unpacking* | Assigning to variables | `ip, port = db_connection` |
+
+**Performance (Big O)**:
+| Operation | Complexity | Note |
+| :--- | :--- | :--- |
+| Access `[i]` | O(1) | Same as lists |
+| Iteration | O(n) | Slightly faster than lists due to optimizations |
+
+**DevOps Use Case**:
+*Returning multiple values from a function or creating dictionary keys that consist of multiple parts (e.g., (region, instance_id)).*
+```python
+# DevOps Example: Function Return
+def get_status():
+    return (200, "OK") # Returns a tuple
+
+code, msg = get_status() # Unpacking
 ```
 
 ---
@@ -170,24 +261,23 @@ graph LR
     style C fill:#306998,stroke:#ffe873,color:#fff
 ```
 
-| Operation | List | Dict | Set |
-|-----------|------|------|-----|
-| Lookup | O(n) | O(1) ✅ | O(1) ✅ |
-| Insert at end | O(1) ✅ | O(1) ✅ | O(1) ✅ |
-| Insert at start | O(n) | N/A | N/A |
-| Delete by value | O(n) | O(1) ✅ | O(1) ✅ |
-| Memory | Low | High | Medium |
+| Operation       | List   | Dict   | Set    |
+| --------------- | ------ | ------ | ------ |
+| Lookup          | O(n)   | O(1) ✅ | O(1) ✅ |
+| Insert at end   | O(1) ✅ | O(1) ✅ | O(1) ✅ |
+| Insert at start | O(n)   | N/A    | N/A    |
+| Delete by value | O(n)   | O(1) ✅ | O(1) ✅ |
+| Memory          | Low    | High   | Medium |
 
 ---
 ## 🛠️ Hands-On Challenges
-
 Master Python data structures by solving these DevOps-centric challenges.
 
-| Challenge | Description | Starter Code | Solution |
-| :--- | :--- | :--- | :--- |
-| **01. Inventory Management** | Build a server inventory system using lists and dicts. | [Link](./challenges/challenge_01_inventory_mgmt.py) | [Link](./challenges/solutions/solution_01_inventory_mgmt.py) |
-| **02. Log Deduplication** | Deduplicate and analyze server logs using sets. | [Link](./challenges/challenge_02_log_dedup.py) | [Link](./challenges/solutions/solution_02_log_dedup.py) |
-| **03. Config Merger** | Merge configuration dictionaries for different environments. | [Link](./challenges/challenge_03_config_merger.py) | [Link](./challenges/solutions/solution_03_config_merger.py) |
+| Challenge                    | Description                                                  | Starter Code                                        | Solution                                                     |
+| :--------------------------- | :----------------------------------------------------------- | :-------------------------------------------------- | :----------------------------------------------------------- |
+| **01. Inventory Management** | Build a server inventory system using lists and dicts.       | [Link](./challenges/challenge_01_inventory_mgmt.py) | [Link](./challenges/solutions/solution_01_inventory_mgmt.py) |
+| **02. Log Deduplication**    | Deduplicate and analyze server logs using sets.              | [Link](./challenges/challenge_02_log_dedup.py)      | [Link](./challenges/solutions/solution_02_log_dedup.py)      |
+| **03. Config Merger**        | Merge configuration dictionaries for different environments. | [Link](./challenges/challenge_03_config_merger.py)  | [Link](./challenges/solutions/solution_03_config_merger.py)  |
 
 > **Pro Tip**: Efficiently choosing between a list, set, or dictionary can significantly optimize your DevOps automation scripts.
 
@@ -205,19 +295,34 @@ Master Python data structures by solving these DevOps-centric challenges.
 ## ❓ Interview Questions
 
 1. **When would you use a tuple instead of a list?**
-   > When data shouldn't change (immutability) or when using as dictionary keys.
+   <details>
+   <summary>Show Answer</summary>
+   When data shouldn't change (immutability) or when using as dictionary keys.
+   </details>
 
 2. **How do you efficiently check if an element exists in a collection?**
-   > Use sets or dictionary keys for O(1) lookups instead of lists.
+   <details>
+   <summary>Show Answer</summary>
+   Use sets or dictionary keys for O(1) lookups instead of lists.
+   </details>
 
 3. **What's the difference between `dict.get(key)` and `dict[key]`?**
-   > `.get()` returns None (or default) if key missing; `[]` raises KeyError.
+   <details>
+   <summary>Show Answer</summary>
+   `.get()` returns None (or default) if key missing; `[]` raises KeyError.
+   </details>
 
 4. **How do you merge two dictionaries?**
-   > Python 3.9+: `d1 | d2`. Earlier: `{**d1, **d2}` or `d1.update(d2)`.
+   <details>
+   <summary>Show Answer</summary>
+   Python 3.9+: `d1 | d2`. Earlier: `{**d1, **d2}` or `d1.update(d2)`.
+   </details>
 
 5. **Explain list comprehension vs generator expression.**
-   > List comprehension `[x for x in range(1000)]` creates list in memory. Generator `(x for x in range(1000))` yields items lazily.
+   <details>
+   <summary>Show Answer</summary>
+   List comprehension `[x for x in range(1000)]` creates list in memory. Generator `(x for x in range(1000))` yields items lazily.
+   </details>
 
 ---
 ## 🧠 Quiz
@@ -225,27 +330,51 @@ Master Python data structures by solving these DevOps-centric challenges.
 1. Which data structure allows duplicate values?
    - a) Set
    - b) Dictionary keys
-   - c) List ✅
+   - c) List 
+   - d) Tuple
+   <details>
+   <summary>Show Answer</summary>
+   List ✅
+   </details>
 
 2. How do you create an empty dictionary?
    - a) `dict[]`
-   - b) `{}` ✅
+   - b) `{}` 
    - c) `dict()`  (also correct)
+   <details>
+   <summary>Show Answer</summary>
+   `{}` ✅
+   </details>
 
 3. What is the time complexity of `in` operator for a set?
    - a) O(n)
    - b) O(log n)
-   - c) O(1) ✅
+   - c) O(1) 
+   - d) O(n log n)
+   <details>
+   <summary>Show Answer</summary>
+   O(1) ✅
+   </details>
 
 4. Which can be a dictionary key?
    - a) List
-   - b) Tuple ✅
+   - b) Tuple 
    - c) Set
+   - d) Dictionary
+   <details>
+   <summary>Show Answer</summary>
+   Tuple ✅
+   </details>
 
 5. What does `servers[-1]` return?
    - a) First element
-   - b) Last element ✅
+   - b) Last element
    - c) Error
+   - d) None
+   <details>
+   <summary>Show Answer</summary>
+   Last element ✅
+   </details>
 
 ---
 

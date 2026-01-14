@@ -74,15 +74,34 @@ with open("k8s-deploy.yaml", "w") as f:
 ## ❓ Interview Questions
 
 1. **What is the difference between `json.load()` and `json.loads()`?**
-   * *Answer*: `load()` reads from a file-like object (a file on disk), while `loads()` (Load String) parses a JSON string directly from memory.
+   <details>
+   <summary>Show Answer</summary>
+   `load()` reads from a file-like object (a file on disk), while `loads()` (Load String) parses a JSON string directly from memory.
+   </details>
+
 2. **Why should you use `yaml.safe_load()`?**
-   * *Answer*: `yaml.load()` can instantiate any Python object from a YAML file, which is a massive security risk if the YAML source is untrusted. `safe_load()` restricts parsing to simple, safe data types.
+   <details>
+   <summary>Show Answer</summary>
+   `yaml.load()` can instantiate any Python object from a YAML file, which is a massive security risk if the YAML source is untrusted. `safe_load()` restricts parsing to simple, safe data types.
+   </details>
+
 3. **How do you handle a JSON file that has keys that are not valid Python variable names?**
-   * *Answer*: Python dictionaries use strings as keys, so any valid JSON key (including those with spaces or dashes) works perfectly: `data["key-with-dashes"]`.
+   <details>
+   <summary>Show Answer</summary>
+   Python dictionaries use strings as keys, so any valid JSON key (including those with spaces or dashes) works perfectly: `data["key-with-dashes"]`.
+   </details>
+
 4. **How do you find the difference between two lists of IP addresses?**
-   * *Answer*: Use Python Sets. `set(list_a) - set(list_b)` will give you all IPs in list A that are not in list B.
+   <details>
+   <summary>Show Answer</summary>
+   Use Python Sets. `set(list_a) - set(list_b)` will give you all IPs in list A that are not in list B.
+   </details>
+
 5. **What happens if you try to parse a YAML file that contains multiple documents (separated by `---`)?**
-   * *Answer*: You must use `yaml.safe_load_all()`, which returns a generator for each document in the file.
+   <details>
+   <summary>Show Answer</summary>
+   You must use `yaml.safe_load_all()`, which returns a generator for each document in the file.
+   </details>
 
 ---
 

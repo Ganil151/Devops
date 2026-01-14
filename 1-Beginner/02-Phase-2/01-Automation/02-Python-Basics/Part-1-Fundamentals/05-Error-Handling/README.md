@@ -64,6 +64,25 @@ except Exception as e:
 
 ### 2. Try/Except/Finally/Else
 
+The full error handling structure allows for distinct execution paths based on success or failure.
+
+```mermaid
+stateDiagram-v2
+    state "Try Block" as Try
+    state "Except Block" as Except
+    state "Else Block" as Else
+    state "Finally Block" as Finally
+
+    [*] --> Try
+    Try --> Except : "Exception Raised 💥"
+    Try --> Else : "Success ✅"
+    Except --> Finally
+    Else --> Finally
+    Finally --> [*]
+    
+    note right of Finally : Always runs (Cleanup)
+```
+
 ```python
 def process_file(filepath):
     file_handle = None
@@ -160,6 +179,36 @@ def deploy(version):
 
 ### Exponential Backoff
 
+Visualizing the timeline of a retry operation makes the "backoff" strategy clear:
+
+```mermaid
+sequenceDiagram
+    participant Script
+    participant API
+    
+    rect rgb(35, 30, 30)
+        Note right of Script: Attempt 1
+        Script->>API: GET /data
+        API-->>Script: 500 Error ❌
+    end
+    
+    Script->>Script: Wait 1s (Backoff)
+    
+    rect rgb(35, 30, 30)
+        Note right of Script: Attempt 2
+        Script->>API: GET /data
+        API-->>Script: 500 Error ❌
+    end
+    
+    Script->>Script: Wait 2s (Backoff)
+    
+    rect rgb(30, 40, 30)
+        Note right of Script: Attempt 3
+        Script->>API: GET /data
+        API-->>Script: 200 OK ✅
+    end
+```
+
 ```python
 import time
 import random
@@ -202,6 +251,27 @@ data = exponential_backoff_retry(
 ```
 
 ### Retry Decorator
+
+Decorators wrap your functions, creating a "safety layer" that handles errors transparently.
+
+```mermaid
+graph LR
+    Input --> Wrapper(Decorator Wrapper)
+    Wrapper -->|Calls| Func[Target Function]
+    Func -->|Returns/Raises| Wrapper
+    
+    subgraph "Error Handling Logic"
+    Wrapper -- "Exception?" --> RetryLoop{Retry?}
+    RetryLoop -- Yes --> Sleeper[Sleep & Backoff]
+    Sleeper --> Wrapper
+    RetryLoop -- No --> Output[Raise Error]
+    end
+    
+    Wrapper -- "Success" --> Output2[Return Result]
+    
+    style Wrapper fill:#306998,stroke:#ffe873,color:#fff
+    style Func fill:#4b8bbe,stroke:#306998,color:#fff
+```
 
 ```python
 import functools

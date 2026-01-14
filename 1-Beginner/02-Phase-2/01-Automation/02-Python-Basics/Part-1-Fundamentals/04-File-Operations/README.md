@@ -35,159 +35,147 @@ flowchart LR
 
 ## 📚 Core Concepts
 
-### 1. Basic File Operations
+File operations are the bridge between your code and the permanent storage of your system. In DevOps, robust file handling prevents data corruption during deployments and ensures efficient log processing.
 
+### Visual Guide
+
+![Context Manager Flow](./assets/context_manager.png)
+*Fig 1: The Context Manager acts as a shield, ensuring resources are safely closed even if errors occur.*
+
+![File Modes](./assets/file_modes.png)
+*Fig 2: Understanding access modes—Read, Write (Truncate), Append, and Update—is critical for safety.*
+
+---
+
+### 1. Robust File Handling (Context Managers)
+**Definition**:
+The `with` statement is a **Context Manager**. It handles the setup (opening) and teardown (closing) phases automatically.
+
+**The "Old" Way (Risky)**:
+If an error occurs before `.close()`, the file handle hangs open, leaking resources.
 ```python
-# Reading a file (bad - doesn't auto-close!)
-f = open("config.txt", "r")
-content = f.read()
+f = open("/tmp/data.txt", "w")
+f.write("data")
+# if error here -> file stays open!
 f.close()
-
-# Reading a file (good - context manager)
-with open("config.txt", "r") as f:
-    content = f.read()
-# File automatically closed here
-
-# Reading lines
-with open("/var/log/app.log", "r") as f:
-    lines = f.readlines()  # List of all lines
-    
-# Reading line by line (memory efficient)
-with open("/var/log/app.log", "r") as f:
-    for line in f:
-        process(line.strip())
 ```
 
-### 2. File Modes
-
-| Mode | Description | Creates File? |
-|------|-------------|---------------|
-| `r` | Read (default) | No |
-| `w` | Write (truncates) | Yes |
-| `a` | Append | Yes |
-| `r+` | Read and write | No |
-| `w+` | Write and read | Yes |
-| `rb` | Read binary | No |
-| `wb` | Write binary | Yes |
-
-### 3. Writing Files
-
+**The "DevOps" Way (Safe)**:
+Even if the code crashes inside the block, Python guarantees the file is closed.
 ```python
-# Write entire content
-with open("output.txt", "w") as f:
-    f.write("Server Status Report\n")
-    f.write("=" * 20 + "\n")
-
-# Write multiple lines
-lines = ["web-01: healthy", "web-02: healthy", "db-01: warning"]
-with open("status.txt", "w") as f:
-    f.writelines(line + "\n" for line in lines)
-
-# Append to existing file
-with open("audit.log", "a") as f:
-    f.write(f"[{timestamp}] User logged in\n")
-
-# Write with print (useful for formatted output)
-with open("report.txt", "w") as f:
-    print("Section 1", file=f)
-    print("=" * 40, file=f)
+with open("/tmp/data.txt", "w") as f:
+    f.write("Important Config")
+    # if error here -> file still auto-closes safely
 ```
 
-### 4. Working with Binary Files
+**Under the Hood**:
+The context manager calls `__enter__()` when starting and `__exit__()` (which closes the file) when leaving the block, catching exceptions if needed.
 
+---
+
+### 2. File Modes & Permissions
+Choosing the wrong mode can wipe out critical data.
+
+| Mode | Name | Description | Pointer Position | Truncates? | Create? |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `r` | **Read** | Default. Read-only. Error if missing. | Start | ❌ No | ❌ No |
+| `w` | **Write** | Writing only. **Wipes file content!** | Start | ✅ **YES** | ✅ Yes |
+| `a` | **Append** | Writing only. Adds to end. | End | ❌ No | ✅ Yes |
+| `r+` | **Read+Write** | Reading & Writing. | Start | ❌ No | ❌ No |
+| `w+` | **Write+Read** | Reading & Writing. **Wipes content!** | Start | ✅ **YES** | ✅ Yes |
+| `a+` | **Append+Read**| Reading & Writing. | End | ❌ No | ✅ Yes |
+
+**Binary Mode (`b`)**:
+Append `b` (e.g., `wb`, `rb`) for non-text files like images, executables, or compressed archives.
 ```python
-# Copy binary file (e.g., images, archives)
-with open("app.tar.gz", "rb") as src:
-    with open("backup.tar.gz", "wb") as dst:
+# Copying a binary executable safely
+with open("/bin/stress", "rb") as src:
+    with open("/tmp/stress_copy", "wb") as dst:
         dst.write(src.read())
+```
 
-# Read chunks for large files
-def copy_large_file(source, destination, chunk_size=8192):
-    with open(source, "rb") as src:
-        with open(destination, "wb") as dst:
-            while chunk := src.read(chunk_size):
-                dst.write(chunk)
+---
+
+### 3. Reading Strategies (Performance)
+**DevOps Scenario**: Analyzing a 50GB HTTP access log.
+
+**❌ Bad: Load everything (RAM Explosion)**
+```python
+# Reads 50GB into RAM -> Crash
+with open("access.log", "r") as f:
+    content = f.read()
+```
+
+**✅ Good: Line-by-Line (Stream Processing)**
+File objects are *iterators*. They yield one line at a time.
+```python
+# Uses negligible RAM
+with open("access.log", "r") as f:
+    for line in f:
+        if "500 Internal Server Error" in line:
+            notify_admin(line)
+```
+
+**✅ Good: Chunked Reading (Binary)**
+For large binary files, read in fixed blocks (e.g., 4KB or 8KB).
+```python
+CHUNK_SIZE = 8192
+with open("large_backup.tar.gz", "rb") as f:
+    while (chunk := f.read(CHUNK_SIZE)):
+        process_chunk(chunk)
 ```
 
 ---
 
 ## 🔧 Advanced Patterns
 
-### Atomic File Writes
+### 1. Atomic Writes (Safety Critical)
+**Problem**: If your script crashes while writing `config.json`, the file might be half-written (corrupt) and invalid.
+**Solution**: Write to a temporary file, then **rename** it. Renaming is an atomic operation on POSIX systems.
 
 ```python
-import tempfile
 import os
-import shutil
+import json
+import tempfile
 
-def atomic_write(filepath, content):
-    """Write file atomically to prevent corruption."""
-    dir_name = os.path.dirname(filepath)
-    
-    # Write to temp file first
-    with tempfile.NamedTemporaryFile(
-        mode='w', 
-        dir=dir_name, 
-        delete=False
-    ) as tmp:
-        tmp.write(content)
-        tmp_path = tmp.name
-    
-    # Atomic rename
-    shutil.move(tmp_path, filepath)
+def save_config_atomically(path, data):
+    dir_name = os.path.dirname(path)
+    # Create temp file in same directory (ensures same filesystem)
+    with tempfile.NamedTemporaryFile("w", dir=dir_name, delete=False) as tmp:
+        json.dump(data, tmp, indent=2)
+        tmp.flush()
+        os.fsync(tmp.fileno()) # Force write to disk
+        tmp_name = tmp.name
+        
+    # Instant swap
+    os.replace(tmp_name, path)
 
-# Usage - config won't be corrupted if write fails
-atomic_write("/etc/myapp/config.json", '{"debug": true}')
+# Usage
+config = {"db_host": "10.0.0.1", "retries": 5}
+save_config_atomically("/etc/monitor/config.json", config)
 ```
 
-### File Locking
+### 2. Efficient Log Parsing Pipeline
+Processing logs often involves multiple steps: filter -> extract -> count. Generators allow this pipeline to run efficiently without intermediate lists.
 
 ```python
-import fcntl
-import time
+def log_pipeline(file_path):
+    with open(file_path) as f:
+        # Step 1: Generator yielding lines
+        lines = (line.strip() for line in f)
+        
+        # Step 2: Filter errors
+        errors = (l for l in lines if "ERROR" in l)
+        
+        # Step 3: Extract timestamp (first 19 chars)
+        timestamps = (e[:19] for e in errors)
+        
+        # Consume the generator
+        for ts in timestamps:
+            print(f"Incident occurred at: {ts}")
 
-def write_with_lock(filepath, content):
-    """Write to file with exclusive lock."""
-    with open(filepath, 'w') as f:
-        try:
-            fcntl.flock(f.fileno(), fcntl.LOCK_EX)
-            f.write(content)
-        finally:
-            fcntl.flock(f.fileno(), fcntl.LOCK_UN)
-```
-
-### Processing Large Log Files
-
-```mermaid
-flowchart TD
-    A[Large Log File] --> B[Open File Handle]
-    B --> C[Read Line by Line]
-    C --> D{Match Pattern?}
-    D -->|Yes| E[Process/Store]
-    D -->|No| C
-    E --> C
-    C --> F[End of File]
-    F --> G[Return Results]
-    
-    style A fill:#306998,stroke:#ffe873,color:#fff
-    style G fill:#306998,stroke:#ffe873,color:#fff
-```
-
-```python
-def find_errors_in_log(log_file, pattern="ERROR"):
-    """Stream through large log file finding errors."""
-    errors = []
-    with open(log_file, "r") as f:
-        for line_num, line in enumerate(f, 1):
-            if pattern in line:
-                errors.append({
-                    "line_num": line_num,
-                    "content": line.strip()
-                })
-    return errors
-
-# Memory efficient for multi-GB log files
-errors = find_errors_in_log("/var/log/large-app.log")
+# This runs with O(1) memory regardless of log size
+log_pipeline("/var/log/syslog")
 ```
 
 ---
