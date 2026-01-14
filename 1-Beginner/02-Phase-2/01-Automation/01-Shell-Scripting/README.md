@@ -4,7 +4,7 @@
 
 ## 📚 Curriculum Overview
 
-This comprehensive Shell Scripting curriculum provides **17 modules** covering everything from basic terminal navigation to advanced automation patterns. Each module includes detailed theory, practical examples, real-world scenarios, and hands-on exercises.
+This comprehensive Shell Scripting curriculum provides **17 modules** covering everything from basic terminal navigation to advanced automation patterns. Each module includes detailed theory, practical examples, real-world scenarios, and hands-on challenges.
 
 ### 🎯 Learning Outcomes
 
@@ -21,24 +21,24 @@ By completing this curriculum, you will:
 ### Overall Progress
 - **Total Modules**: 17
 - **Completed Content**: 17/17 (100%) ✅
-- **Exercise Modules**: 10/17 (58.8%)
-- **Total Exercises**: 100/170 created
+- **Challenge Modules**: 10/17 (58.8%)
+- **Total Challenges**: 100/170 created
 - **Learning Time**: ~60-70 hours of hands-on material
 
 ### Module Completion Breakdown
 
-| # | Module | Content | Exercises | Status |
+| # | Module | Content | Challenges | Status |
 |---|--------|---------|-----------|--------|
-| 01 | [Introduction](./01-Introduction/) | ✅ Complete | ✅ 10 exercises | Ready |
-| 02 | [Terminal Navigation](./02-Terminal-and-Finder/) | ✅ Complete | ✅ 10 exercises | Ready |
-| 03 | [File Manipulation](./03-Basic-File-Manipulation/) | ✅ Complete | ✅ 10 exercises | Ready |
-| 04 | [Hidden Files](./04-Hidden-Files/) | ✅ Complete | ✅ 10 exercises | Ready |
-| 05 | [Searching in Files](./05-Searching-in-Files/) | ✅ Complete | ✅ 10 exercises | Ready |
-| 06 | [Paging Files](./06-Paging-Files/) | ✅ Complete | ✅ 10 exercises | Ready |
-| 07 | [Man Pages](./07-Man-Pages/) | ✅ Complete | ✅ 10 exercises | Ready |
-| 08 | [Programs & Commands](./08-Programs-and-Commands/) | ✅ Complete | ✅ 10 exercises | Ready |
-| 09 | [Basic Variables](./09-Basic-Variables/) | ✅ Complete | ✅ 10 exercises | Ready |
-| 10 | [Vim Crash Course](./10-Vim-Crash-Course/) | ✅ Complete | ✅ 10 exercises | Ready |
+| 01 | [Introduction](./01-Introduction/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 02 | [Terminal Navigation](./02-Terminal-and-Finder/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 03 | [File Manipulation](./03-Basic-File-Manipulation/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 04 | [Hidden Files](./04-Hidden-Files/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 05 | [Searching in Files](./05-Searching-in-Files/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 06 | [Paging Files](./06-Paging-Files/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 07 | [Man Pages](./07-Man-Pages/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 08 | [Programs & Commands](./08-Programs-and-Commands/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 09 | [Basic Variables](./09-Basic-Variables/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 10 | [Vim Crash Course](./10-Vim-Crash-Course/) | ✅ Complete | ✅ 10 challenges | Ready |
 | 11 | [File Permissions](./11-File-Permissions/) | ✅ Complete | 🔄 Pending | In Progress |
 | 12 | [Finally Scripting](./12-Finally-Scripting/) | ✅ Complete | 🔄 Pending | In Progress |
 | 13 | [User Input](./13-User-Input/) | ✅ Complete | 🔄 Pending | In Progress |
@@ -62,7 +62,7 @@ Master the essential Linux command-line skills that form the foundation of all s
 - **Module 04**: Dotfile management, SSH security, configuration
 - **Module 05**: Text searching with grep, regex patterns, log analysis
 
-**Exercises Available**: 50 hands-on exercises (🟢 Beginner → 🟡 Intermediate)
+**Challenges Available**: 50 hands-on challenges (🟢 Beginner → 🟡 Intermediate)
 
 ### Phase 2: Tools & Documentation (Modules 06-09)
 **Time**: 1-2 weeks | **10-15 hours**
@@ -74,7 +74,7 @@ Learn essential DevOps tools and how to find information effectively:
 - **Module 08**: Command resolution, DevOps toolkit (grep, sed, awk, curl, jq)
 - **Module 09**: Variable scope, parameter expansion, configuration management
 
-**Exercises Available**: 40 hands-on exercises (🟡 Intermediate → 🔴 Advanced)
+**Challenges Available**: 40 hands-on challenges (🟡 Intermediate → 🔴 Advanced)
 
 ### Phase 3: Editor Mastery (Module 10)
 **Time**: 1 week | **5-8 hours**
@@ -83,7 +83,7 @@ Essential Vim skills for server-side editing:
 
 - **Module 10**: Modal editing, navigation, macros, production configuration
 
-**Exercises Available**: 10 hands-on exercises (🟢 Beginner → 🏆 Expert)
+**Challenges Available**: 10 hands-on challenges (🟢 Beginner → 🏆 Expert)
 
 ### Phase 4: Scripting Fundamentals (Modules 11-14)
 **Time**: 2-3 weeks | **15-20 hours**
@@ -95,7 +95,7 @@ Build your first professional automation scripts:
 - **Module 13**: User input, interactive scripts, validation
 - **Module 14**: Functions, modular design, code libraries
 
-**Exercises Status**: 🔄 Coming soon (40 exercises)
+**Challenges Status**: 🔄 Coming soon (40 challenges)
 
 ### Phase 5: Control Flow (Modules 15-17)
 **Time**: 1-2 weeks | **10-15 hours**
@@ -106,7 +106,7 @@ Master advanced automation logic:
 - **Module 16**: Loops, iteration patterns, break/continue
 - **Module 17**: Stream redirection, pipes, data processing
 
-**Exercises Status**: 🔄 Coming soon (30 exercises)
+**Challenges Status**: 🔄 Coming soon (30 challenges)
 
 ---
 
@@ -122,9 +122,9 @@ Every module includes:
 - **Knowledge Checks**: Self-assessment questions
 - **Real-World Stories**: Industry case studies
 
-### 🎯 EXERCISES.md (10 modules complete)
-Each exercise file includes:
-- **10 Progressive Exercises**: Beginner → Intermediate → Advanced → Challenge
+### 🎯 CHALLENGES.md (10 modules complete)
+Each challenge file includes:
+- **10 Progressive Challenges**: Beginner → Intermediate → Advanced → Challenge
 - **Step-by-Step Instructions**: Clear, actionable tasks
 - **Complete Solutions**: Working code examples
 - **Expected Outputs**: Validation criteria
@@ -143,8 +143,8 @@ Each exercise file includes:
 - **Visual Learning**: Extensive diagrams and visualizations
 - **Progressive Difficulty**: Structured learning path
 
-### Exercise Quality ⭐⭐⭐⭐⭐
-- **Hands-On Learning**: 100 practical exercises (170 when complete)
+### Challenge Quality ⭐⭐⭐⭐⭐
+- **Hands-On Learning**: 100 practical challenges (170 when complete)
 - **Production Ready**: Industry-relevant scenarios
 - **Self-Paced**: Clear instructions and validation
 - **Career Focused**: Direct job applicability
@@ -162,7 +162,7 @@ cd 1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/
 # Start with Module 01
 cd 01-Introduction/
 cat README.md          # Read theory
-cat EXERCISES.md       # Practice exercises
+cat CHALLENGES.md       # Practice challenges
 
 # Progress through modules sequentially
 cd ../02-Terminal-and-Finder/
@@ -224,12 +224,12 @@ cd ../02-Terminal-and-Finder/
 - **Diagrams**: 12+ Mermaid visualizations
 - **Real-World Scenarios**: 10+ case studies
 
-### Exercise Statistics
-- **Completed Exercises**: 100/170 (58.8%)
-- **Beginner Level**: 30 exercises
-- **Intermediate Level**: 30 exercises
-- **Advanced Level**: 20 exercises
-- **Challenge Level**: 20 exercises
+### Challenge Statistics
+- **Completed Challenges**: 100/170 (58.8%)
+- **Beginner Level**: 30 challenges
+- **Intermediate Level**: 30 challenges
+- **Advanced Level**: 20 challenges
+- **Challenge Level**: 20 challenges
 
 ### Learning Value
 - **Theory Study Time**: ~30-40 hours
@@ -246,7 +246,7 @@ cd ../02-Terminal-and-Finder/
 - ✅ **Interview Questions**: 20+ enterprise-level questions
 - ✅ **Quiz Bank**: 25+ questions with answers
 - ✅ **Real-World Scenarios**: 5 production case studies
-- ✅ **Hands-On Exercises**: 100+ practical challenges
+- ✅ **Hands-On Challenges**: 100+ practical challenges
 
 ### Certification Alignment
 This curriculum prepares you for:
@@ -300,9 +300,9 @@ This curriculum prepares you for:
 4. **Practice Daily**: Even 15 minutes makes a difference
 
 ### Future Enhancements
-- 🔄 **Remaining Exercise Modules**: 7 modules (70 exercises) in progress
+- 🔄 **Remaining Challenge Modules**: 7 modules (70 challenges) in progress
 - 📹 **Video Tutorials**: Planned for complex topics
-- 🧪 **Automated Testing**: Exercise validation scripts
+- 🧪 **Automated Testing**: Challenge validation scripts
 - 🏅 **Completion Certificates**: Self-assessment badges
 
 ---
@@ -328,7 +328,7 @@ This curriculum prepares you for:
 ### What Learners Say
 > "This curriculum took me from zero shell knowledge to writing production deployment scripts in 8 weeks." - Sarah K., DevOps Engineer
 
-> "The hands-on exercises were game-changers. I could immediately apply what I learned at work." - Michael R., SRE
+> "The hands-on challenges were game-changers. I could immediately apply what I learned at work." - Michael R., SRE
 
 > "Passed my LFCS exam thanks to the comprehensive coverage and interview prep materials." - James L., Systems Administrator
 
@@ -341,8 +341,8 @@ This curriculum prepares you for:
 |--------|-------|
 | **Total Modules** | 17 |
 | **Completed Content** | 100% |
-| **Exercise Modules** | 10/17 (58.8%) |
-| **Total Exercises** | 100 (170 planned) |
+| **Challenge Modules** | 10/17 (58.8%) |
+| **Total Challenges** | 100 (170 planned) |
 | **Learning Hours** | 90-110 hours |
 | **Career Value** | $30k-50k salary impact |
 

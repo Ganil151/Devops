@@ -111,9 +111,9 @@ goimports -w .
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: System Info Tool
+### Challenge 1: System Info Tool
 ```go
 // Create a program that prints system info
 package main
@@ -154,7 +154,7 @@ func main() {
 ```
 </details>
 
-### Exercise 2: Multi-file Project
+### Challenge 2: Multi-file Project
 ```bash
 # Create project structure
 mkdir -p greet/utils

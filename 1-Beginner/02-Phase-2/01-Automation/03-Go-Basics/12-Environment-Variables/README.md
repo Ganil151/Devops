@@ -66,7 +66,7 @@ func LoadConfig() Config {
 
 ---
 
-## 🛠️ Hands-On Exercise
+## 🛠️ Hands-On Challenge
 
 ```go
 // Create a required env checker

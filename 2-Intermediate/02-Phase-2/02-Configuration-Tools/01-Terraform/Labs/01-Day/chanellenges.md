@@ -43,7 +43,7 @@ Understanding what happens when reality changes.
 2.  **Manual Intervention**: Manually delete the `hello.txt` file using your file explorer or `rm hello.txt`.
 3.  **Drift Detection**: Run `terraform plan`. 
     - **Question**: Why does Terraform want to create the file again? What did it compare reality against?
-4.  **The "Taint" Exercise**: Run `terraform apply`. Once the file is back, run `terraform taint local_file.welcome`.
+4.  **The "Taint" Challenge**: Run `terraform apply`. Once the file is back, run `terraform taint local_file.welcome`.
 5.  **Observe Taint**: Run `terraform plan`. 
     - Notice that Terraform now wants to destroy and recreate the file even though nothing changed in your code.
 ---

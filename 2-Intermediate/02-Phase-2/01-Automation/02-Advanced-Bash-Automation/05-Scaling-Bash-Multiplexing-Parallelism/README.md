@@ -73,7 +73,7 @@ Result1 & Result2 & Result3 & ResultN --> Aggregator[Consolidated Report]
 
 ---
 
-## 🛠️ Hands-On Exercise: Parallel Ping Sweeper
+## 🛠️ Hands-On Challenge: Parallel Ping Sweeper
 
 **Objective**: Use `xargs` to speed up a network scan by 5x.
 

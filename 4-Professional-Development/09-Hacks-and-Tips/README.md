@@ -971,7 +971,7 @@ Answer: free
 **Morning** (6-9 AM):
 - [ ] Review goals and priorities
 - [ ] Deep work on client deliverables (no meetings)
-- [ ] Exercise (mental clarity)
+- [ ] Challenge (mental clarity)
 
 **Midday** (9 AM-12 PM):
 - [ ] Client calls and meetings

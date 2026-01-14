@@ -266,9 +266,9 @@ log_pattern = re.compile(r"""
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Parse NGINX Access Log
+### Challenge 1: Parse NGINX Access Log
 
 ```python
 import re
@@ -329,7 +329,7 @@ print(result)
 ```
 </details>
 
-### Exercise 2: Validate Input Data
+### Challenge 2: Validate Input Data
 
 ```python
 import re
@@ -392,7 +392,7 @@ print(validate_infrastructure_input("instance_id", "i-0123456789abcdef0")) # Val
 ```
 </details>
 
-### Exercise 3: Log Error Aggregator
+### Challenge 3: Log Error Aggregator
 
 ```python
 import re
@@ -491,7 +491,7 @@ print(f"Errors by source: {dict(result['by_source'])}")
 ```
 </details>
 
-### Exercise 4: Configuration Extractor
+### Challenge 4: Configuration Extractor
 
 ```python
 import re

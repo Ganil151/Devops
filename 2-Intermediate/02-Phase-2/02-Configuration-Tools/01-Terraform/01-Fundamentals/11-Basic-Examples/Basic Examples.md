@@ -38,7 +38,7 @@ style SG fill:#f9f,stroke:#333
 **Solution**: Use **Implicit Dependencies**. By referencing `vpc_security_group_ids = [aws_security_group.web.id]`, Terraform ensures the firewall is created FIRST and attached correctly.
 **Result**: The team learned that "Standalone" resources are rare; infrastructure is a web of dependencies.
 ### Scenario 3: The "Accidental Deletion" Gameday
-**Problem**: During a training exercise, a junior admin ran `terraform destroy` on a "Basic Example" folder.
+**Problem**: During a training challenge, a junior admin ran `terraform destroy` on a "Basic Example" folder.
 **Crisis**: They didn't realize that a critical production database was (improperly) managed in that same folder.
 **Outcome**: High-value data was deleted in seconds.
 **Solution**: Implement the **Lifecycle Prevent Destroy** hook. In every critical resource block, add `lifecycle { prevent_destroy = true }`.

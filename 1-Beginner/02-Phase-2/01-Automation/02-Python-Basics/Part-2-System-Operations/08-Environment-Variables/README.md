@@ -117,9 +117,9 @@ if config.debug:
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Mandatory Variable Validator
+### Challenge 1: Mandatory Variable Validator
 Create a utility that checks for all required variables and raises a clear error list if they are missing.
 
 <details>
@@ -140,7 +140,7 @@ def validate_environment():
 ```
 </details>
 
-### Exercise 2: Secret Masking Logger
+### Challenge 2: Secret Masking Logger
 Implement a function that logs environment variables but masks the values of sensitive keys.
 
 <details>
@@ -161,7 +161,7 @@ def log_env_safely():
 ```
 </details>
 
-### Exercise 3: Type-Safe Parser
+### Challenge 3: Type-Safe Parser
 Create a helper function `get_env_bool(name, default)` that correctly handles various string representations of booleans ("1", "true", "yes").
 
 <details>
@@ -178,7 +178,7 @@ def get_env_bool(name, default=False):
 ```
 </details>
 
-### Exercise 4: Dynamic Environment Loader
+### Challenge 4: Dynamic Environment Loader
 Write a script that loads `.env.prod` if `ENV=production` is set, otherwise loads `.env.dev`.
 
 <details>
@@ -198,7 +198,7 @@ def setup_env():
 ```
 </details>
 
-### Exercise 5: Prefix-Based Config Loader
+### Challenge 5: Prefix-Based Config Loader
 Read all variables starting with `APP_` (e.g., `APP_PORT`, `APP_TIMEOUT`) and return them as a dictionary with the prefix removed.
 
 <details>

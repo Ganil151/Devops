@@ -64,7 +64,7 @@ flag.Usage = func() {
 
 ---
 
-## 🛠️ Hands-On Exercise
+## 🛠️ Hands-On Challenge
 
 ```go
 // Build a deployment CLI

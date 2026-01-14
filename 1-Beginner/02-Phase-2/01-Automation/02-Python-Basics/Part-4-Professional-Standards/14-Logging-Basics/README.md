@@ -278,9 +278,9 @@ logger.error("Health check failed", extra={"server": "web-01", "job_id": "deploy
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Basic Logger Setup
+### Challenge 1: Basic Logger Setup
 
 ```python
 # TODO: Create a logger that:
@@ -339,7 +339,7 @@ logger.error("Failed to connect")          # Both
 ```
 </details>
 
-### Exercise 2: Rotating Log Handler
+### Challenge 2: Rotating Log Handler
 
 ```python
 # TODO: Create a logger with rotating file handler that:
@@ -391,7 +391,7 @@ for i in range(1000):
 ```
 </details>
 
-### Exercise 3: Function Execution Logger (Decorator)
+### Challenge 3: Function Execution Logger (Decorator)
 
 ```python
 # TODO: Create a decorator that logs function entry, exit, and exceptions
@@ -452,7 +452,7 @@ deploy_server("web-02", "prod")     # Exception logged
 ```
 </details>
 
-### Exercise 4: Multi-Server Log Aggregator
+### Challenge 4: Multi-Server Log Aggregator
 
 ```python
 # TODO: Create a logging system that:

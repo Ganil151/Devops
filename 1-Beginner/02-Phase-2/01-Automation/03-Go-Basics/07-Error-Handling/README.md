@@ -115,7 +115,7 @@ if errors.Is(err, ErrNotFound) {
 
 ---
 
-## 🛠️ Hands-On Exercise
+## 🛠️ Hands-On Challenge
 
 ```go
 // Implement retry with error wrapping

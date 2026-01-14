@@ -473,9 +473,9 @@ graph TB
 
 ---
 
-## Hands-On Exercise
+## Hands-On Challenge
 
-### Exercise 1: Policy Design
+### Challenge 1: Policy Design
 
 Create a governance policy for:
 <b>1. Required tags</b>
@@ -488,14 +488,14 @@ Answer: 5 minimum
 3. Approved regions
 4. Budget limits by environment
 
-### Exercise 2: Approval Workflow
+### Challenge 2: Approval Workflow
 
 Design an approval workflow:
 1. Define spending thresholds
 2. Assign approvers per level
 3. Document SLAs
 
-### Exercise 3: Compliance Dashboard
+### Challenge 3: Compliance Dashboard
 
 Build a compliance report showing:
 1. Overall compliance percentage

@@ -287,22 +287,22 @@ graph LR
 
 ---
 
-## Hands-On Exercise
+## Hands-On Challenge
 
-### Exercise 1: Define Your Unit Metrics
+### Challenge 1: Define Your Unit Metrics
 
 1. List your key business transactions
 2. Define 3-5 unit cost metrics
 3. Identify data sources for each
 
-### Exercise 2: Calculate Current Unit Costs
+### Challenge 2: Calculate Current Unit Costs
 
 Using your data:
 1. Pull last month's cloud costs
 2. Pull corresponding business metrics
 3. Calculate unit costs
 
-### Exercise 3: Build a Value Dashboard
+### Challenge 3: Build a Value Dashboard
 
 Design a dashboard showing:
 1. Key unit metrics with trends

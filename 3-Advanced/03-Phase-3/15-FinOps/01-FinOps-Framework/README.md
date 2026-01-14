@@ -319,16 +319,16 @@ gantt
 
 ---
 
-## Hands-On Exercise
+## Hands-On Challenge
 
-### Exercise 1: Maturity Assessment
+### Challenge 1: Maturity Assessment
 
 Complete a maturity assessment for your organization:
 1. Rate each capability 1-5
 2. Calculate average score
 3. Identify top 3 gaps
 
-### Exercise 2: Roadmap Planning
+### Challenge 2: Roadmap Planning
 
 Create a 6-month implementation roadmap:
 <b>1. Define current state</b>
@@ -340,7 +340,7 @@ Answer: Crawl/Walk/Run
 2. Set target state
 3. Identify key initiatives
 
-### Exercise 3: Stakeholder Mapping
+### Challenge 3: Stakeholder Mapping
 
 Map your organization's FinOps stakeholders:
 1. Identify all personas

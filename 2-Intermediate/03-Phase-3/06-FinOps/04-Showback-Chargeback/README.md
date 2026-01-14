@@ -298,23 +298,23 @@ Chargeback Policy:
 
 ---
 
-## Hands-On Exercise
+## Hands-On Challenge
 
-### Exercise 1: Design Your Report
+### Challenge 1: Design Your Report
 
 Create a showback report template for your organization:
 1. Identify key stakeholders
 2. Define report sections
 3. Determine frequency
 
-### Exercise 2: Calculate Shared Cost Allocation
+### Challenge 2: Calculate Shared Cost Allocation
 
 Using your current data:
 1. Identify shared cost categories
 2. Calculate allocation percentages
 3. Apply to sample month
 
-### Exercise 3: Draft Chargeback Policy
+### Challenge 3: Draft Chargeback Policy
 
 Create a policy document covering:
 1. Who is charged

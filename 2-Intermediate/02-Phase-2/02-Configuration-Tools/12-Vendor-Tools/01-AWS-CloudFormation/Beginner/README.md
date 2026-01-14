@@ -508,9 +508,9 @@ stateDiagram-v2
 
 ---
 
-## ✅ Beginner Practice Exercises
+## ✅ Beginner Practice Challenges
 
-### Exercise 1: Create a Versioned S3 Bucket
+### Challenge 1: Create a Versioned S3 Bucket
 **Objective**: Create an S3 bucket with versioning enabled
 
 **Requirements**:
@@ -518,7 +518,7 @@ stateDiagram-v2
 - Add lifecycle policy to transition old versions to Glacier
 - Add tags for Environment and Project
 
-### Exercise 2: Launch a Simple Web Server
+### Challenge 2: Launch a Simple Web Server
 **Objective**: Deploy an EC2 instance running Apache
 
 **Requirements**:
@@ -526,7 +526,7 @@ stateDiagram-v2
 - Install and start Apache using UserData
 - Output the public DNS name
 
-### Exercise 3: Multi-Resource Template
+### Challenge 3: Multi-Resource Template
 **Objective**: Create VPC with public subnet
 
 **Requirements**:

@@ -4,7 +4,7 @@ Python's clean syntax and readability make it the #1 language for automation. Th
 
 ---
 ## 🐍 Python at a Glance
-![Python DevOps Hub](../assets/python_devops_hub.png)
+![Python DevOps Hub](../../assets/python_devops_hub.png)
 
 ---
 ## 🎯 Learning Objectives
@@ -38,7 +38,6 @@ flowchart TD
 ## 📚 Core Concepts
 ### 1. Variables and Data Types
 Python is **dynamically typed**, meaning you don't need to declare types. However, type hints (introduced in Python 3.5) are highly recommended for DevOps scripts to improve maintainability.
-
 #### Basic Types
 ```python
 # Integers & Floats (Scaling, Resources)
@@ -56,7 +55,6 @@ dry_run = False
 # None (Placeholder)
 db_connection = None          # NoneType
 ```
-
 #### Collection Types (Crucial for DevOps)
 ```python
 # Lists (Ordered, Mutable) - Good for server lists, steps
@@ -74,10 +72,8 @@ server_config = {
 db_creds = ("admin", "secure_password_123")
 # db_creds[0] = "root"  # This would raise TypeError
 ```
-
 ### 2. String Operations for DevOps
 String manipulation is 80% of scripting. Mastering these methods will save you hours of parsing logs and configs.
-
 ```python
 # f-strings (The DevOps Gold Standard)
 env = "production"
@@ -101,10 +97,8 @@ key, value = config_line.split("=")   # Splitting config lines
 cmd_parts = ["docker", "run", "-d", "nginx"]
 full_cmd = " ".join(cmd_parts)        # 'docker run -d nginx'
 ```
-
 ### 3. Control Flow
 Control flow dictates the logic of your automation script.
-
 #### Conditionals (`if/elif/else`)
 ```python
 response_time_ms = 450
@@ -116,7 +110,6 @@ elif response_time_ms < 500:
 else:
     status = "CRITICAL"
 ```
-
 #### Loops (`for` & `while`)
 ```python
 # Iterating over lists (Servers, Files)
@@ -142,27 +135,65 @@ while retries < 3:
 *   **`break`**: Exit loop immediately (e.g., found the target file).
 *   **`continue`**: Skip current iteration (e.g., skip offline servers).
 *   **`pass`**: Do nothing (placeholder).
+## Operators 
+Are the decision-making tools in your scripts. Beyond simple math, they determine logic flow, validate configurations, and parse text.
+#### 🧮 Arithmetic Operators
+Used for resource calculations (validating CPU/RAM sizing).
 
-
-### 4. Operators
-From calculating resources to checking permissions, operators are fundamental.
-
-#### Arithmetic & Assignment
-| Symbol | Operation | Use Case |
+| Symbol | Name | DevOps Example |
 |:---:|---|---|
-| `//` | Floor Division | `total_ram // server_size` (Instance count) |
-| `%` | Modulus | `index % 2 == 0` (Rolling updates / Even-odd) |
-| `**` | Exponentiation | `2 ** 10` (Calculating byte sizes: 1024) |
-| `+=` | Add & Assign | `success_count += 1` |
+| `+`, `-` | Add/Sub | `disk_used + disk_new` |
+| `*`, `/` | Mult/Div | `cpu_count * 0.8` (80% utilization buffer) |
+| `//` | **Floor Division** | `total_ram // 4096` (How many 4GB instances fit?) |
+| `%` | **Modulus** | `node_id % 3` (Distribute load across 3 AZs) |
+| `**` | **Exponentiation** | `2 ** 30` (Calculate 1 Gigabyte in bytes) |
+#### 🔄 Assignment Operators
+Efficiently update variables.
 
-#### Comparison & Logical
 | Symbol | Description | Example |
 |:---:|---|---|
-| `==`, `!=` | Equality | `env == "prod"` |
-| `in` | Membership | `"error" in log_line` (Very common!) |
-| `is` | Identity | `config is None` (Checks memory object) |
-| `and`, `or`, `not` | Logic | `is_master and not is_cordoned` |
+| `=` | Assign | `retries = 3` |
+| `+=` | Increment | `failed_attempts += 1` |
+| `-=` | Decrement | `quota_remaining -= request_size` |
+#### ⚖️ Comparison Operators
+The foundation of `if` statements. Returns `True` or `False`.
 
+| Symbol | Description | Example |
+|:---:|---|---|
+| `==`, `!=` | Equality | `environment == "production"` |
+| `>`, `<` | Greater/Less | `latency_ms > 500` (SLA breach) |
+| `>=` | At least | `disk_free_percent >= 20` |
+#### 🧠 Logical Operators
+Combine multiple checks into complex rules.
+
+| Operator | Logic | DevOps Use Case |
+|:---:|---|---|
+| `and` | Both true | `(is_master) and (not is_maintenance_mode)` |
+| `or` | Either true | `(region == "us-east-1") or (region == "eu-west-1")` |
+| `not` | Invert | `if not config_file.exists():` |
+#### 🔍 Membership & Identity (Key for Python)
+These are specific to Python and extremely powerful for parsing.
+- **`in` / `not in`**: Checks if a value exists in a sequence (List, String, Tuple).
+```python
+    # Check logs
+    if "ERROR" in log_line:
+        alert_ops()
+
+    # Check allowed values
+    if region not in ["us-east-1", "us-west-2"]:
+        raise ValueError("Invalid Region")
+```
+
+- **`is` / `is not`**: Checks object identity (memory location). **Always use this for `None`**.
+```python
+    # Correct
+    if db_connection is None:
+        connect()
+    
+    # Wrong (Can fail with custom objects)
+    if db_connection == None:
+        pass
+```
 
 ---
 
@@ -218,115 +249,17 @@ if is_ready:
 ```
 
 ---
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: The Resource Calculator
-**Scenario**: You need to provision a Kubernetes cluster. Calculate the total resources needed based on node types.
+Master Python fundamentals by solving these DevOps-centric challenges.
 
-```python
-# Inputs
-node_count = 5
-node_cpu = 4
-node_memory_gb = 16
-overhead_percent = 0.10  # 10% system overhead
+| Challenge | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- |
+| **01. Resource Calculator** | Calculate K8s cluster capacity with overhead. | [Link](./challenges/challenge_01_resource_calculator.py) | [Link](./challenges/solutions/solution_01_resource_calculator.py) |
+| **02. Log Level Parser** | Parse and extract data from raw server logs. | [Link](./challenges/challenge_02_log_parser.py) | [Link](./challenges/solutions/solution_02_log_parser.py) |
+| **03. Drift Detector** | Identify missing or extra services in an environment. | [Link](./challenges/challenge_03_drift_detector.py) | [Link](./challenges/solutions/solution_03_drift_detector.py) |
 
-# TODO:
-# 1. Calculate usable CPU/Memory per node (Total - Overhead)
-# 2. Calculate total cluster capacity
-# 3. Print a summary report using f-strings
-```
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-node_count = 5
-node_cpu = 4
-node_memory_gb = 16
-overhead_percent = 0.10
-
-# Calculations
-server_overhead_cpu = node_cpu * overhead_percent
-server_overhead_mem = node_memory_gb * overhead_percent
-
-usable_cpu_per_node = node_cpu - server_overhead_cpu
-usable_mem_per_node = node_memory_gb - server_overhead_mem
-
-total_cluster_cpu = usable_cpu_per_node * node_count
-total_cluster_mem = usable_mem_per_node * node_count
-
-# Report
-print(f"--- Cluster Capacity Report ---")
-print(f"Nodes: {node_count}")
-print(f"Usable Per Node: {usable_cpu_per_node} vCPU / {usable_mem_per_node} GB RAM")
-print(f"Total Cluster:   {total_cluster_cpu} vCPU / {total_cluster_mem} GB RAM")
-```
-</details>
-
-### Exercise 2: Log Level Parser
-**Scenario**: You have a raw log string. You need to identify its severity and format it for a dashboard.
-
-```python
-log_entry = "2024-01-20 10:00:05 [CRITICAL] Database connection failed "
-
-# TODO:
-# 1. Strip trailing spaces
-# 2. Check if the log is related to "Database" (boolean)
-# 3. Extract the clean timestamp (first 19 chars)
-# 4. Print: "Alert! Database Issue at [Time]" if critical
-```
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-log_entry = "2024-01-20 10:00:05 [CRITICAL] Database connection failed "
-clean_log = log_entry.strip()
-
-is_db_error = "Database" in clean_log
-timestamp = clean_log[:19]  # Slicing
-
-if "[CRITICAL]" in clean_log and is_db_error:
-    print(f"Alert! Database Issue at {timestamp}")
-else:
-    print("Log normal.")
-```
-</details>
-
-### Exercise 3: Environment Drift Detector
-**Scenario**: Compare a list of currently running services against a list of required services.
-
-```python
-running_services = ["nginx", "docker", "ssh", "fail2ban", "obsolete_app"]
-required_services = ["nginx", "docker", "ssh", "fail2ban", "monitoring_agent"]
-
-# TODO:
-# 1. Loop through required_services.
-# 2. If a service is NOT in running_services, print "MISSING: <service>"
-# 3. Loop through running_services.
-# 4. If a service is NOT in required_services, print "EXTRA: <service>"
-```
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-running_services = ["nginx", "docker", "ssh", "fail2ban", "obsolete_app"]
-required_services = ["nginx", "docker", "ssh", "fail2ban", "monitoring_agent"]
-
-print("--- Compliance Check ---")
-
-# Check for missing
-for req in required_services:
-    if req not in running_services:
-        print(f"MISSING: {req}")
-
-# Check for unauthorized extras
-for run in running_services:
-    if run not in required_services:
-        print(f"EXTRA: {run} (Consider removing)")
-```
-</details>
+> **Pro Tip**: Try to solve the challenges in your terminal first. You can run them using `python challenges/challenge_name.py`.
 
 ---
 
@@ -341,53 +274,75 @@ for run in running_services:
 **Outcome**: Configuration drift eliminated, making Ansible automation possible.
 
 ---
-
-## ❓ Interview Questions
-
+## ❓ Interview Questions 
 1. **What is the difference between `==` and `is` in Python?**
-   > `==` compares values, while `is` compares object identity (memory location). Use `==` for value comparison and `is` for checking `None`.
-
+   <details>
+   <summary>💡 Solution</summary>
+   `==` compares values, while `is` compares object identity (memory location). Use `==` for value comparison and `is` for checking `None`.
+   </details>
 2. **Explain Python's dynamic typing. Is it an advantage for DevOps?**
-   > Variables don't have fixed types. Advantage: faster scripting. Disadvantage: runtime errors instead of compile-time.
-
+   <details>
+   <summary>💡 Solution</summary>
+   Variables don't have fixed types. Advantage: faster scripting. Disadvantage: runtime errors instead of compile-time.
+   </details>
 3. **What is PEP 8 and why does it matter?**
-   > Python Enhancement Proposal 8 is the style guide. Consistent style improves readability and maintainability.
-
+   <details>
+   <summary>💡 Solution</summary>
+   Python Enhancement Proposal 8 is the style guide. Consistent style improves readability and maintainability.
+   </details>
 4. **How do you check if a variable is None in Python?**
-   > Use `if variable is None:` (not `== None`).
-
+   <details>
+   <summary>💡 Solution</summary>
+   Use `if variable is None:` (not `== None`).
+   </details>
 5. **What's the difference between `for` and `while` loops?**
-   > `for` iterates over sequences, `while` continues based on a condition.
-
+   <details>
+   <summary>💡 Solution</summary>
+   `for` iterates over sequences, `while` continues based on a condition.
+   </details>
 ---
-
 ## 🧠 Quiz
-
 1. What is the output of `type(5.0)`?
    - a) `<class 'int'>`
-   - b) `<class 'float'>` ✅
+   - b) `<class 'float'>`
    - c) `<class 'number'>`
-
+   <details>
+   <summary>💡 Solution</summary>
+   `5.0` is a float.
+   </details>
 2. Which is the correct way to create a multi-line string?
    - a) `"line1" + "line2"`
-   - b) `"""line1\nline2"""` ✅
+   - b) `"""line1\nline2"""`
    - c) `'line1', 'line2'`
+   <details>
+   <summary>💡 Solution</summary>
+   `"""line1\nline2"""` is a multi-line string.
+   </details>
 
 3. What does `5 // 2` return?
    - a) `2.5`
-   - b) `2` ✅
+   - b) `2`
    - c) `3`
-
+   <details>
+   <summary>💡 Solution</summary>
+   `5 // 2` returns `2` (integer division).
+   </details>
 4. Which naming convention is PEP 8 compliant for functions?
    - a) `calculateSum`
    - b) `CalculateSum`
-   - c) `calculate_sum` ✅
+   - c) `calculate_sum`
+   <details>
+   <summary>💡 Solution</summary>
+   `calculate_sum` is PEP 8 compliant.
+   </details>
 
 5. What is the output of `"hello" * 3`?
    - a) `"hello hello hello"`
-   - b) `"hellohellohello"` ✅
+   - b) `"hellohellohello"`
    - c) `Error`
-
+   <details>
+   <summary>💡 Solution</summary>
+   `"hello" * 3` returns `"hellohellohello"`.
+   </details>
 ---
-
 **Next Step**: [Data Structures →](../02-Data-Structures/README.md)

@@ -561,7 +561,7 @@ echo "Migration completed successfully!"
 - [ ] Configure Azure Active Directory integration
 - [ ] Implement advanced branch policies
 - [ ] Set up Azure services integration (ACR, Key Vault)
-- [ ] Complete repository migration exercise
+- [ ] Complete repository migration challenge
 - [ ] Configure enterprise security policies
 - [ ] Set up monitoring and analytics
 - [ ] Pass the comprehensive quiz (85%+ score)

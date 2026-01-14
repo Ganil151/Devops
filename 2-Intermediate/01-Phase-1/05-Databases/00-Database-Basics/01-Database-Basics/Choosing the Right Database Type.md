@@ -353,7 +353,7 @@ Ready to implement? Choose your path:
 
 ---
 
-**Exercise**: Design the database architecture for these applications:
+**Challenge**: Design the database architecture for these applications:
 
 <b>1. Food delivery app</b>
 <details>

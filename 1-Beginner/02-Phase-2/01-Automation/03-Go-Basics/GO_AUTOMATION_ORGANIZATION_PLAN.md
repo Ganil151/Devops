@@ -174,7 +174,7 @@ Each topic includes:
 - **Common Pitfalls**: Go-specific gotchas
 - **Interview Questions**: 5-10 with answers
 - **Quiz**: 10-20 questions
-- **Exercises**: Build actual tools
+- **Challenges**: Build actual tools
 - **Resources**: Go documentation, blogs
 
 ## 🎯 Learning Paths

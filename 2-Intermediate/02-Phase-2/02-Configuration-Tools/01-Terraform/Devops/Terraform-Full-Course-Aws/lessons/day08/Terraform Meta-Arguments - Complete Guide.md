@@ -23,7 +23,7 @@ day08/
 ├── backend.tf       # S3 backend configuration
 ├── main.tf          # Main resource definitions with count and for_each examples
 ├── output.tf        # Output values demonstrating for loops
-├── task.md          # Hands-on exercises and tasks
+├── task.md          # Hands-on challenges and tasks
 └── README.md        # This file
 
 
@@ -294,7 +294,7 @@ Continue to Day 09 to learn about more advanced Terraform concepts!
 
 ## 📞 Need Help?
 
-- Review the `task.md` file for detailed exercises
+- Review the `task.md` file for detailed challenges
 - Check the inline comments in `main.tf` for explanations
 - Experiment with `terraform console` to test expressions
 - Read the official Terraform documentation

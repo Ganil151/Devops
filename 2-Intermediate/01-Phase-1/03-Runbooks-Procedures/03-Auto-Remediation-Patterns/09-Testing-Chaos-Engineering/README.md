@@ -38,7 +38,7 @@
 5.  **Should you run Chaos Experiments during a real incident?**
     - *Answer*: **No**. Chaos experiments are for *learning* and *validating* in a controlled environment. If an incident is already occurring, the priority is mitigation and recovery, not experimentation.
 6.  **What is the difference between a 'Gameday' and 'Chaos Monkey'?**
-    - *Answer*: A **Gameday** is a scheduled, human-led exercise where a specific scenario is tested (e.g., "Let's test the Power Outage plan"). **Chaos Monkey** is an automated tool that runs continuously and randomly to find weaknesses that haven't been thought of yet.
+    - *Answer*: A **Gameday** is a scheduled, human-led challenge where a specific scenario is tested (e.g., "Let's test the Power Outage plan"). **Chaos Monkey** is an automated tool that runs continuously and randomly to find weaknesses that haven't been thought of yet.
 
 ---
 

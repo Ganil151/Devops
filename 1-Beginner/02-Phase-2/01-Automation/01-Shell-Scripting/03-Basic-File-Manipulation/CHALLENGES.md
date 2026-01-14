@@ -1,6 +1,6 @@
-# 🎯 Hands-On Exercises: Basic File Manipulation
+# 🎯 Hands-On Challenges: Basic File Manipulation
 
-## Exercise 1: CRUD Basics (Beginner)
+## Challenge 1: CRUD Basics (Beginner)
 **Objective**: Master create, read, update, delete operations.
 
 **Tasks**:
@@ -15,7 +15,7 @@
 
 ---
 
-## Exercise 2: The Folder Factory (Intermediate)
+## Challenge 2: The Folder Factory (Intermediate)
 **Objective**: Create complex directory structures efficiently.
 
 **Tasks**:
@@ -41,7 +41,7 @@ mkdir -p devops-project/{src/{frontend,backend},docs,tests,deploy/{staging,produ
 3. Create a `README.md` in each directory using a loop (bonus)
 
 ---
-## Exercise 3: File Backup Strategy (Practical)
+## Challenge 3: File Backup Strategy (Practical)
 **Objective**: Implement a safe backup workflow.
 **Scenario**: You're editing a critical configuration file.
 
@@ -65,7 +65,7 @@ mkdir -p devops-project/{src/{frontend,backend},docs,tests,deploy/{staging,produ
 **Question**: Why use timestamps instead of simple `.bak` extensions?
 
 ---
-## Exercise 4: The Recursive Copy Challenge (Advanced)
+## Challenge 4: The Recursive Copy Challenge (Advanced)
 **Objective**: Safely copy entire directory trees with permissions.
 
 **Setup**:
@@ -87,7 +87,7 @@ echo "info" > source/logs/app.log
 
 ---
 
-## Exercise 5: The Safe Delete Protocol (Critical)
+## Challenge 5: The Safe Delete Protocol (Critical)
 **Objective**: Develop habits that prevent catastrophic data loss.
 
 **Setup**:
@@ -125,7 +125,7 @@ ls
  `safe_rm` function that always confirms before deleting.
 
 ---
-## Exercise 6: The Mass Rename Mission (Scripting)
+## Challenge 6: The Mass Rename Mission (Scripting)
 **Objective**: Rename multiple files programmatically.
 
 **Setup**:
@@ -150,7 +150,7 @@ done
 
 ---
 
-## Exercise 7: The DevOps Artifact Manager (Real-World)
+## Challenge 7: The DevOps Artifact Manager (Real-World)
 **Objective**: Create a script to manage deployment artifacts.
 
 **Requirements**:
@@ -186,7 +186,7 @@ echo "✓ Artifact created: ${ARTIFACT_DIR}.tar.gz"
 
 ---
 
-## Exercise 8: The Wildcard Wizard (Pattern Matching)
+## Challenge 8: The Wildcard Wizard (Pattern Matching)
 **Objective**: Master glob patterns for file operations.
 
 **Setup**:
@@ -208,7 +208,7 @@ touch script.sh config.conf README.md
 **Question**: What's the difference between `*`, `?`, and `[...]`?
 
 ---
-## Exercise 9: The Disaster Recovery Drill (Critical Thinking)
+## Challenge 9: The Disaster Recovery Drill (Critical Thinking)
 **Objective**: Recover from common mistakes safely.
 
 **Scenario 1** - Accidental Overwrite:
@@ -234,7 +234,7 @@ rm -rf ../project  # Deleted wrong directory!
 
 ---
 
-## Exercise 10: Speed & Efficiency Competition (Mastery)
+## Challenge 10: Speed & Efficiency Competition (Mastery)
 **Objective**: Complete file operations at professional speed.
 
 **Challenge**: Complete these tasks in under 60 seconds:
@@ -277,4 +277,4 @@ echo "✓ Complete"
 ❌ Using `rm -f` without verification  
 
 ## Next Steps
-Complete these exercises, then proceed to **[Hidden Files](../04-Hidden-Files/EXERCISES.md)** →
+Complete these challenges, then proceed to **[Hidden Files](../04-Hidden-Files/CHALLENGES.md)** →

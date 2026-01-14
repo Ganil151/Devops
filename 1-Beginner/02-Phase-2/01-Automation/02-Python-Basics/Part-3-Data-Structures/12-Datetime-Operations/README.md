@@ -256,9 +256,9 @@ else:
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Backup Age Checker
+### Challenge 1: Backup Age Checker
 
 ```python
 from datetime import datetime, timedelta
@@ -338,7 +338,7 @@ for detail in report["details"]:
 ```
 </details>
 
-### Exercise 2: Log Timestamp Parser
+### Challenge 2: Log Timestamp Parser
 
 ```python
 from datetime import datetime
@@ -427,7 +427,7 @@ for result in parse_log_timestamps(logs):
 ```
 </details>
 
-### Exercise 3: SLA Duration Calculator
+### Challenge 3: SLA Duration Calculator
 
 ```python
 from datetime import datetime, timedelta
@@ -515,7 +515,7 @@ for detail in report["details"]:
 ```
 </details>
 
-### Exercise 4: Maintenance Window Scheduler
+### Challenge 4: Maintenance Window Scheduler
 
 ```python
 from datetime import datetime, timedelta

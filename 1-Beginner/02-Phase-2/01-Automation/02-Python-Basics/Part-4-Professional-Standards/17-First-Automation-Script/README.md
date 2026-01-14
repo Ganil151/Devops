@@ -748,9 +748,9 @@ python-dotenv>=1.0.0
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Add Slack Notifications
+### Challenge 1: Add Slack Notifications
 
 ```python
 """Add Slack notification support to the health monitor.
@@ -852,7 +852,7 @@ def send_slack_notification(report: Dict, webhook_url: str) -> bool:
 ```
 </details>
 
-### Exercise 2: Add Historical Tracking
+### Challenge 2: Add Historical Tracking
 
 ```python
 """Add historical data storage for trend analysis.
@@ -1033,7 +1033,7 @@ class HistoryTracker:
 ```
 </details>
 
-### Exercise 3: Add Email Reports
+### Challenge 3: Add Email Reports
 
 ```python
 """Add email report generation and sending.

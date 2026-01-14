@@ -1,6 +1,6 @@
-# 🎯 Hands-On Exercises: Programs and Commands
+# 🎯 Hands-On Challenges: Programs and Commands
 
-## Exercise 1: Type Investigation (Beginner)
+## Challenge 1: Type Investigation (Beginner)
 **Objective**: Identify command types using `type`.
 
 **Tasks**:
@@ -20,7 +20,7 @@
 
 ---
 
-## Exercise 2: Which vs Type (Intermediate)
+## Challenge 2: Which vs Type (Intermediate)
 **Objective**: Understand the difference between `which` and `type`.
 
 **Tasks**:
@@ -34,7 +34,7 @@
 
 ---
 
-## Exercise 3: PATH Exploration (Practical)
+## Challenge 3: PATH Exploration (Practical)
 **Objective**: Understand command resolution order.
 
 **Tasks**:
@@ -51,7 +51,7 @@
 
 ---
 
-## Exercise 4: The DevOps Power Toolkit (Essential)
+## Challenge 4: The DevOps Power Toolkit (Essential)
 **Objective**: Master the five essential DevOps commands.
 
 **Setup**:
@@ -82,7 +82,7 @@ EOF
 
 ---
 
-## Exercise 5: Hash Cache Investigation (Advanced)
+## Challenge 5: Hash Cache Investigation (Advanced)
 **Objective**: Understand command caching and hash tables.
 
 **Tasks**:
@@ -98,7 +98,7 @@ EOF
 
 ---
 
-## Exercise 6: Built-in vs External Performance (Benchmark)
+## Challenge 6: Built-in vs External Performance (Benchmark)
 **Objective**: Measure execution speed difference.
 
 **Tasks**:
@@ -116,7 +116,7 @@ EOF
 
 ---
 
-## Exercise 7: Custom Tool Installation (Real-World)
+## Challenge 7: Custom Tool Installation (Real-World)
 **Objective**: Install a custom command in user space.
 
 **Tasks**:
@@ -139,7 +139,7 @@ EOF
 
 ---
 
-## Exercise 8: Command Resolution Debug (Troubleshooting)
+## Challenge 8: Command Resolution Debug (Troubleshooting)
 **Objective**: Debug command execution issues.
 
 **Scenario**: You have two versions of a tool installed.
@@ -167,7 +167,7 @@ chmod +x ~/old-tools/deploy ~/new-tools/deploy
 
 ---
 
-## Exercise 9: Platform-Specific Commands (Cross-Platform)
+## Challenge 9: Platform-Specific Commands (Cross-Platform)
 **Objective**: Handle differences between Linux/Mac/Windows.
 
 **Tasks**:
@@ -207,7 +207,7 @@ fi
 
 ---
 
-## Exercise 10: The Ultimate Command Finder (Expert)
+## Challenge 10: The Ultimate Command Finder (Expert)
 **Objective**: Build a comprehensive command discovery tool.
 
 **Requirements**:
@@ -300,4 +300,4 @@ echo $PATH | tr ':' '\n' | nl
 ```
 
 ## Next Steps
-Complete these exercises, then proceed to **[Basic Variables](../09-Basic-Variables/EXERCISES.md)** →
+Complete these challenges, then proceed to **[Basic Variables](../09-Basic-Variables/CHALLENGES.md)** →

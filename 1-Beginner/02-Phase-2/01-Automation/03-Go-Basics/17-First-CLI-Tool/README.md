@@ -130,7 +130,7 @@ GOOS=darwin GOARCH=arm64 go build -o srvmgr-mac
 
 ---
 
-## 🛠️ Extension Exercises
+## 🛠️ Extension Challenges
 
 1. Add `deploy` command with app name and version flags
 2. Implement actual HTTP health checks

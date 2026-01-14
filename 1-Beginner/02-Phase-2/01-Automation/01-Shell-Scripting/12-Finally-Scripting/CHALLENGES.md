@@ -1,13 +1,13 @@
-# 📜 Finally Scripting - Hands-On Exercises
+# 📜 Finally Scripting - Hands-On Challenges
 
-## 📚 **Exercise Overview**
-Master shell script creation through 10 progressive exercises that build real-world automation tools.
+## 📚 **Challenge Overview**
+Master shell script creation through 10 progressive challenges that build real-world automation tools.
 
 ---
 
-## 🟢 **BEGINNER EXERCISES (1-3)**
+## 🟢 **BEGINNER CHALLENGES (1-3)**
 
-### **Exercise 1: Your First Script**
+### **Challenge 1: Your First Script**
 **Scenario**: Create a system information script for server documentation.
 
 **Task**:
@@ -44,7 +44,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 ---
 
-### **Exercise 2: Script with Variables**
+### **Challenge 2: Script with Variables**
 **Scenario**: Create a backup script that uses variables for flexibility.
 
 **Task**:
@@ -83,7 +83,7 @@ Backup completed: /home/user/backups/backup_20260111_100000.tar.gz
 
 ---
 
-### **Exercise 3: User Input and Validation**
+### **Challenge 3: User Input and Validation**
 **Scenario**: Create an interactive deployment script that validates user input.
 
 **Task**:
@@ -146,9 +146,9 @@ Deployment completed successfully!
 
 ---
 
-## 🟡 **INTERMEDIATE EXERCISES (4-6)**
+## 🟡 **INTERMEDIATE CHALLENGES (4-6)**
 
-### **Exercise 4: Functions and Error Handling**
+### **Challenge 4: Functions and Error Handling**
 **Scenario**: Create a modular script with functions for log management.
 
 **Task**:
@@ -269,7 +269,7 @@ Log Analysis Results:
 
 ---
 
-### **Exercise 5: Configuration File Processing**
+### **Challenge 5: Configuration File Processing**
 **Scenario**: Create a script that reads configuration files and manages application settings.
 
 **Task**:
@@ -438,7 +438,7 @@ Configuration loaded for MyWebApp v1.2.3
 
 ---
 
-### **Exercise 6: Service Management Script**
+### **Challenge 6: Service Management Script**
 **Scenario**: Create a comprehensive service management script for application lifecycle.
 
 **Task**:
@@ -618,9 +618,9 @@ Service stopped successfully
 
 ---
 
-## 🔴 **ADVANCED EXERCISES (7-8)**
+## 🔴 **ADVANCED CHALLENGES (7-8)**
 
-### **Exercise 7: Multi-Server Deployment Script**
+### **Challenge 7: Multi-Server Deployment Script**
 **Scenario**: Create a script that deploys applications across multiple servers with rollback capability.
 
 **Task**:
@@ -819,7 +819,7 @@ chmod +x ~/multi_deploy.sh
 
 ---
 
-### **Exercise 8: Infrastructure Monitoring Script**
+### **Challenge 8: Infrastructure Monitoring Script**
 **Scenario**: Create a comprehensive monitoring script that checks system health and sends alerts.
 
 **Task**:
@@ -1063,9 +1063,9 @@ Checking network connectivity...
 
 ---
 
-## 🏆 **CHALLENGE EXERCISES (9-10)**
+## 🏆 **CHALLENGE CHALLENGES (9-10)**
 
-### **Exercise 9: CI/CD Pipeline Script**
+### **Challenge 9: CI/CD Pipeline Script**
 **Scenario**: Create a complete CI/CD pipeline script that builds, tests, and deploys applications.
 
 **Task**:
@@ -1362,7 +1362,7 @@ Cleanup completed
 
 ---
 
-### **Exercise 10: Enterprise Automation Framework**
+### **Challenge 10: Enterprise Automation Framework**
 **Scenario**: Create a comprehensive automation framework that can execute multiple types of operations with logging, error handling, and reporting.
 
 **Task**:
@@ -1674,7 +1674,7 @@ Reports: 0
 
 ## 🎯 **FINAL VERIFICATION CHECKLIST**
 
-After completing all exercises, verify your shell scripting mastery:
+After completing all challenges, verify your shell scripting mastery:
 
 ### **Core Scripting Skills**
 - [ ] Can create executable scripts with proper shebang

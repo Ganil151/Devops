@@ -342,9 +342,9 @@ kubectl apply -f deployment.yaml  # No changes
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Make This Script Idempotent
+### Challenge 1: Make This Script Idempotent
 
 ```bash
 #!/bin/bash
@@ -382,7 +382,7 @@ fi
 ```
 </details>
 
-### Exercise 2: Python Idempotent Installer
+### Challenge 2: Python Idempotent Installer
 
 ```python
 # Create an idempotent Python script that:

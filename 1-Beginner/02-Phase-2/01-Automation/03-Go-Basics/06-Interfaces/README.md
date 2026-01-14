@@ -123,7 +123,7 @@ type error interface {
 
 ---
 
-## 🛠️ Hands-On Exercise
+## 🛠️ Hands-On Challenge
 
 ```go
 // Create a Deployer interface and implementations

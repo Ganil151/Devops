@@ -1,6 +1,6 @@
-# 🎯 Hands-On Exercises: Terminal Navigation
+# 🎯 Hands-On Challenges: Terminal Navigation
 
-## Exercise 1: Navigation Fundamentals (Beginner)
+## Challenge 1: Navigation Fundamentals (Beginner)
 **Objective**: Master basic directory navigation commands.
 
 **Tasks**:
@@ -16,7 +16,7 @@
 **Document**: Write down the absolute path of your home directory.
 
 ---
-## Exercise 2: Path Detective (Intermediate)
+## Challenge 2: Path Detective (Intermediate)
 **Objective**: Understand absolute vs relative paths.
 **Tasks**:
 1. Create this directory structure in `/tmp`:
@@ -33,7 +33,7 @@
 **Answer**: `../configs`
 
 ---
-## Exercise 3: The Lost Files Mission (Practical)
+## Challenge 3: The Lost Files Mission (Practical)
 **Objective**: Use `ls` flags to find specific files.
 
 **Setup**:
@@ -58,7 +58,7 @@ chmod +x scripts/*.sh
 - How can you see files sorted by size?
 
 ---
-## Exercise 4: The Directory Maze (Challenge)
+## Challenge 4: The Directory Maze (Challenge)
 **Objective**: Navigate complex directory structures efficiently.
 
 **Setup**: Create this structure:
@@ -77,7 +77,7 @@ cd ~/devops-practice
 **Speed Challenge**: Complete all 5 tasks in under 30 seconds!
 
 ---
-## Exercise 5: Tab Completion Mastery (Skill Builder)
+## Challenge 5: Tab Completion Mastery (Skill Builder)
 **Objective**: Master tab completion to increase speed.
 
 **Tasks**:
@@ -90,7 +90,7 @@ cd ~/devops-practice
 **Pro Tip**: Double-tap Tab when there are multiple matches.
 
 ---
-## Exercise 6: The PWD Safety Protocol (Real-World)
+## Challenge 6: The PWD Safety Protocol (Real-World)
 **Objective**: Develop defensive navigation habits.
 
 **Scenario**: You're about to run `rm -rf *` to clean up temp files.
@@ -110,7 +110,7 @@ cd ~/devops-practice
 **Critical Question**: What would happen if you forgot to run `pwd` and were actually in your home directory?
 
 ---
-## Exercise 7: Build a Navigation Helper Script (Advanced)
+## Challenge 7: Build a Navigation Helper Script (Advanced)
 **Objective**: Create a script that helps with common navigation tasks.
 
 **Requirements**:
@@ -137,7 +137,7 @@ dirs -v
 ```
 
 ---
-## Exercise 8: The Fast Navigator Challenge (Competition)
+## Challenge 8: The Fast Navigator Challenge (Competition)
 **Objective**: Maximize navigation speed.
 
 **Setup**:
@@ -181,4 +181,4 @@ ls -lt | head  # See recent logs
 tail -f access.log  # Monitor live
 ```
 ## Next Steps
-Complete these exercises, then proceed to **[File Manipulation](../03-Basic-File-Manipulation/EXERCISES.md)** →
+Complete these challenges, then proceed to **[File Manipulation](../03-Basic-File-Manipulation/CHALLENGES.md)** →

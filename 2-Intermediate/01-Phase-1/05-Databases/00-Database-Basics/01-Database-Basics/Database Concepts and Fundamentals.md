@@ -356,7 +356,7 @@ Now that you understand database fundamentals, continue your learning:
 
 ---
 
-**Practice Exercise**: Think about an application you use daily. What type of database would it use and why? Consider the data structure, access patterns, and consistency requirements.
+**Practice Challenge**: Think about an application you use daily. What type of database would it use and why? Consider the data structure, access patterns, and consistency requirements.
 
 ---
 

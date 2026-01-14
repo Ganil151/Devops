@@ -329,23 +329,23 @@ ORDER BY 1, 4 DESC;
 
 ---
 
-## Hands-On Exercise
+## Hands-On Challenge
 
-### Exercise 1: Service Mapping
+### Challenge 1: Service Mapping
 
 Create a mapping table for your services:
 1. List your top 20 services across clouds
 2. Map to normalized categories
 3. Identify gaps
 
-### Exercise 2: Unified Dashboard Design
+### Challenge 2: Unified Dashboard Design
 
 Design a multi-cloud dashboard:
 1. Define key metrics
 2. Sketch layout
 3. Identify data sources
 
-### Exercise 3: Commitment Analysis
+### Challenge 3: Commitment Analysis
 
 Analyze commitment opportunities:
 1. Calculate baseline by provider

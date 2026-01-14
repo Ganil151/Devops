@@ -774,7 +774,7 @@ if __name__ == "__main__":
 - [ ] Implement branching and merging workflows
 - [ ] Create and deploy hook scripts
 - [ ] Optimize repository for large files
-- [ ] Complete SVN to Git migration exercise
+- [ ] Complete SVN to Git migration challenge
 - [ ] Configure backup and disaster recovery
 - [ ] Pass the comprehensive quiz (85%+ score)
 

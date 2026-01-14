@@ -1,6 +1,6 @@
-# 🎯 Hands-On Exercises: Introduction to Shell Scripting
+# 🎯 Hands-On Challenges: Introduction to Shell Scripting
 
-## Exercise 1: Hello DevOps World (Beginner)
+## Challenge 1: Hello DevOps World (Beginner)
 **Objective**: Create your first executable shell script.
 
 **Tasks**:
@@ -26,7 +26,7 @@ echo "Hello, DevOps World! Today is $(date)"
 
 ---
 
-## Exercise 2: System Information Reporter (Intermediate)
+## Challenge 2: System Information Reporter (Intermediate)
 **Objective**: Create a script that displays system information.
 
 **Tasks**:
@@ -58,7 +58,7 @@ OS: Linux
 
 ---
 
-## Exercise 3: Shell Type Comparison (Advanced)
+## Challenge 3: Shell Type Comparison (Advanced)
 **Objective**: Write a script that runs in both Bash and Sh and reports differences.
 
 **Tasks**:
@@ -86,7 +86,7 @@ fi
 
 ---
 
-## Exercise 4: Script Execution Methods (Practical)
+## Challenge 4: Script Execution Methods (Practical)
 **Objective**: Understand different ways to execute scripts.
 
 **Tasks**:
@@ -106,7 +106,7 @@ fi
 
 ---
 
-## Exercise 5: DevOps Automation Simulator (Challenge)
+## Challenge 5: DevOps Automation Simulator (Challenge)
 **Objective**: Create a script that simulates a basic deployment process.
 
 **Requirements**:
@@ -143,4 +143,4 @@ echo -e "${GREEN}✓ Success${NC}"
 - [ ] Understand comments in shell scripts
 
 ## Next Steps
-Complete these exercises, then proceed to **[Terminal Navigation](../02-Terminal-and-Finder/EXERCISES.md)** →
+Complete these challenges, then proceed to **[Terminal Navigation](../02-Terminal-and-Finder/CHALLENGES.md)** →

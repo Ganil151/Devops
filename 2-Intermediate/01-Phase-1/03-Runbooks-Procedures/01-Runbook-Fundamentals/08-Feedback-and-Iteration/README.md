@@ -107,7 +107,7 @@ Answer: B
 </details>
 
 
-<b>4. A 'Gameday' is a simulated failure exercise used to:</b>
+<b>4. A 'Gameday' is a simulated failure challenge used to:</b>
 <details>
 <summary>Show Answer</summary>
 Answer: B

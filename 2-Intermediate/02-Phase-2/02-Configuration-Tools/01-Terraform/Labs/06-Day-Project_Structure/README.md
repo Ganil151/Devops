@@ -20,7 +20,7 @@ Before diving into this lab, review these foundational concepts:
 │   └── terraform.tfstate       # Local state file (if using local backend)
 ├── .terraform.lock.hcl         # Provider version lock file
 ├── backend.tf                  # Backend and provider requirements
-├── challenges.md               # Lab challenges and exercises
+├── challenges.md               # Lab challenges and challenges
 ├── locals.tf                   # Local values and computed expressions
 ├── main.tf                     # Main configuration file
 ├── output.tf                   # Output value definitions

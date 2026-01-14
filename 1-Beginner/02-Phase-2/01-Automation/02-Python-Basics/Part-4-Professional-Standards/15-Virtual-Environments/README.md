@@ -350,9 +350,9 @@ python src/main.py
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Project Setup Script
+### Challenge 1: Project Setup Script
 
 ```python
 """Create a complete project setup automation script.
@@ -468,7 +468,7 @@ setup_project("my-automation", ["requests", "boto3", "click"])
 ```
 </details>
 
-### Exercise 2: Environment Validator
+### Challenge 2: Environment Validator
 
 ```python
 """Validate that an environment matches requirements.
@@ -572,7 +572,7 @@ validate_environment("requirements.txt")
 ```
 </details>
 
-### Exercise 3: Multi-Environment Manager
+### Challenge 3: Multi-Environment Manager
 
 ```python
 """Manage multiple virtual environments for different purposes.

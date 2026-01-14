@@ -280,9 +280,9 @@ Budget:
 
 ---
 
-## Hands-On Exercise
+## Hands-On Challenge
 
-### Exercise 1: Create a Budget
+### Challenge 1: Create a Budget
 1. Log into your cloud provider console
 2. Create a budget with these settings:
    - Name: "Monthly-Lab-Budget"
@@ -290,12 +290,12 @@ Budget:
    - Period: Monthly
    - Alerts: 50%, 80%, 100%
 
-### Exercise 2: Set Up Anomaly Detection
+### Challenge 2: Set Up Anomaly Detection
 1. Enable anomaly detection for your account
 2. Set threshold to $10 for lab environment
 3. Configure email notifications
 
-### Exercise 3: Create a Budget Report
+### Challenge 3: Create a Budget Report
 Document:
 - Total budget across all accounts
 - Current spend vs. budget

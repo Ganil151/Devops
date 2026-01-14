@@ -209,9 +209,9 @@ graph TB
 
 ---
 
-## Hands-On Exercise
+## Hands-On Challenge
 
-### Exercise 1: Create a Tagging Policy
+### Challenge 1: Create a Tagging Policy
 Define 5-7 tags for your organization:
 
 | Tag Key | Required? | Values | Purpose |
@@ -219,12 +219,12 @@ Define 5-7 tags for your organization:
 | | | | |
 | | | | |
 | | | | |
-### Exercise 2: Explore Cost Tools
+### Challenge 2: Explore Cost Tools
 1. Open your cloud provider's cost tool
 2. Filter by a specific date range
 3. Group costs by service
 4. Identify your top 3 spending services
-### Exercise 3: Find Untagged Resources
+### Challenge 3: Find Untagged Resources
 1. Use the CLI commands above to find untagged resources
 2. Document how many untagged resources exist
 3. Create a plan to tag them

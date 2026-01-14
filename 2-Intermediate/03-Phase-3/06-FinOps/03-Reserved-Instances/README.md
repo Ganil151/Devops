@@ -270,22 +270,22 @@ graph TB
 
 ---
 
-## Hands-On Exercise
+## Hands-On Challenge
 
-### Exercise 1: Calculate Baseline
+### Challenge 1: Calculate Baseline
 
 Using your cloud provider's cost tool:
 1. Pull 90 days of EC2/VM usage
 2. Identify minimum daily usage
 3. Calculate baseline commitment amount
 
-### Exercise 2: Evaluate Recommendations
+### Challenge 2: Evaluate Recommendations
 
 1. Access Savings Plan/RI recommendations
 2. Review suggested commitment levels
 3. Calculate expected ROI
 
-### Exercise 3: Create Utilization Report
+### Challenge 3: Create Utilization Report
 
 Build a report showing:
 - Current commitment coverage

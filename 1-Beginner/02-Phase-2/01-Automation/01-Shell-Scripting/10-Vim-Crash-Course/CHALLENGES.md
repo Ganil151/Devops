@@ -1,6 +1,6 @@
-# 🎯 Hands-On Exercises: Vim Crash Course
+# 🎯 Hands-On Challenges: Vim Crash Course
 
-## Exercise 1: Vim Mode Mastery (Beginner)
+## Challenge 1: Vim Mode Mastery (Beginner)
 **Objective**: Practice switching between Vim modes confidently.
 
 **Tasks**:
@@ -18,7 +18,7 @@
 
 ---
 
-## Exercise 2: Navigation Without Arrow Keys (Intermediate)
+## Challenge 2: Navigation Without Arrow Keys (Intermediate)
 **Objective**: Master Vim's hjkl navigation.
 
 **Setup**:
@@ -48,7 +48,7 @@ vim navigate.txt
 
 ---
 
-## Exercise 3: Editing Commands (Practical)
+## Challenge 3: Editing Commands (Practical)
 **Objective**: Perform common editing operations.
 
 **Setup**:
@@ -80,7 +80,7 @@ vim edit-practice.txt
 
 ---
 
-## Exercise 4: Search and Replace (Advanced)
+## Challenge 4: Search and Replace (Advanced)
 **Objective**: Master find/replace operations.
 
 **Setup**:
@@ -108,7 +108,7 @@ vim replace-demo.txt
 
 ---
 
-## Exercise 5: Visual Block Mode (Power User)
+## Challenge 5: Visual Block Mode (Power User)
 **Objective**: Edit multiple lines simultaneously.
 
 **Setup**:
@@ -134,7 +134,7 @@ vim block-edit.txt
 
 ---
 
-## Exercise 6: Vim Configuration (Essential)
+## Challenge 6: Vim Configuration (Essential)
 **Objective**: Create a professional `.vimrc` file.
 
 **Tasks**:
@@ -173,7 +173,7 @@ inoremap jk <Esc>      " jk to exit insert mode
 
 ---
 
-## Exercise 7: Emergency Vim Recovery (Critical)
+## Challenge 7: Emergency Vim Recovery (Critical)
 **Objective**: Handle common Vim emergencies.
 
 **Scenarios**:
@@ -193,7 +193,7 @@ vim test.txt
 
 ---
 
-## Exercise 8: Production Config Editing (Real-World)
+## Challenge 8: Production Config Editing (Real-World)
 **Objective**: Edit configuration files like a pro.
 
 **Scenario**: Update nginx configuration on production server.
@@ -231,7 +231,7 @@ vim nginx.conf
 
 ---
 
-## Exercise 9: Vim Macros (Expert)
+## Challenge 9: Vim Macros (Expert)
 **Objective**: Automate repetitive editing tasks.
 
 **Setup**:
@@ -265,7 +265,7 @@ vim macro-practice.txt
 
 ---
 
-## Exercise 10: The Vim Speed Challenge (Competition)
+## Challenge 10: The Vim Speed Challenge (Competition)
 **Objective**: Complete editing tasks at professional speed.
 
 **Challenge**: Complete these tasks in under 2 minutes:
@@ -383,6 +383,6 @@ sudo systemctl reload nginx
 ❌ Not learning macros for repetitive tasks  
 
 ## Next Steps
-Complete these exercises, then proceed to **[File Permissions](../11-File-Permissions/EXERCISES.md)** →
+Complete these challenges, then proceed to **[File Permissions](../11-File-Permissions/CHALLENGES.md)** →
 
 **💡 Practice Tip**: Spend 10 minutes daily in Vim. Configure your terminal to use Vim for git commits: `git config --global core.editor vim`

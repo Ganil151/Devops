@@ -331,9 +331,9 @@ resource "aws_instance" "app" {
 
 ---
 
-## Hands-On Exercise
+## Hands-On Challenge
 
-### Exercise 1: Design Your Tag Taxonomy
+### Challenge 1: Design Your Tag Taxonomy
 
 Create a tagging strategy for your organization:
 
@@ -344,13 +344,13 @@ Create a tagging strategy for your organization:
 | Financial | | | |
 | Operational | | | |
 
-### Exercise 2: Identify Shared Costs
+### Challenge 2: Identify Shared Costs
 
 1. List all shared resources in your environment
 2. Determine allocation method for each
 3. Calculate allocation percentages
 
-### Exercise 3: Create Allocation Report
+### Challenge 3: Create Allocation Report
 
 Build a cost allocation report showing:
 - Direct costs by team

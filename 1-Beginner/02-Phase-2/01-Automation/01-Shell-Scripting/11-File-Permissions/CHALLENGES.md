@@ -1,13 +1,13 @@
-# 🔐 File Permissions - Hands-On Exercises
+# 🔐 File Permissions - Hands-On Challenges
 
-## 📚 **Exercise Overview**
-Master Linux file permissions through 10 progressive exercises that simulate real-world DevOps scenarios.
+## 📚 **Challenge Overview**
+Master Linux file permissions through 10 progressive challenges that simulate real-world DevOps scenarios.
 
 ---
 
-## 🟢 **BEGINNER EXERCISES (1-3)**
+## 🟢 **BEGINNER CHALLENGES (1-3)**
 
-### **Exercise 1: Permission Basics**
+### **Challenge 1: Permission Basics**
 **Scenario**: You're setting up a new web server and need to understand current file permissions.
 
 **Task**: 
@@ -40,7 +40,7 @@ drwxr-xr-x 2 user user 4096 Jan 11 10:00 web
 
 ---
 
-### **Exercise 2: Changing Basic Permissions**
+### **Challenge 2: Changing Basic Permissions**
 **Scenario**: Your deployment script needs execute permissions, and log files should be write-protected.
 
 **Task**:
@@ -66,7 +66,7 @@ ls -la ~/permissions-lab/logs/access.log
 
 ---
 
-### **Exercise 3: Octal Notation Mastery**
+### **Challenge 3: Octal Notation Mastery**
 **Scenario**: You need to set specific permissions using numeric notation for automation scripts.
 
 **Task**:
@@ -93,9 +93,9 @@ stat -c "%a %n" ~/permissions-lab/logs/access.log
 
 ---
 
-## 🟡 **INTERMEDIATE EXERCISES (4-6)**
+## 🟡 **INTERMEDIATE CHALLENGES (4-6)**
 
-### **Exercise 4: Group Permissions for Team Collaboration**
+### **Challenge 4: Group Permissions for Team Collaboration**
 **Scenario**: Your DevOps team needs shared access to deployment scripts while maintaining security.
 
 **Task**:
@@ -127,7 +127,7 @@ drwxrwxr-x 2 user user 4096 Jan 11 10:00 shared
 
 ---
 
-### **Exercise 5: Special Permissions - Sticky Bit and SUID**
+### **Challenge 5: Special Permissions - Sticky Bit and SUID**
 **Scenario**: Configure a shared directory where users can only delete their own files, and create a monitoring script with elevated privileges.
 
 **Task**:
@@ -159,7 +159,7 @@ drwxrwxr-t 2 user user 4096 Jan 11 10:00 shared
 
 ---
 
-### **Exercise 6: ACL (Access Control Lists) Basics**
+### **Challenge 6: ACL (Access Control Lists) Basics**
 **Scenario**: You need granular permissions for different team members on the same files.
 
 **Task**:
@@ -190,9 +190,9 @@ echo "other::r--"
 
 ---
 
-## 🔴 **ADVANCED EXERCISES (7-8)**
+## 🔴 **ADVANCED CHALLENGES (7-8)**
 
-### **Exercise 7: Security Audit and Remediation**
+### **Challenge 7: Security Audit and Remediation**
 **Scenario**: Perform a security audit of file permissions and fix vulnerabilities.
 
 **Task**:
@@ -246,7 +246,7 @@ chmod 644 ~/permissions-lab/audit/public.html
 
 ---
 
-### **Exercise 8: Automated Permission Management**
+### **Challenge 8: Automated Permission Management**
 **Scenario**: Create a script that automatically sets correct permissions for a web application deployment.
 
 **Task**:
@@ -307,9 +307,9 @@ Verification:
 
 ---
 
-## 🏆 **CHALLENGE EXERCISES (9-10)**
+## 🏆 **CHALLENGE CHALLENGES (9-10)**
 
-### **Exercise 9: Container Permission Mapping**
+### **Challenge 9: Container Permission Mapping**
 **Scenario**: Understand how file permissions work between host and container environments.
 
 **Task**:
@@ -367,7 +367,7 @@ Best practices:
 
 ---
 
-### **Exercise 10: Enterprise Permission Policy Implementation**
+### **Challenge 10: Enterprise Permission Policy Implementation**
 **Scenario**: Implement a comprehensive permission policy for a multi-tier application environment.
 
 **Task**:
@@ -473,7 +473,7 @@ Secrets: 600/700 - Owner only
 
 ## 🎯 **VERIFICATION CHECKLIST**
 
-After completing all exercises, verify your understanding:
+After completing all challenges, verify your understanding:
 
 - [ ] Can explain the difference between user, group, and other permissions
 - [ ] Can use both symbolic and octal notation for chmod

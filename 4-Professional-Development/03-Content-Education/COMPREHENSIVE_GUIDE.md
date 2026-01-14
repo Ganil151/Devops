@@ -184,7 +184,7 @@ graph TB
 - **Code Repositories**: Complete, working examples
 - **Slide Decks**: Professional presentation materials
 - **Cheat Sheets**: Quick reference guides
-- **Practice Exercises**: Hands-on learning reinforcement
+- **Practice Challenges**: Hands-on learning reinforcement
 
 ### **Successful Course Examples & Revenue**
 

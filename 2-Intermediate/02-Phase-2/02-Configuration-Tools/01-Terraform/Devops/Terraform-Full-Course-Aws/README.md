@@ -254,7 +254,7 @@ This course consists of video lessons covering basic to advanced Terraform conce
 
 ## 🎓 Learning Path
 1. Follow videos in sequence
-2. Complete hands-on exercises in task.md
+2. Complete hands-on challenges in task.md
 3. Implement projects
 4. Practice with provided code samples
 

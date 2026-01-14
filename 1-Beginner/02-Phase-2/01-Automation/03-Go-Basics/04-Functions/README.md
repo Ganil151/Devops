@@ -117,9 +117,9 @@ func example() {
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Server Stats
+### Challenge 1: Server Stats
 ```go
 // Return multiple stats from a function
 func getServerStats(name string) (cpu, memory, disk float64) {
@@ -146,7 +146,7 @@ func main() {
 ```
 </details>
 
-### Exercise 2: Retry with Options
+### Challenge 2: Retry with Options
 ```go
 // Create a flexible retry function
 func withRetry(fn func() error, maxAttempts int) error {

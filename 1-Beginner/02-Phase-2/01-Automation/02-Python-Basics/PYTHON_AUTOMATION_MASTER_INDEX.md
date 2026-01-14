@@ -2,7 +2,7 @@
 
 > **"Python: The Swiss Army knife of DevOps automation"**
 
-![Python Automation](./02-Python-Basics/assets/python_automation_banner.png)
+![Python Automation](./assets/python_automation_banner.png)
 
 ## 📚 Overview
 

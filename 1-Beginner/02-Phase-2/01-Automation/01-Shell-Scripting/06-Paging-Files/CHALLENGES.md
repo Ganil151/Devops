@@ -1,6 +1,6 @@
-# 🎯 Hands-On Exercises: Paging Files
+# 🎯 Hands-On Challenges: Paging Files
 
-## Exercise 1: Less Basics (Beginner)
+## Challenge 1: Less Basics (Beginner)
 **Objective**: Master the `less` pager for log file navigation.
 
 **Setup**:
@@ -25,7 +25,7 @@ done > large.log
 
 ---
 
-## Exercise 2: Head and Tail Mastery (Intermediate)
+## Challenge 2: Head and Tail Mastery (Intermediate)
 **Objective**: Extract specific portions of files efficiently.
 
 **Setup**:
@@ -45,7 +45,7 @@ seq 1 100 > numbers.txt
 
 ---
 
-## Exercise 3: Real-Time Log Monitoring (Practical)
+## Challenge 3: Real-Time Log Monitoring (Practical)
 **Objective**: Monitor live log files.
 
 **Setup**:
@@ -69,7 +69,7 @@ LOG_PID=$!
 
 ---
 
-## Exercise 4: Memory-Efficient File Preview (Advanced)
+## Challenge 4: Memory-Efficient File Preview (Advanced)
 **Objective**: View huge files without loading into memory.
 
 **Setup**:
@@ -88,7 +88,7 @@ dd if=/dev/zero of=huge.bin bs=1M count=100
 
 ---
 
-## Exercise 5: Multi-File Paging (Power User)
+## Challenge 5: Multi-File Paging (Power User)
 **Objective**: Navigate between multiple files in less.
 
 **Setup**:
@@ -107,7 +107,7 @@ echo "File 3 content" > file3.txt
 
 ---
 
-## Exercise 6: Search Within Less (Expert)
+## Challenge 6: Search Within Less (Expert)
 **Objective**: Master advanced search capabilities.
 
 **Setup**:
@@ -133,7 +133,7 @@ EOF
 
 ---
 
-## Exercise 7: Production Log Analysis (Real-World)
+## Challenge 7: Production Log Analysis (Real-World)
 **Objective**: Analyze production logs efficiently.
 
 **Scenario**: You're debugging a production incident.
@@ -164,7 +164,7 @@ EOF
 
 ---
 
-## Exercise 8: Tail Performance Comparison (Benchmark)
+## Challenge 8: Tail Performance Comparison (Benchmark)
 **Objective**: Understand tail's efficiency versus other methods.
 
 **Setup**:
@@ -188,7 +188,7 @@ dd if=/dev/urandom of=giant.log bs=1M count=1000
 
 ---
 
-## Exercise 9: Custom Log Monitor Script (Automation)
+## Challenge 9: Custom Log Monitor Script (Automation)
 **Objective**: Build a production-ready log monitoring script.
 
 **Requirements**:
@@ -222,7 +222,7 @@ echo "ERROR: Something failed!" >> test.log
 
 ---
 
-## Exercise 10: The Less Survival Challenge (Competition)
+## Challenge 10: The Less Survival Challenge (Competition)
 **Objective**: Master less navigation at professional speed.
 
 **Setup**:
@@ -292,4 +292,4 @@ less +G /var/log/app/service.log  # Opens at end
 ```
 
 ## Next Steps
-Complete these exercises, then proceed to **[Man Pages](../07-Man-Pages/EXERCISES.md)** →
+Complete these challenges, then proceed to **[Man Pages](../07-Man-Pages/CHALLENGES.md)** →

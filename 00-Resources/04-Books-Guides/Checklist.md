@@ -108,7 +108,7 @@ Empowering teams with knowledge fosters a culture of accountability and ensures 
 Having a defined incident response plan minimizes the impact of security breaches and ensures a swift recovery. This step prepares teams to address incidents effectively and resume operations quickly.
 - Develop a detailed incident response plan outlining roles and responsibilities.
 - Set up a communication strategy for informing stakeholders during incidents.
-- Conduct simulations or tabletop exercises to practice response strategies.
+- Conduct simulations or tabletop challenges to practice response strategies.
 - Create a post-incident review process to identify and address root causes.
 - Ensure all team members are familiar with response protocols.
 - **KPI:** Average time to resolve security incidents reduced by 20% year-over-year.

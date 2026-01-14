@@ -189,7 +189,7 @@ graph LR
 
 ---
 
-## Hands-On Exercise
+## Hands-On Challenge
 
 1. **Explore your cloud provider's cost dashboard**
    - AWS: Navigate to Cost Explorer

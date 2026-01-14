@@ -118,7 +118,7 @@ type Config struct {
 
 ---
 
-## 🛠️ Hands-On Exercise
+## 🛠️ Hands-On Challenge
 
 ```go
 // Create a Deployment struct with methods

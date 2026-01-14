@@ -217,9 +217,9 @@ final_config = deep_merge(base_config, production_overlay)
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: API Response Parser
+### Challenge 1: API Response Parser
 ```python
 # Parse this AWS EC2 describe-instances style response
 api_response = '''
@@ -273,7 +273,7 @@ print(result)
 ```
 </details>
 
-### Exercise 2: Config Validator
+### Challenge 2: Config Validator
 ```python
 # Create a JSON config validator
 # TODO: Implement validate_config function
@@ -331,7 +331,7 @@ print(errors)
 ```
 </details>
 
-### Exercise 3: JSON Diff Tool
+### Challenge 3: JSON Diff Tool
 ```python
 # Create a tool to diff two JSON configs
 # TODO: Implement json_diff function

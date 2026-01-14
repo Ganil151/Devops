@@ -1,6 +1,6 @@
-# 🎯 Hands-On Exercises: Hidden Files (Dotfiles)
+# 🎯 Hands-On Challenges: Hidden Files (Dotfiles)
 
-## Exercise 1: Revealing the Invisible (Beginner)
+## Challenge 1: Revealing the Invisible (Beginner)
 **Objective**: Discover hidden files in your system.
 
 **Tasks**:
@@ -16,7 +16,7 @@
 
 ---
 
-## Exercise 2: The Bash Profile Investigation (Intermediate)
+## Challenge 2: The Bash Profile Investigation (Intermediate)
 **Objective**: Understand shell configuration hierarchy.
 
 **Tasks**:
@@ -31,7 +31,7 @@
 **Challenge**: Document the order in which these files are loaded.
 
 ---
-## Exercise 3: Custom Alias Creation (Practical)
+## Challenge 3: Custom Alias Creation (Practical)
 **Objective**: Enhance productivity with custom aliases.
 
 **Tasks**:
@@ -55,7 +55,7 @@ alias topcmd='history | awk "{print \$2}" | sort | uniq -c | sort -rn | head -10
 
 ---
 
-## Exercise 4: SSH Key Management (Critical)
+## Challenge 4: SSH Key Management (Critical)
 **Objective**: Secure SSH key storage and permissions.
 
 **Tasks**:
@@ -88,7 +88,7 @@ What should the permissions be?
 
 ---
 
-## Exercise 5: Git Configuration Mastery (Essential)
+## Challenge 5: Git Configuration Mastery (Essential)
 **Objective**: Set up global Git configuration.
 
 **Tasks**:
@@ -112,7 +112,7 @@ What should the permissions be?
 5. Verify: `cat ~/.gitconfig`
 
 ---
-## Exercise 6: Environment Variable Export (Advanced)
+## Challenge 6: Environment Variable Export (Advanced)
 **Objective**: Manage environment variables via dotfiles.
 
 **Tasks**:
@@ -138,7 +138,7 @@ function awsprofile() {
 ```
 
 ---
-## Exercise 7: Dotfile Version Control (Professional)
+## Challenge 7: Dotfile Version Control (Professional)
 **Objective**: Manage dotfiles with Git for portability.
 
 **Tasks**:
@@ -166,7 +166,7 @@ function awsprofile() {
 5. Commit: `git add . && git commit -m "Initial dotfiles"`
 
 ---
-## Exercise 8: Security Audit (Critical)
+## Challenge 8: Security Audit (Critical)
 **Objective**: Find and secure sensitive hidden files.
 
 **Tasks**:
@@ -195,7 +195,7 @@ history -c  # Clear current session
 
 ---
 
-## Exercise 9: The Malicious Dotfile Detection (Forensics)
+## Challenge 9: The Malicious Dotfile Detection (Forensics)
 **Objective**: Identify suspicious hidden files.
 
 **Scenario**: Your system has been compromised.
@@ -225,7 +225,7 @@ history -c  # Clear current session
 
 ---
 
-## Exercise 10: Professional Prompt Customization (Productivity)
+## Challenge 10: Professional Prompt Customization (Productivity)
 **Objective**: Create an informative custom prompt.
 
 **Tasks**:
@@ -272,4 +272,4 @@ export PS1='[\[\033[01;33m\]${AWS_PROFILE}\[\033[00m\]] \[\033[01;32m\]\u\[\033[
 | `.kube/config` | Kubernetes cluster config |
 
 ## Next Steps
-Complete these exercises, then proceed to **[Searching in Files](../05-Searching-in-Files/EXERCISES.md)** →
+Complete these challenges, then proceed to **[Searching in Files](../05-Searching-in-Files/CHALLENGES.md)** →

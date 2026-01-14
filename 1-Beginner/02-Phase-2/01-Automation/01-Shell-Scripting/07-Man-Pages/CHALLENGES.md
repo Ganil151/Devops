@@ -1,6 +1,6 @@
-# 🎯 Hands-On Exercises: Man Pages
+# 🎯 Hands-On Challenges: Man Pages
 
-## Exercise 1: Man Page Basics (Beginner)
+## Challenge 1: Man Page Basics (Beginner)
 **Objective**: Navigate and understand man page structure.
 
 **Tasks**:
@@ -17,7 +17,7 @@
 
 ---
 
-## Exercise 2: Section Navigation (Intermediate)
+## Challenge 2: Section Navigation (Intermediate)
 **Objective**: Access different manual sections.
 
 **Tasks**:
@@ -33,7 +33,7 @@
 
 ---
 
-## Exercise 3: Keyword Search with Apropos (Practical)
+## Challenge 3: Keyword Search with Apropos (Practical)
 **Objective**: Find commands when you don't know their names.
 
 **Tasks**:
@@ -58,7 +58,7 @@
 
 ---
 
-## Exercise 4: Man vs Help vs Info (Comparison)
+## Challenge 4: Man vs Help vs Info (Comparison)
 **Objective**: Understand when to use each documentation tool.
 
 **Tasks**:
@@ -78,7 +78,7 @@
 
 ---
 
-## Exercise 5: Synopsis Decoder (Advanced)
+## Challenge 5: Synopsis Decoder (Advanced)
 **Objective**: Read and understand command syntax notation.
 
 **Task**: Decode this synopsis from `man cp`:
@@ -96,7 +96,7 @@ cp [OPTION]... SOURCE... DIRECTORY
 
 ---
 
-## Exercise 6: Flag Hunting Mission (Skill Builder)
+## Challenge 6: Flag Hunting Mission (Skill Builder)
 **Objective**: Quickly find specific flags in man pages.
 
 **Challenges** (Time yourself!):
@@ -115,7 +115,7 @@ cp [OPTION]... SOURCE... DIRECTORY
 
 ---
 
-## Exercise 7: Version Mismatch Detective (Real-World)
+## Challenge 7: Version Mismatch Detective (Real-World)
 **Objective**: Verify command behavior matches your system.
 
 **Scenario**: An online tutorial says `grep --perl-regexp` works, but fails on your system.
@@ -131,7 +131,7 @@ cp [OPTION]... SOURCE... DIRECTORY
 
 ---
 
-## Exercise 8: Custom Documentation Script (Automation)
+## Challenge 8: Custom Documentation Script (Automation)
 **Objective**: Build a command
 
  reference helper.
@@ -185,7 +185,7 @@ chmod +x cmdref.sh
 
 ---
 
-## Exercise 9: The RTFM Challenge (Competition)
+## Challenge 9: The RTFM Challenge (Competition)
 **Objective**: Answer questions using ONLY man pages.
 
 **Rules**: No Google, no AI, just `man` and `apropos`.
@@ -209,7 +209,7 @@ chmod +x cmdref.sh
 
 ---
 
-## Exercise 10: Build a Man Page Navigator (Expert)
+## Challenge 10: Build a Man Page Navigator (Expert)
 **Objective**: Create an interactive man page browser.
 
 **Requirements**:
@@ -312,4 +312,4 @@ kubectl --help
 ```
 
 ## Next Steps
-Complete these exercises, then proceed to **[Programs and Commands](../08-Programs-and-Commands/EXERCISES.md)** →
+Complete these challenges, then proceed to **[Programs and Commands](../08-Programs-and-Commands/CHALLENGES.md)** →

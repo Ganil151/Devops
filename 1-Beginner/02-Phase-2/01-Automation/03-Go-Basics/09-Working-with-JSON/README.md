@@ -56,7 +56,7 @@ type Config struct {
 
 ---
 
-## 🛠️ Hands-On Exercise
+## 🛠️ Hands-On Challenge
 
 ```go
 // Parse K8s-style JSON response

@@ -137,16 +137,16 @@ EOF
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Robust Backup Script
+### Challenge 1: Robust Backup Script
 Build a script that:
 1.  Takes a source and destination as arguments.
 2.  Uses `set -e` to ensure it stops if the copy fails.
 3.  Calculates the total size of files copied using a function.
 4.  Logs the start and end time.
 
-### Exercise 2: Server Inventory Validator
+### Challenge 2: Server Inventory Validator
 Read a file `servers.txt` containing IP addresses. Use a loop to check if they respond on port 22 (SSH) and output a summary table.
 
 ---

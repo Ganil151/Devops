@@ -90,7 +90,7 @@ done
 
 ---
 
-## 🛠️ Hands-On Exercise: The Universal Deploy Tool
+## 🛠️ Hands-On Challenge: The Universal Deploy Tool
 
 **Objective**: Create a script named `deploy_tool.sh` that accepts an environment (`-e`), a version (`-v`), and a dry-run flag (`-d`).
 

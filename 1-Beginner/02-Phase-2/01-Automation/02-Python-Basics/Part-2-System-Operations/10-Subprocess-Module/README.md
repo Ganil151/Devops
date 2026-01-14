@@ -283,9 +283,9 @@ subprocess.run(["echo", user_input], capture_output=True)  # Prints literally
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Server Health Checker
+### Challenge 1: Server Health Checker
 
 ```python
 import subprocess
@@ -350,7 +350,7 @@ if status.get('latency_ms'):
 ```
 </details>
 
-### Exercise 2: Git Status Checker
+### Challenge 2: Git Status Checker
 
 ```python
 import subprocess
@@ -415,7 +415,7 @@ print(f"Repository clean: {status.get('clean', 'N/A')}")
 ```
 </details>
 
-### Exercise 3: Docker Container Manager
+### Challenge 3: Docker Container Manager
 
 ```python
 import subprocess
@@ -478,7 +478,7 @@ if result["success"]:
 ```
 </details>
 
-### Exercise 4: Log File Monitor
+### Challenge 4: Log File Monitor
 
 ```python
 import subprocess

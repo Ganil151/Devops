@@ -72,7 +72,7 @@ By the end of this level, you will:
 
 ## 📝 Hands-on Labs
 
-Each topic includes practical exercises and real-world examples to reinforce learning.
+Each topic includes practical challenges and real-world examples to reinforce learning.
 
 ---
 *Master the fundamentals before moving to intermediate concepts.*

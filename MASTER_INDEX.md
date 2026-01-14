@@ -25,7 +25,7 @@
 
 ---
 
-## 🛠️ Labs & Exercises Index
+## 🛠️ Labs & Challenges Index
 
 | Difficulty | Topic | Lab Link | Objective |
 | :--- | :--- | :--- | :--- |

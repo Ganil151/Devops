@@ -152,7 +152,7 @@ graph LR
 ```
 Monday:     Theory & Reading (2h)
 Tuesday:    Hands-on Coding (2h)
-Wednesday:  Practice Exercises (2h)
+Wednesday:  Practice Challenges (2h)
 Thursday:   Build Small Project (2h)
 Friday:     Review & Debug (1h)
 Weekend:    Larger Project / Portfolio (4-6h)

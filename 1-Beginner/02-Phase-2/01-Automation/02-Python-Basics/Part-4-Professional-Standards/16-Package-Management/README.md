@@ -109,9 +109,9 @@ flowchart TD
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Multi-Environment Dependency Setup
+### Challenge 1: Multi-Environment Dependency Setup
 
 Create a system for a project that has separate production and development requirements.
 
@@ -141,7 +141,7 @@ black
 ```
 </details>
 
-### Exercise 2: Dependency Auditor
+### Challenge 2: Dependency Auditor
 
 Write a script that reads a `requirements.txt` file and checks if any versions are older than a "minimum allowed" list.
 
@@ -178,7 +178,7 @@ def check_requirements(file_path):
 ```
 </details>
 
-### Exercise 3: Package Configurator (Editable Install)
+### Challenge 3: Package Configurator (Editable Install)
 
 Create a simple project structure and install it in "editable" mode so changes reflect immediately without reinstalling.
 

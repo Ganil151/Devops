@@ -132,9 +132,9 @@ for _, server := range servers {
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Server Health Checker
+### Challenge 1: Server Health Checker
 ```go
 // Implement health status logic
 func getHealthStatus(cpu, memory, disk float64) string {
@@ -161,7 +161,7 @@ func getHealthStatus(cpu, memory, disk float64) string {
 ```
 </details>
 
-### Exercise 2: Retry Loop
+### Challenge 2: Retry Loop
 ```go
 // Implement retry logic with backoff
 func connectWithRetry(maxRetries int) bool {

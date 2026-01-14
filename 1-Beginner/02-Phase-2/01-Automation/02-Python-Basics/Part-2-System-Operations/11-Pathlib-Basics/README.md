@@ -219,9 +219,9 @@ path.as_uri()         # file:///C:/Users/admin
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Log File Cleanup
+### Challenge 1: Log File Cleanup
 
 ```python
 from pathlib import Path
@@ -279,7 +279,7 @@ print(f"\n✅ Deleted {deleted} old log files")
 ```
 </details>
 
-### Exercise 2: Project File Analyzer
+### Challenge 2: Project File Analyzer
 
 ```python
 from pathlib import Path
@@ -362,7 +362,7 @@ for ext, data in stats["by_extension"].items():
 ```
 </details>
 
-### Exercise 3: Safe File Backup
+### Challenge 3: Safe File Backup
 
 ```python
 from pathlib import Path
@@ -430,7 +430,7 @@ backup_path = backup_file("config.yaml", backup_dir="./backups", max_backups=3)
 ```
 </details>
 
-### Exercise 4: Directory Synchronizer
+### Challenge 4: Directory Synchronizer
 
 ```python
 from pathlib import Path

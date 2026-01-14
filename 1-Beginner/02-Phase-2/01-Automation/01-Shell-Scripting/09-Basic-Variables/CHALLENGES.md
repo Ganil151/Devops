@@ -1,6 +1,6 @@
-# 🎯 Hands-On Exercises: Basic Variables
+# 🎯 Hands-On Challenges: Basic Variables
 
-## Exercise 1: Variable Assignment and Access (Beginner)
+## Challenge 1: Variable Assignment and Access (Beginner)
 **Objective**: Master basic variable syntax.
 
 **Tasks**:
@@ -21,7 +21,7 @@ VAR="value"
 
 ---
 
-## Exercise 2: Quoting Rules (Intermediate)
+## Challenge 2: Quoting Rules (Intermediate)
 **Objective**: Understand single vs double quotes.
 
 **Setup**:
@@ -46,7 +46,7 @@ $((5 + 3))     →  8
 
 ---
 
-## Exercise 3: Parameter Expansion Magic (Practical)
+## Challenge 3: Parameter Expansion Magic (Practical)
 **Objective**: Use advanced expansion techniques.
 
 **Tasks**:
@@ -67,7 +67,7 @@ echo "Connecting to $DB_HOST:$DB_PORT"
 
 ---
 
-## Exercise 4: Environment Variables (Advanced)
+## Challenge 4: Environment Variables (Advanced)
 **Objective**: Manage environment variable scope.
 
 **Setup**:
@@ -97,7 +97,7 @@ echo "Global: $GLOBAL_VAR"  # Works!
 
 ---
 
-## Exercise 5: Special Variables ($?, $$, $@) (Essential)
+## Challenge 5: Special Variables ($?, $$, $@) (Essential)
 **Objective**: Master special shell variables.
 
 **Tasks**:
@@ -125,7 +125,7 @@ echo "Global: $GLOBAL_VAR"  # Works!
 
 ---
 
-## Exercise 6: Variable Validation (Security)
+## Challenge 6: Variable Validation (Security)
 **Objective**: Implement defensive programming.
 
 **Dangerous Code**:
@@ -150,7 +150,7 @@ rm -rf "${TEMP_DIR:?}"/*
 
 ---
 
-## Exercise 7: Array Variables (Intermediate)
+## Challenge 7: Array Variables (Intermediate)
 **Objective**: Work with array data structures.
 
 **Tasks**:
@@ -176,7 +176,7 @@ done
 
 ---
 
-## Exercise 8: Configuration File Variables (Real-World)
+## Challenge 8: Configuration File Variables (Real-World)
 **Objective**: Load configuration from external files.
 
 **Setup**:
@@ -215,7 +215,7 @@ echo "✅ Configuration validated"
 
 ---
 
-## Exercise 9: Dynamic Variable Names (Expert)
+## Challenge 9: Dynamic Variable Names (Expert)
 **Objective**: Create and access variables dynamically.
 
 **Tasks**:
@@ -239,7 +239,7 @@ echo "${!var_name}"
 
 ---
 
-## Exercise 10: Build a Configuration Manager (Challenge)
+## Challenge 10: Build a Configuration Manager (Challenge)
 **Objective**: Create a professional config management script.
 
 **Requirements**:
@@ -354,4 +354,4 @@ echo "Database: $DB_HOST"
 ```
 
 ## Next Steps
-Complete these exercises, then proceed to **[Vim Crash Course](../10-Vim-Crash-Course/EXERCISES.md)** →
+Complete these challenges, then proceed to **[Vim Crash Course](../10-Vim-Crash-Course/CHALLENGES.md)** →

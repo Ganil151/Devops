@@ -349,23 +349,23 @@ Answer: 1-5
 
 ---
 
-## Hands-On Exercise
+## Hands-On Challenge
 
-### Exercise 1: Cultural Assessment
+### Challenge 1: Cultural Assessment
 
 Survey your organization:
 1. Distribute the 5 survey questions above
 2. Calculate average scores
 3. Identify gaps
 
-### Exercise 2: Design an Incentive Program
+### Challenge 2: Design an Incentive Program
 
 Create a savings sharing proposal:
 1. Define eligibility criteria
 2. Set calculation methodology
 3. Determine payout structure
 
-### Exercise 3: Champion Program Launch
+### Challenge 3: Champion Program Launch
 
 Plan a champion program:
 <b>1. Identify potential champions</b>

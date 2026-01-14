@@ -60,7 +60,7 @@ result := builder.String()
 
 ---
 
-## 🛠️ Hands-On Exercise
+## 🛠️ Hands-On Challenge
 
 ```go
 // Parse server name: "web-prod-us-east-01"

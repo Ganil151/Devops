@@ -110,9 +110,9 @@ parser.add_argument("--target-ip", type=validate_ip)
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Port Scanner CLI
+### Challenge 1: Port Scanner CLI
 Build a tool that takes a required `host` and an optional `--ports` list (defaulting to 80, 443).
 
 <details>
@@ -130,7 +130,7 @@ print(f"Scanning {args.host} on ports {args.ports}...")
 ```
 </details>
 
-### Exercise 2: File-Based Argument Passing
+### Challenge 2: File-Based Argument Passing
 Use `fromfile_prefix_chars='@'` to allow users to put long argument lists in a text file.
 
 <details>
@@ -148,7 +148,7 @@ print(f"Targeting servers: {args.server}")
 ```
 </details>
 
-### Exercise 3: Automated Cleaner with Safety
+### Challenge 3: Automated Cleaner with Safety
 Create a CLI with a `--force` and `--dry-run` mutually exclusive group.
 
 <details>
@@ -170,7 +170,7 @@ else:
 ```
 </details>
 
-### Exercise 4: Subcommand Router
+### Challenge 4: Subcommand Router
 Build a calculator CLI with `add` and `multiply` subcommands, each taking two numbers.
 
 <details>
@@ -196,7 +196,7 @@ elif args.op == "multiply":
 ```
 </details>
 
-### Exercise 5: Environment Override CLI
+### Challenge 5: Environment Override CLI
 Create a CLI that reads an `API_KEY` positional argument, but if it's missing, looks for an `API_KEY` environment variable.
 
 <details>

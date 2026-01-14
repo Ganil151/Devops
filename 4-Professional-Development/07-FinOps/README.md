@@ -29,7 +29,7 @@ Before diving into consulting, master FinOps fundamentals through our structured
 | 🔴 **Advanced** | [3-Advanced/12-FinOps](../../../3-Advanced/12-FinOps/README.md) | FinOps Framework, Multi-Cloud, Unit Economics, Culture, Enterprise Governance |
 
 > [!TIP]
-> Complete the learning path before offering FinOps consulting services. Each level includes hands-on exercises, tool recommendations, and real-world examples.
+> Complete the learning path before offering FinOps consulting services. Each level includes hands-on challenges, tool recommendations, and real-world examples.
 
 ---
 

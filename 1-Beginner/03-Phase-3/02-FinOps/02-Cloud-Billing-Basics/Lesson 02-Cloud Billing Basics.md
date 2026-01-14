@@ -194,7 +194,7 @@ Most cloud providers offer free tiers with limits:
 
 ---
 
-## Hands-On Exercise
+## Hands-On Challenge
 
 1. **Log into your cloud provider's billing console**
 

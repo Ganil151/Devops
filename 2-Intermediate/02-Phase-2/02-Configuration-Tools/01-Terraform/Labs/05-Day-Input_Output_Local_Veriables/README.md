@@ -25,7 +25,7 @@ Before diving into this lab, review these foundational concepts:
 ├── output.tf                   # Output value definitions
 ├── providers.tf                # Provider configurations
 ├── README.md                   # Project documentation
-├── task.md                     # Learning tasks and exercises
+├── task.md                     # Learning tasks and challenges
 ├── tfplan                      # Terraform execution plan (generated)
 └── variables.tf                # Input variable definitions
 ```

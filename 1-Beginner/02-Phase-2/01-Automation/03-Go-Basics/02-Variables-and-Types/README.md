@@ -149,9 +149,9 @@ func getPort() int {
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Server Config
+### Challenge 1: Server Config
 ```go
 // Define variables for a server configuration
 package main
@@ -190,7 +190,7 @@ func main() {
 ```
 </details>
 
-### Exercise 2: Log Level Enum
+### Challenge 2: Log Level Enum
 ```go
 // Create log level constants using iota
 // TODO: Define LogDebug=0, LogInfo=1, LogWarn=2, LogError=3

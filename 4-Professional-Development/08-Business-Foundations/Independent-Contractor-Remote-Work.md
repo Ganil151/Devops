@@ -336,7 +336,7 @@ gantt
 
 ### Morning Routine (Before Work)
 - [ ] No screens for first 30 minutes
-- [ ] Exercise or movement (even 15 min)
+- [ ] Challenge or movement (even 15 min)
 - [ ] Healthy breakfast
 
 ### During Work
@@ -450,7 +450,7 @@ If you work in multiple states or have clients in different states:
 ┌─────────────────────────────────────────────────────────┐
 │ Monday                                                   │
 ├───────────────┬──────────────────────────────────────────┤
-│ 7-8 AM        │ 🏃 Exercise / Personal                   │
+│ 7-8 AM        │ 🏃 Challenge / Personal                   │
 ├───────────────┼──────────────────────────────────────────┤
 │ 8-9 AM        │ 📧 Email triage, planning                │
 ├───────────────┼──────────────────────────────────────────┤

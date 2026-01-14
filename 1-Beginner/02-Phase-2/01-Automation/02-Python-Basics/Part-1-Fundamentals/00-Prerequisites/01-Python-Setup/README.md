@@ -102,15 +102,15 @@ Hello, DevOps!
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: Version Check Script
+### Challenge 1: Version Check Script
 Write a one-liner to check your environment.
 ```bash
 python -c "import sys; print(f'Running Python {sys.version}')"
 ```
 
-### Exercise 2: Locate Interpreter
+### Challenge 2: Locate Interpreter
 Find exactly where your Python is running from.
 ```bash
 # Windows

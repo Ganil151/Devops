@@ -80,7 +80,7 @@ func TestServer(t *testing.T) {
 
 ---
 
-## 🛠️ Hands-On Exercise
+## 🛠️ Hands-On Challenge
 
 ```go
 // Write tests for validate email function

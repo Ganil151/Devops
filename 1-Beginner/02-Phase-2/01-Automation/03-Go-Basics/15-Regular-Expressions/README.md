@@ -53,7 +53,7 @@ result := pattern.ReplaceAllString(config, "password=***")
 
 ---
 
-## 🛠️ Hands-On Exercise
+## 🛠️ Hands-On Challenge
 
 ```go
 // Extract log level and message from log line

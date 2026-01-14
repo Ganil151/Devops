@@ -174,7 +174,7 @@ Each topic includes:
 - **Common Pitfalls**: What to avoid
 - **Interview Questions**: 5-10 with answers
 - **Quiz**: 10-20 questions
-- **Exercises**: Hands-on practice
+- **Challenges**: Hands-on practice
 - **Resources**: External links
 
 ## 🎯 Learning Paths

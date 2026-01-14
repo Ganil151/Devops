@@ -682,7 +682,7 @@ if __name__ == "__main__":
 - [ ] Master basic and advanced commands
 - [ ] Implement branching strategies
 - [ ] Optimize repository performance
-- [ ] Complete migration exercises
+- [ ] Complete migration challenges
 - [ ] Set up enterprise server
 - [ ] Configure access control and security
 - [ ] Pass the comprehensive quiz (80%+ score)

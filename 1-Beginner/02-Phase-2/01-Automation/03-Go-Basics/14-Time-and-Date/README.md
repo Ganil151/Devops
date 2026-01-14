@@ -59,7 +59,7 @@ case <-time.After(10 * time.Second):
 
 ---
 
-## 🛠️ Hands-On Exercise
+## 🛠️ Hands-On Challenge
 
 ```go
 // Calculate deployment duration

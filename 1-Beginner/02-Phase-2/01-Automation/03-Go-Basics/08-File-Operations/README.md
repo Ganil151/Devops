@@ -78,7 +78,7 @@ os.RemoveAll("directory")
 
 ---
 
-## 🛠️ Hands-On Exercise
+## 🛠️ Hands-On Challenge
 
 ```go
 // Create a log file rotator

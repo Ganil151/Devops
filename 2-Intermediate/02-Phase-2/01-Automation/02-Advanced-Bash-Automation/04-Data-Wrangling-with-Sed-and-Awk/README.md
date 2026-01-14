@@ -60,7 +60,7 @@ sed -i 's/^PermitRootLogin yes/PermitRootLogin no/' /opt/app/config.ini
 
 ---
 
-## 🛠️ Hands-On Exercise: Log Miner
+## 🛠️ Hands-On Challenge: Log Miner
 
 **Objective**: Extract specific data from a messy log file using `sed` and `awk`.
 

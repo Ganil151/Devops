@@ -1,6 +1,6 @@
-# 🎯 Hands-On Exercises: Searching in Files (Grep Mastery)
+# 🎯 Hands-On Challenges: Searching in Files (Grep Mastery)
 
-## Exercise 1: Basic Grep Operations (Beginner)
+## Challenge 1: Basic Grep Operations (Beginner)
 **Objective**: Master fundamental grep syntax.
 
 **Setup**:
@@ -29,7 +29,7 @@ EOF
 
 ---
 
-## Exercise 2: Context Searching (Intermediate)
+## Challenge 2: Context Searching (Intermediate)
 **Objective**: Use context flags to debug issues.
 
 **Setup**:
@@ -59,7 +59,7 @@ EOF
 
 ---
 
-## Exercise 3: Recursive Directory Search (Practical)
+## Challenge 3: Recursive Directory Search (Practical)
 **Objective**: Search across multiple files.
 
 **Setup**:
@@ -81,7 +81,7 @@ echo "WARN: High memory usage" > logs/app/metrics.log
 
 ---
 
-## Exercise 4: Regular Expression Patterns (Advanced)
+## Challenge 4: Regular Expression Patterns (Advanced)
 **Objective**: Master regex for complex searches.
 
 **Setup**:
@@ -108,7 +108,7 @@ grep -oE '\w+@' users.txt | sed 's/@//'
 
 ---
 
-## Exercise 5: Log Analysis Mission (Real-World)
+## Challenge 5: Log Analysis Mission (Real-World)
 **Objective**: Analyze production logs for incidents.
 
 **Setup**:
@@ -146,7 +146,7 @@ EOF
 
 ---
 
-## Exercise 6: Security Audit with Grep (Critical)
+## Challenge 6: Security Audit with Grep (Critical)
 **Objective**: Search for security vulnerabilities.
 
 **Tasks**:
@@ -171,7 +171,7 @@ EOF
 
 ---
 
-## Exercise 7: Grep vs RipGrep Performance Test (Comparison)
+## Challenge 7: Grep vs RipGrep Performance Test (Comparison)
 **Objective**: Compare search tool performance.
 
 **Setup**:
@@ -197,7 +197,7 @@ done > large.log
 
 ---
 
-## Exercise 8: Advanced Pattern Matching (Expert)
+## Challenge 8: Advanced Pattern Matching (Expert)
 **Objective**: Master complex regex patterns.
 
 **Setup**:
@@ -230,7 +230,7 @@ EOF
 
 ---
 
-## Exercise 9: Grep Pipelines (Power User)
+## Challenge 9: Grep Pipelines (Power User)
 **Objective**: Chain grep with other commands.
 
 **Tasks**:
@@ -249,7 +249,7 @@ EOF
 
 ---
 
-## Exercise 10: Custom Grep Alert Script (Automation)
+## Challenge 10: Custom Grep Alert Script (Automation)
 **Objective**: Create monitoring script using grep.
 
 **Requirements**:
@@ -301,4 +301,4 @@ fi
 | `\|` | OR (with -E) |
 
 ## Next Steps
-Complete these exercises, then proceed to **[Paging Files](../06-Paging-Files/EXERCISES.md)** →
+Complete these challenges, then proceed to **[Paging Files](../06-Paging-Files/CHALLENGES.md)** →

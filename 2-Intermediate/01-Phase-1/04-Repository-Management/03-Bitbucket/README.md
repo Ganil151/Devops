@@ -547,7 +547,7 @@ if __name__ == "__main__":
 - [ ] Configure Jira integration with smart commits
 - [ ] Create and deploy Bitbucket Pipelines
 - [ ] Implement branch permissions and security policies
-- [ ] Complete repository migration exercise
+- [ ] Complete repository migration challenge
 - [ ] Configure enterprise authentication (SSO/LDAP)
 - [ ] Set up monitoring and audit logging
 - [ ] Pass the comprehensive quiz (80%+ score)

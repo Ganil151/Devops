@@ -63,7 +63,7 @@ If you answered 3+, you're ready to start. If not, spend 2-4 weeks learning the 
 - [ ] Enable AWS Budgets and alerts
 - [ ] Configure basic tagging
 
-**Practice Exercises**:
+**Practice Challenges**:
 1. **Cost Analysis**: Analyze your free tier usage
 2. **Budgets**: Set up a $10/month budget with alerts
 3. **Tagging**: Tag all resources with Environment, Owner, Project

@@ -66,7 +66,7 @@ type Deployment struct {
 
 ---
 
-## 🛠️ Hands-On Exercise
+## 🛠️ Hands-On Challenge
 
 ```go
 // Create a function to generate K8s ConfigMap YAML

@@ -233,9 +233,9 @@ print(f"Deploying {manifest['spec']['replicas']} replicas")
 
 ---
 
-## 🛠️ Hands-On Exercises
+## 🛠️ Hands-On Challenges
 
-### Exercise 1: K8s Manifest Generator
+### Challenge 1: K8s Manifest Generator
 ```python
 # Create a function to generate Kubernetes deployment manifests
 # TODO: Implement generate_deployment function
@@ -295,7 +295,7 @@ print(generate_deployment("web-api", "nginx:latest", replicas=3))
 ```
 </details>
 
-### Exercise 2: Ansible Inventory Parser
+### Challenge 2: Ansible Inventory Parser
 ```python
 # Parse this Ansible inventory YAML
 inventory = """
@@ -362,7 +362,7 @@ for host in hosts:
 ```
 </details>
 
-### Exercise 3: Config Merger
+### Challenge 3: Config Merger
 ```python
 # Merge multiple YAML config files with proper precedence
 # TODO: Implement merge_configs function

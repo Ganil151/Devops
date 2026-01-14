@@ -375,7 +375,7 @@ Each completed topic includes:
    - Consistent dark-mode theme
    - Tech-focused design aesthetic
 
-3. **Create Exercise Files**
+3. **Create Challenge Files**
    - Hands-on practice for each topic
    - Solution files with explanations
    - Progressive difficulty
@@ -492,7 +492,7 @@ Recognizing different DevOps roles:
 Built-in validation through:
 - Interview-style questions
 - Multiple-choice quizzes
-- Practical exercises
+- Practical challenges
 - Real-world scenarios
 ### 4. Visual Learning Emphasis
 Every topic includes:

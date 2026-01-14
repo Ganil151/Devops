@@ -43,7 +43,7 @@ subgraph "Testing the Documentation"
 ## ❓ Interview Questions
 
 1.  **What is a 'Gameday' and what is its primary value for an SRE team?**
-    - *Answer*: A Gameday is a controlled exercise where a team intentionally injects a fault into a non-production (or staging) environment to test their response systems. Its value lies in identifying gaps in monitoring, alerting, and specifically **documentation** before they cause a real-world outage.
+    - *Answer*: A Gameday is a controlled challenge where a team intentionally injects a fault into a non-production (or staging) environment to test their response systems. Its value lies in identifying gaps in monitoring, alerting, and specifically **documentation** before they cause a real-world outage.
 2.  **Explain the role of the 'Scribe' or 'Observer' during a documentation test.**
     - *Answer*: The Scribe does not help fix the issue. Instead, they watch the engineers' behavior. They look for moments of hesitation, "side searches" on Google, or manual steps taken that aren't in the SOP. These represent "Documentation Debt" that needs to be fixed.
 3.  **How do you incorporate documentation feedback into a blameless post-mortem?**
