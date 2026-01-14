@@ -13,7 +13,13 @@ When shell scripts become too complex or require heavy API interaction, Python i
 | **05** | [**Cloud Automation**](./05-Cloud-Automation-Boto3-Deep-Dive/README.md) | AWS Programming | Boto3, Sessions, Clients/Resources |
 | **06** | [**Serverless Boto3**](./06-Serverless-Boto3-Lambda/README.md) | Lambda Automation | Handlers, Events, Warm Starts |
 | **07** | [**Testing & Mocking**](./07-Testing-Automation-with-Pytest/README.md) | Quality Assurance | Pytest, Fixtures, Repo/Moto |
-| **08** | [**Capstone: S3 Guardian**](./08-Capstone-Project-S3-Auditor/README.md) | **Build a CLI Tool** | **Synthesizing all skills** |
+| **08** | [**Log Parsing & Regex**](./08-Log-Parsing-and-Regex/README.md) | Operations | re, Counter, Log Aggregation |
+| **09** | [**Remote Execution**](./09-Remote-Execution-and-SSH/README.md) | Fleet Management | SSH, Paramiko, SFTP |
+| **10** | [**Database Ops**](./10-Database-Operations/README.md) | State Management | SQLite, Parameters, Inventory |
+| **11** | [**Docker & K8s SDKs**](./11-Docker-and-Kubernetes-SDKs/README.md) | Container Orchestration| Docker SDK, K8s Client |
+| **12** | [**Web Scraping**](./12-Web-Scraping-for-Monitoring/README.md) | Monitoring | BeautifulSoup, Requests |
+| **13** | [**Data Processing**](./13-Data-Processing-with-Pandas/README.md) | Analysis | Pandas, DataFrames, Reporting |
+| **14** | [**Capstone: S3 Guardian**](./14-Capstone-Project-S3-Auditor/README.md) | **Build a CLI Tool** | **Synthesizing all skills** |
 
 ---
 

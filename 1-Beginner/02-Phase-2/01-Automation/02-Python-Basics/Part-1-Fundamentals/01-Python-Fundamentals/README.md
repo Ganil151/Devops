@@ -262,7 +262,6 @@ Master Python fundamentals by solving these DevOps-centric challenges.
 > **Pro Tip**: Try to solve the challenges in your terminal first. You can run them using `python challenges/challenge_name.py`.
 
 ---
-
 ## 📖 Real-World Story: The Config Parser
 **Scenario**: A team had 50+ servers with configuration scattered across bash scripts using different variable naming conventions (`serverName`, `SERVER_NAME`, `server-name`).
 

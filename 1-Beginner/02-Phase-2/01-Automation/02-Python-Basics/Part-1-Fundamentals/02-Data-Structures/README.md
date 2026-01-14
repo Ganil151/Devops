@@ -1,6 +1,5 @@
 # Python Data Structures
 *Organizing Data for Efficient DevOps Automation*
-
 Choosing the right data structure is critical for automation scripts. The difference between a `list` and a `dict` can mean the difference between O(n) and O(1) lookups—crucial when processing thousands of log entries.
 
 ---

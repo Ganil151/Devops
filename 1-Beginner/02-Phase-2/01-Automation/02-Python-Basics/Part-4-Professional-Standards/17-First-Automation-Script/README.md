@@ -750,55 +750,17 @@ python-dotenv>=1.0.0
 
 ## 🛠️ Hands-On Challenges
 
-### Challenge 1: Add Slack Notifications
+Apply your knowledge to extend the health monitor with these feature requests.
 
-```python
-"""Add Slack notification support to the health monitor.
+| Challenge | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- |
+| **01. Slack Alerter** | Implement a notification module that sends alerts to Slack webhooks for unhealthy servers. | [Link](./challenges/challenge_01_slack_alerter.py) | [Link](./challenges/solutions/solution_01_slack_alerter.py) |
+| **02. CLI Improver** | Add a `--retries` argument and implementation logic to handle transient network failures. | [Link](./challenges/challenge_02_cli_improver.py) | [Link](./challenges/solutions/solution_02_cli_improver.py) |
+| **03. CSV Exporter** | Build a reporting extension that saves health check results to a management-friendly CSV format. | [Link](./challenges/challenge_03_report_exporter.py) | [Link](./challenges/solutions/solution_03_report_exporter.py) |
+| **04. Port Scanner** | Create a multi-port scanning module to verify complex services (web, ssh, db) on a single host. | [Link](./challenges/challenge_04_port_scanner.py) | [Link](./challenges/solutions/solution_04_port_scanner.py) |
 
-TODO: Implement a notification module that:
-1. Sends alerts to Slack when servers are unhealthy
-2. Includes summary stats
-3. Only notifies if there are problems
-"""
-
-def send_slack_notification(report: Dict, webhook_url: str) -> bool:
-    pass
-```
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-"""Slack notification module for health monitor."""
-
-import requests
-import logging
-from typing import Dict
-
-logger = logging.getLogger(__name__)
-
-
-def send_slack_notification(report: Dict, webhook_url: str) -> bool:
-    """Send health check results to Slack."""
-    
-    if not webhook_url:
-        logger.warning("No Slack webhook URL configured")
-        return False
-    
-    summary = report["summary"]
-    unhealthy = [r for r in report["results"] if not r["healthy"]]
-    
-    # Only notify if there are problems
-    if summary["unhealthy"] == 0:
-        logger.info("All servers healthy, skipping Slack notification")
-        return True
-    
-    # Build message
-    if summary["unhealthy"] == summary["total"]:
-        color = "danger"
-        title = "🔴 All Servers Down!"
-    else:
-        color = "warning"
+> **Pro Tip**: When building complex automation tools, always use `if __name__ == "__main__":` so your logic modules can be imported and tested individually without triggering the full script.
+or = "warning"
         title = f"⚠️ {summary['unhealthy']} Server(s) Unhealthy"
     
     # Format unhealthy servers

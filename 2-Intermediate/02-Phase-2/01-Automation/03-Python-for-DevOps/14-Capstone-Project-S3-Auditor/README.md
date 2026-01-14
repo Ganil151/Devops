@@ -245,3 +245,33 @@ def test_audit_passes_secure_bucket():
     assert report['Status'] == "✅ PASS"
 ```
 </details>
+
+---
+
+## 📂 Project Source Code
+
+You can find the complete, professional-grade source code for this project in the `project/` directory of this module.
+
+- **[Main CLI Interface](./project/main.py)**: Handles arguments and AWS sessions.
+- **[Auditor Logic](./project/auditor.py)**: The reusable security check engine.
+- **[Test Suite](./project/tests/test_s3_guardian.py)**: Automated tests using Moto.
+- **[Requirements](./project/requirements.txt)**: Minimal dependencies for production use.
+
+---
+
+## 🎖️ Module Completed!
+
+Congratulations! You've mastered the Intermediate Python for DevOps curriculum. You are now capable of:
+1.  Writing complex, logic-heavy automation scripts.
+2.  Manipulating Infrastructure-as-Code (YAML/JSON) programmatically.
+3.  Managing massive cloud environments using Boto3 and Paginators.
+4.  Deploying serverless event-driven automation in AWS Lambda.
+5.  Protecting your infrastructure with professional unit tests and mocks.
+
+**What's Next?**
+- Head to the [**Advanced Python for DevOps**](../../../../3-Advanced/02-Phase-2/01-Automation/03-Python-Advanced/README.md) module to learn about Object Oriented (OOP) Automation, Context Managers, and Multi-threading.
+- Or explore [**Ansible Automation**](../../02-Configuration-Tools/05-Ansible/README.md) to apply your Python skills to configuration management.
+
+---
+
+**Back to Main Hub**: [Python for DevOps Hub](../README.md)

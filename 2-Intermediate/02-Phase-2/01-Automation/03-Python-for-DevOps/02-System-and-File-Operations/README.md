@@ -87,6 +87,21 @@ new_dir.mkdir(parents=True, exist_ok=True)
 
 ---
 
+## 🛠️ Hands-On Challenges
+
+Master system interaction by building these automated DevOps tools.
+
+| Challenge | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- |
+| **01. Duplicate Finder** | Scan directories recursively and find identical files using MD5 hashing. | [Link](./challenges/challenge_01_duplicate_finder.py) | [Link](./challenges/solutions/solution_01_duplicate_finder.py) |
+| **02. Log Rotator** | Implement a custom retention policy to keep only the N most recent logs. | [Link](./challenges/challenge_02_log_rotator.py) | [Link](./challenges/solutions/solution_02_log_rotator.py) |
+| **03. Command Wrapper** | Build a robust wrapper for `subprocess` with timeouts and structured output. | [Link](./challenges/challenge_03_command_wrapper.py) | [Link](./challenges/solutions/solution_03_command_wrapper.py) |
+| **04. Bulk Renamer** | Use `pathlib` to efficiently rename entire sets of files for migration tasks. | [Link](./challenges/challenge_04_bulk_renamer.py) | [Link](./challenges/solutions/solution_04_bulk_renamer.py) |
+
+> **Pro Tip**: When using `subprocess.run`, always check `result.returncode`. A non-zero code usually means your automation failed to execute the intended side-effect.
+
+---
+
 ## 🧠 Quiz
 
 1. **Which module handles command-line arguments passed to a script?** `(sys)`
@@ -94,3 +109,7 @@ new_dir.mkdir(parents=True, exist_ok=True)
 3. **True/False: `pathlib` is only available on Linux.** `(False)`
 4. **How do you access an environment variable in Python?** `(os.getenv('NAME'))`
 5. **What does `exist_ok=True` do in `mkdir()`?** `(Prevents an error if the directory already exists)`
+
+---
+
+**Next Step**: [Working with Data (JSON/YAML) →](../03-Working-with-Data-JSON-YAML/README.md)

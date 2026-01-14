@@ -86,6 +86,21 @@ with open("k8s-deploy.yaml", "w") as f:
 
 ---
 
+## 🛠️ Hands-On Challenges
+
+Master data processing by building these configuration management tools.
+
+| Challenge | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- |
+| **01. YAML to JSON** | Build a migration utility that converts directory-wide YAML configs to JSON format. | [Link](./challenges/challenge_01_yaml_to_json.py) | [Link](./challenges/solutions/solution_01_yaml_to_json.py) |
+| **02. Config Validator** | Create a schema validation script that ensures configurations meet required types. | [Link](./challenges/challenge_02_config_validator.py) | [Link](./challenges/solutions/solution_02_config_validator.py) |
+| **03. K8s Scaler** | Programmatically update Kubernetes manifests to scale deployments during peak traffic. | [Link](./challenges/challenge_03_k8s_scaler.py) | [Link](./challenges/solutions/solution_03_k8s_scaler.py) |
+| **04. Inventory Auditor** | Use set theory to detect configuration drift between desired and actual infrastructure. | [Link](./challenges/challenge_04_inventory_auditor.py) | [Link](./challenges/solutions/solution_04_inventory_auditor.py) |
+
+> **Pro Tip**: Use `yaml.safe_dump(data, sort_keys=False)` to maintain the original order of keys in your YAML files, making them more readable for humans.
+
+---
+
 ## 🧠 Quiz
 
 1. **Which Python data structure is closest to a JSON object?** `(Dictionary)`
@@ -93,3 +108,7 @@ with open("k8s-deploy.yaml", "w") as f:
 3. **What is the command to install the most common YAML library?** `(pip install pyyaml)`
 4. **How do you add an element to a Python list?** `(.append())`
 5. **Which function converts a Python dictionary into a JSON file?** `(json.dump())`
+
+---
+
+**Next Step**: [API Mastery with Requests →](../04-API-Mastery-with-Requests/README.md)

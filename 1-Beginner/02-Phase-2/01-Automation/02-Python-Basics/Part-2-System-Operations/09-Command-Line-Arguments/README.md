@@ -112,109 +112,17 @@ parser.add_argument("--target-ip", type=validate_ip)
 
 ## 🛠️ Hands-On Challenges
 
-### Challenge 1: Port Scanner CLI
-Build a tool that takes a required `host` and an optional `--ports` list (defaulting to 80, 443).
+Build professional command-line interfaces by solving these DevOps challenges.
 
-<details>
-<summary>💡 Solution</summary>
+| Challenge | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- |
+| **01. Port Scanner** | Build a tool that takes a required host and a dynamic list of ports. | [Link](./challenges/challenge_01_port_scanner.py) | [Link](./challenges/solutions/solution_01_port_scanner.py) |
+| **02. File Args** | Use the `@` prefix to allow passing long argument lists from a text file. | [Link](./challenges/challenge_02_file_args.py) | [Link](./challenges/solutions/solution_02_file_args.py) |
+| **03. Safety Flags** | Implement mutually exclusive `--force` and `--dry-run` logic for safe scripts. | [Link](./challenges/challenge_03_safety_flags.py) | [Link](./challenges/solutions/solution_03_safety_flags.py) |
+| **04. Subcommands** | Create a multi-purpose calculator CLI using the subcommand pattern. | [Link](./challenges/challenge_04_subcommands.py) | [Link](./challenges/solutions/solution_04_subcommands.py) |
+| **05. Env Override** | Build a CLI that gracefully falls back to environment variables for defaults. | [Link](./challenges/challenge_05_env_override.py) | [Link](./challenges/solutions/solution_05_env_override.py) |
 
-```python
-import argparse
-
-parser = argparse.ArgumentParser()
-parser.add_argument("host", help="Hostname to scan")
-parser.add_argument("--ports", type=int, nargs="+", default=[80, 443])
-
-args = parser.parse_args()
-print(f"Scanning {args.host} on ports {args.ports}...")
-```
-</details>
-
-### Challenge 2: File-Based Argument Passing
-Use `fromfile_prefix_chars='@'` to allow users to put long argument lists in a text file.
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-import argparse
-
-# Usage: python script.py @args.txt
-parser = argparse.ArgumentParser(fromfile_prefix_chars='@')
-parser.add_argument("--server", action="append")
-
-args = parser.parse_args()
-print(f"Targeting servers: {args.server}")
-```
-</details>
-
-### Challenge 3: Automated Cleaner with Safety
-Create a CLI with a `--force` and `--dry-run` mutually exclusive group.
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-import argparse
-
-parser = argparse.ArgumentParser()
-group = parser.add_mutually_exclusive_group()
-group.add_argument("-f", "--force", action="store_true")
-group.add_argument("-d", "--dry-run", action="store_true")
-
-args = parser.parse_args()
-if args.dry_run:
-    print("Pretending to delete files...")
-else:
-    print("Actually deleting files...")
-```
-</details>
-
-### Challenge 4: Subcommand Router
-Build a calculator CLI with `add` and `multiply` subcommands, each taking two numbers.
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-import argparse
-
-parser = argparse.ArgumentParser()
-sub = parser.add_subparsers(dest="op")
-
-add = sub.add_parser("add")
-add.add_argument("nums", type=int, nargs=2)
-
-mult = sub.add_parser("multiply")
-mult.add_argument("nums", type=int, nargs=2)
-
-args = parser.parse_args()
-if args.op == "add":
-    print(sum(args.nums))
-elif args.op == "multiply":
-    print(args.nums[0] * args.nums[1])
-```
-</details>
-
-### Challenge 5: Environment Override CLI
-Create a CLI that reads an `API_KEY` positional argument, but if it's missing, looks for an `API_KEY` environment variable.
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-import argparse
-import os
-
-parser = argparse.ArgumentParser()
-parser.add_argument("key", nargs="?", default=os.environ.get("API_KEY"))
-
-args = parser.parse_args()
-if not args.key:
-    parser.error("API_KEY must be provided via argument or environment variable.")
-print(f"Using Key: {args.key}")
-```
-</details>
+> **Pro Tip**: Use `parser.add_subparsers(dest="action")` to easily route logic based on the user's chosen command.
 
 ---
 

@@ -183,9 +183,7 @@ from server_utils import *
 ```
 
 ---
-
 ## 📁 Package Structure
-
 ```mermaid
 flowchart LR
     subgraph Package
@@ -215,7 +213,6 @@ from mypackage import important_function
 ```
 ---
 ## 🛠️ Hands-On Challenges
-
 Master functions and modules by solving these professional DevOps challenges.
 
 | Challenge | Description | Starter Code | Solution |
@@ -229,7 +226,6 @@ Master functions and modules by solving these professional DevOps challenges.
 ---
 
 ## 📖 Real-World Story: The Utility Library
-
 **Scenario**: Five teams were each writing their own server connection code, leading to inconsistent error handling and duplicated bugs.
 
 **Solution**: Created a shared `infra-utils` Python package with:

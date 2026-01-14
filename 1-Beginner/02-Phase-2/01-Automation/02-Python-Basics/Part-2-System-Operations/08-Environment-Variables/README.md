@@ -119,104 +119,17 @@ if config.debug:
 
 ## 🛠️ Hands-On Challenges
 
-### Challenge 1: Mandatory Variable Validator
-Create a utility that checks for all required variables and raises a clear error list if they are missing.
+Master environment variables by solving these professional DevOps challenges.
 
-<details>
-<summary>💡 Solution</summary>
+| Challenge | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- |
+| **01. Mandatory Validator** | Ensure critical variables (API keys, DB URLs) are present before execution. | [Link](./challenges/challenge_01_validator.py) | [Link](./challenges/solutions/solution_01_validator.py) |
+| **02. Secret Masking** | Implement a secure logger that protects sensitive credentials. | [Link](./challenges/challenge_02_masking_logger.py) | [Link](./challenges/solutions/solution_02_masking_logger.py) |
+| **03. Bool Parser** | Create a robust type-safe parser for boolean environment variables. | [Link](./challenges/challenge_03_bool_parser.py) | [Link](./challenges/solutions/solution_03_bool_parser.py) |
+| **04. Dynamic Loader** | Build a loader that switches `.env` files based on the target environment. | [Link](./challenges/challenge_04_dynamic_loader.py) | [Link](./challenges/solutions/solution_04_dynamic_loader.py) |
+| **05. Prefix Loader** | Bulk load configuration items using custom variable prefixes. | [Link](./challenges/challenge_05_prefix_loader.py) | [Link](./challenges/solutions/solution_05_prefix_loader.py) |
 
-```python
-import os
-
-REQUIRED_VARS = ["DB_URL", "API_KEY", "REGION"]
-
-def validate_environment():
-    missing = [var for var in REQUIRED_VARS if var not in os.environ]
-    if missing:
-        raise EnvironmentError(f"Missing mandatory variables: {', '.join(missing)}")
-    print("✅ Environment is valid")
-
-# validate_environment()
-```
-</details>
-
-### Challenge 2: Secret Masking Logger
-Implement a function that logs environment variables but masks the values of sensitive keys.
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-import os
-
-SENSITIVE_KEYS = {"PASSWORD", "SECRET", "KEY", "TOKEN"}
-
-def log_env_safely():
-    for key, value in os.environ.items():
-        if any(s in key.upper() for s in SENSITIVE_KEYS):
-            masked = value[:2] + "*" * (len(value) - 4) + value[-2:] if len(value) > 4 else "****"
-            print(f"{key}: {masked}")
-        else:
-            print(f"{key}: {value}")
-```
-</details>
-
-### Challenge 3: Type-Safe Parser
-Create a helper function `get_env_bool(name, default)` that correctly handles various string representations of booleans ("1", "true", "yes").
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-import os
-
-def get_env_bool(name, default=False):
-    val = os.environ.get(name, str(default)).lower()
-    return val in ("true", "1", "t", "y", "yes")
-
-# debug = get_env_bool("DEBUG", default=True)
-```
-</details>
-
-### Challenge 4: Dynamic Environment Loader
-Write a script that loads `.env.prod` if `ENV=production` is set, otherwise loads `.env.dev`.
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-from dotenv import load_dotenv
-import os
-
-def setup_env():
-    environment = os.environ.get("ENV", "development")
-    env_file = f".env.{environment}"
-    load_dotenv(env_file)
-    print(f"Loaded config from {env_file}")
-
-# setup_env()
-```
-</details>
-
-### Challenge 5: Prefix-Based Config Loader
-Read all variables starting with `APP_` (e.g., `APP_PORT`, `APP_TIMEOUT`) and return them as a dictionary with the prefix removed.
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-import os
-
-def get_app_config():
-    return {
-        key[4:].lower(): value 
-        for key, value in os.environ.items() 
-        if key.startswith("APP_")
-    }
-
-# config = get_app_config()
-```
-</details>
+> **Pro Tip**: Use a centralized `Config` class to load all variables at startup, rather than accessing `os.environ` randomly throughout your code.
 
 ---
 

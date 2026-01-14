@@ -97,6 +97,21 @@ def check_cpu_threshold(current: float, limit: float = 90.0) -> bool:
 
 ---
 
+## 🛠️ Hands-On Challenges
+
+Master intermediate Python patterns by building these production-grade utilities.
+
+| Challenge | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- |
+| **01. Multi-Env Config** | Merge base settings with environment-specific overrides for flexible automation. | [Link](./challenges/challenge_01_multi_env_config.py) | [Link](./challenges/solutions/solution_01_multi_env_config.py) |
+| **02. Graceful Shutdown** | Implement signal handlers to clean up files and resources when a script is stopped. | [Link](./challenges/challenge_02_graceful_shutdown.py) | [Link](./challenges/solutions/solution_02_graceful_shutdown.py) |
+| **03. Conflict Resolver** | Audit two dependency files to find overlapping packages with conflicting version pins. | [Link](./challenges/challenge_03_dependency_conflicts.py) | [Link](./challenges/solutions/solution_03_dependency_conflicts.py) |
+| **04. Secure Secret Loader**| Secure your automation by validating file permissions before reading sensitive tokens. | [Link](./challenges/challenge_04_secure_secret.py) | [Link](./challenges/solutions/solution_04_secure_secret.py) |
+
+> **Pro Tip**: Use `sys.exit(0)` for success and `sys.exit(1)` (or higher) for failures. This allows your CI/CD pipeline to know exactly when a script failed.
+
+---
+
 ## 🧠 Quiz
 
 1. **Which command creates a new virtual environment?** `(python -m venv <name>)`
@@ -104,3 +119,7 @@ def check_cpu_threshold(current: float, limit: float = 90.0) -> bool:
 3. **What is the default tool for installing Python packages?** `(pip)`
 4. **Which block is used to catch errors in Python?** `(try...except)`
 5. **How do you activate a virtual environment on Linux?** `(source .venv/bin/activate)`
+
+---
+
+**Next Step**: [System and File Operations →](../02-System-and-File-Operations/README.md)

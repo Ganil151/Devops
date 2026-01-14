@@ -79,6 +79,21 @@ graph TD
 
 ---
 
+## 🛠️ Hands-On Challenges
+
+Master AWS automation by building these infrastructure management tools.
+
+| Challenge | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- |
+| **01. S3 Auditor** | Programmatically audit all S3 buckets for public access and policy compliance. | [Link](./challenges/challenge_01_s3_auditor.py) | [Link](./challenges/solutions/solution_01_s3_auditor.py) |
+| **02. EC2 Tagger** | Automatically apply ownership tags to untagged EC2 instances to improve cost tracking. | [Link](./challenges/challenge_02_ec2_tagger.py) | [Link](./challenges/solutions/solution_02_ec2_tagger.py) |
+| **03. Snapshot Cleaner**| Build a cost-optimization utility that deletes old, non-permanent EBS snapshots. | [Link](./challenges/challenge_03_snapshot_cleaner.py) | [Link](./challenges/solutions/solution_03_snapshot_cleaner.py) |
+| **04. Boto3 Paginator** | Efficiently process large-scale S3 datasets using Boto3's native pagination system. | [Link](./challenges/challenge_04_boto3_paginator.py) | [Link](./challenges/solutions/solution_04_boto3_paginator.py) |
+
+> **Pro Tip**: Use `boto3.Session(profile_name='x')` to explicitly manage multiple AWS environments from a single script without constant switching of environment variables.
+
+---
+
 ## 🧠 Quiz
 
 1. **Which Boto3 interface is object-oriented?** `(Resource)`
@@ -86,3 +101,7 @@ graph TD
 3. **How do you stop an instance using a Resource object?** `(instance.stop())`
 4. **True/False: Boto3 supports all AWS services.** `(True)`
 5. **Which client method is used to list all S3 buckets?** `(list_buckets())`
+
+---
+
+**Next Step**: [Serverless Boto3 (Lambda) →](../06-Serverless-Boto3-Lambda/README.md)

@@ -132,6 +132,21 @@ def test_s3_bucket_creation():
 
 ---
 
+## 🛠️ Hands-On Challenges
+
+Master quality assurance by building these automated testing suites.
+
+| Challenge | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- |
+| **01. Config Test** | Create unit tests with fixtures to validate configuration loader functions safely. | [Link](./challenges/challenge_01_config_test.py) | [Link](./challenges/solutions/solution_01_config_test.py) |
+| **02. API Mocking** | Use `unittest.mock` to simulate Slack API failures and test your code's resilience. | [Link](./challenges/challenge_02_mock_api_test.py) | [Link](./challenges/solutions/solution_02_mock_api_test.py) |
+| **03. Moto AWS Test** | Write in-memory AWS tests for S3 file management using the powerful Moto library. | [Link](./challenges/challenge_03_moto_test.py) | [Link](./challenges/solutions/solution_03_moto_test.py) |
+| **04. Parameterize** | Efficiently test network validation logic against multiple IP ranges in a single test block. | [Link](./challenges/challenge_04_parameterize_test.py) | [Link](./challenges/solutions/solution_04_parameterize_test.py) |
+
+> **Pro Tip**: Use `pytest --cov=my_script` to check your **Test Coverage**. Aim for 80%+ coverage for critical infrastructure modules.
+
+---
+
 ## 🧠 Quiz
 
 1.  **To mark a function as a test in Pytest, you must:**
@@ -157,3 +172,7 @@ def test_s3_bucket_creation():
     *   b) It raises an `AssertionError` and fails the test ✅
     *   c) It warns the user but continues
     *   d) nothing
+
+---
+
+**Next Step**: [Capstone Project: S3 Auditor →](../08-Capstone-Project-S3-Auditor/README.md)

@@ -111,96 +111,16 @@ flowchart TD
 
 ## 🛠️ Hands-On Challenges
 
-### Challenge 1: Multi-Environment Dependency Setup
+Master package management by building these production-grade dependency tools.
 
-Create a system for a project that has separate production and development requirements.
+| Challenge | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- |
+| **01. Dependency Whitelist** | Create a security scanner that verifies if packages in `requirements.txt` are on the approved list. | [Link](./challenges/challenge_01_dependency_analyzer.py) | [Link](./challenges/solutions/solution_01_dependency_analyzer.py) |
+| **02. Pip CI Wrapper** | Build a safe `pip install` wrapper with automatic `--no-cache-dir` flags and central logging. | [Link](./challenges/challenge_02_pip_wrapper.py) | [Link](./challenges/solutions/solution_02_pip_wrapper.py) |
+| **03. Version Bumper** | Automate the release process by building a script that increments patch versions in `setup.py`. | [Link](./challenges/challenge_03_version_bumper.py) | [Link](./challenges/solutions/solution_03_version_bumper.py) |
+| **04. Conflict Finder** | Detect "dependency hell" by auditing multiple microservice requirements for conflicting versions. | [Link](./challenges/challenge_04_conflict_finder.py) | [Link](./challenges/solutions/solution_04_conflict_finder.py) |
 
-```bash
-# 1. Create a requirements.txt with:
-#    requests (exact version 2.31.0)
-#    boto3 (any 1.26.x version)
-
-# 2. Create a requirements-dev.txt that includes:
-#    Everything in requirements.txt (use -r requirements.txt)
-#    pytest
-#    black
-```
-
-<details>
-<summary>💡 Solution</summary>
-
-```ini
-# requirements.txt
-requests==2.31.0
-boto3~=1.26.0
-
-# requirements-dev.txt
--r requirements.txt
-pytest
-black
-```
-</details>
-
-### Challenge 2: Dependency Auditor
-
-Write a script that reads a `requirements.txt` file and checks if any versions are older than a "minimum allowed" list.
-
-```python
-# TODO: Implement a checker
-MIN_VERSIONS = {"requests": "2.28.0", "pyyaml": "6.0"}
-
-def check_requirements(file_path):
-    pass
-```
-
-<details>
-<summary>💡 Solution</summary>
-
-```python
-import pkg_resources # part of setuptools
-
-MIN_VERSIONS = {"requests": "2.28.0", "pyyaml": "6.0"}
-
-def check_requirements(file_path):
-    with open(file_path, 'r') as f:
-        for line in f:
-            if '==' not in line: continue
-            pkg, ver = line.strip().split('==')
-            
-            if pkg in MIN_VERSIONS:
-                min_v = MIN_VERSIONS[pkg]
-                if pkg_resources.parse_version(ver) < pkg_resources.parse_version(min_v):
-                    print(f"🚨 ALERT: {pkg} is version {ver}, but needs {min_v}")
-                else:
-                    print(f"✅ {pkg} version {ver} is safe.")
-
-# check_requirements("requirements.txt")
-```
-</details>
-
-### Challenge 3: Package Configurator (Editable Install)
-
-Create a simple project structure and install it in "editable" mode so changes reflect immediately without reinstalling.
-
-<details>
-<summary>💡 Solution</summary>
-
-```bash
-# Folder structure
-# my_tool/
-#   setup.py
-#   my_tool/
-#     __init__.py
-#     script.py
-
-# setup.py snippet
-from setuptools import setup, find_packages
-setup(name="my_tool", packages=find_packages())
-
-# Install
-pip install -e .
-```
-</details>
+> **Pro Tip**: Use `pip check` regularly in your CI pipelines—it's a built-in way to verify that your installed packages have compatible dependencies.
 
 ---
 

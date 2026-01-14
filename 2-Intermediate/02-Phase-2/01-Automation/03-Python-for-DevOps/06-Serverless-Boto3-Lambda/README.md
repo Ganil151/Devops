@@ -165,6 +165,21 @@ Lambda only includes the standard Python library and `boto3` (usually an older v
 
 ---
 
+## 🛠️ Hands-On Challenges
+
+Master serverless automation by building these event-driven cloud utilities.
+
+| Challenge | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- |
+| **01. S3 Extractor** | Extract image metadata automatically upon upload and store as JSON in a S3 data lake. | [Link](./challenges/challenge_01_s3_extractor.py) | [Link](./challenges/solutions/solution_01_s3_extractor.py) |
+| **02. IAM Auditor** | Build a daily scheduled Lambda that identifies and alerts on stale IAM access keys. | [Link](./challenges/challenge_02_iam_auditor.py) | [Link](./challenges/solutions/solution_02_iam_auditor.py) |
+| **03. EC2 Scheduler** | Save thousands in AWS costs by automatically stopping dev instances outside office hours. | [Link](./challenges/challenge_03_ec2_scheduler.py) | [Link](./challenges/solutions/solution_03_ec2_scheduler.py) |
+| **04. Layer Builder** | Create a local utility that automates the packaging of third-party Python libraries for Lambda. | [Link](./challenges/challenge_04_layer_builder.py) | [Link](./challenges/solutions/solution_04_layer_builder.py) |
+
+> **Pro Tip**: Always enable "X-Ray" tracing for your Lambda functions. It helps you visualize where Boto3 calls are slow and identifies bottleneck APIs in your automation pipelines.
+
+---
+
 ## 🧠 Quiz
 
 1.  **What is the first argument passed to every Lambda handler?**
@@ -190,3 +205,7 @@ Lambda only includes the standard Python library and `boto3` (usually an older v
     *   b) A Lambda Layer ✅
     *   c) A larger instance type
     *   d) `import numpy` is supported by default
+
+---
+
+**Next Step**: [Testing Automation with Pytest →](../07-Testing-Automation-with-Pytest/README.md)

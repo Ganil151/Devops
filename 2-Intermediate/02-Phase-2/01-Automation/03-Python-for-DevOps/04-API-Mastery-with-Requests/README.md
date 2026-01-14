@@ -95,6 +95,21 @@ response = requests.get(url, auth=HTTPBasicAuth('user', 'pass'))
 
 ---
 
+## 🛠️ Hands-On Challenges
+
+Master API interactions by building these service integration tools.
+
+| Challenge | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- |
+| **01. GitHub Auditor** | Use the GitHub API to identify repositories missing essential documentation. | [Link](./challenges/challenge_01_github_auditor.py) | [Link](./challenges/solutions/solution_01_github_auditor.py) |
+| **02. Weather Alerter** | Integrate a weather API with Slack to notify team members of dangerous conditions. | [Link](./challenges/challenge_02_weather_alerter.py) | [Link](./challenges/solutions/solution_02_weather_alerter.py) |
+| **03. Retry Session** | Build a resilient `requests.Session` that handles intermittent 5xx errors with backoff. | [Link](./challenges/challenge_03_retry_session.py) | [Link](./challenges/solutions/solution_03_retry_session.py) |
+| **04. Paginated API** | Create a consumer that iterates through multi-page results to aggregate bulk data. | [Link](./challenges/challenge_04_paginated_api.py) | [Link](./challenges/solutions/solution_04_paginated_api.py) |
+
+> **Pro Tip**: Use a `.env` file and `os.getenv()` to manage your API keys. Never hardcode tokens in your scripts, especially if you plan to share them on GitHub!
+
+---
+
 ## 🧠 Quiz
 
 1. **Which library is used to make HTTP requests?** `(requests)`

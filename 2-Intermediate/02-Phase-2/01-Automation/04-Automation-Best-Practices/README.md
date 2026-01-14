@@ -249,3 +249,22 @@ Answer: B
 <summary>Show Answer</summary>
 Answer: B
 </details>
+
+---
+
+## 🛠️ Hands-On Challenges
+
+Apply production-grade reliability patterns to your automation logic.
+
+| Challenge | Topic | Description | Starter Code | Solution |
+| :--- | :--- | :--- | :--- | :--- |
+| **01. Idempotent Dir** | Idempotency | Create a safe folder manager that verifies state and avoids redundant actions. | [Link](./02-Idempotency-Patterns-Check-Act-Verify/challenges/challenge_01_idempotent_dir.py) | [Link](./02-Idempotency-Patterns-Check-Act-Verify/challenges/solutions/solution_01_idempotent_dir.py) |
+| **02. Secure Env** | Secrets | Build a multi-source config loader that pulls secrets from Env Vars and local files securely. | [Link](./03-Parameterization-and-Secrets-Management/challenges/challenge_01_secure_env.py) | [Link](./03-Parameterization-and-Secrets-Management/challenges/solutions/solution_01_secure_env.py) |
+| **03. Atomic Write** | Failure Handling| Implement an atomic file updater to prevent data corruption during script crashes. | [Link](./04-Failure-Handling-and-Atomicity/challenges/challenge_01_atomic_write.py) | [Link](./04-Failure-Handling-and-Atomicity/challenges/solutions/solution_01_atomic_write.py) |
+| **04. Dry-Run Guard** | Observability | Develop a destructive cleanup utility with a safety-first `--dry-run` operation mode. | [Link](./05-Observability-and-Logging/challenges/challenge_01_dry_run.py) | [Link](./05-Observability-and-Logging/challenges/solutions/solution_01_dry_run.py) |
+
+> **Pro Tip**: Use a "Pre-flight Checklist" function in your entry point. Verify permissions, connectivity, and dependencies before a single line of your main logic executes. Fail fast, fail loud.
+
+---
+
+**Next Step**: [Ansible Mastery →](../05-Ansible/README.md)
