@@ -193,6 +193,8 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
+    "00-Resources/04-Books-Guides/Languages/Python-All-in-One-4-Dummies.pdf",
+    "00-Resources/04-Books-Guides/Languages/Unconfirmed 930932.crdownload",
     "00-Resources/01-Scripts-Code/Scripting/Python/Automated_Virus_Scan.md",
     "00-Resources/01-Scripts-Code/Scripting/Windows/DefenderGuard_Enterprise_Solution.md",
     "00-Resources/01-Scripts-Code/Scripting/Windows",
@@ -207,7 +209,6 @@
     "00-Resources/04-Books-Guides/DevOps-Directory-MindMap.md",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/03-Functions-and-Modules/README.md",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Labs/automation_tool/utils/network.py",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Labs/automation_tool/utils/logger.py",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/04-File-Operations/assets/context_manager.png",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/04-File-Operations/assets/file_modes.png",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/03-Functions-and-Modules/assets/monolith_vs_modular.png",
@@ -238,7 +239,6 @@
     "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/08-Log-Parsing-and-Regex/README.md",
     "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/15-Capstone-Project-S3-Auditor/README.md",
     "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/14-Data-Processing-with-Pandas/README.md",
-    "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/13-Web-Scraping-for-Monitoring/README.md",
     "Untitled.canvas"
   ]
 }
