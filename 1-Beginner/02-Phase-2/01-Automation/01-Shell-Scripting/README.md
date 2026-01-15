@@ -39,9 +39,9 @@ By completing this curriculum, you will:
 | 08 | [Programs & Commands](./08-Programs-and-Commands/) | ✅ Complete | ✅ 10 challenges | Ready |
 | 09 | [Basic Variables](./09-Basic-Variables/) | ✅ Complete | ✅ 10 challenges | Ready |
 | 10 | [Vim Crash Course](./10-Vim-Crash-Course/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 11 | [File Permissions](./11-File-Permissions/) | ✅ Complete | 🔄 Pending | In Progress |
-| 12 | [Finally Scripting](./12-Finally-Scripting/) | ✅ Complete | 🔄 Pending | In Progress |
-| 13 | [User Input](./13-User-Input/) | ✅ Complete | 🔄 Pending | In Progress |
+| 11 | [File Permissions](./11-File-Permissions/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 12 | [Finally Scripting](./12-Finally-Scripting/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 13 | [User Input](./13-User-Input/) | ✅ Complete | ✅ 10 challenges | Ready |
 | 14 | [Functions](./14-Functions/) | ✅ Complete | 🔄 Pending | In Progress |
 | 15 | [Conditionals](./15-Conditionals/) | ✅ Complete | 🔄 Pending | In Progress |
 | 16 | [For Loops](./16-For-Loops/) | ✅ Complete | 🔄 Pending | In Progress |

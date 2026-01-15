@@ -1,5 +1,6 @@
 # 🔍 Searching in Files (Grep Mastery)
 > **"Finding a needle in a haystack is easy... if you have a magnet."**
+
 ![Grep Mastery Flow](./grep_mastery.svg)
 ## 📚 Overview
 In DevOps, you spend 80% of your time reading logs, debugging errors, and searching configuration files. `grep` (Global Regular Expression Print) is the ultimate tool for this. It allows you to find specific text patterns across thousands of files instantly. Mastering grep is the difference between an engineer who spends 2 hours searching for an error and one who finds it in 2 seconds.
@@ -18,6 +19,7 @@ By the end of this module, you will:
 |------|-------|----------|
 | **grep** | ⚡ Fast | Standard in pipelines, installed on every server. |
 | **rg** (ripgrep) | 🚀 Insane | The modern choice for searching massive monorepos. |
+
 ---
 ## 🛠️ Performance Searching & Context
 ### 1. The Day-to-Day Flags

@@ -26,16 +26,18 @@ Start from your **Current Directory**. They depend on where you are standing.
 Always run `pwd` before running destructive commands like `rm` to ensure you are in the correct location.
 ### 2. The Power of Tab Completion
 Never type full folder names. Type the first two letters and hit `Tab`. If the terminal beeps, there are multiple matches; hit `Tab` twice to see them.
+
 ---
 ## 📑 Navigation Cheat Sheet
-| Command | Mnemonic | Result |
-|---------|----------|--------|
-| **`pwd`** | **P**rint **W**orking **D**irectory | Shows your current location. |
-| **`ls -l`** | **L**ist **L**ong | Shows details (Size, Date, Perms). |
-| **`cd ~`** | **C**hange to **Home** | Jumps back to your user folder. |
-| **`cd -`** | **C**hange to **Previous** | Jumps back to where you just were. |
-| **`cd ..`** | **C**hange **Up** | Moves up one level. |
-| **`clear`** | Clear Screen | Wipes the terminal clutter (`Ctrl+L`). |
+| Command | Mnemonic                            | Result                                 |
+| ------- | ----------------------------------- | -------------------------------------- |
+| `pwd`   | **P**rint **W**orking **D**irectory | Shows your current location.           |
+| `ls -l` | **L**ist **L**ong                   | Shows details (Size, Date, Perms).     |
+| `cd ~`  | **C**hange to **Home**              | Jumps back to your user folder.        |
+| `cd -`  | **C**hange to **Previous**          | Jumps back to where you just were.     |
+| `cd ..` | **C**hange **Up**                   | Moves up one level.                    |
+| `clear` | Clear Screen                        | Wipes the terminal clutter (`Ctrl+L`). |
+
 ---
 ## 🏆 Real-World DevOps Story
 ### 💡 **The Lost Root Deletion**
@@ -43,6 +45,7 @@ Never type full folder names. Type the first two letters and hit `Tab`. If the t
 **The Discovery**:
 Because they started the path with a `/`, they told the system to delete the **Global System Root /tmp** folder instead of the one in their local project.
 **The Lesson**: Always use relative paths (`./tmp`) for local project work to prevent accidental system-wide damage.
+
 ---
 ## 📝 Knowledge Check
 1. **Which symbol represents the Root directory?**

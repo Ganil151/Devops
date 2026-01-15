@@ -91,6 +91,7 @@ They ran `type deploy-tool` and discovered:
 Because the shell had run the old version (located in `/usr/bin/`) earlier in the session, it had **hashed** (cached) the location. Even though the new version was earlier in the `$PATH`, the shell skipped the search and went straight to the cached old version.
 **The Fix**:
 They ran `hash -d deploy-tool` to clear the cache. For future scripts, they added `hash -r` at the start of upgrade routines to ensure the shell re-scanned the `$PATH`.
+
 ---
 ## 📝 Knowledge Check
 1. **Which command identifies if `cd` is a built-in or a binary?**

@@ -55,6 +55,7 @@ head -n 5 massive_data.csv
 The terminal attempted to process 120GB of text. The SSH session froze, the server CPU spiked (due to I/O overhead), and the engineer was locked out of the system.
 **The Fix**:
 Senior engineers use `less`. By running `less database.log`, the pager only read the first 4KB of data required to fill the screen. They then jumped to the end with `G` to see the actual crash error in milliseconds without stressing the server.
+
 ---
 ## 📝 Knowledge Check
 1. **Which command is better for real-time log monitoring?**

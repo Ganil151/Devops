@@ -71,6 +71,7 @@ Replacing an old IP address in a 500-line config file.
 **The Pro Trick**: Instead of quitting and losing the work, they used a "sudo write" command from within Vim:
 ` :w !sudo tee % `
 **Explanation**: This tells Vim to pipe the current buffer (`%`) into the command `sudo tee`, effectively saving the file with elevated privileges without leaving the editor.
+
 ---
 ## 📝 Knowledge Check
 1. **Which mode are you in when you first open Vim?**

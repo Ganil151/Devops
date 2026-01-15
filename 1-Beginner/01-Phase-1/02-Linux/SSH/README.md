@@ -34,7 +34,6 @@ sequenceDiagram
 # Generate a modern, highly secure Ed25519 key
 ssh-keygen -t ed25519 -C "admin@company.com"
 ```
-
 ### 2. Copying Keys to Server
 ```bash
 # Automates adding your public key to ~/.ssh/authorized_keys
@@ -42,7 +41,6 @@ ssh-copy-id -i ~/.ssh/id_ed25519.pub user@remote-host
 ```
 
 ---
-
 ## ⚙️ Configuration Mastery
 
 ### Client Side: `~/.ssh/config`

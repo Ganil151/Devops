@@ -11,12 +11,38 @@
             "id": "3b0e4a985e699d8d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "00-Resources/04-Books-Guides/Languages/python.pdf"
+                "file": "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/04-Hidden-Files/README.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "python"
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "7102568f98092cec",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://docs.python.org/3/library/string.html#format-specification-mini-language",
+                "title": "string — Common string operations — Python 3.14.2 documentation",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "string — Common string operations — Python 3.14.2 documentation"
             }
           }
         ]
@@ -76,7 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 245.5,
     "collapsed": true
   },
   "right": {
@@ -163,16 +189,28 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
+          },
+          {
+            "id": "30306de68b0ff6d2",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "omnisearch:Omnisearch": false,
       "markdown-importer:Open format converter": false,
       "zk-prefixer:Create new unique note": false,
       "random-note:Open random note": false,
@@ -193,52 +231,52 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
-    "00-Resources/04-Books-Guides/Languages/Python-All-in-One-4-Dummies.pdf",
-    "00-Resources/04-Books-Guides/Languages/Unconfirmed 930932.crdownload",
-    "00-Resources/01-Scripts-Code/Scripting/Python/Automated_Virus_Scan.md",
-    "00-Resources/01-Scripts-Code/Scripting/Windows/DefenderGuard_Enterprise_Solution.md",
-    "00-Resources/01-Scripts-Code/Scripting/Windows",
-    "00-Resources/04-Books-Guides/Languages/Beginning-Programming-with-Python-For-Dummies-John-Paul-Mueller(www.ebook-dl.com).pdf",
-    "00-Resources/04-Books-Guides/Languages/Unconfirmed 922173.crdownload",
-    "00-Resources/01-Scripts-Code/Windows/virus_auto_scan.ps1",
-    "00-Resources/01-Scripts-Code/Windows/autoScan.ps1",
-    "00-Resources/01-Scripts-Code/Windows/auto_scan",
-    "00-Resources/01-Scripts-Code/Windows",
-    "00-Resources/04-Books-Guides/Languages/python.pdf",
-    "00-Resources/04-Books-Guides/Languages/README.md",
-    "00-Resources/04-Books-Guides/DevOps-Directory-MindMap.md",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/03-Functions-and-Modules/README.md",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Labs/automation_tool/utils/network.py",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/Boilerplates/boilerplate_ansible_vault_manager.sh",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/Boilerplates/boilerplate_terraform_output_parser.sh",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/Boilerplates/boilerplate_log_processor.sh",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/Boilerplates",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/16-For-Loops/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/16-For-Loops/Boilerplates/boilerplate_docker_image_builder.sh",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/16-For-Loops/Boilerplates/boilerplate_server_inventory_scanner.sh",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/16-For-Loops/Boilerplates/boilerplate_multi_region_deployer.sh",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/16-For-Loops/Boilerplates",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/15-Conditionals/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/15-Conditionals/Boilerplates/boilerplate_deployment_gatekeeper.sh",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/15-Conditionals/Boilerplates/boilerplate_resource_validator.sh",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/14-Functions/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/13-User-Input/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/12-Finally-Scripting/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/11-File-Permissions/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/10-Vim-Crash-Course/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/09-Basic-Variables/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/08-Programs-and-Commands/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/07-Man-Pages/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/06-Paging-Files/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/04-Hidden-Files/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/02-Terminal-and-Finder/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/04-Hidden-Files/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/02-Terminal-and-Finder/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/README.md",
+    "1-Beginner/01-Phase-1/02-Linux/SSH/README.md",
+    "1-Beginner/01-Phase-1/02-Linux/04-Permissions/README.md",
+    "1-Beginner/01-Phase-1/02-Linux/02-Filesystem/README.md",
+    "00-Resources/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/10-Vim-Crash-Course/vim_modes_state.svg",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/shell_architecture.svg",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/04-File-Operations/assets/context_manager.png",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/04-File-Operations/assets/file_modes.png",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/03-Functions-and-Modules/assets/monolith_vs_modular.png",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/03-Functions-and-Modules/assets/function_anatomy.png",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/02-Data-Structures/README.md",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/02-Data-Structures/assets/list_vs_tuple.png",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/02-Data-Structures/assets/dict_vs_set.png",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/README.md",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/04-Hidden-Files/README.md",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/assets/python_learning_path.png",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/assets/python_ecosystem.png",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/assets/python_devops_hub.png",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/assets/python_data_flow.png",
-    "3-Advanced/02-Phase-2/01-Automation/03-Python-Advanced/07-Infrastructure-as-Code-Python/README.md",
-    "3-Advanced/02-Phase-2/01-Automation/03-Python-Advanced/06-Generic-Automation-Framework/README.md",
-    "3-Advanced/02-Phase-2/01-Automation/03-Python-Advanced/05-CLI-Frameworks-Click-Typer/README.md",
-    "3-Advanced/02-Phase-2/01-Automation/03-Python-Advanced/04-Metaprogramming-and-Decorators/README.md",
-    "3-Advanced/02-Phase-2/01-Automation/03-Python-Advanced/03-Advanced-OOP-and-Design-Patterns/README.md",
-    "3-Advanced/02-Phase-2/01-Automation/03-Python-Advanced/02-Concurrent-Futures/README.md",
-    "3-Advanced/02-Phase-2/01-Automation/03-Python-Advanced/01-Async-Programming-asyncio/README.md",
-    "3-Advanced/02-Phase-2/01-Automation/03-Python-Advanced/README.md",
-    "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/14-Capstone-Project-S3-Auditor/README.md",
-    "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/13-Data-Processing-with-Pandas/README.md",
-    "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/12-Web-Scraping-for-Monitoring/README.md",
-    "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/11-Docker-and-Kubernetes-SDKs/README.md",
-    "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/10-Database-Operations/README.md",
-    "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/09-Remote-Execution-and-SSH/README.md",
-    "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/08-Log-Parsing-and-Regex/README.md",
-    "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/15-Capstone-Project-S3-Auditor/README.md",
-    "2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/14-Data-Processing-with-Pandas/README.md",
     "Untitled.canvas"
   ]
 }

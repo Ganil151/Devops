@@ -78,6 +78,7 @@ Because `$TMP_DIR` was empty, the shell expanded the command to: `rm -rf /*`.
 Senior engineers use defensive parameter expansion.
 `rm -rf ${TMP_DIR:? "Error: TMP_DIR is not set!"}/*`
 Now, if the variable is empty, the script exits immediately with an error message instead of deleting the root filesystem.
+
 ---
 ## 📝 Knowledge Check
 1. **What is the result of `echo 'Value: $PATH'`?**
