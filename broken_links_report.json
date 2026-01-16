@@ -1,136 +1,16 @@
 {
   "summary": {
-    "total_files": 1463,
-    "valid_links": 2215,
-    "broken_links": 380
+    "total_files": 1466,
+    "valid_links": 2232,
+    "broken_links": 364
   },
   "broken_links": [
-    {
-      "source_file": "Labs\\Play_Ground\\README.md",
-      "line": 10,
-      "link_text": "Lab 01: Directory Navigator",
-      "link_target": "./Lab01-Navigator.md",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\Labs\\Play_Ground\\Lab01-Navigator.md",
-      "possible_matches": []
-    },
-    {
-      "source_file": "Labs\\Play_Ground\\README.md",
-      "line": 14,
-      "link_text": "Lab 02: Log Rotator",
-      "link_target": "./Lab02-LogRotator.md",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\Labs\\Play_Ground\\Lab02-LogRotator.md",
-      "possible_matches": []
-    },
-    {
-      "source_file": "Labs\\Play_Ground\\README.md",
-      "line": 18,
-      "link_text": "Lab 03: User Creator",
-      "link_target": "./Lab03-UserCreator.md",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\Labs\\Play_Ground\\Lab03-UserCreator.md",
-      "possible_matches": []
-    },
-    {
-      "source_file": "Labs\\Play_Ground\\README.md",
-      "line": 22,
-      "link_text": "Lab 04: Server Health Check",
-      "link_target": "./Lab04-HealthCheck.md",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\Labs\\Play_Ground\\Lab04-HealthCheck.md",
-      "possible_matches": []
-    },
-    {
-      "source_file": "Labs\\Play_Ground\\Terraform\\05-Day-Input_Output_Local_Veriables\\README.md",
-      "line": 12,
-      "link_text": "Configuration Language (HCL)",
-      "link_target": "../../01-Fundamentals/05-Configuration-Language/Configuration%20Language%20(HCL",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\Labs\\Play_Ground\\01-Fundamentals\\05-Configuration-Language\\Configuration Language (HCL",
-      "possible_matches": []
-    },
-    {
-      "source_file": "Labs\\Play_Ground\\Terraform\\07-Day-Type_Constraints\\README.md",
-      "line": 8,
-      "link_text": "Configuration Language (HCL)",
-      "link_target": "../../01-Fundamentals/05-Configuration-Language/Configuration%20Language%20(HCL",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\Labs\\Play_Ground\\01-Fundamentals\\05-Configuration-Language\\Configuration Language (HCL",
-      "possible_matches": []
-    },
     {
       "source_file": "Labs\\Play_Ground\\Terraform\\07-Day-Type_Constraints\\README.md",
       "line": 511,
       "link_text": "Console Command",
-      "link_target": "../../01-Fundamentals/02-Commands/14-Console.md",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\Labs\\Play_Ground\\01-Fundamentals\\02-Commands\\14-Console.md",
-      "possible_matches": []
-    },
-    {
-      "source_file": "4-Professional-Development\\00-Action-Plans\\README.md",
-      "line": 152,
-      "link_text": "Getting Started Overview",
-      "link_target": "../Getting-Started-Overview.md",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\4-Professional-Development\\Getting-Started-Overview.md",
-      "possible_matches": []
-    },
-    {
-      "source_file": "4-Professional-Development\\03-Content-Education\\COMPREHENSIVE_GUIDE.md",
-      "line": 530,
-      "link_text": "Content Strategy Workbook",
-      "link_target": "./Content-Strategy-Workbook.md",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\4-Professional-Development\\03-Content-Education\\Content-Strategy-Workbook.md",
-      "possible_matches": []
-    },
-    {
-      "source_file": "4-Professional-Development\\04-OpenSource-Tools\\COMPREHENSIVE_GUIDE.md",
-      "line": 599,
-      "link_text": "Product Development Toolkit",
-      "link_target": "./Product-Development-Toolkit.md",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\4-Professional-Development\\04-OpenSource-Tools\\Product-Development-Toolkit.md",
-      "possible_matches": []
-    },
-    {
-      "source_file": "4-Professional-Development\\05-Niche-Roles\\COMPREHENSIVE_GUIDE.md",
-      "line": 641,
-      "link_text": "Niche Role Assessment",
-      "link_target": "./Niche-Role-Assessment.md",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\4-Professional-Development\\05-Niche-Roles\\Niche-Role-Assessment.md",
-      "possible_matches": []
-    },
-    {
-      "source_file": "4-Professional-Development\\10-App-Monetization\\README.md",
-      "line": 105,
-      "link_text": "Professional Development Index",
-      "link_target": "../Monetizing-DevOps-Knowledge.md",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\4-Professional-Development\\Monetizing-DevOps-Knowledge.md",
-      "possible_matches": []
-    },
-    {
-      "source_file": "4-Professional-Development\\11-Freelancing\\README.md",
-      "line": 59,
-      "link_text": "Professional Development Index",
-      "link_target": "../Monetizing-DevOps-Knowledge.md",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\4-Professional-Development\\Monetizing-DevOps-Knowledge.md",
-      "possible_matches": []
-    },
-    {
-      "source_file": "4-Professional-Development\\12-Digital-Assets\\README.md",
-      "line": 56,
-      "link_text": "Professional Development Index",
-      "link_target": "../Monetizing-DevOps-Knowledge.md",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\4-Professional-Development\\Monetizing-DevOps-Knowledge.md",
-      "possible_matches": []
-    },
-    {
-      "source_file": "4-Professional-Development\\Images\\IMAGE-ANALYSIS-REPORT.md",
-      "line": 119,
-      "link_text": "Pricing",
-      "link_target": "../Images/infographics/pricing-comparison.png",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\4-Professional-Development\\Images\\infographics\\pricing-comparison.png",
-      "possible_matches": []
-    },
-    {
-      "source_file": "4-Professional-Development\\Images\\README.md",
-      "line": 64,
-      "link_text": "Pricing Strategy",
-      "link_target": "../Images/infographics/pricing-comparison.png",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\4-Professional-Development\\Images\\infographics\\pricing-comparison.png",
+      "link_target": "../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/02-Commands/14-Console.md",
+      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\2-Intermediate\\02-Phase-2\\02-Configuration-Tools\\01-Terraform\\01-Fundamentals\\02-Commands\\14-Console.md",
       "possible_matches": []
     },
     {
@@ -1619,14 +1499,6 @@
       "link_text": "Security",
       "link_target": "../../../3-Advanced/04-Security/",
       "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\2-Intermediate\\3-Advanced\\04-Security",
-      "possible_matches": []
-    },
-    {
-      "source_file": "2-Intermediate\\02-Phase-2\\02-Configuration-Tools\\01-Terraform\\01-Fundamentals\\README.md",
-      "line": 17,
-      "link_text": "05-Configuration Language (HCL)",
-      "link_target": "./05-Configuration-Language/Configuration%20Language%20(HCL",
-      "resolved_to": "C:\\Users\\Ganil\\Documents\\Devops\\2-Intermediate\\02-Phase-2\\02-Configuration-Tools\\01-Terraform\\01-Fundamentals\\05-Configuration-Language\\Configuration Language (HCL",
       "possible_matches": []
     },
     {

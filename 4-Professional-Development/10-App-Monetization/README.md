@@ -102,4 +102,4 @@ end
 
 ---
 
-**Next Step**: Return to the [Professional Development Index](../Monetizing-DevOps-Knowledge.md) to explore other income streams.
+**Next Step**: Return to the [Professional Development Index](../README.md) to explore other income streams.

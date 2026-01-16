@@ -3,25 +3,28 @@
 ## 🔍 Keyword Search Index
 
 ### 🟢 Beginner
-*   **System**: [Linux Basics](), [Permissions](), [Package Management]()
-*   **Scripting**: [Python Fundamentals](), [Bash Basics]()
-*   **Git**: [Commits](), [Branching](), [Pull Requests]()
+
+* **System**: [Linux Basics](), [Permissions](), [Package Management]()
+* **Scripting**: [Python Fundamentals](), [Bash Basics]()
+* **Git**: [Commits](), [Branching](), [Pull Requests]()
 
 ### 🟡 Intermediate (Automation)
-*   **Shell**:
-    *   [Strict Mode](2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md)
-    *   [Functions](2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md)
-    *   [Loops](2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md)
-    *   [xargs/Parallel](README.md)
-    *   [Sed/Awk](README.md)
-    *   [JQ/JSON](README.md)
-*   **Python**: [Boto3](), [Requests](), [Testing]()
-*   **Ansible**: [Playbooks](), [Roles](), [Inventory]()
+
+* **Shell**:
+  * [Strict Mode](2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md)
+  * [Functions](2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md)
+  * [Loops](2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md)
+  * [xargs/Parallel](README.md)
+  * [Sed/Awk](README.md)
+  * [JQ/JSON](README.md)
+* **Python**: [Boto3](), [Requests](), [Testing]()
+* **Ansible**: [Playbooks](), [Roles](), [Inventory]()
 
 ### 🔴 Advanced
-*   **Containers**: [Docker](), [Kubernetes]()
-*   **IaC**: [Terraform](), [Crossplane]()
-*   **CI/CD**: [GitHub Actions](), [GitLab CI](), [Jenkins]()
+
+* **Containers**: [Docker](), [Kubernetes]()
+* **IaC**: [Terraform](), [Crossplane]()
+* **CI/CD**: [GitHub Actions](), [GitLab CI](), [Jenkins]()
 
 ---
 

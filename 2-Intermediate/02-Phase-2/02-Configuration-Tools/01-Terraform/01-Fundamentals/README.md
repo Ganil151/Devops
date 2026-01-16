@@ -14,7 +14,7 @@ This module has been reorganized using a **CLI-first learning methodology**. By 
 2.  **[02-Commands](./02-Commands/README.md)** ⭐: **New Early Access!** Comprehensive CLI guide (Init, Plan, Apply, Destroy).
 3.  **[03-Core Concepts](./03-Core-Concepts/Terraform%20Core%20Concepts.md)**: Architecture, State, and Providers.
 4.  **[04-Installation and Setup](./04-Installation-and-Setup/README.md)**: CLI installation and tfenv tool management.
-5.  **[05-Configuration Language (HCL)](./05-Configuration-Language/Configuration%20Language%20(HCL).md)**: Syntax, data types, and functions.
+5.  **[05-Configuration Language (HCL)](./05-Configuration-Language/Configuration-Language-HCL.md)**: Syntax, data types, and functions.
 6.  **[06-Providers](./06-Providers/Providers.md)**: Multi-cloud and plugin architecture.
 7.  **[07-Resources](./07-Resources/Resources.md)**: Managing infrastructure blocks and meta-arguments.
 8.  **[08-Variables and Outputs](./08-Variables-and-Outputs/Variables%20and%20Outputs.md)**: Parameterizing and extracting data.

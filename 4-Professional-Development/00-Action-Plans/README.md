@@ -149,7 +149,7 @@ These are guidelines, not rigid rules. Adapt the plan to your situation.
 
 ## 🚀 Quick Start
 
-1. **Today**: Read the [Getting Started Overview](../Getting-Started-Overview.md) to choose your path
+1. **Today**: Read the [Getting Started Overview](../README.md) to choose your path
 2. **Tomorrow**: Review your chosen 30-day plan completely
 3. **Day 3**: Start Day 1 of your action plan
 4. **Day 30**: Celebrate your progress and plan your next 30 days!

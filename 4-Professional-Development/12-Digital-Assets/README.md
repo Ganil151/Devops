@@ -53,4 +53,4 @@ If you create open-source software (OSS) or content, people may support you dire
 
 ---
 
-**Next Step**: Return to the [Professional Development Index](../Monetizing-DevOps-Knowledge.md).
+**Next Step**: Return to the [Professional Development Index](../README.md).

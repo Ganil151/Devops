@@ -5,7 +5,7 @@ This lab demonstrates Terraform's type system and constraints, showing how to us
 ## 📚 Related Fundamentals
 Before starting this lab, review these foundational concepts:
 - [Variables and Outputs](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/08-Variables-and-Outputs/Variables%20and%20Outputs.md) - Input variables and output values
-- [Configuration Language (HCL)](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/05-Configuration-Language/Configuration%20Language%20(HCL).md) - HCL syntax and expressions
+- [Configuration Language (HCL)](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/05-Configuration-Language/Configuration-Language-HCL.md) - HCL syntax and expressions
 - [Terraform Core Concepts](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/03-Core-Concepts/Terraform%20Core%20Concepts.md) - Understanding Terraform basics
 - [Providers](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/06-Providers/Providers.md) - Provider configuration
 ## Infrastructure Components
@@ -508,7 +508,7 @@ terraform destroy
 - [Apply Command](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/02-Commands/04-Apply.md) - Apply changes
 - [Output Command](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/02-Commands/11-Output.md) - View outputs
 - [Validate Command](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/02-Commands/02-Validate.md) - Validate configuration
-- [Console Command](../../01-Fundamentals/02-Commands/14-Console.md) - Interactive console
+- [Console Command](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/02-Commands/14-Console.md) - Interactive console
 
 ### Related Labs
 - [Day 5: Project Structure](../../../../README.md) - File organization

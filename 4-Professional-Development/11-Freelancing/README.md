@@ -56,4 +56,4 @@ Many companies pay developers to write tutorials for their blogs.
 
 ---
 
-**Next Step**: Return to the [Professional Development Index](../Monetizing-DevOps-Knowledge.md).
+**Next Step**: Return to the [Professional Development Index](../README.md).

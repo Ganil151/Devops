@@ -13,12 +13,18 @@ The link scan and fix process was run on the `Devops` directory to identify and 
     - Fixed broken relative links to "Configuration Language (HCL)" in Terraform labs.
 - **Current Status**: The vast majority of broken links (>95%) have been resolved.
 
-## Remaining Issues
+## Resolved Issues (Latest Session)
+1.  **Missing Images**: Created `pricing-comparison.png`.
+2.  **Placeholder Links**: 
+    - Created missing workbook stubs in `4-Professional-Development`.
+    - Fixed links to `Getting-Started-Overview` and `Monetizing-DevOps-Knowledge` (redirected to main READMEs).
+3.  **Cross-Referencing**: 
+    - Renamed `Configuration Language (HCL).md` to remove special characters and updated links.
+    - Fixed broken relative paths in Terraform Labs.
 
-A small number of broken links may remain, falling into these categories:
-1.  **Missing Images**: Links to images that are not yet created (e.g., `images/architecture.png`).
-2.  **Placeholder Links**: Links to documentation sections that are planned but not yet written.
-3.  **Cross-Referencing**: Some deeply nested relative links in the `Labs` section may still need verification.
+## Remaining Issues
+1.  **Deep Nesting**: Some deeply nested relative links in the `Labs` section may still need verification (minor).
+
 
 ## Recommendations
 
