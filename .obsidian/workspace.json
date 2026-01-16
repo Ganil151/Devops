@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/Boilerplates/README.md",
+                "file": "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/Boilerplates/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -102,8 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245.5,
-    "collapsed": true
+    "width": 245.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -231,8 +230,14 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
-    "cUsersGanilDocumentsDevops.githubscripts",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/04-Hidden-Files/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/Boilerplates/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/02-Terminal-and-Finder/Boilerplates/repo_structure_analyzer.sh",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/02-Terminal-and-Finder/Boilerplates/log_archiver.sh",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/Boilerplates/startup_health_check.sh",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/Boilerplates/docker_cleanup.sh",
+    "cUsersGanilDocumentsDevops.githubscripts",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/Boilerplates/boilerplate_ansible_vault_manager.sh",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/Boilerplates/boilerplate_terraform_output_parser.sh",
@@ -240,12 +245,7 @@
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/Boilerplates",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/16-For-Loops/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/16-For-Loops/Boilerplates/boilerplate_docker_image_builder.sh",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/16-For-Loops/Boilerplates/boilerplate_server_inventory_scanner.sh",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/16-For-Loops/Boilerplates/boilerplate_multi_region_deployer.sh",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/16-For-Loops/Boilerplates",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/15-Conditionals/Boilerplates/README.md",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/15-Conditionals/Boilerplates/boilerplate_deployment_gatekeeper.sh",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/15-Conditionals/Boilerplates/boilerplate_resource_validator.sh",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/14-Functions/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/13-User-Input/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/12-Finally-Scripting/Boilerplates/README.md",
@@ -255,13 +255,11 @@
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/08-Programs-and-Commands/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/07-Man-Pages/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/06-Paging-Files/Boilerplates/README.md",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/04-Hidden-Files/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/02-Terminal-and-Finder/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/README.md",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/02-Terminal-and-Finder/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/README.md",
     "1-Beginner/01-Phase-1/02-Linux/SSH/README.md",

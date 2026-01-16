@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-# Script: boilerplate_ansible_inventory_generator.sh
+# Script: ansible_inventory_generator.sh
 # Description: Generates dynamic Ansible inventory from AWS EC2 tags
 # DevOps Context: Dynamic inventory management for cloud infrastructure
 # Requires: AWS CLI, jq

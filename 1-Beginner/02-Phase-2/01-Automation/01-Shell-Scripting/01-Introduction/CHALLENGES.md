@@ -1,9 +1,11 @@
 # 🎯 Hands-On Challenges: Introduction to Shell Scripting
 
 ## Challenge 1: Hello DevOps World (Beginner)
+
 **Objective**: Create your first executable shell script.
 
 **Tasks**:
+
 1. Create a file called `hello.sh`
 2. Add the shebang line `#!/bin/bash`
 3. Add a comment explaining what the script does
@@ -12,11 +14,14 @@
 6. Run it using `./hello.sh`
 
 **Expected Output**:
+
 ```
+
 Hello, DevOps World! Today is Sat Jan 11 14:46:21 EST 2026
 ```
 
 **Solution**:
+
 ```bash
 #!/bin/bash
 # My first DevOps automation script
@@ -27,9 +32,11 @@ echo "Hello, DevOps World! Today is $(date)"
 ---
 
 ## Challenge 2: System Information Reporter (Intermediate)
+
 **Objective**: Create a script that displays system information.
 
 **Tasks**:
+
 1. Create `system_info.sh`
 2. Display the following information:
    - Current user
@@ -40,6 +47,7 @@ echo "Hello, DevOps World! Today is $(date)"
 3. Use proper formatting with labels
 
 **Expected Output**:
+
 ```
 === System Information ===
 User: Ganil
@@ -50,6 +58,7 @@ OS: Linux
 ```
 
 **Hints**:
+
 - Use `whoami` for username
 - Use `hostname` for hostname
 - Use `pwd` for current directory
@@ -59,15 +68,18 @@ OS: Linux
 ---
 
 ## Challenge 3: Shell Type Comparison (Advanced)
+
 **Objective**: Write a script that runs in both Bash and Sh and reports differences.
 
 **Tasks**:
+
 1. Create `shell_compare.sh`
 2. Check which shell is executing the script
 3. Display shell-specific information
 4. Run the script with both `bash` and `sh`
 
 **Sample Code**:
+
 ```bash
 #!/bin/bash
 
@@ -87,9 +99,11 @@ fi
 ---
 
 ## Challenge 4: Script Execution Methods (Practical)
+
 **Objective**: Understand different ways to execute scripts.
 
 **Tasks**:
+
 1. Create `test_exec.sh` with a simple echo command
 2. Execute it using ALL these methods:
    - `bash test_exec.sh`
@@ -100,6 +114,7 @@ fi
 3. Document which methods require execute permissions
 
 **Questions to Answer**:
+
 - Which methods create a subshell?
 - Which methods run in the current shell?
 - When would you use `source` vs direct execution?
@@ -107,9 +122,11 @@ fi
 ---
 
 ## Challenge 5: DevOps Automation Simulator (Challenge)
+
 **Objective**: Create a script that simulates a basic deployment process.
 
 **Requirements**:
+
 1. Print a banner "=== Deployment Starting ==="
 2. Show current date/time
 3. Check if user is root (bonus)
@@ -124,6 +141,7 @@ Add delays between steps using `sleep 1` to simulate real processes.
 
 **Bonus Challenge**:
 Use color codes to make output more professional:
+
 ```bash
 GREEN='\033[0;32m'
 RED='\033[0;31m'
@@ -134,6 +152,7 @@ echo -e "${GREEN}✓ Success${NC}"
 ---
 
 ## Verification Checklist
+
 - [ ] Can create and edit bash scripts
 - [ ] Understand shebang purpose
 - [ ] Can make scripts executable with chmod
@@ -143,4 +162,5 @@ echo -e "${GREEN}✓ Success${NC}"
 - [ ] Understand comments in shell scripts
 
 ## Next Steps
+
 Complete these challenges, then proceed to **[Terminal Navigation](../02-Terminal-and-Finder/CHALLENGES.md)** →

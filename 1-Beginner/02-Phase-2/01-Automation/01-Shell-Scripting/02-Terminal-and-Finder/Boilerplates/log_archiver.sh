@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-# Script: boilerplate_log_archiver.sh
+# Script: log_archiver.sh
 # Description: Finds and compresses old log files for compliance
 # DevOps Context: Log retention automation for regulatory compliance
 # Schedule: Run weekly via cron - 0 3 * * 0 /path/to/script

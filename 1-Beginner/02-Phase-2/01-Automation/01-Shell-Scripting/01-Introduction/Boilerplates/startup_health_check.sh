@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-# Script: boilerplate_startup_health_check.sh
+# Script: startup_health_check.sh
 # Description: System health check for pre-deployment validation
 # DevOps Context: Run before deployments to ensure infrastructure readiness
 # ==============================================================================

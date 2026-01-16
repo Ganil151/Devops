@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-# Script: boilerplate_terraform_backend_setup.sh
+# Script: terraform_backend_setup.sh
 # Description: Creates and validates Terraform S3 backend configuration
 # DevOps Context: IaC initialization for multi-environment deployments
 # ==============================================================================
