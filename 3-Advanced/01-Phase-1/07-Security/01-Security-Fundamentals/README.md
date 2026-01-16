@@ -350,8 +350,8 @@ Start with these high-impact, low-effort security improvements:
 ## Next Steps
 
 1. **Deep Dive**: Read [Shift-Left Security](Shift-Left-Security.md) for implementation strategies
-2. **Tools**: Explore [Security Tools](../02-Security-Tools/README.md) for detailed tool guides
-3. **Practice**: Implement security in [CI/CD Pipeline](../07-CI-CD-Security/README.md)
+2. **Tools**: Explore [Security Tools](../../../../README.md) for detailed tool guides
+3. **Practice**: Implement security in [CI/CD Pipeline](../../../../README.md)
 
 ## Resources
 
@@ -362,4 +362,4 @@ Start with these high-impact, low-effort security improvements:
 
 ---
 
-**[← Back to Security Overview](../README.md)** | **[Next: Security Tools →](../02-Security-Tools/README.md)**
+**[← Back to Security Overview](../README.md)** | **[Next: Security Tools →](../../../../README.md)**

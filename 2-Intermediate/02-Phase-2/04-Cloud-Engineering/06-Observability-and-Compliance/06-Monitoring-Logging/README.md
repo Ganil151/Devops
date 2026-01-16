@@ -37,4 +37,4 @@ You cannot manage what you do not measure. This module teaches you how to gain d
 - **Centralized Logging**: Stream logs to a central account for enterprise visibility.
 
 ---
-**Advanced Observability**: Check out [AWS X-Ray](../../Advanced-Level/17-Observability-Governance/README.md) for distributed tracing.
+**Advanced Observability**: Check out [AWS X-Ray](../../../../../README.md) for distributed tracing.

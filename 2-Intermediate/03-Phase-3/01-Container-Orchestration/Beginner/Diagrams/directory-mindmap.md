@@ -1,5 +1,5 @@
 # Kubernetes Architecture Directory Mind Map
-![DMM](Images/kube-folder-mindMap.png)
+![DMM](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/kube-folder-mindMap.png)
 ---
 
 ## Component Relationships

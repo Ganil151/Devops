@@ -67,7 +67,7 @@ graph TD
 ### 🟢 Part 1: Fundamentals (Core Concepts)
 | # | Module | Description |
 |---|--------|-------------|
-| 00 | [Prerequisites](./Part-1-Fundamentals/00-Prerequisites/README.md) | Setup, Pip, and Intro to Venv |
+| 00 | [Prerequisites](../../../../README.md) | Setup, Pip, and Intro to Venv |
 | 01 | [Python Fundamentals](./Part-1-Fundamentals/01-Python-Fundamentals/README.md) | Variables, data types, control flow, PEP 8 |
 | 02 | [Data Structures](./Part-1-Fundamentals/02-Data-Structures/README.md) | Lists, dicts, sets, tuples - choosing wisely |
 | 03 | [Functions and Modules](./Part-1-Fundamentals/03-Functions-and-Modules/README.md) | Functions, imports, packages |
@@ -143,4 +143,4 @@ graph TD
 3. Which tool allows Python to interact with a physical browser? `(Selenium)`
 
 ---
-**Next Step**: Start with **[Working with the Web](./01-Working-with-the-Web.md)**.
+**Next Step**: Start with **[Working with the Web](Part-4-Professional-Standards/99-Topical-Extras/01-Working-with-the-Web.md)**.

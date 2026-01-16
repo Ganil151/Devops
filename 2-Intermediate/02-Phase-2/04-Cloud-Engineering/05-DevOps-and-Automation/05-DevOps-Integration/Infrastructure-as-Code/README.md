@@ -24,7 +24,7 @@ This module focuses on **Terraform**, the industry-standard for cloud-agnostic I
 
 ## 3. Learning Path
 
-### 🏗️ [Terraform AWS Complete](../09-Infrastructure-as-Code/terraform-aws-complete.md)
+### 🏗️ [Terraform AWS Complete](../../../../../../3-Advanced/02-Phase-2/11-Enterprise-Cloud/09-Infrastructure-as-Code/terraform-aws-complete.md)
 The end-to-end guide to building production infrastructure with Terraform.
 
 ---

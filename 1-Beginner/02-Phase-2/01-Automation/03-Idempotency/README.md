@@ -508,7 +508,7 @@ grep -q "backup.sh" /etc/crontab || echo "0 * * * * /scripts/backup.sh" >> /etc/
 
 ## 🔗 Resources
 
-- [Automation Best Practices](../04-Automation-Best-Practices/)
+- [Automation Best Practices](../../../../2-Intermediate/02-Phase-2/01-Automation/04-Automation-Best-Practices)
 - [Ansible Idempotency](https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html#term-Idempotency)
 - [Terraform State](https://developer.hashicorp.com/terraform/language/state)
 

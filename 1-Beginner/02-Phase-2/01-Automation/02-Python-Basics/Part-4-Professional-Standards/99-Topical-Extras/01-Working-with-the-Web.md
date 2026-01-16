@@ -85,7 +85,7 @@ print(f"New Gist URL: {r.json()['url']}")
 ---
 
 ## 🌊 Web Stream Data Flow
-![Web Interaction Flow](../../assets/web_interaction_flow.svg)
+![Web Interaction Flow](../../../assets/web_interaction_flow.svg)
 
 ---
 

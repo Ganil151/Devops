@@ -1,9 +1,11 @@
 # 🎯 Hands-On Challenges: Basic File Manipulation
 
 ## Challenge 1: CRUD Basics (Beginner)
+
 **Objective**: Master create, read, update, delete operations.
 
 **Tasks**:
+
 1. Create an empty file: `touch test.txt`
 2. Create a directory: `mkdir my-app`
 3. Copy the file: `cp test.txt test-backup.txt`
@@ -16,11 +18,14 @@
 ---
 
 ## Challenge 2: The Folder Factory (Intermediate)
+
 **Objective**: Create complex directory structures efficiently.
 
 **Tasks**:
+
 1. Create this entire structure in ONE command:
-   ```
+
+```
    devops-project/
    ├── src/
    │   ├── frontend/
@@ -30,23 +35,28 @@
    └── deploy/
        ├── staging/
        └── production/
-   ```
+```
 
 **Command**:
+
 ```bash
 mkdir -p devops-project/{src/{frontend,backend},docs,tests,deploy/{staging,production}}
 ```
 
-2. Verify structure: `tree devops-project` or `find devops-project -type d`
-3. Create a `README.md` in each directory using a loop (bonus)
+1. Verify structure: `tree devops-project` or `find devops-project -type d`
+2. Create a `README.md` in each directory using a loop (bonus)
 
 ---
+
 ## Challenge 3: File Backup Strategy (Practical)
+
 **Objective**: Implement a safe backup workflow.
 **Scenario**: You're editing a critical configuration file.
 
 **Tasks**:
+
 1. Create a sample config:
+
    ```bash
    cat > app.conf << EOF
    database=localhost
@@ -54,10 +64,13 @@ mkdir -p devops-project/{src/{frontend,backend},docs,tests,deploy/{staging,produ
    debug=false
    EOF
    ```
+
 2. Create a timestamped backup:
+
    ```bash
    cp app.conf app.conf.$(date +%Y%m%d-%H%M%S)
    ```
+
 3. Edit the original: `echo "version=2.0" >> app.conf`
 4. Verify both files exist
 5. Compare them: `diff app.conf app.conf.2026*`
@@ -65,10 +78,13 @@ mkdir -p devops-project/{src/{frontend,backend},docs,tests,deploy/{staging,produ
 **Question**: Why use timestamps instead of simple `.bak` extensions?
 
 ---
+
 ## Challenge 4: The Recursive Copy Challenge (Advanced)
+
 **Objective**: Safely copy entire directory trees with permissions.
 
 **Setup**:
+
 ```bash
 mkdir -p source/{data,config,logs}
 echo "sensitive" > source/data/database.conf
@@ -77,6 +93,7 @@ echo "info" > source/logs/app.log
 ```
 
 **Tasks**:
+
 1. Copy with basic `cp -r source/ dest1/`
 2. Check permissions in dest1: `ls -l dest1/data/`
 3. Copy preserving attributes: `cp -rp source/ dest2/`
@@ -88,9 +105,11 @@ echo "info" > source/logs/app.log
 ---
 
 ## Challenge 5: The Safe Delete Protocol (Critical)
+
 **Objective**: Develop habits that prevent catastrophic data loss.
 
 **Setup**:
+
 ```bash
 mkdir -p /tmp/delete-practice/{keep,temp,archive}
 touch /tmp/delete-practice/keep/important.txt
@@ -99,12 +118,14 @@ touch /tmp/delete-practice/archive/old-{a..e}.log
 ```
 
 **SAFE DELETE CHECKLIST**:
+
 1. **Always** `pwd` first
 2. **Always** `ls` what you're about to delete
 3. Use `-i` for interactive mode initially
 4. Test with `echo` first
 
 **Tasks**:
+
 ```bash
 # Navigate safely
 cd /tmp/delete-practice/temp
@@ -125,10 +146,13 @@ ls
  `safe_rm` function that always confirms before deleting.
 
 ---
+
 ## Challenge 6: The Mass Rename Mission (Scripting)
+
 **Objective**: Rename multiple files programmatically.
 
 **Setup**:
+
 ```bash
 mkdir -p rename-test
 cd rename-test
@@ -138,6 +162,7 @@ touch IMG-{001..010}.jpg
 **Task**: Rename all `IMG-*.jpg` to `photo-*.jpg`
 
 **Solution**:
+
 ```bash
 for file in IMG-*.jpg; do
     mv "$file" "${file/IMG/photo}"
@@ -151,10 +176,12 @@ done
 ---
 
 ## Challenge 7: The DevOps Artifact Manager (Real-World)
+
 **Objective**: Create a script to manage deployment artifacts.
 
 **Requirements**:
 Create `artifact_manager.sh` that:
+
 1. Creates a timestamped artifact directory
 2. Copies application files to it
 3. Creates a checksum file
@@ -162,6 +189,7 @@ Create `artifact_manager.sh` that:
 5. Cleans up old artifacts (keep last 5)
 
 **Sample Structure**:
+
 ```bash
 #!/bin/bash
 set -e
@@ -187,9 +215,11 @@ echo "✓ Artifact created: ${ARTIFACT_DIR}.tar.gz"
 ---
 
 ## Challenge 8: The Wildcard Wizard (Pattern Matching)
+
 **Objective**: Master glob patterns for file operations.
 
 **Setup**:
+
 ```bash
 mkdir -p glob-lab
 cd glob-lab
@@ -199,6 +229,7 @@ touch script.sh config.conf README.md
 ```
 
 **Challenges**:
+
 1. List only single-digit files: `ls file?.txt`
 2. List two-digit files: `ls file??.txt`
 3. Copy all .txt files to backup/: `mkdir backup && cp *.txt backup/`
@@ -208,25 +239,32 @@ touch script.sh config.conf README.md
 **Question**: What's the difference between `*`, `?`, and `[...]`?
 
 ---
+
 ## Challenge 9: The Disaster Recovery Drill (Critical Thinking)
+
 **Objective**: Recover from common mistakes safely.
 
 **Scenario 1** - Accidental Overwrite:
+
 ```bash
 cp important.txt backup.txt
 # ... do work ...
 cp backup.txt important.txt  # Oops! Overwrote important.txt
 ```
+
 **Solution**: Always use `-i` flag for confirmation, or `-n` for no-clobber.
 
 **Scenario 2** - Wrong Directory Deletion:
+
 ```bash
 cd /tmp/project
 rm -rf ../project  # Deleted wrong directory!
 ```
+
 **Prevention**: Always use `pwd` and relative paths starting with `./`
 
 **Drill**:
+
 1. Create test environment
 2. Intentionally make common mistakes
 3. Practice recovery procedures
@@ -235,9 +273,11 @@ rm -rf ../project  # Deleted wrong directory!
 ---
 
 ## Challenge 10: Speed & Efficiency Competition (Mastery)
+
 **Objective**: Complete file operations at professional speed.
 
 **Challenge**: Complete these tasks in under 60 seconds:
+
 1. Create directory `speed-test` with subdirs `a`, `b`, `c`
 2. Create 10 files in `a`
 3. Copy all files from `a` to `b` preserving permissions
@@ -247,6 +287,7 @@ rm -rf ../project  # Deleted wrong directory!
 7. Extract archive to verify
 
 **Pro Solution**:
+
 ```bash
 mkdir -p speed-test/{a,b,c} && \
 touch speed-test/a/file{1..10}.txt && \
@@ -261,6 +302,7 @@ echo "✓ Complete"
 ---
 
 ## Verification Checklist
+
 - [ ] Can create files and directories
 - [ ] Understand difference between `cp` and `cp -p`
 - [ ] Know when to use `-r` flag
@@ -271,10 +313,12 @@ echo "✓ Complete"
 - [ ] Always verify location before destructive operations
 
 ## Common Pitfalls to Avoid
+
 ❌ `rm -rf /` (Never do this!)  
 ❌ `mv * ../` without checking `pwd`  
 ❌ `cp -r` without `-p` for sensitive files  
 ❌ Using `rm -f` without verification  
 
 ## Next Steps
+
 Complete these challenges, then proceed to **[Hidden Files](../04-Hidden-Files/CHALLENGES.md)** →

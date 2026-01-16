@@ -50,7 +50,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 02: Linux & Operating Systems
-**Study Resource**: [Linux Basics](../../1-Beginner/01-Phase-1/03-Linux/README.md)
+**Study Resource**: [Linux Basics](../../README.md)
 
 5. Which command is used to list files in a directory in Linux?
 - A) cd
@@ -67,7 +67,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 03: SSH & Remote Access
-**Study Resource**: [SSH Guide](../../1-Beginner/01-Phase-1/03-Linux/SSH/README.md)
+**Study Resource**: [SSH Guide](../../README.md)
 
 7. Which file on the REMOTE server stores the public keys of authorized users?
 - A) ~/.ssh/id_rsa.pub
@@ -84,7 +84,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 04: Version Control (Git)
-**Study Resource**: [Git Fundamentals](../../2-Intermediate/1-Beginner-Level/07-Repository-Management/01-Git-GitHub/README.md)
+**Study Resource**: [Git Fundamentals](../../README.md)
 
 9. Which tool is commonly used for version control in DevOps?
 - A) Git
@@ -101,7 +101,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 05: Data Formats (YAML & JSON)
-**Study Resource**: [Data Formats](../../1-Beginner/01-Phase-1/07-Data-Formats/README.md)
+**Study Resource**: [Data Formats](../../README.md)
 
 11. In YAML, how are lists (arrays) represented?
 - A) Using curly braces `{}`
@@ -118,7 +118,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 06: Docker Basics
-**Study Resource**: [Docker Basics](../../1-Beginner/03-Phase-3/04-Container-Orchestration/Docker/README.md)
+**Study Resource**: [Docker Basics](../../README.md)
 
 13. What is a container in DevOps?
 - A) A virtual machine
@@ -135,7 +135,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 07: Maven & Build Tools
-**Study Resource**: [Maven Basics](../../1-Beginner/02-Phase-2/10-Maven/README.md)
+**Study Resource**: [Maven Basics](../../README.md)
 
 15. Which file is the primary configuration file for a Maven project?
 - A) package.json
@@ -152,7 +152,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 08: Basic CI/CD
-**Study Resource**: [CI/CD Basics](../../1-Beginner/02-Phase-2/12-Basic-CI-CD/README.md)
+**Study Resource**: [CI/CD Basics](../../README.md)
 
 17. What does CI/CD stand for?
 - A) Continuous Integration/Continuous Delivery
@@ -169,7 +169,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 09: Cloud Foundations
-**Study Resource**: [Cloud Foundations](../../1-Beginner/01-Phase-1/13-Cloud-Foundations/README.md)
+**Study Resource**: [Cloud Foundations](../../README.md)
 
 19. What is the fundamental security principle of "Least Privilege"?
 - A) Giving users access to everything by default

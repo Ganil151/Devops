@@ -6,9 +6,9 @@ Amazon Web Services (AWS) is the world's most comprehensive and broadly adopted 
 
 ## 🏗️ 1. Core Learning Modules
 
-- **[AWS Fundamentals for DevOps](./AWS/aws-fundamentals-devops.md)**: A deep dive into CLI, EC2, S3, RDS, and IAM.
-- **[VPC & Networking](./AWS/aws-networking-vpc-guide.md)**: Understanding the backbone of AWS infrastructure.
-- **[S3 Storage Deep Dive](./AWS/s3-bucket/README.md)**: Managing object storage at scale.
+- **[AWS Fundamentals for DevOps](01-Introduction/aws-fundamentals-devops.md)**: A deep dive into CLI, EC2, S3, RDS, and IAM.
+- **[VPC & Networking](02-Networking/aws-networking-vpc-guide.md)**: Understanding the backbone of AWS infrastructure.
+- **[S3 Storage Deep Dive](../../../../README.md)**: Managing object storage at scale.
 
 ## 🛠️ 2. AWS CLI Quick Start
 *When to use: Automating cloud resource management from your terminal.*
@@ -89,4 +89,4 @@ aws ec2 describe-instances --filters "Name=instance-state-name,Values=running"
 
 ---
 
-**Next Steps**: Explore [Advanced AWS Services](../../../2-Intermediate/08-Cloud-Engineering/README.md) for EKS, CloudFormation, and more.
+**Next Steps**: Explore [Advanced AWS Services](../../../../README.md) for EKS, CloudFormation, and more.

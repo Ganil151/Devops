@@ -47,9 +47,9 @@ Hardening your CI/CD server from external threats.
 ## 4. Integration Ecosystem
 
 Jenkins shines when integrated with the broader DevOps stack:
-- **Source Control**: polling or Webhook-based triggers from [GitHub](../Git&GitHub/README.md).
-- **Orchestration**: Direct deployment to [Kubernetes](../Kubernetes/README.md) using the K8s CLI or Helm.
-- **Containers**: Building and pushing images to [Docker registries](../Docker/README.md).
+- **Source Control**: polling or Webhook-based triggers from [GitHub](../../../../README.md).
+- **Orchestration**: Direct deployment to [Kubernetes](../../../../README.md) using the K8s CLI or Helm.
+- **Containers**: Building and pushing images to [Docker registries](../../../../README.md).
 
 ---
 
@@ -60,4 +60,4 @@ Jenkins shines when integrated with the broader DevOps stack:
 4. **Discard Old Builds**: Prevent disk space issues by setting a log rotation policy.
 
 ---
-**Next Step**: Learn how GitOps revolutionizes deployment with [ArgoCD](../ArgoCD/README.md).
+**Next Step**: Learn how GitOps revolutionizes deployment with [ArgoCD](../../../../README.md).

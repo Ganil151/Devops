@@ -80,4 +80,4 @@ Senior engineers use `set -o pipefail`. This ensures that if any command in the 
    - [ ] c) It deletes the file after 2 uses
 **Answers**: 1-c, 2-b, 3-b
 ## 🔗 Next Steps
-Beginner Phase Complete! Proceed to: **[Case Statements](../../2-Intermediate/02-Phase-2/02-Automation/01-Shell-Scripting/01-Case-Statements/README.md)** →
+Beginner Phase Complete! Proceed to: **[Case Statements](../../../../../README.md)** →

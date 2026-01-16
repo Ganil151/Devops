@@ -304,7 +304,7 @@ terraform state show aws_iam_user.users[\"Michael\"]
 - [Terraform AWS Provider Docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 - [AWS IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
 - [Terraform Functions](https://www.terraform.io/language/functions)
-- [Complete Demo Guide](./DEMO_GUIDE.md)
+- [Complete Demo Guide](../day19/code/provisioner-demo/DEMO_GUIDE.md)
 
 ## Success! ✅
 

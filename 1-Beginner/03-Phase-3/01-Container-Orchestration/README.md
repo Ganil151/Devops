@@ -10,4 +10,4 @@ Scaling and managing containerized applications.
 - **Service Mesh**: Connectivity and security between microservices.
 
 ---
-**Next Step**: Learn about [FinOps Fundamentals](../14-FinOps/README.md).
+**Next Step**: Learn about [FinOps Fundamentals](../../../README.md).

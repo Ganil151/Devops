@@ -36,4 +36,4 @@ PoLP is the most important rule in security. It states that a user or service sh
 3. **Tag Everything**: Use tags for cost allocation and access control (TBAC).
 
 ---
-**Compliance**: Learn how to automate these checks in the [DevSecOps Module](../04-Security/README.md).
+**Compliance**: Learn how to automate these checks in the [DevSecOps Module](../../../README.md).

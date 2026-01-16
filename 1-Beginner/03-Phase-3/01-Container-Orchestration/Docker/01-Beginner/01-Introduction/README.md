@@ -321,8 +321,8 @@ Now that you understand Docker basics, proceed to:
 
 1. [Images and Containers](../02-Images-and-Containers/README.md) - Deep dive into images and container management
 2. [Dockerfile Basics](../03-Dockerfile-Basics/README.md) - Learn to build your own images
-3. [Private Registry Setup](../../Intermediate/04-Private-Registry/README.md) - Host your own images
-4. [Backup & Restore](../../Intermediate/05-Backup-Restore-Migration/README.md) - Move images offline
+3. [Private Registry Setup](../../../../../../README.md) - Host your own images
+4. [Backup & Restore](../../../../../../README.md) - Move images offline
 
 ## Resources
 

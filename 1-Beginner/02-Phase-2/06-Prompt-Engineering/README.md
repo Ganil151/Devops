@@ -9,4 +9,4 @@ Using AI to accelerate DevOps workflows, from writing scripts to troubleshooting
 - **Tool Integration**: Using AI within your terminal and IDE.
 
 ---
-**Next Step**: Advance to [Container Orchestration](../../03-Phase-3/04-Container-Orchestration/README.md).
+**Next Step**: Advance to [Container Orchestration](../../../README.md).

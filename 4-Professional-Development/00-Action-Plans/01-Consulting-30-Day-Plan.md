@@ -21,7 +21,7 @@ This is your day-by-day roadmap to landing your first consulting clients and gen
 **Time**: 2-3 hours
 
 **Tasks**:
-- [ ] Complete the self-assessment in the [Getting Started Guide](../01-Consulting-Services/Getting-Started.md#prerequisites--self-assessment)
+- [ ] Complete the self-assessment in the [Getting Started Guide](../02-Consulting-Services/Getting-Started.md)
 - [ ] Choose your consulting niche (Kubernetes, FinOps, DevSecOps, etc.)
 - [ ] List 5 past projects that demonstrate your expertise
 - [ ] Identify your ideal client profile (startup size, industry, tech stack)

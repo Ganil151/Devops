@@ -63,7 +63,7 @@ This directory serves as the gallery for high-complexity, end-to-end DevOps proj
 
 ## 📂 Specialized Application Stacks
 
-### [Microservices](../../3-Advanced/2-Intermediate-Level/09-Microservices/README.md)
+### [Microservices](../README.md)
 Deep-dive into distributed systems, circuit breakers, and service mesh.
 
 ### [Multi-Tier Apps](./Multi_Tier_Apps/README.md)

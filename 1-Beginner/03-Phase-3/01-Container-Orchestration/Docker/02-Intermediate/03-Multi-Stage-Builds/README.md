@@ -619,9 +619,9 @@ FROM gcr.io/distroless/static-debian12
 
 ## Next Steps
 
-- Explore [Docker Registry](../04-Docker-Registry/README.md) for image distribution
-- Learn about [Docker Security](../../Advanced/01-Docker-Security/README.md)
-- Combine with [Docker Compose](../../Docker-Compose/Beginner/01-Basics/README.md)
+- Explore [Docker Registry](../../../../../../README.md) for image distribution
+- Learn about [Docker Security](../../../../../../README.md)
+- Combine with [Docker Compose](../../../../../../README.md)
 
 ## Resources
 
@@ -632,4 +632,4 @@ FROM gcr.io/distroless/static-debian12
 
 ---
 
-**[← Previous: Docker Volumes](../02-Docker-Volumes/README.md)** | **[Next: Docker Registry →](../04-Docker-Registry/README.md)**
+**[← Previous: Docker Volumes](../02-Docker-Volumes/README.md)** | **[Next: Docker Registry →](../../../../../../README.md)**

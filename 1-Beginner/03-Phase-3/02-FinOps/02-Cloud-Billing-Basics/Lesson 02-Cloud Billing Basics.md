@@ -217,4 +217,4 @@ Most cloud providers offer free tiers with limits:
 
 ---
 ## Next Lesson
-Continue to **[Lesson 03: Cost Visibility](Lesson%2003-Cost%20Visibility.md)** to learn how to gain visibility into your cloud spending.
+Continue to **[Lesson 03: Cost Visibility](../03-Cost-Visibility/Lesson%2003-Cost%20Visibility.md)** to learn how to gain visibility into your cloud spending.

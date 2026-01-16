@@ -13,4 +13,4 @@ Everything you need to know about:
 
 ## Learning Path
 1. Understand the core concepts in the Fundamentals guide.
-2. Advance to the [Hands-on Guide](../../../Intermediate-Level/14-Serverless-Lambda/aws-lambda-hands-on.md) to build and deploy functions via CLI.
+2. Advance to the [Hands-on Guide](../../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/01-Compute-and-Containers/14-Serverless-Lambda/aws-lambda-hands-on.md) to build and deploy functions via CLI.

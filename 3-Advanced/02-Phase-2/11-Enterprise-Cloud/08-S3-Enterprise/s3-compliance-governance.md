@@ -759,7 +759,7 @@ Monitoring:
 
 ## Additional Resources
 
-- [S3 Enterprise README](file:///home/ganil/Documents/Devops/Cloud_Computing/Advanced-Level/08-S3-Enterprise/README.md)
+- [S3 Enterprise README](../../../../README.md)
 - [AWS Compliance](https://aws.amazon.com/compliance/)
 - [S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html)
 - [Regulatory Compliance](https://docs.aws.amazon.com/whitepapers/latest/navigating-gdpr-compliance/navigating-gdpr-compliance.html)

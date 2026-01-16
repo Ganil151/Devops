@@ -107,4 +107,17 @@ func main() {
 
 ---
 
+
+## 💻 Code Samples
+
+### Deployment Config Parser (Boilerplate)
+A simulation of a DevOps tool that parses complex flags for region, environment, and replica counts, complete with custom help text.
+
+**Run the sample:**
+```bash
+cd boilerplate
+go run main.go -region eu-west-1 -replicas 5 -verbose
+```
+Try running `go run main.go -help` to see the custom usage output!
+
 **Next Step**: [Environment Variables →](../12-Environment-Variables/README.md)

@@ -95,4 +95,4 @@ Using advanced loops and conditional filters to manage complex system states.
 3. **Automated Testing**: Use tools like `tflint`, `ansible-lint`, and `molecule` to verify your code before it hits production.
 
 ---
-**EKS Automation**: See how these tools combine to build managed Kubernetes clusters in the [Advanced K8s Module](../03-Advanced-K8s/README.md).
+**EKS Automation**: See how these tools combine to build managed Kubernetes clusters in the [Advanced K8s Module](../../../README.md).

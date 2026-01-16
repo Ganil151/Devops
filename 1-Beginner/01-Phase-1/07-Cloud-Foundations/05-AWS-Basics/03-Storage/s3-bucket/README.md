@@ -276,6 +276,6 @@ aws s3api put-bucket-encryption \
 
 ## 🔗 Related Resources
 - [S3 CLI Deep Dive](./s3-cli-guide.md)
-- [S3 Bucket Policies (Intermediate)](../../../../../../2-Intermediate/02-Phase-2/12-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-bucket-policies.md)
-- [S3 Static Web Hosting (Intermediate)](../../../../../../2-Intermediate/02-Phase-2/12-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-static-website.md)
+- [S3 Bucket Policies (Intermediate)](../../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-bucket-policies.md)
+- [S3 Static Web Hosting (Intermediate)](../../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-static-website.md)
 - [AWS Storage Overview](../README.md)

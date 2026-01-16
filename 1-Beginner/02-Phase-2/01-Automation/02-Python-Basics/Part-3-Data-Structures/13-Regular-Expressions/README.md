@@ -400,10 +400,10 @@ def analyze_incident_logs(log_file, time_window):
 
 | Module | Relationship |
 |--------|-------------|
-| [Logging Basics](../14-Logging-Basics/README.md) | Parse log formats |
-| [File Operations](../04-File-Operations/README.md) | Read/process log files |
+| [Logging Basics](../../../../../../README.md) | Parse log formats |
+| [File Operations](../../../../../../README.md) | Read/process log files |
 | [Working with JSON](../06-Working-with-JSON/README.md) | Extract data from structured text |
 
 ---
 
-**Next Step**: [Logging Basics →](../14-Logging-Basics/README.md)
+**Next Step**: [Logging Basics →](../../../../../../README.md)

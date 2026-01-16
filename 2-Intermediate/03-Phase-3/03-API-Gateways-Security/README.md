@@ -47,7 +47,7 @@ By the end of this module, you will be able to:
 
 ## 🔗 Next Steps
 - **[Cloud Engineering](../12-Cloud-Engineering/)** - Build production-grade architectural patterns.
-- **[Advanced Observability](../../3-Advanced/02-Observability/README.md)** - Master distributed tracing and APM.
+- **[Advanced Observability](../../../README.md)** - Master distributed tracing and APM.
 
 ---
 *Secure the gateway. Rule the traffic.*

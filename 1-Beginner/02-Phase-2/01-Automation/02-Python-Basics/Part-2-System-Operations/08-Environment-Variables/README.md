@@ -210,9 +210,9 @@ Master environment variables by solving these professional DevOps challenges.
 
 | Module | Relationship |
 |--------|-------------|
-| [Working with YAML](../07-Working-with-YAML/README.md) | YAML can reference environment variables (like in Ansible/K8s) |
+| [Working with YAML](../../../../../../README.md) | YAML can reference environment variables (like in Ansible/K8s) |
 | [Command Line Arguments](../09-Command-Line-Arguments/README.md) | CLI args usually take precedence over env vars |
-| [Logging Basics](../14-Logging-Basics/README.md) | Use env vars to set log levels (DEBUG vs INFO) |
+| [Logging Basics](../../../../../../README.md) | Use env vars to set log levels (DEBUG vs INFO) |
 
 ---
 

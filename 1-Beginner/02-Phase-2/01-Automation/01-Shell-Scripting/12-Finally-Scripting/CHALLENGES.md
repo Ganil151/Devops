@@ -1709,9 +1709,9 @@ Continue to: **[User Input](../13-User-Input/README.md)** →
 - Basic error handling knowledge
 
 **Related Advanced Topics**:
-- **[Advanced Bash Automation](../../../../2-Intermediate/02-Phase-2/01-Automation/02-Advanced-Bash-Automation/README.md)**
-- **[Python for DevOps](../../../../2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/README.md)**
-- **[Infrastructure as Code](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/README.md)**
+- **[Advanced Bash Automation](../../../../../README.md)**
+- **[Python for DevOps](../../../../../README.md)**
+- **[Infrastructure as Code](../../../../../README.md)**
 
 **Real-World Applications**:
 - Server provisioning and configuration

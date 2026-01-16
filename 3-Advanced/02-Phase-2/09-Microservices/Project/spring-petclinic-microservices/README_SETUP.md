@@ -8,23 +8,23 @@
    - Verification checklist
    - Troubleshooting tips
 
-2. **[IMPLEMENTATION_CHECKLIST.md](./IMPLEMENTATION_CHECKLIST.md)** - Track progress
+2. **[IMPLEMENTATION_CHECKLIST.md](terraform/Docs/IMPLEMENTATION_CHECKLIST.md)** - Track progress
    - Pre-implementation verification
    - Phase-by-phase checklist
    - Sign-off documentation
 
 ### Understanding the Changes
-3. **[FIXES_SUMMARY.md](./FIXES_SUMMARY.md)** - What was fixed
+3. **[FIXES_SUMMARY.md](terraform/Docs/FIXES_SUMMARY.md)** - What was fixed
    - Issues identified
    - Solutions implemented
    - Files modified
 
-4. **[CHANGES_SUMMARY.md](./CHANGES_SUMMARY.md)** - Complete change log
+4. **[CHANGES_SUMMARY.md](terraform/Docs/CHANGES_SUMMARY.md)** - Complete change log
    - New files created
    - Files modified
    - Key changes explained
 
-5. **[ANSIBLE_ROLES_SETUP.md](./ANSIBLE_ROLES_SETUP.md)** - Ansible details
+5. **[ANSIBLE_ROLES_SETUP.md](terraform/Docs/ANSIBLE_ROLES_SETUP.md)** - Ansible details
    - Role structure
    - Playbook organization
    - Troubleshooting guide

@@ -33,4 +33,4 @@ Advanced orchestration, Task Definitions, and Service Auto Scaling for container
 - **Infrastructure as Code**: Always use Terraform or CloudFormation to deploy compute resources to ensure reproducibility.
 
 ---
-**Advanced Orchestration**: Learn about Kubernetes in the [AWS EKS Production Guide](../../Advanced-Level/16-Container-Orchestration/README.md)
+**Advanced Orchestration**: Learn about Kubernetes in the [AWS EKS Production Guide](../../../../../README.md)

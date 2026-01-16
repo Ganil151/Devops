@@ -37,4 +37,4 @@
 
 
 [Links:](https://youtu.be/dbCBe7hlLbk)
-[Ref:](C:\Users\ganil\Documents\DevOPS\Books\Python$DevOps\Python4DevOps.pdf)
+[Ref:](../../04-Books-Guides/DevOps/Python4DevOps.pdf)

@@ -345,10 +345,10 @@ Answer: dev, staging, prod
 
 ## 🔗 **Related Documentation**
 
-- [EKS_COMMAND_REFERENCE.md](../EKS/EKS_COMMAND_REFERENCE.md) - kubectl commands
-- [INFRASTRUCTURE_ARCHITECTURE.md](../kubernetes/INFRASTRUCTURE_ARCHITECTURE.md) - Architecture overview
-- [KUBECTL_CONFIG_FIX.md](../kubernetes/KUBECTL_CONFIG_FIX.md) - kubectl configuration
-- [k8s-complete-setup.sh](../kubernetes/scripts/k8s-complete-setup.sh) - Cluster setup script
+- [EKS_COMMAND_REFERENCE.md](../EKS_COMMAND_REFERENCE.md) - kubectl commands
+- [INFRASTRUCTURE_ARCHITECTURE.md](../../Instructions/INFRASTRUCTURE_ARCHITECTURE.md) - Architecture overview
+- [KUBECTL_CONFIG_FIX.md](../../Instructions/KUBECTL_CONFIG_FIX.md) - kubectl configuration
+- [k8s-complete-setup.sh](../../scripts/K8s-Master/k8s-complete-setup.sh) - Cluster setup script
 
 ---
 

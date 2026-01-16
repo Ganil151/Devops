@@ -140,7 +140,7 @@ Best,
 ---
 
 ### Day 21: Conduct 3-5 Discovery Calls
-- [ ] Use discovery call script from [Getting Started Guide](../04-Niche-Roles/Getting-Started.md)
+- [ ] Use discovery call script from [Getting Started Guide](../02-Consulting-Services/Getting-Started.md)
 - [ ] Focus on business outcomes, not just technical details
 - [ ] Take detailed notes
 

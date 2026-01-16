@@ -23,7 +23,7 @@ Architectures that span across AWS, Azure, and GCP.
 - [Enterprise Patterns & Governance](07-Enterprise-Patterns/README.md)
 
 ### 📦 16. Advanced Orchestration
-- **Kubernetes**: [EKS Production-Ready Guide](16-Container-Orchestration/README.md)
+- **Kubernetes**: [EKS Production-Ready Guide](../../../README.md)
 - **Secrets & Identity**: [Cognito & Advanced IAM](12-Identity-Management/README.md)
 
 ### 🔍 17. Observability & SRE

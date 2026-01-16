@@ -34,4 +34,4 @@ This directory contains production-ready microservice implementations designed f
    ```
 
 ---
-**Reference**: For a deep dive into the underlying technology, see the [Advanced K8s Module](../../../3-Advanced/03-Advanced-K8s/README.md).
+**Reference**: For a deep dive into the underlying technology, see the [Advanced K8s Module](../../README.md).

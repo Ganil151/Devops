@@ -40,7 +40,7 @@ Managing external access.
 - HTTP/HTTPS routing.
 - Path-based and Host-based routing.
 
-### 6. [StatefulSets](StatefulSets/)
+### 6. [StatefulSets](../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/StatefulSets)
 Managing stateful applications that require stable identities and persistent storage.
 - **Stable Pod Identities**: Predictable pod names and DNS.
 - **Persistent Storage**: Dedicated PVCs for each pod.
@@ -79,4 +79,4 @@ kubectl rollout status deployment/web
 kubectl get pods -n my-namespace
 ```
 
-[Back to Beginner](../Beginner/README.md) | [Proceed to Advanced Level](../Advanced/README.md)
+[Back to Beginner](../Beginner/README.md) | [Proceed to Advanced Level](../../../../README.md)

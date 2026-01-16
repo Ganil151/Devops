@@ -242,6 +242,7 @@ Master YAML manipulation by solving these professional DevOps challenges.
 | **01. K8s Manifest Generator** | Automate the creation of Kubernetes Deployment manifests. | [Link](./challenges/challenge_01_manifest_gen.py) | [Link](./challenges/solutions/solution_01_manifest_gen.py) |
 | **02. Ansible Inventory Parser** | Extract host and group details from a YAML inventory file. | [Link](./challenges/challenge_02_inventory_parser.py) | [Link](./challenges/solutions/solution_02_inventory_parser.py) |
 | **03. Deep Config Merger** | Implement a recursive merger for environment-specific configurations. | [Link](./challenges/challenge_03_config_merger.py) | [Link](./challenges/solutions/solution_03_config_merger.py) |
+| **04. Ansible Inventory Gen** | Generate nested Ansible inventory YAML from server data. | [Link](./challenges/challenge_04_ansible_inventory.py) | [Link](./challenges/solutions/solution_04_ansible_inventory.py) |
 
 > **Pro Tip**: Always use `yaml.safe_load()` instead of `yaml.load()` to prevent arbitrary code execution vulnerabilities.
 
@@ -310,4 +311,4 @@ Master YAML manipulation by solving these professional DevOps challenges.
 
 ---
 
-**Next Step**: [Environment Variables →](../08-Environment-Variables/README.md)
+**Next Step**: [Environment Variables →](../../../../../../README.md)

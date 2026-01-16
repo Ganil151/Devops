@@ -12,6 +12,6 @@ Practical compliance:
 - Multi-account governance strategies.
 
 ## Learning Path
-1. Master basic auditing in [CloudTrail](../../Intermediate-Level/06-Monitoring-Logging/aws-monitoring-comprehensive.md).
+1. Master basic auditing in [CloudTrail](../06-Monitoring-Logging/aws-monitoring-comprehensive.md).
 2. Follow this guide to automate compliance and remediation.
-3. Advance to [Distributed Tracing](../../Advanced-Level/17-Observability-Governance/aws-xray-observability.md) for deep application insights.
+3. Advance to [Distributed Tracing](../../../../../3-Advanced/02-Phase-2/11-Enterprise-Cloud/17-Observability-Governance/aws-xray-observability.md) for deep application insights.

@@ -6,22 +6,22 @@ Microsoft Azure is a comprehensive cloud platform for building, deploying, and m
 
 ## 📚 Azure Learning Modules
 
-### 01. [Azure Fundamentals](./Fundamentals/README.md)
+### 01. [Azure Fundamentals](../../../../README.md)
 Introduction to Azure infrastructure, global regions, and management tools (Portal, CLI, PowerShell).
 
-### 02. [Azure Compute](./Compute/README.md)
+### 02. [Azure Compute](../../../../README.md)
 Virtual Machines (VMs), Azure Container Instances (ACI), and Azure Functions.
 
-### 03. [Azure Networking](./Networking/README.md)
+### 03. [Azure Networking](../../../../README.md)
 Virtual Networks (VNet), Subnets, Network Security Groups (NSG), and Load Balancers.
 
-### 04. [Azure Storage](./Storage/README.md)
+### 04. [Azure Storage](../../../../README.md)
 Storage Accounts, Blob Storage, Azure Files, and Managed Disks.
 
-### 05. [Identity & Security](./Security/README.md)
+### 05. [Identity & Security](../../../../README.md)
 Azure Active Directory (AAD), Role-Based Access Control (RBAC), and Key Vault.
 
-### 06. [Azure DevOps](./DevOps/README.md)
+### 06. [Azure DevOps](../../../../README.md)
 Introduction to Azure DevOps Services and Pipelines.
 
 ---

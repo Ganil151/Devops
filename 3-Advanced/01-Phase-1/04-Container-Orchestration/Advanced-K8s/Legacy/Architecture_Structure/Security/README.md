@@ -31,7 +31,7 @@
 - **Service Accounts**: Pod identity management
 - **User Management**: Human user authentication
 
-### 2. [Network Security](./network-policies/)
+### 2. [Network Security](../Networking/network-policies)
 - **Network Policies**: Traffic segmentation
 - **Service Mesh**: Advanced networking security
 - **Encryption**: Data in transit protection

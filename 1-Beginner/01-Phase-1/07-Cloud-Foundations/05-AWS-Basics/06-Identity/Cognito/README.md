@@ -13,4 +13,4 @@ Detailed overview of Cognito, including:
 
 ## Learning Path
 1. Start with the Fundamentals guide.
-2. Move to the [Hands-on Guide](../../../Intermediate-Level/04-Security-IAM/cognito-hands-on.md) to set up your first User Pool.
+2. Move to the [Hands-on Guide](../../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/04-IAM-and-Security/cognito-hands-on.md) to set up your first User Pool.

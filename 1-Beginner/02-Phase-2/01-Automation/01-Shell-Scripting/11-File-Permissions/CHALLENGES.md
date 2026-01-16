@@ -496,5 +496,5 @@ Continue to: **[Finally Scripting](../12-Finally-Scripting/README.md)** →
 - Familiarity with text editors
 
 **Related Modules**:
-- **[Linux Basics](../../01-Phase-1/02-Linux/README.md)** - Foundation concepts
-- **[Security Fundamentals](../../../3-Advanced/01-Phase-1/07-Security/README.md)** - Advanced security topics
+- **[Linux Basics](../../../../../README.md)** - Foundation concepts
+- **[Security Fundamentals](../../../../../README.md)** - Advanced security topics

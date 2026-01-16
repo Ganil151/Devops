@@ -166,4 +166,4 @@ spec:
 
 ---
 
-**Next Module**: Secure your enterprise cluster with **[Enterprise Security (DevSecOps)](../04-Security/README.md)**.
+**Next Module**: Secure your enterprise cluster with **[Enterprise Security (DevSecOps)](../../../../../README.md)**.

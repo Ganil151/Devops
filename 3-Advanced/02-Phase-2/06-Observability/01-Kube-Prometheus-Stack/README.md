@@ -17,7 +17,7 @@ The power of this stack lies in the **Operator Pattern**. Instead of manually ma
 - **Kube-State-Metrics**: Listens to the Kubernetes API server and generates metrics about the state of objects (pods, deployments, etc.).
 
 ### Monitoring Flow (Mermaid)
-![Monitoring Flow](../../../00-Resources/03-Images-Diagrams/Kubernetes/KubeMonStack.png)
+![Monitoring Flow](../../../../00-Resources/03-Images-Diagrams/Kubernetes/KubeMonStack.png)
 
 ---
 
@@ -122,4 +122,4 @@ spec:
 
 ---
 
-**Next Steps**: Learn how to correlate these metrics with logs in the [ELK Stack Guide](../03-Logging-ELK/README.md) or dive deeper into [Advanced Kubernetes Patterns](../../03-Advanced-K8s/README.md).
+**Next Steps**: Learn how to correlate these metrics with logs in the [ELK Stack Guide](../03-Logging-ELK/README.md) or dive deeper into [Advanced Kubernetes Patterns](../../../../README.md).

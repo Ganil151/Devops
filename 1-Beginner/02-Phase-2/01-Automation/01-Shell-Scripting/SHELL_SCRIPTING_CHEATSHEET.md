@@ -780,8 +780,8 @@ alias cheat='less ~/cheatsheet.md'
 
 **🔗 Related Resources**:
 - [Main Automation README](./README.md)
-- [Master Index](./AUTOMATION_MASTER_INDEX.md)
-- [Organization Plan](./AUTOMATION_ORGANIZATION_PLAN.md)
+- [Master Index](../AUTOMATION_MASTER_INDEX.md)
+- [Organization Plan](../AUTOMATION_ORGANIZATION_PLAN.md)
 
 ---
 

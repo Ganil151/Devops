@@ -14,7 +14,7 @@ In DevOps, we almost never configure systems through a GUI. Instead, we use **De
 ## 📖 YAML (YAML Ain't Markup Language)
 YAML is the industry standard for DevOps tools like Kubernetes, Ansible, and Docker Compose. It is designed to be human-readable.
 
-![YAML vs JSON Syntax](../Images/yaml_vs_json.png)
+![YAML vs JSON Syntax](yaml_vs_json.png)
 
 ### Key Syntax Rules
 - **Indentation Matters**: Use spaces (usually 2), NEVER tabs.
@@ -291,7 +291,7 @@ python3 -c 'import sys, yaml, json; print(json.dumps(yaml.safe_load(sys.stdin.re
 - C) To compress the files
 - D) To encrypt the data
 
-**Next Step**: Now that you master data formats, learn how to package apps in [Docker Basics](../06-Docker/README.md).
+**Next Step**: Now that you master data formats, learn how to package apps in [Docker Basics](../../../README.md).
 
 ### 🔑 Quiz Answer Key
 

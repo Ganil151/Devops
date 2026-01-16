@@ -604,7 +604,7 @@ Long-Term:
 
 ## Additional Resources
 
-- [S3 Enterprise README](file:///home/ganil/Documents/Devops/Cloud_Computing/Advanced-Level/08-S3-Enterprise/README.md)
+- [S3 Enterprise README](../../../../README.md)
 - [AWS S3 Pricing](https://aws.amazon.com/s3/pricing/)
 - [S3 Storage Lens](https://aws.amazon.com/s3/storage-lens/)
 - [Cost Optimization](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-cost.html)

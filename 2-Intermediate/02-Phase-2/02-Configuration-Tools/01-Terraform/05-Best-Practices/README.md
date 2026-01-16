@@ -48,7 +48,7 @@ In the world of Infrastructure as Code, technical debt translates directly into 
 
 ## 📚 Learning Path
 
-1.  **[01. Code Organization](Code%20Organization%20Best%20Practices.md)**: Structuring for scale and **<font color="#92d050">blast radius reduction</font>**.
+1.  **[01. Code Organization](01-Code-Organization/Code%20Organization%20Best%20Practices.md)**: Structuring for scale and **<font color="#92d050">blast radius reduction</font>**.
 2.  **[02. Naming Conventions](./02-Naming-Conventions/README.md)**: Industry standards for **<font color="#92d050">self-documenting code</font>**.
 3.  **[03. Security Best Practices](./03-Security-Best-Practices/README.md)**: Secret management and the **<font color="#92d050">principle of least privilege</font>**.
 4.  **[04. Performance Optimization](./04-Performance-Optimization/README.md)**: Faster plans and effective **<font color="#92d050">parallelism</font>**.

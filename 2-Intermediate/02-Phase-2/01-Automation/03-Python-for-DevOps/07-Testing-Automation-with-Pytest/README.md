@@ -175,4 +175,4 @@ Master quality assurance by building these automated testing suites.
 
 ---
 
-**Next Step**: [Capstone Project: S3 Auditor →](../08-Capstone-Project-S3-Auditor/README.md)
+**Next Step**: [Capstone Project: S3 Auditor →](../../../../../README.md)

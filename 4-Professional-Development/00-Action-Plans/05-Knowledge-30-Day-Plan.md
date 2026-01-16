@@ -19,7 +19,7 @@ Launch your training, mentorship, or micro-SaaS business and acquire your first 
 
 ### Day 1-2: Choose Your Path
 - [ ] Decide: Training, Mentorship, Community, or Micro-SaaS
-- [ ] Review [Getting Started Guide](../05-Knowledge-Apps/Getting-Started.md)
+- [ ] Review [Getting Started Guide](../02-Consulting-Services/Getting-Started.md)
 - [ ] Choose based on:
   - Your strengths (teaching vs. building)
   - Time available

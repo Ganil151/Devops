@@ -183,7 +183,7 @@ ___
 ## Network Communication Patterns
 
 ### Pattern 1: Frontend + Backend + Database
-![App Network Pattern](../../../Images/docker_network_pattern_1.png)
+![App Network Pattern](../../../docker_network_pattern_1.png)
 
 ```bash
 # Create network
@@ -241,7 +241,7 @@ docker run -d \
   nginx
 ```
 
-![Multiple Networks Architecture](../../../Images/docker_network_pattern_2.png)
+![Multiple Networks Architecture](../../../docker_network_pattern_2.png)
 ___
 
 ## Managing Networks
@@ -359,7 +359,7 @@ ___
 
 ### Isolate with Multiple Networks
 
-![Multiple Networks Architecture](../../../Images/docker_network_pattern_3.png)
+![Multiple Networks Architecture](../../../docker_network_pattern_3.png)
 
 ```bash
 # Public network (exposed services)
@@ -398,7 +398,7 @@ docker run -d \
 ___
 
 ## Overlay Networks (Swarm/Multi-Host)
-![Overlay Network Architecture](../../../Images/docker_network_pattern_4.png)
+![Overlay Network Architecture](../../../docker_network_pattern_4.png)
 
 Overlay networks enable multi-host communication in Docker Swarm:
 
@@ -442,7 +442,7 @@ docker run -d \
   nginx
 ```
 
-![Macvlan Network Architecture](../../../Images/docker_network_pattern_5.png)
+![Macvlan Network Architecture](../../../docker_network_pattern_5.png)
 
 **Use cases:**
 - Legacy applications requiring MAC addresses
@@ -794,7 +794,7 @@ ___
 
 - Continue to [Docker Volumes](../02-Docker-Volumes/README.md)
 - Learn about [Multi-Stage Builds](../03-Multi-Stage-Builds/README.md)
-- Explore [Docker Compose for Multi-Container Apps](../../Docker-Compose/Beginner/01-Basics/README.md)
+- Explore [Docker Compose for Multi-Container Apps](../../../../../../README.md)
 
 ## Resources
 
@@ -805,4 +805,4 @@ ___
 
 ---
 
-**[← Previous: Dockerfile Basics](../../Beginner/03-Dockerfile-Basics/README.md)** | **[Next: Docker Volumes →](../02-Docker-Volumes/README.md)**
+**[← Previous: Dockerfile Basics](../../../../../../README.md)** | **[Next: Docker Volumes →](../02-Docker-Volumes/README.md)**

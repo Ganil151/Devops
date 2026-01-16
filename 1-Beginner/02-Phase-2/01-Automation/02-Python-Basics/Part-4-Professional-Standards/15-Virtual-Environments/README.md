@@ -481,7 +481,7 @@ pip install -r requirements.txt
 |--------|-------------|
 | [Package Management](../16-Package-Management/README.md) | Managing pip and packages |
 | [First Automation Script](../17-First-Automation-Script/README.md) | Using venv in real projects |
-| [Subprocess Module](../10-Subprocess-Module/README.md) | Running pip commands programmatically |
+| [Subprocess Module](../../../../../../README.md) | Running pip commands programmatically |
 
 ---
 

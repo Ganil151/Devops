@@ -85,4 +85,4 @@ aws efs delete-file-system --file-system-id $FILE_SYSTEM_ID
 ```
 
 ---
-**Next Step**: Explore [Advanced EFS Patterns & Troubleshooting](../../Advanced-Level/13-File-Storage-EFS/efs-advanced-patterns.md)
+**Next Step**: Explore [Advanced EFS Patterns & Troubleshooting](../../../../../3-Advanced/02-Phase-2/11-Enterprise-Cloud/13-File-Storage-EFS/efs-advanced-patterns.md)

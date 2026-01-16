@@ -24,7 +24,7 @@ Perfect for those new to Docker and containerization.
 | Topic | Description | Key Concepts |
 |-------|-------------|--------------|
 | **[Compose Basics](04-Docker-Compose/Beginner/01-Basics/README.md)** | Multi-container applications | Services, Commands, Workflow |
-| **[Service Configuration](04-Docker-Compose/Beginner/02-Service-Configuration/README.md)** | Defining and configuring services | Ports, Environment, Dependencies |
+| **[Service Configuration](../../../../README.md)** | Defining and configuring services | Ports, Environment, Dependencies |
 | **[Database Storage](04-Docker-Compose/Beginner/03-Database-Storage/README.md)** | Persistence for PSQL, MySQL, etc | Data paths, Init scripts, Volumes |
 
 ### 🟡 Intermediate Level

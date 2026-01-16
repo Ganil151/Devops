@@ -121,6 +121,7 @@ Build professional command-line interfaces by solving these DevOps challenges.
 | **03. Safety Flags** | Implement mutually exclusive `--force` and `--dry-run` logic for safe scripts. | [Link](./challenges/challenge_03_safety_flags.py) | [Link](./challenges/solutions/solution_03_safety_flags.py) |
 | **04. Subcommands** | Create a multi-purpose calculator CLI using the subcommand pattern. | [Link](./challenges/challenge_04_subcommands.py) | [Link](./challenges/solutions/solution_04_subcommands.py) |
 | **05. Env Override** | Build a CLI that gracefully falls back to environment variables for defaults. | [Link](./challenges/challenge_05_env_override.py) | [Link](./challenges/solutions/solution_05_env_override.py) |
+| **06. CLI Tool Wrapper** | Create a kubectl-style CLI with subcommands (get, create, delete). | [Link](./challenges/challenge_06_cli_wrapper.py) | [Link](./challenges/solutions/solution_06_cli_wrapper.py) |
 
 > **Pro Tip**: Use `parser.add_subparsers(dest="action")` to easily route logic based on the user's chosen command.
 
@@ -205,7 +206,7 @@ Build professional command-line interfaces by solving these DevOps challenges.
 |--------|-------------|
 | [Subprocess Module](../10-Subprocess-Module/README.md) | Pass CLI arguments to external shell commands |
 | [Environment Variables](../08-Environment-Variables/README.md) | CLI args often override environment variables |
-| [First Automation Script](../17-First-Automation-Script/README.md) | The entry point for any professional script |
+| [First Automation Script](../../../../../../README.md) | The entry point for any professional script |
 
 ---
 

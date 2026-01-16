@@ -48,7 +48,7 @@ Platform as a Service and Software as a Service - Building and deploying cloud-n
 
 ---
 
-### ⚡ [Serverless Architecture](./Serverless-Architecture/README.md)
+### ⚡ [Serverless Architecture](../../../README.md)
 Event-driven design patterns and serverless best practices.
 
 **Topics**:
@@ -60,7 +60,7 @@ Event-driven design patterns and serverless best practices.
 
 ---
 
-### 🌍 [Edge Computing](./Edge-Computing/README.md)
+### 🌍 [Edge Computing](../../../README.md)
 Architecture for low-latency, geographically distributed applications.
 
 **Topics**:
@@ -76,7 +76,7 @@ Architecture for low-latency, geographically distributed applications.
 
 ### Infrastructure as Code (IaC) - Advanced
 
-**Covered in**: [2-Intermediate/04-Terraform](../../2-Intermediate/04-Terraform/README.md)
+**Covered in**: [2-Intermediate/04-Terraform](../../../README.md)
 
 **Advanced Topics**:
 - Multi-cloud IaC (Terraform, Pulumi, Crossplane)
@@ -89,7 +89,7 @@ Architecture for low-latency, geographically distributed applications.
 
 ### FinOps (Cloud Financial Operations)
 
-**Covered in**: [4-Professional-Development/07-FinOps](../../4-Professional-Development/07-FinOps/README.md)
+**Covered in**: [4-Professional-Development/07-FinOps](../../../README.md)
 
 **Topics**:
 - Cloud cost optimization
@@ -129,7 +129,7 @@ Architecture for low-latency, geographically distributed applications.
 
 **Tools**: Istio, Linkerd, Consul
 
-**Covered in**: [3-Advanced/06-Microservices](../06-Microservices/README.md)
+**Covered in**: [3-Advanced/06-Microservices](../../../README.md)
 
 ---
 
@@ -159,7 +159,7 @@ Architecture for low-latency, geographically distributed applications.
 - **Serverless**: Function injection, over-privileged roles
 - **Edge**: DDoS protection, data sovereignty
 
-**Covered in**: [3-Advanced/04-Security](../04-Security/README.md)
+**Covered in**: [3-Advanced/04-Security](../../../README.md)
 
 ---
 
@@ -169,7 +169,7 @@ Architecture for low-latency, geographically distributed applications.
 - **Traces**: Jaeger, Tempo
 - **Unified**: Datadog, New Relic, Grafana Cloud
 
-**Covered in**: [3-Advanced/02-Observability](../02-Observability/README.md)
+**Covered in**: [3-Advanced/02-Observability](../../../README.md)
 
 ---
 
@@ -179,7 +179,7 @@ Architecture for low-latency, geographically distributed applications.
 - **Reserved capacity**: 30-70% savings
 - **Auto-scaling**: Scale to zero when possible
 
-**Covered in**: [4-Professional-Development/07-FinOps](../../4-Professional-Development/07-FinOps/README.md)
+**Covered in**: [4-Professional-Development/07-FinOps](../../../README.md)
 
 ---
 

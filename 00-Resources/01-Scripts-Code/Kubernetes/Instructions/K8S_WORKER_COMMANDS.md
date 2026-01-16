@@ -414,6 +414,6 @@ sudo reboot
 
 ## 🔗 Related Documentation
 
-- [Worker Setup Scripts](./WORKER_SCRIPTS_FIXES.md)
+- [Worker Setup Scripts](../scripts/WORKER_SCRIPTS_FIXES.md)
 - [Kubernetes Official Docs](https://kubernetes.io/docs/)
 - [Troubleshooting Guide](https://kubernetes.io/docs/tasks/debug/)

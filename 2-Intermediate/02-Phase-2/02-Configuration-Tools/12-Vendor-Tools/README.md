@@ -351,11 +351,11 @@ Upon completion, you should be able to:
 
 ### Prerequisites
 - **[01-Terraform](../01-Terraform/README.md)** - Understanding of IaC concepts
-- **[CI/CD](../../08-CI-CD/README.md)** - Pipeline fundamentals
-- **[Cloud Engineering](../../12-Cloud-Engineering/README.md)** - Cloud platform basics
+- **[CI/CD](../../../../README.md)** - Pipeline fundamentals
+- **[Cloud Engineering](../../../../README.md)** - Cloud platform basics
 
 ### Related Topics
-- **[Ansible](../../02-Automation/05-Ansible/)** - Configuration management
+- **[Ansible](../../01-Automation/05-Ansible)** - Configuration management
 - **[Security](../../../3-Advanced/04-Security/)** - IaC security scanning
 
 ---
@@ -379,7 +379,7 @@ A: Yes, Config Connector runs on GKE or any Kubernetes cluster with GCP connecti
 
 ---
 
-**Return to**: [Configuration Tools](../README.md) | [Intermediate Level](../../README.md)
+**Return to**: [Configuration Tools](../README.md) | [Intermediate Level](../../../../README.md)
 
 ---
 

@@ -7,8 +7,8 @@ HCP Terraform is the standard platform for enterprise-grade Infrastructure as Co
 1.  **[Introduction and Architecture](./01-Introduction-and-Architecture/README.md)**: HCP platform, Organizations, and workspaces.
 2.  **[VCS-Driven Workflow](./02-VCS-Driven-Workflow/VCS%20Driven%20Workflow%20(GitOps).md)**: The "GitOps" approach to infrastructure.
 3.  **[CLI and API Workflows](./03-CLI-and-API-Workflows/CLI%20and%20API%20Workflows.md)**: Remote execution and external CI/CD integrations.
-4.  **[Workspace Management](./04-Workspace-Management/README.md)**: Controlling state, runs, and historical audit logs.
-5.  **[Variables and Secrets](Variables%20and%20Secrets.md)**: Secure credential management and Variable Sets.
+4.  **[Workspace Management](../../../../../README.md)**: Controlling state, runs, and historical audit logs.
+5.  **[Variables and Secrets](05-Variables-and-Secrets/Variables%20and%20Secrets.md)**: Secure credential management and Variable Sets.
 6.  **[Policy as Code (Sentinel)](./06-Policy-as-Code-Sentinel/README.md)**: Proprietary guardrails and enforcement levels.
 7.  **[Policy as Code (OPA)](./07-Policy-as-Code-OPA/README.md)**: Open-standard compliance using Rego.
 8.  **[Governance and RBAC](./08-Governance-and-RBAC/README.md)**: Team-based permissions and enterprise access control.

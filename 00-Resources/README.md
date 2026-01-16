@@ -17,7 +17,7 @@ Visual learning materials and video-based lesson plans.
 - **Lesson Archives**: Consolidated zip files and note sets for YouTube-based DevOps tutorials.
 - **Tools**: Includes the **YoutubeDownLoader** project and related scripts.
 
-### [Images & Architectural Diagrams](./03-Images-Diagrams/README.md)
+### [Images & Architectural Diagrams](README.md)
 High-resolution diagrams and screenshots to help visualize complex systems.
 - **Architecture Maps**: Detailed maps for EKS, Docker, Maven, and Terraform operations.
 - **DevOps Lifecycle**: Visual guides to CI/CD and security "shifts."

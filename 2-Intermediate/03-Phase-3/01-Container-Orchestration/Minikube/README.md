@@ -4,7 +4,7 @@ Your complete guide to running Kubernetes locally. This section is organized int
 
 ## 🎓 Learning Levels
 
-### 🟢 [1. Beginner](2-Intermediate/01-Kubernetes/Minikube/Beginner/README.md)
+### 🟢 [1. Beginner](../../../../README.md)
 **Getting Started**
 - Installation guides.
 - Basic commands (`start`, `stop`, `delete`).

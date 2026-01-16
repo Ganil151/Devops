@@ -1,7 +1,7 @@
 # Pip Essentials
 *The Package Installer for Python*
 
-`pip` is the standard package manager for Python. It allows you to install and manage additional libraries and dependencies that are not distributed as part of the standard library.
+`pip` <font color="#ffc000">is the standard package manager for Python</font>. It allows you to install and manage additional libraries and dependencies that are not distributed as part of the standard library.
 
 ---
 ## 🎯 Learning Objectives
@@ -11,7 +11,6 @@
 - Understand basic pip commands
 
 ---
-
 ## 🛠️ Basic Pip Commands
 
 ### Installing Packages
@@ -25,7 +24,6 @@ pip install requests==2.31.0
 # Install a version compatible with 2.31
 pip install requests~=2.31.0
 ```
-
 ### Managing Packages
 ```bash
 # List installed packages
@@ -37,22 +35,18 @@ pip show requests
 # Uninstall a package
 pip uninstall requests
 ```
-
 ### Requirements Files
 Requirements files allow you to specify a list of packages to install. This is crucial for reproducing environments.
-
 **requirements.txt**:
 ```text
 requests==2.31.0
 boto3>=1.26.0
 pyyaml
 ```
-
 **Install from file**:
 ```bash
 pip install -r requirements.txt
 ```
-
 **Freeze current environment to file**:
 ```bash
 pip freeze > requirements.txt
@@ -65,4 +59,4 @@ pip freeze > requirements.txt
 3. **Cache for CI/CD**: Use `--no-cache-dir` in Docker builds to save space, but leverage caching in CI/CD pipelines for speed.
 
 ---
-**Next Step**: [Virtual Environments →](../00-Virtual-Environments/README.md)
+**Next Step**: [Virtual Environments →](../../../../../../../README.md)

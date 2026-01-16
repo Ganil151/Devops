@@ -8,7 +8,7 @@ Docker uses a **layered filesystem** (UnionFS). When you run an image, Docker ad
 
 To solve this, Docker provides three ways to mount data from the host into the container:
 
-![Docker-Storage-Arch](../../../../1-Beginner/Images/dockerStorageArch.png)
+![Docker-Storage-Arch](../../../dockerStorageArch.png)
 
 ### Storage Types Comparison
 
@@ -803,8 +803,8 @@ docker run -d --mount type=tmpfs,destination=/app/sessions,tmpfs-size=512m my-ap
 ## Next Steps
 
 - Learn about [Multi-Stage Builds](../03-Multi-Stage-Builds/README.md)
-- Explore [Docker Registry](../04-Docker-Registry/README.md)
-- Combine with [Docker Compose](../../Docker-Compose/Beginner/01-Basics/README.md)
+- Explore [Docker Registry](../../../../../../README.md)
+- Combine with [Docker Compose](../../../../../../README.md)
 
 ## Resources
 

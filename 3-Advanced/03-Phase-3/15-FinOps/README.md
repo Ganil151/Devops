@@ -23,8 +23,8 @@ This advanced guide covers enterprise-scale FinOps frameworks, multi-cloud cost 
 ## Prerequisites
 
 Before starting this level, ensure you have completed:
-- ✅ [Beginner FinOps](../../1-Beginner/14-FinOps/README.md)
-- ✅ [Intermediate FinOps](../../2-Intermediate/14-FinOps/README.md)
+- ✅ [Beginner FinOps](../../../README.md)
+- ✅ [Intermediate FinOps](../../../README.md)
 - ✅ Experience with cloud cost management
 - ✅ Understanding of organizational structures
 

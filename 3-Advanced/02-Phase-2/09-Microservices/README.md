@@ -8,7 +8,7 @@ Microservices is an architectural style that structures an application as a coll
 
 A production-grade microservices environment requires several supporting components to handle communication, security, and state.
 
-![Microservices Architecture](../../00-Resources/03-Images-Diagrams/microServiesArch.png)
+![Microservices Architecture](../../../00-Resources/03-Images-Diagrams/microServiesArch.png)
 ---
 
 ## 1. Why Microservices?
@@ -65,10 +65,10 @@ Offloading networking logic (security, retries, tracing) to a specialized proxy 
 
 ## 4. Core Modules
 
-### 🍃 [Spring Boot Microservices](./Spring-Boot-MicroServices/README.md)
+### 🍃 [Spring Boot Microservices](../../../README.md)
 Practical implementation using the most popular enterprise Java framework. Includes Service Discovery (Eureka), API Gateway, and Config Server.
 
-### 🏗️ [Design Patterns](./Patterns/README.md)
+### 🏗️ [Design Patterns](../../../README.md)
 Understanding Circuit Breakers, Bulkheads, and Sidecars.
 
 ---
@@ -80,4 +80,4 @@ Understanding Circuit Breakers, Bulkheads, and Sidecars.
 4. **Shift-Left Security**: Authenticate and authorize at the Gateway and between services (mTLS).
 
 ---
-**Advanced Networking**: Learn how to manage service communication at scale in the [Advanced Kubernetes Module](../03-Advanced-K8s/README.md).
+**Advanced Networking**: Learn how to manage service communication at scale in the [Advanced Kubernetes Module](../../../README.md).

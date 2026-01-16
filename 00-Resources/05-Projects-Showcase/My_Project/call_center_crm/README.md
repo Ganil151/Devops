@@ -40,4 +40,4 @@ A robust REST API that handles data persistence and business logic.
    - API Docs: `http://localhost:8000/docs`
 
 ---
-**Advanced**: Learn how to monitor this application's performance in the [Observability Hub](../../../3-Advanced/02-Observability/README.md).
+**Advanced**: Learn how to monitor this application's performance in the [Observability Hub](../../../README.md).

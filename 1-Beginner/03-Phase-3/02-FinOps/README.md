@@ -9,4 +9,4 @@ Understanding Cloud Financial Operations and how to manage cloud costs.
 - [Budgeting Basics](./04-Budgeting-Basics/) - Setting guardrails.
 
 ---
-**Next Step**: Explore [Model Context Protocol (MCP)](../16-MCP/README.md).
+**Next Step**: Explore [Model Context Protocol (MCP)](../../../README.md).

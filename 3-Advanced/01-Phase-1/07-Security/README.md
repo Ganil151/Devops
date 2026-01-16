@@ -141,16 +141,16 @@ Core DevSecOps concepts and principles:
 - Threat modeling basics
 - Security mindset for developers
 
-### 🔧 [Security Tools](02-Security-Tools/README.md)
+### 🔧 [Security Tools](../../../README.md)
 
 Comprehensive guides for each tool:
-- **[Trivy](02-Security-Tools/Trivy/README.md)**: Container and filesystem scanning
-- **[SonarQube](02-Security-Tools/SonarQube/README.md)**: Code quality and security
-- **[Vault](02-Security-Tools/Vault/README.md)**: Secrets management
-- **[Snyk](02-Security-Tools/Snyk/README.md)**: Developer security platform
-- **[OWASP Tools](02-Security-Tools/OWASP-DependencyCheck/README.md)**: Dependency checking
+- **[Trivy](../../../README.md)**: Container and filesystem scanning
+- **[SonarQube](../../../README.md)**: Code quality and security
+- **[Vault](../../../README.md)**: Secrets management
+- **[Snyk](../../../README.md)**: Developer security platform
+- **[OWASP Tools](../../../README.md)**: Dependency checking
 
-### 🔍 [SAST & DAST](03-SAST-DAST/README.md)
+### 🔍 [SAST & DAST](../../../README.md)
 
 Implementation guides for security testing:
 - Static Application Security Testing (SAST)
@@ -158,7 +158,7 @@ Implementation guides for security testing:
 - Interactive Application Security Testing (IAST)
 - Integration patterns and best practices
 
-### 🐳 [Container Security](04-Container-Security/README.md)
+### 🐳 [Container Security](../../../README.md)
 
 Securing containerized applications:
 - Image scanning and hardening
@@ -166,7 +166,7 @@ Securing containerized applications:
 - Registry security
 - Best practices and patterns
 
-### 🔐 [Secrets Management](05-Secrets-Management/README.md)
+### 🔐 [Secrets Management](../../../README.md)
 
 Managing sensitive data securely:
 - HashiCorp Vault implementation
@@ -174,7 +174,7 @@ Managing sensitive data securely:
 - Secret rotation strategies
 - Best practices and anti-patterns
 
-### 📋 [Compliance as Code](06-Compliance-as-Code/README.md)
+### 📋 [Compliance as Code](../../../README.md)
 
 Automating compliance and auditing:
 - Open Policy Agent (OPA) policies
@@ -182,7 +182,7 @@ Automating compliance and auditing:
 - Automated audit trails
 - Compliance frameworks (SOC2, HIPAA, PCI-DSS)
 
-### 🔄 [CI/CD Security](07-CI-CD-Security/README.md)
+### 🔄 [CI/CD Security](../../../README.md)
 
 Securing the deployment pipeline:
 - Secure pipeline design
@@ -197,18 +197,18 @@ Securing the deployment pipeline:
 ### Beginner Path (1-2 weeks)
 
 1. **[Security Fundamentals](01-Security-Fundamentals/README.md)** - Understand core concepts
-2. **[Container Security Basics](04-Container-Security/README.md)** - Secure your containers
-3. **[Secrets Management](05-Secrets-Management/README.md)** - Never hardcode credentials
-4. **[CI/CD Security](07-CI-CD-Security/README.md)** - Basic pipeline security
+2. **[Container Security Basics](../../../README.md)** - Secure your containers
+3. **[Secrets Management](../../../README.md)** - Never hardcode credentials
+4. **[CI/CD Security](../../../README.md)** - Basic pipeline security
 
 **Goal**: Implement basic security practices in your pipeline
 
 ### Intermediate Path (2-4 weeks)
 
 1. Complete Beginner Path
-2. **[Security Tools](02-Security-Tools/README.md)** - Master Trivy, SonarQube
-3. **[SAST/DAST](03-SAST-DAST/README.md)** - Implement automated testing
-4. **[Compliance](06-Compliance-as-Code/README.md)** - Policy enforcement with OPA
+2. **[Security Tools](../../../README.md)** - Master Trivy, SonarQube
+3. **[SAST/DAST](../../../README.md)** - Implement automated testing
+4. **[Compliance](../../../README.md)** - Policy enforcement with OPA
 
 **Goal**: Automate security across development lifecycle
 
@@ -304,11 +304,11 @@ security_scan:
 
 ### Internal Resources
 
-- [Docker Security](../../1-Beginner/03-Docker/Advanced/01-Docker-Security/README.md) - Container security basics
-- [Kubernetes Security](../../2-Intermediate/01-Kubernetes/Intermediate/PodSecurity/README.md) - K8s security
+- [Docker Security](../../../README.md) - Container security basics
+- [Kubernetes Security](../../../README.md) - K8s security
 - [CI/CD Documentation](../../2-Intermediate/05-CI-CD/) - Pipeline integration
-- [Identity & Governance](../05-Identity-Governance/README.md) - Access management
-- [Compliance](../03-Advanced-K8s/Compliance/) - Kubernetes compliance
+- [Identity & Governance](../../../README.md) - Access management
+- [Compliance](../04-Container-Orchestration/Advanced-K8s/Compliance) - Kubernetes compliance
 
 ### External Resources
 
@@ -456,8 +456,8 @@ Answer: Vault, cloud providers
 ## 📞 Next Steps
 
 1. **Start**: Begin with [Security Fundamentals](01-Security-Fundamentals/README.md)
-2. **Implement**: Pick a tool from [Security Tools](02-Security-Tools/README.md)
-3. **Integrate**: Add security to your [CI/CD Pipeline](07-CI-CD-Security/README.md)
+2. **Implement**: Pick a tool from [Security Tools](../../../README.md)
+3. **Integrate**: Add security to your [CI/CD Pipeline](../../../README.md)
 4. **Expand**: Explore advanced topics as needed
 
 **Remember**: DevSecOps is a journey, not a destination. Start small, iterate, and continuously improve.

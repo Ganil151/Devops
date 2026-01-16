@@ -4,7 +4,7 @@ A communication subsystem is a complex piece of Hardware and software. Early att
 
 Layered Architecture The main aim of the layered architecture is to divide the design into small pieces.  
 
-![OSI Layers](./OSI%20Model/Images/OSI-7-layers.jpg.webp)  
+![OSI Layers](Images/OSI-7-layers.jpg.webp)  
 
 - Each lower layer adds its services to the higher layer to provide a full set of services to manage communications and run the applications.
     
@@ -38,4 +38,4 @@ Layered Architecture The main aim of the layered architecture is to divide the d
 - **Easy to test:** Each layer of the layered architecture can be analyzed and tested individually.
 
 ### Comparison of Models
-![OSI vs TCP/IP](./OSI%20Model/Images/OSI-vs.-TCPIP-models.jpg.webp)
+![OSI vs TCP/IP](Images/OSI-vs.-TCPIP-models.jpg.webp)

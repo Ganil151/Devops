@@ -336,10 +336,10 @@ config_path = Path(project_dir) / "config" / "app.yaml"
 
 | Module | Relationship |
 |--------|-------------|
-| [File Operations](../04-File-Operations/README.md) | Pathlib is the modern approach to file handling |
+| [File Operations](../../../../../../README.md) | Pathlib is the modern approach to file handling |
 | [Subprocess Module](../10-Subprocess-Module/README.md) | Pass pathlib paths as command arguments |
-| [Working with JSON](../06-Working-with-JSON/README.md) | Read/write JSON files with pathlib |
+| [Working with JSON](../../../../../../README.md) | Read/write JSON files with pathlib |
 
 ---
 
-**Next Step**: [Datetime Operations →](../12-Datetime-Operations/README.md)
+**Next Step**: [Datetime Operations →](../../../../../../README.md)

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-# Script: boilerplate_repo_structure_analyzer.sh
+# Script: repo_structure_analyzer.sh
 # Description: Maps project directory structure and generates documentation
 # DevOps Context: Onboarding new team members with auto-generated repo guides
 # ==============================================================================

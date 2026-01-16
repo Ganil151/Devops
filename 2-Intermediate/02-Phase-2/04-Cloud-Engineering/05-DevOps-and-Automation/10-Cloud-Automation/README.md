@@ -42,4 +42,4 @@ Advanced tips for debugging scripts and handling API limits (Throttling).
 - **Dry Run**: Support a `--dry-run` flag to show what the script *would* do without acting.
 
 ---
-**Next Level**: Scale your automation logic with [AWS Lambda Functions](../14-Serverless-Lambda/README.md).
+**Next Level**: Scale your automation logic with [AWS Lambda Functions](../../../../../README.md).

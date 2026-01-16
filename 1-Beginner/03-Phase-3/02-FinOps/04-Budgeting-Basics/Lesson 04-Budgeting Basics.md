@@ -318,5 +318,5 @@ Document:
 Congratulations! You've completed the **FinOps Beginner** level! 🎉
 
 Continue your learning:
-- 📘 **[Intermediate FinOps](../../2-Intermediate/14-FinOps/README.md)** - Cost optimization strategies
-- 📕 **[Advanced FinOps](../../3-Advanced/12-FinOps/README.md)** - Enterprise FinOps frameworks
+- 📘 **[Intermediate FinOps](../../../../README.md)** - Cost optimization strategies
+- 📕 **[Advanced FinOps](../../../../README.md)** - Enterprise FinOps frameworks

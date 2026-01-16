@@ -72,7 +72,7 @@ DevOps tools should follow the CRUD lifecycle:
 ---
 
 ## 🏛️ Micro-Service Architecture
-![Micro-Service Architecture Flow](../../assets/microservice_architecture.svg)
+![Micro-Service Architecture Flow](../../../assets/microservice_architecture.svg)
 
 ---
 
@@ -89,4 +89,4 @@ DevOps tools should follow the CRUD lifecycle:
 3. **How do you handle security (Auth) for internal DevOps micro-services?**
 
 ---
-**Next Step**: Return to **[Module Overview](./README.md)**.
+**Next Step**: Return to **[Module Overview](../../../../../../README.md)**.

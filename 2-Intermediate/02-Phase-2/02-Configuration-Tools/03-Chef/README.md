@@ -37,7 +37,7 @@ Follow these modules in order to master Chef:
 
 ### **[1. Architecture & Setup](./01-Architecture-and-Setup/)**
 Deep dive into the core components.
-*   **[01-Workstation](The%20Developer's%20Command%20Center.md)**: Your development cluster (Knife, ChefDK).
+*   **[01-Workstation](01-Architecture-and-Setup/01-Workstation/The%20Developer's%20Command%20Center.md)**: Your development cluster (Knife, ChefDK).
 *   **[02-Chef-Server](./01-Architecture-and-Setup/02-Chef-Server/README.md)**: The central brain and system of record.
 *   **[03-Nodes](./01-Architecture-and-Setup/03-Nodes/README.md)**: The managed servers runs the convergence loop.
 

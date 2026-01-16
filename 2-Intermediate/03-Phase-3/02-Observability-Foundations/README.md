@@ -45,7 +45,7 @@ Follow these modules in order to master system visibility:
 ---
 
 ## 🔗 Next Steps
-- **[Advanced Observability](../../3-Advanced/02-Observability/README.md)** - Scale these concepts using Prometheus and the ELK Stack.
+- **[Advanced Observability](../../../README.md)** - Scale these concepts using Prometheus and the ELK Stack.
 - **[Kubernetes Mastery](../07-Kubernetes/)** - Implement probers and log collectors in a K8s cluster.
 
 ---

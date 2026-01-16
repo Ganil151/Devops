@@ -1,6 +1,5 @@
 # Python Installation & Setup
 *The First Step to Automation*
-
 Before you can automate servers or cloud infrastructure, you need a robust Python environment. This guide covers how to install Python correctly on Windows, Linux, and macOS for DevOps work.
 
 ---
@@ -89,7 +88,6 @@ If typing `python` gives "Command not found":
 ---
 ## 🐍 Interactive Shell (REPL)
 Type `python` (or `python3`) to enter the interactive shell. Great for quick tests.
-
 ```python
 Type "help", "copyright", "credits" or "license" for more information.
 >>> print("Hello, DevOps!")
@@ -101,7 +99,6 @@ Hello, DevOps!
 (Press `Ctrl+Z` then `Enter` on Windows, or `Ctrl+D` on Linux/Mac to exit)
 
 ---
-
 ## 🛠️ Hands-On Challenges
 
 ### Challenge 1: Version Check Script
@@ -109,7 +106,6 @@ Write a one-liner to check your environment.
 ```bash
 python -c "import sys; print(f'Running Python {sys.version}')"
 ```
-
 ### Challenge 2: Locate Interpreter
 Find exactly where your Python is running from.
 ```bash
@@ -121,4 +117,4 @@ which python3
 ```
 
 ---
-**Next Step**: [Pip Essentials →](../00-Pip-Basics/README.md)
+**Next Step**: [Pip Essentials →](../../../../../../../README.md)

@@ -7,12 +7,12 @@ Networking is the plumbing of the internet. For a DevOps engineer, understanding
 ## 📂 Module Structure
 
 ### 🔰 Beginner Level
-- **[01-Network-Fundamentals](../../../1-Beginner/1-Beginner-Level/01-Networking/01-Network-Fundamentals/)**: Basics of networking.
-- **[02-Network-Models](../../../1-Beginner/1-Beginner-Level/01-Networking/02-Network-Models/)**: OSI and TCP/IP models.
-- **[03-IP-Addressing](../../../1-Beginner/1-Beginner-Level/01-Networking/03-IP-Addressing/)**: IPv4, IPv6, Subnetting.
-- **[04-Basic-Protocols](../../../1-Beginner/1-Beginner-Level/01-Networking/04-Basic-Protocols/)**: TCP, UDP, HTTP, DNS.
-- **[05-Network-Devices](../../../1-Beginner/1-Beginner-Level/01-Networking/05-Network-Devices/)**: Routers, Switches, Firewalls.
-- **[06-Basic-Troubleshooting](../../../1-Beginner/1-Beginner-Level/01-Networking/06-Basic-Troubleshooting/)**: Diagnosing connectivity issues.
+- **[01-Network-Fundamentals](../../../1-Beginner/01-Phase-1/01-Networking/01-Network-Fundamentals)**: Basics of networking.
+- **[02-Network-Models](../../../1-Beginner/01-Phase-1/01-Networking/02-Network-Models)**: OSI and TCP/IP models.
+- **[03-IP-Addressing](../../../1-Beginner/01-Phase-1/01-Networking/03-IP-Addressing)**: IPv4, IPv6, Subnetting.
+- **[04-Basic-Protocols](../../../1-Beginner/01-Phase-1/01-Networking/04-Basic-Protocols)**: TCP, UDP, HTTP, DNS.
+- **[05-Network-Devices](../../../1-Beginner/01-Phase-1/01-Networking/05-Network-Devices)**: Routers, Switches, Firewalls.
+- **[06-Basic-Troubleshooting](../../../1-Beginner/01-Phase-1/01-Networking/06-Basic-Troubleshooting)**: Diagnosing connectivity issues.
 
 ### 🚀 Intermediate Level
 - **[01-VPC-Fundamentals](./01-VPC-Fundamentals/)**: Core network services.
@@ -23,12 +23,12 @@ Networking is the plumbing of the internet. For a DevOps engineer, understanding
 - **[06-VPC-Peering-and-Transit-Gateway](./06-VPC-Peering-and-Transit-Gateway/)**: Distributing traffic.
 
 ### 🛡️ Advanced Level
-- **[01-Cloud-Networking](../../3-Advanced/Networking/01-Cloud-Networking/)**: VPCs, Cloud Load Balancers.
-- **[02-Container-Networking](../../3-Advanced/Networking/02-Container-Networking/)**: Docker and CNI.
-- **[03-Service-Mesh](../../3-Advanced/Networking/03-Service-Mesh/)**: Istio, Linkerd.
-- **[04-SDN-NFV](../../3-Advanced/Networking/04-SDN-NFV/)**: Software Defined Networking.
-- **[05-Network-Automation](../../3-Advanced/Networking/05-Network-Automation/)**: NetDevOps.
-- **[06-Performance-Optimization](../../3-Advanced/Networking/06-Performance-Optimization/)**: Tuning and latency reduction.
+- **[01-Cloud-Networking](../../../3-Advanced/01-Phase-1/01-Networking/01-Cloud-Networking)**: VPCs, Cloud Load Balancers.
+- **[02-Container-Networking](../../../3-Advanced/01-Phase-1/01-Networking/02-Container-Networking)**: Docker and CNI.
+- **[03-Service-Mesh](../../../3-Advanced/01-Phase-1/01-Networking/03-Service-Mesh)**: Istio, Linkerd.
+- **[04-SDN-NFV](../../../3-Advanced/01-Phase-1/01-Networking/04-SDN-NFV)**: Software Defined Networking.
+- **[05-Network-Automation](../../../3-Advanced/01-Phase-1/01-Networking/05-Network-Automation)**: NetDevOps.
+- **[06-Performance-Optimization](../../../3-Advanced/01-Phase-1/01-Networking/06-Performance-Optimization)**: Tuning and latency reduction.
 
 ---
 
@@ -103,7 +103,7 @@ Based on industry standards and the *Linux Command Line* guide:
 
 ## 🛠️ The DevOps Toolbelt
 Mastering theory is only half the battle. You must master the diagnostic and scanning tools used in the field:
-- **[Networking Tools Deep Dive](./4-Networking-Tools/README.md)**: Master **Wireshark**, **Nmap**, and **Tcpdump**.
+- **[Networking Tools Deep Dive](../../../README.md)**: Master **Wireshark**, **Nmap**, and **Tcpdump**.
 
 -----
 

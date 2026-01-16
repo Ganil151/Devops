@@ -379,7 +379,7 @@ if datetime.now(timezone.utc) < maintenance_start:
 
 | Module | Relationship |
 |--------|-------------|
-| [Logging Basics](../14-Logging-Basics/README.md) | Timestamps in log messages |
+| [Logging Basics](../../../../../../README.md) | Timestamps in log messages |
 | [Working with JSON](../06-Working-with-JSON/README.md) | Serialize/deserialize dates |
 | [Regular Expressions](../13-Regular-Expressions/README.md) | Parse timestamps from logs |
 

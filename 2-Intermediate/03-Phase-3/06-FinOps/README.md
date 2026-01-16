@@ -26,7 +26,7 @@ Building on the fundamentals, this intermediate guide covers cost optimization s
 ## Prerequisites
 
 Before starting this level, ensure you have completed:
-- ✅ [Beginner FinOps](../../1-Beginner/15-FinOps/README.md)
+- ✅ [Beginner FinOps](../../../README.md)
 - ✅ Basic tagging strategy implemented
 - ✅ Cost visibility tools configured
 - ✅ Budgets and alerts set up
@@ -160,4 +160,4 @@ style CA fill:#3498db,stroke:#2980b9,color:#fff
 Start with **[Lesson 01: Cost Allocation Strategies](./01-Cost-Allocation/README.md)** or jump to the **[Interview Prep](./06-Interview-Questions-and-Quizzes/README.md)**!
 
 After completing the Intermediate level:
-- 📕 [Advanced FinOps](../../3-Advanced/13-FinOps/README.md) - Enterprise frameworks and culture
+- 📕 [Advanced FinOps](../../../README.md) - Enterprise frameworks and culture

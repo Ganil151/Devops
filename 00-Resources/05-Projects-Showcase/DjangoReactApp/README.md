@@ -45,4 +45,4 @@ npm run dev
 - **Security**: JWT-based authentication and CORS allowance for specific frontend origins.
 
 ---
-**Learning Integration**: This project is an excellent example of the [Intermediate Automation](../../../2-Intermediate/07-Automation/README.md) and [Advanced Microservices](../../../3-Advanced/06-Microservices/README.md) modules.
+**Learning Integration**: This project is an excellent example of the [Intermediate Automation](../../README.md) and [Advanced Microservices](../../README.md) modules.

@@ -66,20 +66,15 @@ OS: Linux
 - Use `uname -s` for OS type
 
 ---
-
 ## Challenge 3: Shell Type Comparison (Advanced)
-
 **Objective**: Write a script that runs in both Bash and Sh and reports differences.
 
 **Tasks**:
-
 1. Create `shell_compare.sh`
 2. Check which shell is executing the script
 3. Display shell-specific information
 4. Run the script with both `bash` and `sh`
-
 **Sample Code**:
-
 ```bash
 #!/bin/bash
 
@@ -97,13 +92,9 @@ fi
 ```
 
 ---
-
 ## Challenge 4: Script Execution Methods (Practical)
-
 **Objective**: Understand different ways to execute scripts.
-
 **Tasks**:
-
 1. Create `test_exec.sh` with a simple echo command
 2. Execute it using ALL these methods:
    - `bash test_exec.sh`
@@ -114,7 +105,6 @@ fi
 3. Document which methods require execute permissions
 
 **Questions to Answer**:
-
 - Which methods create a subshell?
 - Which methods run in the current shell?
 - When would you use `source` vs direct execution?

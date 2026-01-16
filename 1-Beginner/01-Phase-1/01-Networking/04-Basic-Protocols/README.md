@@ -14,7 +14,7 @@ Understanding fundamental network protocols is essential for DevOps professional
 ### HTTP (Hypertext Transfer Protocol)
 HTTP is the foundation of web communication, operating on port 80. It is a **stateless**, request-response protocol.
 
-![HTTP Request/Response Flow](../../../Images/http_request_response_flow.png)
+![HTTP Request/Response Flow](../../../02-Phase-2/02-API-Basics/http_request_response_flow.png)
 
 ### The Stateless Nature of HTTP
 Statelessness means that the server does not "remember" previous requests. Every request is isolated.
@@ -52,7 +52,7 @@ Set-Cookie: session=abc123; HttpOnly; Secure
 ```
 
 ### HTTP Methods
-![HTTP Methods](../../../Images/HTTProperties.png)
+![HTTP Methods](../../../02-Phase-2/02-API-Basics/HTTProperties.png)
 
 ### HTTP Status Codes
 **Success (2xx):**
@@ -95,7 +95,7 @@ Set-Cookie: session=abc123; HttpOnly; Secure
 - `Content-Security-Policy` (CSP): Prevents XSS.
 - `X-Frame-Options`: Prevents Clickjacking.
 
-![HTTP Protocol Evolution](../../../Images/http_versions_comparison.png)
+![HTTP Protocol Evolution](../../../02-Phase-2/02-API-Basics/http_versions_comparison.png)
 
 **Why DevOps Care about versioning?**
 - **HTTP/1.1** results in "Head-of-Line Blocking" where one slow image can block the rest of the page.
@@ -105,7 +105,7 @@ Set-Cookie: session=abc123; HttpOnly; Secure
 ### HTTPS (HTTP Secure)
 HTTPS adds TLS/SSL encryption to HTTP, operating on port 443.
 
-![HTTPS TLS Handshake](../../../Images/https_tls_handshake.png)
+![HTTPS TLS Handshake](../../../02-Phase-2/02-API-Basics/https_tls_handshake.png)
 
 **TLS/SSL Details for DevOps:**
 - **Asymmetric Encryption**: Used during the handshake (RSA/Diffie-Hellman) to securely exchange a "session key."
@@ -129,7 +129,7 @@ openssl x509 -in certificate.crt -noout -dates
 DNS translates human-readable domain names to IP addresses.
 
 ### DNS Hierarchy
-![DNS Hierarchy](../../../Images/dns_hierarchy.png)
+![DNS Hierarchy](../dns_hierarchy.png)
 
 ### DNS Record Types
 **A Record (Address):**
@@ -253,7 +253,7 @@ dig @1.1.1.1 example.com +stats
 DHCP automatically assigns IP addresses and network configuration to devices.
 
 ### DHCP Process (DORA)
-![DHCP DORA Process](../../../Images/dhcp_dora_process.png)
+![DHCP DORA Process](../dhcp_dora_process.png)
 
 ### DHCP Relay Agents (IP Helper)
 Since DHCP Discover packets are broadcasts, they don't cross routers by default. A **DHCP Relay Agent** (installed on a router or server) listens for these broadcasts on a local subnet and forwards them as unicast packets to a DHCP server on a different subnet. This allows one central DHCP server to serve multiple subnets.

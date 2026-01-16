@@ -37,4 +37,4 @@ In the cloud, **Identity is the new perimeter**. IAM allows you to manage who ca
 4.  **No Root User**: Delete root access keys and use IAM users/roles for daily work.
 
 ---
-**Next Step**: Level up your observability with [Monitoring & Logging](../06-Monitoring-Logging/README.md)
+**Next Step**: Level up your observability with [Monitoring & Logging](../../../../README.md)

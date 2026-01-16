@@ -12,16 +12,16 @@ This is your central navigation hub for **core automation modules** across three
 #### Shell Scripting (Bash)
 - **[Organization Plan](./AUTOMATION_ORGANIZATION_PLAN.md)** - Blueprint for success
 - **[Master Index](./AUTOMATION_MASTER_INDEX.md)** - Detailed topic catalog
-- **[Cheat Sheet](./SHELL_SCRIPTING_CHEATSHEET.md)** - Quick reference guide
+- **[Cheat Sheet](01-Shell-Scripting/SHELL_SCRIPTING_CHEATSHEET.md)** - Quick reference guide
 - **[Project Summary](./AUTOMATION_PROJECT_SUMMARY.md)** - Achievement report
 
 #### Python Automation
-- **[Organization Plan](./PYTHON_AUTOMATION_ORGANIZATION_PLAN.md)** - Python roadmap
-- **[Master Index](./PYTHON_AUTOMATION_MASTER_INDEX.md)** - Python topic catalog
+- **[Organization Plan](02-Python-Basics/PYTHON_AUTOMATION_ORGANIZATION_PLAN.md)** - Python roadmap
+- **[Master Index](02-Python-Basics/PYTHON_AUTOMATION_MASTER_INDEX.md)** - Python topic catalog
 
 #### Go Automation
-- **[Organization Plan](./GO_AUTOMATION_ORGANIZATION_PLAN.md)** - Go roadmap
-- **[Master Index](./GO_AUTOMATION_MASTER_INDEX.md)** - Go topic catalog
+- **[Organization Plan](03-Go-Basics/GO_AUTOMATION_ORGANIZATION_PLAN.md)** - Go roadmap
+- **[Master Index](03-Go-Basics/GO_AUTOMATION_MASTER_INDEX.md)** - Go topic catalog
 
 #### Multi-Language Summary
 - **[Complete Project Summary](./MULTI_LANGUAGE_AUTOMATION_SUMMARY.md)** - All three languages
@@ -253,7 +253,7 @@ A: Yes, curated in January 2026 based on current industry practices.
 **Right now**, choose ONE of these:
 
 1. **[ ] Read**: [Shell Introduction](./01-Shell-Scripting/01-Introduction/README.md)
-2. **[ ] Review**: [Shell Cheat Sheet](./SHELL_SCRIPTING_CHEATSHEET.md)
+2. **[ ] Review**: [Shell Cheat Sheet](01-Shell-Scripting/SHELL_SCRIPTING_CHEATSHEET.md)
 3. **[ ] Plan**: [Choose your learning path](#choose-your-learning-path)
 4. **[ ] Setup**: Install tools and create workspace
 

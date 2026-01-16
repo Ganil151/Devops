@@ -195,7 +195,7 @@ Master package management by building these production-grade dependency tools.
 |--------|-------------|
 | [Virtual Environments](../15-Virtual-Environments/README.md) | Where packages are actually installed |
 | [First Automation Script](../17-First-Automation-Script/README.md) | Setting up dependencies for a real tool |
-| [Subprocess Module](../10-Subprocess-Module/README.md) | Automating pip commands |
+| [Subprocess Module](../../../../../../README.md) | Automating pip commands |
 
 ---
 

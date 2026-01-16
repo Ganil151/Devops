@@ -49,7 +49,7 @@ This course consists of video lessons covering basic to advanced Terraform conce
 - Challenges with the traditional approach
 - Terraform Workflow
 - Installing Terraform
-- [Code Sample](/lessons/day01/)
+- [Code Sample](lessons/day01)
 
 #### Day2: Terraform Provider
 - Terraform Providers
@@ -57,14 +57,14 @@ This course consists of video lessons covering basic to advanced Terraform conce
 - Why version matters
 - Version constraints
 - Operators for versions
-- [Code Sample](/lessons/day02/)
+- [Code Sample](lessons/day02)
 
 #### Day3: VPC and S3 Bucket
 - Authentication and Authorization to AWS resources
 - Creating VPC
 - S3 bucket management
 - Understanding dependencies
-- [Code Sample](/lessons/day03/)
+- [Code Sample](lessons/day03)
 
 #### Day4: State file management - Remote Backend
 - How Terraform updates Infra
@@ -72,7 +72,7 @@ This course consists of video lessons covering basic to advanced Terraform conce
 - State file best practices
 - Remote backend setup
 - State management
-- [Code Sample](/lessons/day04/)
+- [Code Sample](lessons/day04)
 
 #### Day5: Variables
 - Input variables
@@ -80,25 +80,25 @@ This course consists of video lessons covering basic to advanced Terraform conce
 - Locals
 - Variable precedence
 - Variable files (tfvars)
-- [Code Sample](/lessons/day05/)
+- [Code Sample](lessons/day05)
 
 #### Day6: File Structure
 - Terraform file organization
 - Sequence of file loading
 - Best practices for structure
-- [Code Sample](/lessons/day06/)
+- [Code Sample](lessons/day06)
 
 #### Video 7: Type constraints in Terraform
 - String, number, bool
 - Map, set, list, Tuple, Objects
-- [Code Sample](/lessons/day07/)
+- [Code Sample](lessons/day07)
 
 #### Video 8: Meta-arguments
 - Understanding count
 - for_each loop
 - for loop
 - Practical examples
-- [Code Sample](/lessons/day08)
+- [Code Sample](lessons/day08)
 
 #### Video 9: The Lifecycle meta-arguments
 - create before destroy
@@ -106,14 +106,14 @@ This course consists of video lessons covering basic to advanced Terraform conce
 - ignore changes
 - replace triggered by
 - custom condition
-- [Code Sample](/lessons/day09)
+- [Code Sample](lessons/day09)
 
 #### Video 10: Dynamic Blocks and expressions
 - Dynamic blocks
 - Conditional expressions
 - Splat Expressions
 - practical examples
-- [Code Sample](/lessons/day10)
+- [Code Sample](lessons/day10)
 
 #### Video 11: Functions in Terraform
 - Built-in functions
@@ -130,7 +130,7 @@ This course consists of video lessons covering basic to advanced Terraform conce
 #### Video 13: Data Sources
 - Using data sources
 - Practical examples
-- [Code Sample](/lessons/day13)
+- [Code Sample](lessons/day13)
 
 </details>
 
@@ -140,36 +140,36 @@ This course consists of video lessons covering basic to advanced Terraform conce
 #### Video 14: Static Website Hosting ( Mini Project 1 )
 - S3 static website hosting
 - CloudFront distribution
-- [Code Sample](/lessons/day14)
+- [Code Sample](lessons/day14)
 
 
 #### Video 15: VPC and Peering ( Mini Project 2 )
 - Virtual Private Cloud Creation
 - VPC peering setup
-- [Code Sample](/lessons/day15)
+- [Code Sample](lessons/day15)
 
 #### Video 16: IAM Authentication ( Mini Project 3 )
 - Authentication methods
 - IAM roles and policies
 - Service accounts
-- [Code Sample](/lessons/day16)
+- [Code Sample](lessons/day16)
 
 #### Video 17: AWS Web Apps ( Mini Project 4 )
 - Elastic Beanstalk creation
 - Configuration
 - Deployment
-- [Code Sample](/lessons/day17)
+- [Code Sample](lessons/day17)
 
 #### Video 18: AWS Lambda ( Mini Project 5 )
 - Lambda function setup
 - Configuration
-- [Code Sample](/lessons/day18)
+- [Code Sample](lessons/day18)
 
 #### Video 19: Terraform Provisioners ( Mini Project 6 )
 - What are provisioners and their use case
 - Local vs remote vs file provisioners
 - Demo of all three provisioners
-- [Code Sample](/lessons/day19)
+- [Code Sample](lessons/day19)
 
 #### Video 20: EKS Cluster ( Real-time Project 1)
 - Kubernetes cluster setup
@@ -177,24 +177,24 @@ This course consists of video lessons covering basic to advanced Terraform conce
 - Custom module usage
 - Custom module creation for EKS, Secrets Manager, IAM etc
 - Networking and security configuration
-- [Code Sample](/lessons/day20)
+- [Code Sample](lessons/day20)
 
 #### Video 21: AWS Policy and Governance ( Mini Project 7 )
 - Policy creation
 - Governance setup
-- [Code Sample](/lessons/day21)
+- [Code Sample](lessons/day21)
 
 #### Video 22: RDS Database ( Mini Project 8 )
 - Database creation
 - Configuration
-- [Code Sample](/lessons/day22)
+- [Code Sample](lessons/day22)
 
 #### Video 23: AWS Monitoring ( Mini Project 9 )
 - CloudWatch metrics alerts
 - SNS topics
 - CloudWatch logs
 - Log alerts
-- [Code Sample](/lessons/day23)
+- [Code Sample](lessons/day23)
 
 #### Video 24: High available/scalable Infrastructure Deployment ( Mini Project 10 )
 
@@ -202,7 +202,7 @@ This course consists of video lessons covering basic to advanced Terraform conce
 - Auto Scaling Groups
 - Security Groups
 - Application Load Balancer, NAT Gateway, Elastic IP, Auto Scaling rules etc
-- [Code Sample](/lessons/day24)
+- [Code Sample](lessons/day24)
 
 </details>
 
@@ -216,17 +216,17 @@ This course consists of video lessons covering basic to advanced Terraform conce
 - AWS Config
 - Importing a live infrastructure to Terraform using AWS Config
 - Terraformer
-- [Code Sample](/lessons/day25)
+- [Code Sample](lessons/day25)
 
 #### Video 26: Terraform Cloud and Workspaces
 - Cloud setup
 - Workspace management
-- [Code Sample](/lessons/day26)
+- [Code Sample](lessons/day26)
 
 #### Video 27: AWS DevOps with Terraform (Real-time project 3)
 - CI/CD pipeline setup
 - Automation
-- [Code Sample](/lessons/day27)
+- [Code Sample](lessons/day27)
 
 
 #### Video 28: 3-Tier Architecture (Real-time project 5)
@@ -234,7 +234,7 @@ This course consists of video lessons covering basic to advanced Terraform conce
 - Web tier, Application tier, Database tier
 - Load balancing and auto-scaling
 - Best practices
-- [Code Sample](/lessons/day29)
+- [Code Sample](lessons/day29)
 
 #### Video 29: GitOps with Terraform (Real-time project 4)
 
@@ -242,13 +242,13 @@ This course consists of video lessons covering basic to advanced Terraform conce
 - ArgoCD setup with Terraform
 - Git-based infrastructure management
 - Automated deployments
-- [Code Sample](/lessons/day30)
+- [Code Sample](lessons/day30)
 
 
 ### Video 0: Terrafrom Drift Detection using Terraform Cloud
 - Drift detection setup
 - Monitoring infrastructure changes
-- [Code Sample](/lessons/day31)
+- [Code Sample](lessons/day31)
 
 </details>
 

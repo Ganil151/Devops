@@ -9,4 +9,4 @@ Introduction to Continuous Integration and Continuous Deployment.
 - **Tools**: Overview of Jenkins, GitHub Actions, and GitLab CI.
 
 ---
-**Next Step**: Explore [Prompt Engineering](../15-Prompt-Engineering/README.md).
+**Next Step**: Explore [Prompt Engineering](../../../README.md).

@@ -35,16 +35,16 @@ Topics Covered:
 
 ##Table of Contents
 
-1. [S3 Replication](file:///home/ganil/Documents/Devops/Cloud_Computing/Intermediate-Level/08-S3-Advanced/s3-replication.md) - CRR, SRR, and replication configurations
-2. [S3 Event Notifications](file:///home/ganil/Documents/Devops/Cloud_Computing/Intermediate-Level/08-S3-Advanced/s3-event-notifications.md) - Event-driven architectures with S3
-3. [S3 Performance Optimization](file:///home/ganil/Documents/Devops/Cloud_Computing/Intermediate-Level/08-S3-Advanced/s3-performance-optimization.md) - Optimize upload/download performance
+1. [S3 Replication](s3-replication.md) - CRR, SRR, and replication configurations
+2. [S3 Event Notifications](s3-event-notifications.md) - Event-driven architectures with S3
+3. [S3 Performance Optimization](s3-performance-optimization.md) - Optimize upload/download performance
 
 ## Prerequisites
 
 Before diving into advanced S3 topics, you should understand:
 
-- [S3 Fundamentals](file:///home/ganil/Documents/Devops/Cloud_Computing/Beginner-Level/02-AWS-Basics/AWS/s3-bucket/README.md)
-- [S3 Bucket Policies](file:///home/ganil/Documents/Devops/Cloud_Computing/Beginner-Level/02-AWS-Basics/AWS/s3-bucket/s3-bucket-policies.md)
+- [S3 Fundamentals](../../../../../README.md)
+- [S3 Bucket Policies](s3-bucket-policies.md)
 - IAM roles and policies
 - AWS Lambda basics (for event notifications)
 - CloudFormation or Terraform
@@ -343,7 +343,7 @@ Performance Issues:
 
 After mastering intermediate S3 concepts:
 
-1. **Enterprise Patterns** - [Advanced S3 Enterprise](file:///home/ganil/Documents/Devops/Cloud_Computing/Advanced-Level/08-S3-Enterprise/README.md)
+1. **Enterprise Patterns** - [Advanced S3 Enterprise](../../../../../README.md)
 2. **Security Deep Dive** - S3 Access Points, VPC Endpoints, Macie
 3. **Cost Optimization** - S3 Storage Lens, Intelligent-Tiering at scale
 4. **Compliance** - Object Lock, Vault Lock, Audit logging

@@ -428,12 +428,36 @@ print("\n🎉 Deployment Complete!")
 
 ---
 
+
+## 🔌 DevOps Integration
+
+### Terraform Wrapper (Exit Code Parsing)
+One of the most common use cases for `subprocess` in DevOps is wrapping Infrastructure as Code (IaC) tools. 
+
+**Scenario**: You want to run `terraform plan` in a CI/CD pipeline. Terraform returns specific exit codes:
+- `0`: No changes.
+- `1`: Error.
+- `2`: Changes present (Diff).
+
+A simple `subprocess.check_call()` would fail on code `2`, treating it as an error. By using `subprocess.run(..., check=False)` and manually inspecting `.returncode`, you can create smart logic:
+
+```python
+result = subprocess.run(["terraform", "plan", "-detailed-exitcode"], check=False)
+if result.returncode == 2:
+    print("⚠️ Diff detected - Requesting Approval")
+    trigger_approval_workflow()
+elif result.returncode == 0:
+    print("✅ No changes - Skipping Apply")
+```
+
+Check out **[Challenge 05](./challenges/challenge_05_terraform_wrapper.py)** to implement this wrapper!
+
 ## 🔗 Related Topics
 
 | Module | Relationship |
 |--------|-------------|
-| [Error Handling](../05-Error-Handling/README.md) | Exception handling for subprocess failures |
-| [Logging Basics](../14-Logging-Basics/README.md) | Logging command execution for debugging |
+| [Error Handling](../../../../../../README.md) | Exception handling for subprocess failures |
+| [Logging Basics](../../../../../../README.md) | Logging command execution for debugging |
 | [Environment Variables](../08-Environment-Variables/README.md) | Passing env vars to subprocesses |
 
 ---

@@ -49,4 +49,4 @@ This is the most powerful use case' for SNS.
 - **Encryption in Transit**: TLS encryption for all message delivery to endpoints.
 
 ---
-**Next Step**: Learn how to use SNS in the [Hands-on SNS Guide](../../Intermediate-Level/11-Application-Integration/sns-hands-on.md)
+**Next Step**: Learn how to use SNS in the [Hands-on SNS Guide](../../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/07-Load-Balancing-and-Scaling/11-Application-Integration/sns-hands-on.md)

@@ -8,4 +8,4 @@ A standardized protocol for connecting AI models to external tools and data sour
 - **Tool Definition**: Standardizing how models interact with your DevOps tools.
 
 ---
-**Next Step**: Learn about [Blockchain Fundamentals](../17-Blockchain/README.md).
+**Next Step**: Learn about [Blockchain Fundamentals](../../../README.md).

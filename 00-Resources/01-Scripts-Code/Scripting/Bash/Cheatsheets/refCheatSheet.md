@@ -933,9 +933,9 @@ alias cheat='less ~/cheatsheet.md'
 ```
 
 **🔗 Related Resources**:
-- [Main Automation README](./README.md)
-- [Master Index](./AUTOMATION_MASTER_INDEX.md)
-- [Organization Plan](./AUTOMATION_ORGANIZATION_PLAN.md)
+- [Main Automation README](../../../README.md)
+- [Master Index](../../../../../1-Beginner/02-Phase-2/01-Automation/AUTOMATION_MASTER_INDEX.md)
+- [Organization Plan](../../../../../1-Beginner/02-Phase-2/01-Automation/AUTOMATION_ORGANIZATION_PLAN.md)
 
 ---
 

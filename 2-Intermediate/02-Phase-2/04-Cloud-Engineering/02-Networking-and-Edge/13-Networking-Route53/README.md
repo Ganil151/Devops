@@ -12,6 +12,6 @@ Step-by-step instructions for:
 - Testing DNS resolution via CLI.
 
 ## Learning Path
-1. Complete the [Beginner Fundamentals](../../Beginner-Level/02-AWS-Basics/Route53/route53-fundamentals.md) first.
+1. Complete the [Beginner Fundamentals](../../../../../1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/08-Web-Hosting/Route53/route53-fundamentals.md) first.
 2. Follow this Hands-on Guide to master DNS management.
-3. Advance to [Advanced Patterns](../../Advanced-Level/14-Networking-Route53/route53-advanced-patterns.md) for complex routing and hybrid DNS.
+3. Advance to [Advanced Patterns](../../../../../3-Advanced/02-Phase-2/11-Enterprise-Cloud/14-Networking-Route53/route53-advanced-patterns.md) for complex routing and hybrid DNS.

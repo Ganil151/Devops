@@ -9,4 +9,4 @@ Nginx is a high-performance web server, reverse proxy, and load balancer.
 - **Static Content Hosting**: Efficiently serving images, CSS, and JS.
 
 ---
-**Next Step**: Learn about [Maven & Build Tools](../10-Maven/README.md).
+**Next Step**: Learn about [Maven & Build Tools](../../../README.md).

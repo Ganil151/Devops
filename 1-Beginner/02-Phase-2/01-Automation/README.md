@@ -57,7 +57,7 @@ Master the fundamentals of shell scripting and terminal navigation.
 | 01 | [**Introduction**](./01-Shell-Scripting/01-Introduction/) | Shell types, first script | ✅ |
 | 02 | [**Terminal and Finder**](./01-Shell-Scripting/02-Terminal-and-Finder/) | Navigation, paths | ✅ |
 | 03 | [**Basic File Manipulation**](./01-Shell-Scripting/03-Basic-File-Manipulation/) | cp, mv, rm | ✅ |
-| ... | **[View Full Beginner Index](../../AUTOMATION_MASTER_INDEX.md)** | Topics 04-17 (Planned) | 📝 |
+| ... | **[View Full Beginner Index](AUTOMATION_MASTER_INDEX.md)** | Topics 04-17 (Planned) | 📝 |
 
 ---
 
@@ -67,13 +67,13 @@ Functional modules for building real-world tools.
 
 | # | Module | Description | Path |
 |---|--------|-------------|------|
-| 01 | **Intermediate Shell** | Functions, Loops, Strict Mode | [Link](../../2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/) |
-| 02 | **Advanced Bash** | jq, sed, awk, xargs, traps | [Link](../../2-Intermediate/02-Phase-2/01-Automation/02-Advanced-Bash-Automation/) |
-| 03 | **Python for DevOps** | Boto3, APIs, Web Scraping | [Link](../../2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps/) |
-| 04 | **Best Practices** | Idempotency, Secrets | [Link](../../2-Intermediate/02-Phase-2/01-Automation/04-Automation-Best-Practices/) |
-| 05 | **Ansible** | Playbooks, Roles | [Link](../../2-Intermediate/02-Phase-2/01-Automation/05-Ansible/) |
+| 01 | **Intermediate Shell** | Functions, Loops, Strict Mode | [Link](../../../2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting) |
+| 02 | **Advanced Bash** | jq, sed, awk, xargs, traps | [Link](../../../2-Intermediate/02-Phase-2/01-Automation/02-Advanced-Bash-Automation) |
+| 03 | **Python for DevOps** | Boto3, APIs, Web Scraping | [Link](../../../2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps) |
+| 04 | **Best Practices** | Idempotency, Secrets | [Link](../../../2-Intermediate/02-Phase-2/01-Automation/04-Automation-Best-Practices) |
+| 05 | **Ansible** | Playbooks, Roles | [Link](../../../2-Intermediate/02-Phase-2/01-Automation/05-Ansible) |
 | 07 | **Real Life Scenarios** | Troubleshooting War Stories | [Link](../../2-Intermediate/02-Phase-2/01-Automation/07-Real-Life-Scenarios/) |
-| 08 | **Infracost** | FinOps & Cost Estimation | [Link](../../2-Intermediate/02-Phase-2/01-Automation/08-Infracost-Automation/) |
+| 08 | **Infracost** | FinOps & Cost Estimation | [Link](../../../2-Intermediate/02-Phase-2/01-Automation/08-Infracost-Automation) |
 
 ---
 
@@ -81,8 +81,8 @@ Functional modules for building real-world tools.
 
 High-level implementation strategies.
 
-- **[GitOps](../../3-Advanced/02-Phase-2/05-GitOps/)**
-- **[Observability](../../3-Advanced/02-Phase-2/06-Observability/)**
+- **[GitOps](../../../3-Advanced/02-Phase-2/05-GitOps)**
+- **[Observability](../../../3-Advanced/02-Phase-2/06-Observability)**
 
 ---
 

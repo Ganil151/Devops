@@ -213,4 +213,4 @@ graph LR
 
 ## Next Lesson
 
-Continue to **[Lesson 02: Cloud Billing Basics](Lesson%2002-Cloud%20Billing%20Basics.md)** to learn how cloud providers charge for services.
+Continue to **[Lesson 02: Cloud Billing Basics](../02-Cloud-Billing-Basics/Lesson%2002-Cloud%20Billing%20Basics.md)** to learn how cloud providers charge for services.

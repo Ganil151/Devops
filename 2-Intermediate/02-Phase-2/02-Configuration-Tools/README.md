@@ -14,14 +14,14 @@ This directory contains all configuration management and Infrastructure as Code 
 - **[12-Vendor-Tools](./12-Vendor-Tools/README.md)**: Cloud-native IaC (CloudFormation, ARM, Deployment Manager, etc.)
 
 ### ⚙️ Configuration Management  
-- **[02-Ansible](../03-Automation/05-Ansible/README.md)**: Agentless configuration management and automation
+- **[02-Ansible](../../../README.md)**: Agentless configuration management and automation
 - **[03-Chef](./03-Chef/README.md)**: Infrastructure automation with Ruby DSL
 - **[07-Puppet](./07-Puppet/README.md)**: Enterprise configuration management platform
 - **[08-SaltStack](./08-SaltStack/README.md)**: Event-driven infrastructure automation
 
 ### 📦 Container & Application Configuration
 - **[04-Helm](./04-Helm/README.md)**: Kubernetes package manager and templating
-- **[06-Kustomize](Kustomize.md)**: Kubernetes native configuration management
+- **[06-Kustomize](06-Kustomize/Kustomize.md)**: Kubernetes native configuration management
 
 ### 🏠 Development Environment Management
 - **[10-Vagrant](./10-Vagrant/README.md)**: Development environment automation

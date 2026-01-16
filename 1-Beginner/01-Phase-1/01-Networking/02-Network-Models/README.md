@@ -17,8 +17,8 @@ Navigate the layers deeply:
 - **[Layer 7: Application](./OSI%20Model/7.%20Application/README.md)** (HTTP, DNS, User Interface)
 
 ### 🧠 Interactive Learning
-- **[🛠️ Real-Life Troubleshooting Scenarios](./Real-Life-Scenarios.md)**: How to use this connection to fix actual production bugs.
-- **[📝 Network Model Quiz](./Quiz.md)**: Test your knowledge with 20 questions.
+- **[🛠️ Real-Life Troubleshooting Scenarios](OSI%20Model/Real-Life-Scenarios.md)**: How to use this connection to fix actual production bugs.
+- **[📝 Network Model Quiz](OSI%20Model/Quiz.md)**: Test your knowledge with 20 questions.
 
 ---
 
@@ -67,7 +67,7 @@ Manages "conversations" (sessions) between computers. Keeps connections open and
 
 This is the model actually implemented in the internet today. It collapses the OSI layers for simplicity.
 
-![TCP/IP Model](../Images/OSIModel.png)
+![TCP/IP Model](OSI%20Model/Images/OSIModel.png)
 
 1.  **Application Layer**: Combines OSI layers 5, 6, and 7.
 2.  **Transport Layer**: Maps to OSI layer 4.

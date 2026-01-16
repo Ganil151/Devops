@@ -43,4 +43,4 @@ By the end of this module, you will be able to:
 5.  Prepare for technical interviews that focus on the intersection of AI and DevOps.
 
 ---
-**Ready for the Future?** Proceed to the **[Advanced Level](../../3-Advanced/11-MCP/README.md)** to see how MCP scales to enterprise environments.
+**Ready for the Future?** Proceed to the **[Advanced Level](../../../README.md)** to see how MCP scales to enterprise environments.

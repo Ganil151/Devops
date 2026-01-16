@@ -753,7 +753,7 @@ docker compose rm                 # Remove stopped containers
 
 ## Next Steps
 
-- Learn about [Service Configuration](../02-Service-Configuration/README.md)
+- Learn about [Service Configuration](../../../../../../../README.md)
 - Explore [Advanced Compose Features](../../Intermediate/01-Advanced-Features/README.md)
 - Understand [Networks and Volumes](../../Intermediate/02-Networks-Volumes/README.md)
 
@@ -766,4 +766,4 @@ docker compose rm                 # Remove stopped containers
 
 ---
 
-**[Next: Service Configuration →](../02-Service-Configuration/README.md)**
+**[Next: Service Configuration →](../../../../../../../README.md)**

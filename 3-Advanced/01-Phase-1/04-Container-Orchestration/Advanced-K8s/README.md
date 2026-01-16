@@ -72,7 +72,7 @@ Handling complex stateful applications and cloud-native services.
 ## 📖 Best Practices
 1. **Immutable Infrastructure**: Changes should be made to templates and images, not running pods.
 2. **Observability First**: Always deploy metrics and tracing before going to production.
-3. **Automate Everything**: Use GitOps patterns to manage your cluster state (see the [GitOps Module](../01-GitOps/README.md)).
+3. **Automate Everything**: Use GitOps patterns to manage your cluster state (see the [GitOps Module](../../../../README.md)).
 
 ---
-**Next Step**: Learn how to bridge these clusters with enterprise-scale automation in the [Advanced Automation Module](../09-Advanced-Automation/README.md).
+**Next Step**: Learn how to bridge these clusters with enterprise-scale automation in the [Advanced Automation Module](../../../../README.md).

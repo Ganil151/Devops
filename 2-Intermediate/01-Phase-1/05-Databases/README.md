@@ -10,7 +10,7 @@ Follow these modules in order to master database orchestration:
 
 1.  **[01-Database-Fundamentals](./01-Database-Fundamentals/README.md)**: SQL vs NoSQL theory, ACID/BASE, and Managed vs Self-hosted.
 2.  **[02-PostgreSQL-DevOps](./02-PostgreSQL-DevOps/README.md)**: Deep dive into the world's most advanced open-source database.
-3.  **[03-MySQL-and-RDS](./03-MySQL-and-RDS/README.md)**: Master MySQL and its cloud implementation via Amazon RDS.
+3.  **[03-MySQL-and-RDS](../../../README.md)**: Master MySQL and its cloud implementation via Amazon RDS.
 4.  **[04-NoSQL-MongoDB-Redis](./04-NoSQL-MongoDB-Redis/README.md)**: Document stores and high-performance in-memory caching.
 5.  **[05-Backup-and-Monitoring](./05-Backup-and-Monitoring/README.md)**: Strategies for data durability, snapshots, and performance tracking.
 6.  **[06-Interview-Questions-and-Quizzes](./06-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for job screenings.

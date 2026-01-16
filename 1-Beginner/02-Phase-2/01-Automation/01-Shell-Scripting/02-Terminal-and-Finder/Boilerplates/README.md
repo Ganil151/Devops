@@ -1,14 +1,10 @@
 # Boilerplates: Terminal and Finder
-
 This directory contains boilerplate scripts demonstrating navigation and file discovery automation for DevOps workflows.
-
 ## Available Boilerplates
 
 ### 1. Repository Structure Analyzer
 **File**: `boilerplate_repo_structure_analyzer.sh`
-
 **Purpose**: Generates auto-documented repository structure
-
 **DevOps Use Case**: Onboarding new engineers with clear directory maps
 
 **Usage**:
@@ -25,19 +21,15 @@ This directory contains boilerplate scripts demonstrating navigation and file di
 - Configurable depth levels
 
 ---
-
 ### 2. Log Archiver
 **File**: `boilerplate_log_archiver.sh`
-
 **Purpose**: Compresses and archives old log files for compliance
-
 **DevOps Use Case**: Automated log retention for regulatory requirements
 
 **Usage**:
 ```bash
 ./boilerplate_log_archiver.sh [log_dir] [archive_dir]
 ```
-
 **Default Behavior**:
 - Searches `/var/log` for logs older than 30 days
 - Creates compressed archives in `/var/log/archives`
@@ -56,7 +48,6 @@ This directory contains boilerplate scripts demonstrating navigation and file di
 - Archive size reporting
 
 ---
-
 ## Quick Start
 
 1. Make scripts executable:

@@ -4,7 +4,7 @@
 
 **Kubernetes StatefulSets** manage stateful applications in production environments, providing stable network identities, persistent storage, and ordered deployment/scaling. This guide covers advanced patterns, production best practices, and enterprise-grade configurations for StatefulSets.
 
-> **Prerequisites**: Familiarity with basic StatefulSet concepts. See [Intermediate StatefulSets](../../../2-Intermediate/01-Kubernetes/Intermediate/StatefulSets/) for fundamentals.
+> **Prerequisites**: Familiarity with basic StatefulSet concepts. See [Intermediate StatefulSets](.) for fundamentals.
 
 ---
 
@@ -787,11 +787,11 @@ spec:
 
 ## Related Documentation
 
-- **[Intermediate StatefulSets](../../../2-Intermediate/01-Kubernetes/Intermediate/StatefulSets/)**: Core concepts and basic examples
-- **[StatefulSet Diagrams](../../../2-Intermediate/01-Kubernetes/Beginner/Diagrams/statefulsets/)**: Visual architecture guides
+- **[Intermediate StatefulSets](.)**: Core concepts and basic examples
+- **[StatefulSet Diagrams](../../../../../2-Intermediate/03-Phase-3/01-Container-Orchestration/Beginner/Diagrams/statefulsets)**: Visual architecture guides
 - **[Persistent Volumes](../../../2-Intermediate/01-Kubernetes/Intermediate/PersistentVolumes/)**: Storage fundamentals
-- **[Pod Disruption Budgets](./Autoscaling/pdb/)**: Availability management
-- **[VPA with StatefulSets](./Autoscaling/vpa/)**: Vertical scaling patterns
+- **[Pod Disruption Budgets](../Autoscaling/pdb)**: Availability management
+- **[VPA with StatefulSets](../Autoscaling/vpa)**: Vertical scaling patterns
 
 ---
 

@@ -20,7 +20,7 @@ Answer: Enterprise SaaS)](./06-Datadog-SaaS/README.md
 A complete observability strategy requires correlating three distinct types of data:
 
 ### 1. Metrics (Numerical History)
-- **Tool**: [Prometheus](../../00-Resources/01-Scripts-Code/Prometheus/) & Grafana.
+- **Tool**: [Prometheus](../../../00-Resources/01-Scripts-Code/Prometheus) & Grafana.
 - **Example Alerting Rule**:
 ```yaml
 groups:
@@ -113,4 +113,4 @@ Classical infrastructure monitoring. Learn host/service definitions, NRPE-based 
 
 ---
 
-**Cloud Observability**: See how to implement these patterns in AWS using [CloudWatch and X-Ray](../08-Enterprise-Cloud/17-Observability-Governance/README.md).
+**Cloud Observability**: See how to implement these patterns in AWS using [CloudWatch and X-Ray](../../../README.md).

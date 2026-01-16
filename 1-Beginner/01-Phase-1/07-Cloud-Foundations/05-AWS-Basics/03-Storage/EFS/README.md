@@ -13,4 +13,4 @@ Detailed overview of EFS, including:
 
 ## Learning Path
 1. Start with the Fundamentals guide.
-2. Move to the [Hands-on Guide](../../../Intermediate-Level/12-File-Storage-EFS/efs-hands-on.md) to create and mount your first file system.
+2. Move to the [Hands-on Guide](../../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/12-File-Storage-EFS/efs-hands-on.md) to create and mount your first file system.

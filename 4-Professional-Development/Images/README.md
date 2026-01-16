@@ -52,13 +52,13 @@ The following diagrams are referenced but not yet created:
 
 ### Relative Path Format
 ```markdown
-![Alt Text](../Images/diagrams/finops-lifecycle.png)
+![Alt Text](../../1-Beginner/03-Phase-3/02-FinOps/Images/finops-lifecycle.png)
 ```
 
 ### From Different Directories
 ```markdown
 # From 07-FinOps/README.md
-![FinOps Lifecycle](../Images/diagrams/finops-lifecycle.png)
+![FinOps Lifecycle](../../1-Beginner/03-Phase-3/02-FinOps/Images/finops-lifecycle.png)
 
 # From 00-Action-Plans/01-Consulting-30-Day-Plan.md
 ![Pricing Strategy](../Images/infographics/pricing-comparison.png)

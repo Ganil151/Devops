@@ -12,11 +12,11 @@ This module is organized into 6 progressive phases:
     *   CoT for complex troubleshooting (Networking, K8s).
     *   Reasoning traces and verification steps.
 
-2.  **[02-Runbook-Automation](Runbook%20Automation.md)**
+2.  **[02-Runbook-Automation](02-Runbook-Automation/Runbook%20Automation.md)**
     *   Converting logs to structured documentation.
     *   Prompt templates for incident post-mortems.
 
-3.  **[03-Few-Shot-and-Role-Prompting](Few-Shot%20and%20Role%20Prompting.md)**
+3.  **[03-Few-Shot-and-Role-Prompting](03-Few-Shot-and-Role-Prompting/Few-Shot%20and%20Role%20Prompting.md)**
     *   Role-based prompts for Security and SRE personas.
     *   Using Few-Shot examples for consistent Infrastructure-as-Code.
 

@@ -4,9 +4,9 @@ Modules are the key to building scalable, standardized, and reusable infrastruct
 
 ## 📚 Learning Path
 
-1.  **[Module Fundamentals](./01-Module-Fundamentals/README.md)**: Introduction, types of modules, and core abstraction benefits.
-2.  **[Module Structure](Module%20Structure.md)**: Standard layout and professional file organization.
-3.  **[Creating Modules](Creating%20Modules.md)**: Building from scratch, input validation, and logic.
+1.  **[Module Fundamentals](../../../../../README.md)**: Introduction, types of modules, and core abstraction benefits.
+2.  **[Module Structure](02-Module-Structure/Module%20Structure.md)**: Standard layout and professional file organization.
+3.  **[Creating Modules](03-Creating-Modules/Creating%20Modules.md)**: Building from scratch, input validation, and logic.
 4.  **[Module Composition](./04-Module-Composition/README.md)**: Orchestrating multiple modules and handling dependencies.
 5.  **[Module Registry](./05-Module-Registry/README.md)**: Leveraging the public registry and private organization catalogs.
 6.  **[Versioning Strategy](./06-Versioning-Strategy/README.md)**: Semantic Versioning and pinning for production safety.

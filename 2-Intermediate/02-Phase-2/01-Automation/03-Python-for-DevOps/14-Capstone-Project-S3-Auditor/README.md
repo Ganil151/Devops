@@ -269,8 +269,8 @@ Congratulations! You've mastered the Intermediate Python for DevOps curriculum. 
 5.  Protecting your infrastructure with professional unit tests and mocks.
 
 **What's Next?**
-- Head to the [**Advanced Python for DevOps**](../../../../3-Advanced/02-Phase-2/01-Automation/03-Python-Advanced/README.md) module to learn about Object Oriented (OOP) Automation, Context Managers, and Multi-threading.
-- Or explore [**Ansible Automation**](../../02-Configuration-Tools/05-Ansible/README.md) to apply your Python skills to configuration management.
+- Head to the [**Advanced Python for DevOps**](../../../../../README.md) module to learn about Object Oriented (OOP) Automation, Context Managers, and Multi-threading.
+- Or explore [**Ansible Automation**](../../../../../README.md) to apply your Python skills to configuration management.
 
 ---
 

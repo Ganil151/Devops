@@ -72,5 +72,5 @@ Choose the installation method that best fits your environment and requirements.
 After installation:
 - Configure [Database](../Configuration/Database/) settings
 - Set up [Security](../Configuration/Security/) and authentication
-- Optimize [Performance](../Configuration/Performance/) settings
+- Optimize [Performance](../../../../../3-Advanced/01-Phase-1/03-Linux/Performance) settings
 - Integrate with [CI/CD](../CI-CD-Integration/) pipelines

@@ -78,7 +78,7 @@ driver = webdriver.Firefox(options=options)
 ---
 
 ## 📊 Selenium Workflow
-![Selenium Workflow Chart](../../assets/selenium_workflow.svg)
+![Selenium Workflow Chart](../../../assets/selenium_workflow.svg)
 
 ---
 

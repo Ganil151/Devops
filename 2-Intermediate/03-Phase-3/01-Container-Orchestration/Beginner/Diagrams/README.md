@@ -7,11 +7,11 @@ This directory contains comprehensive documentation for all major Kubernetes arc
 ## Architecture Components
 
 ### Control Plane Components
-- **[1-Cloud_Controller_Manager](Control-Plane/1-Cloud_Controller_Manager/)** - Cloud provider integration and management
-- **[2-Kube_Api_Server](Control-Plane/2-Kube_Api_Server/)** - Central API gateway and cluster management
-- **[3-ETCD](Control-Plane/3-ETCD/)** - Distributed key-value store for cluster data
-- **[4-Kube-Scheduler](Control-Plane/4-Kube-Scheduler/)** - Pod scheduling and placement decisions
-- **[5-Kube_Controller_Manager](Control-Plane/5-Kube_Controller_Manager/)** - Controller processes and state reconciliation
+- **[1-Cloud_Controller_Manager](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Control-Plane/1-Cloud_Controller_Manager)** - Cloud provider integration and management
+- **[2-Kube_Api_Server](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Control-Plane/2-Kube_Api_Server)** - Central API gateway and cluster management
+- **[3-ETCD](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Control-Plane/3-ETCD)** - Distributed key-value store for cluster data
+- **[4-Kube-Scheduler](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Control-Plane/4-Kube-Scheduler)** - Pod scheduling and placement decisions
+- **[5-Kube_Controller_Manager](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Control-Plane/5-Kube_Controller_Manager)** - Controller processes and state reconciliation
 
 ### Node Components
 - **[kubelet](kubelet/)** - Node agent for pod lifecycle management
@@ -29,7 +29,7 @@ This directory contains comprehensive documentation for all major Kubernetes arc
 ### Networking
 - **[services](services/)** - Service discovery and load balancing
 - **[ingress](ingress/)** - External access and HTTP routing
-- **[network-policies](network-policies/)** - Network security and micro-segmentation
+- **[network-policies](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Legacy/Architecture_Structure/Networking/network-policies)** - Network security and micro-segmentation
 
 ### Storage
 - **[persistent-volumes](persistent-volumes/)** - Durable storage management
@@ -47,9 +47,9 @@ This directory contains comprehensive documentation for all major Kubernetes arc
 - **[kubectl](kubctl/)** - Command-line interface and cluster interaction
 
 ### Autoscaling and Availability
-- **[hpa](hpa/)** - Horizontal Pod Autoscaler
-- **[vpa](vpa/)** - Vertical Pod Autoscaler
-- **[pdb](pdb/)** - Pod Disruption Budget
+- **[hpa](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Autoscaling/hpa)** - Horizontal Pod Autoscaler
+- **[vpa](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Autoscaling/vpa)** - Vertical Pod Autoscaler
+- **[pdb](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Autoscaling/pdb)** - Pod Disruption Budget
 
 ## Quick Navigation
 
@@ -68,13 +68,13 @@ This directory contains comprehensive documentation for all major Kubernetes arc
 ### Advanced Topics
 1. [StatefulSets](statefulsets/) - Stateful applications
 2. [Ingress](ingress/) - External access patterns
-3. [Network Policies](network-policies/) - Security policies
-4. [Autoscaling](hpa/) - Dynamic scaling strategies
+3. [Network Policies](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Legacy/Architecture_Structure/Networking/network-policies) - Security policies
+4. [Autoscaling](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Autoscaling/hpa) - Dynamic scaling strategies
 
 ### Operations
 1. [kubectl](kubctl/) - Command-line operations
 2. [Jobs](jobs/) & [CronJobs](cronjobs/) - Batch processing
-3. [PDB](pdb/) - Availability management
+3. [PDB](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Autoscaling/pdb) - Availability management
 4. [Storage](persistent-volumes/) - Data persistence
 
 ## Architecture Diagrams

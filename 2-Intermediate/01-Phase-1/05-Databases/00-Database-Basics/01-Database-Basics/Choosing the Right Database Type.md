@@ -3,7 +3,7 @@
 This guide provides a practical decision-making framework to help you choose the appropriate database for your specific use case.
 
 ## Start Here: Decision Tree
-![Decision Tree](decisionTree.png)
+![Decision Tree](../Images/decisionTree.png)
 
 ## Quick Reference Matrix
 

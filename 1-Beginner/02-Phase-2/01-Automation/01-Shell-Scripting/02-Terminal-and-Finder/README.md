@@ -1,6 +1,7 @@
 # 📍 Terminal Navigation (The DevOps GPS)
+
 > **"You can't automate where you haven't been. Mastering navigation is the first step to controlling the machine."**
-![Navigation Architecture](./navigation_architecture.svg)
+![Navigation Architecture](./navigation_architecture.png)
 ## 📚 Overview
 The terminal is your headquarters. Unlike the mouse-driven "Finder" or "Explorer," the terminal is a precise, text-based interface for the Unix filesystem. In DevOps, you don't navigate by clicking folders; you navigate by understanding the hierarchy of the system. This module covers the essential "GPS" commands required to move safely across local and remote servers.
 ## 🎓 Learning Objectives
@@ -17,7 +18,7 @@ Always start from the **Root** (`/`). They work from anywhere in the system.
 - **Example**: `/var/log/nginx/access.log`
 ### 2. Relative Paths
 Start from your **Current Directory**. They depend on where you are standing.
-- **`.`**: Current directory.
+- **`.`** : Current directory.
 - **`..`**: Parent directory (Go back one level).
 - **Example**: `../config/sites-enabled/`
 ---

@@ -422,9 +422,9 @@ except Exception as e:
 
 | Module | Relationship |
 |--------|-------------|
-| [Error Handling](../05-Error-Handling/README.md) | Log exceptions with stack traces |
-| [Subprocess Module](../10-Subprocess-Module/README.md) | Log command execution and output |
-| [Datetime Operations](../12-Datetime-Operations/README.md) | Timestamp formatting in logs |
+| [Error Handling](../../../../../../README.md) | Log exceptions with stack traces |
+| [Subprocess Module](../../../../../../README.md) | Log command execution and output |
+| [Datetime Operations](../../../../../../README.md) | Timestamp formatting in logs |
 
 ---
 

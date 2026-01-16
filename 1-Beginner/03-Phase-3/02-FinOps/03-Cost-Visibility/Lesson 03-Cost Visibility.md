@@ -239,4 +239,4 @@ Define 5-7 tags for your organization:
 
 ---
 ## Next Lesson
-Continue to **[Lesson 04: Budgeting Basics](Lesson%2004-Budgeting%20Basics.md)** to learn how to set and manage cloud budgets.
+Continue to **[Lesson 04: Budgeting Basics](../04-Budgeting-Basics/Lesson%2004-Budgeting%20Basics.md)** to learn how to set and manage cloud budgets.

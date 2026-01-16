@@ -26,4 +26,4 @@ This directory contains battle-tested configuration files and patterns used in e
 Copy these patterns into your own projects to ensure your infrastructure follows the **Well-Architected Framework**.
 
 ---
-**Reference**: For security-specific hardening, see the [Advanced Security Module](../../../3-Advanced/04-Security/README.md).
+**Reference**: For security-specific hardening, see the [Advanced Security Module](../../README.md).

@@ -1,0 +1,200 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" fill="#212529" font-family="Arial, sans-serif" font-size="24" font-weight="bold">
+    DevOps Learning Platform - Navigation Architecture
+  </text>
+  
+  <!-- Main Hub -->
+  <rect x="350" y="70" width="200" height="80" fill="#1976d2" stroke="#0d47a1" stroke-width="3" rx="10"/>
+  <text x="450" y="105" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    Main README
+  </text>
+  <text x="450" y="125" text-anchor="middle" fill="#e3f2fd" font-family="Arial, sans-serif" font-size="12">
+    Platform Overview
+  </text>
+  <text x="450" y="140" text-anchor="middle" fill="#e3f2fd" font-family="Arial, sans-serif" font-size="12">
+    Master Quiz • Resources
+  </text>
+  
+  <!-- Tier 1: Beginner -->
+  <rect x="50" y="200" width="180" height="100" fill="#4caf50" stroke="#2e7d32" stroke-width="2" rx="8"/>
+  <text x="140" y="225" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    Tier 1: Beginner
+  </text>
+  <text x="140" y="245" text-anchor="middle" fill="#e8f5e9" font-family="Arial, sans-serif" font-size="11">
+    • Networking Basics
+  </text>
+  <text x="140" y="260" text-anchor="middle" fill="#e8f5e9" font-family="Arial, sans-serif" font-size="11">
+    • Linux Fundamentals
+  </text>
+  <text x="140" y="275" text-anchor="middle" fill="#e8f5e9" font-family="Arial, sans-serif" font-size="11">
+    • Shell Scripting
+  </text>
+  <text x="140" y="290" text-anchor="middle" fill="#e8f5e9" font-family="Arial, sans-serif" font-size="11">
+    • Docker Basics
+  </text>
+  
+  <!-- Tier 2: Intermediate -->
+  <rect x="270" y="200" width="180" height="100" fill="#ff9800" stroke="#f57c00" stroke-width="2" rx="8"/>
+  <text x="360" y="225" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    Tier 2: Intermediate
+  </text>
+  <text x="360" y="245" text-anchor="middle" fill="#fff3e0" font-family="Arial, sans-serif" font-size="11">
+    • Kubernetes
+  </text>
+  <text x="360" y="260" text-anchor="middle" fill="#fff3e0" font-family="Arial, sans-serif" font-size="11">
+    • Terraform/Ansible
+  </text>
+  <text x="360" y="275" text-anchor="middle" fill="#fff3e0" font-family="Arial, sans-serif" font-size="11">
+    • CI/CD Pipelines
+  </text>
+  <text x="360" y="290" text-anchor="middle" fill="#fff3e0" font-family="Arial, sans-serif" font-size="11">
+    • Databases
+  </text>
+  
+  <!-- Tier 3: Advanced -->
+  <rect x="490" y="200" width="180" height="100" fill="#9c27b0" stroke="#7b1fa2" stroke-width="2" rx="8"/>
+  <text x="580" y="225" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    Tier 3: Advanced
+  </text>
+  <text x="580" y="245" text-anchor="middle" fill="#f3e5f5" font-family="Arial, sans-serif" font-size="11">
+    • GitOps/ArgoCD
+  </text>
+  <text x="580" y="260" text-anchor="middle" fill="#f3e5f5" font-family="Arial, sans-serif" font-size="11">
+    • Observability
+  </text>
+  <text x="580" y="275" text-anchor="middle" fill="#f3e5f5" font-family="Arial, sans-serif" font-size="11">
+    • Service Mesh
+  </text>
+  <text x="580" y="290" text-anchor="middle" fill="#f3e5f5" font-family="Arial, sans-serif" font-size="11">
+    • Security
+  </text>
+  
+  <!-- Tier 4: Professional -->
+  <rect x="710" y="200" width="180" height="100" fill="#e91e63" stroke="#c2185b" stroke-width="2" rx="8"/>
+  <text x="800" y="225" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    Tier 4: Professional
+  </text>
+  <text x="800" y="245" text-anchor="middle" fill="#fce4ec" font-family="Arial, sans-serif" font-size="11">
+    • Consulting
+  </text>
+  <text x="800" y="260" text-anchor="middle" fill="#fce4ec" font-family="Arial, sans-serif" font-size="11">
+    • FinOps
+  </text>
+  <text x="800" y="275" text-anchor="middle" fill="#fce4ec" font-family="Arial, sans-serif" font-size="11">
+    • Business Dev
+  </text>
+  <text x="800" y="290" text-anchor="middle" fill="#fce4ec" font-family="Arial, sans-serif" font-size="11">
+    • Monetization
+  </text>
+  
+  <!-- Arrows from Main Hub -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#495057"/>
+    </marker>
+  </defs>
+  
+  <path d="M 350 110 L 230 200" stroke="#495057" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 450 150 L 360 200" stroke="#495057" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 550 150 L 580 200" stroke="#495057" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 550 110 L 710 200" stroke="#495057" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Cross-References Layer -->
+  <text x="450" y="340" text-anchor="middle" fill="#212529" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    Cross-Reference System
+  </text>
+  
+  <!-- Prerequisites -->
+  <rect x="50" y="360" width="250" height="80" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
+  <text x="175" y="385" text-anchor="middle" fill="#1976d2" font-family="Arial, sans-serif" font-size="13" font-weight="bold">
+    Prerequisites Links
+  </text>
+  <text x="175" y="405" text-anchor="middle" fill="#1565c0" font-family="Arial, sans-serif" font-size="10">
+    • Module dependencies
+  </text>
+  <text x="175" y="420" text-anchor="middle" fill="#1565c0" font-family="Arial, sans-serif" font-size="10">
+    • Required knowledge
+  </text>
+  <text x="175" y="435" text-anchor="middle" fill="#1565c0" font-family="Arial, sans-serif" font-size="10">
+    • Skill validation
+  </text>
+  
+  <!-- Next Steps -->
+  <rect x="330" y="360" width="250" height="80" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="455" y="385" text-anchor="middle" fill="#2e7d32" font-family="Arial, sans-serif" font-size="13" font-weight="bold">
+    Next Steps Navigation
+  </text>
+  <text x="455" y="405" text-anchor="middle" fill="#388e3c" font-family="Arial, sans-serif" font-size="10">
+    • Progressive learning path
+  </text>
+  <text x="455" y="420" text-anchor="middle" fill="#388e3c" font-family="Arial, sans-serif" font-size="10">
+    • Related modules
+  </text>
+  <text x="455" y="435" text-anchor="middle" fill="#388e3c" font-family="Arial, sans-serif" font-size="10">
+    • Advanced topics
+  </text>
+  
+  <!-- Related Resources -->
+  <rect x="610" y="360" width="250" height="80" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="735" y="385" text-anchor="middle" fill="#e65100" font-family="Arial, sans-serif" font-size="13" font-weight="bold">
+    Related Resources
+  </text>
+  <text x="735" y="405" text-anchor="middle" fill="#f57c00" font-family="Arial, sans-serif" font-size="10">
+    • Exercises & Labs
+  </text>
+  <text x="735" y="420" text-anchor="middle" fill="#f57c00" font-family="Arial, sans-serif" font-size="10">
+    • Interview Questions
+  </text>
+  <text x="735" y="435" text-anchor="middle" fill="#f57c00" font-family="Arial, sans-serif" font-size="10">
+    • Video Resources
+  </text>
+  
+  <!-- Assessment Layer -->
+  <text x="450" y="480" text-anchor="middle" fill="#212529" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    Assessment & Tracking
+  </text>
+  
+  <!-- Quizzes -->
+  <ellipse cx="200" cy="530" rx="100" ry="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="200" y="525" text-anchor="middle" fill="#7b1fa2" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+    Quizzes
+  </text>
+  <text x="200" y="540" text-anchor="middle" fill="#7b1fa2" font-family="Arial, sans-serif" font-size="10">
+    100+ Questions
+  </text>
+  
+  <!-- Exercises -->
+  <ellipse cx="450" cy="530" rx="100" ry="40" fill="#ffebee" stroke="#d32f2f" stroke-width="2"/>
+  <text x="450" y="525" text-anchor="middle" fill="#d32f2f" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+    Exercises
+  </text>
+  <text x="450" y="540" text-anchor="middle" fill="#d32f2f" font-family="Arial, sans-serif" font-size="10">
+    170+ Hands-On
+  </text>
+  
+  <!-- Progress Tracking -->
+  <ellipse cx="700" cy="530" rx="100" ry="40" fill="#e0f2f1" stroke="#00796b" stroke-width="2"/>
+  <text x="700" y="525" text-anchor="middle" fill="#00695c" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+    Progress
+  </text>
+  <text x="700" y="540" text-anchor="middle" fill="#00695c" font-family="Arial, sans-serif" font-size="10">
+    Completion Tracking
+  </text>
+  
+  <!-- Legend -->
+  <rect x="20" y="560" width="15" height="15" fill="#4caf50"/>
+  <text x="40" y="572" fill="#495057" font-family="Arial, sans-serif" font-size="10">Beginner</text>
+  
+  <rect x="120" y="560" width="15" height="15" fill="#ff9800"/>
+  <text x="140" y="572" fill="#495057" font-family="Arial, sans-serif" font-size="10">Intermediate</text>
+  
+  <rect x="240" y="560" width="15" height="15" fill="#9c27b0"/>
+  <text x="260" y="572" fill="#495057" font-family="Arial, sans-serif" font-size="10">Advanced</text>
+  
+  <rect x="350" y="560" width="15" height="15" fill="#e91e63"/>
+  <text x="370" y="572" fill="#495057" font-family="Arial, sans-serif" font-size="10">Professional</text>
+</svg>

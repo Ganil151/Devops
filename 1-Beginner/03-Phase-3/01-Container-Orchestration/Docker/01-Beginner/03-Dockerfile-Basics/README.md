@@ -791,8 +791,8 @@ CMD ["<command>", "<arg>"]
 
 You now understand Dockerfile basics! Next, explore:
 
-- **Intermediate Level**: [Docker Networking](../../Intermediate/01-Docker-Networking/README.md)
-- **Docker Compose**: [Docker Compose Basics](../../Docker-Compose/Beginner/01-Basics/README.md)
+- **Intermediate Level**: [Docker Networking](../../../../../../README.md)
+- **Docker Compose**: [Docker Compose Basics](../../../../../../README.md)
 
 ## Resources
 

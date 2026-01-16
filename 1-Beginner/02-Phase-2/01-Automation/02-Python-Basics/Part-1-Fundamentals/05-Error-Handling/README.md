@@ -382,4 +382,4 @@ Master error handling by solving these professional DevOps challenges.
 
 ---
 
-**Next Step**: [Working with JSON →](../06-Working-with-JSON/README.md)
+**Next Step**: [Working with JSON →](../../../../../../README.md)

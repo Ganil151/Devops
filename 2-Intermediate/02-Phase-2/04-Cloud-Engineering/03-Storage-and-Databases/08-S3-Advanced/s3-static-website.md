@@ -779,6 +779,6 @@ SEO:
 
 ## Additional Resources
 
-- [S3 Main README](file:///home/ganil/Documents/Devops/Cloud_Computing/Beginner-Level/02-AWS-Basics/AWS/s3-bucket/README.md)
-- [S3 Bucket Policies](file:///home/ganil/Documents/Devops/Cloud_Computing/Beginner-Level/02-AWS-Basics/AWS/s3-bucket/s3-bucket-policies.md)
+- [S3 Main README](../../../../../README.md)
+- [S3 Bucket Policies](s3-bucket-policies.md)
 - [AWS S3 Website Hosting Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)

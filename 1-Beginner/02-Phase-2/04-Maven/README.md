@@ -9,4 +9,4 @@ Packaging application code into deployable artifacts (JARs/WARs) using Apache Ma
 - [POM Configuration](./POM-Configuration/) - The Project Object Model.
 
 ---
-**Next Step**: Learn about [Automation Basics](../02-Automation/README.md).
+**Next Step**: Learn about [Automation Basics](../../../README.md).

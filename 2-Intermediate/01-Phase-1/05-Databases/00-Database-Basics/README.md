@@ -10,9 +10,9 @@ Databases are essential components of modern applications, providing structured 
 
 ### 1. Database Basics
 Start here to understand fundamental database concepts:
-- [Database Concepts](Database%20Concepts%20and%20Fundamentals.md) - Core database principles
+- [Database Concepts](01-Database-Basics/Database%20Concepts%20and%20Fundamentals.md) - Core database principles
 - [Relational vs NoSQL](01-Database-Basics/relational-vs-nosql.md) - Understanding different database types
-- [Choosing Database Type](Choosing%20the%20Right%20Database%20Type.md) - Decision-making guide
+- [Choosing Database Type](01-Database-Basics/Choosing%20the%20Right%20Database%20Type.md) - Decision-making guide
 
 ### 2. RDS Basics
 Learn about Amazon Relational Database Service:
@@ -46,8 +46,8 @@ By completing this section, you will:
 ## Next Steps
 
 After mastering these fundamentals, progress to:
-- **Intermediate Level**: [Database Services](../../Intermediate-Level/09-Database-Services/README.md) for advanced RDS features, DynamoDB design patterns, Aurora, and ElastiCache
-- **Advanced Level**: [Database Enterprise](../../Advanced-Level/10-Database-Enterprise/README.md) for multi-region deployments, performance optimization, and enterprise security
+- **Intermediate Level**: [Database Services](../../../../README.md) for advanced RDS features, DynamoDB design patterns, Aurora, and ElastiCache
+- **Advanced Level**: [Database Enterprise](../../../../README.md) for multi-region deployments, performance optimization, and enterprise security
 
 ## Additional Resources
 
@@ -58,7 +58,7 @@ After mastering these fundamentals, progress to:
 
 ---
 
-**Ready to start?** Begin with [Database Concepts](Database%20Concepts%20and%20Fundamentals.md)!
+**Ready to start?** Begin with [Database Concepts](01-Database-Basics/Database%20Concepts%20and%20Fundamentals.md)!
 
 ## Database Architecture
 ```mermaid

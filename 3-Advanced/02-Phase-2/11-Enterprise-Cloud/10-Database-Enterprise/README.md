@@ -38,7 +38,7 @@ Advanced database services:
 
 ## Prerequisites
 
-- Completed [Intermediate Database Services](../../Intermediate-Level/09-Database-Services/)
+- Completed [Intermediate Database Services](../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/09-Database-Services)
 - Production experience with AWS databases
 - Advanced AWS networking knowledge
 - Infrastructure as Code expertise

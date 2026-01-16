@@ -78,7 +78,7 @@ aws s3 rm s3://your-bucket --recursive && aws s3api delete-bucket --bucket your-
 
 ## 📚 Resources
 
-- [Demo Guide](DEMO_GUIDE.md)
+- [Demo Guide](code/DEMO_GUIDE.md)
 - [Terraform Docs](https://www.terraform.io/docs)
 - [GitHub Actions](https://docs.github.com/en/actions)
 

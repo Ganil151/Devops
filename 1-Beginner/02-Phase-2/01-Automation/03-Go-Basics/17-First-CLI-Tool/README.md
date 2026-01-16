@@ -168,4 +168,17 @@ GOOS=darwin GOARCH=arm64 go build -o srvmgr-mac
 
 **🎉 Congratulations!** You've completed Go Basics for DevOps!
 
+
+## 💻 Code Samples
+
+### Git Wrapper (Boilerplate)
+A practical example of using `os/exec` to wrap external binaries (like git, terraform, or kubectl) within a Go tool. This pattern is often used to build "Platform CLI" tools that unify various commands.
+
+**Run the sample:**
+```bash
+cd boilerplate
+go run main.go
+```
+This script will check if `git` is installed and print its version, or warn you if it's missing.
+
 **Next Steps**: Explore [Intermediate Go](../../README.md) for Goroutines, Kubernetes client-go, and more!

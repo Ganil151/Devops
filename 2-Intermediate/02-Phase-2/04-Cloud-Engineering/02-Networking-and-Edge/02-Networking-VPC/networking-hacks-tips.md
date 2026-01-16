@@ -700,4 +700,4 @@ Outputs:
 **More Resources**:
 - [VPC Getting Started](../../Beginner-Level/05-Basic-Networking/vpc-getting-started.md)
 - [Advanced Networking](../../Advanced-Level/02-Networking-VPC/networking-pro-tips.md)
-- [Troubleshooting Guide](../../Advanced-Level/06-Troubleshooting/README.md)
+- [Troubleshooting Guide](../../../../../README.md)

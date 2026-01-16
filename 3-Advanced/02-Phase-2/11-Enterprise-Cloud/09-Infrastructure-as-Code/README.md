@@ -20,4 +20,4 @@ Scaling infrastructure manually is impossible. Professional DevOps teams use IaC
 - **Terragrunt**: A thin wrapper for Terraform that provides extra tools for keeping your configurations DRY.
 
 ---
-**Learning Path**: Start with the [Intermediate Terraform Module](../../2-Intermediate/04-Terraform/README.md) before diving into these advanced enterprise patterns.
+**Learning Path**: Start with the [Intermediate Terraform Module](../../../../README.md) before diving into these advanced enterprise patterns.

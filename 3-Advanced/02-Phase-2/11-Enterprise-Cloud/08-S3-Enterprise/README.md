@@ -38,16 +38,16 @@ Enterprise Features:
 
 ## Table of Contents
 
-1. [S3 Security Best Practices](file:///home/ganil/Documents/Devops/Cloud_Computing/Advanced-Level/08-S3-Enterprise/s3-security-best-practices.md) - Enterprise security patterns
-2. [S3 Cost Optimization](file:///home/ganil/Documents/Devops/Cloud_Computing/Advanced-Level/08-S3-Enterprise/s3-cost-optimization.md) - Cost management strategies
-3. [S3 Compliance & Governance](file:///home/ganil/Documents/Devops/Cloud_Computing/Advanced-Level/08-S3-Enterprise/s3-compliance-governance.md) - Regulatory compliance
+1. [S3 Security Best Practices](s3-security-best-practices.md) - Enterprise security patterns
+2. [S3 Cost Optimization](s3-cost-optimization.md) - Cost management strategies
+3. [S3 Compliance & Governance](s3-compliance-governance.md) - Regulatory compliance
 
 ## Prerequisites
 
 Before implementing enterprise S3 features:
 
-- [S3 Fundamentals](file:///home/ganil/Documents/Devops/Cloud_Computing/Beginner-Level/02-AWS-Basics/AWS/s3-bucket/README.md)
-- [S3 Advanced Features](file:///home/ganil/Documents/Devops/Cloud_Computing/Intermediate-Level/08-S3-Advanced/README.md)
+- [S3 Fundamentals](../../../../README.md)
+- [S3 Advanced Features](../../../../README.md)
 - AWS Organizations understanding
 - IAM advanced policies
 - VPC networking knowledge
@@ -410,15 +410,15 @@ Performance Alerts:
 ## Documentation Links
 
 ### Beginner Level
-- [S3 Fundamentals](file:///home/ganil/Documents/Devops/Cloud_Computing/Beginner-Level/02-AWS-Basics/AWS/s3-bucket/README.md)
-- [S3 Bucket Policies](file:///home/ganil/Documents/Devops/Cloud_Computing/Beginner-Level/02-AWS-Basics/AWS/s3-bucket/s3-bucket-policies.md)
-- [Static Website Hosting](file:///home/ganil/Documents/Devops/Cloud_Computing/Beginner-Level/02-AWS-Basics/AWS/s3-bucket/s3-static-website.md)
+- [S3 Fundamentals](../../../../README.md)
+- [S3 Bucket Policies](../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-bucket-policies.md)
+- [Static Website Hosting](../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-static-website.md)
 
 ### Intermediate Level
-- [S3 Advanced Features](file:///home/ganil/Documents/Devops/Cloud_Computing/Intermediate-Level/08-S3-Advanced/README.md)
-- [S3 Replication](file:///home/ganil/Documents/Devops/Cloud_Computing/Intermediate-Level/08-S3-Advanced/s3-replication.md)
-- [Event Notifications](file:///home/ganil/Documents/Devops/Cloud_Computing/Intermediate-Level/08-S3-Advanced/s3-event-notifications.md)
-- [Performance Optimization](file:///home/ganil/Documents/Devops/Cloud_Computing/Intermediate-Level/08-S3-Advanced/s3-performance-optimization.md)
+- [S3 Advanced Features](../../../../README.md)
+- [S3 Replication](../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-replication.md)
+- [Event Notifications](../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-event-notifications.md)
+- [Performance Optimization](../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-performance-optimization.md)
 
 ### Advanced Level (This Section)
 - Security Best Practices

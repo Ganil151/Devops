@@ -28,7 +28,7 @@ Day-by-day roadmaps to launch your chosen monetization path in 30 days.
 ### 👤 [01-Profile-Building](./01-Profile-Building/) - Build Your Professional Brand
 Establish a powerful online presence that attracts opportunities, clients, and high-paying jobs.
 
-- **[README.md](Establish%20Your%20DevOps%20Brand.md)** - Complete guide to LinkedIn, GitHub, personal website, content strategy, speaking, and networking
+- **[README.md](01-Profile-Building/Establish%20Your%20DevOps%20Brand.md)** - Complete guide to LinkedIn, GitHub, personal website, content strategy, speaking, and networking
 
 ---
 
@@ -37,40 +37,40 @@ Establish a powerful online presence that attracts opportunities, clients, and h
 ### 🏗️ [03-Consulting-Services](./03-Consulting-Services/)
 Immediate income through client work: infrastructure audits, CI/CD setup, cloud migrations, and FinOps consulting.
 
-- **[README.md](./03-Consulting-Services/README.md)** - 6 consulting strategies overview
-- **[Getting-Started.md](./03-Consulting-Services/Getting-Started.md)** - Complete consulting implementation guide
+- **[README.md](../README.md)** - 6 consulting strategies overview
+- **[Getting-Started.md](02-Consulting-Services/Getting-Started.md)** - Complete consulting implementation guide
 
 ---
 
 ### 📝 [04-Content-Education](./04-Content-Education/)
 Scalable income through technical writing, courses, and newsletters.
 
-- **[README.md](./04-Content-Education/README.md)** - 6 content creation strategies
-- **[Getting-Started.md](./04-Content-Education/Getting-Started.md)** - Complete content creation guide
+- **[README.md](../README.md)** - 6 content creation strategies
+- **[Getting-Started.md](02-Consulting-Services/Getting-Started.md)** - Complete content creation guide
 
 ---
 
 ### 🛠️ [05-OpenSource-Tools](./05-OpenSource-Tools/)
 Building assets with marketplace templates, CLI tools, and white-label infrastructure.
 
-- **[README.md](./05-OpenSource-Tools/README.md)** - 6 tool development strategies
-- **[Getting-Started.md](./05-OpenSource-Tools/Getting-Started.md)** - Complete product development guide
+- **[README.md](../README.md)** - 6 tool development strategies
+- **[Getting-Started.md](02-Consulting-Services/Getting-Started.md)** - Complete product development guide
 
 ---
 
 ### 🎯 [06-Niche-Roles](./06-Niche-Roles/)
 High-value positions: Fractional CTO, DevRel, technical recruiting, and platform engineering consulting.
 
-- **[README.md](./06-Niche-Roles/README.md)** - 6 strategic role strategies
-- **[Getting-Started.md](./06-Niche-Roles/Getting-Started.md)** - Complete strategic positioning guide
+- **[README.md](../README.md)** - 6 strategic role strategies
+- **[Getting-Started.md](02-Consulting-Services/Getting-Started.md)** - Complete strategic positioning guide
 
 ---
 
 ### 💡 [07-Knowledge-Apps](./07-Knowledge-Apps/)
 Combining community building with product development: training workshops, mentorship, and micro-SaaS.
 
-- **[README.md](./07-Knowledge-Apps/README.md)** - 6 knowledge sharing strategies
-- **[Getting-Started.md](./07-Knowledge-Apps/Getting-Started.md)** - Complete knowledge sharing guide
+- **[README.md](../README.md)** - 6 knowledge sharing strategies
+- **[Getting-Started.md](02-Consulting-Services/Getting-Started.md)** - Complete knowledge sharing guide
 
 ---
 
@@ -79,24 +79,24 @@ Combining community building with product development: training workshops, mento
 ### 💰 [08-FinOps](./08-FinOps/) - High-Earning Specialization!
 Master cloud cost optimization and earn $150-300/hr helping companies save millions on AWS, Azure, and GCP spending.
 
-- **[README.md](./08-FinOps/README.md)** - Complete FinOps overview and lifecycle
-- **[Getting-Started.md](./08-FinOps/Getting-Started.md)** - 90-day FinOps roadmap to $100k+ income
-- **[Tools-and-Platforms.md](./08-FinOps/Tools-and-Platforms.md)** - FinOps tools and platforms guide
+- **[README.md](../README.md)** - Complete FinOps overview and lifecycle
+- **[Getting-Started.md](02-Consulting-Services/Getting-Started.md)** - 90-day FinOps roadmap to $100k+ income
+- **[Tools-and-Platforms.md](07-FinOps/Tools-and-Platforms.md)** - FinOps tools and platforms guide
 
 ---
 
 ### 🏢 [09-Business-Foundations](./09-Business-Foundations/) - Legal & Business Setup
 Everything you need to legitimize your consulting practice: LLC formation, insurance, contracts, taxes, and scaling.
 
-- **[README.md](./09-Business-Foundations/README.md)** - Complete business formation guide (LLC, insurance, compliance)
-- **[Contract-Templates.md](./09-Business-Foundations/Contract-Templates.md)** - Ready-to-use MSA, SOW, NDA, and invoice templates
+- **[README.md](../README.md)** - Complete business formation guide (LLC, insurance, compliance)
+- **[Contract-Templates.md](08-Business-Foundations/Contract-Templates.md)** - Ready-to-use MSA, SOW, NDA, and invoice templates
 
 ---
 
 ### 🔥 [10-Hacks-and-Tips](./10-Hacks-and-Tips/) - Growth Strategies & Shortcuts
 Battle-tested hacks, tips, and growth strategies to 10x your results and accelerate your path to $100k+.
 
-- **[README.md](./10-Hacks-and-Tips/README.md)** - Complete collection of proven growth hacks and insider tips
+- **[README.md](../README.md)** - Complete collection of proven growth hacks and insider tips
 
 ---
 

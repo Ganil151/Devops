@@ -515,7 +515,7 @@ Policies:
 
 ## Additional Resources
 
-- [S3 Enterprise README](file:///home/ganil/Documents/Devops/Cloud_Computing/Advanced-Level/08-S3-Enterprise/README.md)
+- [S3 Enterprise README](../../../../README.md)
 - [AWS S3 Security](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security.html)
 - [S3 Access Points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html)
 - [S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html)

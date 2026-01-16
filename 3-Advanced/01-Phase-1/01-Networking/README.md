@@ -7,20 +7,20 @@ Networking is the plumbing of the internet. For a DevOps engineer, understanding
 ## 📂 Module Structure
 
 ### 🔰 Beginner Level
-- **[01-Network-Fundamentals](../../1-Beginner/Networking/01-Network-Fundamentals/)**: Basics of networking.
-- **[02-Network-Models](../../1-Beginner/Networking/02-Network-Models/)**: OSI and TCP/IP models.
-- **[03-IP-Addressing](../../1-Beginner/Networking/03-IP-Addressing/)**: IPv4, IPv6, Subnetting.
-- **[04-Basic-Protocols](../../1-Beginner/Networking/04-Basic-Protocols/)**: TCP, UDP, HTTP, DNS.
-- **[05-Network-Devices](../../1-Beginner/Networking/05-Network-Devices/)**: Routers, Switches, Firewalls.
-- **[06-Basic-Troubleshooting](../../1-Beginner/Networking/06-Basic-Troubleshooting/)**: Diagnosing connectivity issues.
+- **[01-Network-Fundamentals](../../../1-Beginner/01-Phase-1/01-Networking/01-Network-Fundamentals)**: Basics of networking.
+- **[02-Network-Models](../../../1-Beginner/01-Phase-1/01-Networking/02-Network-Models)**: OSI and TCP/IP models.
+- **[03-IP-Addressing](../../../1-Beginner/01-Phase-1/01-Networking/03-IP-Addressing)**: IPv4, IPv6, Subnetting.
+- **[04-Basic-Protocols](../../../1-Beginner/01-Phase-1/01-Networking/04-Basic-Protocols)**: TCP, UDP, HTTP, DNS.
+- **[05-Network-Devices](../../../1-Beginner/01-Phase-1/01-Networking/05-Network-Devices)**: Routers, Switches, Firewalls.
+- **[06-Basic-Troubleshooting](../../../1-Beginner/01-Phase-1/01-Networking/06-Basic-Troubleshooting)**: Diagnosing connectivity issues.
 
 ### 🚀 Intermediate Level
-- **[01-VPC-Fundamentals](../../2-Intermediate/Networking/01-VPC-Fundamentals/)**: Core network services.
-- **[02-Subnetting-and-CIDR](../../2-Intermediate/Networking/02-Subnetting-and-CIDR/)**: Layer 2 segmentation.
-- **[03-Internet-and-NAT-Gateways](../../2-Intermediate/Networking/03-Internet-and-NAT-Gateways/)**: OSPF, BGP, Static routing.
-- **[04-Routing-and-Route-Tables](../../2-Intermediate/Networking/04-Routing-and-Route-Tables/)**: Firewalls, VPNs, Security Groups.
-- **[05-Network-Security-NACLs-SGs](../../2-Intermediate/Networking/05-Network-Security-NACLs-SGs/)**: Remote access and Site-to-Site.
-- **[06-VPC-Peering-and-Transit-Gateway](../../2-Intermediate/Networking/06-VPC-Peering-and-Transit-Gateway/)**: Distributing traffic.
+- **[01-VPC-Fundamentals](../../../2-Intermediate/01-Phase-1/01-Networking/01-VPC-Fundamentals)**: Core network services.
+- **[02-Subnetting-and-CIDR](../../../2-Intermediate/01-Phase-1/01-Networking/02-Subnetting-and-CIDR)**: Layer 2 segmentation.
+- **[03-Internet-and-NAT-Gateways](../../../2-Intermediate/01-Phase-1/01-Networking/03-Internet-and-NAT-Gateways)**: OSPF, BGP, Static routing.
+- **[04-Routing-and-Route-Tables](../../../2-Intermediate/01-Phase-1/01-Networking/04-Routing-and-Route-Tables)**: Firewalls, VPNs, Security Groups.
+- **[05-Network-Security-NACLs-SGs](../../../2-Intermediate/01-Phase-1/01-Networking/05-Network-Security-NACLs-SGs)**: Remote access and Site-to-Site.
+- **[06-VPC-Peering-and-Transit-Gateway](../../../2-Intermediate/01-Phase-1/01-Networking/06-VPC-Peering-and-Transit-Gateway)**: Distributing traffic.
 
 ### 🛡️ Advanced Level
 - **[01-Cloud-Networking](./01-Cloud-Networking/)**: VPCs, Cloud Load Balancers.
@@ -103,7 +103,7 @@ Based on industry standards and the *Linux Command Line* guide:
 
 ## 🛠️ The DevOps Toolbelt
 Mastering theory is only half the battle. You must master the diagnostic and scanning tools used in the field:
-- **[Networking Tools Deep Dive](./4-Networking-Tools/README.md)**: Master **Wireshark**, **Nmap**, and **Tcpdump**.
+- **[Networking Tools Deep Dive](../../../README.md)**: Master **Wireshark**, **Nmap**, and **Tcpdump**.
 
 -----
 
@@ -129,4 +129,4 @@ Mastering theory is only half the battle. You must master the diagnostic and sca
 
 ---
 
- **Next Step**: Learn how to securely log into these networked systems in the [Linux Basics Module](../02-Linux-Basics/README.md).
+ **Next Step**: Learn how to securely log into these networked systems in the [Linux Basics Module](../../../README.md).

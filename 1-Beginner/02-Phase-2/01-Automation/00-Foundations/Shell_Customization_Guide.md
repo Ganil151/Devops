@@ -669,8 +669,8 @@ alias dps='kubectl get pods'   # Redirect to new command
 
 1. **[Hidden Files Deep Dive](../01-Shell-Scripting/04-Hidden-Files/README.md)**: Master dotfile management
 2. **[Shell Scripting Basics](../01-Shell-Scripting/01-Introduction/README.md)**: Automate your workflows
-3. **[Advanced Bash Scripting](../01-Shell-Scripting/03-Control-Structures/README.md)**: Build complex automation
-4. **[System Administration](../../03-Phase-3/01-System-Administration/README.md)**: Apply shell skills to infrastructure
+3. **[Advanced Bash Scripting](../../../../README.md)**: Build complex automation
+4. **[System Administration](../../../../README.md)**: Apply shell skills to infrastructure
 
 ### 🔌 External Resources
 

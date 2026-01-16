@@ -120,4 +120,17 @@ func rotateLog(path string, maxSize int64) error {
 
 ---
 
+
+## 💻 Code Samples
+
+### Directory Scanner (Boilerplate)
+A production-ready example of how to walk a directory tree and inspect files—similar to how you might write a log rotation checking tool.
+
+**Run the sample:**
+```bash
+cd boilerplate
+go run main.go
+```
+This will generate a temporary `logs/` directory, create a dummy file, scan it, and print the contents before cleaning up.
+
 **Next Step**: [Working with JSON →](../09-Working-with-JSON/README.md)
