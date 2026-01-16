@@ -1,21 +1,17 @@
 # Boilerplates: Searching in Files
-
 Log analysis and security scanning scripts demonstrating grep mastery for DevOps.
 
 ## Available Boilerplates
 
 ### 1. Error Aggregator
 **File**: `boilerplate_error_aggregator.sh`
-
 **Purpose**: Analyzes application logs and categorizes errors
-
 **DevOps Use Case**: Incident response and troubleshooting
 
 **Usage**:
 ```bash
 ./boilerplate_error_aggregator.sh /var/log/app/application.log
 ```
-
 **Features**:
 - Error categorization (FATAL, ERROR, WARN)
 - Statistical summaries
@@ -23,12 +19,9 @@ Log analysis and security scanning scripts demonstrating grep mastery for DevOps
 - Formatted reports
 
 ---
-
 ### 2. Security Audit Scanner
 **File**: `boilerplate_security_audit.sh`
-
 **Purpose**: Scans for hardcoded secrets in codebase
-
 **DevOps Use Case**: Pre-commit security validation
 
 **Usage**:

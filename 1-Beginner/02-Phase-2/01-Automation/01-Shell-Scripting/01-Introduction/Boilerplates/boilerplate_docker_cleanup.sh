@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-# Script: boilerplate_docker_cleanup.sh
+# Script: docker_cleanup.sh
 # Description: Removes dangling Docker images and stopped containers
 # DevOps Context: CI/CD runner maintenance to prevent disk space issues
 # Schedule: Run daily via cron - 0 2 * * * /path/to/script

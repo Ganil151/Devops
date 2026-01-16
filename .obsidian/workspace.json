@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/04-Hidden-Files/README.md",
+                "file": "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/Boilerplates/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -231,6 +231,8 @@
   },
   "active": "3b0e4a985e699d8d",
   "lastOpenFiles": [
+    "cUsersGanilDocumentsDevops.githubscripts",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/04-Hidden-Files/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/Boilerplates/boilerplate_ansible_vault_manager.sh",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/Boilerplates/boilerplate_terraform_output_parser.sh",
@@ -259,14 +261,12 @@
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/02-Terminal-and-Finder/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/Boilerplates/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/README.md",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/04-Hidden-Files/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/02-Terminal-and-Finder/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/README.md",
     "1-Beginner/01-Phase-1/02-Linux/SSH/README.md",
     "1-Beginner/01-Phase-1/02-Linux/04-Permissions/README.md",
     "1-Beginner/01-Phase-1/02-Linux/02-Filesystem/README.md",
-    "00-Resources/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/10-Vim-Crash-Course/vim_modes_state.svg",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/shell_architecture.svg",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-1-Fundamentals/04-File-Operations/assets/context_manager.png",
