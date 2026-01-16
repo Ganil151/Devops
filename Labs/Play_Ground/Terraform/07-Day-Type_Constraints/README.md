@@ -5,7 +5,7 @@ This lab demonstrates Terraform's type system and constraints, showing how to us
 ## 📚 Related Fundamentals
 Before starting this lab, review these foundational concepts:
 - [Variables and Outputs](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/08-Variables-and-Outputs/Variables%20and%20Outputs.md) - Input variables and output values
-- [Configuration Language (HCL)](../../01-Fundamentals/05-Configuration-Language/Configuration%20Language%20(HCL).md) - HCL syntax and expressions
+- [Configuration Language (HCL)](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/05-Configuration-Language/Configuration%20Language%20(HCL).md) - HCL syntax and expressions
 - [Terraform Core Concepts](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/03-Core-Concepts/Terraform%20Core%20Concepts.md) - Understanding Terraform basics
 - [Providers](../../../../2-Intermediate/02-Phase-2/02-Configuration-Tools/01-Terraform/01-Fundamentals/06-Providers/Providers.md) - Provider configuration
 ## Infrastructure Components

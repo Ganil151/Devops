@@ -7,21 +7,25 @@ Welcome to the practice grounds. These labs are designed to test your knowledge 
 
 ## 🛠️ Lab List
 
-1. **[Lab 01: Directory Navigator](./Lab01-Navigator.md)**
-   - Build a script that creates a specific directory structure.
-   - **Skills**: `mkdir`, `cd`, variables.
-
-2. **[Lab 02: Log Rotator](./Lab02-LogRotator.md)**
-   - Create a script that renames `.log` files with today's date.
+1. **[Log Rotation](./Shell-Scripting/01-Log-Rotation.md)**
+   - Archive & Cleanup Logs.
    - **Skills**: `mv`, date command, variables.
 
-3. **[Lab 03: User Creator](./Lab03-UserCreator.md)**
-   - (Interactive) Ask for a username and create a file for them.
-   - **Skills**: `read`, `touch`, conditions.
+2. **[API Polling](./Shell-Scripting/02-API-Polling.md)**
+   - API interaction with exponential backoff.
+   - **Skills**: `curl`, `sleep`, loops.
 
-4. **[Lab 04: Server Health Check](./Lab04-HealthCheck.md)**
-   - Check if disk space is low and alert the user.
-   - **Skills**: `df`, `awk`, `if` logic.
+3. **[Backup System](./Shell-Scripting/03-Backup-Automation.md)**
+   - Backup automation with atomic locks.
+   - **Skills**: `tar`, locks, error handling.
+
+4. **[User Audit](./Shell-Scripting/04-User-Audit.md)**
+   - Parse /etc/passwd and audit users.
+   - **Skills**: `awk`, file reading, conditions.
+
+5. **[Pre-Flight Checks](./Shell-Scripting/05-Pre-Flight-Checks.md)**
+   - System requirement validation script.
+   - **Skills**: `df`, system checks, reporting.
 
 ## 🚀 How to Submit
 There is no automated submission. Run your scripts locally and verify they work!
