@@ -1,0 +1,1 @@
+This boilerplate has been moved to /Devops/Boilerplate/PythonDevOps-Working-with-Data-JSON-YAML-data_parser.py

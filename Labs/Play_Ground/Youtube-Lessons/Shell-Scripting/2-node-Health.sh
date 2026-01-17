@@ -10,6 +10,8 @@
 #######################################
 
 set -x # debug mode
+set -eo pipefail
+
 
 df -h
 
@@ -20,4 +22,4 @@ free -g
 nproc
 
 
-ps -ef
+ps -ef | grep vscode |awk -F" " '{print $2}'

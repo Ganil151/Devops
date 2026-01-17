@@ -1,0 +1,1 @@
+This boilerplate has been moved to /Devops/Boilerplate/Packer-Fundamentals-aws-ubuntu.pkr.hcl

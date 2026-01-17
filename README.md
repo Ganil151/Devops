@@ -138,6 +138,8 @@ graph TD
 - **[Repository Management Hub](./2-Intermediate/01-Phase-1/04-Repository-Management/README.md)**: Centralized 6 VCS technologies (Git, GitLab, Bitbucket, Azure DevOps, Mercurial, SVN).
 - **[Database Management Hub](./2-Intermediate/01-Phase-1/05-Databases/README.md)**: Consolidated SQL, NoSQL, and Managed Services from across the platform.
 - **[Configuration Tools Hub](./2-Intermediate/02-Phase-2/02-Configuration-Tools/README.md)**: Enterprise patterns for 11+ tools (Terraform, Ansible, Chef, Helm, etc.).
+- **[Boilerplate Repository](./Boilerplate/README.md)**: Centralized vault for all 150+ code templates and automated scripts.
+- **[Link Maintenance Toolkit]**: Automated health tools including [Scanner](./link_scanner.py) and [Fixer](./link_fixer.py).
 - **[Quizzes & Assessments](./Quizzes/README.md)**: Master Quiz + 100+ tiered questions and 200+ interview Q&As.
 - **[Recommended Videos](./Recommended_Videos.md)**: Curated YouTube curriculum mapped to each learning level.
 
