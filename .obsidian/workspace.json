@@ -11,24 +11,12 @@
             "id": "7102568f98092cec",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate Shell Scripting.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "00-Resources/04-Books-Guides/Script/shell-scripting.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Intermediate Shell Scripting"
+              "icon": "lucide-file-text",
+              "title": "shell-scripting"
             }
           }
         ]
@@ -88,7 +76,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 244.5
+    "width": 244.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -214,19 +203,29 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "7102568f98092cec",
   "lastOpenFiles": [
-    "Labs/Play_Ground/Youtube-Lessons/Shell-Scripting",
-    "Boilerplate/1-Beginner/Shell/Shell-Input-Output-boilerplate_log_processor.sh",
-    "Boilerplate/1-Beginner/Shell/Shell-Input-Output-boilerplate_ansible_vault_manager.sh",
-    "Boilerplate/1-Beginner/Shell/Shell-Hidden-Files-boilerplate_ssh_config_builder.sh",
-    "Boilerplate/1-Beginner/Shell/Shell-Hidden-Files-boilerplate_env_file_manager.sh",
-    "Boilerplate/1-Beginner/Shell/Shell-Functions-boilerplate_logging_framework.sh",
-    "Boilerplate/1-Beginner/Shell/Shell-Functions-boilerplate_devops_library.sh",
-    "Boilerplate/1-Beginner/Shell/Shell-For-Loops-boilerplate_server_inventory_scanner.sh",
-    "Boilerplate/1-Beginner/Shell/Shell-For-Loops-boilerplate_multi_region_deployer.sh",
-    "Boilerplate/1-Beginner/Shell/Shell-For-Loops-boilerplate_docker_image_builder.sh",
-    "Boilerplate/1-Beginner/Shell/Shell-Finally-Scripting-boilerplate_infrastructure_reporter.sh",
+    "2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate Shell Scripting.md",
+    "Recommended_Videos.md",
+    "00-Resources/04-Books-Guides/Script/shell-scripting.pdf",
+    "00-Resources/04-Books-Guides/Script/Unconfirmed 894430.crdownload",
+    "Labs/Play_Ground/Youtube-Lessons/05-Shell-Scripting/Ganil/Ganil.txt",
+    "Labs/Play_Ground/Youtube-Lessons/05-Shell-Scripting/script-2~",
+    "Labs/Play_Ground/Youtube-Lessons/05-Shell-Scripting/4913",
+    "Labs/Play_Ground/Youtube-Lessons/05-Shell-Scripting/Ganil.txt",
+    "Labs/Play_Ground/Youtube-Lessons/05-Shell-Scripting/Ganil",
+    "Labs/Play_Ground/Youtube-Lessons/05-Shell-Scripting/script-2",
+    "Boilerplate/1-Beginner/Shell/Shell-Searching-in-Files-boilerplate_security_audit.sh",
+    "Boilerplate/1-Beginner/Shell/Shell-Searching-in-Files-boilerplate_error_aggregator.sh",
+    "Boilerplate/3-Advanced/README.md",
+    "Boilerplate/3-Advanced/03-Custom-Cloud-Native-Tooling/CHALLENGES.md",
+    "Boilerplate/3-Advanced/03-Custom-Cloud-Native-Tooling/README.md",
+    "Boilerplate/3-Advanced/04-High-Scale-Performance-Tuning/CHALLENGES.md",
+    "Boilerplate/3-Advanced/04-High-Scale-Performance-Tuning/README.md",
+    "Boilerplate/3-Advanced/02-Security-and-Compliance-as-Code/CHALLENGES.md",
+    "Boilerplate/3-Advanced/02-Security-and-Compliance-as-Code/README.md",
+    "Boilerplate/3-Advanced/01-Self-Healing-Infrastructure/CHALLENGES.md",
+    "Boilerplate/3-Advanced/01-Self-Healing-Infrastructure/README.md",
     "Labs/Play_Ground/Youtube-Lessons/01-Kubernetes/Anton_Putra/devops-youtube-course-2025/client/src/assets/react.svg",
     "Labs/Play_Ground/Youtube-Lessons/01-Kubernetes/Anton_Putra/devops-youtube-course-2025/client/public/vite.svg",
     "Labs/Play_Ground/Youtube-Lessons/01-Kubernetes/Anton_Putra/devops-youtube-course-2025/client/README.md",
@@ -244,16 +243,6 @@
     "Boilerplate/1-Beginner/Shell/Shell-Conditionals-README.md",
     "Boilerplate/1-Beginner/Shell/Shell-Basic-Variables-README.md",
     "Boilerplate/1-Beginner/Python/PythonBasics-Part-1-Fundamentals-README.md",
-    "Boilerplate/1-Beginner/Shell/Shell-Vim-Crash-Course-README.md",
-    "Boilerplate/1-Beginner/Shell/Shell-Paging-Files-README.md",
-    "Boilerplate/1-Beginner/Shell/Shell-Hidden-Files-README.md",
-    "Boilerplate/1-Beginner/Shell/Shell-Basic-File-Manipulation-README.md",
-    "Boilerplate/1-Beginner/Shell-Vim-Crash-Course-README.md",
-    "Boilerplate/1-Beginner/Shell-User-Input-README.md",
-    "Boilerplate/1-Beginner/Shell-Terminal-and-Finder-README.md",
-    "Boilerplate/1-Beginner/Shell-Searching-in-Files-README.md",
-    "Boilerplate/1-Beginner/Shell-Programs-and-Commands-README.md",
-    "Boilerplate/1-Beginner/Shell-Paging-Files-README.md",
     "Youtube-Lessons/01-Kubernetes/Anton_Putra/devops-youtube-course-2025/client/src/assets/react.svg",
     "Youtube-Lessons/01-Kubernetes/Anton_Putra/devops-youtube-course-2025/client/public/vite.svg",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/02-Terminal-and-Finder/navigation_architecture.svg",
