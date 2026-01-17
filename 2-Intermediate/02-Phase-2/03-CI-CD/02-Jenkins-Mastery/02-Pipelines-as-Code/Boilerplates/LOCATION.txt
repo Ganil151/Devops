@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Jenkins-Pipelines-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/Jenkins-Pipelines-LOCATION.txt

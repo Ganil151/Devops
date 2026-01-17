@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Ansible-Inventory-Management-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/Ansible-Inventory-Management-LOCATION.txt

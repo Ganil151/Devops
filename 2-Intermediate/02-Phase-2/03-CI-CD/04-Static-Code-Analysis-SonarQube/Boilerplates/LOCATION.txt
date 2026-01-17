@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/SonarQube-Boilerplates-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/SonarQube-Boilerplates-LOCATION.txt

@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/GoBasics-Time-and-Date-main.go
+This boilerplate has been moved to /Devops/Boilerplate/Beginner/GoBasics-Time-and-Date-main.go

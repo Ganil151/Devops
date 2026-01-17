@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Ansible-Ansible-Vault-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/Ansible-Ansible-Vault-LOCATION.txt

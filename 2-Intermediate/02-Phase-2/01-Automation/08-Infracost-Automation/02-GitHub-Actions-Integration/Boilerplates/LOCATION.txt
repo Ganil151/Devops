@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Infracost-Automation-GitHub-Actions-Integration-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/Infracost-Automation-GitHub-Actions-Integration-LOCATION.txt

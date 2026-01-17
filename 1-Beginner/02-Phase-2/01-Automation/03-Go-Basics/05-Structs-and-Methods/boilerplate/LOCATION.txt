@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/GoBasics-Structs-and-Methods-main.go
+This boilerplate has been moved to /Devops/Boilerplate/Beginner/GoBasics-Structs-and-Methods-main.go

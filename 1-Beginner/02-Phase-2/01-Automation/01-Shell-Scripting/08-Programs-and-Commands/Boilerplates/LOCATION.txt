@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Shell-Programs-and-Commands-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Beginner/Shell-Programs-and-Commands-LOCATION.txt

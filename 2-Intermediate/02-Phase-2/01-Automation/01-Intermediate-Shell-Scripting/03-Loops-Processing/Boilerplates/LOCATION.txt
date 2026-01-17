@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Intermediate-Shell-Loops-Processing-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/Intermediate-Shell-Loops-Processing-LOCATION.txt

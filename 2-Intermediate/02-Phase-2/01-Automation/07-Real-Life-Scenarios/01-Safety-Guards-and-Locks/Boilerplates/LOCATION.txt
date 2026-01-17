@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Real-Life-Scenarios-Safety-Guards-and-Locks-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/Real-Life-Scenarios-Safety-Guards-and-Locks-LOCATION.txt

@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Intermediate-Shell-Input-Arithmetic-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/Intermediate-Shell-Input-Arithmetic-LOCATION.txt

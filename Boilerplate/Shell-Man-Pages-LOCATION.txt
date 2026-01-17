@@ -1,1 +1,0 @@
-This boilerplate has been moved to /Devops/Boilerplate/Shell-Man-Pages-README.md

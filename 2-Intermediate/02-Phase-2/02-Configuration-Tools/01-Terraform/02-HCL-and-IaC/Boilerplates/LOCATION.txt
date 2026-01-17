@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Terraform-HCL-and-IaC-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/Terraform-HCL-and-IaC-LOCATION.txt

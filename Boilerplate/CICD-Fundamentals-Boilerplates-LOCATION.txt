@@ -1,1 +1,0 @@
-This boilerplate has been moved to /Devops/Boilerplate/CICD-Fundamentals-Boilerplates-ci_cd_skeleton.sh

@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/SaltStack-States-and-Pillars-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/SaltStack-States-and-Pillars-LOCATION.txt

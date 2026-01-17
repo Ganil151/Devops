@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/PythonDevOps-Database-Operations-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/PythonDevOps-Database-Operations-LOCATION.txt

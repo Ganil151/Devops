@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Puppet-Manifests-and-Classes-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/Puppet-Manifests-and-Classes-LOCATION.txt

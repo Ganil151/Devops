@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Kustomize-Fundamentals-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/Kustomize-Fundamentals-LOCATION.txt

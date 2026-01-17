@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/GoBasics-Variables-and-Types-README.md
+This boilerplate has been moved to /Devops/Boilerplate/Beginner/GoBasics-Variables-and-Types-README.md

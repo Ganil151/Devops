@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Intermediate-Shell-Advanced-IO-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/Intermediate-Shell-Advanced-IO-LOCATION.txt

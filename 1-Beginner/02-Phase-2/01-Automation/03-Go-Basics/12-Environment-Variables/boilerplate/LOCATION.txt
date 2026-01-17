@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/GoBasics-Environment-Variables-main.go
+This boilerplate has been moved to /Devops/Boilerplate/Beginner/GoBasics-Environment-Variables-main.go

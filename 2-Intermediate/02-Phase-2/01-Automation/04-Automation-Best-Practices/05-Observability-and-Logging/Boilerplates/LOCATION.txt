@@ -1,1 +1,1 @@
-This boilerplate has been moved to /Devops/Boilerplate/Automation-Best-Practices-Observability-and-Logging-LOCATION.txt
+This boilerplate has been moved to /Devops/Boilerplate/Intermediate/Automation-Best-Practices-Observability-and-Logging-LOCATION.txt
