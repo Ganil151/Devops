@@ -155,7 +155,7 @@ graph TD
 - **[Boilerplate Repository](./Boilerplate/README.md)**: Centralized vault for all 150+ code templates and automated scripts.
 - **[Link Maintenance Toolkit]**: Automated health tools including [Scanner](./link_scanner.py) and [Fixer](./link_fixer.py).
 - **[Quizzes & Assessments](./Quizzes/README.md)**: Master Quiz + 100+ tiered questions and 200+ interview Q&As.
-- **[Recommended Videos](./Recommended_Videos.md)**: Curated YouTube curriculum mapped to each learning level.
+- **[Recommended Videos](00-Resources/06-Docs/Recommended_Videos.md)**: Curated YouTube curriculum mapped to each learning level.
 
 ---
 

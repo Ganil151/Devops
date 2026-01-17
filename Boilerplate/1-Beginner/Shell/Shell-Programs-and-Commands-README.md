@@ -30,4 +30,4 @@ Multi-tool orchestration scripts for DevOps workflows.
 
 ## Related Resources
 
-- [Parent Module](../README.md)
+- [Parent Module](../../../README.md)

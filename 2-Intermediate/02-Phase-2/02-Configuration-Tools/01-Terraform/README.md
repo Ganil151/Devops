@@ -48,7 +48,7 @@ graph TD
 ## ❓ Interview Prep & Resources
 - **[Interview Questions & Quizzes](./07-Interview-Questions-and-Quizzes/README.md)**
 - **[Real-Life War Stories](./08-Real-Life-Scenarios/README.md)**
-- **[Hands-on Sample Project](./09-Sample-Project/README.md)**
+- **[Hands-on Sample Project](../../../../README.md)**
 
 ---
 

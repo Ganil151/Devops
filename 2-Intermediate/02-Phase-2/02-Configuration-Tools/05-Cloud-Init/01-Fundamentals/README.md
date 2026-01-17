@@ -61,4 +61,4 @@ cloud-init schema --config cloud-config.yaml
 
 ---
 
-[Next: Kustomize](../06-Kustomize/README.md)
+[Next: Kustomize](../../../../../README.md)

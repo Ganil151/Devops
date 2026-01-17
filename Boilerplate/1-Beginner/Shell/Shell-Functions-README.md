@@ -40,4 +40,4 @@ log_error "Deployment failed"
 
 ## Related Resources
 
-- [Parent Module](../README.md)
+- [Parent Module](../../../README.md)

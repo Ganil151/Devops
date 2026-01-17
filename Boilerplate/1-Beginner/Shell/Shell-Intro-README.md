@@ -81,5 +81,5 @@ These boilerplates demonstrate:
 
 ## Related Resources
 
-- [Parent Module: Introduction](../README.md)
-- [Shell Scripting Challenges](../CHALLENGES.md)
+- [Parent Module: Introduction](../../../README.md)
+- [Shell Scripting Challenges](../../../1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/CHALLENGES.md)

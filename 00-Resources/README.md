@@ -12,7 +12,7 @@ The primary collection of automation and configuration code.
 - **Python for DevOps**: Boto3 (AWS) automation, API integration, and custom logic.
 - **Automation Folders**: Core scripts for **Ansible, Kubernetes, Terraform, and Docker**.
 
-### [YouTube Lessons & Videos](./Youtube-Lessons/README.md)
+### [YouTube Lessons & Videos](README.md)
 Visual learning materials and video-based lesson plans.
 - **Lesson Archives**: Consolidated zip files and note sets for YouTube-based DevOps tutorials.
 - **Tools**: Includes the **YoutubeDownLoader** project and related scripts.

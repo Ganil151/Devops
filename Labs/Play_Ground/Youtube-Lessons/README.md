@@ -318,4 +318,4 @@ cd 01-Kubernetes/Anton_Putra/devops-youtube-course-2025/
 **Consolidation Date**: 2025-12-21  
 **Total Content**: ~107MB across 4 categories
 
-For questions or issues, refer to the main [Devops README](../../README.md) or specific topic documentation in the main directory structure.
+For questions or issues, refer to the main [Devops README](../README.md) or specific topic documentation in the main directory structure.

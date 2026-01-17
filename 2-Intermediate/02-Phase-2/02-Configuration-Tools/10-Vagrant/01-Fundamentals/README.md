@@ -59,4 +59,4 @@ Don't let unused VMs bloat your disk space.
 
 ---
 
-[Next: Pulumi](../11-Pulumi/README.md)
+[Next: Pulumi](../../../../../README.md)

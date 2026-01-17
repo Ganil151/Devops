@@ -42,4 +42,4 @@ Complete automation workflows combining multiple shell concepts.
 
 ## Related Resources
 
-- [Parent Module](../README.md)
+- [Parent Module](../../../README.md)

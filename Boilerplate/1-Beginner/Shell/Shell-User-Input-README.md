@@ -30,4 +30,4 @@ Interactive automation prompts for safe deployments.
 
 ## Related Resources
 
-- [Parent Module](../README.md)
+- [Parent Module](../../../README.md)

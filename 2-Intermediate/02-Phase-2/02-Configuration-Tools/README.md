@@ -10,7 +10,7 @@ Infrastructure is no longer a physical rack of servers; it is **Code**. This mod
 | **[03-Chef](./03-Chef/README.md)** | **Config** | Policy-driven automation with Ruby. |
 | **[04-Helm](./04-Helm/README.md)** | **K8s** | Kubernetes Package Management. |
 | **[05-Cloud-Init](./05-Cloud-Init/README.md)** | **Init** | Instance bootstrapping and User Data. |
-| **[06-Kustomize](./06-Kustomize/README.md)** | **K8s** | Native Kubernetes configuration (Overlay). |
+| **[06-Kustomize](../../../README.md)** | **K8s** | Native Kubernetes configuration (Overlay). |
 | **[02-Ansible](../01-Automation/05-Ansible/README.md)** | **Config** | Agentless configuration management. |
 | **[07-Puppet](./07-Puppet/README.md)** | **Config** | Model-driven configuration management. |
 | **[08-SaltStack](./08-SaltStack/README.md)** | **Orchestration** | Event-driven automation & Remote execution. |

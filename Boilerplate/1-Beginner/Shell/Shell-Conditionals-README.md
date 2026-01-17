@@ -42,4 +42,4 @@ Decision-driven automation scripts.
 
 ## Related Resources
 
-- [Parent Module](../README.md)
+- [Parent Module](../../../README.md)

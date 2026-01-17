@@ -7,8 +7,8 @@ Jenkins is the world's most popular open-source automation server. It acts as th
 | Stage | Topic | Focus |
 | :--- | :--- | :--- |
 | **01** | **[Architecture & Setup](./01-Architecture-and-Setup/README.md)** | Controllers, Agents, and Docker Integration. |
-| **02** | **[Pipelines as Code](./02-Pipelines-as-Code/README.md)** | Jenkinsfile syntax, Stages, and Post-build logic. |
-| **03** | **[Security & Admin](./03-Security-and-Administration/README.md)** | RBAC, Backups, and Plugin management. |
+| **02** | **[Pipelines as Code](../../../../README.md)** | Jenkinsfile syntax, Stages, and Post-build logic. |
+| **03** | **[Security & Admin](../../../../README.md)** | RBAC, Backups, and Plugin management. |
 
 ---
 

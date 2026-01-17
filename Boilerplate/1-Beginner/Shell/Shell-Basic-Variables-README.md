@@ -43,4 +43,4 @@ docker build -t myapp:$DOCKER_TAG_COMMIT .
 
 ## Related Resources
 
-- [Parent Module](../README.md)
+- [Parent Module](../../../README.md)

@@ -42,4 +42,4 @@ Security and access control scripts for DevOps workflows.
 
 ## Related Resources
 
-- [Parent Module](../README.md)
+- [Parent Module](../../../README.md)

@@ -44,4 +44,4 @@ encrypt_secret "my-password"
 
 ## Related Resources
 
-- [Parent Module](../README.md)
+- [Parent Module](../../../README.md)

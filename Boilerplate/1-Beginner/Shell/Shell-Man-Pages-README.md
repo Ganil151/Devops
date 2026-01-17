@@ -30,4 +30,4 @@ Self-documenting scripts and dependency validation tools.
 
 ## Related Resources
 
-- [Parent Module](../README.md)
+- [Parent Module](../../../README.md)

@@ -73,5 +73,5 @@ ssh dev-bastion
 
 ## Related Resources
 
-- [Parent Module](../README.md)
-- [Challenges](../CHALLENGES.md)
+- [Parent Module](../../../README.md)
+- [Challenges](../../../1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/CHALLENGES.md)
