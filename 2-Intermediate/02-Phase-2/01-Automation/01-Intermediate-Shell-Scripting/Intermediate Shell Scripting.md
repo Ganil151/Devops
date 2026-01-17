@@ -1,10 +1,8 @@
 # 🐚 Intermediate Shell Scripting
 *Building Robust, Scalable Automation with Bash*
-
 Moving beyond simple command lists, intermediate shell scripting focuses on logic, modularity via functions, and defensive programming. This level is where you start building "tools" rather than just "scripts."
 
 ---
-
 ## 🎯 Learning Objectives
 - Implement **Bash Strict Mode** for defensive scripting.
 - Create modular code using **Functions** and local variables.
@@ -36,10 +34,8 @@ graph TD
 ```
 
 ---
-
 ## 🛡️ 1. The "Strict Mode" Foundation
 Production scripts should fail fast and explicitly. The "Unofficial Bash Strict Mode" is the standard for intermediate-to-advanced scripting.
-
 ```bash
 #!/bin/bash
 set -euo pipefail
@@ -53,13 +49,10 @@ IFS=$'\n\t'
 | `-o pipefail` | Pipe Fail | Ensures that `fail_cmd | success_cmd` returns a failure exit code. |
 
 ---
-
 ## 📦 2. Functions and Scope
 Functions allow you to dry up your code (Don't Repeat Yourself) and encapsulate logic.
-
 ### **Pro-Pattern: Local Variables**
 Always use the `local` keyword inside functions to prevent "pollution" of the global variable space.
-
 ```bash
 #!/bin/bash
 
@@ -76,10 +69,8 @@ log_action "Database synced"
 ```
 
 ---
-
 ## 🔄 3. Iteration and Data Processing
 DevOps engineers rarely process one thing; they process lists of servers, files, or containers.
-
 ### **The Intelligent For Loop**
 ```bash
 #!/bin/bash

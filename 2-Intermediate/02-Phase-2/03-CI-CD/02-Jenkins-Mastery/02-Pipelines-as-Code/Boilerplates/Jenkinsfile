@@ -1,0 +1,64 @@
+pipeline {
+    agent any
+
+    environment {
+        // Centralized configuration
+        APP_NAME = 'DevOpsApp'
+        VERSION  = '1.0.0'
+        DOCKER_CREDS = credentials('docker-hub-login')
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo "Building ${APP_NAME}..."
+                sh 'make build' // Replace with your build command
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "Running unit tests..."
+                sh 'make test'
+            }
+            post {
+                always {
+                    junit 'reports/**/*.xml'
+                }
+            }
+        }
+
+        stage('Security Scan') {
+            steps {
+                echo "Running scanning..."
+                sh 'trufflehog git file:///$(pwd)'
+            }
+        }
+
+        stage('Deploy to Staging') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo "Deploying to Staging..."
+                sh './deploy.sh staging'
+            }
+        }
+    }
+
+    post {
+        failure {
+            echo "Pipeline Failed! Sending Slack notification..."
+            // slackSend channel: '#alerts', message: "Job ${env.JOB_NAME} failed!"
+        }
+        success {
+            echo "Pipeline Passed!"
+        }
+    }
+}

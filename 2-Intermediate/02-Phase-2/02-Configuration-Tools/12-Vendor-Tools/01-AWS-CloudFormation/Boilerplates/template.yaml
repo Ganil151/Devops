@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Standard AWS CloudFormation template for an S3 Bucket.
+
+Parameters:
+  EnvName:
+    Type: String
+    Default: dev
+    AllowedValues: [dev, prod, test]
+
+Resources:
+  MyS3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Sub "my-app-data-${EnvName}-${AWS::AccountId}"
+      Tags:
+        - Key: Environment
+          Value: !Ref EnvName
+
+Outputs:
+  BucketDomain:
+    Value: !GetAtt MyS3Bucket.DomainName
+    Description: The domain name of the created bucket.

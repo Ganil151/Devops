@@ -1,30 +1,50 @@
-# HCL & IaC Best Practices
+# HCL (HashiCorp Configuration Language)
 
-Welcome to the advanced study of Infrastructure as Code. This module focuses on the principles, patterns, and security practices required to run Terraform at an enterprise scale.
+HCL is the language of Terraform. It's designed to be human-readable while powerful enough to handle complex infrastructure relationships.
 
-## 📚 Learning Path
-
-1.  **[IaC Principles](./01-IaC-Principles/Infrastructure%20as%20Code%20(IaC)%20Principles.md)**: Idempotency, immutability, and declarative workflows.
-2.  **[Project Structure](./02-Project-Structure/Project%20Structure.md)**: Scaling from single-file to multi-module.
-3.  **[Environment Management](./03-Environment-Management/Environment%20Management.md)**: Isolation strategies (Workspaces vs. Directories).
-4.  **[Configuration Patterns](./04-Configuration-Patterns/Configuration%20Patterns.md)**: DRY, Composition, and Dynamic Blocks.
-5.  **[Version Control Integration](./05-Version-Control-Integration/Version%20Control%20Integration.md)**: Git strategies and peer review.
-6.  **[CI/CD Pipeline Integration](./06-CI-CD-Pipeline-Integration/CI-CD%20Pipeline%20Integration.md)**: Automating init, plan, and apply.
-7.  **[Testing Strategies](./07-Testing-Strategies/Testing%20Strategies.md)**: Linting, scanning, and unit testing.
-8.  **[Documentation Standards](./08-Documentation-Standards/Documentation%20Standards.md)**: Automated READMEs and variable help.
-9.  **[Security Practices](./09-Security-Practices/Security%20Practices.md)**: State protection and secret management.
-10. **[Compliance & Governance](./10-Compliance-and-Governance/Compliance%20and%20Governance.md)**: Policy as Code (OPA/Sentinel).
+## 📚 Module Structure
+- **[Boilerplates](./Boilerplates/)**: `advanced_hcl.tf` (Variables, Locals, Data Sources).
+- **[CHALLENGES](./CHALLENGES.md)**: Loops (`for_each`) and Conditionals.
 
 ---
 
-## 🏗️ Module Features
-- **250+ Advanced Quiz Questions**: 25 questions per topic, validating expertise.
-- **60+ High-Value Interview Questions**: Prepared for senior DevOps roles.
-- **30+ Real-Life Scenarios**: Solving actual production infrastructure challenges.
-- **Interactive Formatting**: Collapsible quiz answers for an enhanced learning experience.
-- **Automated Workflows**: Visualized via detailed Mermaid diagrams.
+## 🔑 Key Concepts
+
+| Keyword | Description |
+| :--- | :--- |
+| **`variable`** | Parameterization. Allows inputs from CLI or `.tfvars`. |
+| **`locals`** | Internal variables. Used for DRY (Don't Repeat Yourself) code. |
+| **`data`** | Read-only fetch. Pulls info from existing infrastructure. |
+| **`output`** | Exports values for users or other Terraform states. |
+| **`count`** | Simple loop (incremental index). |
+| **`for_each`** | Sophisticated loop (map or set of strings). |
 
 ---
 
-## 📺 YouTube Lessons
-For visual reinforcement, check out the **[📺 YouTube Lessons](../Youtube_Lessons.md)** in the parent directory.
+## 🏗️ Robust Pattern: Variable Validation
+Always validate inputs to catch errors before `apply`.
+
+```hcl
+variable "port" {
+  type = number
+  validation {
+    condition     = var.port > 1024
+    error_message = "Non-privileged ports (1025+) are required for this app."
+  }
+}
+```
+
+---
+
+## ❓ Interview Questions
+
+1. **What is the difference between `count` and `for_each`?**
+   - *Answer*: `count` is based on an index (0, 1, 2). If you remove an item from the middle of the list, Terraform will re-create subsequent items. `for_each` is based on a unique key, making it safer for managing resources in a list.
+2. **When would you use `locals` instead of `variables`?**
+   - *Answer*: Use `variables` for values provided by the *user* at runtime. Use `locals` for values derived *inside* the code (e.g., combining strings or performing logical calculations).
+3. **What are Data Sources used for?**
+   - *Answer*: To fetch information about infrastructure that already exists (not managed by the current Terraform workspace), such as the default VPC ID or the latest AMI ID.
+
+---
+
+[Next: State Management](../03-State-Management/README.md)

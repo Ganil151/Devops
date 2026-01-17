@@ -1,0 +1,10 @@
+---
+# site.yml
+- name: Apply Common Configuration
+  hosts: all
+  become: yes
+  
+  roles:
+    - role: common
+      vars:
+        common_timezone: "America/New_York"

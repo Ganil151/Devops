@@ -1,4 +1,5 @@
 # 📝 Vim Crash Course (The DevOps Survival Editor)
+
 > **"Vim is not just an editor; it's a language. Once you learn the grammar, you can edit text as fast as you can think."**
 
 ![Vim Modes State Diagram](./vim_modes_state.svg)

@@ -1,52 +1,51 @@
 # Helm: The Kubernetes Package Manager
 
-Helm is a powerful tool that automates the creation, packaging, configuration, and deployment of Kubernetes applications. It treats infrastructure as "Apps" rather than just YAML files.
+Helm treats Kubernetes infrastructure as "Apps." Instead of managing hundreds of individual YAML files, you manage a single **Chart**.
+
+## 🏗️ Module Roadmap
+
+| Stage | Topic | Focus |
+| :--- | :--- | :--- |
+| **01** | **[Fundamentals](./01-Helm-Fundamentals/README.md)** | V3 Architecture, Repos, and Releases. |
+| **02** | **[Chart Templating](./02-Chart-Templating/README.md)** | Dynamic YAML, Go Templates, and Values. |
+| **03** | **[Intermediate Patterns](./03-Intermediate-Helm/README.md)** | Subcharts and Dependencies. |
+| **04** | **[Advanced Ops](./04-Advanced-Helm/README.md)** | Security, Plugins, and CI/CD Integration. |
 
 ---
 
-## 🗺️ The Helm Learning Path
+## 🏗️ Architecture: The Rendering Pipeline
 
-Follow these modules in order to master Kubernetes package management:
-
-1.  **[01-Helm-Fundamentals](./01-Helm-Fundamentals/README.md)**: Core concepts, architecture (v3), and basic installation.
-2.  **[02-Chart-Templating](./02-Chart-Templating/README.md)**: Master Go templates, functions, and logic to build dynamic charts.
-3.  **[03-Intermediate-Helm](./03-Intermediate-Helm/README.md)**: Subcharts, dependencies, and automated CI/CD integration.
-4.  **[04-Advanced-Helm](./04-Advanced-Helm/README.md)**: Enterprise governance, security best practices (SOPS), and custom plugins.
-5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for interviews.
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architecture challenges.
-7.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
-
----
-
-## 🏗️ 1. Why Helm?
-- **Manage Complexity**: Package multi-resource stacks (Deployment + Service + Ingress) into a single unit.
-- **Easy Updates**: Change one parameter in `values.yaml` and roll out changes cluster-wide.
-- **Safety**: Built-in release history and one-command rollbacks.
-- **Shareability**: Use public charts from Artifact Hub to deploy community-standard software in seconds.
+```mermaid
+graph LR
+    Values[values.yaml] --> Engine[Helm Engine]
+    Templates[templates/*.yaml] --> Engine
+    Engine --> Manifests[Kubernetes Manifests]
+    Manifests --> |kubectl apply| Cluster[K8s Cluster]
+    
+    style Engine fill:#0f1689,color:#fff
+```
 
 ---
 
-## 🛡️ Core Best Practices
-- **No Hardcoding**: Everything that might change should be a variable in `values.yaml`.
-- **Semantic Versioning**: Use proper versioning (SemVer) for your charts to avoid confusion.
-- **Validate Early**: Use `helm lint` and `--dry-run` in your CI pipeline.
-- **Security**: Never store plain-text secrets in charts; use Helm Secrets or external vaults.
+## 📖 Real-Life Scenarios
+
+### Scenario 1: The "Manual Patch" Disaster
+**Problem**: An engineer manually updated a deployment's replicas to 10.
+**Crisis**: When the CI/CD pipeline ran again, it reset the replicas to 2 (the value in Git), causing a performance drop.
+**Solution**: Switched to managing all changes via **Helm Values**.
+**Result**: Configuration consistency is now guaranteed.
+
+### Scenario 2: The "Broken Production" Rollback
+**Problem**: A new release caused the database connection to fail.
+**Action**: The SRE team ran `helm rollback my-app 14`.
+**Result**: The application was reverted to the previous working version in seconds.
 
 ---
 
-## ✅ Knowledge Check
-- [x] Install Helm and add a repository (e.g., Bitnami).
-- [x] Create a custom chart using `helm create`.
-- [x] Use `helm upgrade --install` to manage an application lifecycle.
-- [x] Perform a rollback to a previous release version.
-- [x] Use logic (`if/else`) and loops (`range`) in a template.
-- [x] Pass the 20-Question assessment in module 05.
+## ❓ Interview Prep & Resources
+- **[Interview Questions & Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**
+- **[Real-Life War Stories](./06-Real-Life-Scenarios/README.md)**
 
 ---
 
-## 🔗 Next Steps
-- **[Kubernetes Mastery](../07-Kubernetes/)** - The foundation Helm builds upon.
-- **[CI/CD Pipelines](../06-CI-CD/)** - Automate your Helm deployments.
-
----
-*Package your power. Ship with Helm.*
+[⬅️ Back to Configuration Tools Index](../README.md)

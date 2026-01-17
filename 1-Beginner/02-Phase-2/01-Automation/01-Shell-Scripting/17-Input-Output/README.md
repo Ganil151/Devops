@@ -1,5 +1,7 @@
 # 🔀 Input/Output (The Stream Plumbing)
+
 > **"In Unix, everything is a file. If it isn't a file, it's a stream. If it isn't a stream, it's a pipe."**
+
 ![I/O Stream Architecture](./io_stream_architecture.svg)
 ## 📚 Overview
 Every command in Linux is a "<font color="#ffc000">black box</font>" that processes data. To coordinate these boxes, Linux uses standardized data channels called **Streams**. Mastering I/O (Input/Output) allows you to "<font color="#ffc000">plumb</font>" these streams together—redirecting logs to files, silencing annoying warnings, and chaining dozens of tools into a single, complex pipeline. Professional automation is 50% logic and 50% plumbing.

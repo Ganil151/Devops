@@ -1,77 +1,51 @@
 # Ansible Fundamentals
 
-Ansible is an open-source automation tool that focuses on "Radical Simplicity". Unlike other tools that require complex agents and PKI infrastructure, Ansible uses the tools you already have: **SSH** and **Python**.
+Ansible is an open-source automation tool used for configuration management, application deployment, and task automation.
 
-This module breaks down the 4 Pillars of Ansible Architecture.
-
-## 📚 Learning Path
-
-| # | Topic | Description |
-| :--- | :--- | :--- |
-| **01** | [**Control Node**](./01-Control-Node/README.md) | The brain. Requirements, Configuration (`ansible.cfg`), and Scalability (`forks`). |
-| **02** | [**Inventory**](./02-Inventory-Architecture/README.md) | The source of truth. Static files vs Dynamic Cloud Plugins. |
-| **03** | [**Transport**](./03-Transport-Protocols/README.md) | How Ansible talks. SSH Pipelining, WinRM, and Agentless design. |
-| **04** | [**Modules**](./04-Module-Architecture/README.md) | The tools. The Lifecycle of a module (Push -> Exec -> Delete). |
+## 📚 Module Structure
+- **[Boilerplates](./Boilerplates/)**: `ansible.cfg` (Standard Configuration).
+- **[CHALLENGES](./CHALLENGES.md)**: Ad-hoc commands and connectivity tests.
 
 ---
 
-## 🏗️ High-Level Architecture
+## 🔑 Key Concepts
+
+| Concept | Description |
+| :--- | :--- |
+| **Control Node** | The machine where you run the `ansible` command. (Mac/Linux/WSL). |
+| **Managed Node** | The target servers (Linux, Windows, Network Devices). |
+| **Inventory** | A list of managed nodes. |
+| **Ad-Hoc** | Single-line commands for quick tasks (`ansible all -m ping`). |
+
+---
+
+## 🏗️ Architecture
 
 ```mermaid
 graph TD
-    User((System Admin)) -->|Run Playbook| Control[Control Node]
+    CN[Control Node]
+    CN -->|SSH| Node1[Managed Node 1]
+    CN -->|SSH| Node2[Managed Node 2]
+    CN -->|SSH| Node3[Managed Node 3]
     
-    Control -->|Read| Inv[Inventory]
-    Control -->|Connect (SSH)| Target1[Target Node]
-    
-    subgraph Execution
-    Target1 -->|Receive| Mod[Module File]
-    Mod -->|Run| Py[Python]
-    Py -->|Return| JSON[JSON Output]
-    end
+    style CN fill:#ee0000,color:#fff
 ```
+
+## 🛡️ Best Practices
+- **Strict Host Checking**: only disable `host_key_checking` in Dev/Labs.
+- **Python Specs**: Ensure target nodes have Python installed (Ansible needs it to run modules).
 
 ---
 
-## 🛠️ Lab Environment Setup
+## ❓ Interview Questions
 
-To follow this course, you need a local or cloud-based lab environment.
-
-### Option 1: Local Virtual Machines (Vagrant)
-Ideal for testing network configurations and kernel-level changes.
-```bash
-# Start a 3-node lab (Control + 2 Nodes)
-mkdir ansible-lab && cd ansible-lab
-# ... create Vagrantfile ...
-vagrant up
-```
-
-### Option 2: Docker Containers (Fastest)
-Ideal for testing application deployments and playbook logic.
-```bash
-# Start containers with SSH enabled
-docker-compose up -d
-```
-
-### Option 3: Cloud (AWS EC2)
-Ideal for enterprise-scale testing and dynamic inventory practice.
-```bash
-# Deploy using Terraform
-terraform apply
-```
+1.  **Does Ansible require an agent?**
+    - *Answer*: No. It uses SSH (for Linux) or WinRM (for Windows) to communicate.
+2.  **What is Idempotency?**
+    - *Answer*: The property where performing an operation multiple times yields the same result as performing it once. (e.g., Installing a package that is already installed does nothing).
+3.  **How does Ansible communicate with nodes?**
+    - *Answer*: By pushing small Python programs (modules) to the nodes, executing them, and returning the JSON result.
 
 ---
 
-## Quick Start (Ad-Hoc)
-
-Once you understand the architecture, you can run simple commands:
-
-```bash
-# Ping all servers in inventory
-ansible all -m ping
-
-# Check uptime
-ansible webservers -m command -a "uptime"
-```
-
-Please proceed to **[01-Control-Node](./01-Control-Node/README.md)** to begin the deep dive.
+[Next: Inventory Management](../02-Inventory-Management/README.md)

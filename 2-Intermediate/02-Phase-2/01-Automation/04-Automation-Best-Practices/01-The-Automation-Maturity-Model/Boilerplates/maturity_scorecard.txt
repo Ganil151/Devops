@@ -1,0 +1,24 @@
+# Automation Maturity Scorecard
+
+Evaluate your current script against this list:
+
+## Level 2 Checklist (Scripted)
+- [ ] Script is in Git.
+- [ ] No hardcoded paths (uses variables or constants).
+- [ ] Has a --help menu.
+
+## Level 3 Checklist (Integrated)
+- [ ] Runs in a CI/CD Pipeline.
+- [ ] All inputs are passed as Arguments or Env Vars.
+- [ ] Fails with a non-zero exit code on error.
+
+## Level 4 Checklist (Observed)
+- [ ] Writes logs to a file OR a central log server (Splunk/ELK).
+- [ ] Includes a --dry-run flag.
+- [ ] Has a "Pre-flight Check" section.
+- [ ] Is Idempotent (Safe to run twice).
+
+## Level 5 Checklist (Autonomous)
+- [ ] Triggered by a monitoring alert (not a human/timer).
+- [ ] Verifies the fix before exiting.
+- [ ] Automatically opens a ticket/slack message documenting the action.

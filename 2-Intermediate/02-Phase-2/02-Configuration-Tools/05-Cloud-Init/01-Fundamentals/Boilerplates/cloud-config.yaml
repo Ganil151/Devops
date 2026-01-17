@@ -1,0 +1,37 @@
+#cloud-config
+# -----------------------------------------------------------------------------
+# Name: cloud-config.yaml
+# Description: Standard instance bootstrapping with users, packages, and files.
+# -----------------------------------------------------------------------------
+
+# 1. Update Packages
+package_update: true
+package_upgrade: true
+
+# 2. Install Packages
+packages:
+  - nginx
+  - git
+  - curl
+
+# 3. Add Users
+users:
+  - name: devops
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3Nza... (Your Key Here)
+
+# 4. Create Files
+write_files:
+  - path: /var/www/html/index.html
+    permissions: '0644'
+    content: |
+      <h1>Bootstrap Successful</h1>
+      <p>Server initialized via Cloud-Init.</p>
+
+# 5. Run Commands
+runcmd:
+  - systemctl enable nginx
+  - systemctl start nginx

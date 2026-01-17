@@ -1,73 +1,57 @@
-# Database Operations for DevOps
-*Managing State and Inventory*
+# Database Operations
 
-DevOps scripts often need to interact with databases to store inventory data, track deployment history, or audit configurations. While SQL can be complex, Python makes it accessible using libraries like `sqlite3` (built-in) and `psycopg2` (PostgreSQL).
+DevOps isn't just about files. Dealing with state (users, inventories, jobs) often requires a Database. Python's DB-API 2.0 provides a standard way to talk to SQL databases.
+
+## 📚 Module Structure
+- **[Boilerplates](./Boilerplates/)**: `db_ops.py` (SQLite Context Managers).
+- **[CHALLENGES](./CHALLENGES.md)**: CSV Importers, JSON Exporters.
 
 ---
 
-## 🏗️ The SQLite Pattern
+## 🔑 Key Concepts
 
-SQLite is perfect for local automation because it doesn't require a separate server.
+| Concept | Description |
+| :--- | :--- |
+| **Cursor** | The object used to execute queries and traverse results. |
+| **Commit** | Saving changes. Forgot this? Data is lost on close. |
+| **Context Manager** | `with connect(...)` ensures connection closes even if errors occur. |
+| **ORM** | Object Relational Mapper (SQLAlchemy). Maps Classes to Tables. |
+
+---
+
+## 🏗️ Safety Patterns
+
+### SQL Injection Prevention
+NEVER use f-strings for queries.
 
 ```python
-import sqlite3
+# CATASTROPHIC SECURITY FLAW
+cursor.execute(f"SELECT * FROM users WHERE name = '{user_input}'")
 
-# 1. Connect (creates file if missing)
-conn = sqlite3.connect('inventory.db')
-cursor = conn.cursor()
-
-# 2. Create Table
-cursor.execute('''CREATE TABLE IF NOT EXISTS servers 
-                  (hostname TEXT, ip TEXT, status TEXT)''')
-
-# 3. Insert Data
-cursor.execute("INSERT INTO servers VALUES ('web-01', '10.0.0.1', 'up')")
-conn.commit()
-
-# 4. Query
-cursor.execute("SELECT * FROM servers WHERE status='up'")
-print(cursor.fetchall())
-
-# 5. Close
-conn.close()
+# SAFE (Parameterized)
+cursor.execute("SELECT * FROM users WHERE name = ?", (user_input,))
 ```
 
 ---
 
-## 📊 Logic Flow: Inventory Sync
+## 📖 Real-World Story: The "Little Bobby Tables"
 
-```mermaid
-graph LR
-    API[Fetch from Cloud API] --> Filter[Filter Required Fields]
-    Filter --> DB{Check if DB exists?}
-    DB -- No --> Create[Create Table]
-    DB -- Yes --> Upsert[Upsert Data]
-    Upsert --> Verify[Verify Row Count]
-```
-
----
-
-## 🛠️ Hands-On Challenges
-
-Master data persistence by building these database tools.
-
-| Challenge | Description | Starter Code | Solution |
-| :--- | :--- | :--- | :--- |
-| **01. Inventory Tracker** | Build a tool that stores server metadata (hostname, IP, OS) in a SQLite database. | [Link](./challenges/challenge_01_inventory_db.py) | [Link](./challenges/solutions/solution_01_inventory_db.py) |
-| **02. Deployment Auditor** | Create a script that logs the results of every deployment (timestamp, status, engineer) to a DB. | [Link](./challenges/challenge_02_deploy_log.py) | [Link](./challenges/solutions/solution_02_deploy_log.py) |
-| **03. DB Backup Verifier** | Write a script that connects to a DB, counts rows in a critical table, and compares it to a baseline. | [Link](./challenges/challenge_03_db_verify.py) | [Link](./challenges/solutions/solution_03_db_verify.py) |
+**Problem**: An internal admin tool allowed engineers to reset passwords by typing a username.
+**Crisis**: A QA engineer typed `admin'; DROP TABLE users; --` as a test.
+**Result**: The users table was deleted. The tool used string concatenation.
+**Solution**: Switched to parameterized queries (`?` or `%s`).
 
 ---
 
 ## ❓ Interview Questions
 
-1. **Why use SQLite for small automation scripts instead of a full PostgreSQL server?**
-   * *Answer*: SQLite is "zero-config" and serverless. The entire database is a single file on disk, making it extremely portable and easy to include in custom tools without setting up external infrastructure.
-2. **What is the purpose of `conn.commit()`?**
-   * *Answer*: SQL operations are transactional. `commit()` saves the changes permanently to the database. Without it, changes might be lost when the connection closes.
-3. **How do you prevent SQL Injection in Python?**
-   * *Answer*: Never use f-strings or string formatting to build queries. Use **parameterized queries**: `cursor.execute("SELECT * FROM table WHERE id=?", (val,))`.
+1.  **What is the Python DB-API?**
+    - *Answer*: A specification (PEP 249) that defines common interfaces (connect, cursor, execute) so code works across different databases (MySQL, Postgres, SQLite) with minimal changes.
+2.  **Why use an ORM (like SQLAlchemy)?**
+    - *Answer*: It abstracts raw SQL, allowing you to switch database backends easily and work with Python objects instead of tuples.
+3.  **What happens if you don't call `conn.commit()`?**
+    - *Answer*: The transaction is rolled back when the connection closes. No data is saved.
 
 ---
 
-**Next Step**: [Docker Python SDK →](../11-Docker-and-Kubernetes-SDKs/README.md)
+[Next: Docker & Kubernetes](../11-Docker-and-Kubernetes-SDKs/README.md)

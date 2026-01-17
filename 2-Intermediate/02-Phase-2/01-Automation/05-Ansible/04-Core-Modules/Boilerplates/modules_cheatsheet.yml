@@ -1,0 +1,37 @@
+---
+- name: Core Modules Cheat Sheet
+  hosts: localhost
+  tasks:
+    # 1. FILE: Managing directories/permissions
+    - name: Create a directory
+      file:
+        path: /tmp/app/config
+        state: directory
+        mode: '0755'
+        owner: root
+
+    # 2. COPY: Moving local files to remote
+    - name: Copy config file
+      copy:
+        src: ./local_file.txt
+        dest: /tmp/app/config/settings.txt
+
+    # 3. GET_URL: Downloading from Web
+    - name: Download source
+      get_url:
+        url: https://example.com/source.tar.gz
+        dest: /tmp/app/source.tar.gz
+
+    # 4. USER: Managing Accounts
+    - name: Create deploy user
+      user:
+        name: deployer
+        shell: /bin/bash
+        groups: sudo
+
+    # 5. SERVICE: Managing Daemons
+    # (Requires sudo/systemd usually, commented out for local test safety)
+    # - name: Start App
+    #   service:
+    #     name: myapp
+    #     state: started

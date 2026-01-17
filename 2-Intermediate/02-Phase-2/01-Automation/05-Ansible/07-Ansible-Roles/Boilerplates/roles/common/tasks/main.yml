@@ -1,0 +1,17 @@
+---
+# tasks/main.yml
+- name: Install required packages
+  package:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ common_packages }}"
+
+- name: Set timezone
+  timezone:
+    name: "{{ common_timezone }}"
+
+- name: Ensure NTP is running
+  service:
+    name: "{{ ntp_service }}"
+    state: started
+    enabled: yes

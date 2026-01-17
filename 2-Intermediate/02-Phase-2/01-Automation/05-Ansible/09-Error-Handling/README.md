@@ -1,95 +1,81 @@
-# Error Handling and Debugging
+# Error Handling in Ansible
 
-Things go wrong. Services crash, disks fill up, and typos happen. Ansible is programmed to **Fail Fast**, but it also provides a suite of tools to manage failures gracefully and find the root cause of issues quickly.
+By default, Ansible stops execution on a host if a task fails. However, production automation needs to be resilient. You need to handle failures, perform cleanups, and define what actually constitutes an "error".
 
-## 📚 Learning Path
-
-| # | Topic | Description | Key Modules/Flags |
-| :--- | :--- | :--- | :--- |
-| **01** | [**Failure Strategies**](./01-Failure-Strategies/README.md) | Controlling Playbook Abortion | `ignore_errors`, `max_fail_percentage` |
-| **02** | [**Debugging Tools**](./02-Debugging-Tools/README.md) | Inspecting State | `debug`, `-vvvv`, `--check`, `debugger` |
-| **03** | [**Handler Management**](./03-Handler-Management/README.md) | Deferred Tasks | `notify`, `meta: flush_handlers`, `listen` |
-| **04** | [**Validation & Abortion**](./04-Validation-and-Abortion/README.md) | Stopping Safely | `assert`, `fail`, `pause`, `wait_for` |
+## 📚 Module Structure
+- **[Boilerplates](./Boilerplates/)**: `rollback.yml` (Using Blocks for try/except/finally logic).
+- **[CHALLENGES](./CHALLENGES.md)**: Ignoring errors, Rescue missions, and Custom failure logic.
 
 ---
 
-## 🏗️ Troubleshooting Flow
+## 🔑 Key Concepts
 
-```mermaid
-graph TD
-    Error[Task Error Detected] --> Strat{Failure Strategy?}
-    Strat -->|Ignore| Continue[Continue to Next Task]
-    Strat -->|Fatal| Abort[Stop Playbook]
-    
-    Tabort[Abort Triggered] --> Handlers{Force Handlers?}
-    Handlers -->|Yes| RunH[Run notified Handlers]
-    Handlers -->|No| End[Exit Playbook]
-    
-    Abort --> End
-    RunH --> End
-    
-    style Abort fill:#ff4444,color:#fff
-```
-
-## Quick Start
-
-To debug a task that keeps failing due to unknown reasons:
-
-```bash
-ansible-playbook site.yml --limit <hostname> -vvvv
-```
-
-To verify variable values during a run:
-
-```yaml
-- name: Debug my_var
-  debug:
-    var: my_var
-```
+| Keyword | Description |
+| :--- | :--- |
+| **`ignore_errors`** | Continues the play even if the task fails. |
+| **`failed_when`** | Overrides Ansible's failure logic (e.g., "Fail only if 'fatal' is in output"). |
+| **`changed_when`** | Overrides when a task reports a change (useful for shell commands). |
+| **`block`** | Groups tasks for shared error handling. |
+| **`rescue`** | Tasks that run only if the `block` fails (The "Catch" block). |
+| **`always`** | Tasks that run regardless of success or failure (The "Finally" block). |
 
 ---
 
-## 🚀 Rollback and Backup Strategies
+## 🏗️ Robust Error Patterns
 
-Production-grade automation must be able to restore the system to a known good state if a configuration change fails.
-
-### The `block/rescue/always` Pattern
-This is the equivalent of `try/except/finally` in Python and is the standard for robust error recovery.
+### 1. The Try/Except Pattern (Blocks)
+Use blocks to ensure your system isn't left in a half-configured state.
 
 ```yaml
-- name: Application deployment with rollback
+- name: Database Upgrade
   block:
-    - name: Create deployment backup
-      archive:
-        path: "/var/www/my_app"
-        dest: "/tmp/app_backup.tar.gz"
-        format: gz
-    
-    - name: Deploy new version (Potentially Dangerous)
-      unarchive:
-        src: "new_ver.tar.gz"
-        dest: "/var/www/my_app"
-
+    - name: Stop Database
+      service: name=postgresql state=stopped
+    - name: Run Upgrade Script
+      command: /opt/upgrade.sh
   rescue:
-    - name: Log deployment failure
-      debug:
-        msg: "Deployment failed! Triggering rollback..."
-    
-    - name: Restore from backup
-      unarchive:
-        src: "/tmp/app_backup.tar.gz"
-        dest: "/var/www/my_app"
-        remote_src: yes
-    
-    - name: Fail deployment
-      fail:
-        msg: "Deployment failed and rollback completed."
-
+    - name: Recovery - Restart Database
+      service: name=postgresql state=started
+    - name: Print Error
+      debug: msg="Upgrade failed! Database reverted."
   always:
-    - name: Clean up temporary files
-      file:
-        path: "/tmp/app_backup.tar.gz"
-        state: absent
+    - name: Send Slack Notification
+      community.general.slack:
+        msg: "Upgrade job finished"
 ```
 
-Please proceed to **[01-Failure-Strategies](./01-Failure-Strategies/README.md)**.
+### 2. Custom Success Definition
+Sometimes a command returns a non-zero exit code but is actually successful (or vice-versa).
+
+```yaml
+- name: Check App Status
+  command: /usr/bin/check_app
+  register: app_res
+  failed_when: "'CRITICAL' in app_res.stdout"
+  changed_when: false
+```
+
+---
+
+## 📖 Real-World Story: The "Infinite Update"
+
+**Scenario**: A maintenance script updated 500 servers. It used `yum update -y`.
+**Problem**: One server had a corrupted package database. The task failed, and because there was no error handling, the script stopped halfway through the list of servers.
+**Outcome**: 200 servers were updated, 300 were not. The fleet was out of sync.
+**Resolution**: Implemented `any_errors_fatal: true` and `max_fail_percentage: 10%`.
+**Prevention**: By setting a failure threshold, the team ensured that if a few nodes fail it's okay, but if a large portion fails, the whole job stops immediately to prevent a mass "half-done" state.
+
+---
+
+## ❓ Interview Questions
+
+1. **What is the difference between `ignore_errors` and `failed_when`?**
+   - *Answer*: `ignore_errors` lets the play continue after a task fails. `failed_when` defines *what causes* the task to fail in the first place.
+2. **When would you use a `rescue` block?**
+   - *Answer*: To perform a rollback or cleanup action if a critical set of tasks fails.
+3. **What does `any_errors_fatal: true` do?**
+   - *Answer*: If any single host fails a task, Ansible stops the play for *all* hosts immediately.
+
+---
+
+[Next: Ansible Vault](../10-Ansible-Vault/README.md)

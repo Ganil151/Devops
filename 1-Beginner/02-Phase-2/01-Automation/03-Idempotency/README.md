@@ -118,13 +118,10 @@ mkdir -p /app/logs                        # -p = no error if exists
 id deploy &>/dev/null || useradd deploy   # Check first
 iptables -C INPUT -p tcp ... 2>/dev/null || iptables -A INPUT -p tcp ...
 ```
-
 ---
-
 ## 💻 Shell Script Patterns
 
 ### Pattern 1: Check Before Create
-
 ```bash
 #!/bin/bash
 # Idempotent user creation
@@ -142,9 +139,7 @@ create_user() {
 
 create_user "deploy"
 ```
-
 ### Pattern 2: Check Before Append
-
 ```bash
 #!/bin/bash
 # Idempotent config line addition
@@ -163,9 +158,7 @@ add_config_line() {
 
 add_config_line "/etc/hosts" "10.0.0.5 api.internal"
 ```
-
 ### Pattern 3: Desired State Enforcement
-
 ```bash
 #!/bin/bash
 # Idempotent service configuration

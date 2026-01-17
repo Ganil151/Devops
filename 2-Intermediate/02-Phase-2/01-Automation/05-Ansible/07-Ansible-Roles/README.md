@@ -1,37 +1,62 @@
 # Ansible Roles
 
-Playbooks get messy. When your `site.yml` reaches 500 lines, it's time for **Roles**. Roles allow you to group related automation into reusable packages that can be shared across teams and projects.
+Playbooks get messy. Roles are the standard way to organize tasks, variables, files, and templates into a reusable package. Think of them as "Libraries" or "Modules" in programming files.
 
-## 📚 Learning Path
-
-| # | Topic | Description | Key Areas |
-| :--- | :--- | :--- | :--- |
-| **01** | [**Standard Structure**](./01-Role-Standard-Structure/README.md) | The Anatomy of a Role | `tasks`, `vars`, `defaults`, `files` |
-| **02** | [**Advanced Usage**](./02-Advanced-Role-Usage/README.md) | Complex Logic | Dependencies, `include_role`, Parameters |
-| **03** | [**Galaxy & Collections**](./03-Galaxy-and-Collections/README.md) | Community & Sharing | `ansible-galaxy`, `requirements.yml`, FQCN |
-| **04** | [**Testing with Molecule**](./04-Testing-with-Molecule/README.md) | Reliability & TDD | `molecule test`, Converge, Verify |
+## 📚 Module Structure
+- **[Boilerplates](./Boilerplates/)**: `roles/common` (Standard folder structure).
+- **[CHALLENGES](./CHALLENGES.md)**: Refactoring monolithic playbooks into roles.
 
 ---
 
-## 🏗️ Role Management Flow
+## 🔑 Key Concepts
+
+| Folder | Purpose |
+| :--- | :--- |
+| **tasks/** | The main list of steps (`main.yml`). |
+| **handlers/** | Service restarters. |
+| **defaults/** | Default variables (lowest priority). |
+| **vars/** | Higher priority variables (rarely used). |
+| **files/** | Static files for `copy`. |
+| **templates/** | Jinja2 files for `template`. |
+| **meta/** | Dependencies (e.g., this role needs `common` first). |
+
+---
+
+## 🏗️ Architecture
 
 ```mermaid
 graph TD
-    Init[ansible-galaxy init] --> Build[Develop Tasks & Logic]
-    Build --> Test[Test with Molecule]
-    Test -->|Pass| Share[Publish to Galaxy/Git]
-    Share --> Use[Use in Playbooks]
+    Playbook[site.yml] --> Role1[Role: Common]
+    Playbook --> Role2[Role: Webserver]
+    Playbook --> Role3[Role: Database]
     
-    style Test fill:#00aa00,color:#fff
-    style Use fill:#3399ff,color:#fff
+    Role1 --> Tasks1[Tasks]
+    Role1 --> Defaults1[Defaults]
+    
+    Role2 --> Tasks2[Tasks]
+    Role2 --> Templates2[Templates]
 ```
 
-## Quick Start
+---
 
-To create a new role with the standard structure:
+## 📖 Real-World Story: The "Mega-Playbook" Refactor
 
-```bash
-ansible-galaxy init roles/my_new_role
-```
+**Problem**: A startup had a single `deploy.yml` with 2,000 lines. It installed Nginx, Postgres, Redis, and the App.
+**Crisis**: Developers were terrified to edit it. Scrolling took forever. Variables polluted the global namespace.
+**Solution**: Refactored into 4 Roles: `nginx`, `postgres`, `redis`, `application`.
+**Result**: The main playbook became 10 lines long. Teams could work on the `redis` role without breaking the `nginx` role.
 
-Please proceed to **[01-Standard-Structure](./01-Role-Standard-Structure/README.md)**.
+---
+
+## ❓ Interview Questions
+
+1.  **What is Ansible Galaxy?**
+    - *Answer*: A hub for finding, sharing, and reviewing Ansible roles. You can install roles using `ansible-galaxy install author.role`.
+2.  **What is the precedence of `defaults/main.yml`?**
+    - *Answer*: It has the *lowest* precedence. It is meant to be overridden by inventory or playbook variables.
+3.  **How do you include one role inside another?**
+    - *Answer*: Using `meta/main.yml` to define dependencies.
+
+---
+
+[Next: Conditionals & Loops](../08-Conditionals-and-Loops/README.md)

@@ -1,0 +1,28 @@
+---
+- name: Error Handling Demo
+  hosts: localhost
+  tasks:
+    - name: Attempt a risky operation
+      block:
+        - name: Create a critical directory
+          file:
+            path: /tmp/critical
+            state: directory
+        
+        - name: Run a command that might fail
+          command: /bin/false  # This always fails
+          
+      rescue:
+        - name: Clean up failed directory (Rollback)
+          file:
+            path: /tmp/critical
+            state: absent
+            
+        - name: Log the error
+          debug:
+            msg: "Implementation failed. Rolling back changes."
+
+      always:
+        - name: Send Notification
+          debug:
+            msg: "This runs no matter what (e.g., Slack Alert)."

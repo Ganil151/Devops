@@ -1,0 +1,17 @@
+# Global Variables (Apply to everyone)
+# Place in group_vars/all.yml
+
+app_version: "1.2.0"
+backup_enabled: true
+
+# Dicts (Hash Maps)
+db_config:
+  host: "db.example.com"
+  port: 5432
+  user: "admin"
+
+# Lists
+allowed_ports:
+  - 80
+  - 443
+  - 8080

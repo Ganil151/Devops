@@ -1,67 +1,67 @@
-# Chart Templating
+# Helm: The Kubernetes Package Manager
 
-One of the most powerful features of Helm is its ability to use Go templates to dynamically generate Kubernetes manifests.
+Helm helps you manage Kubernetes applications. Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
+
+## 📚 Module Structure
+- **[Boilerplates](./Boilerplates/)**: `deployment.yaml` (Chart Template).
+- **[CHALLENGES](./CHALLENGES.md)**: Overriding values, debugging, and rollbacks.
 
 ---
 
-## 🏗️ Core Concepts
+## 🏗️ Architecture: The Templating Engine
 
-### 1. Variables and Values
-Access values defined in `values.yaml` using the `.Values` object.
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: {{ .Values.configName }}
-```
+Helm takes a **Chart** (Skeleton YAML + Values) and renders it into valid **Kubernetes Manifests**.
 
-### 2. Template Functions
-Helm provides over 60 functions for manipulating data.
-- `upper`: Converts string to uppercase.
-- `quote`: Wraps string in double quotes.
-- `default`: Provides a fallback value.
-```yaml
-name: {{ .Values.appName | upper | quote }}
-status: {{ .Values.status | default "active" }}
-```
-
-### 3. Logic and Loops
-Use `if/else` and `range` to handle complex logic.
-```yaml
-# Conditional
-{{- if .Values.ingress.enabled }}
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-...
-{{- end }}
-
-# Looping over a list
-env:
-{{- range .Values.envVars }}
-- name: {{ .name }}
-  value: {{ .value | quote }}
-{{- end }}
-```
-
-### 4. Named Templates (Partials)
-Reuse code snippets across different files using `define` and `template`/`include`.
-```yaml
-# Defined in _helpers.tpl
-{{- define "myapp.labels" -}}
-app: myapp
-release: {{ .Release.Name }}
-{{- end -}}
-
-# Used in deployment.yaml
-metadata:
-  labels:
-    {{- include "myapp.labels" . | nindent 4 }}
+```mermaid
+graph LR
+    Values[values.yaml] --> Engine[Helm Engine]
+    Templates[templates/*.yaml] --> Engine
+    Engine --> Manifests[Kubernetes Manifests]
+    Manifests --> |kubectl apply| Cluster[K8s Cluster]
 ```
 
 ---
 
-## 💡 Best Practices
-- **nindent**: Use `nindent` instead of `indent` for better newline handling.
-- **Hyphens**: Use `{{-` to remove whitespace around your logic blocks.
-- **Dry-run**: Always verify your templates with `helm install --dry-run --debug`.
-- **Validation**: Use `tpl` function only when necessary as it can be hard to troubleshoot.
+## 🔑 Key Concepts
+
+| Concept | Description |
+| :--- | :--- |
+| **Chart** | A bundle of information necessary to create an instance of a Kubernetes application. |
+| **Release** | A running instance of a chart with a specific config. |
+| **Values** | The parameters passed to the chart templates. |
+| **Library Charts** | A type of chart that provides utilities/templates but doesn't deploy anything itself. |
+
+---
+
+## 🛡️ Robust Pattern: Helper Templates
+Use `_helpers.tpl` for re-usable logic across multiple templates to keep your code clean and consistent.
+
+```yaml
+{{/* Define a naming helper */}}
+{{- define "mychart.name" -}}
+{{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
+{{- end }}
+```
+
+---
+
+## 📖 Real-World Story: The "Misconfigured Image"
+**Scenario**: A developer accidentally updated the production image tag to `latest` instead of a specific version.
+**Crisis**: All pods pulled a broken experimental version of the app.
+**Solution**: The SRE team ran `helm rollback <release-name> <last-working-version>`.
+**Result**: The site was back online in 15 seconds.
+
+---
+
+## ❓ Interview Questions
+
+1. **What is the difference between `helm install` and `helm upgrade --install`?**
+   - *Answer*: `install` fails if the release already exists. `upgrade --install` will install it if missing, or update it if it exists (making it idempotent).
+2. **What is a 'Sub-Chart'?**
+   - *Answer*: A chart that is nested inside another chart (Parent Chart). It allows you to build complex stacks where one chart manages the DB, another manages the UI, etc.
+3. **What does the `Chart.lock` file do?**
+   - *Answer*: It records the exact versions of all dependencies (sub-charts) to ensure that every environment builds from the exact same components.
+
+---
+
+[Next: Cloud-Init](../05-Cloud-Init/README.md)

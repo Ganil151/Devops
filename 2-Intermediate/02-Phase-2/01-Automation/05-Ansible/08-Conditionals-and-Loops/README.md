@@ -1,97 +1,66 @@
 # Conditionals and Loops
 
-Ansible playbooks are simple lists of tasks... until you need logic. This section walks through the core components that turn tasks into intelligent automation.
+Automation requires logic. "Do this 5 times." "Do this only if X is true."
 
-## 📚 Learning Path
-
-| # | Topic | Description | Key Areas |
-| :--- | :--- | :--- | :--- |
-| **01** | [**Conditional Execution**](./01-Conditional-Execution/README.md) | Smart Task Skipping | `when`, logical operators |
-| **02** | [**Looping Mechanics**](./02-Looping-Mechanics/README.md) | Mass Configuration | `loop`, `until`, `retries` |
-| **03** | [**Error Handling Blocks**](./03-Error-Handling-Blocks/README.md) | Flow Control | `block`, `rescue`, `always` |
-| **04** | [**Advanced Logic Control**](./04-Advanced-Logic-Control/README.md) | Overriding Status | `failed_when`, `changed_when` |
+## 📚 Module Structure
+- **[Boilerplates](./Boilerplates/)**: `logic.yml` (Loops, Register, When).
+- **[CHALLENGES](./CHALLENGES.md)**: Refactoring lists, OS-specific logic.
 
 ---
 
-## 🏗️ Execution Flow
+## 🔑 Key Concepts
 
-```mermaid
-graph TD
-    Play[Start Play] --> Block[Block of Tasks]
-    Block --> Logic{When condition?}
-    Logic -->|Pass| Iter[Execute Loop]
-    Iter --> Success[Task Success]
-    Success --> Done[Next Task]
-    
-    Logic -->|Fail| Skip[Skip Tasks]
-    Skip --> Done
-    
-    Block --> Error[Task Failure]
-    Error --> Rescue[Rescue Block]
-    Rescue --> Done
-    
-    Done --> Always[Always Block]
-    
-    style Rescue fill:#ff4444,color:#fff
-    style Always fill:#3399ff,color:#fff
+| Concept | Syntax |
+| :--- | :--- |
+| **Simple Loop** | `loop: [item1, item2]` |
+| **Dictionary Loop** | `loop: [{name: a, id: 1}, {name: b, id: 2}]`. Access via `item.name`. |
+| **When** | `when: result.rc == 0`. Skips task if false. |
+| **Changed_when** | `changed_when: false`. Tells Ansible "This didn't actually change state" (Keep output Green). |
+
+---
+
+## 🏗️ Robust Logic
+
+### 1. Waiting for things (`until`)
+Don't use `sleep`. Poll the status.
+
+```yaml
+- name: Wait for DB to start
+  command: /usr/bin/pg_isready
+  register: db_check
+  until: db_check.rc == 0
+  retries: 10
+  delay: 5
 ```
 
-## Quick Start
+### 2. Failing Intentionally
+Assert state before proceeding.
 
-### Simple Conditional
 ```yaml
-- name: Run on Debian ONLY
-  apt: name=nginx state=present
-  when: ansible_os_family == "Debian"
-```
-
-### Simple Loop
-```yaml
-- name: Install list
-  package: name="{{ item }}" state=present
-  loop: [git, curl, vim]
+- fail:
+    msg: "This playbook only runs on Ubuntu!"
+  when: ansible_distribution != 'Ubuntu'
 ```
 
 ---
 
-## 🚀 Advanced Logic Patterns
+## 📖 Real-World Story: The "Thundering Herd"
 
-### 1. Complex Conditionals
-You can combine multiple conditions using `and`, `or`, and `not`.
+**Problem**: A playbook restarted all web servers at once (`loop`). The site went down.
+**Solution**: Added `serial: 2` to the Playbook header.
+**Result**: Ansible restarted servers 2 at a time (Rolling Restart). Conditionals (`when`) were used to drain traffic from the Load Balancer before restart.
 
-```yaml
-- name: Install web server based on OS and requirement
-  package:
-    name: "{{ 'httpd' if ansible_os_family == 'RedHat' else 'apache2' }}"
-    state: present
-  when: 
-    - webserver_required | default(true)
-    - ansible_distribution_version | int >= 8
-```
+---
 
-### 2. Advanced Loop Control
-Use `loop_control` to track indexes or provide descriptive labels in logs.
+## ❓ Interview Questions
 
-```yaml
-- name: Configure virtual hosts
-  template:
-    src: vhost.conf.j2
-    dest: "/etc/nginx/sites-available/{{ item.name }}"
-  loop: "{{ virtual_hosts }}"
-  loop_control:
-    index_var: vhost_index
-    label: "Configuring {{ item.name }} (Node #{{ vhost_index }})"
-```
+1.  **What is the difference between `loop` and `with_items`?**
+    - *Answer*: `with_items` is the old syntax. `loop` is the modern standard. They are mostly identical, but `loop` is stricter.
+2.  **How do you prevent a task from reporting "Changed" (Yellow)?**
+    - *Answer*: Use `changed_when: false` (e.g., when run a command that just checks a version).
+3.  **Can you loop over a dictionary?**
+    - *Answer*: Yes, use `with_dict` or `loop: "{{ my_dict | dict2items }}"`.
 
-### 3. Loop with Subelements
-Great for nested data structures like users and their SSH keys.
+---
 
-```yaml
-- name: Create users with SSH keys
-  authorized_key:
-    user: "{{ item.0.name }}"
-    key: "{{ item.1 }}"
-  loop: "{{ users | subelements('ssh_keys') }}"
-```
-
-Please proceed to **[01-Conditional-Execution](./01-Conditional-Execution/README.md)**.
+[Next: Error Handling](../09-Error-Handling/README.md)
