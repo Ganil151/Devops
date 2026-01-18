@@ -18,7 +18,7 @@ Instead of jumping into complex tools, we follow a tiered journey that mimics re
 7. **[Cloud Foundations](../README.md)**: Intro to AWS, Azure, and GCP.
 
 ### 🧩 Phase 2: Core Skills
-8. **[API Basics](../README.md)**: Understanding HTTP, REST, and Status Codes.
+8. **[API Basics](./02-Phase-2/02-API-Basics/README.md)**: Understanding HTTP, REST, and Status Codes.
 9. **[Nginx Web Server](../README.md)**: Reverse proxies and load balancing.
 10. **[Maven & Build Tools](../README.md)**: Creating deployable artifacts.
 11. **[Automation Basics](../README.md)**: Introduction to scripting and automation.

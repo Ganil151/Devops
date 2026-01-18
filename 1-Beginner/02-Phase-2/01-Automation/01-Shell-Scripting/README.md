@@ -8,7 +8,8 @@ This comprehensive Shell Scripting curriculum provides **17 modules** covering e
 
 ### 🎯 Learning Outcomes
 
-By completing this curriculum, you will:
+### 🎯 Learning Outcomes
+
 - ✅ **Master Shell Fundamentals**: Command execution, navigation, and file management
 - ✅ **Build Production Scripts**: Error handling, testing, and deployment automation
 - ✅ **Implement DevOps Patterns**: CI/CD integration, infrastructure management, monitoring
@@ -42,16 +43,17 @@ By completing this curriculum, you will:
 | 11 | [File Permissions](./11-File-Permissions/) | ✅ Complete | ✅ 10 challenges | Ready |
 | 12 | [Finally Scripting](./12-Finally-Scripting/) | ✅ Complete | ✅ 10 challenges | Ready |
 | 13 | [User Input](./13-User-Input/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 14 | [Functions](./14-Functions/) | ✅ Complete | 🔄 Pending | In Progress |
-| 15 | [Conditionals](./15-Conditionals/) | ✅ Complete | 🔄 Pending | In Progress |
-| 16 | [For Loops](./16-For-Loops/) | ✅ Complete | 🔄 Pending | In Progress |
-| 17 | [Input/Output](./17-Input-Output/) | ✅ Complete | 🔄 Pending | In Progress |
+| 14 | [Functions](./14-Functions/) | ✅ Complete | 🔄 Pending | Ready |
+| 15 | [Conditionals](./15-Conditionals/) | ✅ Complete | 🔄 Pending | Ready |
+| 16 | [For Loops](./16-For-Loops/) | ✅ Complete | 🔄 Pending | Ready |
+| 17 | [Input/Output](./17-Input-Output/) | ✅ Complete | 🔄 Pending | Ready |
 
 ---
 
 ## 🗺️ Learning Path
 
 ### Phase 1: Foundation Skills (Modules 01-05)
+
 **Time**: 2-3 weeks | **15-20 hours**
 
 Master the essential Linux command-line skills that form the foundation of all shell scripting:
