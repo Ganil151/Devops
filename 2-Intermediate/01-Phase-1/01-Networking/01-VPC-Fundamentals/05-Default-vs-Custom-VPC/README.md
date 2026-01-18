@@ -1,189 +1,151 @@
-# Default vs. Custom VPC
+# 🏢 Module 05: Default vs. Custom VPC
 
-AWS provides a default VPC in every region, but custom VPCs offer more control and better security.
+> **"AWS gives you a Default VPC to get you started, but a Custom VPC is where you build for production. Using a Default VPC for production is like leaving your front door unlocked in a busy city—it's convenient, but dangerous."**
 
-## Default VPC
+```mermaid
+graph LR
+    subgraph Default_VPC[Default VPC: Flat & Public]
+        D_IGW[Internet Gateway]
+        D_Sub1[Subnet 1: Public]
+        D_Sub2[Subnet 2: Public]
+        D_Sub3[Subnet 3: Public]
+        D_IGW <--> D_Sub1 & D_Sub2 & D_Sub3
+    end
 
-### Characteristics
-- **CIDR**: 172.31.0.0/16 (65,536 IPs)
-- **Subnets**: One /20 subnet per AZ (4,096 IPs each)
-- **Internet Gateway**: Pre-attached
-- **Route Table**: Public route (0.0.0.0/0 -> IGW) by default
-- **DNS**: Enabled (hostnames and resolution)
-- **Public IPs**: Auto-assigned to instances
+    subgraph Custom_VPC[Custom VPC: Multi-Tier & Secure]
+        C_IGW[Internet Gateway]
+        C_NAT[NAT Gateway]
+        
+        subgraph Public_Tier[Public Subnets]
+            LB[Load Balancers]
+        end
+        
+        subgraph Private_Tier[Private Subnets]
+            App[App Servers]
+            DB[(Database)]
+        end
 
-### Advantages
-- **Quick Start**: Launch instances immediately
-- **Beginner-Friendly**: No networking knowledge required
-- **Testing**: Perfect for learning and experimentation
+        C_IGW <--> Public_Tier
+        Public_Tier --> C_NAT
+        C_NAT --> Private_Tier
+    end
 
-### Disadvantages
-- **Security**: All subnets are public by default
-- **Limited Control**: Can't change CIDR block
-- **Not Production-Ready**: Lacks proper network segmentation
-- **Compliance**: May not meet security requirements
+    style Default_VPC fill:#fff1f2,stroke:#be123c
+    style Custom_VPC fill:#f0fdf4,stroke:#15803d
+```
+
+## 📚 Overview
+
+Every AWS account comes with a **Default VPC** in every region. While this allows you to launch instances immediately, it lacks the security and segmentation required for professional workloads. This module explains the critical differences between the two and why mastering **Custom VPC** design is a non-negotiable skill for DevOps engineers.
+
+## 🎓 Learning Objectives
+
+By the end of this module, you will:
+
+- ✅ Identify the "Public-by-Default" nature of the **Default VPC**.
+- ✅ Understand the **Security Risks** associated with using default configurations.
+- ✅ Design a **Custom VPC** with tiered public and private subnets.
+- ✅ Learn the manual steps to convert a blank VPC into a functional environment.
+- ✅ Master the **Lifecycle** of a Default VPC (Deletion and Recreation).
 
 ---
 
-## Custom VPC
+## ⚖️ Comparison Table: Default vs. Custom
 
-### Characteristics
-- **CIDR**: You choose (e.g., 10.0.0.0/16)
-- **Subnets**: You design (public/private, multi-tier)
-- **Gateways**: You configure (IGW, NAT, VPN)
-- **Route Tables**: You define routing logic
-- **Security**: Layered (public/private subnets, NACLs, SGs)
-
-### Advantages
-- **Full Control**: Design network topology
-- **Security**: Proper isolation and segmentation
-- **Compliance**: Meet regulatory requirements
-- **Scalability**: Plan for growth
-- **Best Practices**: Implement defense in depth
-
-### Disadvantages
-- **Complexity**: Requires networking knowledge
-- **Setup Time**: More configuration required
-- **Responsibility**: You manage all components
-
----
-
-## Comparison Table
-
-| Feature | Default VPC | Custom VPC |
+| Feature | Default VPC | Custom VPC (Pro Choice) |
 | :--- | :--- | :--- |
-| **CIDR Block** | 172.31.0.0/16 (fixed) | Your choice |
-| **Subnets** | Public only | Public + Private |
+| **Creation** | Automatic by AWS | Manual (Console/IaC) |
+| **IP Range (CIDR)** | Fixed: `172.31.0.0/16` | Flexible (e.g., `10.0.0.0/16`) |
+| **Subnets** | All are **Public** (Routes to IGW) | Mix of **Public** and **Private** |
+| **Public IPs** | Auto-assigned to instances | You control allocation |
 | **Internet Gateway** | Pre-attached | You attach |
-| **Route Tables** | Public routes | You configure |
-| **NAT Gateway** | None | You create |
-| **Public IPs** | Auto-assigned | You configure |
-| **Security** | Basic | Advanced (multi-layer) |
-| **Production Use** | Not recommended | Recommended |
-| **Compliance** | May not meet requirements | Customizable |
-| **Learning Curve** | Easy | Moderate |
+| **NAT Gateway** | None (instances must be public) | You deploy for private security |
+| **Production Ready?** | ❌ No | ✅ Yes |
 
 ---
 
-## When to Use Each
+## 🛠️ The Custom VPC Roadmap
 
-### Use Default VPC For:
-- Learning AWS
-- Quick testing/prototyping
-- Temporary workloads
-- Non-production environments
-- Simple applications with no sensitive data
+If you were to build a VPC from scratch right now, here is the "Order of Operations":
 
-### Use Custom VPC For:
-- Production workloads
-- Multi-tier applications
-- Compliance requirements (PCI-DSS, HIPAA, SOC 2)
-- Hybrid cloud (VPN/Direct Connect)
-- Enterprise applications
-- Any application handling sensitive data
+1.  **VPC**: Define your CIDR block (e.g., `10.0.0.0/16`).
+2.  **Subnets**: Create at least two—one for the internet (Public) and one for your data (Private).
+3.  **Internet Gateway (IGW)**: Create and attach it to the VPC.
+4.  **Route Tables**: Create two—a **Public RT** (pointing to IGW) and a **Private RT** (internal only).
+5.  **Subnet Association**: Assign each subnet to its respective Route Table.
+6.  **Security**: Define Security Groups for each layer (Instance-level firewalls).
 
 ---
 
-## Migration from Default to Custom VPC
+## 🚀 Professional Pattern: The "Custom Foundation"
 
-### Step 1: Design Custom VPC
-```
-VPC: 10.0.0.0/16
-├── Public Subnets (Web Tier)
-│   ├── 10.0.1.0/24 (AZ-A)
-│   └── 10.0.2.0/24 (AZ-B)
-└── Private Subnets (App/Data Tier)
-    ├── 10.0.11.0/24 (AZ-A)
-    └── 10.0.12.0/24 (AZ-B)
-```
+In enterprise environments, the first thing many teams do is delete the Default VPC to prevent accidental deployments in an insecure network.
 
-### Step 2: Create Infrastructure
-- Create VPC
-- Create subnets
-- Attach IGW
-- Create NAT Gateway
-- Configure route tables
-- Set up security groups
-
-### Step 3: Migrate Workloads
-- Launch new instances in custom VPC
-- Migrate data
-- Update DNS/load balancers
-- Test thoroughly
-- Decommission old instances
+**The Pro Standard**:
+1. **Delete the Default**: In sensitive accounts (e.g., Production), remove the default VPC entirely using the CLI or Service Quotas.
+2. **IaC Only**: Never create VPCs manually. Use **Terraform** or **CloudFormation** to ensure the tags, subnets, and routes are identical across Dev, Staging, and Prod.
+3. **Multi-Account over Multi-VPC**: Instead of putting everything in one massive VPC, use separate AWS Accounts (via AWS Organizations) to provide the ultimate "Blast Radius" protection.
 
 ---
 
-## Default VPC Deletion
+## 🏆 Real-World DevOps Story: The Default VPC Breach
 
-**Warning**: Deleting the default VPC is permanent and cannot be undone through the console.
-
-### To Delete:
-```bash
-# List default VPC
-aws ec2 describe-vpcs --filters "Name=isDefault,Values=true"
-
-# Delete default VPC (use with caution!)
-aws ec2 delete-vpc --vpc-id vpc-xxxxx
-```
-
-### To Recreate:
-```bash
-# Recreate default VPC
-aws ec2 create-default-vpc
-```
-
-**Best Practice**: Keep default VPC for testing, use custom VPCs for production.
+**The Scenario**: A startup used the Default VPC for their production database to "save time" during their launch week.
+**The Crisis**: Because the Default VPC assigns public IPs to every instance, their database server was reachable from the entire internet. A script-kiddy running a port scanner found port `3306` (MySQL) open. Within an hour, they brute-forced the weak admin password.
+**The Impact**: The database was encrypted by ransomware. The startup had to pay $10,000 in Bitcoin to recover their customer records, and their reputation was permanently damaged by the mandatory data breach notification.
+**The Lesson**: **Convenience is the enemy of security.** A Custom VPC with a Private Subnet would have made this attack physically impossible, as the database would have had no public IP and no path from the internet.
 
 ---
 
-## 🏗️ Real-Life Scenario: The Default VPC Breach
-**Company**: Startup using default VPC for production.
-**Setup**: All EC2 instances in default VPC with public IPs.
-**Incident**: Database server accidentally launched in default VPC with public IP.
-**Attack**: Port scanner found open port 3306 (MySQL), brute-forced password.
-**Impact**: Data breach, $250k fine, customer trust lost.
-**Root Cause**: Default VPC makes everything public by default.
-**Fix**: Migrated to custom VPC with proper public/private subnet separation.
-**Lesson**: Never use default VPC for production workloads.
+## ❓ Interview Preparation (Default vs. Custom)
+
+1. **Q: How can you tell if an instance is in a Public Subnet or a Private Subnet?**
+    *A: Look at the Subnet's Route Table. If there is a route (0.0.0.0/0) pointing to an **Internet Gateway (igw-xxxxx)**, it is a Public Subnet. If the route points to a NAT Gateway or doesn't exist, it is Private.*
+
+2. **Q: If you delete your Default VPC, can you get it back?**
+    *A: Yes. You can use the AWS CLI (`aws ec2 create-default-vpc`) or the AWS Console to recreate it. However, it will not restore any resources that were inside it.*
+
+3. **Q: Why would I choose a CIDR like 10.0.0.0/16 for my custom VPC instead of 192.168.0.0/24?**
+    *A: A `/16` provides 65,531 usable IPs, whereas a `/24` only provides 251. For a production environment, you want the largest possible space (/16) so you can create many subnets across multiple Availability Zones without running out of room.*
+
+4. **Q: Does a Custom VPC cost more than a Default VPC?**
+    *A: No. Creating the VPC, Subnets, IGWs, and Route Tables is free. You only pay for the resources you put inside them (like EC2) or for specific components like **NAT Gateways** or **VPC Endpoints**.*
+
+5. **Q: If I launch an EC2 in the Default VPC, do I need to create a Route Table manually?**
+    *A: No. The Default VPC comes with a "Main Route Table" that already has a rule to send all internet traffic to the pre-attached Internet Gateway.*
 
 ---
 
-## ❓ Interview Questions
-1.  **What is the main security risk of using the default VPC for production?**
-    *   *Answer*: All subnets in the default VPC are public by default with routes to the Internet Gateway. Instances automatically receive public IPs, making them directly accessible from the internet unless explicitly restricted by security groups.
-2.  **Can you modify the CIDR block of the default VPC?**
-    *   *Answer*: No, the default VPC always uses 172.31.0.0/16 and this cannot be changed. You can add secondary CIDR blocks, but the primary CIDR is fixed.
+## 📝 Knowledge Check
+
+1. **What is the CIDR block fixed to in an AWS Default VPC?**
+    - [ ] a) 10.0.0.0/16
+    - [x] b) 172.31.0.0/16
+    - [ ] c) 192.168.1.0/24
+
+2. **In a Custom VPC, which component is required to give resources in a Private Subnet internet access for updates?**
+    - [ ] a) Internet Gateway
+    - [x] b) NAT Gateway
+    - [ ] c) Virtual Private Gateway
+
+3. **True or False: A Default VPC's subnets are private by default.**
+    - [ ] True
+    - [x] False (They are all public)
+
+4. **Which tool is recommended for recreating a deleted Default VPC?**
+    - [ ] a) AWS SDK
+    - [x] b) AWS CLI / Console
+    - [ ] c) AWS Support Ticket
+
+5. **What is the primary reason to use a Custom VPC for production?**
+    - [ ] a) It is faster
+    - [x] b) It allows for network segmentation and better security
+    - [ ] c) It is required by AWS
 
 ---
 
-## 🧠 Quiz Snippet (5/20+)
-<b>1. What is the CIDR of the default VPC?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: 172.31.0.0/16
-</details>
+## 🔗 Next Steps
 
-<b>2. True/False: Default VPC subnets are private.</b>
-<details>
-<summary>Show Answer</summary>
-Answer: False - they're public
-</details>
+Design is one thing; scaling is another. Every cloud environment has "speed limits." Let's look at the quotas you need to know to avoid a production outage.
 
-<b>3. Should you use default VPC for production?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: No
-</details>
-
-<b>4. Can you recreate a deleted default VPC?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: Yes - via AWS CLI
-</details>
-
-<b>5. Do instances in default VPC get public IPs automatically?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: Yes
-</details>
+Proceed to: **[06. VPC Limits & Quotas](../06-VPC-Limits-and-Quotas/README.md)** →

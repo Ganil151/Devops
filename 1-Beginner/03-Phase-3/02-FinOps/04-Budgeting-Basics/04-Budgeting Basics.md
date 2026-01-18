@@ -32,11 +32,11 @@ By the end of this module, you will:
 
 ## 🏗️ The Three Types of Guardrails
 
-| Type | Name | Purpose |
-| :--- | :--- | :--- |
-| **Soft Alert** | Information | "Hey team, we've used 50% of the budget." No action taken. |
-| **Warning Alert** | Investigation | "80% reached. Stop starting new instances and review." |
-| **Hard Limit** | Enforcement | "100% reached. Automatically denying new resource requests." |
+| Type              | Name          | Purpose                                                      |
+| :---------------- | :------------ | :----------------------------------------------------------- |
+| **Soft Alert**    | Information   | "Hey team, we've used 50% of the budget." No action taken.   |
+| **Warning Alert** | Investigation | "80% reached. Stop starting new instances and review."       |
+| **Hard Limit**    | Enforcement   | "100% reached. Automatically denying new resource requests." |
 
 ---
 

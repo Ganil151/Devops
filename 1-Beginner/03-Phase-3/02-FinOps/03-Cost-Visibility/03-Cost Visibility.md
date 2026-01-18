@@ -36,13 +36,13 @@ By the end of this module, you will:
 
 A "Good" tag is consistent, lowercase, and hyphenated. A "Bad" tag is inconsistent (e.g., `Environment` vs `env` vs `ENV`).
 
-| Key | Standard Value | Description |
-| :--- | :--- | :--- |
-| `env` | `prod`, `stag`, `dev` | Critical for separating stable vs exploratory costs. |
-| `team` | `platform`, `billing`, `ui` | Who owns the technical resource? |
-| `costcenter` | `cc-804`, `eng-ops` | Which spreadsheet cell does this money come from? |
-| `project` | `migration-v2` | Useful for tracking one-off initiative costs. |
-| `owner` | `john.doe` | The human to Slack when the resource is idle. |
+| Key          | Standard Value              | Description                                          |
+| :----------- | :-------------------------- | :--------------------------------------------------- |
+| `env`        | `prod`, `stag`, `dev`       | Critical for separating stable vs exploratory costs. |
+| `team`       | `platform`, `billing`, `ui` | Who owns the technical resource?                     |
+| `costcenter` | `cc-804`, `eng-ops`         | Which spreadsheet cell does this money come from?    |
+| `project`    | `migration-v2`              | Useful for tracking one-off initiative costs.        |
+| `owner`      | `john.doe`                  | The human to Slack when the resource is idle.        |
 
 ---
 

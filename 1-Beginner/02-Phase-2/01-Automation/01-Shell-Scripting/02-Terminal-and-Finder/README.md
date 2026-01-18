@@ -22,14 +22,14 @@ By the end of this module, you will:
 ## 🏗️ The Filesystem Hierarchy Standard (FHS)
 In Linux, every file has a designated home. Understanding this map is critical for automation.
 
-| Directory | Purpose | DevOps Context |
-| :--- | :--- | :--- |
-| **`/bin`** | Essential Binary apps | `ls`, `cp`, `mv` live here. |
-| **`/etc`** | System Configurations | Where `nginx.conf` or `cni` settings live. |
-| **`/var/log`**| Variable Data (Logs) | The first place you go when a service fails. |
-| **`/home`** | User Directories | Personal scripts and SSH keys. |
-| **`/opt`** | Optional/Add-on software| Where manual installs (like some DBs) are stored. |
-| **`/tmp`** | Temporary files | Wiped on reboot; used for interim script data. |
+| Directory  | Purpose                  | DevOps Context                                    |
+| :--------- | :----------------------- | :------------------------------------------------ |
+| `/bin`     | Essential Binary apps    | `ls`, `cp`, `mv` live here.                       |
+| `/etc`     | System Configurations    | Where `nginx.conf` or `cni` settings live.        |
+| `/var/log` | Variable Data (Logs)     | The first place you go when a service fails.      |
+| `/home`    | User Directories         | Personal scripts and SSH keys.                    |
+| `/opt`     | Optional/Add-on software | Where manual installs (like some DBs) are stored. |
+| `/tmp`     | Temporary files          | Wiped on reboot; used for interim script data.    |
 
 ---
 

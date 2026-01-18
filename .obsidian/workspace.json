@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-Beginner/03-Phase-3/02-FinOps/02-Cloud-Billing-Basics/02-Cloud Billing Basics.md",
+                "file": "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/04-Hidden-Files/CHALLENGES.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02-Cloud Billing Basics"
+              "title": "CHALLENGES"
             }
           }
         ]
@@ -217,6 +217,18 @@
   },
   "active": "7102568f98092cec",
   "lastOpenFiles": [
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/02-Terminal-and-Finder/CHALLENGES.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/CHALLENGES.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/file_lifecycle.svg",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/02-Terminal-and-Finder/README.md",
+    "1-Beginner/03-Phase-3/02-FinOps/Images/RegionTypeCost.png",
+    "1-Beginner/03-Phase-3/02-FinOps/Images/pricing-models.png",
+    "1-Beginner/03-Phase-3/02-FinOps/Images/finops-lifecycle.png",
+    "1-Beginner/03-Phase-3/02-FinOps/Images/cloud-cost-breakdown.png",
+    "1-Beginner/03-Phase-3/02-FinOps/04-Budgeting-Basics/04-Budgeting Basics.md",
+    "1-Beginner/03-Phase-3/02-FinOps/03-Cost-Visibility/03-Cost Visibility.md",
+    "1-Beginner/03-Phase-3/02-FinOps/02-Cloud-Billing-Basics/02-Cloud Billing Basics.md",
     "1-Beginner/03-Phase-3/02-FinOps/01-Introduction/Introduction to FinOps.md",
     "1-Beginner/03-Phase-3/01-Container-Orchestration/Docker/01-Beginner/03-Dockerfile-Basics/README.md",
     "1-Beginner/03-Phase-3/01-Container-Orchestration/Docker/01-Beginner/02-Images-and-Containers/README.md",
@@ -227,7 +239,6 @@
     "1-Beginner/03-Phase-3/01-Container-Orchestration/docker_network_pattern_4.png",
     "1-Beginner/03-Phase-3/01-Container-Orchestration/docker_network_pattern_3.png",
     "1-Beginner/03-Phase-3/01-Container-Orchestration/docker_network_pattern_2.png",
-    "1-Beginner/03-Phase-3/01-Container-Orchestration/docker_network_pattern_1.png",
     "2-Intermediate/03-Phase-3/01-Container-Orchestration/01-Cluster-Architecture/README.md",
     "2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/02-Functions-Scope/CHALLENGES.md",
     "Labs/Play_Ground/Youtube-Lessons/05-Shell-Scripting/ytb-links.txt~",
@@ -252,17 +263,6 @@
     "1-Beginner/02-Phase-2/06-Prompt-Engineering/02-Prompt-Toolkit/README.md",
     "1-Beginner/02-Phase-2/06-Prompt-Engineering/01-Foundations-and-Mental-Models/README.md",
     "1-Beginner/02-Phase-2/05-Basic-CI-CD/CHALLENGES.md",
-    "1-Beginner/02-Phase-2/05-Basic-CI-CD/05-Continuous-Deployment/README.md",
-    "1-Beginner/02-Phase-2/05-Basic-CI-CD/04-Security-and-Quality-Gates/README.md",
-    "1-Beginner/02-Phase-2/05-Basic-CI-CD/03-Pipeline-Components/README.md",
-    "1-Beginner/02-Phase-2/05-Basic-CI-CD/02-GitHub-Actions-Basics/README.md",
-    "1-Beginner/02-Phase-2/05-Basic-CI-CD/01-CI-CD-Foundations/README.md",
-    "1-Beginner/02-Phase-2/04-Maven/CHALLENGES.md",
-    "2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/02-Functions-Scope/README.md",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/15-Conditionals/conditional_logic_flow.png",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/shell_architecture.png",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/17-Input-Output/io_stream_architecture.png",
-    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/16-For-Loops/iteration_mechanics.png",
     "Untitled.canvas"
   ]
 }
