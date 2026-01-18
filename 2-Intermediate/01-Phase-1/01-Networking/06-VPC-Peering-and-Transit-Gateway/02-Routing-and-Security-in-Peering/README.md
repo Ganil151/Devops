@@ -1,144 +1,132 @@
-# 02. Routing and Security in Peering
+# 🚏 Module 06.02: Routing & Security in Peering
 
-Simply "Connecting" two VPCs via peering does not allow data to flow. You must configure **Route Tables**, handle **DNS Resolution**, and update **Security Groups** to bridge the two networks.
-
-## The Non-Transitive Rule
-
-The most famous concept in VPC peering is that it is **Non-Transitive**. If VPC A is peered with VPC B, and VPC B is peered with VPC C, VPC A **cannot** talk to VPC C using VPC B as a bridge.
+> **"Connectivity is only half the battle. In a peered environment, the 'Invisible Walls' of Route Tables and Security Groups are what truly define whether data flows or dies at the border."**
 
 ```mermaid
 graph LR
-    A[VPC A] <-->|Peer 1| B[VPC B]
-    B <-->|Peer 2| C[VPC C]
-    A -.->|Illegal Hop| C
+    subgraph VPC_A[VPC A: 10.0.0.0/16]
+        App_A[App Server]
+        RT_A[Route Table: 10.1.0.0/16 -> pcx-123]
+    end
 
-style B fill:#3399ff,color:#fff
+    subgraph VPC_B[VPC B: 10.1.0.0/16]
+        DB_B[Database]
+        RT_B[Route Table: 10.0.0.0/16 -> pcx-123]
+    end
+
+    App_A <-->|pcx-123| DB_B
+    
+    style App_A fill:#fdf2f8,stroke:#db2777
+    style DB_B fill:#eff6ff,stroke:#2563eb
+    style RT_A fill:#fff,stroke:#333
+    style RT_B fill:#fff,stroke:#333
 ```
 
-### Why?
-The VPC router only looks one step ahead. It does not allow "multi-hop" routing for peering. To connect A to C, you must create a **Third Peering Connection** directly between A and C.
+## 📚 Overview
+
+Establishing a **VPC Peering** connection is like plugging in a network cable. However, just plugging it in doesn't mean your devices know how to talk across it. This module covers the critical post-connection steps: manual **Route Table** updates, enabling **Private DNS Resolution**, and the strict rules governing **Transitive Routing** (or the lack thereof). We will also explore how **Security Groups** can work across accounts to provide a truly integrated security posture.
+
+## 🎓 Learning Objectives
+
+By the end of this module, you will:
+
+- ✅ Configure **Static Routes** for bidirectional traffic flow.
+- ✅ Understand the **Non-Transitive** limitation and its architectural impact.
+- ✅ Enable **DNS Resolution Support** for private EC2 hostnames.
+- ✅ Implement **Cross-VPC Security Group Referring** (Same Region).
+- ✅ Identify **Edge-to-Edge** routing violations (IGW/VPN bypass).
 
 ---
 
-## DNS Support in Peering
+## 🏗️ Core Rules
 
-By default, an instance in VPC A cannot resolve the private DNS name of an instance in VPC B. 
-*   **The Issue**: If you try to reach `db.internal.vpc-b`, it will fail because the DNS servers are local to their own VPCs.
-*   **The Solution**: You must enable **DNS Resolution Support** on the peering connection. This tells the AWS DNS server to allow cross-VPC private hostname resolution.
+### 1. The Non-Transitive Law
+VPC Peering is a direct 1-to-1 relationship. If A is peered with B, and B is peered with C, **A cannot reach C through B**. This prevents unplanned "transit" through your network. To link A to C, you need a direct peering connection or a Transit Gateway.
 
----
+### 2. Manual Routing
+AWS does NOT automatically update your route tables when a peer is accepted. You must manually add a route in **both VPCs** pointing to the other's CIDR range with the target set to the `pcx-` ID.
 
-## Cross-VPC Security Groups
-
-In the same region, you can reference a **Security Group ID** from a peered VPC in your rules. 
-*   **Benefit**: "Allow Port 3306 from `sg-web-vpc-a`". 
-*   **Why it's great**: You don't have to keep track of IP addresses. If a web server in VPC A changes its IP, the database in VPC B still recognizes its SG membership.
+### 3. DNS Resolution
+By default, you can only ping a peer's IP address. To resolve private DNS names (e.g., `ip-10-0-1-5.ec2.internal`), you must enable "DNS Resolution Support" in the Peering Connection options for both the requester and the accepter.
 
 ---
 
-## Real-Life Scenarios
+## 🚀 Professional Pattern: Cross-VPC "Least Privilege"
 
-### Scenario 1: "The Peering Mesh Nightmare"
-**Problem**: An organization had 10 VPCs that all needed to talk to each other. They started creating peering connections.
-**Discovery**: For 10 VPCs to be fully meshed, they needed `(N*(N-1))/2` connections, which is **45 connections**. The management became a nightmare.
-**Result**: They realized that peering doesn't scale for large meshes (this is why they later switched to Transit Gateway).
+Instead of allowing "All traffic from 10.0.0.0/16," senior architects use **Security Group Referencing**.
 
-### Scenario 2: "The Broken Database Connection"
-**Problem**: A developer could ping the internal IP of a RDS database in a peered VPC, but the application (trying to use the DNS name `db-01.xxxxxxxx.region.rds.amazonaws.com`) failed to connect.
-**Discovery**: DNS Resolution Support was not enabled on the `pcx-xxxx` connection.
-**Solution**: Modified the Peering Connection Options to "Allow DNS resolution from accepted VPC".
-
-### Scenario 3: "Hidden Edge-to-Edge"
-**Problem**: VPC A has a VPN connection to an On-Premise office. VPC A is peered with VPC B. Can the On-Premise office talk to VPC B via the peering connection?
-**Answer**: **No**. This is "Edge-to-Edge" routing, which is forbidden in VPC peering.
-**Solution**: Must use Transit Gateway or a separate VPN for VPC B.
+**The Pro Standard**:
+1. **The Peered Link**: Ensure VPC A and VPC B are in the **same region**.
+2. **The Database (VPC B)**: Set a rule to "Allow MySQL (3306) from `sg-12345 (VPC A)`".
+3. **The Web Server (VPC A)**: Has `sg-12345` assigned.
+4. **The Benefit**: If you add 10 more web servers, they automatically have access. If a server is compromised and you remove it from the SG, it loses access instantly. No IP maintenance required.
 
 ---
 
-## ❓ Interview Questions
+## 🏆 Real-World DevOps Story: The "Hidden Hop" Failure
 
-1. **What does it mean that VPC peering is non-transitive?**
-    - If A is peered with B and B is peered with C, traffic cannot flow from A to C through B.
-2. **Can you reach an On-Premise network via a peer's VPN?**
-    - No. VPC peering does not support edge-to-edge routing.
-3. **How do you enable private DNS resolution across a peering connection?**
-    - You must enable "DNS Resolution Support" in the peering connection options for both the Requester and the Accepter.
-4. **Can you reference a Security Group ID in a peered VPC?**
-    - Yes, but only for **Inter-Region Peering** if specific settings are met (usually same region is standard).
-5. **How do you route traffic to a peered VPC?**
-    - You must add a static route to your Route Table: `Destination: Peer-CIDR, Target: pcx-xxxx`.
-6. **If two peered VPCs have overlapping CIDRs, what happens to the route table?**
-    - You cannot create the peering connection in the first place, so the route table conflict is avoided by the API limits.
-7. **What is 'Edge-to-Edge' routing?**
-    - Attempting to use a VPC as a "middleman" to reach an IGW, VGW, or another Peer.
-8. **Does a peering connection automatically update my route tables?**
-    - No. You must manually add the routes on **both sides** of the peering connection.
-9. **Which component enforces security in a peering connection?**
-    - Both Security Groups (at the instance) and NACLs (at the subnet boundary).
-10. **Can you use peering to connect a VPC to a public website?**
-    - No. Peering is for private IP communication only.
+**The Scenario**: A company had a secure VPC A connected via VPN to their on-premise office. They peered VPC A with a new "Dev VPC" (VPC B).
+**The Crisis**: Developers in the physical office could SSH into servers in VPC A, but they couldn't reach VPC B, even though the routes in VPC A seemed correct.
+**The Discovery**: They were attempting **Edge-to-Edge Routing**. The VPN traffic entered VPC A, but AWS routing logic forbade it from "hopping" over the peering link to VPC B.
+**The Fix**: They had to establish a separate VPN for VPC B, or (the better long-term fix) migrate all connections to a **Transit Gateway**, which *does* support edge-to-edge transit.
+**The Lesson**: **Peering is a bridge, not a bypass.** It won't carry traffic from other gateways (VPN, DX, or IGW).
 
 ---
 
-## 🧠 Quiz
+## ❓ Interview Preparation (Routing & Security)
 
-1. **Non-transitive means:**
-    - [x] No multi-hop routing
-    - [ ] No internet access
-2. **To enable DNS across VPCs, modify:**
-    - [x] Peering Connection Options
-    - [ ] Routing Table
-3. **Edge-to-Edge routing is:**
-    - [x] Blocked in Peering
-    - [ ] Allowed by default
-4. **Target for Peering Route:**
-    - [x] pcx-id
-    - [ ] igw-id
-5. **If N=4, a full mesh needs:**
-    - [x] 6 connections
-    - [ ] 4 connections
-6. **Can you reference Peer SG IDs in same region?**
-    - [x] Yes
-    - [ ] No
-7. **DNS resolution of private IPs requires:**
-    - [x] Enable DNS Resolution Support
-    - [ ] Public IP address
-8. **Who adds routes to the route table?**
-    - [x] The User (Both sides)
-    - [ ] AWS (Automatically)
-9. **Can a Peer reach your Internet Gateway?**
-    - [x] No
-    - [ ] Yes
-10. **Peering involves how many VPCs?**
-    - [x] 2
-    - [ ] 3
-11. **If Route A points to pcx-1 and Route B points to pcx-2:**
-    - [x] Most specific CIDR wins (LPM)
-    - [ ] Older route wins
-12. **NACLs are bypasssed by peering?**
-    - [x] No
-    - [ ] Yes
-13. **Security Groups are bypassed by peering?**
-    - [x] No
-    - [ ] Yes
-14. **Peering 'Request' is sent by:**
-    - [x] Requester VPC
-    - [ ] Accepter VPC
-15. **Status for active data flow:**
-    - [x] Active
-    - [ ] Connected
-16. **Shared resources usually live in a:**
-    - [x] Hub VPC
-    - [ ] Edge VPC
-17. **Full Mesh Peering scaleability is:**
-    - [x] Low (Complex)
-    - [ ] High (Simple)
-18. **Can you peer with yourself?**
-    - [x] No
-    - [ ] Yes
-19. **If VPN is at VPC A, can VPC B use it?**
-    - [x] No
-    - [ ] Yes (Only with TGW)
-20. **Peering is basically a:**
-    - [x] Layer 3 connection
-    - [ ] Layer 7 Proxy
+1. **Q: Can you reach a peered VPC's Internet Gateway (IGW)?**
+    *A: **No.** VPC Peering does not support 'Edge-to-Edge' routing. You cannot use a peer's internet connection or VPN gateway to reach a third party.*
+
+2. **Q: What happens if you forget to add a route in the 'Accepter' VPC?**
+    *A: Traffic will reach the destination server, but the server won't know how to send the 'Reply' back. The connection will time out, even if the Security Groups are correct.*
+
+3. **Q: Can you resolve cross-account private DNS hostnames?**
+    *A: Yes, but only if 'DNS Resolution Support' is enabled on the peering connection for both the requester and the accepter accounts.*
+
+4. **Q: Is it possible to reference a Security Group from a different region in a peering rule?**
+    *A: **No.** Security Group referencing only works within the same region (though the VPCs can be in different accounts).*
+
+5. **Q: Why is 'Non-Transitivity' considered a security feature?**
+    *A: It prevents "lateral movement" by default. If a hacker compromises one network, they can't automatically hop through all your peered networks unless you've explicitly built a mesh.*
+
+---
+
+## 📝 Knowledge Check
+
+1. **VPC A is peered with VPC B. For A to talk to B, you must add a route to:**
+    - [ ] a) Only VPC A's Route Table
+    - [ ] b) Only VPC B's Route Table
+    - [x] c) Both VPC A and VPC B's Route Tables
+    - [ ] d) The Internet Gateway
+
+2. **If VPC A is peered to VPC B and VPC B is peered to VPC C, can A talk to C through B?**
+    - [ ] a) Yes, by default
+    - [ ] b) Yes, if routes are added
+    - [x] c) No, this is non-transitive and forbidden
+    - [ ] d) Only if they are in the same account
+
+3. **Which option must be enabled to resolve cross-VPC private hostnames?**
+    - [ ] a) Public IP address
+    - [x] b) DNS Resolution Support
+    - [ ] c) DHCP Option Sets
+    - [ ] d) Route 53 Resolver
+
+4. **True or False: You can reference a Security Group ID from a peered VPC in a different region.**
+    - [ ] True 
+    - [x] False (Same region only)
+
+5. **A 'pcx' target in a route table refers to:**
+    - [ ] a) A VPN Gateway
+    - [x] b) A VPC Peering Connection
+    - [ ] c) A Transit Gateway
+    - [ ] d) A NAT Gateway
+
+---
+
+## 🔗 Next Steps
+
+Peering works for pairs, but what happens when you have 100 VPCs? Let's look at the centralized "Cloud Router" that solves the mesh complexity.
+
+Proceed to: **[03. Transit Gateway Architecture](../03-Transit-Gateway-Architecture/README.md)** →
+Node: This link points to the next lesson.

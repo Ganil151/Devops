@@ -1,153 +1,132 @@
-# 02. ALB Deep Dive & L7 Routing
+# 🧠 Module 07.02: ALB Deep Dive & L7 Routing
 
-The **Application Load Balancer (ALB)** is a highly intelligent, content-aware proxy. Because it terminates the connection and inspects the HTTP headers, it can make routing decisions that Layer 4 balancers cannot.
-
-## How Layer 7 Routing Works
-
-ALB evaluates "Rules" on its Listeners. Each rule consists of a **Priority**, **Conditions**, and **Actions**.
+> **"What makes the Application Load Balancer special isn't that it balances traffic; it's that it 'understands' it. Because it reads the HTTP protocol, it becomes the intelligent brain of your microservices architecture."**
 
 ```mermaid
 graph TD
-    Request[HTTP Request] --> L{Listener 443}
-    L --> Rule1{Is Path /api/*?}
-    Rule1 -->|Yes| TG_API[Target Group: API]
-    Rule1 -->|No| Rule2{Is Host api.v2.com?}
-    Rule2 -->|Yes| TG_V2[Target Group: V2]
-    Rule2 -->|No| Default[Default Rule: 404/Fix Response]
+    User([User Request]) --> ALB[Application Load Balancer]
+    
+    subgraph Routing_Engine[Listener Rules]
+        ALB -->|Host: api.v1.com| TG_V1[Target Group: V1]
+        ALB -->|Path: /images/*| S3[S3 Bucket / Proxy]
+        ALB -->|Header: Mobile| TG_Mobile[Mobile Optimized Pool]
+        ALB -->|Default| TG_Main[Main App Cluster]
+    end
+
+    style ALB fill:#3b82f6,stroke:#1d4ed8,color:#fff
+    style Routing_Engine fill:#eff6ff,stroke:#2563eb
 ```
 
-### Supported Conditions
-*   **Path-based**: `/images/*`, `/login`, `/v1/*`.
-*   **Host-based**: `mobile.example.com`, `admin.internal.net`.
-*   **HTTP Header**: Based on custom headers like `X-User-Type`.
-*   **Query String**: `?version=beta`.
-*   **Source IP**: Only allow traffic from certain CIDR blocks.
+## 📚 Overview
+
+The **Application Load Balancer (ALB)** is a highly intelligent, content-aware proxy. Unlike Layer 4 balancers that just blindly pass packets, the ALB terminates the connection, reads the HTTP headers, inspects the cookies, and evaluates the URL path. This allows you to host multiple applications on a single load balancer and direct users to specific microservices based on their request. This module deep dives into **Smart Routing**, **SSL Termination**, and how to protect your app with **AWS WAF**.
+
+## 🎓 Learning Objectives
+
+By the end of this module, you will:
+
+- ✅ Master **Path-Based** and **Host-Based** routing rules.
+- ✅ Implement **Weighted Target Groups** for Canary and Blue/Green deployments.
+- ✅ Understand **SNI (Server Name Indication)** and multi-certificate hosting.
+- ✅ Configure **Redirect Rules** (e.g., HTTP to HTTPS) and **Fixed Responses**.
+- ✅ Integrate **AWS WAF** to block Layer 7 attacks (SQLi, XSS).
 
 ---
 
-## Technical Features
+## 🏗️ Intelligence Features
 
-### 1. SSL/TLS Termination
-ALB offloads the CPU-intensive task of decrypting HTTPS traffic from your EC2 instances.
-*   **ACM Integration**: You can attach certificates from AWS Certificate Manager easily.
-*   **SNI (Server Name Indication)**: Host multiple websites with different SSL certificates on a single ALB.
+### 1. Smart Routing Rules
+ALB evaluates rules on a "Top-Down" basis. The first rule that matches a condition (URL path, Hostname, HTTP Header, or Query String) wins.
+- **Example**: `myapp.com/api` goes to the API group, while `myapp.com/*` goes to the static web group.
 
-### 2. User Authentication
-ALB can authenticate users before they even reach your application. It integrates with **Amazon Cognito** or any OIDC-compliant provider (Google, Auth0, etc.).
+### 2. SSL/TLS Termination & SNI
+- **Termination**: The ALB decrypts traffic once, so your backend servers receive plain HTTP. This saves significant CPU on your instances.
+- **SNI**: Allows you to host `site-a.com` and `site-b.com` on the same ALB, using different SSL certificates for each.
 
-### 3. Native Integration with WAF
-ALB integrates directly with **AWS WAF (Web Application Firewall)** to block SQL injection, Cross-Site Scripting (XSS), and bot traffic at the edge.
-
----
-
-## Real-Life Scenarios
-
-### Scenario 1: "The Microservices Umbrella"
-**Problem**: An agile team has split their monolith into 5 microservices. They don't want to manage 5 different DNS names or 5 different Load Balancers (to save cost).
-**Discovery**: ALB supports path-based routing.
-**Solution**: 
-- `myapp.com/auth` -> Auth service TG.
-- `myapp.com/payments` -> Payments service TG.
-- `myapp.com/catalog` -> Catalog service TG.
-**Outcome**: One ALB, one certificate, and one DNS name manage the entire ecosystem.
-
-### Scenario 2: "The Phased Rollout (Canary)"
-**Problem**: A DevOps team wants to send 10% of traffic to a new "experimental" version of their app without changing DNS.
-**Discovery**: ALB supports **Weighted Target Groups**.
-**Solution**: Update the route rule to point to two target groups: 90% weight to `Production` and 10% weight to `Beta`.
-**Outcome**: Traffic is split at the Load Balancer level, allowing for safe testing in production.
-
-### Scenario 3: "The Forbidden Browser"
-**Problem**: A legacy backend service crashes when users access it via Internet Explorer 11.
-**Solution**: Create an ALB rule that checks the `User-Agent` header for "MSIE 11" and returns a **Fixed Response** (HTTP 403) with a custom message: "Please upgrade your browser."
-**Outcome**: The crash-prone traffic never touches the backend.
+### 3. Native Integration
+- **WAF**: Block bad bots or malicious request patterns before they reach your code.
+- **OIDC/Cognito**: Authenticate users (Login with Google/Facebook) directly at the load balancer.
 
 ---
 
-## ❓ Interview Questions
+## 🚀 Professional Pattern: The "Blue/Green" Traffic Shift
 
-1. **What is 'Path-Based Routing'?**
-    - Routing traffic to different target groups based on the URL path (e.g., `/api` vs `/static`).
-2. **What is 'Host-Based Routing'?**
-    - Routing traffic based on the domain name in the host header (e.g., `app1.com` vs `app2.com`).
-3. **What is SNI and why is it used in ALBs?**
-    - Server Name Indication. it allows one ALB to serve multiple domains with different SSL certificates.
-4. **How does ALB handle user sessions?**
-    - Via **Sticky Sessions** (Session Affinity) using a cookie.
-5. **Can an ALB authenticate users before the request reaches the server?**
-    - Yes, via integration with Amazon Cognito or OIDC.
-6. **What is a 'Fixed Response' rule?**
-    - A rule where the ALB returns a status code and custom body (like a 404 or maintenance message) without forwarding to a target.
-7. **What is the difference between a 'Forward' and a 'Redirect' action?**
-    - Forward sends the packet to a target group. Redirect sends an HTTP 301/302 response to the client to visit a different URL.
-8. **Does ALB support WebSockets?**
-    - Yes, natively.
-9. **Which component manages the SSL certificates for an ALB?**
-    - AWS Certificate Manager (ACM).
-10. **How many rules can you have on an ALB listener?**
-    - 100 rules per listener (default limit).
+When deploying a major update, senior engineers don't just "switch the code." They use **Weighted Target Groups**.
+
+**The Pro Standard**:
+1. **The Setup**: Create two Target Groups: `TG-Blue` (Old Version) and `TG-Green` (New Version).
+2. **The Shift**: Initially, set the weight to 100 for Blue and 0 for Green.
+3. **The Canary**: Shift 5% of traffic to Green. Monitor your error logs.
+4. **The Completion**: If everything is healthy, shift 10%... then 50%... then 100%.
+5. **The Rollback**: If Green crashes, simply shift the weight back to Blue instantly. No DNS propagation wait time.
 
 ---
 
-## 🧠 Quiz
+## 🏆 Real-World DevOps Story: The Phishing Bot Defense
 
-1. **Routing based on domain name:**
-    - [x] Host-based
-    - [ ] Path-based
-2. **Routing based on /images:**
-    - [x] Path-based
-    - [ ] Query-based
-3. **Feature for multiple SSLs on one ALB:**
-    - [x] SNI
-    - [ ] HSTS
-4. **Weighted Target Groups are used for:**
-    - [x] Canary/Blue-Green deployment
-    - [ ] DNS failover
-5. **Component for blocking SQL injection:**
-    - [x] AWS WAF
-    - [ ] AWS Shield
-6. **Status code for 'Permanent Redirect':**
-    - [x] 301
-    - [ ] 200
-7. **Maximum priority for a rule:**
-    - [x] 1 (Smallest number wins)
-    - [ ] 100
-8. **Does ALB support HTTP/2?**
-    - [x] Yes
-    - [ ] No
-9. **Action that returns a custom body:**
-    - [x] Fixed Response
-    - [ ] Redirect
-10. **Authentication provider for ALB:**
-    - [x] Amazon Cognito
-    - [ ] IAM User
-11. **Sticky sessions use:**
-    - [x] Cookies
-    - [ ] IP addresses
-12. **Rule that triggers if no others match:**
-    - [x] Default Rule
-    - [ ] Catch-All
-13. **Can you route based on Source IP?**
-    - [x] Yes
-    - [ ] No
-14. **Redirects can be used to move traffic from:**
-    - [x] HTTP to HTTPS
-    - [ ] Private to Public
-15. **ALB rule limit per listener:**
-    - [x] 100
-    - [ ] 10
-16. **Is ALB a 'Transparent' proxy?**
-    - [x] No (It terminates the connection)
-    - [ ] Yes
-17. **Which protocol does ALB use for internal health checks?**
-    - [x] HTTP/HTTPS
-    - [ ] ICMP (Ping)
-18. **Rule priority order:**
-    - [x] Top down (Lowest number first)
-    - [ ] Bottom up
-19. **Content type for Fixed Response:**
-    - [x] text/plain or text/html
-    - [ ] binary/stream
-20. **Can you route based on Query Strings?**
-    - [x] Yes
-    - [ ] No
+**The Scenario**: A fintech startup was being attacked by a botnet trying to scrape user data. The bots were sending requests with a specific custom header: `X-Scanner: Malicious`.
+**The Crisis**: The application servers were overwhelmed. Even though the application returned a 403 error, the servers still had to "wake up" and process the request, which was using up all the available connections.
+**The Discovery**: They could handle this at the "Gatekeeper" level.
+**The Fix**: They added an ALB Rule: *If HTTP Header `X-Scanner` exists, return a **Fixed Response** of 403 Forbidden with a plain text message "Go Away."*
+**The Result**: The requests were blocked inside the ALB's infrastructure. The application servers never even saw the packets, and their CPU load dropped from 90% to 5% instantly.
+**The Lesson**: **Drop garbage at the door.** Your application should only see valid, filtered traffic.
+
+---
+
+## ❓ Interview Preparation (ALB Smarts)
+
+1. **Q: What is the difference between a 'Forward' and a 'Redirect' action in an ALB?**
+    *A: **Forward** sends the request to a backend target group (transparently). **Redirect** sends an HTTP 301/302 back to the user's browser, telling them to visit a different URL (like moving from `http://` to `https://`).*
+
+2. **Q: How many rules can a single ALB Listener handle?**
+    *A: By default, you can have up to 100 rules per listener. Rules are prioritized numerically; lower numbers are evaluated first.*
+
+3. **Q: What is a 'Fixed Response'?**
+    *A: It is a rule where the ALB returns a custom status code (e.g., 403, 503) and a custom message body directly to the client without ever talking to a backend server. Great for maintenance pages or blocking specific agents.*
+
+4. **Q: How does SNI help save money?**
+    *A: Before SNI, you needed a separate Load Balancer for every domain name that had a different SSL certificate. With SNI, you can host hundreds of domains on a single ALB, saving the hourly cost of multiple balancers.*
+
+5. **Q: Can an ALB route traffic based on the client's cookie?**
+    *A: **Yes.** ALB routing rules can inspect Cookies, Query Strings, and custom HTTP Headers to make a routing decision. This is highly useful for "A/B Testing" or "Beta Testing" specific users.*
+
+---
+
+## 📝 Knowledge Check
+
+1. **Which routing type allows you to send 'myapp.com/blog' to a different server than 'myapp.com/app'?**
+    - [ ] a) Host-based
+    - [x] b) Path-based
+    - [ ] c) Query-based
+    - [ ] d) Protocol-based
+
+2. **What is the HTTP status code typically used for a 'Permanent Redirect' from HTTP to HTTPS?**
+    - [ ] a) 200
+    - [ ] b) 404
+    - [x] c) 301
+    - [ ] d) 503
+
+3. **In the ALB rule ranking, which priority level is evaluated first?**
+    - [x] a) 1 (Highest Priority)
+    - [ ] b) 100
+    - [ ] c) 999
+    - [ ] d) Default Rule
+
+4. **Which feature allows an ALB to present the correct SSL certificate based on the requested domain name?**
+    - [ ] a) HSTS
+    - [b] b) SNI (Server Name Indication)
+    - [ ] c) OSCP
+    - [ ] d) TLS Termination
+
+5. **True or False: Using an ALB allows you to perform 'Canary' deployments by splitting traffic by percentage weight between two versions of your app.**
+    - [x] True 
+    - [ ] False
+
+---
+
+## 🔗 Next Steps
+
+You've mastered the intelligent "Layer 7" world. Now let's look at the high-performance giants: the NLB and the GLB.
+
+Proceed to: **[03. NLB & GLB Architecture](../03-NLB-and-GLB-Architecture/README.md)** →
+Node: This link points to the next lesson.

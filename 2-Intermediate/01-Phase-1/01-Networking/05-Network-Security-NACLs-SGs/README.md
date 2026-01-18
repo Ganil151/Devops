@@ -1,246 +1,114 @@
-# Network Security: NACLs and Security Groups
+# 🛡️ Module 05: Network Security (NACLs & SGs)
 
-AWS provides two layers of firewall protection for your VPC: **Security Groups** (Instance level) and **Network ACLs** (Subnet level). Understanding the layered interaction between these two is critical for architecting secure cloud environments.
-
-## 📚 Learning Path
-
-| # | Topic | Description | Key Concepts |
-| :--- | :--- | :--- | :--- |
-| **01** | [**SGs: Stateful**](./01-Security-Groups-Stateful/README.md) | The Instance-Level Firewall | State Tracking, Allow Rules, SG-IDs |
-| **02** | [**NACLs: Stateless**](./02-Network-ACLs-Stateless/README.md) | The Subnet-Level Gatekeeper | Rule Numbering, Deny Rules, Ephemeral Ports |
-| **03** | [**Layered Defense**](./03-Layered-Defense-Strategies/README.md) | Professional Security Design | Evaluation Order, 3-Tier Security |
-| **04** | [**Troubleshooting**](./04-Advanced-Troubleshooting/README.md) | Finding the "Block" | Reachability Analyzer, Flow Logs |
-
----
-
-## 🛡️ The Layered Defense Diagram
+> **"In the cloud, your network is your first and last line of defense. Security is not a single wall; it is a series of gates, each requiring a specific key to pass."**
 
 ```mermaid
 graph TD
-    Internet((Public Internet)) --> NACL{Network ACL - Subnet}
-    NACL -- Allow Rule --> SG{Security Group - Instance}
-    SG -- Allow Rule --> App[Application Instance]
+    Internet((Public Internet)) --> NACL{Network ACL - Subnet Level}
+    NACL -- "Stateless (Must allow In/Out)" --> SG{Security Group - Instance Level}
+    SG -- "Stateful (Permissive Inbound)" --> App[Application Instance]
 
-style NACL fill:#cc0000,color:#fff
-    style SG fill:#ff9900,color:#fff
+    style Internet fill:#fef3c7,stroke:#d97706
+    style NACL fill:#ef4444,stroke:#b91c1c,color:#fff
+    style SG fill:#f97316,stroke:#c2410c,color:#fff
+    style App fill:#f1f5f9,stroke:#64748b
 ```
 
----
+## 📚 Overview
 
-## 🏗️ Real-Life Scenarios
+AWS provides two distinct layers of firewall protection for your Virtual Private Cloud: **Security Groups** (Instance level) and **Network ACLs** (Subnet level). Mastering the interaction between these two is the core requirement for architecting secure, enterprise-grade cloud environments. This module dives into stateful vs. stateless logic, layered defense strategies, and how to block malicious traffic at the edge.
 
-### Scenario 1: The "Invisible Block" Mystery
-**Problem**: An application server in a private subnet couldn't download software updates from the internet via a NAT Gateway. The Security Group allowed all outbound traffic, and there was a valid route to the NAT Gateway.
-**Crisis**: Developers were stuck for 12 hours unable to deploy critical security patches.
-**Outcome**: The issue was a custom **Network ACL (NACL)**. The NACL allowed outbound traffic on ports 80/443, but it **didn't** allow inbound traffic on **ephemeral ports** (1024-65535). Because NACLs are stateless, they don't remember that the request started inside; they need an explicit return rule.
-**Solution**: Add an Inbound NACL rule to allow traffic from `0.0.0.0/0` on port range `1024-65535`.
-**Result**: Updates started working instantly. The team documented "Statelessness" as a key troubleshooting step.
+## 🎓 Learning Path
 
-### Scenario 2: The "Over-Permissive" Security Group
-**Problem**: A junior admin attached the same Security Group to 50 different instances (web servers, app servers, and databases) to "keep it simple."
-**Crisis**: A single web server was compromised via a zero-day exploit. Because it shared an SG with the database, the attacker was able to move laterally and access sensitive customer data on port 3306.
-**Outcome**: A major data breach occurred that could have been prevented by network isolation.
-**Solution**: Implement **Micro-segmentation**. Use different Security Groups for each tier. Web SGs only allow port 443 from LB. DB SGs only allow port 3306 from the App SGs.
-**Result**: The blast radius of any future compromise is now restricted to a single tier or even a single instance.
-
-### Scenario 3: The "Deny Rule" Requirement
-**Problem**: A company detected a specific botnet IP address (`203.0.113.10`) attempting to brute-force their web servers.
-**Crisis**: Security Groups only support "Allow" rules. They couldn't specifically block just that one malicious IP without blocking everyone else.
-**Outcome**: The botnet continued to pound the CPU of the web servers, causing high latency for legitimate users.
-**Solution**: Use a **Network ACL** to add a "Deny" rule with a low rule number (e.g., Rule 50) for that specific IP.
-**Result**: The malicious traffic was dropped at the subnet boundary before even reaching the instances, immediately stabilizing the platform.
+| # | Topic | Focus | Key Deliverable |
+| :--- | :--- | :--- | :--- |
+| **01** | [**SGs: Stateful**](./01-Security-Groups-Stateful/README.md) | Instance-Level Firewall | Master State Tracking & SG-ID referencing |
+| **02** | [**NACLs: Stateless**](./02-Network-ACLs-Stateless/README.md) | Subnet-Level Gatekeeper | Rule Numbering & Ephemeral Ports |
+| **03** | [**Layered Defense**](./03-Layered-Defense-Strategies/README.md) | Professional Design | Implement 3-Tier Security Patterns |
+| **04** | [**Troubleshooting**](./04-Advanced-Troubleshooting/README.md) | Finding the "Block" | Master Flow Logs and Reachability tests |
 
 ---
 
-## ❓ Interview Questions
+## 🚀 Professional Pattern: Micro-Segmentation
 
-1.  **Explain the difference between 'Stateful' and 'Stateless' firewalls.**
-    - *Answer*: A **Stateful** firewall (Security Groups) remembers the state of a connection. If you allow inbound traffic on port 80, the return traffic is automatically allowed outbound. A **Stateless** firewall (NACLs) does not remember state; you must explicitly define both inbound and outbound rules for every communication path.
-2.  **In what order are NACL rules evaluated?**
-    - *Answer*: From the **lowest rule number to the highest**. As soon as a packet matches a rule (Allow or Deny), evaluation stops, and that rule is applied. This is why "Deny" rules for specific IPs should have lower numbers than "Allow" rules for broader ranges.
-3.  **Why do NACLs require rules for 'Ephemeral Ports'?**
-    - *Answer*: Because NACLs are stateless. When an instance sends a request to a website (Outbound), the website responds with traffic on a random high port (Ephemeral port). Since the NACL doesn't "remember" the outbound request, you must have an inbound rule to allow that response traffic back in.
-4.  **Can you reference a Security Group by its ID in another Security Group's rules?**
-    - *Answer*: Yes, and this is a best practice. Instead of whitelisting an IP range, you can say "Allow port 3306 from `sg-123456` (the App Tier SG)". This ensures that only instances with that specific SG can access the database, regardless of what their IP address is.
-5.  **What is the default behavior of a custom NACL when it is first created?**
-    - *Answer*: By default, a **custom** NACL denies all inbound and outbound traffic until you add rules. (Note: The **default** NACL that comes with the VPC allows all traffic to facilitate ease of use).
-6.  **Which layer should you use to block a specific malicious IP address?**
-    - *Answer*: You should use a **Network ACL**. Security Groups only support "Allow" rules, so you cannot specifically target an IP for blocking. NACLs support "Deny" rules, making them the correct tool for blocking malicious actors.
+Senior security architects avoid using a single "Catch-All" Security Group. Instead, they use **Micro-segmentation**.
+
+**The Pro Standard**:
+1. **Never use IPs in SG Rules**: Don't whitelist `10.0.1.5`. Instead, allow traffic from **SG-ID** (e.g., "Allow Port 3306 from `sg-app-tier`"). This ensures that if you scale from 1 to 100 app servers, the database automatically trusts all of them without a single IP update.
+2. **Deny at the Edge**: Use **Network ACLs** for high-level "Reject" rules (e.g., blocking botnet CIDRs). This drops the traffic at the subnet boundary, saving your instances from processing malicious packets.
+3. **Least Privilege**: Only open exactly what is needed. If a server doesn't provide a web service, it should NOT have port 80/443 open.
 
 ---
 
-## 🧠 Comprehensive Quiz (25 Questions)
+## 🏆 Real-World DevOps Stories
 
-<b>1. Security Groups are enforced at which level?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+### 🌑 The "Ephemeral Port" Mystery
+**The Scenario**: An application server in a private subnet couldn't download software updates. The Security Group was set to "Allow All Outbound," and the route table was correct.
+**The Crisis**: The deployment pipeline stayed red for 12 hours. The team was baffled because "the firewall says allow."
+**The Discovery**: A custom **Network ACL** had been applied to the subnet. It allowed outbound traffic on port 443, but it **denied** inbound traffic on high ports (1024-65535). Because NACLs are **stateless**, they didn't "remember" the request started inside; they saw the response as new inbound traffic and blocked it.
+**The Lesson**: **Stateless means no memory.** If you open a door in a NACL, you must open the return path for the **Ephemeral Port** range as well.
 
+### 🛡️ The "Lateral Move" Breach
+**The Scenario**: A junior admin used one single Security Group for "Dev-VPC." It allowed Port 22/80/443 between all instances in the group.
+**The Crisis**: A single staging web server was compromised. The attacker used that server to SSH into the database server in the same VPC because theyshared the same permissive Security Group.
+**The Impact**: The production-ready database was wiped. 
+**The Lesson**: **Walls within walls.** Every tier (Web, App, DB) must have its own dedicated Security Group that only trusts the tier directly above it.
 
-<b>2. True/False: Network ACLs (NACLs) are stateful.</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+---
 
+## ❓ Interview Preparation (Security)
 
-<b>3. Which component supports 'Deny' rules?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+1. **Q: What is the main difference between 'Stateful' and 'Stateless' firewalls?**
+    *A: **Security Groups are Stateful**: If you allow traffic in, the response is automatically allowed out. **NACLs are Stateless**: You must explicitly allow both the request and the response in the rules.*
 
+2. **Q: In what order are Network ACL rules evaluated?**
+    *A: Rules are evaluated in numerical order, from **lowest to highest**. As soon as a packet matches a rule (Allow or Deny), evaluation stops. This is why 'Deny' rules should always have lower numbers (e.g., 10, 20) than your broad 'Allow' rules.*
 
-<b>4. What is the evaluation order for NACL rules?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+3. **Q: Can you use a Security Group to block a specific IP address?**
+    *A: **No.** Security Groups only support "Allow" rules. To specifically block or blackhole an IP address, you must use a **Network ACL**, which supports "Deny" rules.*
 
+4. **Q: Why should you reference Security Group IDs instead of IP ranges in your rules?**
+    *A: Referencing IDs is more dynamic and secure. If an instance scales out or changes its Private IP, the rule remains valid as long as the instance maintains that SG-ID. It also makes your security intent much clearer to other engineers.*
 
-<b>5. True/False: If an SG allows inbound traffic on port 80, outbound traffic on the same connection is automatically allowed.</b>
-<details>
-<summary>Show Answer</summary>
-Answer: A
-</details>
+5. **Q: What is an 'Ephemeral Port'?**
+    *A: These are short-lived transport protocol ports used by clients for communication. When an instance sends a request (Outbound), it expects the server to respond on a port in the range 1024-65535. NACLs must be configured to allow this inbound return traffic.*
 
+---
 
-<b>6. 'Ephemeral Ports' typically fall into which range?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+## 📝 Knowledge Check
 
+1. **Which firewall operates at the INSTANCE (ENI) level?**
+    - [ ] a) Network ACL (NACL)
+    - [x] b) Security Group (SG)
+    - [ ] c) Internet Gateway
+    - [ ] d) IAM Policy
 
-<b>7. How many Security Groups can be attached to a single network interface (ENI)?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B (Standard limit)
-</details>
+2. **True or False: A Security Group 'remembers' a connection and allows the return traffic automatically.**
+    - [x] True (It is stateful)
+    - [ ] False
 
+3. **Which component allows you to specify a 'Deny' rule?**
+    - [ ] a) Security Group
+    - [x] b) Network ACL
+    - [ ] c) Route Table
+    - [ ] d) Instance Metadata
 
-<b>8. When multiple SGs are attached to an instance, the effective policy is:</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+4. **In a Network ACL, which rule number will be evaluated first?**
+    - [x] a) 10
+    - [ ] b) 100
+    - [ ] c) 1000
+    - [ ] d) 65535
 
+5. **What is the default behavior of a Security Group's INBOUND rules?**
+    - [ ] a) Allow All
+    - [x] b) Deny All
+    - [ ] c) Allow SSH Only
+    - [ ] d) Allow HTTP Only
 
-<b>9. True/False: A NACL can be associated with multiple subnets.</b>
-<details>
-<summary>Show Answer</summary>
-Answer: A
-</details>
+---
 
+## 🔗 Next Steps
 
-<b>10. What happens if a packet doesn't match any rule in a NACL?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+You've built the layered defense. Now let's explore the instance-level gatekeeper in detail.
 
-
-<b>11. Which is a best practice for Database security?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-
-<b>12. 'Stateless' means the firewall does NOT:</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-
-<b>13. In a 3-Tier architecture, which tier should be in a public subnet?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-
-<b>14. True/False: You can change the 'Default NACL' to deny all traffic.</b>
-<details>
-<summary>Show Answer</summary>
-Answer: A
-</details>
-
-
-<b>15. What rule number is evaluated first in a NACL?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-
-<b>16. 'Source' in a Security Group rule can be:</b>
-<details>
-<summary>Show Answer</summary>
-Answer: D
-</details>
-
-
-<b>17. If a NACL denies traffic on port 80, but the SG allows it, what happens?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-
-<b>18. Security Group rules are only:</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-
-<b>19. True/False: You can add tags to Security Groups.</b>
-<details>
-<summary>Show Answer</summary>
-Answer: A
-</details>
-
-
-<b>20. 'Ingress' rules control:</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-
-<b>21. NACLs are primarily used for:</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-
-<b>22. Which port range do servers use to respond to clients?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-
-<b>23. Total number of rules allowed in a NACL (default)?</b>
-<details>
-<summary>Show Answer</summary>
-Answer: A (AWS Default, increaseable via quota)
-</details>
-
-
-<b>24. A Security Group acts at Layer _____ of the OSI Model.</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-
-<b>25. Without a layered defense, a single bug can lead to a _____.</b>
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+Proceed to: **[01. Security Groups: Stateful](./01-Security-Groups-Stateful/README.md)** →
