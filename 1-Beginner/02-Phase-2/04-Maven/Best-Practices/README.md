@@ -1,215 +1,130 @@
-# Maven Best Practices
+# 🏆 Module 06: Maven Best Practices
 
-Production-ready guidelines, patterns, and optimization strategies for Maven projects.
+> **"Anyone can build a project once. A DevOps master builds a project that can be built by anyone, anywhere, at any time, for the next ten years."**
 
-## Project Structure
-
-### Standard Directory Layout
-```bash
-my-project/
-├── pom.xml
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/example/
-│   │   ├── resources/
-│   │   └── webapp/
-│   └── test/
-│       ├── java/
-│       │   └── com/example/
-│       └── resources/
-├── target/
-└── README.md
+```mermaid
+graph TD
+    A[Best Practices] --> B[Maintainability]
+    A --> C[Security]
+    A --> D[Performance]
+    
+    B --> B1[Parent POMs / BOMs]
+    C --> C1[Vulnerability Scanning]
+    D --> D1[Parallel Test Execution]
+    
+    style A fill:#00d2ff,stroke:#333,stroke-width:4px
+    style B1 fill:#f9d423,stroke:#333
+    style C1 fill:#ff4b2b,stroke:#333,color:#fff
 ```
 
-### Multi-Module Structure
-```bash
-parent-project/
-├── pom.xml (parent)
-├── module-a/
-│   ├── pom.xml
-│   └── src/
-├── module-b/
-│   ├── pom.xml
-│   └── src/
-└── integration-tests/
-    ├── pom.xml
-    └── src/
-```
+## 📚 Overview
+Mastering Maven is not just about knowing the commands; it's about following the patterns that ensure **Stability** and **Security** at scale. In this module, we explore how to professionalize your build scripts for enterprise environments.
 
-## POM Best Practices
+## 🎓 Learning Objectives
+- ✅ Implement **Parent-Child Hierarchy** for configuration sharing.
+- ✅ Leverage **BOM (Bill of Materials)** for version consistency.
+- ✅ Automate **Dependency Security Checks** (OWASP).
+- ✅ Optimize build speed with **Parallel Testing**.
+- ✅ Use **Properties** to centralize all version numbers.
 
-### Parent POM Configuration
+---
+
+## 🚀 The Enterprise Setup: BOMs and Dependency Management
+
+Never define a version number inside a child module. Define everything in a central **Dependency Management** block in the parent.
+
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    
-    <groupId>com.example</groupId>
-    <artifactId>parent-project</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        
-        <!-- Dependency versions -->
-        <spring.version>5.3.21</spring.version>
-        <junit.version>5.8.2</junit.version>
-        <mockito.version>4.6.1</mockito.version>
-    </properties>
-    
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-bom</artifactId>
-                <version>${spring.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-    
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.10.1</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-</project>
-```
-
-## Dependency Management
-
-### Version Management Strategy
-```xml
-<properties>
-    <!-- Use properties for version management -->
-    <spring.version>5.3.21</spring.version>
-    <jackson.version>2.13.3</jackson.version>
-</properties>
-
+<!-- In the PARENT POM -->
 <dependencyManagement>
-    <dependencies>
-        <!-- Import BOMs for consistent versions -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-bom</artifactId>
-            <version>${spring.version}</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-    </dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>3.1.2</version>
+    </dependency>
+  </dependencies>
 </dependencyManagement>
-```
 
-### Scope Best Practices
-```xml
+<!-- In the CHILD POM -->
 <dependencies>
-    <!-- Runtime dependencies -->
-    <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <scope>runtime</scope>
-    </dependency>
-    
-    <!-- Test dependencies -->
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter</artifactId>
-        <scope>test</scope>
-    </dependency>
-    
-    <!-- Provided dependencies -->
-    <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>javax.servlet-api</artifactId>
-        <scope>provided</scope>
-    </dependency>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+    <!-- No version needed! -->
+  </dependency>
 </dependencies>
 ```
 
-## Build Configuration
+---
 
-### Plugin Management
-```xml
-<build>
-    <pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
-                <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-            
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</groupId>
-                <version>3.0.0-M7</version>
-                <configuration>
-                    <argLine>-Xmx1024m</argLine>
-                    <parallel>methods</parallel>
-                    <threadCount>4</threadCount>
-                </configuration>
-            </plugin>
-        </plugins>
-    </pluginManagement>
-</build>
-```
+## 🔐 Security Best Practice: OWASP Scanning
 
-## Security Best Practices
+You don't want to deploy code with known vulnerabilities. Bind the **OWASP Dependency Check** to your build.
 
-### Dependency Vulnerability Scanning
 ```xml
 <plugin>
     <groupId>org.owasp</groupId>
     <artifactId>dependency-check-maven</artifactId>
-    <version>7.1.1</version>
+    <version>8.3.1</version>
     <executions>
         <execution>
-            <goals>
-                <goal>check</goal>
-            </goals>
+            <goals><goal>check</goal></goals>
         </execution>
     </executions>
+</plugin>
+```
+
+**Outcome**: If a library has a critical security flaw (CVE), Maven will **Fail the Build** automatically.
+
+---
+
+## 🏎️ Performance Best Practice: Threaded Testing
+
+If you have 1,000 unit tests, running them one by one is slow. Configure the **Surefire Plugin** to use multiple CPU cores.
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
     <configuration>
-        <failBuildOnCVSS>7</failBuildOnCVSS>
+        <parallel>methods</parallel>
+        <threadCount>4</threadCount>
     </configuration>
 </plugin>
 ```
 
-### Secure Repository Configuration
-```xml
-<repositories>
-    <repository>
-        <id>central</id>
-        <url>https://repo1.maven.org/maven2</url>
-        <releases>
-            <enabled>true</enabled>
-            <checksumPolicy>fail</checksumPolicy>
-        </releases>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-    </repository>
-</repositories>
-```
+---
 
-This guide provides enterprise-grade Maven best practices for production projects.
+## 🏆 Real-World DevOps Story: The 45-Minute Build
+
+**The Scenario**: A company's main build was taking **45 minutes** to run on the CI/CD server, causing a massive bottleneck for developers.
+**The Discovery**: The build was performing a full "Site Report," running integration tests against a slow database, and downloading the entire internet on every run because the local cache wasn't being preserved.
+**The Fix**: The SRE team implemented **Parallel Testing**, moved the Site generation to a separate nightly job, and configured **Docker Volume Caching** for the `~/.m2` directory.
+**The Lesson**: A build tool is only as fast as you configure it to be. **Optimize the developer loop** to keep the company moving.
+
+---
+
+## ❓ Interview Preparation
+
+1. **Q: Why should you use `<pluginManagement>` in a parent POM?**
+   *A: It allows you to define the version and configuration of a plugin once. Child modules will then use that exact version automatically when they call the plugin, ensuring consistency across a large organization.*
+
+2. **Q: What is the benefit of using properties for version numbers?**
+   *A: It provides a "Single Source of Truth." If you need to upgrade Spring from version 5 to 6, you only have to change one line in the `<properties>` block instead of searching through dozens of dependencies.*
+
+3. **Q: How does Maven help with Security Compliance?**
+   *A: By using plugins like **OWASP Dependency Check** or **Snyk**, Maven can scan for known vulnerabilities during the build process and stop a deployment if the code is unsafe.*
+
+4. **Q: What is a 'BOM' (Bill of Materials)?**
+   *A: It is a special type of Maven project that defines a curated list of versions for a set of related libraries. Importing a BOM ensures that all libraries (like those in Spring Boot) are compatible with each other.*
+
+5. **Q: Is it a good practice to use 'Range Versions' (e.g., [1.0, 2.0])?**
+   *A: Generally, **no**. It makes your build "Non-Deterministic." You might build successfully today, but if a library releases a broken version tomorrow, your build will suddenly fail without any code changes. Always use fixed versions in production.*
+
+---
+
+## 🔗 Next Steps
+
+Standards are set. Now let's learn how to fix things when they break.
+
+Proceed to: **[07-Troubleshooting](../Troubleshooting/README.md)** →

@@ -1,6 +1,6 @@
 # Beginner Level: The DevOps Foundations Roadmap
 
-Welcome to the **DevOps Beginner Foundations**. This curriculum is designed to take you from a curious learner to a foundationally strong DevOps practitioner. 
+Welcome to the **DevOps Beginner Foundations**. This curriculum is designed to take you from a curious learner to a foundationally strong DevOps practitioner.
 
 Instead of jumping into complex tools, we follow a tiered journey that mimics real-world infrastructure evolution.
 
@@ -9,6 +9,7 @@ Instead of jumping into complex tools, we follow a tiered journey that mimics re
 ## 🗺️ The Learning Roadmap
 
 ### 📦 Phase 1: Foundations
+
 1. **[Linux Basics & Linux SSH](../README.md)**: Master the operating system and secure access.
 2. **[Windows Basics](../README.md)**: Essential Windows Server knowledge.
 3. **[Networking Foundations](./01-Phase-1/01-Networking/README.md)**: How data travels across the wire.
@@ -18,29 +19,33 @@ Instead of jumping into complex tools, we follow a tiered journey that mimics re
 7. **[Cloud Foundations](../README.md)**: Intro to AWS, Azure, and GCP.
 
 ### 🧩 Phase 2: Core Skills
-8. **[API Basics](./02-Phase-2/02-API-Basics/README.md)**: Understanding HTTP, REST, and Status Codes.
-9. **[Nginx Web Server](../README.md)**: Reverse proxies and load balancing.
-10. **[Maven & Build Tools](../README.md)**: Creating deployable artifacts.
-11. **[Automation Basics](../README.md)**: Introduction to scripting and automation.
-12. **[Basic CI/CD](../README.md)**: Automating your first pipelines.
-13. **[Prompt Engineering](../README.md)**: AI as your wingman.
+
+1. **[API Basics](./02-Phase-2/02-API-Basics/README.md)**: Understanding HTTP, REST, and Status Codes.
+2. **[Nginx Web Server](./02-Phase-2/03-Nginx/README.md)**: Reverse proxies and load balancing.
+3. **[Maven & Build Tools](./02-Phase-2/04-Maven/README.md)**: Creating deployable artifacts.
+4. **[Automation Basics](./02-Phase-2/01-Automation/README.md)**: Introduction to scripting and automation.
+5. **[Basic CI/CD](./02-Phase-2/05-Basic-CI-CD/README.md)**: Automating your first pipelines.
+6. **[Prompt Engineering](./02-Phase-2/06-Prompt-Engineering/README.md)**: AI as your wingman.
 
 ### ☁️ Phase 3: Advanced Concepts
-14. **[Container Orchestration](../README.md)**: Modern application packaging with Docker.
-15. **[FinOps Fundamentals](../README.md)**: Tracking cloud costs.
-16. **[Model Context Protocol (MCP)](../README.md)**: AI tool integration.
-17. **[Blockchain Fundamentals](../README.md)**: Nodes and decentralized ops.
+
+1. **[Container Orchestration](../README.md)**: Modern application packaging with Docker.
+2. **[FinOps Fundamentals](../README.md)**: Tracking cloud costs.
+3. **[Model Context Protocol (MCP)](../README.md)**: AI tool integration.
+4. **[Blockchain Fundamentals](../README.md)**: Nodes and decentralized ops.
 
 ---
 
 ## 🎯 Final Learning Objectives
+
 By the end of this level, you will be able to:
-1.  **Navigate**: Confidently manage Linux/Unix servers via CLI and SSH.
-2.  **Understand**: Explain how a React frontend talks to a Python/Java backend via REST APIs.
-3.  **Collaborate**: Use version control systems (see [Repository Management](../2-Intermediate/01-Phase-1/04-Repository-Management/README.md)).
-4.  **Containerize**: Build, ship, and run any application using Docker.
-5.  **Scale**: Deploy a load-balanced web service using Nginx and Cloud basics.
-6.  **Acknowledge Costs**: Explain why a cloud bill looks the way it does.
+
+1. **Navigate**: Confidently manage Linux/Unix servers via CLI and SSH.
+2. **Understand**: Explain how a React frontend talks to a Python/Java backend via REST APIs.
+3. **Collaborate**: Use version control systems (see [Repository Management](../2-Intermediate/01-Phase-1/04-Repository-Management/README.md)).
+4. **Containerize**: Build, ship, and run any application using Docker.
+5. **Scale**: Deploy a load-balanced web service using Nginx and Cloud basics.
+6. **Acknowledge Costs**: Explain why a cloud bill looks the way it does.
 
 ---
 **Ready to level up?** Once complete, proceed to the [Intermediate Level](../2-Intermediate/README.md).

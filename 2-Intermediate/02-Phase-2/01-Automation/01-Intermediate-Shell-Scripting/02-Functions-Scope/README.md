@@ -53,9 +53,9 @@ HOST=$(get_hostname)
 Since functions run in the same shell process (unlike subshells), you can also pass data by modifying a known Global Variable, though this is riskier.
 
 ### Comparison
-| Method | Pros | Cons |
-| :--- | :--- | :--- |
-| **Stdout (`$(cmd)`)** | Clean, functional, side-effect free. | Spawns a subshell (slower performance). |
-| **Global Ref** | Fast (no subshell). | Side-effects, harder to debug. |
+| Method            | Pros                                 | Cons                                    |
+| :---------------- | :----------------------------------- | :-------------------------------------- |
+| Stdout (`$(cmd)`) | Clean, functional, side-effect free. | Spawns a subshell (slower performance). |
+| **Global Ref**    | Fast (no subshell).                  | Side-effects, harder to debug.          |
 
 See `Boilerplates/math_functions.sh` for a code comparison.

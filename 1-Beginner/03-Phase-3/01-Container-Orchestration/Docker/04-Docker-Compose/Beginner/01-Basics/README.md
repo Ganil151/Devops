@@ -1,769 +1,163 @@
-# Docker Compose Basics
+# 🎼 Module 05: Docker Compose Basics
 
-## What is Docker Compose?
-
-**Docker Compose** is a tool for defining and running multi-container Docker applications. Instead of managing containers individually with `docker run` commands, you define your entire application stack in a single YAML file.
-
-### Why Use Docker Compose?
-
-**Without Docker Compose:**
-```bash
-# Start database
-docker network create myapp-network
-docker run -d --name db --network myapp-network \
-  -e POSTGRES_PASSWORD=secret postgres:15
-
-# Start cache
-docker run -d --name cache --network myapp-network redis:7
-
-# Start backend
-docker run -d --name api --network myapp-network \
-  -e DB_HOST=db -e REDIS_HOST=cache \
-  -p 3000:3000 my-api:latest
-
-# Start frontend
-docker run -d --name web --network myapp-network \
-  -e API_URL=http://api:3000 \
-  -p 80:80 my-frontend:latest
-```
-
-**With Docker Compose:**
-```yaml
-# docker-compose.yml
-services:
-  db:
-    image: postgres:15
-    environment:
-      POSTGRES_PASSWORD: secret
-      
-  cache:
-    image: redis:7
-    
-  api:
-    image: my-api:latest
-    ports:
-      - "3000:3000"
-    environment:
-      DB_HOST: db
-      REDIS_HOST: cache
-    depends_on:
-      - db
-      - cache
-      
-  web:
-    image: my-frontend:latest
-    ports:
-      - "80:80"
-    environment:
-      API_URL: http://api:3000
-    depends_on:
-      - api
-```
-
-```bash
-# Start everything
-docker compose up -d
-
-# Stop everything
-docker compose down
-```
-
-### Key Benefits
-
-- ✅ **Single Configuration File**: One place for all services
-- ✅ **Easy Commands**: Simple up/down commands
-- ✅ **Automatic Networking**: Services can communicate by name
-- ✅ **Environment Management**: Dev, test, prod configs
-- ✅ **Volume Management**: Persistent data handling
-- ✅ **Reproducible**: Same setup everywhere
-
-## Installation
-
-Docker Compose V2 comes bundled with Docker Desktop and recent Docker Engine versions.
-
-```bash
-# Check if installed
-docker compose version
-
-# V2 syntax (preferred)
-docker compose up
-
-# V1 syntax (legacy)
-docker-compose up
-```
-
-> [!NOTE]
-> This guide uses Docker Compose V2 syntax (`docker compose` not `docker-compose`).
-
-## Basic Compose File Structure
-
-```yaml
-version: '3.8'  # Optional in V2, but good for compatibility
-
-services:       # Define containers
-  service-name:
-    image: image:tag
-    # or
-    build: ./path
-    
-volumes:        # Define named volumes (optional)
-  volume-name:
-
-networks:       # Define custom networks (optional)
-  network-name:
-```
-
-## Your First Docker Compose Application
-
-### Example: WordPress with MySQL
-
-**Create `docker-compose.yml`:**
-
-```yaml
-services:
-  db:
-    image: mysql:8.0
-    volumes:
-      - db-data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: somewordpress
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
-    
-  wordpress:
-    image: wordpress:latest
-    ports:
-      - "8080:80"
-    environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
-      WORDPRESS_DB_NAME: wordpress
-    depends_on:
-      - db
-    volumes:
-      - wordpress-data:/var/www/html
-
-volumes:
-  db-data:
-  wordpress-data:
-```
-
-**Run the application:**
-
-```bash
-# Start services
-docker compose up -d
-
-# View logs
-docker compose logs -f
-
-# List running services
-docker compose ps
-
-# Stop services
-docker compose stop
-
-# Stop and remove containers, networks
-docker compose down
-
-# Stop and remove everything including volumes
-docker compose down -v
-```
-
-## Service Configuration
+> **"Docker runs a container. Docker Compose runs an application. It is the sheet music that tells every service exactly when to start and how to talk to its neighbors."**
 
 ```mermaid
-graph TB
-    subgraph "docker-compose.yml"
-        Services[Services] --> Image[image: Image Name]
-        Services --> Build[build: Build Context]
-        Services --> Ports[ports: Port Mapping]
-        Services --> Env[environment: Variables]
-        Services --> Vols[volumes: Data Persistence]
-        Services --> Nets[networks: Network Config]
-        Services --> Deps[depends_on: Dependencies]
+graph TD
+    User[Developer] -->|docker compose up| Stack[The Application Stack]
+    
+    subgraph Stack
+    Proxy[Nginx Proxy] --> Web[Frontend Service]
+    Web --> API[Backend API]
+    API --> DB[(PostgreSQL)]
+    API --> Cache[(Redis)]
     end
     
-    style Services fill:#e3f2fd
-    style Image fill:#f3e5f5
-    style Build fill:#fff3e0
+    style Stack fill:#f8fafc,stroke:#333
+    style Proxy fill:#e2e8f0,stroke:#333
+    style Web fill:#e0f2fe,stroke:#333
+    style API fill:#fef3c7,stroke:#333
+    style DB fill:#dcfce7,stroke:#333
+    style Cache fill:#fee2e2,stroke:#333
 ```
 
-### Image vs Build
+## 📚 Overview
 
-```yaml
-services:
-  # Use pre-built image from registry
-  web:
-    image: nginx:alpine
-  
-  # Build from Dockerfile
-  api:
-    build: ./api
-    
-  # Build with context and Dockerfile path
-  app:
-    build:
-      context: ./app
-      dockerfile: Dockerfile.prod
-      args:
-        VERSION: "1.0"
-```
+In the previous modules, we learned how to build and run **individual** containers. But modern applications are rarely just one process. They 1 are a **Stack**: a web frontend, a database, a cache, and maybe a background worker. 
 
-### Port Mapping
+**Docker Compose** is the tool that allows you to define this entire stack in a single file (`docker-compose.yml`) and start it with a single command.
 
-```yaml
-services:
-  web:
-    image: nginx
-    ports:
-      # HOST:CONTAINER
-      - "8080:80"          # Bind to all interfaces
-      - "127.0.0.1:8443:443"  # Bind to localhost only
-      - "3000-3005:3000-3005" # Port range
-```
+## 🎓 Learning Objectives
 
-### Environment Variables
-
-```yaml
-services:
-  app:
-    image: my-app
-    environment:
-      # Key-value format
-      NODE_ENV: production
-      DATABASE_URL: postgresql://user:pass@db:5432/mydb
-      
-    # Or array format
-    environment:
-      - NODE_ENV=production
-      - DATABASE_URL=postgresql://user:pass@db:5432/mydb
-      
-    # From .env file
-    env_file:
-      - .env
-      - .env.local
-```
-
-### Volumes
-
-```yaml
-services:
-  db:
-    image: postgres:15
-    volumes:
-      # Named volume
-      - db-data:/var/lib/postgresql/data
-      
-      # Bind mount
-      - ./config:/etc/postgresql
-      
-      # Anonymous volume
-      - /var/log/postgresql
-
-volumes:
-  db-data:  # Declare named volumes
-```
-
-### Depends On
-
-```yaml
-services:
-  web:
-    image: nginx
-    depends_on:
-      - api
-      - cache
-    
-  api:
-    image: my-api
-    depends_on:
-      db:
-        condition: service_healthy
-    
-  db:
-    image: postgres:15
-    healthcheck:
-      test: ["CMD", "pg_isready"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    
-  cache:
-    image: redis:7
-```
-
-> [!IMPORTANT]
-> `depends_on` only waits for containers to start, not for services to be ready. Use health checks for service readiness.
-
-## Docker Compose Commands
-
-### Starting and Stopping
-
-```bash
-# Start services in foreground
-docker compose up
-
-# Start in background (detached)
-docker compose up -d
-
-# Start specific services
-docker compose up web db
-
-# Rebuild images and start
-docker compose up --build
-
-# Force recreate containers
-docker compose up --force-recreate
-
-# Stop services (containers remain)
-docker compose stop
-
-# Stop specific service
-docker compose stop web
-
-# Start stopped services
-docker compose start
-
-# Restart services
-docker compose restart
-
-# Restart specific service
-docker compose restart api
-```
-
-### Removing
-
-```bash
-# Stop and remove containers, networks
-docker compose down
-
-# Also remove volumes
-docker compose down -v
-
-# Also remove images
-docker compose down --rmi all
-
-# Remove stopped containers
-docker compose rm
-```
-
-### Viewing
-
-```bash
-# List services
-docker compose ps
-
-# Show all containers
-docker compose ps -a
-
-# View logs
-docker compose logs
-
-# Follow logs (tail -f)
-docker compose logs -f
-
-# Logs for specific service
-docker compose logs api
-
-# Last 100 lines
-docker compose logs --tail=100
-
-# Show timestamps
-docker compose logs -t
-```
-
-### Executing Commands
-
-```bash
-# Run command in running container
-docker compose exec web sh
-
-# Run command in service (creates new container)
-docker compose run web python manage.py migrate
-
-# Run without dependencies
-docker compose run --no-deps web npm test
-
-# One-off command
-docker compose run --rm web sh
-```
-
-### Building
-
-```bash
-# Build images
-docker compose build
-
-# Build specific service
-docker compose build api
-
-# Build without cache
-docker compose build --no-cache
-
-# Build with arguments
-docker compose build --build-arg VERSION=2.0
-```
-
-## Real-World Example: Full Stack Application
-
-**Project structure:**
-```
-my-fullstack-app/
-├── docker-compose.yml
-├── .env
-├── frontend/
-│   ├── Dockerfile
-│   ├── package.json
-│   └── src/
-├── backend/
-│   ├── Dockerfile
-│   ├── requirements.txt
-│   └── app.py
-└── nginx/
-    └── nginx.conf
-```
-
-**docker-compose.yml:**
-
-```yaml
-services:
-  # PostgreSQL Database
-  db:
-    image: postgres:15-alpine
-    restart: always
-    environment:
-      POSTGRES_USER: ${DB_USER:-postgres}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_DB: ${DB_NAME:-myapp}
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-  
-  # Redis Cache
-  cache:
-    image: redis:7-alpine
-    restart: always
-    command: redis-server --appendonly yes
-    volumes:
-      - redis-data:/data
-  
-  # Backend API
-  backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    restart: always
-    environment:
-      DATABASE_URL: postgresql://${DB_USER}:${DB_PASSWORD}@db:5432/${DB_NAME}
-      REDIS_URL: redis://cache:6379
-      SECRET_KEY: ${SECRET_KEY}
-    depends_on:
-      db:
-        condition: service_healthy
-      cache:
-        condition: service_started
-    volumes:
-      - ./backend:/app
-      - backend-static:/app/static
-  
-  # Frontend
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    restart: always
-    environment:
-      REACT_APP_API_URL: http://localhost/api
-    volumes:
-      - ./frontend/src:/app/src
-  
-  # NGINX Reverse Proxy
-  nginx:
-    image: nginx:alpine
-    restart: always
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - backend-static:/var/www/static:ro
-    depends_on:
-      - backend
-      - frontend
-
-volumes:
-  postgres-data:
-  redis-data:
-  backend-static:
-```
-
-**.env file:**
-
-```bash
-# Database
-DB_USER=myapp
-DB_PASSWORD=secret123
-DB_NAME=production_db
-
-# Application
-SECRET_KEY=your-secret-key-here
-DEBUG=false
-```
-
-**Start the application:**
-
-```bash
-# Start all services
-docker compose up -d
-
-# View status
-docker compose ps
-
-# Scale frontend
-docker compose up -d --scale frontend=3
-
-# View logs
-docker compose logs -f backend
-
-# Execute migrations
-docker compose exec backend python manage.py migrate
-
-# Stop everything
-docker compose down -v
-```
-
-## Networking in Compose
-
-Docker Compose automatically creates a network for your app. Services can reach each other using service names.
-
-```yaml
-services:
-  web:
-    image: nginx
-    # Can access 'api' by name: http://api:3000
-    
-  api:
-    image: my-api
-    # Can access 'db' by name: postgresql://db:5432/mydb
-    
-  db:
-    image: postgres:15
-```
-
-### Custom Networks
-
-```yaml
-services:
-  frontend:
-    image: my-frontend
-    networks:
-      - frontend-tier
-      
-  backend:
-    image: my-backend
-    networks:
-      - frontend-tier
-      - backend-tier
-      
-  db:
-    image: postgres:15
-    networks:
-      - backend-tier
-
-networks:
-  frontend-tier:
-  backend-tier:
-```
-
-```mermaid
-graph LR
-    subgraph "frontend-tier"
-        FE[Frontend]
-        BE1[Backend]
-    end
-    
-    subgraph "backend-tier"
-        BE2[Backend]
-        DB[(Database)]
-    end
-    
-    FE --> BE1
-    BE1 -.Same Service.- BE2
-    BE2 --> DB
-    
-    style FE fill:#e3f2fd
-    style BE1 fill:#fff3e0
-    style BE2 fill:#fff3e0
-    style DB fill:#e8f5e9
-```
-
-## Development Workflow
-
-### Live Reload Setup
-
-```yaml
-services:
-  frontend:
-    build: ./frontend
-    volumes:
-      # Bind mount for live reload
-      - ./frontend/src:/app/src
-      # Named volume for node_modules
-      - node_modules:/app/node_modules
-    command: npm run dev
-    
-volumes:
-  node_modules:
-```
-
-### Override for Development
-
-**docker-compose.yml** (base):
-```yaml
-services:
-  app:
-    image: my-app:latest
-    environment:
-      NODE_ENV: production
-```
-
-**docker-compose.override.yml** (automatically loaded):
-```yaml
-services:
-  app:
-    build: .
-    volumes:
-      - ./src:/app/src
-    environment:
-      NODE_ENV: development
-      DEBUG: "true"
-```
-
-**docker-compose.prod.yml** (production):
-```yaml
-services:
-  app:
-    image: my-app:1.0.0
-    restart: always
-```
-
-```bash
-# Development (loads docker-compose.yml + docker-compose.override.yml)
-docker compose up
-
-# Production
-docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
-```
-
-## Troubleshooting
-
-### View Service Status
-
-```bash
-# See all services
-docker compose ps
-
-# Detailed info
-docker compose ps -a --format json
-```
-
-### Check Logs
-
-```bash
-# All services
-docker compose logs
-
-# Specific service with tail
-docker compose logs -f --tail=100 api
-
-# Multiple services
-docker compose logs web api
-```
-
-### Network Issues
-
-```bash
-# Inspect networks
-docker network ls
-docker network inspect myapp_default
-
-# Test connectivity
-docker compose exec web ping api
-docker compose exec web curl http://api:3000/health
-```
-
-### Rebuild Services
-
-```bash
-# Rebuild everything
-docker compose build --no-cache
-
-# Recreate containers
-docker compose up -d --force-recreate
-
-# Pull latest images
-docker compose pull
-docker compose up -d
-```
-
-## Best Practices
-
-1 **Use `.env` Files**: Never commit secrets to version control
-2. **Health Checks**: Define health checks for depends_on
-3. **Named Volumes**: Use named volumes for important data
-4. **Bind Mounts for Development**: Live reload during development
-5. **Restart Policies**: Set appropriate restart policies
-6. **Resource Limits**: Define CPU/memory limits in production
-7. **Specific Image Tags**: Avoid `latest` tag
-8. **Service Names**: Use descriptive, consistent names
-
-## Quick Reference
-
-```bash
-# Lifecycle
-docker compose up -d              # Start services
-docker compose down               # Stop and remove
-docker compose restart            # Restart services
-docker compose stop               # Stop without removing
-
-# Viewing
-docker compose ps                 # List services
-docker compose logs -f            # View logs
-docker compose top                # Show processes
-
-# Execution
-docker compose exec SERVICE cmd   # Run in running container
-docker compose run SERVICE cmd    # Create new container
-
-# Building
-docker compose build              # Build images
-docker compose pull               # Pull images
-
-# Cleanup
-docker compose down -v            # Remove volumes too
-docker compose rm                 # Remove stopped containers
-```
-
-## Next Steps
-
-- Learn about [Service Configuration](../../../../../../../README.md)
-- Explore [Advanced Compose Features](../../Intermediate/01-Advanced-Features/README.md)
-- Understand [Networks and Volumes](../../Intermediate/02-Networks-Volumes/README.md)
-
-## Resources
-
-- [Docker Compose Documentation](https://docs.docker.com/compose/)
-- [Compose File Reference](https://docs.docker.com/compose/compose-file/)
-- [Compose CLI Reference](https://docs.docker.com/compose/reference/)
-- [Environment Variables](https://docs.docker.com/compose/environment-variables/)
+By the end of this module, you will:
+- ✅ Convert complex `docker run` commands into a clean `docker-compose.yml`.
+- ✅ Understand the **Services, Networks, and Volumes** hierarchy.
+- ✅ Master the lifecycle commands: `up`, `down`, `logs`, and `ps`.
+- ✅ Implement **Environment Variables** using `.env` files.
+- ✅ Use **`depends_on`** to control the startup order of your cluster.
 
 ---
 
-**[Next: Service Configuration →](../../../../../../../README.md)**
+## 🏗️ From Solo to Orchestra
+
+### The "Matrix of Pain" (Without Compose)
+To start a simple App + DB stack manually, you'd need:
+1. `docker network create my-net`
+2. `docker run -d --name db --network my-net -e POSTGRES_PASSWORD=sec postgres`
+3. `docker run -d --name app --network my-net -p 8080:80 -e DB_URL=db my-app`
+
+### The "Symphony" (With Compose)
+One file, one command:
+```bash
+docker compose up -d
+```
+
+---
+
+## 🧩 Anatomy of a `docker-compose.yml`
+
+```yaml
+services:           # 1. What are we running?
+  web:
+    build: .        # 2. How do we build it?
+    ports:
+      - "8080:80"   # 3. How do we access it?
+    depends_on:
+      - db          # 4. What must start first?
+      
+  db:
+    image: postgres # 5. Use an existing image
+    environment:
+      - POSTGRES_PASSWORD=${DB_PASS} # 6. Use variables
+```
+
+---
+
+## 🚀 Lifecycle Management
+
+| Command | Action | DevOps Context |
+| :--- | :--- | :--- |
+| **`up -d`** | Create & Start | Deploy the entire stack in the background. |
+| **`down`** | Stop & Remove | Tear down the stack including the network. |
+| **`logs -f`** | Follow Logs | See the output from **all** services simultaneously. |
+| **`ps`** | List Services | Verify which services are "Up" or "Exit (1)". |
+| **`restart`** | Refresh | Quickly reboot all containers in the stack. |
+
+---
+
+## 🏆 Real-World DevOps Story: The 50-Line Shell Script
+
+**The Scenario**: A startup had a README with 15 steps to set up their local development environment. It involved creating 3 different networks, 4 volumes, and running a shell script that was 50 lines of `docker run` commands. New developers spent a full day just getting the app to "Hello World."
+**The Discovery**: One developer spent an hour converting the entire 50-line script into a single `docker-compose.yml` file. 
+**The Fix**: Now, new hires simply run `git clone` and `docker compose up`. The setup time dropped from 8 hours to 2 minutes.
+**The Lesson**: **If it's more than one container, use Compose.** Infrastructure should be code, not a series of manual terminal commands.
+
+---
+
+## 🚀 Professional Pattern: The `.env` Strategy
+
+Never hardcode your passwords or API keys inside your `docker-compose.yml`. If you push that file to GitHub, your secrets are stolen.
+
+**The Solution**:
+1.  Use variables in your YAML: `POSTGRES_PASSWORD: ${DB_PASS}`.
+2.  Create a `.env` file (and add it to `.gitignore`):
+    ```env
+    DB_PASS=super-secret-password-123
+    ```
+3.  Docker Compose automatically looks for this `.env` file and swaps the values.
+
+---
+
+## ❓ Interview Preparation (Docker Compose)
+
+1. **Q: What is the default network behavior of Docker Compose?**
+   *A: Compose automatically creates a single 'Bridge' network for the entire stack. Every service in the file is automatically added to this network and can communicate with others using their service name (e.g., `ping db`).*
+
+2. **Q: Does `depends_on` wait for the database to be 'Ready' or just 'Started'?**
+   *A: By default, it only waits for the container to be **Started**. To wait for it to be 'Ready' (e.g., accepting connections), you must use a 'Healthcheck' combined with the `service_healthy` condition.*
+
+3. **Q: What is the difference between `docker compose up` and `docker compose run`?**
+   *A: `up` starts all services defined in the YAML file as a cohesive stack. `run` is used for 'One-off' tasks, like running a database migration or a test suite for a specific service.*
+
+4. **Q: How do you handle different configurations for Development vs. Production?**
+   *A: Use 'Override' files. You have a base `docker-compose.yml` and a `docker-compose.override.yml` for local dev. For production, you can use `docker-compose.prod.yml` and merge them using the `-f` flag.*
+
+5. **Q: How do you scale a specific service (e.g., the 'worker') to 5 instances?**
+   *A: Use the command `docker compose up -d --scale worker=5`. Note that if the service has a hard-coded host port mapping, this will fail because multiple containers cannot bind to the same host port.*
+
+---
+
+## 📝 Knowledge Check
+
+1. **In a Compose file, what is the top-level key that lists the containers to run?**
+   - [ ] a) `containers:`
+   - [x] b) `services:`
+   - [ ] c) `apps:`
+
+2. **Which command stops all containers and REMOVES the internal network?**
+   - [ ] a) `docker compose stop`
+   - [x] b) `docker compose down`
+   - [ ] c) `docker compose rm`
+
+3. **How does Service A talk to Service B in a Compose stack?**
+   - [ ] a) Using Service B's IP address
+   - [ ] b) Using `localhost`
+   - [x] c) Using Service B's name as defined in the YAML
+
+4. **True or False: You must manually create a network before running `docker compose up`.**
+   - [ ] True
+   - [x] False (Compose creates it automatically)
+
+5. **Which flag is used to start Compose in the background?**
+   - [ ] a) `-b`
+   - [x] b) `-d` (Detached)
+   - [ ] c) `-g`
+
+---
+
+## 🔗 Next Steps
+
+The orchestra is playing. Now let's learn how to make sure they never lose their memory.
+
+Proceed to: **[Module 06: Data Persistence & Volumes](../04-Docker-Compose/Beginner/02-Volumes/README.md)** →
+翻

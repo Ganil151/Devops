@@ -1,235 +1,115 @@
-# Maven POM Configuration
+# 🧠 Module 03: The Project Object Model (POM)
 
-Project Object Model configuration, inheritance, and advanced POM patterns.
+> **"If the filesystem is the body of the project, the `pom.xml` is its brain. It contains the instructions that define what the project is, what it needs, and how it should be born."**
 
-## Basic POM Structure
-
-### Minimal POM
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+```mermaid
+graph TD
+    POM[pom.xml] --> GAV[Coordinates: G.A.V.]
+    POM --> DEP[Dependencies]
+    POM --> BLD[Build / Plugins]
+    POM --> PRO[Properties / Profiles]
     
-    <groupId>com.example</groupId>
-    <artifactId>my-app</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-</project>
+    subgraph Meta Data
+    GAV
+    end
+    
+    subgraph Dynamic Logic
+    PRO
+    BLD
+    end
 ```
 
-### Complete POM Example
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    
-    <!-- Project Information -->
-    <groupId>com.example</groupId>
-    <artifactId>my-application</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-    
-    <name>My Application</name>
-    <description>A sample Maven project</description>
-    <url>https://github.com/user/my-application</url>
-    
-    <!-- Organization Information -->
-    <organization>
-        <name>Example Corp</name>
-        <url>https://example.com</url>
-    </organization>
-    
-    <!-- Developers -->
-    <developers>
-        <developer>
-            <id>john.doe</id>
-            <name>John Doe</name>
-            <email>john.doe@example.com</email>
-            <roles>
-                <role>Lead Developer</role>
-            </roles>
-        </developer>
-    </developers>
-    
-    <!-- License -->
-    <licenses>
-        <license>
-            <name>Apache License 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-    
-    <!-- SCM Information -->
-    <scm>
-        <connection>scm:git:git://github.com/user/my-application.git</connection>
-        <developerConnection>scm:git:ssh://github.com/user/my-application.git</developerConnection>
-        <url>https://github.com/user/my-application</url>
-        <tag>HEAD</tag>
-    </scm>
-    
-    <!-- Issue Management -->
-    <issueManagement>
-        <system>GitHub Issues</system>
-        <url>https://github.com/user/my-application/issues</url>
-    </issueManagement>
-    
-    <!-- Properties -->
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        
-        <!-- Dependency versions -->
-        <spring.version>5.3.21</spring.version>
-        <junit.version>5.8.2</junit.version>
-    </properties>
-</project>
-```
+## 📚 Overview
+The **Project Object Model (POM)** is the unit of work in Maven. It is an XML file that contains information about the project and configuration details used by Maven to build the project. 
 
-## POM Inheritance
+In this module, we move beyond the basics of "GAV" coordinates and explore how to use **Profiles**, **Resource Filtering**, and **Inheritance** to create enterprise-grade build scripts.
 
-### Parent POM
+## 🎓 Learning Objectives
+- ✅ Understand the **GAV (GroupId, ArtifactId, Version)** naming convention.
+- ✅ Implement **POM Inheritance** to share configurations across projects.
+- ✅ Master **Resource Filtering** to inject environment variables into files.
+- ✅ Use **Build Profiles** to switch between Dev, QA, and Prod settings.
+- ✅ Configure **Plugin Management** for consistent tool versioning.
+
+---
+
+## 🏗️ The Anatomy of a POM
+
+Every `pom.xml` starts with the coordinates.
+
 ```xml
 <project>
-    <modelVersion>4.0.0</modelVersion>
-    
-    <groupId>com.example</groupId>
-    <artifactId>parent-pom</artifactId>
-    <version>1.0.0</version>
-    <packaging>pom</packaging>
-    
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-    
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-bom</artifactId>
-                <version>${spring.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-    
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.10.1</version>
-                    <configuration>
-                        <source>${maven.compiler.source}</source>
-                        <target>${maven.compiler.target}</target>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.acme.financial</groupId>
+  <artifactId>payment-gateway</artifactId>
+  <version>1.2.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
 </project>
 ```
 
-### Child POM
-```xml
-<project>
-    <modelVersion>4.0.0</modelVersion>
-    
-    <parent>
-        <groupId>com.example</groupId>
-        <artifactId>parent-pom</artifactId>
-        <version>1.0.0</version>
-        <relativePath>../parent-pom/pom.xml</relativePath>
-    </parent>
-    
-    <artifactId>child-module</artifactId>
-    <!-- version inherited from parent -->
-    
-    <dependencies>
-        <!-- Version managed by parent -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-        </dependency>
-    </dependencies>
-</project>
-```
+### Key Elements:
+- **GroupId**: Usually the reversed domain name of your company (e.g., `com.google`).
+- **ArtifactId**: The name of the project.
+- **Version**: Use `-SNAPSHOT` for work in progress. Remove it for releases.
+- **Packaging**: `jar` (library), `war` (web app), or `pom` (parent project).
 
-## Advanced Configuration
+---
 
-### Profiles
+## 🚀 Professional Pattern: Build Profiles
+
+You don't want your database password for Production sitting in your source code. You use **Profiles** to change configurations based on the environment.
+
 ```xml
 <profiles>
-    <profile>
-        <id>development</id>
-        <activation>
-            <activeByDefault>true</activeByDefault>
-        </activation>
-        <properties>
-            <database.url>jdbc:h2:mem:testdb</database.url>
-            <log.level>DEBUG</log.level>
-        </properties>
-    </profile>
-    
-    <profile>
-        <id>production</id>
-        <properties>
-            <database.url>jdbc:mysql://prod-db:3306/myapp</database.url>
-            <log.level>INFO</log.level>
-        </properties>
-        <build>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <configuration>
-                        <webResources>
-                            <resource>
-                                <directory>src/main/webapp-prod</directory>
-                            </resource>
-                        </webResources>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </build>
-    </profile>
+  <profile>
+    <id>dev</id>
+    <properties>
+      <db.url>jdbc:h2:mem:test</db.url>
+    </properties>
+  </profile>
+  <profile>
+    <id>prod</id>
+    <properties>
+      <db.url>jdbc:mysql://prod-db:3306/db</db.url>
+    </properties>
+  </profile>
 </profiles>
 ```
 
-### Resource Filtering
-```xml
-<build>
-    <resources>
-        <resource>
-            <directory>src/main/resources</directory>
-            <filtering>true</filtering>
-            <includes>
-                <include>**/*.properties</include>
-                <include>**/*.xml</include>
-            </includes>
-        </resource>
-        <resource>
-            <directory>src/main/resources</directory>
-            <filtering>false</filtering>
-            <excludes>
-                <exclude>**/*.properties</exclude>
-                <exclude>**/*.xml</exclude>
-            </excludes>
-        </resource>
-    </resources>
-</build>
-```
+**Usage**: `mvn clean package -P prod` (This activates the production settings).
 
-This guide covers comprehensive Maven POM configuration and inheritance patterns.
+---
+
+## 🏆 Real-World DevOps Story: The Hardcoded API Key Leak
+
+**The Scenario**: A developer hardcoded a staging API key into `src/main/resources/application.properties`. When the project was built for Production, the app continued to use the staging credentials.
+**The Discovery**: The build process wasn't "aware" of the environment. 
+**The Fix**: The SRE team implemented **Resource Filtering**. They changed the property value to `${api.key}` in the file and configured Maven to "inject" the correct value from a secure Build Profile during the CI/CD run.
+**The Lesson**: The `pom.xml` is the bridge between your **Code** and your **Infrastructure**. Use it to keep your code "Environment Agnostic."
+
+---
+
+## ❓ Interview Preparation
+
+1. **Q: What is the significance of the '-SNAPSHOT' suffix in a version?**
+   *A: It indicates that the version is under active development. Maven will look for updates to snapshots more frequently because they are not "immutable" releases.*
+
+2. **Q: What is the 'Effective POM'?**
+   *A: It is the final POM interpreted by Maven after combining your project's POM with all parent POMs and the Super POM. You can see it by running `mvn help:effective-pom`.*
+
+3. **Q: What is Resource Filtering?**
+   *A: It is the process where Maven replaces placeholders (like `${name}`) in your resource files with actual values defined in your `pom.xml` properties or profiles.*
+
+4. **Q: Explain `<dependencyManagement>` vs `<dependencies>`.**
+   *A: `<dependencies>` actually includes the libraries in the project. `<dependencyManagement>` only "pre-configures" the versions. It is used in parent POMs to ensure all child modules use the same version of a library if they choose to include it.*
+
+5. **Q: How can you inherit from a parent POM?**
+   *A: By using the `<parent>` tag in the child POM. This allows the child to inherit all properties, dependencies, and plugin configurations from the parent.*
+
+---
+
+## 🔗 Next Steps
+
+The brain is configured. Now let's feed it the libraries it needs.
+
+Proceed to: **[04-Dependencies](../Dependencies/README.md)** →

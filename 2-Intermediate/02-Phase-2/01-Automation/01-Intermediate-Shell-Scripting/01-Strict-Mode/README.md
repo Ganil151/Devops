@@ -1,7 +1,6 @@
 # 🛡️ Bash Strict Mode
 
 Defensive programming is the cornerstone of professional shell scripting. By default, Bash is permissive: it lets you reference undefined variables (evaluating them to empty strings) and ignores errors in pipelines. "Strict Mode" forces Bash to behave more like a compiled language—failing fast and explicitly.
-
 ## The Standard Header
 Every script you write should start with this:
 

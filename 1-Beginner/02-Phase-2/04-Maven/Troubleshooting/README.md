@@ -1,237 +1,98 @@
-# Maven Troubleshooting
+# 🛠️ Module 07: Maven Troubleshooting
 
-Common issues, debugging techniques, and resolution strategies for Maven projects.
+> **"A build failure is not a catastrophe; it is a signal. The skill of a DevOps engineer lies in their ability to decode the signal and restore the flow."**
 
-## Common Build Issues
+```mermaid
+graph TD
+    Fail[Build Failed!] --> Check1{Java Version?}
+    Check1 -- No --> Fix1[Fix JAVA_HOME]
+    Check1 -- Yes --> Check2{Dependencies?}
+    
+    Check2 -- No --> Fix2[Check settings.xml / VPN]
+    Check2 -- Yes --> Check3{Tests Failed?}
+    
+    Check3 -- Yes --> Fix3[Check Logs / Debug Mode]
+    Check3 -- No --> Fix4[Generic 500 / Heap Space?]
+    
+    Fix4 --> M_OPTS[Increase MAVEN_OPTS]
+```
 
-### Dependency Resolution Problems
+## 📚 Overview
+Even the best build scripts fail. Whether it's a corrupted local repository, a network proxy blocking a library, or a "PermGen" memory error, troubleshooting Maven is a core skill for any SRE or developer. 
+
+In this module, we learn the systematic way to debug build failures using Maven's built-in diagnostic tools.
+
+## 🎓 Learning Objectives
+- ✅ Use **Debug Mode (`-X`)** to see the full execution trace.
+- ✅ Resolve **Corrupted Artifacts** in the local repository.
+- ✅ Debug **Network / Repository Connectivity** issues.
+- ✅ Manage **MAVEN_OPTS** for memory-intensive builds.
+- ✅ Fix the dreaded **"Could not find artifact"** error.
+
+---
+
+## 🏗️ The Debugging Toolkit
+
+| Command | Purpose |
+| :--- | :--- |
+| `mvn clean install -X` | **Debug**: Shows every internal step Maven takes. |
+| `mvn clean install -e` | **Errors**: Shows the full Java stack trace. |
+| `mvn clean install -U` | **Update**: Forces Maven to re-check the remote repo for updates. |
+| `mvn clean install -o` | **Offline**: Prevents Maven from touching the network. |
+
+---
+
+## 🚀 Common Issues & Fixes
+
+### 1. Corrupted Downloads
+If a download is interrupted, Maven might leave a "corrupted" file in your cache.
+**The Fix**:
 ```bash
-# Clear local repository
-rm -rf ~/.m2/repository
-
-# Force update dependencies
+# Delete the specific folder and force a re-download
+rm -rf ~/.m2/repository/com/problem/library
 mvn clean install -U
-
-# Offline mode (use only local repository)
-mvn clean install -o
-
-# Debug dependency resolution
-mvn dependency:tree -Dverbose
-mvn dependency:analyze
 ```
 
-### Compilation Errors
+### 2. Out of Memory (OOM)
+Large projects can run out of Java Heap Space.
+**The Fix**:
 ```bash
-# Check effective POM
-mvn help:effective-pom
-
-# Verify Java version
-java -version
-mvn -version
-
-# Check compiler plugin configuration
-mvn help:describe -Dplugin=compiler -Ddetail
-```
-
-### Memory Issues
-```bash
-# Increase Maven memory
-export MAVEN_OPTS="-Xmx2048m -XX:MaxPermSize=512m"
-
-# For Windows
-set MAVEN_OPTS=-Xmx2048m -XX:MaxPermSize=512m
-
-# Project-specific memory settings
-mvn clean install -Dmaven.compiler.fork=true -Dmaven.compiler.maxmem=1024m
-```
-
-## Debugging Techniques
-
-### Verbose Output
-```bash
-# Debug mode
-mvn clean install -X
-
-# Show version information
-mvn clean install -V
-
-# Quiet mode (errors only)
-mvn clean install -q
-
-# Show stack traces
-mvn clean install -e
-```
-
-### Plugin Debugging
-```bash
-# Debug specific plugin
-mvn help:describe -Dplugin=surefire -Ddetail
-
-# List all plugins
-mvn help:describe -Dplugin=help -Ddetail
-
-# Execute specific goal
-mvn surefire:test -Dtest=MyTest
-```
-
-## Network and Repository Issues
-
-### Repository Problems
-```bash
-# Check repository connectivity
-curl -I https://repo1.maven.org/maven2/
-
-# Use different repository
-mvn clean install -Dmaven.repo.remote=https://repo1.maven.org/maven2
-
-# Check settings.xml
-mvn help:effective-settings
-```
-
-### Proxy Configuration
-```xml
-<!-- ~/.m2/settings.xml -->
-<settings>
-    <proxies>
-        <proxy>
-            <id>corporate-proxy</id>
-            <active>true</active>
-            <protocol>http</protocol>
-            <host>proxy.company.com</host>
-            <port>8080</port>
-            <username>proxyuser</username>
-            <password>proxypass</password>
-            <nonProxyHosts>localhost|127.0.0.1|*.company.com</nonProxyHosts>
-        </proxy>
-    </proxies>
-</settings>
-```
-
-## Test Failures
-
-### Surefire Plugin Issues
-```xml
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.0.0-M7</version>
-    <configuration>
-        <!-- Skip tests -->
-        <skipTests>true</skipTests>
-        
-        <!-- Run specific test -->
-        <test>MyTest</test>
-        
-        <!-- Increase memory -->
-        <argLine>-Xmx1024m</argLine>
-        
-        <!-- Fork JVM -->
-        <forkCount>1</forkCount>
-        <reuseForks>false</reuseForks>
-    </configuration>
-</plugin>
-```
-
-### Test Debugging
-```bash
-# Run single test
-mvn test -Dtest=MyTest
-
-# Run tests with pattern
-mvn test -Dtest=*IntegrationTest
-
-# Skip tests
-mvn clean install -DskipTests
-
-# Skip test compilation
-mvn clean install -Dmaven.test.skip=true
-```
-
-## Performance Issues
-
-### Build Performance
-```bash
-# Parallel builds
-mvn clean install -T 4
-
-# Skip unnecessary phases
-mvn compile -Dmaven.test.skip=true
-
-# Use build cache
-mvn clean install -Dmaven.build.cache.enabled=true
-```
-
-### Dependency Download Optimization
-```bash
-# Download sources and javadocs
-mvn dependency:sources dependency:resolve -Dclassifier=javadoc
-
-# Prefetch dependencies
-mvn dependency:go-offline
-```
-
-## Version Conflicts
-
-### Dependency Conflicts
-```bash
-# Find version conflicts
-mvn dependency:tree -Dverbose | grep "conflict"
-
-# Analyze dependency usage
-mvn dependency:analyze-duplicate
-
-# Show dependency updates
-mvn versions:display-dependency-updates
-```
-
-### Resolution Strategies
-```xml
-<!-- Force specific version -->
-<dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>commons-collections</groupId>
-            <artifactId>commons-collections</artifactId>
-            <version>3.2.2</version>
-        </dependency>
-    </dependencies>
-</dependencyManagement>
-
-<!-- Exclude transitive dependency -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-web</artifactId>
-    <exclusions>
-        <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-        </exclusion>
-    </exclusions>
-</dependency>
-```
-
-## Recovery Procedures
-
-### Clean Build Environment
-```bash
-# Complete clean
-mvn clean
-rm -rf target/
-rm -rf ~/.m2/repository/
-
-# Reset to clean state
-git clean -fdx
+export MAVEN_OPTS="-Xmx2048m"
 mvn clean install
 ```
 
-### Corrupted Repository Fix
-```bash
-# Find corrupted files
-find ~/.m2/repository -name "*.lastUpdated" -delete
+---
 
-# Rebuild repository
-rm -rf ~/.m2/repository
-mvn dependency:resolve
-```
+## 🏆 Real-World DevOps Story: The Ghost in the Machine
 
-This comprehensive Maven troubleshooting guide helps resolve common build and configuration issues.
+**The Scenario**: A project failed to build on one specific developer's laptop, but worked for everyone else. The error was `ClassNotFoundException`.
+**The Discovery**: The developer had manually downloaded a JAR file years ago and put it in their `~/.m2/repository`. That old, broken version was being used instead of the fresh one from the company's Nexus server.
+**The Fix**: The SRE team ran `mvn dependency:purge-local-repository`. This wiped every dependency related to the current project and forced a fresh download of the "Source of Truth."
+**The Lesson**: The local repository is a cache, and **caches can lie**. If in doubt, **Purge it.**
+
+---
+
+## ❓ Interview Preparation
+
+1. **Q: How do you force Maven to update its snapshot dependencies?**
+   *A: Use the `-U` or `--update-snapshots` flag. This tells Maven to ignore its local cache and check the remote repository for newer versions.*
+
+2. **Q: What does 'Offline Mode' (`-o`) do, and when would you use it?**
+   *A: It tells Maven to only use the libraries already present in the local repository and never attempt to connect to the internet. This is useful for building on a plane or in a high-security environment with no external access.*
+
+3. **Q: What is the first thing you should check if Maven says it cannot find a library that you know exists?**
+   *A: Check your `settings.xml` for correct `<mirrors>` and `<proxies>`. If you are in a corporate network, you likely need a proxy to reach the Central Repository.*
+
+4. **Q: How can you see the detailed logs of why a plugin failed?**
+   *A: Run Maven with the `-X` (or `--debug`) flag. It will provide a verbose log including the configuration being passed to the plugin.*
+
+5. **Q: What is the purpose of `MAVEN_OPTS`?**
+   *A: It is an environment variable used to pass parameters to the JVM that runs Maven, such as memory limits (`-Xmx`) or system properties.*
+
+---
+
+## 🔗 Next Steps
+
+The tools are mastered. Now it's time to build your own artifacts!
+
+Proceed to: **[Automation Basics](../../01-Automation/README.md)** →

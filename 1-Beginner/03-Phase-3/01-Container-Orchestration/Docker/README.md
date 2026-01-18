@@ -13,7 +13,7 @@ Perfect for those new to Docker and containerization.
 #### Docker Fundamentals
 
 | Topic | Description | Key Concepts |
-|-------|-------------|--------------|
+| :--- | :--- | :--- |
 | **[Introduction](01-Beginner/01-Introduction/README.md)** | What is Docker? Why containerization? | Architecture, Installation, First container |
 | **[Images & Containers](01-Beginner/02-Images-and-Containers/README.md)** | Working with images and containers | Lifecycle, Commands, Docker Hub |
 | **[Dockerfile Basics](01-Beginner/03-Dockerfile-Basics/README.md)** | Building custom images | Instructions, Best practices, Examples |
@@ -22,9 +22,9 @@ Perfect for those new to Docker and containerization.
 #### Docker Compose Fundamentals
 
 | Topic | Description | Key Concepts |
-|-------|-------------|--------------|
+| :--- | :--- | :--- |
 | **[Compose Basics](04-Docker-Compose/Beginner/01-Basics/README.md)** | Multi-container applications | Services, Commands, Workflow |
-| **[Service Configuration](../../../../README.md)** | Defining and configuring services | Ports, Environment, Dependencies |
+| **[Data Persistence & Volumes](04-Docker-Compose/Beginner/02-Volumes/README.md)** | Storing data in Compose | Named volumes, Bind mounts, Anonymous |
 | **[Database Storage](04-Docker-Compose/Beginner/03-Database-Storage/README.md)** | Persistence for PSQL, MySQL, etc | Data paths, Init scripts, Volumes |
 
 ### 🟡 Intermediate Level
@@ -34,7 +34,7 @@ For developers ready to deploy applications in production.
 #### Advanced Docker Concepts
 
 | Topic | Description | Key Concepts |
-|-------|-------------|--------------|
+| :--- | :--- | :--- |
 | **[Docker Networking](02-Intermediate/01-Docker-Networking/README.md)** | Container communication | Bridge, Host, Overlay networks |
 | **[Docker Volumes](02-Intermediate/02-Docker-Volumes/README.md)** | Data persistence and management | Named volumes, Bind mounts, Backup |
 | **[Multi-Stage Builds](02-Intermediate/03-Multi-Stage-Builds/README.md)** | Optimized production images | Image size, Security, Performance |
@@ -45,7 +45,7 @@ For developers ready to deploy applications in production.
 #### Advanced Docker Compose
 
 | Topic | Description | Key Concepts |
-|-------|-------------|--------------|
+| :--- | :--- | :--- |
 | **[Advanced Features](04-Docker-Compose/Intermediate/01-Advanced-Features/README.md)** | Extends, profiles, overrides | Multi-environment configs |
 | **[Networks & Volumes](04-Docker-Compose/Intermediate/02-Networks-Volumes/README.md)** | Complex networking and storage | Custom networks, Volume drivers |
 | **[Secrets & Configs](04-Docker-Compose/Intermediate/03-Secrets-Configs/README.md)** | Secure configuration management | Secrets, External configs |
@@ -57,7 +57,7 @@ Production-grade Docker knowledge for DevOps engineers.
 #### Production Docker
 
 | Topic | Description | Key Concepts |
-|-------|-------------|--------------|
+| :--- | :--- | :--- |
 | **[Docker Security](03-Advanced/01-Docker-Security/README.md)** | Securing containers and images | Best practices, Scanning, Hardening |
 | **[Resource Management](03-Advanced/02-Resource-Management/README.md)** | CPU, memory, and resource limits | Constraints, Health checks, Monitoring |
 | **[Production Considerations](03-Advanced/03-Production-Considerations/README.md)** | Running Docker in production | High availability, Logging, Troubleshooting |
@@ -65,7 +65,7 @@ Production-grade Docker knowledge for DevOps engineers.
 #### Production Docker Compose
 
 | Topic | Description | Key Concepts |
-|-------|-------------|--------------|
+| :--- | :--- | :--- |
 | **[Production Setup](04-Docker-Compose/Advanced/01-Production/README.md)** | Production configurations | Scaling, Resource limits, Restart policies |
 | **[Orchestration](04-Docker-Compose/Advanced/02-Orchestration/README.md)** | Beyond Compose | Docker Swarm, Kubernetes migration |
 
@@ -96,6 +96,7 @@ Production-grade Docker knowledge for DevOps engineers.
 ### Path 3: DevOps Mastery (2-3 weeks)
 
 Complete all documentation in order, including:
+
 - All Beginner topics
 - All Intermediate topics
 - All Advanced topics
