@@ -216,7 +216,35 @@ timeline
 
 ---
 
-#### 13. Hidden Files
+#### 13. Edge Computing with K3s
+**📂 Path**: `2-Intermediate/02-Phase-2/11-Edge-Computing-K3s/`  
+**🎯 Learning Goals**:
+- Understand K3s architecture for Edge/IoT
+- Manage compute/RAM constraints in remote locations
+- Implement local storage and network optimization
+- Deploy workloads to remote Edge nodes
+
+**🔑 Key Concepts**: K3s, Edge Computing, IoT, Resource Constraints  
+**⏱️ Time**: 6-8 hours  
+**✅ Status**: Complete
+
+---
+
+#### 14. Serverless Infrastructure as Code
+**📂 Path**: `2-Intermediate/02-Phase-2/12-Serverless-IaC/`  
+**🎯 Learning Goals**:
+- Master AWS CDK (Cloud Development Kit) Constructs
+- Implement Infrastructure as Software (TypeScript/Python)
+- Master Pulumi state management and secrets
+- Build Serverless pipelines (Lambda/S3/API Gateway)
+
+**🔑 Key Concepts**: AWS CDK, Pulumi, Serverless, Infrastructure as Code  
+**⏱️ Time**: 10-12 hours  
+**✅ Status**: Complete
+
+---
+
+#### 15. Hidden Files
 
 #### 05. Searching in Files
 **📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/`  
@@ -707,7 +735,7 @@ timeline
 ```mermaid
 pie title Completion Status
     "Completed (Beginner)" : 11
-    "Completed (Int/Adv)" : 8
+    "Completed (Int/Adv)" : 10
     "In Progress" : 1
     "Planned" : 14
 ```
@@ -717,8 +745,8 @@ pie title Completion Status
 | Level | Topics/Modules | Completed | In Progress | Planned |
 |-------|----------------|-----------|-------------|---------|
 | 🟢 Beginner | 25 | 11 | 0 | 14 |
-| 🟡 Intermediate/Adv | 9 | 8 | 1 | 0 |
-| **TOTAL** | **34** | **19** | **1** | **14** |
+| 🟡 Intermediate/Adv | 11 | 10 | 1 | 0 |
+| **TOTAL** | **36** | **21** | **1** | **14** |
 
 ### Estimated Time to Completion
 
@@ -784,6 +812,6 @@ Found an error or want to improve content? Contributions welcome!
 **Last Updated**: 2026-01-13  
 **Version**: 2.0.0  
 **Maintained by**: DevOps Learning Team  
-**Status**: 56% Complete (19/34 modules) 🚧
+**Status**: 58% Complete (21/36 modules) 🚧
 
 **📌 Remember**: Automation is a journey. Start simple, scale fast! 🚀
