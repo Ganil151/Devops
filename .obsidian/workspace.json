@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 244.5,
-    "collapsed": true
+    "width": 244.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,22 +214,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7102568f98092cec",
+  "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "3-Advanced/02-Phase-2/24-Fleet-Management-ArgoCD-ApplicationSets/README.md",
+    "3-Advanced/02-Phase-2/23-Advanced-Secret-Management-Vault/README.md",
+    "3-Advanced/02-Phase-2/24-Fleet-Management-ArgoCD-ApplicationSets/02-Git-Generators",
+    "3-Advanced/02-Phase-2/24-Fleet-Management-ArgoCD-ApplicationSets/01-Matrix-Generators",
+    "3-Advanced/02-Phase-2/24-Fleet-Management-ArgoCD-ApplicationSets",
+    "3-Advanced/02-Phase-2/23-Advanced-Secret-Management-Vault/02-Vault-Agent-Auto-Auth",
+    "3-Advanced/02-Phase-2/23-Advanced-Secret-Management-Vault/01-Dynamic-Secrets-Generation",
+    "3-Advanced/02-Phase-2/23-Advanced-Secret-Management-Vault",
     "3-Advanced/02-Phase-2/22-Automated-Compliance-Auditing-Cloud-Custodian/README.md",
     "3-Advanced/02-Phase-2/21-Service-Mesh-Security-mTLS-SPIFFE/README.md",
     "3-Advanced/02-Phase-2/22-Automated-Compliance-Auditing-Cloud-Custodian/02-Real-time-Remediation",
     "3-Advanced/02-Phase-2/22-Automated-Compliance-Auditing-Cloud-Custodian/01-Custodian-Policy-Language",
     "3-Advanced/02-Phase-2/22-Automated-Compliance-Auditing-Cloud-Custodian",
     "3-Advanced/02-Phase-2/21-Service-Mesh-Security-mTLS-SPIFFE/02-SPIRE-Workload-Identity",
-    "3-Advanced/02-Phase-2/21-Service-Mesh-Security-mTLS-SPIFFE/01-mTLS-Fundamentals",
-    "3-Advanced/02-Phase-2/21-Service-Mesh-Security-mTLS-SPIFFE",
     "3-Advanced/02-Phase-2/20-Advanced-Identity-Federation/README.md",
     "3-Advanced/02-Phase-2/19-Chaos-Engineering-Chaos-Mesh/README.md",
-    "3-Advanced/02-Phase-2/20-Advanced-Identity-Federation/02-Identity-Proxy-Dex",
-    "3-Advanced/02-Phase-2/20-Advanced-Identity-Federation/01-OIDC-SAML-Fundamentals",
-    "3-Advanced/02-Phase-2/20-Advanced-Identity-Federation",
-    "3-Advanced/02-Phase-2/19-Chaos-Engineering-Chaos-Mesh/02-Injecting-Faults-with-Chaos-Mesh",
     "3-Advanced/02-Phase-2/18-FinOps-K8s-Optimization/README.md",
     "3-Advanced/02-Phase-2/17-Serverless-Incident-Management/README.md",
     "3-Advanced/02-Phase-2/16-Bare-Metal-Automation/README.md",
@@ -251,8 +252,6 @@
     "5-Boilerplates/3-Advanced/01-Self-Healing-Infrastructure/CHALLENGES.md",
     "5-Boilerplates/1-Beginner/Shell/Shell-Vim-Crash-Course-README.md",
     "5-Boilerplates/1-Beginner/Shell/Shell-User-Input-README.md",
-    "5-Boilerplates/1-Beginner/Shell/Shell-Terminal-and-Finder-README.md",
-    "5-Boilerplates/1-Beginner/Shell/Shell-Searching-in-Files-README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/file_lifecycle.svg",
     "1-Beginner/03-Phase-3/02-FinOps/Images/RegionTypeCost.png",
     "1-Beginner/03-Phase-3/02-FinOps/Images/pricing-models.png",

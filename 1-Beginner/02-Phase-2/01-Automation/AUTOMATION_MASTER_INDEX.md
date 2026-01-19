@@ -384,7 +384,35 @@ timeline
 
 ---
 
-#### 25. Hidden Files
+#### 25. Advanced Secret Management (HashiCorp Vault)
+**📂 Path**: `3-Advanced/02-Phase-2/23-Advanced-Secret-Management-Vault/`  
+**🎯 Learning Goals**:
+- Master the lifecycle of Dynamic Secrets (DB, AWS, SSH)
+- Implement Vault Agent for Auto-Auth and Sidecar injection
+- Configure AppRole methods for machine-to-machine trust
+- Automate rotation and revocation of leaked credentials
+
+**🔑 Key Concepts**: Dynamic Secrets, Vault Agent, AppRole, TTL, Secret Rotation  
+**⏱️ Time**: 12-15 hours  
+**✅ Status**: Complete
+
+---
+
+#### 26. Fleet Management (ArgoCD ApplicationSets)
+**📂 Path**: `3-Advanced/02-Phase-2/24-Fleet-Management-ArgoCD-ApplicationSets/`  
+**🎯 Learning Goals**:
+- Master the ApplicationSet controller for scale
+- Use Matrix and Git generators for automatic discovery
+- Implement cluster-wide deployment patterns via labels
+- Orchestrate progressive rollouts across large fleets
+
+**🔑 Key Concepts**: ApplicationSets, GitOps at Scale, Fleet Factory, Discovery  
+**⏱️ Time**: 10-12 hours  
+**✅ Status**: Complete
+
+---
+
+#### 27. Hidden Files
 
 #### 05. Searching in Files
 **📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/`  
@@ -875,7 +903,7 @@ timeline
 ```mermaid
 pie title Completion Status
     "Completed (Beginner)" : 11
-    "Completed (Int/Adv)" : 20
+    "Completed (Int/Adv)" : 22
     "In Progress" : 1
     "Planned" : 14
 ```
@@ -885,8 +913,8 @@ pie title Completion Status
 | Level | Topics/Modules | Completed | In Progress | Planned |
 |-------|----------------|-----------|-------------|---------|
 | 🟢 Beginner | 25 | 11 | 0 | 14 |
-| 🟡 Intermediate/Adv | 21 | 20 | 1 | 0 |
-| **TOTAL** | **46** | **31** | **1** | **14** |
+| 🟡 Intermediate/Adv | 23 | 22 | 1 | 0 |
+| **TOTAL** | **48** | **33** | **1** | **14** |
 
 ### Estimated Time to Completion
 
@@ -952,6 +980,6 @@ Found an error or want to improve content? Contributions welcome!
 **Last Updated**: 2026-01-13  
 **Version**: 2.0.0  
 **Maintained by**: DevOps Learning Team  
-**Status**: 67% Complete (31/46 modules) 🚧
+**Status**: 69% Complete (33/48 modules) 🚧
 
 **📌 Remember**: Automation is a journey. Start simple, scale fast! 🚀

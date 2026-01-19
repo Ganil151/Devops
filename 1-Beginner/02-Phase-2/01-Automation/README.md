@@ -98,6 +98,8 @@ High-level implementation strategies.
 - **[FinOps K8s Optimization](../../../3-Advanced/02-Phase-2/18-FinOps-K8s-Optimization/)**
 - **[Chaos Engineering](../../../3-Advanced/02-Phase-2/19-Chaos-Engineering-Chaos-Mesh/)**
 - **[Advanced Identity Federation](../../../3-Advanced/02-Phase-2/20-Advanced-Identity-Federation/)**
+- **[Service Mesh Security](../../../3-Advanced/02-Phase-2/21-Service-Mesh-Security-mTLS-SPIFFE/)**
+- **[Automated Compliance Auditing](../../../3-Advanced/02-Phase-2/22-Automated-Compliance-Auditing-Cloud-Custodian/)**
 - **[DBRE (Database Reliability)](../../../3-Advanced/02-Phase-2/14-Database-Reliability-DBRE/)**
 - **[Observability](../../../3-Advanced/02-Phase-2/06-Observability)**
 
