@@ -414,7 +414,35 @@ timeline
 
 ---
 
-#### 27. Hidden Files
+#### 27. Kubernetes Admission Controllers (OPA/Gatekeeper)
+**📂 Path**: `3-Advanced/02-Phase-2/25-K8s-Admission-Controllers-OPA/`  
+**🎯 Learning Goals**:
+- Master Validating and Mutating Admission Webhooks
+- Implement Policy as Code using OPA Gatekeeper
+- Write Rego policies for cluster governance and security
+- Automate policy auditing and enforcement across namespaces
+
+**🔑 Key Concepts**: Admission Controllers, OPA, Gatekeeper, Rego, Policy as Code  
+**⏱️ Time**: 12-15 hours  
+**✅ Status**: Complete
+
+---
+
+#### 28. Advanced CI/CD Patterns (GitHub Actions)
+**📂 Path**: `3-Advanced/02-Phase-2/26-Advanced-CICD-Patterns-GH-Actions/`  
+**🎯 Learning Goals**:
+- Master Reusable Workflows and Composite Actions
+- Implement Keyless Auth using OIDCs with AWS/GCP
+- Build centralized "Pipeline Factories" for organizations
+- Orchestrate complex cross-platform matrix strategies
+
+**🔑 Key Concepts**: Reusable Workflows, OIDC, Composite Actions, GitHub Actions  
+**⏱️ Time**: 10-12 hours  
+**✅ Status**: Complete
+
+---
+
+#### 29. Hidden Files
 
 #### 05. Searching in Files
 **📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/`  
@@ -905,7 +933,7 @@ timeline
 ```mermaid
 pie title Completion Status
     "Completed (Beginner)" : 11
-    "Completed (Int/Adv)" : 22
+    "Completed (Int/Adv)" : 24
     "In Progress" : 1
     "Planned" : 14
 ```
@@ -915,8 +943,8 @@ pie title Completion Status
 | Level | Topics/Modules | Completed | In Progress | Planned |
 |-------|----------------|-----------|-------------|---------|
 | 🟢 Beginner | 25 | 11 | 0 | 14 |
-| 🟡 Intermediate/Adv | 23 | 22 | 1 | 0 |
-| **TOTAL** | **48** | **33** | **1** | **14** |
+| 🟡 Intermediate/Adv | 25 | 24 | 1 | 0 |
+| **TOTAL** | **50** | **35** | **1** | **14** |
 
 ### Estimated Time to Completion
 
@@ -982,6 +1010,6 @@ Found an error or want to improve content? Contributions welcome!
 **Last Updated**: 2026-01-13  
 **Version**: 2.0.0  
 **Maintained by**: DevOps Learning Team  
-**Status**: 69% Complete (33/48 modules) 🚧
+**Status**: 70% Complete (35/50 modules) 🚧
 
 **📌 Remember**: Automation is a journey. Start simple, scale fast! 🚀

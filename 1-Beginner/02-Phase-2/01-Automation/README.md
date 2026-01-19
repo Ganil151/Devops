@@ -102,6 +102,8 @@ High-level implementation strategies.
 - **[Automated Compliance Auditing](../../../3-Advanced/02-Phase-2/22-Automated-Compliance-Auditing-Cloud-Custodian/)**
 - **[Secret Management (Vault)](../../../3-Advanced/02-Phase-2/23-Advanced-Secret-Management-Vault/)**
 - **[Fleet Mgmt (ApplicationSets)](../../../3-Advanced/02-Phase-2/24-Fleet-Management-ArgoCD-ApplicationSets/)**
+- **[Admission Controllers (OPA)](../../../3-Advanced/02-Phase-2/25-K8s-Admission-Controllers-OPA/)**
+- **[Advanced CI/CD Patterns](../../../3-Advanced/02-Phase-2/26-Advanced-CICD-Patterns-GH-Actions/)**
 - **[DBRE (Database Reliability)](../../../3-Advanced/02-Phase-2/14-Database-Reliability-DBRE/)**
 - **[Observability](../../../3-Advanced/02-Phase-2/06-Observability)**
 
