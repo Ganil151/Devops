@@ -1,208 +1,122 @@
-# Kubernetes DNS
+# 🌐 Services and Networking: Connecting the Cluster
 
-## Overview
+![Services Networking Hub](./assets/services_networking_hub.png)
 
-**Kubernetes DNS** provides service discovery and name resolution within the cluster. Every Kubernetes cluster includes a DNS service that automatically assigns DNS names to services and pods.
+## 📋 Overview
 
-## DNS Architecture
+In Kubernetes, Pods are ephemeral. If a Pod crashes and is replaced, its IP address changes. **Services** provide a stable network endpoint (IP and DNS name) that stays constant even as Pods come and go.
 
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│    Pod      │───►│  CoreDNS    │───►│   etcd      │
-│             │    │             │    │ (via API)   │
-└─────────────┘    └─────────────┘    └─────────────┘
-```
+### 🎯 Learning Objectives
 
-## DNS Records
+By the end of this module, you will:
+- Master the three primary **Service Types**: ClusterIP, NodePort, and LoadBalancer.
+- Understand how **Selectors** link Services to Pods via Endpoints.
+- Configure and troubleshoot **CoreDNS** for service discovery.
+- Learn the difference between `port`, `targetPort`, and `nodePort`.
+- Design internal microservice communication using **FQDNs**.
 
-### Service DNS Records
+---
+
+## 🔌 Service Types: The Connectivity Matrix
+
+### 1. ClusterIP (Internal - Default)
+Provides a stable IP address reachable only from within the cluster. This is the "standard" for inter-service communication.
+
+### 2. NodePort (External via Node)
+Exposes the service on each Node's IP at a static port (between 30000-32767).
 ```bash
-# Service FQDN format
-<service-name>.<namespace>.svc.cluster.local
-
-# Examples
-nginx.default.svc.cluster.local
-database.production.svc.cluster.local
+# Example nodePort access
+http://<Any-Node-IP>:30080
 ```
 
-### Pod DNS Records
-```bash
-# Pod FQDN format (if hostname and subdomain specified)
-<hostname>.<subdomain>.<namespace>.pod.cluster.local
+### 3. LoadBalancer (Cloud Standard)
+Exposes the Service externally using a cloud provider's load balancer. This handles the high-level routing from the public internet into your cluster.
 
-# Pod IP-based DNS (A records)
-<pod-ip-with-dashes>.<namespace>.pod.cluster.local
-# Example: 10-244-1-5.default.pod.cluster.local
+```mermaid
+graph TD
+    Client[Internet] --> LB[Load Balancer]
+    LB --> N1[Node 1: NodePort]
+    LB --> N2[Node 2: NodePort]
+    N1 & N2 --> S[Service: ClusterIP]
+    S --> P1[Pod A]
+    S --> P2[Pod B]
+    
+    style LB fill:#f9f9f9,stroke:#333
+    style S fill:#e1f5fe,stroke:#01579b
 ```
 
-## CoreDNS Configuration
+---
 
-### Basic CoreDNS ConfigMap
+## 🏷️ The Selector Mechanics
+
+A Service identifies its target Pods using **Label Selectors**.
+
 ```yaml
 apiVersion: v1
-kind: ConfigMap
+kind: Service
 metadata:
-  name: coredns
-  namespace: kube-system
-data:
-  Corefile: |
-    .:53 {
-        errors
-        health {
-           lameduck 5s
-        }
-        ready
-        kubernetes cluster.local in-addr.arpa ip6.arpa {
-           pods insecure
-           fallthrough in-addr.arpa ip6.arpa
-           ttl 30
-        }
-        prometheus :9153
-        forward . /etc/resolv.conf {
-           max_concurrent 1000
-        }
-        cache 30
-        loop
-        reload
-        loadbalance
-    }
-```
-
-### Custom DNS Configuration
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: coredns
-  namespace: kube-system
-data:
-  Corefile: |
-    .:53 {
-        errors
-        health
-        ready
-        kubernetes cluster.local in-addr.arpa ip6.arpa {
-           pods insecure
-           fallthrough in-addr.arpa ip6.arpa
-        }
-        # Custom upstream DNS
-        forward . 8.8.8.8 8.8.4.4 {
-           max_concurrent 1000
-        }
-        # Custom domain forwarding
-        forward example.com 192.168.1.10
-        cache 30
-        loop
-        reload
-        loadbalance
-    }
-```
-
-## DNS Testing
-
-### Basic DNS Resolution
-```bash
-# Test service DNS resolution
-kubectl run test-pod --image=busybox -it --rm -- nslookup kubernetes.default
-
-# Test external DNS resolution
-kubectl run test-pod --image=busybox -it --rm -- nslookup google.com
-
-# Test pod DNS resolution
-kubectl run test-pod --image=busybox -it --rm -- nslookup 10-244-1-5.default.pod.cluster.local
-```
-
-### DNS Debugging
-```bash
-# Check CoreDNS pods
-kubectl get pods -n kube-system -l k8s-app=kube-dns
-
-# Check CoreDNS logs
-kubectl logs -n kube-system -l k8s-app=kube-dns
-
-# Check DNS configuration
-kubectl get configmap -n kube-system coredns -o yaml
-
-# Test DNS from specific pod
-kubectl exec -it <pod-name> -- cat /etc/resolv.conf
-```
-
-## Pod DNS Configuration
-
-### DNS Policy
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: dns-test
+  name: backend-service
 spec:
-  dnsPolicy: ClusterFirst  # Default
-  containers:
-  - name: test
-    image: busybox
+  type: ClusterIP
+  selector:
+    app: backend-api  # Must match the labels in your Pod/Deployment
+  ports:
+    - protocol: TCP
+      port: 80        # Port the service listens on
+      targetPort: 8080 # Port the application listens on inside the pod
 ```
 
-**DNS Policies**:
-- `ClusterFirst`: Use cluster DNS first, then upstream
-- `ClusterFirstWithHostNet`: For pods with hostNetwork
-- `Default`: Use node's DNS resolution
-- `None`: Use custom DNS configuration
+---
 
-### Custom DNS Configuration
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: custom-dns
-spec:
-  dnsPolicy: None
-  dnsConfig:
-    nameservers:
-    - 8.8.8.8
-    - 8.8.4.4
-    searches:
-    - example.com
-    - internal.example.com
-    options:
-    - name: ndots
-      value: "2"
-    - name: edns0
-  containers:
-  - name: test
-    image: busybox
-```
+## 📖 Service Discovery: Kubernetes DNS
 
-## Troubleshooting DNS
+Kubernetes runs a built-in DNS service (**CoreDNS**) that automatically creates DNS records for every Service.
 
-### Common Issues
-```bash
-# DNS resolution failures
-kubectl run debug --image=busybox -it --rm -- nslookup kubernetes.default
+### The Full Qualified Domain Name (FQDN)
+You can reach any service using this standard format:
+`<service-name>.<namespace>.svc.cluster.local`
 
-# Check pod DNS configuration
-kubectl exec <pod-name> -- cat /etc/resolv.conf
+**Example:**
+`auth-api.production.svc.cluster.local`
 
-# Verify CoreDNS is running
-kubectl get pods -n kube-system -l k8s-app=kube-dns
+### CoreDNS Workflow
+1.  A Pod requests `nslookup database-svc`.
+2.  The request is sent to the **CoreDNS** service IP.
+3.  CoreDNS looks up the mapping and returns the stable **ClusterIP** of the service.
 
-# Check service endpoints
-kubectl get endpoints -n kube-system kube-dns
-```
+---
 
-### Performance Issues
-```bash
-# Check CoreDNS metrics
-kubectl port-forward -n kube-system svc/kube-dns 9153:9153
-curl http://localhost:9153/metrics
+## 📖 Real-World DevOps Story: "The Infinite Loop of Redirection"
 
-# Monitor DNS queries
-kubectl logs -n kube-system -l k8s-app=kube-dns -f
-```
+**The Scenario:** A team noticed extreme latency between their Frontend and Backend microservices. Investigation revealed they were calling each other via their **external** LoadBalancer URLs (e.g., `https://api.myapp.com`) instead of internal names.
 
-## Best Practices
+**The Result:** Every internal request was traveling out to the internet, through the cloud firewall, hitting the LoadBalancer, and coming back in.
 
-- Use short service names within the same namespace
-- Configure appropriate DNS caching
-- Monitor DNS performance and errors
-- Use custom DNS for external services
-- Implement DNS-based service discovery
+**The Lesson:** Always use internal Service names (`http://backend-service`) for service-to-service calls. It is faster, cheaper, and keeps traffic inside your private network.
+
+---
+
+## 👨‍💻 Interview Preparation
+
+1. **Q: What is the "Endpoints" object?**
+   *   *A: It is a resource created automatically by a Service that contains the list of actual IP addresses of the pods matching the selector.*
+
+2. **Q: Explain the difference between `port`, `targetPort`, and `nodePort`.**
+   *   *A: `port` is the service's port; `targetPort` is the pod's port; `nodePort` is the physical node's port.*
+
+3. **Q: How can you access a service if CoreDNS is down?**
+   *   *A: You can still use the **ClusterIP** directly, but service discovery (name resolution) will fail.*
+
+---
+
+## 🧠 Knowledge Check
+
+1. Which Service type is used for inter-service communication only? (ClusterIP)
+2. What is the standard DNS name for a service named `db` in namespace `dev`? (`db.dev.svc.cluster.local`)
+3. Which component on the node routes traffic to the pods? (Kube-Proxy)
+
+---
+
+## 🔗 Internal Navigation
+- [Next: Ingress Controllers](../06-Ingress-Controllers/README.md)
+- [Back: Deployments and Scaling](../04-Deployments-and-Scaling/README.md)
