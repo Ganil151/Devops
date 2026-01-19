@@ -1,8 +1,6 @@
 # 🤖 Automation - Shell Scripting Mastery
 
 > **"Automation is the foundation of modern DevOps. Master shell scripting, and you master the infrastructure."**
-
-
 ![Automation Roadmap](./assets/automation_roadmap.png)
 
 ## 📚 Overview
@@ -24,15 +22,13 @@ By completing this curriculum, you will:
 - ✅ Debug and troubleshoot shell scripts effectively
 - ✅ Build CI/CD pipeline components (GitHub Actions, etc.)
 
-
-
 ## 🗺️ Curriculum Structure
 
 ### Three-Tier Learning System
 
 ```mermaid
 graph TD
-    A[🟢 BEGINNER<br/>17 Basic Topics] --> B[🟡 INTERMEDIATE<br/>Core Automation Modules]
+    A[🟢 BEGINNER<br/>24 Mastered Topics] --> B[🟡 INTERMEDIATE<br/>Functional Modules]
     B --> C[🔴 ADVANCED<br/>Strategic Domains]
     
     A --> A1[Terminal & Files]
@@ -66,7 +62,7 @@ Master the fundamentals of shell scripting and terminal navigation.
 | 01 | [**Introduction**](./01-Shell-Scripting/01-Introduction/) | Shell types, first script | ✅ |
 | 02 | [**Terminal and Finder**](./01-Shell-Scripting/02-Terminal-and-Finder/) | Navigation, paths | ✅ |
 | 03 | [**Basic File Manipulation**](./01-Shell-Scripting/03-Basic-File-Manipulation/) | cp, mv, rm | ✅ |
-| ... | [**View Full Beginner Index**](./AUTOMATION_MASTER_INDEX.md) | Topics 04-17 (Planned) | 📝 |
+| ... | [**View Full Beginner Index**](./AUTOMATION_MASTER_INDEX.md) | Topics 04-24 (Mastered) | ✅ |
 
 ---
 
@@ -115,6 +111,10 @@ High-level implementation strategies.
 - **[Cloud-Native Backup (Velero)](../../../3-Advanced/02-Phase-2/28-Cloud-Native-Backup-Velero/)**
 - **[Automated Security Scanning](../../../3-Advanced/02-Phase-2/29-Automated-Security-Scanning/)**
 - **[Advanced Terraform Workflows](../../../3-Advanced/02-Phase-2/30-Advanced-Terraform-Workflows/)**
+- **[Automated Performance Testing](../../../3-Advanced/02-Phase-2/31-Automated-Performance-Testing-Locust-k6/)**
+- **[Cloud-Native Logging (Loki)](../../../3-Advanced/02-Phase-2/32-Cloud-Native-Logging-Loki-FluentBit/)**
+- **[Cost Governance (Infracost)](../../../3-Advanced/02-Phase-2/33-Infrastructure-Cost-Governance-Infracost/)**
+- **[Advanced K8s Networking (eBPF)](../../../3-Advanced/02-Phase-2/34-Advanced-K8s-Networking-Cilium/)**
 - **[DBRE (Database Reliability)](../../../3-Advanced/02-Phase-2/14-Database-Reliability-DBRE/)**
 - **[Observability](../../../3-Advanced/02-Phase-2/06-Observability)**
 
@@ -122,11 +122,11 @@ High-level implementation strategies.
 
 ## 📊 Progress Tracker
 
-- [x] **Beginner Level** (11/17 completed)
-- [x] **Intermediate/Advanced Level** (11/11 completed)
-- [x] **Strategic Level** (18/22 completed)
+- [x] **Beginner Level** (24/24 completed)
+- [x] **Intermediate/Advanced Level** (26/26 completed)
+- [ ] **Specialization/Planned** (0/12 planned)
 
-**Total Completion**: 72% ⬜⬜⬜⬜⬜⬜⬜⬛⬛⬛
+**Total Completion**: 81% ⬜⬜⬜⬜⬜⬜⬜⬜⬛⬛
 
 ---
 

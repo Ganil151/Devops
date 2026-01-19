@@ -211,7 +211,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 08: Microservices & Architectural Patterns
-**Study Resource**: [Microservices Guide](../../3-Advanced/02-Phase-2/09-Microservices/README.md) & [Specialized Tech](../../3-Advanced/03-Phase-3/10-Specialized-Tech/README.md)
+**Study Resource**: [Microservices Guide](../../3-Advanced/02-Phase-2/09-Microservices/README.md) & [Specialized Tech](../../3-Advanced/03-Phase-3/11-Specialized-Tech/README.md)
 
 30. In the **12-Factor App** methodology, how should application configuration be stored?
 - A) Hardcoded in the source code
