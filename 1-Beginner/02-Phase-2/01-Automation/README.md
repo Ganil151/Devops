@@ -38,6 +38,8 @@ graph TD
     
     C --> C3[Service Mesh]
     C --> C4[Secured CI/CD]
+    C --> C5[Platform Eng]
+    C --> C6[DBRE]
     
     style A fill:#00b894,stroke:#333,stroke-width:3px,color:#fff
     style B fill:#fdcb6e,stroke:#333,stroke-width:3px,color:#000
@@ -89,6 +91,8 @@ High-level implementation strategies.
 - **[Service Mesh](../../../3-Advanced/02-Phase-2/05-Service-Mesh-Istio/)**
 - **[Multi-Cluster K8s](../../../3-Advanced/02-Phase-2/07-Multi-Cluster-Kubernetes/)**
 - **[AIOps & Incident Response](../../../3-Advanced/02-Phase-2/10-AI-Driven-Operations-AIOps/)**
+- **[Platform Engineering](../../../3-Advanced/02-Phase-2/13-Platform-Engineering-Backstage/)**
+- **[DBRE (Database Reliability)](../../../3-Advanced/02-Phase-2/14-Database-Reliability-DBRE/)**
 - **[Observability](../../../3-Advanced/02-Phase-2/06-Observability)**
 
 ---

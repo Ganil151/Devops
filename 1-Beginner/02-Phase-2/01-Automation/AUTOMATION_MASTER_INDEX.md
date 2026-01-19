@@ -244,7 +244,35 @@ timeline
 
 ---
 
-#### 15. Hidden Files
+#### 15. Platform Engineering with Backstage
+**📂 Path**: `3-Advanced/02-Phase-2/13-Platform-Engineering-Backstage/`  
+**🎯 Learning Goals**:
+- Master Backstage Software Catalog & Scaffolder
+- Reduce cognitive load via Internal Developer Portals (IDP)
+- Implement "Golden Paths" using Software Templates
+- Centralize documentation with TechDocs
+
+**🔑 Key Concepts**: Internal Developer Portal, Software Templates, Backstage, Platform Engineering  
+**⏱️ Time**: 12-15 hours  
+**✅ Status**: Complete
+
+---
+
+#### 16. Database Reliability Engineering (DBRE)
+**📂 Path**: `3-Advanced/02-Phase-2/14-Database-Reliability-DBRE/`  
+**🎯 Learning Goals**:
+- Master Database Operators in Kubernetes (CloudNativePG)
+- Implement Automated Failover and HA topologies
+- Perform Zero-Downtime Schema Migrations
+- Optimize database performance and scalability patterns
+
+**🔑 Key Concepts**: DBRE, Database Operators, High Availability, Schema Migrations  
+**⏱️ Time**: 12-15 hours  
+**✅ Status**: Complete
+
+---
+
+#### 17. Hidden Files
 
 #### 05. Searching in Files
 **📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/`  
@@ -735,7 +763,7 @@ timeline
 ```mermaid
 pie title Completion Status
     "Completed (Beginner)" : 11
-    "Completed (Int/Adv)" : 10
+    "Completed (Int/Adv)" : 12
     "In Progress" : 1
     "Planned" : 14
 ```
@@ -745,8 +773,8 @@ pie title Completion Status
 | Level | Topics/Modules | Completed | In Progress | Planned |
 |-------|----------------|-----------|-------------|---------|
 | 🟢 Beginner | 25 | 11 | 0 | 14 |
-| 🟡 Intermediate/Adv | 11 | 10 | 1 | 0 |
-| **TOTAL** | **36** | **21** | **1** | **14** |
+| 🟡 Intermediate/Adv | 13 | 12 | 1 | 0 |
+| **TOTAL** | **38** | **23** | **1** | **14** |
 
 ### Estimated Time to Completion
 
@@ -812,6 +840,6 @@ Found an error or want to improve content? Contributions welcome!
 **Last Updated**: 2026-01-13  
 **Version**: 2.0.0  
 **Maintained by**: DevOps Learning Team  
-**Status**: 58% Complete (21/36 modules) 🚧
+**Status**: 61% Complete (23/38 modules) 🚧
 
 **📌 Remember**: Automation is a journey. Start simple, scale fast! 🚀
