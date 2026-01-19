@@ -164,5 +164,5 @@ Many junior developers write logs to a file inside their app directory (e.g., `/
 
 You've mastered the administration of a single machine. Now it's time to learn how to speak the language of the machine itself through **Shell Scripting & Automation**.
 
-Proceed to: **[Phase 1.02.02: Shell Scripting & Automation](../../02-Automation/01-Shell-Scripting-Basics/README.md)** →
+Proceed to: **[Phase 1.02.02: Shell Scripting & Automation](../../../../../README.md)** →
 Node: This link points to the next level of the Linux curriculum.

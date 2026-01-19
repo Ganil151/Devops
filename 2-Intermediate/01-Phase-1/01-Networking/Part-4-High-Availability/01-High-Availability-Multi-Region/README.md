@@ -141,5 +141,5 @@ DNS failover (Route 53) is subject to **TTL Caching**. If an ISP ignores your 60
 
 You've designed for total resilience. Now let's explore how to connect your cloud empire back to your physical data centers.
 
-Proceed to: **[09. Hybrid Connectivity](../09-Hybrid-Connectivity/README.md)** →
+Proceed to: **[09. Hybrid Connectivity](../../../../../README.md)** →
 Node: This link points to the next logical step in the curriculum.

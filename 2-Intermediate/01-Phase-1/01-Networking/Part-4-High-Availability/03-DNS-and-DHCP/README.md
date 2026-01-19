@@ -168,4 +168,4 @@ sequenceDiagram
 
 Network identity is secure and assigned. Now, let's explore how to protect these packets in transit.
 
-Proceed to: **[Network Security & Firewalls](../02-Firewalls-and-Security/README.md)** →
+Proceed to: **[Network Security & Firewalls](../../../../../README.md)** →

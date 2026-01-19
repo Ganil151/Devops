@@ -132,4 +132,4 @@ For high-performance environments where any delay (latency) is unacceptable, "In
 
 You've built advanced paths. Now let's learn what happens when they break and how to find the "Blackholes" in your network.
 
-Proceed to: **[04. Troubleshooting and Blackholes](./04-Troubleshooting-and-Blackholes/README.md)** →
+Proceed to: **[04. Troubleshooting and Blackholes](../../../../../../README.md)** →

@@ -3,7 +3,7 @@
 Thrive in mission-critical infrastructure by mastering observability, security-as-code, and advanced orchestration patterns.
 
 ## Module 01: GitOps & DeclarativeCD
-**Study Resource**: [GitOps with ArgoCD](../../3-Advanced/02-Phase-2/05-GitOps/README.md)
+**Study Resource**: [GitOps with ArgoCD](../../README.md)
 
 1. What is GitOps?
 - A) Using Git for operations only
@@ -20,7 +20,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 02: Observability & Monitoring
-**Study Resource**: [Advanced Observability](../../3-Advanced/02-Phase-2/06-Observability/README.md)
+**Study Resource**: [Advanced Observability](../../README.md)
 
 3. What is Prometheus used for?
 - A) Configuration management
@@ -153,7 +153,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 06: Cloud-Native & Hybrid Networking
-**Study Resource**: [Multi-Cloud Networking](../../3-Advanced/02-Phase-2/11-Enterprise-Cloud/01-Multi-Cloud-Architecture/README.md)
+**Study Resource**: [Multi-Cloud Networking](../../README.md)
 
 22. Which Service Mesh feature allows for fine-grained control over traffic splitting (e.g., 90% to v1, 10% to v2)?
 - A) Ingress Gateway
@@ -182,7 +182,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 07: SRE & FinOps Essentials
-**Study Resource**: [Multi-Cloud Management & Governance](../../3-Advanced/02-Phase-2/11-Enterprise-Cloud/01-Multi-Cloud-Architecture/Management/README.md)
+**Study Resource**: [Multi-Cloud Management & Governance](../../README.md)
 
 26. What is the main difference between an SLO (Service Level Objective) and an SLA (Service Level Agreement)?
 - A) SLOs are internal goals; SLAs are external legal contracts with customers
@@ -211,7 +211,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 08: Microservices & Architectural Patterns
-**Study Resource**: [Microservices Guide](../../3-Advanced/02-Phase-2/09-Microservices/README.md) & [Specialized Tech](../../3-Advanced/03-Phase-3/11-Specialized-Tech/README.md)
+**Study Resource**: [Microservices Guide](../../README.md) & [Specialized Tech](../../3-Advanced/03-Phase-3/11-Specialized-Tech/README.md)
 
 30. In the **12-Factor App** methodology, how should application configuration be stored?
 - A) Hardcoded in the source code

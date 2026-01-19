@@ -52,23 +52,23 @@ Security as Code: SAST, DAST, and Compliance automation.
 
 ### ⚙️ Phase 2: Core Skills (Advanced Tier)
 
-#### 06. [GitOps with ArgoCD](./02-Phase-2/05-GitOps/README.md)
+#### 06. [GitOps with ArgoCD](../README.md)
 
 Declarative deployment using pull-based reconciliation.
 
-#### 07. [Observability & Monitoring](./02-Phase-2/06-Observability/README.md)
+#### 07. [Observability & Monitoring](../README.md)
 
 Deep dive into the 3 Pillars: Metrics (Prometheus), Logs (ELK), and Traces (OpenTelemetry).
 
-#### 08. [Identity & Governance](./02-Phase-2/08-Identity-Governance/README.md)
+#### 08. [Identity & Governance](../README.md)
 
 Mastering IAM, Permissions, and automated Compliance Audits.
 
-#### 09. [Microservices Architecture](./02-Phase-2/09-Microservices/README.md)
+#### 09. [Microservices Architecture](../README.md)
 
 Service Discovery, API Gateways, and distributed system operational challenges.
 
-#### 10. [Enterprise Cloud Architecture](./02-Phase-2/11-Enterprise-Cloud/README.md)
+#### 10. [Enterprise Cloud Architecture](../README.md)
 
 High-availability multi-cloud patterns and global infrastructure.
 

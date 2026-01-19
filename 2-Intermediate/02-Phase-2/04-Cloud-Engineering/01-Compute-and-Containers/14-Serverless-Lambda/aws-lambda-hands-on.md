@@ -113,4 +113,4 @@ aws iam delete-role --role-name lambda-ex-role
 ```
 
 ---
-**Next Step**: Explore [Advanced Lambda Patterns & Troubleshooting](../../../../../3-Advanced/02-Phase-2/11-Enterprise-Cloud/15-Serverless-Lambda/aws-lambda-advanced-patterns.md)
+**Next Step**: Explore [Advanced Lambda Patterns & Troubleshooting](../../../../../3-Advanced/02-Phase-2/Part-11-Cloud-Architecture/01-Enterprise-Multi-Cloud/15-Serverless-Lambda/aws-lambda-advanced-patterns.md)

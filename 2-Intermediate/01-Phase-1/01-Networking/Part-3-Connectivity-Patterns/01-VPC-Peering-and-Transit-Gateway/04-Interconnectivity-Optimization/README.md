@@ -120,5 +120,5 @@ Imagine you have many VPCs connected via TGW. One of them (VPC A) is a "Data Lak
 
 You've mastered the interconnectivity layer. Now let's dive into distributing traffic across your servers using Cloud Load Balancers.
 
-Proceed to: **[Module 07: Load Balancing (ALB/NLB)](../07-Load-Balancing-ALB-NLB/README.md)** →
+Proceed to: **[Module 07: Load Balancing (ALB/NLB)](../../../../../../README.md)** →
 Node: This link points to the next level of the curriculum.

@@ -122,4 +122,4 @@ While AWS still allows you to build your own NAT using a regular EC2 instance ("
 
 IPv4 is the current standard, but the future is IPv6. Let's see how we handle egress in a world where "everything is public."
 
-Proceed to: **[03. IPv6 and Egress-Only Gateways](./03-IPv6-and-Egress-Only-Gateways/README.md)** →
+Proceed to: **[03. IPv6 and Egress-Only Gateways](../../../../../../README.md)** →

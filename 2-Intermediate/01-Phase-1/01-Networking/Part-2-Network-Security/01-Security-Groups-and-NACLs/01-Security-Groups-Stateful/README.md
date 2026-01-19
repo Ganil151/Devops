@@ -135,4 +135,4 @@ Senior DevOps engineers never hardcode IP addresses in Security Groups.
 
 The SG protects the instance, but what protects the entire street (subnet)? Let's look at the stateless gatekeeper.
 
-Proceed to: **[02. Network ACLs: Stateless](./02-Network-ACLs-Stateless/README.md)** →
+Proceed to: **[02. Network ACLs: Stateless](../../../../../../README.md)** →

@@ -129,5 +129,5 @@ Senior DevOps engineers always follow a "bottom-up" troubleshooting order:
 
 You've learned how to secure and troubleshoot. Now let's explore how to give your VPC a "Global Voice"—the DNS and DHCP systems that power human-readable cloud networking.
 
-Proceed to: **[01-DNS-DHCP](../../02-Phase-2/01-Networking/01-DNS-DHCP/README.md)** →
+Proceed to: **[01-DNS-DHCP](../../../../../README.md)** →
 Node: This link points to the next phase in the curriculum structure.

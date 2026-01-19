@@ -126,4 +126,4 @@ Senior DevOps engineers don't just pick random IP ranges. They plan for the futu
 
 The foundation is laid. Now let's explore the individual parts that make the VPC function.
 
-Proceed to: **[VPC Components & Architecture](../02-VPC-Components/README.md)** →
+Proceed to: **[VPC Components & Architecture](../../../../../../README.md)** →

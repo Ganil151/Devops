@@ -149,4 +149,4 @@ In the VM world, we used to write logs to `/var/log/myapp.log`. In the Docker wo
 
 The kitchen is fixed. Now let's build something massive.
 
-Proceed to: **[Module 05: Docker Compose](../04-Docker-Compose/Beginner/01-Basics/README.md)** →
+Proceed to: **[Module 05: Docker Compose](../../../../../../README.md)** →

@@ -136,5 +136,5 @@ Junior admins often check if Port 80 is open. If the server is 100% CPU but Port
 
 You've mastered traffic distribution. Now let's explore how to design for high availability across multiple regions and ensure your network is resilient to total disasters.
 
-Proceed to: **[08. High Availability & Multi-Region](../08-High-Availability-and-Multi-Region/README.md)** →
+Proceed to: **[08. High Availability & Multi-Region](../../../../../README.md)** →
 Node: This link points to the next logical step in the curriculum.

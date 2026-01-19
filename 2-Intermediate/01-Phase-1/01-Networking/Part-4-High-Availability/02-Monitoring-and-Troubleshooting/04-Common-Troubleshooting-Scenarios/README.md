@@ -130,5 +130,5 @@ Sometimes the AWS network is fine, but the server is "silent."
 
 **Congratulations!** You have completed the 01-Networking phase of the Intermediate Curriculum. You now have the skills to design, build, and fix complex global networks in the cloud.
 
-Proceed to: **[Phase 2: Linux Mastery](../../02-Linux/README.md)** →
+Proceed to: **[Phase 2: Linux Mastery](../../../../../../README.md)** →
 Node: This link points to the next phase of the journey.

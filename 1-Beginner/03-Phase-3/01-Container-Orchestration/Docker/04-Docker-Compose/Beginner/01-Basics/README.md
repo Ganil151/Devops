@@ -159,5 +159,5 @@ Never hardcode your passwords or API keys inside your `docker-compose.yml`. If y
 
 The orchestra is playing. Now let's learn how to make sure they never lose their memory.
 
-Proceed to: **[Module 06: Data Persistence & Volumes](../04-Docker-Compose/Beginner/02-Volumes/README.md)** →
+Proceed to: **[Module 06: Data Persistence & Volumes](../../../../../../../README.md)** →
 翻

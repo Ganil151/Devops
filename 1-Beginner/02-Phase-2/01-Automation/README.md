@@ -90,33 +90,33 @@ Functional modules for building real-world tools.
 
 High-level implementation strategies.
 
-- **[GitOps](../../../3-Advanced/02-Phase-2/05-GitOps)**
-- **[Service Mesh](../../../3-Advanced/02-Phase-2/05-Service-Mesh-Istio/)**
-- **[Multi-Cluster K8s](../../../3-Advanced/02-Phase-2/07-Multi-Cluster-Kubernetes/)**
-- **[AIOps & Incident Response](../../../3-Advanced/02-Phase-2/10-AI-Driven-Operations-AIOps/)**
-- **[Platform Engineering](../../../3-Advanced/02-Phase-2/13-Platform-Engineering-Backstage/)**
-- **[Supply Chain Security](../../../3-Advanced/02-Phase-2/15-Supply-Chain-Security/)**
-- **[Bare Metal Automation](../../../3-Advanced/02-Phase-2/16-Bare-Metal-Automation/)**
-- **[Serverless Incident Mgmt](../../../3-Advanced/02-Phase-2/17-Serverless-Incident-Management/)**
-- **[FinOps K8s Optimization](../../../3-Advanced/02-Phase-2/18-FinOps-K8s-Optimization/)**
-- **[Chaos Engineering](../../../3-Advanced/02-Phase-2/19-Chaos-Engineering-Chaos-Mesh/)**
-- **[Advanced Identity Federation](../../../3-Advanced/02-Phase-2/20-Advanced-Identity-Federation/)**
-- **[Service Mesh Security](../../../3-Advanced/02-Phase-2/21-Service-Mesh-Security-mTLS-SPIFFE/)**
-- **[Automated Compliance Auditing](../../../3-Advanced/02-Phase-2/22-Automated-Compliance-Auditing-Cloud-Custodian/)**
-- **[Secret Management (Vault)](../../../3-Advanced/02-Phase-2/23-Advanced-Secret-Management-Vault/)**
-- **[Fleet Mgmt (ApplicationSets)](../../../3-Advanced/02-Phase-2/24-Fleet-Management-ArgoCD-ApplicationSets/)**
-- **[Admission Controllers (OPA)](../../../3-Advanced/02-Phase-2/25-K8s-Admission-Controllers-OPA/)**
-- **[Advanced CI/CD Patterns](../../../3-Advanced/02-Phase-2/26-Advanced-CICD-Patterns-GH-Actions/)**
-- **[Service Mesh Observability](../../../3-Advanced/02-Phase-2/27-Service-Mesh-Observability-Kiali-Jaeger/)**
-- **[Cloud-Native Backup (Velero)](../../../3-Advanced/02-Phase-2/28-Cloud-Native-Backup-Velero/)**
-- **[Automated Security Scanning](../../../3-Advanced/02-Phase-2/29-Automated-Security-Scanning/)**
-- **[Advanced Terraform Workflows](../../../3-Advanced/02-Phase-2/30-Advanced-Terraform-Workflows/)**
-- **[Automated Performance Testing](../../../3-Advanced/02-Phase-2/31-Automated-Performance-Testing-Locust-k6/)**
-- **[Cloud-Native Logging (Loki)](../../../3-Advanced/02-Phase-2/32-Cloud-Native-Logging-Loki-FluentBit/)**
-- **[Cost Governance (Infracost)](../../../3-Advanced/02-Phase-2/33-Infrastructure-Cost-Governance-Infracost/)**
-- **[Advanced K8s Networking (eBPF)](../../../3-Advanced/02-Phase-2/34-Advanced-K8s-Networking-Cilium/)**
-- **[DBRE (Database Reliability)](../../../3-Advanced/02-Phase-2/14-Database-Reliability-DBRE/)**
-- **[Observability](../../../3-Advanced/02-Phase-2/06-Observability)**
+- **[GitOps](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/05-GitOps)**
+- **[Service Mesh](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/05-Service-Mesh-Istio)**
+- **[Multi-Cluster K8s](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/07-Multi-Cluster-Kubernetes)**
+- **[AIOps & Incident Response](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/10-AI-Driven-Operations-AIOps)**
+- **[Platform Engineering](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/13-Platform-Engineering-Backstage)**
+- **[Supply Chain Security](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/15-Supply-Chain-Security)**
+- **[Bare Metal Automation](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/16-Bare-Metal-Automation)**
+- **[Serverless Incident Mgmt](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/17-Serverless-Incident-Management)**
+- **[FinOps K8s Optimization](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/18-FinOps-K8s-Optimization)**
+- **[Chaos Engineering](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/19-Chaos-Engineering-Chaos-Mesh)**
+- **[Advanced Identity Federation](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/20-Advanced-Identity-Federation)**
+- **[Service Mesh Security](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/21-Service-Mesh-Security-mTLS-SPIFFE)**
+- **[Automated Compliance Auditing](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/22-Automated-Compliance-Auditing-Cloud-Custodian)**
+- **[Secret Management (Vault)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/23-Advanced-Secret-Management-Vault)**
+- **[Fleet Mgmt (ApplicationSets)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/24-Fleet-Management-ArgoCD-ApplicationSets)**
+- **[Admission Controllers (OPA)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/25-K8s-Admission-Controllers-OPA)**
+- **[Advanced CI/CD Patterns](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/26-Advanced-CICD-Patterns-GH-Actions)**
+- **[Service Mesh Observability](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/27-Service-Mesh-Observability-Kiali-Jaeger)**
+- **[Cloud-Native Backup (Velero)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/28-Cloud-Native-Backup-Velero)**
+- **[Automated Security Scanning](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/29-Automated-Security-Scanning)**
+- **[Advanced Terraform Workflows](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/30-Advanced-Terraform-Workflows)**
+- **[Automated Performance Testing](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/31-Automated-Performance-Testing-Locust-k6)**
+- **[Cloud-Native Logging (Loki)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/32-Cloud-Native-Logging-Loki-FluentBit)**
+- **[Cost Governance (Infracost)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/33-Infrastructure-Cost-Governance-Infracost)**
+- **[Advanced K8s Networking (eBPF)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/34-Advanced-K8s-Networking-Cilium)**
+- **[DBRE (Database Reliability)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/14-Database-Reliability-DBRE)**
+- **[Observability](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/06-Observability)**
 
 ---
 

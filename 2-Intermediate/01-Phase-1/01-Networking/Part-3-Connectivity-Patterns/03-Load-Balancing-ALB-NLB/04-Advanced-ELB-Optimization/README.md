@@ -125,5 +125,5 @@ When updating your application code, you don't just "shut down the old version."
 
 You've mastered traffic distribution. Now let's explore how to design for high availability across multiple regions and ensure your network is resilient to total disasters.
 
-Proceed to: **[Module 08: High Availability & Multi-Region](../08-High-Availability-and-Multi-Region/README.md)** →
+Proceed to: **[Module 08: High Availability & Multi-Region](../../../../../../README.md)** →
 Node: This link points to the next level of the curriculum.

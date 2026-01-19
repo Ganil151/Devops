@@ -132,4 +132,4 @@ Senior DevOps engineers don't reach for a calculator when choosing a CIDR. They 
 
 You've done the math. Now let's use it to build walls. Let's explore the architectural zones of a production network.
 
-Proceed to: **[03. Public and Private Zoning](./03-Public-and-Private-Zoning/README.md)** →
+Proceed to: **[03. Public and Private Zoning](../../../../../README.md)** →

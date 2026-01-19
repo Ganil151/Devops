@@ -125,4 +125,4 @@ Senior engineers don't guess about routes. They use the **AWS Reachability Analy
 
 Congratulations! You have mastered the GPS and the logic of cloud networking. You can now build, secure, and troubleshoot the most complex paths in the cloud.
 
-Proceed to: **[Module 05: Network Security (NACLs & SGs)](../05-Network-Security-NACLs-SGs/README.md)** →
+Proceed to: **[Module 05: Network Security (NACLs & SGs)](../../../../../../README.md)** →

@@ -138,4 +138,4 @@ NAT Gateways are expensive ($0.045/GB). If you are processing petabytes of data 
 
 You've built a rock-solid gateway architecture. Now let's explore the "Brain" of the VPC—the Route Tables that tell every packet where to go.
 
-Proceed to: **[Module 04: Routing & Route Tables](../04-Routing-and-Route-Tables/README.md)** →
+Proceed to: **[Module 04: Routing & Route Tables](../../../../../README.md)** →

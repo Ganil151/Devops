@@ -14,4 +14,4 @@ Step-by-step instructions for:
 ## Learning Path
 1. Complete the [Beginner Fundamentals](../../../../../1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/03-Storage/EFS/efs-fundamentals.md) first.
 2. Follow this Hands-on Guide to master mounting and file management.
-3. Advance to [Advanced Patterns](../../../../../3-Advanced/02-Phase-2/11-Enterprise-Cloud/13-File-Storage-EFS/efs-advanced-patterns.md) for production optimization.
+3. Advance to [Advanced Patterns](../../../../../3-Advanced/02-Phase-2/Part-11-Cloud-Architecture/01-Enterprise-Multi-Cloud/13-File-Storage-EFS/efs-advanced-patterns.md) for production optimization.

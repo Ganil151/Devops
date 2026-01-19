@@ -210,7 +210,7 @@ files_modified = 0
 for file_path, fixes in fixes_by_file.items():
     if fix_links_in_file(file_path, fixes):
         files_modified += 1
-        print(f"  ✓ Fixed {len(fixes)} links in {file_path}")
+        print(f"  [+] Fixed {len(fixes)} links in {file_path}")
 
 print(f"\n{'='*60}")
 print(f"LINK FIX SUMMARY")

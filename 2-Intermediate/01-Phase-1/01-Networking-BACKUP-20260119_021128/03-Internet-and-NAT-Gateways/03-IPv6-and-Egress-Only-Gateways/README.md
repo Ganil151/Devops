@@ -122,4 +122,4 @@ Modern DevOps teams are increasingly moving toward **IPv6-Only subnets** to avoi
 
 You've mastered the gateways. Now let's see how to combine them into a high-availability architecture that never goes down.
 
-Proceed to: **[04. High Availability and Optimization](./04-High-Availability-and-Optimization/README.md)** →
+Proceed to: **[04. High Availability and Optimization](../../../../../README.md)** →

@@ -139,4 +139,4 @@ Senior architects take security one step further by creating a **Data Tier** wit
 
 You've built the walls. Now let's look at the "Hidden Taxes"—the reserved addresses that can trip up your math.
 
-Proceed to: **[04. AWS Reserved IPs and Limits](./04-AWS-Reserved-IPs-and-Limits/README.md)** →
+Proceed to: **[04. AWS Reserved IPs and Limits](../../../../../../README.md)** →

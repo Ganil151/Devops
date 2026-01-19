@@ -46,7 +46,7 @@ By the end of this level, you will:
 - Plugin development
 - Microservices integration
 
-### [05-Performance-Optimization](./05-Performance-Optimization/)
+### [05-Performance-Optimization](../../../../../1-Beginner/02-Phase-2/03-Nginx/05-Performance-Optimization)
 - Performance monitoring and tuning
 - Database optimization
 - Caching strategies

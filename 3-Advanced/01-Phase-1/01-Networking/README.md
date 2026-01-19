@@ -19,8 +19,8 @@ Networking is the plumbing of the internet. For a DevOps engineer, understanding
 - **[02-Subnetting-and-CIDR](../../../2-Intermediate/01-Phase-1/01-Networking/02-Subnetting-and-CIDR)**: Layer 2 segmentation.
 - **[03-Internet-and-NAT-Gateways](../../../2-Intermediate/01-Phase-1/01-Networking/03-Internet-and-NAT-Gateways)**: OSPF, BGP, Static routing.
 - **[04-Routing-and-Route-Tables](../../../2-Intermediate/01-Phase-1/01-Networking/04-Routing-and-Route-Tables)**: Firewalls, VPNs, Security Groups.
-- **[05-Network-Security-NACLs-SGs](../../../2-Intermediate/01-Phase-1/01-Networking/05-Network-Security-NACLs-SGs)**: Remote access and Site-to-Site.
-- **[06-VPC-Peering-and-Transit-Gateway](../../../2-Intermediate/01-Phase-1/01-Networking/06-VPC-Peering-and-Transit-Gateway)**: Distributing traffic.
+- **[05-Network-Security-NACLs-SGs](../../../2-Intermediate/01-Phase-1/01-Networking-BACKUP-20260119_021128/05-Network-Security-NACLs-SGs)**: Remote access and Site-to-Site.
+- **[06-VPC-Peering-and-Transit-Gateway](../../../2-Intermediate/01-Phase-1/01-Networking-BACKUP-20260119_021128/06-VPC-Peering-and-Transit-Gateway)**: Distributing traffic.
 
 ### 🛡️ Advanced Level
 - **[01-Cloud-Networking](./01-Cloud-Networking/)**: VPCs, Cloud Load Balancers.

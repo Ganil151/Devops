@@ -99,4 +99,4 @@ aws sqs delete-queue --queue-url $(aws sqs get-queue-url --queue-name my-dlq --q
 ```
 
 ---
-**Next Step**: Explore [Advanced SQS Patterns & Troubleshooting](../../../../../3-Advanced/02-Phase-2/11-Enterprise-Cloud/11-Application-Integration/sqs-advanced-patterns.md)
+**Next Step**: Explore [Advanced SQS Patterns & Troubleshooting](../../../../../3-Advanced/02-Phase-2/Part-11-Cloud-Architecture/01-Enterprise-Multi-Cloud/11-Application-Integration/sqs-advanced-patterns.md)

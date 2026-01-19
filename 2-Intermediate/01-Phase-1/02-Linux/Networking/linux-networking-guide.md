@@ -220,5 +220,5 @@ Junior admins often rely on `ping` and `telnet` to test networks. Senior DevOps 
 
 You've mastered the Linux networking stack. Now let's explore how to automate the management and scaling of these systems.
 
-Proceed to: **[SSH & Remote Management](../SSH/README.md)** →
+Proceed to: **[SSH & Remote Management](../../../../README.md)** →
 Node: This link points to the next level of remote administration.

@@ -92,6 +92,6 @@ Modify the `app.py` script to print only the name of the user if the JSON contai
 
 ---
 
-Proceed to: **[02. Intermediate Implementation & Security](../02-Intermediate-Automation-Scheduling/README.md)** →
+Proceed to: **[02. Intermediate Implementation & Security](../../../../../README.md)** →
 *Note: Corrected link in actual file to point to 02-Intermediate-Implementation-Security.*
  Node: Moving to secure, production-grade endpoints.

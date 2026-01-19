@@ -132,5 +132,5 @@ Junior architects often rely on **Sticky Sessions** (Affinity) to keep a user on
 
 You've mastered the theory of traffic distribution. Now let's explore how AWS implements these concepts using ALB, NLB, and GLB.
 
-Proceed to: **[07. Cloud Load Balancers (ALB/NLB)](../07-Load-Balancing-ALB-NLB/README.md)** →
+Proceed to: **[07. Cloud Load Balancers (ALB/NLB)](../../../../../README.md)** →
 Node: This link points to the next logical step in the curriculum.

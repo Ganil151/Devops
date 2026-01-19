@@ -124,4 +124,4 @@ Sometimes you have two routes with the exact same prefix length (e.g., two diffe
 
 You've mastered the logic. Now let's explore the "Middleboxes"—advanced routes that allow you to inspect traffic before it reaches its destination.
 
-Proceed to: **[03. Gateway Routing and Middleboxes](./03-Gateway-Routing-and-Middleboxes/README.md)** →
+Proceed to: **[03. Gateway Routing and Middleboxes](../../../../../README.md)** →

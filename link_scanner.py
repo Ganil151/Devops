@@ -146,26 +146,6 @@ def main():
     print(f"Broken links found: {len(broken_links)}")
     print(f"{'='*60}\n")
     
-    if broken_links:
-        print("BROKEN LINKS:\n")
-        
-        # Group by source file
-        by_file = defaultdict(list)
-        for bl in broken_links:
-            by_file[bl['source_file']].append(bl)
-        
-        for source, links in sorted(by_file.items()):
-            print(f"\n📄 {source}")
-            print("-" * 50)
-            for link in links:
-                print(f"  Line {link['line']}: [{link['link_text'][:40]}...]")
-                print(f"    Target: {link['link_target']}")
-                if link['possible_matches']:
-                    print(f"    Possible matches:")
-                    for pm in link['possible_matches']:
-                        print(f"      ✓ {pm}")
-                print()
-    
     # Save detailed report to JSON
     report_path = BASE_DIR / 'broken_links_report.json'
     with open(report_path, 'w', encoding='utf-8') as f:
@@ -178,8 +158,31 @@ def main():
             'broken_links': broken_links
         }, f, indent=2)
     
-    print(f"\n📋 Detailed report saved to: {report_path}")
-    
+    print(f"\n[+] Detailed report saved to: {report_path}")
+
+    if broken_links:
+        print("BROKEN LINKS:\n")
+        
+        # Group by source file
+        by_file = defaultdict(list)
+        for bl in broken_links:
+            by_file[bl['source_file']].append(bl)
+        
+        for source, links in sorted(by_file.items()):
+            print(f"\n[F] {source}")
+            print("-" * 50)
+            for link in links:
+                try:
+                    print(f"  Line {link['line']}: [{link['link_text'][:40]}...]")
+                    print(f"    Target: {link['link_target']}")
+                    if link['possible_matches']:
+                        print(f"    Possible matches:")
+                        for pm in link['possible_matches']:
+                            print(f"      + {pm}")
+                    print()
+                except UnicodeEncodeError:
+                    print(f"  Line {link['line']}: [Link text contains unicode]")
+
     return broken_links
 
 if __name__ == '__main__':

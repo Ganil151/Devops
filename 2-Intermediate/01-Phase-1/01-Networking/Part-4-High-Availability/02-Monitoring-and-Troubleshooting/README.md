@@ -135,5 +135,5 @@ When a connection fails, don't just start clicking randomly in the console. Foll
 
 Congratulations! You've completed the Intermediate Networking curriculum. You now have the skills to build, scale, and protect production networks in the cloud.
 
-Proceed to: **[Phase 2: Linux & Automation](../../02-Linux/README.md)** →
+Proceed to: **[Phase 2: Linux & Automation](../../../../../README.md)** →
 Node: This link points to the next phase of the curriculum.

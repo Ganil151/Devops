@@ -170,4 +170,4 @@ Add `set -o pipefail` at the top of your scripts. This ensures that if **any** c
 
 You have mastered the core mechanics of the shell. You are now ready to graduate to more advanced programming logic.
 
-Proceed to: **[Python for DevOps Automation](../02-Python-Basics/README.md)** →
+Proceed to: **[Python for DevOps Automation](../../../../../README.md)** →

@@ -139,4 +139,4 @@ You don't need to be a math genius to do CIDR. You only need to memorize these *
 
 You've mastered the binary. Now let's use it to slice and dice networks with precision.
 
-Proceed to: **[02. CIDR Math and Calculation](./02-CIDR-Math-and-Calculation/README.md)** →
+Proceed to: **[02. CIDR Math and Calculation](../../../../../README.md)** →

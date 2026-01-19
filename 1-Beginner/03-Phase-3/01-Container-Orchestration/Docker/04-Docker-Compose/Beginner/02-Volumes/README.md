@@ -154,5 +154,5 @@ Even if a hacker gets "root" inside the container, they cannot change the `nginx
 
 The memory is set. Now let's learn how to organize the communication lines.
 
-Proceed to: **[Module 07: Networking Basics](../04-Docker-Compose/Beginner/04-Networking/README.md)** →
+Proceed to: **[Module 07: Networking Basics](../../../../../../../README.md)** →
 翻

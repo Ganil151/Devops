@@ -131,4 +131,4 @@ Senior network engineers always leave gaps in their rule numbering to allow for 
 
 You've mastered the gatekeeper and the guard. Now let's see how to combine them into a bulletproof defense strategy.
 
-Proceed to: **[03. Layered Defense Strategies](./03-Layered-Defense-Strategies/README.md)** →
+Proceed to: **[03. Layered Defense Strategies](../../../../../../README.md)** →

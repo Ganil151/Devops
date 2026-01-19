@@ -142,4 +142,4 @@ Stop naming your servers "Titan" or "Venus." Name them "node-01," "node-02," etc
 
 You have reached the end of the Docker World. You are now prepared to dive deep into the ultimate orchestrator.
 
-Proceed to: **[Phase 4: Kubernetes Mastery](../../../../02-Orchestration/HELM/README.md)** →
+Proceed to: **[Phase 4: Kubernetes Mastery](../../../../../../../README.md)** →

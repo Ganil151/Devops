@@ -116,5 +116,5 @@ What happens if your worker fails to process a webhook? Because the original sen
 
 ---
 
-Return to: **[Main Index](../../../../README.md)** | **[Job Scheduling (Module 04)](../04-Job-Scheduling-and-Cron/README.md)**
+Return to: **[Main Index](../../../../README.md)** | **[Job Scheduling (Module 04)](../../../../../README.md)**
 Node: Congratulations, you have mastered the reactive side of DevOps automation.

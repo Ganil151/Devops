@@ -186,4 +186,4 @@ Manual creation is for learning; **Infrastructure as Code (IaC)** is for the job
 
 Congratulations! You have transformed from a networking novice to a cloud architect. You've built the foundation. Now it's time to build the applications that live inside it.
 
-**Continue to the next section: [DNS & DHCP Concepts](../01-DNS-DHCP/README.md)** →
+**Continue to the next section: [DNS & DHCP Concepts](../../../../../../README.md)** →

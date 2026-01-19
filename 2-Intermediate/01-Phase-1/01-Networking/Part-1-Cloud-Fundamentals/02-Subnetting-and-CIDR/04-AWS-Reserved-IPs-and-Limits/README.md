@@ -128,4 +128,4 @@ Senior DevOps engineers know that eventually, even a `/16` VPC might run out of 
 
 You've mastered the building blocks of the network. Now let's explore how to connect these isolated subnets to the rest of the world and back.
 
-Proceed to: **[Module 03: Internet and NAT Gateways](../03-Internet-and-NAT-Gateways/README.md)** →
+Proceed to: **[Module 03: Internet and NAT Gateways](../../../../../../README.md)** →
