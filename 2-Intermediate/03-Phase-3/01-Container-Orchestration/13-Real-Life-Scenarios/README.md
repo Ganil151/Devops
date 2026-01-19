@@ -1,76 +1,93 @@
-# Kubernetes Real-Life Scenarios
+# 🚑 Kubernetes Real-Life Scenarios & Troubleshooting
 
-Put your orchestration skills into practice with these real-world DevOps challenges.
+## 📋 Overview
 
----
+In production, Kubernetes rarely fails because of "The Cluster." It fails because of **Configurations**, **Resource Contention**, or **Network Misunderstandings**. This module collects high-pressure scenarios to help you build the diagnostic muscles of a Senior DevOps Engineer.
 
-## 🛠️ Scenario 1: The Zero-Downtime Rolling Update
-**Problem:** Your application is highly active. You need to deploy a new feature, but you cannot afford any downtime during the transition.
+### 🎯 Learning Objectives
 
-**The Solution:**
-1. Use a **Deployment** with a `RollingUpdate` strategy.
-2. Define `maxUnavailable` (e.g., 25%) and `maxSurge` (e.g., 25%).
-3. Run `kubectl apply -f deployment.yaml`.
-4. Kubernetes will start new pods (v2) and only shutdown old pods (v1) once v2 passes its **Readiness Probe**.
-5. If monitoring shows errors, run `kubectl rollout undo deployment/my-app` to revert immediately.
-**Goal**: Master high-availability application updates.
+By the end of this module, you will:
+- Identify and fix **Container Crash Patterns** (OOMKilled, Restarts).
+- Resolve **Networking Deadlocks** (Services vs. Network Policies).
+- Manage **Storage Attachment Locks** during pod migrations.
+- Troubleshoot **Scaling Death Spirals** in HPA configurations.
+- Use the **Diagnostic Toolkit** (`describe`, `logs`, `get events`, `debug`).
 
 ---
 
-## 🏗️ Scenario 2: Troubleshooting "ImagePullBackOff"
-**Problem:** You deploy a pod using an image from a private registry (e.g., AWS ECR or Docker Hub Private), but the pod status says `ImagePullBackOff`.
+## 🛠️ The "Panic Button" Diagnostic Flow
 
-**The Investigation:**
-1. Run `kubectl describe pod <pod_name>`.
-2. Find the "Events" section. It likely says `ErrImagePull` and `unauthorized: authentication required`.
-3. **The Fix**:
-   - Create a `kubernetes.io/dockerconfigjson` Secret containing your registry credentials.
-   - Add `imagePullSecrets: [{name: my-registry-key}]` to your pod's `spec`.
-   - Re-apply the configuration.
-**Goal**: Manage secure private registry integrations.
+When an incident occurs, follow this standard hierarchy to find the root cause:
 
----
-
-## 🌩️ Scenario 3: Autoscaling for Traffic Spikes
-**Problem:** Your e-commerce app experiences massive traffic spikes during sales. You need to scale automatically without manual intervention.
-
-**The Solution:**
-1. Ensure the **Metrics Server** is installed in the cluster.
-2. Define **Resource Requests** and **Limits** in your deployment (e.g., request 100m CPU).
-3. Create a **Horizontal Pod Autoscaler (HPA)**:
-   ```bash
-   kubectl autoscale deployment my-app --cpu-percent=50 --min=2 --max=10
-   ```
-4. As CPU usage hits the 50% threshold, Kubernetes automatically launches more replicas.
-**Goal**: Implement dynamic, cost-effective infrastructure scaling.
+```mermaid
+graph TD
+    A[Pod is failing] --> B{kubectl get pods}
+    B -->|Pending| C[kubectl describe pod]
+    B -->|CrashLoop| D[kubectl logs --previous]
+    B -->|Ready but 404/502| E[kubectl get endpoints]
+    
+    C --> C1[Check Events: Taints, Affinity, Resources]
+    D --> D1[Check App Code, ConfigMaps, Secrets]
+    E --> E1[Check Service Selector vs Pod Labels]
+```
 
 ---
 
-## 🔄 Scenario 4: Investigating a "CrashLoopBackOff"
-**Problem:** A pod starts, but immediately crashes and enters the `CrashLoopBackOff` state.
+## 🏗️ Scenario 1: The "OOMKilled" Mystery
 
-**The Investigation:**
-1. **Check Logs**: `kubectl logs <pod_name>`. Often the application prints an error message (e.g., `Missing environment variable: DB_PASSWORD`).
-2. **Check Events**: `kubectl describe pod <pod_name>`. Look for "Exit Code".
-   - `Exit Code 0`: The application finished its task (maybe it should be a Job, not a Deployment?).
-   - `Exit Code 137`: Out of Memory (OOMKilled). Increase the memory limit!
-   - `Exit Code 1`: General application error.
-3. **The Fix**: Fix the configuration (ConfigMap/Secret) or increase resources.
-**Goal**: Become an expert debugger of containerized workloads.
+**The Problem:** Your high-traffic API starts vanishing and restarting every few hours.
+**The Investigation:** `kubectl get pods` shows `RESTARTS: 45`. `kubectl describe pod` shows `Reason: OOMKilled`.
+**The Fix:** Increase the `memory: limit` in the deployment. If it keeps happening, you likely have a memory leak in your code.
 
 ---
 
-## 🛍️ Scenario 5: Persistent Storage for a Stateful Database
-**Problem:** You are running a database (PostgreSQL) in Kubernetes. When the pod restarts, all the data is gone because it was stored inside the container.
+## 🌩️ Scenario 2: The "Zombie Volume Attachment"
 
-**The Solution:**
-1. Define a **PersistentVolumeClaim (PVC)** requesting 10Gi of storage.
-2. Use a **StorageClass** (e.g., `gp2` in AWS) for dynamic provisioning.
-3. Update the **StatefulSet** spec to mount the PVC into `/var/lib/postgresql/data`.
-4. Kubernetes will automatically provision a cloud disk (EBS/Azure Disk) and attach it to the node where the pod is running.
-**Goal**: Handle stateful workloads and persistent data lifecycles.
+**The Problem:** You move a database pod to a new node, but it's stuck in `Pending` for 20 minutes.
+**The Reason:** The cloud provider's storage controller (AWS EBS) still thinks the disk is attached to the *old* node.
+**The Fix:** Manually verify and potentially force-detach the volume in the cloud console or delete the `VolumeAttachment` resource in K8s.
 
 ---
 
-## 💡 Key Takeaway
-Kubernetes is a **Self-Healing** orchestrator. Most real-world scenarios involve providing the right "Desired State" (probes, secrets, storage) so that the cluster can manage the "Actual State" autonomously.
+## 🚦 Scenario 3: The "Silent Timeout"
+
+**The Problem:** Pod A and Pod B are in the same namespace. Pod A can't reach Pod B via internal DNS.
+**The Reason:** A **NetworkPolicy** was applied with an `Ingress` rule that doesn't include Pod A's labels.
+**The Fix:** Update the Network Policy to allow ingress from pods matching Pod A's labels.
+
+---
+
+## 📖 Real-World DevOps Story: "The Night the HPA went Crazy"
+
+**The Scenario:** A team configured an HPA to scale based on **CPU usage**. During a flash sale, the app used 100% CPU purely for its startup initialization (loading cache). 
+
+**The Result:** HPA saw 100% CPU and launched 10 more pods. Those pods *also* used 100% CPU to start. This triggered *more* pods. The cluster hit its cloud node limit and crashed the control plane with a storm of API requests.
+
+**The Lesson:** Always use **Readiness Probes** to ensure the app is actually serving traffic before the HPA considers it "Healthy" for its scaling math.
+
+---
+
+## 👨‍💻 Interview Preparation
+
+1. **Q: How do you see events for the whole namespace at once?**
+   *   *A: `kubectl get events --sort-by='.lastTimestamp'`. This is the single best command for seeing a timeline of cluster failures.*
+
+2. **Q: What is the difference between `kubectl logs` and `kubectl logs --previous`?**
+   *   *A: `logs` shows the current container. `--previous` shows the logs from the container that just crashed, which is vital for finding why it died.*
+
+3. **Q: If a pod is stuck in `Pending`, where do you look?**
+   *   *A: `kubectl describe pod`. Go straight to the **Events** at the bottom. It will tell you if it's due to Insufficient CPU, Node Taints, or Volume issues.*
+
+---
+
+## 🧠 Knowledge Check
+
+1. What status code indicates a memory-related crash? (OOMKilled)
+2. Which command lets you investigate a pod without any debugging tools installed in its image? (`kubectl debug`)
+3. Why might a Service exist but have no "Endpoints"? (The selector doesn't match any running pod labels)
+
+---
+
+## 🔗 Internal Navigation
+- [Next: Final Assessment](../12-Interview-Questions-and-Quizzes/README.md)
+- [Back: Cluster Administration](../11-Cluster-Administration/README.md)

@@ -1,734 +1,102 @@
-# Kubernetes StorageClass
+# 💾 Persistence and Storage: Handling Stateful Data
 
-## Overview
+## 📋 Overview
 
-**Kubernetes StorageClass** provides a way to describe different classes of storage available in a cluster. StorageClasses enable dynamic provisioning of persistent volumes, allowing administrators to define storage types and users to request storage without knowing the underlying infrastructure details.
+By default, Kubernetes Pods are ephemeral. If a container crashes or is deleted, any data stored inside its root filesystem is lost. **Persistence and Storage** provides a way to decouple data from the container lifecycle, ensuring that databases, file shares, and user uploads survive restarts and rescheduling.
 
-## What is StorageClass?
+### 🎯 Learning Objectives
 
-StorageClass is:
-- A cluster-scoped resource that defines storage types
-- Used for dynamic provisioning of PersistentVolumes
-- A way to abstract storage implementation details
-- The bridge between storage requests and storage provisioners
+By the end of this module, you will:
+- Master the **Storage Lifecycle**: StorageClass -> PVC -> PV.
+- Understand **Dynamic Provisioning** vs. Static Provisioning.
+- Select correct **Access Modes** (RWO, RWX) for different workloads.
+- Implement **Topology-Aware** storage for multi-zone clusters.
+- Manage **Reclaim Policies** to prevent accidental data loss.
 
-## StorageClass Architecture
-
-### Dynamic Provisioning Flow
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│     PVC     │───►│StorageClass │───►│ Provisioner │
-│  (Request)  │    │ (Template)  │    │  (Create)   │
-└─────────────┘    └─────────────┘    └─────────────┘
-       │                   │                   │
-       │                   ▼                   │
-       │            ┌─────────────┐            │
-       │            │ Parameters  │            │
-       │            │ & Policies  │            │
-       │            └─────────────┘            │
-       │                   │                   │
-       │                   ▼                   │
-       └────────────┌─────────────┐◄───────────┘
-                    │     PV      │
-                    │ (Created)   │
-                    └─────────────┘
-```
-
-### Storage Ecosystem
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Storage Ecosystem                        │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────┐     │
-│  │     Pod     │  │     PVC     │  │  StorageClass   │     │
-│  │             │  │             │  │                 │     │
-│  └─────────────┘  └─────────────┘  └─────────────────┘     │
-│         │                 │                 │              │
-│         ▼                 ▼                 ▼              │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────┐     │
-│  │   Volume    │  │     PV      │  │  Provisioner    │     │
-│  │   Mount     │  │             │  │                 │     │
-│  └─────────────┘  └─────────────┘  └─────────────────┘     │
-│                          │                 │              │
-│                          ▼                 ▼              │
-│                   ┌─────────────────────────────────┐     │
-│                   │      Storage Backend            │     │
-│                   │   (AWS EBS, GCE PD, etc.)      │     │
-│                   └─────────────────────────────────┘     │
-└─────────────────────────────────────────────────────────────┘
-```
-
-## Basic StorageClass Configuration
-
-### Simple StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: fast-ssd
-provisioner: kubernetes.io/aws-ebs
-parameters:
-  type: gp3
-  iops: "3000"
-  throughput: "125"
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-volumeBindingMode: WaitForFirstConsumer
-```
-
-### Default StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: standard
-  annotations:
-    storageclass.kubernetes.io/is-default-class: "true"
-provisioner: kubernetes.io/aws-ebs
-parameters:
-  type: gp3
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-```
-
-## Cloud Provider StorageClasses
-
-### AWS EBS StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: aws-ebs-gp3
-provisioner: ebs.csi.aws.com
-parameters:
-  type: gp3
-  iops: "3000"
-  throughput: "125"
-  encrypted: "true"
-  kmsKeyId: "arn:aws:kms:us-west-2:123456789012:key/12345678-1234-1234-1234-123456789012"
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-volumeBindingMode: WaitForFirstConsumer
 ---
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: aws-ebs-io2
-provisioner: ebs.csi.aws.com
-parameters:
-  type: io2
-  iops: "10000"
-  encrypted: "true"
-reclaimPolicy: Retain
-allowVolumeExpansion: true
+
+## 🏗️ The Storage Hierarchy: Roles & Responsibilities
+
+Kubernetes uses three main objects to manage storage:
+
+1.  **StorageClass (SC)**: The "Menu" of available storage types (e.g., SSD, HDD, Encrypted).
+2.  **PersistentVolumeClaim (PVC)**: The "Order" placed by a developer (e.g., "I need 10Gi of SSD").
+3.  **PersistentVolume (PV)**: The "Actual Disk" created to fulfill the order.
+
+```mermaid
+graph LR
+    User[Developer] -->|Creates| PVC[PersistentVolumeClaim]
+    PVC -->|Requests| SC[StorageClass]
+    SC -->|Dynamically Provisions| PV[PersistentVolume]
+    PV -->|Binds to| PVC
+    Pod[Pod] -->|Uses| PVC
+    
+    style SC fill:#e1f5fe,stroke:#01579b
+    style PV fill:#fff3e0,stroke:#e65100,stroke-width:2px
 ```
 
-### Google Cloud StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: gce-pd-ssd
-provisioner: pd.csi.storage.gke.io
-parameters:
-  type: pd-ssd
-  replication-type: regional-pd
-  zones: us-central1-a,us-central1-b
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-volumeBindingMode: WaitForFirstConsumer
 ---
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: gce-pd-balanced
-provisioner: pd.csi.storage.gke.io
-parameters:
-  type: pd-balanced
-  provisioned-iops-on-create: "3000"
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-```
 
-### Azure Disk StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: azure-disk-premium
-provisioner: disk.csi.azure.com
-parameters:
-  skuName: Premium_LRS
-  cachingmode: ReadOnly
-  kind: Managed
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-volumeBindingMode: WaitForFirstConsumer
+## 🔌 Dynamic vs. Static Provisioning
+
+| Type | How it Works | Use Case |
+| :--- | :--- | :--- |
+| **Static** | Admin manually creates PVs before they are used. | On-prem clusters with fixed hardware. |
+| **Dynamic** | Kubernetes talks to the Cloud Provider (AWS/GCP) to create disks on-demand. | **Cloud Standard.** AWS EBS, Azure Disk, GCE PD. |
+
 ---
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: azure-disk-ultra
-provisioner: disk.csi.azure.com
-parameters:
-  skuName: UltraSSD_LRS
-  diskIOPSReadWrite: "2000"
-  diskMBpsReadWrite: "320"
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-```
 
-## StorageClass Parameters
+## 🛠️ Access Modes: Who can use the disk?
 
-### Common Parameters
+| Mode | Shortcut | Behavior | Example |
+| :--- | :--- | :--- | :--- |
+| **ReadWriteOnce** | RWO | Only one node can read/write at a time. | Databases (EBS, PD). |
+| **ReadWriteMany** | RWX | Many nodes can read/write simultaneously. | File shares (EFS, NFS). |
+| **ReadOnlyMany** | ROX | Many nodes can read, none can write. | Shared static assets. |
 
-#### Reclaim Policy
-```yaml
-# Delete - PV is deleted when PVC is deleted
-reclaimPolicy: Delete
+---
 
-# Retain - PV is retained when PVC is deleted
-reclaimPolicy: Retain
+## 🛡️ The Reclaim Policy (Finality)
 
-# Recycle - PV data is scrubbed and made available again (deprecated)
-reclaimPolicy: Recycle
-```
+What happens to the physical disk when you delete the `PersistentVolumeClaim`?
+- **Retain**: The disk is preserved. An admin must manually delete it or recover it.
+- **Delete**: The physical disk in the cloud (e.g., AWS EBS) is deleted immediately. **Data is lost!**
 
-#### Volume Binding Mode
-```yaml
-# Immediate - PV is created immediately when PVC is created
-volumeBindingMode: Immediate
+---
 
-# WaitForFirstConsumer - PV creation is delayed until pod is scheduled
-volumeBindingMode: WaitForFirstConsumer
-```
+## 📖 Real-World DevOps Story: "The Database that lost its home"
 
-#### Volume Expansion
-```yaml
-# Allow volume expansion
-allowVolumeExpansion: true
+**The Scenario:** A team was running a database in a multi-zone AWS cluster. The DB pod was originally created in `us-east-1a` along with its EBS volume. During a maintenance window, the pod was rescheduled to `us-east-1b`.
 
-# Disallow volume expansion
-allowVolumeExpansion: false
-```
+**The Result:** The pod stayed in `Pending` state with the error `Volume not found in zone`. This is because **EBS volumes are zonal** and cannot travel across availability zones.
 
-### Provider-Specific Parameters
+**The Lesson:** 
+- In multi-zone clusters, use `volumeBindingMode: WaitForFirstConsumer` in your StorageClass. 
+- This ensures the volume is created **only** after the pod is scheduled to a specific node, matching the zone perfectly.
 
-#### AWS EBS Parameters
-```yaml
-parameters:
-  type: gp3                    # Volume type (gp2, gp3, io1, io2, sc1, st1)
-  iops: "3000"                # IOPS for gp3, io1, io2
-  throughput: "125"           # Throughput for gp3 (MiB/s)
-  encrypted: "true"           # Enable encryption
-  kmsKeyId: "key-id"          # KMS key for encryption
-  fsType: ext4                # Filesystem type
-```
+---
 
-#### GCE Persistent Disk Parameters
-```yaml
-parameters:
-  type: pd-ssd                # Disk type (pd-standard, pd-ssd, pd-balanced)
-  zones: us-central1-a,us-central1-b  # Availability zones
-  replication-type: regional-pd        # Replication type
-  provisioned-iops-on-create: "3000"  # Provisioned IOPS
-```
+## 👨‍💻 Interview Preparation
 
-#### Azure Disk Parameters
-```yaml
-parameters:
-  skuName: Premium_LRS        # Storage type (Standard_LRS, Premium_LRS, UltraSSD_LRS)
-  kind: Managed              # Disk kind (Shared, Dedicated, Managed)
-  cachingmode: ReadOnly      # Caching mode (None, ReadOnly, ReadWrite)
-  diskIOPSReadWrite: "2000"  # IOPS for Ultra SSD
-  diskMBpsReadWrite: "320"   # Throughput for Ultra SSD
-```
+1. **Q: What is the benefit of using a StorageClass?**
+   *   *A: It allows developers to request storage without needing to know the technical details of the underlying storage system (AWS, Azure, VMWare).*
 
-## Using StorageClass with PVCs
+2. **Q: Can you expand a PVC while it's attached to a pod?**
+   *   *A: Most modern CSI drivers (like AWS EBS or GCE PD) support online expansion if `allowVolumeExpansion: true` is set in the StorageClass.*
 
-### Basic PVC with StorageClass
-```yaml
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: my-pvc
-spec:
-  accessModes:
-  - ReadWriteOnce
-  storageClassName: fast-ssd
-  resources:
-    requests:
-      storage: 10Gi
-```
+3. **Q: What is CSI (Container Storage Interface)?**
+   *   *A: It is a standard for exposing arbitrary block and file storage systems to containerized workloads (K8s).*
 
-### PVC with Default StorageClass
-```yaml
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: default-pvc
-spec:
-  accessModes:
-  - ReadWriteOnce
-  # storageClassName omitted - uses default StorageClass
-  resources:
-    requests:
-      storage: 5Gi
-```
+---
 
-### PVC without StorageClass (Static Provisioning)
-```yaml
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: static-pvc
-spec:
-  accessModes:
-  - ReadWriteOnce
-  storageClassName: ""  # Empty string disables dynamic provisioning
-  resources:
-    requests:
-      storage: 20Gi
-```
+## 🧠 Knowledge Check
 
-## Advanced StorageClass Features
+1. Which resource does a developer create to request 50GB of storage? (PVC)
+2. What is the default reclaim policy for dynamic storage? (Delete)
+3. Which access mode is needed for a shared web server folder used by multiple nodes? (ReadWriteMany)
 
-### Topology-Aware Provisioning
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: topology-aware
-provisioner: ebs.csi.aws.com
-parameters:
-  type: gp3
-volumeBindingMode: WaitForFirstConsumer
-allowedTopologies:
-- matchLabelExpressions:
-  - key: topology.ebs.csi.aws.com/zone
-    values:
-    - us-west-2a
-    - us-west-2b
-```
+---
 
-### Mount Options
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: nfs-storage
-provisioner: nfs.csi.k8s.io
-parameters:
-  server: nfs-server.example.com
-  share: /exports/data
-mountOptions:
-- hard
-- nfsvers=4.1
-- rsize=1048576
-- wsize=1048576
-reclaimPolicy: Retain
-```
-
-### Volume Expansion Policy
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: expandable-storage
-provisioner: ebs.csi.aws.com
-parameters:
-  type: gp3
-allowVolumeExpansion: true
-reclaimPolicy: Delete
-volumeBindingMode: WaitForFirstConsumer
-```
-
-## CSI StorageClasses
-
-### Local Path Provisioner
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: local-path
-provisioner: rancher.io/local-path
-parameters:
-  nodePath: /opt/local-path-provisioner
-reclaimPolicy: Delete
-volumeBindingMode: WaitForFirstConsumer
-```
-
-### Longhorn StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: longhorn
-provisioner: driver.longhorn.io
-parameters:
-  numberOfReplicas: "3"
-  staleReplicaTimeout: "2880"
-  fromBackup: ""
-  fsType: "ext4"
-  dataLocality: "disabled"
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-volumeBindingMode: Immediate
-```
-
-### Ceph RBD StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: ceph-rbd
-provisioner: rbd.csi.ceph.com
-parameters:
-  clusterID: b9127830-b0cc-4e34-aa47-9d1a2e9949a8
-  pool: kubernetes
-  imageFeatures: layering
-  csi.storage.k8s.io/provisioner-secret-name: csi-rbd-secret
-  csi.storage.k8s.io/provisioner-secret-namespace: default
-  csi.storage.k8s.io/controller-expand-secret-name: csi-rbd-secret
-  csi.storage.k8s.io/controller-expand-secret-namespace: default
-  csi.storage.k8s.io/node-stage-secret-name: csi-rbd-secret
-  csi.storage.k8s.io/node-stage-secret-namespace: default
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-mountOptions:
-- discard
-```
-
-## StorageClass Management
-
-### Viewing StorageClasses
-```bash
-# List all StorageClasses
-kubectl get storageclass
-
-# Show default StorageClass
-kubectl get storageclass -o jsonpath='{.items[?(@.metadata.annotations.storageclass\.kubernetes\.io/is-default-class=="true")].metadata.name}'
-
-# Describe StorageClass
-kubectl describe storageclass fast-ssd
-
-# Get StorageClass YAML
-kubectl get storageclass fast-ssd -o yaml
-```
-
-### Setting Default StorageClass
-```bash
-# Remove existing default
-kubectl patch storageclass old-default -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
-
-# Set new default
-kubectl patch storageclass new-default -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
-```
-
-### Creating StorageClass
-```bash
-# Create from YAML
-kubectl apply -f storageclass.yaml
-
-# Verify creation
-kubectl get storageclass
-kubectl describe storageclass my-storage-class
-```
-
-## Performance Optimization
-
-### High-Performance StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: high-performance
-provisioner: ebs.csi.aws.com
-parameters:
-  type: io2
-  iops: "20000"
-  throughput: "1000"
-  encrypted: "true"
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-volumeBindingMode: WaitForFirstConsumer
-mountOptions:
-- noatime
-- nodiratime
-```
-
-### Cost-Optimized StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: cost-optimized
-provisioner: ebs.csi.aws.com
-parameters:
-  type: sc1  # Cold HDD
-  encrypted: "false"
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-volumeBindingMode: WaitForFirstConsumer
-```
-
-### Balanced StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: balanced
-provisioner: ebs.csi.aws.com
-parameters:
-  type: gp3
-  iops: "3000"
-  throughput: "125"
-  encrypted: "true"
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-volumeBindingMode: WaitForFirstConsumer
-```
-
-## Multi-Zone StorageClass
-
-### Regional Persistent Disk
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: regional-ssd
-provisioner: pd.csi.storage.gke.io
-parameters:
-  type: pd-ssd
-  replication-type: regional-pd
-allowVolumeExpansion: true
-volumeBindingMode: WaitForFirstConsumer
-allowedTopologies:
-- matchLabelExpressions:
-  - key: topology.gke.io/zone
-    values:
-    - us-central1-a
-    - us-central1-b
-    - us-central1-c
-```
-
-### Multi-AZ EBS
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: multi-az-ebs
-provisioner: ebs.csi.aws.com
-parameters:
-  type: gp3
-  encrypted: "true"
-volumeBindingMode: WaitForFirstConsumer
-allowedTopologies:
-- matchLabelExpressions:
-  - key: topology.ebs.csi.aws.com/zone
-    values:
-    - us-west-2a
-    - us-west-2b
-    - us-west-2c
-```
-
-## StorageClass Troubleshooting
-
-### Common Issues
-
-#### 1. PVC Stuck in Pending
-```bash
-# Check PVC status
-kubectl describe pvc my-pvc
-
-# Check StorageClass
-kubectl describe storageclass fast-ssd
-
-# Check provisioner logs
-kubectl logs -n kube-system -l app=ebs-csi-controller
-
-# Check events
-kubectl get events --field-selector involvedObject.name=my-pvc
-```
-
-#### 2. Provisioner Not Found
-```bash
-# Check available provisioners
-kubectl get csidriver
-
-# Check StorageClass provisioner
-kubectl get storageclass -o jsonpath='{.items[*].provisioner}'
-
-# Verify CSI driver installation
-kubectl get pods -n kube-system | grep csi
-```
-
-#### 3. Volume Expansion Issues
-```bash
-# Check if expansion is allowed
-kubectl get storageclass fast-ssd -o jsonpath='{.allowVolumeExpansion}'
-
-# Check PVC expansion status
-kubectl describe pvc my-pvc | grep -A 5 "Conditions"
-
-# Check filesystem expansion
-kubectl exec my-pod -- df -h /data
-```
-
-#### 4. Mount Issues
-```bash
-# Check pod events
-kubectl describe pod my-pod
-
-# Check volume attachment
-kubectl get volumeattachment
-
-# Check node CSI driver
-kubectl get pods -n kube-system -o wide | grep csi-node
-```
-
-### Debug Commands
-```bash
-# Check PV created by StorageClass
-kubectl get pv -o custom-columns=NAME:.metadata.name,STORAGECLASS:.spec.storageClassName,STATUS:.status.phase
-
-# Check PVC to StorageClass mapping
-kubectl get pvc -o custom-columns=NAME:.metadata.name,STORAGECLASS:.spec.storageClassName,STATUS:.status.phase
-
-# Check provisioner events
-kubectl get events --field-selector reason=ProvisioningSucceeded
-kubectl get events --field-selector reason=ProvisioningFailed
-```
-
-## Best Practices
-
-### 1. StorageClass Design
-- Create multiple StorageClasses for different use cases
-- Use descriptive names that indicate performance characteristics
-- Set appropriate default StorageClass
-- Document StorageClass purposes and limitations
-
-### 2. Performance Considerations
-- Choose appropriate volume types for workload requirements
-- Use WaitForFirstConsumer for multi-zone clusters
-- Configure appropriate IOPS and throughput settings
-- Consider mount options for performance optimization
-
-### 3. Cost Management
-- Use cost-effective storage types for non-critical workloads
-- Implement volume expansion policies
-- Set appropriate reclaim policies
-- Monitor storage usage and costs
-
-### 4. Security
-- Enable encryption for sensitive data
-- Use appropriate access modes
-- Implement proper RBAC for StorageClass management
-- Secure CSI driver configurations
-
-### 5. Operations
-- Monitor provisioning success rates
-- Implement backup strategies for persistent data
-- Plan for disaster recovery scenarios
-- Test volume expansion procedures
-
-## StorageClass Patterns
-
-### Database StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: database-storage
-provisioner: ebs.csi.aws.com
-parameters:
-  type: io2
-  iops: "10000"
-  throughput: "500"
-  encrypted: "true"
-reclaimPolicy: Retain
-allowVolumeExpansion: true
-volumeBindingMode: WaitForFirstConsumer
-mountOptions:
-- noatime
-```
-
-### Log Storage StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: log-storage
-provisioner: ebs.csi.aws.com
-parameters:
-  type: st1  # Throughput Optimized HDD
-  encrypted: "false"
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-volumeBindingMode: Immediate
-```
-
-### Backup StorageClass
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: backup-storage
-provisioner: ebs.csi.aws.com
-parameters:
-  type: sc1  # Cold HDD
-  encrypted: "true"
-reclaimPolicy: Retain
-allowVolumeExpansion: true
-volumeBindingMode: Immediate
-```
-
-## Environment-Specific StorageClasses
-
-### Development Environment
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: dev-storage
-  annotations:
-    storageclass.kubernetes.io/is-default-class: "true"
-provisioner: ebs.csi.aws.com
-parameters:
-  type: gp3
-  encrypted: "false"
-reclaimPolicy: Delete
-allowVolumeExpansion: true
-volumeBindingMode: Immediate
-```
-
-### Production Environment
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: prod-storage
-  annotations:
-    storageclass.kubernetes.io/is-default-class: "true"
-provisioner: ebs.csi.aws.com
-parameters:
-  type: gp3
-  iops: "3000"
-  throughput: "125"
-  encrypted: "true"
-  kmsKeyId: "arn:aws:kms:us-west-2:123456789012:key/12345678-1234-1234-1234-123456789012"
-reclaimPolicy: Retain
-allowVolumeExpansion: true
-volumeBindingMode: WaitForFirstConsumer
-```
-
-## Conclusion
-
-Kubernetes StorageClass provides:
-- Dynamic provisioning of persistent volumes
-- Abstraction of storage implementation details
-- Flexible storage configuration options
-- Integration with cloud provider storage services
-- Support for various storage backends and CSI drivers
-
-Understanding StorageClass configuration and management is essential for providing appropriate storage solutions for different application requirements while optimizing for performance, cost, and operational efficiency.
+## 🔗 Internal Navigation
+- [Next: StatefulSets and Jobs](../09-StatefulSets-and-Jobs/README.md)
+- [Back: ConfigMaps and Secrets](../07-ConfigMaps-and-Secrets/README.md)
