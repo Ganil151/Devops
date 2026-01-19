@@ -328,7 +328,63 @@ timeline
 
 ---
 
-#### 21. Hidden Files
+#### 21. Chaos Engineering with Chaos Mesh
+**📂 Path**: `3-Advanced/02-Phase-2/19-Chaos-Engineering-Chaos-Mesh/`  
+**🎯 Learning Goals**:
+- Master Principles of Chaos Engineering (Steady State, Hypothesis)
+- Inject and orchestrate Pod, Network, and I/O chaos
+- Use Chaos Mesh for automated resilience testing
+- Integrate Chaos experiments into CI/CD pipelines
+
+**🔑 Key Concepts**: Chaos Mesh, Resilience, Fault Injection, Blast Radius  
+**⏱️ Time**: 10-12 hours  
+**✅ Status**: Complete
+
+---
+
+#### 22. Advanced Identity Federation (OIDC & SAML)
+**📂 Path**: `3-Advanced/02-Phase-2/20-Advanced-Identity-Federation/`  
+**🎯 Learning Goals**:
+- Master OIDC and SAML 2.0 federation flows
+- Implement Dex as an Identity Proxy for Kubernetes
+- Federate external IdPs (Auth0, Okta, GitHub) with RBAC
+- Configure Group-based access control across multiple clusters
+
+**🔑 Key Concepts**: OIDC, SAML, Dex, Federation, SSO, RBAC  
+**⏱️ Time**: 12-15 hours  
+**✅ Status**: Complete
+
+---
+
+#### 23. Service Mesh Security (mTLS & SPIFFE)
+**📂 Path**: `3-Advanced/02-Phase-2/21-Service-Mesh-Security-mTLS-SPIFFE/`  
+**🎯 Learning Goals**:
+- Master mTLS handshake and certificate management
+- Implement workload identity using SPIFFE and SPIRE
+- Enforce strict communication policies in Istio
+- Audit service-to-service transit security
+
+**🔑 Key Concepts**: mTLS, SPIFFE, SPIRE, Workload Identity, Istio Security  
+**⏱️ Time**: 12-15 hours  
+**✅ Status**: Complete
+
+---
+
+#### 24. Automated Compliance Auditing (Cloud Custodian)
+**📂 Path**: `3-Advanced/02-Phase-2/22-Automated-Compliance-Auditing-Cloud-Custodian/`  
+**🎯 Learning Goals**:
+- Master Cloud Custodian YAML policy syntax
+- Implement event-driven remediation via Lambda/EventBridge
+- Enforce tagging, encryption, and resource state policies
+- Build automated compliance reports across multi-cloud
+
+**🔑 Key Concepts**: Cloud Custodian, Governance, Policy as Code, Auto-Remediation  
+**⏱️ Time**: 10-12 hours  
+**✅ Status**: Complete
+
+---
+
+#### 25. Hidden Files
 
 #### 05. Searching in Files
 **📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/`  
@@ -819,7 +875,7 @@ timeline
 ```mermaid
 pie title Completion Status
     "Completed (Beginner)" : 11
-    "Completed (Int/Adv)" : 16
+    "Completed (Int/Adv)" : 20
     "In Progress" : 1
     "Planned" : 14
 ```
@@ -829,8 +885,8 @@ pie title Completion Status
 | Level | Topics/Modules | Completed | In Progress | Planned |
 |-------|----------------|-----------|-------------|---------|
 | 🟢 Beginner | 25 | 11 | 0 | 14 |
-| 🟡 Intermediate/Adv | 17 | 16 | 1 | 0 |
-| **TOTAL** | **42** | **27** | **1** | **14** |
+| 🟡 Intermediate/Adv | 21 | 20 | 1 | 0 |
+| **TOTAL** | **46** | **31** | **1** | **14** |
 
 ### Estimated Time to Completion
 
@@ -896,6 +952,6 @@ Found an error or want to improve content? Contributions welcome!
 **Last Updated**: 2026-01-13  
 **Version**: 2.0.0  
 **Maintained by**: DevOps Learning Team  
-**Status**: 64% Complete (27/42 modules) 🚧
+**Status**: 67% Complete (31/46 modules) 🚧
 
 **📌 Remember**: Automation is a journey. Start simple, scale fast! 🚀

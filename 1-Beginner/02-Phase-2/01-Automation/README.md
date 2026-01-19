@@ -96,6 +96,8 @@ High-level implementation strategies.
 - **[Bare Metal Automation](../../../3-Advanced/02-Phase-2/16-Bare-Metal-Automation/)**
 - **[Serverless Incident Mgmt](../../../3-Advanced/02-Phase-2/17-Serverless-Incident-Management/)**
 - **[FinOps K8s Optimization](../../../3-Advanced/02-Phase-2/18-FinOps-K8s-Optimization/)**
+- **[Chaos Engineering](../../../3-Advanced/02-Phase-2/19-Chaos-Engineering-Chaos-Mesh/)**
+- **[Advanced Identity Federation](../../../3-Advanced/02-Phase-2/20-Advanced-Identity-Federation/)**
 - **[DBRE (Database Reliability)](../../../3-Advanced/02-Phase-2/14-Database-Reliability-DBRE/)**
 - **[Observability](../../../3-Advanced/02-Phase-2/06-Observability)**
 
