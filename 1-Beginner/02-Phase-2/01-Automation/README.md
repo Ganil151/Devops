@@ -2,11 +2,16 @@
 
 > **"Automation is the foundation of modern DevOps. Master shell scripting, and you master the infrastructure."**
 
+
 ![Automation Roadmap](./assets/automation_roadmap.png)
 
 ## 📚 Overview
 
 Welcome to the comprehensive **Automation curriculum**! This module is designed to transform you from a beginner to an expert capable of building robust, scalable automation across Shell, Python, and Ansible.
+
+## 📋 Professional Pattern: "Configuration separation"
+
+Don't bake your environment values into your HCL logic. Keep your Terraform code strictly for **Architectural Logic** and use **YAML/JSON files** for your **Environment Configuration**. Your module should read the YAML file, parse it into a map, and use `for_each` to create the infrastructure. This allows you to add new environments or services just by editing a simple data file—zero HCL changes required.
 
 ## 🎯 Learning Objectives
 
@@ -18,6 +23,8 @@ By completing this curriculum, you will:
 - ✅ Understand Unix philosophy and best practices
 - ✅ Debug and troubleshoot shell scripts effectively
 - ✅ Build CI/CD pipeline components (GitHub Actions, etc.)
+
+
 
 ## 🗺️ Curriculum Structure
 
@@ -68,7 +75,7 @@ Master the fundamentals of shell scripting and terminal navigation.
 Functional modules for building real-world tools.
 
 | # | Module | Description | Path |
-|---|--------|-------------|------|
+| :---: | :--- | :--- | :---: |
 | 01 | **Intermediate Shell** | Functions, Loops, Strict Mode | [Explore Module](../../../2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting) |
 | 02 | **Advanced Bash** | jq, sed, awk, xargs, traps | [Explore Module](../../../2-Intermediate/02-Phase-2/01-Automation/02-Advanced-Bash-Automation) |
 | 03 | **Python for DevOps** | Boto3, APIs, Web Scraping | [Explore Module](../../../2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps) |
@@ -104,6 +111,10 @@ High-level implementation strategies.
 - **[Fleet Mgmt (ApplicationSets)](../../../3-Advanced/02-Phase-2/24-Fleet-Management-ArgoCD-ApplicationSets/)**
 - **[Admission Controllers (OPA)](../../../3-Advanced/02-Phase-2/25-K8s-Admission-Controllers-OPA/)**
 - **[Advanced CI/CD Patterns](../../../3-Advanced/02-Phase-2/26-Advanced-CICD-Patterns-GH-Actions/)**
+- **[Service Mesh Observability](../../../3-Advanced/02-Phase-2/27-Service-Mesh-Observability-Kiali-Jaeger/)**
+- **[Cloud-Native Backup (Velero)](../../../3-Advanced/02-Phase-2/28-Cloud-Native-Backup-Velero/)**
+- **[Automated Security Scanning](../../../3-Advanced/02-Phase-2/29-Automated-Security-Scanning/)**
+- **[Advanced Terraform Workflows](../../../3-Advanced/02-Phase-2/30-Advanced-Terraform-Workflows/)**
 - **[DBRE (Database Reliability)](../../../3-Advanced/02-Phase-2/14-Database-Reliability-DBRE/)**
 - **[Observability](../../../3-Advanced/02-Phase-2/06-Observability)**
 
@@ -111,11 +122,11 @@ High-level implementation strategies.
 
 ## 📊 Progress Tracker
 
-- [ ] **Beginner Level** (3/17 completed)
-- [ ] **Intermediate/Advanced Level** (6/7 modules completed)
-- [ ] **Strategic Level** (Planned)
+- [x] **Beginner Level** (11/17 completed)
+- [x] **Intermediate/Advanced Level** (11/11 completed)
+- [x] **Strategic Level** (18/22 completed)
 
-**Total Completion**: 31% ⬜⬜⬛⬛⬛⬛⬛⬛⬛⬛
+**Total Completion**: 72% ⬜⬜⬜⬜⬜⬜⬜⬛⬛⬛
 
 ---
 

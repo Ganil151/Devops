@@ -442,7 +442,63 @@ timeline
 
 ---
 
-#### 29. Hidden Files
+#### 29. Service Mesh Observability (Kiali & Jaeger)
+**📂 Path**: `3-Advanced/02-Phase-2/27-Service-Mesh-Observability-Kiali-Jaeger/`  
+**🎯 Learning Goals**:
+- Implement distributed tracing with Jaeger collectors
+- Visualize service topology and dependencies with Kiali
+- Identify performance bottlenecks and p99 outliers
+- Analyze traffic flow and service health in real-time
+
+**🔑 Key Concepts**: Jaeger, Kiali, Distributed Tracing, Observability, Service Graph  
+**⏱️ Time**: 10-12 hours  
+**✅ Status**: Complete
+
+---
+
+#### 30. Cloud-Native Backup & Restore (Velero)
+**📂 Path**: `3-Advanced/02-Phase-2/28-Cloud-Native-Backup-Velero/`  
+**🎯 Learning Goals**:
+- Orchestrate cluster-wide backups of resources and volumes
+- Perform cross-region and cross-cloud disaster recovery
+- Manage persistent volume snapshots and Restic integration
+- Automate restore drills and data integrity verification
+
+**🔑 Key Concepts**: Velero, Disaster Recovery, Restic, CSI Snapshots, BSL/VSL  
+**⏱️ Time**: 12-15 hours  
+**✅ Status**: Complete
+
+---
+
+#### 31. Automated Security Scanning (Trivy & Gitleaks)
+**📂 Path**: `3-Advanced/02-Phase-2/29-Automated-Security-Scanning/`  
+**🎯 Learning Goals**:
+- Integrate image vulnerability scanning in CI/CD pipelines
+- Implement secret leakage prevention with Gitleaks
+- Perform Software Bill of Materials (SBOM) audits
+- Automate security gating and MTTR tracking
+
+**🔑 Key Concepts**: Trivy, Gitleaks, CVE, SAST, CI/CD Security, SBOM  
+**⏱️ Time**: 10-12 hours  
+**✅ Status**: Complete
+
+---
+
+#### 32. Advanced Terraform Workflows
+**📂 Path**: `3-Advanced/02-Phase-2/30-Advanced-Terraform-Workflows/`  
+**🎯 Learning Goals**:
+- Master iterative resource creation with `for_each` and `flatten`
+- Architect dynamic blocks for flexible resource configuration
+- Build data-driven "Factory Modules" for massive scale
+- Implement custom logic via external data sources and scripts
+
+**🔑 Key Concepts**: Advanced HCL, Iteration, Dynamic Blocks, Factory Pattern  
+**⏱️ Time**: 12-15 hours  
+**✅ Status**: Complete
+
+---
+
+#### 33. Hidden Files
 
 #### 05. Searching in Files
 **📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/`  
@@ -933,7 +989,7 @@ timeline
 ```mermaid
 pie title Completion Status
     "Completed (Beginner)" : 11
-    "Completed (Int/Adv)" : 24
+    "Completed (Int/Adv)" : 28
     "In Progress" : 1
     "Planned" : 14
 ```
@@ -943,8 +999,8 @@ pie title Completion Status
 | Level | Topics/Modules | Completed | In Progress | Planned |
 |-------|----------------|-----------|-------------|---------|
 | 🟢 Beginner | 25 | 11 | 0 | 14 |
-| 🟡 Intermediate/Adv | 25 | 24 | 1 | 0 |
-| **TOTAL** | **50** | **35** | **1** | **14** |
+| 🟡 Intermediate/Adv | 29 | 28 | 1 | 0 |
+| **TOTAL** | **54** | **39** | **1** | **14** |
 
 ### Estimated Time to Completion
 
@@ -1010,6 +1066,6 @@ Found an error or want to improve content? Contributions welcome!
 **Last Updated**: 2026-01-13  
 **Version**: 2.0.0  
 **Maintained by**: DevOps Learning Team  
-**Status**: 70% Complete (35/50 modules) 🚧
+**Status**: 72% Complete (39/54 modules) 🚧
 
 **📌 Remember**: Automation is a journey. Start simple, scale fast! 🚀
