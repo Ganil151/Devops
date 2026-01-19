@@ -100,6 +100,8 @@ High-level implementation strategies.
 - **[Advanced Identity Federation](../../../3-Advanced/02-Phase-2/20-Advanced-Identity-Federation/)**
 - **[Service Mesh Security](../../../3-Advanced/02-Phase-2/21-Service-Mesh-Security-mTLS-SPIFFE/)**
 - **[Automated Compliance Auditing](../../../3-Advanced/02-Phase-2/22-Automated-Compliance-Auditing-Cloud-Custodian/)**
+- **[Secret Management (Vault)](../../../3-Advanced/02-Phase-2/23-Advanced-Secret-Management-Vault/)**
+- **[Fleet Mgmt (ApplicationSets)](../../../3-Advanced/02-Phase-2/24-Fleet-Management-ArgoCD-ApplicationSets/)**
 - **[DBRE (Database Reliability)](../../../3-Advanced/02-Phase-2/14-Database-Reliability-DBRE/)**
 - **[Observability](../../../3-Advanced/02-Phase-2/06-Observability)**
 

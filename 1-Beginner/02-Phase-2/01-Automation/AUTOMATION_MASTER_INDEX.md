@@ -66,6 +66,7 @@ timeline
 **✅ Status**: Complete
 
 ---
+
 #### 03. Basic File Manipulation
 **📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/03-Basic-File-Manipulation/`  
 **🎯 Learning Goals**:
@@ -80,6 +81,7 @@ timeline
 **✅ Status**: Complete
 
 ---
+
 #### 04. Job Scheduling and Cron
 **📂 Path**: `1-Beginner/02-Phase-2/01-Automation/04-Job-Scheduling-and-Cron/`  
 **🎯 Learning Goals**:
