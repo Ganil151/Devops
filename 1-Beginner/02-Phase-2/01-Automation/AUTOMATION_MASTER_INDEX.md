@@ -136,7 +136,87 @@ timeline
 
 ---
 
-#### 08. Hidden Files
+#### 07. Observability Fundamentals
+**📂 Path**: `1-Beginner/02-Phase-2/07-Observability-Fundamentals/`  
+**🎯 Learning Goals**:
+- Understand MELT (Metrics, Events, Logs, Traces)
+- Implement manual system health checks
+- Master basic log analysis and resource monitoring
+
+**🔑 Key Concepts**: MELT, Health Checks, curl, tail/grep  
+**⏱️ Time**: 4-6 hours  
+**✅ Status**: Complete
+
+---
+
+#### 08. GitOps Fundamentals
+**📂 Path**: `1-Beginner/02-Phase-2/08-GitOps-Fundamentals/`  
+**🎯 Learning Goals**:
+- Master "Git as Source of Truth" concept
+- Differentiate between Push-based and Pull-based CI/CD
+- Understand Declarative configuration management
+
+**🔑 Key Concepts**: GitOps, Push vs Pull, Declarative  
+**⏱️ Time**: 4-6 hours  
+**✅ Status**: Complete
+
+---
+
+#### 09. Compliance as Code Foundations
+**📂 Path**: `1-Beginner/02-Phase-2/09-Compliance-as-Code-Foundations/`  
+**🎯 Learning Goals**:
+- Understand Security vs. Compliance
+- Master CIS Benchmarks and checklists
+- Introduction to Policy as Code concepts
+
+**🔑 Key Concepts**: CaC, CIS Benchmarks, Audit Checklists  
+**⏱️ Time**: 4-6 hours  
+**✅ Status**: Complete
+
+---
+
+#### 10. Container Security Basics
+**📂 Path**: `1-Beginner/02-Phase-2/10-Container-Security-Basics/`  
+**🎯 Learning Goals**:
+- Understand Container Supply Chain security
+- Perform manual Dockerfile audits
+- Master basic image vulnerability scanning
+
+**🔑 Key Concepts**: CVEs, Image Scanning, Least Privilege  
+**⏱️ Time**: 4-6 hours  
+**✅ Status**: Complete
+
+---
+
+#### 11. Multi-Cluster Kubernetes Management
+**📂 Path**: `3-Advanced/02-Phase-2/07-Multi-Cluster-Kubernetes/`  
+**🎯 Learning Goals**:
+- Master ClusterAPI (CAPI) for declarative provisioning
+- Implement unified management with Rancher/Anthos/Arc
+- Enforce global policies across fleets using OPA Gatekeeper
+- Understand multi-cluster networking (Submariner)
+
+**🔑 Key Concepts**: ClusterAPI, Rancher, Fleet Management, OPA, Submariner  
+**⏱️ Time**: 12-15 hours  
+**✅ Status**: Complete
+
+---
+
+#### 12. AI-Driven Operations (AIOps)
+**📂 Path**: `3-Advanced/02-Phase-2/10-AI-Driven-Operations-AIOps/`  
+**🎯 Learning Goals**:
+- Implement Anomaly Detection with Prometheus/Python
+- Leverage LLMs for automated Root Cause Analysis (RCA)
+- Build Closed-Loop Remediation pipelines
+- Understand Predictive Scaling models
+
+**🔑 Key Concepts**: AIOps, ML, LLM, Anomaly Detection, Remediation  
+**⏱️ Time**: 10-12 hours  
+**✅ Status**: Complete
+
+---
+
+#### 13. Hidden Files
 
 #### 05. Searching in Files
 **📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/`  
@@ -626,8 +706,8 @@ timeline
 
 ```mermaid
 pie title Completion Status
-    "Completed (Beginner)" : 7
-    "Completed (Int/Adv)" : 6
+    "Completed (Beginner)" : 11
+    "Completed (Int/Adv)" : 8
     "In Progress" : 1
     "Planned" : 14
 ```
@@ -636,9 +716,9 @@ pie title Completion Status
 
 | Level | Topics/Modules | Completed | In Progress | Planned |
 |-------|----------------|-----------|-------------|---------|
-| 🟢 Beginner | 21 | 7 | 0 | 14 |
-| 🟡 Intermediate/Adv | 7 | 6 | 1 | 0 |
-| **TOTAL** | **28** | **13** | **1** | **14** |
+| 🟢 Beginner | 25 | 11 | 0 | 14 |
+| 🟡 Intermediate/Adv | 9 | 8 | 1 | 0 |
+| **TOTAL** | **34** | **19** | **1** | **14** |
 
 ### Estimated Time to Completion
 
@@ -704,6 +784,6 @@ Found an error or want to improve content? Contributions welcome!
 **Last Updated**: 2026-01-13  
 **Version**: 2.0.0  
 **Maintained by**: DevOps Learning Team  
-**Status**: 46% Complete (13/28 modules) 🚧
+**Status**: 56% Complete (19/34 modules) 🚧
 
 **📌 Remember**: Automation is a journey. Start simple, scale fast! 🚀

@@ -19,7 +19,6 @@ flowchart TD
 ```
 
 ## 📚 Overview
-
 Intermediate scheduling moves beyond simple syntax into **Reliability Engineering**. Cron is notorious for having a "Bare Bones" environment—it doesn't inherit your `PATH`, your aliases, or your environment variables. Furthermore, a cron job has no concept of "Self-Awareness"; if a job scheduled for every minute takes 5 minutes to run, cron will happily start 5 overlapping instances, potentially corrupting your database or exhausting your RAM.
 
 ## 🎓 Learning Objectives

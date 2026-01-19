@@ -36,8 +36,8 @@ graph TD
     B --> B2[Python for DevOps]
     B --> B3[Ansible]
     
-    C --> C1[GitOps]
-    C --> C2[Observability]
+    C --> C3[Service Mesh]
+    C --> C4[Secured CI/CD]
     
     style A fill:#00b894,stroke:#333,stroke-width:3px,color:#fff
     style B fill:#fdcb6e,stroke:#333,stroke-width:3px,color:#000
@@ -77,7 +77,7 @@ Functional modules for building real-world tools.
 | 08 | **Best Practices** | Idempotency, Secrets | [Explore Module](../../../2-Intermediate/02-Phase-2/01-Automation/04-Automation-Best-Practices) |
 | 09 | **Ansible Fundamentals** | Playbooks, Roles | [Explore Module](../../../2-Intermediate/02-Phase-2/01-Automation/05-Ansible) |
 | 10 | **Real Life Scenarios** | Troubleshooting War Stories | [Explore Module](../../2-Intermediate/02-Phase-2/01-Automation/07-Real-Life-Scenarios/) |
-| 11 | **Infracost** | FinOps & Cost Estimation | [Explore Module](../../../2-Intermediate/02-Phase-2/01-Automation/08-Infracost-Automation) |
+| 11 | **FinOps (Cost as Code)** | Infracost, Kubecost | [Explore Module](../../../2-Intermediate/02-Phase-2/06-FinOps-Cost-as-Code/) |
 
 ---
 
@@ -86,6 +86,9 @@ Functional modules for building real-world tools.
 High-level implementation strategies.
 
 - **[GitOps](../../../3-Advanced/02-Phase-2/05-GitOps)**
+- **[Service Mesh](../../../3-Advanced/02-Phase-2/05-Service-Mesh-Istio/)**
+- **[Multi-Cluster K8s](../../../3-Advanced/02-Phase-2/07-Multi-Cluster-Kubernetes/)**
+- **[AIOps & Incident Response](../../../3-Advanced/02-Phase-2/10-AI-Driven-Operations-AIOps/)**
 - **[Observability](../../../3-Advanced/02-Phase-2/06-Observability)**
 
 ---

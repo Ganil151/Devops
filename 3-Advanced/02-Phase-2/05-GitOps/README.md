@@ -8,16 +8,38 @@ GitOps is a modern evolution of Continuous Delivery. It treats **Git as the sing
 
 In traditional CD, a pipeline (like Jenkins) "pushes" changes to a cluster. In GitOps, an agent runs **inside** the cluster (like ArgoCD) and pulls the desired state from Git.
 
-- **The Git Repo**: Defines exactly what should be running (the "Desired State").
-- **The Agent**: Constantly compares Git to the cluster (the "Actual State").
-- **The Sync**: If they don't match, the agent automatically "reconciles" the cluster to match Git.
+```mermaid
+sequenceDiagram
+    participant D as Developer
+    participant G as Git Repository
+    participant A as ArgoCD Agent
+    participant K as K8s Cluster (Actual State)
 
-### Learning Path
-1. [GitOps Fundamentals](./README.md)
-2. [📺 YouTube Lessons](./Youtube_Lessons.md)
-3. [❓ Interview Questions & Quiz](./Interview_Questions_and_Quiz.md)
+    D->>G: git push (Desired State)
+    A->>G: Poll/Webhook Trigger
+    A->>G: Fetch Manifests
+    A->>A: Diff: Desired vs Actual
+    Alt Drift Detected
+        A->>K: Reconcile (Apply changes)
+    Else In Sync
+        A->>A: Do nothing
+    End
+```
 
-## 🛠️ 2. Essential ArgoCD Commands
+---
+
+## 🔐 2. Secret Management in GitOps
+
+A major challenge in GitOps is how to store secrets (API keys, DB passwords) in a Git repository without compromising security.
+
+### 🛡️ The "Sealed Secrets" Pattern
+1.  **Encrypt**: You encrypt a secret locally using a public key provided by the cluster.
+2.  **Commit**: You commit the encrypted `SealedSecret` to Git.
+3.  **Decrypt**: The Bitnami Sealed Secrets controller in the cluster uses its private key to decrypt it back into a standard `Secret`.
+
+---
+
+## 🛠️ 3. Essential ArgoCD Commands
 
 ### 🔍 Inspection and Sync
 *When to use: Manually triggering or checking the status of GitOps applications.*

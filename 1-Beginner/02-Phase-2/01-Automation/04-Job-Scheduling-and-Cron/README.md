@@ -41,11 +41,11 @@ By the end of this module, you will:
 
 ## 📂 Module Structure
 
-| Level | Topic | Description |
-| :--- | :--- | :--- |
-| **[01. Beginner](./01-Beginner-Cron-Basics/)** | **Cron Foundations** | The crontab syntax, basic backups, and local scheduling. |
-| **[02. Intermediate](./02-Intermediate-Automation-Scheduling/)** | **Robust Execution** | Logging, Environment variables, and Locking mechanisms. |
-| **[03. Advanced](./03-Advanced-Distributed-Job-Orchestration/)** | **Enterprise Jobs** | Distributed Workers, K8s CronJobs, and High-Precision Go schedulers. |
+| Level                                                        | Topic                | Description                                                          |
+| :----------------------------------------------------------- | :------------------- | :------------------------------------------------------------------- |
+| [01. Beginner](./01-Beginner-Cron-Basics/)                   | **Cron Foundations** | The crontab syntax, basic backups, and local scheduling.             |
+| [02. Intermediate](./02-Intermediate-Automation-Scheduling/) | **Robust Execution** | Logging, Environment variables, and Locking mechanisms.              |
+| [03. Advanced](./03-Advanced-Distributed-Job-Orchestration/) | **Enterprise Jobs**  | Distributed Workers, K8s CronJobs, and High-Precision Go schedulers. |
 
 ---
 
