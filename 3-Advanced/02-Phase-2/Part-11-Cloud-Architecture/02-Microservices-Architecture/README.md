@@ -1183,6 +1183,238 @@ spec:
 
 ---
 
+### Service Discovery Patterns
+
+**Problem:** In microservices, services need to find and communicate with each other dynamically. Hard-coded IP addresses don't work in cloud environments where instances scale up/down.
+
+**Solution:** Service discovery mechanisms that maintain a registry of available service instances.
+
+#### Client-Side Discovery (Netflix Eureka Pattern)
+
+**How it works:**
+1. Service instances register themselves with a service registry on startup
+2. Clients query the registry to get available instances
+3. Client performs load balancing and selects an instance
+4. Client makes direct request to chosen instance
+
+```mermaid
+sequenceDi agram
+    participant S as Service Instance
+    participant R as Service Registry<br/>(Eureka)
+    participant C as Client
+    
+    S->>R: 1. Register (heartbeat every 30s)
+    C->>R: 2. Query available instances
+    R-->>C: 3. List of instances
+    C->>C: 4. Load balance (client-side)
+    C->>S: 5. Direct request
+```
+
+**Example (Spring Cloud Eureka):**
+
+**Service Registration:**
+```java
+// application.yml
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 30
+
+// Service code
+@SpringBootApplication
+@EnableEurekaClient
+public class OrderServiceApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(OrderServiceApplication.class, args);
+    }
+}
+```
+
+**Service Discovery (Client):**
+```java
+@Autowired
+private DiscoveryClient discoveryClient;
+
+public List<ServiceInstance> getOrderServiceInstances() {
+    return discoveryClient.getInstances("order-service");
+}
+
+// With load balancing
+@LoadBalanced
+@Bean
+public RestTemplate restTemplate() {
+    return new RestTemplate();
+}
+
+// Usage (automatic load balancing)
+String response = restTemplate.getForObject(
+    "http://order-service/api/orders/123",
+    String.class
+);
+```
+
+**Pros:**
+- ✅ Client controls load balancing algorithm
+- ✅ No single point of failure for routing
+- ✅ Better performance (no extra hop)
+
+**Cons:**
+- ❌ Client logic more complex
+- ❌ Must implement health checks
+- ❌ Different languages need different clients
+
+---
+
+#### Server-Side Discovery (Kubernetes DNS Pattern)
+
+**How it works:**
+1. Load balancer/router queries service registry
+2. Registry returns healthy instances
+3. Load balancer forwards request
+4. Client is unaware of discovery mechanism
+
+```mermaid
+graph LR
+    C[Client] -->|Request to<br/>service-name| LB[Load Balancer/<br/>Kubernetes Service]
+    LB -->|Query| DNS[DNS/Service Registry]
+    LB -->|Forward| S1[Instance 1]
+    LB -->|Forward| S2[Instance 2]
+    LB -->|Forward| S3[Instance 3]
+    
+    style LB fill:#ff6b6b,stroke:#c92a2a,color:#fff
+    style DNS fill:#51cf66,stroke:#2f9e44,color:#fff
+```
+
+**Example (Kubernetes + CoreDNS):**
+
+**Service Definition:**
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: order-service
+spec:
+  selector:
+    app: order-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: ClusterIP  # Internal load balancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: order-service
+  template:
+    metadata:
+      labels:
+        app: order-service
+    spec:
+      containers:
+      - name: order-service
+        image: order-service:1.0
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+```
+
+**Client Usage (any language):**
+```python
+# Simple HTTP call - DNS resolution handled by K8s
+import requests
+
+response = requests.get("http://order-service/api/orders/123")
+
+# Fully Qualified Domain Name (FQDN) in K8s:
+# http://order-service.default.svc.cluster.local
+```
+
+**Kubernetes DNS Resolution:**
+```bash
+# Within cluster, services resolve by name:
+order-service               → Resolves to ClusterIP
+order-service.default       → Explicitly specify namespace
+order-service.default.svc.cluster.local  → FQDN
+
+# External DNS (for external access):
+ExternalName service type
+```
+
+**Pros:**
+- ✅ Simpler client code
+- ✅ Language-agnostic
+- ✅ Infrastructure handles health checks
+- ✅ Centralized logging/monitoring
+
+**Cons:**
+- ❌ Extra network hop (slight latency)
+- ❌ Load balancer is potential bottleneck
+- ❌ Less control over load balancing
+
+---
+
+#### Decision Matrix
+
+| Factor | Client-Side Discovery | Server-Side Discovery |
+|--------|----------------------|----------------------|
+| **Client Complexity** | High (embedded logic) | Low (simple HTTP call) |
+| **Performance** | ✅ Faster (direct) | ⚠️ Extra hop |
+| **Language Support** | ❌ Need client libs | ✅ Any language |
+| **Load Balancing Control** | ✅ Full control | ⚠️ Limited options |
+| **Failure Isolation** | ⚠️ Client retries | ✅ LB handles |
+| **Observability** | ❌ Distributed metrics | ✅ Centralized |
+| **Best For** | Java/Spring ecosystem | Kubernetes, polyglot |
+
+#### Hybrid Approach (Service Mesh)
+
+Modern service meshes like **Istio** combine both approaches:
+
+- Server-side discovery (Kubernetes Service)
+- Client-side load balancing (Envoy sidecar)
+- Centralized configuration (Istio control plane)
+
+```mermaid
+graph TB
+    C[Client Pod] -->|Request| ES[Envoy Sidecar]
+    ES -->|Service Discovery| CP[Control Plane<br/>Istiod]
+    CP -->|Endpoints| ES
+    ES -->|Load Balance| P1[Pod 1]
+    ES -->|Load Balance| P2[Pod 2]
+    ES -->|Load Balance| P3[Pod 3]
+    
+    style ES fill:#51cf66,stroke:#2f9e44,color:#fff
+    style CP fill:#845ef7,stroke:#5f3dc4,color:#fff
+```
+
+**Best of Both Worlds:**
+- ✅ Simple client code (server-side)
+- ✅ Advanced load balancing (client-side)
+- ✅ Centralized policy management
+
+**Implementation:** See [`Resiliency/Service-Mesh-and-Retries/`](./Resiliency/Service-Mesh-and-Retries/) for detailed Istio configuration.
+
+---
+
 ## 💻 Implementation Examples
 
 ### Resilient Client (Go)
