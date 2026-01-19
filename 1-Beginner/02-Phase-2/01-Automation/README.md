@@ -92,6 +92,10 @@ High-level implementation strategies.
 - **[Multi-Cluster K8s](../../../3-Advanced/02-Phase-2/07-Multi-Cluster-Kubernetes/)**
 - **[AIOps & Incident Response](../../../3-Advanced/02-Phase-2/10-AI-Driven-Operations-AIOps/)**
 - **[Platform Engineering](../../../3-Advanced/02-Phase-2/13-Platform-Engineering-Backstage/)**
+- **[Supply Chain Security](../../../3-Advanced/02-Phase-2/15-Supply-Chain-Security/)**
+- **[Bare Metal Automation](../../../3-Advanced/02-Phase-2/16-Bare-Metal-Automation/)**
+- **[Serverless Incident Mgmt](../../../3-Advanced/02-Phase-2/17-Serverless-Incident-Management/)**
+- **[FinOps K8s Optimization](../../../3-Advanced/02-Phase-2/18-FinOps-K8s-Optimization/)**
 - **[DBRE (Database Reliability)](../../../3-Advanced/02-Phase-2/14-Database-Reliability-DBRE/)**
 - **[Observability](../../../3-Advanced/02-Phase-2/06-Observability)**
 

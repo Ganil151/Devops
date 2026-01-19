@@ -272,7 +272,63 @@ timeline
 
 ---
 
-#### 17. Hidden Files
+#### 17. Supply Chain Security (SLSA & SBOM)
+**📂 Path**: `3-Advanced/02-Phase-2/15-Supply-Chain-Security/`  
+**🎯 Learning Goals**:
+- Generate and manage Software Bill of Materials (SBOM)
+- Implement Attestations and Keyless Signing with Cosign
+- Integrate dependency scanning (Grype) into pipelines
+- Achieve compliance with SLSA Levels 1-4
+
+**🔑 Key Concepts**: SBOM, SLSA, Cosign, Attestations, Supply Chain Security  
+**⏱️ Time**: 10-12 hours  
+**✅ Status**: Complete
+
+---
+
+#### 18. Bare Metal Automation (PXE & MaaS)
+**📂 Path**: `3-Advanced/02-Phase-2/16-Bare-Metal-Automation/`  
+**🎯 Learning Goals**:
+- Master network-based provisioning (PXE/iPXE)
+- Implement Metal-as-a-Service (MaaS) for remote fleets
+- Automate hardware management via Redfish and IPMI
+- Optimize BIOS/Firmware updates at scale
+
+**🔑 Key Concepts**: PXE, MaaS, Redfish, iPXE, DHCP/TFTP  
+**⏱️ Time**: 12-15 hours  
+**✅ Status**: Complete
+
+---
+
+#### 19. Serverless Incident Management
+**📂 Path**: `3-Advanced/02-Phase-2/17-Serverless-Incident-Management/`  
+**🎯 Learning Goals**:
+- Automate PagerDuty lifecycle via Events API v2
+- Implement auto-remediation loops with AWS Lambda
+- Build dynamic incident management rooms in Slack
+- Master event-driven triage and escalation logic
+
+**🔑 Key Concepts**: PagerDuty, Lambda, Slack Automation, Auto-Remediation, Event-Driven  
+**⏱️ Time**: 8-10 hours  
+**✅ Status**: Complete
+
+---
+
+#### 20. FinOps: Kubernetes Resource Optimization
+**📂 Path**: `3-Advanced/02-Phase-2/18-FinOps-K8s-Optimization/`  
+**🎯 Learning Goals**:
+- Master Vertical Pod Autoscaler (VPA) for right-sizing
+- Use Goldilocks to visualize and enact resource recommendations
+- Differentiate between Resource Requests, Limits, and Quotas
+- Implement cost-visibility feedback loops for developers
+
+**🔑 Key Concepts**: VPA, Goldilocks, FinOps, Resource Management, K8s Optimization  
+**⏱️ Time**: 8-10 hours  
+**✅ Status**: Complete
+
+---
+
+#### 21. Hidden Files
 
 #### 05. Searching in Files
 **📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/`  
@@ -763,7 +819,7 @@ timeline
 ```mermaid
 pie title Completion Status
     "Completed (Beginner)" : 11
-    "Completed (Int/Adv)" : 12
+    "Completed (Int/Adv)" : 16
     "In Progress" : 1
     "Planned" : 14
 ```
@@ -773,8 +829,8 @@ pie title Completion Status
 | Level | Topics/Modules | Completed | In Progress | Planned |
 |-------|----------------|-----------|-------------|---------|
 | 🟢 Beginner | 25 | 11 | 0 | 14 |
-| 🟡 Intermediate/Adv | 13 | 12 | 1 | 0 |
-| **TOTAL** | **38** | **23** | **1** | **14** |
+| 🟡 Intermediate/Adv | 17 | 16 | 1 | 0 |
+| **TOTAL** | **42** | **27** | **1** | **14** |
 
 ### Estimated Time to Completion
 
@@ -840,6 +896,6 @@ Found an error or want to improve content? Contributions welcome!
 **Last Updated**: 2026-01-13  
 **Version**: 2.0.0  
 **Maintained by**: DevOps Learning Team  
-**Status**: 61% Complete (23/38 modules) 🚧
+**Status**: 64% Complete (27/42 modules) 🚧
 
 **📌 Remember**: Automation is a journey. Start simple, scale fast! 🚀
