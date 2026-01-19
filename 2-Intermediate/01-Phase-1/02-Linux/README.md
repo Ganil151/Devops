@@ -7,10 +7,13 @@ Moving beyond basic commands, this level focuses on managing production Linux sy
 ## 📂 Module Structure
 
 ### 🚀 Intermediate Topics
-- **[System Administration](./System-Administration/)**: Managing `systemd` services, processes, and logs.
-- **[Shell Scripting](../02-Automation/01-Shell-Scripting-Basics/)**: Writing reusable Bash scripts and logic.
-- **[Linux Networking](./Networking/)**: Troubleshooting interfaces, routing, and ports.
-- **[Intermediate SSH](./SSH/)**: Keys, config files, and tunneling.
+- [System Administration](./System-Administration/README.md): Master the core engine - Systemd, Processes, Storage, and Identity.
+
+- [Shell Scripting](../02-Automation/01-Shell-Scripting-Basics/): Writing reusable Bash scripts and logic.
+
+- [Linux Networking](./Networking/): Troubleshooting interfaces, routing, and ports.
+
+- [Intermediate SSH](./SSH/): Keys, config files, and tunneling.
 
 ---
 

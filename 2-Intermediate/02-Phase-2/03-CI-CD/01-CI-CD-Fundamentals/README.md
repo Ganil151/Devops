@@ -3,6 +3,7 @@
 CI/CD is the backbone of modern software delivery. It automates the transition from code commit to production deployment, ensuring speed, reliability, and consistency.
 
 ## 📚 Module Structure
+
 - **[Boilerplates](./Boilerplates/)**: `ci_cd_skeleton.sh` (Logical flow of a pipeline).
 - **[CHALLENGES](./CHALLENGES.md)**: Designing workflows and understanding failure.
 
@@ -33,13 +34,15 @@ graph TD
 ---
 
 ## 🛡️ Best Practices
-1.  **Build Once**: The same binary/image must be tested in Staging and deployed to Prod.
-2.  **Parity**: Dev should match Prod as closely as possible (use Docker).
-3.  **Clean State**: Every build should happen in a clean, ephemeral environment.
+
+1. **Build Once**: The same binary/image must be tested in Staging and deployed to Prod.
+2. **Parity**: Dev should match Prod as closely as possible (use Docker).
+3. **Clean State**: Every build should happen in a clean, ephemeral environment.
 
 ---
 
 ## 📖 Real-World Story: The "Silent Failure"
+
 **Scenario**: A company was deploying manually. A developer forgot to run the `migration` script.
 **Crisis**: The new code launched, but the database schema didn't match. The site crashed for 4 hours.
 **Solution**: They automated the deployment using a CI/CD pipeline that runs database migrations as a mandatory stage.

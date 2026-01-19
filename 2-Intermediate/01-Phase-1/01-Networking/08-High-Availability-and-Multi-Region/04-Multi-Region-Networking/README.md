@@ -129,5 +129,5 @@ Instead of deploying a full suite of monitoring, active directory, and security 
 
 You've built and connected a global empire. Now let's explore how to bridge your cloud world with your physical data centers.
 
-Proceed to: **[Module 09: Hybrid Connectivity](../09-Hybrid-Connectivity/README.md)** →
+Proceed to: **[Module 09: Hybrid Connectivity](../../09-Hybrid-Connectivity/README.md)** →
 Node: This link points to the next level of the curriculum.

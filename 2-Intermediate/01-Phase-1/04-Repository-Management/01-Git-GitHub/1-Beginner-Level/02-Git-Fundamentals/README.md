@@ -9,24 +9,28 @@ Git is a distributed version control system designed to handle everything from s
 ## Why Git is Critical for DevOps
 
 ### 1. Version Control and Change Management
+
 - **Code History**: Complete history of all changes with detailed commit messages
 - **Rollback Capability**: Easy rollback to previous versions when issues arise
 - **Change Tracking**: Track who made what changes and when
 - **Branching Strategy**: Support for complex branching workflows
 
 ### 2. Collaboration and Team Coordination
+
 - **Distributed Development**: Multiple developers working on the same codebase
 - **Merge Conflict Resolution**: Tools to resolve conflicting changes
 - **Code Reviews**: Integration with pull/merge request workflows
 - **Team Synchronization**: Keep team members in sync with latest changes
 
 ### 3. CI/CD Pipeline Integration
+
 - **Automated Triggers**: Git hooks trigger CI/CD pipelines
 - **Branch-based Deployments**: Different branches for different environments
 - **Release Management**: Tag-based releases and semantic versioning
 - **Infrastructure as Code**: Version control for infrastructure configurations
 
 ### 4. DevOps Workflow Enablement
+
 - **GitOps**: Git as single source of truth for infrastructure and applications
 - **Configuration Management**: Version control for configuration files
 - **Documentation**: Keep documentation in sync with code changes
@@ -71,6 +75,7 @@ Repository
 ```
 
 ### Git Workflow Areas
+
 ```bash
 # Three main areas in Git workflow
 Working Directory  →  Staging Area (Index)  →  Repository (.git)
@@ -83,6 +88,7 @@ Working Directory  →  Staging Area (Index)  →  Repository (.git)
 ## Essential Git Commands
 
 ### Repository Initialization and Cloning
+
 ```bash
 # Initialize new repository
 git init                           # Initialize empty repository
@@ -102,6 +108,7 @@ git remote remove origin           # Remove remote repository
 ```
 
 ### Basic File Operations
+
 ```bash
 # Check repository status
 git status                         # Show working directory status
@@ -128,6 +135,7 @@ git mv <old-name> <new-name>       # Rename/move file
 ```
 
 ### Viewing History and Changes
+
 ```bash
 # View commit history
 git log                            # Show commit history
@@ -155,6 +163,7 @@ git show HEAD~2                    # Show commit 2 steps back
 ## Branching and Merging
 
 ### Branch Management
+
 ```bash
 # List branches
 git branch                         # List local branches
@@ -180,6 +189,7 @@ git branch -m <new-name>           # Rename current branch
 ```
 
 ### Merging Strategies
+
 ```bash
 # Merge branches
 git merge <branch-name>            # Merge branch into current branch

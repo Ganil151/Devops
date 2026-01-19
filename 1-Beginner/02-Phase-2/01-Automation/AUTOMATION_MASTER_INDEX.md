@@ -80,20 +80,63 @@ timeline
 **✅ Status**: Complete
 
 ---
-#### 04. Hidden Files
-**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/04-Hidden-Files/`  
+#### 04. Job Scheduling and Cron
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/04-Job-Scheduling-and-Cron/`  
 **🎯 Learning Goals**:
-- Understand dotfiles (.bashrc, .profile, .gitignore)
-- View hidden files (ls -a)
-- Create and modify configuration files
-- Understand dotfile purposes
-- Manage environment configurations
+- Master the `* * * * *` crontab syntax
+- Implement overlap prevention using `flock`
+- Manage jobs programmatically in Python
+- Orchestrate Kubernetes CronJobs
 
-**🔑 Key Concepts**: Dotfiles, hidden files, configuration, .bashrc, .profile  
-**⏱️ Time**: 2-3 hours  
+**🔑 Key Concepts**: Crontab, flock, Kubernetes CronJob, robfig/cron  
+**⏱️ Time**: 6-8 hours  
 **✅ Status**: Complete
 
 ---
+
+#### 05. Event-Driven Webhooks
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/05-Event-Driven-Webhooks/`  
+**🎯 Learning Goals**:
+- Design synchronous vs. asynchronous event handlers
+- Implement HMAC-SHA256 signature verification
+- Build distributed event pipelines with task queues
+- Manage idempotency and retry logic
+
+**🔑 Key Concepts**: Webhooks, HMAC, Event-Driven, Async processing, Redis  
+**⏱️ Time**: 8-10 hours  
+**✅ Status**: Complete
+
+---
+
+#### 06. Ansible Dynamic Inventory
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/06-Ansible-Dynamic-Inventory/`  
+**🎯 Learning Goals**:
+- Efficiently manage dynamic cloud fleets
+- Implement Inventory Plugins for AWS/Azure/GCP
+- Organize hosts using Keyed Groups and Tags
+- Build custom high-performance Python inventory scripts
+
+**🔑 Key Concepts**: Dynamic Inventory, Inventory Plugins, Keyed Groups, Caching  
+**⏱️ Time**: 8-10 hours  
+**✅ Status**: Complete
+
+---
+
+#### 07. Terraform Patterns
+**📂 Path**: `1-Beginner/02-Phase-2/01-Automation/07-Terraform-Patterns/`  
+**🎯 Learning Goals**:
+- Master Terraform Module architecture
+- Implement secure Remote State Locking
+- Use `for_each` and `count` for dynamic scaling
+- Build DRY (Don't Repeat Yourself) infrastructure with Terragrunt
+
+**🔑 Key Concepts**: Modules, State Locking, DRY, Terragrunt, Workspaces  
+**⏱️ Time**: 10-12 hours  
+**✅ Status**: Complete
+
+---
+
+#### 08. Hidden Files
 
 #### 05. Searching in Files
 **📂 Path**: `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/05-Searching-in-Files/`  
@@ -583,7 +626,7 @@ timeline
 
 ```mermaid
 pie title Completion Status
-    "Completed (Beginner)" : 3
+    "Completed (Beginner)" : 7
     "Completed (Int/Adv)" : 6
     "In Progress" : 1
     "Planned" : 14
@@ -593,9 +636,9 @@ pie title Completion Status
 
 | Level | Topics/Modules | Completed | In Progress | Planned |
 |-------|----------------|-----------|-------------|---------|
-| 🟢 Beginner | 17 | 3 | 0 | 14 |
+| 🟢 Beginner | 21 | 7 | 0 | 14 |
 | 🟡 Intermediate/Adv | 7 | 6 | 1 | 0 |
-| **TOTAL** | **24** | **9** | **1** | **14** |
+| **TOTAL** | **28** | **13** | **1** | **14** |
 
 ### Estimated Time to Completion
 
@@ -661,6 +704,6 @@ Found an error or want to improve content? Contributions welcome!
 **Last Updated**: 2026-01-13  
 **Version**: 2.0.0  
 **Maintained by**: DevOps Learning Team  
-**Status**: 37% Complete (9/24 modules) 🚧
+**Status**: 46% Complete (13/28 modules) 🚧
 
 **📌 Remember**: Automation is a journey. Start simple, scale fast! 🚀

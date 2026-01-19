@@ -140,5 +140,5 @@ When you have two paths (e.g., a fast DX and a slow VPN), you must tell AWS to p
 
 You've built a indestructible bridge. Now let's explore how to see what's actually happening on that bridge: Monitoring and Troubleshooting your VPC network.
 
-Proceed to: **[Module 10: Monitoring & Troubleshooting](../10-Monitoring-and-Troubleshooting/README.md)** →
+Proceed to: **[Module 10: Monitoring & Troubleshooting](../../10-Monitoring-and-Troubleshooting/README.md)** →
 Node: This link points to the final module of the networking phase.

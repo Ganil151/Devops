@@ -20,14 +20,17 @@ AWS provides multiple ways to run your code. Choosing the right one depends on y
 ## 2. Core Modules
 
 ### 🖥️ [EC2 Comprehensive Guide](aws-ec2-comprehensive.md)
+
 Master instance types, AMIs, User Data scripts, and Instance Metadata.
 
 ### 🐳 [ECS & Fargate Deep Dive](aws-ecs-fargate-guide.md)
+
 Advanced orchestration, Task Definitions, and Service Auto Scaling for containers.
 
 ---
 
 ## 3. Deployment Best Practices
+
 - **Use Auto Scaling Groups (ASG)**: Never run a production EC2 instance without an ASG; it provides self-healing and elasticity.
 - **Image Hardening**: Regularly update your AMIs and Docker base images for security patches.
 - **Infrastructure as Code**: Always use Terraform or CloudFormation to deploy compute resources to ensure reproducibility.

@@ -7,6 +7,7 @@
 ## What is a Kubernetes Cluster?
 
 A Kubernetes Cluster is:
+
 - A collection of nodes working together as a single system
 - Composed of control plane and worker nodes
 - The foundation for running containerized applications
@@ -15,56 +16,67 @@ A Kubernetes Cluster is:
 ## Cluster Architecture
 
 ### High-Level Architecture
+
 ![High-Level Arch](../Images/KubeClusterArch.png)
 
 ### Component Interaction
-![Component Interaction](../Images/kubeComponent.png)
 
+![Component Interaction](../Images/kubeComponent.png)
 
 ## Cluster Components
 
 ### Control Plane Components
 
 #### 1. API Server (kube-apiserver)
+
 **Purpose**: Central management component and cluster gateway
 
 **Responsibilities**:
+
 - Exposes Kubernetes API
 - Validates and processes API requests
 - Serves as communication hub for all components
 - Handles authentication and authorization
 
 #### 2. etcd
+
 **Purpose**: Distributed key-value store for cluster data
 
 **Responsibilities**:
+
 - Stores all cluster configuration and state
 - Provides consistent data storage
 - Enables cluster-wide coordination
 - Maintains cluster history and versioning
 
 #### 3. Scheduler (kube-scheduler)
+
 **Purpose**: Assigns pods to nodes
 
 **Responsibilities**:
+
 - Watches for unscheduled pods
 - Selects optimal nodes for pod placement
 - Considers resource requirements and constraints
 - Applies scheduling policies and priorities
 
 #### 4. Controller Manager (kube-controller-manager)
+
 **Purpose**: Runs controller processes
 
 **Responsibilities**:
+
 - Manages cluster state reconciliation
 - Handles node lifecycle management
 - Manages replication and scaling
 - Processes cluster events and changes
 
 #### 5. Cloud Controller Manager
+
 **Purpose**: Integrates with cloud provider APIs
 
 **Responsibilities**:
+
 - Manages cloud-specific resources
 - Handles load balancer provisioning
 - Manages node lifecycle in cloud environments
@@ -73,27 +85,33 @@ A Kubernetes Cluster is:
 ### Node Components
 
 #### 1. kubelet
+
 **Purpose**: Node agent that manages pods
 
 **Responsibilities**:
+
 - Communicates with API Server
 - Manages pod lifecycle on the node
 - Reports node and pod status
 - Handles volume mounting and container execution
 
 #### 2. kube-proxy
+
 **Purpose**: Network proxy for services
 
 **Responsibilities**:
+
 - Maintains network rules for services
 - Handles load balancing for service endpoints
 - Manages iptables/IPVS rules
 - Enables service discovery and connectivity
 
 #### 3. Container Runtime
+
 **Purpose**: Runs containers
 
 **Supported Runtimes**:
+
 - containerd
 - CRI-O
 - Docker (deprecated)
@@ -101,6 +119,7 @@ A Kubernetes Cluster is:
 ## Cluster Types
 
 ### 1. Single-Node Cluster
+
 **Use Cases**: Development, testing, learning
 
 ```yaml
@@ -119,6 +138,7 @@ spec:
 ```
 
 ### 2. Multi-Node Cluster
+
 **Use Cases**: Production, staging environments
 
 ```yaml
@@ -140,6 +160,7 @@ metadata:
 ```
 
 ### 3. High Availability Cluster
+
 **Use Cases**: Production with high availability requirements
 
 ```yaml
@@ -199,6 +220,7 @@ graph TB
 ```
 
 ### CNI Plugins
+
 ```yaml
 # Flannel CNI configuration
 apiVersion: v1
@@ -237,6 +259,7 @@ data:
 ```
 
 ### Service Types
+
 ```yaml
 # ClusterIP Service
 apiVersion: v1
@@ -282,6 +305,7 @@ spec:
 ## Cluster Setup Methods
 
 ### 1. kubeadm
+
 ```bash
 # Initialize control plane
 kubeadm init --pod-network-cidr=10.244.0.0/16
@@ -296,6 +320,7 @@ kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/master/Doc
 ### 2. Managed Kubernetes Services
 
 #### Amazon EKS
+
 ```bash
 # Create EKS cluster
 eksctl create cluster --name my-cluster --region us-west-2 --nodegroup-name workers --node-type m5.large --nodes 3
@@ -305,6 +330,7 @@ aws eks update-kubeconfig --region us-west-2 --name my-cluster
 ```
 
 #### Google GKE
+
 ```bash
 # Create GKE cluster
 gcloud container clusters create my-cluster --zone us-central1-a --num-nodes 3
@@ -314,6 +340,7 @@ gcloud container clusters get-credentials my-cluster --zone us-central1-a
 ```
 
 #### Azure AKS
+
 ```bash
 # Create AKS cluster
 az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 3 --enable-addons monitoring --generate-ssh-keys
@@ -325,6 +352,7 @@ az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
 ### 3. Development Clusters
 
 #### minikube
+
 ```bash
 # Start minikube cluster
 minikube start --driver=docker --cpus=2 --memory=4g
@@ -335,6 +363,7 @@ minikube addons enable dashboard
 ```
 
 #### kind (Kubernetes in Docker)
+
 ```yaml
 # kind-config.yaml
 kind: Cluster
@@ -353,6 +382,7 @@ kind create cluster --config kind-config.yaml --name my-cluster
 ## Cluster Security
 
 ### RBAC Configuration
+
 ```yaml
 # ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
@@ -380,6 +410,7 @@ roleRef:
 ```
 
 ### Network Policies
+
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -414,6 +445,7 @@ spec:
 ```
 
 ### Pod Security Standards
+
 ```yaml
 apiVersion: v1
 kind: Namespace
@@ -428,6 +460,7 @@ metadata:
 ## Cluster Monitoring
 
 ### Metrics Server
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -452,6 +485,7 @@ spec:
 ```
 
 ### Prometheus Monitoring
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -479,6 +513,7 @@ spec:
 ```
 
 ### Cluster Logging
+
 ```yaml
 apiVersion: apps/v1
 kind: DaemonSet
@@ -504,6 +539,7 @@ spec:
 ## Cluster Scaling
 
 ### Horizontal Pod Autoscaler
+
 ```yaml
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -532,6 +568,7 @@ spec:
 ```
 
 ### Vertical Pod Autoscaler
+
 ```yaml
 apiVersion: autoscaling.k8s.io/v1
 kind: VerticalPodAutoscaler
@@ -556,6 +593,7 @@ spec:
 ```
 
 ### Cluster Autoscaler
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -586,6 +624,7 @@ spec:
 ## Cluster Maintenance
 
 ### Cluster Upgrades
+
 ```bash
 # Check current version
 kubectl version --short
@@ -607,6 +646,7 @@ systemctl restart kubelet
 ```
 
 ### Backup and Recovery
+
 ```bash
 # Backup etcd
 ETCDCTL_API=3 etcdctl snapshot save backup.db \
@@ -624,6 +664,7 @@ ETCDCTL_API=3 etcdctl snapshot restore backup.db \
 ```
 
 ### Certificate Management
+
 ```bash
 # Check certificate expiration
 kubeadm certs check-expiration
@@ -641,6 +682,7 @@ kubeadm certs renew etcd-server
 ### Common Issues
 
 #### 1. Cluster Connectivity
+
 ```bash
 # Check cluster info
 kubectl cluster-info
@@ -656,6 +698,7 @@ kubectl get pods -n kube-system
 ```
 
 #### 2. DNS Issues
+
 ```bash
 # Test DNS resolution
 kubectl run -it --rm debug --image=busybox --restart=Never -- nslookup kubernetes.default
@@ -666,6 +709,7 @@ kubectl logs -n kube-system -l k8s-app=kube-dns
 ```
 
 #### 3. Network Issues
+
 ```bash
 # Check CNI configuration
 ls -la /etc/cni/net.d/
@@ -677,6 +721,7 @@ kubectl exec test-pod-1 -- ping <test-pod-2-ip>
 ```
 
 #### 4. Resource Issues
+
 ```bash
 # Check resource usage
 kubectl top nodes
@@ -690,6 +735,7 @@ kubectl describe limitrange --all-namespaces
 ```
 
 ### Debug Commands
+
 ```bash
 # Cluster events
 kubectl get events --sort-by=.metadata.creationTimestamp
@@ -709,24 +755,28 @@ kubectl logs -n kube-system etcd-<control-plane-node>
 ## Best Practices
 
 ### 1. Cluster Design
+
 - Use multiple control plane nodes for high availability
 - Separate control plane and worker nodes
 - Plan for appropriate cluster sizing
 - Implement proper network segmentation
 
 ### 2. Security
+
 - Enable RBAC and implement least privilege
 - Use network policies for micro-segmentation
 - Implement Pod Security Standards
 - Regular security audits and updates
 
 ### 3. Monitoring and Logging
+
 - Deploy comprehensive monitoring solution
 - Implement centralized logging
 - Set up alerting for critical events
 - Monitor resource usage and capacity
 
 ### 4. Maintenance
+
 - Plan regular upgrade cycles
 - Implement backup and disaster recovery
 - Test failure scenarios
@@ -735,6 +785,7 @@ kubectl logs -n kube-system etcd-<control-plane-node>
 ## Cluster Patterns
 
 ### Multi-Cluster Architecture
+
 ```yaml
 # Cluster federation or multi-cluster management
 apiVersion: v1
@@ -754,6 +805,7 @@ data:
 ```
 
 ### Edge Computing
+
 ```yaml
 # Edge cluster configuration
 apiVersion: v1
@@ -773,6 +825,7 @@ spec:
 ## Conclusion
 
 Kubernetes Clusters provide:
+
 - Scalable platform for containerized applications
 - High availability and fault tolerance
 - Unified management interface
