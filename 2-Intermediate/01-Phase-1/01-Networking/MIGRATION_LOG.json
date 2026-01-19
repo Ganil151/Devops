@@ -1,0 +1,86 @@
+{
+  "timestamp": "2026-01-19T02:11:28.383414",
+  "backup_location": "C:\\Users\\Ganil\\Documents\\Devops\\2-Intermediate\\01-Phase-1\\01-Networking-BACKUP-20260119_021128",
+  "changes": [
+    {
+      "old_path": "01-VPC-Fundamentals",
+      "new_path": "Part-1-Cloud-Fundamentals\\01-VPC-Fundamentals",
+      "timestamp": "2026-01-19T02:11:28.364275"
+    },
+    {
+      "old_path": "02-Subnetting-and-CIDR",
+      "new_path": "Part-1-Cloud-Fundamentals\\02-Subnetting-and-CIDR",
+      "timestamp": "2026-01-19T02:11:28.365563"
+    },
+    {
+      "old_path": "03-Internet-and-NAT-Gateways",
+      "new_path": "Part-1-Cloud-Fundamentals\\03-Internet-and-NAT-Gateways",
+      "timestamp": "2026-01-19T02:11:28.366559"
+    },
+    {
+      "old_path": "04-Routing-and-Route-Tables",
+      "new_path": "Part-1-Cloud-Fundamentals\\04-Routing-and-Route-Tables",
+      "timestamp": "2026-01-19T02:11:28.367361"
+    },
+    {
+      "old_path": "05-Network-Security-NACLs-SGs",
+      "new_path": "Part-2-Network-Security\\01-Security-Groups-and-NACLs",
+      "timestamp": "2026-01-19T02:11:28.368810"
+    },
+    {
+      "old_path": "05-VPN-Technologies",
+      "new_path": "Part-2-Network-Security\\02-VPN-Technologies",
+      "timestamp": "2026-01-19T02:11:28.369740"
+    },
+    {
+      "old_path": "04-Network-Security",
+      "new_path": "Part-2-Network-Security\\03-Traditional-Network-Security",
+      "timestamp": "2026-01-19T02:11:28.371071"
+    },
+    {
+      "old_path": "06-VPC-Peering-and-Transit-Gateway",
+      "new_path": "Part-3-Connectivity-Patterns\\01-VPC-Peering-and-Transit-Gateway",
+      "timestamp": "2026-01-19T02:11:28.372577"
+    },
+    {
+      "old_path": "09-Hybrid-Connectivity",
+      "new_path": "Part-3-Connectivity-Patterns\\02-Hybrid-Connectivity",
+      "timestamp": "2026-01-19T02:11:28.373699"
+    },
+    {
+      "old_path": "07-Load-Balancing-ALB-NLB",
+      "new_path": "Part-3-Connectivity-Patterns\\03-Load-Balancing-ALB-NLB",
+      "timestamp": "2026-01-19T02:11:28.374893"
+    },
+    {
+      "old_path": "06-Load-Balancing",
+      "new_path": "Part-3-Connectivity-Patterns\\04-Load-Balancing-Basics",
+      "timestamp": "2026-01-19T02:11:28.376121"
+    },
+    {
+      "old_path": "08-High-Availability-and-Multi-Region",
+      "new_path": "Part-4-High-Availability\\01-High-Availability-Multi-Region",
+      "timestamp": "2026-01-19T02:11:28.377616"
+    },
+    {
+      "old_path": "10-Monitoring-and-Troubleshooting",
+      "new_path": "Part-4-High-Availability\\02-Monitoring-and-Troubleshooting",
+      "timestamp": "2026-01-19T02:11:28.378895"
+    },
+    {
+      "old_path": "01-DNS-DHCP",
+      "new_path": "Part-4-High-Availability\\03-DNS-and-DHCP",
+      "timestamp": "2026-01-19T02:11:28.379732"
+    },
+    {
+      "old_path": "02-VLANs-Switching",
+      "new_path": "Part-5-Traditional-Networking\\01-VLANs-and-Switching",
+      "timestamp": "2026-01-19T02:11:28.381145"
+    },
+    {
+      "old_path": "03-Advanced-Routing",
+      "new_path": "Part-5-Traditional-Networking\\02-Advanced-Routing-Protocols",
+      "timestamp": "2026-01-19T02:11:28.382209"
+    }
+  ]
+}
