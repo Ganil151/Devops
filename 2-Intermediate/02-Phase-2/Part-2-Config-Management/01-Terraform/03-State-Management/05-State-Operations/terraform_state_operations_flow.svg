@@ -1,0 +1,125 @@
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="node-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glass-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="4" result="offsetblur" />
+      <feFlood flood-color="#000000" flood-opacity="0.5" />
+      <feComposite in2="offsetblur" operator="in" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bg-gradient)" rx="15" ry="15" />
+
+  <!-- Connectors (Paths) -->
+  <!-- Start to Decisions -->
+  <path d="M600 80 L600 120 L300 120 L300 150" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M600 80 L600 120 L900 120 L900 150" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Inspect to Children -->
+  <path d="M300 210 L300 240 L150 240 L150 280" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M300 210 L300 240 L300 240 L300 280" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M300 210 L300 240 L450 240 L450 280" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Modify to Children -->
+  <path d="M900 210 L900 240 L675 240 L675 280" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M900 210 L900 240 L825 240 L825 280" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M900 210 L900 240 L975 240 L975 280" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M900 210 L900 240 L1125 240 L1125 280" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Nodes -->
+  
+  <!-- START NODE -->
+  <g transform="translate(520, 30)">
+    <rect width="160" height="50" rx="10" fill="url(#node-gradient)" stroke="#94a3b8" stroke-width="2" filter="url(#glass-shadow)"/>
+    <text x="80" y="32" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="bold">State File</text>
+  </g>
+
+  <!-- INSPECT NODE -->
+  <g transform="translate(220, 150)">
+    <path d="M80 0 L160 30 L80 60 L0 30 Z" fill="#334155" stroke="#94a3b8" stroke-width="2" filter="url(#glass-shadow)"/>
+    <text x="80" y="35" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="bold">Inspect?</text>
+  </g>
+
+  <!-- MODIFY NODE -->
+  <g transform="translate(820, 150)">
+    <path d="M80 0 L160 30 L80 60 L0 30 Z" fill="#334155" stroke="#94a3b8" stroke-width="2" filter="url(#glass-shadow)"/>
+    <text x="80" y="35" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="bold">Modify?</text>
+  </g>
+
+  <!-- INSPECT CHILDREN -->
+  <!-- Child 1 -->
+  <g transform="translate(70, 280)">
+    <rect width="160" height="60" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#glass-shadow)"/>
+    <text x="80" y="20" text-anchor="middle" fill="#94a3b8" font-size="12">View all resources</text>
+    <rect x="10" y="30" width="140" height="24" rx="4" fill="#0f172a"/>
+    <text x="80" y="47" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="12">terraform state list</text>
+  </g>
+  
+  <!-- Child 2 -->
+  <g transform="translate(250, 280)">
+    <rect width="160" height="60" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#glass-shadow)"/>
+    <text x="80" y="20" text-anchor="middle" fill="#94a3b8" font-size="12">View resource details</text>
+    <rect x="10" y="30" width="140" height="24" rx="4" fill="#0f172a"/>
+    <text x="80" y="47" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="12">terraform state show</text>
+  </g>
+
+  <!-- Child 3 -->
+  <g transform="translate(430, 280)">
+    <rect width="160" height="60" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#glass-shadow)"/>
+    <text x="80" y="20" text-anchor="middle" fill="#94a3b8" font-size="12">View entire state</text>
+    <rect x="10" y="30" width="140" height="24" rx="4" fill="#0f172a"/>
+    <text x="80" y="47" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="12">terraform show</text>
+  </g>
+
+  <!-- MODIFY CHILDREN -->
+  <!-- Child 1 (MV) -->
+  <g transform="translate(620, 280)">
+    <rect width="110" height="70" rx="6" fill="#1e293b" stroke="#eab308" stroke-width="2" filter="url(#glass-shadow)"/> <!-- Yellow Stroke -->
+    <text x="55" y="20" text-anchor="middle" fill="#94a3b8" font-size="11">Rename</text>
+    <rect x="5" y="35" width="100" height="25" rx="4" fill="#0f172a"/>
+    <text x="55" y="47" text-anchor="middle" fill="#eab308" font-family="monospace" font-size="10">terraform state mv</text> <!-- Fixed wrapping -->
+    <text x="55" y="58" text-anchor="middle" fill="#eab308" font-family="monospace" font-size="10"></text>
+  </g>
+
+  <!-- Child 2 (RM) -->
+  <g transform="translate(770, 280)"> <!-- Moved to avoid overlap -->
+    <rect width="110" height="70" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="2" filter="url(#glass-shadow)"/> <!-- Red Stroke -->
+    <text x="55" y="20" text-anchor="middle" fill="#94a3b8" font-size="11">Remove</text>
+    <rect x="5" y="35" width="100" height="25" rx="4" fill="#0f172a"/>
+    <text x="55" y="52" text-anchor="middle" fill="#ef4444" font-family="monospace" font-size="11">state rm</text>
+  </g>
+
+  <!-- Child 3 (Import) -->
+  <g transform="translate(900, 280)"> <!-- Adjusted position -->
+    <rect width="110" height="70" rx="6" fill="#1e293b" stroke="#22c55e" stroke-width="2" filter="url(#glass-shadow)"/> <!-- Green Stroke -->
+    <text x="55" y="20" text-anchor="middle" fill="#94a3b8" font-size="11">Import</text>
+    <rect x="5" y="35" width="100" height="25" rx="4" fill="#0f172a"/>
+    <text x="55" y="52" text-anchor="middle" fill="#22c55e" font-family="monospace" font-size="11">import</text>
+  </g>
+
+  <!-- Child 4 (Replace) -->
+  <g transform="translate(1030, 280)"> <!-- Adjusted position -->
+    <rect width="160" height="70" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#glass-shadow)"/>
+    <text x="80" y="20" text-anchor="middle" fill="#94a3b8" font-size="11">Change provider</text>
+    <rect x="5" y="35" width="150" height="25" rx="4" fill="#0f172a"/>
+    <text x="80" y="52" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="11">state replace-provider</text>
+  </g>
+
+</svg>

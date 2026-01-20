@@ -1,26 +1,38 @@
 # Toggle-FirewallProfile
 
-> Safely toggles the firewall profile state for troubleshooting.
+> Safely toggles specific firewall profiles (Domain, Private, Public) with built-in safety warnings.
 
 ```powershell
-$Profile = "Private"
-$State = "False" # False = Off, True = On
+param(
+    [ValidateSet("Domain", "Private", "Public")]
+    [string]$TargetProfile = "Private",
+    
+    [switch]$TurnOff
+)
 
 try {
-    Set-NetFirewallProfile -Profile $Profile -Enabled $State -ErrorAction Stop
-    Write-Host "Firewall profile '$Profile' set to Enabled=$State" -ForegroundColor Yellow
+    if ($TurnOff) {
+        Write-Warning "DISABLING the $TargetProfile firewall profile."
+        Write-Warning "Do not leave this disabled permanently. Use for testing connectivity only."
+        Set-NetFirewallProfile -Profile $TargetProfile -Enabled False -ErrorAction Stop
+        Write-Host "Status: $TargetProfile Profile is now DOWN (Off)." -ForegroundColor Red
+    }
+    else {
+        Set-NetFirewallProfile -Profile $TargetProfile -Enabled True -ErrorAction Stop
+        Write-Host "Status: $TargetProfile Profile is now UP (On)." -ForegroundColor Green
+    }
 }
 catch {
-    Write-Error "Failed to change firewall state: $_"
+    Write-Error "Failed to toggle profile: $_"
 }
 ```
 
 ## Permissions
-*   **Required:** Administrator (Elevated)
+*   **Required:** Administrator Privileges
 
 ## Rollback
 ```powershell
-# Re-enable the firewall
-Set-NetFirewallProfile -Profile "Private" -Enabled "True"
-Write-Host "Firewall profile 'Private' re-enabled." -ForegroundColor Green
+# Re-enable the profile immediately
+Set-NetFirewallProfile -Profile "Private" -Enabled True
+Write-Host "Safety Rollback: Private profile enabled."
 ```
