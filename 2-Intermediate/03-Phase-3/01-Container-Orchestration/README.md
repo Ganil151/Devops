@@ -1,35 +1,42 @@
 # ☸️ Kubernetes (K8s) Orchestration Master Class
 
-Welcome to the definitive guide to **Kubernetes**, the "Operating System of the Cloud." This curriculum takes you from a beginner understanding of containers to managing enterprise-grade, highly available clusters.
+Welcome to the definitive guide to **Kubernetes**, the "Operating System of the Cloud." This curriculum is organized into logical learning paths to take you from foundations to enterprise-grade cluster operations.
 
 ---
 
 ## 🗺️ The Kubernetes Learning Path
 
-Follow these modules in order to master container orchestration. Each module contains **Real-World Stories**, **Interview Prep**, and **Hands-on Challenges**.
+### 🏗️ [Part 1: Foundations & Architecture](./Part-1-Foundations/README.md)
+Master the brain, the CLI, and the basic communication patterns.
+- **[01-Cluster-Architecture](./Part-1-Foundations/01-Cluster-Architecture/README.md)**: Control Plane, etcd, and the Request Lifecycle.
+- **[02-Kubectl-Basics](./Part-1-Foundations/02-Kubectl-Basics/README.md)**: CLI productivity, JSONPath, and Custom Columns.
 
-### 🏗️ Phase 1: Foundations & Architecture
-1.  **[01-Cluster-Architecture](./01-Cluster-Architecture/README.md)**: Deep dive into the API Server, etcd, and Control Plane.
-2.  **[02-Kubectl-Basics](./02-Kubectl-Basics/README.md)**: Master the CLI tools and pro-level productivity tricks.
-3.  **[03-Pods-and-Nodes](./03-Pods-and-Nodes/README.md)**: Understand the atomic units of compute.
+### 🔄 [Part 2: Workload Management](./Part-2-Workload-Management/README.md)
+Learn how to deploy, scale, and manage the health of your applications.
+- **[03-Pods-and-Nodes](./Part-2-Workload-Management/03-Pods-and-Nodes/README.md)**: Pod lifecycle, Sidecars, and Scheduling.
+- **[04-Deployments-and-Scaling](./Part-2-Workload-Management/04-Deployments-and-Scaling/README.md)**: Rolling updates and Horizontal Autoscaling (HPA).
 
-### 🔄 Phase 2: Application Management
-4.  **[04-Deployments-and-Scaling](./04-Deployments-and-Scaling/README.md)**: Zero-downtime rollouts and horizontal scaling.
-5.  **[05-Services-and-Networking](./05-Services-and-Networking/README.md)**: Service discovery, DNS, and internal load balancing.
-6.  **[06-Ingress-Controllers](./06-Ingress-Controllers/README.md)**: Advanced Layer 7 routing and SSL termination.
-7.  **[07-ConfigMaps-and-Secrets](./07-ConfigMaps-and-Secrets/README.md)**: Decoupling configuration and securing credentials.
+### 🚦 [Part 3: Networking and Configuration](./Part-3-Networking-and-Config/README.md)
+Connect your services and manage application settings securely.
+- **[05-Services-and-Networking](./Part-3-Networking-and-Config/05-Services-and-Networking/README.md)**: Service Types, DNS, and discovery.
+- **[06-Ingress-Controllers](./Part-3-Networking-and-Config/06-Ingress-Controllers/README.md)**: Layer 7 routing and SSL termination.
+- **[07-ConfigMaps-and-Secrets](./Part-3-Networking-and-Config/07-ConfigMaps-and-Secrets/README.md)**: Decoupling configuration from containers.
 
-### 💾 Phase 3: State & Persistence
-8.  **[08-Persistence-and-Storage](./08-Persistence-and-Storage/README.md)**: PVs, PVCs, and dynamic cloud storage.
-9.  **[09-StatefulSets-and-Jobs](./09-StatefulSets-and-Jobs/README.md)**: Running databases and batch processes.
+### 💾 [Part 4: State and Persistence](./Part-4-State-and-Persistence/README.md)
+Handle databases and long-term storage in a containerized environment.
+- **[08-Persistence-and-Storage](./Part-4-State-and-Persistence/08-Persistence-and-Storage/README.md)**: PVs, PVCs, and StorageClasses.
+- **[09-StatefulSets-and-Jobs](./Part-4-State-and-Persistence/09-StatefulSets-and-Jobs/README.md)**: Persistent identities and Batch processing.
 
-### 🛡️ Phase 4: Production Governance
-10. **[10-Managed-Kubernetes-EKS](./10-Managed-Kubernetes-EKS/README.md)**: EKS, GKE, and the Shared Responsibility Model.
-11. **[11-Cluster-Administration](./11-Cluster-Administration/README.md)**: RBAC, Namespaces, and Resource Hygiene.
+### 🛡️ [Part 5: Cloud Ops and Administration](./Part-5-Cloud-Ops-and-Admin/README.md)
+Manage your cluster in the cloud and enforce enterprise governance.
+- **[10-Managed-Kubernetes-EKS](./Part-5-Cloud-Ops-and-Admin/10-Managed-Kubernetes-EKS/README.md)**: EKS, GKE, and Shared Responsibility.
+- **[11-Cluster-Administration](./Part-5-Cloud-Ops-and-Admin/11-Cluster-Administration/README.md)**: RBAC, Namespaces, and Quotas.
 
-### 🎓 Phase 5: Mastery & Career
-12. **[12-Interview-Questions-and-Quizzes](./12-Interview-Questions-and-Quizzes/README.md)**: Senior-level deep dives and CKA prep.
-13. **[13-Real-Life-Scenarios](./13-Real-Life-Scenarios/README.md)**: Advanced troubleshooting and "Panic Button" solutions.
+### 🎓 [Part 6: Mastery and Resources](./Part-6-Mastery-and-Resources/README.md)
+Advanced troubleshooting, interview preparation, and technical deep-dives.
+- **[12-Interview-Questions-and-Quizzes](./Part-6-Mastery-and-Resources/12-Interview-Questions-and-Quizzes/README.md)**: CKA prep and senior screenings.
+- **[13-Real-Life-Scenarios](./Part-6-Mastery-and-Resources/13-Real-Life-Scenarios/README.md)**: High-pressure troubleshooting stories.
+- **[📦 Deep Dives & Supplementary](./Part-6-Mastery-and-Resources/Deep-Dives/README.md)**: Helm, Kubelet internals, and specialized storage.
 
 ---
 
@@ -63,12 +70,6 @@ graph TD
 - **CKA**: Certified Kubernetes Administrator (Focus on Cluster Ops).
 - **CKAD**: Certified Kubernetes Application Developer (Focus on Workloads).
 - **CKS**: Certified Kubernetes Security Specialist (Focus on Hardening).
-
----
-
-## 🔗 Next Steps
-- **[Helm Charts](../../02-Phase-2/02-Configuration-Tools/04-Helm)** - Learn to package your apps.
-- **[Observability Foundations](../10-Observability-Foundations/)** - Monitor your cluster health.
 
 ---
 *Orchestrate with confidence. Scale without limits.*
