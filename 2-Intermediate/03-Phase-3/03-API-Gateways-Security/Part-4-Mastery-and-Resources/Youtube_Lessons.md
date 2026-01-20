@@ -22,5 +22,7 @@ Secure and manage your microservices architecture using modern API Gateways.
 
 ---
 
-> [!TIP]
-> **Pro Tip**: Use an API Gateway to handle cross-cutting concerns like Auth and Logging, so your developers can focus on business logic.
+---
+
+## 🔗 Internal Navigation
+- [Back to Part 4 Overview](./README.md)
