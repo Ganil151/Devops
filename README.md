@@ -9,13 +9,13 @@
 
 ## 📊 Platform Snapshot
 
-*Status: **Version 2.0 (Strategic Reorganization)** | Updated: January 2026*
+*Status: **Version 2.1 (Auditing & Refinement)** | Updated: January 2026*
 
 | Metric | Count | Rating |
 | :--- | :--- | :--- |
-| **Documentation** | 1,116+ Guides | ⭐⭐⭐⭐⭐ |
+| **Documentation** | 1,150+ Guides | ⭐⭐⭐⭐⭐ |
 | **Structure** | 4-Tier Architecture | ⭐⭐⭐⭐⭐ |
-| **Modules** | 11 Strategic Parts (Adv) | ⭐⭐⭐⭐⭐ |
+| **Modules** | 12 Strategic Parts (Inermediate) | ⭐⭐⭐⭐⭐ |
 | **Assets** | 4,000+ Snippets | ⭐⭐⭐⭐⭐ |
 | **Overall** | **Grade: A+** | **Production Ready** |
 
@@ -41,24 +41,19 @@ graph TD
 ## 📂 Curriculum
 
 ### 🌱 [Tier 1: Beginner - Foundations](./1-Beginner/README.md)
-*Networking, Linux, Containers, Basic Tools*
+*Networking, Linux, Windows Basics, Containers*
 - **Focus**: Building the "Infrastructure Layer" skills.
-- **Key Modules**: Networking, Linux, Docker, Git basics.
+- **Key Modules**: Networking, Linux, **Windows Basics & Auditing**, Docker, Git basics.
 
 ### ⚙️ [Tier 2: Intermediate - Automation](./2-Intermediate/README.md)
-*IaC, Kubernetes, CI/CD, Scripting*
+*IaC, Kubernetes, CI/CD, Scripting, System Admin*
 - **Focus**: "Orchestration Layer" & Automating everything.
-- **Key Update**: Networking module now organized into **5 Strategic Parts** (Cloud Fundamentals, Security, Connectivity, etc.).
+- **Key Update**: Phase 2 is now organized into **12 Strategic Parts** (Scripting, Config Mgmt, Pipelines, Cost Mgmt, Security, etc.) + **System Administration Auditing**.
 
 ### 🏛️ [Tier 3: Advanced - Enterprise Strategy](./3-Advanced/README.md)
-*Service Mesh, GitOps, DevSecOps, FinOps*
+*Service Mesh, GitOps, DevSecOps, FinOps, Infrastructure Security*
 - **Focus**: "Architectural Layer" for high-scale systems.
-- **Key Update**: **34 Modules** organized into **11 Strategic Parts**:
-  - Service Mesh Architecture
-  - Security & Compliance
-  - Platform Engineering
-  - GitOps & Fleet Management
-  - And more...
+- **Key Update**: Includes **Infrastructure Security Auditing**, Service Mesh Architecture, and Advanced Platform Engineering.
 
 ### 💼 [Tier 4: Professional - Monetization](./4-Professional-Development/README.md)
 *Consulting, Business, FinOps*
@@ -68,11 +63,11 @@ graph TD
 
 ## 🛠️ Global Hubs & Resources
 
-- **[Boilerplate Vault](README.md)**: 150+ Templates (Terraform, Ansible, Scripts).
+- **[Boilerplate Vault](./5-Boilerplates/README.md)**: 150+ Templates (Terraform, Ansible, Scripts).
 - **[Repository Hub](./2-Intermediate/01-Phase-1/04-Repository-Management/README.md)**: Centralized VCS guides.
 - **[Database Hub](./2-Intermediate/01-Phase-1/05-Databases/README.md)**: SQL/NoSQL mastery.
-- **[Configuration Tools](./2-Intermediate/02-Phase-2/02-Configuration-Tools/README.md)**: Enterprise patterns for 11+ tools.
-- **[Quizzes](README.md)**: 200+ Questions & Interview Prep.
+- **[Configuration Tools](./2-Intermediate/02-Phase-2/Part-2-Config-Management/README.md)**: Enterprise patterns for 11+ tools.
+- **[Quizzes](./6-Quizzes/README.md)**: 200+ Questions & Interview Prep.
 
 ---
 
