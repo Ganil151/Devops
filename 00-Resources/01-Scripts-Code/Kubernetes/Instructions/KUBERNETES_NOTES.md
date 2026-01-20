@@ -39,7 +39,7 @@ Kubernetes follows a **master-worker architecture** with two main node types:
 
 ### Visual Architecture
 
-![Kubernetes Architecture Diagram](C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_architecture_1763915576581.png)
+![Kubernetes Architecture Diagram](../../../../03-Images-Diagrams/Kubernetes/Kubernetes-01.png)
 
 ```mermaid
 graph TB
@@ -324,7 +324,9 @@ Kubernetes objects are **persistent entities** that represent the state of your 
 
 **The smallest and simplest Kubernetes object.**
 
-![Kubernetes Pod Concept](C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_pod_concept_1763915612885.png)
+> [!WARNING]
+> **Missing Image**: Kubernetes Pod Concept
+> <!-- ![Kubernetes Pod Concept](C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_pod_concept_1763915612885.png) -->
 
 - **Definition**: A group of one or more containers with shared storage/network
 - **Lifecycle**: Ephemeral - Pods are mortal
@@ -375,7 +377,9 @@ kubectl exec -it nginx-pod -- /bin/bash
 
 **An abstract way to expose an application running on Pods.**
 
-![Kubernetes Service Types](C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_service_types_1763915644861.png)
+> [!WARNING]
+> **Missing Image**: Kubernetes Service Types
+> <!-- ![Kubernetes Service Types](C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_service_types_1763915644861.png) -->
 
 - **Purpose**: Provides stable networking for Pods
 - **Why Needed**: Pod IPs change when Pods restart
@@ -423,7 +427,9 @@ kubectl get endpoints nginx-service
 
 **Provides declarative updates for Pods and ReplicaSets.**
 
-![Kubernetes Deployment Hierarchy](C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_deployment_hierarchy_1763915683588.png)
+> [!WARNING]
+> **Missing Image**: Kubernetes Deployment Hierarchy
+> <!-- ![Kubernetes Deployment Hierarchy](C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_deployment_hierarchy_1763915683588.png) -->
 
 - **Purpose**: Manages stateless applications
 - **Features**:
@@ -616,7 +622,9 @@ spec:
 
 ## Networking
 
-![Kubernetes Networking](C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_networking_1763915721952.png)
+> [!WARNING]
+> **Missing Image**: Kubernetes Networking
+> <!-- ![Kubernetes Networking](C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_networking_1763915721952.png) -->
 
 Kubernetes networking follows these principles:
 
@@ -676,7 +684,9 @@ spec:
 
 ## Storage
 
-![Kubernetes Storage Concepts](C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_storage_concepts_1763915758222.png)
+> [!WARNING]
+> **Missing Image**: Kubernetes Storage Concepts
+> <!-- ![Kubernetes Storage Concepts](C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_storage_concepts_1763915758222.png) -->
 
 Kubernetes provides abstractions for managing storage.
 

@@ -141,7 +141,7 @@ A single Direct Connect link is a single point of failure (SPOF). Physical fiber
 
 ## 🔗 Next Steps
 
-You've built the global bridge. Now let's explore how to monitor every single packet and troubleshoot the inevitable issues that arise in high-scale networks.
+You've built the global bridge. Now let's ensure it remains available and resilient against failures.
 
-Proceed to: **[10. Monitoring & Troubleshooting](../../../../../README.md)** →
+Proceed to: **[Part 4: High Availability](../../Part-4-High-Availability/README.md)** →
 Node: This link points to the next logical step in the curriculum.

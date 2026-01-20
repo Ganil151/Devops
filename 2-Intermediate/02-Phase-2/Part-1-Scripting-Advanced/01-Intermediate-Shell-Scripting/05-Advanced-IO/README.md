@@ -2,7 +2,7 @@
 
 Controlling data streams is what separates scripters from engineers.
 
-![IO Streams Placeholder](./io_redirection_streams.svg)
+> **⚠️ Missing Image**: *IO Streams Placeholder* ('./io_redirection_streams.svg')
 
 ## 📄 Here Documents (HereDocs)
 Pass multi-line strings into commands. Ideal for generating config files or passing SQL queries.

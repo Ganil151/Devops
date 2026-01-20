@@ -26,7 +26,7 @@ Navigate the layers deeply:
 
 The Open Systems Interconnection (OSI) model standardizes network functions.
 
-![OSI 7 Layers](./OSI%20Model/Images/OSI-7-layers.jpg.webp)
+> **⚠️ Missing Image**: *OSI 7 Layers* ('./OSI%20Model/Images/OSI-7-layers.jpg.webp')
 
 | Layer | Name | Function | Real-World Example |
 | :--- | :--- | :--- | :--- |
@@ -67,7 +67,7 @@ Manages "conversations" (sessions) between computers. Keeps connections open and
 
 This is the model actually implemented in the internet today. It collapses the OSI layers for simplicity.
 
-![TCP/IP Model](OSI%20Model/Images/OSIModel.png)
+> **⚠️ Missing Image**: *TCP/IP Model* ('OSI%20Model/Images/OSIModel.png')
 
 1.  **Application Layer**: Combines OSI layers 5, 6, and 7.
 2.  **Transport Layer**: Maps to OSI layer 4.
@@ -75,7 +75,7 @@ This is the model actually implemented in the internet today. It collapses the O
 4.  **Network Access Layer**: Combines OSI layers 1 and 2.
 
 ### OSI vs. TCP/IP Comparison
-![OSI vs TCP/IP](./OSI%20Model/Images/OSI-vs.-TCPIP-models.jpg.webp)
+> **⚠️ Missing Image**: *OSI vs TCP/IP* ('./OSI%20Model/Images/OSI-vs.-TCPIP-models.jpg.webp')
 
 ---
 

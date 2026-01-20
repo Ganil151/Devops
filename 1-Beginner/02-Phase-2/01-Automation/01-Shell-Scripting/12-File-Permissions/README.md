@@ -57,10 +57,12 @@ To get the final permission digit, you add the values together:
 
 ---
 
-## 🚀 Professional DevOps Patterns
+## 🚀 Professional Patterns for Automation
 
 ### Pattern A: Secret Hardening (The 400 Rule)
-Cloud providers (AWS/GCP) will literally **block** you from using SSH keys that are too "open." 
+
+Cloud providers (AWS/GCP) will literally **block** you from using SSH keys that are too "open."
+
 ```bash
 # Set owner to you, and strip ALL permissions from everyone else
 chmod 600 ~/.ssh/id_rsa
@@ -70,7 +72,9 @@ chmod 400 my-cloud-key.pem
 ```
 
 ### Pattern B: The "Web Guard" Principle
+
 For web applications, the files should be owned by the developer but readable by the web server process (e.g., `www-data`).
+
 ```bash
 # Change group to web server
 sudo chown -R $USER:www-data /var/www/html
@@ -83,7 +87,9 @@ find /var/www/html -type d -exec chmod 750 {} \;
 ```
 
 ### Pattern C: The Recursive Reset
+
 Sometimes a directory is in a "messy" state. Use `-R` with caution, but it is the fastest way to reset a staging environment.
+
 ```bash
 # Reset entire project ownership to the current user
 sudo chown -R $(whoami):$(whoami) ./my-project
@@ -150,4 +156,4 @@ sudo chown -R $(whoami):$(whoami) ./my-project
 
 Now that you've secured your files, it's time to put everything together and start building real automation!
 
-Proceed to: **[Finally Scripting](../12-Finally-Scripting/README.md)** →
+Proceed to: **[Finally Scripting](../13-Finally-Scripting/README.md)** →

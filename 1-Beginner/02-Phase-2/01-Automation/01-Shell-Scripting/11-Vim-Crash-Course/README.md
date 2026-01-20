@@ -53,10 +53,12 @@ Commands in Vim often follow a grammar: **[Verb] + [Count] + [Object]**.
 
 ---
 
-## 🚀 Professional Patterns for Maintenance
+## 🚀 Professional Patterns for Automation
 
 ### Pattern A: Mass-Commenting (Visual Block)
+
 Need to comment out 20 lines of a YAML file?
+
 1. In **Normal Mode**, place cursor on the first line.
 2. Press `Ctrl + v` (Visual Block Mode).
 3. Use `j` to highlight down 20 lines.
@@ -64,12 +66,14 @@ Need to comment out 20 lines of a YAML file?
 5. Type `# ` and hit `Esc`. Vim will apply the `# ` to every highlighted line instantly.
 
 ### Pattern B: The Sudo-Save Hack
+
 It happens to everyone: you spend 10 minutes editing a complex config only to realize you forgot to use `sudo`. Vim won't let you save. 
 **The Solution**:
 `:w !sudo tee %`
 This pipes the current Vim buffer into the `sudo tee` command, which has the permission to write to the file.
 
 ### Pattern C: Global Search & Replace
+
 To change an IP or an Image version across an entire file:
 `:%s/old-value/new-value/g`
 - `%`: Entire file.
@@ -137,4 +141,4 @@ To change an IP or an Image version across an entire file:
 
 Now that you can edit files like a pro, let's learn how to secure them!
 
-Proceed to: **[File Permissions](../11-File-Permissions/README.md)** →
+Proceed to: **[File Permissions](../12-File-Permissions/README.md)** →

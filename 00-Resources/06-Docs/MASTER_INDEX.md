@@ -11,9 +11,9 @@
 ### 🟡 Intermediate (Automation)
 
 * **Shell**:
-  * [Strict Mode](../../2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md)
-  * [Functions](../../2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md)
-  * [Loops](../../2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md)
+  * [Strict Mode](../../2-Intermediate/02-Phase-2/Part-1-Scripting-Advanced/01-Intermediate-Shell-Scripting/README.md)
+  * [Functions](../../2-Intermediate/02-Phase-2/Part-1-Scripting-Advanced/01-Intermediate-Shell-Scripting/README.md)
+  * [Loops](../../2-Intermediate/02-Phase-2/Part-1-Scripting-Advanced/01-Intermediate-Shell-Scripting/README.md)
   * [xargs/Parallel](../README.md)
   * [Sed/Awk](../README.md)
   * [JQ/JSON](../README.md)

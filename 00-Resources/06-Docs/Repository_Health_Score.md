@@ -6,7 +6,7 @@
 ## 📊 Statistics
 - **Modules Checked**: 54
 - **Files Scanned**: 1878
-- **Broken Links**: 665
+- **Broken Links**: 662
 - **Broken Images**: 154
 - **Missing Standards**: 117
 - **Absolute Paths**: 9
@@ -16,26 +16,6 @@
 
 | Severity | Category | File | Issue |
 | :--- | :--- | :--- | :--- |
-| **High** | Broken Asset | `3-Advanced\03-Phase-3\README.md` | Image not found: ./Assets/phase3_roadmap.png |
-| **High** | Broken Asset | `3-Advanced\02-Phase-2\Part-11-Cloud-Architecture\02-Microservices-Architecture\README.md` | Image not found: ./assets/microservices_vs_monolith_comparison.png |
-| **High** | Broken Asset | `3-Advanced\02-Phase-2\Part-11-Cloud-Architecture\02-Microservices-Architecture\README.md` | Image not found: ./assets/event_driven_architecture_flow.svg |
-| **High** | Broken Asset | `3-Advanced\02-Phase-2\Part-11-Cloud-Architecture\02-Microservices-Architecture\README.md` | Image not found: ./assets/database_per_service_pattern.jpg |
-| **High** | Broken Asset | `3-Advanced\02-Phase-2\Part-11-Cloud-Architecture\02-Microservices-Architecture\assets\README.md` | Image not found: ./assets/microservices_vs_monolith_comparison.png |
-| **High** | Broken Asset | `3-Advanced\02-Phase-2\Part-11-Cloud-Architecture\02-Microservices-Architecture\assets\README.md` | Image not found: ./assets/event_driven_architecture_flow.svg |
-| **High** | Broken Asset | `3-Advanced\02-Phase-2\Part-11-Cloud-Architecture\02-Microservices-Architecture\assets\README.md` | Image not found: ./assets/database_per_service_pattern.jpg |
-| **High** | Broken Asset | `2-Intermediate\03-Phase-3\01-Container-Orchestration\Part-6-Mastery-and-Resources\Legacy-Supplemental-Beginner\Diagrams\directory-mindmap.md` | Image not found: ../../../../../00-Resources/03-Images-Diagrams/Kubernetes/kube-folder-mindMap.png |
-| **High** | Broken Asset | `2-Intermediate\03-Phase-3\01-Container-Orchestration\Part-6-Mastery-and-Resources\Deep-Dives\LoadBalancers\README.md` | Image not found: ../../../../../00-Resources/03-Images-Diagrams/Kubernetes/LB-1.png |
-| **High** | Broken Asset | `2-Intermediate\03-Phase-3\01-Container-Orchestration\Part-6-Mastery-and-Resources\Deep-Dives\LoadBalancers\README.md` | Image not found: ../../../../../00-Resources/03-Images-Diagrams/Kubernetes/multi-AZ-Deployment.png |
-| **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-4-Cloud-Platforms\04-IAM-and-Security\auth-deep-dive.md` | Image not found: ../../Images/congitoVsEntra.png |
-| **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-3-Pipeline-Engineering\CICD_Lessons\Notes\CICD_Com.md` | Image not found: <images\Screenshot (131 |
-| **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-3-Pipeline-Engineering\CICD_Lessons\Notes\CICD_Com.md` | Image not found: <images\Screenshot (133 |
-| **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-3-Pipeline-Engineering\CICD_Lessons\Notes\CICD_Com.md` | Image not found: <images\Screenshot (134 |
-| **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-3-Pipeline-Engineering\CICD_Lessons\Notes\CICD_Com.md` | Image not found: <Screenshot (136 |
-| **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-3-Pipeline-Engineering\CICD_Lessons\Notes\CICD_Com.md` | Image not found: <images\Screenshot (137 |
-| **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-3-Pipeline-Engineering\CICD_Lessons\Notes\CICD_Com.md` | Image not found: <images\Screenshot (138 |
-| **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-3-Pipeline-Engineering\CICD_Lessons\Notes\CICD_Com.md` | Image not found: <images\Screenshot (139 |
-| **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-3-Pipeline-Engineering\CICD_Lessons\Notes\CICD_Com.md` | Image not found: <images\Screenshot (140 |
-| **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-3-Pipeline-Engineering\CICD_Lessons\Notes\CICD_Com.md` | Image not found: <Screenshot (141 |
 | **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-3-Pipeline-Engineering\CICD_Lessons\Notes\CICD_Com.md` | Image not found: <images\Screenshot (142 |
 | **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-3-Pipeline-Engineering\CICD_Lessons\Notes\CICD_Com.md` | Image not found: <images\Screenshot (143 |
 | **High** | Broken Asset | `2-Intermediate\02-Phase-2\Part-3-Pipeline-Engineering\CICD_Lessons\Notes\CICD_Com.md` | Image not found: <images\Screenshot (144 |
@@ -924,9 +904,6 @@
 | **Medium** | Broken Link | `00-Resources\04-Books-Guides\README.md` | Dead link: DevOps/DevOps%20For%20Beginners%20-%20Joseph%20Joyner.pdf |
 | **Medium** | Broken Link | `00-Resources\04-Books-Guides\README.md` | Dead link: Hack/Book%20-%20Nmap%20Cookbook%20The%20Fat-free%20Guide%20to%20Network%20Scanning-1.pdf |
 | **Medium** | Broken Link | `00-Resources\04-Books-Guides\README.md` | Dead link: DevOps/DevOps%20Automation%20Cookbook.pdf |
-| **Medium** | Broken Link | `00-Resources\06-Docs\MASTER_INDEX.md` | Dead link: ../../2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md |
-| **Medium** | Broken Link | `00-Resources\06-Docs\MASTER_INDEX.md` | Dead link: ../../2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md |
-| **Medium** | Broken Link | `00-Resources\06-Docs\MASTER_INDEX.md` | Dead link: ../../2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting/Intermediate%20Shell%20Scripting.md |
 | **Medium** | Broken Link | `00-Resources\06-Docs\Migration-Audit\MICROSERVICES_ACTION_PLAN.md` | Dead link: ../12-Cloud-Engineering/ |
 | **Medium** | Broken Link | `00-Resources\06-Docs\Migration-Audit\MICROSERVICES_ACTION_PLAN.md` | Dead link: ../../02-Phase-2/04-Cloud-Engineering/ |
 | **Medium** | Broken Link | `00-Resources\06-Docs\Migration-Audit\MICROSERVICES_AUDIT_REPORT.md` | Dead link: ../../../1-Beginner/02-Phase-2/03-Microservices-Intro/ |

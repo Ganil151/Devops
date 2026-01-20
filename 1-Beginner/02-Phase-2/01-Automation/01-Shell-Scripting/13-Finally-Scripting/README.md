@@ -49,10 +49,12 @@ Bash is "forgiving" by default, which is lethal in production. Professional scri
 
 ---
 
-## 🚀 Professional Patterns for Maintenance
+## 🚀 Professional Patterns for Automation
 
 ### Pattern A: The Self-Cleaning Script (`trap`)
+
 Automation often creates temporary files. If your script crashes, these files stay on the disk forever. Use a `trap` to ensure cleanup on exit (success or fail).
+
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -67,12 +69,15 @@ trap 'rm -rf "$TMP_DIR"' EXIT
 ```
 
 ### Pattern B: The Success/Failure Signal
+
 External tools (Jenkins, GitHub Actions) only know if your script failed by looking at the **Exit Status**.
 - `exit 0`: Success (Green light).
 - `exit 1-255`: Failure (Red light/Alert).
 
 ### Pattern C: Trace Debugging
+
 When a script behaves unpredictably, don't guess. Watch it work.
+
 ```bash
 # Run script in Trace Mode to see every variable expansion
 bash -x ./my-script.sh
@@ -139,4 +144,4 @@ bash -x ./my-script.sh
 
 Now that you can write the code, let's learn how to make it interactive!
 
-Proceed to: **[User Input](../13-User-Input/README.md)** →
+Proceed to: **[User Input](../14-User-Input/README.md)** →

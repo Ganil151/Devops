@@ -18,11 +18,13 @@ graph TD
 ```
 
 ## 📚 Overview
-The name is short for **Manual**. Before Google and Stack Overflow, there were Man pages. They are the definitive, offline documentation for every command on your system. 
+
+The name is short for **Manual**. Before Google and Stack Overflow, there were Man pages. They are the definitive, offline documentation for every command on your system.
 
 Unlike online tutorials which might be outdated or tailored to a specific OS version, `man` pages exactly match the version of the software installed on **your** machine. For a DevOps engineer, the local manual is the "Source of Truth" when shell scripts behave differently across Ubuntu, RHEL, or macOS.
 
 ## 🎓 Learning Objectives
+
 By the end of this module, you will:
 - ✅ **Decode the SYNOPSIS**: Understand optional vs. required flag notation.
 - ✅ Master the **Sectional Hierarchy** (1, 5, and 8).
@@ -50,7 +52,7 @@ In the manual, flags and arguments follow a strict logical notation:
 
 ---
 
-## 🚀 Professional Help Patterns
+## 🚀 Professional Patterns for Automation
 
 ### Pattern A: The One-Line Scout (`whatis`)
 When you see a command you don't recognize in a script, don't read the whole manual yet. Get a 5-second summary.
@@ -76,7 +78,7 @@ export MANPAGER="less -R --use-color -Dd+r -Du+b"
 
 ---
 
-## 🏆 Real-World DevOps Case Study: The Flag Version Trap
+## 🏆 Real-World DevOps Story: The Flag Version Trap
 
 **The Scenario**: A junior engineer was trying to use a tool called `yq`. All online tutorials showed a `--indent` flag for formatting output. However, whenever they ran the script on the production server, they received: `Error: unknown flag: --indent`.
 **The Investigation**: They ran `man yq` on the server and searched for the string `indent`. They discovered the version installed on the server was two years old and used the flag `-i` instead of the long-form `--indent`.

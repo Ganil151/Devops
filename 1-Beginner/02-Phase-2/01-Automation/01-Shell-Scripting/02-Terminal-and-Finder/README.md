@@ -5,11 +5,13 @@
 ![Navigation Architecture](./navigation_architecture.png)
 
 ## 📚 Overview
-The terminal is your headquarters. Unlike the mouse-driven "Finder" or "File Explorer," the terminal is a precise, text-based interface for the Unix filesystem. In DevOps, you don't navigate by clicking folders; you navigate by understanding the **Filesystem Hierarchy Standard (FHS)**. 
+
+The terminal is your headquarters. Unlike the mouse-driven "Finder" or "File Explorer," the terminal is a precise, text-based interface for the Unix filesystem. In DevOps, you don't navigate by clicking folders; you navigate by understanding the **Filesystem Hierarchy Standard (FHS)**.
 
 This module covers the essential "GPS" commands and architectural concepts required to move safely and efficiently across local clusters and remote production servers.
 
 ## 🎓 Learning Objectives
+
 By the end of this module, you will:
 - ✅ Understand the **Filesystem Hierarchy Standard (FHS)** and where files "live."
 - ✅ Master the **Primary Navigation Trio**: `cd`, `ls`, and `pwd`.
@@ -33,7 +35,7 @@ In Linux, every file has a designated home. Understanding this map is critical f
 
 ---
 
-## 🚀 Professional Navigation Patterns
+## 🚀 Professional Patterns for Automation
 
 ### Pattern A: Absolute vs. Relative Mastery
 - **Absolute (`/`)**: Starts from the Root. Used in scripts to ensure a path is valid regardless of where the script is executed.

@@ -7,16 +7,19 @@ The Network Layer is responsible for routing data packets between different netw
 ## Key Functions
 
 ### 1. Logical Addressing
+
 - **IP Addressing**: Assigns unique logical addresses to devices
 - **IPv4**: 32-bit addresses (e.g., 192.168.1.1)
 - **IPv6**: 128-bit addresses (e.g., 2001:db8::1)
 
 ### 2. Routing
+
 - **Path Determination**: Finds optimal route between source and destination
 - **Routing Tables**: Maintain information about network paths
 - **Routing Algorithms**: OSPF, BGP, RIP, EIGRP
 
 ### 3. Packet Forwarding
+
 - **Packet Switching**: Forwards packets based on destination IP
 - **Load Balancing**: Distributions traffic across multiple paths
 - **Quality of Service (QoS)**: Prioritizes different types of traffic
@@ -33,6 +36,7 @@ graph LR
 ## Network Layer Protocols
 
 ### Internet Protocol (IP)
+
 ```bash
 # IPv4 Header Structure
 Version (4 bits) | IHL (4 bits) | Type of Service (8 bits) | Total Length (16 bits)
@@ -44,6 +48,7 @@ Options (variable) | Padding (variable)
 ```
 
 ### Internet Control Message Protocol (ICMP)
+
 ```bash
 # ICMP Message Types
 Type 0: Echo Reply (ping response)
@@ -59,6 +64,7 @@ mtr google.com                    # Continuous traceroute
 ```
 
 ### Address Resolution Protocol (ARP)
+
 ```bash
 # ARP Commands
 arp -a                            # Display ARP table
@@ -75,6 +81,7 @@ arp -s 192.168.1.1 00:11:22:33:44:55  # Static ARP entry
 ## Routing Concepts
 
 ### Static vs Dynamic Routing
+
 ```bash
 # Static Routing (Linux)
 ip route add 192.168.2.0/24 via 192.168.1.1
@@ -89,6 +96,7 @@ netstat -rn
 ### Routing Protocols
 
 #### OSPF (Open Shortest Path First)
+
 ```bash
 # OSPF Configuration (Cisco)
 router ospf 1
@@ -102,6 +110,7 @@ show ip route ospf
 ```
 
 #### BGP (Border Gateway Protocol)
+
 ```bash
 # BGP Configuration
 router bgp 65001
@@ -117,6 +126,7 @@ show ip route bgp
 ## Subnetting and VLSM
 
 ### Subnet Calculation
+
 ```bash
 # Network: 192.168.1.0/24
 # Subnets needed: 4
@@ -130,6 +140,7 @@ Subnet 4: 192.168.1.192/26 (192.168.1.193-254)
 ```
 
 ### CIDR (Classless Inter-Domain Routing)
+
 ```bash
 # CIDR Notation Examples
 /8  = 255.0.0.0     (16,777,214 hosts)
@@ -141,6 +152,7 @@ Subnet 4: 192.168.1.192/26 (192.168.1.193-254)
 ## Network Address Translation (NAT)
 
 ### NAT Types
+
 ```bash
 # Static NAT (1:1 mapping)
 ip nat inside source static 192.168.1.10 203.0.113.10
@@ -156,6 +168,7 @@ ip nat inside source list 1 interface fastethernet0/0 overload
 ## Quality of Service (QoS)
 
 ### Traffic Classification
+
 ```bash
 # DiffServ Code Points (DSCP)
 EF (Expedited Forwarding): Voice traffic
@@ -171,6 +184,7 @@ tc class add dev eth0 parent 1:1 classid 1:10 htb rate 80mbit ceil 100mbit
 ## Network Security at Layer 3
 
 ### Access Control Lists (ACLs)
+
 ```bash
 # Standard ACL (Cisco)
 access-list 10 permit 192.168.1.0 0.0.0.255
@@ -187,6 +201,7 @@ ip access-group 10 in
 ```
 
 ### IPSec VPN
+
 ```bash
 # IPSec Configuration
 crypto isakmp policy 10
@@ -205,6 +220,7 @@ match address 101
 ## Troubleshooting Network Layer
 
 ### Common Tools
+
 ```bash
 # Connectivity Testing
 ping -c 4 8.8.8.8                # Test connectivity
@@ -221,6 +237,7 @@ ss -rn                           # Display routing table
 ```
 
 ### Network Layer Issues
+
 ```bash
 # Common Problems and Solutions
 
@@ -240,6 +257,7 @@ tcpdump -i eth0 icmp             # Monitor ICMP messages
 ## DevOps Integration
 
 ### Infrastructure as Code
+
 ```yaml
 # Terraform - VPC and Subnets
 resource "aws_vpc" "main" {
@@ -266,6 +284,7 @@ resource "aws_route_table" "public" {
 ```
 
 ### Monitoring and Automation
+
 ```bash
 # Network monitoring with Prometheus
 # /etc/prometheus/prometheus.yml
@@ -291,29 +310,35 @@ scrape_configs:
 ## Best Practices
 
 ### 1. IP Address Management
+
 - Use private IP ranges (RFC 1918)
 - Implement proper subnetting
 - Document IP allocations
 - Use DHCP reservations for servers
 
 ### 2. Routing Design
+
 - Implement redundant paths
 - Use route summarization
 - Configure route filtering
 - Monitor routing table size
 
 ### 3. Security
+
 - Implement network segmentation
 - Use ACLs for traffic filtering
 - Enable logging and monitoring
 - Regular security audits
 
 ### 4. Performance Optimization
+
 - Optimize routing metrics
 - Implement QoS policies
 - Monitor bandwidth utilization
 - Use traffic engineering
+
 ---
 
 ### ⏭️ Next Step
+
 Move up to [Layer 4: Transport Layer](../4.%20Transport/README.md).

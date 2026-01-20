@@ -2,7 +2,7 @@
 
 > **"Where standard DevOps ends, Enterprise Engineering begins. Master the frontier of specialized technology, AI-driven operations, and global governance."**
 
-![Phase 3 Roadmap](./Assets/phase3_roadmap.png)
+> **⚠️ Missing Image**: *Phase 3 Roadmap* ('./Assets/phase3_roadmap.png')
 
 ## 🏛️ Overview
 

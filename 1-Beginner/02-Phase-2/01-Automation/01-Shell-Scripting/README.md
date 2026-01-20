@@ -20,10 +20,10 @@ This comprehensive Shell Scripting curriculum provides **17 modules** covering e
 ## 📊 Curriculum Status
 
 ### Overall Progress
-- **Total Modules**: 17
-- **Completed Content**: 17/17 (100%) ✅
-- **Challenge Modules**: 10/17 (58.8%)
-- **Total Challenges**: 100/170 created
+- **Total Modules**: 18
+- **Completed Content**: 18/18 (100%) ✅
+- **Challenge Modules**: 10/18 (55.5%)
+- **Total Challenges**: 100/180 created
 - **Learning Time**: ~60-70 hours of hands-on material
 
 ### Module Completion Breakdown
@@ -39,14 +39,15 @@ This comprehensive Shell Scripting curriculum provides **17 modules** covering e
 | 07 | [Man Pages](./07-Man-Pages/) | ✅ Complete | ✅ 10 challenges | Ready |
 | 08 | [Programs & Commands](./08-Programs-and-Commands/) | ✅ Complete | ✅ 10 challenges | Ready |
 | 09 | [Basic Variables](./09-Basic-Variables/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 10 | [Vim Crash Course](./10-Vim-Crash-Course/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 11 | [File Permissions](./11-File-Permissions/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 12 | [Finally Scripting](./12-Finally-Scripting/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 13 | [User Input](./13-User-Input/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 14 | [Functions](./14-Functions/) | ✅ Complete | 🔄 Pending | Ready |
-| 15 | [Conditionals](./15-Conditionals/) | ✅ Complete | 🔄 Pending | Ready |
-| 16 | [For Loops](./16-For-Loops/) | ✅ Complete | 🔄 Pending | Ready |
-| 17 | [Input/Output](./17-Input-Output/) | ✅ Complete | 🔄 Pending | Ready |
+| 10 | [Arithmetic & Metrics](./10-Arithmetic-and-Metrics/) | ✅ Complete | ✅ Boilerplate | Ready |
+| 11 | [Vim Crash Course](./11-Vim-Crash-Course/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 12 | [File Permissions](./12-File-Permissions/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 13 | [Finally Scripting](./13-Finally-Scripting/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 14 | [User Input](./14-User-Input/) | ✅ Complete | ✅ 10 challenges | Ready |
+| 15 | [Functions](./15-Functions/) | ✅ Complete | 🔄 Pending | Ready |
+| 16 | [Conditionals](./16-Conditionals/) | ✅ Complete | 🔄 Pending | Ready |
+| 17 | [For Loops](./17-For-Loops/) | ✅ Complete | 🔄 Pending | Ready |
+| 18 | [Input/Output](./18-Input-Output/) | ✅ Complete | 🔄 Pending | Ready |
 
 ---
 
@@ -66,47 +67,48 @@ Master the essential Linux command-line skills that form the foundation of all s
 
 **Challenges Available**: 50 hands-on challenges (🟢 Beginner → 🟡 Intermediate)
 
-### Phase 2: Tools & Documentation (Modules 06-09)
+### Phase 2: Shell Logic (Modules 06-10)
 **Time**: 1-2 weeks | **10-15 hours**
 
-Learn essential DevOps tools and how to find information effectively:
+Master the logic that makes scripts powerful:
 
-- **Module 06**: Log file navigation, tail monitoring, memory efficiency
-- **Module 07**: Man pages, documentation search, command discovery
+- **Module 06**: Paging, `less`, `more`, buffer navigation
+- **Module 07**: Man pages, documentation, help systems
 - **Module 08**: Command resolution, DevOps toolkit (grep, sed, awk, curl, jq)
 - **Module 09**: Variable scope, parameter expansion, configuration management
+- **Module 10**: Arithmetic, metrics calculation, floating point math (bc)
 
 **Challenges Available**: 40 hands-on challenges (🟡 Intermediate → 🔴 Advanced)
 
-### Phase 3: Editor Mastery (Module 10)
+### Phase 3: Editor Mastery (Module 11)
 **Time**: 1 week | **5-8 hours**
 
 Essential Vim skills for server-side editing:
 
-- **Module 10**: Modal editing, navigation, macros, production configuration
+- **Module 11**: Modal editing, navigation, macros, production configuration
 
 **Challenges Available**: 10 hands-on challenges (🟢 Beginner → 🏆 Expert)
 
-### Phase 4: Scripting Fundamentals (Modules 11-14)
+### Phase 4: Scripting Fundamentals (Modules 12-15)
 **Time**: 2-3 weeks | **15-20 hours**
 
 Build your first professional automation scripts:
 
-- **Module 11**: Permission systems, chmod mastery, security
-- **Module 12**: Script structure, best practices, error handling  
-- **Module 13**: User input, interactive scripts, validation
-- **Module 14**: Functions, modular design, code libraries
+- **Module 12**: Permission systems, chmod mastery, security
+- **Module 13**: Script structure, best practices, error handling  
+- **Module 14**: User input, interactive scripts, validation
+- **Module 15**: Functions, modular design, code libraries
 
 **Challenges Status**: 🔄 Coming soon (40 challenges)
 
-### Phase 5: Control Flow (Modules 15-17)
+### Phase 5: Control Flow (Modules 16-18)
 **Time**: 1-2 weeks | **10-15 hours**
 
 Master advanced automation logic:
 
-- **Module 15**: Conditional logic, test operators, decision trees
-- **Module 16**: Loops, iteration patterns, break/continue
-- **Module 17**: Stream redirection, pipes, data processing
+- **Module 16**: Conditional logic, test operators, decision trees
+- **Module 17**: Loops, iteration patterns, break/continue
+- **Module 18**: Stream redirection, pipes, data processing
 
 **Challenges Status**: 🔄 Coming soon (30 challenges)
 

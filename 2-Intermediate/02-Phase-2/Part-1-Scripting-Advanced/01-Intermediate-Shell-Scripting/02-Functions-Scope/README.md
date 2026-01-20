@@ -2,7 +2,7 @@
 
 Functions are the building blocks of maintainable scripts. They allow you to encapsulate logic, re-use code, and isolate variables.
 
-![Function Architecture Placeholder](./function_scope_architecture.svg)
+> **⚠️ Missing Image**: *Function Architecture Placeholder* ('./function_scope_architecture.svg')
 
 ## 🌎 Global vs. Local Scope
 

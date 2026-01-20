@@ -14,7 +14,7 @@ ssh-copy-id <user-name@public-ip>
 Plugins
 
 Credentials
-![alt text](<Image\Screenshot (195).png>)
+![alt text](Image/Screenshot%20(195).png)
 
 ---- Jenkins Test Job ----
 ```groovy

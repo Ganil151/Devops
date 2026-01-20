@@ -44,10 +44,10 @@ Finding an error line is useless if you don't know what caused it.
 - **`-C 5` (Context)**: Shows both, providing a full narrative of the event.
 
 ### 3. High-Performance Tools
-| Tool | Speed | Use Case |
-| :--- | :--- | :--- |
-| **`grep`** | ⚡ Fast | The universal standard found on every server. |
-| **`ripgrep` (`rg`)**| 🚀 Insane | The modern choice for searching massive monorepos and multi-gigabyte logs. |
+| Tool             | Speed     | Use Case                                                                   |
+| :--------------- | :-------- | :------------------------------------------------------------------------- |
+| `grep`           | ⚡ Fast    | The universal standard found on every server.                              |
+| `ripgrep` (`rg`) | 🚀 Insane | The modern choice for searching massive monorepos and multi-gigabyte logs. |
 
 ---
 
