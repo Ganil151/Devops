@@ -1,2 +1,0 @@
-Auditing directories in: C:\Users\Ganil\Documents\Devops\1-Beginner\02-Phase-2\01-Automation\01-Shell-Scripting
-------------------------------------------------------------

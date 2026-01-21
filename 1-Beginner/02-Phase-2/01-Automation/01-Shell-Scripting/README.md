@@ -1,372 +1,90 @@
-# 🐚 Shell Scripting Complete Curriculum
+# 🐚 Shell Scripting & Automation Mastery
 
-> **"Mastering shell scripting is the foundation of DevOps excellence. From automation to infrastructure management, these skills power modern cloud operations."**
-
-## 📚 Curriculum Overview
-
-This comprehensive Shell Scripting curriculum provides **17 modules** covering everything from basic terminal navigation to advanced automation patterns. Each module includes detailed theory, practical examples, real-world scenarios, and hands-on challenges.
-
-### 🎯 Learning Outcomes
-
-### 🎯 Learning Outcomes
-
-- ✅ **Master Shell Fundamentals**: Command execution, navigation, and file management
-- ✅ **Build Production Scripts**: Error handling, testing, and deployment automation
-- ✅ **Implement DevOps Patterns**: CI/CD integration, infrastructure management, monitoring
-- ✅ **Develop Professional Skills**: Interview preparation, best practices, career advancement
+Welcome to the definitive guide to Shell Scripting for DevOps. This curriculum is designed as a continuous 3-tier progression, moving from basic command execution to professional automation engineering.
 
 ---
 
-## 📊 Curriculum Status
+## 🗺️ Curriculum Map
 
-### Overall Progress
-- **Total Modules**: 18
-- **Completed Content**: 18/18 (100%) ✅
-- **Challenge Modules**: 10/18 (55.5%)
-- **Total Challenges**: 100/180 created
-- **Learning Time**: ~60-70 hours of hands-on material
+```mermaid
+graph LR
+    subgraph Phase 1: Foundations
+        P1[Part-01: Intro] --> P2[Part-02: Navigate]
+        P2 --> P3[Part-03: Manipulate]
+        P3 --> P4[Part-04: Hidden]
+        P4 --> P5[Part-05: Search]
+        P5 --> P6[Part-06: Paging]
+        P6 --> P7[Part-07: Help]
+        P7 --> P8[Part-08: Binary]
+        P8 --> P9[Part-09: Vim]
+        P9 --> P10[Part-10: Auth]
+        P10 --> P11[Part-11: Vars]
+        P11 --> P12[Part-12: Math]
+    end
 
-### Module Completion Breakdown
+    subgraph Phase 2: Logic
+        P12 --> P13[Part-13: Input]
+        P13 --> P14[Part-14: Logic]
+        P14 --> P15[Part-15: Loops]
+        P15 --> P16[Part-16: Basics]
+    end
 
-| # | Module | Content | Challenges | Status |
-|---|--------|---------|-----------|--------|
-| 01 | [Introduction](./01-Introduction/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 02 | [Terminal Navigation](./02-Terminal-and-Finder/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 03 | [File Manipulation](./03-Basic-File-Manipulation/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 04 | [Hidden Files](./04-Hidden-Files/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 05 | [Searching in Files](./05-Searching-in-Files/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 06 | [Paging Files](./06-Paging-Files/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 07 | [Man Pages](./07-Man-Pages/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 08 | [Programs & Commands](./08-Programs-and-Commands/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 09 | [Basic Variables](./09-Basic-Variables/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 10 | [Arithmetic & Metrics](./10-Arithmetic-and-Metrics/) | ✅ Complete | ✅ Boilerplate | Ready |
-| 11 | [Vim Crash Course](./11-Vim-Crash-Course/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 12 | [File Permissions](./12-File-Permissions/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 13 | [Finally Scripting](./13-Finally-Scripting/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 14 | [User Input](./14-User-Input/) | ✅ Complete | ✅ 10 challenges | Ready |
-| 15 | [Functions](./15-Functions/) | ✅ Complete | 🔄 Pending | Ready |
-| 16 | [Conditionals](./16-Conditionals/) | ✅ Complete | 🔄 Pending | Ready |
-| 17 | [For Loops](./17-For-Loops/) | ✅ Complete | 🔄 Pending | Ready |
-| 18 | [Input/Output](./18-Input-Output/) | ✅ Complete | 🔄 Pending | Ready |
+    subgraph Phase 3: Engineering
+        P16 --> P17[Part-17: Strict]
+        P17 --> P18[Part-18: Functions]
+        P18 --> P19[Part-19: Streams]
+    end
 
----
-
-## 🗺️ Learning Path
-
-### Phase 1: Foundation Skills (Modules 01-05)
-
-**Time**: 2-3 weeks | **15-20 hours**
-
-Master the essential Linux command-line skills that form the foundation of all shell scripting:
-
-- **Module 01**: Shell basics, script execution, automation concepts
-- **Module 02**: Terminal navigation, path mastery, directory operations
-- **Module 03**: File CRUD operations, safety protocols, disaster recovery
-- **Module 04**: Dotfile management, SSH security, configuration
-- **Module 05**: Text searching with grep, regex patterns, log analysis
-
-**Challenges Available**: 50 hands-on challenges (🟢 Beginner → 🟡 Intermediate)
-
-### Phase 2: Shell Logic (Modules 06-10)
-**Time**: 1-2 weeks | **10-15 hours**
-
-Master the logic that makes scripts powerful:
-
-- **Module 06**: Paging, `less`, `more`, buffer navigation
-- **Module 07**: Man pages, documentation, help systems
-- **Module 08**: Command resolution, DevOps toolkit (grep, sed, awk, curl, jq)
-- **Module 09**: Variable scope, parameter expansion, configuration management
-- **Module 10**: Arithmetic, metrics calculation, floating point math (bc)
-
-**Challenges Available**: 40 hands-on challenges (🟡 Intermediate → 🔴 Advanced)
-
-### Phase 3: Editor Mastery (Module 11)
-**Time**: 1 week | **5-8 hours**
-
-Essential Vim skills for server-side editing:
-
-- **Module 11**: Modal editing, navigation, macros, production configuration
-
-**Challenges Available**: 10 hands-on challenges (🟢 Beginner → 🏆 Expert)
-
-### Phase 4: Scripting Fundamentals (Modules 12-15)
-**Time**: 2-3 weeks | **15-20 hours**
-
-Build your first professional automation scripts:
-
-- **Module 12**: Permission systems, chmod mastery, security
-- **Module 13**: Script structure, best practices, error handling  
-- **Module 14**: User input, interactive scripts, validation
-- **Module 15**: Functions, modular design, code libraries
-
-**Challenges Status**: 🔄 Coming soon (40 challenges)
-
-### Phase 5: Control Flow (Modules 16-18)
-**Time**: 1-2 weeks | **10-15 hours**
-
-Master advanced automation logic:
-
-- **Module 16**: Conditional logic, test operators, decision trees
-- **Module 17**: Loops, iteration patterns, break/continue
-- **Module 18**: Stream redirection, pipes, data processing
-
-**Challenges Status**: 🔄 Coming soon (30 challenges)
-
----
-
-## 📖 What's Included in Each Module
-
-### 📝 README.md Content
-Every module includes:
-- **Comprehensive Overview**: Theory and concepts
-- **Learning Objectives**: Clear skill targets
-- **Architecture Diagrams**: Visual explanations (12+ Mermaid diagrams)
-- **Practical Examples**: 50+ production-ready code snippets
-- **DevOps Integration**: Real-world use cases
-- **Knowledge Checks**: Self-assessment questions
-- **Real-World Stories**: Industry case studies
-
-### 🎯 CHALLENGES.md (10 modules complete)
-Each challenge file includes:
-- **10 Progressive Challenges**: Beginner → Intermediate → Advanced → Challenge
-- **Step-by-Step Instructions**: Clear, actionable tasks
-- **Complete Solutions**: Working code examples
-- **Expected Outputs**: Validation criteria
-- **Verification Checklists**: Self-assessment tools
-- **Common Pitfalls**: Mistakes to avoid
-- **Pro Tips**: Industry insights
-- **Real-World Scenarios**: Production contexts
-
----
-
-## 🎓 Quality Standards
-
-### Content Excellence ⭐⭐⭐⭐⭐
-- **Comprehensive Coverage**: All essential shell scripting concepts
-- **Practical Focus**: Real-world DevOps applications
-- **Visual Learning**: Extensive diagrams and visualizations
-- **Progressive Difficulty**: Structured learning path
-
-### Challenge Quality ⭐⭐⭐⭐⭐
-- **Hands-On Learning**: 100 practical challenges (170 when complete)
-- **Production Ready**: Industry-relevant scenarios
-- **Self-Paced**: Clear instructions and validation
-- **Career Focused**: Direct job applicability
-
----
-
-## 🚀 Getting Started
-
-### For Students
-
-```bash
-# Clone or navigate to the repository
-cd 1-Beginner/02-Phase-2/02-Automation/01-Shell-Scripting/
-
-# Start with Module 01
-cd 01-Introduction/
-cat README.md          # Read theory
-cat CHALLENGES.md       # Practice challenges
-
-# Progress through modules sequentially
-cd ../02-Terminal-and-Finder/
-# ... continue learning
+    style Phase 1 fill:#e1f5fe,stroke:#01579b
+    style Phase 2 fill:#fff3e0,stroke:#e65100
+    style Phase 3 fill:#e8f5e9,stroke:#1b5e20
 ```
 
-### Recommended Study Schedule
+---
 
-**Full-Time  (4-6 weeks)**:
-- 3-4 hours/day
-- 1-2 modules per week
-- Daily hands-on practice
+## 📈 The 3-Tier Progression
 
-**Part-Time (8-12 weeks)**:
-- 1-2 hours/day
-- 1 module per week
-- Weekend projects
+### 🛡️ Phase 1: Foundations (The Operator)
 
-**Weekend Warrior (12-16 weeks)**:
-- 6-8 hours/weekend
-- 1 module every 2 weeks
-- Focused deep dives
+*Focus: Mastering the environment and basic syntax.*
+
+1. **[Part-01: Introduction](./Part-01-Introduction/README.md)** - The Layered Architecture.
+2. **[Part-02: Terminal & Finder](./Part-02-Terminal-and-Finder/README.md)** - Navigation and the FHS.
+3. **[Part-03: Basic File Manipulation](./Part-03-Basic-File-Manipulation/README.md)** - Raw file operations.
+4. **[Part-04: Hidden Files](./Part-04-Hidden-Files/README.md)** - Configuration files and dotfiles.
+5. **[Part-05: Searching in Files](./Part-05-Searching-in-Files/README.md)** - Grep and text extraction.
+6. **[Part-06: Paging Files](./Part-06-Paging-Files/README.md)** - Inspecting large datasets.
+7. **[Part-07: Man Pages](./Part-07-Man-Pages/README.md)** - Self-documentation and technical help.
+8. **[Part-08: Programs and Commands](./Part-08-Programs-and-Commands/README.md)** - Binaries, aliases, and built-ins.
+9. **[Part-09: Vim Crash Course](./Part-09-Vim-Crash-Course/README.md)** - Modal editing for extreme speed.
+10. **[Part-10: File Permissions](./Part-10-File-Permissions/README.md)** - Security and ownership.
+11. **[Part-11: Basic Variables](./Part-11-Basic-Variables/README.md)** - Scope and parameter expansion.
+12. **[Part-12: Arithmetic and Metrics](./Part-12-Arithmetic-and-Metrics/README.md)** - Capacity calculation and `bc`.
+
+### 🧠 Phase 2: Logic & Control (The Scripter)
+
+*Focus: Moving from static commands to dynamic logic.*
+
+1. **[Part-13: User Input](./Part-13-User-Input/README.md)** - Positional parameters and `read`.
+2. **[Part-14: Conditionals](./Part-14-Conditionals/README.md)** - Decision making and tests.
+3. **[Part-15: Loops and Processing](./Part-15-Loops-and-Processing/README.md)** - Advanced iteration and lists.
+4. **[Part-16: Finally Scripting](./Part-16-Finally-Scripting/README.md)** - Building your first end-to-end automation.
+
+### 🚀 Phase 3: Engineering (The Architect)
+
+*Focus: Robust, enterprise-grade automation.*
+
+1. **[Part-17: Strict Mode & Error Handling](./Part-17-Strict-Mode-and-Error-Handling/README.md)** - Fail-fast and defensive coding.
+2. **[Part-18: Functions and Scope](./Part-18-Functions-and-Scope/README.md)** - Modular logic and recursion.
+3. **[Part-19: Advanced I/O & Redirection](./Part-19-Advanced-IO-and-Redirection/README.md)** - Streams, signals, and process substitution.
 
 ---
 
-## 💼 Career Impact
-
-### Skills Acquired
-
-| Skill Category | Modules | Career Relevance |
-|---------------|---------|------------------|
-| **Linux Fundamentals** | 01-04 | Every DevOps role |
-| **Text Processing** | 05, 08 | Log analysis, monitoring |
-| **Configuration Management** | 04, 09, 13 | Infrastructure automation |
-| **Script Development** | 11-17 | CI/CD, deployments |
-| **Tool Mastery** | 06-10 | Daily DevOps operations |
-
-### Career Progression
-
-- **Junior DevOps Engineer** ($70-85k): Modules 01-10 sufficient
-- **DevOps Engineer** ($85-115k): Complete all modules  
-- **Senior DevOps Engineer** ($115-150k): Mastery + advanced projects
-- **DevOps Architect/SRE** ($150k+): Expert-level + specializations
-
-### Interview Preparation
-
-- **20+ Technical Interview Questions**: Included in Interview_Questions_and_Quiz.md
-- **25+ Quiz Questions**: With detailed explanations
-- **5 Real-World Scenarios**: Production incident case studies
-- **Best Practices Guide**: Industry-standard patterns
+## 🛠️ Usage
+Each directory contains:
+- **README.md**: Conceptual deep dive and DevOps context.
+- **Boilerplates/**: Proven code snippets for production.
+- **CHALLENGES.md**: Hands-on exercises to build muscle memory.
 
 ---
-
-## 📊 Content Metrics
-
-### Documentation Statistics
-- **Total Pages**: 45+ pages of content
-- **Code Examples**: 50+ production-ready scripts
-- **Diagrams**: 12+ Mermaid visualizations
-- **Real-World Scenarios**: 10+ case studies
-
-### Challenge Statistics
-- **Completed Challenges**: 100/170 (58.8%)
-- **Beginner Level**: 30 challenges
-- **Intermediate Level**: 30 challenges
-- **Advanced Level**: 20 challenges
-- **Challenge Level**: 20 challenges
-
-### Learning Value
-- **Theory Study Time**: ~30-40 hours
-- **Hands-On Practice**: ~60-70 hours
-- **Total Learning Time**: ~90-110 hours
-- **Career ROI**: $30k-50k salary increase potential
-
----
-
-## 🏆 Assessment & Certification Prep
-
-### Included Assessments
-- ✅ **Knowledge Checks**: End of each module
-- ✅ **Interview Questions**: 20+ enterprise-level questions
-- ✅ **Quiz Bank**: 25+ questions with answers
-- ✅ **Real-World Scenarios**: 5 production case studies
-- ✅ **Hands-On Challenges**: 100+ practical challenges
-
-### Certification Alignment
-This curriculum prepares you for:
-- **LFCS** (Linux Foundation Certified SysAdmin)
-- **RHCSA** (Red Hat Certified System Administrator)
-- **CompTIA Linux+**
-- **AWS DevOps Professional** (shell scripting components)
-
----
-
-## 🛠️ DevOps Tool Integration
-
-### Tools Covered
-- **Text Processing**: grep, sed, awk, jq
-- **File Management**: find, rsync, tar
-- **Process Control**: systemctl, cron
-- **Network Tools**: curl, wget, nc
-- **Version Control**: git (configuration)
-- **Editors**: vim, nano
-
-### Integration Patterns
-- **CI/CD Pipelines**: Jenkins, GitLab CI, GitHub Actions
-- **Configuration Management**: Ansible, Terraform helpers
-- **Container Operations**: Docker, Kubernetes scripts
-- **Infrastructure Management**: AWS CLI, Azure CLI, gcloud
-- **Monitoring**: Log processing, alert scripts
-
----
-
-## 📚 Additional Resources
-
-### Included Files
-- 📄 **README.md** (this file): Complete curriculum overview
-- 📝 **Interview_Questions_and_Quiz.md**: Assessment materials
-- 📊 **shell_scripting_architecture.md**: Technical deep-dive
-
-### External Resources
-- [GNU Bash Manual](https://www.gnu.org/software/bash/manual/)
-- [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/)
-- [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
-- [ShellCheck](https://www.shellcheck.net/) - Script analysis tool
-
----
-
-## 🎯 Next Steps
-
-### Immediate Actions
-1. **Start Learning**: Begin with [Module 01 - Introduction](./01-Introduction/)
-2. **Set Schedule**: Commit to regular study time
-3. **Join Community**: Connect with other learners
-4. **Practice Daily**: Even 15 minutes makes a difference
-
-### Future Enhancements
-- 🔄 **Remaining Challenge Modules**: 7 modules (70 challenges) in progress
-- 📹 **Video Tutorials**: Planned for complex topics
-- 🧪 **Automated Testing**: Challenge validation scripts
-- 🏅 **Completion Certificates**: Self-assessment badges
-
----
-
-## 📞 Support & Feedback
-
-### Getting Help
-- 📖 **Documentation**: Each README.md has detailed explanations
-- 💬 **Community**: DevOps learning forums and Discord servers
-- 🐛 **Issues**: Report problems or suggest improvements
-- ✉️ **Contributions**: Submit enhancements via pull requests
-
-### Quality Assurance
-- **Content Reviewed**: ✅ Industry experts
-- **Technically Validated**: ✅ Production tested
-- **Career Aligned**: ✅ Job market analysis
-- **Student Tested**: ✅ Learning effectiveness verified
-
----
-
-## 🌟 Success Stories
-
-### What Learners Say
-> "This curriculum took me from zero shell knowledge to writing production deployment scripts in 8 weeks." - Sarah K., DevOps Engineer
-
-> "The hands-on challenges were game-changers. I could immediately apply what I learned at work." - Michael R., SRE
-
-> "Passed my LFCS exam thanks to the comprehensive coverage and interview prep materials." - James L., Systems Administrator
-
----
-
-## ⚡ Quick Reference
-
-### Course Statistics
-| Metric | Value |
-|--------|-------|
-| **Total Modules** | 17 |
-| **Completed Content** | 100% |
-| **Challenge Modules** | 10/17 (58.8%) |
-| **Total Challenges** | 100 (170 planned) |
-| **Learning Hours** | 90-110 hours |
-| **Career Value** | $30k-50k salary impact |
-
-### Module Categories
-- 🟢 **Foundation** (01-05): Linux basics
-- 🔵 **Tools** (06-09): DevOps utilities
-- 🟣 **Editor** (10): Vim mastery
-- 🟠 **Scripting** (11-14): Automation fundamentals
-- 🔴 **Advanced** (15-17): Control flow & I/O
-
----
-
-**🎉 Ready to Start Your DevOps Journey?**
-
-Begin with **[Module 01 - Introduction](./01-Introduction/README.md)** →
-
----
-
-**Last Updated**: 2026-01-11  
-**Curriculum Version**: 2.0  
-**Status**: 🟢 PRODUCTION READY  
-**Quality Rating**: ⭐⭐⭐⭐⭐ (5.0/5.0)  
-**Recommendation**: ✅ APPROVED for professional DevOps education
+> "The shell is the glue that holds the cloud together."
