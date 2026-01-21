@@ -1,4 +1,4 @@
-# 💳 Module 02: Cloud Billing Basics
+# 💳 Part 02: Cloud Billing Basics
 
 > **"A cloud bill is like a restaurant receipt for a million tiny snacks. If you don't know the price of the ingredients, you'll be shocked when the bill arrives."**
 
@@ -23,9 +23,18 @@ graph TD
 
 Cloud billing is complex because it is **granular**. Unlike a monthly Netflix subscription, a cloud bill changes every second based on how many users hit your site, how much data they download, and how many logs your application generates. This module teaches you how to decipher the "Taxonomy of Spend" and avoid common billing traps.
 
+## 💼 Career Impact: The "Efficiency Architect"
+
+Mastering cloud billing transforms you from an engineer who consumes resources to one who manages them as a portfolio.
+
+- **Architectural Authority**: You gain the ability to veto expensive, inefficient designs before they reach production.
+- **Visibility**: Your optimization efforts (e.g., migrating to Spot or RIs) translate directly into "saved revenue" on the company's P&L statement.
+- **Leadership Track**: Cost management is a key differentiator for Principal and Staff engineer roles.
+
 ## 🎓 Learning Objectives
 
 By the end of this module, you will:
+
 - ✅ Deconstruct the three main **Cost Pillars** (Compute, Storage, Network).
 - ✅ Differentiate between **On-Demand, Reserved, and Spot** pricing models.
 - ✅ Identify the "Hidden Tax": **Data Egress** (Outbound transfer).
@@ -37,17 +46,23 @@ By the end of this module, you will:
 ## 🏗️ The Pricing Hierarchy
 
 ### 1. On-Demand (The "Retail" Price)
-The default. You pay for what you use by the second. 
+
+The default. You pay for what you use by the second.
+
 - **Best for**: New apps, unpredictable spikes, and spikes.
 - **Analogy**: A hotel room booked at the front desk.
 
 ### 2. Spot / Preemptible (The "Clearance" Price)
+
 You bid for spare capacity. It's up to **90% cheaper**, but the cloud provider can take it back with a 2-minute notice.
+
 - **Best for**: Batch processing, CI/CD runners, and stateless apps.
 - **Analogy**: A standby flight ticket.
 
 ### 3. Reserved Instances / Savings Plans (The "Subscription")
+
 You commit to a 1 or 3-year term.
+
 - **Best for**: Databases and core production services.
 - **Analogy**: Leasing an apartment for a year.
 
@@ -56,6 +71,7 @@ You commit to a 1 or 3-year term.
 ## 🚀 Professional Pattern: The 3-Tier Strategy
 
 Senior Cloud Architects never put everything on "On-Demand." They use a mix:
+
 - **Baseline (Stable)**: Reserved Instances (e.g., Databases).
 - **Scale (Variable)**: On-Demand (e.g., Handling traffic spikes).
 - **Batch (Disposable)**: Spot Instances (e.g., Nightly data processing).
@@ -89,6 +105,7 @@ graph LR
 ## 🌐 The Hidden Tax: Egress
 
 Most cloud providers have a "Hotel California" policy:
+
 - **Data Inbound**: Free.
 - **Data Outbound (To Internet)**: **Expensive ($0.09/GB)**.
 - **Cross-Region/Zone**: **Expensive ($0.02/GB)**.
@@ -147,4 +164,4 @@ Most cloud providers have a "Hotel California" policy:
 
 The bill is no longer a mystery. Now let's learn how to label every single dollar using Tagging and Reporting.
 
-Proceed to: **[Module 03: Cost Visibility](../03-Cost-Visibility/Lesson 03-Cost Visibility.md)** →
+Proceed to: **[Part 03: Cost Visibility](../Part-03-Cost-Visibility/README.md)** →

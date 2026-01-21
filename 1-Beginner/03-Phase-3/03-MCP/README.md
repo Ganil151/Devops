@@ -1,4 +1,4 @@
-# 🤖 Model Context Protocol (MCP) Mastery
+# 🤖 Phase 3: Model Context Protocol (MCP) Mastery
 
 > **"If an AI model is the brain, MCP is the central nervous system. It connects the intelligence of the LLM to the physical tools and data of your local machine and enterprise infrastructure."**
 
@@ -30,114 +30,76 @@ graph TD
 
 ## 📚 Overview
 
-The **Model Context Protocol (MCP)** is an open-source standard that enables AI models to interact with data and tools in a secure, standardized way. Before MCP, every AI tool had to build its own custom "connectors" for databases, filesystems, and APIs. MCP provides a universal "plug-and-play" architecture, allowing any AI (the Client) to safely use any technical resource (the Server).
+The **Model Context Protocol (MCP)** is an open-source standard that enables AI models to interact with data and tools in a secure, standardized way. Before MCP, every AI tool had to build its own custom "connectors." MCP provides a universal "plug-and-play" architecture, allowing any AI (the Client) to safely use any technical resource (the Server).
 
-## 🎓 Learning Objectives
+## 🎓 Curriculum Path
 
-By the end of this module, you will:
-
-- ✅ Define the **Client-Server Architecture** of MCP.
-- ✅ Understand the three primitives: **Resources, Tools, and Prompts**.
-- ✅ Configure a local MCP server to grant an AI access to your filesystem.
-- ✅ Identify security risks and **Sandboxing** best practices.
-- ✅ Build a custom MCP server to automate DevOps workflows.
+1. **[Part 01: Architecture & Primitives](./Part-01-Architecture-and-Primitives/README.md)**: Understanding the core building blocks of AI connectivity.
+2. **[Part 02: Ecosystem & Servers](./Part-02-Ecosystem-and-Servers/README.md)**: Working with the filesystem, GitHub, and external search servers.
+3. **[Part 03: Building Custom Servers](./Part-03-Building-Custom-Servers/README.md)**: Creating your own tools using the MCP SDK (Node.js/Python).
+4. **[Part 04: Security & Best Practices](./Part-04-Security-and-Best-Practices/README.md)**: Hardening the AI's "hands" with sandboxing and governance.
 
 ---
 
-## 🏗️ The Three Primitives of MCP
+## 🏆 The "AI Engineer" Profile
 
-| Primitive | Purpose | Analogy |
-| :--- | :--- | :--- |
-| **Resources** | Static or dynamic data (Read-only) | A book in a library. |
-| **Tools** | Executable functions (Read/Write/Action) | A hammer or a calculator. |
-| **Prompts** | Pre-defined templates for the AI | A standardized order form. |
+By completing this track, you are evolving from a standard DevOps engineer to an **AI Systems Architect**. You will be able to build infrastructure that doesn't just "host" AI, but is "observable and controllable" by AI agents.
 
----
+### Key Skills You Will Master
 
-## 🛠️ The Local Lab: Filesystem Integration
-
-The most common use case for MCP is giving an AI agent (like the one you are talking to now) the ability to see and edit your code.
-
-```bash
-# Example: Starting an MCP Filesystem server
-npx @modelcontextprotocol/server-filesystem /path/to/my/project
-```
-
-*Once started, the AI doesn't just "guess" what's in your files; it uses the server to fetch the exact content.*
+- ✅ **Protocol Architecture**: Mastering JSON-RPC communication between LLMs and tools.
+- ✅ **Secure Tooling**: Providing AI with "hands" while maintaining zero-trust security.
+- ✅ **Data Grounding**: Preventing AI hallucinations by providing direct access to truth.
+- ✅ **Agentic Governance**: Building human-in-the-loop guardrails for automated systems.
 
 ---
 
-## 🏆 Real-World DevOps Story: The "I Forgot How This Works" Incident
+## 🚀 Professional Pattern: The "Grounding" Strategy
 
-**The Scenario**: A Senior DevOps engineer was on-call at 3 AM for a database system they hadn't touched in 12 months. The system was throwing a cryptic `Error 1402`.
-**The Crisis**: The manual was 200 pages long, and the engineer couldn't remember the exact SQL commands to check the healthy status of the replication lag.
-**The Fix**: The engineer used an IDE connected to an **MCP Database Server**. They simply told the AI: *"Analyze the replication lag and fix any stuck threads."*
-**The Discovery**: The AI used the MCP Tool to query the DB, identified a deadlocked transaction, and executed the `KILL` command immediately.
-**The Lesson**: **MCP turns AI into a co-pilot with hands.** It moves the model from "Passive Advisor" to "Active Operator."
+In the old world, we asked AI to "imagine" code based on a prompt. In the MCP world, we **ground** the AI in the facts of the repository.
 
----
+- **Old Prompt**: "Write a Python script to scan my logs." (AI guesses the log format).
+- **MCP Prompt**: "Read the last 100 lines of `app.log` and write a script to extract all 500 errors." (AI sees the actual logs via the Filesystem Server).
 
-## 🚀 Professional Pattern: The Read-Only Buffer
-
-Never give an AI "Full Administrative" access to your production database via MCP.
-
-**The Pro Standard**:
-
-1. Create a **Read-Only** database user specifically for the MCP Server.
-2. Require **Human-in-the-loop** confirmation for any "Tool" that performs a `DELETE` or `UPDATE` action.
-3. Audit all MCP logs to see exactly what queries the model is running.
+**Why this matters**: Grounding reduces hallucinations by nearly 90% in complex DevOps troubleshooting.
 
 ---
 
-## ❓ Interview Preparation (MCP Fundamentals)
+## 🏆 Real-World DevOps Story: The 3 AM AI On-Call
 
-1. **Q: Why is MCP better than just copy-pasting code into a chat window?**
-    *A: Scale and Context. An LLM has a limited 'Context Window.' You can't paste a 10,000-file repository. MCP allows the model to surgically 'fetch' only the files or data points it needs, when it needs them, reducing errors and saving token costs.*
+**The Scenario**: A company's database was failing due to a deadlock. The on-call engineer had the documentation but couldn't find the specific SQL queries needed to unlock the table.
+**The Fix**: The engineer used an MCP-enabled IDE. They gave the AI access to the DB server and the documentation. The AI "looked" at the real-time process list, cross-referenced it with the recovery docs, and proposed a surgical `KILL` command.
+**The Lesson**: **Speed is life.** The AI didn't just give advice; it acted as a co-pilot with direct visibility into the system, resolving the incident in 4 minutes instead of 40.
 
-2. **Q: Explain the security model of MCP.**
-    *A: MCP follows a 'Local-First' and 'Permission-Based' model. The AI (Client) can only see the Tools and Resources that you explicitly expose via the MCP Server. If you don't list a directory in the server config, the AI has no way of knowing it exists.*
+---
 
-3. **Q: What is a 'Transport' in MCP?**
-    *A: Transport is the underlying communication layer. Most local MCP setups use **stdio** (Standard Input/Output), while remote integrations might use **SSE** (Server-Sent Events) or WebSockets.*
+## ❓ Interview Preparation (MCP Hub)
 
-4. **Q: How does MCP solve the 'Hallucination' problem?**
-    *A: By providing 'Grounding.' Instead of the AI hallucinating what might be in your database or a file, it uses a Tool to see the real data. If the Tool returns an error, the AI knows the facts have changed.*
+1. **Q: How does MCP differ from traditional REST APIs?**
+   *A: MCP is a bi-directional protocol designed specifically for context. While a REST API is usually 'Request-Response' for a specific resource, MCP allows a model to discover and use multiple resources, tools, and prompts dynamically as needed to solve a goal.*
 
-5. **Q: Can one MCP Client connect to multiple MCP Servers?**
-    *A: Yes! A single AI agent (the Client) can simultaneously talk to a Filesystem Server, a GitHub Server, and a Google Search Server, combining data from all three to solve a single problem.*
+2. **Q: What is the biggest security risk when giving an AI access to a local filesystem?**
+   *A: 'Prompt Injection' leading to unauthorized file deletion. A malicious prompt could trick the AI into executing a `DELETE` command on sensitive system files. This is why MCP servers must be configured with specific directory scopes (Sandboxing).*
 
 ---
 
 ## 📝 Knowledge Check
 
-1. **In the MCP architecture, what is the 'Client'?**
-    - [ ] a) The Database
-    - [x] b) The AI application/interface (like VS Code or Claude Desktop)
-    - [ ] c) The JSON-RPC protocol
+1. **Which primitive is responsible for providing data to the AI?**
+   - [x] a) Resources
+   - [ ] b) Tools
+   - [ ] c) Prompts
 
-2. **Which primitive is used for actions that change data or perform tasks?**
-    - [ ] a) Resources
-    - [x] b) Tools
-    - [ ] c) Prompts
-
-3. **Which transport protocol is typically used for local MCP servers running in the terminal?**
-    - [ ] a) HTTP/3
-    - [x] b) stdio
-    - [ ] c) Bluetooth
-
-4. **True or False: An AI can access any file on your computer once you enable MCP.**
-    - [ ] True
-    - [x] False (It can only access what the MCP Server explicitly exposes)
-
-5. **What is 'Grounding' in the context of AI and MCP?**
-    - [x] a) Providing real-world data to the model to prevent hallucinations
-    - [ ] b) Cutting off the AI's internet access
-    - [ ] c) Encrypting the model's weights
+2. **What communication protocol does MCP use under the hood?**
+   - [ ] a) GraphQL
+   - [x] b) JSON-RPC
+   - [ ] c) SOAP
 
 ---
 
 ## 🔗 Next Steps
 
-The bridge is built. Now let's explore how these technologies intersect with decentralized infrastructure and nodes.
+The bridge is built. Now let's dive into the core primitives.
 
-Proceed to: **[Module 04: Blockchain DevOps Fundamentals](../04-Blockchain/README.md)** →
+1. Proceed to: **[Part 01: Architecture & Primitives](./Part-01-Architecture-and-Primitives/README.md)** →
+2. Return to: **[Phase 3 Hub](../README.md)** →

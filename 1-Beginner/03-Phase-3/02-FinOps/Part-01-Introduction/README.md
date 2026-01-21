@@ -1,4 +1,4 @@
-# 💰 Module 01: Introduction to FinOps
+# 💰 Part 01: Introduction to FinOps
 
 > **"In the data center, you paid for the box once. In the cloud, you pay for every second you forget the box is turned on. FinOps is the art of ensuring every cent spent in the cloud delivers a dollar of value."**
 
@@ -24,9 +24,18 @@ graph TD
 
 It is NOT just about saving money; it is about **making money** by optimizing the unit economics of the cloud.
 
+## 💼 Career Impact: The "Cloud Economist"
+
+As companies spend millions per month in the cloud, they no longer just need engineers who can "build"—they need engineers who can "rationalize."
+
+- **Salary Boost**: FinOps-certified practitioners often see a 15-20% salary premium.
+- **Strategic Influence**: You move from being a "cost center" to a "profit enabler," sitting in meetings with the CTO and CFO.
+- **Market Demand**: Every Fortune 500 company is currently hiring for FinOps roles to tackle cloud waste.
+
 ## 🎓 Learning Objectives
 
 By the end of this module, you will:
+
 - ✅ Define FinOps and its role in modern DevOps environments.
 - ✅ Understand the shift from **CapEx** (Fixed) to **OpEx** (Variable) spending.
 - ✅ Master the six core **Principles of FinOps**.
@@ -47,13 +56,14 @@ Traditional IT used **CapEx** (Capital Expenditure): You bought a server, and it
 | **Responsibility** | Procurement Team | **The Developer** (via code/CLI) |
 
 ---
+
 ## 🚀 The FinOps Lifecycle
 
 FinOps is not a one-time event; it is a continuous loop consisting of three phases:
 
-1.  **Inform**: Mapping spend to teams, tags, and projects. (Visibility)
-2.  **Optimize**: Finding "Low-Hanging Fruit" like unused disks or over-sized servers. (Action)
-3.  **Operate**: Automating policies so the "Inform" and "Optimize" steps happen without human intervention. (Governance)
+1. **Inform**: Mapping spend to teams, tags, and projects. (Visibility)
+2. **Optimize**: Finding "Low-Hanging Fruit" like unused disks or over-sized servers. (Action)
+3. **Operate**: Automating policies so the "Inform" and "Optimize" steps happen without human intervention. (Governance)
 
 ```mermaid
 stateDiagram-v2
@@ -80,6 +90,7 @@ stateDiagram-v2
 The foundation of FinOps is **Tagging**. If a resource isn't tagged, you don't know who to charge for it.
 
 **The Pro Standard**: Use an IAM Policy or AWS Service Control Policy (SCP) that **denies** the creation of any resource (EC2, S3, RDS) unless it includes mandatory tags:
+
 - `Project`: Which app is this?
 - `Owner`: Who is the human responsible?
 - `CostCenter`: Which budget pays for this?
@@ -137,4 +148,4 @@ The foundation of FinOps is **Tagging**. If a resource isn't tagged, you don't k
 
 You've learned the *why* and the *who*. Now let's dive into the *how*: understanding the actual bills from AWS, Azure, and GCP.
 
-Proceed to: **[Module 02: Cloud Billing Basics](../02-Cloud-Billing-Basics/Lesson 02-Cloud Billing Basics.md)** →
+Proceed to: **[Part 02: Cloud Billing Basics](../Part-02-Cloud-Billing-Basics/README.md)** →

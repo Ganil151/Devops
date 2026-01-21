@@ -1,4 +1,4 @@
-# 👁️ Module 03: Cost Visibility & Tagging
+# 👁️ Part 03: Cost Visibility & Tagging
 
 > **"You cannot manage what you cannot measure. Without tags, a cloud bill is just a list of random charges; with tags, it's a strategic map of your business operations."**
 
@@ -21,9 +21,18 @@ graph LR
 
 Cost visibility is the ability to map cloud spend back to the teams, products, and business units that generated it. This is primarily achieved through **Tagging**. In this module, we move from simply seeing the total bill to deconstructing it into "Attributable Spend." You will learn how to design a tagging schema that survives scale and how to enforce it using technical guardrails.
 
+## 💼 Career Impact: The "Cloud Auditor"
+
+Visibility is the foundation of trust between Engineering and Finance.
+
+- **Reporting Excellence**: You gain the ability to create boardroom-ready reports that explain the "Why" behind the "How Much."
+- **Governance Specialization**: Mastering enforcement via Policy-as-Code makes you an ideal candidate for Cloud Governance and Compliance teams.
+- **Influence**: When you can prove exactly where money is being wasted, your recommendations for architectural changes carry significantly more weight.
+
 ## 🎓 Learning Objectives
 
 By the end of this module, you will:
+
 - ✅ Design a **Professional Tagging Schema** for enterprise scale.
 - ✅ Master **Enforcement Strategies** (Policy-as-Code).
 - ✅ Differentiate between **Showback and Chargeback** models.
@@ -50,7 +59,8 @@ A "Good" tag is consistent, lowercase, and hyphenated. A "Bad" tag is inconsiste
 
 Don't ask developers to tag resources—**force them**. Senior DevOps engineers use "Policy as Code" or Terraform modules to ensure every resource has the required labels before it even reaches the cloud.
 
-**Example: Terraform Mandatory Tags**
+### Example: Terraform Mandatory Tags
+
 ```hcl
 resource "aws_instance" "app" {
   ami           = "ami-12345678"
@@ -69,7 +79,7 @@ resource "aws_instance" "app" {
 
 ## 🏆 Real-World DevOps Story: The Ghost in the Data Warehouse
 
-**The Scenario**: A large e-commerce company noticed their **BigQuery** (GCP) costs tripled in one month, jumping from $5,000 to $15,000. 
+**The Scenario**: A large e-commerce company noticed their **BigQuery** (GCP) costs tripled in one month, jumping from $5,000 to $15,000.
 **The Crisis**: Because they had poor tagging on their data datasets, they couldn't tell if the increase was due to more customers or a rogue script.
 **The Fix**: They implemented mandatory `project_id` and `user_id` labels on every query.
 **The Discovery**: They found a "Ghost" script—a forgotten analytics job from a former intern that was running every hour, scanning 50TB of raw logs to look for information that was no longer used by anyone.
@@ -146,4 +156,4 @@ graph TD
 
 Visibility is set. Now let's learn how to draw a line in the sand and ensure we don't cross it using **Budgets**.
 
-Proceed to: **[Module 04: Budgeting Basics](../04-Budgeting-Basics/Lesson 04-Budgeting Basics.md)** →
+Proceed to: **[Part 04: Budgeting Basics](../Part-04-Budgeting-Basics/README.md)** →
