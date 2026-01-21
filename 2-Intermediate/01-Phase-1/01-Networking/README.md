@@ -1,100 +1,47 @@
-# Intermediate Networking: Cloud VPCs & Architecture
+# 🌐 Intermediate Networking Track
 
-> **"Networking is the plumbing of modern infrastructure. Understanding how data flows through cloud networks is essential for every DevOps engineer."**
-
----
-
-## 📚 Module Organization
-
-This module is organized into **5 logical Parts** for structured learning:
-
-### [Part 1: Cloud Fundamentals](./Part-1-Cloud-Fundamentals/)
-Core VPC concepts and cloud networking foundations.
-
-**Modules:**
-- 01-VPC-Fundamentals
-- 02-Subnetting-and-CIDR
-- 03-Internet-and-NAT-Gateways
-- 04-Routing-and-Route-Tables
-
-### [Part 2: Network Security](./Part-2-Network-Security/)
-Security controls, firewalls, and access management.
-
-**Modules:**
-- 01-Security-Groups-and-NACLs
-- 02-VPN-Technologies
-- 03-Traditional-Network-Security
-
-### [Part 3: Connectivity Patterns](./Part-3-Connectivity-Patterns/)
-Inter-VPC connectivity and load balancing.
-
-**Modules:**
-- 01-VPC-Peering-and-Transit-Gateway
-- 02-Hybrid-Connectivity
-- 03-Load-Balancing-ALB-NLB
-- 04-Load-Balancing-Basics
-
-### [Part 4: High Availability](./Part-4-High-Availability/)
-HA, disaster recovery, and monitoring.
-
-**Modules:**
-- 01-High-Availability-Multi-Region
-- 02-Monitoring-and-Troubleshooting
-- 03-DNS-and-DHCP
-
-### [Part 5: Traditional Networking](./Part-5-Traditional-Networking/)
-Classical networking concepts (optional for cloud-focused learners).
-
-**Modules:**
-- 01-VLANs-and-Switching
-- 02-Advanced-Routing-Protocols
+Welcome to the **Intermediate Networking** module of the DevOps curriculum. This track is designed to take you from basic connectivity concepts to complex cloud architectures and advanced security patterns.
 
 ---
 
-## 🎯 Learning Path
+## 📋 Table of Contents
 
-### Recommended Order:
-1. **Start with Part 1** - Cloud Fundamentals (essential)
-2. **Move to Part 2** - Security patterns
-3. **Continue with Part 3** - Connectivity
-4. **Master Part 4** - HA and monitoring
-5. **Optional: Part 5** - Traditional concepts
+### 1. [Part 1: Fundamentals](./Part-1-Fundamentals/README.md)
+*The building blocks of networking.*
+- **Overview**: Basic networking concepts (IP, Subnetting, DNS, DHCP, Routing).
+- **Key Topics**: OSI & TCP/IP Models, IPv4 vs IPv6, Common Protocols.
+- **Examples**: Troubleshooting commands.
+- **Diagrams**: Network topologies.
 
-### Time Estimate:
-- **Part 1**: 8-10 hours
-- **Part 2**: 6-8 hours
-- **Part 3**: 8-10 hours
-- **Part 4**: 6-8 hours
-- **Part 5**: 4-6 hours (optional)
+### 2. [Part 2: Advanced Networking](./Part-2-Advanced-Networking/README.md)
+*Securing and scaling traffic.*
+- **Overview**: VLANs, Switching, Advanced Security, and Load Balancing.
+- **Key Topics**: Segmentation, Firewalls, ACLs, Layer 4/7 Balancing.
+- **Configuration Files**: Real-world templates.
+- **Scripts**: Automation of networking tasks.
 
-**Total**: ~32-42 hours for complete mastery
-
----
-
-## 🔗 Related Modules
-
-### Prerequisites:
-- [Beginner Networking](../../../1-Beginner/01-Phase-1/01-Networking/) - Basic concepts
-
-### Next Steps:
-- [Advanced Networking](../../../3-Advanced/01-Phase-1/01-Networking/) - Service mesh, SDN
-- [Linux Administration](../02-Linux/) - System networking
+### 3. [Part 3: Tools and Utilities](./Part-3-Tools-and-Utilities/README.md)
+*Managing and monitoring the stack.*
+- **Overview**: Essential tools for observability and cloud-native networking.
+- **Key Tools**: Wireshark, Nmap, TCPDump, AWS VPC, Azure VNet.
+- **Documentation**: Usage guides and best practices.
+- **Examples**: Real-world use cases.
 
 ---
 
-## 🏆 Certifications
+## 🚀 Learning Path
 
-This module prepares you for:
-- **AWS Certified Solutions Architect - Associate**
-- **Azure Network Engineer Associate**
-- **GCP Professional Cloud Architect**
+Networking is not just a prerequisite; it's a continuous practice. As you move through these parts, focus on:
 
----
-
-## 📺 Video Learning
-
-See [Youtube_Lessons.md](./Youtube_Lessons.md) for curated video tutorials.
+1. **Understanding the Theory**: Don't skip the OSI model; it's the "grammar" of networking.
+2. **Hands-on Labs**: Use the tools in Part 3 to verify the concepts in Parts 1 and 2.
+3. **Cloud Context**: Connect traditional networking knowledge to how it's implemented in AWS/Azure/GCP.
 
 ---
 
-**Ready to dive in?** Start with [Part 1: Cloud Fundamentals](./Part-1-Cloud-Fundamentals/)!
+## 🛠️ Log of Actions
+- ✅ **Consolidation**: Fully migrated all contents from `01-Networking-BACKUP-20260119_021128`.
+- ✅ **Reorganization**: Structured the directory into `Part-1-Fundamentals`, `Part-2-Advanced-Networking`, and `Part-3-Tools-and-Utilities`.
+- ✅ **Audit & Merge**: Identified and resolved duplicate folders (Network Security, Load Balancing).
+- ✅ **Verification**: Confirmed accessibility of all 16 modules.
+- ✅ **Cleanup**: Deleted the now-redundant backup directory.

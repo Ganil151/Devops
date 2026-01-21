@@ -1,6 +1,0 @@
-{
-  "timestamp": "2026-01-19T02:11:28.361951",
-  "source": "C:\\Users\\Ganil\\Documents\\Devops\\2-Intermediate\\01-Phase-1\\01-Networking",
-  "backup": "C:\\Users\\Ganil\\Documents\\Devops\\2-Intermediate\\01-Phase-1\\01-Networking-BACKUP-20260119_021128",
-  "restore_command": "rm -rf \"C:\\Users\\Ganil\\Documents\\Devops\\2-Intermediate\\01-Phase-1\\01-Networking\" && mv \"C:\\Users\\Ganil\\Documents\\Devops\\2-Intermediate\\01-Phase-1\\01-Networking-BACKUP-20260119_021128\" \"C:\\Users\\Ganil\\Documents\\Devops\\2-Intermediate\\01-Phase-1\\01-Networking\""
-}
