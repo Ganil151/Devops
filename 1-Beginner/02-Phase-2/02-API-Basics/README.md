@@ -1,125 +1,106 @@
 # 🌐 API Basics: The Nervous System of the Cloud
 
-> **"If code is the soul of software, APIs are its voice. Mastering how software talks to software is the foundation of the modern distributed world."**
+> **"If code is the soul of software, APIs are its voice. In a cloud-native world, your infrastructure is only as strong as the contracts that connect it."**
+
+## 📚 Overview
+
+Modern infrastructure is no longer a collection of isolated servers; it is a complex web of interconnected services. An **API (Application Programming Interface)** is the formal contract that allows these services to communicate, share data, and trigger actions across boundaries.
+
+For a DevOps engineer, APIs are everywhere:
+
+- **Automation**: Terraform and Ansible are essentially sophisticated API clients.
+- **Monitoring**: Metrics and logs are shipped and queried via APIs.
+- **Microservices**: Deeply understanding HTTP and REST is non-negotiable for debugging production traffic.
+
+---
+
+## 🏗️ High-Level Architecture
+
+How disparate systems bridge the gap using APIs.
 
 ```mermaid
-graph LR
-    A[Client App] -- "HTTP Request (JSON/XML)" --> B{API Gateway}
-    B -- "Routing / Auth" --> C[Microservice]
-    C -- "Query" --> D[(Database)]
-    D -- "Data" --> C
-    C -- "HTTP Response (Status + Body)" --> A
-    
-    style A fill:#00d2ff,stroke:#333
-    style B fill:#f9d423,stroke:#333
-    style C fill:#00d2ff,stroke:#333
-    style D fill:#ff4b2b,stroke:#333,color:#fff
+graph TD
+    subgraph Client_Tier [Client Tier]
+        CLI[DevOps CLI Tool]
+        Web[Web Dashboard]
+        App[Mobile App]
+    end
+
+    subgraph API_Layer [API Gateway / Management]
+        Auth{Auth & Rate Limit}
+        Proxy[Request Proxy]
+    end
+
+    subgraph Service_Tier [Backend Services]
+        Compute[Compute Service]
+        Storage[Storage Service]
+        Users[User Directory]
+    end
+
+    subgraph Data_Tier [Persistence]
+        DB[(Database)]
+    end
+
+    CLI -- REST/JSON --> Auth
+    Web -- REST/JSON --> Auth
+    App -- REST/JSON --> Auth
+
+    Auth --> Proxy
+    Proxy --> Compute
+    Proxy --> Storage
+    Proxy --> Users
+
+    Compute --> DB
+    Users --> DB
+
+    style Auth fill:#f9d423,stroke:#333
+    style DB fill:#ff4b2b,stroke:#333,color:#fff
+    style API_Layer fill:#f0f0f0,stroke:#666,stroke-dasharray: 5 5
 ```
 
-## 📚 Curriculum Overview
-In the age of Cloud Native and Microservices, no piece of software lives in isolation. An **API (Application Programming Interface)** is the contract that allows disparate systems to exchange data reliably. This module transitions you from building "isolated code" to building "connected systems."
+---
 
-We will explore the mechanics of the web, the grammar of HTTP, and the architectural constraints of REST, preparing you to debug, document, and integrate with any modern cloud service.
+## 🎯 Learning Objectives
 
-## 🎓 Learning Objectives
+By the end of this module, you will:
 
-### 🎯 Learning Outcomes
-
-- ✅ Master the **HTTP Protocol** (Methods, Headers, and Body).
-- ✅ Understand the **6 REST Constraints** that define modern web architecture.
-- ✅ Decode the **Status Code Taxonomy** (1xx - 5xx).
-- ✅ Implement **Secure Auth Patterns** (API Keys, JWT, OAuth2).
-- ✅ Visualize the **Client-Server Handshake** in high-stakes environments.
-- ✅ Use **cURL and Postman** for surgical API debugging.
+- ✅ **Master** the HTTP/HTTPS protocol anatomy (Methods, Headers, Body).
+- ✅ **Design** services following strict RESTful architectural constraints.
+- ✅ **Debug** production failures using Status Code taxonomy (1xx - 5xx).
+- ✅ **Secure** machine-to-machine communication using JWT, OAuth2, and API Keys.
+- ✅ **Implement** DevOps-native API patterns like Webhooks and Idempotency.
 
 ---
 
-## 🏗️ Curriculum Structure
 
-| # | Module | Topic | Description |
-| :--- | :--- | :--- | :--- |
-| 01 | **HTTP Protocol** | The Grammar of the Web | Methods (GET/POST), Headers, and Message Anatomy. |
-| 02 | **REST Architecture** | The Design Language | Resources, Endpoints, and Statelessness. |
-| 03 | **Status & Error Handling** | The Feedback Loop | Communicating success and failure through codes. |
-| 04 | **API Security** | The Protective Layer | Authentication vs. Authorization and Token management. |
-| 05 | **DevOps Integration** | APIs in the Wild | Webhooks, Rate Limiting, and Idempotency. |
+## 🗺️ Curriculum Structure
 
----
-
-## 🚀 Why APIs for DevOps?
-
-### 1. The Proliferation of Microservices
-
-Modern applications aren't one big "block" of code; they are hundreds of small services talking over APIs. If an API breaks, the infrastructure dies.
-
-### 2. Infrastructure as Code (IaC)
-
-Tools like **Terraform** and **Ansible** are essentially giant API clients. They talk to the AWS or Azure APIs to spin up servers. Understanding APIs makes you a better automation engineer.
-
-### 3. Monitoring & Observability
-
-Most monitoring tools (Datadog, Prometheus) ingest data via APIs. As a DevOps engineer, you'll build "Plumbing" that pipes data through these interfaces.
+| Part | Topic | Description |
+| :--- | :--- | :--- |
+| **[🟢 Part 1](./Part-01-Web-Foundations/)** | **Web Foundations** | The Grammar of the Internet. HTTP Protocol, REST constraints, and Status Codes. |
+| **[🟡 Part 2](./Part-02-API-Security-and-Auth/01-Authentication-and-Security/)** | **Security & Auth** | The Protective Layer. Authentication vs. Authorization, Tokens, and OAuth2. |
+| **[🔴 Part 3](./Part-03-Advanced-API-Workflows/01-DevOps-Integration/)** | **DevOps Workflows** | APIs in Production. Webhooks, Rate Limiting, and Resilient Retries. |
 
 ---
 
 ## 🏆 Real-World DevOps Story: The Idempotency Incident
 
 **The Scenario**: An automated billing script was retrying a "Charge Customer" API call because of a network timeout. 
+
 **The Crisis**: Because the API was not **Idempotent**, every retry created a new charge. One customer was billed 15 times for the same item because the script didn't understand the API's failure logic.
-**The Fix**: The team implemented **Idempotency Keys** (unqiue headers). Now, even if the script retries 100 times, the API recognizes the key and only processes the charge once.
+
+**The Fix**: The team implemented **Idempotency Keys** (unique headers). Now, even if the script retries 100 times, the API recognizes the key and only processes the charge once.
+
 **The Lesson**: In DevOps, knowing *how* an API behaves during failure is more important than knowing how it behaves during success.
 
 ---
 
-## ❓ Interview Preparation (Core API Concepts)
+## 🎓 Career Readiness
 
-1. **Q: What is the difference between an Endpoint and a Resource?**
-   *A: A Resource is the actual data object (e.g., a "User"). An Endpoint is the URL used to access or manipulate that resource (e.g., `/api/v1/users/123`).*
+**Interview Question:** "Explain the difference between PUT and PATCH, and why it matters for API design."
 
-2. **Q: What does it mean for an API to be "Stateless"?**
-   *A: It means the server does not store any "client state" between requests. Every single request must contain all the information necessary to fulfill it (e.g., the authentication token and the data).*
-
-3. **Q: When would you use PUT vs. PATCH?**
-   *A: PUT is for a full replacement of a resource. If you miss a field, it might be deleted. PATCH is for partial updates—only the fields you send are changed.*
-
-4. **Q: What is a "Payload" in an API context?**
-   *A: The payload is the actual data sent in the body of an HTTP request or response, usually formatted as JSON or XML.*
-
-5. **Q: What is the purpose of the 'Accept' header?**
-   *A: It tells the server what format the client is capable of parsing (e.g., `application/json` or `text/html`).*
+**Strong Answer:** "PUT is used for full resource replacement. If you send a PUT request to update a user profile but omit the 'email' field, a strict REST API will set that email to null or delete it. PATCH, however, is for partial updates. It only modifies the specific fields provided in the payload. In a DevOps context, PATCH is often safer for updating configuration as it reduces the risk of accidentally overwriting unrelated settings."
 
 ---
 
-## 📝 Preliminary Knowledge Check
-
-1. **Which HTTP method is considered 'Safe' (it only reads data, never changes it)?**
-   - [ ] a) POST
-   - [x] b) GET
-   - [ ] c) DELETE
-
-2. **What status code range represents "Client Side Errors"?**
-   - [ ] a) 2xx
-   - [ ] b) 5xx
-   - [x] c) 4xx
-
-3. **Which format is the modern standard for API data exchange?**
-   - [ ] a) CSV
-   - [x] b) JSON
-   - [ ] c) TXT
-
-4. **True or False: An API Key is a secure way to handle user-specific login in a browser.**
-   - [ ] a) True
-   - [x] b) False (User-specific login should use tokens like JWT/OAuth2; API keys are for app-to-app identity)
-
-5. **What does CRUD stand for?**
-   - [x] a) Create, Read, Update, Delete
-   - [ ] b) Control, Read, Use, Deploy
-   - [ ] c) Call, Run, Update, Disconnect
-
----
-
-## 🔗 Next Steps
-
-Ready to dive into the grammar of the internet?
-
-Proceed to: **[01-HTTP-Protocol](./01-HTTP-Protocol/README.md)** →
+**Next Step**: Start with **[Part 1: Web Foundations](./Part-01-Web-Foundations/01-HTTP-Protocol/)** 🚀

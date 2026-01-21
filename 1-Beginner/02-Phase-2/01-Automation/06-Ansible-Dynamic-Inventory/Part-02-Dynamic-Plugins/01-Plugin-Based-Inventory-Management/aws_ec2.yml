@@ -1,0 +1,27 @@
+plugin: aws_ec2
+regions:
+  - us-east-1
+filters:
+  # Only pick up instances that are actually alive
+  instance-state-name: running
+hostnames:
+  # Use the private IP for SSH (Best for internal networks)
+  - private-ip-address
+
+keyed_groups:
+  # Create groups like "tag_Role_Web", "tag_Role_DB"
+  - prefix: tag
+    key: tags
+
+  # Create groups based on Region: "aws_region_us_east_1"
+  - prefix: aws_region
+    key: placement.region
+
+  # Create groups combining OS and Arch: "os_linux_x86_64"
+  # This requires jinja2 parsing inside the key
+  - prefix: os
+    key: 'image.platform_details | default("unknown")'
+
+compose:
+  # Set the ansible_user dynamically based on the OS tag
+  ansible_user: "'ubuntu' if tags.OS == 'Ubuntu' else 'ec2-user'"
