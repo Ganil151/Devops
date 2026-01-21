@@ -17,28 +17,28 @@ In the early days of Unix, the shell relied heavily on the external `test` comma
 By the end of this module, you will:
 
 1. ✅ **Master the Triple-Option `if`/`elif`/`else` anatomy.**
-   - **Why**: To handle complex decision trees (e.g., success, partial failure, critical failure).
-   - **Use Case**: A backup script that retries connectivity before giving up.
+    - **Why**: To handle complex decision trees (e.g., success, partial failure, critical failure).
+    - **Use Case**: A backup script that retries connectivity before giving up.
 
 2. ✅ **Understand the Comparison Partition: Strings (`==`) vs Integers (`-eq`).**
-   - **Why**: Providing the wrong type to an operator is a frequent source of logic bugs.
-   - **Use Case**: Distinguishing between version "1.10" (string) and the number 10 (integer).
+    - **Why**: Providing the wrong type to an operator is a frequent source of logic bugs.
+    - **Use Case**: Distinguishing between version "1.10" (string) and the number 10 (integer).
 
 3. ✅ **Leverage File Test Operators (`-f`, `-d`, `-x`, `-s`) for system auditing.**
-   - **Why**: Scripts rarely operate in a vacuum; they interact with the filesystem.
-   - **Use Case**: Ensuring a config file exists `-f` and is readable `-r` before parsing.
+    - **Why**: Scripts rarely operate in a vacuum; they interact with the filesystem.
+    - **Use Case**: Ensuring a config file exists `-f` and is readable `-r` before parsing.
 
 4. ✅ **Adopt the Superior `[[ ]]` Syntax for safer, modern Bash code.**
-   - **Why**: It prevents critical "word-splitting" errors that crash production scripts.
-   - **Use Case**: Handling filenames with spaces, like `"User Data.txt"`.
+    - **Why**: It prevents critical "word-splitting" errors that crash production scripts.
+    - **Use Case**: Handling filenames with spaces, like `"User Data.txt"`.
 
 5. ✅ **Implement Arithmetic `(( ))` Evaluation for mathematical logic.**
-   - **Why**: Native integer handling is faster and more readable than external calls to `expr`.
-   - **Use Case**: Calculating retry counters or checking disk usage percentages.
+    - **Why**: Native integer handling is faster and more readable than external calls to `expr`.
+    - **Use Case**: Calculating retry counters or checking disk usage percentages.
 
 6. ✅ **Master Case Switch Patterns for complex flags and menu handling.**
-   - **Why**: `if/elif` chains become unreadable after 3+ conditions. `case` scales cleanly.
-   - **Use Case**: Processing command-line arguments (`--install`, `--remove`, `--update`).
+    - **Why**: `if/elif` chains become unreadable after 3+ conditions. `case` scales cleanly.
+    - **Use Case**: Processing command-line arguments (`--install`, `--remove`, `--update`).
 
 ---
 

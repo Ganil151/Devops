@@ -52,13 +52,14 @@ mindmap
 
 ## 🗺️ Curriculum Structure
 
-### 🟢 Level 1: Beginner (17 Topics) - **55-70 hours**
+### 🟢 Level 1: Beginner (18 Topics) - **60-75 hours**
 
 Master Go fundamentals and build your first CLI tools.
 
 | # | Topic | Description | Key Learning | Hours |
-|---|-------|-------------|--------------|-------|
-| 01 | **Go Fundamentals** | Syntax, packages, go modules | First Go program | 4-5h |
+| :--- | :--- | :--- | :--- | :--- |
+| 00 | [**Go Foundations**](./00-Foundations/README.md) | What is Go?, history, install, config | Path to Devops | 4h |
+| 01 | [**Go Fundamentals**](./01-Go-Fundamentals/README.md) | Syntax, packages, go modules | First Go program | 4-5h |
 | 02 | **Variables and Types** | Types, constants, iota | Type system | 3-4h |
 | 03 | **Control Flow** | if/else, switch, loops | Go idioms | 3-4h |
 | 04 | **Functions** | Functions, closures, defer | Function patterns | 4-5h |
@@ -190,11 +191,11 @@ Build enterprise-grade cloud-native automation platforms.
 
 | Metric | Value |
 |--------|-------|
-| **Total Topics** | 60 |
-| **Beginner Topics** | 17 |
+| **Total Topics** | 61 |
+| **Beginner Topics** | 18 |
 | **Intermediate Topics** | 18 |
 | **Advanced Topics** | 25 |
-| **Total Hours** | 290-360 |
+| **Total Hours** | 295-365 |
 | **Full-time Weeks** | 7-9 |
 | **Part-time Weeks** | 15-19 |
 
