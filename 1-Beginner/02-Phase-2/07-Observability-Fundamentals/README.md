@@ -1,10 +1,10 @@
 # 🔭 Observability Fundamentals (Beginner)
 
-> **"If it's not monitored, it doesn't exist."**
+> **"If it's not monitored, it doesn't exist. If it's not observable, it cannot be debugged."**
 
 ## 📚 Overview
 
-Observability is the ability to measure the internal states of a system by examining its outputs. In this module, we move beyond simple "is it running?" checks and into understanding system health through data.
+Observability is the ability to measure the internal states of a system by examining its outputs. In this module, we move beyond simple "is it running?" checks and into understanding system health through data. We explore the **MELT** framework and hands-on tools for manual diagnostics.
 
 ## 🎯 Learning Objectives
 
@@ -13,17 +13,14 @@ Observability is the ability to measure the internal states of a system by exami
 - ✅ Perform manual system health checks using simple terminal tools.
 - ✅ Understand the importance of structured logging.
 
-## 🗺️ Module Structure
+---
 
-1.  **[🟢 01-MELT-Introduction](./01-MELT-Introduction/)**
-    - Metrics: The numbers (CPU, RAM).
-    - Events: The occurrences (Deployments, Errors).
-    - Logs: The stories (Text strings, JSON).
-    - Traces: The journeys (Request paths).
-2.  **[🟢 02-Manual-Health-Checks](./02-Manual-Health-Checks/)**
-    - Using `curl` for HTTP status checks.
-    - Monitoring system resources with `top` and `df`.
-    - Basic log tailing and grep.
+## 🗺️ Curriculum Structure
+
+| Part | Topic | Description |
+| :--- | :--- | :--- |
+| **[🟢 Part 1](./Part-01-The-Signals/)** | **The Signals** | Understanding Concepts: Metrics, Logs, Traces. |
+| **[🟡 Part 2](./Part-02-Active-Monitoring/)** | **Active Ops** | Hands-on Health Checks and Diagnostics. |
 
 ---
 
@@ -43,7 +40,9 @@ graph LR
 ```
 
 ## 📋 Professional Pattern: The "Health Endpoint"
+
 Always implement a `/health` or `/ready` endpoint in your services. This allows load balancers and container orchestrators to know if your app is alive without needing complex probes.
 
 ---
-**Next Step**: Start with [MELT Introduction](./01-MELT-Introduction/) 🚀
+
+**Next Step**: Start with **[Part 1: The Signals](./Part-01-The-Signals/README.md)** 🚀

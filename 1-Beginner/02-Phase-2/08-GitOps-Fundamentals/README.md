@@ -1,4 +1,4 @@
-# 📈 GitOps Fundamentals (Beginner)
+# 📉 GitOps Fundamentals (Beginner)
 
 > **"Your Git repository is the single source of truth for your desired infrastructure state."**
 
@@ -13,15 +13,14 @@ GitOps is an operational framework that takes DevOps best practices used for app
 - ✅ Learn the difference between **Push-based** and **Pull-based** deployments.
 - ✅ Understand how "Drift" is detected and remediated.
 
-## 🗺️ Module Structure
+---
 
-1.  **[🟢 01-Git-Source-of-Truth](./01-Git-Source-of-Truth/)**
-    - Declarative vs. Imperative configurations.
-    - Version controlling your YAMLs.
-2.  **[🟢 02-Push-vs-Pull-Basics](./02-Push-vs-Pull-Basics/)**
-    - The "Push" model (Jenkins, GitHub Actions).
-    - The "Pull" model (ArgoCD, FluxCD).
-    - Why Pull-based is more secure.
+## 🗺️ Curriculum Structure
+
+| Part | Topic | Description |
+| :--- | :--- | :--- |
+| **[🟢 Part 1](./Part-01-The-Core-Philosophy/)** | **Philosophy** | Declarative configuration and Git principles. |
+| **[🟡 Part 2](./Part-02-Architecture-Models/)** | **Architecture** | Push vs. Pull models and security implications. |
 
 ---
 
@@ -45,7 +44,9 @@ graph TD
 ```
 
 ## 📋 Professional Pattern: Declarative Everything
+
 Never use `kubectl edit` or `ansible-playbook` manually on production nodes. If you want to change the system, change the code in Git, and let the system reconcile itself.
 
 ---
-**Next Step**: Start with [Git Source of Truth](./01-Git-Source-of-Truth/) 🚀
+
+**Next Step**: Start with **[Part 1: The Core Philosophy](./Part-01-The-Core-Philosophy/README.md)** 🚀

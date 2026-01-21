@@ -42,15 +42,13 @@ By the end of this curriculum, you will:
 
 ---
 
-## 🏗️ Curriculum Structure
+## 🗺️ Curriculum Structure
 
-| # | Module | Topic | Description |
-| :--- | :--- | :--- | :--- |
-| 01 | **[CI/CD Foundations](./01-CI-CD-Foundations/)** | The Philosophy | Core concepts, terminologies, and the "Pipeline" mindset. |
-| 02 | **[GitHub Actions Basics](./02-GitHub-Actions-Basics/)** | The Engine | YAML syntax, Events, Runners, and Actions. |
-| 03 | **[Pipeline Components](./03-Pipeline-Components/)** | The Building Blocks | Jobs, Steps, Matrix builds, and Environment Variables. |
-| 04 | **[Quality & Security Gates](./04-Security-and-Quality-Gates/)** | Providing Confidence | Unit testing, Linting, and Dependency Scanning. |
-| 05 | **[Continuous Deployment](./05-Continuous-Deployment/)** | Reaching the User | Automated deployments, Rollbacks, and Artifact storage. |
+| Part | Topic | Description |
+| :--- | :--- | :--- |
+| **[🟢 Part 1](./Part-01-Principles-and-Fundamentals/)** | **Foundations** | The Philosophy. Core concepts, terminologies, and the "Pipeline" mindset. |
+| **[🟡 Part 2](./Part-02-GitHub-Actions-Core/)** | **Implementation** | The Engine. YAML syntax, Events, Runners, and Components. |
+| **[🔴 Part 3](./Part-03-Advanced-Workflows/)** | **Advanced Ops** | Reaching Production. Quality Gates, Security Scans, and CD. |
 
 ---
 
@@ -73,8 +71,11 @@ Automated pipelines act as a safety net. If a deployment fails, the pipeline can
 ## 🏆 Real-World DevOps Story: The 4:55 PM Friday Deployment
 
 **The Scenario**: In 2012, a major financial firm tried to deploy new software manually at 5:00 PM on a Friday. A human engineer made a typo in a configuration path.
+
 **The Crisis**: Within 45 minutes, the company lost **$440 million** as their automated trading systems went haywire. Because there was no automated CI/CD pipeline, it took them hours to manually find the error and revert it.
+
 **The Fix**: Modern companies now use **Immutable Pipelines**. Every change is tested in a replica environment automatically. If the "Smoke Tests" fail, the code is blocked from reaching production.
+
 **The Lesson**: Manual deployments are a massive business risk. **CI/CD is your insurance policy.**
 
 ---
@@ -130,4 +131,4 @@ Automated pipelines act as a safety net. If a deployment fails, the pipeline can
 
 Ready to automate the world?
 
-Proceed to: **[01-CI/CD Foundations](./01-CI-CD-Foundations/README.md)** →
+Proceed to: **[Part 1: Principles & Fundamentals](./Part-01-Principles-and-Fundamentals/README.md)** 🚀

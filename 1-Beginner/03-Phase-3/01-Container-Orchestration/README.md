@@ -1,28 +1,25 @@
-# 🎡 Container Orchestration: Scaling the Modern Stack
+# 🐳 Container Orchestration: Scaling the Modern Stack
 
 > **"Containerization is about packing the boxes. Orchestration is about managing the warehouse, the trucks, and the global delivery schedule."**
 
 ```mermaid
 graph TD
-    User[Developer] -->|Build/Push| Registry[Image Registry]
-    Registry -->|Pull| Orchestrator[Orchestrator: K8s/Compose]
+    User[Develop Code] -->|docker build| Image[Docker Image]
+    Image -->|docker push| Registry[Image Registry]
     
-    subgraph Cluster
-    Orchestrator -->|Manage| Node1[Node A]
-    Orchestrator -->|Manage| Node2[Node B]
-    Orchestrator -->|Manage| Node3[Node C]
-    
-    subgraph Nodes
-    Node1 -->|Run| P1[Container]
-    Node1 -->|Run| P2[Container]
-    Node2 -->|Run| P3[Container]
-    Node3 -->|Run| P4[Container]
-    end
+    subgraph Cluster[The Production Cluster]
+        Orchestrator[Orchestrator: K8s/Compose] -->|Self-Healing| P1[Container A]
+        Orchestrator -->|Auto-Scaling| P2[Container B]
+        Orchestrator -->|Zero-Downtime| P3[Container C]
     end
     
-    style Orchestrator fill:#00d2ff,stroke:#333
-    style Cluster fill:#f9f9f9,stroke:#333
+    Registry -->|docker pull| Orchestrator
+    
+    style Cluster fill:#f8fafc,stroke:#333,stroke-width:2px
+    style Orchestrator fill:#00d2ff,stroke:#333,stroke-width:2px
     style Registry fill:#f9d423,stroke:#333
+    style Image fill:#00b894,color:#fff
+    style User fill:#a29bfe,color:#fff
 ```
 
 ## 📚 Overview
@@ -31,7 +28,7 @@ In Phase 1 and 2, we learned how to write code and automate scripts. In Phase 3,
 
 While **Docker** provides the engine to run a single container, orchestration tools like **Docker Compose** (for multi-container local apps) and **Kubernetes** (for production-grade clusters) handle the "Hard Parts": healing crashed containers, auto-scaling during traffic spikes, and managing zero-downtime updates.
 
-## 🎓 Learning Objectives
+## 🎯 Learning Objectives
 
 - ✅ Understand the shift from **Virtual Machines** to **Containers**.
 - ✅ Master **Docker Foundations** (Images, Layers, and Daemons).
@@ -40,17 +37,25 @@ While **Docker** provides the engine to run a single container, orchestration to
 - ✅ Implement **Persistence** and **Networking** in containerized environments.
 - ✅ Introduction to **Kubernetes** architecture (Pods, Nodes, and Control Planes).
 
+## 🛠️ The DevOps Toolbox
+
+| Tool | Role | Why we use it |
+| :--- | :--- | :--- |
+| **Docker Engine** | Runtime | To package and run containers on a single host. |
+| **Docker Compose** | Orchestration | To manage multi-container applications (YAML based). |
+| **Trivy** | Security | To scan images for vulnerabilities before deployment. |
+| **Nginx** | Reverse Proxy | To route external traffic into our container networks. |
+| **Alpine Linux** | Base OS | To keep our images tiny, fast, and secure. |
+
 ---
 
 ## 🏗️ Curriculum Structure
 
-| # | module | Topic | Description |
-| :--- | :--- | :--- | :--- |
-| 01 | **[Docker Foundations](./Docker/01-Beginner/)** | The Engine | Images, Containers, and the Dockerfile. |
-| 02 | **[Multi-Container Apps](./Docker/04-Docker-Compose/)** | The Orchestra | Managing microservices with Docker Compose. |
-| 03 | **[Intermediate Patterns](./Docker/02-Intermediate/)** | The Network | Advanced Networking, Volumes, and Multi-Stage builds. |
-| 04 | **[Production Security](./Docker/03-Advanced/)** | The Fortress | Securing images, scanning, and resource limits. |
-| 05 | **[Kubernetes Intro](./README.md)** | The Conductor | (Coming Soon) The industry standard for cluster orchestration. |
+| Part | Topic | Description |
+| :--- | :--- | :--- |
+| **[🟢 Part 1](./Part-01-Docker-Fundamentals/)** | **The Engine** | Images, Containers, and the Dockerfile. |
+| **[🟡 Part 2](./Part-02-Orchestration-and-Architecture/)** | **Orchestration** | Networking, Storage, and Docker Compose. |
+| **[🔴 Part 3](./Part-03-Advanced-Ops-and-Projects/)** | **Production** | Security, Optimization, and Real-world Projects. |
 
 ---
 
@@ -71,7 +76,7 @@ In the container world, containers are **"Cattle"**.
 ## 💡 Stuck?
 
 - Review the [Master README](./README.md) for concepts.
-- Check the [Docker Documentation](./Docker/README.md) for more examples.
+- Check the **[Interview Prep](./INTERVIEW_PREP.md)** for deep dives.
 - Use `docker system prune` to clean up your workspace between challenges.
 
 ---
@@ -107,19 +112,16 @@ In the container world, containers are **"Cattle"**.
 ## 📝 Knowledge Check
 
 1. **What is the name of the file used to define multi-container applications?**
-
    - [ ] a) Dockerfile
    - [x] b) docker-compose.yml
    - [ ] c) config.json
 
 2. **Which command is used to see the logs of a running container?**
-
    - [x] a) `docker logs`
    - [ ] b) `docker cat`
    - [ ] c) `docker tail`
 
 3. **In the "Cattle vs. Pets" model, containers are considered...**
-
    - [ ] a) Pets
    - [x] b) Cattle
    - [ ] c) Neither
@@ -131,4 +133,4 @@ In the container world, containers are **"Cattle"**.
 The warehouse is open. Let's start packing the boxes.
 
 1. Proceed to: **[CHALLENGES.md](./CHALLENGES.md)** →
-2. Start the first module: **[Docker Foundations](./Docker/01-Beginner/01-Introduction/README.md)** →
+2. Start the first module: **[Docker Foundations](./Part-01-Docker-Fundamentals/README.md)** →

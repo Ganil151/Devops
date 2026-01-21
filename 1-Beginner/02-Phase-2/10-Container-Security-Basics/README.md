@@ -13,14 +13,14 @@ Container security involves protecting the containerized applications from the b
 - ✅ Perform basic vulnerability scans on local images.
 - ✅ Learn the importance of "Small & Secure" base images (Alpine, Distroless).
 
-## 🗺️ Module Structure
+---
 
-1.  **[🟢 01-Image-Scanning-Fundamentals](./01-Image-Scanning-Fundamentals/)**
-    - What is a CVE?
-    - How scanners work.
-2.  **[🟢 02-Manual-Docker-Audit](./02-Manual-Docker-Audit/)**
-    - Auditing Dockerfiles for security anti-patterns.
-    - Using `docker scan` (Snyk) or manual inspection.
+## 🗺️ Curriculum Structure
+
+| Part | Topic | Description |
+| :--- | :--- | :--- |
+| **[🟢 Part 1](./Part-01-Vulnerability-Detection/)** | **Scanning** | CVEs and image scanning. |
+| **[🟡 Part 2](./Part-02-Configuration-Security/)** | **Audit** | Dockerfile security and anti-patterns. |
 
 ---
 
@@ -40,7 +40,9 @@ graph LR
 ```
 
 ## 📋 Professional Pattern: Principle of Least Privilege
+
 Always specify a non-root user in your `Dockerfile`. Running as root inside a container makes it trivial for an attacker to escalate privileges to the host system if the container is compromised.
 
 ---
-**Next Step**: Start with [Image Scanning Fundamentals](./01-Image-Scanning-Fundamentals/) 🚀
+
+**Next Step**: Start with **[Part 1: Vulnerability Detection](./Part-01-Vulnerability-Detection/README.md)** 🚀

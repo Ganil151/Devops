@@ -42,22 +42,20 @@ By the end of this curriculum, you will:
 
 ---
 
-## 🏗️ Curriculum Structure
+## 🗺️ Curriculum Structure
 
-| # | Module | Topic | Description |
-| :--- | :--- | :--- | :--- |
-| 01 | **[Foundations & Mental Models](./01-Foundations-and-Mental-Models/)** | The AI Mindset | How LLMs work and the "System Prompt" philosophy. |
-| 02 | **[The DevOps Prompt Toolkit](./02-Prompt-Toolkit/)** | Professional Frameworks | Structure, Persona, and Zero-shot vs. Few-shot prompting. |
-| 03 | **[Automating Code & IaC](./03-Automating-Code-and-IaC/)** | The Forge | Generating Bash, Python, YAML, and HCL with precision. |
-| 04 | **[Troubleshooting & Debugging](./04-Debugging-with-AI/)** | The Diagnostic | Analyzing stack traces, logs, and fixing "Ghost" bugs. |
-| 05 | **[Security & Ethics](./05-Security-and-Ethics/)** | The Guardrails | Token limits, data privacy, and avoiding "AI Hallucinations." |
-| App | **[Prompt Templates](./examples/)** | The Library | A collection of professional DevOps system prompts. |
+| Part | Topic | Description |
+| :--- | :--- | :--- |
+| **[🟢 Part 1](./Part-01-AI-Fundamentals/)** | **The AI Mindset** | How LLMs work, Mental Models, and the Professional Prompt Toolkit. |
+| **[🟡 Part 2](./Part-02-DevOps-Automation/)** | **DevOps Workflows** | Generating Code, IaC, and Troubleshooting with AI. |
+| **[🔴 Part 3](./Part-03-Governance-and-Ethics/)** | **Best Practices** | Security, Ethics, and the Limits of AI. |
 
 ---
 
 ## 🚀 The "Force Multiplier" Effect
 
 ### 1. Speed to Implementation
+
 What used to take 2 hours of searching StackOverflow now takes 2 minutes of prompt-refinement. AI handles the "Boilerplate" while you handle the "Architecture."
 
 ### 2. Crossing the Language Barrier
@@ -73,8 +71,11 @@ Fed a 100-line Linux kernel log or an Nginx error trace? AI can spot the pattern
 ## 🏆 Real-World DevOps Story: The 3:00 AM Kubernetes Crisis
 
 **The Scenario**: A Senior SRE was paged for a production outage. A Kubernetes cluster was stuck in a "CrashLoopBackOff," and the logs showed obscure networking errors that didn't match any known documentation.
+
 **The Discovery**: The SRE copied the last 50 lines of the log and fed them to an LLM with the prompt: *"You are a Principal K8s Networking Expert. Analyze these logs and identify the root cause involving Calico CNI."*
+
 **The Fix**: The AI immediately spotted an MTU mismatch between the cloud provider and the CNI overlay—a configuration error that was hidden deep in the YAML. It even suggested the exact `kubectl patch` command to fix it.
+
 **The Lesson**: AI isn't just for writing code; it's a **Junior-to-Mid level pair programmer** that never sleeps and has read every manual. Use it to shorten your "Mean Time to Recovery" (MTTR).
 
 ---
@@ -102,4 +103,4 @@ Fed a 100-line Linux kernel log or an Nginx error trace? AI can spot the pattern
 
 The tools are ready. Now let's master the language.
 
-Proceed to: **[01-Foundations & Mental Models](./01-Foundations-and-Mental-Models/README.md)** →
+Proceed to: **[Part 1: The AI Mindset](./Part-01-AI-Fundamentals/README.md)** 🚀

@@ -13,14 +13,14 @@ Compliance as Code (CaC) is the automation of auditing and managing regulatory r
 - ✅ Perform manual security audits using checklists.
 - ✅ Understand the concept of "Policy as Code".
 
-## 🗺️ Module Structure
+---
 
-1. **[🟢 01-Introduction-to-Policy](./01-Introduction-to-Policy/)**
-   - What is Policy?
-   - Declarative vs. Imperative security.
-2. **[🟢 02-Manual-Security-Checklists](./02-Manual-Security-Checklists/)**
-   - CIS Benchmarks overview.
-   - Creating a basic security audit template.
+## 🗺️ Curriculum Structure
+
+| Part | Topic | Description |
+| :--- | :--- | :--- |
+| **[🟢 Part 1](./Part-01-Policy-Foundations/)** | **Policy** | Definitions, frameworks, and imperative vs. declarative. |
+| **[🟡 Part 2](./Part-02-Security-Auditing/)** | **Auditing** | CIS Benchmarks and manual checklists. |
 
 ---
 
@@ -40,7 +40,9 @@ graph TD
 ```
 
 ## 📋 Professional Pattern: The "Policy-First" Design
+
 Before building a single resource, define the guardrails. For example, "No S3 buckets can be public" should be a policy that is enforced before bucket creation, not a check done after a breach.
 
 ---
-**Next Step**: Start with [Introduction to Policy](./01-Introduction-to-Policy/) 🚀
+
+**Next Step**: Start with **[Part 1: Policy Foundations](./Part-01-Policy-Foundations/README.md)** 🚀
