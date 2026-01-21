@@ -35,30 +35,33 @@ mindmap
 
 ## 🗺️ Curriculum Structure
 
-### 🟢 Level 1: Beginner (17 Topics) - **55-70 hours**
+### 🟢 Level 1: Beginner (20 Topics) - **65-85 hours**
 
 Master Python fundamentals and basic automation scripts.
 
 | #   | Topic                                                                                               | Description                      | Key Learning                     | Hours |
 | --- | --------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------- | ----- |
 | 00  | **[Prerequisites](../../../../README.md)**                               | Setup, Pip, Venv                 | Installation, Path, Environments | 2-3h  |
-| 01  | **[Python Fundamentals](./Part-1-Fundamentals/01-Python-Fundamentals/README.md)**                   | Syntax, data types, control flow | First Python script, PEP 8       | 4-5h  |
-| 02  | **[Data Structures](./Part-1-Fundamentals/02-Data-Structures/README.md)**                           | Lists, dicts, sets, tuples       | Choosing right data structure    | 4-5h  |
-| 03  | **[Functions and Modules](./Part-1-Fundamentals/03-Functions-and-Modules/README.md)**               | Functions, imports, packages     | Code organization                | 4-5h  |
-| 04  | **[File Operations](./Part-1-Fundamentals/04-File-Operations/README.md)**                           | Reading/writing files            | Config file handling             | 3-4h  |
-| 05  | **[Error Handling](./Part-1-Fundamentals/05-Error-Handling/README.md)**                             | try/except, custom exceptions    | Robust error handling            | 3-4h  |
-| 06  | **[Working with JSON](./Part-3-Data-Structures/06-Working-with-JSON/README.md)**                    | JSON parsing, serialization      | API data handling                | 2-3h  |
-| 07  | **[Working with YAML](./Part-3-Data-Structures/07-Working-with-YAML/README.md)**                    | YAML config files                | K8s manifests, configs           | 2-3h  |
-| 08  | **[Environment Variables](./Part-2-System-Operations/08-Environment-Variables/README.md)**          | os.environ, python-dotenv        | 12-factor apps                   | 2-3h  |
-| 09  | **[Command Line Arguments](./Part-2-System-Operations/09-Command-Line-Arguments/README.md)**        | argparse, sys.argv               | CLI tool creation                | 3-4h  |
-| 10  | **[Subprocess Module](./Part-2-System-Operations/10-Subprocess-Module/README.md)**                  | Running shell commands           | Shell integration                | 4-5h  |
-| 11  | **[Pathlib Basics](./Part-2-System-Operations/11-Pathlib-Basics/README.md)**                        | Modern path handling             | Cross-platform paths             | 3h    |
-| 12  | **[Datetime Operations](./Part-3-Data-Structures/12-Datetime-Operations/README.md)**                | Date/time manipulation           | Log timestamps                   | 3h    |
-| 13  | **[Regular Expressions](./Part-3-Data-Structures/13-Regular-Expressions/README.md)**                | Pattern matching                 | Log parsing                      | 4-5h  |
-| 14  | **[Logging Basics](./Part-4-Professional-Standards/14-Logging-Basics/README.md)**                   | Logging module                   | Professional logging             | 3-4h  |
-| 15  | **[Virtual Environments](./Part-4-Professional-Standards/15-Virtual-Environments/README.md)**       | venv, virtualenv                 | Dependency isolation             | 2-3h  |
-| 16  | **[Package Management](./Part-4-Professional-Standards/16-Package-Management/README.md)**           | pip, requirements.txt            | Reproducible environments        | 3h    |
-| 17  | **[First Automation Script](./Part-4-Professional-Standards/17-First-Automation-Script/README.md)** | Complete deployment script       | Real-world automation            | 5-6h  |
+| 01  | **[Python Fundamentals](./Part-01-Python-Fundamentals/README.md)**                   | Syntax, data types, control flow | First Python script, PEP 8       | 4-5h  |
+| 02  | **[Data Structures](./Part-02-Data-Structures/README.md)**                           | Lists, dicts, sets, tuples       | Choosing right data structure    | 4-5h  |
+| 03  | **[Functions and Modules](./Part-03-Functions-and-Modules/README.md)**               | Functions, imports, packages     | Code organization                | 4-5h  |
+| 04  | **[File Operations](./Part-04-File-Operations/README.md)**                           | Reading/writing files            | Config file handling             | 3-4h  |
+| 05  | **[Error Handling](./Part-05-Error-Handling/README.md)**                             | try/except, custom exceptions    | Robust error handling            | 3-4h  |
+| 06  | **[Working with JSON](./Part-06-Working-with-JSON/README.md)**                    | JSON parsing, serialization      | API data handling                | 2-3h  |
+| 07  | **[Working with YAML](./Part-07-Working-with-YAML/README.md)**                    | YAML config files                | K8s manifests, configs           | 2-3h  |
+| 08  | **[Environment Variables](./Part-08-Environment-Variables/README.md)**          | os.environ, python-dotenv        | 12-factor apps                   | 2-3h  |
+| 09  | **[Command Line Arguments](./Part-09-Command-Line-Arguments/README.md)**        | argparse, sys.argv               | CLI tool creation                | 3-4h  |
+| 10  | **[Subprocess Module](./Part-10-Subprocess-Module/README.md)**                  | Running shell commands           | Shell integration                | 4-5h  |
+| 11  | **[Pathlib Basics](./Part-11-Pathlib-Basics/README.md)**                        | Modern path handling             | Cross-platform paths             | 3h    |
+| 12  | **[Datetime Operations](./Part-12-Datetime-Operations/README.md)**                | Date/time manipulation           | Log timestamps                   | 3h    |
+| 13  | **[Regular Expressions](./Part-13-Regular-Expressions/README.md)**                | Pattern matching                 | Log parsing                      | 4-5h  |
+| 14  | **[Logging Basics](./Part-14-Logging-Basics/README.md)**                   | Logging module                   | Professional logging             | 3-4h  |
+| 15  | **[Virtual Environments](./Part-15-Virtual-Environments/README.md)**       | venv, virtualenv                 | Dependency isolation             | 2-3h  |
+| 16  | **[Package Management](./Part-16-Package-Management/README.md)**           | pip, requirements.txt            | Reproducible environments        | 3h    |
+| 17  | **[First Automation Script](./Part-17-First-Automation-Script/README.md)** | Complete deployment script       | Real-world automation            | 5-6h  |
+| 18  | **[Working with the Web](./Part-18-Working-with-the-Web/README.md)**        | Requests, Scrapers, and APIs      | API interaction, Web scraping    | 4-5h  |
+| 19  | **[Web Automation](./Part-19-Web-Automation/README.md)**                   | Browser orchestration            | Selenium, Headless patterns       | 5-6h  |
+| 20  | **[Micro-Frameworks & Async](./Part-20-Micro-Frameworks-and-Async/README.md)** | Async IO and Web hooks          | Bottle/Flask, Asyncio basics      | 5-6h  |
 
 ---
 
@@ -132,6 +135,7 @@ Build enterprise-scale automation frameworks.
 **Prerequisites**: Basic programming knowledge
 
 **Curriculum**:
+
 - ✅ All Beginner topics (Weeks 1-2)
 - ✅ Intermediate: API Interactions, Boto3, Docker SDK, K8s Client, Fabric (Weeks 3-5)
 - ✅ Advanced: Pulumi, CI/CD, GitOps, Observability, Best Practices (Weeks 6-10)
@@ -147,6 +151,7 @@ Build enterprise-scale automation frameworks.
 **Prerequisites**: Basic Python, understanding of Linux
 
 **Curriculum**:
+
 - ✅ All Beginner topics (Weeks 1-2)
 - ✅ Intermediate: Monitoring, Log Parsing, Scheduling, Testing, Boto3 (Weeks 3-6)
 - ✅ Advanced: Observability, Chaos Engineering, Performance, Enterprise Scale (Weeks 7-11)
@@ -162,6 +167,7 @@ Build enterprise-scale automation frameworks.
 **Prerequisites**: Cloud basics (AWS/Azure/GCP)
 
 **Curriculum**:
+
 - ✅ All Beginner topics (Weeks 1-2)
 - ✅ Intermediate: Boto3, K8s Client, API Interactions, Config Management (Weeks 3-6)
 - ✅ Advanced: Pulumi, Terraform CDK, Cost Optimization, Security (Weeks 7-12)
@@ -182,7 +188,7 @@ pie title Python Automation Curriculum
 ### Statistics
 
 | Metric | Value |
-|--------|-------|
+| :--- | :--- |
 | **Total Topics** | 60 |
 | **Beginner Topics** | 17 |
 | **Intermediate Topics** | 18 |
@@ -202,21 +208,25 @@ pie title Python Automation Curriculum
 - **Apache Libcloud**: Multi-cloud abstraction
 
 ### Container & Orchestration
+
 - **docker-py**: Docker SDK
 - **kubernetes**: Official K8s SDK client
 - **Helm**: Chart management
 
 ### Configuration & Deployment
+
 - **Ansible**: Automation platform (Python-based)
 - **Fabric**: SSH automation
 - **SaltStack**: Configuration management
 
 ### Monitoring & Observability
+
 - **Prometheus Client**: Metrics
 - **OpenTelemetry**: Tracing
 - **Grafana**: Dashboards (Python SDK)
 
 ### CLI Tools
+
 - **Click**: CLI framework
 - **Typer**: Modern CLI with type hints
 - **Rich**: Terminal formatting
@@ -229,6 +239,7 @@ pie title Python Automation Curriculum
 Python powers Netflix's Chaos Monkey and Simian Army for resilience testing.
 
 **Implementation**:
+
 ```python
 # Simplified chaos engineering example
 import random
@@ -320,6 +331,7 @@ Migrated 100+ TB of data using Python scripts with zero downtime.
 - Udemy: Complete Python DevOps Course
 
 ### Tools & Libraries
+
 - [Awesome Python](https://awesome-python.com/)
 - [PyPI](https://pypi.org/) - Python Package Index
 - [Python Weekly](https://www.pythonweekly.com/)
@@ -341,7 +353,7 @@ source devops-automation/bin/activate  # Linux/Mac
 pip install boto3 requests pyyaml python-dotenv
 
 # 4. Start with Beginner-01
-cd ~/Devops/1-Beginner/02-Phase-2/02-Automation/02-Python-Basics
+cd ~/Devops/1-Beginner/02-Phase-2/01-Automation/02-Python-Basics
 cd 01-Python-Fundamentals
 ```
 
@@ -393,7 +405,7 @@ This curriculum is continuously evolving. Found a better example? Have a real-wo
 
 ---
 
-**Last Updated**: 2026-01-10  
+**Last Updated**: 2026-01-20  
 **Version**: 1.0.0  
 **Status**: Active Development 🚧  
 **Maintained by**: DevOps Learning Team
