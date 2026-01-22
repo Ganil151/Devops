@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/04-Loops-and-Processing/README_advanced.md",
+                "file": "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/04-Loops-and-Processing/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README_advanced"
+              "title": "README"
             }
           }
         ]
@@ -217,6 +217,9 @@
   },
   "active": "e142cfc2dc308a10",
   "lastOpenFiles": [
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/Part-XX-Signal-Handling/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/Part-XX-Signal-Handling",
+    "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/04-Loops-and-Processing/README_advanced.md",
     "1-Beginner/02-Phase-2/04-Maven/Part-02-Core-Build-Workflows/README.md",
     "1-Beginner/02-Phase-2/04-Maven/Part-01-Maven-Fundamentals/README.md",
     "1-Beginner/02-Phase-2/04-Maven/Part-01-Maven-Fundamentals/DEEP_DIVE.md",
@@ -239,7 +242,6 @@
     "1-Beginner/02-Phase-2/04-Maven/Part-01-Maven-Fundamentals/01-Installation/README.md",
     "1-Beginner/02-Phase-2/04-Maven/Part-01-Maven-Fundamentals/01-Installation",
     "1-Beginner/02-Phase-2/04-Maven/assets",
-    "1-Beginner/02-Phase-2/04-Maven/Part-03-Enterprise-Maven-and-Optimization",
     "1-Beginner/02-Phase-2/03-Nginx/Part-03-Security-and-Hardening/01-Security-and-SSL/README.md",
     "1-Beginner/02-Phase-2/03-Nginx/Part-02-Traffic-Management-and-Performance/02-Performance-Optimization/README.md",
     "1-Beginner/02-Phase-2/03-Nginx/Part-02-Traffic-Management-and-Performance/01-Load-Balancing-Strategies/README.md",
@@ -257,8 +259,6 @@
     "1-Beginner/02-Phase-2/02-API-Basics/assets/http_versions_comparison.png",
     "1-Beginner/02-Phase-2/02-API-Basics/assets/http_request_response_flow.png",
     "1-Beginner/02-Phase-2/02-API-Basics/Part-03-Advanced-API-Workflows/01-DevOps-Integration/README.md",
-    "1-Beginner/02-Phase-2/02-API-Basics/Part-02-API-Security-and-Auth/01-Authentication-and-Security/README.md",
-    "1-Beginner/02-Phase-2/02-API-Basics/Part-01-Web-Foundations/03-Status-Codes-and-Errors/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/02-Terminal-and-Navigation/Programs-and-Commands/command_resolution_order.svg",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/02-Terminal-and-Navigation/navigation_architecture.png",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-03-System-Drafting/02-Advanced-IO/io_stream_architecture.png",
