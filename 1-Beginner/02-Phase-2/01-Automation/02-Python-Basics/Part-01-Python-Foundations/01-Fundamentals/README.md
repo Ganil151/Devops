@@ -2,7 +2,7 @@
 
 > **"Bash is the glue for the OS, but Python is the glue for the Cloud. It turns complex infrastructure into manageable, readable code."**
 
-![Python DevOps Hub](../assets/python_devops_hub.png)
+![Python DevOps Hub](../../assets/python_devops_hub.png)
 
 ## 📚 Overview
 
@@ -42,6 +42,7 @@ flowchart TD
 ```
 
 ### Detailed Breakdown
+
 1. **Lexing & Parsing**: The interpreter reads your `.py` source code and breaks it into "tokens." If you forgot a colon (`:`) or have bad indentation, the script fails here with a `SyntaxError`.
 2. **AST (Abstract Syntax Tree)**: Python builds a logical map of your code's hierarchy. This tree is what advanced linters and security scanners (like `Bandit`) analyze.
 3. **Bytecode Compilation**: The code is converted into **CPython Bytecode**. This is a platform-independent intermediate language. You might see `__pycache__` folders containing `.pyc` files—these are cached bytecodes to speed up the next run.
@@ -52,10 +53,14 @@ flowchart TD
 
 ## 🚀 Core Concepts for Engineers
 
-### 1. Variables and Data Types: "Everything is an Object"
-In Python, every variable is an object. A simple integer `x = 5` is actually a full-featured object with methods.
+### 1. Variables & Data Types
 
-#### Production-Ready Type Hints (PEP 484)
+- **Core Concept**: In Python, every variable is an object. Type Hints (PEP 484) allow for static typing in a dynamic language.
+- **Why for DevOps**: Infrastructure code requires precision. Passing a string `"5"` instead of an integer `5` to a scaling function can crash a pipeline.
+- **Real-World Scenario**: Defining resource quotas for a Kubernetes namespace where CPU limits must be floats and replica counts must be integers.
+
+#### 🛠️ Production-Ready Type Hints (PEP 484)
+
 In DevOps, we prioritize **clarity over brevity**. Type hints ensure your teammates know exactly what kind of data your function expects.
 
 ```python
@@ -76,6 +81,7 @@ server_pool: list[str] = ["web-01", "web-02", "web-03"]
 ```
 
 #### The DevOps Trio of Collections
+
 | Structure | Syntax | Type | Best Use Case | Big-O Lookup |
 | :--- | :--- | :--- | :--- | :--- |
 | **List** | `[]` | Mutable | Ordered server lists, command steps. | O(n) |
@@ -84,8 +90,12 @@ server_pool: list[str] = ["web-01", "web-02", "web-03"]
 
 ---
 
-### 2. String Manipulation: The Log Parser's Edge
-DevOps engineers spend 80% of their time parsing text (logs, YAML, JSON, CLI output). Python is a powerhouse for this.
+### 2. String Manipulation
+
+- **Core Concept**: Slicing, f-strings, and splitting.
+
+- **Why for DevOps**: We spend 80% of our time parsing text (logs, YAML, JSON, CLI output). Python is a powerhouse for this.
+- **Real-World Scenario**: Extracting the timestamp and error code from a raw Nginx access log line to trigger an automated alert.
 
 ```python
 # Modern Formatting: f-strings (The Gold Standard)
@@ -107,9 +117,15 @@ lines = raw_log.splitlines() # Better than .split('\n') as it handles all OS typ
 
 ---
 
-### 3. Control Flow: The "Brain" of Automation
+### 3. Control Flow & Logic
 
-#### The Guard Clause Pattern
+- **Core Concept**: Conditionals, Loops, and the Guard Clause Pattern.
+
+- **Why for DevOps**: Scripts must make decisions (e.g., "If the server is down, restart it") and handle lists of resources.
+- **Real-World Scenario**: Iterating through a list of servers to apply patches, skipping those that are offline.
+
+#### 🛡️ The Guard Clause Pattern
+
 Avoid deep nesting (the "Arrowhead Antipattern"). Use guard clauses to exit early if conditions aren't met.
 
 ```python
@@ -132,6 +148,7 @@ def process_server(server):
 ```
 
 #### Resilient Loops with `enumerate` and `zip`
+
 ```python
 servers = ["web-01", "web-02"]
 ips = ["10.0.0.1", "10.0.0.2"]
@@ -154,9 +171,11 @@ while retries > 0:
 ---
 
 ## 🎨 PEP 8 Style Guide: The Professional Bar
+
 In DevOps, "Code is Infrastructure." Your code must be as clean as your Terraform or K8s manifests. PEP 8 is the official style guide.
 
 ### The CI/CD Enforcement Loop
+
 Professional teams don't just "hope" for clean code; they enforce it in the pipeline using tools:
 
 - **Flake8**: Checks for PEP 8 violations.
@@ -176,6 +195,7 @@ graph LR
 ```
 
 ### ❌ "Dirty" Script vs ✅ "Pythonic" (PEP 8)
+
 ```python
 # ❌ The "Hacker" Script
 import os,sys

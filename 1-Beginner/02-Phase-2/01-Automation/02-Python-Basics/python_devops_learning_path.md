@@ -1,4 +1,6 @@
-# Python for DevOps Learning Path
+# Python for Platform Engineering: The DevOps Learning Path
+
+> **"Python is the glue that holds the cloud together. It transforms manual toil into automated reliability."**
 
 ```mermaid
 graph TD
