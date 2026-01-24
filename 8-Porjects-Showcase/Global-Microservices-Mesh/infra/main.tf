@@ -32,7 +32,7 @@ terraform {
 }
 
 module "networking" {
-  source = "../../06-Terraform-Modules-Gallery/vpc"
+  source = "../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/Terraform/modules/vpc"
 
   project_name         = var.project_name
   vpc_cidr             = "10.0.0.0/16"
@@ -41,7 +41,7 @@ module "networking" {
 }
 
 module "eks" {
-  source = "../../06-Terraform-Modules-Gallery/eks"
+  source = "../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/Terraform/modules/eks"
 
   project_name    = var.project_name
   cluster_version = var.eks_cluster_version

@@ -20,10 +20,10 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 | Skill | Status | Deliverable |
 | :--- | :--- | :--- |
 | **Cloud VPC / Networking** | ✅ Done | [VPC Boilerplates](../../2-Intermediate/01-Phase-1/01-Networking/) |
-| **Terraform IaC** | ✅ Done | [Module Gallery](../../00-Resources/06-Terraform-Modules-Gallery/) |
+| **Terraform IaC** | ✅ Done | [Module Gallery](../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/Terraform/modules/) |
 | **Ansible Config** | ✅ Done | [Standard Playbooks](../../2-Intermediate/02-Phase-2/Part-2-Config-Management/) |
 | **Kubernetes Admin** | ✅ Done | [Cluster Ops Guides](../../2-Intermediate/README.md) |
-| **Enterprise CI/CD** | ✅ Done | [Jenkins Blueprints Master](../../00-Resources/05-Jenkins-Blueprints/) |
+| **Enterprise CI/CD** | ✅ Done | [Jenkins Blueprints Master](../../2-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/Jenkins/blueprints/) |
 | **FinOps / Cost Mgmt** | ✅ Done | [Modern Ops Quiz](../../6-Quizzes/Intermediate/Modern-Ops-Quiz.md) |
 
 ---

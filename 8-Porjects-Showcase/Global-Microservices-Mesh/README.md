@@ -38,7 +38,7 @@ graph TD
 
 - **Provisioning**: Terraform (VPC, EKS, RDS).
 - **Configuration**: Ansible (Security Hardening, Vault Setup).
-- **Delivery**: [Jenkins Enterprise Blueprint](../../05-Jenkins-Blueprints/blueprint-enterprise-k8s-full.groovy).
+- **Delivery**: [Jenkins Enterprise Blueprint](../../../2-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/Jenkins/blueprints/blueprint-enterprise-k8s-full.groovy).
 - **Security**:
   - **Istio**: Zero-Trust mTLS.
   - **Trivy**: Container vulnerability scanning.
@@ -71,6 +71,43 @@ graph TD
 - [x] **Phase 3**: Istio Control Plane & Gateway installation via Helm.
 - [x] **Phase 4**: CI/CD integration with [Jenkinsfile](./Jenkinsfile) and security scans.
 - [x] **Phase 5**: [GitOps](./gitops/) reconciliation and automated drift detection.
+
+---
+
+## 🚀 Quick Start Deployment
+
+### Option 1: Automated Deployment (Recommended)
+
+#### For Windows (PowerShell)
+
+```powershell
+cd C:\Users\Ganil\Documents\Devops\8-Porjects-Showcase\Global-Microservices-Mesh
+.\deploy.ps1
+```
+
+#### For Linux/Mac (Bash)
+
+```bash
+cd /path/to/Devops/8-Porjects-Showcase/Global-Microservices-Mesh
+chmod +x deploy.sh
+./deploy.sh
+```
+
+### Option 2: Manual Deployment
+
+Follow the comprehensive step-by-step guide:
+
+#### [Complete Deployment Guide](./DEPLOYMENT_GUIDE.md)
+
+### Prerequisites
+
+Before deploying, ensure you have:
+
+- AWS CLI configured with valid credentials
+- Terraform (v1.0+)
+- kubectl (v1.24+)
+- Helm (v3.x+)
+- Docker (for local testing)
 
 ---
 
