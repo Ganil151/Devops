@@ -1,0 +1,33 @@
+version: '3.8'
+
+# --- BLOCKCHAIN NODE BOILERPLATE: GETH ---
+# Standard configuration for an Ethereum Go-Client node.
+
+services:
+  geth:
+    image: ethereum/client-go:stable
+    container_name: ethereum-node
+    restart: unless-stopped
+    ports:
+      - "8545:8545" # JSON-RPC HTTP
+      - "8546:8546" # WebSockets
+      - "30303:30303" # P2P Discovery (TCP)
+      - "30303:30303/udp" # P2P Discovery (UDP)
+    volumes:
+      - geth-data:/root/.ethereum
+    command:
+      - "--http"
+      - "--http.addr=0.0.0.0"
+      - "--http.port=8545"
+      - "--http.vhosts=*"
+      - "--http.api=eth,net,web3,debug"
+      - "--ws"
+      - "--ws.addr=0.0.0.0"
+      - "--ws.port=8546"
+      - "--ws.api=eth,net,web3"
+      - "--syncmode=snap" # Fast sync mode
+      - "--maxpeers=50"
+
+volumes:
+  geth-data:
+    driver: local

@@ -1,0 +1,40 @@
+# K8s Foundations Boilerplate: Sidecar Pattern Pod
+
+# --- 1. THE YAML MANIFEST ---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sidecar-example
+  labels:
+    app: logging
+spec:
+  containers:
+  # The Main Application Container
+  - name: main-app
+    image: nginx:alpine
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: shared-logs
+      mountPath: /usr/share/nginx/html
+
+  # The Sidecar Container (Helper)
+  - name: log-helper
+    image: busybox
+    command: ["sh", "-c", "while true; do echo 'Hello from Sidecar' > /data/index.html; sleep 10; done"]
+    volumeMounts:
+    - name: shared-logs
+      mountPath: /data
+
+  # Shared Volume between containers
+  volumes:
+  - name: shared-logs
+    emptyDir: {}
+
+---
+
+# Pro-Tip: Kubectl Mastery
+Run these commands to verify the pod:
+1. `kubectl get pods` - Check status.
+2. `kubectl describe pod sidecar-example` - View events and containers.
+3. `kubectl logs sidecar-example -c main-app` - View logs of a specific container inside the pod.

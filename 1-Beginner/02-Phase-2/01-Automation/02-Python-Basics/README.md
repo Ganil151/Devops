@@ -6,10 +6,17 @@
 
 We have consolidated the modules into three professional tiers to guide you from script kiddy to automation architect.
 
+### 🛠️ Part 0: Prerequisites (The Setup)
+*Environment preparation and professional toolchains.*
+
+*   **[01. Python Setup](./Part-00-Prerequisites/01-Python-Setup/README.md)**: Official installation & path configuration.
+*   **[02. Pip Basics](./Part-00-Prerequisites/02-Pip-Basics/README.md)**: Mastering the Python package manager.
+*   **[03. Virtual Environments](./Part-00-Prerequisites/03-Virtual-Environments/README.md)**: Ensuring project isolation.
+*   **[04. Anaconda Setup](./Part-00-Prerequisites/04-Anaconda-Setup/README.md)**: The professional standard for data-heavy automation.
+
 ### 🔹 Part 1: Python Foundations (The Syntax)
 *Basic logic, robust data structures, and functional patterns.*
 
-*   **[00. Prerequisites](./Part-01-Python-Foundations/00-Prerequisites/README.md)**: Setup and Installation (Pip, Venv).
 *   **[01. Fundamentals](./Part-01-Python-Foundations/01-Fundamentals/README.md)**: Syntax, Loops, and Logic.
 *   **[02. Data Structures](./Part-01-Python-Foundations/02-Data-Structures/README.md)**: Lists, Dicts, Sets, and Tuples.
 *   **[03. Functions & Modules](./Part-01-Python-Foundations/03-Functions-and-Modules/README.md)**: Writing reusable code.

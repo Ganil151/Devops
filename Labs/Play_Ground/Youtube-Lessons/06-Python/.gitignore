@@ -1,0 +1,17 @@
+.lessenv
+.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.idea/
+.vscode/
+.DS_Store
+*.log
+*.sqlite3
+instance/

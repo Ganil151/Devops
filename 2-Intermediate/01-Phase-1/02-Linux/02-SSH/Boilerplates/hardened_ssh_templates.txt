@@ -1,0 +1,43 @@
+# Hardened SSH Daemon Configuration (Best Practices)
+# Path: /etc/ssh/sshd_config (Template)
+
+# 1. Connectivity
+Port 2222                 # Move from default 22 to reduce log noise
+AddressFamily inet        # Use IPv4 only (if preferred)
+ListenAddress 0.0.0.0
+
+# 2. Authentication
+PermitRootLogin prohibit-password # Allow root ONLY via keys
+PubkeyAuthentication yes
+PasswordAuthentication no       # FORCE SSH keys
+PermitEmptyPasswords no
+
+# 3. Security Limits
+MaxAuthTries 3
+LoginGraceTime 30
+MaxSessions 5
+
+# 4. Networking Features
+AllowAgentForwarding no
+AllowTcpForwarding yes          # Needed for tunnels, disable if not used
+X11Forwarding no
+
+# 5. Banner/Compliance
+Banner /etc/issue.net
+
+---
+
+# SSH Client Config Template (~/.ssh/config)
+
+Host bastion
+    HostName 34.20.10.5
+    User ec2-user
+    IdentityFile ~/.ssh/id_rsa_bastion
+
+Host private-app
+    HostName 10.0.1.5
+    User app-user
+    ProxyJump bastion
+    IdentityFile ~/.ssh/id_rsa_app
+
+# Usage: ssh private-app (Automatically jumps through bastion)

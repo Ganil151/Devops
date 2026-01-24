@@ -1,0 +1,41 @@
+# K8s Persistence Boilerplate: Volume Claim
+
+# --- 1. THE CLAIM ---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: data-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  # Leave blank for default, or specify a cloud class
+  # storageClassName: "standard"
+
+---
+
+# --- 2. POD MOUNTING EXAMPLE ---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-persistence-test
+spec:
+  containers:
+  - name: db-instance
+    image: postgres:alpine
+    volumeMounts:
+    - name: db-storage
+      mountPath: /var/lib/postgresql/data
+  # The link between pod and infra
+  volumes:
+  - name: db-storage
+    persistentVolumeClaim:
+      claimName: data-pvc
+
+---
+
+# Troubleshooting Data Corruption
+1. **AccessModes**: `ReadWriteOnce` means only one node can mount the disk. `ReadWriteMany` is required for shared storage (like NFS/EFS).
+2. **Reclaim Policy**: Check if your PV is set to `Delete` or `Retain`. If `Delete`, your data vanishes when the PVC is deleted!

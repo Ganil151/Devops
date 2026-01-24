@@ -1,0 +1,33 @@
+# K8s Networking Boilerplate: Service & ConfigMap
+
+# --- 1. THE CONFIGURATION ---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-settings
+data:
+  DB_URL: "jdbc:postgresql://db-host:5432/main"
+  FEATURE_FLAG: "true"
+
+---
+
+# --- 2. THE SERVICE (EXPOSURE) ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-srv
+spec:
+  selector:
+    app: backend
+  ports:
+    - protocol: TCP
+      port: 80       # Port the service listens on
+      targetPort: 8080 # Port the pod listens on
+  type: ClusterIP    # Internal only
+
+---
+
+# Pro-Tip: DNS Names
+All services in Kubernetes are available via the following DNS format:
+`<service-name>.<namespace>.svc.cluster.local`
+Example: `backend-srv.production.svc.cluster.local`

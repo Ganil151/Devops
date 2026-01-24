@@ -1,0 +1,46 @@
+name: DevOps Python CI
+
+# Control when the workflow will run
+on:
+  push:
+    branches: [ "main", "dev" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build_and_test:
+    # Use the official GitHub-hosted Linux runner
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Set up Python environment
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # 3. Install dependencies
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      # 4. Run Linting (simulated)
+      - name: Run Linter (Flake8)
+        run: |
+          echo "Running Flake8..."
+          # pip install flake8
+          # flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+      # 5. Run Tests (automated)
+      - name: Run Unit Tests
+        run: |
+          echo "Running Pytest..."
+          # pytest

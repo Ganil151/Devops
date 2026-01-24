@@ -1,0 +1,31 @@
+# Professional Networking Cheat Sheet (DevOps Edition)
+
+### 1. Connectivity Tests
+| Command | Purpose | Essential Flag |
+| :--- | :--- | :--- |
+| `ping` | Is the host alive? | `-c 4` (Limit count) |
+| `telnet` | Is the port open? | `telnet host 80` |
+| `nc -zv` | Fast port scan | `-z` (Zero I/O), `-v` (Verbose) |
+| `mtr` | Combined Ping + Traceroute | Monitoring real-time loss |
+
+### 2. Network Interface & IP
+| Command | Modern Entry | Purpose |
+| :--- | :--- | :--- |
+| `ifconfig` | `ip addr show` | View IP and MAC addresses |
+| `route` | `ip route show` | View the local routing table |
+| `arp` | `ip neighbor` | View local network devices |
+
+### 3. Traffic Analysis
+| Command | Purpose | Pro Tip |
+| :--- | :--- | :--- |
+| `tcpdump` | Packet capture | Save to file with `-w script.pcap` |
+| `ss -lntp` | View local listeners | `-n` (Numeric), `-t` (TCP) |
+| `nslookup` | DNS Query (Basic) | Works on Windows and Linux |
+| `dig` | DNS Query (Advanced) | Use `+short` for clean script output |
+
+### 4. HTTP / API Debugging
+| Command | Purpose |
+| :--- | :--- |
+| `curl -I` | View HTTP Headers only |
+| `curl -v` | Detailed request/response cycle |
+| `httpie` | A modern, color-coded alternative to curl |

@@ -1,0 +1,43 @@
+# Cost Visibility Boilerplate: AWS IAM Policy for Mandatory Tagging
+
+/* 
+   This policy denies the creation of EC2 resources if specific tags are missing.
+   This is a "Prevention" strategy in FinOps governance.
+*/
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "EnforceMandatoryTags",
+      "Effect": "Deny",
+      "Action": [
+        "ec2:RunInstances",
+        "ec2:CreateVolume"
+      ],
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*",
+        "arn:aws:ec2:*:*:volume/*"
+      ],
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/team": "true",
+          "aws:RequestTag/env": "true",
+          "aws:RequestTag/costcenter": "true"
+        }
+      }
+    }
+  ]
+}
+
+---
+
+# Tagging Schema Template (Markdown)
+
+| Tag Key      | Required? | Values (Allowed)       | Purpose                          |
+| :----------- | :-------- | :--------------------- | :------------------------------- |
+| `team`       | Yes       | api, frontend, ops     | Financial Chargeback             |
+| `env`        | Yes       | dev, prod, qa          | Cost Separation                  |
+| `costcenter` | Yes       | eng-100, mkt-200       | Accounting Ledger                |
+| `data-class` | No        | public, pii, secret    | Security / Compliance            |
+| `owner`      | Yes       | user@company.com       | Technical Support Contact        |

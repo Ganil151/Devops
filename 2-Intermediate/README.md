@@ -14,143 +14,85 @@ This level is organized into a tiered journey across **16 specialized modules**.
 
 ---
 
-### 🌱 Phase 1: Foundations (Intermediate Tier)
+### 🌱 Phase 1: Foundations (The Core)
 
-#### 1️⃣ [02-Linux](./01-Phase-1/02-Linux/README.md)
+#### 1️⃣ [01-Networking](./01-Phase-1/01-Networking/README.md)
+**Advanced Cloud Networking & VPC Architecture**
+- VPC fundamentals, subnetting, and CIDR blocks.
+- Peering, Transit Gateways, and Hybrid Connectivity.
 
-**Intermediate System Administration & Security**
+#### 2️⃣ [02-Linux](./01-Phase-1/02-Linux/README.md)
+**Intermediate System Administration & Observability**
+- Master systemd, signals, and process lifecycles.
+- SSH hardening and diagnostic tools.
 
-- Master systemd, signals, and process lifecycle
-- SSH hardening, key management, and tunneling
-- System logs, diagnostic tools, and kernel observability
+#### 3️⃣ [03-Runbooks-Procedures](./01-Phase-1/03-Runbooks-Procedures/README.md)
+**Operational Excellence & Automated Remediation**
+- Writing production-grade SOPs and Runbooks.
+- Incident management workflows and self-healing patterns.
 
-#### 2️⃣ [01-Networking](./01-Phase-1/01-Networking/README.md)
+#### 4️⃣ [04-Repository-Management](./01-Phase-1/04-Repository-Management/README.md)
+**Enterprise Version Control & Branching Models**
+- Git, GitLab, Bitbucket, and multi-repo architectures.
+- Trunk-based development and GitFlow strategies.
 
-**Advanced Cloud Networking, VPC Architecture & Security**
-
-- VPC fundamentals, subnetting, and CIDR blocks
-- Internet and NAT Gateways, Route Tables
-- VPC Peering and Transit Gateway architectures
-
-#### 3️⃣ [07-Repository-Management](../README.md)
-
-**Enterprise Version Control & Repository Architecture**
-
-- Git, GitLab, Bitbucket, and Azure DevOps Repos
-- Enterprise branching models (GitFlow, Trunk-based)
-- 📚 Interview Questions and Consolidation Summary
-
-#### 4️⃣ [08-Databases](../README.md)
-
-**SQL, NoSQL & Database DevOps Practices**
-
-- PostgreSQL, MySQL, MariaDB, and Amazon RDS
-- NoSQL scaling (MongoDB, Redis, DynamoDB)
-- Backup strategies, replication, and disaster recovery
-
-#### 5️⃣ [04-Runbooks-Procedures](../README.md)
-
-**Automated Remediation & Operational Excellence**
-
-- Writing effective Standard Operating Procedures (SOPs)
-- Auto-remediation patterns and self-healing strategies
-- Incident management and response workflows
+#### 5️⃣ [05-Databases](./01-Phase-1/05-Databases/README.md)
+**Database DevOps & State Management**
+- PostgreSQL, MySQL, and Amazon RDS mastery.
+- NoSQL scaling with MongoDB, Redis, and DynamoDB.
 
 ---
 
-### ⚙️ Phase 2: Core Skills (Intermediate Tier)
+### ⚙️ Phase 2: Core Skills (The Automation)
 
-#### 6️⃣ [03-Automation](../README.md)
+#### 6️⃣ [01-Infrastructure-Automation](./02-Phase-2/01-Infrastructure-Automation/README.md)
+**IaC & Configuration Management Mastery**
+- **Terraform**: Provisioning and State management.
+- **Ansible**: Config management and modular playbooks.
 
-**Python for DevOps, Scripting Patterns & Ansible**
+#### 7️⃣ [02-Delivery-and-Governance](./02-Phase-2/02-Delivery-and-Governance/README.md)
+**Advanced CI/CD & Policy Enforcement**
+- Secure pipelines and GitOps (ArgoCD/Flux).
+- Policy-as-Code and Automated Governance.
 
-- Advanced Bash scripting and automation patterns
-- Python for infrastructure automation
-- Ansible playbooks, roles, and vault
-
-#### 7️⃣ [05-Configuration-Tools](../README.md)
-
-**Infrastructure as Code & Configuration Management**
-
-- **Terraform** - Provisioning, state mastery, and modular design
-- **Chef, Helm, Ansible, Packer, Pulumi**
-- Cloud-Init, Kustomize, Puppet, Vagrant
-
-#### 8️⃣ [09-CI-CD](../README.md)
-
-**Advanced Continuous Integration & Delivery Pipelines**
-
-- Jenkins mastery - Pipeline as Code
-- GitHub Actions & GitLab CI for modern workflows
-- Deployment strategies (Blue/Green, Canary)
-
-#### 9️⃣ [12-Cloud-Engineering](../README.md)
-
-**Cloud Patterns & Landing Zones**
-
-- Multi-cloud architecture and landing zones
-- Edge computing and Content Delivery (CloudFront)
-- IAM Governance and fine-grained security
-
-#### 🔟 [13-Prompt-Engineering](../README.md)
-
-**AI-Driven Troubleshooting & Automation**
-
-- Chain-of-Thought prompting for complex SRE tasks
-- Automated runbook generation with AI agents
-- Optimization for code generation and refactoring
+#### 8️⃣ [03-Modern-Operations](./02-Phase-2/03-Modern-Operations/README.md)
+**AI-Ops, Serverless & Edge Computing**
+- Serverless architecture and Edge Delivery (CDN).
+- AI-driven troubleshooting (Prompt Engineering for SRE).
 
 ---
 
-### 🏛️ Phase 3: Advanced Concepts (Intermediate Tier)
+### 🏛️ Phase 3: Advanced Concepts (The Orchestration)
 
-#### 1️⃣1️⃣ [06-Container-Orchestration](../README.md)
+#### 9️⃣ [01-Container-Orchestration](./03-Phase-3/01-Container-Orchestration/README.md)
+**Kubernetes (K8s) & Cluster Management**
+- Control plane architecture and secure networking.
+- Ingress, Service Mesh, and Cluster Administration.
 
-**Orchestrating Container Fleets with Kubernetes**
+#### 🔟 [02-Observability-Foundations](./03-Phase-3/02-Observability-Foundations/README.md)
+**Telemetry & Full-Stack Visibility**
+- Prometheus/Grafana (Metrics) & ELK/Loki (Logs).
+- Distributed Tracing with Jaeger and OpenTelemetry.
 
-- Kubernetes cluster architecture and control plane
-- Pods, Deployments, Services, and Core Networking
-- Ingress Controllers, Service Mesh, and Cluster Ops
+#### 1️⃣1️⃣ [03-API-Gateways-Security](./03-Phase-3/03-API-Gateways-Security/README.md)
+**Traffic Management & Identity**
+- API Gateway architecture (Kong, Nginx, AWS).
+- OIDC, JWT, and mTLS security patterns.
 
-#### 1️⃣2️⃣ [10-Observability-Foundations](../README.md)
+#### 1️⃣2️⃣ [04-MCP](./03-Phase-3/04-MCP/README.md)
+**Model Context Protocol for AI Agents**
+- Building agentic tool-servers for infrastructure.
+- MCP Ecosystem integration with K8s and Cloud.
 
-**Metrics, Logs & Distributed Tracing**
+#### 1️⃣3️⃣ [05-Blockchain](./03-Phase-3/05-Blockchain/README.md)
+**Web3 Infrastructure & Smart Contract CI/CD**
+- Node management (Ethereum/Geth/L2s).
+- Decentralized operations and infrastructure auditing.
 
-- Monitoring principles and metrics collection (Prometheus)
-- Centralized log management (ELK/Loki)
-- Distributed tracing (Jaeger/Zipkin)
-
-#### 1️⃣3️⃣ [11-API-Gateways-Security](../README.md)
-
-**Traffic Control, Authentication & API Management**
-
-- API Gateway architecture (Kong, NGINX, AWS)
-- JWT, OAuth2, and AuthN/AuthZ patterns
-- Traffic control, rate limiting, and WAF
-
-#### 1️⃣4️⃣ [14-MCP](../README.md)
-
-**Model Context Protocol for Agentic AI**
-
-- MCP fundamentals and architectural standards
-- Scaling AI agents with context-aware servers
-- MCP integration with Cloud & K8s ecosystems
-
-#### 1️⃣5️⃣ [15-Blockchain](../README.md)
-
-**Web3 DevOps & Smart Contract CI/CD**
-
-- Blockchain development foundations and nodes
-- Smart contract security scanning and CI/CD
-- Testing strategies for DApps and decentralized infra
-
-#### 1️⃣6️⃣ [16-FinOps](../README.md)
-
-**Cloud Cost Optimization & Financial Operations**
-
-- Cloud cost allocation, tagging, and visibility
-- Optimization techniques for compute and storage
-- FinOps automation and governance models
+#### 1️⃣4️⃣ [06-FinOps](./03-Phase-3/06-FinOps/README.md)
+**Cloud Cost Optimization & Economics**
+- Cost allocation, Tagging, and Financial Governance.
+- Rightsizing and Reserved Instance optimization strategies.
 
 ---
 

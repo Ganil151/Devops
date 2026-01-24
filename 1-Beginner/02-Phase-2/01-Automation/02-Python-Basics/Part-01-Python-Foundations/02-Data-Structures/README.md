@@ -2,7 +2,7 @@
 
 > **"Algorithms + Data Structures = Programs. In DevOps, the right data structure is the difference between a high-performance automation suite and a script that crashes your production monitoring."**
 
-![Python Data Structures](../assets/python_data_structures.png)
+![Python Data Structures](../../Part-01-Python-Foundations/02-Data-Structures/assets/python_data_structures.png)
 
 ## 📚 Overview
 

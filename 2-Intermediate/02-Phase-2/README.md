@@ -23,21 +23,21 @@ Phase 2 takes you deep into the engine room of modern DevOps. Having mastered ne
 
 ## 📋 Curriculum Path
 
-### 1. [Part 1: Infrastructure Automation](./Part-1-Infrastructure-Automation/README.md)
+### 1. [01. Infrastructure Automation](./01-Infrastructure-Automation/README.md)
 *Treating infrastructure as code.*
 - **Advanced Scripting**: Mastering Bash and Python for complex automation.
 - **Config Management**: Ansible, Terraform, and the state-based paradigm.
 - **Cloud Engineering**: Scaling resources on AWS, Azure, and GCP.
 - **System Admin**: Auditing and compliance at scale.
 
-### 2. [Part 2: Delivery & Governance](./Part-2-Delivery-and-Governance/README.md)
+### 2. [02. Delivery & Governance](./02-Delivery-and-Governance/README.md)
 *Building the production highway.*
 - **CI/CD Pipelines**: Jenkins, Secret scanning, and Static analysis.
 - **GitOps**: Declarative deployment models with ArgoCD.
 - **Policy as Code**: Enforcement using OPA and Gatekeeper.
 - **Security Automation**: DevSecOps integration.
 
-### 3. [Part 3: Modern Operations](./Part-3-Modern-Operations/README.md)
+### 3. [03. Modern Operations](./03-Modern-Operations/README.md)
 *The future of systems intelligence.*
 - **Observability**: Beyond monitoring—logging, tracing, and metrics.
 - **AI Operations**: Leveraging LLMs and prompt engineering for DevOps.
