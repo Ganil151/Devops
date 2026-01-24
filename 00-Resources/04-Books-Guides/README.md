@@ -1,27 +1,22 @@
-# Books, Guides & Checklists
+# Books & Guides (Reference)
 
-A collection of literature, professional guides, and checklists to support your DevOps journey.
+This directory acts as a **Central Archive** for all PDFs, Cheat Sheets, and external resources.
 
-## 📚 Core Literature
-- [The Linux Command Line](OS/The%20Linux%20Command%20Line%20-%20A%20Complete%20Introduction.pdf)
-- [DevOps For Beginners](DevOps/DevOps%20For%20Beginners%20-%20Joseph%20Joyner.pdf)
-- [Nmap Cookbook](Hack/Book%20-%20Nmap%20Cookbook%20The%20Fat-free%20Guide%20to%20Network%20Scanning-1.pdf)
-- [DevOps Automation Cookbook](DevOps/DevOps%20Automation%20Cookbook.pdf)
-
-## 🛠️ Operational Guides
-- [DevOps Production Checklist](./Checklist.md)
-- [DevOps Directory MindMap](./DevOps-Directory-MindMap.md)
-- [DevOps Interview Q&A](DevOps/DevopsInterviewQ&A.pdf)
-
-## 📂 Specialized Resources
-- [Docker Resources](./Docker/)
-- [Languages (Go, Python)](./Languages/)
-- [Prompt Engineering](./Prompt-Engineering/)
-- [Testing & Security](./Testing/)
-- [Web Design](./WebDesign/)
-
-## 📄 Careers
-- [Resume Templates & Examples](./) (Check the `.docx` files in this directory)
+> **Note**: A copy of these resources has been distributed to their relevant `resources/` folders within the curriculum (e.g., `1-Beginner`, `2-Intermediate`) to support active learning.
 
 ---
-**Global Hub**: Back to [Resources Hub](../README.md).
+
+## 📚 Migration Map
+
+| Resource Type | Active Location |
+| :--- | :--- |
+| **Cheat Sheets** | Distributed to relevant module `resources/` (e.g., [Docker](../../1-Beginner/03-Phase-3/02-Container-Orchestration/Part-01-Docker-Fundamentals/resources/)) |
+| **Pen Testing (Kali)** | `3-Advanced/02-Phase-2/05-Security-Compliance/resources/` |
+| **Terraform Guides** | `2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/Terraform/resources/` |
+| **Resume Templates** | `4-Professional-Development/02-Resume-Engineering/resources/` |
+| **Networking/Nmap** | `1-Beginner/01-Phase-1/01-Networking/resources/` |
+
+---
+
+## 🛠️ Usage
+Students should reference the local `resources/` folder within their current learning module for the most relevant guides. This directory is preserved as a fallback backup.
