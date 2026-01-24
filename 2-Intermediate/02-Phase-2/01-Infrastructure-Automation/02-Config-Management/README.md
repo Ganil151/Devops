@@ -24,26 +24,42 @@ graph TD
 ## 🗺️ Curriculum Path
 
 ### 1. [01-Introduction](./01-Introduction/README.md)
+
 The shift from "Click-Ops" to Declarative Infrastructure. Understanding Idempotency, State, and the IaC Lifecycle.
 
 ### 2. [02-Infrastructure-Provisioning](./02-Infrastructure-Provisioning/README.md)
+
 **Terraform, Pulumi, and Vendor Tools**. Focus on multi-cloud provisioning, state management, and modular infrastructure.
 
 ### 3. [03-Server-Configuration](./03-Server-Configuration/README.md)
+
 **Ansible, Chef, Puppet, and SaltStack**. Focus on agent vs agentless management and policy-driven server hardening.
 
 ### 4. [04-Immutable-Infrastructure](./04-Immutable-Infrastructure/README.md)
+
 **Packer, Vagrant, and Cloud-Init**. Moving away from "Snowflake" servers towards reproducible, baked images.
 
 ### 5. [05-Kubernetes-Config-Management](./05-Kubernetes-Config-Management/README.md)
+
 **Helm and Kustomize**. Managing complexity in container environments using templates and overlays.
 
 ### 6. [06-Assessments](./06-Assessments/README.md)
+
 Prepare for your next architecture review with technical interview questions, quizzes, and practical design challenges.
 
 ---
 
+## 📂 Practical Code & Scripts
+
+Accelerate your learning with real-world automation scripts:
+
+- **[Ansible Lab Scripts](./Ansible/)**: Playbooks for health checks, MySQL setup, and inventory generation.
+- **[Configuration Boilerplates](./Ansible/Boilerplates/)**: Reusable roles and variable files for enterprise environments.
+
+---
+
 ## 🛡️ The "State" Standard
+
 Everything in this track is designed to eliminate **Config Drift**. We treat infrastructure as a software product—versioned, tested, and automated.
 
 ---

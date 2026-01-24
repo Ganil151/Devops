@@ -1,0 +1,112 @@
+pipeline {
+    agent { label params.NODE_LABEL }
+
+    parameters {
+        string(name: 'NODE_LABEL', defaultValue: 'worker-node-3', description: 'Jenkins agent node label to run the pipeline on')
+        string(name: 'MYSQL_PETCLINIC_DB_NAME', defaultValue: 'petclinic')
+    }
+
+    environment {
+        MYSQL_ROOT_PASSWORD = credentials('mysql-root-password')
+    }
+
+    stages {
+
+        stage('Checkout Spring PetClinic Code') {
+            steps {
+                git branch: 'main',
+                    credentialsId: 'github-credentials',
+                    url: 'https://github.com/Ganil151/spring-petclinic-microservices.git'
+            }
+        }
+
+        stage('Install & Configure MySQL') {
+            steps {
+
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'mysql-petclinic-user',
+                        usernameVariable: 'MYSQL_PETCLINIC_USER',
+                        passwordVariable: 'MYSQL_PETCLINIC_PASSWORD'
+                    )
+                ]) {
+
+                    sh """
+                        set -e
+
+                        echo "===== Starting MySQL Setup on \$(hostname) ====="
+
+                        # Get DB name from pipeline parameters safely
+                        DB_NAME="${params.MYSQL_PETCLINIC_DB_NAME}"
+                        ROOT_PASS="${MYSQL_ROOT_PASSWORD}"
+
+                        echo "Configuring database: \$DB_NAME"
+
+                        # Install MySQL if not installed
+                        if ! command -v mysqld >/dev/null 2>&1; then
+                            sudo yum update -y
+                            sudo yum install -y wget git
+                            sudo wget https://dev.mysql.com/get/mysql80-community-release-el9-1.noarch.rpm -O /tmp/mysql.rpm
+                            sudo yum localinstall -y /tmp/mysql.rpm
+                            sudo yum install -y mysql-community-server
+                            sudo systemctl enable --now mysqld
+                        fi
+
+                        # Get temporary password if needed
+                        TEMP_PASSWORD=\$(sudo grep 'temporary password' /var/log/mysqld.log | awk '{print \$NF}' | tail -1 || true)
+                        CONNECTED=0
+
+                        # METHOD 1: socket auth
+                        if sudo mysql -e 'SELECT 1;' >/dev/null 2>&1; then
+                            sudo mysql -e "
+                                CREATE DATABASE IF NOT EXISTS $DB_NAME;
+                                CREATE USER IF NOT EXISTS '$MYSQL_PETCLINIC_USER'@'%' IDENTIFIED BY '$MYSQL_PETCLINIC_PASSWORD';
+                                GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$MYSQL_PETCLINIC_USER'@'%';
+                                FLUSH PRIVILEGES;
+                            "
+                            CONNECTED=1
+                        fi
+
+                        # METHOD 2: temporary password
+                        if [ "$CONNECTED" -eq 0 ] && [ -n "\$TEMP_PASSWORD" ] &&
+                           echo 'SELECT 1;' | mysql --connect-expired-password -uroot -p"$TEMP_PASSWORD" >/dev/null 2>&1; then
+
+                            mysql --connect-expired-password -uroot -p" $TEMP_PASSWORD" -e "
+                                ALTER USER 'root'@'localhost' IDENTIFIED BY '$ROOT_PASS';
+                                CREATE DATABASE IF NOT EXISTS $DB_NAME;
+                                CREATE USER IF NOT EXISTS '$MYSQL_PETCLINIC_USER'@'%' IDENTIFIED BY '$MYSQL_PETCLINIC_PASSWORD';
+                                GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$MYSQL_PETCLINIC_USER'@'%';
+                                FLUSH PRIVILEGES;
+                            "
+                            CONNECTED=1
+                        fi
+
+                        # METHOD 3: root with final password
+                        if [ "$CONNECTED" -eq 0 ] &&
+                           echo 'SELECT 1;' | mysql -uroot -p" $ROOT_PASS" >/dev/null 2>&1; then
+
+                            mysql -uroot -p" $ROOT_PASS" -e "
+                                CREATE DATABASE IF NOT EXISTS $DB_NAME;
+                                CREATE USER IF NOT EXISTS '$MYSQL_PETCLINIC_USER'@'%' IDENTIFIED BY '$MYSQL_PETCLINIC_PASSWORD';
+                                GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$MYSQL_PETCLINIC_USER'@'%';
+                                FLUSH PRIVILEGES;
+                            "
+                            CONNECTED=1
+                        fi
+
+                        if [ "$CONNECTED" -eq 0 ]; then
+                            echo "ERROR: Could not authenticate to MySQL root."
+                            exit 1
+                        fi
+
+                        echo "===== MySQL Configuration Complete ====="
+                    """
+                }
+            }
+        }
+    }
+
+    post {
+        always { echo "Pipeline complete for node ${params.NODE_LABEL}" }
+    }
+}

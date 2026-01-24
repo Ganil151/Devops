@@ -28,10 +28,11 @@ Cloud platforms are the foundation of modern DevOps. This module focuses on mast
 ## 🎓 Learning Objectives
 
 By the end of this module, you will be able to:
-1.  **Architect for Failure**: Design systems that survive the loss of an entire Availability Zone or Region.
-2.  **Scale Dynamically**: Implement automated load balancing and auto-scaling based on real-time metrics.
-3.  **Harden Identity**: Master IAM Policies, Roles, and Service Control Policies (SCPs) for least-privilege access.
-4.  **Manage Global Logic**: Utilize Edge Computing (CloudFront/Lambda@Edge) to reduce latency for global users.
+
+1. **Architect for Failure**: Design systems that survive the loss of an entire Availability Zone or Region.
+2. **Scale Dynamically**: Implement automated load balancing and auto-scaling based on real-time metrics.
+3. **Harden Identity**: Master IAM Policies, Roles, and Service Control Policies (SCPs) for least-privilege access.
+4. **Manage Global Logic**: Utilize Edge Computing (CloudFront/Lambda@Edge) to reduce latency for global users.
 
 ---
 
@@ -59,10 +60,14 @@ All architectures in this module follow the **Cloud Well-Architected Framework**
 
 ---
 
-## 📂 Resources
+## 📂 Practical Code & Scripts
 
+Accelerate your platform engineering skills with real-world assets:
+
+- **[Terraform Modules](./Terraform/)**: Reusable HCL modules for EKS, VPC, and S3.
+- **[AWS Automation Scripts](./Aws/)**: CLI logic for EC2 tagging, bucket creation, and identity audits.
 - **[YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials.
-- **[Real-Life Scenarios](./05-Assessments/Real-Life-Scenarios/README.md)**: Practical troubleshootng challenges.
+- **[Real-Life Scenarios](./05-Assessments/Real-Life-Scenarios/README.md)**: Practical troubleshooting challenges.
 
 ---
 

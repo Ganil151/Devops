@@ -130,12 +130,11 @@ High-level implementation strategies.
 
 ---
 
-## 🚀 Quick Start
+## 📂 Practical Code & Scripts
 
-```bash
-# Start with Beginner Introduction
-cd 01-Shell-Scripting/01-Introduction
-cat README.md
-```
+Build your first tools with these guided examples:
+
+- **[Shell Scripting Examples](./01-Shell-Scripting/examples/)**: Hello World, variable tests, and basic OS diagnostics.
+- **[Python Basics](./02-Python-Basics/examples/)**: Essential syntax and automation logic for DevOps.
 
 **Happy Automating!** 🤖
