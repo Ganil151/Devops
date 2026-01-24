@@ -17,7 +17,7 @@ The power of this stack lies in the **Operator Pattern**. Instead of manually ma
 - **Kube-State-Metrics**: Listens to the Kubernetes API server and generates metrics about the state of objects (pods, deployments, etc.).
 
 ### Monitoring Flow (Mermaid)
-![Monitoring Flow](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/KubeMonStack.png)
+> **⚠️ Missing Image**: *Monitoring Flow* ('../../../../../00-Resources/03-Images-Diagrams/Kubernetes/KubeMonStack.png')
 
 ---
 

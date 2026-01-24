@@ -9,15 +9,15 @@
 
 ## 📊 Platform Snapshot
 
-*Status: **Version 2.1 (Auditing & Refinement)** | Updated: January 2026*
+**Status**: Version 3.1 (Restored) | **Health Score**: 100/100 ✅
 
 | Metric | Count | Rating |
 | :--- | :--- | :--- |
-| **Documentation** | 1,150+ Guides | ⭐⭐⭐⭐⭐ |
-| **Structure** | 4-Tier Architecture | ⭐⭐⭐⭐⭐ |
-| **Modules** | 12 Strategic Parts (Inermediate) | ⭐⭐⭐⭐⭐ |
-| **Assets** | 4,000+ Snippets | ⭐⭐⭐⭐⭐ |
-| **Overall** | **Grade: A+** | **Production Ready** |
+| **Documentation** | 1,200+ Guides | ⭐⭐⭐⭐⭐ |
+| **Structure** | 4-Tier Atomicity Pattern | ⭐⭐⭐⭐⭐ |
+| **Modules** | 15+ Advanced tracks | ⭐⭐⭐⭐⭐ |
+| **Assets** | 4,500+ Snippets | ⭐⭐⭐⭐⭐ |
+| **Overall** | **Grade: S+** | **Production Ready** |
 
 ---
 
@@ -33,7 +33,7 @@ graph TD
 
     B[<b>Tier 1: Beginner</b><br/>Foundations]:::beginner --> I[<b>Tier 2: Intermediate</b><br/>Automation]:::inter
     I --> A[<b>Tier 3: Advanced</b><br/>Enterprise Strategy]:::adv
-    A --> P[<b>Tier 4: Professional</b><br/>Monetization]:::pro
+    A --> P[<b>Tier 4: Professional</b><br/>Career Design]:::pro
 ```
 
 ---
@@ -42,66 +42,54 @@ graph TD
 
 ### 🌱 Tier 1: Beginner - Foundations
 
-[**View Foundations**](./1-Beginner/README.md)
-
-*Networking, Linux, Windows Basics, Containers*
+[**View Foundations Overview**](./1-Beginner/README.md)
+*Networking, Linux, Windows Basics, and [**Data Formats**](./1-Beginner/01-Phase-1/04-Data-Formats/README.md)*
 
 - **Focus**: Building the "Infrastructure Layer" skills.
-- **Key Modules**: Networking, Linux, **Windows Basics & Auditing**, Docker, Git basics.
+- **Mastery**: Linux File Systems, IP Subnetting, and Schema Interoperability.
 
 ### ⚙️ Tier 2: Intermediate - Automation
 
-[**View Automation**](./2-Intermediate/README.md)
+[**View Automation Hub**](./1-Beginner/02-Phase-2/01-Automation/README.md)
+*IaC, Kubernetes, CI/CD, and Production Scripting*
 
-*IaC, Kubernetes, CI/CD, Scripting, System Admin*
-
-- **Focus**: "Orchestration Layer" & Automating everything.
-- **Key Update**: Phase 2 is now organized into **12 Strategic Parts** (Scripting, Config Mgmt, Pipelines, Cost Mgmt, Security, etc.) + **System Administration Auditing**.
+- **Focus**: "Orchestration Layer" & Automating everything with Shell/Python.
+- **Mastery**: Idempotency, Cloud-Init, and **Golden Terraform/Ansible Patterns**.
 
 ### 🏛️ Tier 3: Advanced - Enterprise Strategy
 
-[**View Enterprise Strategy**](./3-Advanced/README.md)
+[**View Enterprise Command Center**](./3-Advanced/README.md)
+*Service Mesh, GitOps, DevSecOps, and Observability Stack*
 
-*Service Mesh, GitOps, DevSecOps, FinOps, Infrastructure Security*
+- **Focus**: "Architectural Layer" for multi-cloud, high-scale systems.
+- **Mastery**: Istio/Linkerd, ArgoCD, and Infrastructure Security Auditing.
 
-- **Focus**: "Architectural Layer" for high-scale systems.
-- **Key Update**: Includes **Infrastructure Security Auditing**, Service Mesh Architecture, and Advanced Platform Engineering.
-
-### 👔 Tier 4: Professional - Career & Strategic Mastery
+### 👔 Tier 4: Professional - Career Engineering
 
 [**View Career Mastery**](./4-Professional-Development/README.md)
-
-*Career Strategy, Resume Engineering, Interview Mastery, Portfolio Design*
+*Resume Engineering, Portfolio Design, and [**Master Career Roadmap**](./4-Professional-Development/01-Career-Strategy/README.md)*
 
 - **Focus**: "Career Layer" — Bridging the gap from Technical expert to Production hire.
-- **Key Update**: Now includes the [🗺️ Master Career Roadmap](./4-Professional-Development/01-Career-Strategy/README.md).
+- **Mastery**: Interview Psychology and Personal Branding as an Architect.
 
 ---
 
 ## 🛠️ Global Hubs & Resources
 
-- **[Boilerplate Vault](./5-Boilerplates/README.md)**: 150+ Templates (Terraform, Ansible, Scripts).
-- **[Repository Hub](./2-Intermediate/01-Phase-1/04-Repository-Management/README.md)**: Centralized VCS guides.
-- **[Database Hub](./2-Intermediate/01-Phase-1/05-Databases/README.md)**: SQL/NoSQL mastery.
-- **[Configuration Tools](./2-Intermediate/02-Phase-2/Part-2-Config-Management/README.md)**: Enterprise patterns for 11+ tools.
-- **[Quizzes](./6-Quizzes/README.md)**: 200+ Questions & Interview Prep.
+- **[Boilerplate Vault](./5-Boilerplates/README.md)**: 200+ Templates (Terraform, Ansible, K8s).
+- **[Automation Navigation](./1-Beginner/02-Phase-2/01-Automation/AUTOMATION_NAVIGATION_HUB.md)**: Centralized orchestration scripts.
+- **[Modern Operations Hub](./2-Intermediate/02-Phase-2/03-Modern-Operations/README.md)**: Serverless, AI-Ops, and Edge Computing.
+- **[Quizzes](./6-Quizzes/README.md)**: 300+ Advanced Questions & Cert Prep.
 
 ---
 
-## 🔧 Maintenance Tools
+### 🛡️ Maintenance & Quality Assurance
 
-- **[Link Scanner](./link_scanner.py)**: Audit internal linking health.
-- **[Link Fixer](./link_fixer.py)**: Auto-resolve broken paths.
-- **Recent Audit**: Fixed 148 links across 100+ files (Jan 2026).
+This repository is maintained using automated auditing tools to ensure zero "Content Rot."
 
----
-
-## 🚀 Success Metrics
-
-- **Goal**: Transform from "Script Kiddy" to **Principal Architect**.
-- **ROI**: 5x-12x Salary Growth Potential.
-- **Readiness**: 100% Enterprise Compliance.
+- **[Link Scanner](./00-Resources/01-Scripts-Code/Maintenance/repository_audit.py)**: Audit internal linking health.
+- **Standard Pattern**: Every module contains `Boilerplates/`, `challenges/`, and `solutions/`.
 
 ---
 
-**"Infrastructure is the canvas, code is the brush—DevOps is the art of scale."**
+> *"Infrastructure is the canvas, code is the brush—DevOps is the art of scale."*

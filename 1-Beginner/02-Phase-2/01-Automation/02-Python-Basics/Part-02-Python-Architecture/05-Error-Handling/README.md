@@ -2,7 +2,7 @@
 
 > **"In DevOps, failure is not an option—it's a certainty. The difference between a script that crashes at 3 AM and one that recovers gracefully is how you handle the unexpected."**
 
-![Secure Python Error Handling](../assets/python_error_handling.png)
+> **⚠️ Missing Image**: *Secure Python Error Handling* ('../assets/python_error_handling.png')
 
 ## 📚 Overview
 

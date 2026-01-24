@@ -14,7 +14,7 @@ Understanding fundamental network protocols is essential for DevOps professional
 ### HTTP (Hypertext Transfer Protocol)
 HTTP is the foundation of web communication, operating on port 80. It is a **stateless**, request-response protocol.
 
-![HTTP Request/Response Flow](../../../02-Phase-2/02-API-Basics/http_request_response_flow.png)
+> **⚠️ Missing Image**: *HTTP Request/Response Flow* ('../../../02-Phase-2/02-API-Basics/http_request_response_flow.png')
 
 ### The Stateless Nature of HTTP
 Statelessness means that the server does not "remember" previous requests. Every request is isolated.
@@ -52,7 +52,7 @@ Set-Cookie: session=abc123; HttpOnly; Secure
 ```
 
 ### HTTP Methods
-![HTTP Methods](../../../02-Phase-2/02-API-Basics/HTTProperties.png)
+> **⚠️ Missing Image**: *HTTP Methods* ('../../../02-Phase-2/02-API-Basics/HTTProperties.png')
 
 ### HTTP Status Codes
 **Success (2xx):**
@@ -95,7 +95,7 @@ Set-Cookie: session=abc123; HttpOnly; Secure
 - `Content-Security-Policy` (CSP): Prevents XSS.
 - `X-Frame-Options`: Prevents Clickjacking.
 
-![HTTP Protocol Evolution](../../../02-Phase-2/02-API-Basics/http_versions_comparison.png)
+> **⚠️ Missing Image**: *HTTP Protocol Evolution* ('../../../02-Phase-2/02-API-Basics/http_versions_comparison.png')
 
 **Why DevOps Care about versioning?**
 - **HTTP/1.1** results in "Head-of-Line Blocking" where one slow image can block the rest of the page.
@@ -105,7 +105,7 @@ Set-Cookie: session=abc123; HttpOnly; Secure
 ### HTTPS (HTTP Secure)
 HTTPS adds TLS/SSL encryption to HTTP, operating on port 443.
 
-![HTTPS TLS Handshake](../../../02-Phase-2/02-API-Basics/https_tls_handshake.png)
+> **⚠️ Missing Image**: *HTTPS TLS Handshake* ('../../../02-Phase-2/02-API-Basics/https_tls_handshake.png')
 
 **TLS/SSL Details for DevOps:**
 - **Asymmetric Encryption**: Used during the handshake (RSA/Diffie-Hellman) to securely exchange a "session key."

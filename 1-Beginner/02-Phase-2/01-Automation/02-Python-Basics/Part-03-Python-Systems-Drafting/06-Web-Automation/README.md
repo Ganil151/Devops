@@ -2,7 +2,7 @@
 
 > **"When simple HTTP requests fail because a site is 'too interactive,' Selenium steps in. It's the digital hand that clicks, types, and navigates the web exactly like a human engineer."**
 
-![Python Automation Banner](../assets/python_automation_banner.png)
+> **⚠️ Missing Image**: *Python Automation Banner* ('../assets/python_automation_banner.png')
 
 ## 📚 Overview
 

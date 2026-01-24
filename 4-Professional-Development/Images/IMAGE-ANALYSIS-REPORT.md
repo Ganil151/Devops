@@ -110,7 +110,7 @@ Images/
 
 ### From Same Level Directory
 ```markdown
-![Alt Text](../../1-Beginner/03-Phase-3/02-FinOps/Images/finops-lifecycle.png)
+> **⚠️ Missing Image**: *Alt Text* ('../../1-Beginner/03-Phase-3/02-FinOps/Images/finops-lifecycle.png')
 ```
 
 ### From Nested Directory
@@ -119,7 +119,7 @@ Images/
 ![Pricing](../Images/infographics/pricing-comparison.png)
 
 # From 07-FinOps/README.md
-![Lifecycle](../../1-Beginner/03-Phase-3/02-FinOps/Images/finops-lifecycle.png)
+> **⚠️ Missing Image**: *Lifecycle* ('../../1-Beginner/03-Phase-3/02-FinOps/Images/finops-lifecycle.png')
 ```
 
 ---

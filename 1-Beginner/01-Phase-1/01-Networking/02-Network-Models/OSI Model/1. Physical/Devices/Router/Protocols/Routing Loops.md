@@ -6,7 +6,7 @@ What is Routing Loop and How to Avoid Routing Loop?
 
  _**For example**_ :  it’s where traffic is being received from one connection or one device (a router typically or a layer 3 switch) it sees traffic coming from an interface and it sends this traffic to this host and then that host receives the traffic and it sends this traffic to the interface and it is receiving traffic from the host and it is sending it right back to host so essentially the traffic goes in a **loop**.
 
-![file:///tmp/.CFZMW2/1.png](file:///tmp/.CFZMW2/1.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/1.png* ('file:///tmp/.CFZMW2/1.png')
 
 In the above image, the GFG Router 2 is sending the data traffic to GFG Router 1  and it is sending back it to GFG Router 2 which cause the loop there is a term called  TTL which is a time to live on a packet and it tells up to how many hops this packet can live.
 Whenever a routing loop is developed due to some fault in the routing table the data packets are delivered in between two routers again and again until the time to live expires and then the packet has to be deleted that’s why the routing loop is bad.

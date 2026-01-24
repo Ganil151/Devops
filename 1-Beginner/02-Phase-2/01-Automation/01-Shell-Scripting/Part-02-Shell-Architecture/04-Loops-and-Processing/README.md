@@ -243,8 +243,8 @@ sequenceDiagram
 
 Image placeholders (add actual assets as needed):
 
-- ![loop-architecture-placeholder](./assets/loop-architecture.png)
-- ![flow-placeholder](./assets/flow-placeholder.png)
+- > **⚠️ Missing Image**: *loop-architecture-placeholder* ('./assets/loop-architecture.png')
+- > **⚠️ Missing Image**: *flow-placeholder* ('./assets/flow-placeholder.png')
 
 ---
 

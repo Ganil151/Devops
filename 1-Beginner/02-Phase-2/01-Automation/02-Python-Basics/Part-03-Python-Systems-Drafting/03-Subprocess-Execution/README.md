@@ -2,7 +2,7 @@
 
 > **"Python is the brain, but the Shell is the muscles. The subprocess module is the nervous system that connects the two, allowing your code to orchestrate everything from Docker to Terraform."**
 
-![Python Subprocess Ecosystem](../assets/python_ecosystem.png)
+> **⚠️ Missing Image**: *Python Subprocess Ecosystem* ('../assets/python_ecosystem.png')
 
 ## 📚 Overview
 

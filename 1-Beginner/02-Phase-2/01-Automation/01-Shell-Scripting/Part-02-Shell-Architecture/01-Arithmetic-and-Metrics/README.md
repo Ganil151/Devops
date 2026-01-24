@@ -2,7 +2,7 @@
 
 > **"Arithmetic in Bash isn't just about math; it's about making decisions based on system resources, cost, and capacity."**
 
-![Arithmetic & Metrics Banner](../assets/arithmetic_metrics_header.svg)
+> **⚠️ Missing Image**: *Arithmetic & Metrics Banner* ('../assets/arithmetic_metrics_header.svg')
 
 ## 📚 Overview
 

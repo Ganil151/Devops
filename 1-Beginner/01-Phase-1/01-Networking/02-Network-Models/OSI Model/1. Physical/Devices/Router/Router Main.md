@@ -1,4 +1,4 @@
-![file:///tmp/.CFZMW2/1.png](file:///tmp/.CFZMW2/1.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/1.png* ('file:///tmp/.CFZMW2/1.png')
 
    • A router is a hardware device which is used to connect a LAN with an internet connection. It is used to receive, analyze and forward the incoming packets to another network.
 - A router works in a <span style="background:#fff88f">Layer 3 (Network layer)</span> of the OSI Reference model.     
@@ -10,4 +10,4 @@
 - **Performance:** Router enhances the overall performance of the network. Suppose there are 24 workstations in a network generates a same amount of traffic. This increases the traffic load on the network. Router splits the single network into two networks of 12 workstations each, reduces the traffic load by half.
 - **Network**
 
-![file:///tmp/.CFZMW2/2.png](file:///tmp/.CFZMW2/2.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/2.png* ('file:///tmp/.CFZMW2/2.png')

@@ -8,7 +8,7 @@ In the early days of Jenkins, CI/CD jobs were created using a point-and-click GU
 ## 🏗️ The Pipeline Architecture
 Modern Jenkins relies on **Declarative** and **Scripted** pipelines. Declarative is the industry standard for 99% of use cases due to its strict, readable syntax.
 
-![Declarative Pipeline Lifecycle](../../../../../00-Resources/03-Images-Diagrams/declarative_pipeline_lifecycle.png)
+> **⚠️ Missing Image**: *Declarative Pipeline Lifecycle* ('../../../../../00-Resources/03-Images-Diagrams/declarative_pipeline_lifecycle.png')
 
 ### Why "As Code"?
 | Feature | Legacy Jenkins (Freestyle) | Modern Jenkins (Pipeline) |

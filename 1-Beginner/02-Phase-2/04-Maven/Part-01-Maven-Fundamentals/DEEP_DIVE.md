@@ -42,11 +42,11 @@ Answer: Link for Java Installation
 
 ## Maven Architecture
 Maven repository is a place where the maven artifacts or dependencies of the JAR file is going to store which are written in the file called the POM.XML. POM.XML contains the Java classes, resources, and other dependencies. There are the two types of repositories like local repository and remote repository.
-![Maven Architecture](Images/maven-architecture.png)
+> **⚠️ Missing Image**: *Maven Architecture* ('Images/maven-architecture.png')
 Maven reads the pom.xml file. Maven downloads the dependencies defined in the pom.xml file into the local repository from the central or remote repository. Maven executes the life cycles, phases, goals, and plugins defined in the pom.xml file.
 ## Maven Repository
 Maven repositories are directories of packaged JAR files along with their metadata. The metadata are POM files related to the projects each packaged JAR file belongs to, including what external dependencies each packaged JAR has. This metadata enables Maven to download dependencies of your dependencies recursively until all dependencies are download and put into your local machine. Maven has three types of repository: Maven searches for dependencies in this repositories. First maven searches in Local repository then Central repository then Remote repository if Remote repository specified in the POM.
-![Maven Repository](Images/Maven-Repository.jpg)
+> **⚠️ Missing Image**: *Maven Repository* ('Images/Maven-Repository.jpg')
 **1. Local repository:** A local repository is a directory on the machine of developer. This repository contains all the dependencies Maven downloads. Maven only needs to download the dependencies once, even if multiple projects depends on them (e.g. ODBC). By default, maven local repository is user_home/m2 directory. example **C:\Users\asingh\.m2**
 
 **2. Central repository:** The central Maven repository is created Maven community. Maven looks in this central repository for any dependencies needed but not found in your local repository. Maven then downloads these dependencies into your local repository.

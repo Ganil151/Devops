@@ -2,7 +2,7 @@
 
 > **"In DevOps, you don't always need a massive enterprise server. Sometimes you just need a 10-line Webhook receiver that can handle 10,000 requests a second without breaking a sweat."**
 
-![Python Automation Banner](../assets/python_automation_banner.png)
+> **⚠️ Missing Image**: *Python Automation Banner* ('../assets/python_automation_banner.png')
 
 ## 📚 Overview
 

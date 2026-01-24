@@ -2,7 +2,7 @@
 
 > **"If os.path is the 'Old Manual Gearbox' of file systems, Pathlib is the 'Automatic Transmission.' It turns complex path logic into readable, object-oriented code that works seamlessly on every OS."**
 
-![Secure Python File Ops](../assets/python_file_ops.png)
+> **⚠️ Missing Image**: *Secure Python File Ops* ('../assets/python_file_ops.png')
 
 ## 📚 Overview
 

@@ -44,7 +44,7 @@ graph TD
 
 In production, we don't just put everything on one partition. We separate them to prevent a log file from filling up the entire disk and crashing the OS.
 
-![Server Mount Strategy](../../../../00-Resources/03-Images-Diagrams/serverMount.png)
+> **⚠️ Missing Image**: *Server Mount Strategy* ('../../../../00-Resources/03-Images-Diagrams/serverMount.png')
 
 ### SRE Recommended Mounts:
 1.  **`/` (Root)**: The base OS.

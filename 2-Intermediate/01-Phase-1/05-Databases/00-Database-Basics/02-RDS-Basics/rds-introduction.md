@@ -41,7 +41,7 @@ Time spent: 5-10% on infrastructure, 90-95% on application
 ## Supported Database Engines
 
 RDS supports six popular database engines:
-![RDS Supported Database Engines](.../../../../../../../../00-Resources/03-Images-Diagrams/AWS/databasesEngines.png)
+> **⚠️ Missing Image**: *RDS Supported Database Engines* ('.../../../../../../../../00-Resources/03-Images-Diagrams/AWS/databasesEngines.png')
 
 ### Quick Comparison
 
@@ -95,15 +95,15 @@ Daily Backups:
 ```
 
 ### 2. High Availability (Multi-AZ)
-![multi-AZ](.../../../../../../../../00-Resources/03-Images-Diagrams/AWS/multi-Az-Deployment.png)
+> **⚠️ Missing Image**: *multi-AZ* ('.../../../../../../../../00-Resources/03-Images-Diagrams/AWS/multi-Az-Deployment.png')
 
 
 
 ### 3. Read Replicas
-![ReadReplicas](../../../../../../00-Resources/03-Images-Diagrams/AWS/replicaDeployment.png)
+> **⚠️ Missing Image**: *ReadReplicas* ('../../../../../../00-Resources/03-Images-Diagrams/AWS/replicaDeployment.png')
 
 ### 4. Automatic Scaling
-![autoScaling](../../../../../../00-Resources/03-Images-Diagrams/AWS/storageAutoScaling.png)
+> **⚠️ Missing Image**: *autoScaling* ('../../../../../../00-Resources/03-Images-Diagrams/AWS/storageAutoScaling.png')
 
 ### 5. Security Features
 ```

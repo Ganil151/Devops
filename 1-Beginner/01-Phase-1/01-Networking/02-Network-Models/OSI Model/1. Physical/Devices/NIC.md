@@ -5,7 +5,7 @@
 - The MAC address or physical address is encoded on the network card chip which is assigned by the IEEE to identify a network card uniquely. The MAC address is stored in the PROM (Programmable read-only memory).
 
 There are two types of NIC:
-![file:///tmp/.CFZMW2/1.png](file:///tmp/.CFZMW2/1.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/1.png* ('file:///tmp/.CFZMW2/1.png')
 
 **Wired NIC:** The Wired NIC is present inside the motherboard. Cables and connectors are used with wired NIC to transfer data.
 

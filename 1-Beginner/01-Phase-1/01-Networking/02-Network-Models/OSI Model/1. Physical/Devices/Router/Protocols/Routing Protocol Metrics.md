@@ -58,7 +58,7 @@ Example: Router receives multiple routes over to the 10.10.10.0/24 network from 
 
 You can display the Administrative Distance in the router by typing the show IP route
 ####  command in CLI:
-![file:///tmp/.CFZMW2/1.png](file:///tmp/.CFZMW2/1.png) 
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/1.png* ('file:///tmp/.CFZMW2/1.png') 
 
 #### **Relationship between Administrative Distance and Routing Metric:**
 

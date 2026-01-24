@@ -2,7 +2,7 @@
 
 > **"Theory becomes power only when it is applied. This capstone project combines every module you've studied—from Variables to Subprocesses—into a single, production-grade automation engine."**
 
-![Python Automation Banner](../assets/python_automation_banner.png)
+> **⚠️ Missing Image**: *Python Automation Banner* ('../assets/python_automation_banner.png')
 
 ## 📚 Overview
 

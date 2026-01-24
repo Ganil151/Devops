@@ -28,7 +28,7 @@ Metrics are the network variables used to determine the best route to the destin
 - Default Routing
 - Dynamic Routing
 
-![file:///tmp/.CFZMW2/1.png](file:///tmp/.CFZMW2/1.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/1.png* ('file:///tmp/.CFZMW2/1.png')
 
 ## Static Routing
 

@@ -23,7 +23,7 @@ I've created comprehensive Kubernetes notes in [`KUBERNETES_NOTES.md`](KUBERNETE
 
 ## 🎯 Key Kubernetes Components at a Glance
 
-![Kubernetes Architecture](../../../../03-Images-Diagrams/Kubernetes/Kubernetes-01.png)
+> **⚠️ Missing Image**: *Kubernetes Architecture* ('../../../../03-Images-Diagrams/Kubernetes/Kubernetes-01.png')
 
 ### Control Plane (Master Node)
 | Component | Port | Purpose |
@@ -86,7 +86,7 @@ kubectl port-forward pod/<pod-name> 8080:80
 
 ## 📊 Kubernetes Object Hierarchy
 
-![Deployment Hierarchy](C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_deployment_hierarchy_1763915683588.png)
+> **⚠️ Missing Image**: *Deployment Hierarchy* ('C:/Users/ganil/.gemini/antigravity/brain/efe02e60-f4a0-4f0a-92fa-00244e737dbd/kubernetes_deployment_hierarchy_1763915683588.png')
 
 ```
 Cluster

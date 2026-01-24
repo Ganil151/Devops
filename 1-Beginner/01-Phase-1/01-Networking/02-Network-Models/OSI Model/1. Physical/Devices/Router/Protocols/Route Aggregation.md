@@ -13,7 +13,7 @@ In an enterprise network, **sub-netting** is the process of lengthening the ma
 As the network size increases, the number of individual networks listed in the IP route table also increases, as does packet size. **Routers** cannot effectively handle a large number of sub-networks, which leads to slowdowns, **packet losses** and even crashes. That's why it's important to reduce the number of entries in the route table, which is what route summarization accomplishes.
 
 With route summarization, many routes are advertised with just one line in an update packet, which not only reduces the packet size, but also allows more **bandwidth** for data transfer.
-![file:///tmp/.CFZMW2/1.png](file:///tmp/.CFZMW2/1.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/1.png* ('file:///tmp/.CFZMW2/1.png')
 
 Figure 1.
 
@@ -27,7 +27,7 @@ Route summarization enables multiple routes to be advertised with only one line 
 Also, each time a new data flow enters a router, it must identify which interface the 
 traffic  must be sent out to. For this, it must perform a lookup in its routing table. This process takes longer for large routing tables and requires more router central processing unit ( CPU ) cycles to route traffic.
 Route summarization can eliminate this problem by minimizing both the time required to perform lookup and reducing the number of CPU cycles.
-![file:///tmp/.CFZMW2/2.png](file:///tmp/.CFZMW2/2.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/2.png* ('file:///tmp/.CFZMW2/2.png')
 
 Figure 2.
 Close up view of Distribution Router F and Access Router D from Figure 1 illustrating the terminology used.

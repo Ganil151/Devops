@@ -2,7 +2,7 @@
 
 > **"Bash scripts are for quick fixes, but Python CLIs are for enterprise automation. If you want your tools to be used by fellow engineers, you must build them with a professional interface."**
 
-![Python CLI Automation](../assets/python_automation_banner.png)
+> **⚠️ Missing Image**: *Python CLI Automation* ('../assets/python_automation_banner.png')
 
 ## 📚 Overview
 

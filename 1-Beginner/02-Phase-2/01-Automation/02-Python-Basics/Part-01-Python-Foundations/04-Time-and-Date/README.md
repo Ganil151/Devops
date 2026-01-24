@@ -2,7 +2,7 @@
 
 > **"In the DevOps world, 'when' is just as important as 'what'. If your automation can't handle timezones, offsets, and durations, your production schedule will eventually drift into chaos."**
 
-![Python Data Flow](../assets/python_data_flow.png)
+> **⚠️ Missing Image**: *Python Data Flow* ('../assets/python_data_flow.png')
 
 ## 📚 Overview
 

@@ -1,3 +1,3 @@
 Are the major parts which are needed to install the software. Some important network components are <span style="background:#d3f8b6">NIC, SWITCH, CABLE, HUB, ROUTER, and [[Modem]].</span> Depending on the type of network that we need to install, some network components can also be removed. For example, the wireless network does not require a cable. Following are the major components required to install a network:
 
-![file:///tmp/.CFZMW2/1.png](file:///tmp/.CFZMW2/1.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/1.png* ('file:///tmp/.CFZMW2/1.png')

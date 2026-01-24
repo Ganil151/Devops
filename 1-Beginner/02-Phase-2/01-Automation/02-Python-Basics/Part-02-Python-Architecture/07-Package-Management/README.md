@@ -2,7 +2,7 @@
 
 > **"A script is only as reliable as its weakest dependency. In DevOps, package management isn't just about 'installing stuff'—it's about ensuring your automation supply chain is secure, reproducible, and conflict-free."**
 
-![Python Subprocess Ecosystem](../assets/python_ecosystem.png)
+> **⚠️ Missing Image**: *Python Subprocess Ecosystem* ('../assets/python_ecosystem.png')
 
 ## 📚 Overview
 

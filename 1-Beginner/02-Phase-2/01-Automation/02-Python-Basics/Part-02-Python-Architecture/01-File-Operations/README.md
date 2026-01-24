@@ -2,7 +2,7 @@
 
 > **"In the DevOps world, everything eventually becomes a file. If you can't read, write, and manipulate files safely, you can't automate infrastructure."**
 
-![Secure Python File Ops](../assets/python_file_ops.png)
+> **⚠️ Missing Image**: *Secure Python File Ops* ('../assets/python_file_ops.png')
 
 ## 📚 Overview
 

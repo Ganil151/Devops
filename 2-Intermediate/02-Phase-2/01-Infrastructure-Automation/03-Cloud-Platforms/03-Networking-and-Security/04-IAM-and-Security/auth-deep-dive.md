@@ -52,7 +52,7 @@ aws iam create-user --user-name dev-user \
 ```
 
 ## 3. Application Security: Cognito vs. Entra ID
-![Cognito vs Entra ID](../../Images/congitoVsEntra.png)
+> **⚠️ Missing Image**: *Cognito vs Entra ID* ('../../Images/congitoVsEntra.png')
 
 ### Cognito Authentication Flow
 1. User Logs in via Hosted UI -> Receives JWT (IdToken, AccessToken, RefreshToken).

@@ -7,12 +7,12 @@ sudo apt install -y unzip wget
 sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.9.0.112764.zip 
 
 #### Jenkins github pipeline 
-![alt text](IMAGES/Screenshot%20(210).png)
+> **⚠️ Missing Image**: *alt text* ('IMAGES/Screenshot%20(210').png)
 - Trigger the build when a change is pushed to GitHub
 - Add GitHub hook trigger for GITScm polling
 - Poll SCM: H/5 * * * * * 
 
-![alt text](IMAGES/Screenshot%20(211).png)
+> **⚠️ Missing Image**: *alt text* ('IMAGES/Screenshot%20(211').png)
 
 #### Fix Permission Issue in SonarQube
 ```bash

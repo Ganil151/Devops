@@ -38,7 +38,7 @@ By the end of this module, you will be able to:
 
 ## 🏗️ Architecture Overview
 
-![Microservices Architecture](./assets/microservices_vs_monolith_comparison.png)
+> **⚠️ Missing Image**: *Microservices Architecture* ('./assets/microservices_vs_monolith_comparison.png')
 
 ```mermaid
 graph TB
@@ -353,7 +353,7 @@ services:
 
 ## 📡 Communication Patterns
 
-![Event-Driven Architecture](./assets/event_driven_architecture_flow.svg)
+> **⚠️ Missing Image**: *Event-Driven Architecture* ('./assets/event_driven_architecture_flow.svg')
 
 ### Synchronous Communication
 
@@ -553,7 +553,7 @@ graph LR
 
 ## 💾 Data Management
 
-![Database Per Service](./assets/database_per_service_pattern.jpg)
+> **⚠️ Missing Image**: *Database Per Service* ('./assets/database_per_service_pattern.jpg')
 
 ### Database Per Service
 

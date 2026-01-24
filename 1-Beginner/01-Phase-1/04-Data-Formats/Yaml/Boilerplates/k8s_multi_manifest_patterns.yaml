@@ -1,0 +1,87 @@
+# 🏗️ Kubernetes Multi-Manifest Bundles (The Golden Standard)
+
+This document demonstrates the professional pattern for bundling related resources into a single YAML configuration using the document separator (`---`).
+
+## 1. The Bundle Architecture
+A production-grade application requires multiple resource types. Orchestrating them in a single file ensures consistency and easier versioning.
+
+```yaml
+# ==========================================
+# 1. Namespace Definition
+# ==========================================
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: billing-system
+  labels:
+    tier: production
+    managed-by: terraform
+---
+# ==========================================
+# 2. ConfigMap (Environment Injection)
+# ==========================================
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: billing-config
+  namespace: billing-system
+data:
+  DB_HOST: "prod-db.example.com"
+  LOG_LEVEL: "info"
+---
+# ==========================================
+# 3. Service (Internal Load Balancer)
+# ==========================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: billing-api
+  namespace: billing-system
+spec:
+  selector:
+    app: billing-microservice
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+---
+# ==========================================
+# 4. Deployment (The Orchestrator)
+# ==========================================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: billing-deployment
+  namespace: billing-system
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: billing-microservice
+  template:
+    metadata:
+      labels:
+        app: billing-microservice
+    spec:
+      containers:
+      - name: api-container
+        image: ganil151/billing-api:v1.2.0
+        envFrom:
+        - configMapRef:
+            name: billing-config
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "1Gi"
+          requests:
+            cpu: "250m"
+            memory: "512Mi"
+```
+
+## 🔐 Best Practices Used:
+1. **Explicit Namespacing**: Every resource (except the Namespace itself) specifies its `namespace`.
+2. **Standard Labeling**: Uses consistent `app` and `tier` labels for discovery and monitoring.
+3. **Decoupled Config**: Injects environment variables via `ConfigMap` rather than hardcoding values in the Deployment.
+4. **Horizontal Scaling**: Configured with 3 replicas for high availability.

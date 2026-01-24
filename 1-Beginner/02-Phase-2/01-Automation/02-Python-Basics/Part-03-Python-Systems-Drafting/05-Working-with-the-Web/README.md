@@ -2,7 +2,7 @@
 
 > **"If a system is connected, it has an interface. Whether it's a sleek REST API or a messy HTML status page, Python is the universal key that unlocks and automates those interactions."**
 
-![Python Subprocess Ecosystem](../assets/python_ecosystem.png)
+> **⚠️ Missing Image**: *Python Subprocess Ecosystem* ('../assets/python_ecosystem.png')
 
 ## 📚 Overview
 

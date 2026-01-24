@@ -1,6 +1,6 @@
 #### <font color="#ff0000">How Routing Algorithms Work</font>
 
-![file:///tmp/.CFZMW2/1.png](file:///tmp/.CFZMW2/1.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/1.png* ('file:///tmp/.CFZMW2/1.png')
 
 Routers need to have some information about network status in order to make decisions regarding how and where to send packets. But how do they gather this information?
 
@@ -14,7 +14,7 @@ Based on how routers gather information about the structure of a network and the
 
 ### <font color="#ff0000">LS Algorithms</font>
 
-![file:///tmp/.CFZMW2/2.png](file:///tmp/.CFZMW2/2.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/2.png* ('file:///tmp/.CFZMW2/2.png')
 
 In LS algorithms, every router has to follow these steps:
 
@@ -39,16 +39,16 @@ We will use this algorithm as an example on the next page.
 #### Example: 
 
 #### <font color="#ff0000">Dijkstra Algorithm</font>
-![file:///tmp/.CFZMW2/3.png](file:///tmp/.CFZMW2/3.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/3.png* ('file:///tmp/.CFZMW2/3.png')
 <font color="#245bdb">Step 1.</font>
 
-![file:///tmp/.CFZMW2/4.png](file:///tmp/.CFZMW2/4.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/4.png* ('file:///tmp/.CFZMW2/4.png')
 <font color="#245bdb">Step 2</font>
 
-![file:///tmp/.CFZMW2/5.png](file:///tmp/.CFZMW2/5.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/5.png* ('file:///tmp/.CFZMW2/5.png')
 <font color="#245bdb">Step 3</font>
 
-![file:///tmp/.CFZMW2/6.png](file:///tmp/.CFZMW2/6.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/6.png* ('file:///tmp/.CFZMW2/6.png')
 <font color="#245bdb">Step 4</font>
 
 Here we want to find the best route between A and E (see below). You can see that there are six possible routes between A and E (ABE, ACE, ABDE, ACDE, ABDCE, ACDBE), and it's obvious that ABDE is the best route because its weight is the lowest. But life is not always so easy, and there are some complicated cases in which we have to use algorithms to find the best route.
@@ -112,7 +112,7 @@ Do{path[I++]=k;k=state[k].predecessor;} while (k > =0);
 
 #### <font color="#ff0000">DV Algorithms</font>
 
-![file:///tmp/.CFZMW2/7.png](file:///tmp/.CFZMW2/7.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/7.png* ('file:///tmp/.CFZMW2/7.png')
 
 A typical network graph and routing table for router J
 
@@ -129,25 +129,25 @@ In DV algorithms, each router has to follow these steps:
 One of the most important problems with DV algorithms is called "**count to infinity**." Let's examine this problem with an example:
 
 Imagine a network with a graph as shown below. As you see in this graph, there is only one link between A and the other parts of the network. Here you can see the graph and routing table of all nodes:
-![file:///tmp/.CFZMW2/8.png](file:///tmp/.CFZMW2/8.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/8.png* ('file:///tmp/.CFZMW2/8.png')
 
 Now imagine that the link between A and B is cut. At this time, B corrects its table. After a specific amount of time, routers exchange their tables, and so B receives C's routing table. Since C doesn't know what has happened to the link between A and B, it says that it has a link to A with the weight of 2 (1 for C to B, and 1 for B to A -- it doesn't know B has no link to A). B receives this table and thinks there is a separate link between C and A, so it corrects its table and changes infinity to 3 (1 for B to C, and 2 for C to A, as C said). Once again, routers exchange their tables. When C receives B's routing table, it sees that B has changed the weight of its link to A from 1 to 3, so C updates its table and changes the weight of the link to A to 4 (1 for C to B, and 3 for B to A, as B said).
 
 This process loops until all nodes find out that the weight of link to A is infinity. This situation is shown in the table below. In this way, experts say DV algorithms have a **slow convergence rate**.
-![file:///tmp/.CFZMW2/9.png](file:///tmp/.CFZMW2/9.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/9.png* ('file:///tmp/.CFZMW2/9.png')
 
 One way to solve this problem is for routers to send information only to the neighbors that are not exclusive links to the destination. For example, in this case, C shouldn't send any information to B about A, because B is the only way to A.
 
 #### <font color="#ff0000">Hierarchical Routing</font>
-![file:///tmp/.CFZMW2/10.png](file:///tmp/.CFZMW2/10.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/10.png* ('file:///tmp/.CFZMW2/10.png')
 
-![file:///tmp/.CFZMW2/11.png](file:///tmp/.CFZMW2/11.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/11.png* ('file:///tmp/.CFZMW2/11.png')
 
 Network graph and A's routing table
 
-![file:///tmp/.CFZMW2/12.png](file:///tmp/.CFZMW2/12.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/12.png* ('file:///tmp/.CFZMW2/12.png')
 
-![file:///tmp/.CFZMW2/13.png](file:///tmp/.CFZMW2/13.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/13.png* ('file:///tmp/.CFZMW2/13.png')
 
 As you see, in both LS and DV algorithms, every router has to save some information about other routers. When the network size grows, the number of routers in the network increases. Consequently, the size of routing tables increases, as well, and routers can't handle network traffic as efficiently. We use **hierarchical routing** to overcome this problem. Let's examine this subject with an example:
 

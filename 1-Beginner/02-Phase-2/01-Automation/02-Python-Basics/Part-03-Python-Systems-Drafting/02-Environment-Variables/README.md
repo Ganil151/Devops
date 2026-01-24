@@ -2,7 +2,7 @@
 
 > **"Code is static, but environments are dynamic. If you hardcode a credentials or a URL, you've built a fragile script. If you use environment variables, you've built a portable tool."**
 
-![Python Ecosystem](../assets/python_ecosystem.png)
+> **⚠️ Missing Image**: *Python Ecosystem* ('../assets/python_ecosystem.png')
 
 ## 📚 Overview
 

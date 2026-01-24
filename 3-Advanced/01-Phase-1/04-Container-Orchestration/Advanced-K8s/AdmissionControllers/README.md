@@ -5,7 +5,7 @@
 **Kubernetes Admission Controllers** are plugins that govern and enforce how the cluster is used. They intercept requests to the Kubernetes API server after authentication and authorization but before object persistence. Admission controllers can validate, mutate, or reject requests.
 
 ## Admission Control Flow
-![AdminssionCF](../../../../../00-Resources/03-Images-Diagrams/Kubernetes/admission-control.png)
+> **⚠️ Missing Image**: *AdminssionCF* ('../../../../../00-Resources/03-Images-Diagrams/Kubernetes/admission-control.png')
 
 ## Built-in Admission Controllers
 

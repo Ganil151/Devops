@@ -2,7 +2,7 @@
 
 > **"A script that runs on your laptop but fails in production isn't automated—it's broken. Virtual environments are the 'Shipping Containers' of Python, ensuring your code carries its own dependencies wherever it goes."**
 
-![Python Subprocess Ecosystem](../assets/python_ecosystem.png)
+> **⚠️ Missing Image**: *Python Subprocess Ecosystem* ('../assets/python_ecosystem.png')
 
 ## 📚 Overview
 

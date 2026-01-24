@@ -1,6 +1,0 @@
-*.zip
-*.tfstate
-*.tfstate.backup
-*.tfvars
-.terraform/
-terraform.tfvars.json

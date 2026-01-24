@@ -1,1193 +1,51 @@
 .
 ├── 00-Resources
 │   ├── 01-Scripts-Code
-│   │   ├── Ansible
-│   │   │   ├── COMMAND_REFERENCE.md
-│   │   │   ├── README.md
-│   │   │   ├── ansible
-│   │   │   │   ├── COMMAND_REFERENCE.md
-│   │   │   │   ├── README.md
-│   │   │   │   ├── ansible-health-check.sh
-│   │   │   │   ├── generate_hosts.sh
-│   │   │   │   ├── group_vars
-│   │   │   │   │   ├── all.yml
-│   │   │   │   │   └── mysql.yml
-│   │   │   │   ├── hosts.ini
-│   │   │   │   ├── inventory.ini
-│   │   │   │   ├── monitoring_setup.yml
-│   │   │   │   ├── mysql_diagnostic.yml
-│   │   │   │   ├── mysql_install.yml
-│   │   │   │   ├── mysql_setup_galaxy.yml
-│   │   │   │   ├── petclinic
-│   │   │   │   │   ├── create_databases.yml
-│   │   │   │   │   ├── create_users.yml
-│   │   │   │   │   ├── load_data.yml
-│   │   │   │   │   └── load_schema.yml
-│   │   │   │   ├── requirements.yml
-│   │   │   │   ├── reset_mysql.yml
-│   │   │   │   └── roles
-│   │   │   │       ├── monitoring
-│   │   │   │       │   ├── defaults
-│   │   │   │       │   │   └── main.yml
-│   │   │   │       │   ├── files
-│   │   │   │       │   │   └── grafana_dashboards
-│   │   │   │       │   │       ├── docker-metrics-dashboard.json
-│   │   │   │       │   │       └── spring-boot-dashboard.json
-│   │   │   │       │   ├── handlers
-│   │   │   │       │   │   └── main.yml
-│   │   │   │       │   ├── tasks
-│   │   │   │       │   │   ├── configure_grafana.yml
-│   │   │   │       │   │   ├── configure_prometheus.yml
-│   │   │   │       │   │   ├── configure_services.yml
-│   │   │   │       │   │   ├── install_grafana.yml
-│   │   │   │       │   │   ├── install_node_exporter.yml
-│   │   │   │       │   │   ├── install_prometheus.yml
-│   │   │   │       │   │   └── main.yml
-│   │   │   │       │   └── templates
-│   │   │   │       │       ├── grafana-datasource.yml.j2
-│   │   │   │       │       └── prometheus.yml.j2
-│   │   │   │       └── mysql_petclinic
-│   │   │   │           ├── files
-│   │   │   │           │   ├── customers-data.sql
-│   │   │   │           │   ├── customers-schema.sql
-│   │   │   │           │   ├── vets-schema.sql
-│   │   │   │           │   ├── vets.data.sql
-│   │   │   │           │   ├── visits-schema.sql
-│   │   │   │           │   └── visits.data.sq
-│   │   │   │           ├── handlers
-│   │   │   │           │   └── main.yml
-│   │   │   │           └── tasks
-│   │   │   │               ├── create_databases.yml
-│   │   │   │               ├── create_users.yml
-│   │   │   │               ├── load_data.yml
-│   │   │   │               ├── load_schema.yml
-│   │   │   │               └── main.yml
-│   │   │   ├── ansible-health-check-v2.sh
-│   │   │   ├── ansible-health-check.sh
-│   │   │   ├── generate_hosts.sh
-│   │   │   ├── group_vars
-│   │   │   │   ├── all.yml
-│   │   │   │   └── mysql.yml
-│   │   │   ├── hosts.ini
-│   │   │   ├── inventory.ini
-│   │   │   ├── monitoring_setup.yml
-│   │   │   ├── mysql_diagnostic.yml
-│   │   │   ├── mysql_install.yml
-│   │   │   ├── mysql_setup.yml
-│   │   │   ├── petclinic
-│   │   │   │   ├── create_databases.yml
-│   │   │   │   ├── create_users.yml
-│   │   │   │   ├── load_data.yml
-│   │   │   │   └── load_schema.yml
-│   │   │   ├── requirements.yml
-│   │   │   ├── reset_mysql.yml
-│   │   │   └── roles
-│   │   │       ├── monitoring
-│   │   │       │   ├── defaults
-│   │   │       │   │   └── main.yml
-│   │   │       │   ├── files
-│   │   │       │   │   └── grafana_dashboards
-│   │   │       │   │       ├── docker-metrics-dashboard.json
-│   │   │       │   │       └── spring-boot-dashboard.json
-│   │   │       │   ├── handlers
-│   │   │       │   │   └── main.yml
-│   │   │       │   ├── tasks
-│   │   │       │   │   ├── configure_grafana.yml
-│   │   │       │   │   ├── configure_prometheus.yml
-│   │   │       │   │   ├── configure_services.yml
-│   │   │       │   │   ├── install_grafana.yml
-│   │   │       │   │   ├── install_node_exporter.yml
-│   │   │       │   │   ├── install_prometheus.yml
-│   │   │       │   │   └── main.yml
-│   │   │       │   └── templates
-│   │   │       │       ├── grafana-datasource.yml.j2
-│   │   │       │       └── prometheus.yml.j2
-│   │   │       └── mysql_petclinic
-│   │   │           ├── files
-│   │   │           │   ├── customers-data.sql
-│   │   │           │   ├── customers-schema.sql
-│   │   │           │   ├── vets-schema.sql
-│   │   │           │   ├── vets.data.sql
-│   │   │           │   ├── visits-schema.sql
-│   │   │           │   └── visits.data.sq
-│   │   │           ├── handlers
-│   │   │           │   └── main.yml
-│   │   │           └── tasks
-│   │   │               ├── create_databases.yml
-│   │   │               ├── create_users.yml
-│   │   │               ├── load_data.yml
-│   │   │               ├── load_schema.yml
-│   │   │               └── main.yml
-│   │   ├── ArgoCD
-│   │   │   └── install-argo.sh
-│   │   ├── Aws
-│   │   │   ├── IAM-EKS-Policy.json
-│   │   │   ├── aws_cli.sh
-│   │   │   ├── commands
-│   │   │   │   └── README.md
-│   │   │   ├── output.tf
-│   │   │   ├── s3-bucket
-│   │   │   │   ├── create-bucket.sh
-│   │   │   │   └── main.tf
-│   │   │   ├── tagging_ec2.sh
-│   │   │   └── variables.tf
-│   │   ├── Docker
-│   │   │   ├── Diagnostic
-│   │   │   │   ├── docker-compose-diagnostic-and-fixes.sh.md
-│   │   │   │   └── docker-diagnose.sh.md
-│   │   │   ├── docker-4-centos.sh
-│   │   │   ├── docker-buildx.sh
-│   │   │   └── docker.sh
-│   │   ├── Etc
-│   │   │   ├── jscript.sh
-│   │   │   ├── petclinic_setup.sh
-│   │   │   ├── petclinic_setup1.sh
-│   │   │   └── spring-petclinic-diagnostic.sh
-│   │   ├── Jenkins
-│   │   │   ├── Blue&GreenJenkinsfile
-│   │   │   ├── JenkinsKubernetes
-│   │   │   ├── Jenkinsdoc
-│   │   │   ├── Jenkinsfile
-│   │   │   ├── JenkinsfileDocker
-│   │   │   ├── JenkinsfileEc2_dynamic
-│   │   │   ├── JenkinsfileWorker2Docker
-│   │   │   ├── Jenkinsfile_ec2
-│   │   │   ├── Jenkinsfile_myEc2
-│   │   │   ├── Jenkinsfile_mysql
-│   │   │   ├── Jenkinsfile_mysql.txt
-│   │   │   ├── Jenkinsfiletest
-│   │   │   ├── fix_jenkins_access.sh
-│   │   │   ├── jenkins-installation-aws-ubuntu-instance.txt
-│   │   │   ├── jenkins-stages
-│   │   │   │   ├── update-monitoring.groovy
-│   │   │   │   └── verify-k8s-deployment.groovy
-│   │   │   ├── jenkins_setup.sh
-│   │   │   ├── kubernetes_stage
-│   │   │   │   └── Jenkinsfile
-│   │   │   └── mysql_stage
-│   │   │       └── Jenkinsfile
-│   │   ├── Json
-│   │   │   ├── broken_links_report.json
-│   │   │   ├── progress_tracker.json
-│   │   │   └── unfixable_links.json
-│   │   ├── Keys
-│   │   │   └── copy_keys.sh
-│   │   ├── Kubernetes
-│   │   │   ├── EKS
-│   │   │   │   ├── EKS_COMMAND_REFERENCE.md
-│   │   │   │   ├── EKS_MIGRATION_GUIDE.md
-│   │   │   │   ├── EKS_QUICK_REFERENCE.md
-│   │   │   │   ├── README.md
-│   │   │   │   ├── check-eks-network.sh
-│   │   │   │   ├── deployments
-│   │   │   │   │   ├── README.md
-│   │   │   │   │   ├── admin-server.yaml
-│   │   │   │   │   ├── api-gateway.yaml
-│   │   │   │   │   ├── config-server.yaml
-│   │   │   │   │   ├── customers-service.yaml
-│   │   │   │   │   ├── deployment.yaml
-│   │   │   │   │   ├── discovery-server.yaml
-│   │   │   │   │   ├── genai-service.yaml
-│   │   │   │   │   ├── grafana.yaml
-│   │   │   │   │   ├── prometheus.yaml
-│   │   │   │   │   ├── secrets.yaml
-│   │   │   │   │   ├── tracing-server.yaml
-│   │   │   │   │   ├── vets-service.yaml
-│   │   │   │   │   └── visits-service.yaml
-│   │   │   │   ├── eks-cluster-config.yaml
-│   │   │   │   ├── eks-health-check.sh
-│   │   │   │   └── task.md.resolved
-│   │   │   ├── Instructions
-│   │   │   │   ├── ARCHITECTURE.md
-│   │   │   │   ├── ARCHITECTURE_QUICK_REF.md
-│   │   │   │   ├── CALICO_FIX.md
-│   │   │   │   ├── CONFIGURE_KUBECTL_JENKINS.md
-│   │   │   │   ├── DEPLOYMENT-ARCHITECTURE.md
-│   │   │   │   ├── HEALTH_CHECK_FIX.md
-│   │   │   │   ├── INFRASTRUCTURE_ARCHITECTURE.md
-│   │   │   │   ├── JENKINSFILE_MYSQL_STAGE_FIX.md
-│   │   │   │   ├── K3S_AUTO_JOIN.md
-│   │   │   │   ├── K3S_SIMPLE_SETUP.md
-│   │   │   │   ├── K3S_VS_K8S.md
-│   │   │   │   ├── K8S_INSTALL_TROUBLESHOOTING.md
-│   │   │   │   ├── K8S_NODE_ROLES.md
-│   │   │   │   ├── K8S_QUICK_REFERENCE.md
-│   │   │   │   ├── K8S_RECREATION_GUIDE.md
-│   │   │   │   ├── K8S_WORKER_COMMANDS.md
-│   │   │   │   ├── KUBECTL_CONFIG_FIX.md
-│   │   │   │   ├── KUBERNETES_NOTES.md
-│   │   │   │   ├── MIGRATION_GUIDE.md
-│   │   │   │   ├── MYSQL_VERIFICATION_FIX.md
-│   │   │   │   ├── POD-NODE-ASSIGNMENT.md
-│   │   │   │   └── TROUBLESHOOTING.md
-│   │   │   ├── README.md
-│   │   │   ├── Troubleshoot
-│   │   │   │   ├── cni_cleanup.sh
-│   │   │   │   └── reset&re-init.sh
-│   │   │   ├── images
-│   │   │   │   └── infrustructure_architecture_diagram.png
-│   │   │   ├── k3s
-│   │   │   │   ├── install_k3s_master_amzlinux2023.sh
-│   │   │   │   ├── install_k3s_worker_amzlinux2023.sh
-│   │   │   │   ├── k3s-installation.sh
-│   │   │   │   ├── k3s_agent.sh
-│   │   │   │   └── k3s_server.sh
-│   │   │   ├── k8s
-│   │   │   │   ├── deployment.yaml
-│   │   │   │   ├── install_k3s_amzlinux2023.sh
-│   │   │   │   ├── k8s-install.sh
-│   │   │   │   └── k8s-installation2.sh
-│   │   │   ├── scripts
-│   │   │   │   ├── Diagnose
-│   │   │   │   │   ├── check-cluster-health.sh
-│   │   │   │   │   ├── check-cluster.sh
-│   │   │   │   │   ├── check-config-server.sh
-│   │   │   │   │   ├── check-network-health.sh
-│   │   │   │   │   ├── check-pod-distribution.sh
-│   │   │   │   │   ├── cleanup-failed-pods.sh
-│   │   │   │   │   ├── diagnose-config-server.sh
-│   │   │   │   │   ├── diagnose-crashloop.sh
-│   │   │   │   │   ├── diagnose-k8s-install.sh
-│   │   │   │   │   ├── diagnose-rollout.sh
-│   │   │   │   │   ├── diagnose_k8s_connectivity.sh
-│   │   │   │   │   ├── diagnose_pending_pods.sh
-│   │   │   │   │   ├── k8s-comprehensive-fix.sh
-│   │   │   │   │   ├── k8s-diagnose.sh
-│   │   │   │   │   ├── pod-diagnostic-report.sh
-│   │   │   │   │   └── verify.sh
-│   │   │   │   ├── Fixes
-│   │   │   │   │   ├── auto-fix-services.sh
-│   │   │   │   │   ├── check-and-fix-services.sh
-│   │   │   │   │   ├── config-server-fix.sh
-│   │   │   │   │   ├── diagnose-and-fix-eks.sh
-│   │   │   │   │   ├── fix-all-pods.sh
-│   │   │   │   │   ├── fix-config-server.sh
-│   │   │   │   │   ├── fix-crashloop.sh
-│   │   │   │   │   ├── fix-crictl-permissions.sh
-│   │   │   │   │   ├── fix-dns-issues.sh
-│   │   │   │   │   ├── fix-eks-cluster.sh
-│   │   │   │   │   ├── fix-kubectl-config.sh
-│   │   │   │   │   ├── fix-node-labels.sh
-│   │   │   │   │   ├── fix-notready-nodes.sh
-│   │   │   │   │   └── fix-pods.sh
-│   │   │   │   ├── K8s-Master
-│   │   │   │   │   ├── copy_deployment_to_master.sh
-│   │   │   │   │   ├── diagnose-k8s-master.sh
-│   │   │   │   │   ├── fix-k8s-master.sh
-│   │   │   │   │   ├── fix_all_k8s_master.sh
-│   │   │   │   │   ├── install_k3s_master_amzlinux2023.sh
-│   │   │   │   │   ├── k8s-complete-setup.sh
-│   │   │   │   │   ├── k8s-installation.sh
-│   │   │   │   │   ├── setup-k8s-master.sh
-│   │   │   │   │   └── uninstall-k8s-master.sh
-│   │   │   │   ├── K8s-Worker
-│   │   │   │   │   ├── diagnose-k8s-worker.sh
-│   │   │   │   │   ├── fix-k8s-worker.sh
-│   │   │   │   │   ├── fix_k8s_worker_connectivity.sh
-│   │   │   │   │   ├── fix_worker_hostname.sh
-│   │   │   │   │   ├── install_k3s_worker_amzlinux2023.sh
-│   │   │   │   │   ├── join-worker-to-cluster.sh
-│   │   │   │   │   ├── k8s-worker-complete-setup.sh
-│   │   │   │   │   ├── k8s-worker-full-setup.sh
-│   │   │   │   │   ├── label-worker-nodes.sh
-│   │   │   │   │   ├── manual-worker-setup.sh
-│   │   │   │   │   ├── setup-k8s-worker.sh
-│   │   │   │   │   └── uninstall-k8s-worker.sh
-│   │   │   │   ├── Pod-Distribution
-│   │   │   │   │   ├── add-node-selectors.sh
-│   │   │   │   │   ├── apply-node-assignments.sh
-│   │   │   │   │   └── configure-node-distribution.sh
-│   │   │   │   ├── WORKER_SCRIPTS_FIXES.md
-│   │   │   │   ├── apply-node-assignments.sh
-│   │   │   │   ├── check-worker-nodes.sh
-│   │   │   │   ├── configure_kubectl.sh
-│   │   │   │   ├── delete-pods.sh
-│   │   │   │   ├── deploy-to-k3s.sh
-│   │   │   │   ├── fix_all_pods.sh
-│   │   │   │   ├── fix_cluster_resources.sh
-│   │   │   │   ├── fix_containerd_worker.sh
-│   │   │   │   ├── fix_cri_socket.sh
-│   │   │   │   ├── generate-join-command.sh
-│   │   │   │   ├── increase-swap.sh
-│   │   │   │   ├── join-command.sh
-│   │   │   │   ├── quick-status.sh
-│   │   │   │   ├── role-label-nodes.sh
-│   │   │   │   ├── setup-kubectl-ec2-user.sh
-│   │   │   │   ├── troubleshooting-commands.sh
-│   │   │   │   ├── validate-deployment.sh
-│   │   │   │   ├── webhook-rbac.yaml
-│   │   │   │   └── webhook-receiver.py
-│   │   │   └── verify_cni.sh
-│   │   ├── Maintenance
-│   │   │   ├── 00_preflight_check.sh
-│   │   │   ├── 01_create_backup.sh
-│   │   │   ├── 02_create_migration_plan.py
-│   │   │   ├── audit_directory.py
-│   │   │   ├── comprehensive_audit.py
-│   │   │   ├── final_readme_fix.py
-│   │   │   ├── fix_images_v2.py
-│   │   │   ├── fix_malformed_screenshots.py
-│   │   │   ├── fix_paths_and_absolute.py
-│   │   │   ├── link_fixer.py
-│   │   │   ├── link_scanner.py
-│   │   │   ├── organize_root.ps1
-│   │   │   ├── reorganize_phase2.py
-│   │   │   ├── reorganize_windows_basics.py
-│   │   │   └── verify_phase2.py
-│   │   ├── MySql
-│   │   │   ├── README.md
-│   │   │   ├── mysql-bak.sh
-│   │   │   ├── mysql.sh
-│   │   │   └── mysql_config.sh
-│   │   ├── Node_Exporter
-│   │   │   └── install-node_exporter.md
-│   │   ├── POM
-│   │   │   └── pom.xml
-│   │   ├── Prometheus
-│   │   │   └── install-prometheus.md
-│   │   ├── Py4DevOps
-│   │   │   ├── Notes.md
-│   │   │   └── Py4DevOps.ipynb
-│   │   ├── README.md
-│   │   ├── Scripting
-│   │   │   ├── AI & LLM
-│   │   │   │   └── vscode
-│   │   │   │       ├── AI_Assistant.sh
-│   │   │   │       ├── settings.json
-│   │   │   │       ├── tools.instructions.md
-│   │   │   │       └── workspace.json
-│   │   │   ├── Bash
-│   │   │   │   ├── Cheatsheets
-│   │   │   │   │   └── refCheatSheet.md
-│   │   │   │   └── os_test.sh
-│   │   │   ├── Python
-│   │   │   │   ├── Automated_Virus_Scan.md
-│   │   │   │   ├── audit_links.py
-│   │   │   │   ├── centralize_boilerplates.py
-│   │   │   │   ├── convert_quiz_format.py
-│   │   │   │   ├── create_missing_files.py
-│   │   │   │   ├── fix_images_script.py
-│   │   │   │   ├── fix_images_v2.py
-│   │   │   │   ├── migration_mapper.py
-│   │   │   │   └── reformat_all_quizzes.py
-│   │   │   ├── Windows
-│   │   │   ├── brave-install.sh
-│   │   │   └── shell-scripting-automation.md
-│   │   ├── SonarQube
-│   │   │   ├── sonarqube.sh
-│   │   │   └── sonerQ.sh
-│   │   ├── Swap
-│   │   │   └── increase_swap.sh
-│   │   ├── Terraform
-│   │   │   ├── kubernetes
-│   │   │   │   ├── k8s_agent_1_server.sh
-│   │   │   │   ├── k8s_agent_2_server.sh
-│   │   │   │   └── k8s_master.sh
-│   │   │   ├── run_terraform.sh
-│   │   │   └── variables.tf
-│   │   ├── Tmp
-│   │   │   ├── CentOS
-│   │   │   │   └── fix_tmp_space.sh
-│   │   │   └── Ubuntu
-│   │   │       └── fix-tmp-space.sh
-│   │   ├── VPN
-│   │   │   ├── dynamic.md
-│   │   │   ├── dynamic_vpn.sh
-│   │   │   └── dynamic_wireguard.sh
-│   │   ├── Windows
-│   │   │   ├── app_purge.ps1
-│   │   │   ├── autoScan.ps1
-│   │   │   ├── howtoUseAppPurge.txt
-│   │   │   ├── organize.ps1
-│   │   │   └── virus_auto_scan.ps1
-│   │   ├── centOS
-│   │   │   ├── master-ports.sh
-│   │   │   ├── master-server.sh
-│   │   │   ├── mysql-server.sh
-│   │   │   ├── worker-ports.sh
-│   │   │   └── worker-server.sh
-│   │   └── side_modules
-│   │       ├── data.tf
-│   │       ├── main.tf
-│   │       ├── provider.tf
-│   │       ├── security.tf
-│   │       └── variables.tf
-│   ├── 03-Images-Diagrams
-│   │   ├── 1_3eNjkCTPWsmqVQWFpO2FOw.webp
-│   │   ├── 1_Du4r4SjxjOGwP58rMOJrgg.webp
-│   │   ├── AWS
-│   │   │   ├── 2019ServerStandard.png
-│   │   │   ├── ActiveDirctory.png
-│   │   │   ├── ActiveDirectoryController
-│   │   │   │   ├── AddRoles.png
-│   │   │   │   ├── DNS1.png
-│   │   │   │   ├── DNSManager.png
-│   │   │   │   ├── ForwardLookUp2.png
-│   │   │   │   ├── ForwardLookup.png
-│   │   │   │   ├── NewZone.png
-│   │   │   │   ├── RLZName.png
-│   │   │   │   ├── ReverseLookUpz.png
-│   │   │   │   ├── Screenshot_20250127_205608.png
-│   │   │   │   ├── Screenshot_20250127_205730.png
-│   │   │   │   ├── Screenshot_20250127_205823.png
-│   │   │   │   ├── Screenshot_20250127_205904.png
-│   │   │   │   ├── Screenshot_20250127_210025.png
-│   │   │   │   ├── Screenshot_20250127_210030.png
-│   │   │   │   └── finishline-dc.png
-│   │   │   ├── AddFeaures.jpeg
-│   │   │   ├── Dashboard.jpeg
-│   │   │   ├── DomainService.jpeg
-│   │   │   ├── IDA_Technologies.png
-│   │   │   ├── IDA_responsibilities.png
-│   │   │   ├── Identity&Access.png
-│   │   │   ├── Identity.png
-│   │   │   ├── Screenshot from 2025-01-22 20-33-45.png
-│   │   │   ├── Screenshot from 2025-01-22 20-34-36.png
-│   │   │   ├── Screenshot from 2025-01-22 20-36-44.png
-│   │   │   ├── Screenshot from 2025-01-22 20-37-09.png
-│   │   │   ├── Screenshot from 2025-01-22 20-47-10.png
-│   │   │   ├── Screenshot from 2025-01-22 20-48-44.png
-│   │   │   ├── SelectDServer.jpeg
-│   │   │   ├── SelectInstallType.jpeg
-│   │   │   ├── SelectServerRoles.jpeg
-│   │   │   ├── SeletFeatures.jpeg
-│   │   │   ├── beforeYouBegin.jpeg
-│   │   │   ├── instanceLab.png
-│   │   │   ├── instanceNetwork.png
-│   │   │   ├── instanceSucces.png
-│   │   │   ├── labdone.png
-│   │   │   └── wampDe.png
-│   │   ├── AdvanceDevops.png
-│   │   ├── Attack-surface-of-supply-chain-980x466.png
-│   │   ├── Benifits.png
-│   │   ├── DCTools.png
-│   │   ├── DevMethologies.png
-│   │   ├── DevMetrics.png
-│   │   ├── DevOpsMM.png
-│   │   ├── Devops-Lifecycle.png
-│   │   ├── DevopsChallanges.png
-│   │   ├── FutureOfDevops.png
-│   │   ├── Kubernetes
-│   │   │   ├── CCM-1.png
-│   │   │   ├── CCM-2.png
-│   │   │   ├── CCM-3.png
-│   │   │   ├── CCM-4.png
-│   │   │   ├── CCM-5.png
-│   │   │   ├── CCM-6.png
-│   │   │   ├── KAS-1.png
-│   │   │   ├── KAS-2.png
-│   │   │   ├── KAS-3.png
-│   │   │   ├── KAS-4.png
-│   │   │   ├── KAS-5.png
-│   │   │   ├── KAS-6.png
-│   │   │   ├── KAS-7.png
-│   │   │   ├── KubeMonStack.png
-│   │   │   ├── Kubernetes-01.png
-│   │   │   ├── LB-1.png
-│   │   │   ├── Screenshot (215).png
-│   │   │   ├── Screenshot (216).png
-│   │   │   ├── Screenshot (217).png
-│   │   │   ├── Screenshot (218).png
-│   │   │   ├── admission-control.png
-│   │   │   ├── kube-folder-mindMap.png
-│   │   │   ├── kube-mindMap-1.png
-│   │   │   └── multi-AZ-Deployment.png
-│   │   ├── Maven-Repository.jpg
-│   │   ├── core-principles.png
-│   │   ├── devVStrad.png
-│   │   ├── devops-architecture-mermaid.md
-│   │   ├── dockerArch.png
-│   │   ├── dockerStates.png
-│   │   ├── fileSystem.png
-│   │   ├── git&githubTalk.png
-│   │   ├── gitStructure.png
-│   │   ├── maven-architecture.png
-│   │   ├── microServiesArch.png
-│   │   ├── serverMount.png
-│   │   ├── storagePerformance.png
-│   │   └── teraformProArch.png
+│   │   └── Maintenance
+│   │       ├── fix_broken_images.py
+│   │       └── repository_audit.py
 │   ├── 04-Books-Guides
-│   │   ├── CheatSheets
-│   │   │   ├── AWS-Basic-Cheat-Sheet.pdf
-│   │   │   ├── Jenkins-Cheat-Sheet-converted.pdf
-│   │   │   ├── Kubernetes-Cheat-Sheet.pdf
-│   │   │   ├── Linux-Networking-Commands.pdf
-│   │   │   ├── LinuxFileSystems.gif
-│   │   │   ├── Nmap-Cheat-Sheet.pdf
-│   │   │   ├── PostgreSQL-Cheat-Sheet.pdf
-│   │   │   ├── Powershell.pdf
-│   │   │   ├── ansible.pdf
-│   │   │   ├── aws-cost.pdf
-│   │   │   ├── aws-services.pdf
-│   │   │   ├── cybersecurity-101.gif
-│   │   │   ├── devsecops.gif
-│   │   │   ├── docker-security.pdf
-│   │   │   ├── docker.pdf
-│   │   │   ├── docker_by_jrebel.pdf
-│   │   │   ├── linux-bash-terminal.pdf
-│   │   │   ├── linux-bash.pdf
-│   │   │   ├── nmap.pdf
-│   │   │   ├── python-regular-expression-regex.pdf
-│   │   │   └── wireshark.pdf
-│   │   ├── Checklist.md
-│   │   ├── DevOps
-│   │   │   ├── DevOps Automation Cookbook.pdf
-│   │   │   ├── DevOps For Beginners - Joseph Joyner.pdf
-│   │   │   ├── DevOps-Directory-MindMap.md
-│   │   │   ├── DevopsInterviewQ&A.pdf
-│   │   │   ├── Python4DevOps.pdf
-│   │   │   ├── [Devops] DevOps For Dummies.pdf
-│   │   │   └── devops.pdf
-│   │   ├── DevOps Resume Ganil Batist.docx
-│   │   ├── DevOps Resume.docx
-│   │   ├── DevOps-Directory-MindMap.md
-│   │   ├── Docker
-│   │   │   ├── A very informal introduction to Docker.pdf
-│   │   │   ├── Containerisation with Docker & K8s (1).pdf
-│   │   │   ├── Containerisation with Docker & K8s (2).pdf
-│   │   │   ├── Containerisation with Docker & K8s (3).pdf
-│   │   │   ├── Containerisation with Docker & K8s.pdf
-│   │   │   ├── Containerize your Apps with Docker & K8s.pdf
-│   │   │   ├── Containers_for_everyone.pdf
-│   │   │   ├── Conterization with Docker & Kubernetes.pdf
-│   │   │   ├── DIQ.pdf
-│   │   │   ├── Docker & Kubernetes.pdf
-│   │   │   ├── Docker in the Cloud.pdf
-│   │   │   ├── Docker-commands-cheat-sheet-pdf.pdf
-│   │   │   ├── Docker_Kubernetes_Helm.pdf
-│   │   │   ├── Docker_Tutorial.pdf
-│   │   │   └── Learning Docker.pdf
-│   │   ├── Employment Verification Yan Batist.pdf
-│   │   ├── GitGuide.pdf
-│   │   ├── Hack
-│   │   │   ├── Basics of Web Hacking.pdf
-│   │   │   ├── Beginning Ethical Hacking with Kali Linux_ Computational Techniques for Resolving Security Issues ( PDFDrive.com ).pdf
-│   │   │   ├── Black Hat Python ( PDFDrive.com ).pdf
-│   │   │   ├── Book - Nmap Cookbook The Fat-free Guide to Network Scanning-1.pdf
-│   │   │   ├── Cyber-attacks-patternstrendsandsecuritycountermeasures.pdf
-│   │   │   ├── Hacking Wireless Networks for Dummies.pdf
-│   │   │   ├── Hacking_Beginner_to_Expert_Guide_to_Computer_Hacking_Basic_Security(4).pdf
-│   │   │   ├── Quick Hacks for the Command Line.pdf
-│   │   │   ├── The Little Black  Book of Computer Viruses.pdf
-│   │   │   ├── XForce_Threat_Intelligence_2022.pdf
-│   │   │   ├── [Cybersecurity-Web Development] Web security and commerce.pdf
-│   │   │   ├── [Cybersecurity] Computer_Security_Principles_and_Practice_(3rd_Edition).pdf
-│   │   │   ├── black_hat_python_source.json
-│   │   │   ├── nmap_cookbook_source.json
-│   │   │   └── web_hacking_basics_source.json
-│   │   ├── Images
-│   │   │   ├── Screenshot (100).png
-│   │   │   ├── Screenshot (101).png
-│   │   │   ├── Screenshot (102).png
-│   │   │   ├── Screenshot (103).png
-│   │   │   ├── Screenshot (104).png
-│   │   │   ├── Screenshot (106).png
-│   │   │   ├── Screenshot (107).png
-│   │   │   ├── Screenshot (108).png
-│   │   │   ├── Screenshot (109).png
-│   │   │   ├── Screenshot (110).png
-│   │   │   ├── Screenshot (111).png
-│   │   │   ├── Screenshot (112).png
-│   │   │   ├── Screenshot (113).png
-│   │   │   ├── Screenshot (114).png
-│   │   │   ├── Screenshot (115).png
-│   │   │   ├── Screenshot (116).png
-│   │   │   ├── Screenshot (117).png
-│   │   │   ├── Screenshot (118).png
-│   │   │   ├── Screenshot (119).png
-│   │   │   ├── Screenshot (120).png
-│   │   │   ├── Screenshot (122).png
-│   │   │   ├── Screenshot (83).png
-│   │   │   ├── Screenshot (84).png
-│   │   │   ├── Screenshot (85).png
-│   │   │   ├── Screenshot (86).png
-│   │   │   ├── Screenshot (87).png
-│   │   │   ├── Screenshot (88).png
-│   │   │   ├── Screenshot (89).png
-│   │   │   ├── Screenshot (90).png
-│   │   │   ├── Screenshot (91).png
-│   │   │   ├── Screenshot (92).png
-│   │   │   ├── Screenshot (93).png
-│   │   │   ├── Screenshot (94).png
-│   │   │   ├── Screenshot (97).png
-│   │   │   ├── Screenshot (98).png
-│   │   │   └── Screenshot (99).png
-│   │   ├── Kali Linux Wireless Penetration Testing - Beginner's Guide - Learn to penetrate Wi-Fi and wireless networks to secure your system from vulnerabilities by Vivek Ramachandran and Cameron Buchanan.pdf
-│   │   ├── Languages
-│   │   │   ├── Beginning-Programming-with-Python-For-Dummies-John-Paul-Mueller(www.ebook-dl.com).pdf
-│   │   │   ├── Java
-│   │   │   │   └── Upgrade Java to 21.md
-│   │   │   ├── Python-All-in-One-4-Dummies.pdf
-│   │   │   ├── README.md
-│   │   │   ├── gobook.pdf
-│   │   │   └── python.pdf
-│   │   ├── MoreBooks.txt
-│   │   ├── Network
-│   │   │   ├── Computer_Networking.pdf
-│   │   │   ├── Hacking
-│   │   │   └── Network Security Bible.pdf
-│   │   ├── OS
-│   │   │   ├── Linux
-│   │   │   │   ├── Linux For Dummies.pdf
-│   │   │   │   ├── The Linux Command Line - A Complete Introduction.pdf
-│   │   │   │   └── python.pdf
-│   │   │   ├── The Linux Command Line - A Complete Introduction.pdf
-│   │   │   └── XForce_Threat_Intelligence_2022.pdf
-│   │   ├── Prompt-Engineering
-│   │   │   ├── 22-promptengg.pdf
-│   │   │   ├── Effectively+Creating+Prompts.pdf
-│   │   │   ├── Prompt-Engineering-Lecture-Elvis.pdf
-│   │   │   ├── Prompts
-│   │   │   │   └── pdf_to_json.md
-│   │   │   ├── THE+PROMPT+ENGINEERING+GUIDE.pdf
-│   │   │   ├── Top+5+Business+Ideas+Prompt.pdf
-│   │   │   └── book_english_version.pdf
-│   │   ├── PuTTY_User_Manual.pdf
-│   │   ├── README.md
-│   │   ├── Script
-│   │   │   ├── Advanced Bash-Scripting Guide.pdf
-│   │   │   ├── Automate it!.pdf
-│   │   │   ├── Basics of Web Hacking.pdf
-│   │   │   ├── pdf_scraper.py
-│   │   │   └── shell-scripting.pdf
-│   │   ├── Terraform
-│   │   │   ├── infrastructure-as-code-iac-cookbook.pdf
-│   │   │   └── terraform-up-and-running.pdf
-│   │   ├── Testing
-│   │   │   ├── API-Testing
-│   │   │   │   └── README.md
-│   │   │   ├── CWE SANS.md
-│   │   │   ├── Integration-Testing
-│   │   │   │   └── README.md
-│   │   │   ├── Jenkins
-│   │   │   │   └── Jenkinsfile
-│   │   │   ├── Performance-Testing
-│   │   │   │   └── README.md
-│   │   │   ├── README.md
-│   │   │   ├── SAST
-│   │   │   │   └── SAST TEST.md
-│   │   │   ├── SCA
-│   │   │   │   ├── OWASP.md
-│   │   │   │   └── SCA - Software Composition Analysis.md
-│   │   │   ├── Security-Testing
-│   │   │   │   └── README.md
-│   │   │   └── Unit-Testing
-│   │   │       └── README.md
-│   │   ├── WebDesign
-│   │   │   ├── Airbnb Clone
-│   │   │   │   ├── Django & NextJs Project Airbnb Clone.md
-│   │   │   │   ├── Images
-│   │   │   │   │   ├── Screenshot (58).png
-│   │   │   │   │   └── Screenshot (59).png
-│   │   │   │   └── Todo listDjangoBnB.md
-│   │   │   ├── CSS
-│   │   │   │   └── TailwindCss.md
-│   │   │   └── Tree.md
-│   │   └── Youtube_Lessons
-│   ├── 05-Projects-Showcase
-│   │   ├── Archive
-│   │   │   ├── Amazon-Prime-Clone
-│   │   │   │   └── README.md
-│   │   │   ├── Ansible
-│   │   │   │   ├── ansible_cicd_v1
-│   │   │   │   │   ├── README.md
-│   │   │   │   │   ├── app
-│   │   │   │   │   │   ├── Jenkinsfile
-│   │   │   │   │   │   ├── main.tf
-│   │   │   │   │   │   ├── provider.tf
-│   │   │   │   │   │   ├── scripts
-│   │   │   │   │   │   │   ├── master.sh
-│   │   │   │   │   │   │   └── worker.sh
-│   │   │   │   │   │   └── variables.tf
-│   │   │   │   │   └── modules
-│   │   │   │   │       ├── ec2
-│   │   │   │   │       │   ├── main.tf
-│   │   │   │   │       │   ├── output.tf
-│   │   │   │   │       │   └── variables.tf
-│   │   │   │   │       ├── keys
-│   │   │   │   │       │   ├── main.tf
-│   │   │   │   │       │   ├── output.tf
-│   │   │   │   │       │   └── variables.tf
-│   │   │   │   │       ├── s3
-│   │   │   │   │       │   ├── main.tf
-│   │   │   │   │       │   ├── output.tf
-│   │   │   │   │       │   └── variables.tf
-│   │   │   │   │       ├── sg
-│   │   │   │   │       │   ├── main.tf
-│   │   │   │   │       │   ├── output.tf
-│   │   │   │   │       │   └── variables.tf
-│   │   │   │   │       └── vpc
-│   │   │   │   │           ├── main.tf
-│   │   │   │   │           ├── output.tf
-│   │   │   │   │           └── variables.tf
-│   │   │   │   └── ansible_cicd_v2
-│   │   │   │       ├── README.md
-│   │   │   │       ├── app
-│   │   │   │       │   ├── Dockerfile
-│   │   │   │       │   ├── Jenkinsfile
-│   │   │   │       │   ├── main.tf
-│   │   │   │       │   ├── provider.tf
-│   │   │   │       │   ├── scripts
-│   │   │   │       │   │   ├── Terraform-Server.sh
-│   │   │   │       │   │   ├── ansible.sh
-│   │   │   │       │   │   ├── jenkins.sh
-│   │   │   │       │   │   ├── kube_deploy.yml
-│   │   │   │       │   │   ├── register-ci.yml
-│   │   │   │       │   │   ├── register-deployment.yml
-│   │   │   │       │   │   └── register-service.yml
-│   │   │   │       │   └── variable.tf
-│   │   │   │       ├── images
-│   │   │   │       │   ├── Screenshot (131).png
-│   │   │   │       │   ├── Screenshot (133)-1.png
-│   │   │   │       │   ├── Screenshot (133).png
-│   │   │   │       │   ├── Screenshot (134)-1.png
-│   │   │   │       │   ├── Screenshot (134).png
-│   │   │   │       │   ├── Screenshot (136).png
-│   │   │   │       │   ├── Screenshot (137)-1.png
-│   │   │   │       │   ├── Screenshot (137).png
-│   │   │   │       │   ├── Screenshot (138)-1.png
-│   │   │   │       │   ├── Screenshot (138).png
-│   │   │   │       │   ├── Screenshot (139).png
-│   │   │   │       │   ├── Screenshot (140).png
-│   │   │   │       │   ├── Screenshot (141).png
-│   │   │   │       │   ├── Screenshot (142).png
-│   │   │   │       │   ├── Screenshot (143).png
-│   │   │   │       │   ├── Screenshot (144).png
-│   │   │   │       │   ├── Screenshot (145).png
-│   │   │   │       │   ├── Screenshot (147).png
-│   │   │   │       │   ├── Screenshot (149).png
-│   │   │   │       │   ├── Screenshot (150).png
-│   │   │   │       │   ├── Screenshot (151)-1.png
-│   │   │   │       │   ├── Screenshot (151).png
-│   │   │   │       │   ├── Screenshot (152).png
-│   │   │   │       │   ├── Screenshot (153).png
-│   │   │   │       │   ├── Screenshot (154).png
-│   │   │   │       │   ├── Screenshot (155).png
-│   │   │   │       │   ├── Screenshot (157).png
-│   │   │   │       │   ├── Screenshot (158).png
-│   │   │   │       │   ├── Screenshot (159).png
-│   │   │   │       │   ├── Screenshot (160).png
-│   │   │   │       │   ├── Screenshot (162).png
-│   │   │   │       │   ├── Screenshot (163).png
-│   │   │   │       │   ├── Screenshot (164).png
-│   │   │   │       │   ├── Screenshot (165).png
-│   │   │   │       │   ├── Screenshot (166).png
-│   │   │   │       │   ├── Screenshot (167).png
-│   │   │   │       │   ├── Screenshot (168).png
-│   │   │   │       │   ├── Screenshot (169).png
-│   │   │   │       │   ├── Screenshot (170).png
-│   │   │   │       │   ├── Screenshot (171).png
-│   │   │   │       │   ├── Screenshot (172).png
-│   │   │   │       │   ├── Screenshot (173).png
-│   │   │   │       │   ├── Screenshot (174).png
-│   │   │   │       │   ├── Screenshot (175).png
-│   │   │   │       │   ├── Screenshot (176).png
-│   │   │   │       │   ├── Screenshot (177).png
-│   │   │   │       │   ├── Screenshot (178).png
-│   │   │   │       │   ├── Screenshot (179).png
-│   │   │   │       │   ├── Screenshot (180).png
-│   │   │   │       │   ├── Screenshot (181).png
-│   │   │   │       │   ├── Screenshot (182).png
-│   │   │   │       │   ├── Screenshot (183).png
-│   │   │   │       │   └── image.png
-│   │   │   │       └── modules
-│   │   │   │           ├── ec2
-│   │   │   │           │   ├── main.tf
-│   │   │   │           │   ├── output.tf
-│   │   │   │           │   └── variables.tf
-│   │   │   │           ├── keys
-│   │   │   │           │   ├── main.tf
-│   │   │   │           │   ├── output.tf
-│   │   │   │           │   └── variables.tf
-│   │   │   │           ├── s3
-│   │   │   │           │   ├── main.tf
-│   │   │   │           │   ├── output.tf
-│   │   │   │           │   └── variables.tf
-│   │   │   │           ├── security_group
-│   │   │   │           │   ├── main.tf
-│   │   │   │           │   ├── output.tf
-│   │   │   │           │   └── variables.tf
-│   │   │   │           └── vpc
-│   │   │   │               ├── main.tf
-│   │   │   │               ├── output.tf
-│   │   │   │               └── variables.tf
-│   │   │   ├── Kubernetes
-│   │   │   │   └── Dev
-│   │   │   │       ├── AntonPutra
-│   │   │   │       │   ├── 1-example
-│   │   │   │       │   │   ├── 0-viewer-cluster-role.yaml
-│   │   │   │       │   │   └── 1-viewer-cluster-role-binding.yaml
-│   │   │   │       │   ├── 2-example
-│   │   │   │       │   │   └── admin-cluster-role-binging.yaml
-│   │   │   │       │   ├── 3-example
-│   │   │   │       │   │   ├── 0-namespace.yaml
-│   │   │   │       │   │   ├── 1-deployment.yaml
-│   │   │   │       │   │   ├── 2-service.yaml
-│   │   │   │       │   │   └── 3-hpa.yaml
-│   │   │   │       │   ├── 4-example
-│   │   │   │       │   │   ├── 0-namespace.yaml
-│   │   │   │       │   │   └── 1-deployment.yaml
-│   │   │   │       │   ├── 5-example
-│   │   │   │       │   │   ├── 0-namespace.yaml
-│   │   │   │       │   │   ├── 1-deployment.yaml
-│   │   │   │       │   │   └── 2-service.yaml
-│   │   │   │       │   ├── README.md
-│   │   │   │       │   └── terraform
-│   │   │   │       │       ├── 0-locals.tf
-│   │   │   │       │       ├── 1-providers.tf
-│   │   │   │       │       ├── 10-add-manager-role.tf
-│   │   │   │       │       ├── 11-helm-provider.tf
-│   │   │   │       │       ├── 12-meterics-server.tf
-│   │   │   │       │       ├── 13-pod-identity-addon.tf
-│   │   │   │       │       ├── 14-cluster-autoscaler.tf
-│   │   │   │       │       ├── 15-aws-lbc.tf
-│   │   │   │       │       ├── 2-vpc.tf
-│   │   │   │       │       ├── 3-igw.tf
-│   │   │   │       │       ├── 4-subnets.tf
-│   │   │   │       │       ├── 5-nat.tf
-│   │   │   │       │       ├── 6-routes.tf
-│   │   │   │       │       ├── 7-eks.tf
-│   │   │   │       │       ├── 8-node.tf
-│   │   │   │       │       ├── 9-add-developer-user.tf
-│   │   │   │       │       ├── iam
-│   │   │   │       │       │   └── LoadBalancerController.json
-│   │   │   │       │       └── values
-│   │   │   │       │           └── meterics-server.yaml
-│   │   │   │       ├── Kastro
-│   │   │   │       │   ├── README.md
-│   │   │   │       │   ├── app
-│   │   │   │       │   │   ├── Jenkinsfile
-│   │   │   │       │   │   ├── main.tf
-│   │   │   │       │   │   ├── provider.tf
-│   │   │   │       │   │   ├── scripts
-│   │   │   │       │   │   │   ├── kubernetes.sh
-│   │   │   │       │   │   │   └── master.sh
-│   │   │   │       │   │   └── variable.tf
-│   │   │   │       │   └── modules
-│   │   │   │       │       ├── Ec2
-│   │   │   │       │       │   ├── main.tf
-│   │   │   │       │       │   ├── outputs.tf
-│   │   │   │       │       │   └── variables.tf
-│   │   │   │       │       ├── Keys
-│   │   │   │       │       │   ├── main.tf
-│   │   │   │       │       │   ├── outputs.tf
-│   │   │   │       │       │   └── variables.tf
-│   │   │   │       │       ├── SG
-│   │   │   │       │       │   ├── main.tf
-│   │   │   │       │       │   ├── outputs.tf
-│   │   │   │       │       │   └── variables.tf
-│   │   │   │       │       └── Vpc
-│   │   │   │       │           ├── main.tf
-│   │   │   │       │           ├── outputs.tf
-│   │   │   │       │           └── variables.tf
-│   │   │   │       └── VirtualTechBox
-│   │   │   │           ├── APP
-│   │   │   │           │   ├── Jenkinsfile
-│   │   │   │           │   ├── main.tf
-│   │   │   │           │   ├── provider.tf
-│   │   │   │           │   ├── scripts
-│   │   │   │           │   │   ├── jagent.sh
-│   │   │   │           │   │   ├── master.sh
-│   │   │   │           │   │   └── sonarqube.sh
-│   │   │   │           │   └── variable.tf
-│   │   │   │           ├── MODULES
-│   │   │   │           │   ├── Ec2
-│   │   │   │           │   │   ├── main.tf
-│   │   │   │           │   │   ├── outputs.tf
-│   │   │   │           │   │   └── variables.tf
-│   │   │   │           │   ├── Keys
-│   │   │   │           │   │   ├── main.tf
-│   │   │   │           │   │   ├── outputs.tf
-│   │   │   │           │   │   └── variables.tf
-│   │   │   │           │   ├── SG
-│   │   │   │           │   │   ├── main.tf
-│   │   │   │           │   │   ├── outputs.tf
-│   │   │   │           │   │   └── variables.tf
-│   │   │   │           │   └── Vpc
-│   │   │   │           │       ├── main.tf
-│   │   │   │           │       ├── outputs.tf
-│   │   │   │           │       └── variables.tf
-│   │   │   │           └── README.md
-│   │   │   ├── Netflix-Clone-CICD-Pipeline
-│   │   │   │   └── README.md
-│   │   │   ├── README.md
-│   │   │   ├── SPMS_CICD
-│   │   │   │   ├── APP
-│   │   │   │   │   ├── Jenkinsfile
-│   │   │   │   │   ├── main.tf
-│   │   │   │   │   ├── provider.tf
-│   │   │   │   │   ├── scripts
-│   │   │   │   │   │   └── bash
-│   │   │   │   │   │       ├── master.sh
-│   │   │   │   │   │       └── worker.sh
-│   │   │   │   │   └── variable.tf
-│   │   │   │   ├── Image
-│   │   │   │   │   └── Screenshot (195).png
-│   │   │   │   ├── MODULES
-│   │   │   │   │   ├── Ec2
-│   │   │   │   │   │   ├── main.tf
-│   │   │   │   │   │   ├── outputs.tf
-│   │   │   │   │   │   └── variables.tf
-│   │   │   │   │   ├── Keys
-│   │   │   │   │   │   ├── main.tf
-│   │   │   │   │   │   ├── outputs.tf
-│   │   │   │   │   │   └── variables.tf
-│   │   │   │   │   ├── SG
-│   │   │   │   │   │   ├── main.tf
-│   │   │   │   │   │   ├── outputs.tf
-│   │   │   │   │   │   └── variables.tf
-│   │   │   │   │   └── Vpc
-│   │   │   │   │       ├── main.tf
-│   │   │   │   │       ├── outputs.tf
-│   │   │   │   │       └── variables.tf
-│   │   │   │   └── README.md
-│   │   │   ├── basic_v1
-│   │   │   │   ├── 01_basic
-│   │   │   │   │   ├── example1-0.txt
-│   │   │   │   │   ├── example1-1.txt
-│   │   │   │   │   ├── example1-2.txt
-│   │   │   │   │   ├── main.tf
-│   │   │   │   │   └── provider.tf
-│   │   │   │   ├── 02_state
-│   │   │   │   │   ├── example2.txt
-│   │   │   │   │   ├── main.tf
-│   │   │   │   │   ├── provider.tf
-│   │   │   │   │   └── sensitive.md
-│   │   │   │   ├── 03_vars-outputs
-│   │   │   │   │   ├── configs
-│   │   │   │   │   │   └── PROD
-│   │   │   │   │   │       ├── server1.sh
-│   │   │   │   │   │       ├── server2.sh
-│   │   │   │   │   │       └── server3.sh
-│   │   │   │   │   ├── main.tf
-│   │   │   │   │   └── variables.tf
-│   │   │   │   ├── 04_giving_values
-│   │   │   │   │   ├── from-env-var.txt
-│   │   │   │   │   ├── main.tf
-│   │   │   │   │   └── variables.tf
-│   │   │   │   ├── 05_modules
-│   │   │   │   │   ├── file_creator
-│   │   │   │   │   │   ├── main.tf
-│   │   │   │   │   │   ├── my_first_file.txt
-│   │   │   │   │   │   ├── my_second_file.txt
-│   │   │   │   │   │   ├── outputs.tf
-│   │   │   │   │   │   └── variables.tf
-│   │   │   │   │   ├── main.tf
-│   │   │   │   │   └── variables.tf
-│   │   │   │   ├── README.md
-│   │   │   │   ├── jenkins_server_v1
-│   │   │   │   │   ├── jenkins-server
-│   │   │   │   │   │   ├── java_script.sh
-│   │   │   │   │   │   ├── jenkins_script.sh
-│   │   │   │   │   │   ├── main.tf
-│   │   │   │   │   │   ├── provider.tf
-│   │   │   │   │   │   └── variable.tf
-│   │   │   │   │   └── modules
-│   │   │   │   │       ├── ec2
-│   │   │   │   │       │   ├── main.tf
-│   │   │   │   │       │   ├── output.tf
-│   │   │   │   │       │   └── variables.tf
-│   │   │   │   │       ├── keys
-│   │   │   │   │       │   ├── main.tf
-│   │   │   │   │       │   ├── output.tf
-│   │   │   │   │       │   └── variables.tf
-│   │   │   │   │       ├── security_group
-│   │   │   │   │       │   ├── main.tf
-│   │   │   │   │       │   ├── output.tf
-│   │   │   │   │       │   └── variables.tf
-│   │   │   │   │       └── vpc
-│   │   │   │   │           ├── main.tf
-│   │   │   │   │           ├── output.tf
-│   │   │   │   │           └── variables.tf
-│   │   │   │   ├── jenkins_server_v1_bak
-│   │   │   │   │   ├── jenkins-server
-│   │   │   │   │   │   ├── jscript.sh
-│   │   │   │   │   │   ├── main.tf
-│   │   │   │   │   │   ├── provider.tf
-│   │   │   │   │   │   └── variable.tf
-│   │   │   │   │   └── modules
-│   │   │   │   │       ├── ec2
-│   │   │   │   │       │   ├── main.tf
-│   │   │   │   │       │   ├── output.tf
-│   │   │   │   │       │   └── variables.tf
-│   │   │   │   │       ├── keys
-│   │   │   │   │       │   ├── main.tf
-│   │   │   │   │       │   ├── output.tf
-│   │   │   │   │       │   └── variables.tf
-│   │   │   │   │       ├── security_group
-│   │   │   │   │       │   ├── main.tf
-│   │   │   │   │       │   ├── output.tf
-│   │   │   │   │       │   └── variables.tf
-│   │   │   │   │       └── vpc
-│   │   │   │   │           ├── main.tf
-│   │   │   │   │           ├── output.tf
-│   │   │   │   │           └── variables.tf
-│   │   │   │   ├── project
-│   │   │   │   │   ├── app
-│   │   │   │   │   │   ├── README.md
-│   │   │   │   │   │   ├── db_commands.txt
-│   │   │   │   │   │   ├── package-lock.json
-│   │   │   │   │   │   ├── package.json
-│   │   │   │   │   │   ├── public
-│   │   │   │   │   │   │   ├── app.js
-│   │   │   │   │   │   │   ├── images
-│   │   │   │   │   │   │   │   ├── logo.png
-│   │   │   │   │   │   │   │   ├── placeholder.jpg
-│   │   │   │   │   │   │   │   └── profile_pic_1.jpg
-│   │   │   │   │   │   │   ├── index.html
-│   │   │   │   │   │   │   └── style.css
-│   │   │   │   │   │   ├── server.js
-│   │   │   │   │   │   └── terraform
-│   │   │   │   │   │       ├── ec2.tf
-│   │   │   │   │   │       ├── main.tf
-│   │   │   │   │   │       ├── output.tf
-│   │   │   │   │   │       ├── providers.tf
-│   │   │   │   │   │       ├── rds.tf
-│   │   │   │   │   │       ├── s3.tf
-│   │   │   │   │   │       └── script.sh
-│   │   │   │   │   └── app2
-│   │   │   │   │       ├── main.tf
-│   │   │   │   │       ├── output.tf
-│   │   │   │   │       ├── script.sh
-│   │   │   │   │       ├── security.tf
-│   │   │   │   │       └── variables.tf
-│   │   │   │   └── state-file
-│   │   │   ├── basic_v2
-│   │   │   │   ├── README.md
-│   │   │   │   ├── jupiter-website-ecs
-│   │   │   │   │   ├── backend.tf
-│   │   │   │   │   ├── main.tf
-│   │   │   │   │   └── variables.tf
-│   │   │   │   └── modules
-│   │   │   │       └── vpc
-│   │   │   │           ├── main.tf
-│   │   │   │           ├── outputs.tf
-│   │   │   │           └── variables.tf
-│   │   │   ├── jenkins
-│   │   │   │   ├── README.md
-│   │   │   │   └── terra_jenkins
-│   │   │   │       ├── Jenkinsfile
-│   │   │   │       ├── README.md
-│   │   │   │       └── main.tf
-│   │   │   ├── terraform_server_s3_v1
-│   │   │   │   ├── README.md
-│   │   │   │   ├── modules
-│   │   │   │   │   ├── ec2
-│   │   │   │   │   │   ├── main.tf
-│   │   │   │   │   │   ├── output.tf
-│   │   │   │   │   │   └── variables.tf
-│   │   │   │   │   ├── keys
-│   │   │   │   │   │   ├── main.tf
-│   │   │   │   │   │   ├── output.tf
-│   │   │   │   │   │   └── variables.tf
-│   │   │   │   │   ├── s3
-│   │   │   │   │   │   ├── main.tf
-│   │   │   │   │   │   ├── output.tf
-│   │   │   │   │   │   └── variables.tf
-│   │   │   │   │   ├── security_group
-│   │   │   │   │   │   ├── main.tf
-│   │   │   │   │   │   ├── output.tf
-│   │   │   │   │   │   └── variables.tf
-│   │   │   │   │   └── vpc
-│   │   │   │   │       ├── main.tf
-│   │   │   │   │       ├── output.tf
-│   │   │   │   │       └── variables.tf
-│   │   │   │   └── terra-server
-│   │   │   │       ├── main.tf
-│   │   │   │       ├── provider.tf
-│   │   │   │       ├── scripts
-│   │   │   │       │   ├── modules
-│   │   │   │       │   │   ├── data.tf
-│   │   │   │       │   │   ├── main.tf
-│   │   │   │       │   │   ├── provider.tf
-│   │   │   │       │   │   ├── security.tf
-│   │   │   │       │   │   └── variable.tf
-│   │   │   │       │   └── terraform_setup.sh
-│   │   │   │       └── variable.tf
-│   │   │   └── vpc_basic_v1
-│   │   │       ├── README.md
-│   │   │       └── Terraform
-│   │   │           ├── main.tf
-│   │   │           ├── provider.tf
-│   │   │           └── variables.tf
-│   │   ├── DjangoReactApp
-│   │   │   ├── Django-NextJS-Backend-API
-│   │   │   │   ├── Backend Build.md
-│   │   │   │   └── To-do List.md
-│   │   │   └── README.md
-│   │   ├── Microservices
-│   │   │   └── README.md
-│   │   ├── Multi_Tier_Apps
-│   │   │   └── README.md
-│   │   ├── My_Project
-│   │   │   └── call_center_crm
-│   │   │       ├── Notes
-│   │   │       │   └── chat-Call Center CRM Development.txt
-│   │   │       ├── README.md
-│   │   │       ├── backend
-│   │   │       │   ├── database
-│   │   │       │   │   └── db.js
-│   │   │       │   ├── index.js
-│   │   │       │   ├── middleware
-│   │   │       │   │   └── authenticateToken.js
-│   │   │       │   ├── package-lock.json
-│   │   │       │   ├── package.json
-│   │   │       │   └── utils
-│   │   │       │       └── auth.js
-│   │   │       ├── docker-compose.yml
-│   │   │       └── frontend
-│   │   │           ├── AnalyticsChart}.js
-│   │   │           ├── README.md
-│   │   │           ├── package-lock.json
-│   │   │           ├── package.json
-│   │   │           ├── public
-│   │   │           │   ├── favicon.ico
-│   │   │           │   ├── index.html
-│   │   │           │   ├── logo192.png
-│   │   │           │   ├── logo512.png
-│   │   │           │   ├── manifest.json
-│   │   │           │   └── robots.txt
-│   │   │           └── src
-│   │   │               ├── App.css
-│   │   │               ├── App.js
-│   │   │               ├── App.test.js
-│   │   │               ├── components
-│   │   │               │   ├── AnalyticsChart.js
-│   │   │               │   ├── CallLogs.js
-│   │   │               │   ├── Dashboard.js
-│   │   │               │   └── TicketList.js
-│   │   │               ├── index.css
-│   │   │               ├── index.js
-│   │   │               ├── logo.svg
-│   │   │               ├── reportWebVitals.js
-│   │   │               └── setupTests.js
-│   │   ├── Production_Examples
-│   │   │   └── README.md
-│   │   └── README.md
-│   ├── 06-Docs
-│   │   ├── AUDIT_REPORT_2026_01_20.md
-│   │   ├── LINK_UPDATE_REPORT.md
-│   │   ├── MAChanger_How_To.md
-│   │   ├── MASTER_INDEX.md
-│   │   ├── Migration-Audit
-│   │   │   ├── MICROSERVICES_ACTION_PLAN.md
-│   │   │   ├── MICROSERVICES_AUDIT_REPORT.md
-│   │   │   ├── MICROSERVICES_CONSISTENCY_MATRIX.md
-│   │   │   ├── MIGRATION_MANIFEST.json
-│   │   │   ├── MIGRATION_MANIFEST.md
-│   │   │   ├── NEXT_STEPS.md
-│   │   │   ├── REORGANIZATION_EXECUTIVE_SUMMARY.md
-│   │   │   ├── REORGANIZATION_PLAN.md
-│   │   │   ├── audit_report.json
-│   │   │   ├── audit_report.md
-│   │   │   ├── broken_links_report.json
-│   │   │   └── unfixable_links.json
-│   │   ├── REMEDIATION_COMPLETION_REPORT.md
-│   │   ├── Recommended_Videos.md
-│   │   ├── Repository_Health_Score.md
-│   │   ├── audit_data.json
-│   │   └── fix_broken_images.py
+│   │   └── MoreBooks.txt
+│   ├── Images
+│   │   ├── Screenshot (100).png
+│   │   ├── Screenshot (101).png
+│   │   ├── Screenshot (102).png
+│   │   ├── Screenshot (103).png
+│   │   ├── Screenshot (104).png
+│   │   ├── Screenshot (106).png
+│   │   ├── Screenshot (107).png
+│   │   ├── Screenshot (108).png
+│   │   ├── Screenshot (109).png
+│   │   ├── Screenshot (110).png
+│   │   ├── Screenshot (111).png
+│   │   ├── Screenshot (112).png
+│   │   ├── Screenshot (113).png
+│   │   ├── Screenshot (114).png
+│   │   ├── Screenshot (115).png
+│   │   ├── Screenshot (116).png
+│   │   ├── Screenshot (117).png
+│   │   ├── Screenshot (118).png
+│   │   ├── Screenshot (119).png
+│   │   ├── Screenshot (120).png
+│   │   ├── Screenshot (122).png
+│   │   ├── Screenshot (83).png
+│   │   ├── Screenshot (84).png
+│   │   ├── Screenshot (85).png
+│   │   ├── Screenshot (86).png
+│   │   ├── Screenshot (87).png
+│   │   ├── Screenshot (88).png
+│   │   ├── Screenshot (89).png
+│   │   ├── Screenshot (90).png
+│   │   ├── Screenshot (91).png
+│   │   ├── Screenshot (92).png
+│   │   ├── Screenshot (93).png
+│   │   ├── Screenshot (94).png
+│   │   ├── Screenshot (97).png
+│   │   ├── Screenshot (98).png
+│   │   └── Screenshot (99).png
 │   ├── README.md
+│   ├── Script
+│   │   └── pdf_scraper.py
 │   └── bashCustomization.txt
 ├── 1-Beginner
 │   ├── 01-Phase-1
@@ -1265,7 +123,14 @@
 │   │   │   │   └── README.md
 │   │   │   ├── README.md
 │   │   │   ├── dhcp_dora_process.png
-│   │   │   └── dns_hierarchy.png
+│   │   │   ├── dns_hierarchy.png
+│   │   │   └── resources
+│   │   │       ├── Computer_Networking.pdf
+│   │   │       ├── Hacking
+│   │   │       ├── Network Security Bible.pdf
+│   │   │       ├── Nmap-Cheat-Sheet.pdf
+│   │   │       ├── nmap.pdf
+│   │   │       └── wireshark.pdf
 │   │   ├── 02-Linux
 │   │   │   ├── 01-Introduction
 │   │   │   │   ├── Interview_Questions.md
@@ -1285,10 +150,20 @@
 │   │   │   │   └── README.md
 │   │   │   ├── Interview_Questions_and_Quiz.md
 │   │   │   ├── README.md
-│   │   │   └── SSH
-│   │   │       ├── Interview_Questions.md
-│   │   │       ├── Quiz.md
-│   │   │       └── README.md
+│   │   │   ├── SSH
+│   │   │   │   ├── Interview_Questions.md
+│   │   │   │   ├── Quiz.md
+│   │   │   │   └── README.md
+│   │   │   └── resources
+│   │   │       ├── Books
+│   │   │       │   ├── Linux For Dummies.pdf
+│   │   │       │   ├── Linux-Networking-Commands.pdf
+│   │   │       │   ├── The Linux Command Line - A Complete Introduction.pdf
+│   │   │       │   ├── XForce_Threat_Intelligence_2022.pdf
+│   │   │       │   ├── linux-bash-terminal.pdf
+│   │   │       │   ├── linux-bash.pdf
+│   │   │       │   └── python.pdf
+│   │   │       └── LinuxFileSystems.gif
 │   │   ├── 03-Windows-Basics
 │   │   │   ├── Linkks.md
 │   │   │   ├── Login Screen.md
@@ -1450,12 +325,85 @@
 │   │   │   ├── Part-8-Pro-Tips
 │   │   │   ├── Product Key Windows 2019.md
 │   │   │   ├── README.md
-│   │   │   └── VirtualBox Installations.md
+│   │   │   ├── VirtualBox Installations.md
+│   │   │   ├── resources
+│   │   │   │   ├── Powershell.pdf
+│   │   │   │   └── PuTTY_User_Manual.pdf
+│   │   │   └── scripts
+│   │   │       ├── app_purge.ps1
+│   │   │       ├── autoScan.ps1
+│   │   │       ├── howtoUseAppPurge.txt
+│   │   │       ├── organize.ps1
+│   │   │       └── virus_auto_scan.ps1
 │   │   ├── 04-Data-Formats
+│   │   │   ├── Json
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   ├── python_serialization_bridge.py
+│   │   │   │   │   └── standard_templates.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── challenges
+│   │   │   │   │   └── jq_challenge.md
+│   │   │   │   ├── progress_tracker.json
+│   │   │   │   ├── solutions
+│   │   │   │   │   └── jq_query_solution.sh
+│   │   │   │   └── unfixable_links.json
+│   │   │   ├── Markdown
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── documentation_templates.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── challenges
+│   │   │   │   │   └── changelog_challenge.md
+│   │   │   │   └── solutions
+│   │   │   │       └── CHANGELOG_GOAL.md
 │   │   │   ├── README.md
+│   │   │   ├── Toml
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── standard_templates.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── challenges
+│   │   │   │   │   └── refactor_challenge.md
+│   │   │   │   └── solutions
+│   │   │   │       └── modern_config.toml
+│   │   │   ├── Xml
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── standard_templates.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── challenges
+│   │   │   │   │   └── extraction_challenge.md
+│   │   │   │   └── solutions
+│   │   │   │       └── pom_extractor.py
+│   │   │   ├── Yaml
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   ├── k8s_multi_manifest_patterns.yaml
+│   │   │   │   │   └── standard_templates.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── challenges
+│   │   │   │   │   └── dry_challenge.md
+│   │   │   │   └── solutions
+│   │   │   │       └── dry_config_solution.yaml
 │   │   │   └── yaml_vs_json.png
 │   │   ├── 05-Software-Stack
-│   │   │   └── README.md
+│   │   │   ├── README.md
+│   │   │   ├── assets
+│   │   │   │   ├── AdvanceDevops.png
+│   │   │   │   ├── Benifits.png
+│   │   │   │   ├── DevMethologies.png
+│   │   │   │   ├── DevMetrics.png
+│   │   │   │   ├── DevOpsMM.png
+│   │   │   │   ├── Devops-Lifecycle.png
+│   │   │   │   ├── DevopsChallanges.png
+│   │   │   │   ├── FutureOfDevops.png
+│   │   │   │   ├── core-principles.png
+│   │   │   │   ├── devVStrad.png
+│   │   │   │   └── devops-architecture-mermaid.md
+│   │   │   └── resources
+│   │   │       ├── DevOps Automation Cookbook.pdf
+│   │   │       ├── DevOps For Beginners - Joseph Joyner.pdf
+│   │   │       ├── DevOps-Directory-MindMap.md
+│   │   │       ├── DevopsInterviewQ&A.pdf
+│   │   │       ├── Python4DevOps.pdf
+│   │   │       ├── [Devops] DevOps For Dummies.pdf
+│   │   │       └── devops.pdf
 │   │   ├── 06-Web-Design
 │   │   │   ├── Django
 │   │   │   │   └── README.md
@@ -1777,18 +725,28 @@
 │   │   │   │   │       ├── io_stream_architecture.png
 │   │   │   │   │       └── io_stream_architecture.svg
 │   │   │   │   ├── README.md
-│   │   │   │   └── assets
-│   │   │   │       ├── arithmetic_metrics_header.svg
-│   │   │   │       ├── case_logic.svg
-│   │   │   │       ├── deployment_logic_flow.svg
-│   │   │   │       ├── dotfiles_iceberg.svg
-│   │   │   │       ├── function_architecture.svg
-│   │   │   │       ├── grep_mastery.svg
-│   │   │   │       ├── paging_ecosystem.svg
-│   │   │   │       ├── pipeline_architecture.svg
-│   │   │   │       ├── stream_architecture.png
-│   │   │   │       ├── stream_architecture.svg
-│   │   │   │       └── test_operators.svg
+│   │   │   │   ├── assets
+│   │   │   │   │   ├── arithmetic_metrics_header.svg
+│   │   │   │   │   ├── case_logic.svg
+│   │   │   │   │   ├── deployment_logic_flow.svg
+│   │   │   │   │   ├── dotfiles_iceberg.svg
+│   │   │   │   │   ├── function_architecture.svg
+│   │   │   │   │   ├── grep_mastery.svg
+│   │   │   │   │   ├── paging_ecosystem.svg
+│   │   │   │   │   ├── pipeline_architecture.svg
+│   │   │   │   │   ├── stream_architecture.png
+│   │   │   │   │   ├── stream_architecture.svg
+│   │   │   │   │   └── test_operators.svg
+│   │   │   │   ├── examples
+│   │   │   │   │   ├── Cheatsheets
+│   │   │   │   │   │   └── refCheatSheet.md
+│   │   │   │   │   └── os_test.sh
+│   │   │   │   └── resources
+│   │   │   │       ├── Advanced Bash-Scripting Guide.pdf
+│   │   │   │       ├── Automate it!.pdf
+│   │   │   │       ├── Basics of Web Hacking.pdf
+│   │   │   │       ├── pdf_scraper.py
+│   │   │   │       └── shell-scripting.pdf
 │   │   │   ├── 02-Python-Basics
 │   │   │   │   ├── Part-00-Prerequisites
 │   │   │   │   │   ├── 01-Python-Setup
@@ -2054,7 +1012,19 @@
 │   │   │   │   │   ├── python_file_ops.png
 │   │   │   │   │   ├── python_functions_modules.png
 │   │   │   │   │   └── python_learning_path.png
-│   │   │   │   └── python_devops_learning_path.md
+│   │   │   │   ├── examples
+│   │   │   │   │   ├── Automated_Virus_Scan.md
+│   │   │   │   │   ├── audit_links.py
+│   │   │   │   │   ├── centralize_boilerplates.py
+│   │   │   │   │   ├── convert_quiz_format.py
+│   │   │   │   │   ├── create_missing_files.py
+│   │   │   │   │   ├── fix_images_script.py
+│   │   │   │   │   ├── fix_images_v2.py
+│   │   │   │   │   ├── migration_mapper.py
+│   │   │   │   │   └── reformat_all_quizzes.py
+│   │   │   │   ├── python_devops_learning_path.md
+│   │   │   │   └── resources
+│   │   │   │       └── python-regular-expression-regex.pdf
 │   │   │   ├── 03-Go-Basics
 │   │   │   │   ├── 00-Foundations
 │   │   │   │   │   └── README.md
@@ -2242,16 +1212,24 @@
 │   │   │   ├── AUTOMATION_PROJECT_SUMMARY.md
 │   │   │   ├── MULTI_LANGUAGE_AUTOMATION_SUMMARY.md
 │   │   │   ├── README.md
-│   │   │   └── assets
-│   │   │       ├── automation_roadmap.png
-│   │   │       ├── devops_learning_path.png
-│   │   │       ├── file_operations.png
-│   │   │       ├── introduction_banner.png
-│   │   │       ├── microservice_architecture.svg
-│   │   │       ├── project_complete_banner.png
-│   │   │       ├── selenium_workflow.svg
-│   │   │       ├── terminal_mastery.png
-│   │   │       └── web_interaction_flow.svg
+│   │   │   ├── assets
+│   │   │   │   ├── automation_roadmap.png
+│   │   │   │   ├── devops_learning_path.png
+│   │   │   │   ├── file_operations.png
+│   │   │   │   ├── introduction_banner.png
+│   │   │   │   ├── microservice_architecture.svg
+│   │   │   │   ├── project_complete_banner.png
+│   │   │   │   ├── selenium_workflow.svg
+│   │   │   │   ├── terminal_mastery.png
+│   │   │   │   └── web_interaction_flow.svg
+│   │   │   └── resources
+│   │   │       ├── Beginning-Programming-with-Python-For-Dummies-John-Paul-Mueller(www.ebook-dl.com).pdf
+│   │   │       ├── Java
+│   │   │       │   └── Upgrade Java to 21.md
+│   │   │       ├── Python-All-in-One-4-Dummies.pdf
+│   │   │       ├── README.md
+│   │   │       ├── gobook.pdf
+│   │   │       └── python.pdf
 │   │   ├── 02-API-Basics
 │   │   │   ├── CHALLENGES.md
 │   │   │   ├── Part-01-Web-Foundations
@@ -2319,9 +1297,11 @@
 │   │   │   │   │   └── README.md
 │   │   │   │   └── README.md
 │   │   │   ├── README.md
-│   │   │   └── assets
-│   │   │       ├── Maven-Repository.jpg
-│   │   │       └── maven-architecture.png
+│   │   │   ├── assets
+│   │   │   │   ├── Maven-Repository.jpg
+│   │   │   │   └── maven-architecture.png
+│   │   │   └── scripts
+│   │   │       └── pom.xml
 │   │   ├── 05-Basic-CI-CD
 │   │   │   ├── CHALLENGES.md
 │   │   │   ├── Part-01-Principles-and-Fundamentals
@@ -2357,18 +1337,28 @@
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 04-Debugging-with-AI
 │   │   │   │   │   └── README.md
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── pdf_to_json.md
 │   │   │   ├── Part-03-Governance-and-Ethics
 │   │   │   │   ├── 05-Security-and-Ethics
 │   │   │   │   │   └── README.md
 │   │   │   │   └── README.md
 │   │   │   ├── README.md
-│   │   │   └── examples
-│   │   │       ├── README.md
-│   │   │       ├── chanllenges.txt
-│   │   │       ├── content-architect.md
-│   │   │       ├── full-stack-instructor.md
-│   │   │       └── senior-devops-engineer.md
+│   │   │   ├── examples
+│   │   │   │   ├── README.md
+│   │   │   │   ├── chanllenges.txt
+│   │   │   │   ├── content-architect.md
+│   │   │   │   ├── full-stack-instructor.md
+│   │   │   │   └── senior-devops-engineer.md
+│   │   │   └── resources
+│   │   │       ├── 22-promptengg.pdf
+│   │   │       ├── Effectively+Creating+Prompts.pdf
+│   │   │       ├── Prompt-Engineering-Lecture-Elvis.pdf
+│   │   │       ├── Prompts
+│   │   │       │   └── pdf_to_json.md
+│   │   │       ├── THE+PROMPT+ENGINEERING+GUIDE.pdf
+│   │   │       ├── Top+5+Business+Ideas+Prompt.pdf
+│   │   │       └── book_english_version.pdf
 │   │   ├── 07-Observability-Fundamentals
 │   │   │   ├── CHALLENGES.md
 │   │   │   ├── Part-01-The-Signals
@@ -2413,7 +1403,55 @@
 │   │       │   └── README.md
 │   │       └── README.md
 │   ├── 03-Phase-3
-│   │   ├── 01-Container-Orchestration
+│   │   ├── 01-CI-CD-Foundations
+│   │   │   ├── 01-Jenkins-Mastery
+│   │   │   │   ├── 01-Introduction-to-CI-CD
+│   │   │   │   │   ├── Boilerplates
+│   │   │   │   │   │   └── LOCATION.txt
+│   │   │   │   │   ├── CHALLENGES.md
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── 02-Jenkins-Architecture
+│   │   │   │   │   ├── Boilerplates
+│   │   │   │   │   │   └── LOCATION.txt
+│   │   │   │   │   ├── CHALLENGES.md
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── 03-Installation-and-Setup
+│   │   │   │   │   ├── Boilerplates
+│   │   │   │   │   │   └── LOCATION.txt
+│   │   │   │   │   ├── CHALLENGES.md
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── 04-Pipelines-as-Code
+│   │   │   │   │   ├── Boilerplates
+│   │   │   │   │   │   └── SAMPLE_JENKINSFILE.txt
+│   │   │   │   │   ├── CHALLENGES.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── challenges
+│   │   │   │   └── 05-Integrations-and-Plugins
+│   │   │   │       ├── Boilerplates
+│   │   │   │       │   └── LOCATION.txt
+│   │   │   │       ├── CHALLENGES.md
+│   │   │   │       └── README.md
+│   │   │   ├── 02-GitHub-Actions-Foundations
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   ├── full-stack-ci-cd.yml
+│   │   │   │   │   └── python-ci-workflow.yml
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 03-GitLab-CI-Basics
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── gitlab-ci-enterprise.yml
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 04-Artifact-Registry-Management
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── docker-compose-nexus.yml
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   └── README.md
+│   │   ├── 02-Container-Orchestration
 │   │   │   ├── CHALLENGES.md
 │   │   │   ├── INTERVIEW_PREP.md
 │   │   │   ├── Part-01-Docker-Fundamentals
@@ -2427,7 +1465,32 @@
 │   │   │   │   │   ├── 04-Debugging
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   └── README.md
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── images
+│   │   │   │   │   ├── dockerArch.png
+│   │   │   │   │   └── dockerStates.png
+│   │   │   │   ├── resources
+│   │   │   │   │   ├── A very informal introduction to Docker.pdf
+│   │   │   │   │   ├── Containerisation with Docker & K8s (1).pdf
+│   │   │   │   │   ├── Containerisation with Docker & K8s (2).pdf
+│   │   │   │   │   ├── Containerisation with Docker & K8s (3).pdf
+│   │   │   │   │   ├── Containerisation with Docker & K8s.pdf
+│   │   │   │   │   ├── Containerize your Apps with Docker & K8s.pdf
+│   │   │   │   │   ├── Containers_for_everyone.pdf
+│   │   │   │   │   ├── Conterization with Docker & Kubernetes.pdf
+│   │   │   │   │   ├── DIQ.pdf
+│   │   │   │   │   ├── Docker & Kubernetes.pdf
+│   │   │   │   │   ├── Docker in the Cloud.pdf
+│   │   │   │   │   ├── Docker-commands-cheat-sheet-pdf.pdf
+│   │   │   │   │   ├── Docker_Kubernetes_Helm.pdf
+│   │   │   │   │   ├── Docker_Tutorial.pdf
+│   │   │   │   │   ├── Learning Docker.pdf
+│   │   │   │   │   ├── docker-security.pdf
+│   │   │   │   │   ├── docker.pdf
+│   │   │   │   │   └── docker_by_jrebel.pdf
+│   │   │   │   └── scripts
+│   │   │   │       ├── docker-centos-install.sh
+│   │   │   │       └── docker-install.sh
 │   │   │   ├── Part-02-Orchestration-and-Architecture
 │   │   │   │   ├── 01-Networking-and-Storage
 │   │   │   │   │   ├── 01-Docker-Networking
@@ -2446,8 +1509,15 @@
 │   │   │   │   ├── 02-Docker-Compose
 │   │   │   │   │   ├── Advanced
 │   │   │   │   │   │   ├── 01-Production
+│   │   │   │   │   │   │   ├── Boilerplates
+│   │   │   │   │   │   │   │   ├── LOCATION.txt
+│   │   │   │   │   │   │   │   └── SCALABLE_COMPOSE_TEMPLATE.txt
+│   │   │   │   │   │   │   ├── CHALLENGES.md
 │   │   │   │   │   │   │   └── README.md
 │   │   │   │   │   │   └── 02-Orchestration
+│   │   │   │   │   │       ├── Boilerplates
+│   │   │   │   │   │       │   └── LOCATION.txt
+│   │   │   │   │   │       ├── CHALLENGES.md
 │   │   │   │   │   │       └── README.md
 │   │   │   │   │   ├── Beginner
 │   │   │   │   │   │   ├── 01-Basics
@@ -2517,7 +1587,7 @@
 │   │   │       ├── docker_network_pattern_4.png
 │   │   │       ├── docker_network_pattern_5.png
 │   │   │       └── virtualVsDocker.png
-│   │   ├── 02-FinOps
+│   │   ├── 03-FinOps
 │   │   │   ├── Images
 │   │   │   │   ├── RegionTypeCost.png
 │   │   │   │   ├── cloud-cost-breakdown.png
@@ -2529,11 +1599,18 @@
 │   │   │   ├── Part-02-Cloud-Billing-Basics
 │   │   │   │   └── README.md
 │   │   │   ├── Part-03-Cost-Visibility
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   ├── LOCATION.txt
+│   │   │   │   │   └── TTAGGING_POLICY_TEMPLATE.txt
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   └── README.md
 │   │   │   ├── Part-04-Budgeting-Basics
 │   │   │   │   └── README.md
 │   │   │   └── README.md
-│   │   ├── 03-MCP
+│   │   ├── 04-MCP
+│   │   │   ├── Boilerplates
+│   │   │   │   └── mcp-hello-server.py
+│   │   │   ├── CHALLENGES.md
 │   │   │   ├── Part-01-Architecture-and-Primitives
 │   │   │   │   └── README.md
 │   │   │   ├── Part-02-Ecosystem-and-Servers
@@ -2542,22 +1619,31 @@
 │   │   │   │   └── README.md
 │   │   │   ├── Part-04-Security-and-Best-Practices
 │   │   │   │   └── README.md
-│   │   │   └── README.md
-│   │   └── 04-Blockchain
-│   │       ├── Part-01-Architecture-and-Node-Types
-│   │       │   └── README.md
-│   │       ├── Part-02-Infrastructure-and-Resources
-│   │       │   └── README.md
-│   │       ├── Part-03-Decentralized-Operations
-│   │       │   └── README.md
-│   │       ├── Part-04-Maintenance-and-Governance
-│   │       │   └── README.md
-│   │       └── README.md
+│   │   │   ├── README.md
+│   │   │   └── challenges
+│   │   ├── 05-Blockchain
+│   │   │   ├── Boilerplates
+│   │   │   │   └── geth-node-compose.yml
+│   │   │   ├── CHALLENGES.md
+│   │   │   ├── Part-01-Architecture-and-Node-Types
+│   │   │   │   └── README.md
+│   │   │   ├── Part-02-Infrastructure-and-Resources
+│   │   │   │   └── README.md
+│   │   │   ├── Part-03-Decentralized-Operations
+│   │   │   │   └── README.md
+│   │   │   ├── Part-04-Maintenance-and-Governance
+│   │   │   │   └── README.md
+│   │   │   ├── README.md
+│   │   │   └── challenges
+│   │   └── README.md
 │   └── README.md
 ├── 2-Intermediate
 │   ├── 01-Phase-1
 │   │   ├── 01-Networking
-│   │   │   ├── Part-1-Fundamentals
+│   │   │   ├── 01-Fundamentals
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── standard-vpc-terraform.tf
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   ├── Diagrams
 │   │   │   │   │   └── network-topology.md
 │   │   │   │   ├── Examples
@@ -2587,8 +1673,9 @@
 │   │   │   │   │   │   │   └── README.md
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   └── SUMMARY.md
-│   │   │   │   └── README.md
-│   │   │   ├── Part-2-Advanced-Networking
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 02-Advanced-Networking
 │   │   │   │   ├── Advanced-Topics
 │   │   │   │   │   ├── 01-VLANs-and-Switching
 │   │   │   │   │   │   └── README.md
@@ -2632,136 +1719,159 @@
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   └── 07-Software-Defined-Networking
 │   │   │   │   │       └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── vpc-peering-template.tf
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   ├── Case-Studies
 │   │   │   │   │   └── migration-scenario.md
 │   │   │   │   ├── Configuration-Files
 │   │   │   │   │   └── nginx-lb.conf
 │   │   │   │   ├── README.md
-│   │   │   │   └── Scripts
-│   │   │   │       └── port-monitor.sh
-│   │   │   ├── Part-3-Tools-and-Utilities
+│   │   │   │   ├── Scripts
+│   │   │   │   │   └── port-monitor.sh
+│   │   │   │   └── challenges
+│   │   │   ├── 03-Tools-and-Utilities
 │   │   │   │   ├── Best-Practices
 │   │   │   │   │   └── packet-analysis.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── network-tools-cheatsheet.txt
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   ├── Documentation
 │   │   │   │   │   ├── Best-Practices.md
 │   │   │   │   │   ├── Installation-Guides.md
 │   │   │   │   │   └── wireshark-cheat-sheet.md
 │   │   │   │   ├── README.md
-│   │   │   │   └── Tools
-│   │   │   │       ├── 00-Network-Analysis-Tools
-│   │   │   │       │   └── README.md
-│   │   │   │       ├── 01-VPC-Fundamentals
-│   │   │   │       │   ├── 01-What-is-a-VPC
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 02-VPC-vs-Traditional-Networks
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 03-VPC-Components-Overview
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 04-IP-Addressing-Basics
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 05-Default-vs-Custom-VPC
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 06-VPC-Limits-and-Quotas
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 07-Multi-VPC-Strategies
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 08-VPC-Best-Practices
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 09-Cloud-Provider-Comparison
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 10-Getting-Started-Guide
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   └── README.md
-│   │   │   │       ├── 03-Internet-and-NAT-Gateways
-│   │   │   │       │   ├── 01-Internet-Gateway-Fundamentals
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 02-NAT-Gateway-Deep-Dive
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 03-IPv6-and-Egress-Only-Gateways
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 04-High-Availability-and-Optimization
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   └── README.md
-│   │   │   │       ├── 06-VPC-Peering-and-Transit-Gateway
-│   │   │   │       │   ├── 01-VPC-Peering-Basics
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 02-Routing-and-Security-in-Peering
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 03-Transit-Gateway-Architecture
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 04-Interconnectivity-Optimization
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   └── README.md
-│   │   │   │       ├── 09-Hybrid-Connectivity
-│   │   │   │       │   ├── 01-VPN-Site-to-Site-Fundamentals
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 02-Direct-Connect-Deep-Dive
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 03-TGW-and-Hybrid-Architectures
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   ├── 04-Resiliency-and-Security-Hybrid
-│   │   │   │       │   │   └── README.md
-│   │   │   │       │   └── README.md
-│   │   │   │       └── 10-Monitoring-and-Troubleshooting
-│   │   │   │           ├── 01-VPC-Flow-Logs-Network-Visibility
-│   │   │   │           │   └── README.md
-│   │   │   │           ├── 02-Reachability-Analyzer-Network-Insights
-│   │   │   │           │   └── README.md
-│   │   │   │           ├── 03-Traffic-Mirroring-Deep-Packet-Inspection
-│   │   │   │           │   └── README.md
-│   │   │   │           ├── 04-Common-Troubleshooting-Scenarios
-│   │   │   │           │   └── README.md
-│   │   │   │           ├── 05-Advanced-Monitoring-Tools
-│   │   │   │           │   └── README.md
-│   │   │   │           └── README.md
+│   │   │   │   ├── Tools
+│   │   │   │   │   ├── 00-Network-Analysis-Tools
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── 01-VPC-Fundamentals
+│   │   │   │   │   │   ├── 01-What-is-a-VPC
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 02-VPC-vs-Traditional-Networks
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 03-VPC-Components-Overview
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 04-IP-Addressing-Basics
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 05-Default-vs-Custom-VPC
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 06-VPC-Limits-and-Quotas
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 07-Multi-VPC-Strategies
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 08-VPC-Best-Practices
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 09-Cloud-Provider-Comparison
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 10-Getting-Started-Guide
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── 03-Internet-and-NAT-Gateways
+│   │   │   │   │   │   ├── 01-Internet-Gateway-Fundamentals
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 02-NAT-Gateway-Deep-Dive
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 03-IPv6-and-Egress-Only-Gateways
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 04-High-Availability-and-Optimization
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── 06-VPC-Peering-and-Transit-Gateway
+│   │   │   │   │   │   ├── 01-VPC-Peering-Basics
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 02-Routing-and-Security-in-Peering
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 03-Transit-Gateway-Architecture
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 04-Interconnectivity-Optimization
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── 09-Hybrid-Connectivity
+│   │   │   │   │   │   ├── 01-VPN-Site-to-Site-Fundamentals
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 02-Direct-Connect-Deep-Dive
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 03-TGW-and-Hybrid-Architectures
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── 04-Resiliency-and-Security-Hybrid
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   └── 10-Monitoring-and-Troubleshooting
+│   │   │   │   │       ├── 01-VPC-Flow-Logs-Network-Visibility
+│   │   │   │   │       │   └── README.md
+│   │   │   │   │       ├── 02-Reachability-Analyzer-Network-Insights
+│   │   │   │   │       │   └── README.md
+│   │   │   │   │       ├── 03-Traffic-Mirroring-Deep-Packet-Inspection
+│   │   │   │   │       │   └── README.md
+│   │   │   │   │       ├── 04-Common-Troubleshooting-Scenarios
+│   │   │   │   │       │   └── README.md
+│   │   │   │   │       ├── 05-Advanced-Monitoring-Tools
+│   │   │   │   │       │   └── README.md
+│   │   │   │   │       └── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── README.md
 │   │   │   └── Youtube_Lessons.md
 │   │   ├── 02-Linux
-│   │   │   ├── Interview_Questions_and_Quiz.md
-│   │   │   ├── Networking
+│   │   │   ├── 01-Networking
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   ├── Linux Networking Cookbook.pdf
+│   │   │   │   ├── challenges
 │   │   │   │   └── linux-networking-guide.md
-│   │   │   ├── README.md
-│   │   │   ├── SSH
+│   │   │   ├── 02-SSH
 │   │   │   │   ├── 01-Best-Practices
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 02-Tunneling
 │   │   │   │   │   └── README.md
-│   │   │   │   └── 03-Automation
-│   │   │   │       └── README.md
-│   │   │   └── System-Administration
-│   │   │       ├── 01-Systemd-and-Services
-│   │   │       │   ├── 01-Unit-File-Fundamentals
-│   │   │       │   │   └── README.md
-│   │   │       │   ├── 02-Service-State-Management
-│   │   │       │   │   └── README.md
-│   │   │       │   ├── 03-Hardening-and-Security
-│   │   │       │   │   └── README.md
-│   │   │       │   ├── 04-Dependencies-and-Targets
-│   │   │       │   │   └── README.md
-│   │   │       │   └── README.md
-│   │   │       ├── 02-Process-Management
-│   │   │       │   └── README.md
-│   │   │       ├── 03-User-and-Group-Management
-│   │   │       │   └── README.md
-│   │   │       ├── 04-Storage-and-LVM
-│   │   │       │   └── README.md
-│   │   │       ├── 05-Log-Management
-│   │   │       │   └── README.md
-│   │   │       ├── README.md
-│   │   │       ├── Server
-│   │   │       │   ├── CentOS
-│   │   │       │   │   ├── CentOS 9 Stream with GUI Step by Step Instructions.md
-│   │   │       │   │   ├── How to Install Django on CentOS 9.md
-│   │   │       │   │   ├── Install Django under the Python venv. It's possible to do for any common user..md
-│   │   │       │   │   ├── SudoUser&Update.md
-│   │   │       │   │   └── VsCode Install.md
-│   │   │       │   ├── README.md
-│   │   │       │   └── UbuntuServer
-│   │   │       │       ├── SSH.txt
-│   │   │       │       └── Ubuntu Server CLI cheat sheet 2024 v6.pdf
-│   │   │       ├── Share folder on VMware.md
-│   │   │       └── linux-system-administration.md
+│   │   │   │   ├── 03-Automation
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── hardened_ssh_templates.txt
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   └── challenges
+│   │   │   ├── 03-System-Administration
+│   │   │   │   ├── 01-Systemd-and-Services
+│   │   │   │   │   ├── 01-Unit-File-Fundamentals
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── 02-Service-State-Management
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── 03-Hardening-and-Security
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── 04-Dependencies-and-Targets
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── 02-Process-Management
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── 03-User-and-Group-Management
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── 04-Storage-and-LVM
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── 05-Log-Management
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── systemd_and_signals.txt
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── Server
+│   │   │   │   │   ├── CentOS
+│   │   │   │   │   │   ├── CentOS 9 Stream with GUI Step by Step Instructions.md
+│   │   │   │   │   │   ├── How to Install Django on CentOS 9.md
+│   │   │   │   │   │   ├── Install Django under the Python venv. It's possible to do for any common user..md
+│   │   │   │   │   │   ├── SudoUser&Update.md
+│   │   │   │   │   │   └── VsCode Install.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── UbuntuServer
+│   │   │   │   │       ├── SSH.txt
+│   │   │   │   │       └── Ubuntu Server CLI cheat sheet 2024 v6.pdf
+│   │   │   │   ├── Share folder on VMware.md
+│   │   │   │   ├── challenges
+│   │   │   │   └── linux-system-administration.md
+│   │   │   ├── Interview_Questions_and_Quiz.md
+│   │   │   ├── README.md
+│   │   │   └── assets
+│   │   │       ├── fileSystem.png
+│   │   │       ├── serverMount.png
+│   │   │       └── storagePerformance.png
 │   │   ├── 03-Runbooks-Procedures
 │   │   │   ├── 01-Runbook-Fundamentals
 │   │   │   │   ├── 01-Philosophy-and-Goals
@@ -2784,7 +1894,10 @@
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 10-Runbook-Audit-and-Compliance
 │   │   │   │   │   └── README.md
-│   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 02-Writing-Effective-SOPs
 │   │   │   │   ├── 01-Philosophy-and-Mindset
 │   │   │   │   │   └── README.md
@@ -2806,8 +1919,11 @@
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 10-Governance-and-Compliance
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   ├── README.md
-│   │   │   │   └── Writing Effective SOP's.md
+│   │   │   │   ├── Writing Effective SOP's.md
+│   │   │   │   └── challenges
 │   │   │   ├── 03-Auto-Remediation-Patterns
 │   │   │   │   ├── 01-Self-Healing-Philosophy
 │   │   │   │   │   └── README.md
@@ -2829,7 +1945,10 @@
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 10-Governance-and-Limits
 │   │   │   │   │   └── README.md
-│   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 04-Incident-Management-and-Response
 │   │   │   │   ├── 01-Incident-Fundamentals
 │   │   │   │   │   └── README.md
@@ -2851,7 +1970,10 @@
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 10-Continuous-Improvement
 │   │   │   │   │   └── README.md
-│   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 05-Interview-Questions-and-Quizzes
 │   │   │   │   └── Interview Questions and Quizzes.md
 │   │   │   ├── 06-Real-Life-Scenarios
@@ -2881,7 +2003,10 @@
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   └── 02-Security-Best-Practices
 │   │   │   │   │       └── README.md
-│   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 02-GitLab
 │   │   │   │   ├── 01-Beginner-Level
 │   │   │   │   │   ├── 01-GitLab-Fundamentals
@@ -2903,10 +2028,16 @@
 │   │   │   │   │   ├── 01-Enterprise-Administration
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   ├── LEARNING_PATH_SUMMARY.md
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 03-Bitbucket
-│   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 04-Azure-DevOps-Repos
 │   │   │   │   └── README.md
 │   │   │   ├── 05-Mercurial
@@ -2916,74 +2047,99 @@
 │   │   │   ├── CONSOLIDATION_SUMMARY.md
 │   │   │   ├── Interview-Questions-and-Quiz.md
 │   │   │   ├── README.md
-│   │   │   └── Real-Life-Scenarios.md
-│   │   └── 05-Databases
-│   │       ├── 00-Database-Basics
-│   │       │   ├── 01-Database-Basics
-│   │       │   │   ├── Choosing the Right Database Type.md
-│   │       │   │   ├── Database Concepts and Fundamentals.md
-│   │       │   │   └── relational-vs-nosql.md
-│   │       │   ├── 02-RDS-Basics
-│   │       │   │   ├── rds-getting-started.md
-│   │       │   │   └── rds-introduction.md
-│   │       │   ├── 03-DynamoDB-Basics
-│   │       │   │   ├── dynamodb-getting-started.md
-│   │       │   │   └── dynamodb-introduction.md
-│   │       │   ├── Images
-│   │       │   │   ├── FstorageVsDatabase.png
-│   │       │   │   ├── databaseDenormalized.png
-│   │       │   │   ├── databaseNormalized.png
-│   │       │   │   ├── decisionTree.png
-│   │       │   │   └── structuredQueryLanguage.png
-│   │       │   └── README.md
-│   │       ├── 01-Database-Fundamentals
-│   │       │   └── README.md
-│   │       ├── 02-PostgreSQL-DevOps
-│   │       │   ├── PostgreSQL
-│   │       │   │   ├── 1
-│   │       │   │   │   ├── 0a923b3b21b40bb0e461712955439f23db72cda39a1e5c95d24337dd85a3dac3.png
-│   │       │   │   │   ├── 161edfe289bd025ccc4b84f8287a054101cb3c3130f85e2e913b1cb82de815dc.png
-│   │       │   │   │   ├── 25862ff921863adbe25bb3b423edace4de1afea8c6484933f736b0a251598711.png
-│   │       │   │   │   ├── 27c1018601b9a80e355a6382c4e4753d3d1dfe51fed8be646fb430ece23ee4c7.png
-│   │       │   │   │   ├── 2f5d565369424c63e859a91e6cfa5d98c7e7870b8cad50a28ed4829abf9e1b84.png
-│   │       │   │   │   ├── 331cb989affbfa52b96a8dbf13d5bf0ef1102e67af14ca953d9902f7312203ea.png
-│   │       │   │   │   ├── 4d159d9b3e39a340e534101e0e8d1af9601906e5d2bad40b0c3edf191d4572d4.png
-│   │       │   │   │   ├── 4d1ecc1b5826ad3e0222be1992f6cff008d32d5b4d0d60cd621f4c679f98b982.png
-│   │       │   │   │   ├── 4e31158ce98cbde7320c5c34412d7d55753a6eaf50a7c976a02556e7a47333d2.png
-│   │       │   │   │   ├── 5cee70bf094e2c63f83b9e97519ceb7edd7226834cb1cd5a4315816ba5ed82a9.png
-│   │       │   │   │   ├── 680b9fb5333f9865de3e2075acb9e04c7ee8e7c280ad29feca41095a4207f746.png
-│   │       │   │   │   ├── 6e18d0a30745fc97f55f527cbc0aef9af9496e206db133dd49c4a53e67a9e8ad.png
-│   │       │   │   │   ├── 77f4ae764c9a1fe80690c8874246adaef2f249b721c0f1ee5828cd570673c626.png
-│   │       │   │   │   ├── 7eb0f198b6b9faff4a9319f6e92dd59f99d6162326a285bd985443cdec176346.png
-│   │       │   │   │   ├── 9535318c7afa22427566714a2b5e5bee10ac5342b4b0fb3f2310befb0f7dbd85.png
-│   │       │   │   │   ├── a0e56362c6e658f98db3d7c9623afc807ee8d567c4995101f8b7c50c1526ca1b.png
-│   │       │   │   │   ├── b3929b060191587135a25f5b56a07ee1ed32556c83dcf607816bfb613c9a062d.png
-│   │       │   │   │   ├── b7d312f26f74b94256601b002a186ed533ea8b62461628d04489c74f32f13fbc.png
-│   │       │   │   │   ├── c59895ee2606ab3c58f85c4ca524cad7926b137e82072ef9f2cf75ee15b23151.png
-│   │       │   │   │   ├── cb92e22fa0f3a35b58859964cc59d62bd6eaa25d0623f6b7a28373153ed2d5dc.png
-│   │       │   │   │   ├── dee49482150458f1366eaaa4beecb2c539532f9a19811d34f66f644917d96aaf.png
-│   │       │   │   │   ├── e9c55b9e21882239981c901d230e3c665126f4b022424db543b3c96433d6988f.png
-│   │       │   │   │   ├── ed0ce770fbc5b3547eaf0893bbdafc5ae4c217c3eb5d6bd3de284e33dea0d299.png
-│   │       │   │   │   ├── f0647ce85f5d2f7aa43d1664bae09706055480e3aa50bd1cf68d0bce459c2b79.png
-│   │       │   │   │   └── node.xml
-│   │       │   │   └── subnodes.lst
-│   │       │   └── README.md
-│   │       ├── 03-MySQL-and-RDS
-│   │       │   ├── Commands
-│   │       │   │   └── Comprehensive MySQL Commands Reference & Diagnostic Guide.md
-│   │       │   └── Temporary MySql Password.md
-│   │       ├── 04-NoSQL-MongoDB-Redis
-│   │       │   └── README.md
-│   │       ├── 05-Backup-and-Monitoring
-│   │       │   └── README.md
-│   │       ├── 06-Interview-Questions-and-Quizzes
-│   │       │   └── README.md
-│   │       ├── 07-Real-Life-Scenarios
-│   │       │   └── README.md
-│   │       ├── README.md
-│   │       └── Youtube_Lessons.md
+│   │   │   ├── Real-Life-Scenarios.md
+│   │   │   ├── assets
+│   │   │   │   ├── git&githubTalk.png
+│   │   │   │   └── gitStructure.png
+│   │   │   └── resources
+│   │   │       └── GitGuide.pdf
+│   │   ├── 05-Databases
+│   │   │   ├── 00-Database-Basics
+│   │   │   │   ├── 01-Database-Basics
+│   │   │   │   │   ├── Choosing the Right Database Type.md
+│   │   │   │   │   ├── Database Concepts and Fundamentals.md
+│   │   │   │   │   └── relational-vs-nosql.md
+│   │   │   │   ├── 02-RDS-Basics
+│   │   │   │   │   ├── rds-getting-started.md
+│   │   │   │   │   └── rds-introduction.md
+│   │   │   │   ├── 03-DynamoDB-Basics
+│   │   │   │   │   ├── dynamodb-getting-started.md
+│   │   │   │   │   └── dynamodb-introduction.md
+│   │   │   │   ├── Images
+│   │   │   │   │   ├── FstorageVsDatabase.png
+│   │   │   │   │   ├── databaseDenormalized.png
+│   │   │   │   │   ├── databaseNormalized.png
+│   │   │   │   │   ├── decisionTree.png
+│   │   │   │   │   └── structuredQueryLanguage.png
+│   │   │   │   └── README.md
+│   │   │   ├── 01-Database-Fundamentals
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── db_backup_script.sh
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 02-PostgreSQL-DevOps
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── PostgreSQL
+│   │   │   │   │   ├── 1
+│   │   │   │   │   │   ├── 0a923b3b21b40bb0e461712955439f23db72cda39a1e5c95d24337dd85a3dac3.png
+│   │   │   │   │   │   ├── 161edfe289bd025ccc4b84f8287a054101cb3c3130f85e2e913b1cb82de815dc.png
+│   │   │   │   │   │   ├── 25862ff921863adbe25bb3b423edace4de1afea8c6484933f736b0a251598711.png
+│   │   │   │   │   │   ├── 27c1018601b9a80e355a6382c4e4753d3d1dfe51fed8be646fb430ece23ee4c7.png
+│   │   │   │   │   │   ├── 2f5d565369424c63e859a91e6cfa5d98c7e7870b8cad50a28ed4829abf9e1b84.png
+│   │   │   │   │   │   ├── 331cb989affbfa52b96a8dbf13d5bf0ef1102e67af14ca953d9902f7312203ea.png
+│   │   │   │   │   │   ├── 4d159d9b3e39a340e534101e0e8d1af9601906e5d2bad40b0c3edf191d4572d4.png
+│   │   │   │   │   │   ├── 4d1ecc1b5826ad3e0222be1992f6cff008d32d5b4d0d60cd621f4c679f98b982.png
+│   │   │   │   │   │   ├── 4e31158ce98cbde7320c5c34412d7d55753a6eaf50a7c976a02556e7a47333d2.png
+│   │   │   │   │   │   ├── 5cee70bf094e2c63f83b9e97519ceb7edd7226834cb1cd5a4315816ba5ed82a9.png
+│   │   │   │   │   │   ├── 680b9fb5333f9865de3e2075acb9e04c7ee8e7c280ad29feca41095a4207f746.png
+│   │   │   │   │   │   ├── 6e18d0a30745fc97f55f527cbc0aef9af9496e206db133dd49c4a53e67a9e8ad.png
+│   │   │   │   │   │   ├── 77f4ae764c9a1fe80690c8874246adaef2f249b721c0f1ee5828cd570673c626.png
+│   │   │   │   │   │   ├── 7eb0f198b6b9faff4a9319f6e92dd59f99d6162326a285bd985443cdec176346.png
+│   │   │   │   │   │   ├── 9535318c7afa22427566714a2b5e5bee10ac5342b4b0fb3f2310befb0f7dbd85.png
+│   │   │   │   │   │   ├── a0e56362c6e658f98db3d7c9623afc807ee8d567c4995101f8b7c50c1526ca1b.png
+│   │   │   │   │   │   ├── b3929b060191587135a25f5b56a07ee1ed32556c83dcf607816bfb613c9a062d.png
+│   │   │   │   │   │   ├── b7d312f26f74b94256601b002a186ed533ea8b62461628d04489c74f32f13fbc.png
+│   │   │   │   │   │   ├── c59895ee2606ab3c58f85c4ca524cad7926b137e82072ef9f2cf75ee15b23151.png
+│   │   │   │   │   │   ├── cb92e22fa0f3a35b58859964cc59d62bd6eaa25d0623f6b7a28373153ed2d5dc.png
+│   │   │   │   │   │   ├── dee49482150458f1366eaaa4beecb2c539532f9a19811d34f66f644917d96aaf.png
+│   │   │   │   │   │   ├── e9c55b9e21882239981c901d230e3c665126f4b022424db543b3c96433d6988f.png
+│   │   │   │   │   │   ├── ed0ce770fbc5b3547eaf0893bbdafc5ae4c217c3eb5d6bd3de284e33dea0d299.png
+│   │   │   │   │   │   ├── f0647ce85f5d2f7aa43d1664bae09706055480e3aa50bd1cf68d0bce459c2b79.png
+│   │   │   │   │   │   └── node.xml
+│   │   │   │   │   └── subnodes.lst
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 03-MySQL-and-RDS
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── Commands
+│   │   │   │   │   └── Comprehensive MySQL Commands Reference & Diagnostic Guide.md
+│   │   │   │   ├── Temporary MySql Password.md
+│   │   │   │   └── challenges
+│   │   │   ├── 04-NoSQL-MongoDB-Redis
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   └── README.md
+│   │   │   ├── 05-Backup-and-Monitoring
+│   │   │   │   └── README.md
+│   │   │   ├── 06-Interview-Questions-and-Quizzes
+│   │   │   │   └── README.md
+│   │   │   ├── 07-Real-Life-Scenarios
+│   │   │   │   └── README.md
+│   │   │   ├── MySql
+│   │   │   │   ├── README.md
+│   │   │   │   ├── mysql-bak.sh
+│   │   │   │   ├── mysql.sh
+│   │   │   │   └── mysql_config.sh
+│   │   │   ├── README.md
+│   │   │   ├── Youtube_Lessons.md
+│   │   │   └── resources
+│   │   │       └── PostgreSQL-Cheat-Sheet.pdf
+│   │   └── README.md
 │   ├── 02-Phase-2
-│   │   ├── Part-1-Infrastructure-Automation
+│   │   ├── 01-Infrastructure-Automation
 │   │   │   ├── 01-Scripting-Automation
 │   │   │   │   ├── 01-Intermediate-Shell-Scripting
 │   │   │   │   │   ├── 01-Introduction
@@ -3488,8 +2644,22 @@
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── cost_management_dashboard_mockup.png
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── Python
+│   │   │   │   │   ├── Notes.md
+│   │   │   │   │   ├── Py4DevOps.ipynb
+│   │   │   │   │   └── side-modules
+│   │   │   │   │       ├── data.tf
+│   │   │   │   │       ├── main.tf
+│   │   │   │   │       ├── provider.tf
+│   │   │   │   │       ├── security.tf
+│   │   │   │   │       └── variables.tf
 │   │   │   │   ├── README.md
-│   │   │   │   └── Youtube_Lessons.md
+│   │   │   │   ├── Youtube_Lessons.md
+│   │   │   │   ├── brave-install.sh
+│   │   │   │   ├── challenges
+│   │   │   │   └── shell-scripting-automation.md
 │   │   │   ├── 02-Config-Management
 │   │   │   │   ├── 01-Introduction
 │   │   │   │   │   ├── Diagrams
@@ -4367,7 +3537,131 @@
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── Solutions
 │   │   │   │   │       └── README.md
-│   │   │   │   └── README.md
+│   │   │   │   ├── Ansible
+│   │   │   │   │   ├── Boilerplates
+│   │   │   │   │   ├── COMMAND_REFERENCE.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── ansible
+│   │   │   │   │   │   ├── COMMAND_REFERENCE.md
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── generate_hosts.sh
+│   │   │   │   │   │   ├── group_vars
+│   │   │   │   │   │   │   ├── all.yml
+│   │   │   │   │   │   │   └── mysql.yml
+│   │   │   │   │   │   ├── hosts.ini
+│   │   │   │   │   │   ├── inventory.ini
+│   │   │   │   │   │   ├── monitoring_setup.yml
+│   │   │   │   │   │   ├── mysql_diagnostic.yml
+│   │   │   │   │   │   ├── mysql_install.yml
+│   │   │   │   │   │   ├── mysql_setup_galaxy.yml
+│   │   │   │   │   │   ├── petclinic
+│   │   │   │   │   │   │   ├── create_databases.yml
+│   │   │   │   │   │   │   ├── create_users.yml
+│   │   │   │   │   │   │   ├── load_data.yml
+│   │   │   │   │   │   │   └── load_schema.yml
+│   │   │   │   │   │   ├── requirements.yml
+│   │   │   │   │   │   ├── reset_mysql.yml
+│   │   │   │   │   │   └── roles
+│   │   │   │   │   │       ├── monitoring
+│   │   │   │   │   │       │   ├── defaults
+│   │   │   │   │   │       │   │   └── main.yml
+│   │   │   │   │   │       │   ├── files
+│   │   │   │   │   │       │   │   └── grafana_dashboards
+│   │   │   │   │   │       │   │       ├── docker-metrics-dashboard.json
+│   │   │   │   │   │       │   │       └── spring-boot-dashboard.json
+│   │   │   │   │   │       │   ├── handlers
+│   │   │   │   │   │       │   │   └── main.yml
+│   │   │   │   │   │       │   ├── tasks
+│   │   │   │   │   │       │   │   ├── configure_grafana.yml
+│   │   │   │   │   │       │   │   ├── configure_prometheus.yml
+│   │   │   │   │   │       │   │   ├── configure_services.yml
+│   │   │   │   │   │       │   │   ├── install_grafana.yml
+│   │   │   │   │   │       │   │   ├── install_node_exporter.yml
+│   │   │   │   │   │       │   │   ├── install_prometheus.yml
+│   │   │   │   │   │       │   │   └── main.yml
+│   │   │   │   │   │       │   └── templates
+│   │   │   │   │   │       │       ├── grafana-datasource.yml.j2
+│   │   │   │   │   │       │       └── prometheus.yml.j2
+│   │   │   │   │   │       └── mysql_petclinic
+│   │   │   │   │   │           ├── files
+│   │   │   │   │   │           │   ├── customers-data.sql
+│   │   │   │   │   │           │   ├── customers-schema.sql
+│   │   │   │   │   │           │   ├── vets-schema.sql
+│   │   │   │   │   │           │   ├── vets.data.sql
+│   │   │   │   │   │           │   ├── visits-schema.sql
+│   │   │   │   │   │           │   └── visits.data.sq
+│   │   │   │   │   │           ├── handlers
+│   │   │   │   │   │           │   └── main.yml
+│   │   │   │   │   │           └── tasks
+│   │   │   │   │   │               ├── create_databases.yml
+│   │   │   │   │   │               ├── create_users.yml
+│   │   │   │   │   │               ├── load_data.yml
+│   │   │   │   │   │               ├── load_schema.yml
+│   │   │   │   │   │               └── main.yml
+│   │   │   │   │   ├── ansible-health-check.sh
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   ├── generate_hosts.sh
+│   │   │   │   │   ├── group_vars
+│   │   │   │   │   │   ├── all.yml
+│   │   │   │   │   │   └── mysql.yml
+│   │   │   │   │   ├── hosts.ini
+│   │   │   │   │   ├── inventory.ini
+│   │   │   │   │   ├── monitoring_setup.yml
+│   │   │   │   │   ├── mysql_diagnostic.yml
+│   │   │   │   │   ├── mysql_install.yml
+│   │   │   │   │   ├── mysql_setup.yml
+│   │   │   │   │   ├── petclinic
+│   │   │   │   │   │   ├── create_databases.yml
+│   │   │   │   │   │   ├── create_users.yml
+│   │   │   │   │   │   ├── load_data.yml
+│   │   │   │   │   │   └── load_schema.yml
+│   │   │   │   │   ├── requirements.yml
+│   │   │   │   │   ├── reset_mysql.yml
+│   │   │   │   │   ├── resources
+│   │   │   │   │   │   └── ansible.pdf
+│   │   │   │   │   ├── roles
+│   │   │   │   │   │   ├── monitoring
+│   │   │   │   │   │   │   ├── defaults
+│   │   │   │   │   │   │   │   └── main.yml
+│   │   │   │   │   │   │   ├── files
+│   │   │   │   │   │   │   │   └── grafana_dashboards
+│   │   │   │   │   │   │   │       ├── docker-metrics-dashboard.json
+│   │   │   │   │   │   │   │       └── spring-boot-dashboard.json
+│   │   │   │   │   │   │   ├── handlers
+│   │   │   │   │   │   │   │   └── main.yml
+│   │   │   │   │   │   │   ├── tasks
+│   │   │   │   │   │   │   │   ├── configure_grafana.yml
+│   │   │   │   │   │   │   │   ├── configure_prometheus.yml
+│   │   │   │   │   │   │   │   ├── configure_services.yml
+│   │   │   │   │   │   │   │   ├── install_grafana.yml
+│   │   │   │   │   │   │   │   ├── install_node_exporter.yml
+│   │   │   │   │   │   │   │   ├── install_prometheus.yml
+│   │   │   │   │   │   │   │   └── main.yml
+│   │   │   │   │   │   │   └── templates
+│   │   │   │   │   │   │       ├── grafana-datasource.yml.j2
+│   │   │   │   │   │   │       └── prometheus.yml.j2
+│   │   │   │   │   │   └── mysql_petclinic
+│   │   │   │   │   │       ├── files
+│   │   │   │   │   │       │   ├── customers-data.sql
+│   │   │   │   │   │       │   ├── customers-schema.sql
+│   │   │   │   │   │       │   ├── vets-schema.sql
+│   │   │   │   │   │       │   ├── vets.data.sql
+│   │   │   │   │   │       │   ├── visits-schema.sql
+│   │   │   │   │   │       │   └── visits.data.sq
+│   │   │   │   │   │       ├── handlers
+│   │   │   │   │   │       │   └── main.yml
+│   │   │   │   │   │       └── tasks
+│   │   │   │   │   │           ├── create_databases.yml
+│   │   │   │   │   │           ├── create_users.yml
+│   │   │   │   │   │           ├── load_data.yml
+│   │   │   │   │   │           ├── load_schema.yml
+│   │   │   │   │   │           └── main.yml
+│   │   │   │   │   └── solutions
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── terraform_mastery_templates.txt
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 03-Cloud-Platforms
 │   │   │   │   ├── 01-Introduction
 │   │   │   │   │   ├── Diagrams
@@ -4406,6 +3700,9 @@
 │   │   │   │   │   │       ├── README.md
 │   │   │   │   │   │       ├── sns-hands-on.md
 │   │   │   │   │   │       └── sqs-hands-on.md
+│   │   │   │   │   ├── Boilerplates
+│   │   │   │   │   │   └── aws-asg-template.tf
+│   │   │   │   │   ├── CHALLENGES.md
 │   │   │   │   │   ├── Diagrams
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 03-Networking-and-Security
@@ -4435,6 +3732,9 @@
 │   │   │   │   │   │   └── 16-Governance-Compliance
 │   │   │   │   │   │       ├── README.md
 │   │   │   │   │   │       └── aws-config-governance.md
+│   │   │   │   │   ├── Boilerplates
+│   │   │   │   │   │   └── vpc_private_link.tf
+│   │   │   │   │   ├── CHALLENGES.md
 │   │   │   │   │   ├── Diagrams
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 04-Data-and-Automation
@@ -4477,16 +3777,80 @@
 │   │   │   │   │   ├── Real-Life-Scenarios
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   └── Solutions
+│   │   │   │   ├── Aws
+│   │   │   │   │   ├── IAM-EKS-Policy.json
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   ├── 2019ServerStandard.png
+│   │   │   │   │   │   ├── ActiveDirctory.png
+│   │   │   │   │   │   ├── ActiveDirectoryController
+│   │   │   │   │   │   │   ├── AddRoles.png
+│   │   │   │   │   │   │   ├── DNS1.png
+│   │   │   │   │   │   │   ├── DNSManager.png
+│   │   │   │   │   │   │   ├── ForwardLookUp2.png
+│   │   │   │   │   │   │   ├── ForwardLookup.png
+│   │   │   │   │   │   │   ├── NewZone.png
+│   │   │   │   │   │   │   ├── RLZName.png
+│   │   │   │   │   │   │   ├── ReverseLookUpz.png
+│   │   │   │   │   │   │   ├── Screenshot_20250127_205608.png
+│   │   │   │   │   │   │   ├── Screenshot_20250127_205730.png
+│   │   │   │   │   │   │   ├── Screenshot_20250127_205823.png
+│   │   │   │   │   │   │   ├── Screenshot_20250127_205904.png
+│   │   │   │   │   │   │   ├── Screenshot_20250127_210025.png
+│   │   │   │   │   │   │   ├── Screenshot_20250127_210030.png
+│   │   │   │   │   │   │   └── finishline-dc.png
+│   │   │   │   │   │   ├── AddFeaures.jpeg
+│   │   │   │   │   │   ├── Dashboard.jpeg
+│   │   │   │   │   │   ├── DomainService.jpeg
+│   │   │   │   │   │   ├── IDA_Technologies.png
+│   │   │   │   │   │   ├── IDA_responsibilities.png
+│   │   │   │   │   │   ├── Identity&Access.png
+│   │   │   │   │   │   ├── Identity.png
+│   │   │   │   │   │   ├── Screenshot from 2025-01-22 20-33-45.png
+│   │   │   │   │   │   ├── Screenshot from 2025-01-22 20-34-36.png
+│   │   │   │   │   │   ├── Screenshot from 2025-01-22 20-36-44.png
+│   │   │   │   │   │   ├── Screenshot from 2025-01-22 20-37-09.png
+│   │   │   │   │   │   ├── Screenshot from 2025-01-22 20-47-10.png
+│   │   │   │   │   │   ├── Screenshot from 2025-01-22 20-48-44.png
+│   │   │   │   │   │   ├── SelectDServer.jpeg
+│   │   │   │   │   │   ├── SelectInstallType.jpeg
+│   │   │   │   │   │   ├── SelectServerRoles.jpeg
+│   │   │   │   │   │   ├── SeletFeatures.jpeg
+│   │   │   │   │   │   ├── beforeYouBegin.jpeg
+│   │   │   │   │   │   ├── instanceLab.png
+│   │   │   │   │   │   ├── instanceNetwork.png
+│   │   │   │   │   │   ├── instanceSucces.png
+│   │   │   │   │   │   ├── labdone.png
+│   │   │   │   │   │   └── wampDe.png
+│   │   │   │   │   ├── aws_cli.sh
+│   │   │   │   │   ├── commands
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── output.tf
+│   │   │   │   │   ├── resources
+│   │   │   │   │   │   ├── AWS-Basic-Cheat-Sheet.pdf
+│   │   │   │   │   │   ├── aws-cost.pdf
+│   │   │   │   │   │   └── aws-services.pdf
+│   │   │   │   │   ├── s3-bucket
+│   │   │   │   │   │   ├── create-bucket.sh
+│   │   │   │   │   │   └── main.tf
+│   │   │   │   │   ├── tagging_ec2.sh
+│   │   │   │   │   └── variables.tf
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   ├── README.md
-│   │   │   │   └── Youtube_Lessons.md
+│   │   │   │   ├── Youtube_Lessons.md
+│   │   │   │   └── challenges
 │   │   │   ├── 04-System-Administration
 │   │   │   │   ├── 01-Introduction
 │   │   │   │   │   ├── Diagrams
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 02-Server-Hardening
+│   │   │   │   │   ├── Boilerplates
+│   │   │   │   │   ├── CHALLENGES.md
 │   │   │   │   │   ├── Diagrams
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 03-Performance-Tuning
+│   │   │   │   │   ├── Boilerplates
+│   │   │   │   │   ├── CHALLENGES.md
 │   │   │   │   │   ├── Diagrams
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 04-Log-Management-and-Auditing
@@ -4506,9 +3870,41 @@
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── Solutions
 │   │   │   │   │       └── README.md
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── assets
+│   │   │   │   │   └── DCTools.png
+│   │   │   │   ├── centOS
+│   │   │   │   │   ├── master-ports.sh
+│   │   │   │   │   ├── master-server.sh
+│   │   │   │   │   ├── mysql-server.sh
+│   │   │   │   │   ├── worker-ports.sh
+│   │   │   │   │   └── worker-server.sh
+│   │   │   │   ├── maintenance-tools
+│   │   │   │   │   ├── 00_preflight_check.sh
+│   │   │   │   │   ├── 01_create_backup.sh
+│   │   │   │   │   ├── 02_create_migration_plan.py
+│   │   │   │   │   ├── audit_directory.py
+│   │   │   │   │   ├── comprehensive_audit.py
+│   │   │   │   │   ├── final_readme_fix.py
+│   │   │   │   │   ├── fix_images_v2.py
+│   │   │   │   │   ├── fix_malformed_screenshots.py
+│   │   │   │   │   ├── fix_paths_and_absolute.py
+│   │   │   │   │   ├── link_fixer.py
+│   │   │   │   │   ├── link_scanner.py
+│   │   │   │   │   ├── organize_root.ps1
+│   │   │   │   │   ├── reorganize_phase2.py
+│   │   │   │   │   ├── reorganize_windows_basics.py
+│   │   │   │   │   └── verify_phase2.py
+│   │   │   │   ├── ssh-keys
+│   │   │   │   │   └── copy_keys.sh
+│   │   │   │   ├── swap
+│   │   │   │   │   └── increase_swap.sh
+│   │   │   │   └── vpn
+│   │   │   │       ├── dynamic.md
+│   │   │   │       ├── dynamic_vpn.sh
+│   │   │   │       └── dynamic_wireguard.sh
 │   │   │   └── README.md
-│   │   ├── Part-2-Delivery-and-Governance
+│   │   ├── 02-Delivery-and-Governance
 │   │   │   ├── 01-CI-CD-Pipelines
 │   │   │   │   ├── 01-CI-CD-Fundamentals
 │   │   │   │   │   ├── Boilerplates
@@ -4529,6 +3925,8 @@
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── Best-Practices
 │   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── Boilerplates
+│   │   │   │   │   ├── CHALLENGES.md
 │   │   │   │   │   ├── Commands
 │   │   │   │   │   │   └── Comprehensive Jenkins Commands & Diagnostics Reference.md
 │   │   │   │   │   ├── Installation
@@ -4593,6 +3991,8 @@
 │   │   │   │   │   ├── 03-Security-Breaches
 │   │   │   │   │   │   └── Boilerplates
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   ├── CICD_Lessons
 │   │   │   │   │   ├── MySql
 │   │   │   │   │   │   └── Commands.md
@@ -4768,7 +4168,6 @@
 │   │   │   │   │       │   ├── Kube_CICD
 │   │   │   │   │       │   │   ├── APP
 │   │   │   │   │       │   │   │   ├── Jenkinsfile_ec2
-│   │   │   │   │       │   │   │   ├── Jenkinsfile_myEc2
 │   │   │   │   │       │   │   │   ├── Jenkinsfile_mysql
 │   │   │   │   │       │   │   │   ├── main.tf
 │   │   │   │   │       │   │   │   ├── provider.tf
@@ -4804,7 +4203,6 @@
 │   │   │   │   │       │   ├── MySql_CICD
 │   │   │   │   │       │   │   ├── APP
 │   │   │   │   │       │   │   │   ├── Jenkinsfile_ec2
-│   │   │   │   │       │   │   │   ├── Jenkinsfile_myEc2
 │   │   │   │   │       │   │   │   ├── Jenkinsfile_mysql
 │   │   │   │   │       │   │   │   ├── main.tf
 │   │   │   │   │       │   │   │   ├── provider.tf
@@ -5263,7 +4661,6 @@
 │   │   │   │   │           ├── MySql_CICD
 │   │   │   │   │           │   ├── APP
 │   │   │   │   │           │   │   ├── Jenkinsfile_ec2
-│   │   │   │   │           │   │   ├── Jenkinsfile_myEc2
 │   │   │   │   │           │   │   ├── Jenkinsfile_mysql
 │   │   │   │   │           │   │   ├── main.tf
 │   │   │   │   │           │   │   ├── provider.tf
@@ -5483,26 +4880,110 @@
 │   │   │   │   │                       ├── providers.tf
 │   │   │   │   │                       ├── script.sh
 │   │   │   │   │                       └── variables.tf
+│   │   │   │   ├── Jenkins
+│   │   │   │   │   ├── Blue&GreenJenkinsfile
+│   │   │   │   │   ├── JenkinsKubernetes
+│   │   │   │   │   ├── Jenkinsdoc
+│   │   │   │   │   ├── Jenkinsfile
+│   │   │   │   │   ├── JenkinsfileDocker
+│   │   │   │   │   ├── JenkinsfileEc2_dynamic
+│   │   │   │   │   ├── JenkinsfileWorker2Docker
+│   │   │   │   │   ├── Jenkinsfile_ec2
+│   │   │   │   │   ├── Jenkinsfile_mysql
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   ├── declarative_pipeline_lifecycle.png
+│   │   │   │   │   │   └── jenkins_master_agent_architecture.png
+│   │   │   │   │   ├── blueprints
+│   │   │   │   │   │   ├── MIGRATION_REPORT.md
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── blueprint-aws-ec2-docker.groovy
+│   │   │   │   │   │   ├── blueprint-blue-green.groovy
+│   │   │   │   │   │   ├── blueprint-docker-compose.groovy
+│   │   │   │   │   │   ├── blueprint-enterprise-k8s-full.groovy
+│   │   │   │   │   │   └── blueprint-quality-gates-sast.groovy
+│   │   │   │   │   ├── fix_jenkins_access.sh
+│   │   │   │   │   ├── jenkins-installation-aws-ubuntu-instance.txt
+│   │   │   │   │   ├── jenkins-stages
+│   │   │   │   │   │   ├── update-monitoring.groovy
+│   │   │   │   │   │   └── verify-k8s-deployment.groovy
+│   │   │   │   │   ├── jenkins_setup.sh
+│   │   │   │   │   ├── kubernetes_stage
+│   │   │   │   │   │   └── Jenkinsfile
+│   │   │   │   │   └── mysql_stage
+│   │   │   │   │       └── Jenkinsfile
 │   │   │   │   ├── README.md
-│   │   │   │   └── Youtube_Lessons.md
+│   │   │   │   ├── SonarQube
+│   │   │   │   │   ├── sonarqube.sh
+│   │   │   │   │   └── sonerQ.sh
+│   │   │   │   ├── Youtube_Lessons.md
+│   │   │   │   ├── challenges
+│   │   │   │   └── resources
+│   │   │   │       ├── API-Testing
+│   │   │   │       │   └── README.md
+│   │   │   │       ├── CWE SANS.md
+│   │   │   │       ├── Integration-Testing
+│   │   │   │       │   └── README.md
+│   │   │   │       ├── Jenkins
+│   │   │   │       │   └── Jenkinsfile
+│   │   │   │       ├── Jenkins-Cheat-Sheet-converted.pdf
+│   │   │   │       ├── Performance-Testing
+│   │   │   │       │   └── README.md
+│   │   │   │       ├── README.md
+│   │   │   │       ├── SAST
+│   │   │   │       │   └── SAST TEST.md
+│   │   │   │       ├── SCA
+│   │   │   │       │   ├── OWASP.md
+│   │   │   │       │   └── SCA - Software Composition Analysis.md
+│   │   │   │       ├── Security-Testing
+│   │   │   │       │   └── README.md
+│   │   │   │       └── Unit-Testing
+│   │   │   │           └── README.md
 │   │   │   ├── 02-GitOps-Mastery
 │   │   │   │   ├── 01-ArgoCD-Helm-Setup
 │   │   │   │   ├── 02-Sync-Strategies
-│   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 03-Governance-and-Policy
 │   │   │   │   ├── 01-OPA-and-Rego-Basics
 │   │   │   │   ├── 02-Static-Analysis-with-Checkov
-│   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 04-Security-Automation
 │   │   │   │   ├── 01-Trivy-Implementation
 │   │   │   │   ├── 02-Shift-Left-Scanning
+│   │   │   │   ├── 03-SAST
+│   │   │   │   │   └── SAST TEST.md
+│   │   │   │   ├── 04-SCA
+│   │   │   │   │   ├── OWASP.md
+│   │   │   │   │   └── SCA - Software Composition Analysis.md
+│   │   │   │   ├── 05-Security-Testing-General
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── CWE SANS.md
 │   │   │   │   └── README.md
+│   │   │   ├── 05-Automated-Testing
+│   │   │   │   ├── API-Testing
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── Integration-Testing
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── Performance-Testing
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── Unit-Testing
+│   │   │   │       └── README.md
 │   │   │   └── README.md
-│   │   ├── Part-3-Modern-Operations
+│   │   ├── 03-Modern-Operations
 │   │   │   ├── 01-Observability
 │   │   │   │   ├── 01-Prometheus-Grafana-Helm
 │   │   │   │   ├── 02-The-Four-Golden-Signals
-│   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 02-AI-Operations
 │   │   │   │   ├── 01-Chain-of-Thought-DevOps
 │   │   │   │   │   └── Chain-of-Thought (CoT) for DevOps.md
@@ -5516,12 +4997,18 @@
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 06-Real-Life-Scenarios
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   ├── README.md
-│   │   │   │   └── Youtube_Lessons.md
+│   │   │   │   ├── Youtube_Lessons.md
+│   │   │   │   └── challenges
 │   │   │   ├── 03-FinOps-Cost-Management
 │   │   │   │   ├── 01-Infracost-CI-CD
 │   │   │   │   ├── 02-Kubecost-Basics
-│   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 04-Edge-Computing
 │   │   │   │   ├── 01-K3s-Installation
 │   │   │   │   ├── 02-Resource-Constraints
@@ -5534,79 +5021,94 @@
 │   │   └── README.md
 │   ├── 03-Phase-3
 │   │   ├── 01-Container-Orchestration
-│   │   │   ├── Images
-│   │   │   │   ├── KubeClusterArch.png
-│   │   │   │   └── kubeComponent.png
-│   │   │   ├── Part-1-Foundations
+│   │   │   ├── 01-Foundations
 │   │   │   │   ├── 01-Cluster-Architecture
-│   │   │   │   │   ├── MISSING_SECTIONS.md
 │   │   │   │   │   ├── README.md
-│   │   │   │   │   └── assets
-│   │   │   │   │       └── k8s_cluster_architecture_hub.png
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   └── k8s_cluster_architecture_hub.png
+│   │   │   │   │   └── kubernetes-cluster-architecture.md
 │   │   │   │   ├── 02-Kubectl-Basics
 │   │   │   │   │   ├── Comprehensive Kubernetes Commands Reference & Diagnostic Guide.md
-│   │   │   │   │   ├── MISSING_SECTIONS.md
 │   │   │   │   │   ├── README.md
-│   │   │   │   │   └── assets
-│   │   │   │   │       └── kubectl_cli_hub.png
-│   │   │   │   └── README.md
-│   │   │   ├── Part-2-Workload-Management
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   └── kubectl_cli_hub.png
+│   │   │   │   │   └── kubectl-basics.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── multi-container-pod.yaml
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 02-Workload-Management
 │   │   │   │   ├── 03-Pods-and-Nodes
-│   │   │   │   │   ├── MISSING_SECTIONS.md
 │   │   │   │   │   ├── README.md
-│   │   │   │   │   └── assets
-│   │   │   │   │       └── pods_nodes_hub.png
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   └── pods_nodes_hub.png
+│   │   │   │   │   └── pods-and-nodes.md
 │   │   │   │   ├── 04-Deployments-and-Scaling
-│   │   │   │   │   ├── MISSING_SECTIONS.md
 │   │   │   │   │   ├── README.md
-│   │   │   │   │   └── assets
-│   │   │   │   │       └── deployment_scaling_hub.png
-│   │   │   │   └── README.md
-│   │   │   ├── Part-3-Networking-and-Config
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   └── deployment_scaling_hub.png
+│   │   │   │   │   └── deployments-and-scaling.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── scalable-deployment.yaml
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 03-Networking-and-Config
 │   │   │   │   ├── 05-Services-and-Networking
-│   │   │   │   │   ├── MISSING_SECTIONS.md
 │   │   │   │   │   ├── README.md
-│   │   │   │   │   └── assets
-│   │   │   │   │       └── services_networking_hub.png
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   └── services_networking_hub.png
+│   │   │   │   │   └── services-and-networking.md
 │   │   │   │   ├── 06-Ingress-Controllers
-│   │   │   │   │   ├── MISSING_SECTIONS.md
 │   │   │   │   │   ├── README.md
-│   │   │   │   │   └── assets
+│   │   │   │   │   ├── assets
+│   │   │   │   │   └── ingress-controllers.md
 │   │   │   │   ├── 07-ConfigMaps-and-Secrets
-│   │   │   │   │   ├── MISSING_SECTIONS.md
 │   │   │   │   │   ├── README.md
-│   │   │   │   │   └── assets
-│   │   │   │   └── README.md
-│   │   │   ├── Part-4-State-and-Persistence
+│   │   │   │   │   ├── assets
+│   │   │   │   │   └── configmaps-and-secrets.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── service-config-bundle.yaml
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 04-State-and-Persistence
 │   │   │   │   ├── 08-Persistence-and-Storage
-│   │   │   │   │   ├── MISSING_SECTIONS.md
-│   │   │   │   │   └── README.md
-│   │   │   │   ├── 09-StatefulSets-and-Jobs
-│   │   │   │   │   ├── MISSING_SECTIONS.md
 │   │   │   │   │   ├── README.md
-│   │   │   │   │   └── examples
-│   │   │   │   │       ├── mysql-example.md
-│   │   │   │   │       └── redis-example.md
+│   │   │   │   │   └── persistence-and-storage.md
+│   │   │   │   ├── 09-StatefulSets-and-Jobs
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── examples
+│   │   │   │   │   │   ├── mysql-example.md
+│   │   │   │   │   │   └── redis-example.md
+│   │   │   │   │   └── statefulsets-jobs-and-cronjobs.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── pvc-standard-claim.yaml
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   └── README.md
-│   │   │   ├── Part-5-Cloud-Ops-and-Admin
+│   │   │   ├── 05-Cloud-Ops-and-Admin
 │   │   │   │   ├── 10-Managed-Kubernetes-EKS
 │   │   │   │   │   ├── AKS
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── GKE
 │   │   │   │   │   │   └── README.md
-│   │   │   │   │   ├── MISSING_SECTIONS.md
-│   │   │   │   │   └── README.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── managed-kubernetes-eks-aks-gke.md
 │   │   │   │   ├── 11-Cluster-Administration
-│   │   │   │   │   ├── MISSING_SECTIONS.md
-│   │   │   │   │   └── README.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── cluster-administration-rbac-namespaces-quotas.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── rbac-policy-bundle.yaml
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   └── README.md
-│   │   │   ├── Part-6-Mastery-and-Resources
+│   │   │   ├── 06-Mastery-and-Resources
 │   │   │   │   ├── 12-Interview-Questions-and-Quizzes
-│   │   │   │   │   ├── MISSING_SECTIONS.md
-│   │   │   │   │   └── README.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── interview-prep-and-quizzes.md
 │   │   │   │   ├── 13-Real-Life-Scenarios
-│   │   │   │   │   ├── MISSING_SECTIONS.md
-│   │   │   │   │   └── README.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── real-life-scenarios.md
 │   │   │   │   ├── Deep-Dives
 │   │   │   │   │   ├── CronJobs
 │   │   │   │   │   │   └── README.md
@@ -5618,14 +5120,14 @@
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── LoadBalancers
 │   │   │   │   │   │   └── README.md
-│   │   │   │   │   ├── MISSING_SECTIONS.md
 │   │   │   │   │   ├── Observability
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   ├── ServiceAccounts
 │   │   │   │   │   │   └── README.md
-│   │   │   │   │   └── VolumeTypes
-│   │   │   │   │       └── README.md
+│   │   │   │   │   ├── VolumeTypes
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   └── high-fidelity-refinement-for-kubernetes-deep-dives-2-intermediate.md
 │   │   │   │   ├── Legacy-Supplemental-Beginner
 │   │   │   │   │   ├── Diagrams
 │   │   │   │   │   │   ├── README.md
@@ -5647,30 +5149,230 @@
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── README.md
 │   │   │   │   └── Youtube_Lessons.md
-│   │   │   └── README.md
+│   │   │   ├── Docker
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── Diagnostic
+│   │   │   │   │   ├── docker-compose-diagnostic-and-fixes.sh.md
+│   │   │   │   │   └── docker-diagnose.sh.md
+│   │   │   │   ├── challenges
+│   │   │   │   ├── docker-buildx.sh
+│   │   │   │   ├── petclinic-scripts
+│   │   │   │   │   ├── jscript.sh
+│   │   │   │   │   ├── petclinic_setup.sh
+│   │   │   │   │   ├── petclinic_setup1.sh
+│   │   │   │   │   └── spring-petclinic-diagnostic.sh
+│   │   │   │   └── solutions
+│   │   │   ├── Images
+│   │   │   │   ├── KubeClusterArch.png
+│   │   │   │   └── kubeComponent.png
+│   │   │   ├── Kubernetes
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── EKS
+│   │   │   │   │   ├── EKS_COMMAND_REFERENCE.md
+│   │   │   │   │   ├── EKS_MIGRATION_GUIDE.md
+│   │   │   │   │   ├── EKS_QUICK_REFERENCE.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── check-eks-network.sh
+│   │   │   │   │   ├── deployments
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── admin-server.yaml
+│   │   │   │   │   │   ├── api-gateway.yaml
+│   │   │   │   │   │   ├── config-server.yaml
+│   │   │   │   │   │   ├── customers-service.yaml
+│   │   │   │   │   │   ├── deployment.yaml
+│   │   │   │   │   │   ├── discovery-server.yaml
+│   │   │   │   │   │   ├── genai-service.yaml
+│   │   │   │   │   │   ├── grafana.yaml
+│   │   │   │   │   │   ├── prometheus.yaml
+│   │   │   │   │   │   ├── secrets.yaml
+│   │   │   │   │   │   ├── tracing-server.yaml
+│   │   │   │   │   │   ├── vets-service.yaml
+│   │   │   │   │   │   └── visits-service.yaml
+│   │   │   │   │   ├── eks-cluster-config.yaml
+│   │   │   │   │   ├── eks-health-check.sh
+│   │   │   │   │   └── task.md.resolved
+│   │   │   │   ├── Instructions
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   ├── ARCHITECTURE_QUICK_REF.md
+│   │   │   │   │   ├── CALICO_FIX.md
+│   │   │   │   │   ├── CONFIGURE_KUBECTL_JENKINS.md
+│   │   │   │   │   ├── DEPLOYMENT-ARCHITECTURE.md
+│   │   │   │   │   ├── HEALTH_CHECK_FIX.md
+│   │   │   │   │   ├── INFRASTRUCTURE_ARCHITECTURE.md
+│   │   │   │   │   ├── JENKINSFILE_MYSQL_STAGE_FIX.md
+│   │   │   │   │   ├── K3S_AUTO_JOIN.md
+│   │   │   │   │   ├── K3S_SIMPLE_SETUP.md
+│   │   │   │   │   ├── K3S_VS_K8S.md
+│   │   │   │   │   ├── K8S_INSTALL_TROUBLESHOOTING.md
+│   │   │   │   │   ├── K8S_NODE_ROLES.md
+│   │   │   │   │   ├── K8S_QUICK_REFERENCE.md
+│   │   │   │   │   ├── K8S_RECREATION_GUIDE.md
+│   │   │   │   │   ├── K8S_WORKER_COMMANDS.md
+│   │   │   │   │   ├── KUBECTL_CONFIG_FIX.md
+│   │   │   │   │   ├── KUBERNETES_NOTES.md
+│   │   │   │   │   ├── MIGRATION_GUIDE.md
+│   │   │   │   │   ├── MYSQL_VERIFICATION_FIX.md
+│   │   │   │   │   ├── POD-NODE-ASSIGNMENT.md
+│   │   │   │   │   └── TROUBLESHOOTING.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── Troubleshoot
+│   │   │   │   │   ├── cni_cleanup.sh
+│   │   │   │   │   └── reset&re-init.sh
+│   │   │   │   ├── assets
+│   │   │   │   │   ├── CCM-1.png
+│   │   │   │   │   ├── CCM-2.png
+│   │   │   │   │   ├── CCM-3.png
+│   │   │   │   │   ├── CCM-4.png
+│   │   │   │   │   ├── CCM-5.png
+│   │   │   │   │   ├── CCM-6.png
+│   │   │   │   │   ├── KAS-1.png
+│   │   │   │   │   ├── KAS-2.png
+│   │   │   │   │   ├── KAS-3.png
+│   │   │   │   │   ├── KAS-4.png
+│   │   │   │   │   ├── KAS-5.png
+│   │   │   │   │   ├── KAS-6.png
+│   │   │   │   │   ├── KAS-7.png
+│   │   │   │   │   ├── KubeMonStack.png
+│   │   │   │   │   ├── Kubernetes-01.png
+│   │   │   │   │   ├── LB-1.png
+│   │   │   │   │   ├── Screenshot (215).png
+│   │   │   │   │   ├── Screenshot (216).png
+│   │   │   │   │   ├── Screenshot (217).png
+│   │   │   │   │   ├── Screenshot (218).png
+│   │   │   │   │   ├── admission-control.png
+│   │   │   │   │   ├── kube-folder-mindMap.png
+│   │   │   │   │   ├── kube-mindMap-1.png
+│   │   │   │   │   └── multi-AZ-Deployment.png
+│   │   │   │   ├── challenges
+│   │   │   │   ├── images
+│   │   │   │   │   └── infrustructure_architecture_diagram.png
+│   │   │   │   ├── k3s
+│   │   │   │   │   ├── install_k3s_master_amzlinux2023.sh
+│   │   │   │   │   ├── install_k3s_worker_amzlinux2023.sh
+│   │   │   │   │   ├── k3s-installation.sh
+│   │   │   │   │   ├── k3s_agent.sh
+│   │   │   │   │   └── k3s_server.sh
+│   │   │   │   ├── k8s
+│   │   │   │   │   ├── deployment.yaml
+│   │   │   │   │   ├── install_k3s_amzlinux2023.sh
+│   │   │   │   │   ├── k8s-install.sh
+│   │   │   │   │   └── k8s-installation2.sh
+│   │   │   │   ├── scripts
+│   │   │   │   │   ├── Diagnose
+│   │   │   │   │   │   ├── check-cluster-health.sh
+│   │   │   │   │   │   ├── check-cluster.sh
+│   │   │   │   │   │   ├── check-config-server.sh
+│   │   │   │   │   │   ├── check-network-health.sh
+│   │   │   │   │   │   ├── check-pod-distribution.sh
+│   │   │   │   │   │   ├── cleanup-failed-pods.sh
+│   │   │   │   │   │   ├── diagnose-config-server.sh
+│   │   │   │   │   │   ├── diagnose-crashloop.sh
+│   │   │   │   │   │   ├── diagnose-k8s-install.sh
+│   │   │   │   │   │   ├── diagnose-rollout.sh
+│   │   │   │   │   │   ├── diagnose_k8s_connectivity.sh
+│   │   │   │   │   │   ├── diagnose_pending_pods.sh
+│   │   │   │   │   │   ├── k8s-comprehensive-fix.sh
+│   │   │   │   │   │   ├── k8s-diagnose.sh
+│   │   │   │   │   │   ├── pod-diagnostic-report.sh
+│   │   │   │   │   │   └── verify.sh
+│   │   │   │   │   ├── Fixes
+│   │   │   │   │   │   ├── auto-fix-services.sh
+│   │   │   │   │   │   ├── check-and-fix-services.sh
+│   │   │   │   │   │   ├── config-server-fix.sh
+│   │   │   │   │   │   ├── diagnose-and-fix-eks.sh
+│   │   │   │   │   │   ├── fix-all-pods.sh
+│   │   │   │   │   │   ├── fix-config-server.sh
+│   │   │   │   │   │   ├── fix-crashloop.sh
+│   │   │   │   │   │   ├── fix-crictl-permissions.sh
+│   │   │   │   │   │   ├── fix-dns-issues.sh
+│   │   │   │   │   │   ├── fix-eks-cluster.sh
+│   │   │   │   │   │   ├── fix-kubectl-config.sh
+│   │   │   │   │   │   ├── fix-node-labels.sh
+│   │   │   │   │   │   ├── fix-notready-nodes.sh
+│   │   │   │   │   │   └── fix-pods.sh
+│   │   │   │   │   ├── K8s-Master
+│   │   │   │   │   │   ├── copy_deployment_to_master.sh
+│   │   │   │   │   │   ├── diagnose-k8s-master.sh
+│   │   │   │   │   │   ├── fix-k8s-master.sh
+│   │   │   │   │   │   ├── fix_all_k8s_master.sh
+│   │   │   │   │   │   ├── install_k3s_master_amzlinux2023.sh
+│   │   │   │   │   │   ├── k8s-complete-setup.sh
+│   │   │   │   │   │   ├── k8s-installation.sh
+│   │   │   │   │   │   ├── setup-k8s-master.sh
+│   │   │   │   │   │   └── uninstall-k8s-master.sh
+│   │   │   │   │   ├── K8s-Worker
+│   │   │   │   │   │   ├── diagnose-k8s-worker.sh
+│   │   │   │   │   │   ├── fix-k8s-worker.sh
+│   │   │   │   │   │   ├── fix_k8s_worker_connectivity.sh
+│   │   │   │   │   │   ├── fix_worker_hostname.sh
+│   │   │   │   │   │   ├── install_k3s_worker_amzlinux2023.sh
+│   │   │   │   │   │   ├── join-worker-to-cluster.sh
+│   │   │   │   │   │   ├── k8s-worker-complete-setup.sh
+│   │   │   │   │   │   ├── k8s-worker-full-setup.sh
+│   │   │   │   │   │   ├── label-worker-nodes.sh
+│   │   │   │   │   │   ├── manual-worker-setup.sh
+│   │   │   │   │   │   ├── setup-k8s-worker.sh
+│   │   │   │   │   │   └── uninstall-k8s-worker.sh
+│   │   │   │   │   ├── Pod-Distribution
+│   │   │   │   │   │   ├── add-node-selectors.sh
+│   │   │   │   │   │   ├── apply-node-assignments.sh
+│   │   │   │   │   │   └── configure-node-distribution.sh
+│   │   │   │   │   ├── WORKER_SCRIPTS_FIXES.md
+│   │   │   │   │   ├── apply-node-assignments.sh
+│   │   │   │   │   ├── check-worker-nodes.sh
+│   │   │   │   │   ├── configure_kubectl.sh
+│   │   │   │   │   ├── delete-pods.sh
+│   │   │   │   │   ├── deploy-to-k3s.sh
+│   │   │   │   │   ├── fix_all_pods.sh
+│   │   │   │   │   ├── fix_cluster_resources.sh
+│   │   │   │   │   ├── fix_containerd_worker.sh
+│   │   │   │   │   ├── fix_cri_socket.sh
+│   │   │   │   │   ├── generate-join-command.sh
+│   │   │   │   │   ├── increase-swap.sh
+│   │   │   │   │   ├── join-command.sh
+│   │   │   │   │   ├── quick-status.sh
+│   │   │   │   │   ├── role-label-nodes.sh
+│   │   │   │   │   ├── setup-kubectl-ec2-user.sh
+│   │   │   │   │   ├── troubleshooting-commands.sh
+│   │   │   │   │   ├── validate-deployment.sh
+│   │   │   │   │   ├── webhook-rbac.yaml
+│   │   │   │   │   └── webhook-receiver.py
+│   │   │   │   ├── solutions
+│   │   │   │   └── verify_cni.sh
+│   │   │   ├── README.md
+│   │   │   └── resources
+│   │   │       └── Kubernetes-Cheat-Sheet.pdf
 │   │   ├── 02-Observability-Foundations
-│   │   │   ├── Part-1-Monitoring-Foundations
+│   │   │   ├── 01-Monitoring-Foundations
 │   │   │   │   ├── 01-Monitoring-Basics
-│   │   │   │   │   ├── MISSING_SECTIONS.md
+│   │   │   │   │   ├── Monitoring.md
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 03-Health-Checks-and-Probers
-│   │   │   │   │   ├── MISSING_SECTIONS.md
+│   │   │   │   │   ├── Probers.md
 │   │   │   │   │   └── README.md
-│   │   │   │   └── README.md
-│   │   │   ├── Part-2-Logging-and-Cloud-Metrics
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── prometheus_alert_config.yml
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 02-Logging-and-Cloud-Metrics
 │   │   │   │   ├── 02-Log-Management
-│   │   │   │   │   ├── MISSING_SECTIONS.md
-│   │   │   │   │   └── README.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── log-management-the-application-s-story.md
 │   │   │   │   ├── 07-AWS-CloudWatch
-│   │   │   │   │   ├── MISSING_SECTIONS.md
-│   │   │   │   │   └── README.md
-│   │   │   │   └── README.md
-│   │   │   ├── Part-3-Distributed-Tracing-and-APM
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── aws-cloudwatch-the-cloud-command-center.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   │   └── cw_agent_config.json
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 03-Distributed-Tracing-and-APM
 │   │   │   │   ├── 04-Tracing-Foundations
-│   │   │   │   │   ├── MISSING_SECTIONS.md
-│   │   │   │   │   └── README.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── tracing-foundations-following-the-thread.md
 │   │   │   │   └── README.md
-│   │   │   ├── Part-4-Mastery-and-Resources
+│   │   │   ├── 04-Mastery-and-Resources
 │   │   │   │   ├── 05-Interview-Questions-and-Quizzes
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 06-Real-Life-Scenarios
@@ -5679,25 +5381,31 @@
 │   │   │   │   └── Youtube_Lessons.md
 │   │   │   └── README.md
 │   │   ├── 03-API-Gateways-Security
-│   │   │   ├── Part-1-Gateway-Fundamentals
+│   │   │   ├── 01-Gateway-Fundamentals
 │   │   │   │   ├── 01-API-Gateway-Basics
-│   │   │   │   │   ├── MISSING_SECTIONS.md
-│   │   │   │   │   └── README.md
-│   │   │   │   └── README.md
-│   │   │   ├── Part-2-Security-and-Authentication
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── api-gateway-basics-the-microservices-hub.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 02-Security-and-Authentication
 │   │   │   │   ├── 02-Authentication-and-JWT
-│   │   │   │   │   ├── MISSING_SECTIONS.md
-│   │   │   │   │   └── README.md
-│   │   │   │   └── README.md
-│   │   │   ├── Part-3-Traffic-Management-and-Docs
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── authentication-jwt-high-fidelity-security.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 03-Traffic-Management-and-Docs
 │   │   │   │   ├── 03-Traffic-Control-and-Rate-Limiting
-│   │   │   │   │   ├── MISSING_SECTIONS.md
-│   │   │   │   │   └── README.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── traffic-control-rate-limiting-high-fidelity-protection.md
 │   │   │   │   ├── 04-API-Documentation-and-Management
-│   │   │   │   │   ├── MISSING_SECTIONS.md
-│   │   │   │   │   └── README.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── api-documentation-lifecycle-the-developer-s-gateway.md
 │   │   │   │   └── README.md
-│   │   │   ├── Part-4-Mastery-and-Resources
+│   │   │   ├── 04-Mastery-and-Resources
 │   │   │   │   ├── 05-Interview-Questions-and-Quizzes
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 06-Real-Life-Scenarios
@@ -5707,7 +5415,10 @@
 │   │   │   └── README.md
 │   │   ├── 04-MCP
 │   │   │   ├── 01-MCP-Fundamentals
-│   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 02-Building-MCP-Servers
 │   │   │   │   ├── README.md
 │   │   │   │   └── src
@@ -5723,7 +5434,10 @@
 │   │   │   └── Youtube_Lessons.md
 │   │   ├── 05-Blockchain
 │   │   │   ├── 01-Blockchain-Development-Foundations
-│   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
 │   │   │   ├── 02-Smart-Contract-CI-CD
 │   │   │   │   └── README.md
 │   │   │   ├── 03-Security-and-Analysis
@@ -5736,34 +5450,44 @@
 │   │   │   │   └── README.md
 │   │   │   ├── README.md
 │   │   │   └── Youtube_Lessons.md
-│   │   └── 06-FinOps
-│   │       ├── 01-Cost-Allocation
-│   │       │   └── README.md
-│   │       ├── 02-Optimization-Strategies
-│   │       │   └── README.md
-│   │       ├── 03-Reserved-Instances
-│   │       │   └── README.md
-│   │       ├── 04-Showback-Chargeback
-│   │       │   └── README.md
-│   │       ├── 05-Automation
-│   │       │   └── README.md
-│   │       ├── 06-Interview-Questions-and-Quizzes
-│   │       │   └── README.md
-│   │       ├── 07-Real-Life-Scenarios
-│   │       │   └── README.md
-│   │       ├── Images
-│   │       │   └── cost-optimization.png
-│   │       ├── README.md
-│   │       └── Youtube_Lessons.md
+│   │   ├── 06-FinOps
+│   │   │   ├── 01-Cost-Allocation
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── challenges
+│   │   │   ├── 02-Optimization-Strategies
+│   │   │   │   └── README.md
+│   │   │   ├── 03-Reserved-Instances
+│   │   │   │   └── README.md
+│   │   │   ├── 04-Showback-Chargeback
+│   │   │   │   └── README.md
+│   │   │   ├── 05-Automation
+│   │   │   │   └── README.md
+│   │   │   ├── 06-Interview-Questions-and-Quizzes
+│   │   │   │   └── README.md
+│   │   │   ├── 07-Real-Life-Scenarios
+│   │   │   │   └── README.md
+│   │   │   ├── Images
+│   │   │   │   └── cost-optimization.png
+│   │   │   ├── README.md
+│   │   │   └── Youtube_Lessons.md
+│   │   └── README.md
 │   └── README.md
 ├── 3-Advanced
 │   ├── 01-Phase-1
 │   │   ├── 01-Networking
 │   │   │   ├── 01-Cloud-Networking
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   └── README.md
 │   │   │   ├── 02-Container-Networking
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   └── README.md
 │   │   │   ├── 03-Service-Mesh
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   └── README.md
 │   │   │   ├── 04-SDN-NFV
 │   │   │   │   └── README.md
@@ -5784,12 +5508,18 @@
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── 05-CI-CD-Integration
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   └── README.md
 │   │   │   ├── Interview_Questions_and_Quiz.md
 │   │   │   ├── README.md
 │   │   │   ├── Spacelift
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   └── README.md
 │   │   │   ├── Terraform
+│   │   │   │   ├── Boilerplates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   └── terraform-advanced-guide.md
 │   │   │   └── Youtube_Lessons.md
 │   │   ├── 03-Linux
@@ -5906,19 +5636,18 @@
 │   │   │   │   ├── README.md
 │   │   │   │   └── aws-eks-production-ready.md
 │   │   │   └── README.md
-│   │   └── 07-Security
+│   │   └── 05-Security
 │   │       ├── 01-Security-Fundamentals
 │   │       │   └── README.md
 │   │       ├── Interview_Questions_and_Quiz.md
 │   │       ├── README.md
 │   │       └── Youtube_Lessons.md
 │   ├── 02-Phase-2
-│   │   ├── MIGRATION_LOG.json
-│   │   ├── ORGANIZATION_PLAN.md
-│   │   ├── Part-01-Service-Mesh
+│   │   ├── 01-Service-Mesh
 │   │   │   ├── 01-Istio-Deep-Dive
 │   │   │   │   ├── 01-Traffic-Management
 │   │   │   │   ├── 02-mTLS-Security
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   └── README.md
 │   │   │   ├── 02-Security-mTLS-SPIFFE
 │   │   │   │   ├── 01-mTLS-Fundamentals
@@ -5929,7 +5658,7 @@
 │   │   │   │   ├── 02-Service-Graph-Visualization
 │   │   │   │   └── README.md
 │   │   │   └── README.md
-│   │   ├── Part-02-GitOps-Fleet
+│   │   ├── 02-GitOps-Fleet
 │   │   │   ├── 01-GitOps-Advanced-Patterns
 │   │   │   │   ├── Interview_Questions_and_Quiz.md
 │   │   │   │   ├── README.md
@@ -5938,26 +5667,32 @@
 │   │   │   │   ├── 01-Matrix-Generators
 │   │   │   │   ├── 02-Git-Generators
 │   │   │   │   └── README.md
+│   │   │   ├── ArgoCD
+│   │   │   │   ├── ARGO_DEEP_DIVE.md
+│   │   │   │   └── install-argo.sh
 │   │   │   └── README.md
-│   │   ├── Part-03-Multi-Cluster
+│   │   ├── 03-Multi-Cluster
 │   │   │   ├── 01-Multi-Cluster-Federation
 │   │   │   │   └── README.md
 │   │   │   ├── 02-Advanced-Networking-Cilium
 │   │   │   │   ├── 01-Cilium-eBPF-Fundamentals
 │   │   │   │   ├── 02-Network-Policy-and-Observability
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── eBPF-Deep-Dive
+│   │   │   │       └── README.md
 │   │   │   └── README.md
-│   │   ├── Part-04-Platform-Engineering
+│   │   ├── 04-Platform-Engineering
 │   │   │   ├── 01-Backstage-IDP
 │   │   │   │   ├── 01-Internal-Developer-Portals
 │   │   │   │   ├── 02-Software-Templates
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   └── README.md
 │   │   │   ├── 02-Database-SRE
 │   │   │   │   ├── 01-Database-Operators
 │   │   │   │   ├── 02-Scalability-Patterns
 │   │   │   │   └── README.md
 │   │   │   └── README.md
-│   │   ├── Part-05-Security-Compliance
+│   │   ├── 05-Security-Compliance
 │   │   │   ├── 01-Supply-Chain-SLSA-SBOM
 │   │   │   │   ├── 01-SBOM-Generation
 │   │   │   │   ├── 02-Attestations-and-Signing
@@ -5982,8 +5717,28 @@
 │   │   │   │   ├── 01-Custodian-Policy-Language
 │   │   │   │   ├── 02-Real-time-Remediation
 │   │   │   │   └── README.md
-│   │   │   └── README.md
-│   │   ├── Part-06-Observability-Stack
+│   │   │   ├── README.md
+│   │   │   ├── assets
+│   │   │   │   ├── Attack-surface-of-supply-chain-980x466.png
+│   │   │   │   └── artifact_registry_architecture.png
+│   │   │   └── resources
+│   │   │       ├── Basics of Web Hacking.pdf
+│   │   │       ├── Beginning Ethical Hacking with Kali Linux_ Computational Techniques for Resolving Security Issues ( PDFDrive.com ).pdf
+│   │   │       ├── Black Hat Python ( PDFDrive.com ).pdf
+│   │   │       ├── Book - Nmap Cookbook The Fat-free Guide to Network Scanning-1.pdf
+│   │   │       ├── Cyber-attacks-patternstrendsandsecuritycountermeasures.pdf
+│   │   │       ├── Hacking Wireless Networks for Dummies.pdf
+│   │   │       ├── Hacking_Beginner_to_Expert_Guide_to_Computer_Hacking_Basic_Security(4).pdf
+│   │   │       ├── Kali Linux Wireless Penetration Testing - Beginner's Guide - Learn to penetrate Wi-Fi and wireless networks to secure your system from vulnerabilities by Vivek Ramachandran and Cameron Buchanan.pdf
+│   │   │       ├── Quick Hacks for the Command Line.pdf
+│   │   │       ├── The Little Black  Book of Computer Viruses.pdf
+│   │   │       ├── XForce_Threat_Intelligence_2022.pdf
+│   │   │       ├── [Cybersecurity-Web Development] Web security and commerce.pdf
+│   │   │       ├── [Cybersecurity] Computer_Security_Principles_and_Practice_(3rd_Edition).pdf
+│   │   │       ├── black_hat_python_source.json
+│   │   │       ├── nmap_cookbook_source.json
+│   │   │       └── web_hacking_basics_source.json
+│   │   ├── 06-Observability-Stack
 │   │   │   ├── 01-Observability-Advanced
 │   │   │   │   ├── 01-Kube-Prometheus-Stack
 │   │   │   │   │   └── README.md
@@ -6002,8 +5757,11 @@
 │   │   │   │   ├── 01-Log-Aggregation-Architecture
 │   │   │   │   ├── 02-LogQL-and-Dashboards
 │   │   │   │   └── README.md
+│   │   │   ├── Prometheus
+│   │   │   │   ├── install-node_exporter.md
+│   │   │   │   └── install-prometheus.md
 │   │   │   └── README.md
-│   │   ├── Part-07-FinOps-Governance
+│   │   ├── 07-FinOps-Governance
 │   │   │   ├── 01-K8s-Cost-Optimization
 │   │   │   │   ├── 01-VPA-Vertical-Pod-Autoscaler
 │   │   │   │   ├── 02-Goldilocks-Rightsizing
@@ -6013,10 +5771,11 @@
 │   │   │   │   ├── 02-OIDC-Cost-Automation
 │   │   │   │   └── README.md
 │   │   │   └── README.md
-│   │   ├── Part-08-Resilience
+│   │   ├── 08-Resilience
 │   │   │   ├── 01-Chaos-Engineering
 │   │   │   │   ├── 01-Foundations-of-Chaos
 │   │   │   │   ├── 02-Injecting-Faults-with-Chaos-Mesh
+│   │   │   │   ├── CHALLENGES.md
 │   │   │   │   └── README.md
 │   │   │   ├── 02-Backup-DR-Velero
 │   │   │   │   ├── 01-Stateful-Backup-Logic
@@ -6027,7 +5786,7 @@
 │   │   │   │   ├── 02-Lambda-Auto-Remediation
 │   │   │   │   └── README.md
 │   │   │   └── README.md
-│   │   ├── Part-09-Advanced-Automation
+│   │   ├── 09-Advanced-Automation
 │   │   │   ├── 01-Advanced-Automation-Patterns
 │   │   │   │   └── 03-Python-Advanced
 │   │   │   │       ├── 01-Async-Programming-asyncio
@@ -6127,11 +5886,16 @@
 │   │   │   │   ├── 02-Metal-as-a-Service-MaaS
 │   │   │   │   └── README.md
 │   │   │   └── README.md
-│   │   ├── Part-10-AI-Operations
+│   │   ├── 10-AI-Operations
 │   │   │   ├── 01-AIOps-ML-Operations
 │   │   │   │   └── README.md
-│   │   │   └── README.md
-│   │   ├── Part-11-Cloud-Architecture
+│   │   │   ├── README.md
+│   │   │   └── vscode
+│   │   │       ├── AI_Assistant.sh
+│   │   │       ├── settings.json
+│   │   │       ├── tools.instructions.md
+│   │   │       └── workspace.json
+│   │   ├── 11-Cloud-Architecture
 │   │   │   ├── 01-Enterprise-Multi-Cloud
 │   │   │   │   ├── 01-Multi-Cloud-Architecture
 │   │   │   │   │   ├── Fundamentals
@@ -6200,7 +5964,6 @@
 │   │   │   │   │   └── gRPC-vs-Event-Driven
 │   │   │   │   │       └── README.md
 │   │   │   │   ├── ENHANCEMENT_SUMMARY.md
-│   │   │   │   ├── MISSING_SECTIONS.md
 │   │   │   │   ├── MODULE_COMPLETION_SUMMARY.md
 │   │   │   │   ├── Patterns
 │   │   │   │   │   └── Saga-Distributed-Transactions
@@ -6213,6 +5976,7 @@
 │   │   │   │   ├── Security
 │   │   │   │   │   └── OAuth2-and-JWT-Propagation
 │   │   │   │   │       └── README.md
+│   │   │   │   ├── advanced-microservices-readme.md
 │   │   │   │   ├── assets
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   ├── database_per_service_pattern.jpg.txt
@@ -6248,16 +6012,15 @@
 │   │   │   │   ├── 01-OIDC-SAML-Fundamentals
 │   │   │   │   ├── 02-Identity-Proxy-Dex
 │   │   │   │   └── README.md
-│   │   │   └── README.md
+│   │   │   ├── README.md
+│   │   │   └── assets
+│   │   │       └── microServiesArch.png
+│   │   ├── MIGRATION_LOG.json
+│   │   ├── ORGANIZATION_PLAN.md
 │   │   ├── README.md
 │   │   └── REORGANIZATION_COMPLETE.md
 │   ├── 03-Phase-3
-│   │   ├── 08-Infrastructure-Security
-│   │   │   └── Auditing
-│   │   │       ├── Get-PatchCompliance.ps1
-│   │   │       ├── Invoke-SecurityBaseline.ps1
-│   │   │       └── README.md
-│   │   ├── 11-Specialized-Tech
+│   │   ├── 01-Specialized-Tech
 │   │   │   ├── 01-MLOps
 │   │   │   │   └── README.md
 │   │   │   ├── 02-Web3-DevOps
@@ -6267,17 +6030,17 @@
 │   │   │   ├── Interview_Questions_and_Quiz.md
 │   │   │   ├── README.md
 │   │   │   └── Youtube_Lessons.md
-│   │   ├── 12-Prompt-Engineering
+│   │   ├── 02-Prompt-Engineering
 │   │   │   ├── Interview_Questions_and_Quiz.md
 │   │   │   ├── README.md
 │   │   │   └── Youtube_Lessons.md
-│   │   ├── 13-MCP
+│   │   ├── 03-MCP
 │   │   │   ├── README.md
 │   │   │   └── Youtube_Lessons.md
-│   │   ├── 14-Blockchain
+│   │   ├── 04-Blockchain
 │   │   │   ├── README.md
 │   │   │   └── Youtube_Lessons.md
-│   │   ├── 15-FinOps
+│   │   ├── 05-FinOps
 │   │   │   ├── 01-FinOps-Framework
 │   │   │   │   └── README.md
 │   │   │   ├── 02-Multi-Cloud-FinOps
@@ -6293,106 +6056,37 @@
 │   │   │   ├── Interview_Questions_and_Quiz.md
 │   │   │   ├── README.md
 │   │   │   └── Youtube_Lessons.md
-│   │   ├── 16-Advanced-API-Architectures
+│   │   ├── 06-Advanced-API-Architectures
 │   │   │   ├── README.md
 │   │   │   └── Youtube_Lessons.md
 │   │   ├── PHASE_3_MASTER_INDEX.md
 │   │   └── README.md
 │   └── README.md
 ├── 4-Professional-Development
-│   ├── Business_Strategy_and_Quiz.md
+│   ├── 01-Career-Strategy
+│   │   ├── PROGRESS_SKILL_MATRIX.md
+│   │   ├── README.md
+│   │   └── resources
+│   │       └── Employment Verification Yan Batist.pdf
+│   ├── 02-Resume-Engineering
+│   │   ├── README.md
+│   │   └── resources
+│   │       ├── DevOps Resume Ganil Batist.docx
+│   │       └── DevOps Resume.docx
+│   ├── 03-Interview-Mastery
+│   │   └── README.md
+│   ├── 04-Portfolio-Projects
+│   │   ├── Boilerplates
+│   │   ├── GOLDEN_PROJECT_GUIDE.md
+│   │   ├── README.md
+│   │   ├── challenges
+│   │   └── solutions
 │   ├── Images
 │   │   ├── IMAGE-ANALYSIS-REPORT.md
 │   │   ├── README.md
 │   │   └── infographics
 │   │       └── pricing-comparison.png
-│   ├── Part-1-Authority-Branding
-│   │   ├── 01-Profile-Optimization
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── Establish Your DevOps Brand.md
-│   │   │   └── Youtube_Lessons.md
-│   │   ├── 02-Content-Creation-Strategy
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── COMPREHENSIVE_GUIDE.md
-│   │   │   ├── Content-Strategy-Workbook.md
-│   │   │   ├── Getting-Started.md
-│   │   │   ├── README.md
-│   │   │   └── Youtube_Lessons.md
-│   │   ├── 03-Niche-Specialization
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── COMPREHENSIVE_GUIDE.md
-│   │   │   ├── Getting-Started.md
-│   │   │   ├── Niche-Role-Assessment.md
-│   │   │   ├── README.md
-│   │   │   └── Youtube_Lessons.md
-│   │   └── README.md
-│   ├── Part-2-Service-Business
-│   │   ├── 01-High-Ticket-Freelancing
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── README.md
-│   │   │   └── Youtube_Lessons.md
-│   │   ├── 02-Enterprise-Consulting
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── COMPREHENSIVE_GUIDE.md
-│   │   │   ├── Getting-Started.md
-│   │   │   ├── README.md
-│   │   │   └── Youtube_Lessons.md
-│   │   ├── 03-Service-Delivery-Plans
-│   │   │   ├── 01-Consulting-30-Day-Plan.md
-│   │   │   ├── 02-Content-30-Day-Plan.md
-│   │   │   ├── 03-Tools-30-Day-Plan.md
-│   │   │   ├── 04-Strategic-30-Day-Plan.md
-│   │   │   ├── 05-Knowledge-30-Day-Plan.md
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── README.md
-│   │   │   ├── Templates-and-Checklists.md
-│   │   │   ├── Tools-and-Resources.md
-│   │   │   └── Youtube_Lessons.md
-│   │   └── README.md
-│   ├── Part-3-Product-Monetization
-│   │   ├── 01-Digital-Product-Creation
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── README.md
-│   │   │   └── Youtube_Lessons.md
-│   │   ├── 02-Knowledge-Platform-Business
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── Getting-Started.md
-│   │   │   ├── README.md
-│   │   │   └── Youtube_Lessons.md
-│   │   ├── 03-SaaS-App-Monetization
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── README.md
-│   │   │   └── Youtube_Lessons.md
-│   │   ├── 04-OpenSource-Commercialization
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── COMPREHENSIVE_GUIDE.md
-│   │   │   ├── Getting-Started.md
-│   │   │   ├── Product-Development-Toolkit.md
-│   │   │   ├── README.md
-│   │   │   └── Youtube_Lessons.md
-│   │   └── README.md
-│   ├── Part-4-Business-Operations
-│   │   ├── 01-Legal-Entity-Setup
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── Contract-Templates.md
-│   │   │   ├── Independent-Contractor-Remote-Work.md
-│   │   │   ├── README.md
-│   │   │   └── Youtube_Lessons.md
-│   │   ├── 02-Cloud-Cost-Consulting
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── Getting-Started.md
-│   │   │   ├── README.md
-│   │   │   ├── Tools-and-Platforms.md
-│   │   │   └── Youtube_Lessons.md
-│   │   └── README.md
-│   ├── Part-5-Growth-Strategy
-│   │   ├── 01-Growth-Hacking-Tactics
-│   │   │   ├── Business_Strategy_and_Quiz.md
-│   │   │   ├── README.md
-│   │   │   └── Youtube_Lessons.md
-│   │   └── README.md
-│   ├── README.md
-│   └── Youtube_Lessons.md
+│   └── README.md
 ├── 5-Boilerplates
 │   ├── 1-Beginner
 │   │   ├── Go
@@ -6578,6 +6272,20 @@
 │   │   ├── SonarQube
 │   │   │   └── SonarQube-Boilerplates-sonar-project.properties
 │   │   ├── Terraform
+│   │   │   ├── AWS-Golden-Foundation
+│   │   │   │   ├── CHANGELOG.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── main.tf
+│   │   │   │   ├── modules
+│   │   │   │   │   ├── sg
+│   │   │   │   │   │   ├── main.tf
+│   │   │   │   │   │   ├── outputs.tf
+│   │   │   │   │   │   └── variables.tf
+│   │   │   │   │   └── vpc
+│   │   │   │   │       ├── main.tf
+│   │   │   │   │       ├── outputs.tf
+│   │   │   │   │       └── variables.tf
+│   │   │   │   └── variables.tf
 │   │   │   ├── Terraform-Fundamentals-main.tf
 │   │   │   ├── Terraform-HCL-and-IaC-advanced_hcl.tf
 │   │   │   ├── Terraform-Modules-module_usage.tf
@@ -6609,316 +6317,526 @@
 │   └── README.md
 ├── 6-Quizzes
 │   ├── Advanced
-│   │   └── README.md
+│   │   ├── README.md
+│   │   └── Specialized-Tech-Quiz.md
 │   ├── Beginner
 │   │   ├── Networking-Scenarios.md
 │   │   └── README.md
 │   ├── Intermediate
+│   │   ├── Modern-Ops-Quiz.md
 │   │   └── README.md
 │   ├── Master-Quiz.md
 │   └── README.md
-├── Labs
-│   ├── Challenges
-│   │   └── TASK_COMPLETION_SUMMARY.md
-│   └── Play_Ground
-│       ├── README.md
-│       ├── Scripts
-│       │   ├── artifact_manager.sh
-│       │   ├── artifacts
-│       │   │   └── deploy-20260112_152836
-│       │   ├── glob_lab
-│       │   │   ├── README.md
-│       │   │   ├── backup
-│       │   │   │   ├── document-a.txt
-│       │   │   │   ├── document-b.txt
-│       │   │   │   ├── file1.txt
-│       │   │   │   ├── file10.txt
-│       │   │   │   ├── file11.txt
-│       │   │   │   ├── file12.txt
-│       │   │   │   ├── file13.txt
-│       │   │   │   ├── file14.txt
-│       │   │   │   ├── file15.txt
-│       │   │   │   ├── file16.txt
-│       │   │   │   ├── file17.txt
-│       │   │   │   ├── file18.txt
-│       │   │   │   ├── file19.txt
-│       │   │   │   ├── file2.txt
-│       │   │   │   ├── file20.txt
-│       │   │   │   ├── file3.txt
-│       │   │   │   ├── file4.txt
-│       │   │   │   ├── file5.txt
-│       │   │   │   ├── file6.txt
-│       │   │   │   ├── file7.txt
-│       │   │   │   ├── file8.txt
-│       │   │   │   └── file9.txt
-│       │   │   ├── config.conf
-│       │   │   ├── document-a.txt
-│       │   │   ├── document-b.txt
-│       │   │   ├── file10.txt
-│       │   │   ├── file11.txt
-│       │   │   ├── file12.txt
-│       │   │   ├── file13.txt
-│       │   │   ├── file14.txt
-│       │   │   ├── file15.txt
-│       │   │   ├── file16.txt
-│       │   │   ├── file17.txt
-│       │   │   ├── file18.txt
-│       │   │   ├── file19.txt
-│       │   │   ├── file20.txt
-│       │   │   ├── file6.txt
-│       │   │   ├── file7.txt
-│       │   │   ├── file8.txt
-│       │   │   ├── file9.txt
-│       │   │   └── script.sh
-│       │   ├── hello-v0.sh
-│       │   ├── hello-v1.sh
-│       │   ├── hello.sh
-│       │   ├── monitor.sh
-│       │   ├── shell_compare.sh
-│       │   ├── system_info.sh
-│       │   └── vim-script.sh
-│       ├── Shell-Scripting
-│       │   ├── 01-Log-Rotation.md
-│       │   ├── 02-API-Polling.md
-│       │   ├── 03-Backup-Automation.md
-│       │   ├── 04-User-Audit.md
-│       │   ├── 05-Pre-Flight-Checks.md
-│       │   ├── monitor.sh
-│       │   └── nav_helper.sh
-│       ├── Terraform
-│       │   ├── 01-Day
-│       │   │   ├── Terraform Fundamentals, Architecture, and Setup.md
-│       │   │   └── chanellenges.md
-│       │   ├── 02-Day
-│       │   │   ├── Day 2 Providers and Resources.md
-│       │   │   ├── README.md
-│       │   │   └── chanellenges.md
-│       │   ├── 03-Day
-│       │   │   ├── README.md
-│       │   │   ├── chanellenges.md
-│       │   │   └── main.tf
-│       │   ├── 04-Day
-│       │   │   ├── README.md
-│       │   │   ├── challenges.md
-│       │   │   ├── main.tf
-│       │   │   └── tfplan
-│       │   ├── 05-Day-Input_Output_Local_Veriables
-│       │   │   ├── README.md
-│       │   │   ├── backend.tf
-│       │   │   ├── chanellenges.md
-│       │   │   ├── locals.tf
-│       │   │   ├── main.tf
-│       │   │   ├── output.tf
-│       │   │   ├── providers.tf
-│       │   │   ├── tfplan
-│       │   │   └── variables.tf
-│       │   ├── 06-Day-Project_Structure
-│       │   │   ├── README.md
-│       │   │   ├── backend.tf
-│       │   │   ├── chanellenges.md
-│       │   │   ├── locals.tf
-│       │   │   ├── main.tf
-│       │   │   ├── output.tf
-│       │   │   ├── providers.tf
-│       │   │   ├── storage.tf
-│       │   │   ├── tfplan
-│       │   │   ├── variables.tf
-│       │   │   └── vpc.tf
-│       │   └── 07-Day-Type_Constraints
-│       │       ├── README.md
-│       │       ├── backend.tf
-│       │       ├── chanellenges.md
-│       │       ├── locals.tf
-│       │       ├── main.tf
-│       │       ├── output.tf
-│       │       ├── providers.tf
-│       │       ├── tfplan
-│       │       └── variables.tf
-│       ├── Youtube-Lessons
-│       │   ├── 01-Kubernetes
-│       │   │   ├── Anton_Putra
-│       │   │   │   ├── Notes.md
-│       │   │   │   ├── devops-youtube-course-2025
-│       │   │   │   │   ├── client
-│       │   │   │   │   │   ├── Dockerfile
-│       │   │   │   │   │   ├── README.md
-│       │   │   │   │   │   ├── eslint.config.js
-│       │   │   │   │   │   ├── index.html
-│       │   │   │   │   │   ├── package-lock.json
-│       │   │   │   │   │   ├── package.json
-│       │   │   │   │   │   ├── public
-│       │   │   │   │   │   │   └── vite.svg
-│       │   │   │   │   │   ├── src
-│       │   │   │   │   │   │   ├── App.css
-│       │   │   │   │   │   │   ├── App.jsx
-│       │   │   │   │   │   │   ├── assets
-│       │   │   │   │   │   │   │   └── react.svg
-│       │   │   │   │   │   │   ├── components
-│       │   │   │   │   │   │   │   ├── AddTaskDialog.jsx
-│       │   │   │   │   │   │   │   ├── LoadingSpinner.jsx
-│       │   │   │   │   │   │   │   ├── TaskCard.jsx
-│       │   │   │   │   │   │   │   └── TaskList.jsx
-│       │   │   │   │   │   │   ├── index.css
-│       │   │   │   │   │   │   ├── main.jsx
-│       │   │   │   │   │   │   ├── services
-│       │   │   │   │   │   │   │   └── taskService.js
-│       │   │   │   │   │   │   └── utils
-│       │   │   │   │   │   │       └── dateUtils.js
-│       │   │   │   │   │   └── vite.config.js
-│       │   │   │   │   ├── docker-compose.yml
-│       │   │   │   │   └── server
-│       │   │   │   │       ├── Dockerfile
-│       │   │   │   │       ├── controllers
-│       │   │   │   │       │   └── taskController.js
-│       │   │   │   │       ├── eslint.config.js
-│       │   │   │   │       ├── models
-│       │   │   │   │       │   └── Task.js
-│       │   │   │   │       ├── package-lock.json
-│       │   │   │   │       ├── package.json
-│       │   │   │   │       ├── routes
-│       │   │   │   │       │   └── tasks.js
-│       │   │   │   │       └── server.js
-│       │   │   │   └── eks-ug.pdf
-│       │   │   └── README.md
-│       │   ├── 02-CI-CD
-│       │   │   ├── Notes
-│       │   │   │   └── README.md
-│       │   │   └── README.md
-│       │   ├── 03-General-DevOps
-│       │   │   ├── DEVOPS_NOTES
-│       │   │   │   ├── 1. Linux Shell Notes.pdf
-│       │   │   │   ├── 2. Git Github Env Notes.pdf
-│       │   │   │   ├── 3. Docker Compose Notes.pdf
-│       │   │   │   ├── 4. Ci Eslint Prettier Notes.pdf
-│       │   │   │   ├── 5. Aws Ec2 Deployment Notes.pdf
-│       │   │   │   ├── 6. Cd Github Ec2 Notes.pdf
-│       │   │   │   └── 7. Kubernetes Mern Notes.pdf
-│       │   │   ├── Downloads
-│       │   │   │   ├── devopsYoutubeLesson.zip
-│       │   │   │   └── devopsYoutubeLessonP-1.zip
-│       │   │   ├── Link&TimeOut.txt
-│       │   │   ├── README.md
-│       │   │   └── YoutubeDownLoader
-│       │   │       └── Link.txt
-│       │   ├── 04-Projects
-│       │   │   ├── README.md
-│       │   │   └── terraform_server_v1
-│       │   │       ├── README.md
-│       │   │       ├── main.tf
-│       │   │       ├── outputs.tf
-│       │   │       ├── terraform.tfvars.example
-│       │   │       └── variables.tf
-│       │   ├── 05-Shell-Scripting
-│       │   │   ├── Course-1
-│       │   │   │   ├── addition-1.sh
-│       │   │   │   ├── addition.sh
-│       │   │   │   ├── cl-agru.sh
-│       │   │   │   ├── comparsion.sh
-│       │   │   │   ├── cron-jobs.sh
-│       │   │   │   ├── file-1.sh
-│       │   │   │   ├── file-2.sh
-│       │   │   │   ├── functions-2.sh
-│       │   │   │   ├── functions.sh
-│       │   │   │   ├── grade.sh
-│       │   │   │   ├── ifelse-2.sh
-│       │   │   │   ├── ifelse-3.sh
-│       │   │   │   ├── ifelse.sh
-│       │   │   │   ├── intro.sh
-│       │   │   │   ├── multiple.sh
-│       │   │   │   ├── password.sh
-│       │   │   │   ├── sample.sh
-│       │   │   │   ├── script-2.sh
-│       │   │   │   ├── while-2.sh
-│       │   │   │   ├── while-3.sh
-│       │   │   │   ├── while.sh
-│       │   │   │   └── ytb-links.txt
-│       │   │   └── Course-2
-│       │   │       ├── Operators
-│       │   │       │   ├── arithmetic-2.sh
-│       │   │       │   └── arithmetic.sh
-│       │   │       ├── conditions
-│       │   │       │   ├── all_example.sh
-│       │   │       │   ├── file_test.sh
-│       │   │       │   ├── if.sh
-│       │   │       │   ├── if_else.sh
-│       │   │       │   ├── ifelif.sh
-│       │   │       │   ├── ifelse_boolean.sh
-│       │   │       │   ├── ifelse_relational.sh
-│       │   │       │   ├── ifelse_string.sh
-│       │   │       │   ├── random.txt
-│       │   │       │   └── switch.sh
-│       │   │       ├── loops
-│       │   │       │   ├── all_example
-│       │   │       │   ├── break.sh
-│       │   │       │   ├── continue.sh
-│       │   │       │   ├── for.sh
-│       │   │       │   ├── nested.sh
-│       │   │       │   ├── read_file.sh
-│       │   │       │   ├── until.sh
-│       │   │       │   └── while.sh
-│       │   │       └── ytb.txt
-│       │   ├── 06-Python
-│       │   │   ├── DevOps-Shack
-│       │   │   │   ├── backup.py
-│       │   │   │   ├── configuration-management.yaml
-│       │   │   │   └── ytb.txt
-│       │   │   ├── configuration_merger.py
-│       │   │   ├── health_check.py
-│       │   │   ├── hello-click.py
-│       │   │   ├── kube-node-calculator.py
-│       │   │   ├── log_deduplication.py
-│       │   │   ├── main.py
-│       │   │   ├── server_utils.py
-│       │   │   └── sever_inventory_management.py
-│       │   ├── README.md
-│       │   └── error_log.log
-│       ├── automation_tool
-│       │   ├── main.py
-│       │   └── utils
-│       │       ├── __init__.py
-│       │       ├── logger.py
-│       │       └── network.py
-│       ├── dest1
-│       │   ├── config
-│       │   ├── data
-│       │   │   └── database.conf
-│       │   ├── logs
-│       │   │   └── app.log
-│       │   └── source
-│       │       ├── config
-│       │       ├── data
-│       │       │   └── database.conf
-│       │       └── logs
-│       │           └── app.log
-│       ├── dest2
-│       │   ├── config
-│       │   ├── data
-│       │   │   └── database.conf
-│       │   └── logs
-│       │       └── app.log
-│       ├── rename-test
-│       │   ├── photo-001.jpg
-│       │   ├── photo-002.jpg
-│       │   ├── photo-003.jpg
-│       │   ├── photo-004.jpg
-│       │   ├── photo-005.jpg
-│       │   ├── photo-006.jpg
-│       │   ├── photo-007.jpg
-│       │   ├── photo-008.jpg
-│       │   ├── photo-009.jpg
-│       │   └── photo-010.jpg
-│       └── source
-│           ├── config
-│           ├── data
-│           │   └── database.conf
-│           └── logs
-│               └── app.log
+├── 8-Porjects-Showcase
+│   ├── Archive
+│   │   ├── Amazon-Prime-Clone
+│   │   │   └── README.md
+│   │   ├── Ansible
+│   │   │   ├── ansible_cicd_v1
+│   │   │   │   ├── README.md
+│   │   │   │   ├── app
+│   │   │   │   │   ├── Jenkinsfile
+│   │   │   │   │   ├── main.tf
+│   │   │   │   │   ├── provider.tf
+│   │   │   │   │   ├── scripts
+│   │   │   │   │   │   ├── master.sh
+│   │   │   │   │   │   └── worker.sh
+│   │   │   │   │   └── variables.tf
+│   │   │   │   └── modules
+│   │   │   │       ├── ec2
+│   │   │   │       │   ├── main.tf
+│   │   │   │       │   ├── output.tf
+│   │   │   │       │   └── variables.tf
+│   │   │   │       ├── keys
+│   │   │   │       │   ├── main.tf
+│   │   │   │       │   ├── output.tf
+│   │   │   │       │   └── variables.tf
+│   │   │   │       ├── s3
+│   │   │   │       │   ├── main.tf
+│   │   │   │       │   ├── output.tf
+│   │   │   │       │   └── variables.tf
+│   │   │   │       ├── sg
+│   │   │   │       │   ├── main.tf
+│   │   │   │       │   ├── output.tf
+│   │   │   │       │   └── variables.tf
+│   │   │   │       └── vpc
+│   │   │   │           ├── main.tf
+│   │   │   │           ├── output.tf
+│   │   │   │           └── variables.tf
+│   │   │   └── ansible_cicd_v2
+│   │   │       ├── README.md
+│   │   │       ├── app
+│   │   │       │   ├── Dockerfile
+│   │   │       │   ├── Jenkinsfile
+│   │   │       │   ├── main.tf
+│   │   │       │   ├── provider.tf
+│   │   │       │   ├── scripts
+│   │   │       │   │   ├── Terraform-Server.sh
+│   │   │       │   │   ├── ansible.sh
+│   │   │       │   │   ├── jenkins.sh
+│   │   │       │   │   ├── kube_deploy.yml
+│   │   │       │   │   ├── register-ci.yml
+│   │   │       │   │   ├── register-deployment.yml
+│   │   │       │   │   └── register-service.yml
+│   │   │       │   └── variable.tf
+│   │   │       ├── images
+│   │   │       │   ├── Screenshot (131).png
+│   │   │       │   ├── Screenshot (133)-1.png
+│   │   │       │   ├── Screenshot (133).png
+│   │   │       │   ├── Screenshot (134)-1.png
+│   │   │       │   ├── Screenshot (134).png
+│   │   │       │   ├── Screenshot (136).png
+│   │   │       │   ├── Screenshot (137)-1.png
+│   │   │       │   ├── Screenshot (137).png
+│   │   │       │   ├── Screenshot (138)-1.png
+│   │   │       │   ├── Screenshot (138).png
+│   │   │       │   ├── Screenshot (139).png
+│   │   │       │   ├── Screenshot (140).png
+│   │   │       │   ├── Screenshot (141).png
+│   │   │       │   ├── Screenshot (142).png
+│   │   │       │   ├── Screenshot (143).png
+│   │   │       │   ├── Screenshot (144).png
+│   │   │       │   ├── Screenshot (145).png
+│   │   │       │   ├── Screenshot (147).png
+│   │   │       │   ├── Screenshot (149).png
+│   │   │       │   ├── Screenshot (150).png
+│   │   │       │   ├── Screenshot (151)-1.png
+│   │   │       │   ├── Screenshot (151).png
+│   │   │       │   ├── Screenshot (152).png
+│   │   │       │   ├── Screenshot (153).png
+│   │   │       │   ├── Screenshot (154).png
+│   │   │       │   ├── Screenshot (155).png
+│   │   │       │   ├── Screenshot (157).png
+│   │   │       │   ├── Screenshot (158).png
+│   │   │       │   ├── Screenshot (159).png
+│   │   │       │   ├── Screenshot (160).png
+│   │   │       │   ├── Screenshot (162).png
+│   │   │       │   ├── Screenshot (163).png
+│   │   │       │   ├── Screenshot (164).png
+│   │   │       │   ├── Screenshot (165).png
+│   │   │       │   ├── Screenshot (166).png
+│   │   │       │   ├── Screenshot (167).png
+│   │   │       │   ├── Screenshot (168).png
+│   │   │       │   ├── Screenshot (169).png
+│   │   │       │   ├── Screenshot (170).png
+│   │   │       │   ├── Screenshot (171).png
+│   │   │       │   ├── Screenshot (172).png
+│   │   │       │   ├── Screenshot (173).png
+│   │   │       │   ├── Screenshot (174).png
+│   │   │       │   ├── Screenshot (175).png
+│   │   │       │   ├── Screenshot (176).png
+│   │   │       │   ├── Screenshot (177).png
+│   │   │       │   ├── Screenshot (178).png
+│   │   │       │   ├── Screenshot (179).png
+│   │   │       │   ├── Screenshot (180).png
+│   │   │       │   ├── Screenshot (181).png
+│   │   │       │   ├── Screenshot (182).png
+│   │   │       │   ├── Screenshot (183).png
+│   │   │       │   └── image.png
+│   │   │       └── modules
+│   │   │           ├── ec2
+│   │   │           │   ├── main.tf
+│   │   │           │   ├── output.tf
+│   │   │           │   └── variables.tf
+│   │   │           ├── keys
+│   │   │           │   ├── main.tf
+│   │   │           │   ├── output.tf
+│   │   │           │   └── variables.tf
+│   │   │           ├── s3
+│   │   │           │   ├── main.tf
+│   │   │           │   ├── output.tf
+│   │   │           │   └── variables.tf
+│   │   │           ├── security_group
+│   │   │           │   ├── main.tf
+│   │   │           │   ├── output.tf
+│   │   │           │   └── variables.tf
+│   │   │           └── vpc
+│   │   │               ├── main.tf
+│   │   │               ├── output.tf
+│   │   │               └── variables.tf
+│   │   ├── Kubernetes
+│   │   │   └── Dev
+│   │   │       ├── AntonPutra
+│   │   │       │   ├── 1-example
+│   │   │       │   │   ├── 0-viewer-cluster-role.yaml
+│   │   │       │   │   └── 1-viewer-cluster-role-binding.yaml
+│   │   │       │   ├── 2-example
+│   │   │       │   │   └── admin-cluster-role-binging.yaml
+│   │   │       │   ├── 3-example
+│   │   │       │   │   ├── 0-namespace.yaml
+│   │   │       │   │   ├── 1-deployment.yaml
+│   │   │       │   │   ├── 2-service.yaml
+│   │   │       │   │   └── 3-hpa.yaml
+│   │   │       │   ├── 4-example
+│   │   │       │   │   ├── 0-namespace.yaml
+│   │   │       │   │   └── 1-deployment.yaml
+│   │   │       │   ├── 5-example
+│   │   │       │   │   ├── 0-namespace.yaml
+│   │   │       │   │   ├── 1-deployment.yaml
+│   │   │       │   │   └── 2-service.yaml
+│   │   │       │   ├── README.md
+│   │   │       │   └── terraform
+│   │   │       │       ├── 0-locals.tf
+│   │   │       │       ├── 1-providers.tf
+│   │   │       │       ├── 10-add-manager-role.tf
+│   │   │       │       ├── 11-helm-provider.tf
+│   │   │       │       ├── 12-meterics-server.tf
+│   │   │       │       ├── 13-pod-identity-addon.tf
+│   │   │       │       ├── 14-cluster-autoscaler.tf
+│   │   │       │       ├── 15-aws-lbc.tf
+│   │   │       │       ├── 2-vpc.tf
+│   │   │       │       ├── 3-igw.tf
+│   │   │       │       ├── 4-subnets.tf
+│   │   │       │       ├── 5-nat.tf
+│   │   │       │       ├── 6-routes.tf
+│   │   │       │       ├── 7-eks.tf
+│   │   │       │       ├── 8-node.tf
+│   │   │       │       ├── 9-add-developer-user.tf
+│   │   │       │       ├── iam
+│   │   │       │       │   └── LoadBalancerController.json
+│   │   │       │       └── values
+│   │   │       │           └── meterics-server.yaml
+│   │   │       ├── Kastro
+│   │   │       │   ├── README.md
+│   │   │       │   ├── app
+│   │   │       │   │   ├── Jenkinsfile
+│   │   │       │   │   ├── main.tf
+│   │   │       │   │   ├── provider.tf
+│   │   │       │   │   ├── scripts
+│   │   │       │   │   │   ├── kubernetes.sh
+│   │   │       │   │   │   └── master.sh
+│   │   │       │   │   └── variable.tf
+│   │   │       │   └── modules
+│   │   │       │       ├── Ec2
+│   │   │       │       │   ├── main.tf
+│   │   │       │       │   ├── outputs.tf
+│   │   │       │       │   └── variables.tf
+│   │   │       │       ├── Keys
+│   │   │       │       │   ├── main.tf
+│   │   │       │       │   ├── outputs.tf
+│   │   │       │       │   └── variables.tf
+│   │   │       │       ├── SG
+│   │   │       │       │   ├── main.tf
+│   │   │       │       │   ├── outputs.tf
+│   │   │       │       │   └── variables.tf
+│   │   │       │       └── Vpc
+│   │   │       │           ├── main.tf
+│   │   │       │           ├── outputs.tf
+│   │   │       │           └── variables.tf
+│   │   │       └── VirtualTechBox
+│   │   │           ├── APP
+│   │   │           │   ├── Jenkinsfile
+│   │   │           │   ├── main.tf
+│   │   │           │   ├── provider.tf
+│   │   │           │   ├── scripts
+│   │   │           │   │   ├── jagent.sh
+│   │   │           │   │   ├── master.sh
+│   │   │           │   │   └── sonarqube.sh
+│   │   │           │   └── variable.tf
+│   │   │           ├── MODULES
+│   │   │           │   ├── Ec2
+│   │   │           │   │   ├── main.tf
+│   │   │           │   │   ├── outputs.tf
+│   │   │           │   │   └── variables.tf
+│   │   │           │   ├── Keys
+│   │   │           │   │   ├── main.tf
+│   │   │           │   │   ├── outputs.tf
+│   │   │           │   │   └── variables.tf
+│   │   │           │   ├── SG
+│   │   │           │   │   ├── main.tf
+│   │   │           │   │   ├── outputs.tf
+│   │   │           │   │   └── variables.tf
+│   │   │           │   └── Vpc
+│   │   │           │       ├── main.tf
+│   │   │           │       ├── outputs.tf
+│   │   │           │       └── variables.tf
+│   │   │           └── README.md
+│   │   ├── Netflix-Clone-CICD-Pipeline
+│   │   │   └── README.md
+│   │   ├── README.md
+│   │   ├── SPMS_CICD
+│   │   │   ├── APP
+│   │   │   │   ├── Jenkinsfile
+│   │   │   │   ├── main.tf
+│   │   │   │   ├── provider.tf
+│   │   │   │   ├── scripts
+│   │   │   │   │   └── bash
+│   │   │   │   │       ├── master.sh
+│   │   │   │   │       └── worker.sh
+│   │   │   │   └── variable.tf
+│   │   │   ├── Image
+│   │   │   │   └── Screenshot (195).png
+│   │   │   ├── MODULES
+│   │   │   │   ├── Ec2
+│   │   │   │   │   ├── main.tf
+│   │   │   │   │   ├── outputs.tf
+│   │   │   │   │   └── variables.tf
+│   │   │   │   ├── Keys
+│   │   │   │   │   ├── main.tf
+│   │   │   │   │   ├── outputs.tf
+│   │   │   │   │   └── variables.tf
+│   │   │   │   ├── SG
+│   │   │   │   │   ├── main.tf
+│   │   │   │   │   ├── outputs.tf
+│   │   │   │   │   └── variables.tf
+│   │   │   │   └── Vpc
+│   │   │   │       ├── main.tf
+│   │   │   │       ├── outputs.tf
+│   │   │   │       └── variables.tf
+│   │   │   └── README.md
+│   │   ├── basic_v1
+│   │   │   ├── 01_basic
+│   │   │   │   ├── example1-0.txt
+│   │   │   │   ├── example1-1.txt
+│   │   │   │   ├── example1-2.txt
+│   │   │   │   ├── main.tf
+│   │   │   │   └── provider.tf
+│   │   │   ├── 02_state
+│   │   │   │   ├── example2.txt
+│   │   │   │   ├── main.tf
+│   │   │   │   ├── provider.tf
+│   │   │   │   └── sensitive.md
+│   │   │   ├── 03_vars-outputs
+│   │   │   │   ├── configs
+│   │   │   │   │   └── PROD
+│   │   │   │   │       ├── server1.sh
+│   │   │   │   │       ├── server2.sh
+│   │   │   │   │       └── server3.sh
+│   │   │   │   ├── main.tf
+│   │   │   │   └── variables.tf
+│   │   │   ├── 04_giving_values
+│   │   │   │   ├── from-env-var.txt
+│   │   │   │   ├── main.tf
+│   │   │   │   └── variables.tf
+│   │   │   ├── 05_modules
+│   │   │   │   ├── file_creator
+│   │   │   │   │   ├── main.tf
+│   │   │   │   │   ├── my_first_file.txt
+│   │   │   │   │   ├── my_second_file.txt
+│   │   │   │   │   ├── outputs.tf
+│   │   │   │   │   └── variables.tf
+│   │   │   │   ├── main.tf
+│   │   │   │   └── variables.tf
+│   │   │   ├── README.md
+│   │   │   ├── jenkins_server_v1
+│   │   │   │   ├── jenkins-server
+│   │   │   │   │   ├── java_script.sh
+│   │   │   │   │   ├── jenkins_script.sh
+│   │   │   │   │   ├── main.tf
+│   │   │   │   │   ├── provider.tf
+│   │   │   │   │   └── variable.tf
+│   │   │   │   └── modules
+│   │   │   │       ├── ec2
+│   │   │   │       │   ├── main.tf
+│   │   │   │       │   ├── output.tf
+│   │   │   │       │   └── variables.tf
+│   │   │   │       ├── keys
+│   │   │   │       │   ├── main.tf
+│   │   │   │       │   ├── output.tf
+│   │   │   │       │   └── variables.tf
+│   │   │   │       ├── security_group
+│   │   │   │       │   ├── main.tf
+│   │   │   │       │   ├── output.tf
+│   │   │   │       │   └── variables.tf
+│   │   │   │       └── vpc
+│   │   │   │           ├── main.tf
+│   │   │   │           ├── output.tf
+│   │   │   │           └── variables.tf
+│   │   │   ├── jenkins_server_v1_bak
+│   │   │   │   ├── jenkins-server
+│   │   │   │   │   ├── jscript.sh
+│   │   │   │   │   ├── main.tf
+│   │   │   │   │   ├── provider.tf
+│   │   │   │   │   └── variable.tf
+│   │   │   │   └── modules
+│   │   │   │       ├── ec2
+│   │   │   │       │   ├── main.tf
+│   │   │   │       │   ├── output.tf
+│   │   │   │       │   └── variables.tf
+│   │   │   │       ├── keys
+│   │   │   │       │   ├── main.tf
+│   │   │   │       │   ├── output.tf
+│   │   │   │       │   └── variables.tf
+│   │   │   │       ├── security_group
+│   │   │   │       │   ├── main.tf
+│   │   │   │       │   ├── output.tf
+│   │   │   │       │   └── variables.tf
+│   │   │   │       └── vpc
+│   │   │   │           ├── main.tf
+│   │   │   │           ├── output.tf
+│   │   │   │           └── variables.tf
+│   │   │   ├── project
+│   │   │   │   ├── app
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── db_commands.txt
+│   │   │   │   │   ├── package-lock.json
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── public
+│   │   │   │   │   │   ├── app.js
+│   │   │   │   │   │   ├── images
+│   │   │   │   │   │   │   ├── logo.png
+│   │   │   │   │   │   │   ├── placeholder.jpg
+│   │   │   │   │   │   │   └── profile_pic_1.jpg
+│   │   │   │   │   │   ├── index.html
+│   │   │   │   │   │   └── style.css
+│   │   │   │   │   ├── server.js
+│   │   │   │   │   └── terraform
+│   │   │   │   │       ├── ec2.tf
+│   │   │   │   │       ├── main.tf
+│   │   │   │   │       ├── output.tf
+│   │   │   │   │       ├── providers.tf
+│   │   │   │   │       ├── rds.tf
+│   │   │   │   │       ├── s3.tf
+│   │   │   │   │       └── script.sh
+│   │   │   │   └── app2
+│   │   │   │       ├── main.tf
+│   │   │   │       ├── output.tf
+│   │   │   │       ├── script.sh
+│   │   │   │       ├── security.tf
+│   │   │   │       └── variables.tf
+│   │   │   └── state-file
+│   │   ├── basic_v2
+│   │   │   ├── README.md
+│   │   │   ├── jupiter-website-ecs
+│   │   │   │   ├── backend.tf
+│   │   │   │   ├── main.tf
+│   │   │   │   └── variables.tf
+│   │   │   └── modules
+│   │   │       └── vpc
+│   │   │           ├── main.tf
+│   │   │           ├── outputs.tf
+│   │   │           └── variables.tf
+│   │   ├── jenkins
+│   │   │   ├── README.md
+│   │   │   └── terra_jenkins
+│   │   │       ├── Jenkinsfile
+│   │   │       └── README.md
+│   │   ├── terraform_server_s3_v1
+│   │   │   ├── README.md
+│   │   │   ├── modules
+│   │   │   │   ├── ec2
+│   │   │   │   │   ├── main.tf
+│   │   │   │   │   ├── output.tf
+│   │   │   │   │   └── variables.tf
+│   │   │   │   ├── keys
+│   │   │   │   │   ├── main.tf
+│   │   │   │   │   ├── output.tf
+│   │   │   │   │   └── variables.tf
+│   │   │   │   ├── s3
+│   │   │   │   │   ├── main.tf
+│   │   │   │   │   ├── output.tf
+│   │   │   │   │   └── variables.tf
+│   │   │   │   ├── security_group
+│   │   │   │   │   ├── main.tf
+│   │   │   │   │   ├── output.tf
+│   │   │   │   │   └── variables.tf
+│   │   │   │   └── vpc
+│   │   │   │       ├── main.tf
+│   │   │   │       ├── output.tf
+│   │   │   │       └── variables.tf
+│   │   │   └── terra-server
+│   │   │       ├── main.tf
+│   │   │       ├── provider.tf
+│   │   │       ├── scripts
+│   │   │       │   ├── modules
+│   │   │       │   │   ├── data.tf
+│   │   │       │   │   ├── main.tf
+│   │   │       │   │   ├── provider.tf
+│   │   │       │   │   ├── security.tf
+│   │   │       │   │   └── variable.tf
+│   │   │       │   └── terraform_setup.sh
+│   │   │       └── variable.tf
+│   │   └── vpc_basic_v1
+│   │       ├── README.md
+│   │       └── Terraform
+│   │           ├── main.tf
+│   │           ├── provider.tf
+│   │           └── variables.tf
+│   ├── DjangoReactApp
+│   │   ├── Django-NextJS-Backend-API
+│   │   │   ├── Backend Build.md
+│   │   │   └── To-do List.md
+│   │   └── README.md
+│   ├── Global-Microservices-Mesh
+│   │   ├── DEPLOYMENT_GUIDE.md
+│   │   ├── DEPLOYMENT_RESOURCES.md
+│   │   ├── Jenkinsfile
+│   │   ├── PREREQUISITES_STATUS.md
+│   │   ├── PRE_DEPLOYMENT_CHECKLIST.md
+│   │   ├── README.md
+│   │   ├── app-manifests
+│   │   │   └── frontend-app.yaml
+│   │   ├── deploy.ps1
+│   │   ├── deploy.sh
+│   │   ├── diagrams
+│   │   ├── gitops
+│   │   │   └── argocd-app.yaml
+│   │   ├── infra
+│   │   │   ├── main.tf
+│   │   │   ├── mesh.tf
+│   │   │   └── variables.tf
+│   │   └── pipeline
+│   ├── Microservices
+│   │   └── README.md
+│   ├── Multi_Tier_Apps
+│   │   └── README.md
+│   ├── My_Project
+│   │   └── call_center_crm
+│   │       ├── Notes
+│   │       │   └── chat-Call Center CRM Development.txt
+│   │       ├── README.md
+│   │       ├── backend
+│   │       │   ├── database
+│   │       │   │   └── db.js
+│   │       │   ├── index.js
+│   │       │   ├── middleware
+│   │       │   │   └── authenticateToken.js
+│   │       │   ├── package-lock.json
+│   │       │   ├── package.json
+│   │       │   └── utils
+│   │       │       └── auth.js
+│   │       ├── docker-compose.yml
+│   │       └── frontend
+│   │           ├── AnalyticsChart}.js
+│   │           ├── README.md
+│   │           ├── package-lock.json
+│   │           ├── package.json
+│   │           ├── public
+│   │           │   ├── favicon.ico
+│   │           │   ├── index.html
+│   │           │   ├── logo192.png
+│   │           │   ├── logo512.png
+│   │           │   ├── manifest.json
+│   │           │   └── robots.txt
+│   │           └── src
+│   │               ├── App.css
+│   │               ├── App.js
+│   │               ├── App.test.js
+│   │               ├── components
+│   │               │   ├── AnalyticsChart.js
+│   │               │   ├── CallLogs.js
+│   │               │   ├── Dashboard.js
+│   │               │   └── TicketList.js
+│   │               ├── index.css
+│   │               ├── index.js
+│   │               ├── logo.svg
+│   │               ├── reportWebVitals.js
+│   │               └── setupTests.js
+│   ├── Production_Examples
+│   │   └── README.md
+│   └── README.md
+├── AUDIT_EXECUTIVE_SUMMARY.md
+├── PURGE_LIST.md
+├── QUICK_REFERENCE.md
 ├── README.md
+├── REPOSITORY_HEALTH_REPORT.md
 ├── assets
 │   ├── PLACEHOLDER_pricing-comparison.md
 │   ├── cicd_pipeline_architecture.svg
 │   ├── devops_platform_banner.svg
 │   └── navigation_architecture.svg
+├── execute_phase1_purge.ps1
+├── mkdir
 └── tree.txt
 
-2284 directories, 4638 files
+2367 directories, 4473 files

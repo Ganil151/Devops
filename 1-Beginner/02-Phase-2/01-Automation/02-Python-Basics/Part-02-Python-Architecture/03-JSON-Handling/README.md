@@ -2,7 +2,7 @@
 
 > **"If Python is the engine of automation, JSON is the fuel. From API responses to infrastructure definitions, mastering JSON manipulation is non-negotiable for modern DevOps engineering."**
 
-![Python Data Flow](../assets/python_data_flow.png)
+> **⚠️ Missing Image**: *Python Data Flow* ('../assets/python_data_flow.png')
 
 ## 📚 Overview
 

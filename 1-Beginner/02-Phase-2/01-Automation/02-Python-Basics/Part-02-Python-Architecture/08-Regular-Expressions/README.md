@@ -2,7 +2,7 @@
 
 > **"If you have a problem and you decide to use regex, now you have two problems. But if you're a DevOps engineer with 10 gigabytes of unstructured log files, regex is the ONLY solution."**
 
-![Python Data Flow](../assets/python_data_flow.png)
+> **⚠️ Missing Image**: *Python Data Flow* ('../assets/python_data_flow.png')
 
 ## 📚 Overview
 

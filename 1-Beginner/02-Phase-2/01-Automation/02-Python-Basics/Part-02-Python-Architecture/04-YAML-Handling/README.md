@@ -2,7 +2,7 @@
 
 > **"If JSON is the language of APIs, YAML is the language of Infrastructure. From Kubernetes manifests to Ansible playbooks, YAML is the blueprint that defines the modern cloud."**
 
-![Python Data Flow](../assets/python_data_flow.png)
+> **⚠️ Missing Image**: *Python Data Flow* ('../assets/python_data_flow.png')
 
 ## 📚 Overview
 

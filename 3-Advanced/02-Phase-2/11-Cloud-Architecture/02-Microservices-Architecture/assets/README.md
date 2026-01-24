@@ -290,11 +290,11 @@ Before considering this section complete, ensure:
 These images are referenced in the main README.md like this:
 
 ```markdown
-![Microservices Architecture](./assets/microservices_vs_monolith_comparison.png)
+> **⚠️ Missing Image**: *Microservices Architecture* ('./assets/microservices_vs_monolith_comparison.png')
 
-![Event-Driven Architecture](./assets/event_driven_architecture_flow.svg)
+> **⚠️ Missing Image**: *Event-Driven Architecture* ('./assets/event_driven_architecture_flow.svg')
 
-![Database Per Service](./assets/database_per_service_pattern.jpg)
+> **⚠️ Missing Image**: *Database Per Service* ('./assets/database_per_service_pattern.jpg')
 ```
 
 ---

@@ -1,4 +1,4 @@
-![file:///tmp/.CFZMW2/1.png](file:///tmp/.CFZMW2/1.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/1.png* ('file:///tmp/.CFZMW2/1.png')
   
 • A modem is a hardware device that allows the computer to connect to the internet over the existing telephone line. 
 - A modem is not integrated with the motherboard rather than it is installed on the PCI slot found on the motherboard    
@@ -12,4 +12,4 @@ Based on the differences in speed and transmission rate, a modem can be classifi
     
 - Cable modem   
 
-![file:///tmp/.CFZMW2/2.png](file:///tmp/.CFZMW2/2.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/2.png* ('file:///tmp/.CFZMW2/2.png')

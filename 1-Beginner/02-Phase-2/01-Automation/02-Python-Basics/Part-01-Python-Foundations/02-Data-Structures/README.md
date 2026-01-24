@@ -2,7 +2,7 @@
 
 > **"Algorithms + Data Structures = Programs. In DevOps, the right data structure is the difference between a high-performance automation suite and a script that crashes your production monitoring."**
 
-![Python Data Structures](../../Part-01-Python-Foundations/02-Data-Structures/assets/python_data_structures.png)
+![Python Data Structures](./assets/python_data_structures.png)
 
 ## 📚 Overview
 
@@ -19,6 +19,8 @@ By the end of this module, you will:
 - ✅ Leverage **List & Dict Comprehensions** for high-performance data filtering.
 - ✅ Understand **Hashed Lookups** and Big-O efficiency for automation.
 - ✅ Perform **Set Operations** for infrastructure "Drift Detection."
+- ✅ **[Deep-Dive]** Build **Custom Resource Classes** for infrastructure models.
+- ✅ **[Deep-Dive]** Use **Abstract Base Classes** for modular DevOps tooling.
 
 ---
 
@@ -122,16 +124,78 @@ to_be_terminated = current_infrastructure - desired_state   # Set()
 
 ---
 
-### 4. Tuples (`tuple`): The Immutable Contract
+## 🧬 Technical Layering: Advanced Engineering Patterns
 
-Tuples are fixed sequences. Once created, they cannot be changed. This makes them safer for credentials or configuration settings that should remain constant during script execution.
+For production-grade automation, standard lists and dicts are often insufficient. We must move toward **Strongly Typed Models**.
+
+### A. Custom Classes for Resource Management
+
+Encapsulating infrastructure data into classes allows for shared logic and state management.
 
 ```python
-# Protecting Constants
-DB_CREDENTIALS = ("admin", "super-secret-pass", 5432)
+class ComputeNode:
+    def __init__(self, name, node_type, region):
+        self.name = name
+        self.node_type = node_type
+        self.region = region
+        self.status = "stopped"
 
-# Unpacking pattern (Powerful for return values)
-user, password, port = DB_CREDENTIALS
+    def start(self):
+        # Fail-Safe logic for API interaction
+        print(f"Initializing boot sequence for {self.name}...")
+        self.status = "running"
+        return True
+
+# Managing a fleet of objects
+fleet = [ComputeNode(f"web-{i}", "t3.medium", "us-east-1") for i in range(1, 4)]
+```
+
+### B. Abstract Base Classes (ABCs) for Modular Plugins
+
+When building internal DevOps tools (like a multi-cloud deployer), use ABCs to enforce a consistent "Contract" between different drivers.
+
+```python
+from abc import ABC, abstractmethod
+
+class CloudProvider(ABC):
+    @abstractmethod
+    def create_instance(self, image_id):
+        pass
+
+    @abstractmethod
+    def terminate_instance(self, instance_id):
+        pass
+
+class AWSProvider(CloudProvider):
+    def create_instance(self, image_id):
+        return f"AWS Instance {image_id} launched."
+
+    def terminate_instance(self, instance_id):
+        return f"AWS Instance {instance_id} terminated."
+```
+
+---
+
+## 🛡️ The "Fail-Safe" Pattern: Context Managers (`with`)
+
+Resource management (file handles, network sockets, DB connections) is high-risk in automation. Using the `with` statement (Context Manager) ensures cleanup even if an error occurs.
+
+```python
+class CloudAPIConnection:
+    def __enter__(self):
+        print("Authenticating with Cloud API...")
+        return self
+
+    def query(self, resource_id):
+        print(f"Fetching {resource_id}...")
+        return {"id": resource_id, "status": "online"}
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print("Closing secure connection and flushing logs...")
+        # Cleanup logic here
+
+with CloudAPIConnection() as conn:
+    data = conn.query("instance-01")
 ```
 
 ---
@@ -155,7 +219,7 @@ user, password, port = DB_CREDENTIALS
 
 **The Solution**: The engineer changed just one line: `seen_list = []` became `seen_set = set()`.
 
-**The Outcome**: Because sets use O(1) hashing, checking for existence was instant regardless of size. The runtime dropped from **45 minutes to 4 minutes**. This simple change saved the company thousands in compute costs and improved incident response time.
+**The Outcome**: Because sets use O(1) hashing, checking for existence was instant regardless of size. The runtime dropped from **45 minutes to 4 minutes**.
 
 ---
 
@@ -165,16 +229,16 @@ user, password, port = DB_CREDENTIALS
    - *A: If a key's value changed, its hash would change, and the dictionary would lose track of where the value is stored in memory. Integers, strings, and tuples are hashable; lists and dicts are NOT.*
 
 2. **Q: How do you efficiently merge two configuration dictionaries in Python 3.9+?**
-   - *A: Use the union operator: `merged_config = dict_a | dict_b`. This is faster and more readable than the older `.update()` method.*
+   - *A: Use the union operator: `merged_config = dict_a | dict_b`.*
 
 3. **Q: When is a List better than a Set?**
-   - *A: 1. When insertion order matters (e.g., a history of commands). 2. When you need to store duplicate values. 3. When memory is extremely limited and O(n) search time is acceptable for small datasets.*
+   - *A: When insertion order matters, when you need duplicates, or when memory is extremely limited for a small dataset.*
 
 4. **Q: What is a "Dictionary Comprehension"?**
-   - *A: A concise way to transform one dictionary into another. Example: `{k: v.lower() for k, v in env_vars.items()}`. It’s highly efficient for normalizing environment variables.*
+   - *A: A concise way to transform one dictionary into another. Example: `{k: v.lower() for k, v in env_vars.items()}`.*
 
 5. **Q: Explain the difference between `list.pop()` and `list.pop(0)`.**
-   - *A: `pop()` removes the last element and is O(1). `pop(0)` removes the first element and is O(n) because it has to shift every other item in memory to fill the gap.*
+   - *A: `pop()` is O(1) (end of list). `pop(0)` is O(n) (front of list) due to memory shifting.*
 
 ---
 
@@ -189,25 +253,13 @@ user, password, port = DB_CREDENTIALS
    - [ ] a) True
    - [x] b) False (Lists are mutable and not hashable).
 
-3. **What is the result of `["web", "db"] * 2`?**
-   - [ ] a) `["webweb", "dbdb"]`
-   - [x] b) `["web", "db", "web", "db"]`
-   - [ ] c) Error
-
-4. **Which set operation finds common elements in both sets?**
+3. **Which set operation finds common elements in both sets?**
    - [ ] a) Difference (`-`)
    - [x] b) Intersection (`&`)
    - [ ] c) Union (`|`)
-
-5. **Why use List Comprehensions instead of map/filter?**
-   - [x] a) Better readability and usually faster in Python.
-   - [ ] b) They use less memory.
-   - [ ] c) They allow for multi-threading.
 
 ---
 
 ## 🔗 Next Steps
 
-Now that you can manage complex data, let's learn how to process it with modular logic.
-
-Proceed to: **[Functions and Modules →](../Part-03-Functions-and-Modules/README.md)**
+Proceed to: **[Functions and Modules →](../03-Functions-and-Modules/README.md)**

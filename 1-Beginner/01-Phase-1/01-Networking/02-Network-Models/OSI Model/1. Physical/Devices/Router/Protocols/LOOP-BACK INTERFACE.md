@@ -16,7 +16,7 @@ Thus, unlike physical interfaces, loopback interfaces don’t go down and up dep
 
 The figure below illustrates a typical network with five routers (numbered from 1 to 5) connected in a simple topology. In this case, each router contains multiple physical network interfaces to which the links that interconnect them are plugged:
 
-![file:///tmp/.CFZMW2/1.png](file:///tmp/.CFZMW2/1.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/1.png* ('file:///tmp/.CFZMW2/1.png')
 
 Let’s consider that certain network traffic must be forwarded from Router 1 to Router 5. In such a case, there are two possible paths:
 
@@ -29,7 +29,7 @@ However, if some link in the top path goes down, we can’t reach Router 5 via t
 
 **Instead, a better approach would be to add a loopback interface to Router 5 and assign a valid IP address to it.** The following figure illustrates this situation:
 
-![file:///tmp/.CFZMW2/2.png](file:///tmp/.CFZMW2/2.png)
+> **⚠️ Missing Image**: *file:///tmp/.CFZMW2/2.png* ('file:///tmp/.CFZMW2/2.png')
 
 **This will allow us to reach Router 5 using a single IP address (10.3.1.1), regardless of which link is currently up.** Therefore, we can only include the IP address of the loopback interface in some mapping (routing table) instead of the IP addresses of multiple physical interfaces.
 

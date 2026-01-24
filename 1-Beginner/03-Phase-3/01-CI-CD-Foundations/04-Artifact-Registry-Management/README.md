@@ -9,7 +9,7 @@ Once code is built, it becomes a **Binary Artifact** (a `.jar`, `.war`, `.zip`, 
 
 In a professional pipeline, the journey of an artifact looks like this:
 
-![Artifact Registry Architecture](../../../../../00-Resources/03-Images-Diagrams/artifact_registry_architecture.png)
+> **⚠️ Missing Image**: *Artifact Registry Architecture* ('../../../../../00-Resources/03-Images-Diagrams/artifact_registry_architecture.png')
 1.  **Build**: Script (Shell/Python/Go) compiles the code.
 2.  **Package**: Bundles code into a deployable format.
 3.  **Scan**: Security checks for vulnerabilities in the dependencies.

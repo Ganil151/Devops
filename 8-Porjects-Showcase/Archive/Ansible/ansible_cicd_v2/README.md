@@ -422,50 +422,50 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
 **Install the plugins:**
-![alt text](<images\Screenshot (131).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (131').png>)
 
 Then go to Manage Jenkins -> Plugins and install: 
 **Pipeline: Stage Step**
-![alt text](<images\Screenshot (133).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (133').png>)
 
 **Maven integration:**
-![alt text](<images\Screenshot (134)-1.png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (134')-1.png>)
 
 **Then go to Manage Jenkins -> Tools**
 - add JDK
-![alt text](<Screenshot (136).png>)
+> **⚠️ Missing Image**: *alt text* ('<Screenshot (136').png>)
 ```bash
 echo $JAVA_HOME
 ```
 
 **Then add Maven location**
 - add Maven:
-![alt text](<images\Screenshot (137).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (137').png>)
 ```bash
 echo $M2_HOME
 ```
 
 Then disable Github Branch Source Plugin
-![alt text](<images\Screenshot (138)-1.png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (138')-1.png>)
 
 #### Step-6 Test Jenkins Maven Job
-![alt text](<images\Screenshot (139).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (139').png>)
 
 - Pull the Register App from Github
 ()[https://github.com/Ganil151/Register-App.git]
-![alt text](<images\Screenshot (140).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (140').png>)
 
 - In the Jenkins Job
-![alt text](<Screenshot (141).png>)
+> **⚠️ Missing Image**: *alt text* ('<Screenshot (141').png>)
   - create a git token for the project
 
 - Add github credentials
-![alt text](<images\Screenshot (142).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (142').png>)
 
-![alt text](<images\Screenshot (143).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (143').png>)
 
 - Set branch to */main
-![alt text](<images\Screenshot (144).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (144').png>)
 
 #### Step-7 Provision Ansible Server with Terraform
 - Go back to Terraform Server 
@@ -758,8 +758,8 @@ amazon-linux-extras install ansible2
 #### Step-9 Integrate Ansible with Jenkins
 
 **Install Publish over SSH**
-![alt text](<Screenshot (147).png>)
-![alt text](<Screenshot (149).png>)
+> **⚠️ Missing Image**: *alt text* ('<Screenshot (147').png>)
+> **⚠️ Missing Image**: *alt text* ('<Screenshot (149').png>)
 
 **Restart Jenkins**
 ```bash
@@ -767,16 +767,16 @@ amazon-linux-extras install ansible2
 ```
 
 **Configure Publish over SSH**
-![alt text](<images\Screenshot (145).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (145').png>)
 
 **Add SSH Server**
-![alt text](<images\Screenshot (150).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (150').png>)
 
 **Fillin:** <ansible-server-public-ip>
-![alt text](<images\Screenshot (151)-1.png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (151')-1.png>)
 
 **Go to Advance**: Fillin password
-![alt text](<images\Screenshot (152).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (152').png>)
 Test the Configuration then apply & save
 
 #### Step-10 Install Docker in Ansible Server
@@ -850,25 +850,25 @@ drwxr-xr-x 2 ansadmin ansadmin  6 Sep 15 18:14 .
 drwxr-xr-x 5 root     root     41 Sep 15 18:14 ..
 ```
 **Run a Docker Test:**
-![alt text](<images\Screenshot (153).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (153').png>)
 
 **Go to Configure:**
-![alt text](<images\Screenshot (154).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (154').png>)
 
 **Slide down Post-Build Actions:**
-![alt text](<images\Screenshot (155).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (155').png>)
 
 **Go to Send build artifacts over SSH:**
-![alt text](<images\Screenshot (157).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (157').png>)
 
-![alt text](<Screenshot (158).png>)
+> **⚠️ Missing Image**: *alt text* ('<Screenshot (158').png>)
 
 **Fillin:**
-![alt text](<Screenshot (162).png>)
+> **⚠️ Missing Image**: *alt text* ('<Screenshot (162').png>)
 Apply and Save
 
 **Then Build:**
-![alt text](<images\Screenshot (160).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (160').png>)
 
 **Install Docker after Build is successful**
 ```bash
@@ -1013,19 +1013,19 @@ ansible-galaxy collection install community.docker
 ```
 
 Go back to Jenkins <http://52.55.121.151:8080/> and start a new Job:
-![alt text](<images\Screenshot (163).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (163').png>)
 
 Start a new Job
-![alt text](<images\Screenshot (164).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (164').png>)
 
 Get github repositories
-![alt text](<images\Screenshot (165).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (165').png>)
 
 then:
-![alt text](<images\Screenshot (166).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (166').png>)
 
 then: 
-![alt text](<images\Screenshot (167).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (167').png>)
 
 ----
 
@@ -1205,12 +1205,12 @@ AWSCloudFormationFullAccess
 IAMFullAccess
 AdministratorAccess
 ```
-![alt text](<images\Screenshot (168).png>)
-![alt text](<images\Screenshot (169).png>)
-![alt text](<images\Screenshot (170).png>)
-![alt text](<images\Screenshot (171).png>)
-![alt text](<images\Screenshot (172).png>)
-![alt text](<images\Screenshot (173).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (168').png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (169').png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (170').png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (171').png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (172').png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (173').png>)
 
 - Launch the Eks Cluster 
 ```bash
@@ -1427,29 +1427,29 @@ replicaset.apps/register-c7d4b99d4    2         2         2       9m24s
 
 #### Create Continouse Deployment Job on Jenkins
 Go to Jenkins and create a new Job:
-![alt text](<images\Screenshot (174).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (174').png>)
 
 Post-build Actions
-![alt text](<images\Screenshot (175).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (175').png>)
 
 Send build artifacts over SSH:
-![alt text](<images\Screenshot (176).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (176').png>)
 
 Under Exec command add the ansible playbook:
-![alt text](<images\Screenshot (177).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (177').png>)
 
 #### Integrate the CI and the CD Jobs:
 Go to Register-CI job and configure:
-![alt text](<images\Screenshot (178).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (178').png>)
 
 Check Poll SCM:
-![alt text](<images\Screenshot (179).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (179').png>)
 
 Go to Add post-build action and click `Build other projects`:
-![alt text](<images\Screenshot (180).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (180').png>)
 
 Slide up to Post-Build Actions to build `Register-CD`:
-![alt text](<images\Screenshot (181).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (181').png>)
 
 Then Run the build on Register-CI, and confirm the it was built in Register-CD 
 
@@ -1477,6 +1477,6 @@ Go to the browser:
 ```bash
 paste: a8dece2e8b78b4326b1a89cc131375fc-2032408722.us-east-1.elb.amazonaws.com:8080
 ```
-![alt text](<images\Screenshot (182).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (182').png>)
 
-![alt text](<images\Screenshot (183).png>)
+> **⚠️ Missing Image**: *alt text* ('<images\Screenshot (183').png>)

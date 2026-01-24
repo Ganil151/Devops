@@ -2,7 +2,7 @@
 
 > **"Proper logging separates amateur scripts from production-ready automation. In DevOps, good logs are the difference between a 5-minute fix and a 5-hour blind investigation."**
 
-![Python Data Flow](../assets/python_data_flow.png)
+> **⚠️ Missing Image**: *Python Data Flow* ('../assets/python_data_flow.png')
 
 ## 📚 Overview
 

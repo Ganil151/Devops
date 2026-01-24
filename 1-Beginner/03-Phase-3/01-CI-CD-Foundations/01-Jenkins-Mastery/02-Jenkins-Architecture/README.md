@@ -9,7 +9,7 @@ To scale Jenkins beyond simple jobs, you must understand its distributed archite
 
 Jenkins operates on a distributed architecture to handle large numbers of builds simultaneously.
 
-![Jenkins Master-Agent Architecture](../../../../../00-Resources/03-Images-Diagrams/jenkins_master_agent_architecture.png)
+> **⚠️ Missing Image**: *Jenkins Master-Agent Architecture* ('../../../../../00-Resources/03-Images-Diagrams/jenkins_master_agent_architecture.png')
 
 ### 1. The Controller (The Brain)
 *   **Role**: Manages the UI, configuration, plugin management, and project scheduling.
