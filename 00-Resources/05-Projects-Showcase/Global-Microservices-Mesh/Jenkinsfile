@@ -1,0 +1,62 @@
+@Library('jenkins-shared-library') _
+
+// This Jenkinsfile leverages the Enterprise K8s Blueprint
+// Location: 00-Resources/05-Jenkins-Blueprints/blueprint-enterprise-k8s-full.groovy
+
+pipeline {
+    agent any
+    
+    environment {
+        PROJECT_NAME = "global-microservices-mesh"
+        AWS_REGION   = "us-east-1"
+        SCAN_TYPE    = "FULL" // Trigger Trivy & SonarQube
+    }
+
+    stages {
+        stage('Initialize') {
+            steps {
+                echo "🚀 Initializing Global Microservices Mesh Pipeline..."
+            }
+        }
+        
+        stage('Infrastructure Lint') {
+            steps {
+                dir('infra') {
+                    sh 'terraform fmt -check'
+                    sh 'tflint'
+                }
+            }
+        }
+
+        stage('Security Scan') {
+            parallel {
+                stage('Trivy (Container Scan)') {
+                    steps {
+                        sh "trivy image --severity HIGH,CRITICAL ${DOCKER_REGISTRY}/${IMAGE_NAME}:${TAG}"
+                    }
+                }
+                stage('Checkov (IaC Scan)') {
+                    steps {
+                        sh "checkov -d infra/"
+                    }
+                }
+            }
+        }
+
+        stage('Deploy (ArgoCD Synchronization)') {
+            steps {
+                sh "argocd app sync ${PROJECT_NAME}"
+                sh "argocd app wait ${PROJECT_NAME}"
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+        success {
+            echo "✅ Deployment Successful!"
+        }
+    }
+}

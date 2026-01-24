@@ -28,77 +28,79 @@ Each module below now includes:
 
 ### 🌱 Phase 1: Foundations (Advanced Tier)
 
-#### 01. [Networking](./01-Phase-1/01-Networking/README.md)
+### 🌱 Phase 1: Foundations (Enterprise Grade)
+
+#### 01. [01-Networking](./01-Phase-1/01-Networking/README.md)
 
 Advanced enterprise networking, Global Scale VPC, and Performance Tuning.
 
-#### 02. [Automation](./01-Phase-1/02-Automation/README.md)
+#### 02. [02-Automation](./01-Phase-1/02-Automation/README.md)
 
-Enterprise patterns for **Ansible** and **Terraform**, focusing on modularity and remote state management.
+Enterprise patterns for **Ansible** and **Terraform**: Multi-cloud orchestration.
 
-#### 03. [Linux](./01-Phase-1/03-Linux/README.md)
+#### 03. [03-Linux](./01-Phase-1/03-Linux/README.md)
 
-Advanced Security, Kernel Hardening, and Performance Tracing (`eBPF`/`perf`).
+Advanced Security, Kernel Hardening, and eBPF observability.
 
-#### 04. [Container Orchestration](./01-Phase-1/04-Container-Orchestration/README.md)
+#### 04. [04-Container-Orchestration](./01-Phase-1/04-Container-Orchestration/README.md)
 
-Advanced Kubernetes with Operators, CRDs, and **Service Mesh** implementations.
+Kubernetes at Scale: Operators, CRDs, and Multi-cluster patterns.
 
-#### 05. [Enterprise Security (DevSecOps)](./01-Phase-1/07-Security/README.md)
+#### 05. [05-Security](./01-Phase-1/05-Security/README.md)
 
-Security as Code: SAST, DAST, and Compliance automation.
-
----
-
-### ⚙️ Phase 2: Core Skills (Advanced Tier)
-
-#### 06. [GitOps with ArgoCD](../README.md)
-
-Declarative deployment using pull-based reconciliation.
-
-#### 07. [Observability & Monitoring](../README.md)
-
-Deep dive into the 3 Pillars: Metrics (Prometheus), Logs (ELK), and Traces (OpenTelemetry).
-
-#### 08. [Identity & Governance](../README.md)
-
-Mastering IAM, Permissions, and automated Compliance Audits.
-
-#### 09. [Microservices Architecture](../README.md)
-
-Service Discovery, API Gateways, and distributed system operational challenges.
-
-#### 10. [Enterprise Cloud Architecture](../README.md)
-
-High-availability multi-cloud patterns and global infrastructure.
+DevSecOps: SAST, DAST, and automated security guardrails.
 
 ---
 
-### 🏛️ Phase 3: Advanced Concepts (Advanced Tier)
+### ⚙️ Phase 2: Core Skills (SRE & Platform)
 
-#### 11. [Specialized Technology](./03-Phase-3/11-Specialized-Tech/README.md)
+#### 06. [01-Service-Mesh](./02-Phase-2/01-Service-Mesh/README.md)
 
-Cutting edge: **AI/ML Integration (MLOps)**, **Web3**, and **Edge Computing**.
+Traffic management and security with **Istio** and **Linkerd**.
 
-#### 12. [Prompt Engineering](./03-Phase-3/12-Prompt-Engineering/README.md)
+#### 07. [02-GitOps-Fleet](./02-Phase-2/02-GitOps-Fleet/README.md)
 
-AI integration architectures and automated runbook generation.
+Managing thousands of applications via GitOps reconciliation.
 
-#### 13. [Model Context Protocol (MCP)](./03-Phase-3/13-MCP/README.md)
+#### 08. [04-Platform-Engineering](./02-Phase-2/04-Platform-Engineering/README.md)
 
-Standardized communication for Agentic AI automation.
+Internal Developer Portals (Backstage) and Self-Service Infrastructure.
 
-#### 14. [Blockchain Ops & Security](./03-Phase-3/14-Blockchain/README.md)
+#### 09. [06-Observability-Stack](./02-Phase-2/06-Observability-Stack/README.md)
 
-Validator nodes and decentralized infrastructure.
+OpenTelemetry, Distributed Tracing, and AIOps event correlation.
 
-#### 15. [Enterprise FinOps](./03-Phase-3/15-FinOps/README.md)
+#### 10. [11-Cloud-Architecture](./02-Phase-2/11-Cloud-Architecture/README.md)
 
-Unit economics and cost-aware engineering culture.
+Direct Connect, Hybrid Cloud, and Global High-Availability maps.
 
-#### 16. [Advanced API Architectures](./03-Phase-3/16-Advanced-API-Architectures/README.md)
+---
 
-gRPC, GraphQL, and Event-Driven architecture at global scale.
+### 🏛️ Phase 3: Advanced Concepts (Intelligence & Scale)
+
+#### 11. [11-Specialized-Tech](./03-Phase-3/11-Specialized-Tech/README.md)
+
+MLOps, Edge Computing (K3s), and Quantum Infrastructure foundations.
+
+#### 12. [12-Prompt-Engineering](./03-Phase-3/12-Prompt-Engineering/README.md)
+
+LLM integration for infrastructure troubleshooting and code generation.
+
+#### 13. [13-MCP](./03-Phase-3/13-MCP/README.md)
+
+Agentic AI automation with Model Context Protocol.
+
+#### 14. [14-Blockchain](./03-Phase-3/14-Blockchain/README.md)
+
+Decentralized infrastructure, validator nodes, and node-ops security.
+
+#### 15. [15-FinOps](./03-Phase-3/15-FinOps/README.md)
+
+Unit economics and cost-aware engineering at the enterprise level.
+
+#### 16. [16-Advanced-API-Architectures](./03-Phase-3/16-Advanced-API-Architectures/README.md)
+
+gRPC, GraphQL, and high-performance event-driven systems.
 
 ---
 

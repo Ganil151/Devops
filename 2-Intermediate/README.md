@@ -116,30 +116,25 @@ By the end of this level, you will be able to:
 
 ## 📊 Recommended Learning Path
 
-### Phase 1: Beginner (Weeks 1-4)
+### Phase 1: Foundations (Weeks 1-4)
+1. **Networking** - [01-Networking](./01-Phase-1/01-Networking/README.md)
+2. **Linux** - [02-Linux](./01-Phase-1/02-Linux/README.md)
+3. **Runbooks** - [03-Runbooks-Procedures](./01-Phase-1/03-Runbooks-Procedures/README.md)
+4. **Repos** - [04-Repository-Management](./01-Phase-1/04-Repository-Management/README.md)
+5. **Databases** - [05-Databases](./01-Phase-1/05-Databases/README.md)
 
-1. **Linux** - Intermediate administration (02)
-2. **Networking** - Cloud architecture (01)
-3. **Repository Management** - Enterprise Git (07)
-4. **Databases** - Database DevOps (08)
-5. **Runbooks** - Operational excellence (04)
+### Phase 2: Core Skills (Weeks 5-10)
+1. **IaC** - [01-Infrastructure-Automation](./02-Phase-2/01-Infrastructure-Automation/README.md)
+2. **Delivery** - [02-Delivery-and-Governance](./02-Phase-2/02-Delivery-and-Governance/README.md)
+3. **Operations** - [03-Modern-Operations](./02-Phase-2/03-Modern-Operations/README.md)
 
-### Phase 2: Intermediate (Weeks 5-10)
-
-1. **Automation** - Scripting & Ansible (03)
-2. **Configuration Tools** - Terraform & IaC (05)
-3. **CI/CD** - Advanced automated pipelines (09)
-4. **Cloud Engineering** - Architecture & Patterns (12)
-5. **Prompt Engineering** - AI-driven automation (13)
-
-### Phase 3: Advance (Weeks 11-16)
-
-1. **Container Orchestration** - Kubernetes mastery (06)
-2. **Observability** - Metrics, Logs, & Tracing (10)
-3. **API Gateways** - Security & Traffic (11)
-4. **MCP** - Agentic AI integration (14)
-5. **Blockchain** - Web3 DevOps (15)
-6. **FinOps** - Cost optimization (16)
+### Phase 3: Advanced (Weeks 11-16)
+1. **K8s** - [01-Container-Orchestration](./03-Phase-3/01-Container-Orchestration/README.md)
+2. **Observability** - [02-Observability-Foundations](./03-Phase-3/02-Observability-Foundations/README.md)
+3. **Gateways** - [03-API-Gateways-Security](./03-Phase-3/03-API-Gateways-Security/README.md)
+4. **MCP** - [04-MCP](./03-Phase-3/04-MCP/README.md)
+5. **Blockchain** - [05-Blockchain](./03-Phase-3/05-Blockchain/README.md)
+6. **FinOps** - [06-FinOps](./03-Phase-3/06-FinOps/README.md)
 
 ---
 

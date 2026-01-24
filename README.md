@@ -40,24 +40,41 @@ graph TD
 
 ## 📂 Curriculum
 
-### 🌱 [Tier 1: Beginner - Foundations](./1-Beginner/README.md)
+### 🌱 Tier 1: Beginner - Foundations
+
+[**View Foundations**](./1-Beginner/README.md)
+
 *Networking, Linux, Windows Basics, Containers*
+
 - **Focus**: Building the "Infrastructure Layer" skills.
 - **Key Modules**: Networking, Linux, **Windows Basics & Auditing**, Docker, Git basics.
 
-### ⚙️ [Tier 2: Intermediate - Automation](./2-Intermediate/README.md)
+### ⚙️ Tier 2: Intermediate - Automation
+
+[**View Automation**](./2-Intermediate/README.md)
+
 *IaC, Kubernetes, CI/CD, Scripting, System Admin*
+
 - **Focus**: "Orchestration Layer" & Automating everything.
 - **Key Update**: Phase 2 is now organized into **12 Strategic Parts** (Scripting, Config Mgmt, Pipelines, Cost Mgmt, Security, etc.) + **System Administration Auditing**.
 
-### 🏛️ [Tier 3: Advanced - Enterprise Strategy](./3-Advanced/README.md)
+### 🏛️ Tier 3: Advanced - Enterprise Strategy
+
+[**View Enterprise Strategy**](./3-Advanced/README.md)
+
 *Service Mesh, GitOps, DevSecOps, FinOps, Infrastructure Security*
+
 - **Focus**: "Architectural Layer" for high-scale systems.
 - **Key Update**: Includes **Infrastructure Security Auditing**, Service Mesh Architecture, and Advanced Platform Engineering.
 
-### 💼 [Tier 4: Professional - Monetization](./4-Professional-Development/README.md)
-*Consulting, Business, FinOps*
-- **Focus**: "Business Layer" & Career acceleration.
+### 👔 Tier 4: Professional - Career & Strategic Mastery
+
+[**View Career Mastery**](./4-Professional-Development/README.md)
+
+*Career Strategy, Resume Engineering, Interview Mastery, Portfolio Design*
+
+- **Focus**: "Career Layer" — Bridging the gap from Technical expert to Production hire.
+- **Key Update**: Now includes the [🗺️ Master Career Roadmap](./4-Professional-Development/01-Career-Strategy/README.md).
 
 ---
 
