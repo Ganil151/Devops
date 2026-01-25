@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4-Professional-Development/04-Portfolio-Projects/GOLDEN_PROJECT_GUIDE.md",
+                "file": "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/03-Python-for-DevOps/03-Working-with-Data-JSON-YAML/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "GOLDEN_PROJECT_GUIDE"
+              "title": "README"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 268.5
+    "width": 268.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -214,8 +215,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "e142cfc2dc308a10",
   "lastOpenFiles": [
+    "1-Beginner/01-Phase-1/03-Windows-Basics/scripts/god_mode.ps1",
+    "1-Beginner/01-Phase-1/03-Windows-Basics/scripts/toggle_power.bat",
+    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/03-Python-for-DevOps/02-System-and-File-Operations/README.md",
+    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/03-Python-for-DevOps/01-Python-Environment-and-Basics/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/python_devops_learning_path.md",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/resources/python-regular-expression-regex.pdf",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/03-Functions-and-Modules/README.md",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/03-Functions-and-Modules/assets/function_anatomy.png",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/03-Functions-and-Modules/assets/monolith_vs_modular.png",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/02-Data-Structures/assets/dict_vs_set.png",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/02-Data-Structures/assets/python_data_structures.png",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/02-Data-Structures/assets/list_vs_tuple.png",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/02-Data-Structures/README.md",
+    "4-Professional-Development/04-Portfolio-Projects/GOLDEN_PROJECT_GUIDE.md",
+    "7-Labs/Play_Ground/Youtube-Lessons/06-Python/DevOps-Shack/ytb.txt~",
+    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/04-System-Administration/maintenance-tools/fix_images_v2.py",
     "2-Intermediate/03-Phase-3/01-Container-Orchestration/06-Mastery-and-Resources/Deep-Dives/high-fidelity-refinement-for-kubernetes-deep-dives-2-intermediate.md",
     "2-Intermediate/03-Phase-3/01-Container-Orchestration/06-Mastery-and-Resources/13-Real-Life-Scenarios/real-life-scenarios.md",
     "2-Intermediate/03-Phase-3/01-Container-Orchestration/06-Mastery-and-Resources/12-Interview-Questions-and-Quizzes/interview-prep-and-quizzes.md",
@@ -236,32 +253,16 @@
     "2-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/Jenkins/blueprints/blueprint-blue-green.groovy",
     "2-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/Jenkins/blueprints/blueprint-aws-ec2-docker.groovy",
     "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/04-System-Administration/maintenance-tools/fix_paths_and_absolute.py",
-    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/04-System-Administration/maintenance-tools/fix_malformed_screenshots.py",
-    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/04-System-Administration/maintenance-tools/final_readme_fix.py",
-    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/04-System-Administration/maintenance-tools/comprehensive_audit.py",
-    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/04-System-Administration/maintenance-tools/audit_directory.py",
     "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/multi-AZ-Deployment.png",
     "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/kube-mindMap-1.png",
     "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/kube-folder-mindMap.png",
     "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/admission-control.png",
     "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/Screenshot (218).png",
-    "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/Screenshot (217).png",
-    "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/Screenshot (216).png",
-    "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/Screenshot (215).png",
-    "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/LB-1.png",
-    "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/Kubernetes-01.png",
     "1-Beginner/01-Phase-1/04-Data-Formats/Markdown/solutions/CHANGELOG_GOAL.md",
     "1-Beginner/01-Phase-1/04-Data-Formats/Markdown/challenges/changelog_challenge.md",
     "1-Beginner/01-Phase-1/04-Data-Formats/Markdown/Boilerplates/documentation_templates.md",
     "1-Beginner/01-Phase-1/04-Data-Formats/Toml/challenges/refactor_challenge.md",
     "1-Beginner/01-Phase-1/04-Data-Formats/Toml/Boilerplates/standard_templates.md",
-    "1-Beginner/01-Phase-1/04-Data-Formats/Xml/challenges/extraction_challenge.md",
-    "1-Beginner/01-Phase-1/04-Data-Formats/Xml/Boilerplates/standard_templates.md",
-    "1-Beginner/01-Phase-1/04-Data-Formats/Json/challenges/jq_challenge.md",
-    "1-Beginner/01-Phase-1/04-Data-Formats/Json/Boilerplates/standard_templates.md",
-    "1-Beginner/01-Phase-1/04-Data-Formats/Yaml/challenges/dry_challenge.md",
-    "1-Beginner/01-Phase-1/04-Data-Formats/Yaml/Boilerplates/standard_templates.md",
-    "1-Beginner/01-Phase-1/04-Data-Formats/Markdown/README.md",
     "Untitled.canvas"
   ]
 }

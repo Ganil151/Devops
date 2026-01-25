@@ -76,7 +76,6 @@ web_nodes = [node for node in all_nodes if node.startswith("web")]
 - **Insert/Pop(0)**: **O(n)** - Adding/Removing from the front requires shifting every other item in memory. Avoid this for large datasets!
 
 ---
-
 ### 2. Dictionaries (`dict`): The Configuration Powerhouse
 
 Dictionaries are key-value mappings. They are the native Python equivalent of JSON objects.

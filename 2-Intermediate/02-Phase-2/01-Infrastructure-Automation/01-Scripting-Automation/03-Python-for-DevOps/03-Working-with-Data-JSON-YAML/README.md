@@ -10,11 +10,11 @@ Infrastructure is defined as data. Python's native support for dictionaries make
 
 ## 🔑 Key Libraries
 
-| Library | Format | Notes |
-| :--- | :--- | :--- |
-| **`json`** | JSON | Native to Python. Fast. |
-| **`pyyaml`** | YAML | Requires `pip install PyYAML`. De-facto standard for K8s/Ansible. |
-| **`csv`** | CSV | Built-in. Good for legacy reports. |
+| Library  | Format | Notes                                                             |
+| :------- | :----- | :---------------------------------------------------------------- |
+| `json`   | JSON   | Native to Python. Fast.                                           |
+| `pyyaml` | YAML   | Requires `pip install PyYAML`. De-facto standard for K8s/Ansible. |
+| `csv`    | CSV    | Built-in. Good for legacy reports.                                |
 
 ---
 

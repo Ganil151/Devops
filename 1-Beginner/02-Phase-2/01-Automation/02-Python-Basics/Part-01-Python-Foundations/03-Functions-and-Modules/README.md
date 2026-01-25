@@ -2,7 +2,7 @@
 
 > **"Don't Repeat Yourself (DRY). If you write the same automation logic twice, you've inherited a maintenance nightmare. If you turn it into a function, you've built a reusable asset."**
 
-> **⚠️ Missing Image**: *Modular Python Automation* ('../assets/python_functions_modules.png')
+![functions&modules](../03-Functions-and-Modules/assets/function_anatomy.png)
 
 ## 📚 Overview
 

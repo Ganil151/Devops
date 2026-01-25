@@ -10,12 +10,12 @@ System interaction is the bread and butter of DevOps. Python offers modern, obje
 
 ## 🔑 Key Libraries
 
-| Library | Use Case | Legacy Equivalent (Avoid) |
-| :--- | :--- | :--- |
-| **`pathlib`** | File/Folder manipulation | `os.path`, `glob` |
-| **`subprocess`** | Running external commands | `os.system` |
-| **`shutil`** | High-level file ops (mv, cp) | Manual `open()/write()` |
-| **`os`** | Low-level (Env vars, Chown) | N/A |
+| Library      | Use Case                     | Legacy Equivalent (Avoid) |
+| :----------- | :--------------------------- | :------------------------ |
+| `pathlib`    | File/Folder manipulation     | `os.path`, `glob`         |
+| `subprocess` | Running external commands    | `os.system`               |
+| `shutil`     | High-level file ops (mv, cp) | Manual `open()/write()`   |
+| `os`         | Low-level (Env vars, Chown)  | N/A                       |
 
 ---
 
