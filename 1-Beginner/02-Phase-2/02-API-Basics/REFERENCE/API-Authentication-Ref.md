@@ -39,7 +39,7 @@ Authorization: System checks if alice@example.com can DELETE /users/42
 **Request**:
 ```http
 GET /api/users HTTP/1.1
-X-API-Key: sk_live_51H8K2jL4Kz9X3Y7m8N6P5Q4R3S2T1U0
+ <!-- X-API-Key: API_KEY_TEST -->
 ```
 
 **Pros**:
@@ -73,7 +73,7 @@ requests.get(f'{url}?api_key={api_key}')
 **Request**:
 ```http
 GET /api/users HTTP/1.1
-Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+ <!-- Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ= -->
 ```
 
 **Encoding**:
@@ -105,7 +105,7 @@ encoded = base64.b64encode(credentials.encode()).decode()
 **Request**:
 ```http
 GET /api/users HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+ <!-- Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c -->
 ```
 
 **JWT Structure**:

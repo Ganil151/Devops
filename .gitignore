@@ -52,6 +52,7 @@ venv/
 .venv/
 .pytest_cache/
 .lessenv
+.env
 
 # Backup files
 *.bak
