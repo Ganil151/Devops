@@ -1,62 +1,54 @@
+#!/usr/bin/env python3
 """
-Multi-Cloud Health Check Dashboard
-Description: Unified health check script for endpoints across AWS, Azure, and GCP
-Author: Senior DevOps Engineer
-Version: 1.0 (Golden Standard)
+🛡️ Multi-Cloud Infrastructure Health Check
+Version 2.0 | Senior Architect Edition
+
+This script performs basic connectivity and resource status checks
+across AWS, Azure, and GCP environments.
 """
 
-import requests
-import json
-import time
+import os
+import sys
 
-# Configuration: List of endpoints to monitor
-ENDPOINTS = [
-    {"name": "AWS-App-Prod", "url": "https://aws.amazon.com", "cloud": "AWS"},
-    {"name": "Azure-API-Gateway", "url": "https://azure.microsoft.com", "cloud": "Azure"},
-    {"name": "GCP-Service-Mesh", "url": "https://cloud.google.com", "cloud": "GCP"}
-]
+def check_aws():
+    print("[RUNNING] Checking AWS Environment...")
+    # Check if AWS CLI is configured
+    status = os.system("aws sts get-caller-identity > /dev/null 2>&1")
+    if status == 0:
+        print("✅ AWS: Credentials Valid.")
+        # Check EC2 Running Instances
+        os.system("aws ec2 describe-instances --filters Name=instance-state-name,Values=running --query 'Reservations[*].Instances[*].InstanceId' --output table")
+    else:
+        print("❌ AWS: Credentials Not Found. Run 'aws configure'.")
 
-def check_endpoint(endpoint):
-    start = time.time()
-    try:
-        response = requests.get(endpoint['url'], timeout=5)
-        latency = round((time.time() - start) * 1000, 2)
-        return {
-            "name": endpoint['name'],
-            "cloud": endpoint['cloud'],
-            "status": "UP" if response.status_code == 200 else "DOWN",
-            "code": response.status_code,
-            "latency_ms": latency
-        }
-    except Exception as e:
-        return {
-            "name": endpoint['name'],
-            "cloud": endpoint['cloud'],
-            "status": "ERROR",
-            "code": 0,
-            "latency_ms": 0,
-            "error": str(e)
-        }
+def check_azure():
+    print("\n[RUNNING] Checking Azure Environment...")
+    # Check if logged in
+    status = os.system("az account show > /dev/null 2>&1")
+    if status == 0:
+        print("✅ Azure: Account Authenticated.")
+        # List Resource Groups
+        os.system("az group list --query '[].{Name:name, Location:location}' --output table")
+    else:
+        print("❌ Azure: Not logged in. Run 'az login'.")
+
+def check_gcp():
+    print("\n[RUNNING] Checking GCP Environment...")
+    # Check project config
+    status = os.system("gcloud config get-value project > /dev/null 2>&1")
+    if status == 0:
+        print("✅ GCP: Project Context Found.")
+        # List Compute Instances
+        os.system("gcloud compute instances list")
+    else:
+        print("❌ GCP: No active project. Run 'gcloud init'.")
 
 def main():
-    print("Multi-Cloud Service Health Check")
-    print("================================")
-    print(f"{'Cloud':<10} {'Service':<20} {'Status':<10} {'Code':<10} {'Latency':<10}")
-    print("-" * 65)
-    
-    results = []
-    
-    for ep in ENDPOINTS:
-        res = check_endpoint(ep)
-        results.append(res)
-        
-        status_color = res['status']
-        print(f"{res['cloud']:<10} {res['name']:<20} {res['status']:<10} {res['code']:<10} {res['latency_ms']}ms")
-
-    # Export
-    with open('multi-cloud-health.json', 'w') as f:
-        json.dump(results, f, indent=4)
-    print("\nDetailed results saved to multi-cloud-health.json")
+    print("--- 🦅 Cloud Health Check Dispatcher ---")
+    check_aws()
+    check_azure()
+    check_gcp()
+    print("\n--- Health Check Complete ---")
 
 if __name__ == "__main__":
     main()

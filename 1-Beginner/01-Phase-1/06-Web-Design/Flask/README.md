@@ -1,107 +1,38 @@
-# Flask - Python Micro-Framework
-
-Flask is a **micro-framework** for Python. It is called "micro" because it doesn't require particular tools or libraries, keeping the core extensible.
-
-## Why Flask for DevOps?
-- **Lightweight**: Perfect for small internal tools and microservices.
-- **Fast Prototyping**: Go from zero to a running API in minutes.
-- **Native Python**: Leverages the power of Python's ecosystem.
-
-> [!IMPORTANT]
-> Always use a **[Virtual Environment](../Environment-Setup.md)** before installing Flask.
+# 🧪 Flask: Lightweight Python Microservices
+*The SRE Tool for Building Glue APIs and Webhooks*
 
 ---
 
-## 1. Core Concepts
+## 🗺️ Learning Roadmap
 
-### Basic Application
-```python
-from flask import Flask
+### [01-Routing](./01-Routing/)
+- **Concepts**: App decorators, Variable paths, Methods (GET/POST).
+- **Goal**: Map entry points to Python logic.
 
-app = Flask(__name__)
+### [02-Request-and-Response](./02-Request-and-Response/)
+- **Concepts**: `request` object, `jsonify`, Status codes.
+- **Goal**: Handle JSON data incoming and outgoing.
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+### [03-Database-and-ORM](./03-Database-and-ORM/)
+- **Concepts**: Flask-SQLAlchemy, SQLite, Migrations.
+- **Goal**: Persist infrastructure state in a SQL database.
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
-```
+### [04-Production-Deployment](./04-Production-Deployment/)
+- **Concepts**: Gunicorn, Nginx Proxy, Worker threads.
+- **Goal**: Move from `app.run()` to a resilient server.
 
-### Routing & Request Handling
-Flask uses decorators to map URLs to Python functions.
-```python
-@app.route('/user/<username>')
-def show_user_profile(username):
-    return f'User {username}'
+---
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        return do_the_login()
-    else:
-        return show_the_login_form()
+## 🛠️ Quick Start
+```bash
+pip install flask
+# create app.py
+flask run
 ```
 
 ---
 
-## 2. DevOps & Production Setup
-
-In development, Flask's built-in server is fine. In **production**, you MUST use a WSGI server like **Gunicorn**.
-
-### Project Structure
-```text
-myapp/
-├── app/
-│   ├── main.py
-│   └── templates/
-├── requirements.txt
-└── Dockerfile
-```
-
-### Dockerizing Flask
-```dockerfile
-# Use official lightweight Python image
-FROM python:3.9-slim
-
-# Set working directory
-WORKDIR /app
-
-# Install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy source code
-COPY . .
-
-# Run Gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app.main:app"]
-```
-
----
-
-## 3. Quiz: Flask Knowledge
-
-1. What is Flask specifically known as?
-   - a) Full-stack framework
-   - b) Micro-framework
-   - c) Database engine
-   - d) Static site generator
-
-2. Which library is commonly used as a Production WSGI server for Flask?
-   - a) Apache
-   - b) Django
-   - c) Gunicorn
-   - d) Nginx
-
-3. Which decorator is used to define a route in Flask?
-   - a) `@route`
-   - b) `@app.route`
-   - c) `@flask.path`
-   - d) `@url`
-
-*(Answers: 1:b, 2:c, 3:b)*
-
----
-
-**[← Back to Web Design](Web%20Design%20&%20Frameworks.md)**
+## 🛡️ SRE Standards
+- **Blueprints**: Always use Blueprints to keep your codebase modular.
+- **Environment Context**: Use `python-dotenv` for config isolation.
+- **Proxy Fix**: Always use `ProxyFix` when running behind Nginx or AWS ALB.

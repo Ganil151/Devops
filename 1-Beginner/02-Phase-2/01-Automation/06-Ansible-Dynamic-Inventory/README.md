@@ -108,4 +108,13 @@ To fully participate in the hands-on labs, you will need:
 
 ---
 
+## 🏢 Reference Library
+*Deep-dive documentation for at-a-glance problem solving.*
+
+*   **[Inventory Architecture](./REFERENCE/Ansible-Inventory-Core-Ref.md)**: Static vs Dynamic comparison and JSON protocol details.
+*   **[Cloud Plugins Reference](./REFERENCE/Ansible-Cloud-Resource-Ref.md)**: AWS, Azure, and GCP plugin manual with keyed group standards.
+*   **[Security & RBAC](./REFERENCE/Ansible-Security-RBAC-Ref.md)**: Vault encryption, environment secrets, and tag-based access control.
+
+---
+
 **Next Step**: Start with **[Level 1: Static vs. Dynamic Basics](./Part-01-Inventory-Foundations/01-Static-vs-Dynamic-Basics/)** 🚀

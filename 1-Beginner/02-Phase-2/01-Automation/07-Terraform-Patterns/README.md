@@ -97,6 +97,15 @@ To participate in the advanced labs:
 
 ---
 
+## 🏢 Reference Library
+*Deep-dive documentation for at-a-glance problem solving.*
+
+*   **[State Management](./REFERENCE/Terraform-State-Management-Ref.md)**: Lifecycle, locking, remote backends, and advanced ops.
+*   **[Modular Architecture](./REFERENCE/Terraform-Modular-Architecture-Ref.md)**: Structure, pathing, versioning, and abstraction standards.
+*   **[Security & Compliance](./REFERENCE/Terraform-Security-Compliance-Ref.md)**: Secrets, OPA policies, and automated drift detection.
+
+---
+
 ## 🎓 Career Readiness
 
 **Interview Question:** "What is the danger of using `count` to create a list of users or instances in Terraform?"

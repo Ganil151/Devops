@@ -14,6 +14,18 @@ We follow the evolution of Linux scheduling, from 1970s Unix tools to modern clo
 *   **[01. Crontab Syntax](./Part-01-Cron-Basics/01-Crontab-Syntax/README.md)**: Decoding `* * * * *`.
 *   **[02. Cron Patterns](./Part-01-Cron-Basics/02-Patterns-and-Pitfalls.md)**: Handling Environment variables and "Silent Failures".
 
+Check your timers:
+`systemctl list-timers`
+
+---
+
+## 🏢 Reference Library
+*Deep-dive documentation for at-a-glance problem solving.*
+
+*   **[Cron Syntax](./REFERENCE/Cron-Syntax-Standard-Ref.md)**: Universal scheduling, paths, and environment traps.
+*   **[Systemd Timers](./REFERENCE/Systemd-Timers-Architecture-Ref.md)**: Granular Linux scheduling, journal integration, and cgroups.
+*   **[Distributed Scheduling](./REFERENCE/Distributed-Job-Scheduling-Ref.md)**: K8s CronJobs, EventBridge, and high-scale orchestration.
+
 ### ⚙️ Part 2: Systemd Timers (The Modern Standard)
 *Why modern Linux distros (RHEL, Ubuntu, CentOS) are moving away from Cron.*
 

@@ -38,8 +38,22 @@ By the end of this module, you will:
 | Level | Topic | Description |
 | :--- | :--- | :--- |
 | **[01. Beginner](./01-Beginner-Webhook-Basics/)** | **The Foundation** | Understanding HTTP POST, JSON Payloads, and simple receivers. |
+### 🔒 Part 2: Security & Implementation (The Defense)
+*Hardening public endpoints against malicious traffic.*
+
+- **[01. Secret Signatures (HMAC)](./Part-02-Security-and-Implementation/01-HMAC-Verification.md)**: Authenticating payloads.
 | **[02. Intermediate](./02-Intermediate-Implementation-Security/)** | **Security & Robustness** | HMAC signatures, API keys, and handling payload variance. |
+### 🦅 Part 3: Event-Driven Architectures (The System)
 | **[03. Advanced](./03-Advanced-Event-Driven-Pipelines/)** | **Cloud Orchestration** | Async processing, Redis queues, and Kubernetes ingress. |
+
+---
+
+## 🏢 Reference Library
+*Deep-dive documentation for at-a-glance problem solving.*
+
+*   **[Webhook Architecture](./REFERENCE/Webhook-Architecture-Ref.md)**: Push vs Pull, core components, and the "Acknowledge First" pattern.
+*   **[Security & Verification](./REFERENCE/Webhook-Security-Verification-Ref.md)**: HMAC signatures, IP whitelisting, and replay prevention.
+*   **[Event-Driven Patterns](./REFERENCE/Event-Driven-Patterns-Ref.md)**: Pub/Sub, Fan-out, and reactive infrastructure engineering.
 
 ---
 

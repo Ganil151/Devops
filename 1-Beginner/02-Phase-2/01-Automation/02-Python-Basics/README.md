@@ -65,9 +65,11 @@ Run any script:
 *Deep-dive documentation for at-a-glance problem solving.*
 
 *   **[Built-in Functions](./REFERENCE/Built-in-Functions-Ref.md)**: Top 20 functions for automation.
-*   **[Standard Library Guide](./REFERENCE/Standard-Library-Ref.md)**: Cheat sheet for `os`, `sys`, `json`, and more.
-*   **[Error & Exceptions](./REFERENCE/Error-Exceptions-Ref.md)**: Common errors and reliability patterns.
-*   **[PEP 8 Style Guide](./REFERENCE/Python-PEP8-Style-Guide.md)**: Clean code standards for the enterprise.
+*   **[Standard Library Guide](./REFERENCE/Standard-Library-Ref.md)**: SRE toolkit for OS, subprocess, and file manipulation.
+*   **[Automation Patterns](./REFERENCE/Python-Automation-Patterns-Ref.md)**: CLI engineering, retries, and modular reliability logic.
+*   **[Testing & CI Integration](./REFERENCE/Python-DevOps-Testing-Ref.md)**: Pytest standards and mocking cloud dependencies.
+*   **[Error & Exceptions](./REFERENCE/Error-Exceptions-Ref.md)**: Common failure modes and architectural recovery patterns.
+*   **[PEP 8 Style Guide](./REFERENCE/Python-PEP8-Style-Guide.md)**: Team-based clean code standards for the enterprise.
 
 ## 📚 Master Index
 

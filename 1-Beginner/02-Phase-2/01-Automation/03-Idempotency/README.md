@@ -39,3 +39,12 @@ Ask yourself this question for every line of code you write:
 ## ⚠️ Warning
 **`rm -rf /` is idempotent.** (If you run it twice, the system is still empty).
 Idempotency ensures **consistency**, not necessarily **correctness**.
+
+---
+
+## 🏢 Reference Library
+*Deep-dive documentation for at-a-glance problem solving.*
+
+*   **[Core Principles](./REFERENCE/Idempotency-Core-Principles-Ref.md)**: Mathematical definitions and state consistency.
+*   **[Design Patterns](./REFERENCE/Design-Patterns-Idempotency-Ref.md)**: Check-then-act, discovery, and atomic rename patterns.
+*   **[State Management](./REFERENCE/State-Management-Declarative-Tools-Ref.md)**: Declarative tools (Ansible, Terraform) and drift detection.

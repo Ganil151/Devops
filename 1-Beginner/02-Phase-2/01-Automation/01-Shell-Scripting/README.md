@@ -35,6 +35,18 @@ We have consolidated the modules into three professional tiers, matching the str
 
 ---
 
+## 🏢 Reference Library
+*Deep-dive documentation for at-a-glance problem solving.*
+
+*   **[Shell Fundamentals](./REFERENCE/Shell-Fundamentals-Ref.md)**: Variables, quoting, and basic execution.
+*   **[Bash Architecture](./REFERENCE/Bash-Architecture-Ref.md)**: Subshells, signals, and job control.
+*   **[Stream Editing & Filtering](./REFERENCE/Stream-Editing-Filtering-Ref.md)**: Grep, Sed, and Awk manual.
+*   **[Script Hardening](./REFERENCE/Script-Hardening-Best-Practices-Ref.md)**: Security, error handling, and strict mode.
+*   **[POSIX vs. Bash](./REFERENCE/POSIX-vs-Bash-Compatibility-Ref.md)**: Portability and compatibility standards.
+*   **[Regular Expressions](./REFERENCE/Regular-Expressions-Ref.md)**: RegEx for shell tools and validation.
+
+---
+
 ## 🛠️ Getting Started
 
 To run any script in this repo:
