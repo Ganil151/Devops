@@ -11,7 +11,7 @@ Instead of jumping into complex tools, we follow a tiered journey that mimics re
 ### 📦 Phase 1: Foundations
 
 1. **[Linux Basics & Linux SSH](../README.md)**: Master the operating system and secure access.
-2. **[Windows Basics](../README.md)**: Essential Windows Server knowledge.
+2. **[Windows Basics](./01-Phase-1/03-Windows-Basics/README.md)**: Essential Windows Server knowledge.
 3. **[Networking Foundations](./01-Phase-1/01-Networking/README.md)**: How data travels across the wire.
 4. **[Data Formats (YAML & JSON)](../README.md)**: Configuration languages.
 5. **[Software Stack Foundations](../README.md)**: Frontend vs Backend, Runtimes, and Frameworks.

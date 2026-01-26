@@ -1,1 +1,0 @@
-.\PurgeApp.ps1 -AppName "Adobe Acrobat"
