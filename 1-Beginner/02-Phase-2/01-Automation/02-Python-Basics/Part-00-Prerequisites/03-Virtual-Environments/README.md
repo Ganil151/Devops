@@ -63,30 +63,7 @@ pip install requests
 ```
 
 ---
-## � Alternative: Anaconda (Conda)
-While `venv` is the standard for general Python development, **Anaconda** is widely used in Data Science and Machine Learning because it manages non-Python dependencies (like C libraries) better.
 
-### Key Differences
-
-| Feature | `venv` (Standard) | `conda` (Anaconda) |
-| :--- | :--- | :--- |
-| **Scope** | Python packages only | Python + External Binaries (C libs, compilers) |
-| **Creation** | Light, built-in | Heavy, requires Conda installation |
-| **Usage** | Web Ops / Automation | Data Science / ML Ops |
-
-### Basic Conda Usage
-```bash
-# Create environment
-conda create --name myenv python=3.9
-
-# Activate
-conda activate myenv
-
-# Install package
-conda install numpy
-```
-
----
 ## �🛑 Common Pitfalls
 1. **Committing `.venv`**: NEVER commit your virtual environment to Git. Add `.venv/` to your `.gitignore`.
 2. **Moving Venvs**: You cannot move a venv folder to a different location. It relies on absolute paths. If you move the project, delete and recreate the venv.

@@ -38,6 +38,17 @@ graph TD
 
 ---
 
+## 🏢 Reference Library
+*Deep-dive documentation for at-a-glance problem solving.*
+
+*   **[Filesystem Hierarchy](./REFERENCE/Linux-Filesystem-Ref.md)**: FHS standard and OS layout manual.
+*   **[Permissions & Ownership](./REFERENCE/Linux-Permissions-Ownership-Ref.md)**: rwx, chmod, and security model manual.
+*   **[Essential SRE Commands](./REFERENCE/Linux-Essential-Commands-Ref.md)**: The binary bible for terminal operations.
+*   **[SSH Security & Configuration](./REFERENCE/Linux-SSH-Security-Ref.md)**: Access manual for hardening and tunneling.
+*   **[Linux Best Practices](./REFERENCE/Linux-Best-Practices-Ref.md)**: DevOps stability and performance standards.
+
+---
+
 ## 🎤 Interview & Assessment
 Each module includes its own specialized questions, but you can also explore the comprehensive collection:
 - **[Full Interview Questions & Quizzes](./Interview_Questions_and_Quiz.md)**

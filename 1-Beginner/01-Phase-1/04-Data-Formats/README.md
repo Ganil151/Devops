@@ -55,4 +55,17 @@ To maintain high-fidelity in your repository, all data formats must follow the *
 **Task**: Visit the [JSON module](./Json/README.md) to learn how to bridge these formats using automated conversion logic.
 
 ---
+
+## 🏢 Reference Library
+*Deep-dive documentation for at-a-glance problem solving.*
+
+*   **[YAML Deep Dive](./REFERENCE/YAML-Deep-Dive-Ref.md)**: Indentation, anchors, and multiline string manual.
+*   **[JSON API Standard](./REFERENCE/JSON-API-Standard-Ref.md)**: Structure, data types, and `jq` query manual.
+*   **[TOML Configuration](./REFERENCE/TOML-Configuration-Ref.md)**: Modern tool settings and table structure manual.
+*   **[XML Enterprise Legacy](./REFERENCE/XML-Enterprise-Legacy-Ref.md)**: Elements, attributes, and XPath query manual.
+*   **[Markdown Standards](./REFERENCE/Markdown-Documentation-Ref.md)**: Document formatting and Mermaid diagram manual.
+*   **[Data Format Best Practices](./REFERENCE/Data-Formats-Best-Practices-Ref.md)**: SRE standards for validation and integrity.
+
+---
+
 *Senior Platform Engineer Audit - 2026-01-24*

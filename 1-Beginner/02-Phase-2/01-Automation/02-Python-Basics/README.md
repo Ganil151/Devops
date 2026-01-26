@@ -61,6 +61,14 @@ source venv/bin/activate
 Run any script:
 `python main.py`
 
+## 🏢 Reference Library
+*Deep-dive documentation for at-a-glance problem solving.*
+
+*   **[Built-in Functions](./REFERENCE/Built-in-Functions-Ref.md)**: Top 20 functions for automation.
+*   **[Standard Library Guide](./REFERENCE/Standard-Library-Ref.md)**: Cheat sheet for `os`, `sys`, `json`, and more.
+*   **[Error & Exceptions](./REFERENCE/Error-Exceptions-Ref.md)**: Common errors and reliability patterns.
+*   **[PEP 8 Style Guide](./REFERENCE/Python-PEP8-Style-Guide.md)**: Clean code standards for the enterprise.
+
 ## 📚 Master Index
 
 For a flat list of all concepts, see the [Legacy Index](./LEGACY_INDEX.md).

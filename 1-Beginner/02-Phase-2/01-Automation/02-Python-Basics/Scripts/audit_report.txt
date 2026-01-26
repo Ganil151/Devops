@@ -1,0 +1,436 @@
+============================================================
+🚀 SRE Automation Linter: Quality & Security Audit
+============================================================
+Scanning Root: C:\Users\Ganil\Documents\Devops\1-Beginner\02-Phase-2\01-Automation\02-Python-Basics
+
+📄 examples\audit_links.py
+   [📝 DOCS] Function 'check_links_in_file' is missing a docstring.
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 examples\centralize_boilerplates.py
+   [📝 DOCS] Function 'clean_name' is missing a docstring.
+------------------------------
+📄 examples\convert_quiz_format.py
+   [📝 DOCS] Function 'convert_quiz_answers' is missing a docstring.
+   [📝 DOCS] Function 'should_process_file' is missing a docstring.
+   [📝 DOCS] Function 'process_file' is missing a docstring.
+   [📝 DOCS] Function 'process_directory' is missing a docstring.
+------------------------------
+📄 examples\create_missing_files.py
+   [📝 DOCS] Function 'create_stubs' is missing a docstring.
+------------------------------
+📄 examples\fix_images_script.py
+   [📝 DOCS] Function 'fix_image_paths' is missing a docstring.
+------------------------------
+📄 examples\fix_images_v2.py
+   [📝 DOCS] Function 'fix_image_paths' is missing a docstring.
+------------------------------
+📄 examples\migration_mapper.py
+   [📝 DOCS] Function 'clean_name' is missing a docstring.
+------------------------------
+📄 examples\reformat_all_quizzes.py
+   [📝 DOCS] Function 'reformat_quiz_content' is missing a docstring.
+   [📝 DOCS] Function 'process_file' is missing a docstring.
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\02-Data-Structures\challenges\challenge_01_inventory_mgmt.py
+   [📝 DOCS] Function 'add_server' is missing a docstring.
+   [📝 DOCS] Function 'find_by_role' is missing a docstring.
+   [📝 DOCS] Function 'remove_server' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\02-Data-Structures\challenges\solutions\solution_01_inventory_mgmt.py
+   [📝 DOCS] Function 'add_server' is missing a docstring.
+   [📝 DOCS] Function 'find_by_role' is missing a docstring.
+   [📝 DOCS] Function 'remove_server' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\03-Functions-and-Modules\challenges\challenge_01_health_checker.py
+   [📝 DOCS] Function 'check_health' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\03-Functions-and-Modules\challenges\challenge_02_retry_decorator.py
+   [📝 DOCS] Function 'connect_to_database' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\03-Functions-and-Modules\challenges\solutions\solution_01_health_checker.py
+   [📝 DOCS] Function 'check_health' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\03-Functions-and-Modules\challenges\solutions\solution_02_retry_decorator.py
+   [📝 DOCS] Function 'retry' is missing a docstring.
+   [📝 DOCS] Function 'decorator' is missing a docstring.
+   [📝 DOCS] Function 'wrapper' is missing a docstring.
+   [📝 DOCS] Function 'connect_to_database' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\03-Functions-and-Modules\challenges\solutions\solution_03_config_pkg\config\loader.py
+   [📝 DOCS] Function 'load_from_env' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\03-Functions-and-Modules\challenges\solutions\solution_03_config_pkg\config\settings.py
+   [📝 DOCS] Function 'validate' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\04-Time-and-Date\challenges\challenge_01_backup_check.py
+   [📝 DOCS] Function 'check_backup_ages' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\04-Time-and-Date\challenges\challenge_02_log_parser.py
+   [📝 DOCS] Function 'parse_to_timestamp' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\04-Time-and-Date\challenges\challenge_03_sla_calculator.py
+   [📝 DOCS] Function 'check_sla_compliance' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\04-Time-and-Date\challenges\challenge_04_scheduler.py
+   [📝 DOCS] Function 'schedule_maintenance' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\04-Time-and-Date\challenges\solutions\solution_01_backup_check.py
+   [📝 DOCS] Function 'check_backup_ages' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\04-Time-and-Date\challenges\solutions\solution_02_log_parser.py
+   [📝 DOCS] Function 'parse_to_timestamp' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\04-Time-and-Date\challenges\solutions\solution_03_sla_calculator.py
+   [📝 DOCS] Function 'check_sla_compliance' is missing a docstring.
+------------------------------
+📄 Part-01-Python-Foundations\04-Time-and-Date\challenges\solutions\solution_04_scheduler.py
+   [📝 DOCS] Function 'schedule_maintenance' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\01-File-Operations\challenges\challenge_01_config_reader.py
+   [📝 DOCS] Function 'parse_config' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\01-File-Operations\challenges\challenge_02_log_rotation.py
+   [📝 DOCS] Function 'rotate_logs' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\01-File-Operations\challenges\challenge_03_safe_updater.py
+   [📝 DOCS] Function 'update_json_config' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\01-File-Operations\challenges\solutions\solution_01_config_reader.py
+   [📝 DOCS] Function 'parse_config' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\01-File-Operations\challenges\solutions\solution_02_log_rotation.py
+   [📝 DOCS] Function 'rotate_logs' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\01-File-Operations\challenges\solutions\solution_03_safe_updater.py
+   [📝 DOCS] Function 'update_json_config' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\02-Pathlib-Modern-Files\challenges\challenge_01_log_cleanup.py
+   [📝 DOCS] Function 'cleanup_logs' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\02-Pathlib-Modern-Files\challenges\challenge_02_project_analyzer.py
+   [📝 DOCS] Function 'analyze_project' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\02-Pathlib-Modern-Files\challenges\challenge_03_safe_backup.py
+   [📝 DOCS] Function 'backup_config' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\02-Pathlib-Modern-Files\challenges\challenge_04_sync_dirs.py
+   [📝 DOCS] Function 'sync_dirs' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\02-Pathlib-Modern-Files\challenges\solutions\solution_01_log_cleanup.py
+   [📝 DOCS] Function 'cleanup_logs' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\02-Pathlib-Modern-Files\challenges\solutions\solution_02_project_analyzer.py
+   [📝 DOCS] Function 'analyze_project' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\02-Pathlib-Modern-Files\challenges\solutions\solution_03_safe_backup.py
+   [📝 DOCS] Function 'backup_config' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\02-Pathlib-Modern-Files\challenges\solutions\solution_04_sync_dirs.py
+   [📝 DOCS] Function 'sync_dirs' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\03-JSON-Handling\challenges\challenge_01_api_parser.py
+   [📝 DOCS] Function 'get_running_instances' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\03-JSON-Handling\challenges\challenge_02_config_validator.py
+   [📝 DOCS] Function 'validate_config' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\03-JSON-Handling\challenges\challenge_03_json_diff.py
+   [📝 DOCS] Function 'json_diff' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\03-JSON-Handling\challenges\solutions\solution_01_api_parser.py
+   [📝 DOCS] Function 'get_running_instances' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\03-JSON-Handling\challenges\solutions\solution_02_config_validator.py
+   [📝 DOCS] Function 'validate_config' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\03-JSON-Handling\challenges\solutions\solution_03_json_diff.py
+   [📝 DOCS] Function 'json_diff' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\04-YAML-Handling\challenges\challenge_01_manifest_gen.py
+   [📝 DOCS] Function 'generate_deployment' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\04-YAML-Handling\challenges\challenge_02_inventory_parser.py
+   [📝 DOCS] Function 'parse_inventory' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\04-YAML-Handling\challenges\challenge_03_config_merger.py
+   [📝 DOCS] Function 'deep_merge' is missing a docstring.
+   [📝 DOCS] Function 'merge_yaml_files' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\04-YAML-Handling\challenges\challenge_04_ansible_inventory.py
+   [📝 DOCS] Function 'generate_inventory' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\04-YAML-Handling\challenges\solutions\solution_01_manifest_gen.py
+   [📝 DOCS] Function 'generate_deployment' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\04-YAML-Handling\challenges\solutions\solution_02_inventory_parser.py
+   [📝 DOCS] Function 'parse_inventory' is missing a docstring.
+   [📝 DOCS] Function 'extract_hosts' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\04-YAML-Handling\challenges\solutions\solution_03_config_merger.py
+   [📝 DOCS] Function 'deep_merge' is missing a docstring.
+   [📝 DOCS] Function 'merge_yaml_files' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\04-YAML-Handling\challenges\solutions\solution_04_ansible_inventory.py
+   [📝 DOCS] Function 'generate_inventory' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\05-Error-Handling\challenges\challenge_01_config_loader.py
+   [📝 DOCS] Function 'load_config' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\05-Error-Handling\challenges\challenge_02_health_retry.py
+   [📝 DOCS] Function 'check_service_health' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\05-Error-Handling\challenges\challenge_03_shutdown_handler.py
+   [📝 DOCS] Function 'acquire_resource' is missing a docstring.
+   [📝 DOCS] Function 'cleanup' is missing a docstring.
+   [📝 DOCS] Function 'run' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\05-Error-Handling\challenges\solutions\solution_01_config_loader.py
+   [📝 DOCS] Function 'load_config' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\05-Error-Handling\challenges\solutions\solution_02_health_retry.py
+   [📝 DOCS] Function 'check_service_health' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\05-Error-Handling\challenges\solutions\solution_03_shutdown_handler.py
+   [📝 DOCS] Function 'acquire_resource' is missing a docstring.
+   [📝 DOCS] Function 'cleanup' is missing a docstring.
+   [📝 DOCS] Function 'run' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\06-Virtual-Environments\challenges\challenge_01_venv_creator.py
+   [📝 DOCS] Function 'create_env' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\06-Virtual-Environments\challenges\challenge_02_req_checker.py
+   [📝 DOCS] Function 'check_requirements' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\06-Virtual-Environments\challenges\challenge_03_portable_setup.py
+   [📝 DOCS] Function 'generate_setup_scripts' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\06-Virtual-Environments\challenges\challenge_04_isolated_task.py
+   [📝 DOCS] Function 'run_in_venv' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\06-Virtual-Environments\challenges\solutions\solution_01_venv_creator.py
+   [📝 DOCS] Function 'create_env' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\06-Virtual-Environments\challenges\solutions\solution_02_req_checker.py
+   [📝 DOCS] Function 'check_requirements' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\06-Virtual-Environments\challenges\solutions\solution_03_portable_setup.py
+   [📝 DOCS] Function 'generate_setup_scripts' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\06-Virtual-Environments\challenges\solutions\solution_04_isolated_task.py
+   [📝 DOCS] Function 'run_in_venv' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\07-Package-Management\challenges\challenge_01_dependency_analyzer.py
+   [📝 DOCS] Function 'verify_packages' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\07-Package-Management\challenges\challenge_02_pip_wrapper.py
+   [📝 DOCS] Function 'safe_install' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\07-Package-Management\challenges\challenge_03_version_bumper.py
+   [📝 DOCS] Function 'bump_patch_version' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\07-Package-Management\challenges\challenge_04_conflict_finder.py
+   [📝 DOCS] Function 'find_conflicts' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\07-Package-Management\challenges\solutions\solution_01_dependency_analyzer.py
+   [📝 DOCS] Function 'verify_packages' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\07-Package-Management\challenges\solutions\solution_02_pip_wrapper.py
+   [📝 DOCS] Function 'safe_install' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\07-Package-Management\challenges\solutions\solution_03_version_bumper.py
+   [📝 DOCS] Function 'bump_patch_version' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\07-Package-Management\challenges\solutions\solution_04_conflict_finder.py
+   [📝 DOCS] Function 'find_conflicts' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\08-Regular-Expressions\challenges\challenge_01_nginx_parser.py
+   [📝 DOCS] Function 'parse_nginx_log' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\08-Regular-Expressions\challenges\challenge_02_data_masker.py
+   [📝 DOCS] Function 'sanitize_logs' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\08-Regular-Expressions\challenges\challenge_03_error_aggregator.py
+   [📝 DOCS] Function 'summarize_errors' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\08-Regular-Expressions\challenges\challenge_04_config_extractor.py
+   [📝 DOCS] Function 'extract_config' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\08-Regular-Expressions\challenges\solutions\solution_01_nginx_parser.py
+   [📝 DOCS] Function 'parse_nginx_log' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\08-Regular-Expressions\challenges\solutions\solution_02_data_masker.py
+   [📝 DOCS] Function 'sanitize_logs' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\08-Regular-Expressions\challenges\solutions\solution_03_error_aggregator.py
+   [📝 DOCS] Function 'summarize_errors' is missing a docstring.
+------------------------------
+📄 Part-02-Python-Architecture\08-Regular-Expressions\challenges\solutions\solution_04_config_extractor.py
+   [📝 DOCS] Function 'extract_config' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\01-Command-Line-Arguments\challenges\challenge_01_port_scanner.py
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\01-Command-Line-Arguments\challenges\challenge_02_file_args.py
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\01-Command-Line-Arguments\challenges\challenge_03_safety_flags.py
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\01-Command-Line-Arguments\challenges\challenge_04_subcommands.py
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\01-Command-Line-Arguments\challenges\challenge_05_env_override.py
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\01-Command-Line-Arguments\challenges\challenge_06_cli_wrapper.py
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\01-Command-Line-Arguments\challenges\solutions\solution_01_port_scanner.py
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\01-Command-Line-Arguments\challenges\solutions\solution_02_file_args.py
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\01-Command-Line-Arguments\challenges\solutions\solution_03_safety_flags.py
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\01-Command-Line-Arguments\challenges\solutions\solution_04_subcommands.py
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\01-Command-Line-Arguments\challenges\solutions\solution_05_env_override.py
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\01-Command-Line-Arguments\challenges\solutions\solution_06_cli_wrapper.py
+   [📝 DOCS] Function 'handle_get' is missing a docstring.
+   [📝 DOCS] Function 'handle_create' is missing a docstring.
+   [📝 DOCS] Function 'handle_delete' is missing a docstring.
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\02-Environment-Variables\challenges\challenge_01_validator.py
+   [📝 DOCS] Function 'validate_environment' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\02-Environment-Variables\challenges\challenge_02_masking_logger.py
+   [📝 DOCS] Function 'log_env_safely' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\02-Environment-Variables\challenges\challenge_03_bool_parser.py
+   [📝 DOCS] Function 'get_env_bool' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\02-Environment-Variables\challenges\challenge_04_dynamic_loader.py
+   [📝 DOCS] Function 'setup_env' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\02-Environment-Variables\challenges\challenge_05_prefix_loader.py
+   [📝 DOCS] Function 'get_app_config' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\02-Environment-Variables\challenges\solutions\solution_01_validator.py
+   [📝 DOCS] Function 'validate_environment' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\02-Environment-Variables\challenges\solutions\solution_02_masking_logger.py
+   [📝 DOCS] Function 'log_env_safely' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\02-Environment-Variables\challenges\solutions\solution_03_bool_parser.py
+   [📝 DOCS] Function 'get_env_bool' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\02-Environment-Variables\challenges\solutions\solution_04_dynamic_loader.py
+   [📝 DOCS] Function 'setup_env' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\02-Environment-Variables\challenges\solutions\solution_05_prefix_loader.py
+   [📝 DOCS] Function 'get_app_config' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\03-Subprocess-Execution\challenges\challenge_01_health_checker.py
+   [📝 DOCS] Function 'check_server' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\03-Subprocess-Execution\challenges\challenge_02_git_checker.py
+   [📝 DOCS] Function 'check_git_status' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\03-Subprocess-Execution\challenges\challenge_03_docker_manager.py
+   [📝 DOCS] Function 'list_running_containers' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\03-Subprocess-Execution\challenges\challenge_04_log_monitor.py
+   [📝 DOCS] Function 'monitor_log' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\03-Subprocess-Execution\challenges\solutions\solution_01_health_checker.py
+   [📝 DOCS] Function 'check_server' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\03-Subprocess-Execution\challenges\solutions\solution_02_git_checker.py
+   [📝 DOCS] Function 'check_git_status' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\03-Subprocess-Execution\challenges\solutions\solution_03_docker_manager.py
+   [📝 DOCS] Function 'list_running_containers' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\03-Subprocess-Execution\challenges\solutions\solution_04_log_monitor.py
+   [📝 DOCS] Function 'monitor_log' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\04-Logging-Basics\challenges\challenge_01_basic_setup.py
+   [📝 DOCS] Function 'setup_logger' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\04-Logging-Basics\challenges\challenge_02_rotating_logs.py
+   [📝 DOCS] Function 'setup_rotating_logger' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\04-Logging-Basics\challenges\solutions\solution_01_basic_setup.py
+   [📝 DOCS] Function 'setup_logger' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\04-Logging-Basics\challenges\solutions\solution_02_rotating_logs.py
+   [📝 DOCS] Function 'setup_rotating_logger' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\04-Logging-Basics\challenges\solutions\solution_03_json_formatter.py
+   [📝 DOCS] Function 'format' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\04-Logging-Basics\challenges\solutions\solution_04_contextual_logging.py
+   [📝 DOCS] Function 'process_request' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\08-Capstone-Script\challenges\challenge_01_slack_alerter.py
+   [📝 DOCS] Function 'send_slack_alert' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\08-Capstone-Script\challenges\challenge_02_cli_improver.py
+   [📝 DOCS] Function 'check_with_retries' is missing a docstring.
+   [📝 DOCS] Function 'parse_new_args' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\08-Capstone-Script\challenges\challenge_03_report_exporter.py
+   [📝 DOCS] Function 'export_to_csv' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\08-Capstone-Script\challenges\challenge_04_port_scanner.py
+   [📝 DOCS] Function 'scan_ports' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\08-Capstone-Script\challenges\solutions\solution_01_slack_alerter.py
+   [📝 DOCS] Function 'send_slack_alert' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\08-Capstone-Script\challenges\solutions\solution_02_cli_improver.py
+   [📝 DOCS] Function 'mock_check' is missing a docstring.
+   [📝 DOCS] Function 'check_with_retries' is missing a docstring.
+   [📝 DOCS] Function 'parse_new_args' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\08-Capstone-Script\challenges\solutions\solution_03_report_exporter.py
+   [📝 DOCS] Function 'export_to_csv' is missing a docstring.
+------------------------------
+📄 Part-03-Python-Systems-Drafting\08-Capstone-Script\challenges\solutions\solution_04_port_scanner.py
+   [📝 DOCS] Function 'scan_ports' is missing a docstring.
+------------------------------
+📄 Scripts\disk_calc.py
+   [📝 DOCS] Function 'calculate_usage' is missing a docstring.
+------------------------------
+📄 Scripts\health_check.py
+   [📝 DOCS] Function 'check_env' is missing a docstring.
+------------------------------
+📄 Scripts\log_formatter.py
+   [📝 DOCS] Function 'format_log' is missing a docstring.
+------------------------------
+📄 Scripts\sre_linter.py
+   [‼️ SECURITY] Line 14: Found eval()
+   [‼️ SECURITY] Line 15: Found exec()
+   [‼️ SECURITY] Line 16: Found shell=True (Injection Risk)
+   [📝 DOCS] Function 'lint_file' is missing a docstring.
+   [📝 DOCS] Function 'main' is missing a docstring.
+------------------------------
+📄 Scripts\Fix\fix_links.py
+   [📝 DOCS] Function 'update_file' is missing a docstring.
+------------------------------
+
+============================================================
+📊 REPORT SUMMARY
+Files Audited: 141
+Total Violations: 161
+============================================================
+
+ACTION REQUIRED: Please address style and security flags to meet SRE standards.

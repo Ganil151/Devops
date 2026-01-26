@@ -82,6 +82,19 @@ Our scripts are organized into "Golden Scripts"—idempotent, parameterized, and
 -   **[Part 7: Performance Tuning](./Part-7-Performance-Tuning)** - Kernel-level optimization techniques.
 -   **[Part 8: Hacks & Tips](./Part-8-Pro-Tips)** - Productivity boosters for the power user.
 
+---
+
+## 🏢 Reference Library
+*Deep-dive documentation for at-a-glance problem solving.*
+
+*   **[Windows Architecture](./REFERENCE/Windows-System-Architecture-Ref.md)**: Registry, Services, and core system manual.
+*   **[PowerShell Automation](./REFERENCE/PowerShell-Automation-Ref.md)**: Object-oriented logic and scripting manual.
+*   **[Active Directory & Identity](./REFERENCE/Active-Directory-Identity-Ref.md)**: DCs, OUs, and Group Policy manual.
+*   **[Windows Troubleshooting](./REFERENCE/SRE-Windows-Troubleshooting-Ref.md)**: SRE playbook for performance and error resolution.
+*   **[Windows Best Practices](./REFERENCE/Windows-Best-Practices-Ref.md)**: Fleet management and security standards.
+
+---
+
 ### 📚 Resources
 
 -   [Official Microsoft PowerShell Docs](https://learn.microsoft.com/en-us/powershell/)
