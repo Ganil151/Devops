@@ -14,6 +14,8 @@ python log_formatter.py "Service started" INFO
 # Expected: [2024-01-15T10:00:00] [INFO] Service started
 ```
 
+**Reference Implementation:** [log_formatter.py](../../Scripts/log_formatter.py)
+
 ---
 
 ## Challenge 2: Environment Health Check
@@ -30,6 +32,8 @@ python health_check.py
 # If missing: Exits with 1
 ```
 
+**Reference Implementation:** [health_check.py](../../Scripts/health_check.py)
+
 ---
 
 ## Challenge 3: Disk Space Calculator (Simple)
@@ -45,3 +49,5 @@ python health_check.py
 python disk_calc.py 90 100
 # Expected: Usage: 90.0%. WARNING: High disk usage!
 ```
+
+**Reference Implementation:** [disk_calc.py](../../Scripts/disk_calc.py)

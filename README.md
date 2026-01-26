@@ -1,6 +1,6 @@
 # ♾️ The Master DevOps Platform: Zero to Enterprise & Beyond
 
-![DevOps Continuous Learning](./assets/devops_platform_banner.svg)
+![DevOps Continuous Learning](./assets/devops_master_banner.png)
 
 > **The Ultimate DevOps Learning & Implementation Platform**  
 > *Structured. Enterprise-Grade. Production-Ready.*
@@ -42,7 +42,7 @@ graph TD
 
 ### 🌱 Tier 1: Beginner - Foundations
 
-[**View Foundations Overview**](./1-Beginner/README.md)
+[**View Foundations Overview**](./1-Beginner/Quick_Reference.md)
 *Networking, Linux, Windows Basics, and [**Data Formats**](./1-Beginner/01-Phase-1/04-Data-Formats/README.md)*
 
 - **Focus**: Building the "Infrastructure Layer" skills.
@@ -50,7 +50,7 @@ graph TD
 
 ### ⚙️ Tier 2: Intermediate - Automation
 
-[**View Automation Hub**](./1-Beginner/02-Phase-2/01-Automation/README.md)
+[**View Automation Hub**](./2-Intermediate/Quick_Reference.md)
 *IaC, Kubernetes, CI/CD, and Production Scripting*
 
 - **Focus**: "Orchestration Layer" & Automating everything with Shell/Python.
@@ -58,7 +58,7 @@ graph TD
 
 ### 🏛️ Tier 3: Advanced - Enterprise Strategy
 
-[**View Enterprise Command Center**](./3-Advanced/README.md)
+[**View Enterprise Command Center**](./3-Advanced/Quick_Reference.md)
 *Service Mesh, GitOps, DevSecOps, and Observability Stack*
 
 - **Focus**: "Architectural Layer" for multi-cloud, high-scale systems.
@@ -66,7 +66,7 @@ graph TD
 
 ### 👔 Tier 4: Professional - Career Engineering
 
-[**View Career Mastery**](./4-Professional-Development/README.md)
+[**View Career Mastery**](./4-Professional-Development/Quick_Reference.md)
 *Resume Engineering, Portfolio Design, and [**Master Career Roadmap**](./4-Professional-Development/01-Career-Strategy/README.md)*
 
 - **Focus**: "Career Layer" — Bridging the gap from Technical expert to Production hire.
@@ -76,10 +76,10 @@ graph TD
 
 ## 🛠️ Global Hubs & Resources
 
-- **[Boilerplate Vault](./5-Boilerplates/README.md)**: 200+ Templates (Terraform, Ansible, K8s).
+- **[Boilerplate Vault](./5-Boilerplates/Quick_Reference.md)**: 200+ Templates (Terraform, Ansible, K8s).
 - **[Automation Navigation](./1-Beginner/02-Phase-2/01-Automation/AUTOMATION_NAVIGATION_HUB.md)**: Centralized orchestration scripts.
 - **[Modern Operations Hub](./2-Intermediate/02-Phase-2/03-Modern-Operations/README.md)**: Serverless, AI-Ops, and Edge Computing.
-- **[Quizzes](./6-Quizzes/README.md)**: 300+ Advanced Questions & Cert Prep.
+- **[Quizzes](./6-Quizzes/Quick_Reference.md)**: 300+ Advanced Questions & Cert Prep.
 
 ---
 
@@ -88,7 +88,7 @@ graph TD
 This repository is maintained using automated auditing tools to ensure zero "Content Rot."
 
 - **[Link Scanner](./00-Resources/01-Scripts-Code/Maintenance/repository_audit.py)**: Audit internal linking health.
-- **Standard Pattern**: Every module contains `Boilerplates/`, `challenges/`, and `solutions/`.
+- **Standard Pattern**: Every module contains `challenges/`, `solutions/`, and links to the [Central Boilerplate Hub](../5-Boilerplates/Quick_Reference.md).
 
 ---
 

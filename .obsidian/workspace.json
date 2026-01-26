@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/03-Python-for-DevOps/03-Working-with-Data-JSON-YAML/README.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -217,6 +217,8 @@
   },
   "active": "e142cfc2dc308a10",
   "lastOpenFiles": [
+    "Quick_Reference.md",
+    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/03-Python-for-DevOps/03-Working-with-Data-JSON-YAML/README.md",
     "1-Beginner/01-Phase-1/03-Windows-Basics/scripts/god_mode.ps1",
     "1-Beginner/01-Phase-1/03-Windows-Basics/scripts/toggle_power.bat",
     "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/03-Python-for-DevOps/02-System-and-File-Operations/README.md",
@@ -252,7 +254,6 @@
     "2-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/Jenkins/blueprints/blueprint-docker-compose.groovy",
     "2-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/Jenkins/blueprints/blueprint-blue-green.groovy",
     "2-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/Jenkins/blueprints/blueprint-aws-ec2-docker.groovy",
-    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/04-System-Administration/maintenance-tools/fix_paths_and_absolute.py",
     "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/multi-AZ-Deployment.png",
     "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/kube-mindMap-1.png",
     "2-Intermediate/03-Phase-3/01-Container-Orchestration/Kubernetes/assets/kube-folder-mindMap.png",
@@ -262,7 +263,6 @@
     "1-Beginner/01-Phase-1/04-Data-Formats/Markdown/challenges/changelog_challenge.md",
     "1-Beginner/01-Phase-1/04-Data-Formats/Markdown/Boilerplates/documentation_templates.md",
     "1-Beginner/01-Phase-1/04-Data-Formats/Toml/challenges/refactor_challenge.md",
-    "1-Beginner/01-Phase-1/04-Data-Formats/Toml/Boilerplates/standard_templates.md",
     "Untitled.canvas"
   ]
 }
