@@ -2,6 +2,23 @@
 
 In the world of DevOps, automation is king, but documentation is the law. **Runbooks** and **Standard Operating Procedures (SOPs)** are the foundational documents that ensure your systems are maintainable, recoverable, and accessible to the entire team. This module covers how to transition from manual hacks to professional, code-driven operational excellence.
 
+## Core Concept: Docs-as-Code
+**[REFERENCE: Runbook Architecture Standards](./REFERENCE/Runbook-Architecture-Standards-Ref.md)**
+
+High-performing teams treat documentation like software:
+- **Git as Source**: Runbooks live in the repo, not a static wiki.
+- **Peer Review**: Documentation changes go through PRs just like code.
+- **Linearity**: Procedures follow the 10-part SRE standard to ensure they are actionable at 3 AM.
+
+## Enterprise Governance: Incident Response
+**[REFERENCE: Incident Management & Response](./REFERENCE/Incident-Response-Governance-Ref.md)**
+
+At scale, the "Hero" model fails. We use **Structured Roles**:
+- **Incident Commander**: Coordinates the response.
+- **Operations Lead**: The hands-on-keyboard.
+- **Blameless Culture**: We perform post-mortems to find system flaws, not human scapegoats.
+- **Escalation Matrix**: Automated paging when the primary on-call doesn't respond.
+
 ---
 
 ## 🗺️ Learning Path

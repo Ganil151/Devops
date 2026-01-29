@@ -23,6 +23,23 @@ graph LR
 
 Automation is the multiplier that allows one DevOps engineer to manage thousands of servers. This module focuses on using scripting languages to eliminate toil and build intelligent workflows. We transition from simple command-line snippets to robust, production-grade automation suites.
 
+## Core Concept: Idempotency & State
+**[REFERENCE: Idempotency in Automation](./REFERENCE/Idempotency-in-Automation-Ref.md)**
+
+High-quality automation is **deterministic**:
+- **Desired vs Current**: Always calculate the difference before acting.
+- **Self-Healing**: Scripts must be safely re-runnable without side effects.
+- **Strict Mode**: Use `set -euo pipefail` in Bash to catch errors and unset variables instantly.
+
+## Enterprise Governance: Secrets & Security
+**[REFERENCE: Automation Security & Secrets](./REFERENCE/Automation-Security-Secrets-Ref.md)**
+
+Automated tools often hold the "keys to the kingdom." We must protect them:
+- **Zero Secrets in Code**: Never hardcode credentials. Use short-lived, dynamic secrets when possible.
+- **Principle of Least Privilege**: Run automation with scoped service accounts, not root/admin.
+- **Audit Trails**: Log exactly which identity performed which action to ensure accountability.
+- **Dynamic Secrets**: Use tools like HashiCorp Vault to generate credentials on-the-fly.
+
 ## 🎓 Learning Objectives
 
 By the end of this module, you will be able to:

@@ -6,6 +6,23 @@
 
 Edge computing brings computation and data storage closer to the location where it is needed, to improve response times and save bandwidth. K3s is a highly available, certified Kubernetes distribution designed for production workloads in unattended, resource-constrained, remote locations or inside IoT appliances.
 
+## Core Concept: Lightweight Orchestration
+**[REFERENCE: Edge Computing Architecture](./REFERENCE/Edge-Computing-Architecture-Ref.md)**
+
+K3s optimizes Kubernetes for the "Frontier":
+- **Single Binary**: All components combined into a < 50MB binary for deployment on small-footprint devices.
+- **SQLite Substitution**: Using SQLite instead of etcd to reduce memory consumption by ~60% in small clusters.
+- **Addon Tuning**: Disabling default features (Traefik, Storage) to fit within 512MB RAM constraints.
+
+## Enterprise Governance: Remote Reliability
+**[REFERENCE: Edge Computing Architecture](./REFERENCE/Edge-Computing-Architecture-Ref.md)**
+
+Managing thousands of disconnected locations requires unique standards:
+- **GitOps Pull Model**: Allowing remote clusters to pull their own manifests, avoiding the need for inbound open ports or stable connections.
+- **Unattended Recovery**: Configuring automated reboots and self-healing storage (Local-Path) for locations without on-site technical staff.
+- **Device Identity**: Using TLS/TPM certificates to secure communication between "The Wild" and the central control plane.
+- **Air-Gapped Execution**: Enabling local image registries and metrics buffering for sites with zero or intermittent internet.
+
 ## 🎯 Learning Objectives
 
 - ✅ Understand the difference between **K8s (Heavy)** and **K3s (Light)**.

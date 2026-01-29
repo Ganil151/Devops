@@ -4,6 +4,23 @@
 
 ArgoCD is a declarative, GitOps continuous delivery tool for Kubernetes. It monitors your Git repository for changes to your Kubernetes manifests and automatically applies those changes to your cluster.
 
+## Core Concept: The Reconciliation Loop
+**[REFERENCE: ArgoCD Architecture](./REFERENCE/ArgoCD-Architecture-Ref.md)**
+
+GitOps shifts the "Source of Truth" from the cluster to Git:
+- **Declarative State**: We define *what* we want in Git, not *how* to get there.
+- **Drift Detection**: ArgoCD continuously compares the "Desired State" (Git) with the "Live State" (Cluster).
+- **Self-Healing**: Automatically reversing manual cluster edits to ensure Git remains the master record.
+
+## Enterprise Governance: Scaling and Safety
+**[REFERENCE: ArgoCD Architecture](./REFERENCE/ArgoCD-Architecture-Ref.md)**
+
+Managing production Kubernetes at scale requires rigorous standards:
+- **App-of-Apps**: A recursive pattern for managing hundreds of applications through a single parent manifest.
+- **Sync Policies**: Choosing between automated "Cruise Control" and manual "Human Gates" based on environment risk.
+- **RBAC & Projects**: Restricting team access to specific namespaces and repositories.
+- **SSO Integration**: Centralizing identity and avoiding local user accounts in the ArgoCD UI.
+
 ## 🎯 Learning Objectives
 
 - ✅ Install ArgoCD using **Helm**.

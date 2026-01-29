@@ -25,6 +25,24 @@ graph TD
 
 Cloud platforms are the foundation of modern DevOps. This module focuses on mastering the architectural patterns that ensure high availability, security, and scalability. We move beyond simple VMs into advanced topics like Multi-AZ deployments, cross-region replication, and complex identity hierarchies.
 
+## Core Concept: The Well-Architected Pillars
+**[REFERENCE: Well-Architected Framework](./REFERENCE/Well-Architected-Framework-Ref.md)**
+
+High-quality cloud platforms are built on five foundational pillars:
+- **Reliability**: Designing for failure through Multi-AZ and Fault Tolerance.
+- **Operational Excellence**: Running everything as code (IaC).
+- **Security**: Hardening identity foundation and maintaining traceability.
+- **Performance & Cost**: Right-sizing and using consumption-based models.
+
+## Enterprise Governance: The Shared Responsibility
+**[REFERENCE: Shared Responsibility Model](./REFERENCE/Shared-Responsibility-Model-Ref.md)**
+
+Security in the cloud is a partnership:
+- **Security OF the Cloud**: The CSP manages hardware, cables, and physical data centers.
+- **Security IN the Cloud**: The Customer manages data privacy, encryption, IAM, and OS patching.
+- **Compliance**: Leveraging CSP audit reports (SOC2, ISO) to satisfy enterprise governance requirements.
+- **Organization Units (OU)**: Using Service Control Policies (SCPs) to enforce global guardrails across hundreds of accounts.
+
 ## 🎓 Learning Objectives
 
 By the end of this module, you will be able to:

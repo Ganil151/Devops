@@ -6,6 +6,24 @@
 
 FinOps is an evolving cloud financial management discipline and cultural practice that enables organizations to get maximum business value by helping engineering, finance, technology and business teams to collaborate on data-driven spending decisions.
 
+## Core Concept: The FinOps Lifecycle
+**[REFERENCE: FinOps Architecture](./REFERENCE/FinOps-Architecture-Ref.md)**
+
+Managing cost is a continuous technical and cultural discipline:
+- **Inform**: Gaining total visibility into spending through granular tagging and Kubecost allocation.
+- **Optimize**: Identifying "Zombie" resources and right-sizing underutilized instances to eliminate waste.
+- **Operate**: Transitioning from reactive "Bill shock" to proactive "Cost-Aware CI/CD."
+- **Unit Economics**: Measuring "Cost per Transaction" rather than just the total cloud bill.
+
+## Enterprise Governance: Cost as Code
+**[REFERENCE: FinOps Architecture](./REFERENCE/FinOps-Architecture-Ref.md)**
+
+Enforcing financial rigor within the automation lifecycle:
+- **Infracost PR Comments**: Automatically adding cost projections to every Pull Request to empower developer decisions.
+- **Budget Guardrails**: Implementing automated "Policy as Code" to block deployments that exceed a defined cost threshold.
+- **Automated Waste Elimination**: Scripts that terminate untagged resources or shut down Dev environments over weekends.
+- **Reservation Management**: Balancing on-demand scaling with long-term Savings Plans for stable base-load traffic.
+
 ## 🎯 Learning Objectives
 
 - ✅ Understand the **Inform, Optimize, Operate** lifecycle.

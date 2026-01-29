@@ -4,6 +4,24 @@
 
 Monitoring is the practice of observing the state of your infrastructure using tools like **Prometheus** and **Grafana**. In this module, we transition from manual checks to automated data collection and sophisticated alerting.
 
+## Core Concept: The Three Pillars
+**[REFERENCE: Observability Architecture](./REFERENCE/Observability-Architecture-Ref.md)**
+
+A complete view of system health requires three distinct data types:
+- **Metrics**: High-level numeric data (CPU, Latency) for alerting and dashboards.
+- **Logs**: Detailed text events for deep-dive root cause analysis.
+- **Traces**: End-to-end maps of a request's journey through microservices.
+- **The 4 Golden Signals**: Standardizing monitoring around Latency, Traffic, Errors, and Saturation.
+
+## Enterprise Governance: High-Signal Alerting
+**[REFERENCE: Observability Architecture](./REFERENCE/Observability-Architecture-Ref.md)**
+
+Escalating issues effectively without causing alert fatigue:
+- **Symptom-Based Alerting**: Only waking up engineers for issues that actually impact the customer (e.g., Error Rates, not CPU spikes).
+- **Service Level Objectives (SLOs)**: Defining acceptable performance targets (e.g., 99.9% uptime) and alerting on "Error Budget" consumption.
+- **Dashboards-as-Code**: Managing Grafana dashboards in Git to ensure consistency and disaster recovery.
+- **OpenTelemetry Standard**: Utilizing vendor-neutral collection to prevent vendor lock-in and simplify instrumentation.
+
 ## 🎯 Learning Objectives
 
 - ✅ Deploy the **Prometheus + Grafana** stack using Helm.

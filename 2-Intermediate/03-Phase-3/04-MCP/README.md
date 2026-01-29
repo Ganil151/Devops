@@ -2,6 +2,23 @@
 
 The **Model Context Protocol (MCP)** is an open-standard protocol that enables Large Language Models (LLMs) to securely and standardly interact with local and remote data and tools. In the DevOps world, MCP acts as the "hands" for your AI assistants, allowing them to bridge the gap between reasoning and action on your infrastructure.
 
+## Core Concept: Agentic Interoperability
+**[REFERENCE: MCP Architecture](./REFERENCE/MCP-Architecture-Ref.md)**
+
+MCP standardizes the bridge between AI reasoning and system execution:
+- **Host, Client, Server**: The three-tier model for secure data and tool exchange.
+- **Tools, Resources, Prompts**: The primitives that allow AI to act, read, and receive context.
+- **Agentic Workflows**: Moving from static "Help Chat" to active "AI Assistants" that investigate and fix outages.
+
+## Enterprise Governance: The AI Guardrails
+**[REFERENCE: MCP Architecture](./REFERENCE/MCP-Architecture-Ref.md)**
+
+Safely integrating AI assistants into production environments:
+- **Human-in-the-Loop (HITL)**: Mandatory manual approval for any action that mutates infrastructure state.
+- **Least Privilege Access**: Restricting the MCP server's credentials to specific domains and read-only actions where possible.
+- **Sanitization & Validation**: Preventing AI "hallucinations" or prompt injections from executing dangerous system commands.
+- **Unified Audit Logs**: Complete traceability of AI-driven actions, including the reasoning trace and human approval.
+
 ---
 
 ## 🗺️ Learning Path

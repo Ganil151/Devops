@@ -2,6 +2,28 @@
 
 Welcome to the **Intermediate Networking** module of the DevOps curriculum. This track is designed to take you from basic connectivity concepts to complex cloud architectures and advanced security patterns.
 
+## Core Concept: The OSI Model as Mental Framework
+**[REFERENCE: TCP/IP Stack Deep Dive](./REFERENCE/TCP-IP-Stack-Deep-Dive-Ref.md)**
+
+Networking is not about memorizing commands; it's about understanding **layers of abstraction**:
+- **Layer 1-2 (Physical/Data Link)**: Bits and MAC addresses. Switches operate here.
+- **Layer 3 (Network)**: IP addresses and routing. Routers operate here.
+- **Layer 4 (Transport)**: TCP (reliable) vs UDP (fast). Load balancers operate here.
+- **Layer 7 (Application)**: HTTP, DNS, SSH. Application firewalls operate here.
+
+> See **[TCP-IP-Stack-Deep-Dive-Ref.md](./REFERENCE/TCP-IP-Stack-Deep-Dive-Ref.md)** for the TCP 3-way handshake, subnetting calculations, and protocol internals.
+
+## Enterprise Governance & Security
+**[REFERENCE: Enterprise Network Architecture](./REFERENCE/Enterprise-Network-Architecture-Ref.md)**
+
+At scale, networking is about **defense in depth**:
+- **Segmentation**: Use VLANs to isolate traffic. Never run a flat network.
+- **Stateful Firewalls**: Track connection state. Auto-allow return traffic for established connections.
+- **DMZ Architecture**: Isolate public-facing services from internal network with dual firewalls.
+- **Zero Trust**: Never trust, always verify. Implement micro-segmentation and identity-based access.
+
+> See **[Enterprise-Network-Architecture-Ref.md](./REFERENCE/Enterprise-Network-Architecture-Ref.md)** for firewall architectures, load balancing strategies (L4 vs L7), and Zero Trust implementation patterns.
+
 ---
 
 ## 📋 Table of Contents

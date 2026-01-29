@@ -2,6 +2,23 @@
 
 Data is the most valuable asset of any organization. In a DevOps lifecycle, managing databases means ensuring high availability, automated backups, and seamless scalability while maintaining strict security.
 
+## Core Concept: CAP Theorem & Consistency Models
+**[REFERENCE: SQL vs NoSQL Architecture](./REFERENCE/SQL-vs-NoSQL-Architecture-Ref.md)**
+
+Infrastructure decisions start with the data model:
+- **ACID**: Atomic, Consistent, Isolated, Durable (Standard for SQL).
+- **BASE**: Basically Available, Soft State, Eventual Consistency (Standard for NoSQL).
+- **CAP**: You can only have 2: Consistency, Availability, Partition Tolerance.
+
+## Enterprise Governance: Persistence & Recovery
+**[REFERENCE: Database Availability & Backup](./REFERENCE/Database-Availability-Backup-Ref.md)**
+
+Production data requires strict guardrails:
+- **Multi-AZ Availability**: Synchronous replication to a standby for automated failover.
+- **RPO/RTO**: Define how much data loss (RPO) and downtime (RTO) is acceptable.
+- **PITR (Point-in-Time Recovery)**: Ability to restore a database to a specific second using transaction logs.
+- **Testing**: A backup that hasn't been tested for restoration is not a backup.
+
 ---
 
 ## 🗺️ The Database Learning Path

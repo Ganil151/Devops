@@ -18,6 +18,23 @@ graph LR
 
 CI/CD is the heart of DevOps, bridging the gap between development and operations by automating the software delivery lifecycle. This module focuses on building resilient, automated pipelines that ensure code quality and security. We move from manual "Hand-offs" to a unified, automated stream of value.
 
+## Core Concept: Pipeline-as-Code (PaC)
+**[REFERENCE: Pipeline Architecture](./REFERENCE/Pipeline-Architecture-Ref.md)**
+
+High-velocity teams treat deployment logic identically to application logic:
+- **DSL vs. YAML**: Choosing between the flexibility of Jenkins Groovy and the simplicity of GitHub Actions YAML.
+- **Resilience**: Implementing standardized retries, timeouts, and parallelization to minimize build wait times.
+- **Shared Libraries**: Centralizing common pipeline logic to ensure consistency across the enterprise.
+
+## Enterprise Governance: The "Shift-Left" Standard
+**[REFERENCE: Pipeline Architecture](./REFERENCE/Pipeline-Architecture-Ref.md)**
+
+Security is not a final step; it is integrated into every stage of the pipeline:
+- **Secret Detection**: Using **TruffleHog** or GitLeaks to block credentials before they reach the repository.
+- **Quality Gates**: Enforcing strict SonarQube metrics (Coverage > 80%, No new Vulnerabilities) to stop "dirty" code from reaching production.
+- **Static vs. Dynamic Analysis**: Combining SAST (source code) and DAST (running apps) for total visibility.
+- **Auditability**: Ensuring every deployment is linked to a Git commit, a developer identity, and a successful security scan.
+
 ## 🎓 Learning Objectives
 
 - **The Pipeline Paradigm**: Master the stages of a modern pipeline: Build, Test, Scan, and Deploy.

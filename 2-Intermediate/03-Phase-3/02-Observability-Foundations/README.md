@@ -2,6 +2,23 @@
 
 Welcome to the definitive guide to **Observability**, the critical discipline of understanding complex systems through their outputs (Metrics, Logs, and Traces). This curriculum transforms you from a "responder" to an "architect" of system visibility.
 
+## Core Concept: The MTTR Mindset
+**[REFERENCE: Advanced Observability Patterns](./REFERENCE/Advanced-Observability-Patterns-Ref.md)**
+
+Elite teams optimize for Mean Time To Repair (MTTR) as failures are inevitable:
+- **Detection (MTTD)**: Using high-signal alerts to identify incidents in real-time.
+- **Correlation**: Linking logs and traces using unique IDs to trace root causes across microservices.
+- **Health Checks**: Distinguishing between Liveness (auto-restart) and Readiness (traffic management).
+
+## Enterprise Governance: Visibility Standards
+**[REFERENCE: Advanced Observability Patterns](./REFERENCE/Advanced-Observability-Patterns-Ref.md)**
+
+Protecting performance and cost through rigorous standards:
+- **Cardinality Control**: Preventing metric explosions that drive up cloud costs without adding value.
+- **Service Level Objectives (SLOs)**: Managing "Error Budgets" to balance reliability with developer velocity.
+- **PII Sanitization**: Ensuring sensitive user data never leaves the application via logs or trace tags.
+- **Unified Dashboards**: Centralizing metrics, logs, and traces into a single pane of glass (Grafana) for total visibility.
+
 ---
 
 ## 🗺️ The Observability Learning Path

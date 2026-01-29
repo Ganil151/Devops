@@ -2,6 +2,23 @@
 
 Scaling from simple scripts to complex automation requires advanced prompting techniques. At this level, we focus on **Chain-of-Thought (CoT)**, structured **Runbook** generation, and the fine-tuning of AI parameters for reliability and precision.
 
+## Core Concept: Chain-of-Thought Reasoning
+**[REFERENCE: AI-Operations & Advanced Prompting](./REFERENCE/AI-Ops-Architecture-Ref.md)**
+
+Moving beyond "Simple Q&A" to architectural analysis:
+- **Reasoning Traces**: Forcing the model to explain its logic before suggesting a command.
+- **Verification Loop**: Instructing the model to include `check` steps (e.g., `kubectl get...`) for every suggested fix.
+- **Parameter Optimization**: Using low Temperature (0.0-0.2) and Top-P to ensure deterministic code generation.
+
+## Enterprise Governance: Guardrails & Privacy
+**[REFERENCE: AI-Operations & Advanced Prompting](./REFERENCE/AI-Ops-Architecture-Ref.md)**
+
+Integrating AI into the production lifecycle with safety:
+- **Personalized Context (RAG)**: Providing the model with internal docs to ensure suggested tools match company standards.
+- **PII Sanitization**: Mandatory stripping of sensitive data (IPs, JWTs, Users) from logs before analysis.
+- **Human-in-the-Loop (HITL)**: AI generates the fix; a human verifies the logic and executes.
+- **Prompt Versioning**: Treating prompts as code (stored in Git) to ensure repeatability and auditability.
+
 ---
 
 ## 🗺️ Learning Path

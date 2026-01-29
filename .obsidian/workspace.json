@@ -11,10 +11,24 @@
             "id": "e142cfc2dc308a10",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/REFERENCE/Python-DevOps-Testing-Ref.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Python-DevOps-Testing-Ref"
             }
           }
         ]
@@ -74,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 268.5
+    "width": 268.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -167,8 +182,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
             }
           }
         ],
@@ -181,7 +196,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "omnisearch:Omnisearch": false,
       "markdown-importer:Open format converter": false,
       "zk-prefixer:Create new unique note": false,
       "random-note:Open random note": false,
@@ -200,10 +214,47 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "e142cfc2dc308a10",
   "lastOpenFiles": [
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/REFERENCE/Python-Automation-Patterns-Ref.md",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/REFERENCE/Error-Exceptions-Ref.md",
+    "2-Intermediate/03-Phase-3/06-FinOps/REFERENCE/Advanced-FinOps-Architecture-Ref.md",
+    "2-Intermediate/03-Phase-3/06-FinOps/REFERENCE",
+    "2-Intermediate/03-Phase-3/05-Blockchain/REFERENCE/Blockchain-DevOps-Architecture-Ref.md",
+    "2-Intermediate/03-Phase-3/05-Blockchain/REFERENCE",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/REFERENCE/Automation-Best-Practices.md",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/REFERENCE/Built-in-Functions-Ref.md",
+    "2-Intermediate/03-Phase-3/04-MCP/REFERENCE/MCP-Architecture-Ref.md",
+    "2-Intermediate/03-Phase-3/04-MCP/REFERENCE",
+    "2-Intermediate/03-Phase-3/01-Container-Orchestration/REFERENCE/Kubernetes-Security-Governance-Ref.md",
+    "2-Intermediate/03-Phase-3/01-Container-Orchestration/REFERENCE/Kubernetes-Architecture-Ref.md",
+    "2-Intermediate/03-Phase-3/01-Container-Orchestration/REFERENCE",
+    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/REFERENCE/Infrastructure-Compliance-Ref.md",
+    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/REFERENCE/IaC-State-Management-Ref.md",
+    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/REFERENCE",
+    "1-Beginner/02-Phase-2/01-Automation/REFERENCE/Automation-Strategy-Ref.md",
+    "1-Beginner/02-Phase-2/01-Automation/REFERENCE",
+    "2-Intermediate/03-Phase-3/03-API-Gateways-Security/REFERENCE/API-Gateway-Security-Ref.md",
+    "2-Intermediate/03-Phase-3/03-API-Gateways-Security/REFERENCE",
+    "2-Intermediate/03-Phase-3/02-Observability-Foundations/REFERENCE/Advanced-Observability-Patterns-Ref.md",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/01-File-Operations/README.md",
+    "2-Intermediate/03-Phase-3/02-Observability-Foundations/REFERENCE",
+    "2-Intermediate/02-Phase-2/03-Modern-Operations/05-Serverless-Architecture/REFERENCE/Serverless-IaC-Architecture-Ref.md",
+    "2-Intermediate/02-Phase-2/03-Modern-Operations/05-Serverless-Architecture/REFERENCE",
+    "2-Intermediate/02-Phase-2/03-Modern-Operations/04-Edge-Computing/REFERENCE/Edge-Computing-Architecture-Ref.md",
+    "2-Intermediate/02-Phase-2/03-Modern-Operations/04-Edge-Computing/REFERENCE",
+    "2-Intermediate/02-Phase-2/03-Modern-Operations/03-FinOps-Cost-Management/REFERENCE/FinOps-Architecture-Ref.md",
+    "2-Intermediate/02-Phase-2/03-Modern-Operations/02-AI-Operations/REFERENCE/AI-Ops-Architecture-Ref.md",
+    "2-Intermediate/02-Phase-2/03-Modern-Operations/01-Observability/REFERENCE/Observability-Architecture-Ref.md",
+    "2-Intermediate/02-Phase-2/02-Delivery-and-Governance/05-Automated-Testing/REFERENCE/DevOps-Testing-Strategy-Ref.md",
+    "2-Intermediate/02-Phase-2/02-Delivery-and-Governance/04-Security-Automation/REFERENCE/Vulnerability-Management-Ref.md",
+    "2-Intermediate/02-Phase-2/02-Delivery-and-Governance/03-Governance-and-Policy/REFERENCE/Policy-as-Code-Architecture-Ref.md",
+    "2-Intermediate/02-Phase-2/02-Delivery-and-Governance/02-GitOps-Mastery/REFERENCE/ArgoCD-Architecture-Ref.md",
+    "2-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/REFERENCE/Pipeline-Architecture-Ref.md",
+    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/04-System-Administration/REFERENCE/LVM-Logical-Volume-Management-Ref.md",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/01-File-Operations/assets/file_modes.png",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/01-File-Operations/assets/context_manager.png",
     "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/ed0ce770fbc5b3547eaf0893bbdafc5ae4c217c3eb5d6bd3de284e33dea0d299.png",
-    "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/node.xml",
     "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/f0647ce85f5d2f7aa43d1664bae09706055480e3aa50bd1cf68d0bce459c2b79.png",
     "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/e9c55b9e21882239981c901d230e3c665126f4b022424db543b3c96433d6988f.png",
     "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/c59895ee2606ab3c58f85c4ca524cad7926b137e82072ef9f2cf75ee15b23151.png",
@@ -211,43 +262,6 @@
     "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/cb92e22fa0f3a35b58859964cc59d62bd6eaa25d0623f6b7a28373153ed2d5dc.png",
     "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/b7d312f26f74b94256601b002a186ed533ea8b62461628d04489c74f32f13fbc.png",
     "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/b3929b060191587135a25f5b56a07ee1ed32556c83dcf607816bfb613c9a062d.png",
-    "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/a0e56362c6e658f98db3d7c9623afc807ee8d567c4995101f8b7c50c1526ca1b.png",
-    "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/9535318c7afa22427566714a2b5e5bee10ac5342b4b0fb3f2310befb0f7dbd85.png",
-    "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/1/7eb0f198b6b9faff4a9319f6e92dd59f99d6162326a285bd985443cdec176346.png",
-    "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/subnodes.lst",
-    "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL/1",
-    "2-Intermediate/01-Phase-1/04-Databases/03-MySQL-and-RDS/Commands/Comprehensive MySQL Commands Reference & Diagnostic Guide.md",
-    "2-Intermediate/01-Phase-1/04-Databases/00-Database-Basics/03-DynamoDB-Basics/dynamodb-introduction.md",
-    "2-Intermediate/01-Phase-1/04-Databases/00-Database-Basics/03-DynamoDB-Basics/dynamodb-getting-started.md",
-    "2-Intermediate/01-Phase-1/04-Databases/00-Database-Basics/02-RDS-Basics/rds-introduction.md",
-    "2-Intermediate/01-Phase-1/04-Databases/00-Database-Basics/02-RDS-Basics/rds-getting-started.md",
-    "2-Intermediate/01-Phase-1/04-Databases/00-Database-Basics/01-Database-Basics/relational-vs-nosql.md",
-    "2-Intermediate/01-Phase-1/04-Databases/00-Database-Basics/01-Database-Basics/Choosing the Right Database Type.md",
-    "2-Intermediate/01-Phase-1/04-Databases/00-Database-Basics/01-Database-Basics/Database Concepts and Fundamentals.md",
-    "2-Intermediate/01-Phase-1/04-Databases/resources/PostgreSQL-Cheat-Sheet.pdf",
-    "2-Intermediate/01-Phase-1/04-Databases/MySql/mysql_config.sh",
-    "2-Intermediate/01-Phase-1/04-Databases/MySql/README.md",
-    "2-Intermediate/01-Phase-1/04-Databases/MySql/mysql.sh",
-    "2-Intermediate/01-Phase-1/04-Databases/MySql/mysql-bak.sh",
-    "2-Intermediate/01-Phase-1/04-Databases/07-Real-Life-Scenarios/README.md",
-    "2-Intermediate/01-Phase-1/04-Databases/04-NoSQL-MongoDB-Redis/README.md",
-    "2-Intermediate/01-Phase-1/04-Databases/05-Backup-and-Monitoring/README.md",
-    "2-Intermediate/01-Phase-1/04-Databases/06-Interview-Questions-and-Quizzes/README.md",
-    "2-Intermediate/01-Phase-1/04-Databases/04-NoSQL-MongoDB-Redis/CHALLENGES.md",
-    "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/README.md",
-    "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/PostgreSQL",
-    "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/CHALLENGES.md",
-    "2-Intermediate/01-Phase-1/04-Databases/02-PostgreSQL-DevOps/challenges",
-    "2-Intermediate/01-Phase-1/04-Databases/03-MySQL-and-RDS/Temporary MySql Password.md",
-    "2-Intermediate/01-Phase-1/04-Databases/03-MySQL-and-RDS/Commands",
-    "2-Intermediate/01-Phase-1/04-Databases/03-MySQL-and-RDS/CHALLENGES.md",
-    "2-Intermediate/01-Phase-1/04-Databases/01-Database-Fundamentals/README.md",
-    "2-Intermediate/01-Phase-1/04-Databases/01-Database-Fundamentals/CHALLENGES.md",
-    "2-Intermediate/01-Phase-1/04-Databases/00-Database-Basics/README.md",
-    "2-Intermediate/01-Phase-1/04-Databases/README.md",
-    "2-Intermediate/01-Phase-1/04-Databases/Youtube_Lessons.md",
-    "1-Beginner/01-Phase-1/08-Repository-Management/02-GitLab/03-Advanced-Level/01-Enterprise-Administration/README.md",
-    "1-Beginner/01-Phase-1/08-Repository-Management/02-GitLab/02-Intermediate-Level/04-Security-Scanning/README.md",
     "Untitled.canvas"
   ]
 }

@@ -2,6 +2,23 @@
 
 Welcome to the **Config Management** track. This phase focuses on the **Architecture of Infrastructure**—moving beyond basic resource creation into stateful, declarative, and production-grade environment engineering.
 
+## Core Concept: Provisioning vs. Configuration
+**[REFERENCE: IaC Architecture Patterns](./REFERENCE/IaC-Architecture-Patterns-Ref.md)**
+
+Professional infrastructure is built in layers:
+- **Provisioning**: The "Outside" code (VPC, Subnet, VM Instance) - *Terraform/Pulumi*.
+- **Configuration**: The "Inside" code (OS tuning, Package installation) - *Ansible/Chef*.
+- **State Management**: The "Source of Truth" that prevents duplicate resources and manages dependencies.
+
+## Enterprise Governance: The Immutable Standard
+**[REFERENCE: Immutable Infrastructure Governance](./REFERENCE/Immutable-Infrastructure-Governance-Ref.md)**
+
+At scale, we move from "Mutable" to "Immutable" patterns:
+- **No Snowflakes**: We never update a production server in place. We replace it.
+- **Golden Images**: We "Bake" our security patches and base code into images (AMI) using Packer.
+- **Drift Prevention**: We use state-locking and automated re-provisioning to eliminate manual configuration tweaks.
+- **Bake vs. Fry**: We prioritize build-time initialization (Baking) over run-time startup (Frying) for speed and reliability.
+
 ---
 
 ## 🏗️ The Infrastructure Stack

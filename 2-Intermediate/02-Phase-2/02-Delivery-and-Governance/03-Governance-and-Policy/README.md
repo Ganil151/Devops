@@ -4,6 +4,23 @@
 
 Transitioning from manual checks to automated policy enforcement using industry-standard tools like **Open Policy Agent (OPA)** and **Checkov**. This module focuses on "Static Analysis"—preventing insecure infrastructure from ever being deployed.
 
+## Core Concept: Decoupled Authorization
+**[REFERENCE: Policy-as-Code Architecture](./REFERENCE/Policy-as-Code-Architecture-Ref.md)**
+
+Moving security logic out of the application and into a centralized engine:
+- **Rego Language**: A purpose-built declarative language for expressing logic as code.
+- **The OPA Loop**: Input (JSON Data) + Policy (Rego) = Decision (Allow/Deny).
+- **Static Analysis**: Scanning Infrastructure as Code (Terraform, K8s) *before* deployment to identify risks for pennies.
+
+## Enterprise Governance: The "Fail-Fast" Guardrails
+**[REFERENCE: Policy-as-Code Architecture](./REFERENCE/Policy-as-Code-Architecture-Ref.md)**
+
+Enforcing organizational standards automatically:
+- **Mandatory Tagging**: Requiring every cloud resource to have an 'Owner' and 'CostCenter'.
+- **Network Boundaries**: Automatically denying any Load Balancer creation in private subnets.
+- **Admission Controllers**: Using OPA Gatekeeper to ensure the cluster itself rejects any non-compliant manifests.
+- **Continuous Compliance**: Tracking policy violations in real-time to ensure zero configuration drift.
+
 ## 🎯 Learning Objectives
 
 - ✅ Write basic **Rego** policies for environment validation.

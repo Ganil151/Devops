@@ -2,7 +2,7 @@
 
 > **"In the DevOps world, everything eventually becomes a file. If you can't read, write, and manipulate files safely, you can't automate infrastructure."**
 
-> **⚠️ Missing Image**: *Secure Python File Ops* ('../assets/python_file_ops.png')
+**⚠️ Missing Image**: *Secure Python File Ops* ('../../assets/context_manager.png')
 
 ## 📚 Overview
 
@@ -84,12 +84,12 @@ def save_safe_config(path, data):
 
 Choosing the correct mode is your first line of defense against accidental data loss.
 
-| Mode | Short | Behavior | Risk Level |
-| :--- | :--- | :--- | :--- |
-| **`r`** | Read | Default. Fails if file is missing. | 🟢 Safe |
-| **`w`** | Write | **Wipes file contents instantly.** Creates if missing. | 🔴 Dangerous |
-| **`a`** | Append | Adds to end. Creates if missing. No wiping. | 🟡 Moderate |
-| **`rb` / `wb`**| Binary | Used for images, archives, or compiled binaries. | 🟡 Moderate |
+| Mode        | Short  | Behavior                                               | Risk Level   |
+| :---------- | :----- | :----------------------------------------------------- | :----------- |
+| `r`         | Read   | Default. Fails if file is missing.                     | 🟢 Safe      |
+| `w`         | Write  | **Wipes file contents instantly.** Creates if missing. | 🔴 Dangerous |
+| `a`         | Append | Adds to end. Creates if missing. No wiping.            | 🟡 Moderate  |
+| `rb` / `wb` | Binary | Used for images, archives, or compiled binaries.       | 🟡 Moderate  |
 
 ---
 

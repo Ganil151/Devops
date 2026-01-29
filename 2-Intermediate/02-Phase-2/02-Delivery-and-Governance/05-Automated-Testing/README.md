@@ -2,6 +2,24 @@
 
 Complete guide to testing strategies, tools, and practices in DevOps environments.
 
+## Core Concept: The Testing Pyramid
+**[REFERENCE: DevOps Testing Strategy](./REFERENCE/DevOps-Testing-Strategy-Ref.md)**
+
+Effective testing balances speed, cost, and confidence:
+- **Unit (70%)**: Rapid, isolated logic checks.
+- **Integration (20%)**: Validating component communication.
+- **End-to-End (10%)**: Real user journeys through the whole stack.
+- **Environment Parity**: Ensuring tests run on infrastructure identical to production.
+
+## Enterprise Governance: Quality & Data
+**[REFERENCE: DevOps Testing Strategy](./REFERENCE/DevOps-Testing-Strategy-Ref.md)**
+
+Scaling quality across the organization:
+- **Test Data Management**: Ensuring zero production data enters test environments. Synthetic data generation via Faker.
+- **Shift-Left Performance**: Running load tests (k6) early in the lifecycle to catch latency spikes before release.
+- **Quality Gates**: Mandatory code coverage minimums (e.g., 80%) enforced via CI.
+- **Flaky Test Elimination**: Monitoring and fixing non-deterministic tests to preserve developer trust in the pipeline.
+
 ## Testing Pyramid
 
 ### Unit Testing (70%)

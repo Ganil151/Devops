@@ -4,6 +4,23 @@
 
 Building on the fundamentals, this intermediate guide covers cost optimization strategies, reserved capacity planning, and implementing showback/chargeback models.
 
+## Core Concept: Unit Economics
+**[REFERENCE: Advanced FinOps Architecture](./REFERENCE/Advanced-FinOps-Architecture-Ref.md)**
+
+Moving from "Total Bill" to "Value Efficiency":
+- **Efficiency over Total**: Measuring cost per transaction or per active user rather than just total spend.
+- **Commitment Portfolios**: Balancing On-Demand, Spot, and Savings Plans for maximum ROI.
+- **Resource Hygiene**: Maintaining a clean estate by automatically identifying and purging "zombie" resources (EBS, EIPs).
+
+## Enterprise Governance: Financial Accountability
+**[REFERENCE: Advanced FinOps Architecture](./REFERENCE/Advanced-FinOps-Architecture-Ref.md)**
+
+Integrating finance into the DevOps lifecycle:
+- **Showback & Chargeback**: Implementing clear attribution of cloud costs to specific departments and products.
+- **Cost as Code**: Utilizing tools like Infracost to predict and govern spend within the Pull Request workflow.
+- **Tagging Governance**: Enforcing mandatory billing tags via automated admission controllers and cleanup scripts.
+- **Forecast Accuracy**: Using historical data to create predictable cloud budgets and alert on anomalous spikes.
+
 ![Cost Optimization](./Images/cost-optimization.png)
 
 ---
