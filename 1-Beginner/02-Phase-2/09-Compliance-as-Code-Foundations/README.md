@@ -6,6 +6,16 @@
 
 Compliance as Code (CaC) is the automation of auditing and managing regulatory requirements using software best practices. Instead of manual spreadsheets, we use declarative policies to ensure our infrastructure meets security standards.
 
+## Core Concept: The Immutable Audit
+**[REFERENCE: Policy Architecture](../../REFERENCE/Policy-Architecture-Ref.md)**
+
+It's not enough to be secure; you must *prove* it.
+- **Decoupling**: Business logic does *not* decide authorization. A separate Policy Engine does.
+- **Deterministic**: The same input + same policy = same decision, forever.
+- **Traceability**: Every decision (Allow/Deny) is logged as a JSON event, creating an unforgeable audit trail.
+
+> See **[Policy-Architecture-Ref.md](../../REFERENCE/Policy-Architecture-Ref.md)** for the OPA/Rego architecture.
+
 ## 🎯 Learning Objectives
 
 - ✅ Understand the difference between **Security** and **Compliance**.

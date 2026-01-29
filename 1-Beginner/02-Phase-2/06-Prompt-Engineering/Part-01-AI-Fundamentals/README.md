@@ -6,6 +6,16 @@
 
 In this part, we explore the fundamental mechanics of Large Language Models (LLMs). We move beyond simple questions and learn how to construct **Structured Prompts** using proven frameworks. We also build your professional **Prompt Toolkit**—a collection of reusable personas and instructions for daily DevOps tasks.
 
+## Core Concept: Tokens & Probabilities
+**[REFERENCE: LLM Architecture](../../../REFERENCE/LLM-Architecture-Internals-Ref.md)**
+
+LLMs do not understand English; they understand **Tokens**.
+- **Tokenization**: "DevOps" becomes two integers (e.g., `4521`, `9912`).
+- **Probabilistic Nature**: The model predicts the *next likely token*. It does not "Know" facts; it knows "Correlations".
+- **Implication**: This is why simple prompts fail on math. They are predicting text patterns, not calculating.
+
+> See **[LLM-Architecture-Internals-Ref.md](../../../REFERENCE/LLM-Architecture-Internals-Ref.md)** for the visualizing the Transformer Attention mechanism.
+
 ---
 
 ## 🧠 The Context Window

@@ -6,6 +6,16 @@
 
 GitOps is an operational framework that takes DevOps best practices used for application development, such as version control, collaboration, compliance, and CI/CD, and applies them to infrastructure automation.
 
+## Core Concept: The Reconciliation Loop
+**[REFERENCE: GitOps Architecture](../../REFERENCE/GitOps-Architecture-Ref.md)**
+
+GitOps is not just "storing YAML in Git". It is an active control loop.
+- **Desired State**: What is in Git.
+- **Current State**: What is in the Cluster.
+- **The Operator**: A software agent (like ArgoCD) that constantly calculates `diff(Desired, Current)` and applies fixes.
+
+> See **[GitOps-Architecture-Ref.md](../../REFERENCE/GitOps-Architecture-Ref.md)** for the security benefits of the Pull Model.
+
 ## 🎯 Learning Objectives
 
 - ✅ Understand the core principle: **Git as Source of Truth**.
