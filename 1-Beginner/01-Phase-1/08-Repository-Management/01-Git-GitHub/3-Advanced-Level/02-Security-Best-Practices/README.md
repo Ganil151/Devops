@@ -3,6 +3,16 @@
 ## Overview
 Security is paramount in modern DevOps workflows. This guide covers essential security practices for Git repositories, GitHub configurations, and CI/CD pipelines to protect code, credentials, and infrastructure.
 
+## Enterprise Governance & Compliance
+**[Reference Documentation](../../../REFERENCE/)**
+Repository management at the enterprise level moves beyond simple code storage to **Auditability**, **Traceability**, and **Compliance**.
+
+- **GPG Signing**: Ensures the identity of the committer (Authentication).
+- **Branch Protection**: Enforces the integrity of the release process (Authorization).
+- **Audit Trails**: Who changed what, and when (Accountability).
+
+> See **[Git-Internal-Architecture-Ref.md](../../../REFERENCE/Git-Internal-Architecture-Ref.md)** for how hashing ensures immutable history.
+
 ## Git Security Fundamentals
 
 ### Commit Signing

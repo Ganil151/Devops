@@ -4,6 +4,14 @@
 
 Git is a distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Created by Linus Torvalds in 2005, Git has become the de facto standard for version control in software development and DevOps practices.
 
+## Core Concept: The Philosophy of Git
+**[REFERENCE: Git Internal Architecture](../../../../REFERENCE/Git-Internal-Architecture-Ref.md)**
+
+Beyond the commands, Git is a **Content-Addressable Filesystem**. 
+- **Immutable History**: Every commit is a snapshot, not a delta. SHA-1 hashes ensure that if a single bit changes in history, the commit ID changes.
+- **Single Source of Truth**: For IaC (Infrastructure as Code), the repo *is* the infrastructure.
+
+
 > **⚠️ Missing Image**: *colabo* ('../../../../../../00-Resources/03-Images-Diagrams/git&githubTalk.png')
 
 ## Why Git is Critical for DevOps

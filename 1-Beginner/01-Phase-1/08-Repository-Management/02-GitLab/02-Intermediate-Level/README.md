@@ -4,6 +4,14 @@ Build upon your GitLab fundamentals with advanced features and enterprise-grade 
 
 ## 📋 Learning Objectives
 
+## Enterprise Architecture & Governance
+**[REFERENCE: GitLab vs GitHub Enterprise](../../REFERENCE/GitLab-vs-GitHub-Enterprise-Ref.md)**
+
+At the Intermediate level, GitLab becomes more than a repo—it is a **complete DevOps Platform**.
+- **Runner Architecture**: Understanding how to scale builds using custom runners.
+- **Security-First**: Integrated SAST/DAST implies compliance is automated, not manual.
+
+
 By the end of this level, you will:
 - Design complex CI/CD pipelines with advanced patterns
 - Manage GitLab Runners at scale
