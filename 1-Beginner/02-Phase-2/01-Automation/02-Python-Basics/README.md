@@ -65,6 +65,7 @@ Run any script:
 *Deep-dive documentation for at-a-glance problem solving.*
 
 *   **[Built-in Functions](./REFERENCE/Built-in-Functions-Ref.md)**: Top 20 functions for automation.
+*   **[Operators & Logic](./REFERENCE/Operators-Logic-Ref.md)**: Computational logic, identity vs equality, and precedence.
 *   **[Standard Library Guide](./REFERENCE/Standard-Library-Ref.md)**: SRE toolkit for OS, subprocess, and file manipulation.
 *   **[Automation Patterns](./REFERENCE/Python-Automation-Patterns-Ref.md)**: CLI engineering, retries, and modular reliability logic.
 *   **[Testing & CI Integration](./REFERENCE/Python-DevOps-Testing-Ref.md)**: Pytest standards and mocking cloud dependencies.
