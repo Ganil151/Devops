@@ -3,6 +3,25 @@
 
 Building code is easy. Reliably building, testing, and deploying code thousands of times a day across multiple environments is the real challenge. This module covers the foundational tools and strategies of CI/CD.
 
+## Core Concept: The DAG Execution Model
+**[REFERENCE: Pipeline Orchestration Patterns](./REFERENCE/Pipeline-Orchestration-Patterns-Ref.md)**
+
+Modern CI/CD is not a linear script; it's a **Directed Acyclic Graph (DAG)**.
+- **Parallelization**: Jobs with no dependencies execute simultaneously, reducing total pipeline time.
+- **Fan-Out/Fan-In**: Matrix testing spawns dozens of parallel jobs that converge into a single reporting job.
+- **Artifact Passing**: Jobs are isolated. To share data, you MUST explicitly upload/download artifacts.
+
+> See **[Pipeline-Orchestration-Patterns-Ref.md](./REFERENCE/Pipeline-Orchestration-Patterns-Ref.md)** for advanced patterns including conditional execution and manual gates.
+
+## Enterprise Governance & Security
+**[REFERENCE: Jenkins Architecture](./REFERENCE/Jenkins-Architecture-Deep-Dive-Ref.md)** | **[REFERENCE: Artifact Registry](./REFERENCE/Artifact-Registry-Governance-Ref.md)**
+
+At scale, CI/CD is a **trust boundary**:
+- **Controller Isolation**: The Jenkins Controller must NEVER execute builds (RCE risk). Only agents run untrusted code.
+- **Immutable Artifacts**: Once `app-1.0.0.jar` is published to Nexus, it cannot be overwritten. This guarantees reproducibility.
+- **Credential Segregation**: Use service accounts with minimal permissions. Rotate tokens quarterly.
+- **Snapshot Prohibition**: NEVER deploy `-SNAPSHOT` versions to production. They are mutable and non-reproducible.
+
 ---
 
 ## 🗺️ Curriculum Path

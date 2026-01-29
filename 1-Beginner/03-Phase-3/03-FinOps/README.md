@@ -20,6 +20,27 @@ graph TD
 
 Modern Cloud Engineering isn't just about building fast systems; it's about building **efficient** ones. **FinOps** is the cultural practice of bringing financial accountability to the variable spend model of the cloud. This module bridges the gap between the "Bill" and the "Infrastructure," teaching you how to treat every dollar as a resource to be optimized.
 
+## Core Concept: The Variable Cost Model
+**[REFERENCE: Cost Attribution & Chargeback](./REFERENCE/Cost-Attribution-Chargeback-Ref.md)**
+
+Cloud fundamentally changed the economics of IT:
+- **CapEx → OpEx**: No upfront hardware purchases. Pay-as-you-go.
+- **Shared Responsibility**: A single EC2 instance might serve 3 teams. Who pays?
+- **Unit Economics**: Measure cost per business metric (cost per user, cost per transaction), not just total spend.
+
+> See **[Cost-Attribution-Chargeback-Ref.md](./REFERENCE/Cost-Attribution-Chargeback-Ref.md)** for tagging strategies and showback/chargeback models.
+
+## Enterprise Governance & Optimization
+**[REFERENCE: Cost Optimization Strategies](./REFERENCE/Cost-Optimization-Strategies-Ref.md)**
+
+At scale, cost optimization is a continuous process:
+- **Right-Sizing**: Monitor actual usage. If CPU < 20%, downsize the instance.
+- **Waste Elimination**: Delete zombie resources (unattached EBS volumes, idle load balancers).
+- **Commitment Discounts**: Use Reserved Instances/Savings Plans for baseline workload (30-70% discount).
+- **Architectural Patterns**: Serverless for sporadic workloads, auto-scaling for variable traffic.
+
+> See **[Cost-Optimization-Strategies-Ref.md](./REFERENCE/Cost-Optimization-Strategies-Ref.md)** for the 80/20 rule and the optimization funnel.
+
 ## 🎓 Curriculum Path
 
 1. **[Part 01: Introduction](./Part-01-Introduction/README.md)**: The "Who, what, and why" of Cloud Financial Management.

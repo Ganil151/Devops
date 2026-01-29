@@ -27,6 +27,28 @@ graph TD
 
 **Blockchain DevOps** is the intersection of traditional infrastructure management and decentralized protocols. While the tools (Docker, Kubernetes, Prometheus) remain the same, the **philosophy** shifts. You aren't just keeping a service online; you are participating in a global consensus network where uptime, data integrity, and peer-to-peer connectivity are the highest priorities.
 
+## Core Concept: The Decentralized State Machine
+**[REFERENCE: Blockchain Node Architecture](./REFERENCE/Blockchain-Node-Architecture-Ref.md)**
+
+A blockchain is a **replicated state machine** with no central authority:
+- **State**: The current account balances, smart contract storage, etc.
+- **Transactions**: State transitions (Alice sends 1 ETH to Bob).
+- **Consensus**: The mechanism that ensures all nodes agree on the same state (PoW, PoS, BFT).
+- **P2P Gossip**: How transactions propagate across the network (exponential spread).
+
+> See **[Blockchain-Node-Architecture-Ref.md](./REFERENCE/Blockchain-Node-Architecture-Ref.md)** for node types (Light, Full, Archive, Validator) and consensus mechanisms.
+
+## Enterprise Governance & Operations
+**[REFERENCE: Blockchain Infrastructure & Operations](./REFERENCE/Blockchain-Infrastructure-Operations-Ref.md)**
+
+Running production blockchain infrastructure requires extreme discipline:
+- **Hardware**: NVMe SSDs are mandatory (>10k IOPS). HDDs cannot keep up with state updates.
+- **High Availability**: Run multiple geographically distributed nodes behind a load balancer.
+- **Monitoring**: Track sync status, peer count, disk I/O, and memory. Alert if node falls >100 blocks behind.
+- **Disaster Recovery**: Backup validator keys daily. NEVER run two validators with same keys (slashing risk).
+
+> See **[Blockchain-Infrastructure-Operations-Ref.md](./REFERENCE/Blockchain-Infrastructure-Operations-Ref.md)** for RPC rate limiting, sync strategies, and Kubernetes StatefulSet patterns.
+
 ## 🎓 Curriculum Path
 
 1. **[Part 01: Architecture & Node Types](./Part-01-Architecture-and-Node-Types/README.md)**: The "Who, what, and why" of decentralized infrastructure.
