@@ -2,6 +2,23 @@
 
 Networking is the plumbing of the internet. For a DevOps engineer, understanding how data moves through a network is critical for debugging connectivity and securing services.
 
+## Core Concept: High-Performance Connectivity
+**[REFERENCE: Hybrid Cloud & Enterprise Networking](./REFERENCE/Hybrid-Cloud-Networking-Ref.md)**
+
+Elite networking focus on reliability and line-speed performance:
+- **Hybrid Mesh**: Connecting on-prem and cloud through 100G Direct Connect and Transit Gateways for sub-10ms latency.
+- **Kernel Bypass**: Utilizing DPDK and SR-IOV to process throughput-heavy workloads without kernel bottlenecks.
+- **Static Analysis**: Identifying bottlenecks through RTT, Packet Loss, and Jitter analysis rather than just "is it up?".
+
+## Enterprise Governance: The Zero-Trust Perimeter
+**[REFERENCE: Container & Service Mesh Networking](./REFERENCE/Container-Mesh-Networking-Ref.md)**
+
+Securing the data plane through automated policy and identity:
+- **Service Mesh (mTLS)**: Moving encryption and identity from the application code to the infrastructure sidecar.
+- **Micro-segmentation**: Utilizing CNI (Cilium/Calico) to enforce Layer 7 and Layer 4 "Default Deny" network policies across clusters.
+- **CIDR Hygiene**: Centrally managing IP space across global regions and hybrid links to prevent overlapping CIDRs and routing loops.
+- **Protocol Discovery**: Identifying and blocking unauthorized protocols within the internal network to prevent lateral movement.
+
 ---
 
 ## 📂 Module Structure

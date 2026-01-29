@@ -6,6 +6,23 @@ Welcome to the Database Fundamentals section! This directory contains foundation
 
 Databases are essential components of modern applications, providing structured data storage, retrieval, and management capabilities. This section will guide you through the basics of database concepts and introduce you to AWS's managed database services.
 
+## Core Concept: Cloud Database Architectures
+**[REFERENCE: Cloud Database Architectures & Selection](./REFERENCE/Cloud-Database-Architectures-Ref.md)**
+
+Navigating the strategic landscape of modern data storage:
+- **SQL vs. NoSQL**: Understanding the tradeoff between rigid transactional consistency (ACID) and massive horizontal scalability.
+- **The Selection Logic**: Utilizing specialized database types (Key-Value, Graph, Document) for specific application data patterns to maximize performance.
+- **Distributed CAP Theorem**: Managing the balance between Consistency, Availability, and Partition Tolerance in global-scale operations.
+
+## Enterprise Governance: Data Protection & Reliability
+**[REFERENCE: Database Governance, Reliability & Security](./REFERENCE/Database-Governance-Reliability-Ref.md)**
+
+Scaling database management with high-maturity reliability and security guardrails:
+- **Resilient Multi-AZ Design**: Implementing synchronous failover and asynchronous read replicas to satisfy zero-downtime SLAs.
+- **Zero-Trust Data Security**: Hardening the "Data Layer" through private networking, KMS encryption, and automated secret rotation.
+- **Proof-of-Recovery**: Moving beyond basic backups to automated Point-in-Time Recovery (PITR) validation and strict audit logging for compliance (SOC2/HIPAA).
+
+---
 ## Learning Path
 
 ### 1. Database Basics

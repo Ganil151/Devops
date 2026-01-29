@@ -2,6 +2,23 @@
 
 **DevSecOps** integrates security practices throughout the entire DevOps lifecycle - from planning and development to deployment and operations. Security is everyone's responsibility, not just a final gate.
 
+## Core Concept: The Secure Supply Chain
+**[REFERENCE: Supply Chain Security (SLSA)](./REFERENCE/Supply-Chain-Security-SLSA-Ref.md)**
+
+Protecting the artifacts and the build process from modern injection attacks:
+- **SLSA Standards**: Implementing verifiable build levels (1-4) to ensure the integrity of your binaries.
+- **Artifact Signing**: Utilizing Cosign and Sigstore for keyless, OIDC-based image signing and verification.
+- **SBOM Governance**: Maintaining a real-time inventory of every dependency across your enterprise fleet.
+
+## Enterprise Governance: Runtime Vigilance
+**[REFERENCE: Runtime Security & IR](./REFERENCE/Runtime-Security-Incident-Response-Ref.md)**
+
+Moving from static prevention to active, automated defense in the production cluster:
+- **eBPF-Driven Visibility**: Utilizing Falco and eBPF probes for line-speed detection of anomalous system calls and network behavior.
+- **Automated Containment**: Chaining security alerts to serverless functions for millisecond-speed isolation of compromised pods.
+- **Binary Authorization**: Enforcing a "Zero-Trust" policy where no image runs without valid cryptographic provenance.
+- **Immutability Enforcement**: Monitoring for filesystem drift and enforcing read-only root filesystems across all production namespaces.
+
 ## 🎯 What is DevSecOps?
 
 DevSecOps = **Development** + **Security** + **Operations**

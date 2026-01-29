@@ -2,6 +2,23 @@
 
 DevOps is constantly evolving. This module explores cutting-edge technologies and specialized domains including MLOps, Web3, SaaS/PaaS, serverless, and edge computing.
 
+
+## Core Concept: Intelligent & Decentralized Systems
+**[REFERENCE: Intelligent & Decentralized Systems](./REFERENCE/Intelligent-Decentralized-Systems-Ref.md)**
+
+Navigating the convergence of machine learning and blockchain infrastructure:
+- **MLOps Lifecycles**: Standardizing the flow from data engineering to production inference with strict reproducibility.
+- **Decentralized Infrastructure**: Operating blockchain nodes and smart contract pipelines in a high-availability enterprise environment.
+- **Security in New Frontiers**: Protecting against model poisoning and ensuring smart contract integrity.
+
+## Enterprise Governance: Modern Platform Delivery
+**[REFERENCE: Modern Platform Delivery Patterns](./REFERENCE/Modern-Platform-Delivery-Patterns-Ref.md)**
+
+Scaling SaaS, Serverless, and Edge architectures with fiscal and operational discipline:
+- **Multi-Tenant Governance**: Implementing robust isolation models (Silo vs. Pool) for scalable SaaS applications.
+- **Edge-First Architectures**: Leveraging CDN-level compute and local data processing for global low-latency user experiences.
+- **Serverless Economics**: Transitioning from fixed-cost servers to usage-based, event-driven consumption models with auto-scaling to zero.
+
 ---
 
 ## 📚 Core Modules

@@ -2,6 +2,23 @@
 
 As microservices scale, the "Network" becomes the most complex and fragile part of your system. Service Mesh technology decouples networking logic (encryption, retries, routing) from the application code by using a sidecar proxy.
 
+## Core Concept: Decoupled Networking
+**[REFERENCE: Service Mesh Architecture](./REFERENCE/Service-Mesh-Architecture-Ref.md)**
+
+Managing complex communication through a unified Control Plane:
+- **Control vs. Data Plane**: Utilizing Istiod to govern a global fleet of Envoy proxies.
+- **Sidecar Lifecycle**: Understanding the transparent injection of proxies via Kubernetes Admission Webhooks.
+- **Traffic Steering**: Implementing advanced VirtualServices and DestinationRules for path-based routing and circuit breaking.
+
+## Enterprise Governance: Zero-Trust Identity
+**[REFERENCE: Zero-Trust Workload Identity](./REFERENCE/Zero-Trust-Workload-Identity-Ref.md)**
+
+Securing the data plane through cryptographically provable identities:
+- **SPIFFE/SPIRE Standards**: Assigning unique, verifiable identities to every workload regardless of platform.
+- **Strict mTLS**: Enforcing mutual TLS encryption and authentication for all internal (East-West) traffic.
+- **Authorization Guardrails**: Moving from IP-based firewalls to identity-based policies (RBAC) at the proxy level.
+- **Namespace Air-Gapping**: Using the mesh to enforce strict isolation between sensitive business domains.
+
 ---
 
 ## 🏛️ The Core Concept

@@ -2,6 +2,23 @@
 
 > **Advanced monitoring, logging, and distributed tracing**
 
+## Core Concept: The Unified Observability Fabric
+**[REFERENCE: Observability Strategy & Architecture](./REFERENCE/Observability-Strategy-Architecture-Ref.md)**
+
+Moving beyond simple monitoring to deep systems understanding:
+- **Unified Data Model**: Utilizing OpenTelemetry to bridge metrics, logs, and traces into a single correlated context.
+- **SLO-Driven Operations**: Shifting focus from "noisy alerts" to business-aligned Service Level Objectives.
+- **High-Cardinality Analysis**: Enabling granular debugging through advanced metric and trace indexing.
+
+## Enterprise Governance: Observability Compliance
+**[REFERENCE: Log Aggregation & Compliance](./REFERENCE/Log-Aggregation-Compliance-Ref.md)**
+
+Scaling visibility while maintaining security and cost control:
+- **Centralized Audit Trails**: Ensuring every API call and system change is immutably recorded for regulatory proof.
+- **Cost-Optimized Retention**: Implementing multi-tier storage strategies (Loki/S3) to balance troubleshooting speed with long-term cost.
+- **PII Redaction & Security**: Automatically stripping sensitive data at the edge before it enters the storage backend.
+- **Standardized Metadata**: Enforcing consistent labeling across the fleet to enable global dashboarding and chargeback.
+
 ---
 
 ## 📚 Modules in This Part

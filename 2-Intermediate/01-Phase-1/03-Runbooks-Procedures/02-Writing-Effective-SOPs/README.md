@@ -2,6 +2,24 @@
 
 A **Standard Operating Procedure (SOP)** is the blueprint for operational consistency. This module covers how to transition from "Tribal Knowledge" to professional, version-controlled documentation.
 
+## Core Concept: The Docs-as-Code Architecture
+**[REFERENCE: SOP Architecture & Documentation Lifecycle](./REFERENCE/SOP-Architecture-Lifecycle-Ref.md)**
+
+Professional documentation is more than just text; it is an engineered product:
+- **Imperative Logic**: Constructing instructions using the imperative mood and atomic steps to eliminate execution ambiguity.
+- **SDRY (Single Source of Documentation Truth)**: Building modular, reusable content fragments that ensure consistency across hundreds of pages.
+- **Visual Mapping**: Leveraging Diagrams-as-Code (Mermaid.js) to illustrate complex decision trees and process flows.
+
+## Enterprise Governance: Quality & Compliance Guardrails
+**[REFERENCE: SOP Governance, Quality & Compliance](./REFERENCE/SOP-Governance-Compliance-Ref.md)**
+
+Ensuring documentation is reliable, secure, and compliant with global standards:
+- **The "3 AM Test"**: Validating that procedures are resilient to cognitive stress and human error during high-stakes incidents.
+- **Gameday Validation**: Implementing continuous improvement via bystander testing and fault-injection drills.
+- **Regulatory Integrity**: Aligning operational steps with SOC2, HIPAA, and PCI-DSS frameworks while maintaining strict secret hygiene.
+
+---
+
 ## 📚 Learning Path
 
 1.  **[Philosophy and Mindset](./01-Philosophy-and-Mindset/README.md)**: The goal of cognitive load reduction and the 3 AM Test.

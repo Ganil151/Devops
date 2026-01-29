@@ -2,6 +2,23 @@
 
 An incident is any unplanned interruption to an IT service. This module covers how to manage incidents with military-grade precision to prioritize stability and learn from every failure.
 
+## Core Concept: The Incident Lifecycle & Command
+**[REFERENCE: Incident Response Lifecycle & Command](./REFERENCE/Incident-Response-Lifecycle-Ref.md)**
+
+Managing operational chaos through structured hierarchies and repeatable lifecycles:
+- **Incident Command System (ICS)**: Establishing clear roles (IC, Scribe, Comms) to decouple technical work from operational coordination.
+- **Triage & Restorative Mitigation**: Rapidly classifying severity and applying "Quickest Defensible Actions" to restore service before a root cause is fully identified.
+- **Operational Loop**: Navigating from initial detection to stable resolution with closed-loop communication.
+
+## Enterprise Governance: Incident Integrity & Learning
+**[REFERENCE: Enterprise Incident Governance & Communication](./REFERENCE/Enterprise-Incident-Governance-Ref.md)**
+
+Transforming outages into organizational growth through consistency and transparency:
+- **Severity Governance**: Standardizing P0-P4 definitions to align engineering urgency with business impact.
+- **Strategic Communication**: Managing stakeholder expectations and status pages through structured internal and external messaging protocols.
+- **Blameless Post-Incident Reviews**: Utilizing "The Five Whys" and blameless cultures to convert technical debt into actionable reliability improvements.
+
+---
 ## 📚 Learning Path
 
 1.  **[Incident Fundamentals](./01-Incident-Fundamentals/README.md)**: Definitions, lifecycle, and the golden rules of incident response.

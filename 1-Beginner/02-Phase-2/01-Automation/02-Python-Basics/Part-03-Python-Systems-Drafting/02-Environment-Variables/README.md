@@ -2,14 +2,12 @@
 
 > **"Code is static, but environments are dynamic. If you hardcode a credentials or a URL, you've built a fragile script. If you use environment variables, you've built a portable tool."**
 
-> **⚠️ Missing Image**: *Python Ecosystem* ('../assets/python_ecosystem.png')
+**⚠️ Missing Image**: *Python Ecosystem* ('../../assets/python_ecosystem.png')
 
 ## 📚 Overview
-
 Environment variables are the "Gold Standard" for configuring modern, cloud-native applications. They allow you to change a script's behavior—switching from a development database to a production one—without changing a single line of code. This fulfills a core principle of the **12-Factor App** methodology.
 
 In DevOps, you will use environment variables to:
-
 * Pass **Secrets** (API keys, passwords) securely to containers.
 * Toggle **Feature Flags** or Log Levels (`DEBUG` vs `INFO`) in CI/CD.
 * Define **Environment Targets** (`staging` vs `production`) for deployment scripts.
@@ -17,9 +15,7 @@ In DevOps, you will use environment variables to:
 This module covers the `os` module for basic handling and the `python-dotenv` library for managing local secrets safely.
 
 ## 🎓 Learning Objectives
-
 By the end of this module, you will:
-
 * ✅ Master the **Safest Access Pattern** using `os.environ.get()`.
 * ✅ Implement **Strict Validation** for mandatory production variables.
 * ✅ Management **Local Secrets** using `.env` files and `python-dotenv`.

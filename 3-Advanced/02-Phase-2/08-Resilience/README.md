@@ -2,6 +2,23 @@
 
 In Advanced DevOps, we assume that failure will happen. This phase focuses on building "Anti-fragile" systems that can withstand and even improve from chaotic network, compute, and human failures.
 
+
+## Core Concept: Anti-Fragile Systems
+**[REFERENCE: Chaos Engineering & System Resilience](./REFERENCE/Chaos-Engineering-Architecture-Ref.md)**
+
+Building systems that thrive on turbulence through controlled experimentation:
+- **Steady State Analysis**: Defining what a "healthy" system looks like under load to detect subtle failures.
+- **Fault Injection**: Intentionally introducing network latency, node failures, and resource exhaustion to reveal hidden weaknesses.
+- **Blast Radius Mitigation**: Ensuring that experiments are isolated and do not impact global user experience.
+
+## Enterprise Governance: Continuity & Recovery
+**[REFERENCE: Business Continuity & Disaster Recovery](./REFERENCE/Business-Continuity-DR-Ref.md)**
+
+Ensuring the business survives catastrophic infrastructure failure:
+- **Defined Recovery Metrics (RTO/RPO)**: Aligning technical recovery capabilities with business-critical SLAs.
+- **Automated Metadata Backups**: Utilizing Velero to ensure cluster state and persistent data are replicated to immutable storage.
+- **Cross-Region Failover Architecture**: Designing global traffic steering and data replication to enable "Push-Button" disaster recovery.
+
 ---
 
 ## 🏛️ The Core Concept

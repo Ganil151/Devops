@@ -2,6 +2,23 @@
 
 At the advanced level, Linux is treated as a highly tunable performance engine and a hardened fortress. This module covers kernel tuning, advanced security models (SELinux/AppArmor), and deep performance tracing.
 
+## Core Concept: The Observability Engine
+**[REFERENCE: Linux Performance & Observability](./REFERENCE/Linux-Performance-Observability-Ref.md)**
+
+Mastering the kernel's internal mechanics for peak efficiency:
+- **Kernel Tuning (`sysctl`)**: Optimizing network buffers, file limits, and memory swappiness for heavy cloud workloads.
+- **eBPF Tracing**: Utilizing high-performance kernel probes to diagnose latency and bottlenecks without system overhead.
+- **The Performance Stack**: Moving beyond `top` to a structured analysis of system calls, context switching, and I/O wait times.
+
+## Enterprise Governance: Hardened Infrastructure
+**[REFERENCE: Linux Security Hardening](./REFERENCE/Linux-Security-Hardening-Ref.md)**
+
+Protecting the operating system through multi-layered defense and auditability:
+- **Mandatory Access Control (MAC)**: Enforcing SELinux or AppArmor policies to prevent lateral movement even if root is compromised.
+- **Kernel Hardening**: Implementing filesystem integrity flags (`noexec`, `nosuid`) and disabling insecure protocols.
+- **Deep Auditing (`auditd`)**: Tracking every sensitive system call and file modification for regulatory compliance (SOC2/PCI-DSS).
+- **Process Whitelisting**: Utilizing daemons like `fapolicyd` to ensure only trusted, signed binaries can execute in production.
+
 ---
 
 ## 📂 Module Structure

@@ -8,67 +8,67 @@
 
 This phase contains **34 enterprise-level modules** organized into **11 strategic Parts**:
 
-### [Part 01: Service Mesh Architecture](./Part-01-Service-Mesh/)
+### [Part 01: Service Mesh Architecture](./01-Service-Mesh/)
 Advanced microservices networking, security, and observability
 
 **Modules**: 3  
 **Estimated Time**: 24-36 hours
 
-### [Part 02: GitOps & Fleet Management](./Part-02-GitOps-Fleet/)
+### [Part 02: GitOps & Fleet Management](./02-GitOps-Fleet/)
 Declarative operations and multi-cluster deployment
 
 **Modules**: 2  
 **Estimated Time**: 16-24 hours
 
-### [Part 03: Multi-Cluster & Advanced Networking](./Part-03-Multi-Cluster/)
+### [Part 03: Multi-Cluster & Advanced Networking](./03-Multi-Cluster/)
 Distributed Kubernetes and eBPF-based networking
 
 **Modules**: 2  
 **Estimated Time**: 16-24 hours
 
-### [Part 04: Platform Engineering](./Part-04-Platform-Engineering/)
+### [Part 04: Platform Engineering](./04-Platform-Engineering/)
 Internal developer platforms and database reliability
 
 **Modules**: 2  
 **Estimated Time**: 16-24 hours
 
-### [Part 05: Security & Compliance](./Part-05-Security-Compliance/)
+### [Part 05: Security & Compliance](./05-Security-Compliance/)
 Enterprise security, secrets management, and compliance automation
 
 **Modules**: 6  
 **Estimated Time**: 48-72 hours
 
-### [Part 06: Observability Stack](./Part-06-Observability-Stack/)
+### [Part 06: Observability Stack](./06-Observability-Stack/)
 Advanced monitoring, logging, and distributed tracing
 
 **Modules**: 2  
 **Estimated Time**: 16-24 hours
 
-### [Part 07: FinOps & Cost Governance](./Part-07-FinOps-Governance/)
+### [Part 07: FinOps & Cost Governance](./07-FinOps-Governance/)
 Cloud financial operations and cost optimization
 
 **Modules**: 2  
 **Estimated Time**: 16-24 hours
 
-### [Part 08: Resilience Engineering](./Part-08-Resilience/)
+### [Part 08: Resilience Engineering](./08-Resilience/)
 Chaos engineering, disaster recovery, and incident management
 
 **Modules**: 3  
 **Estimated Time**: 24-36 hours
 
-### [Part 09: Advanced Automation](./Part-09-Advanced-Automation/)
+### [Part 09: Advanced Automation](./09-Advanced-Automation/)
 Enterprise automation, IaC, and performance testing
 
 **Modules**: 5  
 **Estimated Time**: 40-60 hours
 
-### [Part 10: AI-Driven Operations](./Part-10-AI-Operations/)
+### [Part 10: AI-Driven Operations](./10-AI-Operations/)
 Machine learning for operations and intelligent automation
 
 **Modules**: 1  
 **Estimated Time**: 8-12 hours
 
-### [Part 11: Enterprise Cloud Architecture](./Part-11-Cloud-Architecture/)
+### [Part 11: Enterprise Cloud Architecture](./11-Cloud-Architecture/)
 Multi-cloud patterns, microservices, and identity management
 
 **Modules**: 4  
@@ -157,4 +157,4 @@ Completion of this phase prepares you for roles such as:
 
 ---
 
-**Ready to elevate your skills?** Start with [Part 1: Service Mesh Architecture](./Part-01-Service-Mesh/)!
+**Ready to elevate your skills?** Start with [Part 1: Service Mesh Architecture](./01-Service-Mesh/)!

@@ -2,6 +2,23 @@
 
 > **Enterprise security, secrets management, and compliance automation**
 
+## Core Concept: Identity-Driven Security
+**[REFERENCE: Enterprise Secrets \u0026 Vault](./REFERENCE/Enterprise-Secrets-Architecture-Ref.md)**
+
+Transitioning from static passwords to a dynamic, identity-based security model:
+- **Dynamic Credentials**: Utilizing HashiCorp Vault to generate short-lived, just-in-time secrets for databases and cloud APIs.
+- **Identity-First Auth**: Linking application identity (K8s ServiceAccounts) directly to security policies.
+- **Cryptography as a Service**: Offloading encryption and key management to a central "Transit" engine to prevent key exfiltration.
+
+## Enterprise Governance: Continuous Compliance
+**[REFERENCE: Policy as Code \u0026 Compliance](./REFERENCE/Policy-as-Code-Compliance-Ref.md)**
+
+Moving beyond static audits to real-time, automated policy enforcement:
+- **Policy as Code (OPA/Rego)**: Encoding regulatory requirements (SOC2, PCI-DSS) into machine-readable logic enforced at the API gate.
+- **Admission Control Guardrails**: Utilizing OPA Gatekeeper to block non-compliant infrastructure and workloads before they reach the cluster.
+- **Automated Evidence Collection**: Systematically capturing API logs and configuration snapshots to provide continuous proof of compliance.
+- **Compensating Controls**: Implementing automated "Self-Healing" security rules that remediate violations (e.g., closing public ports) within seconds of detection.
+
 ---
 
 ## 📚 Modules in This Part

@@ -2,6 +2,23 @@
 
 > **Declarative operations and multi-cluster deployment**
 
+## Core Concept: Pull-Based Reconciliation
+**[REFERENCE: Advanced GitOps Architecture](./REFERENCE/Advanced-GitOps-Patterns-Ref.md)**
+
+GitOps shifts the paradigm from pushing changes to a "Continuous Reconciliation" model:
+- **Desired vs. Actual**: The GitOps agent constantly ensures the cluster state matches the Git repository.
+- **Pull-Based Security**: Eliminating the need for external systems to hold cluster credentials, reducing the attack surface.
+- **Drift Detection**: Automatically identifying and reverting manual cluster modifications to maintain the source of truth in Git.
+
+## Enterprise Governance: Fleet Orchestration
+**[REFERENCE: Fleet Management \u0026 Scale](./REFERENCE/Fleet-Management-Scale-Ref.md)**
+
+Scaling operations across hundreds of clusters without operational linear growth:
+- **ApplicationSets**: Utilizing dynamic generators to automate application delivery across entire cluster fleets based on labels and properties.
+- **Baseline Enforcement**: Ensuring every cluster in the fleet is automatically provisioned with core security, networking, and observability tools.
+- **Hub-and-Spoke Governance**: Centralizing policy and control in a management cluster while delegating execution to the spokes.
+- **OCI-Driven Supply Chain**: Extending the secure supply chain by using signed OCI artifacts as the source for Kubernetes manifests.
+
 ---
 
 ## 📚 Modules in This Part

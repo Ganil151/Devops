@@ -2,6 +2,24 @@
 
 Master the art of operational documentation to reduce MTTR, eliminate toil, and empower your SRE team.
 
+## Core Concept: The Operational Source-of-Truth
+**[REFERENCE: Runbook Maturity & Operational Standards](./REFERENCE/Runbook-Maturity-Standards-Ref.md)**
+
+Professional operations require moving beyond "tribal knowledge" into structured, version-controlled documentation:
+- **Operational Hierarchy**: Distinguishing between Policies, SOPs, and actionable Runbooks to ensure the right tool is used for the job.
+- **Maturity Lifecycle**: Transitioning from static text to "Executable Runbooks" and autonomic self-healing systems.
+- **Docs-as-Code**: Managing documentation with the same rigor as application code—versioned in Git, peer-reviewed, and continuously tested.
+
+## Enterprise Governance: Incident Response Integrity
+**[REFERENCE: Incident Response Anatomy & Runbook Design](./REFERENCE/Incident-Response-Anatomy-Ref.md)**
+
+Building a documentation fabric that withstands the pressure of production outages:
+- **Design for Stress**: Implementing "The 3:00 AM Rule" to minimize cognitive load through checklists, code blocks, and unambiguous steps.
+- **Guardrails & Safety**: Highlighting destructive actions and mandatory validation steps to prevent "manual errors" during high-stakes remediation.
+- **Audit & Compliance Audit**: Ensuring documentation meets SOC2/HIPAA standards through quarterly recertification and secure secret hygiene.
+
+---
+
 ## 📚 Learning Path
 
 1.  **[Philosophy and Goals](./01-Philosophy-and-Goals/README.md)**: Why we document and the goal of MTTR reduction.

@@ -29,13 +29,13 @@ Production Linux systems require defense in depth:
 ## 📂 Module Structure
 
 ### 🚀 Intermediate Topics
-- [System Administration](./System-Administration/README.md): Master the core engine - Systemd, Processes, Storage, and Identity.
+- [System Administration](./03-System-Administration/README.md): Master the core engine - Systemd, Processes, Storage, and Identity.
 
 - [Shell Scripting](../02-Automation/01-Shell-Scripting-Basics/): Writing reusable Bash scripts and logic.
 
-- [Linux Networking](./Networking/): Troubleshooting interfaces, routing, and ports.
+- [Linux Networking](./01-Networking/README.md): Troubleshooting interfaces, routing, and ports.
 
-- [Intermediate SSH](./SSH/): Keys, config files, and tunneling.
+- [Intermediate SSH](./02-SSH/README.md): Keys, config files, and tunneling.
 
 ---
 

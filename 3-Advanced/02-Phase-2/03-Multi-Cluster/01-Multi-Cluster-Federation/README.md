@@ -6,6 +6,23 @@
 
 Modern enterprises don't run on a single Kubernetes cluster. They run on dozens or hundreds across multiple clouds (AWS, GCP, Azure) and on-premises data centers. Multi-Cluster Management (MCM) is the discipline of treating these as a unified fleet.
 
+## Core Concept: Declarative Fleet Management
+**[REFERENCE: Multi-Cluster \u0026 CAPI Architecture](./REFERENCE/Multi-Cluster-CAPI-Architecture-Ref.md)**
+
+Treating infrastructure as code extends beyond the application to the cluster lifecycle itself:
+- **ClusterAPI (CAPI)**: Managing clusters as native Kubernetes objects, allowing for automated provisioning across AWS, GCP, and vSphere.
+- **The Management Hub**: Utilizing a central, high-availability cluster to orchestrate the creation and health of the entire global fleet.
+- **Bootstrapping Providers**: Automating the transformation of raw virtual machines into secured, ready-to-use Kubernetes nodes.
+
+## Enterprise Governance: Global Consistency
+**[REFERENCE: Multi-Cluster \u0026 CAPI Architecture](./REFERENCE/Multi-Cluster-CAPI-Architecture-Ref.md)**
+
+Scaling the fleet without compromising security or architectural standards:
+- **Infrastructure Providability**: Mandating version-controlled CAPI manifests for all cluster creation to eliminate "snowflake" environments.
+- **Global Identity (OIDC)**: Centralizing RBAC and identity management across every cluster in the organization's portfolio.
+- **Baseline Enforcement**: Ensuring that every cluster—regardless of cloud provider—is initialized with a standardized set of security and observability tools.
+- **Fault Tolerance**: Designing for regional isolation while maintaining centralized management visibility.
+
 ## 🎯 Learning Objectives
 
 - ✅ Master **ClusterAPI (CAPI)** for declarative cluster provisioning.

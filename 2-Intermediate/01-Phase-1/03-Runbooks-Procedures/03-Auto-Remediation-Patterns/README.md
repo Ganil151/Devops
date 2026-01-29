@@ -2,6 +2,24 @@
 
 In advanced DevOps, the ultimate goal is to move beyond manual intervention. This module covers how to build **self-healing infrastructure** that maintains high availability without human fatigue.
 
+## Core Concept: The Closed-Loop Lifecycle
+**[REFERENCE: Auto-Remediation Architectures & Self-Healing](./REFERENCE/Auto-Remediation-Architectures-Ref.md)**
+
+Building systems that can detect, decide, and recover autonomously:
+- **Zero-Touch Operations**: Shifting the SRE focus from fixing incidents to engineering the software that fixes incidents.
+- **Closed-Loop Feedback**: Implementing robust "Observe-Decide-Act-Verify" cycles to ensure stability and auditability.
+- **Pattern-Based Healing**: Standardizing responses for common failure modes like storage exhaustion, memory leaks, and service hangs.
+
+## Enterprise Governance: Safety & Automation Guardrails
+**[REFERENCE: Safety, Governance & Self-Healing Guardrails](./REFERENCE/Safety-Governance-Self-Healing-Ref.md)**
+
+Protecting the fleet from the potential side effects of automated "fixes":
+- **Circuit Breakers & Rate Limits**: Preventing cascading failures by limiting the blast radius of automated actions.
+- **Human-in-the-Loop Bridging**: Utilizing Slack/ChatOps to provide human oversight for high-risk, automated remediation paths.
+- **Chaos-Driven Validation**: Proactively stress-testing self-healing logic using fault injection and gameday drills.
+
+---
+
 ## 📚 Learning Path
 
 1.  **[Self-Healing Philosophy](./01-Self-Healing-Philosophy/README.md)**: The vision of zero-touch operations and the 80/20 rule.

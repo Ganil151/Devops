@@ -4,6 +4,22 @@
 
 This advanced guide covers enterprise-scale FinOps frameworks, multi-cloud cost management, unit economics, and building a sustainable FinOps culture.
 
+## Core Concept: Unit Economics & Strategic Value
+**[REFERENCE: FinOps Unit Economics & Value Strategy](./REFERENCE/FinOps-Unit-Economics-Strategy-Ref.md)**
+
+Transforming cloud spend from a "line item cost" into a business value engine:
+- **Unit Cost Normalization**: Strategically mapping spend across AWS, Azure, and GCP into unified business value metrics.
+- **Value-Driven Forecasting**: Predicting future infra needs based on business growth markers (orders, users, transactions) rather than historical sprawl.
+- **Strategic Sourcing**: Maximizing commitment coverage (RI/SP) through global, multi-cloud procurement strategies.
+
+## Enterprise Governance: Cultural Accountability
+**[REFERENCE: Enterprise FinOps Governance & Cultural Alignment](./REFERENCE/Enterprise-FinOps-Governance-Ref.md)**
+
+Embedding financial discipline into the engineering DNA of the organization:
+- **Automated Financial Guardrails**: Implementing "Shift-Left Cost Estimation" in CI/CD pipelines to block or flag expensive changes before they hit production.
+- **Decentralized Cost Ownership**: Shifting from centralized "Cloud Cops" to empowered engineering teams that manage their own P&L.
+- **Metadata-Driven Governance**: Ensuring absolute cost attribution through mandatory resource tagging and automated remediation of "unowned" resources.
+
 ![FinOps Framework](./Images/finops-framework.png)
 
 ---

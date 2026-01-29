@@ -1,3 +1,26 @@
+# Prompt Engineering for Advanced Automation
+
+> **Agentic AI systems, autonomous workflows, and intelligent DevOps guardrails**
+
+## Core Concept: Agentic Systems & Continuous Reasoning
+**[REFERENCE: Prompt Engineering & Agentic Workflows](./REFERENCE/Prompt-Engineering-Agentic-Workflows-Ref.md)**
+
+At the enterprise level, Prompt Engineering transitions from manual interaction to **Agentic Systems** that can plan, execute, and self-correct across highly complex environments:
+- **Autonomous Reasoning (ReAct)**: Utilizing specialized "Thought-Action-Observation" loops to interact with CLIs, APIs, and clusters without human intervention.
+- **Context-Enriched Prompting (RAG)**: Augmenting LLM "brains" with real-time enterprise logs, documentation, and codebase context to eliminate hallucinations.
+- **Task Orchestration**: Breaking complex DevOps goals (e.g., "Migrate this app to AWS") into verifiable sub-tasks managed by AI planners.
+
+## Enterprise Governance: The Governed AI Guardrail
+**[REFERENCE: AI Governance & DevOps Guardrails](./REFERENCE/AI-Governance-DevOps-Guardrails-Ref.md)**
+
+Scaling AI assistance while maintaining strict security, cost, and safety standards:
+- **Multi-Agent Orchestration**: Implementing "Red-Team/Blue-Team" workflows where agent outputs are rigorously critiqued by independent security agents.
+- **Strict Execution Sandboxing**: Ensuring all AI-generated code and commands are validated and executed in ephemeral, isolated environments.
+- **PII & Data Redaction**: Automatically stripping sensitive tokens and metrics at the proxy level before they reach external LLM providers.
+- **Token Economy & Cost Control**: Implementing semantic caching and model-tiering to optimize AI performance-to-cost ratios.
+
+---
+
 At the enterprise level, Prompt Engineering transitions from manual interaction to **Agentic Systems** that can plan, execute, and self-correct across highly complex environments.
 
 ---
