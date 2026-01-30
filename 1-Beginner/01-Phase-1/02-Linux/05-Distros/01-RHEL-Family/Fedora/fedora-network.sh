@@ -13,6 +13,9 @@ CUSTOM_SSH_PORT=2222
 SCAN_ONLY=false
 
 # --- Initialization & Safety ---
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
 [[ $EUID -ne 0 ]] && echo "This script must be run as root." && exit 1
 
 while [[ "$#" -gt 0 ]]; do
@@ -78,23 +81,42 @@ harden_kernel() {
 
 # --- 2. Firewalld Orchestration ---
 harden_firewall() {
-    log_action "Configuring Firewalld..."
+    log_action "Starting Firewalld Hardening..."
     if [ "$SCAN_ONLY" = false ]; then
-        # Set default zone to DROP
-        firewall-cmd --set-default-zone=drop
+        log_action "Setting default zone to 'drop' to deny all incoming traffic by default."
+        firewall-cmd --set-default-zone=drop --permanent
         
-        # Enable essential services
-        firewall-cmd --permanent --zone=drop --add-port=${CUSTOM_SSH_PORT}/tcp
-        firewall-cmd --permanent --zone=drop --add-service=https
+        # --- CRITICAL: SSH Port Configuration ---
+        log_action "Configuring firewall for custom SSH port: ${CUSTOM_SSH_PORT}"
+        if ! firewall-cmd --zone=drop --query-port=${CUSTOM_SSH_PORT}/tcp --permanent; then
+            firewall-cmd --zone=drop --add-port=${CUSTOM_SSH_PORT}/tcp --permanent
+        fi
+        # Remove standard SSH port if it exists in any zone to enforce custom port usage
+        firewall-cmd --remove-service=ssh --permanent >/dev/null 2>&1 || true
+        
+        log_action "IMPORTANT: This script opens port ${CUSTOM_SSH_PORT} for SSH."
+        log_action "You MUST now edit /etc/ssh/sshd_config and change the 'Port' directive:"
+        log_action "1. sudo nano /etc/ssh/sshd_config"
+        log_action "2. Change '#Port 22' to 'Port ${CUSTOM_SSH_PORT}' (and uncomment it)"
+        log_action "3. Restart SSHD: sudo systemctl restart sshd"
+        log_action "FAILURE TO DO SO WILL LOCK YOU OUT OF SSH."
+
+        log_action "Allowing HTTPS traffic."
+        if ! firewall-cmd --zone=drop --query-service=https --permanent; then
+            firewall-cmd --zone=drop --add-service=https --permanent
+        fi
         
         # IP Set for Malicious Subnets (Example: known Bogon list placeholder)
-        firewall-cmd --permanent --new-ipset=blacklist --type=hash:net
-        firewall-cmd --permanent --ipset=blacklist --add-entry=192.0.2.0/24 
-        firewall-cmd --permanent --zone=drop --add-rich-rule='rule family="ipv4" source ipset="blacklist" drop'
+        if ! firewall-cmd --get-ipsets --permanent | grep -q "blacklist"; then
+            log_action "Creating 'blacklist' ipset for malicious subnets."
+            firewall-cmd --new-ipset=blacklist --type=hash:net --permanent
+            firewall-cmd --ipset=blacklist --add-entry=192.0.2.0/24 --permanent # Example Bogon range
+            firewall-cmd --zone=drop --add-rich-rule='rule family="ipv4" source ipset="blacklist" drop' --permanent
+        fi
         
         firewall-cmd --reload
     else
-        log_action "[SCAN] Checking Firewall: Default zone is $(firewall-cmd --get-default-zone)"
+        log_action "[SCAN] Checking Firewall: Default zone is $(firewall-cmd --get-default-zone), Custom SSH port should be ${CUSTOM_SSH_PORT}"
     fi
 }
 
@@ -103,7 +125,7 @@ harden_dns_and_privacy() {
     log_action "Configuring systemd-resolved and MAC Randomization..."
     if [ "$SCAN_ONLY" = false ]; then
         # DNSSEC and DoH
-        mkdir -p /etc/systemd/resolved.conf.d
+        mkdir -p /etc/systemd/resolved.conf.d /etc/NetworkManager/conf.d
         cat <<EOF > /etc/systemd/resolved.conf.d/hardened-dns.conf
 [Resolve]
 DNS=1.1.1.1#cloudflare-dns.com 9.9.9.9#dns.quad9.net
@@ -111,10 +133,9 @@ DNSOverTLS=yes
 DNSSEC=yes
 FallbackDNS=1.0.0.1 149.112.112.112
 EOF
-        systemctl restart systemd-resolved
+        systemctl try-restart systemd-resolved
 
         # MAC Randomization (NetworkManager)
-        mkdir -p /etc/NetworkManager/conf.d
         cat <<EOF > /etc/NetworkManager/conf.d/00-mac-randomize.conf
 [device]
 wifi.scan-rand-mac-address=yes
@@ -123,7 +144,7 @@ wifi.scan-rand-mac-address=yes
 wifi.cloned-mac-address=random
 ethernet.cloned-mac-address=random
 EOF
-        systemctl reload NetworkManager
+        systemctl try-reload NetworkManager || log_action "NetworkManager not running, skipping reload."
     fi
 }
 

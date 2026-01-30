@@ -5,12 +5,20 @@
 # Function: Installs Intel Media Drivers, enables GuC/HuC, and sets performance flags.
 # ==============================================================================
 
-LOG_FILE="/var/log/intel_gpu_opt.log"
+# Exit immediately if a command exits with a non-zero status.
+set -e
 
+# Ensure script is run as root
+if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root. Aborting."
+    exit 1
+fi
+
+LOG_FILE="/var/log/intel_gpu_opt.log"
 log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"; }
 
 # 1. Update and Install Core Drivers
-log "Installing Intel Media Drivers and Toolkits via DNF5..."
+log "Ensuring Intel Media Drivers and essential toolkits are installed..."
 dnf5 install -y intel-media-driver intel-gpu-tools libva-utils \
                 mesa-dri-drivers gstreamer1-vaapi libva-intel-driver
 
@@ -23,6 +31,8 @@ dnf5 install -y intel-media-driver --allowerasing
 
 # 3. Kernel Parameter Optimization (GuC/HuC & FBC)
 # Note: GuC (Graphics MicroController) improves scheduling and power management.
+#       FBC (Framebuffer Compression) saves power, primarily on laptops.
+#       fastboot=1 skips certain initialization checks to speed up boot time.
 log "Applying kernel optimizations for i915/Xe drivers..."
 cat <<EOF > /etc/modprobe.d/i915-intel.conf
 options i915 enable_guc=3
