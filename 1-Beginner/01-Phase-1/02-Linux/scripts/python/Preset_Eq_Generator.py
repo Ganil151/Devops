@@ -10,6 +10,7 @@ import threading
 import urllib.request
 import urllib.error
 import hashlib
+import difflib
 
 # Optional imports for plotting
 try:
@@ -24,6 +25,7 @@ except ImportError:
 HOME = os.path.expanduser("~")
 TARGET_DIR = os.path.join(HOME, ".local/share/pipewire-presets")
 PIPEWIRE_CONF_DIR = os.path.join(HOME, ".config/pipewire/pipewire.conf.d")
+WIREPLUMBER_CONF_DIR = os.path.join(HOME, ".config/wireplumber/wireplumber.conf.d")
 LAST_APPLIED_FILE = os.path.join(TARGET_DIR, "last_applied.txt")
 
 # Colors
@@ -39,6 +41,7 @@ LATEST_BACKUP_DIR = None
 
 # Presets Data
 PRESETS = [
+    # --- Movies ---
     {
         "name": "Movies_Cinematic",
         "loudness": -3.0,
@@ -50,6 +53,47 @@ PRESETS = [
         "high_gain": 4.0,
     },
     {
+        "name": "Movies_Action_Explosive",
+        "loudness": -2.0,
+        "low_freq": 60.0,
+        "low_gain": 6.0,
+        "mid_freq": 500.0,
+        "mid_gain": -2.0,
+        "high_freq": 8000.0,
+        "high_gain": 3.0,
+    },
+    {
+        "name": "Movies_SciFi_Immersive",
+        "loudness": -3.0,
+        "low_freq": 50.0,
+        "low_gain": 4.0,
+        "mid_freq": 440.0,
+        "mid_gain": 0.0,
+        "high_freq": 12000.0,
+        "high_gain": 5.0,
+    },
+    {
+        "name": "Movies_Horror_Atmosphere",
+        "loudness": -4.0,
+        "low_freq": 40.0,
+        "low_gain": 5.0,
+        "mid_freq": 1000.0,
+        "mid_gain": -3.0,
+        "high_freq": 10000.0,
+        "high_gain": 4.0,
+    },
+    {
+        "name": "Movie_Dialogue_Boost",
+        "loudness": -2.0,
+        "low_freq": 60.0,
+        "low_gain": -4.0,
+        "mid_freq": 1200.0,
+        "mid_gain": 5.0,
+        "high_freq": 20000.0,
+        "high_gain": 3.0,
+    },
+    # --- TV ---
+    {
         "name": "TV_Clear_Dialogue",
         "loudness": -1.5,
         "low_freq": 50.0,
@@ -59,6 +103,37 @@ PRESETS = [
         "high_freq": 20000.0,
         "high_gain": 2.0,
     },
+    {
+        "name": "TV_Sports_Stadium",
+        "loudness": -2.0,
+        "low_freq": 100.0,
+        "low_gain": 2.0,
+        "mid_freq": 1000.0,
+        "mid_gain": 2.0,
+        "high_freq": 5000.0,
+        "high_gain": 1.0,
+    },
+    {
+        "name": "TV_News_Broadcast",
+        "loudness": -1.0,
+        "low_freq": 100.0,
+        "low_gain": -3.0,
+        "mid_freq": 1500.0,
+        "mid_gain": 4.0,
+        "high_freq": 6000.0,
+        "high_gain": 1.0,
+    },
+    {
+        "name": "TV_Late_Night",
+        "loudness": -6.0,
+        "low_freq": 60.0,
+        "low_gain": -4.0,
+        "mid_freq": 800.0,
+        "mid_gain": 2.0,
+        "high_freq": 5000.0,
+        "high_gain": -2.0,
+    },
+    # --- Music ---
     {
         "name": "Music_Bass_Boost",
         "loudness": -5.0,
@@ -78,26 +153,6 @@ PRESETS = [
         "mid_gain": 2.0,
         "high_freq": 20000.0,
         "high_gain": 5.5,
-    },
-    {
-        "name": "Gaming_FPS",
-        "loudness": -4.0,
-        "low_freq": 50.0,
-        "low_gain": -2.0,
-        "mid_freq": 440.0,
-        "mid_gain": 4.5,
-        "high_freq": 20000.0,
-        "high_gain": 6.0,
-    },
-    {
-        "name": "Night_Listening",
-        "loudness": -8.0,
-        "low_freq": 50.0,
-        "low_gain": -5.0,
-        "mid_freq": 440.0,
-        "mid_gain": 0.0,
-        "high_freq": 20000.0,
-        "high_gain": -2.0,
     },
     {
         "name": "Music_HipHop_Punchy",
@@ -130,16 +185,6 @@ PRESETS = [
         "high_gain": 3.0,
     },
     {
-        "name": "Podcast_Interview",
-        "loudness": -2.0,
-        "low_freq": 80.0,
-        "low_gain": -2.0,
-        "mid_freq": 1000.0,
-        "mid_gain": 5.0,
-        "high_freq": 20000.0,
-        "high_gain": 1.0,
-    },
-    {
         "name": "Music_Electronic",
         "loudness": -2.0,
         "low_freq": 50.0,
@@ -160,23 +205,115 @@ PRESETS = [
         "high_gain": 2.0,
     },
     {
-        "name": "Vocal_Boost_Call",
-        "loudness": -1.0,
+        "name": "Music_Classical",
+        "loudness": -4.0,
+        "low_freq": 50.0,
+        "low_gain": 2.0,
+        "mid_freq": 440.0,
+        "mid_gain": 0.0,
+        "high_freq": 14000.0,
+        "high_gain": 3.0,
+    },
+    {
+        "name": "Music_Jazz",
+        "loudness": -3.0,
         "low_freq": 100.0,
-        "low_gain": -4.0,
-        "mid_freq": 1500.0,
-        "mid_gain": 6.0,
+        "low_gain": 2.0,
+        "mid_freq": 440.0,
+        "mid_gain": 1.5,
+        "high_freq": 12000.0,
+        "high_gain": 2.5,
+    },
+    # --- Gaming ---
+    {
+        "name": "Gaming_FPS",
+        "loudness": -4.0,
+        "low_freq": 50.0,
+        "low_gain": -2.0,
+        "mid_freq": 440.0,
+        "mid_gain": 4.5,
+        "high_freq": 20000.0,
+        "high_gain": 6.0,
+    },
+    {
+        "name": "Gaming_RPG",
+        "loudness": -3.0,
+        "low_freq": 60.0,
+        "low_gain": 3.0,
+        "mid_freq": 1000.0,
+        "mid_gain": 2.0,
+        "high_freq": 12000.0,
+        "high_gain": 4.0,
+    },
+    {
+        "name": "Gaming_Racing",
+        "loudness": -4.0,
+        "low_freq": 50.0,
+        "low_gain": 6.0,
+        "mid_freq": 300.0,
+        "mid_gain": 2.0,
+        "high_freq": 8000.0,
+        "high_gain": 1.0,
+    },
+    # --- Utility/Other ---
+    {
+        "name": "Night_Listening",
+        "loudness": -8.0,
+        "low_freq": 50.0,
+        "low_gain": -5.0,
+        "mid_freq": 440.0,
+        "mid_gain": 0.0,
+        "high_freq": 20000.0,
+        "high_gain": -2.0,
+    },
+    {
+        "name": "Podcast_Interview",
+        "loudness": -2.0,
+        "low_freq": 80.0,
+        "low_gain": -2.0,
+        "mid_freq": 1000.0,
+        "mid_gain": 5.0,
         "high_freq": 20000.0,
         "high_gain": 1.0,
     },
     {
-        "name": "Laptop_Speaker_Fix",
+        "name": "Vocal_Boost_Call",
+        "loudness": 0.0,
+        "low_freq": 120.0,
+        "low_gain": -5.0,
+        "mid_freq": 2000.0,
+        "mid_gain": 5.0,
+        "high_freq": 8000.0,
+        "high_gain": -2.0,
+    },
+    {
+        "name": "Conference_Call_Clear",
+        "loudness": 1.0,
+        "low_freq": 200.0,
+        "low_gain": -8.0,
+        "mid_freq": 1500.0,
+        "mid_gain": 4.0,
+        "high_freq": 6000.0,
+        "high_gain": 0.0,
+    },
+    {
+        "name": "Audiobook_Warm",
         "loudness": -1.0,
-        "low_freq": 50.0,
-        "low_gain": -2.0,
-        "mid_freq": 440.0,
-        "mid_gain": 3.0,
-        "high_freq": 20000.0,
+        "low_freq": 100.0,
+        "low_gain": 2.0,
+        "mid_freq": 500.0,
+        "mid_gain": 1.0,
+        "high_freq": 5000.0,
+        "high_gain": -1.0,
+    },
+    {
+        "name": "Laptop_Speaker_Fix",
+        "loudness": 0.0,
+        "low_freq": 100.0,
+        "low_gain": -6.0,
+        "mid_freq": 2500.0,
+        "mid_gain": 3.5,
+        "high_freq": 14000.0,
         "high_gain": 5.0,
     },
     {
@@ -188,16 +325,6 @@ PRESETS = [
         "mid_gain": 0.0,
         "high_freq": 20000.0,
         "high_gain": 0.0,
-    },
-    {
-        "name": "Movie_Dialogue_Boost",
-        "loudness": -2.0,
-        "low_freq": 60.0,
-        "low_gain": -4.0,
-        "mid_freq": 1200.0,
-        "mid_gain": 5.0,
-        "high_freq": 20000.0,
-        "high_gain": 3.0,
     },
 ]
 
@@ -254,6 +381,11 @@ def get_15_bands_config(p):
     # High -> Band 15 (Last)
     bands[14]["freq"] = float(p["high_freq"])
     bands[14]["gain"] = float(p["high_gain"])
+
+    # Apply loudness as global gain offset to all bands
+    loudness = float(p.get("loudness", 0.0))
+    for band in bands:
+        band["gain"] += loudness
 
     return bands
 
@@ -335,26 +467,32 @@ def reset_equalizer():
         print(f"{YELLOW}No active equalizer configuration found.{NC}")
 
 
-def plot_preset(p):
-    """Plots the frequency response of the preset using matplotlib."""
+def plot_presets(presets_list):
+    """Plots the frequency response of one or more presets using vectorized operations."""
     if not MATPLOTLIB_AVAILABLE:
         print(f"{RED}Error: matplotlib and numpy are required for plotting.{NC}")
         print(f"{YELLOW}Install them with: pip install matplotlib numpy{NC}")
         return
 
-    bands = get_15_bands_config(p)
+    plt.figure(figsize=(12, 7))
     fs = 48000
-    freqs = np.logspace(np.log10(20), np.log10(20000), 500)
-    total_response_db = np.zeros_like(freqs)
+    # Higher resolution for smoother plots
+    freqs = np.logspace(np.log10(20), np.log10(20000), 1000)
+    w = 2 * np.pi * freqs / fs
+    w = w[np.newaxis, :]  # Shape: (1, N_freqs)
+    z_inv = np.exp(-1j * w)
+    z_inv_2 = z_inv**2
 
-    print(f"{BLUE}Calculating frequency response for '{p['name']}'...{NC}")
+    print(f"{BLUE}Calculating frequency responses...{NC}")
 
-    for band in bands:
-        f0 = band["freq"]
-        gain = band["gain"]
+    for p in presets_list:
+        bands = get_15_bands_config(p)
+
+        # Vectorized Coefficient Calculation
+        f0 = np.array([b["freq"] for b in bands])
+        gain = np.array([b["gain"] for b in bands])
         Q = 4.36
 
-        # Peaking EQ Biquad Coefficients (RBJ Audio EQ Cookbook)
         w0 = 2 * np.pi * f0 / fs
         alpha = np.sin(w0) / (2 * Q)
         A = 10 ** (gain / 40)
@@ -366,25 +504,25 @@ def plot_preset(p):
         a1 = -2 * np.cos(w0)
         a2 = 1 - alpha / A
 
-        # Normalize
+        # Normalize coefficients (Shape: N_bands)
         b0 /= a0
         b1 /= a0
         b2 /= a0
         a1 /= a0
         a2 /= a0
 
-        # Calculate Response
-        w = 2 * np.pi * freqs / fs
-        z = np.exp(1j * w)
-        H = (b0 + b1 * z**-1 + b2 * z**-2) / (1 + a1 * z**-1 + a2 * z**-2)
+        # Broadcast coefficients to (N_bands, 1)
+        num = b0[:, None] + b1[:, None] * z_inv + b2[:, None] * z_inv_2
+        den = 1 + a1[:, None] * z_inv + a2[:, None] * z_inv_2
+
+        # Calculate Transfer Function H(z) and Response
+        H = num / den
         response_db = 20 * np.log10(np.abs(H))
+        total_response_db = np.sum(response_db, axis=0)
 
-        total_response_db += response_db
+        plt.semilogx(freqs, total_response_db, label=p["name"])
 
-    # Plotting
-    plt.figure(figsize=(10, 6))
-    plt.semilogx(freqs, total_response_db, label=f"{p['name']} Response", color="cyan")
-    plt.title(f"Frequency Response: {p['name']}")
+    plt.title("Frequency Response Comparison")
     plt.xlabel("Frequency (Hz)")
     plt.ylabel("Gain (dB)")
     plt.grid(True, which="both", ls="-", alpha=0.6)
@@ -397,6 +535,11 @@ def linear_interpolate(target_x, x_list, y_list):
     """Simple linear interpolation for EQ curves."""
     if not x_list or not y_list:
         return 0.0
+
+    # Optimization: Use numpy if available
+    if MATPLOTLIB_AVAILABLE:
+        return float(np.interp(target_x, x_list, y_list))
+
     if target_x <= x_list[0]:
         return y_list[0]
     if target_x >= x_list[-1]:
@@ -709,36 +852,52 @@ def check_active_diff(generated_names):
     if not os.path.exists(active_conf):
         return
 
-    # We don't know the name of the active preset easily, so we check if any generated file matches the active config
+    # Optimization: Read active config once into memory
+    try:
+        with open(active_conf, "r") as f:
+            active_content = f.readlines()
+    except OSError:
+        return
+
     matched_name = None
     for name in generated_names:
         gen_file = os.path.join(TARGET_DIR, f"{name}.lua")
-        if (
-            os.path.exists(gen_file)
-            and subprocess.run(["cmp", "-s", active_conf, gen_file]).returncode == 0
-        ):
-            matched_name = name
-            break
+        if os.path.exists(gen_file):
+            # Compare content in memory (faster than spawning cmp process)
+            with open(gen_file, "r") as f:
+                if f.readlines() == active_content:
+                    matched_name = name
+                    break
 
     if matched_name and LATEST_BACKUP_DIR:
         old_file = os.path.join(LATEST_BACKUP_DIR, f"{matched_name}.lua")
-        new_file = os.path.join(TARGET_DIR, f"{matched_name}.lua")
 
-        if os.path.exists(old_file) and os.path.exists(new_file):
-            # Use system diff for colored output if available
-            try:
-                print()
+        if os.path.exists(old_file):
+            with open(old_file, "r") as f:
+                old_content = f.readlines()
+
+            # Use Python's difflib for portable, fast comparison
+            diff = list(
+                difflib.unified_diff(
+                    old_content,
+                    active_content,
+                    fromfile=f"Backup/{matched_name}",
+                    tofile=f"Active/{matched_name}",
+                    lineterm="",
+                )
+            )
+
+            if diff:
                 print(
-                    f"{YELLOW}Changes detected in active preset ('{matched_name}'):{NC}"
+                    f"\n{YELLOW}Changes detected in active preset ('{matched_name}'):{NC}"
                 )
-                subprocess.run(
-                    ["diff", "-u", "--color=always", old_file, new_file], check=False
-                )
-            except FileNotFoundError:
-                try:
-                    subprocess.run(["diff", "-u", old_file, new_file], check=False)
-                except FileNotFoundError:
-                    print(f"{RED}diff utility not found. Cannot compare files.{NC}")
+                for line in diff:
+                    if line.startswith("+") and not line.startswith("+++"):
+                        print(f"{GREEN}{line}{NC}")
+                    elif line.startswith("-") and not line.startswith("---"):
+                        print(f"{RED}{line}{NC}")
+                    else:
+                        print(line)
 
 
 def download_preset(url, expected_checksum=None):
@@ -829,7 +988,9 @@ def main():
         )
         print(f"       {os.path.basename(sys.argv[0])} --reset")
         print(f"       {os.path.basename(sys.argv[0])} --plot [PRESET_NAME]")
+        print(f'       {os.path.basename(sys.argv[0])} --compare "[PRESET1],[PRESET2]"')
         print(f"       {os.path.basename(sys.argv[0])} --import [FILE]")
+        print(f"       {os.path.basename(sys.argv[0])} --load-presets [JSON_FILE]")
         print(f"       {os.path.basename(sys.argv[0])} --install-service")
         print(f"       {os.path.basename(sys.argv[0])} --edit [PRESET_NAME]")
         print("Generates WirePlumber EQ presets matching the search terms.")
@@ -850,6 +1011,18 @@ def main():
     if "--restore" in args:
         restore_last_preset()
         sys.exit(0)
+
+    if "--load-presets" in args:
+        try:
+            idx = args.index("--load-presets")
+            json_file = args[idx + 1]
+            with open(json_file, "r") as f:
+                extra_presets = json.load(f)
+                if isinstance(extra_presets, list):
+                    PRESETS.extend(extra_presets)
+                    print(f"{GREEN}Loaded {len(extra_presets)} external presets.{NC}")
+        except (IndexError, json.JSONDecodeError, FileNotFoundError) as e:
+            print(f"{RED}Error loading presets: {e}{NC}")
 
     if "--import" in args:
         try:
@@ -908,11 +1081,32 @@ def main():
                     found = p
                     break
             if found:
-                plot_preset(found)
+                plot_presets([found])
             else:
                 print(f"{RED}Error: Preset '{search_term}' not found.{NC}")
         except IndexError:
             print(f"{RED}Error: Please provide a preset name after --plot.{NC}")
+        sys.exit(0)
+
+    if "--compare" in args:
+        try:
+            idx = args.index("--compare")
+            names = args[idx + 1].split(",")
+            to_plot = []
+            for name in names:
+                name = name.strip()
+                for p in PRESETS:
+                    if name.lower() in p["name"].lower():
+                        to_plot.append(p)
+                        break
+            if to_plot:
+                plot_presets(to_plot)
+            else:
+                print(f"{RED}No matching presets found for comparison.{NC}")
+        except IndexError:
+            print(
+                f"{RED}Error: Please provide comma-separated names after --compare.{NC}"
+            )
         sys.exit(0)
 
     # Checks and Setup
@@ -950,6 +1144,12 @@ def main():
                 if not match:
                     continue
 
+            filepath = os.path.join(TARGET_DIR, f"{p['name']}.lua")
+            if os.path.exists(filepath):
+                print(f"  Skipping: {CYAN}{p['name']}{NC} (Exists)")
+                generated.append(p["name"])
+                continue
+
             sys.stdout.write(f"  Saving: {p['name']} ")
             sys.stdout.flush()
 
@@ -986,36 +1186,63 @@ def main():
             if choice == "y":
                 selected_preset = generated[0]
         else:
-            # Check for sinks to offer device binding
-            sinks = get_sinks()
-            target_sink = None
-            if sinks:
-                print(f"\n{BLUE}Available Output Devices:{NC}")
-                for i, (name, desc) in enumerate(sinks):
-                    print(f"  {i + 1}) {desc}")
-                print(f"  s) Skip (Use Default)")
-
-                d_choice = input("Bind EQ to specific device? (#/s) ").strip().lower()
-                if d_choice != "s" and d_choice.isdigit():
-                    idx = int(d_choice) - 1
-                    if 0 <= idx < len(sinks):
-                        target_sink = sinks[idx][0]
-                        print(f"{YELLOW}Targeting: {sinks[idx][1]}{NC}")
-
             print("\nSelect a preset to apply to system audio:")
-            print("Select a preset to apply to system audio:")
             for i, name in enumerate(generated):
                 print(f"  {i + 1}) {name}")
             print(f"  {len(generated) + 1}) Skip")
             try:
                 sel = input("#? ")
                 idx = int(sel) - 1
-                if 0 <= idx < len(generated):
+                if idx == len(generated):
+                    print(f"{YELLOW}Skipping application.{NC}")
+                    selected_preset = None
+                elif 0 <= idx < len(generated):
                     selected_preset = generated[idx]
             except ValueError:
                 pass
 
         if selected_preset:
+            # Automatic Device Selection
+            sinks = get_sinks()
+            target_sink = None
+            if sinks:
+                print(
+                    f"\n{BLUE}Automatically selecting best device for '{selected_preset}'...{NC}"
+                )
+
+                preset_lower = selected_preset.lower()
+                chosen_sink = None
+                chosen_desc = ""
+
+                def find_sink(keywords):
+                    for name, desc in sinks:
+                        if any(k in desc.lower() for k in keywords):
+                            return name, desc
+                    return None, None
+
+                # 1. Laptop/Speaker -> Speaker
+                if "laptop" in preset_lower or "speaker" in preset_lower:
+                    chosen_sink, chosen_desc = find_sink(["speaker"])
+                # 2. Movie/TV -> HDMI/DP
+                elif (
+                    "movie" in preset_lower
+                    or "tv" in preset_lower
+                    or "cinematic" in preset_lower
+                ):
+                    chosen_sink, chosen_desc = find_sink(["hdmi", "displayport"])
+
+                # 3. Fallback -> Speaker
+                if not chosen_sink:
+                    chosen_sink, chosen_desc = find_sink(["speaker"])
+
+                if chosen_sink:
+                    target_sink = chosen_sink
+                    print(f"{GREEN}Auto-selected: {chosen_desc}{NC}")
+                else:
+                    print(
+                        f"{YELLOW}No specific device matched. Using default system behavior.{NC}"
+                    )
+
             # If a target sink was selected, we need to regenerate this specific preset
             # with the target node included.
             if target_sink:
