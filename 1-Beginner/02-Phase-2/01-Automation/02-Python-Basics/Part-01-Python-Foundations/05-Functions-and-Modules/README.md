@@ -7,6 +7,7 @@
 ## 📚 Overview
 
 In the early stages of automation, scripts often start as "Linear Monoliths"—long files that run from top to bottom. While simple, these scripts are fragile, impossible to test, and difficult to share.
+![monoliths](../03-Functions-and-Modules/assets/monolith_vs_modular.png)
 
 **Functions and Modules** are the tools that transform "scripts" into "software." They allow you to encapsulate complex operations—like validating a K8s namespace or fetching cloud costs—into named, reusable blocks. This module teaches you how to architect your automation like a software engineer, using modular packages and clean functional interfaces.
 
@@ -21,7 +22,6 @@ By the end of this module, you will:
 - ✅ Build a **Centralized Utility Library** for enterprise-wide reusability.
 
 ---
-
 ## 🏗️ The Anatomy of a Python Function
 
 A professional function is more than just code; it is a self-documenting contract.

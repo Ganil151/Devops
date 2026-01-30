@@ -91,6 +91,8 @@ else:
     print("Health Check: CPU usage within normal limits.")
 ```
 
+> **Curriculum Link**: To see how these operators drive decision-making in real-world automation, proceed to: **[02-Control-Flow](../1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/02-Control-Flow/README.md)**
+
 ---
 
 ## 4. Logical Operators (Multi-Condition Logic)
