@@ -17,7 +17,7 @@ s3_bucket_tuple.index("Bob_demo_bucket")
 # Tuple operations
 # Accessing first element
 print(s3_bucket_tuple[0]) 
- 
+
 # Slicing tuple
 print(s3_bucket_tuple[1:3]) 
 

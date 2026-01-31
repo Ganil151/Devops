@@ -2,12 +2,12 @@
 
 > **"Don't Repeat Yourself (DRY). If you write the same automation logic twice, you've inherited a maintenance nightmare. If you turn it into a function, you've built a reusable asset."**
 
-![functions&modules](../03-Functions-and-Modules/assets/function_anatomy.png)
+![Anatomy of a Function](../assets/function_anatomy.png)
 
 ## 📚 Overview
 
 In the early stages of automation, scripts often start as "Linear Monoliths"—long files that run from top to bottom. While simple, these scripts are fragile, impossible to test, and difficult to share.
-![monoliths](../03-Functions-and-Modules/assets/monolith_vs_modular.png)
+![Monolith vs Modular](../assets/monolith_vs_modular.png)
 
 **Functions and Modules** are the tools that transform "scripts" into "software." They allow you to encapsulate complex operations—like validating a K8s namespace or fetching cloud costs—into named, reusable blocks. This module teaches you how to architect your automation like a software engineer, using modular packages and clean functional interfaces.
 

@@ -78,7 +78,7 @@ A single automation project might require Python for logic, R for data analysis,
 While you can install thousands of packages, these are the heavy hitters found in almost every professional DevOps toolkit. You can install any of these using `conda install <package_name>`.
 
 ### 1. Cloud & Infrastructure (IaC)
-*   **[boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)**: The official AWS SDK for Python. Used for managing S3, EC2, Lambda, etc.
+*   **[](https://.amazonaws.com/v1/documentation/api/latest/index.html)**: The official AWS SDK for Python. Used for managing S3, EC2, Lambda, etc.
 *   **[pulumi](https://www.pulumi.com/docs/languages-sdk/python/)**: Modern Infrastructure as Code for all major clouds.
 *   **[azure-mgmt-compute](https://pypi.org/project/azure-mgmt-compute/)**: Managing Microsoft Azure resources.
 *   **[google-cloud-sdk](https://pypi.org/project/google-cloud-sdk/)**: Interacting with Google Cloud Platform services.
@@ -129,7 +129,7 @@ Unlike `pip`, Conda handles both Python packages and system-level binaries.
 | :--- | :--- | :--- |
 | `conda search "aws*"` | Search for available packages | Use wildcards to find specific versions of SDKs or tools. |
 | `conda install pandas=2.1` | Install with version pinning | Explicitly pinning versions prevents "Breaking Changes" during automated builds. |
-| `conda install -c conda-forge boto3` | Install from community channel | **Conda-Forge** is often more up-to-date than the default Anaconda channel. |
+| `conda install -c conda-forge ` | Install from community channel | **Conda-Forge** is often more up-to-date than the default Anaconda channel. |
 | `conda update --all` | Sync all packages to latest | Do this locally first; verify tests pass before updating the `environment.yml`. |
 | `conda list` | List installed packages | Useful for generating build logs or auditing security versions. |
 

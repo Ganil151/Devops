@@ -10,19 +10,20 @@ We have consolidated the modules into professional tiers to guide you from scrip
 *Decision logic, data structures, and resilient execution.*
 
 *   **[01. Fundamentals](./Part-01-Python-Foundations/01-Fundamentals/README.md)**: Syntax, Types, and PEP 8 Standards.
-*   **[02. Control Flow](./Part-01-Python-Foundations/02-Control-Flow/README.md)**: Making decisions and Iterating at Scale.
-*   **[03. Data Structures](./Part-01-Python-Foundations/03-Data-Structures/README.md)**: Lists, Dicts, and Sets for Inventory Management.
-*   **[04. Error Handling](./Part-01-Python-Foundations/04-Error-Handling/README.md)**: Building Fault-Tolerant Automation.
-*   **[05. File I/O for DevOps](./Part-01-Python-Foundations/05-File-IO-DevOps/README.md)**: Reading Logs and Infrastructure Configs.
+*   **[02. Control Flow](./Part-01-Python-Foundations/02-Control-Flow/README.md)**: Making decisions (If/Else) and logic gates.
+*   **[03. Iterative Logic & Loops](./Part-01-Python-Foundations/03-Iterative-Logic-and-Loops/README.md)**: The Inventory Loop, Polling, and List Comprehensions.
+*   **[04. Data Structures](./Part-01-Python-Foundations/04-Data-Structures/README.md)**: Lists, Dicts, and Sets for Inventory Management.
+*   **[05. Error Handling](./Part-01-Python-Foundations/05-Error-Handling/README.md)**: Building Fault-Tolerant Automation (Try/Except).
+*   **[06. File I/O for DevOps](./Part-01-Python-Foundations/06-File-IO-DevOps/README.md)**: Reading Logs, Configs, and Context Managers.
+*   **[07. Functions & Modules](./Part-01-Python-Foundations/07-Functions-and-Modules/README.md)**: Writing reusable orchestration code and Packages.
+*   **[08. Time & Date](./Part-01-Python-Foundations/08-Time-and-Date/README.md)**: Managing retention policies, cron-logic, and Timezones.
 
 ### 🛠️ Part 2: Architecture & Advanced Tooling
 *Modularity, Temporal logic, and Environment isolation.*
 
-*   **[01. Functions & Modules](./Part-01-Python-Foundations/06-Functions-and-Modules/README.md)**: Writing reusable orchestration code.
-*   **[02. Time & Date](./Part-01-Python-Foundations/07-Time-and-Date/README.md)**: Managing retention policies and cron-logic.
-*   **[03. Pathlib (Modern Files)](./Part-02-Python-Architecture/02-Pathlib-Modern-Files/README.md)**: Professional path manipulation.
-*   **[04. JSON & YAML](./Part-02-Python-Architecture/03-JSON-Handling/README.md)**: Mastering infrastructure formats.
-*   **[05. Virtual Environments](./Part-02-Python-Architecture/06-Virtual-Environments/README.md)**: Ensuring project isolation.
+*   **[01. Pathlib (Modern Files)](./Part-02-Python-Architecture/02-Pathlib-Modern-Files/README.md)**: Professional path manipulation.
+*   **[02. JSON & YAML](./Part-02-Python-Architecture/03-JSON-Handling/README.md)**: Mastering infrastructure formats.
+*   **[03. Virtual Environments](./Part-02-Python-Architecture/06-Virtual-Environments/README.md)**: Ensuring project isolation.
 
 ### 🚀 Part 3: Systems Drafting (The Automation)
 *Interacting with the OS, Web, and building production tools.*
@@ -42,9 +43,14 @@ We have consolidated the modules into professional tiers to guide you from scrip
 Ready to prove your skills? Complete the **[Capstone Challenges](./CHALLENGES.md)** to earn your "Automation Architect" badge.
 
 ## 🏢 Reference Library
+High-density knowledge sheets for quick lookup.
+
 *   **[Built-in Functions](./REFERENCE/Built-in-Functions-Ref.md)**: Top 20 functions for SREs.
+*   **[Data Keywords & Types](./REFERENCE/Python-Data-Keywords-Ref.md)**: Lists, Sets, and Inspection tools.
+*   **[Iterative Logic Rules](./REFERENCE/Iterative-Logic-Ref.md)**: Loops, Break/Continue, and Comprehensions.
 *   **[Operators & Logic](./REFERENCE/Operators-Logic-Ref.md)**: Decision boundaries and precedence.
 *   **[Automation Patterns](./REFERENCE/Python-Automation-Patterns-Ref.md)**: Retries, Guards, and Backoffs.
+*   **[Error & Exceptions](./REFERENCE/Error-Exceptions-Ref.md)**: Exception hierarchy and handling matrix.
 
 ---
 **Maintained by the DevOps Academy**

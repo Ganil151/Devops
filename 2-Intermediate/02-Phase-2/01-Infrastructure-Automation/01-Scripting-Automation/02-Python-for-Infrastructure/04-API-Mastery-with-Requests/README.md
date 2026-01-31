@@ -118,10 +118,10 @@ if __name__ == "__main__":
     *   [ ] Redirect
     *   [ ] Page Not Found
 5.  **Which library is built into Python for low-level HTTP networking (the one Requests uses internally)?**
-    *   [ ] `boto3`
+    *   [ ] ``
     *   [x] `urllib3`
     *   [ ] `httpx`
 
 ---
 
-[⬅️ Back to Start](../README.md) | [Next: Cloud Automation Boto3](../05-Cloud-Automation-Boto3-Deep-Dive/README.md) ➡️
+[⬅️ Back to Start](../README.md) | [Next: Cloud Automation ](../05-Cloud-Automation--Deep-Dive/README.md) ➡️
