@@ -1,0 +1,456 @@
+./
+├── 00-Reference-and-Metadata/
+│   ├── Config-Management-Keywords.md
+│   ├── IaC-Architecture-Patterns-Ref.md
+│   ├── Immutable-Infrastructure-Governance-Ref.md
+│   ├── Provisioning-IaC-Keywords.md
+│   ├── README.md
+│   └── samples/
+│       ├── cloud_init_bootstrap.yaml
+│       ├── golden_image.pkr.hcl
+│       ├── modular_vpc.tf
+│       └── README.md
+├── 01-IaC-Foundations-and-Terraform/
+│   ├── 01-Fundamentals/
+│   │   ├── 01-IaC-Principles/
+│   │   │   ├── declarative_vs_procedural.png
+│   │   │   ├── iac_workflow.png
+│   │   │   ├── Infrastructure as Code (IaC) Principles.md
+│   │   │   └── snowflake_vs_cattle.png
+│   │   ├── 01-What-is-Terraform/
+│   │   │   └── What is Terraform.md
+│   │   ├── 02-Commands/
+│   │   │   ├── 00-VERIFICATION.md
+│   │   │   ├── 01-Init.md
+│   │   │   ├── 02-Validate.md
+│   │   │   ├── 03-Plan.md
+│   │   │   ├── 04-Apply.md
+│   │   │   ├── 05-Destroy.md
+│   │   │   ├── 06-State.md
+│   │   │   ├── 07-Import.md
+│   │   │   ├── 09-Fmt.md
+│   │   │   ├── 10-Show.md
+│   │   │   ├── 11-Output.md
+│   │   │   ├── 12-Workspace.md
+│   │   │   ├── 14-Console.md
+│   │   │   ├── 21-Quick-Reference.md
+│   │   │   └── README.md
+│   │   ├── 02-Project-Structure/
+│   │   │   └── Project Structure.md
+│   │   ├── 03-Core-Concepts/
+│   │   │   └── Terraform Core Concepts.md
+│   │   ├── 03-Environment-Management/
+│   │   │   └── Environment Management.md
+│   │   ├── 04-Configuration-Patterns/
+│   │   │   └── Configuration Patterns.md
+│   │   ├── 04-Installation-and-Setup/
+│   │   │   └── README.md
+│   │   ├── 05-Configuration-Language/
+│   │   │   ├── Configuration-Language-HCL.md
+│   │   │   └── Expressions.md
+│   │   ├── 05-Version-Control-Integration/
+│   │   │   └── Version Control Integration.md
+│   │   ├── 06-CI-CD-Pipeline-Integration/
+│   │   │   └── CI-CD Pipeline Integration.md
+│   │   ├── 06-Providers/
+│   │   │   └── Providers.md
+│   │   ├── 07-Resources/
+│   │   │   └── Resources.md
+│   │   ├── 07-Testing-Strategies/
+│   │   │   └── Testing Strategies.md
+│   │   ├── 08-Documentation-Standards/
+│   │   │   └── Documentation Standards.md
+│   │   ├── 08-Variables-and-Outputs/
+│   │   │   └── Variables and Outputs.md
+│   │   ├── 09-Data-Sources/
+│   │   │   └── Data Sources.md
+│   │   ├── 09-Security-Practices/
+│   │   │   └── Security Practices.md
+│   │   ├── 10-Compliance-and-Governance/
+│   │   │   └── Compliance and Governance.md
+│   │   ├── 10-Terraform-Workflow/
+│   │   │   └── Terraform Workflow.md
+│   │   ├── 11-Basic-Examples/
+│   │   │   └── Basic Examples.md
+│   │   ├── 12-Provisioners/
+│   │   │   └── Terraform Provisioners.md
+│   │   └── README.md
+│   ├── 02-State-Management/
+│   │   ├── 01-State-Fundamentals/
+│   │   │   ├── Images/
+│   │   │   │   └── terraform_state_cycle.png
+│   │   │   └── State Fundamentals.md
+│   │   ├── 02-Local-vs-Remote-State/
+│   │   │   ├── Images/
+│   │   │   │   └── local_vs_remote.png
+│   │   │   └── Local vs. Remote State.md
+│   │   ├── 03-Remote-State-Backends/
+│   │   │   ├── images/
+│   │   │   │   ├── s3-dynamodb-architecture.png
+│   │   │   │   └── s3_dynamodb_backend.png
+│   │   │   └── Remote State Backends.md
+│   │   ├── 04-State-Locking/
+│   │   │   ├── images/
+│   │   │   │   ├── locking_race_condition.png
+│   │   │   │   └── state_locking_lifecycle.png
+│   │   │   └── State Locking.md
+│   │   ├── 05-State-Operations/
+│   │   │   ├── images/
+│   │   │   │   └── state_operations_workflow.png
+│   │   │   ├── State Operations.md
+│   │   │   └── terraform_state_operations_flow.svg
+│   │   ├── 06-State-Security/
+│   │   │   └── State Security.md
+│   │   ├── 07-State-Migration/
+│   │   │   ├── State Migration & Versioning.md
+│   │   │   └── terraform_state_migration_flow.svg
+│   │   ├── 08-Troubleshooting/
+│   │   │   ├── images/
+│   │   │   │   └── troubleshooting_flow.svg
+│   │   │   └── Troubleshooting State Issues.md
+│   │   ├── 09-Advanced-Patterns/
+│   │   │   ├── Advanced State Patterns.md
+│   │   │   ├── directory_vs_workspaces.png
+│   │   │   └── multi_layer_architecture.png
+│   │   ├── 10-Best-Practices/
+│   │   │   └── State Best Practices.md
+│   │   └── README.md
+│   ├── 03-Modules-and-Composition/
+│   │   ├── 01-Module-Fundamentals/
+│   │   │   └── Terraform Module Fundamentals.md
+│   │   ├── 02-Module-Structure/
+│   │   │   └── Module Structure.md
+│   │   ├── 03-Creating-Modules/
+│   │   │   └── Creating Modules.md
+│   │   ├── 04-Module-Composition/
+│   │   │   └── README.md
+│   │   ├── 05-Module-Registry/
+│   │   │   └── README.md
+│   │   ├── 06-Versioning-Strategy/
+│   │   │   └── README.md
+│   │   ├── 07-Testing-Modules/
+│   │   │   └── README.md
+│   │   ├── 08-Advanced-Patterns/
+│   │   │   └── README.md
+│   │   ├── 09-Best-Practices/
+│   │   │   └── README.md
+│   │   ├── 10-Real-World-Examples/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 04-Terraform-Cloud-and-GitOps/
+│   │   ├── 01-Introduction-and-Architecture/
+│   │   │   ├── README.md
+│   │   │   └── tfc_architecture.png
+│   │   ├── 02-VCS-Driven-Workflow/
+│   │   │   └── VCS Driven Workflow (GitOps).md
+│   │   ├── 03-CLI-and-API-Workflows/
+│   │   │   └── CLI and API Workflows.md
+│   │   ├── 04-Workspace-Management/
+│   │   │   └── Workspace Management.md
+│   │   ├── 05-Variables-and-Secrets/
+│   │   │   └── Variables and Secrets.md
+│   │   ├── 06-Policy-as-Code-Sentinel/
+│   │   │   └── README.md
+│   │   ├── 07-Policy-as-Code-OPA/
+│   │   │   └── README.md
+│   │   ├── 08-Governance-and-RBAC/
+│   │   │   └── README.md
+│   │   ├── 09-Advanced-Features/
+│   │   │   └── README.md
+│   │   ├── 10-Enterprise-Best-Practices/
+│   │   │   └── README.md
+│   │   ├── file_list.txt
+│   │   └── README.md
+│   └── README.md
+├── 01-Introduction/
+│   └── README.md
+├── 02-Server-Configuration-and-Ansible/
+│   ├── 01-Ansible/
+│   │   ├── ansible/
+│   │   │   ├── COMMAND_REFERENCE.md
+│   │   │   ├── generate_hosts.sh
+│   │   │   ├── group_vars/
+│   │   │   │   ├── all.yml
+│   │   │   │   └── mysql.yml
+│   │   │   ├── hosts.ini
+│   │   │   ├── inventory.ini
+│   │   │   ├── monitoring_setup.yml
+│   │   │   ├── mysql_diagnostic.yml
+│   │   │   ├── mysql_install.yml
+│   │   │   ├── mysql_setup_galaxy.yml
+│   │   │   ├── petclinic/
+│   │   │   │   ├── create_databases.yml
+│   │   │   │   ├── create_users.yml
+│   │   │   │   ├── load_data.yml
+│   │   │   │   └── load_schema.yml
+│   │   │   ├── README.md
+│   │   │   ├── requirements.yml
+│   │   │   ├── reset_mysql.yml
+│   │   │   └── roles/
+│   │   │       ├── monitoring/
+│   │   │       │   ├── defaults/
+│   │   │       │   │   └── main.yml
+│   │   │       │   ├── files/
+│   │   │       │   │   └── grafana_dashboards/
+│   │   │       │   │       ├── docker-metrics-dashboard.json
+│   │   │       │   │       └── spring-boot-dashboard.json
+│   │   │       │   ├── handlers/
+│   │   │       │   │   └── main.yml
+│   │   │       │   ├── tasks/
+│   │   │       │   │   ├── configure_grafana.yml
+│   │   │       │   │   ├── configure_prometheus.yml
+│   │   │       │   │   ├── configure_services.yml
+│   │   │       │   │   ├── install_grafana.yml
+│   │   │       │   │   ├── install_node_exporter.yml
+│   │   │       │   │   ├── install_prometheus.yml
+│   │   │       │   │   └── main.yml
+│   │   │       │   └── templates/
+│   │   │       │       ├── grafana-datasource.yml.j2
+│   │   │       │       └── prometheus.yml.j2
+│   │   │       └── mysql_petclinic/
+│   │   │           ├── files/
+│   │   │           │   ├── customers-data.sql
+│   │   │           │   ├── customers-schema.sql
+│   │   │           │   ├── vets.data.sql
+│   │   │           │   ├── vets-schema.sql
+│   │   │           │   ├── visits.data.sq
+│   │   │           │   └── visits-schema.sql
+│   │   │           ├── handlers/
+│   │   │           │   └── main.yml
+│   │   │           └── tasks/
+│   │   │               ├── create_databases.yml
+│   │   │               ├── create_users.yml
+│   │   │               ├── load_data.yml
+│   │   │               ├── load_schema.yml
+│   │   │               └── main.yml
+│   │   ├── ansible-health-check.sh
+│   │   ├── COMMAND_REFERENCE.md
+│   │   ├── generate_hosts.sh
+│   │   ├── group_vars/
+│   │   │   ├── all.yml
+│   │   │   └── mysql.yml
+│   │   ├── hosts.ini
+│   │   ├── inventory.ini
+│   │   ├── monitoring_setup.yml
+│   │   ├── mysql_diagnostic.yml
+│   │   ├── mysql_install.yml
+│   │   ├── mysql_setup.yml
+│   │   ├── petclinic/
+│   │   │   ├── create_databases.yml
+│   │   │   ├── create_users.yml
+│   │   │   ├── load_data.yml
+│   │   │   └── load_schema.yml
+│   │   ├── README.md
+│   │   ├── requirements.yml
+│   │   ├── reset_mysql.yml
+│   │   ├── resources/
+│   │   │   └── ansible.pdf
+│   │   └── roles/
+│   │       ├── monitoring/
+│   │       │   ├── defaults/
+│   │       │   │   └── main.yml
+│   │       │   ├── files/
+│   │       │   │   └── grafana_dashboards/
+│   │       │   │       ├── docker-metrics-dashboard.json
+│   │       │   │       └── spring-boot-dashboard.json
+│   │       │   ├── handlers/
+│   │       │   │   └── main.yml
+│   │       │   ├── tasks/
+│   │       │   │   ├── configure_grafana.yml
+│   │       │   │   ├── configure_prometheus.yml
+│   │       │   │   ├── configure_services.yml
+│   │       │   │   ├── install_grafana.yml
+│   │       │   │   ├── install_node_exporter.yml
+│   │       │   │   ├── install_prometheus.yml
+│   │       │   │   └── main.yml
+│   │       │   └── templates/
+│   │       │       ├── grafana-datasource.yml.j2
+│   │       │       └── prometheus.yml.j2
+│   │       └── mysql_petclinic/
+│   │           ├── files/
+│   │           │   ├── customers-data.sql
+│   │           │   ├── customers-schema.sql
+│   │           │   ├── vets.data.sql
+│   │           │   ├── vets-schema.sql
+│   │           │   ├── visits.data.sq
+│   │           │   └── visits-schema.sql
+│   │           ├── handlers/
+│   │           │   └── main.yml
+│   │           └── tasks/
+│   │               ├── create_databases.yml
+│   │               ├── create_users.yml
+│   │               ├── load_data.yml
+│   │               ├── load_schema.yml
+│   │               └── main.yml
+│   ├── 02-Chef/
+│   │   ├── 01-Architecture-and-Setup/
+│   │   │   ├── 01-Workstation/
+│   │   │   │   ├── assets/
+│   │   │   │   │   └── chef_workstation_architecture.png
+│   │   │   │   └── The Developer's Command Center.md
+│   │   │   ├── 02-Chef-Server/
+│   │   │   │   └── README.md
+│   │   │   ├── 03-Nodes/
+│   │   │   │   └── README.md
+│   │   │   └── Chef Architecture and Setup.md
+│   │   ├── 02-Cookbooks-and-Recipes/
+│   │   │   └── README.md
+│   │   ├── 03-Attributes-and-Ohai/
+│   │   │   └── README.md
+│   │   ├── 04-Environments-and-Data-Bags/
+│   │   │   └── README.md
+│   │   ├── 05-Interview-Questions-and-Quizzes/
+│   │   │   └── README.md
+│   │   ├── 06-Real-Life-Scenarios/
+│   │   │   └── README.md
+│   │   ├── README.md
+│   │   └── Youtube_Lessons.md
+│   ├── 03-Puppet/
+│   │   ├── 02-Manifests-and-Classes/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 04-SaltStack/
+│   │   ├── 01-Fundamentals/
+│   │   │   └── README.md
+│   │   ├── 02-States-and-Pillars/
+│   │   └── README.md
+│   └── README.md
+├── 03-Cloud-Native-Provisioning-and-Vendors/
+│   ├── 01-AWS-CloudFormation/
+│   │   ├── Advanced/
+│   │   │   └── README.md
+│   │   ├── Beginner/
+│   │   │   └── README.md
+│   │   ├── Intermediate/
+│   │   │   └── README.md
+│   │   ├── Interview-Questions/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 02-AWS-CDK/
+│   │   ├── Advanced/
+│   │   │   └── README.md
+│   │   ├── Beginner/
+│   │   │   └── README.md
+│   │   ├── Intermediate/
+│   │   │   └── README.md
+│   │   ├── Interview-Questions/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 03-AWS-SAM/
+│   │   ├── Advanced/
+│   │   │   └── README.md
+│   │   ├── Beginner/
+│   │   │   └── README.md
+│   │   ├── Intermediate/
+│   │   │   └── README.md
+│   │   ├── Interview-Questions/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 04-Azure-ARM/
+│   │   ├── Advanced/
+│   │   │   └── README.md
+│   │   ├── Beginner/
+│   │   │   └── README.md
+│   │   ├── Intermediate/
+│   │   │   └── README.md
+│   │   ├── Interview-Questions/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 05-Azure-Bicep/
+│   │   ├── Advanced/
+│   │   │   └── README.md
+│   │   ├── Beginner/
+│   │   │   └── README.md
+│   │   ├── Intermediate/
+│   │   │   └── README.md
+│   │   ├── Interview-Questions/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 06-GCP-Deployment-Manager/
+│   │   ├── Advanced/
+│   │   │   └── README.md
+│   │   ├── Beginner/
+│   │   │   └── README.md
+│   │   ├── Intermediate/
+│   │   │   └── README.md
+│   │   ├── Interview-Questions/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 07-GCP-Config-Connector/
+│   │   ├── Advanced/
+│   │   │   └── README.md
+│   │   ├── Beginner/
+│   │   │   └── README.md
+│   │   ├── Intermediate/
+│   │   │   └── README.md
+│   │   ├── Interview-Questions/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 08-Pulumi/
+│   │   ├── 01-Fundamentals/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Azure-README.md
+│   ├── GCP-README.md
+│   └── README.md
+├── 04-Immutable-Infrastructure-and-Images/
+│   ├── 01-Cloud-Init/
+│   │   ├── 01-Fundamentals/
+│   │   │   └── README.md
+│   │   ├── 02-Configuration-Formats/
+│   │   │   └── README.md
+│   │   ├── 03-System-Configuration/
+│   │   │   └── README.md
+│   │   ├── 04-Advanced-Features/
+│   │   │   └── README.md
+│   │   ├── 05-Interview-Questions-and-Quiz/
+│   │   │   └── README.md
+│   │   ├── 06-Real-Life-Scenarios/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 02-Packer/
+│   │   ├── 01-Fundamentals/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 03-Vagrant/
+│   │   ├── 01-Fundamentals/
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── README.md
+├── 05-Kubernetes-Config-and-Templating/
+│   ├── 01-Helm/
+│   │   ├── 01-Helm-Fundamentals/
+│   │   │   └── README.md
+│   │   ├── 02-Chart-Templating/
+│   │   │   └── README.md
+│   │   ├── 03-Intermediate-Helm/
+│   │   │   └── README.md
+│   │   ├── 04-Advanced-Helm/
+│   │   │   └── README.md
+│   │   ├── 05-Interview-Questions-and-Quizzes/
+│   │   │   └── README.md
+│   │   ├── 06-Real-Life-Scenarios/
+│   │   │   └── README.md
+│   │   ├── LEARNING_PATH_SUMMARY.md
+│   │   ├── README.md
+│   │   └── Youtube_Lessons.md
+│   ├── 02-Kustomize/
+│   │   ├── 01-Fundamentals/
+│   │   │   └── README.md
+│   │   └── Kustomize.md
+│   └── README.md
+├── 06-Assessments/
+│   ├── ansible-quiz.md
+│   ├── helm-quiz.md
+│   ├── Interview-Questions.md
+│   ├── Quizzes.md
+│   ├── README.md
+│   ├── Solutions/
+│   │   └── README.md
+│   └── terraform-quiz.md
+├── Automation-Challenges-Portfolio.md
+├── INTERVIEW_PREP.md
+├── README.md
+└── tree.txt
+
+177 directories, 277 files

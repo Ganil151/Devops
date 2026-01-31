@@ -1,0 +1,305 @@
+./
+├── 00-Reference-Metadata/
+│   ├── Automation-Security-Secrets-Ref.md
+│   └── Idempotency-in-Automation-Ref.md
+├── 00-Reference-Metadata.md
+├── 01-Shell-Scripting-Mastery/
+│   ├── 01-Fundamentals/
+│   │   ├── 01-Introduction/
+│   │   │   └── README.md
+│   │   └── 02-Intermediate-Logic/
+│   │       ├── logic_and_arrays.sh
+│   │       └── README.md
+│   ├── 02-Data-Processing/
+│   │   ├── 03-JSON-Processing-with-JQ/
+│   │   │   ├── CHALLENGES.md
+│   │   │   ├── jq_parsing.sh
+│   │   │   └── README.md
+│   │   ├── 04-Data-Wrangling-with-Sed-and-Awk/
+│   │   │   ├── CHALLENGES.md
+│   │   │   ├── README.md
+│   │   │   └── sed_awk_mastery.sh
+│   │   └── 06-Regex-and-Data-Parsing/
+│   │       ├── README.md
+│   │       └── regex_and_parsing.sh
+│   ├── 03-Advanced-Production-Patterns/
+│   │   ├── 01-Robust-Execution-and-Traps/
+│   │   │   ├── CHALLENGES.md
+│   │   │   ├── README.md
+│   │   │   ├── robust_execution_header.png
+│   │   │   └── robust_signals.sh
+│   │   ├── 02-Advanced-Argument-Parsing-Getopts/
+│   │   │   ├── CHALLENGES.md
+│   │   │   ├── getopts_cli.sh
+│   │   │   └── README.md
+│   │   ├── 03-Advanced-Functions-and-Modularity/
+│   │   │   ├── bin/
+│   │   │   │   └── main_deployer.sh
+│   │   │   ├── functions_modularity.sh
+│   │   │   ├── lib/
+│   │   │   │   └── logging.sh
+│   │   │   └── README.md
+│   │   ├── 04-Advanced-IO-and-Logging/
+│   │   │   ├── log_and_io_plumbing.sh
+│   │   │   └── README.md
+│   │   ├── 05-Scaling-Bash-Multiplexing-Parallelism/
+│   │   │   ├── CHALLENGES.md
+│   │   │   ├── parallel_fleet.sh
+│   │   │   └── README.md
+│   │   └── 05-Signal-Handling-Legacy/
+│   │       ├── README.md
+│   │       └── trap_and_signals.sh
+│   ├── 07-Assessments/
+│   │   ├── Interview-Questions.md
+│   │   ├── Quizzes.md
+│   │   └── README.md
+│   ├── brave-install.sh
+│   ├── README_Legacy.md
+│   ├── README.md
+│   └── REFERENCE/
+│       └── README.md
+├── 02-Advanced-Bash-Automation/
+│   └── REFERENCE/
+│       ├── Argument-Parsing-Keywords.md
+│       ├── JQ-Processing-Keywords.md
+│       ├── Parallelism-Keywords.md
+│       ├── README.md
+│       ├── Robust-Execution-Keywords.md
+│       └── Sed-Awk-Keywords.md
+├── 02-Python-for-Infrastructure/
+│   ├── 01-Python-Environment-and-Basics/
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_multi_env_config.py
+│   │   │   ├── challenge_02_graceful_shutdown.py
+│   │   │   ├── challenge_03_dependency_conflicts.py
+│   │   │   ├── challenge_04_secure_secret.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_multi_env_config.py
+│   │   │       ├── solution_02_graceful_shutdown.py
+│   │   │       ├── solution_03_dependency_conflicts.py
+│   │   │       └── solution_04_secure_secret.py
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 02-System-and-File-Operations/
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_duplicate_finder.py
+│   │   │   ├── challenge_02_log_rotator.py
+│   │   │   ├── challenge_03_command_wrapper.py
+│   │   │   ├── challenge_04_bulk_renamer.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_duplicate_finder.py
+│   │   │       ├── solution_02_log_rotator.py
+│   │   │       ├── solution_03_command_wrapper.py
+│   │   │       └── solution_04_bulk_renamer.py
+│   │   ├── CHALLENGES.md
+│   │   ├── path_manager.py
+│   │   └── README.md
+│   ├── 03-Working-with-Data-JSON-YAML/
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_yaml_to_json.py
+│   │   │   ├── challenge_02_config_validator.py
+│   │   │   ├── challenge_03_k8s_scaler.py
+│   │   │   ├── challenge_04_inventory_auditor.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_yaml_to_json.py
+│   │   │       ├── solution_02_config_validator.py
+│   │   │       ├── solution_03_k8s_scaler.py
+│   │   │       └── solution_04_inventory_auditor.py
+│   │   ├── CHALLENGES.md
+│   │   ├── config_validator.py
+│   │   └── README.md
+│   ├── 04-API-Mastery-with-Requests/
+│   │   ├── api_session.py
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_github_auditor.py
+│   │   │   ├── challenge_02_weather_alerter.py
+│   │   │   ├── challenge_03_retry_session.py
+│   │   │   ├── challenge_04_paginated_api.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_github_auditor.py
+│   │   │       ├── solution_02_weather_alerter.py
+│   │   │       ├── solution_03_retry_session.py
+│   │   │       └── solution_04_paginated_api.py
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 05-Cloud-Automation-Boto3-Deep-Dive/
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_s3_auditor.py
+│   │   │   ├── challenge_02_ec2_tagger.py
+│   │   │   ├── challenge_03_snapshot_cleaner.py
+│   │   │   ├── challenge_04_boto3_paginator.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_s3_auditor.py
+│   │   │       ├── solution_02_ec2_tagger.py
+│   │   │       ├── solution_03_snapshot_cleaner.py
+│   │   │       └── solution_04_boto3_paginator.py
+│   │   ├── CHALLENGES.md
+│   │   ├── README.md
+│   │   └── s3_paginator.py
+│   ├── 06-Serverless-Boto3-Lambda/
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_s3_extractor.py
+│   │   │   ├── challenge_02_iam_auditor.py
+│   │   │   ├── challenge_03_ec2_scheduler.py
+│   │   │   ├── challenge_04_layer_builder.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_s3_extractor.py
+│   │   │       ├── solution_02_iam_auditor.py
+│   │   │       ├── solution_03_ec2_scheduler.py
+│   │   │       └── solution_04_layer_builder.py
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 07-Testing-Automation-with-Pytest/
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_config_test.py
+│   │   │   ├── challenge_02_mock_api_test.py
+│   │   │   ├── challenge_03_moto_test.py
+│   │   │   ├── challenge_04_parameterize_test.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_config_test.py
+│   │   │       ├── solution_02_mock_api_test.py
+│   │   │       ├── solution_03_moto_test.py
+│   │   │       └── solution_04_parameterize_test.py
+│   │   ├── CHALLENGES.md
+│   │   ├── README.md
+│   │   └── test_infra_logic.py
+│   ├── 08-Log-Parsing-and-Regex/
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_ip_counter.py
+│   │   │   ├── challenge_02_error_extractor.py
+│   │   │   ├── challenge_03_slow_query.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_ip_counter.py
+│   │   │       ├── solution_02_error_extractor.py
+│   │   │       └── solution_03_slow_query.py
+│   │   ├── CHALLENGES.md
+│   │   ├── log_analyzer.py
+│   │   └── README.md
+│   ├── 09-Remote-Execution-and-SSH/
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_health_check.py
+│   │   │   ├── challenge_02_config_deploy.py
+│   │   │   ├── challenge_03_key_injector.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_health_check.py
+│   │   │       ├── solution_02_config_deploy.py
+│   │   │       └── solution_03_key_injector.py
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 10-Database-Operations/
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_inventory_db.py
+│   │   │   ├── challenge_02_deploy_log.py
+│   │   │   ├── challenge_03_db_verify.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_inventory_db.py
+│   │   │       ├── solution_02_deploy_log.py
+│   │   │       └── solution_03_db_verify.py
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 11-Docker-and-Kubernetes-SDKs/
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_docker_janitor.py
+│   │   │   ├── challenge_02_k8s_watcher.py
+│   │   │   ├── challenge_03_image_auditor.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_docker_janitor.py
+│   │   │       ├── solution_02_k8s_watcher.py
+│   │   │       └── solution_03_image_auditor.py
+│   │   ├── CHALLENGES.md
+│   │   ├── k8s_pod_lister.py
+│   │   └── README.md
+│   ├── 12-Web-Scraping-for-Monitoring/
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_status_checker.py
+│   │   │   ├── challenge_02_link_auditor.py
+│   │   │   ├── challenge_03_version_tracker.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_status_checker.py
+│   │   │       ├── solution_02_link_auditor.py
+│   │   │       └── solution_03_version_tracker.py
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 13-Data-Processing-with-Pandas/
+│   │   ├── challenges/
+│   │   │   ├── challenge_01_cost_analyzer.py
+│   │   │   ├── challenge_02_build_stats.py
+│   │   │   ├── challenge_03_log_anomalies.py
+│   │   │   └── solutions/
+│   │   │       ├── solution_01_cost_analyzer.py
+│   │   │       ├── solution_02_build_stats.py
+│   │   │       └── solution_03_log_anomalies.py
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 14-Capstone-Project-S3-Auditor/
+│   │   ├── CHALLENGES.md
+│   │   ├── project/
+│   │   │   ├── auditor.py
+│   │   │   ├── main.py
+│   │   │   ├── requirements.txt
+│   │   │   └── tests/
+│   │   │       └── test_s3_guardian.py
+│   │   └── README.md
+│   ├── README.md
+│   └── REFERENCE/
+│       ├── Cloud-Networking-Keywords.md
+│       ├── Core-Automation-Keywords.md
+│       ├── Data-Manipulation-Keywords.md
+│       ├── README.md
+│       └── Testing-Observability-Keywords.md
+├── 03-Cost-Estimation-and-FinOps/
+│   ├── 01-CLI-Automation/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 02-GitHub-Actions-Integration/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 03-Policy-as-Code-Guardrails/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── cost_management_dashboard_mockup.png
+│   ├── README.md
+│   └── REFERENCE/
+│       ├── Infracost-Keywords.md
+│       ├── README.md
+│       └── samples/
+│           ├── advanced_gha_policy.yml
+│           ├── cost_guardrail.py
+│           ├── infracost_cli_pipeline.sh
+│           ├── README.md
+│           └── usage_metrics.yml
+├── 07-Interview-Questions-and-Quizzes/
+│   ├── 01-Shell-Scripting-Fundamentals/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 02-Python-Automation/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 03-Ansible-Orchestration/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 04-SRE-Best-Practices/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   └── README.md
+├── 08-Real-Life-Scenarios/
+│   ├── 01-Safety-Guards-and-Locks/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 02-Log-Analysis-and-Parsing/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 03-Cloud-Governance-and-Costs/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 04-API-Reliability-and-Retries/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── DELETE_ME.md
+│   └── README.md
+├── Automation-Challenges.md
+├── CHALLENGES.md
+├── README.md
+└── tree.txt
+
+83 directories, 220 files
