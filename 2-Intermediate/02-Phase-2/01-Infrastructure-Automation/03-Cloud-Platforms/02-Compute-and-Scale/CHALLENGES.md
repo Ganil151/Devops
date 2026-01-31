@@ -1,40 +1,53 @@
-# Compute and Scale Challenges (AWS Focused) ☁️
+# 🧪 Hands-On Labs & Challenges
 
-Master the elasticity of the cloud by building self-healing, auto-scaling compute clusters.
+## Lab 1: "The Multi-Cloud Bridge"
+**Objective**: Architecture a cross-cloud event-driven workflow.
 
----
+### Scenario
+An enterprise uses AWS for its primary data ingestion but leverages Azure for its specialized machine learning functions. You need to trigger an Azure Function whenever a new message arrives in an AWS SQS queue.
 
-## 🏆 Challenge 01: The Auto-Scaling Architect
-**Objective**: Configure an AWS Auto Scaling Group (ASG) for high availability.
+### Architecture
+1. **Producer**: A script (Python) sending JSON data to an **AWS SQS** queue.
+2. **Bridge**: An AWS Lambda function acting as a "Forwarder".
+3. **Consumer**: An **Azure Function** (HTTP Triggered) that receives the data and processes it.
 
-1.  **Requirement**: Create a **Launch Template** with a simple UserData script that starts an Nginx server.
-2.  **Task**: Create an **Auto Scaling Group** using that template.
-3.  **Constraints**:
-    *   **Desired Capacity**: 2
-    *   **Min Capacity**: 2
-    *   **Max Capacity**: 5
-4.  **Verification**: Manually terminate one instance through the EC2 console and watch the ASG "Self-Heal" by spinning up a new one.
-
----
-
-## 🏆 Challenge 02: Dynamic Scaling Policies
-**Objective**: Automatically grow your cluster during traffic surges.
-
-1.  **Task**: Add a **Target Tracking Scaling Policy** to your ASG.
-2.  **Metric**: Set a target CPU utilization of **50%**.
-3.  **Lab**: Run a CPU-loading tool (like `stress`) on your instances.
-4.  **Goal**: Observe the "Scaling Out" activity in the ASG activity logs.
+### Your Tasks
+- [ ] Create an AWS SQS queue using Terraform.
+- [ ] Create an Azure Function app with an HTTP endpoint.
+- [ ] Write a Lambda function that:
+    - Triggers on SQS messages.
+    - Sends a POST request to the Azure Function URL.
+    - Implements basic authentication (Function Key).
+- [ ] Verify the message flow from AWS console to Azure monitoring.
 
 ---
 
-## 🏆 Challenge 03: Spot Instance Optimization
-**Objective**: Reduce cloud costs by up to 90%.
+## Lab 2: "Zero-Downtime Deployment"
+**Objective**: Configure a Load Balancer to perform a Blue/Green deployment strategy.
 
-1.  **Requirement**: Modify your Launch Template to use **Spot Instances**.
-2.  **Task**: Explain the "Interruption" mechanism. How does your app handle a 2-minute warning before the instance is reclaimed?
-3.  **Advanced**: Research **Spot Instance Pools** and how to use multiple instance types (e.g., `t3.large` and `m5.large`) to increase availability.
+### Scenario
+Your application `v1` (Blue) is running. You want to deploy `v2` (Green) and switch traffic only after `v2` is fully verified, with the ability to roll back instantly.
+
+### Infrastructure (IaC: Terraform or Bicep)
+1. **Load Balancer**: A single ALB (AWS) or Application Gateway (Azure).
+2. **Target Groups**:
+    - `tg-blue`: Points to instances running `v1`.
+    - `tg-green`: Points to instances running `v2`.
+
+### Your Tasks
+- [ ] Provision the Load Balancer and the two Target Groups.
+- [ ] Set the LB Listener rule to forward 100% of traffic to `tg-blue`.
+- [ ] Deploy `v2` instances into `tg-green`.
+- [ ] Perform a health check on `v2` by accessing the Target Group directly (or via a test listener port).
+- [ ] Update the Listener rule to shift 100% traffic to `tg-green`.
+- [ ] **Bonus**: Reconfigure the rule to do a "Canary" shift (80/20 split) before going 100% Green.
 
 ---
 
-## 📁 Solutions
-Terraform ASG modules and UserData script templates are in the `Boilerplates/` directory.
+## 🏁 Final Project: The Resilient API
+Combine all concepts into a single project:
+- Build a REST API on **AWS ECS Fargate**.
+- Front it with an **Application Load Balancer**.
+- Configure **Auto Scaling** based on concurrent requests.
+- Log all transactional data to an **SQS queue** for asynchronous processing.
+- document the entire stack using a single `main.tf` file.

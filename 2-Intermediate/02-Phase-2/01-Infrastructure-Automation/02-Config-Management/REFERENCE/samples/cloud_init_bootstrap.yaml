@@ -1,0 +1,27 @@
+#cloud-config
+# Topic: Zero-Day Initialization (Frying)
+# Description: Standard server bootstrapping template.
+
+# 1. System Updates
+upgrade_package: true
+
+# 2. User & Access Management
+users:
+  - name: platform_admin
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3N... # Replace with actual key
+
+# 3. Necessary Utilities
+packages:
+  - htop
+  - git
+  - curl
+  - python3-pip
+
+# 4. Final Hook
+runcmd:
+  - [ echo, "🚀 Server successfully bootstrapped via Cloud-Init", ">", "/var/log/bootstrap.log" ]
+  - [ systemctl, stop, cron ] # Example: Disable cron initially

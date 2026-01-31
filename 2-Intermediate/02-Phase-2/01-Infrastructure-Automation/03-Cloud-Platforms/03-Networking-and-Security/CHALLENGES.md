@@ -1,42 +1,48 @@
-# Cloud Networking & Security Challenges 🛡️
+# 🧪 Networking & Security Labs
 
-Secure your cloud infrastructure using advanced isolation and packet filtering.
+## Lab 1: "The Private Link Bridge"
+**Objective**: Architecture a secure, private connection between two VPCs in different accounts without exposing traffic to the public internet.
 
----
+### Scenario
+Account A (Frontend) needs to access a REST API running in a private subnet in Account B (Backend). Company policy forbids VPC Peering due to overlapping CIDR ranges and security concerns.
 
-## 🏆 Challenge 01: The Zero-Trust Security Group
-**Objective**: Implement strictly layered inbound/outbound rules.
+### The Solution: PrivateLink (VPC Endpoints)
+1. **Account B**: Create an **NLB** (Network Load Balancer) in front of the API.
+2. **Account B**: Create an **Endpoint Service** associated with the NLB.
+3. **Account A**: Create an **Interface VPC Endpoint** pointing to the service in Account B.
 
-1.  **Scenario**: A 3-tier app (Web, App, DB).
-2.  **Task**: Define security group rules for the **App SG**.
-3.  **Requirements**:
-    *   **Inbound**: Only allow traffic from the **Web SG** on port 8080.
-    *   **Outbound**: Only allow traffic to the **Database SG** on port 5432.
-4.  **Action**: Draft the Terraform or CLI commands to link the Security Groups by ID rather than IP CIDR.
-5.  **Security**: Explain why linking SGs by Security Group ID is safer than using IP ranges.
-
----
-
-## 🏆 Challenge 02: Private Cloud Isolation (Bastion Access)
-**Objective**: Access private-subnet resources securely.
-
-1.  **Requirement**: A Private Subnet with NO internet access (only a NAT gateway for outbound).
-2.  **Task**: Deploy a **Bastion Host** in the Public Subnet.
-3.  **Advanced**: Research **AWS Client VPN** or **Azure Bastion**. How do these services remove the need for managing your own EC2 jump box?
-4.  **Goal**: Explain the data flow: User -> Public Bastion -> Private Instance.
+### Your Tasks
+- [ ] Provision the VPCs and subnets with non-overlapping and overlapping ranges to simulate the constraint.
+- [ ] Configure the NLB and Endpoint Service in the Backend account.
+- [ ] Whitelist the Frontend account ID.
+- [ ] Create the Endpoint in the Frontend account and verify connectivity via `curl` to the endpoint DNS.
 
 ---
 
-## 🏆 Challenge 03: Cloud Audit & Compliance
-**Objective**: Monitor who did what in your cloud account.
+## Lab 2: "The Secrets Rotation Automaton"
+**Objective**: Implement a zero-trust model where application code never sees a hardcoded password.
 
-1.  **Requirement**: Enable **AWS CloudTrail** or **Azure Activity Logs**.
-2.  **Task**: Intentionally delete a non-production resource.
-3.  **Action**: Use the CloudTrail console to find the event.
-4.  **Discovery**: Identify the **IAM User**, **Source IP**, and **Time** of the deletion.
-5.  **Goal**: Draft a simple alert that triggers if an `iam:CreateUser` event occurs.
+### Scenario
+An RDS PostgreSQL database requires credentials. You must store them in AWS Secrets Manager and rotate them every 30 days without application downtime.
+
+### Implementation
+1. **Vault**: Store the JSON credentials in Secrets Manager.
+2. **Rotation**: Enable rotation using a managed Lambda function (or custom Bicep/Terraform logic).
+3. **Access**: Grant the EC2/ECS instance an **IAM Role** with `secretsmanager:GetSecretValue` permission.
+4. **App**: The application code calls the Secrets Manager API at startup/periodically to retrieve current credentials.
+
+### Your Tasks
+- [ ] Create an RDS instance.
+- [ ] Store credentials in Secrets Manager via Terraform.
+- [ ] Configure the Lambda rotation function.
+- [ ] Write a simple script (Python/Node) that demonstrates fetching the secret using the SDK.
+- [ ] Verify that when the secret is manually rotated, the app can still connect.
 
 ---
 
-## 📁 Solutions
-VPC security templates and CloudTrail alerting policies are in the `Boilerplates/` directory.
+## 🏁 Final Project: The Hardened Edge
+Combine all concepts:
+- Deploy a static site on **S3/CloudFront**.
+- Attach an **AWS WAF** with managed rules for SQLi and Bot protection.
+- Configure **Route 53** with a health check failover to a maintenance page.
+- Use **Certificate Manager** (ACM) for end-to-end SSL/TLS.

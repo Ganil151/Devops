@@ -1,0 +1,39 @@
+# Topic: Advanced Inventory Management
+# Description: Demonstrates nested groups, host variables, and range expansion.
+
+all:
+  children:
+    # --- Environment: Production ---
+    production:
+      hosts:
+        web-prod-[01:05].example.com: # Range expansion for 5 servers
+          ansible_user: deploy_pro
+        db-prod-01.example.com:
+          ansible_host: 192.168.10.50
+          db_role: primary
+      vars:
+        env_label: prod
+        backup_enabled: true
+
+    # --- Environment: Staging ---
+    staging:
+      hosts:
+        web-stg-01.example.com:
+          web_port: 8080
+      vars:
+        env_label: staging
+        backup_enabled: false
+
+    # --- Global Meta Group ---
+    webservers:
+      children:
+        production:
+          # Only include the web hosts from production
+          # (Logic usually handled via tag-based dynamic inventory)
+          pass
+        staging:
+          pass
+
+# DevOps Pro Tip: 
+# Use 'group_vars/' and 'host_vars/' directories instead of putting 
+# all variables in the inventory file for better maintainability.

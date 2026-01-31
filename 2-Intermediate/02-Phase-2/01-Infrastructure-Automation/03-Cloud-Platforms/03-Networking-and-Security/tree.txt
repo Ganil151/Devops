@@ -1,0 +1,47 @@
+./
+├── 01-Network-Infrastructure/
+│   ├── AWS-VPC/
+│   │   ├── networking-hacks.md
+│   │   ├── networking-hacks-tips.md
+│   │   ├── vpc-best-practices.md
+│   │   └── vpc-hands-on.md
+│   ├── Azure-VNet/
+│   │   └── azure-vnet-reference.md
+│   ├── GCP-Virtual-Network/
+│   │   └── gcp-vpc-reference.md
+│   └── README.md
+├── 02-DNS-and-Content-Delivery/
+│   ├── AWS-Route53-CloudFront/
+│   │   ├── aws-api-gateway-guide.md
+│   │   ├── aws-cloudfront-cdn.md
+│   │   └── route53-hands-on.md
+│   ├── Azure-DNS-FrontDoor/
+│   │   └── azure-dns-edge-reference.md
+│   ├── GCP-Cloud-DNS-CDN/
+│   │   └── gcp-dns-edge-reference.md
+│   └── README.md
+├── 03-Identity-and-Access-Control/
+│   ├── auth-deep-dive.md
+│   ├── AWS-IAM-Cognito/
+│   │   ├── aws-iam-comprehensive.md
+│   │   └── cognito-hands-on.md
+│   ├── Azure-AD/
+│   │   └── azure-identity-reference.md
+│   ├── GCP-IAM/
+│   │   └── gcp-identity-reference.md
+│   └── README.md
+├── 04-Security-and-Secrets-Management/
+│   ├── AWS-Shield-WAF-KMS/
+│   │   └── secrets-best-practices.md
+│   ├── Azure-Security-Center-KeyVault/
+│   │   └── azure-keyvault-reference.md
+│   ├── GCP-Armor-SecretManager/
+│   │   └── gcp-security-reference.md
+│   └── README.md
+├── CHALLENGES.md
+├── README.md
+├── technical-guides/
+│   └── quiz.md
+└── tree.txt
+
+18 directories, 27 files
