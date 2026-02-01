@@ -1,60 +1,61 @@
-# 🎯 Regular Expressions: The Scalpel Challenges
+# 🎯 Regular Expressions: The Precision Scalpel Challenges
 
-> **"Logs are the messy history of a system. Regex is the light that finds the truth within them. These challenges test your surgical precision with strings."**
+> **"Infrastructure logs are a chaotic sea of unstructured text. These challenges test your ability to surgically extract the signal from the noise."**
 
 ---
 
-## 🏆 Challenge 1: The IP Extractor
+## 🏆 Challenge 1: The Multi-IP & Port Extractor
 **Difficulty**: ⭐ Beginner  
 **Estimated Time**: 15 minutes
 
 ### Objective
-Extract all IP addresses from a text-based firewall log.
+Extract both IP addresses and Port numbers from a firewall log string.
 
 ### Requirements
-- Input string: `Attempt from 192.168.1.1 blocked. Success from 10.0.0.5 on port 80.`
-- Pattern: Matches 4 sets of numbers separated by dots.
-- Output: A list `['192.168.1.1', '10.0.0.5']`.
-
-### Hints
-- Use `re.findall()`.
-- Pattern hint: `\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}`.
+- Input: `Allow 192.168.1.1:80 from 10.0.0.5:443 (TCP ACK)`
+- Pattern: Use a single regex with two capture groups (one for IP, one for Port).
+- Output: A list of tuples `[('192.168.1.1', '80'), ('10.0.0.5', '443')]`.
+- **Constraint**: Use `re.findall()` with a pattern like `([\d\.]+):(\d+)`.
 
 ---
 
-## 🏆 Challenge 2: The Structured Log Parser
+## 🏆 Challenge 2: The High-Performance Log Parser
 **Difficulty**: ⭐⭐ Intermediate  
 **Estimated Time**: 30 minutes
 
 ### Objective
-Convert a raw log line into a Python Dictionary using **Named Capture Groups**.
+Parse 100+ raw log lines into a list of structured dictionaries using a **Compiled Regex**.
 
 ### Requirements
-- Log: `Feb 01 12:00:00 [ERROR] DB-01: Connection Timeout`
-- Pattern: Use `(?P<name>...)` to capture Date, Level, Host, and Message.
-- Output: `{'date': 'Feb 01 12:00:00', 'level': 'ERROR', 'host': 'DB-01', 'msg': 'Connection Timeout'}`.
+- Log Format: `[2026-02-01 12:00:00] [LEVEL] <SERVICE> Message`
+- Create a **Compiled Regex Object** (`re.compile`) with Named Groups: `timestamp`, `level`, `service`, `message`.
+- Loop through a provided list of lines and append each `match.groupdict()` to a results list.
+- **Verification**: Ensure the `level` matches even if it's lowercase (use `re.IGNORECASE`).
 
 ---
 
-## 🏆 Challenge 3: PII Masking (Redaction)
+## 🏆 Challenge 3: The API Secret Scrubber
 **Difficulty**: ⭐⭐⭐ Advanced  
-**Estimated Time**: 40 minutes
+**Estimated Time**: 45 minutes
 
 ### Objective
-Scrub sensitive information (Credit Cards / Passwords) from a log file before it is sent to a monitoring tool.
+Build a "Pre-processing" function that redacts multi-type secrets (Passwords, API Keys, and SSH Keys).
 
 ### Requirements
-- Input: `User 1234-5678-1234-5678 with password 'Secret123' changed their email.`
-- Action 1: Replace any 16-digit dashed number with `****-****-****-****`.
-- Action 2: Replace any string after `password '...'` with `password '********'`.
-- Output: `User ****-****-****-**** with password '********' changed their email.`
-
-### Hints
-- Use `re.sub()`.
+- Input:
+    ```
+    api_key='sk_test_12345'
+    password="my-secure-pass"
+    ssh-rsa AAAAB3Nza...[long key]... user@host
+    ```
+- Write a function `scrub_secrets(text)` that:
+    1. Replaces values inside quotes after `api_key=` or `password=` with `[REDACTED]`.
+    2. Replaces any string starting with `ssh-rsa` and ending with more than 50 characters with `[SSH-KEY-REMOVED]`.
+- **Constraint**: Must use a **Non-Greedy** match (`.*?`) to avoid deleting the entire line if multiple secrets exist.
 
 ---
 
 ## ✅ Completion Checklist
-- [ ] Challenge 1: IP Extractor
-- [ ] Challenge 2: Log Parser
-- [ ] Challenge 3: PII Masking
+- [ ] Challenge 1: IP & Port Extractor
+- [ ] Challenge 2: High-Performance Parser
+- [ ] Challenge 3: API Secret Scrubber

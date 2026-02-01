@@ -4,49 +4,51 @@
 
 ---
 
-## 🏆 Challenge 1: The Config Generator
+## 🏆 Challenge 1: The Infrastructure Snapshot
 **Difficulty**: ⭐ Beginner  
 **Estimated Time**: 15 minutes
 
 ### Objective
-Create a script that converts a Python dictionary into a formatted `config.json` file.
+Create a script that takes a current system "snapshot" and saves it as a valid JSON file.
 
 ### Requirements
-- Create a dictionary representing server settings (port, host, debug_mode).
-- Save it to `config.json` with an indentation of 4 spaces.
-- Read it back immediately and print the "host" value to verify.
+- Collect: `hostname`, `current_user`, and `disk_usage` (placeholder values are fine).
+- Save to `snapshot.json` with 2-space indentation.
+- Verification: Print the file size of `snapshot.json`.
 
 ---
 
-## 🏆 Challenge 2: The Log Transmogrifier
+## 🏆 Challenge 2: The Audit Log Streamer
 **Difficulty**: ⭐⭐ Intermediate  
 **Estimated Time**: 30 minutes
 
 ### Objective
-Convert a list of flat strings into a structured JSON log file.
+Convert a standard JSON list of logs into a high-performance `JSON Lines (.jsonl)` file.
 
 ### Requirements
-- Input: `["2024-01-01 ERROR DB_FAILED", "2024-01-01 INFO STARTING"]`.
-- Output: A JSON file where each entry is an object: `{"date": "...", "level": "...", "message": "..."}`.
-- Sort the final list by "level" (alphabetical) before saving.
+- Start with a standard list of 5 dictionaries (logs).
+- Save them to `audit.jsonl` (one JSON object per line).
+- **Bonus**: Include a `datetime.now()` object in each log and use a **Custom Encoder** to handle it.
 
 ---
 
-## 🏆 Challenge 3: The API Response Validator
+## 🏆 Challenge 3: The Production API Guard
 **Difficulty**: ⭐⭐⭐ Advanced  
 **Estimated Time**: 45 minutes
 
 ### Objective
-Simulate an API response and extract nested data safely.
+Build a "Validation Layer" that protects your script from malformed API responses.
 
 ### Requirements
-- Use a complex nested JSON string (e.g., a list of users, where each user has a list of 'roles').
-- Create a script that finds all users with the role "admin".
-- Handle cases where the "roles" key might be missing for some users without the script crashing (use `.get()`).
+- Input: A nested JSON string representing an "Inventory Update" (`{"region": "...", "nodes": [...]}`).
+- Task: 
+    1.  Validate that `region` is one of `['us-east-1', 'us-west-2', 'eu-central-1']`.
+    2.  Use a **Schema** (either manual or `jsonschema` library) to ensure every node has an `id` and a `status`.
+    3.  If validation fails, print a detailed report of what's missing instead of just crashing.
 
 ---
 
 ## ✅ Completion Checklist
-- [ ] Challenge 1: Config Generator
-- [ ] Challenge 2: Log Transmogrifier
-- [ ] Challenge 3: API Response Validator
+- [ ] Challenge 1: Infrastructure Snapshot
+- [ ] Challenge 2: Audit Log Streamer
+- [ ] Challenge 3: Production API Guard

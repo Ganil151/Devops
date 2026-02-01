@@ -29,20 +29,36 @@ Think of Python environments like **shipping containers**:
 
 ---
 
-## 📚 Why This Module Matters for Juniors
-
-**Before this module**, you might think:
-- "I'll just `sudo pip install` everything"
-- "One environment is enough for all my scripts"
-- "Why does my code work here but not there?"
-
-**After this module**, you'll understand:
-- **Global installs break operating systems** (yum/apt rely on Python)
-- **Projects need specific versions** of libraries (Version 1.0 vs 2.0)
-- **`requirements.txt` ensures reproducibility**
-- **.venv folders must be gitignored** (they are not portable)
-
 **The Difference**: Your projects become portable, reproducible, and non-destructive.
+
+---
+
+## 🆚 Junior Way vs. Engineer Way
+
+| Feature | The Junior Way (Problematic) | The Engineer Way (Production-ready) |
+|:---|:---|:---|
+| **Installation** | `sudo pip install` (System-wide) | `pip install` inside a virtual environment |
+| **Dependency Control** | One shared mess for all projects | Isolated dependencies per project |
+| **Reproducibility** | "It works on my machine!" | `pip install -r requirements.txt` everywhere |
+| **OS Stability** | Risk of breaking OS tools (yum/apt) | System Python remains clean and stable |
+| **Portability** | Committing `.venv` to Git | Committing only `requirements.txt` |
+
+---
+
+### 🎨 Visual: How Activation Works (PATH Manipulation)
+
+```mermaid
+graph LR
+    A[Shell Terminal] --> B{Active Venv?}
+    B -- No --> C[/usr/bin/python]
+    B -- Yes --> D[.venv/bin/python]
+    
+    style D fill:#2ecc71,stroke:#27ae60,color:#fff
+```
+
+**What happens under the hood?** When you run `source .venv/bin/activate`, your shell's **`PATH`** variable is temporarily changed to put `.venv/bin` at the very front. Now, when you type `python`, the shell finds the one in the container first!
+
+---
 
 ---
 

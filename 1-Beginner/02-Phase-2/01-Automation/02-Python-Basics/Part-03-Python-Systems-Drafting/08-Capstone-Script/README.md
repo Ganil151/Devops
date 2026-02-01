@@ -58,6 +58,41 @@ You will build `ops-mate`, a CLI tool that can:
 
 ---
 
+## 🆚 Junior Way vs. Engineer Way
+
+| Feature | The Junior Way (Problematic) | The Engineer Way (Production-ready) |
+|:---|:---|:---|
+| **Structure** | Single 2000-line script file | Modular package with `src/`, `tests/`, `config/` |
+| **Logic** | Script logic mixed with config | Logic is generic; config is external (YAML) |
+| **Integrity** | Script crashes if one API fails | Resilient loops with robust error boundaries |
+| **Observability** | Printing "Done" at the end | Structured logging with rotation to `logs/` |
+| **Deployment** | Running `python script.py` | Installed as a global CLI tool (`setup.py`) |
+| **Confidence** | Manual testing of common paths | Unit tests covering success & failure cases |
+
+---
+
+### 🎨 Visual: The Production Project Structure
+
+```mermaid
+graph TD
+    Root[ops-mate/] --> Src[src/]
+    Root --> Test[tests/]
+    Root --> Cnf[config/]
+    Root --> Doc[README.md]
+    Root --> Req[requirements.txt]
+    
+    Src --> Main[main.py - The CLI]
+    Src --> Mod1[health.py]
+    Src --> Mod2[deploy.py]
+    Src --> Util[utils.py - The Logger]
+```
+
+**Why this matters**: In a real DevOps team, you don't share scripts via Slack. You share **Git Repositories**. This structure allows your colleagues to understand, test, and contribute to your tool without you needing to explain it.
+
+---
+
+---
+
 ## 🎯 Learning Objectives
 
 By the end of this module, you will:

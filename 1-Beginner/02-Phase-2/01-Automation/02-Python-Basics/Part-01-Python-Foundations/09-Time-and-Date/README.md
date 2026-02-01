@@ -30,21 +30,22 @@ Think of time handling like **coordinating a global meeting**:
 
 ---
 
-## 📚 Why This Module Matters for Juniors
-
-**Before this module**, you might think:
-- "I'll just use `datetime.now()` everywhere"
-- "Timezones don't matter for my scripts"
-- "I'll store timestamps as strings"
-
-**After this module**, you'll understand:
-- **UTC is the universal standard** for storing timestamps
-- **Timezone-aware objects prevent bugs** in distributed systems
-- **timedelta enables time arithmetic** (now - 7 days)
-- **strptime/strftime parse and format** timestamps
-- **Unix epoch is the standard** for APIs and databases
-
 **The Difference**: Your automation will handle time correctly across regions, timezones, and daylight saving changes.
+
+---
+
+## 🆚 Junior Way vs. Engineer Way
+
+| Feature | The Junior Way (Problematic) | The Engineer Way (Production-ready) |
+|:---|:---|:---|
+| **Storage** | Storing time as strings ("Aug 5, 2023") | Storing as Unix Epoch or ISO-8601 UTC |
+| **Reference** | Using `datetime.now()` (Local time) | Using `datetime.now(timezone.utc)` |
+| **Calculation** | Adding/Subscribing strings/ints | Using `timedelta` for precision arithmetic |
+| **Timezones** | Ignoring them (Naive objects) | Using `zoneinfo` or `timezone` (Aware objects) |
+| **Logic** | Overly complex "if hour > X" | `if current_time >= scheduled_time:` |
+| **Formatting** | Hardcoded logic | `strftime` with standard patterns |
+
+---
 
 ---
 

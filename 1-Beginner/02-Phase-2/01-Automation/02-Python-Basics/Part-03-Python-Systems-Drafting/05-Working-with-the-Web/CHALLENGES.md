@@ -1,84 +1,73 @@
-# 🎯 Working with the Web - Challenges
+# 🎯 Working with the Web: API & Orchestration Challenges
 
-> **"An API is a promise. These challenges test your ability to hold systems to that promise by fetching, validating, and orhcestrating data over the wire."**
+> **"Infrastructure is behind an API. These challenges test your ability to fetch, validate, and automate across the wire using professional HTTP patterns."**
 
 ---
 
-## 🏆 Challenge 1: The Status Auditor
+## 🏆 Challenge 1: The Resilient Health Checker
 **Difficulty**: ⭐ Beginner  
-**Estimated Time**: 15 minutes
+**Estimated Time**: 20 minutes
 
 ### Objective
-Create a script that checks a list of public URLs and reports their status.
+Build a status auditor that handles timeouts and connection errors like a production monitoring tool.
 
 ### Requirements
-- Define a list of 5 URLs (e.g., GitHub, Google, a non-existent site).
-- Use `requests.get()` with a `timeout=3`.
-- Print a clean report: `[200 OK] https://github.com` or `[404 FAIL] https://...`.
-- Handle `ConnectionError` gracefully without crashing.
-
-### Hints
-- Use a `for` loop to iterate through the list.
-- Use `response.status_code`.
+- Create a list of 5 URLs (include `http://httpstat.us/200`, `http://httpstat.us/404`, and `http://httpstat.us/500`).
+- Use `requests.get()` with a **mandatory `timeout=5`**.
+- Use **`response.raise_for_status()`** inside a `try/except` block.
+- **Reporting**: Print `[OK]` for 200s, `[ERROR]` for 4xx/5xx, and `[TIMEOUT]` if the server is too slow.
 
 ---
 
-## 🏆 Challenge 2: The GitHub Repo Finder
+## 🏆 Challenge 2: The GitHub Top-5 Automator
 **Difficulty**: ⭐⭐ Intermediate  
 **Estimated Time**: 30 minutes
 
 ### Objective
-Query the GitHub API to find the top 5 most starred Python repositories.
+Query the GitHub Search API and create a structured local backup of the results.
 
 ### Requirements
-- Target: `https://api.github.com/search/repositories?q=language:python&sort=stars&order=desc`.
-- Extract the `name`, `stargazers_count`, and `html_url`.
-- Print the results in a formatted table.
-- **Fail-Safe**: Check `response.status_code` before parsing.
-
-### Hints
-- Use `response.json()` to parse the data.
-- The items are inside a list called `items` in the JSON response.
+- URL: `https://api.github.com/search/repositories?q=language:python&sort=stars`
+- Use a **`requests.Session()`** object for the request.
+- Extract the top 5 results: `name`, `owner.login`, and `stargazers_count`.
+- Save the results into a file named `top_python_repos.json` using the `json` module.
+- **Pro Pattern**: Add a custom `User-Agent` header to your session to avoid being blocked by GitHub's rate limiter.
 
 ---
 
-## 🏆 Challenge 3: The Secret Vault (Secure Auth)
+## 🏆 Challenge 3: The Secret Vault Orchestrator
 **Difficulty**: ⭐⭐⭐ Advanced  
 **Estimated Time**: 45 minutes
 
 ### Objective
-Build a script that interacts with an authenticated API (e.g., GitHub User info or a mock API) using Bearer Tokens.
+Authenticate against an API and perform a structured sequence of actions.
 
 ### Requirements
-- Load an API Token from an Environment Variable (Do NOT hardcode).
-- Send the token in an `Authorization: Bearer <token>` header.
-- Fetch your own GitHub user profile data (`GET https://api.github.com/user`).
-- Display your username, public repo count, and bio.
-- Handle 401 Unauthorized errors with a helpful message: "Check your token!"
-
-### Hints
-- Use `os.getenv("GITHUB_TOKEN")`.
-- Use `headers={"Authorization": f"Bearer {token}"}`.
+- Fetch an **API Token** from an environment variable `SERVICE_TOKEN`.
+- Create a function `get_user_info(token)` that calls an API (e.g., GitHub `/user` or a mock service).
+- If the response is `401 Unauthorized`, print a "Security Alert: Token Expired" message and exit.
+- If successful, parse the JSON and print: "Authenticated as [username]. Account created on [date]".
+- **Bonus**: Implement a simple **retry loop** (wait 2 seconds and try again) if you get a `503 Service Unavailable`.
 
 ---
 
-## 🎓 Bonus Challenge: The Scraper of Last Resort
+## 🏆 Bonus: The "Legacy Miner" (BeautifulSoup)
 **Difficulty**: ⭐⭐⭐ Advanced  
 **Estimated Time**: 60 minutes
 
 ### Objective
-Extract the "Current Temperature" from a weather website that doesn't have a simple API.
+Extract structured data from a legacy HTML page.
 
 ### Requirements
-- Use `requests` to fetch the HTML.
-- Use `BeautifulSoup` to find the specific element (by ID or Class).
-- Extract only the numeric temperature value.
-- Log an error if the element cannot be found (e.g., site structure changed).
+- Use `requests` to fetch a page with a list of items (e.g., a news site or status page).
+- Use `BeautifulSoup` to find all `<a>` tags or a specific `<table>` row.
+- Filter the results to only show items containing the word "Security" or "CVE".
+- **Documentation**: Write a comment explaining why this is a "last resort" compared to an API.
 
 ---
 
 ## ✅ Completion Checklist
-- [ ] Challenge 1: Status Auditor
-- [ ] Challenge 2: GitHub Repo Finder
-- [ ] Challenge 3: Secret Vault
-- [ ] Bonus: Scraper of Last Resort
+- [ ] Challenge 1: Resilient Health Checker
+- [ ] Challenge 2: GitHub Top-5 Automator
+- [ ] Challenge 3: Vault Orchestrator
+- [ ] Bonus: Legacy Miner (Scraping)

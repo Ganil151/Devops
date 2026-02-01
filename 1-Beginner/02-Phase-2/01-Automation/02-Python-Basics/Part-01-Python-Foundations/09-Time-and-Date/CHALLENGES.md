@@ -1,54 +1,68 @@
-# 🎯 Time and Date - Challenges
+# 🎯 Time & Date: Temporal Coordination Challenges
 
-> **"In DevOps, time is the dimension of auditing and availability. These challenges test your ability to coordinate scheduled tasks and monitor durations."**
+> **"Logs without timestamps are just noise. Deployments without schedules are just accidents. These challenges test your ability to master the fourth dimension of automation."**
 
 ---
 
-## 🏆 Challenge 1: The Maintenance Window Check
+## 🏆 Challenge 1: The Global Maintenance Guard
 **Difficulty**: ⭐ Beginner  
-**Estimated Time**: 15 minutes
+**Estimated Time**: 20 minutes
 
 ### Objective
-Determine if the current time falls within a specific maintenance window.
+Build a "Gatekeeper" script that checks if the current time in UTC falls within a scheduled maintenance window.
 
 ### Requirements
-- Define a window: `02:00:00` to `04:00:00`.
-- Get the current time.
-- Print "System in Maintenance" or "Normal Operations" based on the check.
+- Maintenance Window: `01:00 UTC` to `03:00 UTC`.
+- Use `datetime.now(timezone.utc)` to get the current time.
+- Check only the `hour` part of the time.
+- Print: `⚠️ MAINTENANCE IN PROGRESS` or `✅ SERVICE OPERATIONAL`.
+- **Constraint**: Your script must work correctly regardless of the local timezone of the machine running it.
 
 ---
 
-## 🏆 Challenge 2: The S3 Retention Calculator
+## 🏆 Challenge 2: The S3 Object Expiry Auditor
 **Difficulty**: ⭐⭐ Intermediate  
 **Estimated Time**: 30 minutes
 
 ### Objective
-Identify files that are older than 90 days for archival.
+Calculate object retirement dates for a mock cloud storage bucket.
 
 ### Requirements
-- Input: A list of filenames and their "Creation Dates" (as strings like `2023-05-20`).
-- Convert the strings to `datetime` objects.
-- Calculate the "Age in Days" relative to today.
-- Print: `file_x.zip is 105 days old. SHIFT TO GLACIER.`
+- Create a list of dictionaries representing S3 objects:
+    ```python
+    objects = [
+        {"name": "backup_01.zip", "created": "2023-08-01T12:00:00Z"},
+        {"name": "logs_july.tar.gz", "created": "2023-07-15T09:30:00Z"}
+    ]
+    ```
+- Use `strptime()` to parse the ISO-8601 strings into timezone-aware datetime objects.
+- Calculate the age in days using `(now - created).days`.
+- If an object is **older than 30 days**, print: `[EXPIRED] [name] - [age] days old`.
+- Otherwise, print: `[KEEP] [name] - [days_left] days until expiry`.
 
 ---
 
-## 🏆 Challenge 3: The Execution Timer (Decorator Pattern)
+## 🏆 Challenge 3: The Deployment Latency Monitor
 **Difficulty**: ⭐⭐⭐ Advanced  
-**Estimated Time**: 40 minutes
+**Estimated Time**: 45 minutes
 
 ### Objective
-Measure how long a "Deployment Function" takes to run.
+Build a high-precision timer to measure the duration of automation tasks.
 
 ### Requirements
-- Create a function `deploy_app()` that uses `time.sleep(2)` to simulate work.
-- Use `time.perf_counter()` to capture start and end times.
-- Print the total duration in seconds (formatted to 2 decimal places).
-- **Challenge**: Wrap this logic in a decorator so it can be applied to any function.
+- Use **`time.perf_counter()`** for high-precision measurement (don't use `time.time()`).
+- Simulate a task using `time.sleep(1.5)`.
+- Use **`timedelta`** to format the result into `Minutes:Seconds.Milliseconds`.
+- **Bonus (Staff Level)**: Write a "Context Manager" (using `__enter__` and `__exit__`) that allows you to time any block of code using:
+    ```python
+    with Timer() as t:
+        run_my_task()
+    print(f"Task took {t.duration} seconds")
+    ```
 
 ---
 
 ## ✅ Completion Checklist
-- [ ] Challenge 1: Maintenance Window
-- [ ] Challenge 2: Retention Calculator
-- [ ] Challenge 3: Execution Timer
+- [ ] Challenge 1: Global Maintenance Guard
+- [ ] Challenge 2: S3 Expiry Auditor
+- [ ] Challenge 3: Latency Monitor

@@ -66,28 +66,241 @@
 - Logging with full tracebacks
 
 ---
-68: 
-69: ### 3. **Cloud Automation Module (Boto3)** - "Cloud Remote" Framework
-70: **Location**: `Part-01-Python-Foundations/08-Cloud-Automation-Boto3/README.md`
-71: 
-72: **Enhancements Applied**:
-73: - ✅ Infrastructure analogies:
-74:   - Client (Low-level) = Factory Settings / Raw API Menu
-75:   - Resource (High-level) = Universal TV Remote (Volume/Power)
-76: - ✅ Production patterns:
-77:   - Waiters vs `time.sleep()` logic
-78:   - Pagination for large inventory handling
-79:   - `ClientError` parsing with error codes
-80: - ✅ Real-world DevOps Story: The Black Friday "Interactive" Hang-up
-81: - ✅ 3 Mission-based challenges:
-82:   - **S3 Manager**: Bucket inventory and heartbeats
-83:   - **EC2 Cost Saver**: Identifying stopped instances via filters
-84:   - **IAM Security Auditor**: Detecting 90-day stale access keys
-85: - ✅ Full Interview Prep and Knowledge Checks (3 levels)
-86: 
-87: ---
 
-### 3. **Comprehensive Audit Report**
+### 3. **Cloud Automation Module (Boto3)** - "Cloud Remote" Framework
+**Location**: `Part-01-Python-Foundations/08-Cloud-Automation-Boto3/README.md`
+
+**Enhancements Applied**:
+- ✅ Infrastructure analogies:
+  - Client (Low-level) = Factory Settings / Raw API Menu
+  - Resource (High-level) = Universal TV Remote (Volume/Power)
+- ✅ Production patterns:
+  - Waiters vs `time.sleep()` logic (Sequence diagram included)
+  - Paginators for large-scale inventory handling
+  - Granular `ClientError` parsing for robust failure handling
+  - Moto-based zero-cost testing strategies
+- ✅ Security Hardening:
+  - Principal of Least Privilege logic
+  - IAM Role vs. Hardcoded Keys comparison
+  - SSO/Temporary session token adoption
+- ✅ Real-world DevOps Story: The Black Friday "Interactive" Hang-up
+- ✅ Standardized "Junior vs Engineer" comparison matrix
+- ✅ 3 Mission-based challenges (S3 inventory, EC2 filtering, IAM auditing)
+- ✅ Full Interview Prep (with advanced topics) and Comprehensive Quiz
+
+---
+
+### 4. **JSON Handling Module** - "Universal API Language" Framework
+**Location**: `Part-02-Python-Architecture/02-JSON-Handling/README.md`
+
+**Enhancements Applied**:
+- ✅ Infrastructure analogies:
+  - JSON = Shipping Container (Standardized transport)
+  - Rosetta Stone = Global translation between systems
+  - Bureau de Change = Currency exchange for data formats
+- ✅ "The Inter-Process Bridge" section linking JSON with Subprocess/Parent-Child communication
+- ✅ Production patterns:
+  - Safe nested navigation with `.get()` chains
+  - Custom encoders for datetime, UUID, Decimal, and sets
+  - JSON Schema validation with `jsonschema`
+  - High-performance serialization with `orjson`
+- ✅ Real-world DevOps Stories: Silent API Drift, Integer Key Trap
+- ✅ 10 Interview questions and 10 Knowledge checks (3 levels)
+- ✅ Standardized CHALLENGES.md with Production API Guard tasks
+
+---
+
+### 5. **Subprocess Execution Module** - "System Nervous System" Framework
+**Location**: `Part-03-Python-Systems-Drafting/03-Subprocess-Execution/README.md`
+
+**Enhancements Applied**:
+- ✅ Infrastructure analogies:
+  - Foreman = Coordinator of workers (binaries)
+  - Construction Site = The OS environment
+  - Safety Gear = PPE (Argument lists/No shell=True)
+- ✅ Parent/Child process lifecycle visualizations (Mermaid)
+- ✅ Production patterns:
+  - Safe list-based execution (Shell Injection prevention)
+  - Output capturing and stream routing (stdout/stderr)
+  - Exponential backoff and retry logic
+  - Real-time output streaming with `Popen`
+  - Timeout "Watchdog" implementation
+- ✅ Real-world DevOps Stories: The Terraform Wrapper, The Hung Deployment
+- ✅ 10 Interview questions and 10 Knowledge checks
+- ✅ Created new CHALLENGES.md with Docker Inventory Auditor lab
+
+---
+
+### 6. **YAML Handling Module** - "Architectural Blueprint" Framework
+**Location**: `Part-02-Python-Architecture/03-YAML-Handling/README.md`
+
+**Enhancements Applied**:
+- ✅ Infrastructure analogies:
+  - YAML = Construction Blueprint
+  - Filing Cabinet = Multi-document streams
+  - Anchor/Alias = Reusable Design Patterns
+- ✅ "Norway Problem" deep-dive (Boolean type coercion)
+- ✅ Production patterns:
+  - Safe Loading standards (`safe_load` / `safe_load_all`)
+  - Multi-resource manifest processing (K8s style)
+  - DRY configurations using Anchors and Aliases
+  - Environment variable injection with custom `!env` tags
+- ✅ Real-world DevOps Stories: The Tab-Indentation Disaster, The Anchor Explosion
+- ✅ 10 Interview questions and 10 Knowledge checks
+- ✅ Updated CHALLENGES.md with Secret Injector lab
+
+---
+
+### 7. **Functions and Modules Module** - "Automation Toolbox" Framework
+**Location**: `Part-01-Python-Foundations/07-Functions-and-Modules/README.md`
+
+**Enhancements Applied**:
+- ✅ Infrastructure analogies:
+  - Function = Single Tool (Wrench)
+  - Module = Tool Drawer
+  - Package = Complete Toolbox
+- ✅ LEGB Search Path visualization (Mermaid)
+- ✅ Package architecture diagram illustrating `__init__.py` behavior
+- ✅ Production patterns:
+  - Google-style docstrings and type hints
+  - Strategy Pattern (Dispatcher) using first-class functions
+  - Avoidance of the "Mutable Default Argument" trap
+  - Reusable cloud wrapper patterns
+- ✅ Real-world DevOps Story: The Fintech Utility Library (FintechCore)
+- ✅ 10 Interview questions and 10 Knowledge checks
+- ✅ Upgraded CHALLENGES.md with Action Dispatcher task
+
+---
+
+### 8. **Virtual Environments Module** - "Isolated Workshop" Framework
+**Location**: `Part-02-Python-Architecture/05-Virtual-Environments/README.md`
+
+**Enhancements Applied**:
+- ✅ Infrastructure analogies:
+  - System Python = The Ship's Engine Room (Do not touch)
+  - Virtual Environment = Shipping Container (Isolated Cargo)
+  - requirements.txt = Manifest/Packing List
+- ✅ PATH modification visualization explaining activation logic
+- ✅ Production patterns:
+  - Deterministic builds via pinned versions
+  - Multi-stage manifests (`requirements.txt` vs `requirements-dev.txt`)
+  - The `.gitignore` Golden Rule for `.venv` folders
+- ✅ Real-world DevOps Story: The Server Snapshot Disaster (Global numpy upgrade)
+- ✅ 10 Interview questions and 10 Knowledge checks
+- ✅ Standardized CHALLENGES.md with Ephemeral Task Runner task
+
+---
+
+### 9. **Environment Variables Module** - "Secret Vault" Framework
+**Location**: `Part-03-Python-Systems-Drafting/02-Environment-Variables/README.md`
+
+**Enhancements Applied**:
+- ✅ Infrastructure analogies:
+  - Environment Variables = Dashboard Controls
+  - Hidden Compartment = Glove Box (Secrets)
+- ✅ 12-Factor App configuration flow visualization
+- ✅ Production patterns:
+  - Fail-fast validation at startup
+  - Type-safe Configuration Objects (Dataclasses)
+  - Secret masking in logs (Redaction logic)
+  - Local development via `.env` files (python-dotenv)
+- ✅ Real-world DevOps Story: The Public Password Incident ($4k crypto-mining)
+- ✅ 10 Interview questions and 10 Knowledge checks
+- ✅ Created new CHALLENGES.md with Masking Config Logger task
+
+---
+
+### 10. **Logging Basics Module** - "Automation Flight Recorder" Framework
+**Location**: `Part-03-Python-Systems-Drafting/04-Logging-Basics/README.md`
+
+**Enhancements Applied**:
+- ✅ Infrastructure analogies:
+  - Logger = Flight Recorder (Black Box)
+  - Log Levels = Alert Severity (Turbulence vs Engine Fire)
+  - Handlers = Signal Routing (Radio vs Black Box)
+- ✅ Log Propagation visualization (Bubbling up to root)
+- ✅ Production patterns:
+  - Dual-logging (Console for Humans, File for Audit)
+  - Log Rotation (Preventing disk saturation)
+  - Structured JSON Logging for ELK/Datadog
+  - 12-Factor App logging (Stdout in containers)
+- ✅ Real-world DevOps Story: The Silent Cleanup Failure ($15k storage bill)
+- ✅ 10 Interview questions and 10 Knowledge checks
+- ✅ Standardized CHALLENGES.md with JSON Formatter lab
+
+---
+
+### 11. **Regular Expressions Module** - "Precision Scalpel" Framework
+**Location**: `Part-02-Python-Architecture/07-Regular-Expressions/README.md`
+
+**Enhancements Applied**:
+- ✅ Infrastructure analogies:
+  - Regex = DNA Probe (Describe the shape, catch the data)
+  - Substitution = Gene Editing (CRISPR)
+- ✅ Capture Group visualization (Structured record isolation)
+- ✅ Production patterns:
+  - Named Capture Groups (`?P<name>...`) for self-documenting code
+  - Pre-compilation for high-performance log auditing
+  - Non-greedy matches (`.*?`) to prevent over-eager consumption
+  - Data sanitization (PII masking)
+- ✅ Real-world DevOps Story: The 10GB Security Audit (3-minute solution)
+- ✅ 10 Interview questions and 10 Knowledge checks
+- ✅ Upgraded CHALLENGES.md with API Secret Scrubber lab
+
+---
+
+### 12. **File I/O Module** - "Data Persistence Layer" Framework
+**Location**: `Part-01-Python-Foundations/06-File-IO-DevOps/README.md`
+
+**Enhancements Applied**:
+- ✅ Infrastructure analogies: Filing Cabinet (Persistence)
+- ✅ File Stream Pointer visualization (Memory-efficient processing)
+- ✅ Production patterns:
+  - Context Managers (`with`) for resource safety
+  - Line-by-line streaming for multi-GB log files
+  - Atomic writes using temp files
+  - Cross-platform path handling with `pathlib`
+- ✅ Real-world DevOps Story: The 100GB Log Crash
+- ✅ 10 Interview questions and 10 Knowledge checks
+- ✅ Upgraded CHALLENGES.md with "Path Investigator" diagnostic tool lab
+
+---
+
+### 13. **Working with the Web Module** - "Universal Remote" Framework
+**Location**: `Part-03-Python-Systems-Drafting/05-Working-with-the-Web/README.md`
+
+**Enhancements Applied**:
+- ✅ Infrastructure analogies: Postal Mail (HTTP Lifecycle)
+- ✅ HTTP Request/Response anatomy visualization
+- ✅ Production patterns:
+  - Standardizing on `requests` library
+  - Mandatory timeouts and `raise_for_status()` validation
+  - Persistent connection pooling with `requests.Session()`
+  - Exponential backoff for rate limiting (429)
+  - BeautifulSoup as the "Scraper of Last Resort"
+- ✅ Real-world DevOps Story: The Phantom Usage (Slack alerting for API limits)
+- ✅ 10 Interview questions and 10 Knowledge checks
+- ✅ Upgraded CHALLENGES.md with "Resilient Health Checker" lab
+
+---
+
+### 14. **Capstone: The Operations Hub** - "Central Nervous System" Framework
+**Location**: `Part-03-Python-Systems-Drafting/08-Capstone-Script/README.md`
+
+**Enhancements Applied**:
+- ✅ Infrastructure analogies: The Central Nervous System (Orchestration)
+- ✅ Production Project Structure visualization (src/tests/config pattern)
+- ✅ Core Integration:
+  - CLI Parsing (Argparse)
+  - External Configuration (YAML)
+  - Automated Logic (Subprocess/Requests)
+  - Structured Logging
+- ✅ Real-world DevOps Story: The Unified SRE Dashboard
+- ✅ 10 Interview questions and 10 Knowledge checks
+
+---
+
+### 15. **Comprehensive Audit Report**
 **Location**: `AUDIT_REPORT.md`
 
 **Contents**:
@@ -432,18 +645,22 @@ A module is considered "DevOps-First Enhanced" when it has:
 
 ## 🔥 Immediate Action Items
 
-### This Week
+### This Week (Phase 1-5: Complete)
 1. ✅ **DONE**: Audit entire directory structure
 2. ✅ **DONE**: Enhance Data Structures module
 3. ✅ **DONE**: Enhance Error Handling module
-4. **TODO**: Enhance JSON Handling module
-5. **TODO**: Enhance Subprocess Execution module
-
-### Next Week
-6. Enhance YAML Handling module
-7. Enhance Functions and Modules module
-8. Create visual assets for completed modules
-9. Build comprehensive lab demos
+4. ✅ **DONE**: Enhance JSON Handling module
+5. ✅ **DONE**: Enhance Subprocess Execution module
+6. ✅ **DONE**: Enhance YAML Handling module
+7. ✅ **DONE**: Enhance Functions and Modules module
+8. ✅ **DONE**: Enhance Virtual Environments module
+9. ✅ **DONE**: Enhance Environment Variables module
+10. ✅ **DONE**: Enhance Logging Basics module
+11. ✅ **DONE**: Enhance Regular Expressions module
+12. ✅ **DONE**: Enhance File I/O module
+13. ✅ **DONE**: Enhance Working with the Web module
+14. ✅ **DONE**: Standardize Capstone Project structure
+15. ✅ **DONE**: Final curriculum audit and navigation links
 
 ---
 

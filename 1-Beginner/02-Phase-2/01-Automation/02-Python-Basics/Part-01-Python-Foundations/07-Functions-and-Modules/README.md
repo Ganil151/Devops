@@ -47,6 +47,21 @@ Think of functions and modules like a **mechanic's toolbox**:
 
 ---
 
+## 🆚 Junior Way vs. Engineer Way
+
+| Feature | The Junior Way (Problematic) | The Engineer Way (Production-ready) |
+|:---|:---|:---|
+| **Code Reuse** | Copy-pasting code blocks | Creating reusable functions & modules |
+| **Documentation** | No comments or docstrings | Full Google-style docstrings |
+| **Type Safety** | No type hints (hope for the best) | Explicit type hints for all params/returns |
+| **Scope** | Heavy use of `global` variables | Data passed via parameters |
+| **Configuration** | Hardcoded values in main script | Centralized `config.py` module |
+| **Logic** | Deeply nested `if/else` | Guard clauses for early exit |
+
+---
+
+---
+
 ## 🎯 Learning Objectives
 
 By the end of this module, you will:
@@ -151,6 +166,16 @@ def check_server_health(
 ### 🧠 The Mental Model: The Search Path
 
 **The Concept**: Python searches for variables in a specific order: Local → Enclosing → Global → Built-in.
+
+### 🎨 Visual: The LEGB Search Path
+
+```mermaid
+graph TD
+    A[Local] -->|Search 1| B[Enclosing]
+    B -->|Search 2| C[Global]
+    C -->|Search 3| D[Built-in]
+    D -->|Failure| E[NameError]
+```
 
 ### 🔧 LEGB Demonstration
 
@@ -568,6 +593,27 @@ python server_health.py
 ### 🧠 The Mental Model: The Toolbox with Drawers
 
 **The Concept**: A package is a directory containing multiple modules, organized by functionality.
+
+### 🎨 Visual: Package Architecture
+
+```mermaid
+graph TD
+    Root[devops_toolkit/] --> Init[__init__.py]
+    Root --> AWS[aws/]
+    Root --> K8s[kubernetes/]
+    Root --> Mon[monitoring/]
+    
+    AWS --> AWS_Init[__init__.py]
+    AWS --> EC2[ec2.py]
+    AWS --> S3[s3.py]
+    
+    K8s --> K8s_Init[__init__.py]
+    K8s --> Deploy[deployments.py]
+    K8s --> Svc[services.py]
+    
+    Mon --> Mon_Init[__init__.py]
+    Mon --> Alerts[alerts.py]
+```
 
 ### 🔧 Package Structure
 

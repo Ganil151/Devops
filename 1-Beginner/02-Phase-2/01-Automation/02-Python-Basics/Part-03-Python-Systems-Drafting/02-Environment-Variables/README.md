@@ -28,21 +28,38 @@ Think of environment variables like a **car's dashboard controls**:
 
 ---
 
-## 📚 Why This Module Matters for Juniors
-
-**Before this module**, you might think:
-- "I'll just hardcode the database URL"
-- "I'll commit my API keys to Git"
-- "Different environments need different code"
-
-**After this module**, you'll understand:
-- **Environment variables separate config from code** (12-factor app)
-- **Secrets should never be in source code**
-- **Same codebase runs in dev/staging/production** with different env vars
-- **.env files manage local development** safely
-- **Type-safe config classes** prevent runtime errors
-
 **The Difference**: Your applications will be portable, secure, and follow industry best practices.
+
+---
+
+## 🆚 Junior Way vs. Engineer Way
+
+| Feature | The Junior Way (Problematic) | The Engineer Way (Production-ready) |
+|:---|:---|:---|
+| **Credentials** | Hardcoded logic in `.py` files | Stored in Environment Variables / Vaults |
+| **Version Control** | API keys committed to Git history | `.env` files added to `.gitignore` |
+| **Portability** | Script only runs in one environment | One script runs in Dev, QA, and Prod |
+| **Safety** | Crashing if a variable is missing | Graceful defaults or clear "Fail Fast" errors |
+| **Structure** | Scattered `os.getenv` calls | Centralized and validated `Config` objects |
+
+---
+
+### 🎨 Visual: The 12-Factor Config Flow
+
+```mermaid
+graph LR
+    A[Source Code] --> B(Automation Script)
+    C[.env File] -.->|Local Development| B
+    D[Docker/K8s Env] -.->|Production| B
+    E[Secret Vault] -.->|High Security| B
+    B --> F{Final Config}
+    F --> G[Connect DB]
+    F --> H[Authenticate API]
+```
+
+**The Goal**: Your source code should be a generic engine. The environment variables are the fuel that defines *where* it goes and *what* it can access.
+
+---
 
 ---
 

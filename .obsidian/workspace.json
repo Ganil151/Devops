@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/04-Compute-Serverless/ec2-compute-fundamentals.md",
+                "file": "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/08-Cloud-Automation-Boto3/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "ec2-compute-fundamentals"
+              "title": "README"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5
+    "width": 265.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -213,8 +214,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "e142cfc2dc308a10",
   "lastOpenFiles": [
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/assets/boto3-architecture-diagram.svg",
+    "1-Beginner/03-Phase-3/01-CI-CD-Foundations/ENHANCEMENT_SUMMARY.md",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/08-Cloud-Automation-Boto3/test_s3_janitor.py",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/08-Cloud-Automation-Boto3/s3_janitor.py",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/08-Cloud-Automation-Boto3/conftest.py",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/08-Cloud-Automation-Boto3/TESTING_WITH_MOTO.md",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/02-Environment-Variables/CHALLENGES.md",
+    "1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/04-Compute-Serverless/ec2-compute-fundamentals.md",
+    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/03-Subprocess-Execution/CHALLENGES.md",
     "1-Beginner/02-Phase-2/01-Automation/03-Go-Basics/AUDIT_SUMMARY.md",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/08-Cloud-Automation-Boto3/CHALLENGES.md",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/08-Cloud-Automation-Boto3/README.md",
@@ -225,9 +235,6 @@
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/solutions/solution_01_backup_check.py",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/solutions",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/challenge_04_scheduler.py",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/challenge_03_sla_calculator.py",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/challenge_02_log_parser.py",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/challenge_01_backup_check.py",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/README.md",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/CHALLENGES.md",
     "1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/04-Compute-Serverless/README.md",
@@ -247,12 +254,6 @@
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/08-Programs-and-Commands/CHALLENGES.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/03-Conditionals/CHALLENGES.md",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/07-Regular-Expressions/README.md",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/07-Regular-Expressions/CHALLENGES.md",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/06-Package-Management/README.md",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/06-Package-Management/CHALLENGES.md",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/05-Virtual-Environments/README.md",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/05-Virtual-Environments/CHALLENGES.md",
-    "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/04-Testing-and-QA/README.md",
     "1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/Programs-and-Commands/command_resolution_order.svg",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/assets/polling_loop.png",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/assets/loop_visual_flow.png",

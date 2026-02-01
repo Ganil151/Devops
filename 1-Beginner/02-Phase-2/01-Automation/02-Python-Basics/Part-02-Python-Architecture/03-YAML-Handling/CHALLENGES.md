@@ -4,50 +4,53 @@
 
 ---
 
-## 🏆 Challenge 1: The Inventory Parser
+## 🏆 Challenge 1: The DRY Infrastructure Template
 **Difficulty**: ⭐ Beginner  
 **Estimated Time**: 15 minutes
 
 ### Objective
-Read a `docker-compose.yml` style file and list all service names.
+Minimize repetition in a Cloud configuration using **Anchors and Aliases**.
 
 ### Requirements
-- Create a sample YAML with 3 services (`web`, `db`, `redis`).
-- Load the YAML and print the keys under the `services:` block.
-- Print the `image:` version for each service.
+- Create a YAML representing 3 environments (`dev`, `staging`, `prod`).
+- Use an **Anchor** (`&`) for a base resource config (CPU: 1, RAM: 2Gi).
+- Use **Aliases** (`*`) to reuse that base config in all environments.
+- Override the `prod` config to use CPU: 4 instead.
 
 ---
 
-## 🏆 Challenge 2: The Multi-Doc Splitter
+## 🏆 Challenge 2: The Multi-Resource Deployment
 **Difficulty**: ⭐⭐ Intermediate  
 **Estimated Time**: 30 minutes
 
 ### Objective
-Handle a YAML file with multiple documents (common in Kubernetes).
+Parse a multi-document Kubernetes manifest and perform "Pre-flight Checks".
 
 ### Requirements
-- Create a YAML file with 3 documents separated by `---`.
-- Document 1: Kind: Service. Document 2: Kind: Deployment. Document 3: Kind: ConfigMap.
-- Use `yaml.safe_load_all()` to read them.
-- Print the `Kind` of each document found in the file.
+- Read a YAML string containing a `Service`, a `Deployment`, and a `ConfigMap` separated by `---`.
+- Loop through the documents and verify:
+    1.  All resources have a `metadata.name`.
+    2.  The `Deployment` has at least 3 `replicas`.
+- Print a warning if any check fails.
 
 ---
 
-## 🏆 Challenge 3: The Safe-to-Unsafe Converter (YAML to JSON)
-**Difficulty**: ⭐⭐ Intermediate  
-**Estimated Time**: 20 minutes
+## 🏆 Challenge 3: The Secret Injector
+**Difficulty**: ⭐⭐⭐ Advanced  
+**Estimated Time**: 45 minutes
 
 ### Objective
-Build a utility that converts any `.yaml` configuration to a `.json` format for a legacy API.
+Create a custom YAML tag `!env` that pulls values from environment variables at runtime.
 
 ### Requirements
-- Accept a filename as input.
-- Load the YAML.
-- Dump it to a JSON file with the same name (replace extension).
+- Register a custom constructor for the `!env` tag.
+- Create a YAML file that uses `database_password: !env DB_PASS`.
+- Set the `DB_PASS` environment variable in Python (`os.environ`).
+- Load the YAML and verify the password was correctly injected.
 
 ---
 
 ## ✅ Completion Checklist
-- [ ] Challenge 1: Inventory Parser
-- [ ] Challenge 2: Multi-Doc Splitter
-- [ ] Challenge 3: YAML to JSON Converter
+- [ ] Challenge 1: DRY Infrastructure Template
+- [ ] Challenge 2: Multi-Resource Deployment
+- [ ] Challenge 3: Secret Injector

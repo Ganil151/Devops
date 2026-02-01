@@ -44,6 +44,40 @@
 - **Rotation** prevents your server from running out of disk space.
 - **Standard Out (stdout)** is the cloud-native way (Docker/K8s).
 
+**The Difference**: You'll spend less time "guessing" what happened and more time fixing the root cause.
+
+---
+
+## 🆚 Junior Way vs. Engineer Way
+
+| Feature | The Junior Way (Problematic) | The Engineer Way (Production-ready) |
+|:---|:---|:---|
+| **Output Method** | `print()` statements | `logging` module |
+| **Persistence** | Lost when terminal closes | Saved to files, syslog, or ELK |
+| **Severity** | Everything is just "text" | Categorized (INFO, WARN, ERROR) |
+| **Context** | Just the message | Includes timestamps, module, line # |
+| **Filtering** | Deleting prints before prod | Toggling `level=logging.INFO` via env var |
+| **Volume Control** | All or nothing | Rotating handlers to save disk |
+
+---
+
+### 🎨 Visual: Log Propagation Flow
+
+```mermaid
+graph TD
+    A[Log Event] --> B{Logger Level?}
+    B -- Below --> C[Discard]
+    B -- Above --> D[Child Logger Handlers]
+    D --> E{Propagate?}
+    E -- Yes --> F[Parent Logger Handlers]
+    F --> G[Root Logger Handlers]
+    E -- No --> H[Stop]
+```
+
+**The Core Concept**: Logs bubble up. If your script uses a library (like `requests`), those logs bubble up to your root logger, where you can catch them or silence them.
+
+---
+
 ---
 
 ## 🎯 Learning Objectives

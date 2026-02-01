@@ -1,54 +1,59 @@
 # 🎯 Virtual Environments: Isolated Workshop Challenges
 
-> **"A clean environment is a predictable environment. These challenges test your ability to containerize your Python dependencies."**
+> **"Infrastructure is code, and environments are part of that code. These challenges test your ability to build reproducible and isolated automation workspaces."**
 
 ---
 
-## 🏆 Challenge 1: The One-Minute Environment
-**Difficulty**: ⭐ Beginner  
-**Estimated Time**: 10 minutes
-
-### Objective
-Create, Activate, and Destroy an environment manually.
-
-### Requirements
-- Create an environment named `.venv_test`.
-- Activate it and verify the path using `which python` (Linux/Mac) or `where python` (Windows).
-- Deactivate it and delete the directory.
-
----
-
-## 🏆 Challenge 2: The Dependency Freeze
+## 🏆 Challenge 1: The Ephemeral Task Runner
 **Difficulty**: ⭐ Beginner  
 **Estimated Time**: 15 minutes
 
 ### Objective
-Capture an environment's state for another engineer.
+Simulate a CI/CD job that creates a temporary environment to run a task.
 
 ### Requirements
-- Create a new environment.
-- Install `requests` and `PyYAML`.
-- Create a `requirements.txt` file using `pip freeze`.
-- Verify the contents of the file.
+- Create a script (Bash or Python) that:
+    1. Creates a `.venv_temp` directory.
+    2. Installs the `tabulate` library.
+    3. Runs a tiny Python script that prints a table of server names.
+    4. Deactivates and deletes the `.venv_temp` folder.
+- **Verification**: The system must be left exactly as it was found (no global libraries installed).
 
 ---
 
-## 🏆 Challenge 3: Environment Drift Detection
+## 🏆 Challenge 2: The Production manifest
 **Difficulty**: ⭐⭐ Intermediate  
-**Estimated Time**: 25 minutes
+**Estimated Time**: 20 minutes
 
 ### Objective
-Write a script that checks if the current environment has all the required packages installed.
+Create a professional multi-stage dependency manifest.
 
 ### Requirements
-- Create a `requirements.txt` with `requests` and `flask`.
-- Write a Python script (outside the env or in it) that reads the file.
-- Try to import each package.
-- Print "Package X is missing!" for any that fail.
+- Create a `requirements.txt` containing only production essentials (`boto3`, `requests`).
+- Create a `requirements-dev.txt` that includes **everything in production** PLUS development tools (`pytest`, `black`, `flake8`).
+- **Hint**: Use the `-r requirements.txt` syntax inside the dev file to stay DRY.
+- Verify you can install the dev environment with a single command.
+
+---
+
+## 🏆 Challenge 3: Path Investigator
+**Difficulty**: ⭐⭐⭐ Advanced  
+**Estimated Time**: 30 minutes
+
+### Objective
+Build a script that identifies exactly *which* environment it is running in.
+
+### Requirements
+- Write a Python script `env_audit.py`.
+- It must print:
+    1.  The absolute path of the `sys.executable`.
+    2.  Whether it is running inside a virtual environment (`True/False`) by checking `sys.prefix` vs `sys.base_prefix`.
+    3.  A list of all installed packages (using `pkg_resources` or `importlib.metadata`).
+- **Goal**: This script should be your "Diagnostic Tool" for when you aren't sure if a cron job is using the right environment.
 
 ---
 
 ## ✅ Completion Checklist
-- [ ] Challenge 1: One-Minute Env
-- [ ] Challenge 2: Dependency Freeze
-- [ ] Challenge 3: Drift Detection
+- [ ] Challenge 1: Ephemeral Task Runner
+- [ ] Challenge 2: Production Manifest
+- [ ] Challenge 3: Path Investigator
