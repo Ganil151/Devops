@@ -1,19 +1,59 @@
 # 🎯 Hands-On Challenges: Terminal Navigation
 
-## Challenge 1: Navigation Fundamentals (Beginner)
-**Objective**: Master basic directory navigation commands.
+## Challenge 1: The Production Log Inspector (Mission-Based Beginner)
+
+**Objective**: Navigate a production-like filesystem to inspect application logs.
+
+**The Why**: When an app crashes at 2 AM, you need to SSH into the server and find the logs **fast**. No GUI, no mouse click through folders.
+
+**Scenario**: Your team's web application is throwing errors. You need to check the logs.
 
 **Tasks**:
-1. Open a terminal
-2. Run `pwd` and note your current location
-3. Navigate to your home directory: `cd ~`
-4. Navigate to root: `cd /`
-5. Navigate back to home: `cd ~`
-6. Navigate to the previous directory: `cd -`
-7. Go up one level: `cd ..`
-8. Return to home using just `cd` (no arguments)
 
-**Document**: Write down the absolute path of your home directory.
+1. **Simulate production filesystem** (create the structure):
+   ```bash
+   mkdir -p ~/production-sim/var/log/{nginx,app,system}
+   mkdir -p ~/production-sim/etc/nginx
+   mkdir -p ~/production-sim/var/www/app
+   ```
+
+2. **Create sample log files** (with errors):
+   ```bash
+   cd ~/production-sim/var/log/app
+   echo "[2026-02-01 02:45:12] INFO: Application started" > app.log
+   echo "[2026-02-01 02:45:15] ERROR: Database connection failed" >> app.log
+   echo "[2026-02-01 02:45:16] ERROR: Retry attempt 1/3" >> app.log
+   ```
+
+3. **Your Mission** (complete these steps):
+   - Start from your home directory (`cd ~`)
+   - Navigate to the app logs: `cd ~/production-sim/var/log/app`
+   - Verify your location: `pwd`
+   - List all log files with sizes: `ls -lh`
+   - View the last 10 lines: `tail app.log`
+   - Find all ERROR lines: `grep ERROR app.log`
+
+**Expected Output**:
+```bash
+$ pwd
+/home/you/production-sim/var/log/app
+
+$ ls -lh
+total 4.0K
+-rw-r--r-- 1 you you 180 Feb  1 02:45 app.log
+
+$ grep ERROR app.log
+[2026-02-01 02:45:15] ERROR: Database connection failed
+[2026-02-01 02:45:16] ERROR: Retry attempt 1/3
+```
+
+**What You Learned**:
+- ✅ How to navigate to log directories (every server has `/var/log`)
+- ✅ `pwd` confirms you're in the right place before running commands
+- ✅ `ls -lh` shows file sizes in human-readable format (K, M, G)
+- ✅ `grep` finds specific error patterns (critical for debugging)
+
+**Pro Tip**: In real production, you'd use `tail -f app.log` to watch logs in real-time as errors happen!
 
 ---
 ## Challenge 2: Path Detective (Intermediate)
@@ -110,30 +150,108 @@ cd ~/devops-practice
 **Critical Question**: What would happen if you forgot to run `pwd` and were actually in your home directory?
 
 ---
-## Challenge 7: Build a Navigation Helper Script (Advanced)
-**Objective**: Create a script that helps with common navigation tasks.
+## Challenge 7: Build a Deployment Verification Script (Production Mission)
+
+**Objective**: Create a script that verifies deployment success by checking key directories.
+
+**The Why**: After deploying code, you need to verify:
+- Files are in the right place
+- Permissions are correct
+- Logs exist and are writable
+
+This is what real CI/CD pipelines do!
 
 **Requirements**:
-Create `nav_helper.sh` that:
-1. Shows current location
-2. Lists current directory contents
-3. Shows disk usage of current directory
-4. Displays recently accessed directories (from history)
+Create `verify_deployment.sh` that:
+1. Checks if application directory exists
+2. Verifies config files are present
+3. Shows disk space (deployments can fill disks!)
+4. Lists recent logs
+5. Exits with proper codes for CI/CD
 
-**Sample Code**:
+**Production-Ready Code**:
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-echo "📍 Current Location: $(pwd)"
+# Configuration
+APP_DIR="/var/www/app"
+CONFIG_FILE="/etc/nginx/sites-available/app.conf"
+LOG_DIR="/var/log/app"
+
+echo "🔍 Deployment Verification Started..."
+echo "====================================="
+
+# 1. Verify application directory
 echo ""
-echo "📁 Contents:"
-ls -lh
+echo "📁 Checking application directory..."
+if [[ -d "$APP_DIR" ]]; then
+    echo "✅ App directory exists: $APP_DIR"
+    echo "   Size: $(du -sh $APP_DIR | cut -f1)"
+else
+    echo "❌ ERROR: App directory missing!"
+    exit 1
+fi
+
+# 2. Verify config file
 echo ""
-echo "💾 Disk Usage:"
-du -sh .
+echo "⚙️  Checking configuration..."
+if [[ -f "$CONFIG_FILE" ]]; then
+    echo "✅ Config file exists: $CONFIG_FILE"
+else
+    echo "❌ ERROR: Config file missing!"
+    exit 1
+fi
+
+# 3. Check disk space
 echo ""
-echo "📜 Recent Directories:"
-dirs -v
+echo "💾 Checking disk space..."
+DISK_USAGE=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')
+if [[ $DISK_USAGE -lt 90 ]]; then
+    echo "✅ Disk usage OK: ${DISK_USAGE}%"
+else
+    echo "⚠️  WARNING: Disk usage high: ${DISK_USAGE}%"
+fi
+
+# 4. Check logs
+echo ""
+echo "📜 Recent logs (last 3):"
+if [[ -d "$LOG_DIR" ]]; then
+    ls -lt "$LOG_DIR" | head -4 | tail -3
+else
+    echo "⚠️  Log directory not found (may be first deployment)"
+fi
+
+echo ""
+echo "====================================="
+echo "✅ Deployment verification PASSED"
+exit 0
+```
+
+**Test It**:
+```bash
+chmod +x verify_deployment.sh
+./verify_deployment.sh
+
+# Check exit code
+echo "Exit code: $?"
+# 0 = success, 1 = failure
+```
+
+**What You Learned**:
+- ✅ Directory existence checks (`[[ -d ]]`)
+- ✅ File existence checks (`[[ -f ]]`)
+- ✅ Disk space monitoring (critical for production)
+- ✅ Exit codes for CI/CD integration
+- ✅ Structured logging with emojis for readability
+
+**Real-World Use**:
+```yaml
+# In a GitHub Actions workflow:
+- name: Verify Deployment
+  run: |
+    ssh prod-server './verify_deployment.sh'
+    # Pipeline fails if exit code != 0
 ```
 
 ---

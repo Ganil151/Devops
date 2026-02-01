@@ -1,0 +1,101 @@
+.
+├── 01-Network-Fundamentals
+│   └── README.md
+├── 02-Network-Models
+│   ├── OSI Model
+│   │   ├── 1. Physical
+│   │   │   ├── Cables & Connectors
+│   │   │   │   ├── 10 Base-T.md
+│   │   │   │   ├── 100Base-T.md
+│   │   │   │   ├── 1000Base-T.md
+│   │   │   │   ├── Types.md
+│   │   │   │   └── Wiring.md
+│   │   │   ├── Devices
+│   │   │   │   ├── Computer network components.md
+│   │   │   │   ├── HUB.md
+│   │   │   │   ├── NIC.md
+│   │   │   │   └── Router
+│   │   │   │       ├── Components
+│   │   │   │       │   ├── 1841 Cisco Router.md
+│   │   │   │       │   ├── Modem.md
+│   │   │   │       │   └── Router devices and WIC modules.md
+│   │   │   │       ├── Protocols
+│   │   │   │       │   ├── LOOP-BACK INTERFACE.md
+│   │   │   │       │   ├── OSPF.md
+│   │   │   │       │   ├── Route Aggregation.md
+│   │   │   │       │   ├── Routing Alogrithms.md
+│   │   │   │       │   ├── Routing Concepts.md
+│   │   │   │       │   ├── Routing Loops.md
+│   │   │   │       │   └── Routing Protocol Metrics.md
+│   │   │   │       └── Router Main.md
+│   │   │   └── README.md
+│   │   ├── 2. Data Link
+│   │   │   └── README.md
+│   │   ├── 3. Network
+│   │   │   └── README.md
+│   │   ├── 4. Transport
+│   │   │   └── README.md
+│   │   ├── 5. Session
+│   │   │   └── README.md
+│   │   ├── 6. Presentation
+│   │   │   └── README.md
+│   │   ├── 7. Application
+│   │   │   └── README.md
+│   │   ├── Computer Network Models.md
+│   │   ├── Images
+│   │   │   ├── OSI-7-layers.jpg.webp
+│   │   │   ├── OSI-vs.-TCPIP-models.jpg.webp
+│   │   │   ├── OSIModel.png
+│   │   │   └── network-layer.png
+│   │   ├── Quiz.md
+│   │   ├── Real-Life-Scenarios.md
+│   │   └── Slides
+│   │       ├── InternetLayer.jpg
+│   │       ├── NetworkLayer.jpg
+│   │       ├── TransportLayer.jpg
+│   │       ├── applicationLayer.jpg
+│   │       ├── data_link_layer_osi_model.jpg
+│   │       ├── osi_model_application_layer_7.jpg
+│   │       ├── osi_model_network_layer_3.jpg
+│   │       ├── osi_model_physical_layer_1.jpg
+│   │       ├── osi_model_presentation_layer_6.jpg
+│   │       ├── osi_model_session_layer_5.jpg
+│   │       └── osi_model_transport_layer_4.jpg
+│   └── README.md
+├── 03-IP-Addressing
+│   ├── CHALLENGES.md
+│   └── README.md
+├── 04-Basic-Protocols
+│   └── README.md
+├── 05-Network-Devices
+│   └── README.md
+├── 06-Basic-Troubleshooting
+│   └── README.md
+├── 07-Network-Troubleshooting-Labs
+│   ├── lab_01_telnet_test.py
+│   └── lab_02_dns_resolver.py
+├── README.md
+├── REFERENCE
+│   ├── IP-Addressing-Subnetting-Ref.md
+│   ├── Network-Devices-Hardware-Ref.md
+│   ├── Network-Models-Ref.md
+│   ├── Network-Protocols-Ref.md
+│   ├── Network-Troubleshooting-Ref.md
+│   └── Networking-Best-Practices-Ref.md
+├── dhcp_dora_process.png
+├── dns_hierarchy.png
+├── resources
+│   ├── Computer_Networking.pdf
+│   ├── Network Security Bible.pdf
+│   ├── Nmap-Cheat-Sheet.pdf
+│   ├── nmap.pdf
+│   └── wireshark.pdf
+├── scripts
+│   ├── Get-NetworkInventory.ps1
+│   ├── Measure-NetworkLatency.ps1
+│   ├── Resolve-DNSIssues.ps1
+│   ├── Test-NetworkDiagnostics.ps1
+│   └── Test-PortConnectivity.ps1
+└── tree.txt
+
+26 directories, 73 files

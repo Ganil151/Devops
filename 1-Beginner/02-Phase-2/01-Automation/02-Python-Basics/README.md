@@ -16,14 +16,19 @@ We have consolidated the modules into professional tiers to guide you from scrip
 *   **[05. Error Handling](./Part-01-Python-Foundations/05-Error-Handling/README.md)**: Building Fault-Tolerant Automation (Try/Except).
 *   **[06. File I/O for DevOps](./Part-01-Python-Foundations/06-File-IO-DevOps/README.md)**: Reading Logs, Configs, and Context Managers.
 *   **[07. Functions & Modules](./Part-01-Python-Foundations/07-Functions-and-Modules/README.md)**: Writing reusable orchestration code and Packages.
-*   **[08. Time & Date](./Part-01-Python-Foundations/08-Time-and-Date/README.md)**: Managing retention policies, cron-logic, and Timezones.
+*   **[08. Cloud Automation (Boto3)](./Part-01-Python-Foundations/08-Cloud-Automation-Boto3/README.md)**: Managing AWS resources (S3, EC2, IAM) with Python.
+*   **[09. Time & Date](./Part-01-Python-Foundations/09-Time-and-Date/README.md)**: Managing retention policies, cron-logic, and Timezones.
 
 ### 🛠️ Part 2: Architecture & Advanced Tooling
 *Modularity, Temporal logic, and Environment isolation.*
 
-*   **[01. Pathlib (Modern Files)](./Part-02-Python-Architecture/02-Pathlib-Modern-Files/README.md)**: Professional path manipulation.
-*   **[02. JSON & YAML](./Part-02-Python-Architecture/03-JSON-Handling/README.md)**: Mastering infrastructure formats.
-*   **[03. Virtual Environments](./Part-02-Python-Architecture/06-Virtual-Environments/README.md)**: Ensuring project isolation.
+*   **[01. Pathlib (Modern Files)](./Part-02-Python-Architecture/01-Pathlib-Modern-Files/README.md)**: Professional path manipulation.
+*   **[02. JSON Operations](./Part-02-Python-Architecture/02-JSON-Handling/README.md)**: Parsing APIs and Infrastructure state.
+*   **[03. YAML Operations](./Part-02-Python-Architecture/03-YAML-Handling/README.md)**: The language of Kubernetes and Ansible.
+*   **[04. Testing & QA](./Part-02-Python-Architecture/04-Testing-and-QA/README.md)**: Unit tests, Fixtures, and Mocking (`pytest`).
+*   **[05. Virtual Environments](./Part-02-Python-Architecture/05-Virtual-Environments/README.md)**: Ensuring project isolation.
+*   **[06. Package Management](./Part-02-Python-Architecture/06-Package-Management/README.md)**: Dependencies, `pip`, and `requirements.txt`.
+*   **[07. Regular Expressions](./Part-02-Python-Architecture/07-Regular-Expressions/README.md)**: Advanced text matching and parsing.
 
 ### 🚀 Part 3: Systems Drafting (The Automation)
 *Interacting with the OS, Web, and building production tools.*

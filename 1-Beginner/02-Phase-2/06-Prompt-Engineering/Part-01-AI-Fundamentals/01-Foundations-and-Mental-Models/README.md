@@ -21,7 +21,6 @@ graph TD
 Before we can use AI for complex DevOps tasks, we must understand the mental models of how Large Language Models (LLMs) operate. This module moves past "asking questions" and introduces the concept of **Intent-Based Communication**. We explore the fundamental difference between a Search Engine (Google) and a Reasoning Engine (GPT/Claude).
 
 ## 🎓 Learning Objectives
-
 - ✅ Understand **Tokenization** and how it affects prompt accuracy.
 - ✅ Differentiate between **System Prompts** and **User Prompts**.
 - ✅ Learn the **Predictive Nature** of LLMs and why they hallucinate.

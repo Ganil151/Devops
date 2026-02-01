@@ -10,6 +10,7 @@ Welcome to the Networking Foundations module. Here you will learn how data trave
 4. **[Basic Protocols](./04-Basic-Protocols/README.md)**: HTTP, DNS, DHCP, TCP/UDP, and ICMP.
 5. **[Network Devices](./05-Network-Devices/README.md)**: Routers, switches, firewalls, and load balancers.
 6. **[Basic Troubleshooting](./06-Basic-Troubleshooting/README.md)**: Methodology and tools for diagnosing network issues.
+7. **[Troubleshooting Labs](./07-Network-Troubleshooting-Labs/)**: Practical Python scripts for network connectivity and DNS testing.
 
 ## 🏢 Reference Library
 *Deep-dive documentation for at-a-glance problem solving.*

@@ -1,32 +1,68 @@
 # 🎯 Hands-On Challenges: Introduction to Shell Scripting
 
-## Challenge 1: Hello DevOps World (Beginner)
+## Challenge 1: The Service Status Reporter (Mission-Based Beginner)
 
-**Objective**: Create your first executable shell script.
+**Objective**: Create your first DevOps automation script - checking if a critical service is running.
+
+**The Why**: In production, you'll write scripts that other tools (Jenkins, GitHub Actions, Kubernetes health checks) depend on. They need to know: **Did this succeed or fail?** That's what exit codes are for.
 
 **Tasks**:
 
-1. Create a file called `hello.sh`
-2. Add the shebang line `#!/bin/bash`
-3. Add a comment explaining what the script does
-4. Print "Hello, DevOps World! Today is [current date]"
-5. Make the script executable
-6. Run it using `./hello.sh`
+1. Create a file called `check_service.sh`
+2. Add the shebang line `#!/usr/bin/env bash` (portable version)
+3. Add comments explaining what the script does
+4. Check if a service (like `nginx` or `ssh`) is running
+5. Print a status message with timestamp
+6. **Exit with proper code**: `0` for success, `1` for failure
+7. Make the script executable
+8. Run it using `./check_service.sh`
 
-**Expected Output**:
+**Expected Output (if service running)**:
 
 ```
+[2026-02-01 02:30:15] Checking nginx service...
+✅ nginx is active and running
+```
 
-Hello, DevOps World! Today is Sat Jan 11 14:46:21 EST 2026
+**Expected Output (if service stopped)**:
+```
+[2026-02-01 02:30:15] Checking nginx service...
+🚨 ERROR: nginx is NOT running!
 ```
 
 **Solution**:
 
 ```bash
-#!/bin/bash
-# My first DevOps automation script
+#!/usr/bin/env bash
+# Mission: Check if nginx service is active
+# Used by: Monitoring systems, CI/CD health checks
 
-echo "Hello, DevOps World! Today is $(date)"
+SERVICE="nginx"
+
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Checking $SERVICE service..."
+
+if systemctl is-active --quiet "$SERVICE"; then
+    echo "✅ $SERVICE is active and running"
+    exit 0  # Success! Tell the calling system everything is OK
+else
+    echo "🚨 ERROR: $SERVICE is NOT running!"
+    exit 1  # Failure! Tell monitoring/CI/CD to stop and alert
+fi
+```
+
+**What You Learned**:
+- ✅ The shebang (`#!/usr/bin/env bash`) makes scripts portable
+- ✅ `exit 0` = success (DevOps best practice)
+- ✅ `exit 1` = failure (alerts monitoring systems)
+- ✅ `$(date)` = command substitution (runs command, puts output in string)
+- ✅ `systemctl is-active --quiet` = check service without verbose output
+
+**Test the Exit Code**:
+```bash
+./check_service.sh
+echo "Exit code was: $?"
+# $? contains the exit code of the last command
+# 0 = success, non-zero = failure
 ```
 
 ---

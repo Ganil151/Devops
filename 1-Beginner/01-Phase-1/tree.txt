@@ -1,0 +1,846 @@
+./
+├── 01-Networking/
+│   ├── 01-Network-Fundamentals/
+│   │   └── README.md
+│   ├── 02-Network-Models/
+│   │   ├── OSI Model/
+│   │   │   ├── 1. Physical/
+│   │   │   │   ├── Cables & Connectors/
+│   │   │   │   │   ├── 1000Base-T.md
+│   │   │   │   │   ├── 100Base-T.md
+│   │   │   │   │   ├── 10 Base-T.md
+│   │   │   │   │   ├── Types.md
+│   │   │   │   │   └── Wiring.md
+│   │   │   │   ├── Devices/
+│   │   │   │   │   ├── Computer network components.md
+│   │   │   │   │   ├── HUB.md
+│   │   │   │   │   ├── NIC.md
+│   │   │   │   │   └── Router/
+│   │   │   │   │       ├── Components/
+│   │   │   │   │       │   ├── 1841 Cisco Router.md
+│   │   │   │   │       │   ├── Modem.md
+│   │   │   │   │       │   └── Router devices and WIC modules.md
+│   │   │   │   │       ├── Protocols/
+│   │   │   │   │       │   ├── LOOP-BACK INTERFACE.md
+│   │   │   │   │       │   ├── OSPF.md
+│   │   │   │   │       │   ├── Route Aggregation.md
+│   │   │   │   │       │   ├── Routing Alogrithms.md
+│   │   │   │   │       │   ├── Routing Concepts.md
+│   │   │   │   │       │   ├── Routing Loops.md
+│   │   │   │   │       │   └── Routing Protocol Metrics.md
+│   │   │   │   │       └── Router Main.md
+│   │   │   │   └── README.md
+│   │   │   ├── 2. Data Link/
+│   │   │   │   └── README.md
+│   │   │   ├── 3. Network/
+│   │   │   │   └── README.md
+│   │   │   ├── 4. Transport/
+│   │   │   │   └── README.md
+│   │   │   ├── 5. Session/
+│   │   │   │   └── README.md
+│   │   │   ├── 6. Presentation/
+│   │   │   │   └── README.md
+│   │   │   ├── 7. Application/
+│   │   │   │   └── README.md
+│   │   │   ├── Computer Network Models.md
+│   │   │   ├── Images/
+│   │   │   │   ├── network-layer.png
+│   │   │   │   ├── OSI-7-layers.jpg.webp
+│   │   │   │   ├── OSIModel.png
+│   │   │   │   └── OSI-vs.-TCPIP-models.jpg.webp
+│   │   │   ├── Quiz.md
+│   │   │   ├── Real-Life-Scenarios.md
+│   │   │   └── Slides/
+│   │   │       ├── applicationLayer.jpg
+│   │   │       ├── data_link_layer_osi_model.jpg
+│   │   │       ├── InternetLayer.jpg
+│   │   │       ├── NetworkLayer.jpg
+│   │   │       ├── osi_model_application_layer_7.jpg
+│   │   │       ├── osi_model_network_layer_3.jpg
+│   │   │       ├── osi_model_physical_layer_1.jpg
+│   │   │       ├── osi_model_presentation_layer_6.jpg
+│   │   │       ├── osi_model_session_layer_5.jpg
+│   │   │       ├── osi_model_transport_layer_4.jpg
+│   │   │       └── TransportLayer.jpg
+│   │   └── README.md
+│   ├── 03-IP-Addressing/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 04-Basic-Protocols/
+│   │   └── README.md
+│   ├── 05-Network-Devices/
+│   │   └── README.md
+│   ├── 05-Network-Troubleshooting-Tools/
+│   ├── 06-Basic-Troubleshooting/
+│   │   └── README.md
+│   ├── dhcp_dora_process.png
+│   ├── dns_hierarchy.png
+│   ├── README.md
+│   ├── REFERENCE/
+│   │   ├── IP-Addressing-Subnetting-Ref.md
+│   │   ├── Network-Devices-Hardware-Ref.md
+│   │   ├── Networking-Best-Practices-Ref.md
+│   │   ├── Network-Models-Ref.md
+│   │   ├── Network-Protocols-Ref.md
+│   │   └── Network-Troubleshooting-Ref.md
+│   ├── resources/
+│   │   ├── Computer_Networking.pdf
+│   │   ├── Network Security Bible.pdf
+│   │   ├── Nmap-Cheat-Sheet.pdf
+│   │   ├── nmap.pdf
+│   │   └── wireshark.pdf
+│   └── scripts/
+│       ├── Get-NetworkInventory.ps1
+│       ├── Measure-NetworkLatency.ps1
+│       ├── Resolve-DNSIssues.ps1
+│       ├── Test-NetworkDiagnostics.ps1
+│       └── Test-PortConnectivity.ps1
+├── 02-Linux/
+│   ├── 01-Introduction/
+│   │   ├── Interview_Questions.md
+│   │   ├── Quiz.md
+│   │   └── README.md
+│   ├── 02-Filesystem/
+│   │   ├── Interview_Questions.md
+│   │   ├── Quiz.md
+│   │   └── README.md
+│   ├── 03-Commands/
+│   │   ├── Interview_Questions.md
+│   │   ├── Quiz.md
+│   │   └── README.md
+│   ├── 04-Permissions/
+│   │   ├── Interview_Questions.md
+│   │   ├── Quiz.md
+│   │   └── README.md
+│   ├── 05-Distros/
+│   │   ├── 01-RHEL-Family/
+│   │   │   ├── dnf-cheat-sheet.md
+│   │   │   ├── Fedora/
+│   │   │   │   └── Scripts/
+│   │   │   │       ├── bash/
+│   │   │   │       │   ├── fedora-network.sh*
+│   │   │   │       │   ├── fedora-security.sh*
+│   │   │   │       │   ├── Fedora-SystemAudit.sh*
+│   │   │   │       │   ├── Fedora-Toolbox.sh*
+│   │   │   │       │   ├── Optimize-FedoraFull.sh*
+│   │   │   │       │   ├── Optimize-IntelGPU.sh*
+│   │   │   │       │   ├── Preset-Generator.sh*
+│   │   │   │       │   └── Rollback-FedoraFull.sh
+│   │   │   │       └── python/
+│   │   │   │           ├── Input-Enhancer-Preset.py
+│   │   │   │           └── PresetEqGenarator.py
+│   │   │   └── README.md
+│   │   ├── 02-Debian-Family/
+│   │   │   ├── apt-cheat-sheet.md
+│   │   │   └── README.md
+│   │   ├── 03-SUSE-Family/
+│   │   │   ├── README.md
+│   │   │   └── zypper-cheat-sheet.md
+│   │   ├── 04-Lightweight-and-Cloud-Native/
+│   │   │   ├── apk-cheat-sheet.md
+│   │   │   ├── pacman-cheat-sheet.md
+│   │   │   └── README.md
+│   │   ├── Distro-Comparison-Matrix.md
+│   │   └── README.md
+│   ├── Interview_Questions_and_Quiz.md
+│   ├── README.md
+│   ├── REFERENCE/
+│   │   ├── Linux-Best-Practices-Ref.md
+│   │   ├── Linux-Essential-Commands-Ref.md
+│   │   ├── Linux-Filesystem-Ref.md
+│   │   ├── Linux-Permissions-Ownership-Ref.md
+│   │   └── Linux-SSH-Security-Ref.md
+│   ├── resources/
+│   │   ├── Books/
+│   │   │   ├── linux-bash.pdf
+│   │   │   ├── linux-bash-terminal.pdf
+│   │   │   ├── Linux For Dummies.pdf
+│   │   │   ├── Linux-Networking-Commands.pdf
+│   │   │   ├── python.pdf
+│   │   │   ├── The Linux Command Line - A Complete Introduction.pdf
+│   │   │   └── XForce_Threat_Intelligence_2022.pdf
+│   │   └── LinuxFileSystems.gif
+│   ├── scripts/
+│   │   ├── bash/
+│   │   │   ├── disk-usage-analyzer.sh
+│   │   │   ├── linux-system-audit.sh
+│   │   │   ├── permission-analyzer.sh
+│   │   │   ├── process-monitor.sh
+│   │   │   ├── ssh-hardening.sh
+│   │   │   └── zsh/
+│   │   └── python/
+│   │       ├── Input_Enhancer_Generator.py*
+│   │       └── Preset_Eq_Generator.py
+│   └── SSH/
+│       ├── Interview_Questions.md
+│       ├── Quiz.md
+│       └── README.md
+├── 03-Windows-Basics/
+│   ├── assets/
+│   │   ├── powershell_icon.svg
+│   │   └── windows_automation_banner.png
+│   ├── Linkks.md
+│   ├── Login Screen.md
+│   ├── Part-1-PowerShell-Automation/
+│   │   ├── Commands/
+│   │   │   ├── DiskAndStorage/
+│   │   │   │   ├── Format-Volume.md
+│   │   │   │   ├── Get-Disk.md
+│   │   │   │   ├── Get-Partition.md
+│   │   │   │   ├── Get-Volume.md
+│   │   │   │   ├── Initialize-Disk.md
+│   │   │   │   ├── New-Partition.md
+│   │   │   │   ├── Remove-Partition.md
+│   │   │   │   ├── Resize-Partition.md
+│   │   │   │   └── Set-Volume.md
+│   │   │   ├── EventLogs/
+│   │   │   │   ├── Get-EventLog.md
+│   │   │   │   └── Get-WinEvent.md
+│   │   │   ├── FileAndACL/
+│   │   │   │   ├── Get-Acl.md
+│   │   │   │   └── Set-Acl.md
+│   │   │   ├── HacksAndTips/
+│   │   │   │   ├── Add-HostsEntry.md
+│   │   │   │   ├── Audit-FirewallProfiles.md
+│   │   │   │   ├── Audit-FirewallRules.md
+│   │   │   │   ├── Get-ProcessConnections.md
+│   │   │   │   ├── Get-SystemUptime.md
+│   │   │   │   ├── Get-WiFiPasswords.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── Reset-DnsCache.md
+│   │   │   │   ├── Reset-NetworkStack.md
+│   │   │   │   ├── Resolve-MultiDns.md
+│   │   │   │   ├── Test-TcpPort.md
+│   │   │   │   ├── Toggle-FirewallProfile.md
+│   │   │   │   ├── Trace-BlockedTraffic.md
+│   │   │   │   └── Verify-PortStatus.md
+│   │   │   ├── Network/
+│   │   │   │   ├── Disable-NetAdapter.md
+│   │   │   │   ├── Enable-NetAdapter.md
+│   │   │   │   ├── Get-DnsClientServerAddress.md
+│   │   │   │   ├── Get-NetAdapter.md
+│   │   │   │   ├── Get-NetFirewallRule.md
+│   │   │   │   ├── Get-NetIPAddress.md
+│   │   │   │   ├── Get-NetIPConfiguration.md
+│   │   │   │   ├── Get-NetNat.md
+│   │   │   │   ├── Get-NetNeighbor.md
+│   │   │   │   ├── Get-NetRoute.md
+│   │   │   │   ├── Get-NetTCPConnection.md
+│   │   │   │   ├── Get-NetUDPEndpoint.md
+│   │   │   │   ├── New-NetFirewallRule.md
+│   │   │   │   ├── Resolve-DnsName.md
+│   │   │   │   ├── Restart-NetAdapter.md
+│   │   │   │   ├── Set-DnsClientServerAddress.md
+│   │   │   │   ├── Set-NetFirewallRule.md
+│   │   │   │   └── Test-NetConnection.md
+│   │   │   ├── PS Commands.md
+│   │   │   ├── Registry/
+│   │   │   │   ├── Get-Item.md
+│   │   │   │   ├── Get-ItemProperty.md
+│   │   │   │   ├── New-Item.md
+│   │   │   │   ├── Remove-Item.md
+│   │   │   │   ├── Remove-ItemProperty.md
+│   │   │   │   └── Set-ItemProperty.md
+│   │   │   ├── Remoting/
+│   │   │   │   ├── Enter-PSSession.md
+│   │   │   │   ├── Exit-PSSession.md
+│   │   │   │   ├── Get-PSSession.md
+│   │   │   │   ├── Invoke-Command.md
+│   │   │   │   ├── New-PSSession.md
+│   │   │   │   └── Remove-PSSession.md
+│   │   │   ├── ScheduledTasks/
+│   │   │   │   ├── Disable-ScheduledTask.md
+│   │   │   │   ├── Enable-ScheduledTask.md
+│   │   │   │   ├── Get-ScheduledTaskInfo.md
+│   │   │   │   ├── Get-ScheduledTask.md
+│   │   │   │   ├── Register-ScheduledTask.md
+│   │   │   │   ├── Set-ScheduledTask.md
+│   │   │   │   ├── Start-ScheduledTask.md
+│   │   │   │   ├── Stop-ScheduledTask.md
+│   │   │   │   └── Unregister-ScheduledTask.md
+│   │   │   ├── ServiceAndProcess/
+│   │   │   │   ├── Debug-Process.md
+│   │   │   │   ├── Get-Process.md
+│   │   │   │   ├── Get-Service.md
+│   │   │   │   ├── New-Service.md
+│   │   │   │   ├── Remove-Service.md
+│   │   │   │   ├── Restart-Service.md
+│   │   │   │   ├── Set-Service.md
+│   │   │   │   ├── Start-Process.md
+│   │   │   │   ├── Start-Service.md
+│   │   │   │   ├── Stop-Process.md
+│   │   │   │   ├── Stop-Service.md
+│   │   │   │   └── Wait-Process.md
+│   │   │   ├── UserAndGroup/
+│   │   │   │   ├── Add-LocalGroupMember.md
+│   │   │   │   ├── Get-LocalGroup.md
+│   │   │   │   ├── Get-LocalGroupMember.md
+│   │   │   │   ├── Get-LocalUser.md
+│   │   │   │   ├── New-LocalGroup.md
+│   │   │   │   ├── New-LocalUser.md
+│   │   │   │   ├── Remove-LocalGroup.md
+│   │   │   │   ├── Remove-LocalGroupMember.md
+│   │   │   │   ├── Remove-LocalUser.md
+│   │   │   │   └── Set-LocalUser.md
+│   │   │   └── WindowsUpdate/
+│   │   │       ├── Check-PendingUpdates.md
+│   │   │       ├── Get-HotFix.md
+│   │   │       ├── Get-WindowsUpdateLog.md
+│   │   │       └── List-UpdateHistory.md
+│   │   ├── DevOps_Assessment.ps1
+│   │   ├── DevOps_Assessment.py
+│   │   ├── God Mode.txt
+│   │   ├── Lessons/
+│   │   │   ├── Automation/
+│   │   │   │   └── Active Directory Automation.md
+│   │   │   ├── Conditional_Statements.ps1
+│   │   │   ├── CustomObject.ps1
+│   │   │   ├── Explain-PowerShell-Pipeline.md
+│   │   │   ├── HashTable.ps1
+│   │   │   ├── hello_chuck.txt
+│   │   │   ├── Modules.ps1
+│   │   │   ├── Pipeline.ps1
+│   │   │   ├── PowerShell.md
+│   │   │   ├── PSTest.ps1
+│   │   │   ├── Syntax.ps1
+│   │   │   └── SystemAdmin/
+│   │   │       └── System Admin.md
+│   │   ├── ProgramRemoval/
+│   │   │   ├── purgeMcafee.ps1
+│   │   │   ├── purgeOmen.ps1
+│   │   │   ├── windows11Debloat.ps1
+│   │   │   └── windowsTracking.ps1
+│   │   ├── README.md
+│   │   └── scripts/
+│   │       └── Manage-LocalUsers.ps1
+│   ├── Part-2-WSL-Linux-Integration/
+│   │   ├── install-aws-cli.sh
+│   │   ├── README.md
+│   │   ├── setup-wsl-devops.sh
+│   │   └── upgrade-wsl-version.sh
+│   ├── Part-3-Package-Management/
+│   │   ├── Install.md
+│   │   └── scripts/
+│   │       └── Uninstall-ApplicationDeep.ps1
+│   ├── Part-4-Server-Administration/
+│   │   ├── DataCenter/
+│   │   │   └── Product Key.md
+│   │   └── Standard/
+│   │       └── Product Key.md
+│   ├── Part-5-Windows-Containers/
+│   │   └── gitHubDockerLink.txt
+│   ├── Part-6-System-Auditing/
+│   │   ├── Get-DiskUsage.ps1
+│   │   ├── Get-SystemInventory.ps1
+│   │   ├── README.md
+│   │   └── Windows11-Debloat-Risk-Assessment.md
+│   ├── Part-7-Performance-Tuning/
+│   │   ├── 01-CPU-and-Process-Prioritization/
+│   │   │   ├── Optimize-SystemPerformance.ps1
+│   │   │   ├── README.md
+│   │   │   └── Set-ProcessorPerformance.ps1
+│   │   ├── 02-Memory-Management-and-Swap/
+│   │   │   ├── Invoke-SystemAudit.ps1
+│   │   │   └── README.md
+│   │   ├── 03-Storage-I-O-Optimization/
+│   │   │   ├── Invoke-SystemMaintenance.ps1
+│   │   │   └── README.md
+│   │   ├── 04-Network-Stack-Tuning/
+│   │   │   ├── Optimize-NetworkStack.ps1
+│   │   │   ├── Optimize-NetworkStack-Server.ps1
+│   │   │   └── README.md
+│   │   ├── 05-Power-and-Thermal-Profiles/
+│   │   │   ├── Optimize-PowerPlan.ps1
+│   │   │   └── README.md
+│   │   ├── 06-Labs-and-Challenges/
+│   │   │   ├── Lab-Bottleneck-Resolution.md
+│   │   │   └── README.md
+│   │   ├── 07-WSL2-Optimization/
+│   │   │   ├── README.md
+│   │   │   └── Set-WSL2Performance.ps1
+│   │   ├── 08-Server-Hardening/
+│   │   │   ├── Initialize-ServerHardening.ps1
+│   │   │   └── README.md
+│   │   ├── 09-Maintenance-Automation/
+│   │   │   ├── Invoke-ArtifactCleanup.ps1
+│   │   │   └── README.md
+│   │   ├── 10-Health-Monitoring/
+│   │   │   ├── Get-SystemHealthScore.ps1
+│   │   │   └── README.md
+│   │   ├── AUDIT_REPORT.md
+│   │   ├── PROJECT_SUMMARY.md
+│   │   ├── README.md
+│   │   ├── SCRIPT_REFERENCE.md
+│   │   └── UPDATED_ARCHITECTURE.md
+│   ├── Product Key Windows 2019.md
+│   ├── README.md
+│   ├── REFERENCE/
+│   │   ├── Active-Directory-Identity-Ref.md
+│   │   ├── PowerShell-Automation-Ref.md
+│   │   ├── SRE-Windows-Troubleshooting-Ref.md
+│   │   ├── Windows-Best-Practices-Ref.md
+│   │   └── Windows-System-Architecture-Ref.md
+│   ├── resources/
+│   │   ├── Powershell.pdf
+│   │   └── PuTTY_User_Manual.pdf
+│   └── VirtualBox Installations.md
+├── 04-Data-Formats/
+│   ├── Json/
+│   │   ├── challenges/
+│   │   │   └── jq_challenge.md
+│   │   ├── progress_tracker.json
+│   │   ├── README.md
+│   │   ├── solutions/
+│   │   │   └── jq_query_solution.sh
+│   │   └── unfixable_links.json
+│   ├── Markdown/
+│   │   ├── challenges/
+│   │   │   └── changelog_challenge.md
+│   │   ├── README.md
+│   │   └── solutions/
+│   │       └── CHANGELOG_GOAL.md
+│   ├── README.md
+│   ├── REFERENCE/
+│   │   ├── Data-Formats-Best-Practices-Ref.md
+│   │   ├── JSON-API-Standard-Ref.md
+│   │   ├── Markdown-Documentation-Ref.md
+│   │   ├── TOML-Configuration-Ref.md
+│   │   ├── XML-Enterprise-Legacy-Ref.md
+│   │   └── YAML-Deep-Dive-Ref.md
+│   ├── scripts/
+│   │   ├── markdown-linter.py
+│   │   ├── toml-config-manager.py
+│   │   ├── validate-json.py
+│   │   ├── xml-parser.py
+│   │   └── yaml-to-json.py
+│   ├── Toml/
+│   │   ├── challenges/
+│   │   │   └── refactor_challenge.md
+│   │   ├── README.md
+│   │   └── solutions/
+│   │       └── modern_config.toml
+│   ├── Xml/
+│   │   ├── challenges/
+│   │   │   └── extraction_challenge.md
+│   │   ├── README.md
+│   │   └── solutions/
+│   │       └── pom_extractor.py
+│   ├── Yaml/
+│   │   ├── challenges/
+│   │   │   └── dry_challenge.md
+│   │   ├── README.md
+│   │   └── solutions/
+│   │       └── dry_config_solution.yaml
+│   └── yaml_vs_json.png
+├── 05-Software-Stack/
+│   ├── assets/
+│   │   ├── AdvanceDevops.png
+│   │   ├── Benifits.png
+│   │   ├── core-principles.png
+│   │   ├── DevMethologies.png
+│   │   ├── DevMetrics.png
+│   │   ├── devops-architecture-mermaid.md
+│   │   ├── DevopsChallanges.png
+│   │   ├── Devops-Lifecycle.png
+│   │   ├── DevOpsMM.png
+│   │   ├── devVStrad.png
+│   │   └── FutureOfDevops.png
+│   ├── README.md
+│   ├── resources/
+│   │   ├── DevOps Automation Cookbook.pdf
+│   │   ├── [Devops] DevOps For Dummies.pdf
+│   │   ├── DevOps-Directory-MindMap.md
+│   │   ├── DevOps For Beginners - Joseph Joyner.pdf
+│   │   ├── DevopsInterviewQ&A.pdf
+│   │   ├── devops.pdf
+│   │   └── Python4DevOps.pdf
+│   └── scripts/
+│       ├── backup-configurations.ps1
+│       ├── health-check-stack.sh
+│       ├── install-software-stack.sh
+│       ├── setup-dev-environment.ps1
+│       └── verify-dependencies.py
+├── 06-Web-Design/
+│   ├── Angular/
+│   │   ├── 01-Core-Syntax/
+│   │   │   └── README.md
+│   │   ├── 02-Directives-and-Pipes/
+│   │   │   └── README.md
+│   │   ├── 03-Dependency-Injection/
+│   │   │   └── README.md
+│   │   ├── 04-RxJS-and-Observables/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── CSS/
+│   │   ├── Bootstrap/
+│   │   │   └── README.md
+│   │   ├── README.md
+│   │   ├── Sass/
+│   │   │   └── README.md
+│   │   └── TailwindCSS/
+│   │       ├── 01-Utility-Classes/
+│   │       │   └── README.md
+│   │       ├── 02-Responsive-Design/
+│   │       │   └── README.md
+│   │       ├── 03-Custom-Config/
+│   │       │   └── README.md
+│   │       └── README.md
+│   ├── Django/
+│   │   ├── 01-The-MTV-Pattern/
+│   │   │   └── README.md
+│   │   ├── 02-Django-ORM/
+│   │   │   └── README.md
+│   │   ├── 03-Admin-and-Auditing/
+│   │   │   └── README.md
+│   │   ├── 04-Rest-Framework-DRF/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Environment-Setup.md
+│   ├── FastAPI/
+│   │   ├── 01-Basic-API/
+│   │   │   └── README.md
+│   │   ├── 02-Pydantic-Validation/
+│   │   │   └── README.md
+│   │   ├── 03-Async-Operations/
+│   │   │   └── README.md
+│   │   ├── 04-Authed-Endpoints/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Flask/
+│   │   ├── 01-Routing/
+│   │   │   └── README.md
+│   │   ├── 02-Request-and-Response/
+│   │   │   └── README.md
+│   │   ├── 03-Database-and-ORM/
+│   │   │   └── README.md
+│   │   ├── 04-Production-Deployment/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Mobile/
+│   │   ├── Flutter/
+│   │   │   └── README.md
+│   │   ├── ReactNative/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── NextJS/
+│   │   ├── 01-App-Router/
+│   │   │   └── README.md
+│   │   ├── 02-SSR-and-ISR/
+│   │   │   └── README.md
+│   │   ├── 03-API-Routes/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── NodeJS/
+│   │   ├── 01-Event-Loop/
+│   │   │   └── README.md
+│   │   ├── 02-Express-Middleware/
+│   │   │   └── README.md
+│   │   ├── 03-PM2-Operations/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── React/
+│   │   ├── 01-Core-Syntax/
+│   │   │   └── README.md
+│   │   ├── 02-Hooks-and-State/
+│   │   │   └── README.md
+│   │   ├── 03-Routing/
+│   │   │   └── README.md
+│   │   ├── 04-API-Integration/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── README.md
+│   ├── REFERENCE/
+│   │   ├── Angular-Enterprise-Ref.md
+│   │   ├── CSS-Enterprise-Tools-Ref.md
+│   │   ├── Django-Fullstack-Ref.md
+│   │   ├── FastAPI-Modern-Python-Ref.md
+│   │   ├── Flask-Microservices-Ref.md
+│   │   ├── Mobile-App-Frameworks-Ref.md
+│   │   ├── NextJS-Fullstack-React-Ref.md
+│   │   ├── NodeJS-Express-Ref.md
+│   │   ├── React-Frontend-Ref.md
+│   │   ├── SpringBoot-Enterprise-Ref.md
+│   │   ├── TailwindCSS-Architecture-Ref.md
+│   │   ├── VueJS-Progressive-Ref.md
+│   │   ├── Web-Design-Best-Practices-Ref.md
+│   │   └── Web-Fundamentals-Ref.md
+│   ├── scripts/
+│   │   ├── build-react-app.ps1
+│   │   ├── deploy-flask-app.sh
+│   │   ├── springboot-health-check.sh
+│   │   ├── test-django-app.py
+│   │   └── web-performance-test.js
+│   ├── SpringBoot/
+│   │   ├── 01-Inversion-of-Control/
+│   │   │   └── README.md
+│   │   ├── 02-Rest-Controllers/
+│   │   │   └── README.md
+│   │   ├── 03-Data-JPA/
+│   │   │   └── README.md
+│   │   ├── 04-Actuator-and-Monitoring/
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── VueJs/
+│       ├── 01-Core-Syntax/
+│       │   └── README.md
+│       ├── 02-Vue-Router/
+│       │   └── README.md
+│       ├── 03-State-Pinia/
+│       │   └── README.md
+│       └── README.md
+├── 07-Cloud-Foundations/
+│   ├── 01-Basic-Networking/
+│   │   ├── aws-networking-deep-dive.md
+│   │   ├── networking-fundamentals.md
+│   │   └── README.md
+│   ├── 02-Storage-Fundamentals/
+│   │   └── README.md
+│   ├── 04-Cloud-Fundamentals/
+│   │   ├── Cloud-Basics/
+│   │   │   └── README.md
+│   │   ├── Deployment-Models/
+│   │   │   ├── deployment-models-guide.md
+│   │   │   └── README.md
+│   │   └── Service-Models/
+│   │       ├── README.md
+│   │       └── service-models-guide.md
+│   ├── 05-AWS-Basics/
+│   │   ├── 01-Introduction/
+│   │   │   ├── AWS CLI Commands.md
+│   │   │   ├── aws-fundamentals-devops.md
+│   │   │   └── README.md
+│   │   ├── 02-Networking/
+│   │   │   ├── aws-networking-vpc-guide.md
+│   │   │   ├── README.md
+│   │   │   └── VPC-Networking/
+│   │   │       └── README.md
+│   │   ├── 03-Storage/
+│   │   │   ├── EFS/
+│   │   │   │   ├── efs-fundamentals.md
+│   │   │   │   └── README.md
+│   │   │   ├── README.md
+│   │   │   ├── s3-bucket/
+│   │   │   │   ├── Images/
+│   │   │   │   │   └── S3_Architecture.png
+│   │   │   │   ├── main.tf
+│   │   │   │   ├── outputs.tf
+│   │   │   │   ├── README.md
+│   │   │   │   ├── s3-cli-guide.md
+│   │   │   │   └── variables.tf
+│   │   │   └── s3-storage-fundamentals.md
+│   │   ├── 04-Compute-Serverless/
+│   │   │   ├── ec2-compute-fundamentals.md
+│   │   │   ├── Lambda/
+│   │   │   │   ├── aws-lambda-fundamentals.md
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── 05-Containers/
+│   │   │   ├── ECR-Registry/
+│   │   │   │   └── README.md
+│   │   │   ├── ECS/
+│   │   │   │   ├── ecs-application-deployment-guide.md
+│   │   │   │   ├── ecs-cluster-setup-guide.md
+│   │   │   │   ├── ecs-fundamentals-guide.md
+│   │   │   │   ├── ecs-monitoring-troubleshooting-guide.md
+│   │   │   │   └── ecs-security-networking-guide.md
+│   │   │   ├── EKS/
+│   │   │   │   ├── aws-eks-fundamentals.md
+│   │   │   │   ├── eks-cluster-setup-guide.md
+│   │   │   │   ├── eks-fundamentals-guide.md
+│   │   │   │   ├── eks-monitoring-troubleshooting-guide.md
+│   │   │   │   ├── eks-security-networking-guide.md
+│   │   │   │   ├── eks-workload-deployment-guide.md
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── 06-Identity/
+│   │   │   ├── Active Directory  Configuration.md
+│   │   │   ├── Cognito/
+│   │   │   │   ├── cognito-fundamentals.md
+│   │   │   │   └── README.md
+│   │   │   ├── How to Join Windows Server 2019 to an existing Active Directory Domain.md
+│   │   │   ├── iam-ad-fundamentals.md
+│   │   │   └── README.md
+│   │   ├── 07-Messaging/
+│   │   │   ├── README.md
+│   │   │   ├── SNS/
+│   │   │   │   ├── README.md
+│   │   │   │   └── sns-fundamentals.md
+│   │   │   └── SQS/
+│   │   │       ├── README.md
+│   │   │       └── sqs-fundamentals.md
+│   │   ├── 08-Web-Hosting/
+│   │   │   ├── README.md
+│   │   │   ├── Route53/
+│   │   │   │   ├── README.md
+│   │   │   │   └── route53-fundamentals.md
+│   │   │   └── Wordpress/
+│   │   │       ├── PWD.md
+│   │   │       ├── UbuntuWordPress
+│   │   │       └── UbuntuWordPress.md
+│   │   ├── 99-Resources/
+│   │   │   └── AWS/
+│   │   │       ├── chromeDownload/
+│   │   │       │   └── chromeManDownload
+│   │   │       ├── chromeOnPowershell/
+│   │   │       │   ├── chromeManDownload
+│   │   │       │   └── chromeManDownload~
+│   │   │       ├── Connect.md
+│   │   │       ├── EC2Rescue_latest.zip
+│   │   │       ├── FixRDPConnection.txt
+│   │   │       ├── Meta-Data.md
+│   │   │       ├── Microsoft Visual C++ Redistributable Packages.md
+│   │   │       ├── Notes.md
+│   │   │       └── Server Manager/
+│   │   │           ├── DNS Server/
+│   │   │           │   ├── domainChanges.webp
+│   │   │           │   ├── download-1024x640.webp
+│   │   │           │   ├── download-1-1024x640.webp
+│   │   │           │   ├── How to install and configure a DNS server on Windows Server 2019.md
+│   │   │           │   ├── image1.webp
+│   │   │           │   ├── image-38-1024x640.webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7 (10).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7 (11).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7 (12).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7 (1).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7 (2).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7 (3).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7 (4).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7 (5).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7 (6).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7 (7).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7 (8).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7 (9).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-7.webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-8 (1).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-8 (2).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-8 (3).webp
+│   │   │           │   ├── Screen-Shot-2022-09-23-at-8.webp
+│   │   │           │   ├── unknown-1-1.webp
+│   │   │           │   ├── unknown-1-2.webp
+│   │   │           │   ├── unknown-1-3.webp
+│   │   │           │   ├── unknown-1.webp
+│   │   │           │   ├── unknown-2.webp
+│   │   │           │   ├── unknown-3.webp
+│   │   │           │   ├── unknown-4.webp
+│   │   │           │   └── unknown.webp
+│   │   │           └── Tools Tab.md
+│   │   └── README.md
+│   ├── 06-Azure-Basics/
+│   │   ├── 01-Fundamentals/
+│   │   │   └── README.md
+│   │   ├── 02-Compute/
+│   │   │   └── README.md
+│   │   ├── 03-Storage/
+│   │   │   └── README.md
+│   │   ├── 04-Networking/
+│   │   │   └── README.md
+│   │   ├── 05-Security/
+│   │   │   └── README.md
+│   │   ├── 06-DevOps/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 07-GCP-Basics/
+│   │   ├── 01-Fundamentals/
+│   │   │   └── README.md
+│   │   ├── 02-Compute/
+│   │   │   └── README.md
+│   │   ├── 03-Storage/
+│   │   │   └── README.md
+│   │   ├── 04-Networking/
+│   │   │   └── README.md
+│   │   ├── 05-Security/
+│   │   │   └── README.md
+│   │   ├── 06-DevOps/
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── README.md
+│   ├── REFERENCE/
+│   │   ├── AWS-Core-Services-Ref.md
+│   │   ├── Azure-Core-Services-Ref.md
+│   │   ├── Cloud-Computing-Models-Ref.md
+│   │   ├── Cloud-Performance-Optimization-Ref.md
+│   │   ├── Cloud-Security-Compliance-Ref.md
+│   │   ├── Container-Orchestration-Cloud-Ref.md
+│   │   ├── FinOps-Cloud-Economics-Ref.md
+│   │   ├── GCP-Core-Services-Ref.md
+│   │   ├── Multi-Cloud-Migration-Ref.md
+│   │   └── Serverless-Architecture-Ref.md
+│   └── scripts/
+│       ├── aws-resource-inventory.py
+│       ├── azure-cost-analyzer.ps1
+│       ├── cloud-security-audit.py
+│       ├── gcp-project-setup.sh
+│       └── multi-cloud-health-check.py
+├── 08-Repository-Management/
+│   ├── 01-Git-GitHub/
+│   │   ├── 1-Beginner-Level/
+│   │   │   ├── 01-Introduction/
+│   │   │   │   └── README.md
+│   │   │   ├── 02-Git-Fundamentals/
+│   │   │   │   └── README.md
+│   │   │   └── 03-Git-Commands/
+│   │   │       └── README.md
+│   │   ├── 2-Intermediate-Level/
+│   │   │   ├── 01-Git-Workflows/
+│   │   │   │   └── README.md
+│   │   │   ├── 02-GitHub-Integration/
+│   │   │   │   └── README.md
+│   │   │   └── 03-GitHub-Actions/
+│   │   │       └── README.md
+│   │   ├── 3-Advanced-Level/
+│   │   │   ├── 01-Git-Advanced/
+│   │   │   │   └── README.md
+│   │   │   └── 02-Security-Best-Practices/
+│   │   │       └── README.md
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 02-GitLab/
+│   │   ├── 01-Beginner-Level/
+│   │   │   ├── 01-GitLab-Fundamentals/
+│   │   │   │   └── README.md
+│   │   │   ├── 02-Repository-Management/
+│   │   │   │   └── README.md
+│   │   │   ├── 03-Basic-CICD/
+│   │   │   │   └── README.md
+│   │   │   ├── 04-Issue-Tracking/
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── 02-Intermediate-Level/
+│   │   │   ├── 01-Advanced-CICD/
+│   │   │   │   └── README.md
+│   │   │   ├── 04-Security-Scanning/
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── 03-Advanced-Level/
+│   │   │   ├── 01-Enterprise-Administration/
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── CHALLENGES.md
+│   │   ├── LEARNING_PATH_SUMMARY.md
+│   │   └── README.md
+│   ├── 03-Bitbucket/
+│   │   ├── CHALLENGES.md
+│   │   └── README.md
+│   ├── 04-Azure-DevOps-Repos/
+│   │   └── README.md
+│   ├── 05-Mercurial/
+│   │   └── README.md
+│   ├── 06-Subversion-SVN/
+│   │   └── README.md
+│   ├── assets/
+│   │   ├── git&githubTalk.png
+│   │   └── gitStructure.png
+│   ├── CONSOLIDATION_SUMMARY.md
+│   ├── Interview-Questions-and-Quiz.md
+│   ├── README.md
+│   ├── Real-Life-Scenarios.md
+│   ├── REFERENCE/
+│   │   ├── Branching-Strategies-Comparison-Ref.md
+│   │   ├── Git-Internal-Architecture-Ref.md
+│   │   ├── GitLab-vs-GitHub-Enterprise-Ref.md
+│   │   └── Legacy-VCS-Migration-Ref.md
+│   └── resources/
+│       └── GitGuide.pdf
+└── tree.txt
+
+249 directories, 595 files

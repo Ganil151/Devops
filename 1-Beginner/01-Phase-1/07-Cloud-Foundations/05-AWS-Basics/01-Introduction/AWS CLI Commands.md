@@ -62,11 +62,6 @@ uniq # show only unique entries
 paste # combine rows of text, by line
 join # combine rows of text, by initial column value
 ```
-<br/><br/><br/>
-
-
-
-
 
 ## Cloudtrail - Logging and Auditing
 
@@ -113,11 +108,6 @@ aws cloudtrail remove-tags \
     --resource-id awslog \
     --tags-list "Key=log-type,Value=all"
 ```
-<br/><br/><br/>
-
-
-
-
 
 ## IAM
 
@@ -173,8 +163,6 @@ for userName in $allUsers; do
 done
 ```
 
-
-
 ### Password policy
 
 http://docs.aws.amazon.com/cli/latest/reference/iam/
@@ -198,8 +186,6 @@ aws iam update-account-password-policy \
 # http://docs.aws.amazon.com/cli/latest/reference/iam/delete-account-password-policy.html
 aws iam delete-account-password-policy
 ```
-
-
 
 ### Access Keys
 
@@ -233,8 +219,6 @@ aws iam delete-access-key \
     --access-key-id AKIAI44QH8DHBEXAMPLE \
     --user-name aws-admin2
 ```
-
-
 
 ### Groups, Policies, Managed Policies
 
@@ -335,10 +319,6 @@ aws s3api list-buckets --query 'Buckets[*].[Name]' --output text | xargs -I {} b
 aws s3api list-buckets --query 'Buckets[*].[Name]' --output text | xargs -I {} bash -c 'if [[ $(aws s3api get-bucket-acl --bucket {} --query '"'"'Grants[?Grantee.URI==`http://acs.amazonaws.com/groups/global/AllUsers` && Permission==`READ`]'"'"' --output text) ]]; then echo {} ; fi'
 ```
 
-
-
-
-
 ## EC2
 
 ### keypairs
@@ -369,9 +349,6 @@ aws ec2 import-key-pair \
 aws ec2 delete-key-pair \
     --key-name <value>
 ```
-
-
-
 
 ### Security Groups
 
@@ -421,9 +398,6 @@ aws ec2 delete-security-group \
     --group-id sg-00000000
 ```
 
-
-
-
 ## Images
 
 https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-images.html
@@ -439,11 +413,8 @@ aws ec2 deregister-image --image-id ami-00000000
 
 ```
 
-
 ## Instances
-
 http://docs.aws.amazon.com/cli/latest/reference/ec2/index.html
-
 ```shell
 # list all instances (running, and not running)
 # http://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html
@@ -480,8 +451,6 @@ aws ec2 describe-instances \
   --output text | sort -k2
 ```
 
-
-
 ### Tags
 ```shell
 # list the tags of an instance
@@ -500,26 +469,18 @@ aws ec2 delete-tags \
     --resources "ami-1a2b3c4d" \
     --tags Key=Name,Value=
 ```
-<br/><br/><br/>
-
-
-
-
 
 ## Cloudwatch
-
 
 ### Log Groups
 http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatchLogs.html
 http://docs.aws.amazon.com/cli/latest/reference/logs/index.html#cli-aws-logs
-
 ##### create a group
 http://docs.aws.amazon.com/cli/latest/reference/logs/create-log-group.html
 ```shell
 aws logs create-log-group \
 	--log-group-name "DefaultGroup"
 ```
-
 ##### list all log groups
 http://docs.aws.amazon.com/cli/latest/reference/logs/describe-log-groups.html
 ```shell
@@ -535,8 +496,6 @@ http://docs.aws.amazon.com/cli/latest/reference/logs/delete-log-group.html
 aws logs delete-log-group \
 	--log-group-name "DefaultGroup"
 ```
-
-
 
 ### Log Streams
 ```shell
@@ -565,8 +524,6 @@ aws logs delete-log-stream \
 	--log-group-name "DefaultGroup" \
 	--log-stream-name "Default Stream"
 ```
-
-
 
 ## Cloudwatch - Monitoring
 http://docs.aws.amazon.com/cli/latest/reference/cloudwatch/index.html
