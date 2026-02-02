@@ -33,6 +33,17 @@ graph BT
 
 ---
 
+## 🆚 Junior Way vs. Engineer Way
+
+| Feature | The Junior Way (Problematic) | The Engineer Way (Strategic) |
+|:---|:---|:---|
+| **Approach** | "Shotgun Troubleshooting" (Changing 5 things at once). | **Systematic Isolation** (Changing one thing, testing, reverting). |
+| **Logic** | Top-Down (Checking the code first). | **Bottom-Up** (Checking the wire/port first). |
+| **Verification** | "I think it's fixed." | **Evidence-Based Verification** (Showing the `curl` output). |
+| **Prevention** | Fixing it once and moving on. | **Writing a Post-Mortem** and automating the check (Nagios/Zabbix). |
+
+---
+
 ## 🎯 Learning Objectives
 
 - Master essential network diagnostic tools

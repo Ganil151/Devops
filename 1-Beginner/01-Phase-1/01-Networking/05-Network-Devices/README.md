@@ -18,6 +18,17 @@ Think of it like a City:
 
 ---
 
+## 🆚 Junior Way vs. Engineer Way
+
+| Feature | The Junior Way (Problematic) | The Engineer Way (Strategic) |
+|:---|:---|:---|
+| **VPC Setup** | Only uses Default VPC to "make it work". | **Custom VPC Architecture** with private/public隔离 (Isolation). |
+| **Security** | Opening port 0.0.0.0/0 to everyone. | **Security Group Orchestration** (Allowing only specific CIDRs). |
+| **Scaling** | Expecting one server to handle all traffic. | **Load Balanced Architecture** (SSL termination at the LB). |
+| **Connectivity** | Confused by "Connection Timed Out". | **Route Table Auditing** (Checking if the IGW/NAT exists). |
+
+---
+
 ## 🎯 Learning Objectives
 
 - Understand different types of network devices and their functions

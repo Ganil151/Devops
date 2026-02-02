@@ -6,7 +6,7 @@
 
 ## 📚 Overview
 
-![Boto3 Architecture & Workflow](../assets/boto3-architecture-diagram.svg)
+![Boto3 Architecture & Workflow](../assets/boto3-architecture-diagram.png)
 
 Automation isn't limited to your local machine. In a modern DevOps role, you are expected to manage tens of thousands of resources across global regions. **Boto3** is the official AWS SDK for Python, allowing you to create, configure, and delete AWS services programmatically.
 

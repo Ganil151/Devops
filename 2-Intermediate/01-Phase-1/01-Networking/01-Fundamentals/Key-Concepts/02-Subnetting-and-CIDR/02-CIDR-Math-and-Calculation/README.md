@@ -1,135 +1,132 @@
-# 🔢 Module 02.02: CIDR Math and Calculation
+# 🔢 Module 02.02: CIDR Math & Mental Models
 
-> **"A prefix length is more than a number; it is a boundary. A single bit change can double your host capacity or halve your network's broadcast noise."**
+> **"Junior, I don't expect you to calculate binary in your head. I do expect you to know that a /28 is too small for an EKS cluster before you launch it. Math is cheap. Re-IPing a production VPC is a resume-generating event."**
+
+---
+
+## 🏗️ Junior’s Mission
+
+**Goal**: Develop "Mental Math" for IP ranges. You should see `/24` and instantly think "250 hosts," not "lets count bits."
+**Why it matters**: Every AWS VPC has a limit. Every Load Balancer needs 2 IPs. Every Pod needs 1 IP. If you miscalculate, your autoscaler halts.
+
+---
+
+## 🌍 Operational Reality
+
+**In Theory**: "We can use Variable Length Subnet Masking (VLSM) to perfectly resize every subnet."
+**In Production**:
+*   **The Standard**: We use `/24` (256 IPs) for almost everything because it's human-readable. It aligns with the last octet (e.g., `10.0.1.x`).
+*   **The Exception**: We use `/20` (4096 IPs) for Container subnets (EKS/ECS) because pods destroy IP space.
+*   **The Tiny Slices**: We use `/28` (16 IPs) for "Infrastructure" subnets (Transit Gateways, VPN Endpoints) that never scale.
+
+---
+
+## 🛠️ The Toolbelt
+
+Stop doing math on paper. Use the CLI.
+
+| Tool | Command | Purpose |
+| :--- | :--- | :--- |
+| **ipcalc** | `ipcalc 10.0.0.0/24` | Shows HostMin, HostMax, Broadcast, and Binary map. |
+| **Python** | `import ipaddress; print(ipaddress.ip_network('10.0.0.0/24').num_addresses)` | Scriptable math for automation. |
+| **Terraform** | `cidrsubnet("10.0.0.0/16", 8, 2)` | The `cidrsubnet` function is how we generate subnets in Infrastructure as Code. |
+
+---
+
+## 📐 The Golden Reference (Memorize This)
+
+You only need to know these 5 numbers.
+
+| CIDR | Total IPs | Usable IPs (AWS -5) | Use Case |
+| :--- | :--- | :--- | :--- |
+| **/32** | 1 | 1 | A specific Host or Route Target. |
+| **/28** | 16 | 11 | **Infra Subnet** (ALB, TGW, VPN). |
+| **/24** | 256 | 251 | **App/DB Tier** (Standard EC2). |
+| **/20** | 4,096 | 4,091 | **K8s/Container Tier** (High Scale). |
+| **/16** | 65,536 | 65,531 | **Entire VPC** (Max Size). |
+
+---
+
+## � Deep Dive: Binary Boundaries
+
+Understanding the "Bit Slide".
 
 ```mermaid
-graph TD
-    subgraph CIDR_Logic[The /24 Split]
-        VPC["VPC: 10.0.0.0/16 (65,536 IPs)"]
-        
-        Sub1["Subnet 1: 10.0.1.0/24 (256 IPs)"]
-        Sub2["Subnet 2: 10.0.2.0/24 (256 IPs)"]
-        SubN["Subnet N: 10.0.255.0/24 (256 IPs)"]
-        
-        VPC --> Sub1
-        VPC --> Sub2
-        VPC --> SubN
+graph LR
+    subgraph VPC[/16 - The City]
+        direction TB
+        Bit16[11111111.11111111.00000000.00000000]
+        Human16["10.0.x.x (65k IPs)"]
     end
-
-    style VPC fill:#f0f9ff,stroke:#0369a1,stroke-width:3px
-    style Sub1 fill:#f8fafc,stroke:#334155
-    style Sub2 fill:#f8fafc,stroke:#334155
-    style SubN fill:#f8fafc,stroke:#334155
+    
+    subgraph Subnet[/24 - The Neighborhood]
+        direction TB
+        Bit24[11111111.11111111.11111111.00000000]
+        Human24["10.0.1.x (256 IPs)"]
+    end
+    
+    VPC --> Subnet
+    style Bit16 font-family:monospace
+    style Bit24 font-family:monospace
 ```
 
-## 📚 Overview
-
-Calculating the size of a network and the range of its IP addresses is a fundamental skill for cloud architects. **CIDR (Classless Inter-Domain Routing)** provides the mathematical framework for this. In this module, we transition from simple binary to fast, mental math that allows you to calculate host counts and network boundaries in seconds.
-
-## 🎓 Learning Objectives
-
-By the end of this module, you will:
-
-- ✅ Master the **Host Count Formula** (`2^n`).
-- ✅ Calculate **Network Boundaries** using binary bits.
-- ✅ Understand the difference between **Prefix Length** and **Subnet Mask**.
-- ✅ Identify **Contiguous Subnets** for logical organization.
-- ✅ Memorize the **Powers of 2** most common in cloud networking.
+**The "Power of 2" Rule**:
+*   **+1 Bit** (e.g., /24 -> /25) = **Half the IPs**.
+*   **-1 Bit** (e.g., /24 -> /23) = **Double the IPs**.
 
 ---
 
-## 🏗️ The Golden Formula: Host Count
+## > [!IMPORTANT] Senior SRE Pro-Tips
 
-To find the number of IP addresses in a CIDR block, simply subtract the prefix length from 32, then raise 2 to that power.
-
-**Formula: `2 ^ (32 - Prefix) = Total IP Addresses`**
-
-| Prefix | Calculation | Total IPs | Usual Use |
-| :--- | :--- | :--- | :--- |
-| **/32** | 2^(32-32) = 2⁰ | **1** | Single Instance / Route |
-| **/28** | 2^(32-28) = 2⁴ | **16** | NAT Gateways / Smallest Subnet |
-| **/24** | 2^(32-24) = 2⁸ | **256** | Standard Tier Subnet |
-| **/20** | 2^(32-20) = 2¹² | **4,096** | Large K8s / Database Cluster |
-| **/16** | 2^(32-16) = 2¹⁶ | **65,536** | Standard VPC Size |
+1.  **The "Plus Two" Rule for ALBs**: Application Load Balancers (ALBs) scale by launching new nodes in valid subnets. Each node needs an IP. A massive traffic spike can require 50+ IPs for the ALB alone. **Never put an ALB in a /28**.
+2.  **Peering Overlaps**: If Company A uses `10.0.0.0/16` and buys Company B who uses `10.0.0.0/16`, you **cannot** connect them via VPC Peering. You need a Transit Gateway with NAT (Complexity Hell). **Always use unique CIDRs if possible.**
+3.  **Terrorform `cidrsubnet`**: In Terraform, we define proper boundaries like this:
+    ```hcl
+    # Create a /24 inside a /16
+    cidr_block = cidrsubnet(var.vpc_cidr, 8, count.index)
+    ```
+    This ensures we never make a math error manually.
 
 ---
 
-## 🚀 Professional Pattern: The Mental Block Math
+## 🎫 Junior's First Ticket: Incident #005 "IP Exhaustion"
 
-Senior DevOps engineers don't reach for a calculator when choosing a CIDR. They use the **"Four Bit Rule."**
+**Scenario**: "The EKS cluster nodes can't launch pods. They are stuck in `ContainerCreating`."
+**Metrics**: CloudWatch shows `AssignPrivateIpAddress` failures.
 
-**The Pro Standard**:
-- Adding **1 bit** to a prefix (e.g., /24 to /25) **HALVES** the number of IPs.
-- Subtracting **1 bit** from a prefix (e.g., /24 to /23) **DOUBLES** the number of IPs.
-- Adding **4 bits** effectively "moves a decimal" in hex/binary logic (e.g., /24 to /20 is 16x larger).
-
----
-
-## 🏆 Real-World DevOps Story: The Overlapping Peering Request
-
-**The Scenario**: Department A used `10.0.0.0/16` for their main production VPC. Department B requested to peer their VPC, which they had configured with `10.0.128.0/17`.
-**The Crisis**: The peering request was rejected by AWS with a "CIDR Overlap" error. Department B was confused because their start IP was different from Department A's.
-**The Discovery**: Because `10.0.128.0/17` is a subset of the larger `10.0.0.0/16` range, they occupied the same physical path in the routing table. You cannot peer networks where one is a "child" of the other.
-**The Fix**: Department B had to migrate to `10.1.0.0/16`, costing two weeks of downtime and reconfiguration.
-**The Lesson**: **Check your neighbors.** Always look at the corporate IP registry before picking a CIDR to ensure you aren't squatting on someone else's future subnet.
-
----
-
-## ❓ Interview Preparation (CIDR Math)
-
-1. **Q: How many total IP addresses are in a /20 subnet?**
-    *A: 4,096. (2 ^ (32 - 20) = 2^12 = 4,096).*
-
-2. **Q: If a subnet is 10.0.1.0/24, what is the very next available subnet of the same size?**
-    *A: 10.0.2.0/24. A /24 takes up exactly 256 addresses, filling the entire 4th octet.*
-
-3. **Q: How many /24 subnets can you fit into a /16 VPC?**
-    *A: 256. (Total IPs in /16 is 65,536. Total in /24 is 256. 65,536 / 256 = 256).*
-
-4. **Q: What is the subnet mask for a /24 in dotted decimal?**
-    *A: 255.255.255.0. This represents 24 "ON" bits followed by 8 "OFF" bits.*
-
-5. **Q: If I have a /25, how many addresses are in it?**
-    *A: 128. It is exactly half of a /24 (256/2 = 128).*
+**Investigation Steps**:
+1.  **Check Subnet**: `aws ec2 describe-subnets --subnet-ids subnet-xyz`.
+    *   *Result*: `AvailableIpAddressCount: 0`.
+2.  **Check CIDR**: It is a `/24` (251 IPs).
+3.  **Check Count**: There are 5 Nodes. Each Node allows 50 Pods (Secondary IPs).
+    *   5 Nodes * 50 IPs = 250 IPs.
+    *   The Subnet is full.
+4.  **The Fix**: You cannot resize a subnet. You must create a new Secondary CIDR for the VPC (e.g., `100.64.0.0/16` - Carrier Grade NAT range) and migrate the pods.
 
 ---
 
 ## 📝 Knowledge Check
 
-1. **Which CIDR prefix provides exactly 16 total IP addresses?**
-    - [ ] a) /24
-    - [ ] b) /26
-    - [x] c) /28
-    - [ ] d) /30
+1.  **You have a `/24` subnet. You need to split it into two equal halves. What CIDR mask do you use?**
+    - [ ] a) /23
+    - [x] b) /25 (Each has 128 IPs)
+    - [ ] c) /26
+    - [ ] d) /12
 
-2. **Going from a /24 to a /23 does what to the total number of IPs?**
-    - [ ] a) Reduces them by half
-    - [x] b) Doubles them
-    - [ ] c) Keeps them the same
-    - [ ] d) Increases them by 24
+2.  **How many usable IPs remain in a `/28` subnet after AWS reserves their portion?**
+    - [ ] a) 16
+    - [ ] b) 14
+    - [x] c) 11 (16 total - 5 reserved)
+    - [ ] d) 6
 
-3. **What is the maximum number of IPs in an AWS VPC (using a /16 prefix)?**
-    - [ ] a) 1,024
-    - [ ] b) 16,384
-    - [x] c) 65,536
-    - [ ] d) 16 million
-
-4. **In the IP range 192.168.1.0/24, which octet is considered the 'Host' portion?**
-    - [ ] a) First octet
-    - [ ] b) Second octet
-    - [ ] c) Third octet
-    - [x] d) Fourth octet
-
-5. **A /32 CIDR represents:**
-    - [x] a) A single IP address
-    - [ ] b) A network of 32 IPs
-    - [ ] c) A broadcast address
-    - [ ] d) All IP addresses in the world
+3.  **Why is `10.0.1.0/24` preferred over `10.0.1.0/23` for human readability?**
+    - [x] a) /24 perfectly matches the 4th octet (0-255), making it easy to spot boundaries.
+    - [ ] b) /23 is not a valid CIDR.
 
 ---
 
 ## 🔗 Next Steps
 
-You've done the math. Now let's use it to build walls. Let's explore the architectural zones of a production network.
+The math is done. Now let's draw the map.
 
-Proceed to: **[03. Public and Private Zoning](../../../../../README.md)** →
+Proceed to: **[03. Public and Private Zoning](../03-Public-and-Private-Zoning/README.md)** →

@@ -624,176 +624,154 @@ This comprehensive guide provides the foundation for understanding cloud computi
 6. **Describe the Shared Responsibility Model.**
    - Security obligations are shared between provider (security *of* the cloud) and customer (security *in* the cloud).
 
-<b>7. </b>
+### Knowledge Check
+
+1. **Which cloud characteristic allows users to provision computing capabilities automatically without human interaction?**
 <details>
 <summary>Show Answer</summary>
-Answer: C) On-Demand Self-Service</b>
+Answer: On-Demand Self-Service
 </details>
 
-
-<b>2. Scaling resources outward by adding more instances is known as:</b>
+2. **Scaling resources outward by adding more instances is known as:**
 <details>
 <summary>Show Answer</summary>
-Answer: B) Horizontal Scaling</b>
+Answer: Horizontal Scaling
 </details>
 
-
-<b>3. Which model represents "Pay-as-you-go" pricing?</b>
+3. **Which model represents "Pay-as-you-go" pricing?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) OpEx</b>
+Answer: OpEx (Operational Expenditure)
 </details>
 
-
-<b>4. In the Shared Responsibility Model, who is responsible for physical security of data centers?</b>
+4. **In the Shared Responsibility Model, who is responsible for physical security of data centers?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) The Cloud Provider</b>
+Answer: The Cloud Provider
 </details>
 
-
-<b>5. Which virtualization type runs directly on the bare metal hardware?</b>
+5. **Which virtualization type runs directly on the bare metal hardware?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) Type 1 Hypervisor</b>
+Answer: Type 1 Hypervisor
 </details>
 
-
-<b>6. Which benefit allows a cloud application to survive a data center failure?</b>
+6. **Which benefit allows a cloud application to survive a data center failure?**
 <details>
 <summary>Show Answer</summary>
-Answer: C) High Availability (Disaster Recovery)</b>
+Answer: High Availability (Disaster Recovery capability)
 </details>
 
-
-<b>7. What technology allows multiple operating systems to run on a single physical server?</b>
+7. **What technology allows multiple operating systems to run on a single physical server?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) Virtualization</b>
+Answer: Virtualization
 </details>
 
-
-<b>8. Which cloud deployment model is restricted to a specific organization?</b>
+8. **Which cloud deployment model is restricted to a specific organization?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) Private Cloud</b>
+Answer: Private Cloud
 </details>
 
-
-<b>9. Which is NOT a standard cloud service model?</b>
+9. **Which is NOT a standard NIST cloud service model?**
 <details>
 <summary>Show Answer</summary>
-Answer: D) HaaS (in standard NIST definition contexts)</b>
+Answer: HaaS (Hardware as a Service) - commonly IaaS, PaaS, SaaS
 </details>
 
-
-<b>10. What does RPO stand for in Disaster Recovery?</b>
+10. **What does RPO stand for in Disaster Recovery?**
 <details>
 <summary>Show Answer</summary>
-Answer: A) Recovery Point Objective</b>
+Answer: Recovery Point Objective
 </details>
 
-
-<b>11. Docker is an example of what technology?</b>
+11. **Docker is an example of what technology?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) Containerization</b>
+Answer: Containerization
 </details>
 
-
-<b>12. Which capability allows resources to appear unlimited to the consumer?</b>
+12. **Which capability allows resources to appear unlimited to the consumer?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) Rapid Elasticity</b>
+Answer: Rapid Elasticity
 </details>
 
-
-<b>13. Which is an example of SaaS?</b>
+13. **Which is an example of SaaS?**
 <details>
 <summary>Show Answer</summary>
-Answer: C) Gmail</b>
+Answer: Gmail / Salesforce / Office 365
 </details>
 
-
-<b>14. Moving from on-premises to cloud shifts responsibility of hardware maintenance to:</b>
+14. **Moving from on-premises to cloud shifts responsibility of hardware maintenance to:**
 <details>
 <summary>Show Answer</summary>
-Answer: B) The Cloud Provider</b>
+Answer: The Cloud Provider
 </details>
 
-
-<b>15. Which allows users to sign in once and access multiple applications?</b>
+15. **Which allows users to sign in once and access multiple applications?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) SSO (Single Sign-On)</b>
+Answer: SSO (Single Sign-On)
 </details>
 
-
-<b>16. What is the primary benefit of Edge Computing?</b>
+16. **What is the primary benefit of Edge Computing?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) Reduced Latency</b>
+Answer: Reduced Latency
 </details>
 
-
-<b>17. Which is a characteristic of "Cloud Native" apps?</b>
+17. **Which is a characteristic of "Cloud Native" apps?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) Microservices architecture</b>
+Answer: Microservices architecture
 </details>
 
-
-<b>18. What does "Multi-Tenancy" mean?</b>
+18. **What does "Multi-Tenancy" mean?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) Multiple users sharing the same resource/infrastructure</b>
+Answer: Multiple users sharing the same resource/infrastructure security
 </details>
 
-
-<b>19. AWS Lambda is an example of:</b>
+19. **AWS Lambda is an example of:**
 <details>
 <summary>Show Answer</summary>
-Answer: C) FaaS (Serverless)</b>
+Answer: FaaS (Serverless)
 </details>
 
-
-<b>20. Which compliance standard relates to healthcare data?</b>
+20. **Which compliance standard relates to healthcare data?**
 <details>
 <summary>Show Answer</summary>
-Answer: C) HIPAA</b>
+Answer: HIPAA
 </details>
 
-
-<b>21. What is the main advantage of a Hybrid Cloud?</b>
+21. **What is the main advantage of a Hybrid Cloud?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) Flexibility to keep sensitive data private while scaling public workloads</b>
+Answer: Flexibility to keep sensitive data private while scaling public workloads
 </details>
 
-
-<b>22. Which service model provides the most control over the infrastructure?</b>
+22. **Which service model provides the most control over the infrastructure?**
 <details>
 <summary>Show Answer</summary>
-Answer: C) IaaS</b>
+Answer: IaaS (Infrastructure as a Service)
 </details>
 
-
-<b>23. "Vendor Lock-in" is most difficult to resolve in which model?</b>
+23. **"Vendor Lock-in" is most difficult to resolve in which model?**
 <details>
 <summary>Show Answer</summary>
-Answer: C) SaaS</b>
+Answer: SaaS (Software as a Service) - migrating data and business logic is hardest
 </details>
 
-
-<b>24. What best describes "Elasticity"?</b>
+24. **What best describes "Elasticity"?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) Automatic, rapid scaling of resources based on demand</b>
+Answer: Automatic, rapid scaling of resources based on demand
 </details>
 
-
-<b>25. Which is a benefit of "Serverless" computing for developers?</b>
+25. **Which is a benefit of "Serverless" computing for developers?**
 <details>
 <summary>Show Answer</summary>
-Answer: B) Focus on business logic code without managing servers</b>
+Answer: Focus on business logic code without managing servers
 </details>

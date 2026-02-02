@@ -30,7 +30,7 @@ By the end of this module, you will:
 
 ---
 
-## 🧩 The Core Instructions
+## 🏗️ The Core Instructions
 
 A Dockerfile follows a simple `INSTRUCTION argument` format.
 
@@ -49,13 +49,6 @@ A Dockerfile follows a simple `INSTRUCTION argument` format.
 Docker is smart. It only rebuilds the layers that have changed. To speed up your builds, you should put the things that **change the least** at the top.
 
 ### The "COPY" Pattern
-**Bad Practice**:
-```dockerfile
-COPY . .
-RUN npm install
-```
-*Result: Every time you change 1 line of code, Docker has to re-download all your dependencies.*
-
 **Best Practice**:
 ```dockerfile
 COPY package.json .
@@ -66,49 +59,63 @@ COPY . .
 
 ---
 
-## 🏆 Real-World DevOps Story: The 2GB Hello World
+## 🆚 Junior Way vs. Engineer Way
 
-**The Scenario**: An intern was tasked with Dockerizing a small Hello World app written in Go. They used `FROM ubuntu` as their base and installed all build tools inside the image.
-**The Crisis**: The production image was **1.2 GB** for a program that only needed 10 MB. This made deployments slow and used up massive disk space in the cloud registry.
-**The Fix**: A Senior DevOps engineer introduced **Multi-Stage Builds**. They used a heavy image for building the code, then copied only the final "binary" into a tiny `alpine` image.
-**The Lesson**: **Base images matter.** By switching from `ubuntu` to `alpine`, the image size dropped to **15 MB**.
+| Feature | The Junior Way (Problematic) | The Engineer Way (Production-ready) |
+|:---|:---|:---|
+| **Base Image** | `FROM ubuntu:latest` (Huge) | `FROM alpine` / `slim` (Tiny) |
+| **Updates** | `RUN apt update` in separate layer | `RUN apt update && apt install...` |
+| **Source** | `COPY . .` (Includes `.git`, etc) | Uses `.dockerignore` for clean builds |
+| **Ordering** | Copies code before installing deps | Installs deps first to leverage caching |
+| **User** | Running as `root` (Dangerous) | Creating and switching to `non-root` |
+| **Multi-Stage**| One giant image with build tools | Multi-stage: Build tools stay in Stage 1 |
 
 ---
 
-## 🚀 Professional Pattern: Non-Root Security
+## 🏗️ The Multi-Stage Build: The Production Gold Standard
 
-By default, Docker containers run as the **root** user. This is a massive security risk. If a hacker breaks into your app, they have full control over the container and potentially the host.
+As seen in the real-world story, image size is critical. Multi-stage builds allow you to use a "Heavy" image (with compilers, git, and dev tools) to build your app, and then "copy" the finished binary into a "Lightweight" image for production.
 
-**Professional Standard**:
+**Example (Golang)**:
 ```dockerfile
-# Create a system user
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
-# Set permissions
-WORKDIR /app
-COPY --chown=appuser:appgroup . .
-# Switch to non-root
-USER appuser
-CMD ["./my-app"]
+# Stage 1: The Builder
+FROM golang:1.21-alpine AS builder
+WORKDIR /build
+COPY . .
+RUN go build -o myapp main.go
+
+# Stage 2: The Production Image
+FROM alpine:latest
+WORKDIR /root/
+# Copy ONLY the binary from the builder stage
+COPY --from=builder /build/myapp .
+CMD ["./myapp"]
 ```
+*Result*: Your image goes from 800MB (Go SDK) to 15MB (Alpine + Binary).
 
 ---
 
 ## ❓ Interview Preparation (Dockerfile)
 
+### 🎯 Core Concepts
 1. **Q: What is the difference between `RUN`, `CMD`, and `ENTRYPOINT`?**
-   *A: `RUN` happens during the build (it adds a layer). `CMD` is the default command when the container starts but can be overridden. `ENTRYPOINT` is the main command that is always executed, often used to turn a container into a CLI tool.*
+   - *A: `RUN` happens during the build (it adds a layer). `CMD` is the default command when the container starts but can be overridden. `ENTRYPOINT` is the main command that is always executed, often used for containers acting as CLI tools.*
 
 2. **Q: Why should you combine multiple `RUN` commands with `&&`?**
-   *A: Every `RUN` command creates a new layer. Combining them prevents the creation of unnecessary intermediate layers, keeping the final image smaller and more efficient.*
+   - *A: Every `RUN` command creates a new layer. Combining them reduces the total layer count, keeping the image size smaller and the metadata cleaner.*
 
-3. **Q: What does a `.dockerignore` file do and why is it important?**
-   *A: It tells Docker which files/folders should NOT be sent to the build daemon. This speeds up builds and prevents sensitive data (like `.env` files or API keys) from being accidentally baked into the image.*
+3. **Q: What is the 'Build Context'?**
+   - *A: It's the set of files available to the Docker daemon during `docker build`. When you run `docker build .`, the current directory is the context. Using `.dockerignore` prevents bloating this context.*
 
-4. **Q: What is the 'Build Context'?**
-   *A: It is the set of files that Docker has access to during the build. When you run `docker build .`, the `.` represents the build context (your current directory).*
+### 🚀 Advanced Questions
+4. **Q: How does Docker's Layer Caching work?**
+   - *A: Docker caches the result of each instruction. If an instruction (like `COPY package.json`) and its previous instructions haven't changed, Docker reuses the layer. If one layer changes, all subsequent layers are invalidated.*
 
-5. **Q: Explain the benefit of 'slim' or 'alpine' base images.**
-   *A: These images contain only the absolute minimum libraries needed to run the application, reducing the "Attack Surface" (security) and the download time (performance).*
+5. **Q: What is the difference between `ADD` and `COPY`?**
+   - *A: `COPY` is transparent and only copies local files. `ADD` can download files from URLs and automatically extract tarballs. In 99% of cases, `COPY` is preferred for predictability.*
+
+6. **Q: How can you inject environment variables during the build vs. during the run?**
+   - *A: Use `ARG` for build-time variables (not available in the running container) and `ENV` for variables that should persist when the container is running.*
 
 ---
 
@@ -122,25 +129,21 @@ CMD ["./my-app"]
 2. **Which instruction is used to copy a local file into a specific image directory?**
    - [ ] a) `MOVE`
    - [x] b) `COPY`
-   - [ ] c) `ADD` (Note: COPY is preferred for simple tasks)
+   - [ ] c) `ADD`
 
-3. **What happens if you have two `CMD` instructions in one Dockerfile?**
-   - [ ] a) They both run in parallel
-   - [ ] b) The first one takes priority
-   - [x] c) Only the last one is executed
+3. **True/False: Using 'latest' tags in production is a best practice.**
+   - [ ] True
+   - [x] **False**. It leads to environment drift when the tag is updated.
 
 4. **Which instruction sets the default directory for all subsequent commands?**
-   - [ ] a) `CD`
-   - [ ] b) `DIR`
-   - [x] c) `WORKDIR`
+   - [x] `WORKDIR`
 
-5. **Is `ARG` available inside the running container?**
-   - [ ] Yes
-   - [x] No (Only during the build process)
+5. **Where do you define build-time variables that aren't needed in production?**
+   - [x] `ARG`
 
 ---
 
-## 🔗 Next Steps
+## 🎯 Next Steps
 
 The Chef has a recipe. Now let's learn how to fix the kitchen when things go wrong.
 

@@ -14,6 +14,17 @@
 - It doesn't matter what's carrying it (Laptop, AWS, Azure, On-prem).
 - The "Hook" is always in the same place. If it fits on the ship, it travels.
 
+## 🆚 Junior Way vs. Engineer Way
+
+| Feature | The Junior Way (Problematic) | The Engineer Way (Production-ready) |
+|:---|:---|:---|
+| **Paradigm** | "It works on my machine" | "It works in the container" |
+| **Recovery** | Manual restart on failure | Automated self-healing by Orchestrator |
+| **Scaling** | Vertical (Bigger CPU/RAM) | Horizontal (More containers) |
+| **Logic** | Manual setup scripts/VMs | Declarative YAML / Dockerfiles |
+| **Security** | Root user inside containers | Non-root users / Minimal base images |
+| **Updates** | Patching running systems | Replacing immutable images (Cattle) |
+
 ---
 
 ## 🏗️ Docker Object Summary

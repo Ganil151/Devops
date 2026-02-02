@@ -17,6 +17,17 @@
 
 ---
 
+## 🆚 Junior Way vs. Engineer Way
+
+| Feature | The Junior Way (Problematic) | The Engineer Way (Strategic) |
+|:---|:---|:---|
+| **VPC Planning** | Using `192.168.1.0/24` (Too small, common overlap). | Using **RFC 1918 Large Ranges** (e.g., `10.x.0.0/16`) with growth padding. |
+| **CIDR Choice** | "I'll just use /24 for everything." | **Right-Sizing Subnets** (e.g., /28 for small DB tiers vs /20 for large EKS nodes). |
+| **Connectivity** | Re-IPing servers manually when they conflict. | **Non-Overlapping VPC Design** (Planning for Peering/VPN from Day 1). |
+| **Security** | Assigning Public IPs to every server. | **Private-First Strategy** (NAT Gateways and Bastions). |
+
+---
+
 ## 🎯 Learning Objectives
 
 - Master IPv4 and IPv6 addressing schemes

@@ -37,6 +37,17 @@ block-beta
 
 ---
 
+## 🆚 Junior Way vs. Engineer Way
+
+| Feature | The Junior Way (Problematic) | The Engineer Way (Strategic) |
+|:---|:---|:---|
+| **Perspective** | Sees HTTP as "just a URL". | Sees HTTP as a **Request/Response Lifecycle** with headers and status codes. |
+| **Troubleshooting** | "DNS is down? I'll just use the IP." | **Understanding Service Discovery** (Why is the record missing?). |
+| **Security** | "FTP is fine if it's internal." | **Zero Trust Protocols** (Encrypted-by-default: SSH, HTTPS, SFTP). |
+| **Reliability** | Ignores timeouts in code. | **Implementing Circuit Breakers** and strict timeouts for all protocol calls. |
+
+---
+
 ## 🎯 Learning Objectives
 - Master HTTP/HTTPS communication fundamentals
 - Understand DNS resolution and configuration

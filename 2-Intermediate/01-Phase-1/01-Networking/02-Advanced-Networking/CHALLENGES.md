@@ -1,41 +1,73 @@
-# Advanced Networking Challenges 🏢
+# 🎫 NRE Simulation: The Weekly On-Call
 
-Master complex connectivity patterns like VPC Peering, Transit Gateways, and Direct Connect.
-
----
-
-## 🏆 Challenge 01: Peer-to-Peer Architecture
-**Objective**: Connect two isolated VPCs to allow inter-service communication.
-
-1.  **Requirement**: Design a solution to connect `VPC-App` (10.1.0.0/16) and `VPC-DB` (10.2.0.0/16).
-2.  **Task**: Document the three steps required:
-    *   **The Request**: Creating the Peering Connection.
-    *   **The Acceptance**: Accepting the handshake.
-    *   **The Routing**: Updating both VPC Route Tables to point to the `pcx-` ID.
-3.  **Critical Question**: Can VPC-A talk to VPC-C through VPC-B automatically? (Research: Transitive Peering).
+> **"Junior, I don't care if you know the OSI model. I care if you know what to do when PagerDuty screams at 3 AM. This isn't a quiz. This is simulation."**
 
 ---
 
-## 🏆 Challenge 02: Transit Gateway Centralization
-**Objective**: Simplify a "Spoke-and-Hub" network.
+## 📅 Monday: The "Slow" API
+**Severity**: Sev-3 (Degraded Performance)
 
-1.  **Scenario**: You have 15 VPCs that all need to talk to a shared "Security VPC."
-2.  **Task**: Explain why a Transit Gateway (TGW) is better than 15 individual Peering connections.
-3.  **Lab**: Draft a TGW Route Table entry that acts as a "Blackhole" for sensitive traffic between Subnet A and Subnet B.
+### The Alert
+User complaints: "The dashboard is loading, but the user profile images take 5 seconds to appear."
+
+### Your Mission
+1.  **Hypothesis**: It's network latency or packet loss.
+2.  **Tool**: `mtr` (My Traceroute).
+3.  **Task**:
+    *   Synthesize a report showing the "Last Mile" latency vs. "Backbone" latency.
+    *   Determine if the issue is inside our VPC or at the ISP level.
+4.  **CLI Drill**:
+    ```bash
+    mtr --report --report-cycles 10 api.internal
+    # Look at the "% Loss" column on the hops.
+    ```
 
 ---
 
-## 🏆 Challenge 03: Hybrid Cloud Connectivity
-**Objective**: Bridge the gap between On-Premise and AWS/Azure.
+## 📅 Wednesday: The "Split-Brain" Peering
+**Severity**: Sev-2 (Partial Outage)
 
-1.  **Requirement**: Compare **Site-to-Site VPN** and **Direct Connect (DX)**.
-2.  **Task**: Create a decision matrix based on:
-    *   Cost
-    *   Setup Time
-    *   Reliability (Public Internet vs Private Fiber)
-3.  **Goal**: Recommend the best solution for a bank requiring 10Gbps consistent throughput.
+### The Alert
+"Service A in `vpc-prod` cannot access Service B in `vpc-shared`. Connection Timed Out."
+
+### Your Mission
+1.  **Hypothesis**: Route Tables are correct, but the Security Group is one-sided.
+2.  **Tool**: `nc` (Netcat) and `grep`.
+3.  **Task**:
+    *   SSH into Service A. Run `nc -zv service-b 8080`.
+    *   Verify if the return traffic is allowed.
+4.  **The "Gotcha"**: You find the route table points to a **Deleted Peering ID** (`blackhole` status).
+5.  **CLI Drill**:
+    ```bash
+    aws ec2 describe-route-tables --filters "Name=route.state,Values=blackhole"
+    ```
 
 ---
 
-## 📁 Solutions
-Advanced routing templates are in the `Boilerplates/` directory.
+## 📅 Friday: The Deployment Freeze (MTU)
+**Severity**: Sev-1 (Blocker)
+
+### The Alert
+"We migrated to a Direct Connect link. Now, `docker push` works, but `git clone` of large repos hangs indefinitely."
+
+### Your Mission
+1.  **Hypothesis**: MTU Mismatch. The new link has a smaller MTU than the default 1500.
+2.  **Tool**: `ping` with DF (Don't Fragment) bit.
+3.  **Task**: Find the "Safe" MTU size.
+4.  **CLI Drill**:
+    ```bash
+    # Start high and go low
+    ping -M do -s 1472 git.internal
+    # > Message too long
+    ping -M do -s 1300 git.internal
+    # > Reply from...
+    ```
+5.  **Resolution**: Adjust the TCP MSS Clamping on the router.
+
+---
+
+## 📂 Report Template
+For each challenge, write a simplistic "Post-Mortem":
+1.  **Symptoms**: What did the user see?
+2.  **Root Cause**: What was the technical failure? (e.g., "Stateless NACL blocked high ports")
+3.  **Restoration**: What one command fixed it?
