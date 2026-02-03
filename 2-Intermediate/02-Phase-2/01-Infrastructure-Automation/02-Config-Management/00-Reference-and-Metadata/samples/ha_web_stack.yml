@@ -1,0 +1,132 @@
+---
+# High Availability Web Stack - Production Pattern
+# This playbook demonstrates:
+# - Multi-node deployment
+# - Idempotent configuration
+# - Handler-based service management
+# - Role composition
+
+- name: Configure Load Balancer Tier
+  hosts: load_balancers
+  become: yes
+  vars:
+    nginx_worker_processes: auto
+    nginx_worker_connections: 2048
+  
+  roles:
+    - common
+    - nginx_lb
+  
+  tasks:
+    - name: Deploy upstream configuration
+      template:
+        src: templates/upstream.conf.j2
+        dest: /etc/nginx/conf.d/upstream.conf
+        validate: 'nginx -t -c %s'
+      notify: reload_nginx
+    
+    - name: Ensure health check endpoint
+      copy:
+        content: "OK"
+        dest: /var/www/html/health
+        mode: '0644'
+
+- name: Configure Application Tier
+  hosts: app_servers
+  become: yes
+  vars:
+    app_version: "{{ lookup('env', 'APP_VERSION') | default('latest', true) }}"
+    app_port: 8080
+  
+  roles:
+    - common
+    - python_runtime
+    - app_deploy
+  
+  tasks:
+    - name: Deploy application artifact
+      get_url:
+        url: "https://artifacts.company.com/app-{{ app_version }}.tar.gz"
+        dest: /opt/app/app.tar.gz
+        checksum: "sha256:{{ app_checksum }}"
+      register: app_download
+    
+    - name: Extract application
+      unarchive:
+        src: /opt/app/app.tar.gz
+        dest: /opt/app/
+        remote_src: yes
+      when: app_download.changed
+      notify: restart_app
+    
+    - name: Configure application
+      template:
+        src: templates/app.conf.j2
+        dest: /opt/app/config/app.conf
+      notify: restart_app
+    
+    - name: Ensure app service is running
+      systemd:
+        name: myapp
+        state: started
+        enabled: yes
+
+- name: Configure Database Tier
+  hosts: db_servers
+  become: yes
+  vars:
+    postgres_version: "14"
+    max_connections: 200
+  
+  roles:
+    - common
+    - postgresql
+  
+  tasks:
+    - name: Configure PostgreSQL
+      template:
+        src: templates/postgresql.conf.j2
+        dest: "/etc/postgresql/{{ postgres_version }}/main/postgresql.conf"
+      notify: restart_postgresql
+    
+    - name: Configure pg_hba for app servers
+      template:
+        src: templates/pg_hba.conf.j2
+        dest: "/etc/postgresql/{{ postgres_version }}/main/pg_hba.conf"
+      notify: reload_postgresql
+    
+    - name: Ensure backup cron job
+      cron:
+        name: "Daily PostgreSQL backup"
+        minute: "0"
+        hour: "2"
+        job: "/usr/local/bin/pg_backup.sh"
+        user: postgres
+
+  handlers:
+    - name: reload_postgresql
+      systemd:
+        name: postgresql
+        state: reloaded
+    
+    - name: restart_postgresql
+      systemd:
+        name: postgresql
+        state: restarted
+
+# Global handlers (apply to all plays)
+  handlers:
+    - name: reload_nginx
+      systemd:
+        name: nginx
+        state: reloaded
+    
+    - name: restart_app
+      systemd:
+        name: myapp
+        state: restarted
+      # Graceful restart with health check
+      register: restart_result
+      retries: 3
+      delay: 5
+      until: restart_result is success

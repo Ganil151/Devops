@@ -1,75 +1,93 @@
-# Infrastructure as Code (IaC) Architecture Reference
+# 🛠️ IaC Architecture Patterns
 
-**Doc Version:** 1.0.0
-**Role:** Cloud Architect
-**Scope:** State Management, Provisioning vs Configuration, and Modularity
+> **"Architecture is about trade-offs. You can have Fast Updates (Mutable) or Reliable Updates (Immutable), but rarely both."**
 
----
-
-## 1. Provisioning vs. Configuration
-
-DevOps engineers often confuse these two layers.
-
-| Aspect | Provisioning (IaC) | Configuration Management (CM) |
-| :--- | :--- | :--- |
-| **Purpose** | Creating the infrastructure (VPC, Subnet, VMs). | Preparing the software inside the VM (Packages, Config files). |
-| **Tools** | Terraform, Pulumi, CloudFormation. | Ansible, Chef, Puppet, SaltStack. |
-| **Lifecycle** | "Outside-In" management. | "Inside-Out" management. |
-| **Philosophy** | Declarative (Desired state). | Often Procedural (Steps to take). |
+This reference breaks down the high-level design choices for Infrastructure as Code.
 
 ---
 
-## 2. The Infrastructure State
+## 🏗️ 1. Provisioning vs Configuration
 
-State is the "Source of Truth" for your infrastructure.
+The "Two-Layer Model" is the industry standard.
 
-- **Local State**: State stored on the engineer's laptop (`terraform.tfstate`). **WARNING**: Never use in production. Leads to "State Locking" conflicts.
-- **Remote State**: State stored in a shared, versioned backend (AWS S3, Azure Blob, Terraform Cloud).
-- **State Locking**: Mandatory to prevent two people from applying changes simultaneously. Usually handled by DynamoDB (for S3) or natively by the backend.
+| Layer | Tool | Responsibility | Lifecycle |
+| :--- | :--- | :--- | :--- |
+| **Provisioning** | Terraform | Creates the "Metal" (VPC, EC2, DNS, RDS). | Infrequent changes. |
+| **Configuration** | Ansible | Configures the "OS" (Nginx, Users, Cron). | Frequent changes. |
 
----
-
-## 3. Modularity & Reusability
-
-Encapsulate infrastructure into reusable "bricks."
-
-### The "Module" Pattern
-Instead of writing 500 lines of VPC code, use a module:
+### The "UserData" Bridge
+Terraform passes data to Ansible/Bash via `user_data`:
 ```hcl
-module "vpc" {
-  source = "./modules/vpc"
-  region = "us-east-1"
-  cidr_block = "10.0.0.0/16"
+resource "aws_instance" "web" {
+  user_data = templatefile("init.sh", {
+    db_ip = aws_db_instance.main.address
+  })
 }
 ```
 
-### Benefits
-- **Dry (Don't Repeat Yourself)**: Define once, use in Dev, Staging, and Prod.
-- **Standardization**: Enforce company security tags and naming conventions.
+---
+
+## 🔄 2. Mutable vs Immutable
+
+How do you handle updates?
+
+### Mutable (The "Update" Model)
+- **Concept**: SSH into the server and run `apt-get upgrade`.
+- **Tool**: Ansible / Chef / Puppet.
+- **Pros**: Fast. Valid for Stateful Data bases.
+- **Cons**: **Configuration Drift**. Over 2 years, "Server A" becomes different from "Server B".
+
+### Immutable (The "Replace" Model)
+- **Concept**: Bake a new Image (AMI) with the update. Destroy old server. Launch new one.
+- **Tool**: Packer + Terraform.
+- **Pros**: Zero Drift. Exact Replica in Dev/Prod. Easy Rollback.
+- **Cons**: Slow Deployment (Baking takes time). Stateless apps only.
+
+**Staff Recommendation**:
+- **Stateless Web Apps**: Immutable (Packer + ASG).
+- **Databases**: Mutable (RDS or Ansible managed).
 
 ---
 
-## 4. Avoiding Configuration Drift
+## 📡 3. Push vs Pull
 
-**Config Drift** occurs when someone manually changes a setting in the portal/CLI without updating the code.
+How does code get to the server?
 
-### Remediation
-1. **Periodic Scans**: `terraform plan` shows the delta.
-2. **Auto-Remediation**: Use tools like `driftctl` or scheduled CI jobs that re-apply the IaC.
-3. **IAM Controls**: Deny manual "Write" access in the portal. Force all changes through Git.
+### Push Mode (Ansible)
+- **Flow**: Laptop -> SSH -> Server.
+- **Pros**: Immediate control. No agent required. Simpler.
+- **Cons**: Needs inbound SSH access. Harder to scale to 10k nodes.
+
+### Pull Mode (Puppet / Chef / GitOps)
+- **Flow**: Agent on Server -> Polls Git/Master -> Applies Change.
+- **Pros**: Scalable. No inbound ports open (Security). Automatic Drift Correction.
+- **Cons**: Requires Agent management. Complex setup.
 
 ---
 
-## 5. Visualizing the IaC Pipeline
+## 🧩 4. The Module Pattern
 
-```mermaid
-graph LR
-    Dev[Engineer] -->|Git Push| Repo[Git Repository]
-    Repo -->|Trigger| CI[CI/CD: GitHub Actions]
-    CI -->|Plan| Scan[Security Scan: tfsec/Checkov]
-    Scan -->|Approve| State[Remote State Lock]
-    State -->|Apply| Cloud[Cloud Provider: AWS/Azure]
-    Cloud -->|Update| State
+Don't Repeat Yourself (DRY).
+
+### The "Root Module"
+Your `main.tf` should mostly call modules, not define resources directly.
+
+```hcl
+# main.tf (Prod)
+module "network" {
+  source = "./modules/vpc"
+  cidr   = "10.0.0.0/16"
+}
+
+module "app" {
+  source      = "git::github.com/org/terraform-app-module"
+  instance_type = "m5.large"
+  vpc_id      = module.network.vpc_id
+}
 ```
 
-> **Enterprise Pattern**: Use **Workspace Isolation**. Maintain separate state files for every environment (Dev, Stage, Prod) to ensure a mistake in Dev cannot accidentally delete production resources.
+This allows you to verify the *Infrastructure Logic* once (in the module) and reuse it everywhere.
+
+---
+
+[⬅️ Back to Reference Hub](./README.md)

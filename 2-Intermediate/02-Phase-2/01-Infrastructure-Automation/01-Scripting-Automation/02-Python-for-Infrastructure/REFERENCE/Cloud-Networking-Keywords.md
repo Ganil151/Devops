@@ -1,42 +1,113 @@
-# ☁️ Reference: Cloud & Networking Keywords
+# ☁️ Cloud & Networking: Scripting the Infrastructure
 
-Python is the primary language for Cloud-Native engineering. This reference covers the keywords used for interacting with APIs and Cloud SDKs.
+> **"The Network is the computer. In DevOps, your script is rarely local. It's calling an API in Virginia, SSHing to a server in Frankfurt, and pushing data to a bucket in Tokyo."**
 
----
-
-## 🚀 API Mastery (Requests)
-
-### `requests.Session()`
-*   **Definition**: A persistent object that stores cookies and keeps the TCP connection open for multiple requests (Keep-Alive).
-*   **DevOps Why**: Significantly improves performance when making hundreds of API calls to a provider like GitHub or Jira.
-
-### `Response.raise_for_status()`
-*   **Definition**: Raises an `HTTPError` if the response code is 4xx or 5xx.
-*   **DevOps Why**: Ensures your script doesn't continue processing if the API call failed (e.g., Auth error or Timeout).
+This reference covers the libraries for Remote Execution and API Interaction.
 
 ---
 
-## 🏛️ Cloud SDK (Boto3)
+## 🐍 1. AWS SDK (`boto3`)
 
-### `boto3.Session()`
-*   **Definition**: The entry point for AWS SDK. It manages credentials and configuration.
+The standard for AWS Automation.
 
-### `Client` vs `Resource`
-*   **Client**: Low-level, 1-to-1 mapping with the AWS API. Returns dictionaries. (Recommended for large-scale enterprise automation).
-*   **Resource**: High-level, object-oriented abstraction. Easier to use for simple tasks but doesn't cover all AWS features.
+### Client vs Resource
+- **Client**: Low-level, maps 1:1 to API. returns Dicts. Fast.
+- **Resource**: OO abstraction. returns Objects. Slower.
+- **Staff Choice**: Use **Clients** for scripts (speed/completeness). Use **Resources** for simple logic.
 
-### `Paginators`
-*   **Definition**: Handles APIs that return data in multiple "pages" (e.g., `list_objects` in S3).
-*   **DevOps Why**: Mandatory for enterprise scale. If you have 10,000 S3 buckets, a standard API call only returns the first 1,000. Paginators automate the loop to get all results.
+### Paginators (Handling > 1000 items)
+AWS APIs truncate lists at 1000.
+```python
+client = boto3.client('s3')
+paginator = client.get_paginator('list_objects_v2')
 
-### `Waiters`
-*   **Definition**: Polling logic that pauses the script until a resource reaches a certain state (e.g., `instance_running`).
-*   **DevOps Why**: Replaces messy `while True: sleep(5)` loops with professional, optimized polling.
+for page in paginator.paginate(Bucket='my-bucket'):
+    for obj in page['Contents']:
+        print(obj['Key'])
+```
+
+### Waiters (Blocking for State)
+Don't write `time.sleep()`. Let Boto3 poll for you.
+```python
+ec2 = boto3.client('ec2')
+instance = ec2.run_instances(...)['Instances'][0]
+
+waiter = ec2.get_waiter('instance_running')
+waiter.wait(InstanceIds=[instance['InstanceId']]) # Blocks until Running
+```
 
 ---
 
-## 🎙️ Staff Interview context
-*   **"Explain the difference between a Boto3 Client and a Resource."**
-    *   *Answer*: A Client is a low-level service representation that maps directly to the API, making it more comprehensive and faster. A Resource is a high-level, thread-safe abstraction that is more "Pythonic" but less optimized for large-scale data processing.
-*   **"How do you ensure an API script handles transient network failures?"**
-    *   *Answer*: Use the `HTTPAdapter` with `Retry` logic from the `urllib3` library, integrated into a `requests.Session()`.
+## 🌐 2. HTTP Requests (`requests`)
+
+The "Human" HTTP library.
+
+### Session Objects (Performance)
+Reuses TCP connections (Keep-Alive) -> 2x Speed boost.
+```python
+s = requests.Session()
+s.headers.update({'Authorization': 'Bearer token'})
+
+# Both calls reuse the same socket
+s.get('https://api.com/v1/users')
+s.get('https://api.com/v1/posts')
+```
+
+### Retry Logic (Resilience)
+Handle hiccups automatically.
+```python
+from requests.adapters import HTTPAdapter
+
+adapter = HTTPAdapter(max_retries=3)
+s = requests.Session()
+s.mount('https://', adapter) # Auto-retry on 500/502/Network Error
+```
+
+---
+
+## 🔑 3. SSH Automation (`paramiko` & `asyncssh`)
+
+### Paramiko (Standard)
+```python
+import paramiko
+
+client = paramiko.SSHClient()
+client.set_missing_host_key_policy(paramiko.RejectPolicy()) # Security
+
+client.connect('10.0.0.1', username='admin', key_filename='key.pem')
+stdin, stdout, stderr = client.exec_command('uptime')
+print(stdout.read().decode())
+```
+
+### AsyncSSH (High Scale)
+Run 100 SSH connections in parallel using Python `asyncio`.
+```python
+import asyncssh, asyncio
+
+async def run_cmd(host):
+    async with asyncssh.connect(host) as conn:
+        await conn.run('sudo reboot')
+
+asyncio.run(asyncio.gather(run_cmd('h1'), run_cmd('h2')))
+```
+
+---
+
+## 🕸️ 4. Web Scraping (`playwright`)
+
+For monitoring sites without APIs (SPAs/React).
+
+```python
+from playwright.sync_api import sync_playwright
+
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=True)
+    page = browser.new_page()
+    page.goto("http://site.internal")
+    page.click("#login-button")
+    page.screenshot(path="evidence.png")
+```
+
+---
+
+[⬅️ Back to Reference Hub](./README.md)

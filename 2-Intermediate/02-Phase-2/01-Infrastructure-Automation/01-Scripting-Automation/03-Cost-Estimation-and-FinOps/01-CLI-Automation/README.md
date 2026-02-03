@@ -1,104 +1,213 @@
-# 🏗️ CLI Automation & JSON Mastery: The Infracost Engine
+# 🏗️ CLI Automation: The FinOps Engine
 
 > **"A GUI is for confirmation. The CLI is for automation. A true SRE never looks at a cost dashboard if they can build a script that does it for them."**
 
-Welcome to the **Infracost CLI Automation** module. Before costs can be gated in CI/CD, you must master the fundamental binary. This module focuses on the **Breakdown-Diff-Export** pattern, enabling you to extract financial metrics from raw HCL and transform them into actionable data for governance scripts.
+Welcome to the **CLI Automation** module. To master FinOps, you must master the command line. This module defines how to extract **Predictive Costs** (Before Deploy) using `Infracost` and **Historical Costs** (After Deploy) using `aws ce`.
+
+**Why This Matters for Junior DevOps Engineers:**
+- 🔮 **Prediction**: "How much will this Terraform change cost?" (Infracost).
+- 📉 **History**: "How much did we spend on EC2 last month?" (AWS CLI).
+- 🤖 **Automation**: Running these checks in CI/CD pipelines.
 
 ---
 
-## 🏗️ The CLI Execution Lifecycle
+## 📚 Table of Contents
 
-Automated cost analysis follows a strict **Parse-Compare-Report** pipeline.
+1. [Predictive Cost (Infracost)](#-predictive-cost-infracost)
+2. [Historical Cost (AWS CLI)](#-historical-cost-aws-cli)
+3. [Advanced Usage: Usage Files](#-advanced-usage-usage-files)
+4. [Real-World DevOps Scenarios](#-real-world-devops-scenarios)
+5. [Common Pitfalls & Solutions](#-common-pitfalls--solutions)
+6. [Hands-On Exercises](#-hands-on-exercises)
+7. [Interview Preparation](#-interview-preparation)
+
+---
+
+## 🔮 Predictive Cost (Infracost)
+
+Infracost parses Terraform (HCL) and estimates the monthly bill.
 
 ```mermaid
 graph TD
-    A[Source: Terraform / HCL] --> B[infracost breakdown]
-    B -- Pull Pricing --> C[Price API: AWS/GCP/Azure]
-    C --> D[JSON: Raw Cost Data]
-    D --> E{Action: Diff?}
-    E -- Yes --> F[infracost diff --compare-to baseline.json]
-    E -- No --> G[infracost output --format table]
-    F --> H[Export: Slack / Markdown / HTML]
-    G --> H
+    A[Terraform HCL] --> B[infracost breakdown]
+    B -- Query API --> C[Pricing Database]
+    C --> D[JSON Estimate]
+    D --> E[JQ: Extract Total]
     
     style B fill:#ee0000,color:#fff
     style D fill:#fef3c7,stroke:#d97706
-    style F fill:#e0f2fe,stroke:#0369a1
+```
+
+### The "Diff" Workflow
+This tells you the *Delta* (Change) in cost.
+
+```bash
+# 1. Generate Baseline (Main Branch)
+infracost breakdown --path . --format json --out-file baseline.json
+
+# 2. Make Changes (Edit main.tf)
+# ...
+
+# 3. Generate Diff (Feature Branch)
+infracost diff --path . --compare-to baseline.json
+```
+
+**Output**:
+```text
+Project: my-infra
+
++ aws_instance.web_server
+  +$42.00/mo
+
+Monthly Cost Increase: +$42.00
+```
+
+---
+
+## 📉 Historical Cost (AWS CLI)
+
+Predicting is nice, but what did we *actually* spend? Use `aws ce` (Cost Explorer).
+
+### The Command
+```bash
+aws ce get-cost-and-usage \
+    --time-period Start=2023-10-01,End=2023-11-01 \
+    --granularity MONTHLY \
+    --metrics "UnblendedCost" \
+    --group-by Type=DIMENSION,Key=SERVICE
+```
+
+### The Parsing (JQ)
+The JSON output is verbose. We use `jq` to extract just the **Service Name** and **Dollar Amount**.
+
+```bash
+aws ce get-cost-and-usage ... | jq -r '
+  .ResultsByTime[0].Groups[] | 
+  "\(.Keys[0]): $\(.Metrics.UnblendedCost.Amount)"
+'
+```
+
+**Output**:
+```text
+Amazon Elastic Compute Cloud - Compute: $120.50
+Amazon Simple Storage Service: $15.00
+AWS Lambda: $0.02
+```
+
+---
+
+## ⚙️ Advanced Usage: Usage Files
+
+Infracost assumes "0 usage" for variable resources like Lambda or S3. You must tell it: "I expect 1 million requests."
+
+### `infracost-usage.yml`
+```yaml
+version: 0.1
+resource_usage:
+  aws_lambda_function.my_function:
+    monthly_requests: 1000000 
+    request_duration_ms: 150
+  aws_s3_bucket.my_data:
+    standard_storage_gb: 500
+```
+
+### Run with Usage
+```bash
+infracost breakdown --path . --usage-file infracost-usage.yml
 ```
 
 ---
 
 ## 🎭 Real-World DevOps Scenarios
 
-### 🛡️ Scenario: The "Zombie Resource" Discovery
-**The Incident:** An infrastructure team managed 50 separate microservices. Over time, "test" resources were added but never removed.
-**The Failure:** Monthly cloud costs were slowly creeping up at 5% per month, but no single change looked "expensive" in the billing console.
-**The Fix:** A Python script using the **Infracost CLI**. Every Sunday at midnight, the script ran `infracost breakdown` on all 50 repositories, extracted the `totalMonthlyCost` from the JSON output, and logged it to a Prometheus metric.
-**The Result:** The team visualized the cost trend in Grafana. They identified 12 repositories where the cost was static but high, discovered they were hosting abandoned resources, and saved **$4,000/month** by cleaning them up.
+### 🛡️ Scenario 1: The "Silent" Lambda Bill
+**The Incident:** A developer wrote a Lambda that ran fine in testing, but in Prod, it processed 10GB files.
+**The Fix:** Before deploy, they added a `usage.yml` estimating 10GB file processing. Infracost alerted that this would cost **$300/mo** (vs $5/mo for EC2). They switched architecture *before* deploying.
 
----
-
-## 💻 DevOps Logic Snippets: "The Pipeline Blueprint"
-
-Always use JSON for automation and Table/Markdown for human eyes.
-
+### 🔥 Scenario 2: The Daily Spend Alert
+**The Task:** Alert if daily spend exceeds $100.
+**Solution:** Cron job running `aws ce` for the *last 24h*.
 ```bash
-# 1. 🚀 Breakdown: Get the full cost of the current directory
-infracost breakdown --path . --format json --out-file report.json
-
-# 2. 🧪 Diff: Compare current changes against a known baseline
-# This is how you identify 'Cost Regression' in CI
-infracost diff --path . --compare-to baseline.json --format json --out-file diff_report.json
-
-# 3. 📈 Export: Create a human-readable Slack message
-infracost output --path diff_report.json --format slack --out-file slack_msg.json
-
-# 🛡️ Guard Clause: Check if the report exists before parsing
-if [ ! -f "diff_report.json" ]; then
-    echo "❌ Error: Cost report generation failed."
-    exit 1
+DAILY=$(aws ce get-cost-and-usage --granularity DAILY ... | jq '.Total')
+if [ "$DAILY" -gt 100 ]; then
+  curl -X POST slack.com/webhook "🔥 Alert: Spent $$DAILY yesterday!"
 fi
 ```
 
 ---
 
-## 🎙️ Interview Preparation (CLI Mastery)
+## ⚠️ Common Pitfalls
 
-1.  **"What is the difference between `breakdown` and `diff`?"**
-    *   *Answer:* `breakdown` gives you the total cost of all resources in a project. `diff` only shows the **change** in cost (the delta) between your current code and a baseline JSON file or branch.
-2.  **"How do you handle 'Elastic' resources like AWS Lambda or S3 storage in a CLI script?"**
-    *   *Answer:* You must provide a **Usage File** (`--usage-file usage.yml`). Since these resources are priced by consumption (invocations, GBs stored), Infracost needs your expected usage metrics to calculate a price.
-3.  **"Why is the JSON format preferred over Markdown for automation?"**
-    *   *Answer:* JSON is structured and machine-readable. It allows tools like `jq` or Python to extract specific numbers (like `totalMonthlyCost`) to trigger logic, whereas Markdown is purely for human visualization.
-4.  **"How can you automate Infracost to check multiple subdirectories in a mono-repo?"**
-    *   *Answer:* Using the **Config File** (`infracost-config.yml`). This file allows you to define multiple "projects" (paths), allowing one CLI command to analyze an entire repository with diverse infrastructure components.
-5.  **"Explain the benefit of the `infracost log` flag for troubleshooting."**
-    *   *Answer:* It provides detailed output about how Infracost is parsing your HCL and communicating with the pricing API. It's essential for debugging when resources aren't being detected correctly or when credentials fail.
+### Pitfall 1: Ignoring Data Transfer (Infracost)
+Infracost often cannot estimate "Data Transfer" because it doesn't know your traffic volume.
+**Fix**: Always explicitly add `data_transfer_gb` to your `usage.yml` for Load Balancers and NAT Gateways.
+
+### Pitfall 2: AWS CE Delays
+AWS Cost Explorer data is **NOT Real-Time**. It has a 24-48 hour delay.
+**Fix**: Do not use `aws ce` for "Instant" feedback. Use CloudWatch Metrics for that.
+
+---
+
+## 🎯 Hands-On Exercises
+
+### Exercise 1: Infracost Diff
+**Objective**: Calculate the cost of an upgrade.
+**Task**:
+1. Create a `main.tf` with `t3.micro`.
+2. Generate `baseline.json`.
+3. Upgrade to `t3.xlarge`.
+4. Run `infracost diff`.
+
+### Exercise 2: AWS Cost Query
+**Objective**: Find the top spender.
+**Task**: Write a bash script using `aws ce` and `jq` to list the Top 3 most expensive AWS services for the last month.
+
+---
+
+## 🎙️ Interview Preparation
+
+### Foundation Questions
+
+**1. "Does Infracost analyze my actual AWS bill?"**
+- **Answer**: No. Infracost is **Static Analysis** of Terraform code. It uses public pricing data. It does not look at your AWS account history.
+
+**2. "What is `UnblendedCost`?"**
+- **Answer**: The raw cost of usage before any discounts, credits, or reservations are applied. It is the "Price list" cost.
+
+### Advanced Scenario Questions
+
+**3. "How do you automate cost checks for a monorepo with 50 projects?"**
+- **Answer**: Use an `infracost.yml` config file at the root. It lists all projects (`projects: [path: app1, path: app2]`). Run `infracost breakdown --config-file infracost.yml` to get a summarized report for all apps.
 
 ---
 
 ## 🧠 Knowledge Check
 
-1.  **To get the lowest level of data (perfect for scripting), which format do you use?**
-    *   [ ] Table
-    *   [ ] Markdown
-    *   [x] JSON
-2.  **Which command helps identify 'The Delta' between two branches?**
-    *   [ ] `infracost breakdown`
-    *   [x] `infracost diff`
-    *   [ ] `infracost status`
-3.  **True or False: Infracost can analyze Terraform code without running `terraform plan`.**
-    *   [x] True (It can parse HCL directly for most resources).
-    *   [ ] False
-4.  **What flag is used to save the CLI output to a specific file?**
-    *   [ ] `--save`
-    *   [x] `--out-file`
-    *   [ ] `--export`
-5.  **Which pricing source does the CLI contact to get the latest dollar amounts?**
-    *   [ ] AWS Billing API
-    *   [x] Infracost Cloud Pricing API
-    *   [ ] Google Finance
+**1. Which tool looks at *Predictive* (Future) costs?**
+- [ ] AWS Cost Explorer
+- [x] Infracost
+- [ ] AWS Budgets
+
+**2. To estimate S3 storage costs in Infracost, what do you need?**
+- [ ] A credit card
+- [x] A Usage File (`usage.yml`)
+- [ ] Access to the bucket
+
+**3. How fresh is the data from `aws ce` command?**
+- [ ] Real-time (Seconds)
+- [ ] 1 Hour
+- [x] 24-48 Hours
 
 ---
 
-[⬅️ Back to Infracost Index](../README.md) | [Next: GitHub Actions Integration](../02-GitHub-Actions-Integration/README.md) ➡️
+## 🎓 Self-Assessment Checklist
+
+Before moving to the next module, ensure you can:
+- [ ] Run `infracost diff` on a local Terraform file.
+- [ ] Create a `usage.yml` for a Lambda function.
+- [ ] Execute an `aws ce` command to see monthly costs.
+- [ ] Use `jq` to extract a dollar amount from the JSON.
+
+**Score yourself**: 5+/5 = Ready to advance | <5 = Review exercises
+
+[⬅️ Back to FinOps](../README.md) | [Next: GitHub Actions](../02-GitHub-Actions-Integration/README.md) ➡️

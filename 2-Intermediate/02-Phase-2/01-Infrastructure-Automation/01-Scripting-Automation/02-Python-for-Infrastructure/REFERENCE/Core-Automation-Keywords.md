@@ -1,50 +1,125 @@
-# 🐍 Reference: Core Python Automation Keywords
+# 🛠️ Core Automation: The Python Engine Room
 
-Python's strength in DevOps comes from its readable syntax and powerful Standard Library. Below are the core keywords and modules used for system-level automation.
+> **"Scripts break. Software endures. The difference is structure."**
 
----
-
-## 🛠️ System & File Operations (os, pathlib)
-
-### `pathlib.Path`
-*   **Definition**: An object-oriented approach to filesystem paths.
-*   **DevOps Why**: It handles OS-specific separators (Windows `\` vs Linux `/`) automatically and provides safe methods like `.exists()`, `.is_file()`, and `.mkdir(parents=True)`.
-*   **Example**: `Path("/tmp/config.yml").read_text()` is cleaner than old `os.path` methods.
-
-### `subprocess.run()`
-*   **Definition**: The recommended way to run external shell commands from Python.
-*   **Key Args**:
-    *   `check=True`: Automatically raises an exception if the command fails (The Python equivalent of `set -e`).
-    *   `capture_output=True`: Grabs `stdout` and `stderr` for processing.
-    *   `text=True`: Returns strings instead of raw bytes.
-*   **DevOps Why**: It allows Python to act as the "Glue" for legacy CLI tools while providing robust error handling.
-
-### `sys.exit()`
-*   **Definition**: Terminates the script with a specific status code.
-*   **Standard**: Use `sys.exit(0)` for success and `sys.exit(1)` (or higher) for failures to notify CI/CD pipelines.
+This reference covers the fundamental building blocks of robust Python automation. Moving beyond "Hello World," these patterns ensure your tools are safe, readable, and distinct from bash scripts.
 
 ---
 
-## 🛡️ Robust Coding Structures
+## 📂 1. Path & File Operations (`pathlib`)
 
-### `try...except...finally`
-*   **Definition**: The mechanism for catching and handling runtime errors.
-*   **`finally` block**: Guaranteed to run regardless of whether an error occurred.
-*   **DevOps Why**: Used to ensure database connections are closed or temp files are deleted (Python's internal `trap`).
+Stop using strings for file paths. Use `pathlib` for object-oriented filesystem handling that works on Linux/Mac/Windows.
 
-### `with` (Context Managers)
-*   **Definition**: Encapsulates common `try...finally` patterns.
-*   **Example**: `with open('file.txt') as f:` ensures the file is closed automatically even if an error occurs.
-*   **DevOps Why**: Prevents file handle leaks in long-running automation daemons.
+| Keyword | Use Case | Example |
+| :--- | :--- | :--- |
+| `Path('file')` | Create a path object. | `p = Path('/var/log/syslog')` |
+| `.exists()` | Check file existence. | `if p.exists(): ...` |
+| `.mkdir()` | Create directory. | `p.mkdir(parents=True, exist_ok=True)` |
+| `.read_text()` | Read file content. | `content = p.read_text()` |
+| `.write_text()` | Atomic write. | `p.write_text("config=true")` |
+| `.glob()` | Find files matching pattern. | `list(Path('.').glob('*.json'))` |
 
-### Type Hinting (`typing`)
-*   **Definition**: Annotating variables and function returns with their expected types (e.g., `num: int`).
-*   **DevOps Why**: Improves code clarity for team members and allows IDEs to catch bugs before the script even runs.
+**Staff Pattern**:
+```python
+from pathlib import Path
+# Cross-platform safe joining
+config_path = Path.home() / "app" / "config.yaml"
+```
 
 ---
 
-## 🎙️ Staff Interview context
-*   **"Why use pathlib instead of the os module?"**
-    *   *Answer*: `pathlib` treats paths as objects with methods rather than just strings. This reduces errors when joining paths and makes the code more readable and cross-platform compatible.
-*   **"When should you use subprocess instead of a native Python library?"**
-    *   *Answer*: Only as a last resort. Native libraries (like `boto3` or `requests`) provide better error handling and performance. Use `subprocess` only when interacting with a legacy CLI that has no Python SDK.
+## ⚡ 2. Subprocess Management (`subprocess`)
+
+The bridge to the OS. Never use `os.system`.
+
+| Keyword | Use Case | Example |
+| :--- | :--- | :--- |
+| `subprocess.run` | Execute command. | `subprocess.run(['ls', '-la'])` |
+| `capture_output` | Get stdout/stderr. | `res = subprocess.run(..., capture_output=True)` |
+| `check=True` | Raise error on failure. | `subprocess.run(..., check=True)` |
+| `text=True` | Return String not Bytes. | `subprocess.run(..., text=True)` |
+
+**Staff Pattern**:
+```python
+import subprocess
+try:
+    # Safe, captured, text-mode execution
+    res = subprocess.run(["git", "status"], capture_output=True, text=True, check=True)
+    print(res.stdout)
+except subprocess.CalledProcessError as e:
+    print(f"Command failed: {e.stderr}")
+```
+
+---
+
+## 🛡️ 3. Safety & Structure
+
+Patterns that prevent bugs before they happen.
+
+### Context Managers (`with`)
+Ensures resources (files, sockets, DB connections) are closed even if errors occur.
+```python
+# The "File Handle" is automatically closed after the blocke
+with open("data.lock", "w") as f:
+    f.write(pid)
+```
+
+### Type Hints (`typing`)
+Documentation that checks itself.
+```python
+from typing import List, Dict, Optional
+
+def get_instances(tags: Dict[str, str]) -> List[str]:
+    return ["i-12345"]
+```
+
+### Dataclasses (`dataclasses`)
+Structured data objects without the boilerplate.
+```python
+from dataclasses import dataclass
+
+@dataclass
+class Server:
+    hostname: str
+    ip: str
+    is_active: bool = True
+```
+
+---
+
+## 🚀 4. Advanced Flow
+
+### Generators (`yield`)
+Process Infinite Data with Zero RAM.
+```python
+def read_huge_log():
+    with open("10gb.log") as f:
+        for line in f:
+            if "ERROR" in line:
+                yield line # Pauses here, resumes next loop
+
+for err in read_huge_log():
+    process(err)
+```
+
+### Decorators (`@`)
+Modify function behavior (logging, timing, retries) non-destructively.
+```python
+import time
+
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        print(f"Elapsed: {time.time() - start}s")
+        return result
+    return wrapper
+
+@timer
+def heavy_job():
+    time.sleep(1)
+```
+
+---
+
+[⬅️ Back to Reference Hub](./README.md)

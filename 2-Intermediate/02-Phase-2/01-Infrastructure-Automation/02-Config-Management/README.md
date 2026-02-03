@@ -58,13 +58,15 @@ By the end of this module, you will:
 
 ## 🏗️ The Platform Engineering Flow
 
-The content is organized into a logical progression that mirrors a real-world project lifecycle:
-
-1.  **[01-IaC Foundations and Terraform](./01-IaC-Foundations-and-Terraform)**: Provisioning the "Moat and Castle".
-2.  **[02-Server Configuration and Ansible](./02-Server-Configuration-and-Ansible)**: Managing the "Furniture and Utilities".
-3.  **[03-Cloud-Native Provisioning](./03-Cloud-Native-Provisioning-and-Vendors)**: Multi-language IaC (Pulumi/CDK).
-4.  **[04-Immutable Infrastructure](./04-Immutable-Infrastructure-and-Images)**: Building "Golden Images" with Packer.
-5.  **[05-Kubernetes Config](./05-Kubernetes-Config-and-Templating)**: Helm and K8s complexity.
+61: The content is organized into a logical progression that mirrors a real-world project lifecycle:
+62: 
+63: 1.  **[01-Introduction](./01-Introduction)**: The core concepts of Configuration Management.
+64: 2.  **[02-IaC Foundations and Terraform](./02-IaC-Foundations-and-Terraform)**: Provisioning the "Moat and Castle".
+65: 3.  **[03-Server Configuration and Ansible](./03-Server-Configuration-and-Ansible)**: Managing the "Furniture and Utilities".
+66: 4.  **[04-Cloud-Native Provisioning](./04-Cloud-Native-Provisioning-and-Vendors)**: Multi-language IaC (Pulumi/CDK).
+67: 5.  **[05-Immutable Infrastructure](./05-Immutable-Infrastructure-and-Images)**: Building "Golden Images" with Packer.
+68: 6.  **[06-Kubernetes Config](./06-Kubernetes-Config-and-Templating)**: Helm and K8s complexity.
+69: 7.  **[07-Assessments](./07-Assessments)**: Quizzes and Portfolio Challenges.
 
 ---
 
@@ -103,9 +105,9 @@ In IaC, your **State File** is the source of truth.
 
 ## 📝 Knowledge Checks
 
-- **[Terraform Quiz](./06-Assessments/terraform-quiz.md)**
-- **[Ansible Quiz](./06-Assessments/ansible-quiz.md)**
-- **[Helm Quiz](./06-Assessments/helm-quiz.md)**
+106: - **[Terraform Quiz](./07-Assessments/terraform-quiz.md)**
+107: - **[Ansible Quiz](./07-Assessments/ansible-quiz.md)**
+108: - **[Helm Quiz](./07-Assessments/helm-quiz.md)**
 
 ---
 

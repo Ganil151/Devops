@@ -1,0 +1,66 @@
+./
+├── 01-IaC-Principles/
+│   ├── declarative_vs_procedural.png
+│   ├── iac_workflow.png
+│   ├── Infrastructure as Code (IaC) Principles.md
+│   └── snowflake_vs_cattle.png
+├── 01-What-is-Terraform/
+│   └── What is Terraform.md
+├── 02-Commands/
+│   ├── 00-VERIFICATION.md
+│   ├── 01-Init.md
+│   ├── 02-Validate.md
+│   ├── 03-Plan.md
+│   ├── 04-Apply.md
+│   ├── 05-Destroy.md
+│   ├── 06-State.md
+│   ├── 07-Import.md
+│   ├── 09-Fmt.md
+│   ├── 10-Show.md
+│   ├── 11-Output.md
+│   ├── 12-Workspace.md
+│   ├── 14-Console.md
+│   ├── 21-Quick-Reference.md
+│   └── README.md
+├── 02-Project-Structure/
+│   └── Project Structure.md
+├── 03-Core-Concepts/
+│   └── Terraform Core Concepts.md
+├── 03-Environment-Management/
+│   └── Environment Management.md
+├── 04-Configuration-Patterns/
+│   └── Configuration Patterns.md
+├── 04-Installation-and-Setup/
+│   └── README.md
+├── 05-Configuration-Language/
+│   ├── Configuration-Language-HCL.md
+│   └── Expressions.md
+├── 05-Version-Control-Integration/
+│   └── Version Control Integration.md
+├── 06-CI-CD-Pipeline-Integration/
+│   └── CI-CD Pipeline Integration.md
+├── 06-Providers/
+│   └── Providers.md
+├── 07-Resources/
+│   └── Resources.md
+├── 07-Testing-Strategies/
+│   └── Testing Strategies.md
+├── 08-Documentation-Standards/
+│   └── Documentation Standards.md
+├── 08-Variables-and-Outputs/
+│   └── Variables and Outputs.md
+├── 09-Data-Sources/
+│   └── Data Sources.md
+├── 09-Security-Practices/
+│   └── Security Practices.md
+├── 10-Compliance-and-Governance/
+│   └── Compliance and Governance.md
+├── 10-Terraform-Workflow/
+│   └── Terraform Workflow.md
+├── 11-Basic-Examples/
+│   └── Basic Examples.md
+├── 12-Provisioners/
+│   └── Terraform Provisioners.md
+└── tree.txt
+
+23 directories, 41 files

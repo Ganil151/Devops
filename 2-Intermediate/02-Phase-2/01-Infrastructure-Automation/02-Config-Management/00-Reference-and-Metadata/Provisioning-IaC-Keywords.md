@@ -1,50 +1,104 @@
-# 🛠️ Reference: Provisioning & IaC Keywords
+# 🔐 Provisioning & IaC: The Terraform Engine
 
-Provisioning is the act of defining the "Shell" of your infrastructure. These keywords are fundamental to tools like Terraform, Pulumi, and CloudFormation.
+> **"Infrastructure as Code means your datacenter is versioned in Git. 'Clicking around' in the console is strictly forbidden."**
 
----
-
-## 🏗️ The Terraform HCL Toolkit
-
-### `Provider`
-*   **Definition**: The plugin that allows Terraform to communicate with an API (AWS, GitHub, Kubernetes).
-*   **DevOps Why**: It translates the declarative HCL code into specific API calls.
-
-### `Resource`
-*   **Definition**: The basic building block of infrastructure (e.g., an EC2 instance, an S3 bucket).
-*   **Lifecycle**: Terraform tracks the creation, update, and deletion of every resource via its ID.
-
-### `Data Source`
-*   **Definition**: Read-only information fetched from the provider (e.g., "Find the latest Ubuntu AMI ID").
-*   **DevOps Why**: Allows your code to be dynamic. Instead of hardcoding an ID, you "Search" for it at runtime.
-
-### `State` (`tfstate`)
-*   **Definition**: The mapping between your code and the real resources in the cloud.
-*   **Critical Fact**: If you lose your state file, Terraform "forgets" what it created and will try to recreate everything from scratch.
+This reference covers **Terraform** and the Declarative Provisioning model.
 
 ---
 
-## 🗄️ Backend & Management
+## 🏗️ 1. The Terraform Lifecycle
 
-### `Backend`
-*   **Definition**: Where the state file is stored (Local, S3, GCS, Terraform Cloud).
-*   **Standard**: Always use a remote backend with **State Locking** for team collaboration.
+The standard "Plan-Apply" loop.
 
-### `Workspaces`
-*   **Definition**: Separate instances of state within a single configuration.
-*   **DevOps Why**: Allows you to manage Dev, Stage, and Prod using the exact same code, but with different state records.
-
-### `Plan` vs `Apply`
-*   **Plan**: A "Dry Run" that shows what will happen without making changes.
-*   **Apply**: The execution phase that modifies the environment.
+| Phase | Command | Purpose | Staff Tip |
+| :--- | :--- | :--- | :--- |
+| **Init** | `terraform init` | Download providers/modules. | Use `-backend-config` for dynamic envs. |
+| **Plan** | `terraform plan` | Dry-Run. Shows "The Diff". | Always save it: `-out=tfplan`. |
+| **Apply** | `terraform apply` | Execute API calls. | Apply the *saved plan* only. |
+| **Destroy**| `terraform destroy`| Nuke everything. | Dangerous. Use `prevent_destroy` on DBs. |
 
 ---
 
-## 🎙️ Staff Interview Context
+## 📦 2. Essential HCL Keywords
 
-*   **"What happens if two people run 'terraform apply' at the same time?"**
-    *   *Answer*: Without **State Locking**, you get race conditions and possible state corruption. With locking (e.g., DynamoDB), the second user is blocked until the first operation completes.
-*   **"How do you handle secrets (API Keys) in Terraform code?"**
-    *   *Answer*: **Never** hardcode them. Use environment variables (`TF_VAR_xxx`), secret managers (AWS Secrets Manager), or sensitive variable types to ensure they aren't printed in logs.
-*   **"Explain the 'Destroy' lifecycle of a resource."**
-    *   *Answer*: Terraform compares the state file to the code. If a resource exists in the state/cloud but is missing from the code, Terraform identifies it for destruction during the next `apply`.
+HashiCorp Configuration Language.
+
+| Keyword | Use Case | Example |
+| :--- | :--- | :--- |
+| `resource` | Create something (EC2, S3). | `resource "aws_instance" "web" {}` |
+| `data` | Read existing thing. | `data "aws_ami" "ubuntu" {}` |
+| `variable` | Input parameter. | `variable "region" { default = "us-east-1" }` |
+| `output` | Return value. | `output "ip" { value = aws_instance.web.public_ip }` |
+| `local` | Internal variable. | `locals { common_tags = { Team = "Dev" } }` |
+| `module` | Reusable component. | `module "vpc" { source = "./modules/vpc" }` |
+
+**Staff Pattern (Dynamic Metadata)**:
+```hcl
+locals {
+  service_name = "payment-api"
+  # Standardize naming: env-service-resource
+  bucket_name  = "${var.environment}-${local.service_name}-logs"
+  
+  common_tags = {
+    Owner       = "Platform"
+    CostCenter  = "1001"
+    Environment = var.environment
+  }
+}
+
+resource "aws_s3_bucket" "logs" {
+  bucket = local.bucket_name
+  tags   = local.common_tags
+}
+```
+
+---
+
+## 💾 3. State Management
+
+The `terraform.tfstate` file is the "Brain".
+
+### Remote Backend (S3 + DynamoDB)
+Never store state locally or in Git.
+```hcl
+terraform {
+  backend "s3" {
+    bucket         = "company-tf-state"
+    key            = "prod/app.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-locks" # Prevents concurrent writes
+    encrypt        = true
+  }
+}
+```
+
+### State Commands
+| Command | Purpose |
+| :--- | :--- |
+| `state list` | Show all resources tracked. |
+| `state show` | Inspect specific resource attributes. |
+| `state mv` | Rename/Move resource without destroying it (Refactoring). |
+| `state rm` | Stop tracking a resource (Manual Drift). |
+
+---
+
+## 🤝 4. Meta-Arguments
+
+Change how resources behave.
+
+- **`count`**: Loop using Index.
+  `count = var.is_prod ? 3 : 1`
+- **`for_each`**: Loop using Map/Set (Safer).
+  `for_each = var.subnet_cidrs`
+- **`lifecycle`**: Guardrails.
+  ```hcl
+  lifecycle {
+    create_before_destroy = true
+    prevent_destroy       = true
+    ignore_changes        = [tags] # Drift Ignored
+  }
+  ```
+
+---
+
+[⬅️ Back to Reference Hub](./README.md)

@@ -1,0 +1,2 @@
+# Minimal dependencies for example_automation_script.py
+argparse # Usually built-in, but good to list if external version was needed
