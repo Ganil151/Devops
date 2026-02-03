@@ -1,37 +1,32 @@
-# Runbook Fundamentals
+# 📖 Runbook Fundamentals: The Operational Source-of-Truth
 
-Master the art of operational documentation to reduce MTTR, eliminate toil, and empower your SRE team.
+> **"If it's not documented, it doesn't exist. If it's documented but wrong, it's a liability. If it's documented, correct, and actionable, it's a superpower."**
 
-## Core Concept: The Operational Source-of-Truth
-**[REFERENCE: Runbook Maturity & Operational Standards](./REFERENCE/Runbook-Maturity-Standards-Ref.md)**
+Welcome to **Runbook Fundamentals**. In the world of high-stakes operations, "Tribal Knowledge" is a risk. This module is about moving from "Head-Operations" to "Structured Engineering."
 
-Professional operations require moving beyond "tribal knowledge" into structured, version-controlled documentation:
-- **Operational Hierarchy**: Distinguishing between Policies, SOPs, and actionable Runbooks to ensure the right tool is used for the job.
-- **Maturity Lifecycle**: Transitioning from static text to "Executable Runbooks" and autonomic self-healing systems.
-- **Docs-as-Code**: Managing documentation with the same rigor as application code—versioned in Git, peer-reviewed, and continuously tested.
+## 🛣️ Your Learning Path
 
-## Enterprise Governance: Incident Response Integrity
-**[REFERENCE: Incident Response Anatomy & Runbook Design](./REFERENCE/Incident-Response-Anatomy-Ref.md)**
+This module is re-architected into **4 Logical Parts**, mirroring the journey from documentation philosophy to production-grade automation.
 
-Building a documentation fabric that withstands the pressure of production outages:
-- **Design for Stress**: Implementing "The 3:00 AM Rule" to minimize cognitive load through checklists, code blocks, and unambiguous steps.
-- **Guardrails & Safety**: Highlighting destructive actions and mandatory validation steps to prevent "manual errors" during high-stakes remediation.
-- **Audit & Compliance Audit**: Ensuring documentation meets SOC2/HIPAA standards through quarterly recertification and secure secret hygiene.
+### [📐 Part 1: The Blueprint (Concepts & Design)](./01-Part-1-The-Blueprint/)
+*   **Focus**: The "SRE Standard" for documentation.
+*   **Topics**: Philosophy & Goals, SRE Standards (Google model), Documentation Hierarchy, and Standard Templates.
+*   **Goal**: Design documentation that survives the "3:00 AM Stress Test."
 
----
+### [⚙️ Part 2: The Engine (Anatomy & Execution)](./02-Part-2-The-Engine/)
+*   **Focus**: Building and Automating.
+*   **Topics**: Runbook Anatomy, Tools & Platforms (Docs-as-Code), Manual vs. Automated workflows.
+*   **Goal**: Transform static text into executable logic.
 
-## 📚 Learning Path
+### [🧩 Part 3: The Building Blocks (Operations & Scenarios)](./03-Part-3-The-Building-Blocks/)
+*   **Focus**: Living the Lifecycle.
+*   **Topics**: Operational Scenarios (Real-world cases), Feedback Loops, and Continuous Iteration (Gamedays).
+*   **Goal**: Ensure your docs evolve as fast as your application code.
 
-1.  **[Philosophy and Goals](./01-Philosophy-and-Goals/README.md)**: Why we document and the goal of MTTR reduction.
-2.  **[Documentation Hierarchy](./02-Documentation-Hierarchy/README.md)**: SOPs, Runbooks, and Playbooks.
-3.  **[Manual vs. Automated](./03-Manual-vs-Automated/README.md)**: The journey from text to self-healing systems.
-4.  **[Runbook Anatomy](./04-Runbook-Anatomy/README.md)**: The essential sections for a professional doc.
-5.  **[Operational Scenarios](./05-Operational-Scenarios/README.md)**: When to build and use runbooks.
-6.  **[The SRE Standard](./06-The-SRE-Standard/README.md)**: Lessons from Google and the fight against Toil.
-7.  **[Tools and Platforms](./07-Tools-and-Platforms/README.md)**: "Docs as Code" vs. Wikis and Notebooks.
-8.  **[Feedback and Iteration](./08-Feedback-and-Iteration/README.md)**: Post-mortems, Gamedays, and the quality loop.
-9.  **[Standard Templates](./09-Standard-Templates/README.md)**: Reducing cognitive load via consistent layouts.
-10. **[Audit and Compliance](./10-Runbook-Audit-and-Compliance/README.md)**: Safe practices, secret management, and legal standards.
+### [🛡️ Part 4: The Safety Net (Governance & Reliability)](./04-Part-4-The-Safety-Net/)
+*   **Focus**: Integrity & Compliance.
+*   **Topics**: Auditing & Compliance (SOC2/HIPAA), Incident Response Reference Library, and Skill Assessments.
+*   **Goal**: Prove you can manage high-stakes operations under pressure.
 
 ---
 
@@ -44,5 +39,11 @@ Building a documentation fabric that withstands the pressure of production outag
 
 ---
 
-## 📺 YouTube Lessons
-For video walk-throughs on operational procedures, check out the **[📺 YouTube Lessons](../Youtube_Lessons.md)** in the parent directory.
+## 🚀 How to Use This Module
+1.  **Part 1**: Understand *why* we document and pick a consistent template.
+2.  **Part 2**: Build your first "Docs-as-Code" pipeline.
+3.  **Part 3**: Run a "Gameday" to stress-test your documentation.
+4.  **Part 4**: Perform a documentation audit for compliance.
+
+---
+**Status**: ✅ Reorganization Complete (2026-02-02)
