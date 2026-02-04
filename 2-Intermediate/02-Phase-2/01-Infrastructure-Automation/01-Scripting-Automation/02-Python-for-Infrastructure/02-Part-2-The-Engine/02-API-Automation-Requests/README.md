@@ -30,7 +30,6 @@ Welcome to the **API Mastery** module. In the cloud-native era, every piece of i
 ## 🏗️ The API Integration Lifecycle
 
 Building robust API tools requires **Defensive Networking**. We move from simple "Fire-and-Forget" calls to **Stateful Sessions** and **Exponential Backoff**.
-
 ```mermaid
 graph TD
     A[Trigger: Event / Logic] --> B{Session Object}
@@ -82,7 +81,6 @@ response = requests.get('https://api.github.com/user')
 data = response.json() # May crash if response is HTML error page
 print(data['login'])
 ```
-
 ### The Modern Way (Engineering Style)
 ```python
 # ✅ GOOD: Defensive, Persistent, and Safe
@@ -102,7 +100,6 @@ def get_user_data():
         print(f"API Error: {e}")
         return None
 ```
-
 ### 🔑 Authentication Patterns
 
 #### Bearer Token (Common for SaaS)
@@ -110,22 +107,18 @@ def get_user_data():
 headers = {"Authorization": "Bearer my-secret-token"}
 requests.get("https://api.example.com", headers=headers)
 ```
-
 #### Basic Auth (Common for Internal Tools)
 ```python
 requests.get("https://jenkins.internal", auth=('user', 'pass'))
 ```
 
 ---
-
 ## ⚡ The Power of Sessions
-
 A `Session` object persists parameters across requests. It uses **urllib3** connection pooling, meaning it reuses the underlying TCP connection.
 
 **Performance Impact**:
 - **Without Session**: DNS Query -> TCP Handshake -> SSL Handshake -> Request -> Teardown (Repeat 100x)
 - **With Session**: DNS Query -> TCP Handshake -> SSL Handshake -> Request 1 -> Request 2 -> ... (Repeat 0x)
-
 ```python
 # Benchmarking Example
 import time
@@ -154,10 +147,8 @@ By default, `requests` has **NO TIMEOUT**. If a server accepts the connection bu
 # Read timeout: 27s (time to wait for first byte)
 requests.get('https://github.com', timeout=(3.05, 27))
 ```
-
 ### Automatic Retries with Backoff
 Don't write `while` loops for retries. Use the built-in `HTTPAdapter`.
-
 ```python
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
@@ -287,7 +278,6 @@ Sessions hold open TCP connections. If you create thousands of them, you run out
 with requests.Session() as s:
     s.get(url)
 ```
-
 ---
 
 ## 🎯 Hands-On Exercises

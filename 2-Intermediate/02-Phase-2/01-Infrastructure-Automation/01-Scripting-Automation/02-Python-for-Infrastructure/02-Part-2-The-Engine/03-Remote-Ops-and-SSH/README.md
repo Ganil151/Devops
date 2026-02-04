@@ -29,8 +29,8 @@ Welcome to the **Remote Execution** module. SSH (Secure Shell) is the main arter
 ## 🏗️ The SSH Protocol Architecture
 
 Remote execution isn't just "sending text". It involves encryptions, channels, and sub-systems.
-
 ```mermaid
+
 graph TD
     A[Local Python Script] --> B{Handshake (Port 22)}
     B -- Key Exchange --> C[Encrypted Tunnel]
@@ -43,6 +43,7 @@ graph TD
     style C fill:#f0fdf4,stroke:#15803d
     style D fill:#e0f2fe,stroke:#0369a1
 ```
+![SSH Protocol Architecture](ssh_architecture.png)
 
 ### 🔍 Concept Breakdown
 1.  **Transport**: The encrypted TCP connection.

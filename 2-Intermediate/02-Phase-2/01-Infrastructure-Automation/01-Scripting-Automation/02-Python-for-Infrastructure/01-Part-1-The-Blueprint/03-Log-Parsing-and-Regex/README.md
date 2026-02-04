@@ -25,7 +25,6 @@ Welcome to the **Log Parsing & Regex** module. In large-scale systems, truth is 
 9. [Knowledge Check](#-knowledge-check)
 
 ---
-
 ## 🏗️ The Analysis Architecture
 
 Log analysis is about the **Compile-Filter-Count** strategy. We move from raw text to structured **Group Objects**.
@@ -63,12 +62,10 @@ graph TD
 - **How**: `match.group('ip')`.
 
 ---
-
 ## 🐍 Python's Regex Engine (`re`)
 
 ### The "Verbose" Pattern (Best Practice)
 Regex is notoriously hard to read. Use `re.VERBOSE` (or `re.X`) to allow comments and whitespace inside the pattern.
-
 ```python
 import re
 
@@ -89,10 +86,8 @@ LOG_PATTERN = re.compile(r"""
     (?P<size>\d+)                   # Capture Group: Response Size
 """, re.VERBOSE)
 ```
-
 ### Accessing Named Groups
 Named groups `(?P<name>...)` prevent "Index Error" confusion.
-
 ```python
 match = LOG_PATTERN.search(log_line)
 if match:
@@ -101,11 +96,9 @@ if match:
 ```
 
 ---
-
 ## ⚡ Performance Patterns (Generators)
 
 When analyzing a 20GB log file, `f.read()` will crash your laptop. Use Generators.
-
 ```python
 def log_reader(file_path):
     """Yields one line at a time. Low Memory Footprint."""
@@ -172,7 +165,6 @@ def monitor_live(file_path):
 **The Task:** Convert unstructured application logs into a CSV for the Data Team.
 **Challenge:** Log format is inconsistent.
 **Solution:** `re.match` returns `None` on failure. Use this as a filter.
-
 ```python
 import csv
 
@@ -197,10 +189,8 @@ def export_clean_logs(input_log, output_csv):
 **Fix**:
 1. Avoid nested quantifiers.
 2. Set a timeout on regex execution (Python 3.11+ offers timeout flags in some modules, or use `signal`).
-
 ### 2. Sanitize Outputs
 Logs often contain PII (Email, IP). Redact them before sharing.
-
 ```python
 # Redact Email
 cleaned = re.sub(r'[\w\.-]+@[\w\.-]+', '[REDACTED]', log_line)
@@ -215,7 +205,6 @@ cleaned = re.sub(r'[\w\.-]+@[\w\.-]+', '[REDACTED]', log_line)
 - `re.search()` checks ANYWHERE in string.
 **Issue**: Using `match` on a line that starts with a timestamp when your pattern starts with "ERROR" will fail.
 **Fix**: Default to `search()`.
-
 ### Pitfall 2: Forgetting to Compile
 Checking regex inside a loop without compiling is 100x slower.
 **Bad**:
@@ -231,7 +220,6 @@ for line in logs:
 ```
 
 ---
-
 ## 🎯 Hands-On Exercises
 
 ### Exercise 1: The Access Log Parser
@@ -253,7 +241,6 @@ def analyze(log_file):
     # TODO: Read file, count IPs
     pass
 ```
-
 ### Exercise 2: Error Extractor
 **Objective**: Find all error messages in a multi-line Java stack trace.
 **Hint**: Use `re.DOTALL` or `re.MULTILINE` flags.

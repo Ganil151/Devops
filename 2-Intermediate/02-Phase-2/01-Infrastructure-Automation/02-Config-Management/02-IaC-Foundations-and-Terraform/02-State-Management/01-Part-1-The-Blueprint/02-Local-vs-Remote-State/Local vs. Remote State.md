@@ -1,372 +1,260 @@
-# Choosing Your Architecture
-Deciding where to store your state file is a critical architectural decision. It defines how your team collaborates, how your data is secured, and how your infrastructure scales.
-## � Architecture Comparison
-![Local vs Remote State](./Images/local_vs_remote.png)
-### The Two Approaches
+# 🌐 Local vs. Remote State: Choosing Your Architecture
 
-| Feature | **Local State** (Default) | **Remote State** (Best Practice) |
-| :--- | :--- | :--- |
-| **Storage Location** | Your local disk (`./terraform.tfstate`) | Cloud Storage (S3, Azure Blob, GCS, TFC) |
-| **Collaboration** | ❌ Impossible (Manual file sharing required) | ✅ Seamless (Shared access) |
-| **Locking** | ❌ None (Risk of race conditions) | ✅ Supported (DynamoDB, Blob Lease) |
-| **Security** | ❌ Plain text on laptop (High risk) | ✅ Encrypted at Rest & In Transit |
-| **History** | ❌ Dependent on local Git commits | ✅ Built-in Versioning (S3 Bucket Versioning) |
-| **Use Case** | Learning, Testing, Solo Hobby Projects | **Production**, Teams, CI/CD Pipelines |
+> **"Solo work stays local. Teamwork goes remote. In a production environment, your laptop is a liability; the Cloud is your vault."**
+
+Welcome to a critical architectural crossroad: **State Storage**. Deciding where your state file lives determines how your team collaborates, how your secrets are protected, and how your infrastructure survives a hardware failure. For a Junior DevOps Engineer, moving from "Local" to "Remote" state is your first real step into **Production Engineering**.
+
+**Why This Matters for Junior DevOps Engineers:**
+- 🚨 **The "Lost Laptop" Risk**: If your state is local and your machine dies, you lose control of your cloud infrastructure.
+- 🤝 **The Race Condition**: Remote state with locking prevents two people from accidentally destroying the same resource simultaneously.
+- 🔐 **Compliance**: Storing secrets in plain text on a local disk is a security violation in 99% of enterprises.
+- 🚀 **Automation (CI/CD)**: Pipelines cannot access your laptop; they need a shared cloud location to run `apply`.
 
 ---
-## 🛠️ Configuration Guide: Setting up S3 Backend
-To enable remote state, you adds a <font color="#ffc000">backend</font> block to your <font color="#ffc000">terraform</font> configuration.
-### 1. The Configuration (**<font color="#ffc000">backend.tf</font>**)
+
+## 📚 Table of Contents
+
+1. [Architecture Comparison](#-architecture-comparison)
+2. [The Remote State Workflow](#-the-remote-state-workflow)
+3. [Deep-Dive: S3 + DynamoDB (The Gold Standard)](#-deep-dive-s3--dynamodb-the-gold-standard)
+4. [Real-World DevOps Scenarios](#-real-world-devops-scenarios)
+5. [Professional Configuration (Boilerplate)](#-professional-configuration-boilerplate)
+6. [Common Pitfalls & Solutions](#-common-pitfalls--solutions)
+7. [Hands-On Exercises](#-hands-on-exercises)
+8. [Interview Preparation](#-interview-preparation)
+9. [Knowledge Check](#-knowledge-check)
+
+---
+
+## 🏗️ Architecture Comparison
+
+Choosing the right backend is about balancing simplicity vs. durability.
+
+```mermaid
+graph LR
+    subgraph "Local Architecture (Solo)"
+        A[Laptop] -- Writes to --> B[terraform.tfstate]
+        B -- "No Locking" --> B
+        B -- "No Backup" --> B
+    end
+
+    subgraph "Remote Architecture (Enterprise)"
+        C[Dev 1] -- "init/apply" --> E[S3 Bucket]
+        D[Dev 2] -- "init/apply" --> E
+        E <-->|Locking| F[DynamoDB]
+        E -- "Versioning" --> G[History/Rollback]
+    end
+
+    style B fill:#fee2e2,stroke:#dc2626
+    style E fill:#dcfce7,stroke:#166534
+    style F fill:#fef3c7,stroke:#a16207
+```
+
+### The Truth Table: Local vs. Remote
+
+| Feature | **Local State** (Default) | **Remote State** (Standard) |
+|:---|:---|:---|
+| **Storage** | Local Disk (`./terraform.tfstate`) | Cloud Vault (S3, GCS, TFC) |
+| **Concurrency** | ❌ None (Race Conditions) | ✅ Mandatory Locking |
+| **Durability** | ❌ Fails if SSD fails | ✅ 99.999999999% (S3) |
+| **Security** | ❌ Plain-text Secrets | ✅ Encrypted (KMS / AES-256) |
+| **CI/CD** | ❌ Incompatible | ✅ Native Support |
+| **History** | ❌ Not Automated | ✅ Built-in Versioning |
+
+---
+
+## 🔐 The Remote State Workflow
+
+Moving from Local to Remote is a one-way migration that Terraform handles gracefully.
+
+**1. Define the Backend**
+You add a `terraform {}` block to your code specifying where the state should live.
+
+**2. The Handshake (`terraform init`)**
+When you run `init`, Terraform detects that your previous state was local but your NEW configuration is remote.
+
+**3. The Migration**
+Terraform asks: *"Do you want to copy existing state to the new backend?"*
+- **Yes**: Files are uploaded to S3 and deleted locally.
+- **No**: A new blank state is created remotely (Dangerous if you already have resources!).
+
+---
+
+## 🧩 Deep-Dive: S3 + DynamoDB (The Gold Standard)
+
+In AWS environments, the combination of **S3 (Storage)** and **DynamoDB (Locking)** is the industry standard.
+
+### 1. S3 for Durability
+S3 stores the `.tfstate` file. You should enable **Bucket Versioning** so that if a state file is corrupted, you can roll back to 5 minutes ago.
+
+### 2. DynamoDB for Locking
+Terraform writes a small record to DynamoDB when an operation starts.
+- **If Alice runs `apply`**: Terraform locks the table.
+- **If Bob runs `apply` 10 seconds later**: Terraform sees the lock and tells Bob: `"Error: State is locked by Alice."`
+
+---
+
+## 🎭 Real-World DevOps Scenarios
+
+### 🛡️ Scenario 1: The "Coffee Shop" Catastrophe
+**The Incident**: A lead dev stored the production state file locally on their laptop. The laptop was stolen at a coffee shop.
+**The Failure**: No one else in the company could update the cloud infrastructure. They had to manually "Reverse Engineer" 200 resources back into a new state file.
+**The Impact**: 3 days of downtime to reconstruct the "Source of Truth."
+**The Fix**: Use **Remote State** independent of individual machines.
+
+### 🔥 Scenario 2: The "Double Apply" Corruption
+**The Incident**: Alice and Bob both ran `terraform apply` on a shared network drive at the exact same time.
+**The Failure**: Network drives do not support Terraform's locking logic. Both processes wrote to the JSON file simultaneously.
+**The Impact**: The state file became corrupted (malformed JSON). Neither Alice nor Bob could run Terraform until a backup was restored.
+**The Fix**: Use **DynamoDB Locking**.
+
+### 🚨 Scenario 3: The Plain-Text Audit Failure
+**The Incident**: An auditor found that Terraform was storing RDS root passwords in a local `terraform.tfstate` file on developer workstations.
+**The Failure**: Unencrypted secrets on end-user devices violates SOC2 compliance.
+**The Impact**: The company failed the security audit; client contracts were delayed.
+**The Fix**: Move to **Encrypted S3 Backend** where only the CI/CD pipeline has access.
+
+---
+
+## 💻 Professional Configuration (Boilerplate)
+
+Every professional Terraform project starts with a `backend.tf` file.
+
 ```hcl
+# backend.tf
+# ─────────────────────────────────────────────────────
+# Standard Enterprise Backend for AWS
+# ─────────────────────────────────────────────────────
+
 terraform {
+  required_version = "~> 1.0" # Lock the binary version for the team
+
   backend "s3" {
-    bucket         = "my-company-terraform-state" # Must be globally unique
-    key            = "prod/app-name/terraform.tfstate" # Path inside the bucket
+    bucket         = "corp-terraform-state-prod" # Create this first!
+    key            = "services/web-app/terraform.tfstate"
     region         = "us-east-1"
     
-    # Locking Configuration
-    dynamodb_table = "terraform-state-lock"
+    # 🔐 Security Configuration
+    encrypt        = true  # Mandatory: Protects secrets at rest
     
-    # Security Configuration
-    encrypt        = true
+    # 🔏 Concurrency Protection
+    # Requires a DynamoDB table with Partition Key: LockID (String)
+    dynamodb_table = "terraform-state-locks" 
+    
+    # Optional: State ownership identity
+    external_id    = "SRE-Team-Automation"
   }
 }
 ```
 
-### 2. The Migration Process
-Transitioning from Local to Remote is a standard Terraform workflow:
-1.  **Write the Code**: Add the `backend` block (as above) to your TF files.
-2.  **Initialize**: Run `terraform init`.
-3.  **Approve Migration**: Terraform will detect the change and ask:
-    > *"Do you want to copy existing state to the new backend?"*
-4.  **Confirm**: Type `yes`. Your local `terraform.tfstate` is uploaded to S3 and deleted locally.
+---
+
+## ⚠️ Common Pitfalls & Solutions
+
+### Pitfall 1: Hardcoding IDs
+**Problem**: Putting your AWS Access Keys inside the `backend` block.
+**The Solution**: NEVER do this. Use IAM Roles, Instance Profiles, or Environment Variables. Terraform will pick them up automatically.
+
+### Pitfall 2: Forgetting to Migrate
+**Problem**: Changing the `key` path in your backend config and running `init` but refusing the migration.
+**The Solution**: If you refuse, Terraform will try to re-create your resources in the new file, leading to "Duplicate Resource" errors. Always approve migrations.
+
+### Pitfall 3: Deleting the Lock Table
+**Problem**: Deleting the DynamoDB table because you "don't see it being used."
+**The Result**: All `plans` and `applies` will fail immediately with lock errors.
 
 ---
 
-## 🏗️ Real-Life Scenarios
+## 🎯 Hands-On Exercises
 
-### Scenario 1: The "Loner" Laptop Disaster
-**Problem**: A startup's lead developer was the only person managing the cloud. They stored the state file locally on their MacBook Pro.
-**Crisis**: The laptop was stolen at a coffee shop. 
-**Outcome**: The company had no backup of the state file. When they tried to run Terraform from a new machine, Terraform didn't "know" about the 50+ existing production instances and tried to recreate them, leading to massive resource duplication and downtime.
-**Solution**: Use **Remote State (S3)** from Day 1. Remote state persists independently of any individual developer's hardware.
-**Result**: The team can now work from any machine, and a lost laptop is just a hardware replacement, not a production catastrophe.
-### Scenario 2: The "Double-Apply" Corruption
-**Problem**: Two engineers (Alice and Bob) were working on a critical database update using a shared network drive for local state storage.
-**Crisis**: Alice ran `terraform apply`. Five seconds later, Bob (not knowing Alice had started) also ran `terraform apply`.
-**Outcome**: Since "Local" state (even on a network drive) has no locking mechanism, both processes wrote to the file at the same time. The JSON became malformed and corrupted.
-**Solution**: Implement **Remote State Locking** with DynamoDB.
-**Result**: When Bob tried to run his apply, he received an error: `Error: Error acquiring the state lock`. The second process was blocked until Alice finished, preserving state integrity.
+### Exercise 1: The S3 Migration
+1. Start with a project using local state (one `null_resource` is fine).
+2. Manually create an S3 bucket (or use a separate TF project to create it).
+3. Add the `backend "s3"` block to your project.
+4. Run `terraform init` and follow the migration prompts.
+5. Verify the `.tfstate` file is gone from your local folder and present in the S3 bucket.
 
-### Scenario 3: The "Credential Leak" Audit
-**Problem**: An internal security audit found that the company was storing state files in a public S3 bucket without encryption.
-**Crisis**: The auditor demonstrated they could download the state file and see the plain-text password for the production RDS instance.
-**Outcome**: The company failed its SOC2 compliance audit.
-**Solution**: Configured the **S3 Backend with `encrypt = true`** and strict IAM policies. 
-**Result**: State is now encrypted at rest with KMS, and only the specific CI/CD IAM role has the "Get" permission. The company passed the follow-up audit.
+### Exercise 2: Testing the Lock
+1. Configure your project with S3 and DynamoDB.
+2. Open two terminal windows.
+3. In Window 1, run `terraform apply` but **do not type 'yes' yet**. (It is now holding the lock).
+4. In Window 2, run `terraform plan`.
+5. Observe the error: `"Error acquiring the state lock"`. This proves your protection is working.
 
 ---
-## 🛡️ Security & Reliability Features
 
-1.  **State Encryption**: Local state is plain text. Remote backends (S3) support Server-Side Encryption (AES-256) to protect sensitive data like RDS passwords.
-2.  **Access Control**: Remote backends allow granular IAM policies (e.g., "Developers can Plan, CI/CD can Apply"). Local state relies solely on OS file permissions.
-3.  **Durability**: S3 provides 99.999999999% durability. A local laptop hard drive can fail, get stolen, or be corrupted easily.
-4.  **Transport Security**: Remote backends use TLS (HTTPS) for all state operations, protecting data in transit.
+## 🎙️ Interview Preparation
+
+### Foundation Questions
+
+**1. "What is the primary difference between Local and Remote state?"**
+**Answer**: Local state is stored on a single disk and offers no collaboration or protection. Remote state is stored in a shared cloud vault (S3/GCS), supports encryption for secrets, and enables locking to prevent two people from changing the same thing at once.
+
+**2. "Why do you need DynamoDB for an S3 backend but not for Terraform Cloud?"**
+**Answer**: S3 is an object store and doesn't natively support the locking protocol Terraform requires. DynamoDB provides that fast, consistent locking layer. Terraform Cloud is a purpose-built platform that handles storage and locking in a single, unified service.
 
 ---
-## 🌟 Best Practices
-1.  **Enable Versioning**: Always enable S3 Bucket Versioning. If state gets corrupted, you can simply download a previous version from the S3 console.
-2.  **Use Flexible Config**: Don't hardcode the `bucket` and `key` if you reuse code. Use `terraform init -backend-config=config.hcl` for dynamic environments.
-3.  **Least Privilege**: The CI/CD runner should be the **only** entity with `s3:DeleteObject` (or even `s3:PutObject`) permissions on the state bucket. Developers should only have `read` access if possible.
-4.  **State Isolation**: Use different Keys (paths) or even different Buckets for `dev`, `stage`, and `prod` to reduce blast radius.
+
+### Advanced Scenario Questions
+
+**3. "How do you provide different backend keys for Dev, Stage, and Prod environments?"**
+**Answer**: You should use **Partial Configuration**. Define the backend block with only the region and bucket, then use the `-backend-config` flag during `terraform init` to point to a specific file (e.g., `init -backend-config=prod.hcl`).
+
+**4. "Your S3 bucket doesn't have versioning enabled. A junior SRE corrupts the state. How do you recover?"**
+**Answer**: If versioning is off, you are in trouble. You would have to:
+1. Re-run `plan` and identify everything that is missing.
+2. Manually `import` every cloud resource back into a fresh state file.
+3. **Prevention**: This is why SREs enforce **Bucket Versioning** as a mandatory governance policy.
+
 ---
-## ❓ Interview Questions
 
-1.  **What are the three main problems solved by Remote State?**
-    <details>
-    <summary>Answer</summary> 
-    1. **Collaboration**: Multiple users can share a single source of truth.<br>
-    2. **Locking**: Prevents two people from modifying state simultaneously.<br>
-    3. **Security/Durability**: State is encrypted at rest and backed up (versioned) automatically in the cloud.
-    </details>
+## 🧠 Knowledge Check
 
-2.  **How do you migrate from Local state to Remote state?**
-    <details>
-    <summary>Answer</summary> 
-    1. Add a `backend` block to your Terraform configuration.<br>
-    2. Run `terraform init`.<br>
-    3. Terraform will detect the change and ask to migrate the existing state.<br>
-    4. Type 'yes' to upload the local state to the remote backend.
-    </details>
+### Basic Concepts
 
-3.  **Explain the significance of 'terraform_remote_state' data source.**
-    <details>
-    <summary>Answer</summary> It allows one Terraform project to read the *outputs* of another project's state. This is essential for building "Tiered Infrastructure" (e.g., an App project reading the VPC ID from a separate Networking project).
-    </details>
+**1. Which command triggers the migration from local to remote state?**
+- [ ] `terraform apply`
+- [x] `terraform init`
+- [ ] `terraform migrate`
+- [ ] `terraform push`
 
-4.  **What happens if a backend doesn't support locking?**
-    <details>
-    <summary>Answer</summary> If the backend (like a raw HTTP backend without specific lock support) doesn't lock, multiple users could run `apply` simultaneously. This leads to race conditions where the state file can become corrupted or infrastructure can get into an inconsistent "Ghost" state.
-    </details>
+**2. What is the role of the `key` attribute in an S3 backend configuration?**
+- [ ] It's the AWS Secret Key.
+- [ ] It's the KMS Encryption Key.
+- [x] It's the file path within the bucket where the state is saved.
+- [ ] It's the partition key for DynamoDB.
 
-5.  **Can you use 'Variables' inside a `backend` configuration block?**
-    <details>
-    <summary>Answer</summary> No. The `backend` block is processed very early in the Terraform lifecycle, before variables are loaded. You must use hardcoded values, or use a "Backend Config File" (`-backend-config=path/to/file`) during `terraform init`.
-    </details>
+**3. True or False: You should use variables (`var.bucket`) in your backend configuration block.**
+- [ ] True
+- [x] False (Backend is initialized before variables are parsed).
 
-6.  **Why should you enable 'Versioning' on your S3 state bucket?**
-    <details>
-    <summary>Answer</summary> State management is high-risk. If a state file becomes corrupted or you make a mistake that deletes half your infrastructure from state, S3 Versioning allows you to instantly "roll back" the state file to a previous healthy version.
-    </details>
 ---
-## 🧠 Comprehensive Quiz (25 Questions)
 
-<b>1. Where is local state stored by default?</b>
-- A) In the `.terraform` directory
-- B) In the file `terraform.tfstate` in the current directory
-- C) In `/var/lib/terraform`
-- D) In the user's home directory
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+## 📖 Additional Resources
+- [Terraform Backends: Complete List](https://developer.hashicorp.com/terraform/language/settings/backends)
+- [Managing S3 Backends (AWS Guide)](https://repost.aws/knowledge-center/s3-terraform-backend)
 
-<b>2. True/False: Local state supports automatic concurrency locking.</b>
-- A) True (using OS file locks)
-- B) False (no native locking mechanism)
-- C) True (but only on Linux)
-- D) False (unless you use a wrapper script)
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+---
 
-<b>3. Which command is used to transition from local to remote state?</b>
-- A) terraform migrate
-- B) terraform init
-- C) terraform apply
-- D) terraform state push
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+## 🎯 Next Steps
 
-<b>4. Remote state allows teams to share a single _____ of Truth.</b>
-- A) Database
-- B) Source
-- C) File
-- D) Version
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+Now that your state is safely in the cloud, how do you handle secrets that *aren't* in state?
 
-<b>5. Which AWS service works with S3 to provide state locking?</b>
-- A) RDS
-- B) DynamoDB
-- C) Lambda
-- D) SQS
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+**Proceed to**: [Part 2: Sensitive Data and Secrets →](../../../03-Sensitive-Variables/README.md)
 
-<b>6. 'terraform_remote_state' is used to:</b>
-- A) Copy state files
-- B) Read outputs from another state file
-- C) Delete remote state
-- D) Encrypt state files
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+---
 
-<b>7. True/False: You can use HCL variables (var.name) inside a backend block.</b>
-- A) False (Backend initialization happens before variable loading)
-- B) True (Variables are fully supported)
-- C) True (But only for strings)
-- D) False (Unless you use Terraform Cloud)
-<details>
-<summary>Show Answer</summary>
-Answer: A
-</details>
+## 🎓 Self-Assessment Checklist
 
-<b>8. Which backend is managed by HashiCorp and provides a GUI?</b>
-- A) S3
-- B) Terraform Cloud (TFC) / Terraform Enterprise
-- C) Azure Blob Storage
-- D) Consul
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+Before moving to the next module, ensure you can:
+- [ ] Explain the "Race Condition" risk of local state.
+- [ ] Configure an S3 backend from scratch.
+- [ ] Explain why DynamoDB is necessary for locking in AWS.
+- [ ] Perform a state migration from local to remote.
+- [ ] Explain how S3 Versioning acts as a "Safety Net."
+- [ ] Identify which fields in a `backend` block are mandatory for security (`encrypt`).
 
-<b>9. In an S3 backend, the 'key' attribute defines:</b>
-- A) The encryption key
-- B) The file path/name of the state file within the bucket
-- C) The AWS Access Key
-- D) The locking table name
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+**Score yourself**: 5+/6 = Ready to advance | <5 = Review the Architecture Comparison table.
 
-<b>10. What is the biggest danger of storing state on a local laptop?</b>
-- A) It uses too much disk space
-- B) Loss of data (Hardware failure/Theft) and lack of collaboration
-- C) It is slower than S3
-- D) It requires internet access
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-<b>11. Which attribute ensures state is encrypted in S3?</b>
-- A) secure = true
-- B) encrypt = true
-- C) kms = enabled
-- D) lock = true
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-<b>12. True/False: You can use Git as a Terraform backend.</b>
-- A) False (Git is for code, not locking state storage)
-- B) True (It is a supported backend type)
-- C) False (But you can use GitHub Actions)
-- D) True (But only for small projects)
-<details>
-<summary>Show Answer</summary>
-Answer: A (While you *can* commit state to git, it is NOT a backend and is strongly discouraged due to security/locking issues)
-</details>
-
-<b>13. Which command allows you to provide backend config via an external file?</b>
-- A) terraform init -backend-config=...
-- B) terraform apply -var-file=...
-- C) terraform config -load...
-- D) terraform init -config=...
-<details>
-<summary>Show Answer</summary>
-Answer: A
-</details>
-
-<b>14. If two people run 'apply' on S3 without DynamoDB, what might happen?</b>
-- A) The second one is queued
-- B) Race condition/State corruption
-- C) Terraform merges the changes automatically
-- D) S3 rejects the second write
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-<b>15. 'Partial Configuration' in backends means:</b>
-- A) Only initializing half the providers
-- B) Omitting credentials or specific details from the .tf file and providing them at init time
-- C) Using half a state file
-- D) Configuring only read access
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-<b>16. True/False: Terraform Cloud supports state locking natively.</b>
-- A) True
-- B) False
-- C) True (But costs extra)
-- D) False (Requires DynamoDB)
-<details>
-<summary>Show Answer</summary>
-Answer: A
-</details>
-
-<b>17. Which resource type does 'terraform_remote_state' belong to?</b>
-- A) Resource
-- B) Data Source
-- C) Provider
-- D) Module
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-<b>18. Why should state storage be kept separate from application code repos?</b>
-- A) To save space
-- B) Security (Secrets in state) and Logical Separation (Infrastructure vs App Code)
-- C) It is faster
-- D) Backends don't support git
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-<b>19. 'State Migration' moves state from _____ to _____.</b>
-- A) One project to another
-- B) One backend to another (e.g., Local to S3)
-- C) One region to another
-- D) Code to Cloud
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-<b>20. True/False: S3 backends support 'Workspaces'.</b>
-- A) True (By creating different state files per workspace)
-- B) False
-- C) True (But only one workspace)
-- D) False (Workspaces are TFC only)
-<details>
-<summary>Show Answer</summary>
-Answer: A
-</details>
-
-<b>21. A 'Bucket Policy' should be used to:</b>
-- A) Configure locking
-- B) Restrict who can access/delete the state file
-- C) Enable versioning
-- D) Set the state file name
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-<b>22. 'Standard S3 Backend' requires which two components for full safety?</b>
-- A) S3 Bucket + EC2
-- B) S3 Bucket (Storage) + DynamoDB Table (Locking)
-- C) S3 Bucket + EBS Volume
-- D) S3 Bucket + IAM User
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
-
-<b>23. Which command verifies if the current backend is healthy?</b>
-- A) terraform init
-- B) terraform validate
-- C) terraform check
-- D) terraform backend
-<details>
-<summary>Show Answer</summary>
-Answer: A
-</details>
-
-<b>24. Remote state is the '_____ of Collaboration' for teams.</b>
-- A) Backbone
-- B) Enemy
-- C) Barrier
-- D) Cost
-<details>
-<summary>Show Answer</summary>
-Answer: A
-</details>
-
-<b>25. Without remote state, professional DevOps is _____ .</b>
-- A) Easy
-- B) Dangerous and Unscalable
-- C) Recommended
-- D) Faster
-<details>
-<summary>Show Answer</summary>
-Answer: B
-</details>
+---
+**Status**: ✅ Enhanced (2026-02-02)
