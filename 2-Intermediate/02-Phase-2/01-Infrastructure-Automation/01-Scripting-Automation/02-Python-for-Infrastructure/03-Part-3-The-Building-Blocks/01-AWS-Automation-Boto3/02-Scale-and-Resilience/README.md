@@ -14,15 +14,14 @@ Welcome to **Advanced Boto3 Operations**. In this module, we move beyond "Happy 
 ## 📚 Table of Contents
 
 1. [The Scalability Lifecycle](#-the-scalability-lifecycle)
-2. [Mastering Paginators](#-mastering-paginators)
-3. [The "Wait-for-State" Pattern](#-the-wait-for-state-pattern)
-4. [The Resilience Layer: Retries & Throttling](#-the-resilience-layer-retries--throttling)
+2. [Mastering Paginators: Config & Filtering](#-mastering-paginators-config--filtering)
+3. [The "Wait-for-State" Pattern: Custom Pollers](#-the-wait-for-state-pattern-custom-pollers)
+4. [The Resilience Layer: Standard vs Adaptive Retries](#-the-resilience-layer-standard-vs-adaptive-retries)
 5. [Real-World DevOps Scenarios](#-real-world-devops-scenarios)
 6. [Advanced Resilience Code Structure](#-advanced-resilience-code-structure)
-7. [Common Pitfalls & Solutions](#-common-pitfalls--solutions)
-8. [Hands-On Exercises](#-hands-on-exercises)
-9. [Interview Preparation](#-interview-preparation)
-10. [Knowledge Check](#-knowledge-check)
+7. [Hands-On Challenge: The "Ghost" Volume Reaper](#-hands-on-challenge-the-ghost-volume-reaper)
+8. [Interview Preparation](#-interview-preparation)
+9. [Knowledge Check](#-knowledge-check)
 
 ---
 
@@ -50,14 +49,17 @@ graph TD
 **Stage 1: Paged Discovery**
 - **Goal**: Find every resource regardless of count.
 - **Why**: AWS limits most API responses to 1,000 items. Paginators pass the `Marker` or `NextToken` for you.
+- **Precision**: Use `PageSize` to control network payload and `MaxItems` to limit total audit scope.
 
 **Stage 2: State Synchronization**
 - **Goal**: Ensure the resource is ready for the next action.
 - **Why**: Launching a server is instant in code, but takes minutes in reality.
+- **Tuning**: Adjust `Delay` and `MaxAttempts` to balance script speed vs. API cost.
 
 **Stage 3: Error Resilience**
 - **Goal**: Survive API throttling (`429 Too Many Requests`).
 - **Why**: AWS limits "Burst" API calls to protect their platform.
+- **Strategy**: Use `adaptive` retry mode for client-side rate limiting.
 ---
 ## 📉 Mastering Paginators: The "1,000 Item" Trap
 In a system like S3 or EC2, you will eventually have more than 1,000 objects or instances. 
@@ -68,17 +70,27 @@ resp = s3.list_objects_v2(Bucket='prod-logs')
 for obj in resp['Contents']:
     print(obj['Key'])
 ```
-### ✅ The Staff Pattern: Paginators
+### ✅ The Staff Pattern: Paginators with Config
 ```python
 client = boto3.client('s3')
 paginator = client.get_paginator('list_objects_v2')
 
 # Automatically loops and retrieves tokens
-for page in paginator.paginate(Bucket='prod-logs'):
+# 'PageSize' = How many items per API request
+# 'MaxItems' = Total items to retrieve before stopping
+page_iterator = paginator.paginate(
+    Bucket='prod-logs',
+    PaginationConfig={'PageSize': 100, 'MaxItems': 500}
+)
+
+for page in page_iterator:
     if 'Contents' in page:
         for obj in page['Contents']:
             print(f"Auditing object: {obj['Key']}")
 ```
+
+> **💡 Senior SRE Pro-Tip**: Use the `search()` method on a paginator to filter data using **JMESPath** before it even reaches your loop. This reduces memory usage and simplifies your logic.
+> `filtered_iterator = page_iterator.search("Contents[?Size > \`1048576\`].Key")`
 ---
 ## ⏳ The "Wait-for-State" Pattern
 Cloud resources are eventually consistent. Waiters provide absolute certainty.
@@ -88,14 +100,22 @@ ec2.start_instances(InstanceIds=['i-123'])
 time.sleep(30) # This is a "Guess"
 # SSH attempt... (Fails if boot takes 31 seconds)
 ```
-### ✅ The Robust Code: Waiters
+### ✅ The Robust Code: Custom Waiters
+Sometimes the default 15-second poll is too slow or too fast. SREs tune their waiters.
+
 ```python
 ec2.start_instances(InstanceIds=['i-123'])
 waiter = ec2.get_waiter('instance_running')
 
-# Polls every 15s for up to 40 attempts
-waiter.wait(InstanceIds=['i-123'])
-print("Resource is strictly ready.")
+# Poll every 5 seconds, up to 10 times
+try:
+    waiter.wait(
+        InstanceIds=['i-123'],
+        WaiterConfig={'Delay': 5, 'MaxAttempts': 10}
+    )
+    print("Resource is strictly ready.")
+except WaiterError as e:
+    print(f"Timed out waiting for instance: {e}")
 ```
 ---
 ## 🎭 Real-World DevOps Scenarios
@@ -107,9 +127,9 @@ print("Resource is strictly ready.")
 **The Lesson**: For security tools, **Incomplete = Fatal.**
 ### 🔥 Scenario 2: The "Throttling Storm"
 **The Incident**: A Lambda function triggered on S3 uploads attempted to tag 5,000 images simultaneously.
-**The Crash**: AWS throttled the Lambda with a `429` error. Half the images were tagged, half were not. The data was "corrupted" by state mismatch.
-**The Fix**: Configured the Boto3 `retries` mode to `standard`, giving the script 10 attempts with exponential backoff.
-**The Lesson**: The cloud will push back if you move too fast. **Retries are the air-brakes of automation.**
+**The Crash**: AWS throttled the Lambda with a `429` error. Half the images were tagged, half were not. 
+**The Fix**: Configured the Boto3 `retries` mode to **`adaptive`**. Unlike `standard`, which just retries, `adaptive` mode includes a **client-side rate limiter** that slows down your requests to match the AWS API's capacity.
+**The Lesson**: Retries are for failures; rate-limiting is for sustainability.
 
 ---
 ## 💻 Advanced Resilience Code Structure
@@ -153,6 +173,25 @@ def scalable_resource_cleanup(region: str, bucket_name: str):
     except ClientError as e:
         logger.error(f"API Failure: {e}")
         raise
+
+---
+
+## 🏗️ Hands-On Challenge: The "Ghost" Volume Reaper
+
+**Goal**: Create a script that finds all "Available" (unattached) EBS volumes globally and deletes them, ensuring you don't miss a single one due to pagination.
+
+### 🛠️ The Challenge Requirements:
+1. Use an EC2 **Paginator** (`describe_volumes`) to find volumes with `State='available'`.
+2. For each volume found, use a **Waiter** (`volume_deleted`) after calling the delete API.
+3. Configure the client with **`adaptive`** retry mode to survive large-scale deletions.
+4. Log the total GB of storage "reaped" and the total cost saved (use $0.10 per GB/month as a baseline).
+
+### 💡 Hint for the Win:
+```python
+# Strategy: Page -> Filter -> Delete -> Wait
+paginator = ec2.get_paginator('describe_volumes')
+iterator = paginator.paginate(Filters=[{'Name': 'status', 'Values': ['available']}])
+```
 ```
 
 ---

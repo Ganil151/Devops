@@ -6,7 +6,7 @@ Welcome to the **Python for Infrastructure** module. This curriculum is designed
 
 ## 🛣️ Your Learning Path
 
-This module is re-architected into **4 Logical Parts**, mirroring the automation lifecycle.
+This module is re-architected into **5 Logical Parts**, mirroring the automation lifecycle.
 
 ### [📐 Part 1: The Blueprint (Foundations)](./01-Part-1-The-Blueprint/)
 *   **Focus**: Replacing Bash with Python.
@@ -23,7 +23,12 @@ This module is re-architected into **4 Logical Parts**, mirroring the automation
 *   **Modules**: AWS SDK (`boto3`), Serverless (Lambda), Docker/K8s SDKs.
 *   **Goal**: Build "Infrastructure as Code" using pure Python logic.
 
-### [🛡️ Part 4: The Safety Net (Testing & Reliability)](./04-Part-4-The-Safety-Net/)
+### [🤖 Part 4: Operational Automation (ChatOps & Tickets)](./04-Part-4-Operational-Automation/)
+*   **Focus**: The Connective Tissue.
+*   **Modules**: Slack Integration (Webhooks), Jira API, Multi-Cloud Notifiers.
+*   **Goal**: Bridge the gap between infrastructure events and human communication.
+
+### [🛡️ Part 5: The Safety Net (Testing & Reliability)](./05-Part-5-The-Safety-Net/)
 *   **Focus**: Production-grade engineering.
 *   **Modules**: Testing (`pytest`), Databases (SQL), Data Analysis (`pandas`), Final Capstone.
 *   **Goal**: Ensure your automation is testable, reliable, and auditable.
@@ -34,7 +39,7 @@ This module is re-architected into **4 Logical Parts**, mirroring the automation
 1.  **Part 1**: Learn to control your local machine.
 2.  **Part 2**: Learn to control remote machines and web services.
 3.  **Part 3**: Learn to control the Cloud.
-4.  **Part 4**: Learn to verify that you did it correctly.
+4.  **Part 4**: Learn to connect the Cloud to Humans (ChatOps).
+5.  **Part 5**: Learn to verify that you did it correctly (Testing).
 
----
-**Status**: ✅ Reorganization Complete (2026-02-02)
+
