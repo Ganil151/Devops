@@ -12,6 +12,11 @@ def run_git_command():
             timeout=10,
         )
 
+        if not res.stdout.strip():
+            print("No changes to commit.")
+            return "No changes"
+          
+
         subprocess.run(
             ["git", "add", "."],
             capture_output=True,
@@ -30,7 +35,7 @@ def run_git_command():
             timeout=10,
         )
 
-        time.sleep(10)
+        time.sleep(1)
 
         subprocess.run(
             ["git", "push"],
