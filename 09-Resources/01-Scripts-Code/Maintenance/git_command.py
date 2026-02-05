@@ -21,7 +21,7 @@ class GitAutomation:
             curr = curr.parent
         return False
         
-    def run_command(self, cmd: List[str], timeout: int = 30) -> Tuple[bool, str, str]:
+    def run_command(self, cmd: List[str], timeout: int = 60) -> Tuple[bool, str, str]:
         try:
             result = subprocess.run(
                 cmd, capture_output=True, text=True, check=False, 
