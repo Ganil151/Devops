@@ -261,7 +261,7 @@ python script.py            # Execute automation
 | Optimize Networkstack Server | 🌱 Beginner | [01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/04-Network-Stack-Tuning/Optimize-NetworkStack-Server.ps1](01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/04-Network-Stack-Tuning/Optimize-NetworkStack-Server.ps1) |
 | Optimize Networkstack | 🌱 Beginner | [01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/04-Network-Stack-Tuning/Optimize-NetworkStack.ps1](01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/04-Network-Stack-Tuning/Optimize-NetworkStack.ps1) |
 | Optimize Powerplan | 🌱 Beginner | [01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/05-Power-and-Thermal-Profiles/Optimize-PowerPlan.ps1](01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/05-Power-and-Thermal-Profiles/Optimize-PowerPlan.ps1) |
-| Lab Bottleneck Resolution | 🌱 Beginner | [01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/06-Labs-and-Challenges/Lab-Bottleneck-Resolution.md](01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/06-Labs-and-Challenges/Lab-Bottleneck-Resolution.md) |
+| Lab Bottleneck Resolution | 🌱 Beginner | [01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/05-Labs-and-Challenges/Lab-Bottleneck-Resolution.md](01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/05-Labs-and-Challenges/Lab-Bottleneck-Resolution.md) |
 | Set Wsl2Performance | 🌱 Beginner | [01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/07-WSL2-Optimization/Set-WSL2Performance.ps1](01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/07-WSL2-Optimization/Set-WSL2Performance.ps1) |
 | Initialize Serverhardening | 🌱 Beginner | [01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/08-Server-Hardening/Initialize-ServerHardening.ps1](01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/08-Server-Hardening/Initialize-ServerHardening.ps1) |
 | Invoke Artifactcleanup | 🌱 Beginner | [01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/09-Maintenance-Automation/Invoke-ArtifactCleanup.ps1](01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/09-Maintenance-Automation/Invoke-ArtifactCleanup.ps1) |
@@ -579,7 +579,7 @@ python script.py            # Execute automation
 
 ## 🛡️ Repository Standards
 1.  **Atomicity**: Every functional module MUST have its own `REFERENCE.md`.
-2.  **No Rot**: Use the [Link Scanner](./09-Resources/01-Scripts-Code/Maintenance/repository_audit.py) to verify internal links.
+2.  **No Rot**: Use the [Link Scanner](./08-Resources/01-Scripts-Code/Maintenance/repository_audit.py) to verify internal links.
 3.  **Hierarchy**: Follow the `Beginner -> Intermediate -> Advanced` flow for learning.
 
 ---

@@ -236,8 +236,8 @@ Content was consolidated from these locations:
 |-------------------|----------|---------|
 | `/02-Intermediate/01-Kubernetes/Youtube_Lessons/` | `01-Kubernetes/` | Anton Putra course |
 | `/02-Intermediate/05-CI-CD/CICD_Lessons/Youtube_Lessons/` | `02-CI-CD/` | CI/CD projects |
-| `/09-Resources/02-YouTube-Lessons/` | `03-General-DevOps/` | Notes, downloads |
-| `/09-Resources/05-Projects-Showcase/Youtube_Lessons/` | `04-Projects/` | Terraform project |
+| `/08-Resources/02-YouTube-Lessons/` | `03-General-DevOps/` | Notes, downloads |
+| `/08-Resources/05-Projects-Showcase/Youtube_Lessons/` | `04-Projects/` | Terraform project |
 
 All old directories have been removed after successful consolidation.
 

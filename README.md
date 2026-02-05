@@ -40,6 +40,12 @@ graph TD
 
 ## 📂 Curriculum
 
+### 🧭 [Phase 0: Career & Persona Mastery](./00-Career-Mastery/README.md)
+*Mindset, Strategic Roadmap, Resume Engineering, and Interview Tactics*
+
+- **Focus**: Transitioning from "Learning Tools" to "Being an Engineer."
+- **Mastery**: The DevOps Mindset (CALMS), Professional Branding, and Production Psych.
+
 ### 🌱 Tier 1: Beginner - Foundations
 
 [**View Foundations Overview**](./01-Beginner/REFERENCE.md)
@@ -64,22 +70,15 @@ graph TD
 - **Focus**: "Architectural Layer" for multi-cloud, high-scale systems.
 - **Mastery**: Istio/Linkerd, ArgoCD, and Infrastructure Security Auditing.
 
-### 👔 Tier 4: Professional - Career Engineering
-
-[**View Career Mastery**](./05-Professional-Development/REFERENCE.md)
-*Resume Engineering, Portfolio Design, and [**Master Career Roadmap**](./05-Professional-Development/01-Career-Strategy/README.md)*
-
-- **Focus**: "Career Layer" — Bridging the gap from Technical expert to Production hire.
-- **Mastery**: Interview Psychology and Personal Branding as an Architect.
-
 ---
 
-## 🛠️ Global Hubs & Resources
+## �️ Global Hubs & Resources
 
-- **[Boilerplate Vault](./08-Boilerplates/REFERENCE.md)**: 200+ Templates (Terraform, Ansible, K8s).
-- **[Automation Navigation](./01-Beginner/02-Phase-2/01-Automation/AUTOMATION_NAVIGATION_HUB.md)**: Centralized orchestration scripts.
-- **[Modern Operations Hub](./02-Intermediate/02-Phase-2/03-Modern-Operations/README.md)**: Serverless, AI-Ops, and Edge Computing.
-- **[Quizzes](./07-Quizzes/REFERENCE.md)**: 300+ Advanced Questions & Cert Prep.
+- **[Project Showcase](./04-Projects-Showcase/README.md)**: Proof-of-work labs and enterprise projects.
+- **[Labs & Sandboxes](./05-Labs/README.md)**: Interactive playgrounds for tool testing.
+- **[Quizzes](./06-Quizzes/REFERENCE.md)**: 300+ Advanced Questions & Cert Prep.
+- **[Boilerplate Vault](./07-Boilerplates/REFERENCE.md)**: 200+ Templates (Terraform, Ansible, K8s).
+- **[Global Resources](./08-Resources/REFERENCE.md)**: Central scripts and maintenance audits.
 
 ---
 
@@ -87,14 +86,9 @@ graph TD
 
 This repository is maintained using automated auditing tools to ensure zero "Content Rot."
 
-- **[Link Scanner](./09-Resources/01-Scripts-Code/Maintenance/repository_audit.py)**: Audit internal linking health.
+- **[Link Scanner](./08-Resources/01-Scripts-Code/Maintenance/repository_audit.py)**: Audit internal linking health.
 - **Standard Pattern**: Every module contains `challenges/`, `solutions/`, and links to the [Central Boilerplate Hub](REFERENCE.md).
 
 ---
 
 > *"Infrastructure is the canvas, code is the brush—DevOps is the art of scale."*
-
-
----
-## 🧭 Additional Modules
-- [8 Projects Showcase](04-Projects-Showcase/README.md)

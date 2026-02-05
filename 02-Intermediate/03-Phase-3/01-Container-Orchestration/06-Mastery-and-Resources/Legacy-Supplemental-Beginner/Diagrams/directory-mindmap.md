@@ -1,5 +1,5 @@
 # Kubernetes Architecture Directory Mind Map
-> **⚠️ Missing Image**: *DMM* ('../../../../../09-Resources/03-Images-Diagrams/Kubernetes/kube-folder-mindMap.png')
+> **⚠️ Missing Image**: *DMM* ('../../../../../08-Resources/03-Images-Diagrams/Kubernetes/kube-folder-mindMap.png')
 ---
 
 ## Component Relationships

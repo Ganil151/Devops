@@ -106,7 +106,7 @@ Architecture for low-latency, geographically distributed applications.
 
 ### FinOps (Cloud Financial Operations)
 
-**Covered in**: [05-Professional-Development/07-FinOps](../../../README.md)
+**Covered in**: [00-Career-Mastery/07-FinOps](../../../README.md)
 
 **Topics**:
 - Cloud cost optimization
@@ -196,7 +196,7 @@ Architecture for low-latency, geographically distributed applications.
 - **Reserved capacity**: 30-70% savings
 - **Auto-scaling**: Scale to zero when possible
 
-**Covered in**: [05-Professional-Development/07-FinOps](../../../README.md)
+**Covered in**: [00-Career-Mastery/07-FinOps](../../../README.md)
 
 ---
 

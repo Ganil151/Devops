@@ -455,12 +455,12 @@ Then disable Github Branch Source Plugin
   - create a git token for the project
 
 - Add github credentials
-> **⚠️ Missing Image**: *alt text* ('../../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(142').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(142').png)
 
-> **⚠️ Missing Image**: *alt text* ('../../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(143').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(143').png)
 
 - Set branch to */main
-> **⚠️ Missing Image**: *alt text* ('../../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(144').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(144').png)
 
 #### Step-7 Provision Ansible Server with Terraform
 - Go back to Terraform Server 
@@ -751,8 +751,8 @@ amazon-linux-extras install ansible2
 #### Step-9 Integrate Ansible with Jenkins
 
 **Install Publish over SSH**
-> **⚠️ Missing Image**: *alt text* ('../../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(147').png)
-> **⚠️ Missing Image**: *alt text* ('../../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(149').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(147').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(149').png)
 
 **Restart Jenkins**
 ```bash
@@ -760,16 +760,16 @@ amazon-linux-extras install ansible2
 ```
 
 **Configure Publish over SSH**
-> **⚠️ Missing Image**: *alt text* ('../../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(145').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(145').png)
 
 **Add SSH Server**
-> **⚠️ Missing Image**: *alt text* ('../../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(150').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(150').png)
 
 **Fillin:** <ansible-server-public-ip>
-> **⚠️ Missing Image**: *alt text* ('../../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(151')-1.png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(151')-1.png)
 
 **Go to Advance**: Fillin password
-> **⚠️ Missing Image**: *alt text* ('../../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(152').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(152').png)
 Test the Configuration then apply & save
 
 #### Step-10 Install Docker in Ansible Server
@@ -844,25 +844,25 @@ drwxr-xr-x 5 root     root     41 Sep 15 18:14 ..
 ```
 
 **Run a Docker Test:**
-> **⚠️ Missing Image**: *alt text* ('../../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(153').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(153').png)
 
 **Go to Configure:**
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(154').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(154').png)
 
 **Slide down Post-Build Actions:**
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(155').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(155').png)
 
 **Go to Send build artifacts over SSH:**
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(157').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(157').png)
 
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(158').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(158').png)
 
 **Fillin:**
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(162').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(162').png)
 Apply and Save
 
 **Then Build:**
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(160').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(160').png)
 
 **Install Docker after Build is successful**
 ```bash
@@ -1007,19 +1007,19 @@ ansible-galaxy collection install community.docker
 ```
 
 Go back to Jenkins <http://52.55.121.151:8080/> and start a new Job:
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(163').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(163').png)
 
 Start a new Job
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(164').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(164').png)
 
 Get github repositories
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(165').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(165').png)
 
 then:
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(166').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(166').png)
 
 then: 
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(167').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(167').png)
 
 ----
 
@@ -1199,12 +1199,12 @@ AWSCloudFormationFullAccess
 IAMFullAccess
 AdministratorAccess
 ```
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(168').png)
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(169').png)
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(170').png)
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(171').png)
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(172').png)
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(173').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(168').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(169').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(170').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(171').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(172').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(173').png)
 
 - Launch the Eks Cluster 
 ```bash
@@ -1421,29 +1421,29 @@ replicaset.apps/register-c7d4b99d4    2         2         2       9m24s
 
 #### Create Continouse Deployment Job on Jenkins
 Go to Jenkins and create a new Job:
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(174').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(174').png)
 
 Post-build Actions
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(175').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(175').png)
 
 Send build artifacts over SSH:
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(176').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(176').png)
 
 Under Exec command add the ansible playbook:
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(177').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(177').png)
 
 #### Integrate the CI and the CD Jobs:
 Go to Register-CI job and configure:
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(178').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(178').png)
 
 Check Poll SCM:
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(179').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(179').png)
 
 Go to Add post-build action and click `Build other projects`:
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(180').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(180').png)
 
 Slide up to Post-Build Actions to build `Register-CD`:
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(181').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(181').png)
 
 Then Run the build on Register-CI, and confirm the it was built in Register-CD 
 
@@ -1471,6 +1471,6 @@ Go to the browser:
 ```bash
 paste: a8dece2e8b78b4326b1a89cc131375fc-2032408722.us-east-1.elb.amazonaws.com:8080
 ```
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(182').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(182').png)
 
-> **⚠️ Missing Image**: *alt text* ('../../../../../09-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(183').png)
+> **⚠️ Missing Image**: *alt text* ('../../../../../08-Resources/05-Projects-Showcase/Archive/Ansible/ansible_cicd_v2/images/Screenshot%20(183').png)

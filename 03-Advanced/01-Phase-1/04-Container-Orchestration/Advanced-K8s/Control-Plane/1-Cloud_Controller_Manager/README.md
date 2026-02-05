@@ -23,7 +23,7 @@ By decoupling the interoperability logic between Kubernetes and the underlying c
 - **Reduced Core Complexity**: Kubernetes core remains focused on orchestration logic
 
 ## Architecture
-> **⚠️ Missing Image**: *CCM Architecture* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/CCM-1.png')
+> **⚠️ Missing Image**: *CCM Architecture* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/CCM-1.png')
 
 ## Core Components
 
@@ -38,7 +38,7 @@ The Cloud Controller Manager runs the following controllers:
 - Checks the cloud provider to determine if a node has been deleted from the cloud after it stops responding
 
 **Workflow:**
-> **⚠️ Missing Image**: *Node Controller Workflow* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/CCM-2.png')
+> **⚠️ Missing Image**: *Node Controller Workflow* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/CCM-2.png')
 
 ### 2. Route Controller
 
@@ -65,7 +65,7 @@ The Cloud Controller Manager runs the following controllers:
 - Integrates with cloud provider's native load balancing solutions
 
 **Example Flow:**
-> **⚠️ Missing Image**: *Service Controller Workflow* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/CCM-3.png')
+> **⚠️ Missing Image**: *Service Controller Workflow* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/CCM-3.png')
 
 ## How It Works
 
@@ -81,7 +81,7 @@ When the CCM starts:
 
 The CCM operates on an event-driven model:
 
-> **⚠️ Missing Image**: *Event-Driven Operation* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/CCM-4.png')
+> **⚠️ Missing Image**: *Event-Driven Operation* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/CCM-4.png')
 
 ### 3. Reconciliation Loop
 
@@ -154,11 +154,11 @@ Historically, cloud provider code was built into the Kubernetes core. The CCM re
 
 ### In-Tree (Legacy)
 
-> **⚠️ Missing Image**: *In-Tree* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/CCM-5.png')
+> **⚠️ Missing Image**: *In-Tree* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/CCM-5.png')
 
 ### Out-of-Tree (Modern)
 
-> **⚠️ Missing Image**: *Out-of-Tree* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/CCM-6.png')
+> **⚠️ Missing Image**: *Out-of-Tree* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/CCM-6.png')
 
 ### Migration Steps
 

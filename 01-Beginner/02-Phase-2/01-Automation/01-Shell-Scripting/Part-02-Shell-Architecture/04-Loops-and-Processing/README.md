@@ -436,7 +436,7 @@ Proceed to: **[Functions & Scope](../05-Functions-and-Scope/README.md)** →
 ## Assets & TODOs
 
 - Add high-resolution images to ./assets/ (loop-architecture.png, flow-placeholder.png)
-- Add example scripts to `09-Resources/01-Scripts-Code/Scripting/`:
+- Add example scripts to `08-Resources/01-Scripts-Code/Scripting/`:
   - exponential-backoff.sh
   - apply-ai-suggestions.sh
 - Add mermaid rendering instructions to your docs build if needed.

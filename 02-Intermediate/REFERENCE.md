@@ -173,7 +173,7 @@ Most modules include curated YouTube lessons - look for `Youtube_Lessons.md` fil
 
 Each module contains interview questions, quizzes, real-life scenarios, and architecture diagrams.
 
-🔍 **Looking for structured Day-by-Day training?** Check out the [Labs](../06-Labs) directory for organized daily tasks and deep dives.
+🔍 **Looking for structured Day-by-Day training?** Check out the [Labs](../05-Labs) directory for organized daily tasks and deep dives.
 🚀 **Cross-Platform Master Scripts:** Explore the [Trinity Suite](./01-Phase-1/03-Runbooks-Procedures/scripts/resource_monitor.py) for advanced system orchestration.
 
 ---

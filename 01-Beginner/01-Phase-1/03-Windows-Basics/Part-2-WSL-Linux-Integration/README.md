@@ -30,7 +30,7 @@ Follow these steps to execute the setup script within your WSL terminal:
 ### 1. Navigate to the directory
 Since the files are stored on your Windows host, you need to access them via the `/mnt/c` mount point:
 ```bash
-cd /mnt/c/Users/Ganil/Documents/Devops/09-Resources/WSL/
+cd /mnt/c/Users/Ganil/Documents/Devops/08-Resources/WSL/
 ```
 
 ### 2. Make the script executable

@@ -13,7 +13,7 @@ All notable changes to the `04-Data-Formats` curriculum are documented here.
 ### Fixed
 - **Structural Integrity**: All "Hollow Folders" populated with Boilerplates, Challenges, and Solutions.
 - **Linting**: Fixed MD022, MD032, and MD026 errors across all module READMEs.
-- **Navigation**: Corrected relative paths for images in 09-Resources.
+- **Navigation**: Corrected relative paths for images in 08-Resources.
 
 ### Changed
 - **Content Hierarchy**: Refactored the module hub README to serve as a high-authority dashboard.

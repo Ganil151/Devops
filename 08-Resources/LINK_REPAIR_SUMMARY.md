@@ -89,4 +89,4 @@ python3 link_auditor.py --repair --nav
 ---
 
 *Last Updated: 2026-02-04 23:34:00*
-*Script Location: `/home/gsmash/Documents/Devops/09-Resources/Script/link_auditor.py`*
+*Script Location: `/home/gsmash/Documents/Devops/08-Resources/Script/link_auditor.py`*

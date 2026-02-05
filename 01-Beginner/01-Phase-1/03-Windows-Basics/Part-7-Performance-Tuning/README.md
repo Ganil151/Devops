@@ -47,7 +47,7 @@ Eliminating frequency scaling jitter.
 ---
 
 ## 🧪 Labs and Challenges
-Explore the [06-Labs-and-Challenges](./06-Labs-and-Challenges) directory for hands-on performance debugging scenarios.
+Explore the [05-Labs-and-Challenges](./05-Labs-and-Challenges) directory for hands-on performance debugging scenarios.
 
 ---
 *Senior Windows Systems Engineer & Technical Content Architect*

@@ -155,7 +155,7 @@ Part-7-Performance-Tuning/
 ├── 03-Storage-I-O-Optimization/              [EXISTING]
 ├── 04-Network-Stack-Tuning/                  [ENHANCED - Added Server Edition]
 ├── 05-Power-and-Thermal-Profiles/            [EXISTING]
-├── 06-Labs-and-Challenges/                   [ENHANCED - Added README]
+├── 05-Labs-and-Challenges/                   [ENHANCED - Added README]
 ├── 07-WSL2-Optimization/                     [NEW - Windows 11]
 ├── 08-Server-Hardening/                      [NEW - Windows Server]
 ├── 09-Maintenance-Automation/                [NEW - Cross-platform]

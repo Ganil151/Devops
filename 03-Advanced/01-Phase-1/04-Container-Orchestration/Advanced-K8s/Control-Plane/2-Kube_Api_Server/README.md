@@ -26,7 +26,7 @@ The API server is the only component that directly interacts with etcd, the dist
 
 ## Architecture
 
-> **⚠️ Missing Image**: *Architecture* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/KAS-1.png')
+> **⚠️ Missing Image**: *Architecture* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/KAS-1.png')
 
 ## Core Components and Request Flow
 
@@ -34,7 +34,7 @@ The API server is the only component that directly interacts with etcd, the dist
 
 Every API request goes through multiple stages:
 
-> **⚠️ Missing Image**: *Request Processing Pipeline* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/KAS-2.png')
+> **⚠️ Missing Image**: *Request Processing Pipeline* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/KAS-2.png')
 
 ### 1. Authentication
 
@@ -112,7 +112,7 @@ roleRef:
 
 **Common Admission Controllers**:
 
-> **⚠️ Missing Image**: *Common Admission Controllers* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/KAS-3.png')
+> **⚠️ Missing Image**: *Common Admission Controllers* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/KAS-3.png')
 
 **Important Admission Controllers**:
 
@@ -170,7 +170,7 @@ webhooks:
 
 Kubernetes API is organized into groups:
 
-> **⚠️ Missing Image**: *API Groups and Versions* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/KAS-4.png')
+> **⚠️ Missing Image**: *API Groups and Versions* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/KAS-4.png')
 
 ### API Versioning
 
@@ -184,7 +184,7 @@ Kubernetes API is organized into groups:
 
 The API server provides a **watch** mechanism for real-time updates:
 
-> **⚠️ Missing Image**: *Watch Mechanism* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/KAS-5.png')
+> **⚠️ Missing Image**: *Watch Mechanism* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/KAS-5.png')
 
 **Watch Features**:
 - **Resource Versions**: Track changes using resource versions
@@ -205,7 +205,7 @@ kubectl get pods --watch -o json
 
 ### Multi-Master Setup
 
-> **⚠️ Missing Image**: *Multi-Master Setup* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/KAS-6.png')
+> **⚠️ Missing Image**: *Multi-Master Setup* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/KAS-6.png')
 
 ### Configuration for HA
 
@@ -307,7 +307,7 @@ spec:
 
 The API server supports API aggregation for extending with additional APIs:
 
-> **⚠️ Missing Image**: *Aggregation Layer* ('../../../../../../09-Resources/03-Images-Diagrams/Kubernetes/KAS-7.png')
+> **⚠️ Missing Image**: *Aggregation Layer* ('../../../../../../08-Resources/03-Images-Diagrams/Kubernetes/KAS-7.png')
 
 **APIService Example**:
 ```yaml

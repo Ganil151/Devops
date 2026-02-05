@@ -26,7 +26,7 @@ Part-7-Performance-Tuning/
 │   ├── README.md
 │   └── Optimize-PowerPlan.ps1
 │
-├── 06-Labs-and-Challenges/
+├── 05-Labs-and-Challenges/
 │   ├── README.md ✨ ENHANCED
 │   └── Lab-Bottleneck-Resolution.md
 │

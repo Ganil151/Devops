@@ -2,7 +2,7 @@
 
 > **"If you haven't automated it, you haven't understood it. If you have automated it without error handling, you just haven't broken it yet."**
 
-![Reliability Blueprint](../../../../08-Boilerplates/02-Intermediate/Best_Practices/Automation-Best-Practices-Failure-Handling-and-Atomicity-atomic_write.py)
+![Reliability Blueprint](../../../../07-Boilerplates/02-Intermediate/Best_Practices/Automation-Best-Practices-Failure-Handling-and-Atomicity-atomic_write.py)
 
 ---
 

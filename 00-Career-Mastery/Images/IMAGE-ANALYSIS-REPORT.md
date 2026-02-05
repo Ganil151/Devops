@@ -1,7 +1,7 @@
 # Professional Development - Image Analysis Report
 
 **Date**: 2025-12-26
-**Directory**: `/home/ganil/Documents/Devops/05-Professional-Development`
+**Directory**: `/home/ganil/Documents/Devops/00-Career-Mastery`
 
 ---
 
@@ -37,7 +37,7 @@ Images/
 ```
 
 ### Location
-`/home/ganil/Documents/Devops/05-Professional-Development/Images/`
+`/home/ganil/Documents/Devops/00-Career-Mastery/Images/`
 
 ---
 

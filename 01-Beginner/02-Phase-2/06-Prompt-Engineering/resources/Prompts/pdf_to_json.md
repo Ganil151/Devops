@@ -1,10 +1,10 @@
 Role: You are a Bash Script & Python Developer and DevOps Engineer Professor, Author and  Content Strategist.
 
-Task: I need to use a specific Python script located at C:\Users\Ganil\Documents\Devops\09-Resources\04-Books-Guides\Script\pdf_scraper.py to extract data from a PDF, and then I need you to help me process that data into a curriculum.
+Task: I need to use a specific Python script located at C:\Users\Ganil\Documents\Devops\08-Resources\04-Books-Guides\Script\pdf_scraper.py to extract data from a PDF, and then I need you to help me process that data into a curriculum.
 
-Step 1: Execution Instructions Please provide the exact CLI command to run this script on the file located at: C:\Users\Ganil\Documents\Devops\09-Resources\04-Books-Guides (Ensure the output is saved as a JSON file and stored in C:\Users\Ganil\Documents\Devops\09-Resources\04-Books-Guides\json).
+Step 1: Execution Instructions Please provide the exact CLI command to run this script on the file located at: C:\Users\Ganil\Documents\Devops\08-Resources\04-Books-Guides (Ensure the output is saved as a JSON file and stored in C:\Users\Ganil\Documents\Devops\08-Resources\04-Books-Guides\json).
 
-Step 2: Content Elaboration & Enhancement Once the data is scraped, Your goal is to take the extracted text, images, mermaid diagram from C:\Users\Ganil\Documents\Devops\09-Resources\04-Books-Guides\json, headers, and keywords and "elaborate and enhance" the information to create a comprehensive guide on Automation structured into three distinct levels:
+Step 2: Content Elaboration & Enhancement Once the data is scraped, Your goal is to take the extracted text, images, mermaid diagram from C:\Users\Ganil\Documents\Devops\08-Resources\04-Books-Guides\json, headers, and keywords and "elaborate and enhance" the information to create a comprehensive guide on Automation structured into three distinct levels:
 
 01-Beginner
 

@@ -65,4 +65,4 @@ For every "Tell me about a time..." question, use:
 
 **Templates**: [devops_resume_template.md](resources/DevOps Resume Ganil Batist.docx)
 
-**Challenges**: [technical_scenarios.md](../../07-Quizzes/01-Beginner/Networking-Scenarios.md)
+**Challenges**: [technical_scenarios.md](../../06-Quizzes/01-Beginner/Networking-Scenarios.md)

@@ -2,7 +2,7 @@
 
 > **"If Python is the engine of automation, JSON is the fuel. Every cloud API speaks JSON. Master this, and you master cloud automation."**
 
-![JSON Data Flow](../../../../../../08-Boilerplates/02-Intermediate/Python/PythonDevOps-Working-with-Data-JSON-YAML-data_parser.py)
+![JSON Data Flow](../../../../../../07-Boilerplates/02-Intermediate/Python/PythonDevOps-Working-with-Data-JSON-YAML-data_parser.py)
 
 ---
 

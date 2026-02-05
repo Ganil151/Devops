@@ -12,7 +12,7 @@ Beyond the commands, Git is a **Content-Addressable Filesystem**.
 - **Single Source of Truth**: For IaC (Infrastructure as Code), the repo *is* the infrastructure.
 
 
-> **⚠️ Missing Image**: *colabo* ('../../../../../../09-Resources/03-Images-Diagrams/git&githubTalk.png')
+> **⚠️ Missing Image**: *colabo* ('../../../../../../08-Resources/03-Images-Diagrams/git&githubTalk.png')
 
 ## Why Git is Critical for DevOps
 
@@ -48,7 +48,7 @@ Beyond the commands, Git is a **Content-Addressable Filesystem**.
 
 ### Git Repository Structure
 
-> **⚠️ Missing Image**: *gitRepoStructure* ('../../../../../../09-Resources/03-Images-Diagrams/gitStructure.png')
+> **⚠️ Missing Image**: *gitRepoStructure* ('../../../../../../08-Resources/03-Images-Diagrams/gitStructure.png')
 
 ```bash
 .git/

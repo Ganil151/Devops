@@ -68,4 +68,4 @@
 | `01-Beginner/01-Phase-1/07-Cloud-Foundations/README.md` | `../../assets/cloud_foundations_banner.png` | *Manual search required* | ⚠️ Action Required |
 | `01-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/06-Identity/iam-ad-fundamentals.md` | `./Active%20Directory%20%20Configuration.md` | *Manual search required* | ⚠️ Action Required |
 | `01-Beginner/01-Phase-1/04-Data-Formats/REFERENCE/Markdown-Documentation-Ref.md` | `./assets/status.png` | *Manual search required* | ⚠️ Action Required |
-| `01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/06-Labs-and-Challenges/README.md` | `../Boilerplates/Performance-Audit-Template.xml` | *Manual search required* | ⚠️ Action Required |
+| `01-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/05-Labs-and-Challenges/README.md` | `../Boilerplates/Performance-Audit-Template.xml` | *Manual search required* | ⚠️ Action Required |

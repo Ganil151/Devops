@@ -62,7 +62,7 @@ Part-7-Performance-Tuning/
 │   ├── Optimize-NetworkStack.ps1 (Workstation)
 │   └── Optimize-NetworkStack-Server.ps1 ⭐ NEW
 ├── 05-Power-and-Thermal-Profiles/
-├── 06-Labs-and-Challenges/
+├── 05-Labs-and-Challenges/
 ├── 07-WSL2-Optimization/ ⭐ NEW
 │   ├── README.md
 │   └── Set-WSL2Performance.ps1

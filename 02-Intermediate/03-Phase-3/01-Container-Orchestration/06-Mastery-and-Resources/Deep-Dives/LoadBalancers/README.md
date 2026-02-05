@@ -1010,12 +1010,12 @@ kind: Ingress  # Layer 7 load balancing
 ```
 
 #### Multi-tier Load Balancing
-> **⚠️ Missing Image**: *Multi-tier-LB* ('../../../../../09-Resources/03-Images-Diagrams/Kubernetes/LB-1.png')
+> **⚠️ Missing Image**: *Multi-tier-LB* ('../../../../../08-Resources/03-Images-Diagrams/Kubernetes/LB-1.png')
 
 ### 2. High Availability Configuration
 
 #### Multi-AZ Deployment
-> **⚠️ Missing Image**: *Multi-AZ* ('../../../../../09-Resources/03-Images-Diagrams/Kubernetes/multi-AZ-Deployment.png')
+> **⚠️ Missing Image**: *Multi-AZ* ('../../../../../08-Resources/03-Images-Diagrams/Kubernetes/multi-AZ-Deployment.png')
 ```yaml
 apiVersion: apps/v1
 kind: Deployment

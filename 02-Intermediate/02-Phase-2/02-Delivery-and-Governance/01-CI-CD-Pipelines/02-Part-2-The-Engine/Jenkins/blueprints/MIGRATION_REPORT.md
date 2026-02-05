@@ -8,7 +8,7 @@
 ## ✅ Migration Summary
 
 ### Source Location (Removed)
-- **Path**: `09-Resources/05-Jenkins-Blueprints/`
+- **Path**: `08-Resources/05-Jenkins-Blueprints/`
 - **Status**: ❌ Directory removed after successful migration
 
 ### New Location (Active)
@@ -42,7 +42,7 @@ The following files were updated to reflect the new location:
 2. **`8-Porjects-Showcase/Global-Microservices-Mesh/Jenkinsfile`**
    - Updated location comment
 
-3. **`05-Professional-Development/01-Career-Strategy/PROGRESS_SKILL_MATRIX.md`**
+3. **`00-Career-Mastery/02-Strategic-Roadmap/PROGRESS_SKILL_MATRIX.md`**
    - Updated Enterprise CI/CD reference
 
 4. **`02-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/Jenkins/README.md`**
