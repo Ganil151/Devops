@@ -1,1 +1,0 @@
-https://www.sans.org/top25-software-errors/
