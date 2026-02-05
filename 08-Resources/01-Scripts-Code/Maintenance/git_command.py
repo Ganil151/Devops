@@ -68,6 +68,11 @@ class GitAutomation:
             
         return status, filepath
 
+    def get_current_branch(self) -> str:
+        """Get the current active branch name."""
+        success, stdout, stderr = self.run_command(["git", "branch", "--show-current"])
+        return stdout.strip() if success else "unknown"
+
     def get_status(self) -> Dict[str, List[str]]:
         """Get git status and categorize changes."""
         success, stdout, stderr = self.run_command(["git", "status", "--porcelain"])
@@ -90,17 +95,19 @@ class GitAutomation:
                 
             status, filepath = self.parse_status_line(line)
             
-            # Parse git status codes
+            # Parse git status codes (Handling both staged and unstaged)
             if status == "??":
                 changes["untracked"].append(filepath)
-            elif "A" in status:
+            elif "A" in status or "N" in status: # Added
                 changes["added"].append(filepath)
-            elif "M" in status:
+            elif "M" in status: # Modified
                 changes["modified"].append(filepath)
-            elif "D" in status:
+            elif "D" in status: # Deleted
                 changes["deleted"].append(filepath)
-            elif "R" in status:
+            elif "R" in status: # Renamed
                 changes["renamed"].append(filepath)
+            elif status.strip() in ["U", "AA", "UU"]: # Unmerged/Conflict
+                print(f"⚠️  Conflict detected in file: {filepath}")
         
         return changes
 
@@ -110,21 +117,24 @@ class GitAutomation:
         
         for change_type, files in changes.items():
             for filepath in files:
-                path = Path(filepath)
+                # Store original filepath and change type
+                item = f"{change_type}: {filepath}"
                 
                 # Categorize by directory structure
-                if "00-Resources" in filepath:
-                    categories["Resources"].append(f"{change_type}: {filepath}")
+                if "08-Resources" in filepath:
+                    categories["Resources"].append(item)
+                elif "07-Boilerplates" in filepath:
+                    categories["Boilerplates"].append(item)
                 elif "Script" in filepath or filepath.endswith((".py", ".sh", ".ps1")):
-                    categories["Scripts"].append(f"{change_type}: {filepath}")
-                elif filepath.endswith(".md"):
-                    categories["Documentation"].append(f"{change_type}: {filepath}")
+                    categories["Scripts"].append(item)
                 elif "REFERENCE" in filepath:
-                    categories["Reference"].append(f"{change_type}: {filepath}")
-                elif any(x in filepath for x in ["Beginner", "Intermediate", "Advanced"]):
-                    categories["Curriculum"].append(f"{change_type}: {filepath}")
+                    categories["Reference"].append(item)
+                elif filepath.endswith(".md"):
+                    categories["Documentation"].append(item)
+                elif any(x in filepath for x in ["01-Beginner", "02-Intermediate", "03-Advanced"]):
+                    categories["Curriculum"].append(item)
                 else:
-                    categories["Other"].append(f"{change_type}: {filepath}")
+                    categories["Other"].append(item)
         
         return categories
 
@@ -310,7 +320,8 @@ class GitAutomation:
 
     def run(self, custom_message: Optional[str] = None, dry_run: bool = False) -> str:
         """Main execution flow."""
-        print("🔍 Checking repository status...\n")
+        branch = self.get_current_branch()
+        print(f"🔍 Checking repository status on branch: {branch}...\n")
         
         # Get current status
         changes = self.get_status()
