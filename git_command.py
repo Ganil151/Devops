@@ -1,8 +1,8 @@
 import subprocess
-import time
+import sys
 
 
-def run_git_command():
+def run_git_command(message=None):
     try:
         res = subprocess.run(
             ["git", "status", "--porcelain"],
@@ -15,8 +15,8 @@ def run_git_command():
         if not res.stdout.strip():
             print("No changes to commit.")
             return "No changes"
-          
 
+        print("Staging changes...")
         subprocess.run(
             ["git", "add", "."],
             capture_output=True,
@@ -25,7 +25,12 @@ def run_git_command():
             timeout=10,
         )
 
-        commit_message = input("Input your commit message: ")
+        if message:
+            commit_message = message
+        elif len(sys.argv) > 1:
+            commit_message = " ".join(sys.argv[1:])
+        else:
+            commit_message = input("Input your commit message: ")
 
         subprocess.run(
             ["git", "commit", "-m", commit_message],
@@ -35,17 +40,16 @@ def run_git_command():
             timeout=10,
         )
 
-        time.sleep(1)
-
-        subprocess.run(
+        print("Pushing changes...")
+        push_res = subprocess.run(
             ["git", "push"],
             capture_output=True,
             text=True,
             check=True,
-            timeout=10,
+            timeout=30,
         )
 
-        return res.stdout.strip()
+        return push_res.stdout.strip() or "Push Successful"
     except FileNotFoundError:
         print("Error: 'git' command not found. Is it installed?")
     except subprocess.CalledProcessError as e:
