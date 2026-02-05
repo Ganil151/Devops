@@ -1,0 +1,335 @@
+.
+├── 00-Phase-0
+│   ├── 01-The-Tool-Landscape
+│   │   └── README.md
+│   ├── 02-Soft-Skills-for-Engineers
+│   │   └── README.md
+│   ├── 03-Hiring-and-Interviews
+│   │   └── README.md
+│   └── README.md
+├── 01-Phase-1
+│   ├── 01-Networking
+│   │   ├── 01-Network-Fundamentals
+│   │   ├── 02-Network-Models
+│   │   ├── 03-IP-Addressing
+│   │   ├── 04-Basic-Protocols
+│   │   ├── 05-Network-Devices
+│   │   ├── 06-Basic-Troubleshooting
+│   │   ├── 07-Network-Troubleshooting-Labs
+│   │   ├── dhcp_dora_process.png
+│   │   ├── dns_hierarchy.png
+│   │   ├── README.md
+│   │   ├── REFERENCE
+│   │   ├── resources
+│   │   ├── scripts
+│   │   └── tree.txt
+│   ├── 02-Automation
+│   │   ├── Ansible
+│   │   ├── Interview_Questions_and_Quiz.md
+│   │   ├── README.md
+│   │   ├── REFERENCE
+│   │   ├── Spacelift
+│   │   ├── Terraform
+│   │   └── Youtube_Lessons.md
+│   ├── 02-Linux
+│   │   ├── 01-Introduction
+│   │   ├── 02-Filesystem
+│   │   ├── 03-Commands
+│   │   ├── 04-Permissions
+│   │   ├── 05-Distros
+│   │   ├── Interview_Questions_and_Quiz.md
+│   │   ├── README.md
+│   │   ├── REFERENCE
+│   │   ├── resources
+│   │   ├── scripts
+│   │   └── SSH
+│   ├── 03-Data-Serialization
+│   │   ├── Json
+│   │   ├── Markdown
+│   │   ├── README.md
+│   │   ├── REFERENCE
+│   │   ├── scripts
+│   │   ├── Toml
+│   │   ├── Xml
+│   │   ├── Yaml
+│   │   └── yaml_vs_json.png
+│   ├── 03-Linux
+│   │   ├── Interview_Questions_and_Quiz.md
+│   │   ├── Performance
+│   │   ├── README.md
+│   │   ├── REFERENCE
+│   │   ├── Security
+│   │   ├── SSH
+│   │   └── Virtualization-WSL
+│   ├── 04-Container-Orchestration
+│   │   ├── Advanced-K8s
+│   │   ├── Enterprise-Container-Orchestration
+│   │   ├── README.md
+│   │   ├── REFERENCE
+│   │   └── scripts
+│   ├── 04-Windows-Basics
+│   │   ├── assets
+│   │   ├── Linkks.md
+│   │   ├── Login Screen.md
+│   │   ├── Part-1-PowerShell-Automation
+│   │   ├── Part-2-WSL-Linux-Integration
+│   │   ├── Part-3-Package-Management
+│   │   ├── Part-4-Server-Administration
+│   │   ├── Part-5-Windows-Containers
+│   │   ├── Part-6-System-Auditing
+│   │   ├── Part-7-Performance-Tuning
+│   │   ├── Product Key Windows 2019.md
+│   │   ├── README.md
+│   │   ├── REFERENCE
+│   │   ├── resources
+│   │   └── VirtualBox Installations.md
+│   ├── 05-Security
+│   │   ├── 01-Security-Fundamentals
+│   │   ├── Interview_Questions_and_Quiz.md
+│   │   ├── README.md
+│   │   ├── REFERENCE
+│   │   └── Youtube_Lessons.md
+│   ├── 05-Software-Stack
+│   │   ├── assets
+│   │   ├── README.md
+│   │   ├── resources
+│   │   └── scripts
+│   ├── 06-Web-Design
+│   │   ├── Angular
+│   │   ├── CSS
+│   │   ├── Django
+│   │   ├── Environment-Setup.md
+│   │   ├── FastAPI
+│   │   ├── Flask
+│   │   ├── Mobile
+│   │   ├── NextJS
+│   │   ├── NodeJS
+│   │   ├── React
+│   │   ├── README.md
+│   │   ├── REFERENCE
+│   │   ├── scripts
+│   │   ├── SpringBoot
+│   │   └── VueJs
+│   └── README.md
+├── 02-Phase-2
+│   ├── Part-1-Language-Basics
+│   │   └── 01-Python-Syntax
+│   ├── Part-2-The-Engine
+│   │   ├── 01-Part-1-The-Blueprint
+│   │   ├── 01-Terraform-Engine
+│   │   ├── 02-Boto3-Engine
+│   │   ├── 02-Part-2-The-Engine
+│   │   ├── 03-Part-3-The-Building-Blocks
+│   │   ├── 04-Part-4-The-Safety-Net
+│   │   └── README.md
+│   ├── Part-3-Building-Blocks
+│   │   ├── 01-Cloud-Resources
+│   │   ├── 02-Messaging
+│   │   ├── 03-Cloud-Foundations
+│   │   └── 04-Config-Management
+│   └── README.md
+├── 03-Phase-3
+│   ├── 03-Observability
+│   │   ├── 01-Monitoring-Foundations
+│   │   ├── 02-Logging-and-Cloud-Metrics
+│   │   ├── 03-Distributed-Tracing-and-APM
+│   │   ├── 04-Mastery-and-Resources
+│   │   ├── README.md
+│   │   └── REFERENCE
+│   ├── 05-FinOps
+│   │   ├── 01-FinOps-Framework
+│   │   ├── 02-Multi-Cloud-FinOps
+│   │   ├── 03-Unit-Economics
+│   │   ├── 04-FinOps-Culture
+│   │   ├── 05-Enterprise-Governance
+│   │   ├── Images
+│   │   ├── Interview_Questions_and_Quiz.md
+│   │   ├── README.md
+│   │   ├── REFERENCE
+│   │   └── Youtube_Lessons.md
+│   ├── 06-Advanced-API-Architectures
+│   │   ├── README.md
+│   │   └── Youtube_Lessons.md
+│   └── README.md
+├── 04-Experience-Projects
+│   ├── 00-Governance-Checklists
+│   │   ├── CI-CD-Pipeline-Checklist.md
+│   │   ├── Cloud-Infrastructure-Checklist.md
+│   │   ├── Container-Orchestration-Checklist.md
+│   │   ├── Monitoring-Observability-Checklist.md
+│   │   ├── README.md
+│   │   └── Security-Hardening-Checklist.md
+│   ├── 01-Cloud-Native-Web-App
+│   │   ├── CHALLENGES.md
+│   │   ├── README.md
+│   │   ├── Source_Code
+│   │   └── TODO.md
+│   ├── 02-IaC-Infrastructure-Provisioning
+│   │   ├── CHALLENGES.md
+│   │   ├── README.md
+│   │   └── TODO.md
+│   ├── 03-CI-CD-Pipeline-Automation
+│   │   ├── CHALLENGES.md
+│   │   ├── README.md
+│   │   ├── Source_Code
+│   │   └── TODO.md
+│   ├── 04-Kubernetes-Orchestration
+│   │   ├── CHALLENGES.md
+│   │   ├── README.md
+│   │   ├── Source_Code
+│   │   └── TODO.md
+│   ├── 05-Serverless-Data-Processor
+│   │   ├── CHALLENGES.md
+│   │   ├── README.md
+│   │   └── TODO.md
+│   ├── Category-Guides
+│   │   ├── Microservices
+│   │   ├── Multi_Tier_Apps
+│   │   └── Production_Examples
+│   └── README.md
+├── 4-Professional-Development
+│   ├── 01-Career-Strategy
+│   │   ├── PROGRESS_SKILL_MATRIX.md
+│   │   ├── README.md
+│   │   └── resources
+│   ├── 02-Resume-Engineering
+│   │   ├── README.md
+│   │   └── resources
+│   ├── 03-Interview-Mastery
+│   │   └── README.md
+│   ├── 04-Portfolio-Projects
+│   │   ├── GOLDEN_PROJECT_GUIDE.md
+│   │   └── README.md
+│   ├── Images
+│   │   ├── IMAGE-ANALYSIS-REPORT.md
+│   │   ├── infographics
+│   │   └── README.md
+│   └── REFERENCE.md
+├── 6-Quizzes
+│   ├── 1-Beginner
+│   │   ├── Networking-Scenarios.md
+│   │   └── README.md
+│   ├── 2-Intermediate
+│   │   ├── Modern-Ops-Quiz.md
+│   │   └── README.md
+│   ├── 3-Advanced
+│   │   ├── README.md
+│   │   └── Specialized-Tech-Quiz.md
+│   ├── Master-Quiz.md
+│   └── REFERENCE.md
+├── 97-Boilerplates
+│   ├── 1-Beginner
+│   │   ├── Go
+│   │   ├── Python
+│   │   └── Shell
+│   ├── 2-Intermediate
+│   │   ├── Adv
+│   │   ├── Ansible
+│   │   ├── Best_Practices
+│   │   ├── Chef
+│   │   ├── CICD
+│   │   ├── Cloud_Init
+│   │   ├── Helm_Chart
+│   │   ├── Infracost
+│   │   ├── Jenkins
+│   │   ├── Kustomize
+│   │   ├── Packer
+│   │   ├── Pulumi
+│   │   ├── Puppet
+│   │   ├── Python
+│   │   ├── Real_Life
+│   │   ├── SaltStack
+│   │   ├── Shell
+│   │   ├── SonarQube
+│   │   ├── Terraform
+│   │   ├── TruffleHog
+│   │   ├── Vagrant
+│   │   └── Vendor
+│   ├── 3-Advanced
+│   │   ├── 01-Self-Healing-Infrastructure
+│   │   ├── 02-Security-and-Compliance-as-Code
+│   │   ├── 03-Custom-Cloud-Native-Tooling
+│   │   ├── 04-High-Scale-Performance-Tuning
+│   │   └── README.md
+│   ├── 4-PlayGround
+│   │   └── Block-PopUps
+│   └── REFERENCE.md
+├── 98-Labs
+│   ├── Challenges
+│   │   └── TASK_COMPLETION_SUMMARY.md
+│   └── Play_Ground
+│       ├── automation_tool
+│       ├── dest1
+│       ├── dest2
+│       ├── README.md
+│       ├── rename-test
+│       ├── Scripts
+│       ├── Shell-Scripting
+│       ├── source
+│       ├── Terraform
+│       ├── Youtube-Lessons
+│       └── ytb.txt
+├── 99-Resources
+│   ├── 01-Scripts-Code
+│   │   └── Maintenance
+│   ├── 04-Books-Guides
+│   │   └── MoreBooks.txt
+│   ├── bashCustomization.txt
+│   ├── Images
+│   │   ├── Screenshot (100).png
+│   │   ├── Screenshot (101).png
+│   │   ├── Screenshot (102).png
+│   │   ├── Screenshot (103).png
+│   │   ├── Screenshot (104).png
+│   │   ├── Screenshot (106).png
+│   │   ├── Screenshot (107).png
+│   │   ├── Screenshot (108).png
+│   │   ├── Screenshot (109).png
+│   │   ├── Screenshot (110).png
+│   │   ├── Screenshot (111).png
+│   │   ├── Screenshot (112).png
+│   │   ├── Screenshot (113).png
+│   │   ├── Screenshot (114).png
+│   │   ├── Screenshot (115).png
+│   │   ├── Screenshot (116).png
+│   │   ├── Screenshot (117).png
+│   │   ├── Screenshot (118).png
+│   │   ├── Screenshot (119).png
+│   │   ├── Screenshot (120).png
+│   │   ├── Screenshot (122).png
+│   │   ├── Screenshot (83).png
+│   │   ├── Screenshot (84).png
+│   │   ├── Screenshot (85).png
+│   │   ├── Screenshot (86).png
+│   │   ├── Screenshot (87).png
+│   │   ├── Screenshot (88).png
+│   │   ├── Screenshot (89).png
+│   │   ├── Screenshot (90).png
+│   │   ├── Screenshot (91).png
+│   │   ├── Screenshot (92).png
+│   │   ├── Screenshot (93).png
+│   │   ├── Screenshot (94).png
+│   │   ├── Screenshot (97).png
+│   │   ├── Screenshot (98).png
+│   │   └── Screenshot (99).png
+│   ├── LINK_AUDIT_REPORT.md
+│   ├── LINK_REPAIR_SUMMARY.md
+│   ├── README.md
+│   ├── Script
+│   │   ├── link_auditor.py
+│   │   └── pdf_scraper.py
+│   └── update_reference.py
+├── assets
+│   ├── cicd_pipeline_architecture.svg
+│   ├── devops_master_banner.png
+│   ├── devops_platform_banner.svg
+│   ├── navigation_architecture.svg
+│   └── PLACEHOLDER_pricing-comparison.md
+├── CURRICULUM_MAP.md
+├── FINAL_TREE.txt
+├── README.md
+├── REFERENCE.md
+├── requirements.txt
+└── tree.txt
+
+195 directories, 138 files
