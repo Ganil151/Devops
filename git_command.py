@@ -44,6 +44,28 @@ class GitAutomation:
         except FileNotFoundError:
             return False, "", f"Command not found: {cmd[0]}"
 
+    def parse_status_line(self, line: str) -> Tuple[str, str]:
+        """Parse git status line handling quotes and renames."""
+        status = line[:2]
+        rest = line[3:]
+        
+        # Handle renames (R  from -> to)
+        if " -> " in rest:
+            # extract the 'to' part
+            arrow_idx = rest.rfind(" -> ")
+            if arrow_idx != -1:
+                filepath = rest[arrow_idx + 4:]
+            else:
+                filepath = rest
+        else:
+            filepath = rest
+            
+        # Handle quotes
+        if filepath.startswith('"') and filepath.endswith('"'):
+            filepath = filepath[1:-1]
+            
+        return status, filepath
+
     def get_status(self) -> Dict[str, List[str]]:
         """Get git status and categorize changes."""
         success, stdout, stderr = self.run_command(["git", "status", "--porcelain"])
@@ -64,19 +86,18 @@ class GitAutomation:
             if not line:
                 continue
                 
-            status = line[:2]
-            filepath = line[3:].strip()
+            status, filepath = self.parse_status_line(line)
             
             # Parse git status codes
             if status == "??":
                 changes["untracked"].append(filepath)
-            elif status[0] == "A" or status[1] == "A":
+            elif "A" in status:
                 changes["added"].append(filepath)
-            elif status[0] == "M" or status[1] == "M":
+            elif "M" in status:
                 changes["modified"].append(filepath)
-            elif status[0] == "D" or status[1] == "D":
+            elif "D" in status:
                 changes["deleted"].append(filepath)
-            elif status[0] == "R":
+            elif "R" in status:
                 changes["renamed"].append(filepath)
         
         return changes
@@ -121,28 +142,35 @@ class GitAutomation:
         for file_list in changes.values():
             all_files.extend(file_list)
         
-        categories = self.analyze_changes(changes)
-        
         # Determine primary change type
-        if total_added > total_modified and total_added > total_deleted:
-            prefix = "feat"
-            action = "Add"
-        elif total_deleted > total_added and total_deleted > total_modified:
-            prefix = "refactor"
-            action = "Remove"
-        elif total_modified > 0:
-            prefix = "fix" if any("fix" in f.lower() or "bug" in f.lower() for f in all_files) else "docs" if categories.get("Documentation") else "refactor"
-            action = "Update"
-        else:
-            prefix = "chore"
-            action = "Update"
+        is_fix = any("fix" in f.lower() or "bug" in f.lower() for f in all_files)
+        categories = self.analyze_changes(changes)
         
         # Determine scope based on most affected category
         if categories:
             primary_category = max(categories.items(), key=lambda x: len(x[1]))[0]
             scope = primary_category.lower()
         else:
+            primary_category = "General"
             scope = "general"
+
+        if is_fix:
+            prefix = "fix"
+            action = "Fix"
+        elif primary_category == "Documentation":
+             prefix = "docs"
+             action = "Update"
+        elif total_added >= total_modified and total_added >= total_deleted:
+            prefix = "feat"
+            action = "Add"
+        elif total_deleted > total_added and total_deleted > total_modified:
+            prefix = "refactor"
+            action = "Remove"
+        else:
+            prefix = "refactor"
+            action = "Update"
+        
+
         
         # Build message
         summary_parts = []

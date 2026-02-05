@@ -216,6 +216,7 @@
   },
   "active": "e142cfc2dc308a10",
   "lastOpenFiles": [
+    "test file with spaces.txt",
     "git_command.py",
     "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/02-Python-for-Infrastructure/01-Part-1-The-Blueprint/04-Reference/git_command.py",
     "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/02-Python-for-Infrastructure/01-Part-1-The-Blueprint/04-Reference/git_status.py",
@@ -236,7 +237,6 @@
     "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/02-Python-for-Infrastructure/PlayGround/boto3/boto3-aws/s3-bucket.py",
     "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/02-Python-for-Infrastructure/PlayGround/boto3/boto3-jira/ytb.md",
     "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/02-Python-for-Infrastructure/PlayGround/boto3/boto3-jira/jira_project_api.py",
-    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/02-Python-for-Infrastructure/PlayGround/boto3/boto3-jira/create_issues.py",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/02-Control-Flow/CHALLENGES.md",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/01-Fundamentals/CHALLENGES.md",
     "1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/PlayGround/boto3/boto3-jira/ytb.md",
