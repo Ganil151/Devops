@@ -1,6 +1,0 @@
-{
-  "cloudcode.gemini.enableCodeAssist": true,
-  "cloudcode.gemini.logLevel": "info",
-  "cloudcode.features.gemini": true,
-  "cloudcode.gemini.workspaceContext.enabled": true
-}
