@@ -60,7 +60,7 @@ class GitAutomation:
             "untracked": []
         }
         
-        for line in stdout.strip().split('\n'):
+        for line in stdout.splitlines():
             if not line:
                 continue
                 
