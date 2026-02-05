@@ -106,14 +106,15 @@ class GitAutomation:
         success, _, _ = self.run_command(["git", "diff", "--cached", "--quiet"])
         if success: # Exit code 0 means NO changes
             print("✨ No changes to commit.")
-            return True
+            return False
 
         # 3. Commit
         print(f"📝 Committing: {message.splitlines()[0]}")
         success, _, stderr = self.run_command(["git", "commit", "-m", message])
         if not success:
             print(f"❌ Commit failed: {stderr}")
-        return success
+            return False
+        return True
 
     def push_changes(self) -> bool:
         print("🚀 Pushing to remote...")
@@ -146,7 +147,7 @@ class GitAutomation:
         if self.stage_and_commit(commit_message):
             if self.push_changes():
                 return "Success"
-        return "Failed"
+        return "Nothing to push"
 
     def watch(self):
         print("👀 Watching for changes... (Ctrl+C to stop)")
