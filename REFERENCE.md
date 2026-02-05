@@ -1,5 +1,5 @@
 # 🚀 Root REFERENCE: The DevOps Master Logic
-*Last Updated: 2026-02-05 00:20 - Automated Sync*
+*Last Updated: 2026-02-05 01:38 - Automated Sync*
 
 This file serves as the core entry point for the high-level logic across all tiers. Use this to quickly navigate frequent commands, architecture patterns, and the "Trinity" orchestration suite.
 
@@ -62,6 +62,410 @@ python script.py            # Execute automation
 
 | Resource | Category | Path |
 | :--- | :--- | :--- |
+| Activate | Other | `.lessenv/bin/Activate.ps1` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/__init__.py` |
+|   Main   | Other | `.lessenv/lib/python3.14/site-packages/pip/__main__.py` |
+|   Pip Runner   | Other | `.lessenv/lib/python3.14/site-packages/pip/__pip-runner__.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/__init__.py` |
+| Build Env | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/build_env.py` |
+| Cache | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cache.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/__init__.py` |
+| Autocompletion | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/autocompletion.py` |
+| Base Command | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/base_command.py` |
+| Cmdoptions | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/cmdoptions.py` |
+| Command Context | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/command_context.py` |
+| Index Command | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/index_command.py` |
+| Main | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/main.py` |
+| Main Parser | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/main_parser.py` |
+| Parser | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/parser.py` |
+| Progress Bars | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/progress_bars.py` |
+| Req Command | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/req_command.py` |
+| Spinners | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/spinners.py` |
+| Status Codes | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/cli/status_codes.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/__init__.py` |
+| Cache | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/cache.py` |
+| Check | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/check.py` |
+| Completion | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/completion.py` |
+| Configuration | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/configuration.py` |
+| Debug | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/debug.py` |
+| Download | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/download.py` |
+| Freeze | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/freeze.py` |
+| Hash | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/hash.py` |
+| Help | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/help.py` |
+| Index | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/index.py` |
+| Inspect | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/inspect.py` |
+| Install | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/install.py` |
+| List | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/list.py` |
+| Lock | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/lock.py` |
+| Search | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/search.py` |
+| Show | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/show.py` |
+| Uninstall | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/uninstall.py` |
+| Wheel | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/commands/wheel.py` |
+| Configuration | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/configuration.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/distributions/__init__.py` |
+| Base | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/distributions/base.py` |
+| Installed | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/distributions/installed.py` |
+| Sdist | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/distributions/sdist.py` |
+| Wheel | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/distributions/wheel.py` |
+| Exceptions | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/exceptions.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/index/__init__.py` |
+| Collector | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/index/collector.py` |
+| Package Finder | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/index/package_finder.py` |
+| Sources | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/index/sources.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/locations/__init__.py` |
+|  Distutils | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/locations/_distutils.py` |
+|  Sysconfig | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/locations/_sysconfig.py` |
+| Base | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/locations/base.py` |
+| Main | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/main.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/metadata/__init__.py` |
+|  Json | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/metadata/_json.py` |
+| Base | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/metadata/base.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/metadata/importlib/__init__.py` |
+|  Compat | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/metadata/importlib/_compat.py` |
+|  Dists | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/metadata/importlib/_dists.py` |
+|  Envs | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/metadata/importlib/_envs.py` |
+| Pkg Resources | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/metadata/pkg_resources.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/__init__.py` |
+| Candidate | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/candidate.py` |
+| Direct Url | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/direct_url.py` |
+| Format Control | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/format_control.py` |
+| Index | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/index.py` |
+| Installation Report | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/installation_report.py` |
+| Link | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/link.py` |
+| Release Control | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/release_control.py` |
+| Scheme | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/scheme.py` |
+| Search Scope | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/search_scope.py` |
+| Selection Prefs | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/selection_prefs.py` |
+| Target Python | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/target_python.py` |
+| Wheel | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/models/wheel.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/network/__init__.py` |
+| Auth | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/network/auth.py` |
+| Cache | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/network/cache.py` |
+| Download | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/network/download.py` |
+| Lazy Wheel | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/network/lazy_wheel.py` |
+| Session | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/network/session.py` |
+| Utils | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/network/utils.py` |
+| Xmlrpc | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/network/xmlrpc.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/operations/__init__.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/operations/build/__init__.py` |
+| Build Tracker | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/operations/build/build_tracker.py` |
+| Metadata | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/operations/build/metadata.py` |
+| Metadata Editable | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/operations/build/metadata_editable.py` |
+| Wheel | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/operations/build/wheel.py` |
+| Wheel Editable | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/operations/build/wheel_editable.py` |
+| Check | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/operations/check.py` |
+| Freeze | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/operations/freeze.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/operations/install/__init__.py` |
+| Wheel | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/operations/install/wheel.py` |
+| Prepare | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/operations/prepare.py` |
+| Pyproject | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/pyproject.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/req/__init__.py` |
+| Constructors | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/req/constructors.py` |
+| Pep723 | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/req/pep723.py` |
+| Req Dependency Group | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/req/req_dependency_group.py` |
+| Req File | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/req/req_file.py` |
+| Req Install | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/req/req_install.py` |
+| Req Set | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/req/req_set.py` |
+| Req Uninstall | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/req/req_uninstall.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/__init__.py` |
+| Base | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/base.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/legacy/__init__.py` |
+| Resolver | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/legacy/resolver.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib/__init__.py` |
+| Base | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib/base.py` |
+| Candidates | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib/candidates.py` |
+| Factory | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib/factory.py` |
+| Found Candidates | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib/found_candidates.py` |
+| Provider | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib/provider.py` |
+| Reporter | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib/reporter.py` |
+| Requirements | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib/requirements.py` |
+| Resolver | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib/resolver.py` |
+| Self Outdated Check | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/self_outdated_check.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/__init__.py` |
+|  Jaraco Text | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/_jaraco_text.py` |
+|  Log | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/_log.py` |
+| Appdirs | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/appdirs.py` |
+| Compat | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/compat.py` |
+| Compatibility Tags | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/compatibility_tags.py` |
+| Datetime | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/datetime.py` |
+| Deprecation | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/deprecation.py` |
+| Direct Url Helpers | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/direct_url_helpers.py` |
+| Egg Link | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/egg_link.py` |
+| Entrypoints | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/entrypoints.py` |
+| Filesystem | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/filesystem.py` |
+| Filetypes | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/filetypes.py` |
+| Glibc | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/glibc.py` |
+| Hashes | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/hashes.py` |
+| Logging | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/logging.py` |
+| Misc | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/misc.py` |
+| Packaging | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/packaging.py` |
+| Pylock | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/pylock.py` |
+| Retry | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/retry.py` |
+| Subprocess | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/subprocess.py` |
+| Temp Dir | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/temp_dir.py` |
+| Unpacking | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/unpacking.py` |
+| Urls | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/urls.py` |
+| Virtualenv | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/virtualenv.py` |
+| Wheel | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/utils/wheel.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/vcs/__init__.py` |
+| Bazaar | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/vcs/bazaar.py` |
+| Git | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/vcs/git.py` |
+| Mercurial | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/vcs/mercurial.py` |
+| Subversion | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/vcs/subversion.py` |
+| Versioncontrol | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/vcs/versioncontrol.py` |
+| Wheel Builder | Other | `.lessenv/lib/python3.14/site-packages/pip/_internal/wheel_builder.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/__init__.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/__init__.py` |
+|  Cmd | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/_cmd.py` |
+| Adapter | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/adapter.py` |
+| Cache | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/cache.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/caches/__init__.py` |
+| File Cache | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/caches/file_cache.py` |
+| Redis Cache | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/caches/redis_cache.py` |
+| Controller | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/controller.py` |
+| Filewrapper | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/filewrapper.py` |
+| Heuristics | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/heuristics.py` |
+| Serialize | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/serialize.py` |
+| Wrapper | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/wrapper.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/certifi/__init__.py` |
+|   Main   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/certifi/__main__.py` |
+| Core | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/certifi/core.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/dependency_groups/__init__.py` |
+|   Main   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/dependency_groups/__main__.py` |
+|  Implementation | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/dependency_groups/_implementation.py` |
+|  Lint Dependency Groups | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/dependency_groups/_lint_dependency_groups.py` |
+|  Pip Wrapper | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/dependency_groups/_pip_wrapper.py` |
+|  Toml Compat | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/dependency_groups/_toml_compat.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/distlib/__init__.py` |
+| Compat | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/distlib/compat.py` |
+| Resources | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/distlib/resources.py` |
+| Scripts | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/distlib/scripts.py` |
+| Util | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/distlib/util.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/distro/__init__.py` |
+|   Main   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/distro/__main__.py` |
+| Distro | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/distro/distro.py` |
+| License | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/idna/LICENSE.md` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/idna/__init__.py` |
+| Codec | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/idna/codec.py` |
+| Compat | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/idna/compat.py` |
+| Core | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/idna/core.py` |
+| Idnadata | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/idna/idnadata.py` |
+| Intranges | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/idna/intranges.py` |
+| Package Data | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/idna/package_data.py` |
+| Uts46Data | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/idna/uts46data.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/msgpack/__init__.py` |
+| Exceptions | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/msgpack/exceptions.py` |
+| Ext | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/msgpack/ext.py` |
+| Fallback | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/msgpack/fallback.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/__init__.py` |
+|  Elffile | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/_elffile.py` |
+|  Manylinux | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/_manylinux.py` |
+|  Musllinux | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/_musllinux.py` |
+|  Parser | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/_parser.py` |
+|  Structures | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/_structures.py` |
+|  Tokenizer | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/_tokenizer.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/licenses/__init__.py` |
+|  Spdx | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/licenses/_spdx.py` |
+| Markers | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/markers.py` |
+| Metadata | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/metadata.py` |
+| Pylock | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/pylock.py` |
+| Requirements | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/requirements.py` |
+| Specifiers | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/specifiers.py` |
+| Tags | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/tags.py` |
+| Utils | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/utils.py` |
+| Version | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/packaging/version.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pkg_resources/__init__.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/platformdirs/__init__.py` |
+|   Main   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/platformdirs/__main__.py` |
+| Android | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/platformdirs/android.py` |
+| Api | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/platformdirs/api.py` |
+| Macos | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/platformdirs/macos.py` |
+| Unix | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/platformdirs/unix.py` |
+| Version | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/platformdirs/version.py` |
+| Windows | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/platformdirs/windows.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/__init__.py` |
+|   Main   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/__main__.py` |
+| Console | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/console.py` |
+| Filter | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/filter.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/filters/__init__.py` |
+| Formatter | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/formatter.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/formatters/__init__.py` |
+|  Mapping | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/formatters/_mapping.py` |
+| Lexer | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/lexer.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/lexers/__init__.py` |
+|  Mapping | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/lexers/_mapping.py` |
+| Python | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/lexers/python.py` |
+| Modeline | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/modeline.py` |
+| Plugin | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/plugin.py` |
+| Regexopt | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/regexopt.py` |
+| Scanner | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/scanner.py` |
+| Sphinxext | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/sphinxext.py` |
+| Style | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/style.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/styles/__init__.py` |
+|  Mapping | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/styles/_mapping.py` |
+| Token | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/token.py` |
+| Unistring | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/unistring.py` |
+| Util | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pygments/util.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/__init__.py` |
+|  Impl | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/_impl.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/_in_process/__init__.py` |
+|  In Process | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/__init__.py` |
+|   Version   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/__version__.py` |
+|  Internal Utils | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/_internal_utils.py` |
+| Adapters | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/adapters.py` |
+| Api | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/api.py` |
+| Auth | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/auth.py` |
+| Certs | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/certs.py` |
+| Compat | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/compat.py` |
+| Cookies | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/cookies.py` |
+| Exceptions | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/exceptions.py` |
+| Help | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/help.py` |
+| Hooks | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/hooks.py` |
+| Models | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/models.py` |
+| Packages | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/packages.py` |
+| Sessions | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/sessions.py` |
+| Status Codes | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/status_codes.py` |
+| Structures | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/structures.py` |
+| Utils | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/requests/utils.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/resolvelib/__init__.py` |
+| Providers | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/resolvelib/providers.py` |
+| Reporters | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/resolvelib/reporters.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/resolvelib/resolvers/__init__.py` |
+| Abstract | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/resolvelib/resolvers/abstract.py` |
+| Criterion | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/resolvelib/resolvers/criterion.py` |
+| Exceptions | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/resolvelib/resolvers/exceptions.py` |
+| Resolution | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/resolvelib/resolvers/resolution.py` |
+| Structs | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/resolvelib/structs.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/__init__.py` |
+|   Main   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/__main__.py` |
+|  Cell Widths | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_cell_widths.py` |
+|  Emoji Codes | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_emoji_codes.py` |
+|  Emoji Replace | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_emoji_replace.py` |
+|  Export Format | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_export_format.py` |
+|  Extension | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_extension.py` |
+|  Fileno | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_fileno.py` |
+|  Inspect | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_inspect.py` |
+|  Log Render | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_log_render.py` |
+|  Loop | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_loop.py` |
+|  Null File | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_null_file.py` |
+|  Palettes | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_palettes.py` |
+|  Pick | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_pick.py` |
+|  Ratio | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_ratio.py` |
+|  Spinners | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_spinners.py` |
+|  Stack | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_stack.py` |
+|  Timer | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_timer.py` |
+|  Win32 Console | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_win32_console.py` |
+|  Windows | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_windows.py` |
+|  Windows Renderer | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_windows_renderer.py` |
+|  Wrap | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/_wrap.py` |
+| Abc | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/abc.py` |
+| Align | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/align.py` |
+| Ansi | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/ansi.py` |
+| Bar | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/bar.py` |
+| Box | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/box.py` |
+| Cells | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/cells.py` |
+| Color | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/color.py` |
+| Color Triplet | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/color_triplet.py` |
+| Columns | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/columns.py` |
+| Console | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/console.py` |
+| Constrain | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/constrain.py` |
+| Containers | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/containers.py` |
+| Control | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/control.py` |
+| Default Styles | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/default_styles.py` |
+| Diagnose | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/diagnose.py` |
+| Emoji | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/emoji.py` |
+| Errors | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/errors.py` |
+| File Proxy | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/file_proxy.py` |
+| Filesize | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/filesize.py` |
+| Highlighter | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/highlighter.py` |
+| Json | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/json.py` |
+| Jupyter | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/jupyter.py` |
+| Layout | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/layout.py` |
+| Live | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/live.py` |
+| Live Render | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/live_render.py` |
+| Logging | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/logging.py` |
+| Markup | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/markup.py` |
+| Measure | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/measure.py` |
+| Padding | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/padding.py` |
+| Pager | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/pager.py` |
+| Palette | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/palette.py` |
+| Panel | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/panel.py` |
+| Pretty | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/pretty.py` |
+| Progress | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/progress.py` |
+| Progress Bar | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/progress_bar.py` |
+| Prompt | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/prompt.py` |
+| Protocol | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/protocol.py` |
+| Region | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/region.py` |
+| Repr | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/repr.py` |
+| Rule | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/rule.py` |
+| Scope | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/scope.py` |
+| Screen | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/screen.py` |
+| Segment | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/segment.py` |
+| Spinner | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/spinner.py` |
+| Status | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/status.py` |
+| Style | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/style.py` |
+| Styled | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/styled.py` |
+| Syntax | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/syntax.py` |
+| Table | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/table.py` |
+| Terminal Theme | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/terminal_theme.py` |
+| Text | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/text.py` |
+| Theme | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/theme.py` |
+| Themes | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/themes.py` |
+| Traceback | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/traceback.py` |
+| Tree | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/rich/tree.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/tomli/__init__.py` |
+|  Parser | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/tomli/_parser.py` |
+|  Re | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/tomli/_re.py` |
+|  Types | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/tomli/_types.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/tomli_w/__init__.py` |
+|  Writer | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/tomli_w/_writer.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/truststore/__init__.py` |
+|  Api | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/truststore/_api.py` |
+|  Macos | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/truststore/_macos.py` |
+|  Openssl | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/truststore/_openssl.py` |
+|  Ssl Constants | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/truststore/_ssl_constants.py` |
+|  Windows | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/truststore/_windows.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/__init__.py` |
+|  Collections | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/_collections.py` |
+|  Version | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/_version.py` |
+| Connection | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/connection.py` |
+| Connectionpool | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/connectionpool.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/__init__.py` |
+|  Appengine Environ | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/_appengine_environ.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/_securetransport/__init__.py` |
+| Bindings | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/_securetransport/bindings.py` |
+| Low Level | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/_securetransport/low_level.py` |
+| Appengine | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/appengine.py` |
+| Ntlmpool | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/ntlmpool.py` |
+| Pyopenssl | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/pyopenssl.py` |
+| Securetransport | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/securetransport.py` |
+| Socks | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/socks.py` |
+| Exceptions | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/exceptions.py` |
+| Fields | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/fields.py` |
+| Filepost | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/filepost.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages/__init__.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages/backports/__init__.py` |
+| Makefile | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages/backports/makefile.py` |
+| Weakref Finalize | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages/backports/weakref_finalize.py` |
+| Six | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages/six.py` |
+| Poolmanager | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/poolmanager.py` |
+| Request | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/request.py` |
+| Response | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/response.py` |
+|   Init   | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/__init__.py` |
+| Connection | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/connection.py` |
+| Proxy | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/proxy.py` |
+| Queue | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/queue.py` |
+| Request | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/request.py` |
+| Response | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/response.py` |
+| Retry | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/retry.py` |
+| Ssl  | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/ssl_.py` |
+| Ssl Match Hostname | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/ssl_match_hostname.py` |
+| Ssltransport | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/ssltransport.py` |
+| Timeout | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/timeout.py` |
+| Url | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/url.py` |
+| Wait | Other | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/wait.py` |
+| License | Other | `.lessenv/lib/python3.14/site-packages/pip-26.0.1.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md` |
 | 10 Base T | 🌱 Beginner | `1-Beginner/01-Phase-1/01-Networking/02-Network-Models/OSI Model/1. Physical/Cables & Connectors/10 Base-T.md` |
 | 1000Base T | 🌱 Beginner | `1-Beginner/01-Phase-1/01-Networking/02-Network-Models/OSI Model/1. Physical/Cables & Connectors/1000Base-T.md` |
 | 100Base T | 🌱 Beginner | `1-Beginner/01-Phase-1/01-Networking/02-Network-Models/OSI Model/1. Physical/Cables & Connectors/100Base-T.md` |
@@ -159,410 +563,6 @@ python script.py            # Execute automation
 | Get Systemuptime | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/HacksAndTips/Get-SystemUptime.md` |
 | Get Wifipasswords | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/HacksAndTips/Get-WiFiPasswords.md` |
 | Reset Dnscache | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/HacksAndTips/Reset-DnsCache.md` |
-| Reset Networkstack | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/HacksAndTips/Reset-NetworkStack.md` |
-| Resolve Multidns | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/HacksAndTips/Resolve-MultiDns.md` |
-| Test Tcpport | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/HacksAndTips/Test-TcpPort.md` |
-| Toggle Firewallprofile | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/HacksAndTips/Toggle-FirewallProfile.md` |
-| Trace Blockedtraffic | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/HacksAndTips/Trace-BlockedTraffic.md` |
-| Verify Portstatus | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/HacksAndTips/Verify-PortStatus.md` |
-| Disable Netadapter | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Disable-NetAdapter.md` |
-| Enable Netadapter | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Enable-NetAdapter.md` |
-| Get Dnsclientserveraddress | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Get-DnsClientServerAddress.md` |
-| Get Netadapter | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Get-NetAdapter.md` |
-| Get Netfirewallrule | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Get-NetFirewallRule.md` |
-| Get Netipaddress | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Get-NetIPAddress.md` |
-| Get Netipconfiguration | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Get-NetIPConfiguration.md` |
-| Get Netnat | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Get-NetNat.md` |
-| Get Netneighbor | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Get-NetNeighbor.md` |
-| Get Netroute | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Get-NetRoute.md` |
-| Get Nettcpconnection | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Get-NetTCPConnection.md` |
-| Get Netudpendpoint | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Get-NetUDPEndpoint.md` |
-| New Netfirewallrule | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/New-NetFirewallRule.md` |
-| Resolve Dnsname | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Resolve-DnsName.md` |
-| Restart Netadapter | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Restart-NetAdapter.md` |
-| Set Dnsclientserveraddress | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Set-DnsClientServerAddress.md` |
-| Set Netfirewallrule | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Set-NetFirewallRule.md` |
-| Test Netconnection | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Test-NetConnection.md` |
-| Ps Commands | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/PS Commands.md` |
-| Get Item | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Registry/Get-Item.md` |
-| Get Itemproperty | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Registry/Get-ItemProperty.md` |
-| New Item | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Registry/New-Item.md` |
-| Remove Item | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Registry/Remove-Item.md` |
-| Remove Itemproperty | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Registry/Remove-ItemProperty.md` |
-| Set Itemproperty | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Registry/Set-ItemProperty.md` |
-| Enter Pssession | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Remoting/Enter-PSSession.md` |
-| Exit Pssession | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Remoting/Exit-PSSession.md` |
-| Get Pssession | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Remoting/Get-PSSession.md` |
-| Invoke Command | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Remoting/Invoke-Command.md` |
-| New Pssession | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Remoting/New-PSSession.md` |
-| Remove Pssession | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Remoting/Remove-PSSession.md` |
-| Disable Scheduledtask | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ScheduledTasks/Disable-ScheduledTask.md` |
-| Enable Scheduledtask | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ScheduledTasks/Enable-ScheduledTask.md` |
-| Get Scheduledtask | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ScheduledTasks/Get-ScheduledTask.md` |
-| Get Scheduledtaskinfo | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ScheduledTasks/Get-ScheduledTaskInfo.md` |
-| Register Scheduledtask | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ScheduledTasks/Register-ScheduledTask.md` |
-| Set Scheduledtask | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ScheduledTasks/Set-ScheduledTask.md` |
-| Start Scheduledtask | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ScheduledTasks/Start-ScheduledTask.md` |
-| Stop Scheduledtask | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ScheduledTasks/Stop-ScheduledTask.md` |
-| Unregister Scheduledtask | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ScheduledTasks/Unregister-ScheduledTask.md` |
-| Debug Process | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ServiceAndProcess/Debug-Process.md` |
-| Get Process | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ServiceAndProcess/Get-Process.md` |
-| Get Service | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ServiceAndProcess/Get-Service.md` |
-| New Service | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ServiceAndProcess/New-Service.md` |
-| Remove Service | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ServiceAndProcess/Remove-Service.md` |
-| Restart Service | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ServiceAndProcess/Restart-Service.md` |
-| Set Service | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ServiceAndProcess/Set-Service.md` |
-| Start Process | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ServiceAndProcess/Start-Process.md` |
-| Start Service | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ServiceAndProcess/Start-Service.md` |
-| Stop Process | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ServiceAndProcess/Stop-Process.md` |
-| Stop Service | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ServiceAndProcess/Stop-Service.md` |
-| Wait Process | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/ServiceAndProcess/Wait-Process.md` |
-| Add Localgroupmember | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/UserAndGroup/Add-LocalGroupMember.md` |
-| Get Localgroup | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/UserAndGroup/Get-LocalGroup.md` |
-| Get Localgroupmember | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/UserAndGroup/Get-LocalGroupMember.md` |
-| Get Localuser | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/UserAndGroup/Get-LocalUser.md` |
-| New Localgroup | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/UserAndGroup/New-LocalGroup.md` |
-| New Localuser | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/UserAndGroup/New-LocalUser.md` |
-| Remove Localgroup | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/UserAndGroup/Remove-LocalGroup.md` |
-| Remove Localgroupmember | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/UserAndGroup/Remove-LocalGroupMember.md` |
-| Remove Localuser | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/UserAndGroup/Remove-LocalUser.md` |
-| Set Localuser | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/UserAndGroup/Set-LocalUser.md` |
-| Check Pendingupdates | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/WindowsUpdate/Check-PendingUpdates.md` |
-| Get Hotfix | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/WindowsUpdate/Get-HotFix.md` |
-| Get Windowsupdatelog | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/WindowsUpdate/Get-WindowsUpdateLog.md` |
-| List Updatehistory | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/WindowsUpdate/List-UpdateHistory.md` |
-| Devops Assessment | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/DevOps_Assessment.ps1` |
-| Devops Assessment | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/DevOps_Assessment.py` |
-| Active Directory Automation | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Lessons/Automation/Active Directory Automation.md` |
-| Conditional Statements | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Lessons/Conditional_Statements.ps1` |
-| Customobject | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Lessons/CustomObject.ps1` |
-| Explain Powershell Pipeline | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Lessons/Explain-PowerShell-Pipeline.md` |
-| Hashtable | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Lessons/HashTable.ps1` |
-| Modules | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Lessons/Modules.ps1` |
-| Pstest | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Lessons/PSTest.ps1` |
-| Pipeline | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Lessons/Pipeline.ps1` |
-| Powershell | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Lessons/PowerShell.md` |
-| Syntax | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Lessons/Syntax.ps1` |
-| System Admin | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Lessons/SystemAdmin/System Admin.md` |
-| Purgemcafee | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/ProgramRemoval/purgeMcafee.ps1` |
-| Purgeomen | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/ProgramRemoval/purgeOmen.ps1` |
-| Windows11Debloat | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/ProgramRemoval/windows11Debloat.ps1` |
-| Windowstracking | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/ProgramRemoval/windowsTracking.ps1` |
-| Manage Localusers | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/scripts/Manage-LocalUsers.ps1` |
-| Install Aws Cli | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-2-WSL-Linux-Integration/install-aws-cli.sh` |
-| Setup Wsl Devops | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-2-WSL-Linux-Integration/setup-wsl-devops.sh` |
-| Upgrade Wsl Version | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-2-WSL-Linux-Integration/upgrade-wsl-version.sh` |
-| Install | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-3-Package-Management/Install.md` |
-| Uninstall Applicationdeep | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-3-Package-Management/scripts/Uninstall-ApplicationDeep.ps1` |
-| Product Key | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-4-Server-Administration/DataCenter/Product Key.md` |
-| Product Key | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-4-Server-Administration/Standard/Product Key.md` |
-| Get Diskusage | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-6-System-Auditing/Get-DiskUsage.ps1` |
-| Get Systeminventory | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-6-System-Auditing/Get-SystemInventory.ps1` |
-| Windows11 Debloat Risk Assessment | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-6-System-Auditing/Windows11-Debloat-Risk-Assessment.md` |
-| Optimize Systemperformance | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/01-CPU-and-Process-Prioritization/Optimize-SystemPerformance.ps1` |
-| Set Processorperformance | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/01-CPU-and-Process-Prioritization/Set-ProcessorPerformance.ps1` |
-| Invoke Systemaudit | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/02-Memory-Management-and-Swap/Invoke-SystemAudit.ps1` |
-| Invoke Systemmaintenance | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/03-Storage-I-O-Optimization/Invoke-SystemMaintenance.ps1` |
-| Optimize Networkstack Server | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/04-Network-Stack-Tuning/Optimize-NetworkStack-Server.ps1` |
-| Optimize Networkstack | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/04-Network-Stack-Tuning/Optimize-NetworkStack.ps1` |
-| Optimize Powerplan | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/05-Power-and-Thermal-Profiles/Optimize-PowerPlan.ps1` |
-| Lab Bottleneck Resolution | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/06-Labs-and-Challenges/Lab-Bottleneck-Resolution.md` |
-| Set Wsl2Performance | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/07-WSL2-Optimization/Set-WSL2Performance.ps1` |
-| Initialize Serverhardening | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/08-Server-Hardening/Initialize-ServerHardening.ps1` |
-| Invoke Artifactcleanup | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/09-Maintenance-Automation/Invoke-ArtifactCleanup.ps1` |
-| Get Systemhealthscore | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/10-Health-Monitoring/Get-SystemHealthScore.ps1` |
-| Audit Report | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/AUDIT_REPORT.md` |
-| Project Summary | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/PROJECT_SUMMARY.md` |
-| Script Reference | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/SCRIPT_REFERENCE.md` |
-| Updated Architecture | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Part-7-Performance-Tuning/UPDATED_ARCHITECTURE.md` |
-| Product Key Windows 2019 | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/Product Key Windows 2019.md` |
-| Active Directory Identity Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/REFERENCE/Active-Directory-Identity-Ref.md` |
-| Powershell Automation Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/REFERENCE/PowerShell-Automation-Ref.md` |
-| Sre Windows Troubleshooting Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/REFERENCE/SRE-Windows-Troubleshooting-Ref.md` |
-| Windows Best Practices Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/REFERENCE/Windows-Best-Practices-Ref.md` |
-| Windows System Architecture Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/REFERENCE/Windows-System-Architecture-Ref.md` |
-| Virtualbox Installations | 🌱 Beginner | `1-Beginner/01-Phase-1/03-Windows-Basics/VirtualBox Installations.md` |
-| Jq Challenge | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/Json/challenges/jq_challenge.md` |
-| Jq Query Solution | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/Json/solutions/jq_query_solution.sh` |
-| Changelog Challenge | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/Markdown/challenges/changelog_challenge.md` |
-| Changelog Goal | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/Markdown/solutions/CHANGELOG_GOAL.md` |
-| Data Formats Best Practices Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/REFERENCE/Data-Formats-Best-Practices-Ref.md` |
-| Json Api Standard Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/REFERENCE/JSON-API-Standard-Ref.md` |
-| Markdown Documentation Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/REFERENCE/Markdown-Documentation-Ref.md` |
-| Toml Configuration Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/REFERENCE/TOML-Configuration-Ref.md` |
-| Xml Enterprise Legacy Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/REFERENCE/XML-Enterprise-Legacy-Ref.md` |
-| Yaml Deep Dive Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/REFERENCE/YAML-Deep-Dive-Ref.md` |
-| Refactor Challenge | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/Toml/challenges/refactor_challenge.md` |
-| Extraction Challenge | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/Xml/challenges/extraction_challenge.md` |
-| Pom Extractor | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/Xml/solutions/pom_extractor.py` |
-| Dry Challenge | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/Yaml/challenges/dry_challenge.md` |
-| Markdown Linter | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/scripts/markdown-linter.py` |
-| Toml Config Manager | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/scripts/toml-config-manager.py` |
-| Validate Json | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/scripts/validate-json.py` |
-| Xml Parser | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/scripts/xml-parser.py` |
-| Yaml To Json | 🌱 Beginner | `1-Beginner/01-Phase-1/04-Data-Formats/scripts/yaml-to-json.py` |
-| Devops Directory Mindmap | 🌱 Beginner | `1-Beginner/01-Phase-1/05-Software-Stack/resources/DevOps-Directory-MindMap.md` |
-| Backup Configurations | 🌱 Beginner | `1-Beginner/01-Phase-1/05-Software-Stack/scripts/backup-configurations.ps1` |
-| Health Check Stack | 🌱 Beginner | `1-Beginner/01-Phase-1/05-Software-Stack/scripts/health-check-stack.sh` |
-| Install Software Stack | 🌱 Beginner | `1-Beginner/01-Phase-1/05-Software-Stack/scripts/install-software-stack.sh` |
-| Setup Dev Environment | 🌱 Beginner | `1-Beginner/01-Phase-1/05-Software-Stack/scripts/setup-dev-environment.ps1` |
-| Verify Dependencies | 🌱 Beginner | `1-Beginner/01-Phase-1/05-Software-Stack/scripts/verify-dependencies.py` |
-| Environment Setup | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/Environment-Setup.md` |
-| Angular Enterprise Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/Angular-Enterprise-Ref.md` |
-| Css Enterprise Tools Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/CSS-Enterprise-Tools-Ref.md` |
-| Django Fullstack Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/Django-Fullstack-Ref.md` |
-| Fastapi Modern Python Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/FastAPI-Modern-Python-Ref.md` |
-| Flask Microservices Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/Flask-Microservices-Ref.md` |
-| Mobile App Frameworks Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/Mobile-App-Frameworks-Ref.md` |
-| Nextjs Fullstack React Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/NextJS-Fullstack-React-Ref.md` |
-| Nodejs Express Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/NodeJS-Express-Ref.md` |
-| React Frontend Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/React-Frontend-Ref.md` |
-| Springboot Enterprise Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/SpringBoot-Enterprise-Ref.md` |
-| Tailwindcss Architecture Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/TailwindCSS-Architecture-Ref.md` |
-| Vuejs Progressive Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/VueJS-Progressive-Ref.md` |
-| Web Design Best Practices Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/Web-Design-Best-Practices-Ref.md` |
-| Web Fundamentals Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/REFERENCE/Web-Fundamentals-Ref.md` |
-| Build React App | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/scripts/build-react-app.ps1` |
-| Deploy Flask App | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/scripts/deploy-flask-app.sh` |
-| Springboot Health Check | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/scripts/springboot-health-check.sh` |
-| Test Django App | 🌱 Beginner | `1-Beginner/01-Phase-1/06-Web-Design/scripts/test-django-app.py` |
-| Aws Networking Deep Dive | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/01-Basic-Networking/aws-networking-deep-dive.md` |
-| Networking Fundamentals | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/01-Basic-Networking/networking-fundamentals.md` |
-| Deployment Models Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/04-Cloud-Fundamentals/Deployment-Models/deployment-models-guide.md` |
-| Service Models Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/04-Cloud-Fundamentals/Service-Models/service-models-guide.md` |
-| Aws Cli Commands | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/01-Introduction/AWS CLI Commands.md` |
-| Aws Fundamentals Devops | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/01-Introduction/aws-fundamentals-devops.md` |
-| Aws Networking Vpc Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/02-Networking/aws-networking-vpc-guide.md` |
-| Efs Fundamentals | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/03-Storage/EFS/efs-fundamentals.md` |
-| S3 Cli Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/03-Storage/s3-bucket/s3-cli-guide.md` |
-| S3 Storage Fundamentals | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/03-Storage/s3-storage-fundamentals.md` |
-| Aws Lambda Fundamentals | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/04-Compute-Serverless/Lambda/aws-lambda-fundamentals.md` |
-| Ec2 Compute Fundamentals | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/04-Compute-Serverless/ec2-compute-fundamentals.md` |
-| Ecs Application Deployment Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/05-Containers/ECS/ecs-application-deployment-guide.md` |
-| Ecs Cluster Setup Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/05-Containers/ECS/ecs-cluster-setup-guide.md` |
-| Ecs Fundamentals Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/05-Containers/ECS/ecs-fundamentals-guide.md` |
-| Ecs Monitoring Troubleshooting Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/05-Containers/ECS/ecs-monitoring-troubleshooting-guide.md` |
-| Ecs Security Networking Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/05-Containers/ECS/ecs-security-networking-guide.md` |
-| Aws Eks Fundamentals | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/05-Containers/EKS/aws-eks-fundamentals.md` |
-| Eks Cluster Setup Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/05-Containers/EKS/eks-cluster-setup-guide.md` |
-| Eks Fundamentals Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/05-Containers/EKS/eks-fundamentals-guide.md` |
-| Eks Monitoring Troubleshooting Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/05-Containers/EKS/eks-monitoring-troubleshooting-guide.md` |
-| Eks Security Networking Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/05-Containers/EKS/eks-security-networking-guide.md` |
-| Eks Workload Deployment Guide | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/05-Containers/EKS/eks-workload-deployment-guide.md` |
-| Active Directory  Configuration | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/06-Identity/Active Directory  Configuration.md` |
-| Cognito Fundamentals | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/06-Identity/Cognito/cognito-fundamentals.md` |
-| How To Join Windows Server 2019 To An Existing Active Directory Domain | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/06-Identity/How to Join Windows Server 2019 to an existing Active Directory Domain.md` |
-| Iam Ad Fundamentals | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/06-Identity/iam-ad-fundamentals.md` |
-| Sns Fundamentals | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/07-Messaging/SNS/sns-fundamentals.md` |
-| Sqs Fundamentals | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/07-Messaging/SQS/sqs-fundamentals.md` |
-| Route53 Fundamentals | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/08-Web-Hosting/Route53/route53-fundamentals.md` |
-| Pwd | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/08-Web-Hosting/Wordpress/PWD.md` |
-| Ubuntuwordpress | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/08-Web-Hosting/Wordpress/UbuntuWordPress.md` |
-| Connect | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/99-Resources/AWS/Connect.md` |
-| Meta Data | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/99-Resources/AWS/Meta-Data.md` |
-| Microsoft Visual C++ Redistributable Packages | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/99-Resources/AWS/Microsoft Visual C++ Redistributable Packages.md` |
-| Notes | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/99-Resources/AWS/Notes.md` |
-| How To Install And Configure A Dns Server On Windows Server 2019 | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/99-Resources/AWS/Server Manager/DNS Server/How to install and configure a DNS server on Windows Server 2019.md` |
-| Tools Tab | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/99-Resources/AWS/Server Manager/Tools Tab.md` |
-| Aws Core Services Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/REFERENCE/AWS-Core-Services-Ref.md` |
-| Azure Core Services Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/REFERENCE/Azure-Core-Services-Ref.md` |
-| Cloud Computing Models Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/REFERENCE/Cloud-Computing-Models-Ref.md` |
-| Cloud Performance Optimization Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/REFERENCE/Cloud-Performance-Optimization-Ref.md` |
-| Cloud Security Compliance Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/REFERENCE/Cloud-Security-Compliance-Ref.md` |
-| Container Orchestration Cloud Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/REFERENCE/Container-Orchestration-Cloud-Ref.md` |
-| Finops Cloud Economics Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/REFERENCE/FinOps-Cloud-Economics-Ref.md` |
-| Gcp Core Services Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/REFERENCE/GCP-Core-Services-Ref.md` |
-| Multi Cloud Migration Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/REFERENCE/Multi-Cloud-Migration-Ref.md` |
-| Serverless Architecture Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/REFERENCE/Serverless-Architecture-Ref.md` |
-| Aws Resource Inventory | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/scripts/aws-resource-inventory.py` |
-| Azure Cost Analyzer | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/scripts/azure-cost-analyzer.ps1` |
-| Cloud Security Audit | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/scripts/cloud-security-audit.py` |
-| Gcp Project Setup | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/scripts/gcp-project-setup.sh` |
-| Multi Cloud Health Check | 🌱 Beginner | `1-Beginner/01-Phase-1/07-Cloud-Foundations/scripts/multi-cloud-health-check.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/01-Phase-1/08-Repository-Management/01-Git-GitHub/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/01-Phase-1/08-Repository-Management/02-GitLab/CHALLENGES.md` |
-| Learning Path Summary | 🌱 Beginner | `1-Beginner/01-Phase-1/08-Repository-Management/02-GitLab/LEARNING_PATH_SUMMARY.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/01-Phase-1/08-Repository-Management/03-Bitbucket/CHALLENGES.md` |
-| Consolidation Summary | 🌱 Beginner | `1-Beginner/01-Phase-1/08-Repository-Management/CONSOLIDATION_SUMMARY.md` |
-| Interview Questions And Quiz | 🌱 Beginner | `1-Beginner/01-Phase-1/08-Repository-Management/Interview-Questions-and-Quiz.md` |
-| Branching Strategies Comparison Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/08-Repository-Management/REFERENCE/Branching-Strategies-Comparison-Ref.md` |
-| Git Internal Architecture Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/08-Repository-Management/REFERENCE/Git-Internal-Architecture-Ref.md` |
-| Gitlab Vs Github Enterprise Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/08-Repository-Management/REFERENCE/GitLab-vs-GitHub-Enterprise-Ref.md` |
-| Legacy Vcs Migration Ref | 🌱 Beginner | `1-Beginner/01-Phase-1/08-Repository-Management/REFERENCE/Legacy-VCS-Migration-Ref.md` |
-| Real Life Scenarios | 🌱 Beginner | `1-Beginner/01-Phase-1/08-Repository-Management/Real-Life-Scenarios.md` |
-| 01 Maturity Model | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/00-Foundations/Part-01-Philosophy-and-Mindset/01-Maturity-Model.md` |
-| 02 Automation Workflow | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/00-Foundations/Part-01-Philosophy-and-Mindset/02-Automation-Workflow.md` |
-| 01 Tools Comparison | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/00-Foundations/Part-02-Tooling-Landscape/01-Tools-Comparison.md` |
-| 02 How To Read Scripts | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/00-Foundations/Part-02-Tooling-Landscape/02-How-to-Read-Scripts.md` |
-| 01 Shell Customization | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/00-Foundations/Part-03-Environment-Setup/01-Shell-Customization.md` |
-| Audit Summary | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/AUDIT_SUMMARY.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/01-Introduction/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/02-Terminal-and-Navigation/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/03-File-Manipulation/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/03-File-Manipulation/Hidden-Files/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/03-File-Manipulation/Paging/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/03-File-Manipulation/Searching/CHALLENGES.md` |
-| Calculate System Metrics | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/03-File-Manipulation/Searching/calculate-system-metrics.sh` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/04-Man-Pages-and-Help/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/05-Vim-Basics/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/06-Permissions/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/07-Basic-Variables/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-01-Shell-Foundations/08-Programs-and-Commands/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/01-Arithmetic-and-Metrics/CHALLENGES.md` |
-| Readme Advanced | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/01-Arithmetic-and-Metrics/README_advanced.md` |
-| Calculate Metrics | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/01-Arithmetic-and-Metrics/calculate_metrics.sh` |
-| Operators | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/01-Arithmetic-and-Metrics/operators.sh` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/02-User-Input/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/03-Conditionals/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/04-Loops-and-Processing/CHALLENGES.md` |
-| Readme Advanced | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/04-Loops-and-Processing/README_advanced.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/05-Functions-and-Scope/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-02-Shell-Architecture/06-Strict-Mode-Safety/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-03-System-Drafting/01-Scripting-Basics/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/Part-03-System-Drafting/02-Advanced-IO/CHALLENGES.md` |
-| Bash Architecture Ref | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/REFERENCE/Bash-Architecture-Ref.md` |
-| Posix Vs Bash Compatibility Ref | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/REFERENCE/POSIX-vs-Bash-Compatibility-Ref.md` |
-| Regular Expressions Ref | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/REFERENCE/Regular-Expressions-Ref.md` |
-| Script Hardening Best Practices Ref | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/REFERENCE/Script-Hardening-Best-Practices-Ref.md` |
-| Shell Fundamentals Ref | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/REFERENCE/Shell-Fundamentals-Ref.md` |
-| Stream Editing Filtering Ref | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/REFERENCE/Stream-Editing-Filtering-Ref.md` |
-| Refcheatsheet | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/examples/Cheatsheets/refCheatSheet.md` |
-| Os Test | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/examples/os_test.sh` |
-| Pdf Scraper | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/resources/pdf_scraper.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/01-Fundamentals/CHALLENGES.md` |
-| System Monitor Demo | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/01-Fundamentals/system_monitor_demo.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/02-Control-Flow/CHALLENGES.md` |
-| Lab 01 Log Filter | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/02-Control-Flow/lab_01_log_filter.py` |
-| Lab 02 Validator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/02-Control-Flow/lab_02_validator.py` |
-| Lab 03 Port Checker | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/02-Control-Flow/lab_03_port_checker.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/03-Iterative-Logic-and-Loops/CHALLENGES.md` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/04-Data-Structures/CHALLENGES.md` |
-| Challenge 01 Inventory Mgmt | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/04-Data-Structures/challenges/challenge_01_inventory_mgmt.py` |
-| Challenge 02 Log Dedup | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/04-Data-Structures/challenges/challenge_02_log_dedup.py` |
-| Challenge 03 Config Merger | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/04-Data-Structures/challenges/challenge_03_config_merger.py` |
-| Solution 01 Inventory Mgmt | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/04-Data-Structures/challenges/solutions/solution_01_inventory_mgmt.py` |
-| Solution 02 Log Dedup | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/04-Data-Structures/challenges/solutions/solution_02_log_dedup.py` |
-| Solution 03 Config Merger | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/04-Data-Structures/challenges/solutions/solution_03_config_merger.py` |
-| Drift Detector Demo | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/04-Data-Structures/drift_detector_demo.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/05-Error-Handling/CHALLENGES.md` |
-| Challenge 01 Config Loader | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/05-Error-Handling/challenges/challenge_01_config_loader.py` |
-| Challenge 02 Health Retry | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/05-Error-Handling/challenges/challenge_02_health_retry.py` |
-| Challenge 03 Shutdown Handler | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/05-Error-Handling/challenges/challenge_03_shutdown_handler.py` |
-| Solution 01 Config Loader | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/05-Error-Handling/challenges/solutions/solution_01_config_loader.py` |
-| Solution 02 Health Retry | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/05-Error-Handling/challenges/solutions/solution_02_health_retry.py` |
-| Solution 03 Shutdown Handler | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/05-Error-Handling/challenges/solutions/solution_03_shutdown_handler.py` |
-| Resilient Deployer Demo | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/05-Error-Handling/resilient_deployer_demo.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/06-File-IO-DevOps/CHALLENGES.md` |
-| Log Processor Demo | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/06-File-IO-DevOps/log_processor_demo.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/07-Functions-and-Modules/CHALLENGES.md` |
-| Challenge 01 Health Checker | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/07-Functions-and-Modules/challenges/challenge_01_health_checker.py` |
-| Challenge 02 Retry Decorator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/07-Functions-and-Modules/challenges/challenge_02_retry_decorator.py` |
-| Challenge 03 Config Module | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/07-Functions-and-Modules/challenges/challenge_03_config_module.py` |
-| Solution 01 Health Checker | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/07-Functions-and-Modules/challenges/solutions/solution_01_health_checker.py` |
-| Solution 02 Retry Decorator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/07-Functions-and-Modules/challenges/solutions/solution_02_retry_decorator.py` |
-|   Init   | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/07-Functions-and-Modules/challenges/solutions/solution_03_config_pkg/config/__init__.py` |
-| Loader | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/07-Functions-and-Modules/challenges/solutions/solution_03_config_pkg/config/loader.py` |
-| Settings | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/07-Functions-and-Modules/challenges/solutions/solution_03_config_pkg/config/settings.py` |
-| Cloud Dispatcher Demo | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/07-Functions-and-Modules/cloud_dispatcher_demo.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/08-Cloud-Automation-Boto3/CHALLENGES.md` |
-| Testing With Moto | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/08-Cloud-Automation-Boto3/TESTING_WITH_MOTO.md` |
-| Conftest | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/08-Cloud-Automation-Boto3/conftest.py` |
-| S3 Janitor | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/08-Cloud-Automation-Boto3/s3_janitor.py` |
-| Test S3 Janitor | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/08-Cloud-Automation-Boto3/test_s3_janitor.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/CHALLENGES.md` |
-| Challenge 01 Backup Check | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/challenge_01_backup_check.py` |
-| Challenge 02 Log Parser | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/challenge_02_log_parser.py` |
-| Challenge 03 Sla Calculator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/challenge_03_sla_calculator.py` |
-| Challenge 04 Scheduler | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/challenge_04_scheduler.py` |
-| Solution 01 Backup Check | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/solutions/solution_01_backup_check.py` |
-| Solution 02 Log Parser | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/solutions/solution_02_log_parser.py` |
-| Solution 03 Sla Calculator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/solutions/solution_03_sla_calculator.py` |
-| Solution 04 Scheduler | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/challenges/solutions/solution_04_scheduler.py` |
-| Log Retention Demo | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-01-Python-Foundations/09-Time-and-Date/log_retention_demo.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/01-Pathlib-Modern-Files/CHALLENGES.md` |
-| Challenge 01 Log Cleanup | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/01-Pathlib-Modern-Files/challenges/challenge_01_log_cleanup.py` |
-| Challenge 02 Project Analyzer | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/01-Pathlib-Modern-Files/challenges/challenge_02_project_analyzer.py` |
-| Challenge 03 Safe Backup | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/01-Pathlib-Modern-Files/challenges/challenge_03_safe_backup.py` |
-| Challenge 04 Sync Dirs | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/01-Pathlib-Modern-Files/challenges/challenge_04_sync_dirs.py` |
-| Solution 01 Log Cleanup | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/01-Pathlib-Modern-Files/challenges/solutions/solution_01_log_cleanup.py` |
-| Solution 02 Project Analyzer | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/01-Pathlib-Modern-Files/challenges/solutions/solution_02_project_analyzer.py` |
-| Solution 03 Safe Backup | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/01-Pathlib-Modern-Files/challenges/solutions/solution_03_safe_backup.py` |
-| Solution 04 Sync Dirs | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/01-Pathlib-Modern-Files/challenges/solutions/solution_04_sync_dirs.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/02-JSON-Handling/CHALLENGES.md` |
-| Challenge 01 Api Parser | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/02-JSON-Handling/challenges/challenge_01_api_parser.py` |
-| Challenge 02 Config Validator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/02-JSON-Handling/challenges/challenge_02_config_validator.py` |
-| Challenge 03 Json Diff | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/02-JSON-Handling/challenges/challenge_03_json_diff.py` |
-| Solution 01 Api Parser | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/02-JSON-Handling/challenges/solutions/solution_01_api_parser.py` |
-| Solution 02 Config Validator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/02-JSON-Handling/challenges/solutions/solution_02_config_validator.py` |
-| Solution 03 Json Diff | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/02-JSON-Handling/challenges/solutions/solution_03_json_diff.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/03-YAML-Handling/CHALLENGES.md` |
-| Challenge 01 Manifest Gen | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/03-YAML-Handling/challenges/challenge_01_manifest_gen.py` |
-| Challenge 02 Inventory Parser | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/03-YAML-Handling/challenges/challenge_02_inventory_parser.py` |
-| Challenge 03 Config Merger | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/03-YAML-Handling/challenges/challenge_03_config_merger.py` |
-| Challenge 04 Ansible Inventory | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/03-YAML-Handling/challenges/challenge_04_ansible_inventory.py` |
-| Solution 01 Manifest Gen | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/03-YAML-Handling/challenges/solutions/solution_01_manifest_gen.py` |
-| Solution 02 Inventory Parser | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/03-YAML-Handling/challenges/solutions/solution_02_inventory_parser.py` |
-| Solution 03 Config Merger | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/03-YAML-Handling/challenges/solutions/solution_03_config_merger.py` |
-| Solution 04 Ansible Inventory | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/03-YAML-Handling/challenges/solutions/solution_04_ansible_inventory.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/04-Testing-and-QA/CHALLENGES.md` |
-| Challenge 01 Config Loader | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/04-Testing-and-QA/challenges/challenge_01_config_loader.py` |
-| Challenge 02 Health Retry | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/04-Testing-and-QA/challenges/challenge_02_health_retry.py` |
-| Challenge 03 Shutdown Handler | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/04-Testing-and-QA/challenges/challenge_03_shutdown_handler.py` |
-| Solution 01 Config Loader | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/04-Testing-and-QA/challenges/solutions/solution_01_config_loader.py` |
-| Solution 02 Health Retry | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/04-Testing-and-QA/challenges/solutions/solution_02_health_retry.py` |
-| Solution 03 Shutdown Handler | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/04-Testing-and-QA/challenges/solutions/solution_03_shutdown_handler.py` |
-| Resilient Deployer Demo | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/04-Testing-and-QA/resilient_deployer_demo.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/05-Virtual-Environments/CHALLENGES.md` |
-| Challenge 01 Venv Creator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/05-Virtual-Environments/challenges/challenge_01_venv_creator.py` |
-| Challenge 02 Req Checker | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/05-Virtual-Environments/challenges/challenge_02_req_checker.py` |
-| Challenge 03 Portable Setup | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/05-Virtual-Environments/challenges/challenge_03_portable_setup.py` |
-| Challenge 04 Isolated Task | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/05-Virtual-Environments/challenges/challenge_04_isolated_task.py` |
-| Solution 01 Venv Creator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/05-Virtual-Environments/challenges/solutions/solution_01_venv_creator.py` |
-| Solution 02 Req Checker | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/05-Virtual-Environments/challenges/solutions/solution_02_req_checker.py` |
-| Solution 03 Portable Setup | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/05-Virtual-Environments/challenges/solutions/solution_03_portable_setup.py` |
-| Solution 04 Isolated Task | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/05-Virtual-Environments/challenges/solutions/solution_04_isolated_task.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/06-Package-Management/CHALLENGES.md` |
-| Challenge 01 Dependency Analyzer | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/06-Package-Management/challenges/challenge_01_dependency_analyzer.py` |
-| Challenge 02 Pip Wrapper | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/06-Package-Management/challenges/challenge_02_pip_wrapper.py` |
-| Challenge 03 Version Bumper | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/06-Package-Management/challenges/challenge_03_version_bumper.py` |
-| Challenge 04 Conflict Finder | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/06-Package-Management/challenges/challenge_04_conflict_finder.py` |
-| Solution 01 Dependency Analyzer | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/06-Package-Management/challenges/solutions/solution_01_dependency_analyzer.py` |
-| Solution 02 Pip Wrapper | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/06-Package-Management/challenges/solutions/solution_02_pip_wrapper.py` |
-| Solution 03 Version Bumper | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/06-Package-Management/challenges/solutions/solution_03_version_bumper.py` |
-| Solution 04 Conflict Finder | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/06-Package-Management/challenges/solutions/solution_04_conflict_finder.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/07-Regular-Expressions/CHALLENGES.md` |
-| Challenge 01 Nginx Parser | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/07-Regular-Expressions/challenges/challenge_01_nginx_parser.py` |
-| Challenge 02 Data Masker | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/07-Regular-Expressions/challenges/challenge_02_data_masker.py` |
-| Challenge 03 Error Aggregator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/07-Regular-Expressions/challenges/challenge_03_error_aggregator.py` |
-| Challenge 04 Config Extractor | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/07-Regular-Expressions/challenges/challenge_04_config_extractor.py` |
-| Solution 01 Nginx Parser | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/07-Regular-Expressions/challenges/solutions/solution_01_nginx_parser.py` |
-| Solution 02 Data Masker | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/07-Regular-Expressions/challenges/solutions/solution_02_data_masker.py` |
-| Solution 03 Error Aggregator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/07-Regular-Expressions/challenges/solutions/solution_03_error_aggregator.py` |
-| Solution 04 Config Extractor | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/07-Regular-Expressions/challenges/solutions/solution_04_config_extractor.py` |
-| Challenge 01 Port Scanner | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/challenges/challenge_01_port_scanner.py` |
-| Challenge 02 File Args | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/challenges/challenge_02_file_args.py` |
-| Challenge 03 Safety Flags | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/challenges/challenge_03_safety_flags.py` |
-| Challenge 04 Subcommands | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/challenges/challenge_04_subcommands.py` |
-| Challenge 05 Env Override | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/challenges/challenge_05_env_override.py` |
-| Challenge 06 Cli Wrapper | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/challenges/challenge_06_cli_wrapper.py` |
-| Solution 01 Port Scanner | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/challenges/solutions/solution_01_port_scanner.py` |
-| Solution 02 File Args | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/challenges/solutions/solution_02_file_args.py` |
-| Solution 03 Safety Flags | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/challenges/solutions/solution_03_safety_flags.py` |
-| Solution 04 Subcommands | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/challenges/solutions/solution_04_subcommands.py` |
-| Solution 05 Env Override | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/challenges/solutions/solution_05_env_override.py` |
-| Solution 06 Cli Wrapper | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/challenges/solutions/solution_06_cli_wrapper.py` |
-| Deployer Demo | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/01-Command-Line-Arguments/deployer_demo.py` |
-| Challenges | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/02-Environment-Variables/CHALLENGES.md` |
-| Challenge 01 Validator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/02-Environment-Variables/challenges/challenge_01_validator.py` |
-| Challenge 02 Masking Logger | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/02-Environment-Variables/challenges/challenge_02_masking_logger.py` |
-| Challenge 03 Bool Parser | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/02-Environment-Variables/challenges/challenge_03_bool_parser.py` |
-| Challenge 04 Dynamic Loader | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/02-Environment-Variables/challenges/challenge_04_dynamic_loader.py` |
-| Challenge 05 Prefix Loader | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/02-Environment-Variables/challenges/challenge_05_prefix_loader.py` |
-| Solution 01 Validator | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/02-Environment-Variables/challenges/solutions/solution_01_validator.py` |
-| Solution 02 Masking Logger | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/02-Environment-Variables/challenges/solutions/solution_02_masking_logger.py` |
-| Solution 03 Bool Parser | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/02-Environment-Variables/challenges/solutions/solution_03_bool_parser.py` |
-| Solution 04 Dynamic Loader | 🌱 Beginner | `1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-03-Python-Systems-Drafting/02-Environment-Variables/challenges/solutions/solution_04_dynamic_loader.py` |
 
 </details>
 
@@ -573,11 +573,11 @@ python script.py            # Execute automation
 
 | File | Last Modified | Path |
 | :--- | :--- | :--- |
-| 01-Core-Automation-Keywords.md | 2026-02-05 00:09 | `2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/02-Python-for-Infrastructure/01-Part-1-The-Blueprint/04-Reference/01-Core-Automation-Keywords.md` |
-| README.md | 2026-02-04 23:32 | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/03-Storage/EFS/README.md` |
-| efs-fundamentals.md | 2026-02-04 23:32 | `1-Beginner/01-Phase-1/07-Cloud-Foundations/05-AWS-Basics/03-Storage/EFS/efs-fundamentals.md` |
-| README.md | 2026-02-04 23:32 | `1-Beginner/01-Phase-1/02-Linux/README.md` |
-| README.md | 2026-02-04 23:32 | `1-Beginner/01-Phase-1/03-Windows-Basics/README.md` |
+| git_command.py | 2026-02-05 01:29 | `git_command.py` |
+| core_auto.py | 2026-02-05 00:40 | `2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/02-Python-for-Infrastructure/01-Part-1-The-Blueprint/04-Reference/core_auto.py` |
+| LICENSE.md | 2026-02-05 00:30 | `.lessenv/lib/python3.14/site-packages/pip-26.0.1.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md` |
+| wait.py | 2026-02-05 00:30 | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/wait.py` |
+| url.py | 2026-02-05 00:30 | `.lessenv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/url.py` |
 
 
 ---
