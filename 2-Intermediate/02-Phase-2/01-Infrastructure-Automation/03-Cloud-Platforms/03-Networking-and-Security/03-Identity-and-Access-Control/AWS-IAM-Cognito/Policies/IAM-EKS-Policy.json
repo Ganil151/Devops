@@ -1,0 +1,51 @@
+AmazonEC2FullAccess, AmazonEKS\_CNI\_Policy, AmazonEKSClusterPolicy, AmazonEKSWorkerNodePolicy, AWSCloudFormationFullAccess, IAMFullAccess
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:*",
+        "eks:*",
+        "cloudformation:*",
+        "iam:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "autoscaling:DescribeAutoScalingGroups",
+        "autoscaling:UpdateAutoScalingGroup",
+        "ec2:CreateTags",
+        "ec2:DeleteTags",
+        "ec2:DescribeInstances",
+        "ec2:DescribeTags",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeRouteTables",
+        "ec2:DescribeInternetGateways",
+        "ec2:DescribeVolumes",
+        "ec2:DescribeLaunchTemplates",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:ModifyInstanceAttribute",
+        "ec2:RunInstances",
+        "ec2:TerminateInstances",
+        "eks:DescribeCluster",
+        "eks:ListClusters",
+        "eks:CreateCluster",
+        "eks:DeleteCluster",
+        "eks:DescribeNodegroup",
+        "eks:ListNodegroups",
+        "eks:CreateNodegroup",
+        "eks:DeleteNodegroup",
+        "eks:TagResource",
+        "eks:UntagResource",
+        "iam:PassRole"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
