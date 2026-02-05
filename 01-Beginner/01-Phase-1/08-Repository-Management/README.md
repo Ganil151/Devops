@@ -42,8 +42,35 @@
 
 ---
 
-## 🎯 Learning Objectives
+---
 
+## 🎯 Junior's Mission: The Corrupted History
+**Scenario**: You just merged a feature branch, and suddenly the "Main" build is failing. You realize your merge accidentally brought in a bug from an old experiment.
+**Your Goal**: Use `git log` to find the breaking commit and safely **Revert** the changes without losing your team's work.
+
+---
+
+## 🏗️ Operational Reality: Production Hazards
+In a professional DevOps team, Git is the **Source of Truth** for the entire cloud.
+1.  **Merge Hell**: Waiting too long (weeks) to merge your code, leading to hundreds of conflicts that are impossible to solve safely.
+2.  **Detached HEAD**: Getting lost in the "Time Machine" and making changes that aren't attached to any branch—leading to lost work.
+3.  **Secret Leakage**: Accidentally committing an AWS Access Key. Even if you "delete" it in a new commit, it's still in the history for hackers to find.
+4.  **Force Push Destruction**: Using `git push --force` and accidentally overwriting a coworker's work on the shared remote server.
+
+---
+
+## 🛠️ The Git Toolbelt (Essential Commands)
+| Command | Why it matters |
+| :--- | :--- |
+| `git status` | Situational awareness. Where am I and what is unsaved? |
+| `git log --oneline --graph` | A visual map of the project's history. |
+| `git diff` | See exactly what characters were changed before you commit. |
+| `git checkout -b <name>` | Safe isolation. Never work directly on `main`. |
+| `git stash` | Temporarily "pausing" your work to switch to an urgent bug fix. |
+
+---
+
+## 🎯 Learning Objectives
 By the end of this module, you will:
 
 - ✅ **Master the Flow**: Understand `add`, `commit`, `push`, and `pull`.
@@ -51,6 +78,8 @@ By the end of this module, you will:
 - ✅ **Resolve Conflicts**: Surgically fixing overlapping changes.
 - ✅ **Audit History**: Using `git log` and `git blame` to find bugs.
 - ✅ **Automate with Webhooks**: Triggering robots when code is pushed.
+
+---
 
 ---
 

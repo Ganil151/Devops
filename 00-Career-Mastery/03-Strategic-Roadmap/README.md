@@ -113,4 +113,4 @@ Certifications validate your baseline knowledge for recruiters and ATS systems.
 
 ---
 
-**Next Part**: [02-Resume-Engineering](../03-Resume-Engineering/README.md)
+**Next Part**: [02-Resume-Engineering](../04-Resume-Engineering/README.md)

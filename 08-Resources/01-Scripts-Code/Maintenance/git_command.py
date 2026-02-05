@@ -191,9 +191,19 @@ class GitAutomation:
         key_files = []
         for category in ["Scripts", "Documentation", "Reference", "Curriculum", "Resources"]:
             if category in categories:
-                for item in categories[category][:2]:
-                    filename = Path(item.split(": ", 1)[1]).name
-                    key_files.append(filename)
+                for item in categories[category]:
+                    full_path = item.split(": ", 1)[1]
+                    path_obj = Path(full_path)
+                    
+                    # Add parent folder for generic names like README.md
+                    if path_obj.name == "README.md" and len(path_obj.parts) > 1:
+                        display_name = f"{path_obj.parts[-2]}/{path_obj.name}"
+                    else:
+                        display_name = path_obj.name
+                    
+                    if display_name not in key_files:
+                        key_files.append(display_name)
+                    
                     if len(key_files) >= 3:
                         break
             if len(key_files) >= 3:
@@ -246,13 +256,26 @@ class GitAutomation:
         print("✅ Changes committed successfully")
         return True
 
+    def pull_changes(self) -> bool:
+        """Pull latest changes from remote with rebase."""
+        print("📥 Pulling latest changes (with rebase)...")
+        success, stdout, stderr = self.run_command(["git", "pull", "--rebase"], timeout=60)
+        
+        if success:
+            print("✅ Pull successful")
+            return True
+        else:
+            print(f"❌ Pull failed: {stderr}")
+            if "merging" in stderr or "conflict" in stderr:
+                print("⚠️  Merge conflict detected. Manual intervention required.")
+            return False
+
     def push_changes(self, max_retries: int = 3) -> bool:
         """Push commits to remote with retry logic and exponential backoff."""
         print("\n🚀 Pushing to remote...")
         
         for attempt in range(1, max_retries + 1):
             # Increase timeout for potential large pushes or slow connections
-            # First attempt: 120s, Second: 240s, etc.
             current_timeout = 120 * attempt 
             
             print(f"  Attempt {attempt}/{max_retries} (Timeout: {current_timeout}s)...")
@@ -264,7 +287,18 @@ class GitAutomation:
                     print(stdout)
                 return True
             
-            print(f"⚠️  Attempt {attempt} failed: {stderr.strip() if stderr else 'Command timed out'}")
+            err_msg = stderr.strip() if stderr else "Command timed out"
+            
+            # Specialized error handling
+            if "non-fast-forward" in err_msg or "fetch first" in err_msg:
+                print(f"⚠️  Push rejected: remote has changes I don't have.")
+                if self.pull_changes():
+                    print("🔄 Retrying push after successful pull...")
+                    continue # Retry immediately
+                else:
+                    return False # Could not resolve via pull
+            
+            print(f"⚠️  Attempt {attempt} failed: {err_msg}")
             
             if attempt < max_retries:
                 wait_time = 2 ** attempt

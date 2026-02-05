@@ -42,8 +42,35 @@
 
 ---
 
-## 🎯 Learning Objectives
+---
 
+## 🎯 Junior's Mission: The Silent Server
+**Scenario**: You are paged for a server that has become unresponsive. It's still "running" (pingable), but you can't SSH into it.
+**Your Goal**: Identify if the issue is a **Resource Exhaustion** (CPU/RAM/Disk), a **Process Hang** (Zombie processes), or a **Permission Lockdown** (Wrong SSH keys).
+
+---
+
+## 🏗️ Operational Reality: Production Hazards
+Linux in production is about **Stability** and **Constraint**. Watch out for these:
+1.  **OOM Killer**: When a process eats too much RAM, the Kernel starts killing other random processes to save itself.
+2.  **Inodes Exhaustion**: You have plenty of disk space (GB), but you have too many tiny files. You can't create new files because the "File Index" (Inodes) is full.
+3.  **Zombie Processes**: Processes that have finished but haven't been "Reaped" by their parent, clogging the process table.
+4.  **Shadow Permissions**: A script fails not because the code is wrong, but because the user running the CI/CD job doesn't have `rx` access to the target folder.
+
+---
+
+## 🛠️ The Linux Toolbelt (Essential Commands)
+| Command | Why it matters |
+| :--- | :--- |
+| `top` / `htop` | Real-time resource monitoring (Who is the CPU thief?). |
+| `ls -la /var/log` | The first place you look when something breaks. |
+| `df -h` | Is the disk full? (Check this first in a crash). |
+| `ps aux | grep <name>` | Find exactly which process ID (PID) is running. |
+| `chmod +x <script>` | Turning a text file into an executable tool. |
+
+---
+
+## 🎯 Learning Objectives
 By the end of this module, you will:
 
 - ✅ **Navigate the Shell**: Master `cd`, `ls`, `mkdir`, and `rm` with confidence.

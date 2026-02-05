@@ -42,8 +42,35 @@ You don't configure servers; you configure **Services**. You use **Auto-Scaling 
 
 ---
 
-## 🎯 Learning Objectives
+---
 
+## 🎯 Junior's Mission: The Stealthy Sprawl
+**Scenario**: Your CFO gets a notification that the AWS bill has doubled overnight. You suspect a developer launched an expensive "experimental" cluster and forgot to shut it down.
+**Your Goal**: Use the **Cloud CLI** and **Resource Tags** to identify the most expensive resources in the production account and shut down anything that isn't tagged as "Critical-System."
+
+---
+
+## 🏗️ Operational Reality: Production Hazards
+Cloud Platforms provide infinite scale, but they also provide infinite ways to fail.
+1.  **The "Default VPC" Trap**: Deploying your production database in the Default VPC with a Public IP. Every bot on the internet is now attempting to brute-force your password.
+2.  **Hard Resource Limits**: You try to scale to 100 instances during a Black Friday sale, but you hit the "vCPU Service Quota." Your site crashes because you didn't request a limit increase weeks in advance.
+3.  **Cross-Region Latency**: You host your database in Ireland (`eu-west-1`) and your Web App in Virginia (`us-east-1`). Every click takes 300ms longer because the packets have to cross the Atlantic Ocean.
+4.  **Implicit Trust**: Assuming that because a service is "Serverless" (like S3 or Lambda), it is inherently secure. If you don't use "Bucket Policies," your private customer data is publicly readable via a simple URL.
+
+---
+
+## 🛠️ The Cloud Engineer's Toolbelt
+| Tool/Command | Why it matters |
+| :--- | :--- |
+| `aws ec2 describe-images` | Finding that old 50GB snapshot that is costing $10/month for no reason. |
+| `gcloud projects get-iam-policy` | Auditing exactly who has "Owner" rights to your cloud project. |
+| `aws cloudwatch put-metric-alarm` | Setting up the "Cost Guardrail" to alert you if the bill exceeds your budget. |
+| `ping -c 5 google.com` | Simple check: Does your Private Subnet have a working NAT Gateway? |
+| `nslookup <rds_endpoint>` | Is your database endpoint resolving to a private or public IP? |
+
+---
+
+## 🎯 Learning Objectives
 By the end of this module, you will:
 
 - ✅ **Master Multi-AZ Design**: Designing for zero-outage compute.
@@ -51,6 +78,8 @@ By the end of this module, you will:
 - ✅ **Enforce Secret Management**: Using AWS Secrets Manager/Parameter Store.
 - ✅ **Adopt Serverless Architectures**: Moving beyond managed VMs.
 - ✅ **Operate FinOps**: Configuring budgets, alarms, and cost-saving tags.
+
+---
 
 ---
 

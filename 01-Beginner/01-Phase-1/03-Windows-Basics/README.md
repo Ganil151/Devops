@@ -42,8 +42,35 @@
 
 ---
 
-## 🎯 Learning Objectives
+---
 
+## 🎯 Junior's Mission: The Fleet Freeze
+**Scenario**: Your company has 100 Windows-based build nodes, and they all need a specific security update installed by noon. Doing this manually via Remote Desktop is impossible.
+**Your Goal**: Use **PowerShell** to query all nodes, identify which ones are missing the update, and execute a remote install script to "Unfreeze" the fleet.
+
+---
+
+## 🏗️ Operational Reality: Production Hazards
+Windows in an automated environment has unique "Gotchas" that can kill a deployment.
+1.  **Reboot Loops**: An update requires a reboot, but the automation tool tries to keep working, leading to a "File in Use" error and a crashed pipeline.
+2.  **Execution Policy Lock**: A script fails not because the code is wrong, but because the default Windows policy prohibits running unassigned local scripts.
+3.  **Path Length Limit**: Legacy Windows has a 260-character limit for file paths. Deeply nested Git repos or Node.js projects will crash if this isn't tuned in the Registry.
+4.  **Service Accounts**: A service runs fine when *you* are logged in, but fails in the background because the "Service Account" doesn't have permission to write to its own logs.
+
+---
+
+## 🛠️ The Windows Toolbelt (Essential Commands)
+| Command | Why it matters |
+| :--- | :--- |
+| `Get-Service | Where-Object Status -eq "Stopped"` | Find exactly which critical services have crashed. |
+| `Get-Content -Wait -Tail 20` | Power-user way to watch a log file live (like `tail -f`). |
+| `gpupdate /force` | Force-apply the latest "Employee Handbook" (Group Policy) rules. |
+| `Stop-Process -Name "processname" -Force` | Killing a "Zombie" application that won't close. |
+| `Get-EventLog -LogName System -Newest 10` | The "Black Box" recorder. Why did the server reboot? |
+
+---
+
+## 🎯 Learning Objectives
 By the end of this module, you will:
 
 - ✅ **Master Verb-Noun Logic**: Thinking in PowerShell (`Get`, `Set`, `New`, `Invoke`).
@@ -51,6 +78,8 @@ By the end of this module, you will:
 - ✅ **Navigate the Registry**: safely auditing and updating system settings.
 - ✅ **Manage Local Systems**: Standardizing users, groups, and permissions.
 - ✅ **Automate Fleet Tuning**: Using "Golden Scripts" to optimize performance.
+
+---
 
 ---
 

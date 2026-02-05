@@ -1,4 +1,4 @@
-# 🏗️ Part 04: Portfolio Projects & The "Golden Project"
+# 🏗️ Part 06: Portfolio Projects & The "Golden Project"
 
 Your GitHub is your physical proof. One high-quality repo is worth more than 50 "Hello World" tutorials.
 

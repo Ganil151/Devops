@@ -43,8 +43,35 @@ Think of Cloud Computing like **Renting a Modular Home**:
 
 ---
 
-## 🎯 Learning Objectives
+---
 
+## 🎯 Junior's Mission: The Multi-AZ Outage
+**Scenario**: An entire AWS region is experiencing "Increased Latency," and your health checks are failing.
+**Your Goal**: Verify if your application is spread across multiple **Availability Zones** and use the **Cloud CLI** to check the status of your Load Balancer's health checks.
+
+---
+
+## 🏗️ Operational Reality: Production Hazards
+The cloud is an infinite resource, but it's not a "Magic Box."
+1.  **Zombie Resources**: Creating a 1TB high-speed disk for an experiment and forgetting to delete it. You pay for it every second.
+2.  **The IAM "Star" Permission**: Giving a user `AdministratorAccess` (The *) because "it's easier." One compromised key can now delete the entire company's infrastructure.
+3.  **Single-AZ Fallacy**: Thinking your app is "in the cloud" means it's safe. If you only deploy to `us-east-1a` and that data center loses power, you are offline.
+4.  **API Throttling**: Trying to start 1,000 servers at once. The cloud provider will "Throttle" your API calls to protect their own systems, crashing your automation.
+
+---
+
+## 🛠️ The Cloud Toolbelt (Essential Commands)
+| Command | Why it matters |
+| :--- | :--- |
+| `aws configure` | Setting up your digital "Passport" to talk to the cloud. |
+| `aws ec2 describe-instances` | Seeing exactly what is running (and costing money). |
+| `aws s3 ls` | Checking your "Infinite Closet" for storage buckets. |
+| `az vm list` | The Azure equivalent for managing compute nodes. |
+| `gcloud compute instances list` | The GCP equivalent for viewing your fleet. |
+
+---
+
+## 🎯 Learning Objectives
 By the end of this module, you will:
 
 - ✅ **Map the Big Three**: Understanding the differences between AWS, Azure, and GCP.
@@ -52,6 +79,8 @@ By the end of this module, you will:
 - ✅ **Enforce Security**: Using IAM (Identity and Access Management) to lock your doors.
 - ✅ **Control Costs**: Setting up Budgets and Alerts to prevent bill shock.
 - ✅ **Choose the Model**: Understanding IaaS, PaaS, and SaaS.
+
+---
 
 ---
 

@@ -44,10 +44,10 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 
 | Asset | Status | Location |
 | :--- | :--- | :--- |
-| **Master Roadmap** | ✅ Done | [Career Strategy Hub](../02-Strategic-Roadmap/README.md) |
-| **Resume Keyword Matrix** | ✅ Done | [Resume Engineering](../03-Resume-Engineering/README.md) |
-| **STAR Scenario Bank** | ✅ Done | [Interview Mastery](../04-Interview-Mastery/README.md) |
-| **Golden Project Checklist** | ✅ Done | [Portfolio Guidance](../05-Portfolio-Guide/README.md) |
+| **Master Roadmap** | ✅ Done | [Career Strategy Hub](../03-Strategic-Roadmap/README.md) |
+| **Resume Keyword Matrix** | ✅ Done | [Resume Engineering](../04-Resume-Engineering/README.md) |
+| **STAR Scenario Bank** | ✅ Done | [Interview Mastery](../05-Interview-Mastery/README.md) |
+| **Golden Project Checklist** | ✅ Done | [Portfolio Guidance](../06-Portfolio-Guide/README.md) |
 
 ---
 
@@ -55,7 +55,7 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 
 For a step-by-step implementation of a professional-grade project, see the:
 
-👉 **[Golden Project Implementation Guide](../05-Portfolio-Guide/GOLDEN_PROJECT_GUIDE.md)**
+👉 **[Golden Project Implementation Guide](../06-Portfolio-Guide/GOLDEN_PROJECT_GUIDE.md)**
 
 ---
 

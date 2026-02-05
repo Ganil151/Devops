@@ -43,8 +43,35 @@ Think of Data Formats like **Shipping Containers**:
 
 ---
 
-## 🎯 Learning Objectives
+---
 
+## 🎯 Junior's Mission: The Config Crash
+**Scenario**: You are tasked with migrating a legacy server list from a CSV file into a new Kubernetes configuration (YAML).
+**Your Goal**: Ensure the YAML is **Lint-Perfect**, handles **Special Characters** correctly, and can be successfully parsed by a Python validation script.
+
+---
+
+## 🏗️ Operational Reality: Production Hazards
+In the world of "Configuration as Code," a data format error is a **System Failure**.
+1.  **The Invisible Tab**: Mixing Tabs and Spaces in YAML will cause the parser to fail, but it looks identical to the naked eye.
+2.  **Trailing Commas**: Adding a comma after the last item in a JSON list will break most strict parsers (including AWS IAM policies).
+3.  **Encoding Issues**: Saving a file in `UTF-16` instead of `UTF-8` can cause monitoring tools to read gibberish.
+4.  **String vs. Number**: In YAML, `port: "80"` is a string, while `port: 80` is an integer. Some tools will crash if they expect one and get the other.
+
+---
+
+## 🛠️ The Data Toolbelt (Essential Commands)
+| Command | Why it matters |
+| :--- | :--- |
+| `yq` | A command-line YAML processor. Like `jq` but for YAML. |
+| `jq .` | Pretty-print and validate JSON files in the terminal. |
+| `yamllint <file>` | Checks if your YAML follows best practices (not just syntax). |
+| `python3 -m json.tool` | Built-in JSON validator if `jq` isn't installed. |
+| `cat -A <file>` | Shows "hidden" characters (like tabs) that break YAML. |
+
+---
+
+## 🎯 Learning Objectives
 By the end of this module, you will:
 
 - ✅ **Decode YAML**: Mastering indentation, lists, and key-value pairs.
@@ -52,6 +79,8 @@ By the end of this module, you will:
 - ✅ **Navigate XML**: Understanding tags, attributes, and legacy systems.
 - ✅ **Validate State**: Using tools to check for syntax errors.
 - ✅ **Convert Data**: Moving from YAML to JSON and back safely.
+
+---
 
 ---
 

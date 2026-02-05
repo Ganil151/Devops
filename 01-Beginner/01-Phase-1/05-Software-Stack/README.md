@@ -41,8 +41,35 @@
 
 ---
 
-## 🎯 Learning Objectives
+---
 
+## 🎯 Junior's Mission: The Stack Audit
+**Scenario**: You are handed a legacy Python app and asked to containerize it. You don't know what database it uses or what version of Python it needs.
+**Your Goal**: "Audit the Stack" by reading the `requirements.txt` and `dockerfile` to map out the **Dependencies**, the **Runtime**, and the **Database** type.
+
+---
+
+## 🏗️ Operational Reality: Production Hazards
+In a high-tier SRE environment, you are the one responsible for the "Glue" between the layers.
+1.  **Dependency Hell**: One library update breaks the entire backend because it's incompatible with the OS version.
+2.  **Stateful Traps**: Keeping user images on the server's local disk instead of S3. If the server is deleted, the images are gone forever.
+3.  **The "Slow Query" Death**: The app is slow not because the code is bad, but because the database doesn't have an "Index" on a common search term.
+4.  **Version Drift**: The developer uses Python 3.12 on their laptop, but the server is running 3.8. The code crashes instantly upon deployment.
+
+---
+
+## 🛠️ The Stack Toolbelt (Essential Commands)
+| Command | Why it matters |
+| :--- | :--- |
+| `pip list` / `npm list` | See exactly which library versions are currently installed. |
+| `docker inspect <container>` | "X-Ray" vision for your stack. Where are the files stored? |
+| `tail -f /var/log/app.log` | Watching the "Mental State" of the backend in real-time. |
+| `env` | List the environment variables. This is where secrets and DB URLs live. |
+| `netstat -plnt` | See which part of the stack is listening on which port. |
+
+---
+
+## 🎯 Learning Objectives
 By the end of this module, you will:
 
 - ✅ **Map the Tiers**: Identifying Frontend, Backend, and Database layers.
@@ -50,6 +77,8 @@ By the end of this module, you will:
 - ✅ **Compare Frameworks**: Choosing the right tool for the job.
 - ✅ **Analyze Request Flow**: Tracing a user click from the browser to the disk.
 - ✅ **Audit Dependencies**: Understanding how third-party libraries define your stack.
+
+---
 
 ---
 

@@ -41,8 +41,35 @@
 
 ---
 
-## 🎯 Learning Objectives
+---
 
+## 🎯 Junior's Mission: The Broken Dashboard
+**Scenario**: Your team's Grafana-style dashboard is showing "No Data," but you know the backend is healthy. A quick look at the browser console shows a "CORS Error."
+**Your Goal**: Identify if the issue is a **Protocol Mismatch** (HTTP vs HTTPS), a **Header Misconfiguration**, or a broken **API Endpoint** and fix it so the SREs can see their metrics again.
+
+---
+
+## 🏗️ Operational Reality: Production Hazards
+Frontend engineering in a DevOps context is about **Resilience** at the edge.
+1.  **CORS Hell**: Your frontend is on `app.com` and your API is on `api.com`. If you don't configure "Cross-Origin Resource Sharing," the browser will block every request for security reasons.
+2.  **The "White Screen of Death"**: A single JavaScript error in a non-critical component crashes the entire page because there are no "Error Boundaries."
+3.  **Lighthouse Failure**: The app takes 10 seconds to load because you are importing a 5MB "Heavy library" to do a 5-line task.
+4.  **Mobile Responsive Drift**: The dashboard looks great on your MacBook, but is completely unusable on the tablet the datacenter techs use.
+
+---
+
+## 🛠️ The Web Toolbelt (Essential Commands)
+| Tool/Command | Why it matters |
+| :--- | :--- |
+| `F12` (DevTools) | The "Terminal" of the web. Inspecting network traffic and console errors. |
+| `npm run build` | Compiling your human-readable code into a tiny, fast "Production Bundle." |
+| `lighthouse` | Auditing your site for **Performance**, **SEO**, and **Accessibility**. |
+| `curl -I <url>` | Checking the HTTP headers. Are we sending the right `Content-Type`? |
+| `npx tailwindcss init` | Scaffolding the modern "Atomic CSS" utility engine. |
+
+---
+
+## 🎯 Learning Objectives
 By the end of this module, you will:
 
 - ✅ **Structure with Semantics**: Using HTML5 properly for SEO and Accessibility.
@@ -50,6 +77,8 @@ By the end of this module, you will:
 - ✅ **Componentize with React**: Building your first interactive UI modules.
 - ✅ **Build with Full-Stack**: Creating APIs with Flask/FastAPI and connecting them.
 - ✅ **Optimize Performance**: Understanding Bundle Sizes and Lazy Loading.
+
+---
 
 ---
 
