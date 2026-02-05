@@ -31,18 +31,20 @@ A realistic schedule of a Junior DevOps Engineer:
 
 ---
 
-## 3. Technical Sub-Modules
-This directory contains the following focused modules:
-*   **[01-The-Tool-Landscape](./01-The-Tool-Landscape/)**: A high-level overview of the categories (SCM, CI/CD, IaC, Monitoring, Security).
-*   **[02-Soft-Skills-for-Engineers](./02-Soft-Skills-for-Engineers/)**: How to communicate outages, write clear documentation, and participate in blameless post-mortems.
-*   **[03-Hiring-and-Interviews](./03-Hiring-and-Interviews/)**: What managers look for in a Junior portfolio (GitHub presence, lab documentation, and problem-solving logic).
+---
+## 3. The DevOps Curriculum Guide
+This directory is the first step in a larger journey. Once you master the persona, proceed to:
+*   **[02. The Tool Landscape](../02-The-Tool-Landscape/)**: Understanding the "What" (CI/CD, IaC, etc).
+*   **[03. Soft Skills](../03-Soft-Skills/)**: Communication and Blameless Culture.
+*   **[04. Day in the Life](../04-Day-in-the-Life-Operations/)**: Prioritization and Operations.
 
 ---
 ## 4. The "DevOps Mindset" Rules
 **Staff Standards for thinking like an SRE:**
 *   **Rule 1:** If you do it twice, **automate it**.
-*   **Rule 2:** Treat Infrastructure as Code, **not a pet**.
-*   **Rule 3:** Security is **everyone's responsibility** (DevSecOps).
+*   **Rule 2:** Prioritize by **Customer Impact** (Eisenhower Matrix).
+*   **Rule 3:** Treat Infrastructure as Code, **not a pet**.
+*   **Rule 4:** Security is **everyone's responsibility** (DevSecOps).
 
 ---
 ## 5. Junior Challenges (Professional Development)

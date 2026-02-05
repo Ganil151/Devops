@@ -67,5 +67,6 @@ You will eventually join the "Pager Rotation." This means being available 24/7 f
 
 ## 🏁 Your Next Steps
 1.  Complete the [Morning Triage Simulation](./01-Morning-Triage-Sim/README.md).
-2.  Review the [Security-First Gate](./02-The-Code-Review-Gate/README.md).
-3.  Print the [Daily Success Checklist](../DAILY_CHECKLIST.md) and keep it on your desk.
+2.  Master the [Prioritization Framework (Eisenhower Matrix)](./PRIORITIZATION_FRAMEWORK.md).
+3.  Review the [Security-First Gate](./02-The-Code-Review-Gate/README.md).
+4.  Print the [Daily Success Checklist](../DAILY_CHECKLIST.md) and keep it on your desk.
