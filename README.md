@@ -42,15 +42,15 @@ graph TD
 
 ### 🌱 Tier 1: Beginner - Foundations
 
-[**View Foundations Overview**](./1-Beginner/REFERENCE.md)
-*Networking, Linux, Windows Basics, and [**Data Formats**](./1-Beginner/01-Phase-1/04-Data-Formats/README.md)*
+[**View Foundations Overview**](./01-Beginner/REFERENCE.md)
+*Networking, Linux, Windows Basics, and [**Data Formats**](./01-Beginner/01-Phase-1/04-Data-Formats/README.md)*
 
 - **Focus**: Building the "Infrastructure Layer" skills.
 - **Mastery**: Linux File Systems, IP Subnetting, and Schema Interoperability.
 
 ### ⚙️ Tier 2: Intermediate - Automation
 
-[**View Automation Hub**](./2-Intermediate/REFERENCE.md)
+[**View Automation Hub**](./02-Intermediate/REFERENCE.md)
 *IaC, Kubernetes, CI/CD, and Production Scripting*
 
 - **Focus**: "Orchestration Layer" & Automating everything with Shell/Python.
@@ -58,7 +58,7 @@ graph TD
 
 ### 🏛️ Tier 3: Advanced - Enterprise Strategy
 
-[**View Enterprise Command Center**](./3-Advanced/REFERENCE.md)
+[**View Enterprise Command Center**](./03-Advanced/REFERENCE.md)
 *Service Mesh, GitOps, DevSecOps, and Observability Stack*
 
 - **Focus**: "Architectural Layer" for multi-cloud, high-scale systems.
@@ -66,8 +66,8 @@ graph TD
 
 ### 👔 Tier 4: Professional - Career Engineering
 
-[**View Career Mastery**](./4-Professional-Development/REFERENCE.md)
-*Resume Engineering, Portfolio Design, and [**Master Career Roadmap**](./4-Professional-Development/01-Career-Strategy/README.md)*
+[**View Career Mastery**](./05-Professional-Development/REFERENCE.md)
+*Resume Engineering, Portfolio Design, and [**Master Career Roadmap**](./05-Professional-Development/01-Career-Strategy/README.md)*
 
 - **Focus**: "Career Layer" — Bridging the gap from Technical expert to Production hire.
 - **Mastery**: Interview Psychology and Personal Branding as an Architect.
@@ -76,10 +76,10 @@ graph TD
 
 ## 🛠️ Global Hubs & Resources
 
-- **[Boilerplate Vault](./5-Boilerplates/REFERENCE.md)**: 200+ Templates (Terraform, Ansible, K8s).
-- **[Automation Navigation](./1-Beginner/02-Phase-2/01-Automation/AUTOMATION_NAVIGATION_HUB.md)**: Centralized orchestration scripts.
-- **[Modern Operations Hub](./2-Intermediate/02-Phase-2/03-Modern-Operations/README.md)**: Serverless, AI-Ops, and Edge Computing.
-- **[Quizzes](./6-Quizzes/REFERENCE.md)**: 300+ Advanced Questions & Cert Prep.
+- **[Boilerplate Vault](./08-Boilerplates/REFERENCE.md)**: 200+ Templates (Terraform, Ansible, K8s).
+- **[Automation Navigation](./01-Beginner/02-Phase-2/01-Automation/AUTOMATION_NAVIGATION_HUB.md)**: Centralized orchestration scripts.
+- **[Modern Operations Hub](./02-Intermediate/02-Phase-2/03-Modern-Operations/README.md)**: Serverless, AI-Ops, and Edge Computing.
+- **[Quizzes](./07-Quizzes/REFERENCE.md)**: 300+ Advanced Questions & Cert Prep.
 
 ---
 
@@ -87,7 +87,7 @@ graph TD
 
 This repository is maintained using automated auditing tools to ensure zero "Content Rot."
 
-- **[Link Scanner](./00-Resources/01-Scripts-Code/Maintenance/repository_audit.py)**: Audit internal linking health.
+- **[Link Scanner](./09-Resources/01-Scripts-Code/Maintenance/repository_audit.py)**: Audit internal linking health.
 - **Standard Pattern**: Every module contains `challenges/`, `solutions/`, and links to the [Central Boilerplate Hub](REFERENCE.md).
 
 ---
@@ -97,4 +97,4 @@ This repository is maintained using automated auditing tools to ensure zero "Con
 
 ---
 ## 🧭 Additional Modules
-- [8 Projects Showcase](8-Projects-Showcase/README.md)
+- [8 Projects Showcase](04-Projects-Showcase/README.md)
