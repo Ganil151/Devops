@@ -1,0 +1,5 @@
+docx2pdf==0.1.8
+tqdm==4.66.1
+# Note: For Linux/MacOS, ensure LibreOffice is installed via:
+# sudo apt install libreoffice (Ubuntu/Debian)
+# brew install libreoffice (MacOS)
