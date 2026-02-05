@@ -24,8 +24,21 @@ from typing import Dict, List, Tuple, Optional
 
 class GitAutomation:
     def __init__(self, repo_path: str = "."):
-        self.repo_path = Path(repo_path)
+        self.repo_path = Path(repo_path).absolute()
         self.change_summary = defaultdict(list)
+        
+        # Verify if it's a git repository (check current and parents)
+        if not self._is_git_repo():
+            print(f"⚠️ Warning: {self.repo_path} might not be a git repository.")
+
+    def _is_git_repo(self) -> bool:
+        """Check if the directory or its parents contain a .git folder."""
+        curr = self.repo_path
+        while curr != curr.parent:
+            if (curr / ".git").exists():
+                return True
+            curr = curr.parent
+        return False
         
     def run_command(self, cmd: List[str], timeout: int = 30) -> Tuple[bool, str, str]:
         """Execute a git command and return success status, stdout, stderr."""
@@ -120,18 +133,26 @@ class GitAutomation:
             for filepath in files:
                 # Store original filepath and change type
                 item = f"{change_type}: {filepath}"
+                ext = Path(filepath).suffix.lower()
+                path_lower = filepath.lower()
                 
-                # Categorize by directory structure
-                if "08-Resources" in filepath:
+                # Categorize by file type and directory priority
+                if ext in [".py", ".sh", ".ps1", ".bat", ".rb", ".go"]:
+                    categories["Scripts"].append(item)
+                elif ext in [".yml", ".yaml"]:
+                    categories["Config"].append(item)
+                elif ext in [".tf", ".hcl", ".tfvars"]:
+                    categories["IaC"].append(item)
+                elif "docker" in path_lower or "container" in path_lower or "dockerfile" in path_lower:
+                    categories["Containers"].append(item)
+                elif "REFERENCE" in filepath:
+                    categories["Reference"].append(item)
+                elif ext in [".md", ".txt"]:
+                    categories["Documentation"].append(item)
+                elif "08-Resources" in filepath:
                     categories["Resources"].append(item)
                 elif "07-Boilerplates" in filepath:
                     categories["Boilerplates"].append(item)
-                elif "Script" in filepath or filepath.endswith((".py", ".sh", ".ps1")):
-                    categories["Scripts"].append(item)
-                elif "REFERENCE" in filepath:
-                    categories["Reference"].append(item)
-                elif filepath.endswith(".md"):
-                    categories["Documentation"].append(item)
                 elif any(x in filepath for x in ["01-Beginner", "02-Intermediate", "03-Advanced"]):
                     categories["Curriculum"].append(item)
                 else:
@@ -161,7 +182,11 @@ class GitAutomation:
         
         # Determine scope based on most affected category
         if categories:
-            primary_category = max(categories.items(), key=lambda x: len(x[1]))[0]
+            # Sort categories by importance and then by count
+            priority = ["Scripts", "IaC", "Config", "Containers", "Documentation", "Reference", "Curriculum", "Resources", "Other"]
+            sorted_cats = sorted(categories.items(), 
+                               key=lambda x: (priority.index(x[0]) if x[0] in priority else 99, -len(x[1])))
+            primary_category = sorted_cats[0][0]
             scope = primary_category.lower()
         else:
             primary_category = "General"
@@ -200,7 +225,9 @@ class GitAutomation:
         
         # Get key files (limit to 3 most important)
         key_files = []
-        for category in ["Scripts", "Documentation", "Reference", "Curriculum", "Resources"]:
+        priority_display = ["Scripts", "IaC", "Config", "Containers", "Documentation", "Reference", "Curriculum", "Resources", "Other"]
+        
+        for category in priority_display:
             if category in categories:
                 for item in categories[category]:
                     full_path = item.split(": ", 1)[1]
@@ -234,7 +261,8 @@ class GitAutomation:
             if items:
                 body_lines.append(f"\n{category}:")
                 for item in items[:5]:  # Limit to 5 items per category
-                    body_lines.append(f"  - {item.split(': ', 1)[1]}")
+                    # Show the change type for better context
+                    body_lines.append(f"  - {item}")
                 if len(items) > 5:
                     body_lines.append(f"  ... and {len(items) - 5} more")
         
@@ -321,6 +349,16 @@ class GitAutomation:
                     continue # Retry immediately
                 else:
                     return False # Could not resolve via pull
+            elif "no upstream branch" in err_msg:
+                branch = self.get_current_branch()
+                print(f"⚠️  No upstream branch found. Setting upstream to origin/{branch}...")
+                success, stdout, stderr = self.run_command(["git", "push", "--set-upstream", "origin", branch])
+                if success:
+                    print("✅ Successfully set upstream and pushed")
+                    return True
+                else:
+                    print(f"❌ Failed to set upstream: {stderr}")
+                    return False
             
             print(f"⚠️  Attempt {attempt} failed: {err_msg}")
             
@@ -420,12 +458,17 @@ class GitAutomation:
 def main():
     """Main entry point."""
     # Parse arguments
+    help_requested = any(arg in sys.argv for arg in ["--help", "-h"])
     dry_run = "--dry-run" in sys.argv
     watch_mode = "--watch" in sys.argv
     custom_message = None
     
+    if help_requested:
+        print(__doc__)
+        return 0
+
     # Remove flags from argv
-    args = [arg for arg in sys.argv[1:] if not arg.startswith("--")]
+    args = [arg for arg in sys.argv[1:] if not arg.startswith("-")]
     
     if args:
         custom_message = " ".join(args)
