@@ -246,18 +246,33 @@ class GitAutomation:
         print("✅ Changes committed successfully")
         return True
 
-    def push_changes(self) -> bool:
-        """Push commits to remote."""
+    def push_changes(self, max_retries: int = 3) -> bool:
+        """Push commits to remote with retry logic and exponential backoff."""
         print("\n🚀 Pushing to remote...")
-        success, stdout, stderr = self.run_command(["git", "push"], timeout=60)
         
-        if not success:
-            print(f"❌ Failed to push: {stderr}")
-            return False
+        for attempt in range(1, max_retries + 1):
+            # Increase timeout for potential large pushes or slow connections
+            # First attempt: 120s, Second: 240s, etc.
+            current_timeout = 120 * attempt 
+            
+            print(f"  Attempt {attempt}/{max_retries} (Timeout: {current_timeout}s)...")
+            success, stdout, stderr = self.run_command(["git", "push"], timeout=current_timeout)
+            
+            if success:
+                print("✅ Changes pushed successfully")
+                if stdout:
+                    print(stdout)
+                return True
+            
+            print(f"⚠️  Attempt {attempt} failed: {stderr.strip() if stderr else 'Command timed out'}")
+            
+            if attempt < max_retries:
+                wait_time = 2 ** attempt
+                print(f"  Retrying in {wait_time}s...")
+                time.sleep(wait_time)
         
-        print("✅ Changes pushed successfully")
-        print(stdout if stdout else "Push completed")
-        return True
+        print(f"❌ Failed to push after {max_retries} attempts.")
+        return False
 
     def run(self, custom_message: Optional[str] = None, dry_run: bool = False) -> str:
         """Main execution flow."""
