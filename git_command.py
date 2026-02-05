@@ -9,11 +9,13 @@ Usage:
     python3 git_command.py                    # Auto-generate commit message
     python3 git_command.py "Custom message"   # Use custom message
     python3 git_command.py --dry-run          # Preview changes without committing
+    python3 git_command.py --watch            # Watch for changes and auto-commit
 """
 
 import subprocess
 import sys
 import re
+import time
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
@@ -310,11 +312,42 @@ class GitAutomation:
         print("\n✨ All operations completed successfully!")
         return "Success"
 
+    def watch(self, interval: int = 5):
+        """Watch for changes and auto-commit."""
+        print(f"👀 Watching for changes (polling every {interval}s)...")
+        print("Press Ctrl+C to stop.")
+        
+        try:
+            while True:
+                # Check for changes silently first
+                changes = self.get_status()
+                
+                if any(changes.values()):
+                    print(f"\n⚡ Changes detected at {datetime.now().strftime('%H:%M:%S')}")
+                    # Debounce: wait a bit to ensure file writes are finished
+                    time.sleep(2)
+                    
+                    # Double check changes
+                    changes = self.get_status()
+                    if any(changes.values()):
+                        self.run()
+                        print(f"\n👀 Resuming watch (polling every {interval}s)...")
+                
+                time.sleep(interval)
+                
+        except KeyboardInterrupt:
+            print("\n👋 Watch stopped by user.")
+            return "Stopped"
+        except Exception as e:
+            print(f"\n❌ Error in watch loop: {e}")
+            return "Error"
+
 
 def main():
     """Main entry point."""
     # Parse arguments
     dry_run = "--dry-run" in sys.argv
+    watch_mode = "--watch" in sys.argv
     custom_message = None
     
     # Remove flags from argv
@@ -325,9 +358,14 @@ def main():
     
     # Run automation
     git_auto = GitAutomation()
-    result = git_auto.run(custom_message=custom_message, dry_run=dry_run)
     
-    return 0 if result in ["Success", "No changes", "Dry run completed"] else 1
+    if watch_mode:
+        git_auto.watch()
+        result = "Success"
+    else:
+        result = git_auto.run(custom_message=custom_message, dry_run=dry_run)
+    
+    return 0 if result in ["Success", "No changes", "Dry run completed", "Stopped"] else 1
 
 
 if __name__ == "__main__":
