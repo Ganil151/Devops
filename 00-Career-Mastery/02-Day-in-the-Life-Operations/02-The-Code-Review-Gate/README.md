@@ -5,13 +5,11 @@ In DevOps, we are the **Guardians of the State**. Deploying bad infrastructure i
 Your task is to review a teammate's Terraform PR and find the "Staff Standard" violations.
 
 ---
-
 ### 📂 Files in this Simulation:
 1.  **[bad.tf](./bad.tf)**: The "Junior" approach. Full of security holes and hardcoded values.
 2.  **[solution.tf](./solution.tf)**: The "SRE" approach. Standardized, secure, and modular.
 
 ---
-
 ### 🕵️ Your Code Review Checklist:
 When reviewing IaC, always look for:
 - [ ] **Exposure**: Are any ports open to `0.0.0.0/0` (The entire world)?
@@ -20,7 +18,6 @@ When reviewing IaC, always look for:
 - [ ] **Persistence**: Is there a deletion protection policy on databases?
 
 ---
-
 ### 🚨 The "Bad" Code Analysis
 Open `bad.tf`. You will notice:
 *   **Security Risk**: Hardcoded AWS credentials. **NEVER do this.** Use IAM Roles or Environment Variables.

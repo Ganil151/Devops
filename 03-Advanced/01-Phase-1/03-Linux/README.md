@@ -1,23 +1,30 @@
-# Advanced Linux: Security, Performance & Tuning
+---
 
-At the advanced level, Linux is treated as a highly tunable performance engine and a hardened fortress. This module covers kernel tuning, advanced security models (SELinux/AppArmor), and deep performance tracing.
+## 🎯 Junior's Mission: The Performance Wall
+**Scenario**: You have migrated a database to a high-speed NVMe drive, but the application is actually *slower* than before. You suspect the Linux kernel is the bottleneck, not the hardware.
+**Your Goal**: Use **eBPF** or **strace** to identify if the latency is coming from "Syscall Overload" or a misconfigured **Transparent Huge Pages (THP)** setting and apply a `sysctl` fix to unlock the performance.
 
-## Core Concept: The Observability Engine
-**[REFERENCE: Linux Performance & Observability](./REFERENCE/Linux-Performance-Observability-Ref.md)**
+---
 
-Mastering the kernel's internal mechanics for peak efficiency:
-- **Kernel Tuning (`sysctl`)**: Optimizing network buffers, file limits, and memory swappiness for heavy cloud workloads.
-- **eBPF Tracing**: Utilizing high-performance kernel probes to diagnose latency and bottlenecks without system overhead.
-- **The Performance Stack**: Moving beyond `top` to a structured analysis of system calls, context switching, and I/O wait times.
+## 🏗️ Operational Reality: Production Hazards
+At the kernel level, a single character change in a config file can bring down an entire data center.
+1.  **The "Max Files" Crash**: Your server has plenty of RAM and CPU, but it suddenly stops accepting new connections. You realize you hit the `ulimit` (Open Files) limit. The server isn't busy; it's just "out of handles."
+2.  **SELinux Context Drift**: You use a custom script to move files into `/var/www`. The web server can't see them. You realize the files lost their "Security Label" during the move, and SELinux is silently blocking them.
+3.  **Swappiness Death Spiral**: Your server hits 90% RAM usage. Instead of killing the least important process, Linux starts "Swapping" memory to the slow SSD. Now the entire server is unresponsive for 10 minutes while it tries to "breathe" through a tiny straw.
+4.  **Zombie Process Leak**: A developer's script spawns thousands of "Child" processes that finish but don't close. You run out of "Process IDs" (PIDs), and you can't even run `ls` because there are no PIDs left to start the command.
 
-## Enterprise Governance: Hardened Infrastructure
-**[REFERENCE: Linux Security Hardening](./REFERENCE/Linux-Security-Hardening-Ref.md)**
+---
 
-Protecting the operating system through multi-layered defense and auditability:
-- **Mandatory Access Control (MAC)**: Enforcing SELinux or AppArmor policies to prevent lateral movement even if root is compromised.
-- **Kernel Hardening**: Implementing filesystem integrity flags (`noexec`, `nosuid`) and disabling insecure protocols.
-- **Deep Auditing (`auditd`)**: Tracking every sensitive system call and file modification for regulatory compliance (SOC2/PCI-DSS).
-- **Process Whitelisting**: Utilizing daemons like `fapolicyd` to ensure only trusted, signed binaries can execute in production.
+## 🛠️ The Kernel Engineer's Toolbelt (Advanced Tracing)
+| Tool/Command | Why it matters |
+| :--- | :--- |
+| `strace -p <pid> -c` | Summarize the system calls of a running process. Is it spending all its time reading files? |
+| `sysctl -a` | The "Master Knob" list. Seeing every single tunable parameter in the Linux kernel. |
+| `bpftool` | The modern way to interact with eBPF programs. High-speed monitoring with zero overhead. |
+| `sar -A` | The "Time Machine." What was the CPU and Disk usage 4 hours ago during the outage? |
+| `numastat` | Checking if your multi-CPU server is passing data "across" CPUs, which causes massive lag. |
+
+---
 
 ---
 

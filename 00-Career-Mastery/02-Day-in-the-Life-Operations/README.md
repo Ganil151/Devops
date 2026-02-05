@@ -2,28 +2,25 @@
 
 Welcome to the **SRE Bridge**. In this module, we move beyond definitions. You are no longer reading about a role; you are stepping into the "Staff Standard" operational rhythm of a high-tier DevOps team.
 
-> ### 🎮 The Analogy: The Air Traffic Controller
+### 🎮 The Analogy: The Air Traffic Controller
+
 > "A DevOps Engineer is like an Air Traffic Controller. You aren't flying the planes (**Writing the App**), but you are responsible for the radar (**Monitoring**), the runway (**Infrastructure**), and ensuring every landing (**Deployment**) is safe."
 
 ---
-
 ## 🕒 The Operational Rhythm (Your Daily 24)
 
 ### 🌅 08:00 - 09:30 | The Morning Triage
 *   **The Goal**: Establish situational awareness.
 *   **The Routine**: Check `#alerts-critical`, scan the Grafana dashboard for overnight spikes, and triage the JIRA/ServiceNow board.
 *   **The Simulation**: Head to [01-Morning-Triage-Sim](./01-Morning-Triage-Sim/README.md).
-
 ### ⚙️ 10:00 - 12:30 | Infrastructure & Pipelines
 *   **The Goal**: Clean the runway.
 *   **The Routine**: Reviewing Pull Requests (PRs), fixing broken build dependencies, and executing planned IaC changes.
 *   **The Standard**: [02-The-Code-Review-Gate](./02-The-Code-Review-Gate/README.md).
-
 ### 🚨 13:30 - 16:00 | The Afternoon "Incident"
 *   **The Goal**: Restore service; avoid finger-pointing.
 *   **The Routine**: Handling production outages, participating in war rooms, and executing rollbacks if a change went south.
 *   **The Recovery**: [03-Rollback-Procedures](./03-Rollback-Procedures/README.md).
-
 ### 📚 16:30 - Evening | The Long Game
 *   **The Goal**: Sharpen the axe.
 *   **The Routine**: Updating documentation, working on long-term automation projects (to reduce toil), and reading CNCF whitepapers or tool release notes.

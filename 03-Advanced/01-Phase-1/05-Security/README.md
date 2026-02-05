@@ -1,37 +1,30 @@
-# DevSecOps: Security as Code
+---
 
-**DevSecOps** integrates security practices throughout the entire DevOps lifecycle - from planning and development to deployment and operations. Security is everyone's responsibility, not just a final gate.
+## 🎯 Junior's Mission: The Pipeline Sabotage
+**Scenario**: Your CI/CD pipeline suddenly starts failing at the "Build" stage, but no one has changed the source code. You suspect a third-party dependency has been hijacked or restricted.
+**Your Goal**: Use **Snyk** or **Trivy** to scan the dependency lockfile and identify which package is causing the security violation, then implement a "Version Pin" to restore stability.
 
-## Core Concept: The Secure Supply Chain
-**[REFERENCE: Supply Chain Security (SLSA)](./REFERENCE/Supply-Chain-Security-SLSA-Ref.md)**
+---
 
-Protecting the artifacts and the build process from modern injection attacks:
-- **SLSA Standards**: Implementing verifiable build levels (1-4) to ensure the integrity of your binaries.
-- **Artifact Signing**: Utilizing Cosign and Sigstore for keyless, OIDC-based image signing and verification.
-- **SBOM Governance**: Maintaining a real-time inventory of every dependency across your enterprise fleet.
+## 🏗️ Operational Reality: Production Hazards
+Security in DevOps isn't just about locks; it's about **System Integrity**.
+1.  **The "Blind" Scanner**: You run a security scan every day, but it's only scanning the *application* code. The underlying Linux image has 200 unpatched vulnerabilities, and you don't even know it.
+2.  **Secret Sprawl**: A developer puts a password in an environment variable "just for a second" to test. That variable is now logged in plain text in the Cloud Provider's console, where it stays forever.
+3.  **The False Positive Fatigue**: Your scanner reports 500 "Critical" vulnerabilities. 499 of them are for tools you don't even use. The engineers start ignoring the alerts, and the 1 real attack goes unnoticed.
+4.  **Runtime Bypass**: You have a perfect secure pipeline, but an attacker finds a way to pull an un-scanned image directly from a public registry into your production cluster using a hacked developer laptop.
 
-## Enterprise Governance: Runtime Vigilance
-**[REFERENCE: Runtime Security & IR](./REFERENCE/Runtime-Security-Incident-Response-Ref.md)**
+---
 
-Moving from static prevention to active, automated defense in the production cluster:
-- **eBPF-Driven Visibility**: Utilizing Falco and eBPF probes for line-speed detection of anomalous system calls and network behavior.
-- **Automated Containment**: Chaining security alerts to serverless functions for millisecond-speed isolation of compromised pods.
-- **Binary Authorization**: Enforcing a "Zero-Trust" policy where no image runs without valid cryptographic provenance.
-- **Immutability Enforcement**: Monitoring for filesystem drift and enforcing read-only root filesystems across all production namespaces.
+## 🛠️ The DevSecOps Toolbelt (Security Commands)
+| Tool/Command | Why it matters |
+| :--- | :--- |
+| `trivy image --severity HIGH,CRITICAL <image>` | The first line of defense. Never deploy an image without this check. |
+| `gitleaks detect --source .` | Scanning your local Git history for that AWS key you accidentally committed last week. |
+| `falco -c /etc/falco/falco.yaml` | The "Security Camera" for your cluster. Is anyone trying to spawn a shell inside a pod? |
+| `cosign verify <image>` | "Checking the ID." Is this image actually the one our build system signed? |
+| `semgrep --config p/owasp-top-10` | Intelligent code scanning that looks for logic flaws, not just text matches. |
 
-## 🎯 What is DevSecOps?
-
-DevSecOps = **Development** + **Security** + **Operations**
-
-Traditional security models add security checks at the end of development, creating bottlenecks and late-stage discoveries. DevSecOps shifts security "left" - embedding it early and continuously throughout the SDLC.
-
-### Key Principles
-
-1. **Security as Code**: Treat security policies like application code - version-controlled, tested, and automated
-2. **Shift-Left**: Find and fix security issues early when they're cheaper to resolve
-3. **Continuous Security**: Automate security testing at every stage
-4. **Shared Responsibility**: Security is everyone's job, not just security teams
-5. **Fast Feedback**: Provide immediate security feedback to developers
+---
 
 ---
 

@@ -6,17 +6,14 @@
 **Impact**: [The "User" cost: Who was affected? How many? What features were broken?]
 
 ---
-
 ### 1. The TL;DR (Executive Summary)
 *Briefly explain what happened in 3 sentences.*
-
 ### 2. The Timeline
 *Chronological list of events in UTC.*
 - **14:00**: Issue detected by [Monitoring Alert/Customer Report].
 - **14:05**: Incident declared; War Room opened.
 - **14:20**: Initial rollback attempted.
 - **14:35**: Service restored.
-
 ### 3. The Root Cause (The "Why")
 *Use the "5 Whys" method.*
 - **Problem**: Auth-API was down.
@@ -32,6 +29,5 @@
 - [ ] Review Console Access permissions for Juniors.
 
 ---
-
 ### 🏛️ The Blameless Mindset
 > "We assume everyone acted with the best intentions and the best information they had at the time. We are investigating the **System**, not the **Person**."

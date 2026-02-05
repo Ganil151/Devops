@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-Career-Mastery/02-Day-in-the-Life-Operations/README.md",
+                "file": "00-Career-Mastery/02-Day-in-the-Life-Operations/03-Rollback-Procedures/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -24,7 +24,7 @@
                   "showSearch": false,
                   "searchQuery": "",
                   "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
+                  "unlinkedCollapsed": false
                 }
               },
               "icon": "lucide-file",
@@ -216,16 +216,17 @@
   },
   "active": "e142cfc2dc308a10",
   "lastOpenFiles": [
+    "00-Career-Mastery/02-Day-in-the-Life-Operations/02-The-Code-Review-Gate/README.md",
+    "REPOSITORY_HEALTH_REPORT.md",
+    "00-Career-Mastery/02-Day-in-the-Life-Operations/Templates/Post-Mortem-Template.md",
+    "00-Career-Mastery/02-Day-in-the-Life-Operations/README.md",
     "00-Career-Mastery/01-DevOps-Persona/README.md",
     "00-Career-Mastery/05-Interview-Mastery/Mock-Interview-Script.md",
-    "00-Career-Mastery/02-Day-in-the-Life-Operations/Templates/Post-Mortem-Template.md",
     "00-Career-Mastery/02-Day-in-the-Life-Operations/03-Rollback-Procedures/README.md",
     "00-Career-Mastery/02-Day-in-the-Life-Operations/01-Morning-Triage-Sim/README.md",
     "00-Career-Mastery/02-Day-in-the-Life-Operations/02-The-Code-Review-Gate/solution.tf",
     "00-Career-Mastery/02-Day-in-the-Life-Operations/02-The-Code-Review-Gate/bad.tf",
-    "00-Career-Mastery/02-Day-in-the-Life-Operations/02-The-Code-Review-Gate/README.md",
     "00-Career-Mastery/02-Day-in-the-Life-Operations/Templates",
-    "00-Career-Mastery/02-Day-in-the-Life-Operations/README.md",
     "00-Career-Mastery/02-Day-in-the-Life-Operations/03-Rollback-Procedures",
     "00-Career-Mastery/02-Day-in-the-Life-Operations/02-The-Code-Review-Gate",
     "00-Career-Mastery/02-Day-in-the-Life-Operations/01-Morning-Triage-Sim",
@@ -251,7 +252,6 @@
     "REFERENCE.md",
     "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/02-Python-for-Infrastructure/01-Part-1-The-Blueprint/04-Reference/01-Core-Automation-Keywords.md",
     "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/02-Python-for-Infrastructure/03-Part-3-The-Building-Blocks/01-AWS-Automation-Boto3/01-Boto3-Foundations/README.md",
-    "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/01-Scripting-Automation/02-Python-for-Infrastructure/03-Part-3-The-Building-Blocks/01-AWS-Automation-Boto3/02-Scale-and-Resilience/Cost-Management.md",
     "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/02-State-Management/04-Part-4-The-Safety-Net/02-Advanced-Patterns/multi_layer_architecture.png",
     "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/02-State-Management/04-Part-4-The-Safety-Net/02-Advanced-Patterns/directory_vs_workspaces.png",
     "2-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/02-State-Management/04-Part-4-The-Safety-Net/01-Troubleshooting/images/troubleshooting_flow.svg",

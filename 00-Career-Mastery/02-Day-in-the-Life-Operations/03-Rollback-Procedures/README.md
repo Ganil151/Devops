@@ -3,7 +3,6 @@
 When a deployment goes wrong, your first job isn't to find the bug—it's to **stop the bleeding**. Recovery comes before Root Cause Analysis (RCA).
 
 ---
-
 ### 1. The "Git" Panic Button
 If a bad configuration was committed and pushed:
 ```bash
@@ -29,7 +28,6 @@ helm rollback my-app 5
 *   **Why?** Helm rollbacks are near-instant and handle the pod replacement automatically.
 
 ---
-
 ### 3. The "Terraform" State Rescue
 If an infrastructure change triggered an outage (e.g., accidentally deleted a subnet):
 ```bash
@@ -42,7 +40,6 @@ terraform apply
 ```
 
 ---
-
 ### 💡 Pro-Tip: The "Golden Rule" of Rollbacks
 **Never try to 'Fix-Forward' during a Tier 1 outage.** 
 If the site is down, don't try to write a patch and deploy it. **Roll back** to the last known good state first. Once the users are happy again, *then* you can debug and fix the code properly on your own time.
