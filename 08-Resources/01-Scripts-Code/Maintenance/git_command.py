@@ -34,17 +34,18 @@ class GitAutomation:
                 cmd,
                 capture_output=True,
                 text=True,
-                check=True,
+                check=False,  # We handle the return code ourselves
                 timeout=timeout,
                 cwd=self.repo_path
             )
-            return True, result.stdout, result.stderr
-        except subprocess.CalledProcessError as e:
-            return False, e.stdout, e.stderr
+            success = result.returncode == 0
+            return success, result.stdout or "", result.stderr or ""
         except subprocess.TimeoutExpired:
             return False, "", "Command timed out"
         except FileNotFoundError:
             return False, "", f"Command not found: {cmd[0]}"
+        except Exception as e:
+            return False, "", str(e)
 
     def parse_status_line(self, line: str) -> Tuple[str, str]:
         """Parse git status line handling quotes and renames."""
@@ -254,13 +255,26 @@ class GitAutomation:
         return True
 
     def commit_changes(self, message: str) -> bool:
-        """Commit staged changes."""
+        """Commit staged changes with improved error reporting."""
+        # Check if there are actually staged changes
+        success, stdout, stderr = self.run_command(["git", "diff", "--cached", "--quiet"])
+        if success: # exit code 0 means no changes
+            print("✨ No staged changes to commit. Staging again just in case...")
+            if not self.stage_changes():
+                return False
+            # Re-check
+            success, stdout, stderr = self.run_command(["git", "diff", "--cached", "--quiet"])
+            if success:
+                print("✨ Still no changes detected. Skipping commit.")
+                return True
+
         print(f"\n📝 Committing with message:\n{'-' * 60}\n{message}\n{'-' * 60}")
         
         success, stdout, stderr = self.run_command(["git", "commit", "-m", message])
         
         if not success:
-            print(f"❌ Failed to commit: {stderr}")
+            error = stderr.strip() or stdout.strip() or "Unknown error"
+            print(f"❌ Failed to commit: {error}")
             return False
         
         print("✅ Changes committed successfully")
