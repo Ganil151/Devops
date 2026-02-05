@@ -1,38 +1,19 @@
 #!/usr/bin/env python3
-"""
-🚀 Automated Git Commit & Push Utility
-======================================
-Automatically generates intelligent commit messages based on file changes.
-Supports manual override and provides detailed change summaries.
-
-Usage:
-    python3 git_command.py                    # Auto-generate commit message
-    python3 git_command.py "Custom message"   # Use custom message
-    python3 git_command.py --dry-run          # Preview changes without committing
-    python3 git_command.py --watch            # Watch for changes and auto-commit
-"""
-
 import subprocess
 import sys
-import re
 import time
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
 from typing import Dict, List, Tuple, Optional
 
-
 class GitAutomation:
     def __init__(self, repo_path: str = "."):
         self.repo_path = Path(repo_path).absolute()
-        self.change_summary = defaultdict(list)
-        
-        # Verify if it's a git repository (check current and parents)
         if not self._is_git_repo():
-            print(f"⚠️ Warning: {self.repo_path} might not be a git repository.")
+            print(f"⚠️ Warning: {self.repo_path} is not a git repository.")
 
     def _is_git_repo(self) -> bool:
-        """Check if the directory or its parents contain a .git folder."""
         curr = self.repo_path
         while curr != curr.parent:
             if (curr / ".git").exists():
@@ -41,449 +22,155 @@ class GitAutomation:
         return False
         
     def run_command(self, cmd: List[str], timeout: int = 30) -> Tuple[bool, str, str]:
-        """Execute a git command and return success status, stdout, stderr."""
         try:
             result = subprocess.run(
-                cmd,
-                capture_output=True,
-                text=True,
-                check=False,  # We handle the return code ourselves
-                timeout=timeout,
-                cwd=self.repo_path
+                cmd, capture_output=True, text=True, check=False, 
+                timeout=timeout, cwd=self.repo_path
             )
-            success = result.returncode == 0
-            return success, result.stdout or "", result.stderr or ""
-        except subprocess.TimeoutExpired:
-            return False, "", "Command timed out"
-        except FileNotFoundError:
-            return False, "", f"Command not found: {cmd[0]}"
+            return result.returncode == 0, result.stdout or "", result.stderr or ""
         except Exception as e:
             return False, "", str(e)
 
     def parse_status_line(self, line: str) -> Tuple[str, str]:
-        """Parse git status line handling quotes and renames."""
+        """Improved parsing for porcelain status codes and renames."""
         status = line[:2]
-        rest = line[3:]
+        filepath = line[3:].strip()
         
-        # Handle renames (R  from -> to)
-        if " -> " in rest:
-            # extract the 'to' part
-            arrow_idx = rest.rfind(" -> ")
-            if arrow_idx != -1:
-                filepath = rest[arrow_idx + 4:]
-            else:
-                filepath = rest
-        else:
-            filepath = rest
+        # If renamed, git shows "old_path -> new_path"
+        if " -> " in filepath:
+            filepath = filepath.split(" -> ")[-1]
             
-        # Handle quotes
-        if filepath.startswith('"') and filepath.endswith('"'):
-            filepath = filepath[1:-1]
-            
+        # Strip git's internal quotes if filename has spaces
+        filepath = filepath.strip('"')
         return status, filepath
 
     def get_current_branch(self) -> str:
-        """Get the current active branch name."""
-        success, stdout, stderr = self.run_command(["git", "branch", "--show-current"])
-        return stdout.strip() if success else "unknown"
+        success, stdout, _ = self.run_command(["git", "branch", "--show-current"])
+        return stdout.strip() if success and stdout.strip() else "main"
 
     def get_status(self) -> Dict[str, List[str]]:
-        """Get git status and categorize changes."""
         success, stdout, stderr = self.run_command(["git", "status", "--porcelain"])
-        
         if not success:
-            print(f"❌ Error getting git status: {stderr}")
             return {}
         
-        changes = {
-            "added": [],
-            "modified": [],
-            "deleted": [],
-            "renamed": [],
-            "untracked": []
-        }
+        changes = {"added": [], "modified": [], "deleted": [], "renamed": [], "untracked": []}
         
         for line in stdout.splitlines():
-            if not line:
-                continue
-                
+            if not line: continue
             status, filepath = self.parse_status_line(line)
             
-            # Parse git status codes (Handling both staged and unstaged)
-            if status == "??":
+            if "??" in status:
                 changes["untracked"].append(filepath)
-            elif "A" in status or "N" in status: # Added
+            elif "A" in status:
                 changes["added"].append(filepath)
-            elif "M" in status: # Modified
+            elif "M" in status or " M" in status:
                 changes["modified"].append(filepath)
-            elif "D" in status: # Deleted
+            elif "D" in status or " D" in status:
                 changes["deleted"].append(filepath)
-            elif "R" in status: # Renamed
+            elif "R" in status:
                 changes["renamed"].append(filepath)
-            elif status.strip() in ["U", "AA", "UU"]: # Unmerged/Conflict
-                print(f"⚠️  Conflict detected in file: {filepath}")
-        
         return changes
 
-    def analyze_changes(self, changes: Dict[str, List[str]]) -> Dict[str, List[str]]:
-        """Analyze changes by file type and category."""
-        categories = defaultdict(list)
-        
-        for change_type, files in changes.items():
-            for filepath in files:
-                # Store original filepath and change type
-                item = f"{change_type}: {filepath}"
-                ext = Path(filepath).suffix.lower()
-                path_lower = filepath.lower()
-                
-                # Categorize by file type and directory priority
-                if ext in [".py", ".sh", ".ps1", ".bat", ".rb", ".go"]:
-                    categories["Scripts"].append(item)
-                elif ext in [".yml", ".yaml"]:
-                    categories["Config"].append(item)
-                elif ext in [".tf", ".hcl", ".tfvars"]:
-                    categories["IaC"].append(item)
-                elif "docker" in path_lower or "container" in path_lower or "dockerfile" in path_lower:
-                    categories["Containers"].append(item)
-                elif "REFERENCE" in filepath:
-                    categories["Reference"].append(item)
-                elif ext in [".md", ".txt"]:
-                    categories["Documentation"].append(item)
-                elif "08-Resources" in filepath:
-                    categories["Resources"].append(item)
-                elif "07-Boilerplates" in filepath:
-                    categories["Boilerplates"].append(item)
-                elif any(x in filepath for x in ["01-Beginner", "02-Intermediate", "03-Advanced"]):
-                    categories["Curriculum"].append(item)
-                else:
-                    categories["Other"].append(item)
-        
-        return categories
-
     def generate_commit_message(self, changes: Dict[str, List[str]]) -> str:
-        """Generate an intelligent commit message based on changes."""
-        if not any(changes.values()):
+        all_files = [f for sublist in changes.values() for f in sublist]
+        if not all_files:
             return "chore: minor updates"
-        
-        # Count changes by type
-        total_added = len(changes.get("added", [])) + len(changes.get("untracked", []))
-        total_modified = len(changes.get("modified", []))
-        total_deleted = len(changes.get("deleted", []))
-        total_renamed = len(changes.get("renamed", []))
-        
-        # Analyze file categories
-        all_files = []
-        for file_list in changes.values():
-            all_files.extend(file_list)
-        
-        # Determine primary change type
+
+        # Determine Prefix
         is_fix = any("fix" in f.lower() or "bug" in f.lower() for f in all_files)
-        categories = self.analyze_changes(changes)
+        total_added = len(changes["added"]) + len(changes["untracked"])
         
-        # Determine scope based on most affected category
-        if categories:
-            # Sort categories by importance and then by count
-            priority = ["Scripts", "IaC", "Config", "Containers", "Documentation", "Reference", "Curriculum", "Resources", "Other"]
-            sorted_cats = sorted(categories.items(), 
-                               key=lambda x: (priority.index(x[0]) if x[0] in priority else 99, -len(x[1])))
-            primary_category = sorted_cats[0][0]
-            scope = primary_category.lower()
-        else:
-            primary_category = "General"
-            scope = "general"
-
         if is_fix:
-            prefix = "fix"
-            action = "Fix"
-        elif primary_category == "Documentation":
-             prefix = "docs"
-             action = "Update"
-        elif total_added >= total_modified and total_added >= total_deleted:
-            prefix = "feat"
-            action = "Add"
-        elif total_deleted > total_added and total_deleted > total_modified:
-            prefix = "refactor"
-            action = "Remove"
+            prefix, action = "fix", "Fix"
+        elif any(f.endswith('.md') for f in all_files):
+            prefix, action = "docs", "Update"
+        elif total_added > len(changes["modified"]):
+            prefix, action = "feat", "Add"
         else:
-            prefix = "refactor"
-            action = "Update"
-        
+            prefix, action = "refactor", "Update"
 
-        
-        # Build message
-        summary_parts = []
-        if total_added > 0:
-            summary_parts.append(f"{total_added} added")
-        if total_modified > 0:
-            summary_parts.append(f"{total_modified} modified")
-        if total_deleted > 0:
-            summary_parts.append(f"{total_deleted} deleted")
-        if total_renamed > 0:
-            summary_parts.append(f"{total_renamed} renamed")
-        
-        summary = ", ".join(summary_parts)
-        
-        # Get key files (limit to 3 most important)
-        key_files = []
-        priority_display = ["Scripts", "IaC", "Config", "Containers", "Documentation", "Reference", "Curriculum", "Resources", "Other"]
-        
-        for category in priority_display:
-            if category in categories:
-                for item in categories[category]:
-                    full_path = item.split(": ", 1)[1]
-                    path_obj = Path(full_path)
-                    
-                    # Add parent folder for generic names like README.md
-                    if path_obj.name == "README.md" and len(path_obj.parts) > 1:
-                        display_name = f"{path_obj.parts[-2]}/{path_obj.name}"
-                    else:
-                        display_name = path_obj.name
-                    
-                    if display_name not in key_files:
-                        key_files.append(display_name)
-                    
-                    if len(key_files) >= 3:
-                        break
-            if len(key_files) >= 3:
-                break
-        
-        # Construct commit message
-        if key_files:
-            files_str = ", ".join(key_files[:3])
-            commit_msg = f"{prefix}({scope}): {action} {files_str}"
-        else:
-            commit_msg = f"{prefix}({scope}): {action} {summary}"
-        
-        # Add detailed body
-        body_lines = [f"\n\nChanges summary: {summary}"]
-        
-        for category, items in sorted(categories.items()):
-            if items:
-                body_lines.append(f"\n{category}:")
-                for item in items[:5]:  # Limit to 5 items per category
-                    # Show the change type for better context
-                    body_lines.append(f"  - {item}")
-                if len(items) > 5:
-                    body_lines.append(f"  ... and {len(items) - 5} more")
-        
-        full_message = commit_msg + "".join(body_lines)
-        
-        return full_message
+        # Build short summary
+        scope = "auto"
+        primary_file = Path(all_files[0]).name
+        commit_msg = f"{prefix}({scope}): {action} {primary_file}"
+        if len(all_files) > 1:
+            commit_msg += f" and {len(all_files)-1} others"
+            
+        return commit_msg
 
-    def stage_changes(self) -> bool:
-        """Stage all changes."""
-        print("📦 Staging changes...")
-        success, stdout, stderr = self.run_command(["git", "add", "."])
+    def stage_and_commit(self, message: str) -> bool:
+        # 1. Stage
+        self.run_command(["git", "add", "."])
         
-        if not success:
-            print(f"❌ Failed to stage changes: {stderr}")
-            return False
-        
-        print("✅ Changes staged successfully")
-        return True
-
-    def commit_changes(self, message: str) -> bool:
-        """Commit staged changes with improved error reporting."""
-        # Check if there are actually staged changes
-        success, stdout, stderr = self.run_command(["git", "diff", "--cached", "--quiet"])
-        if success: # exit code 0 means no changes
-            print("✨ No staged changes to commit. Staging again just in case...")
-            if not self.stage_changes():
-                return False
-            # Re-check
-            success, stdout, stderr = self.run_command(["git", "diff", "--cached", "--quiet"])
-            if success:
-                print("✨ Still no changes detected. Skipping commit.")
-                return True
-
-        print(f"\n📝 Committing with message:\n{'-' * 60}\n{message}\n{'-' * 60}")
-        
-        success, stdout, stderr = self.run_command(["git", "commit", "-m", message])
-        
-        if not success:
-            error = stderr.strip() or stdout.strip() or "Unknown error"
-            print(f"❌ Failed to commit: {error}")
-            return False
-        
-        print("✅ Changes committed successfully")
-        return True
-
-    def pull_changes(self) -> bool:
-        """Pull latest changes from remote with rebase."""
-        print("📥 Pulling latest changes (with rebase)...")
-        success, stdout, stderr = self.run_command(["git", "pull", "--rebase"], timeout=60)
-        
-        if success:
-            print("✅ Pull successful")
+        # 2. Check if there's actually anything to commit
+        success, _, _ = self.run_command(["git", "diff", "--cached", "--quiet"])
+        if success: # Exit code 0 means NO changes
+            print("✨ No changes to commit.")
             return True
-        else:
-            print(f"❌ Pull failed: {stderr}")
-            if "merging" in stderr or "conflict" in stderr:
-                print("⚠️  Merge conflict detected. Manual intervention required.")
-            return False
 
-    def push_changes(self, max_retries: int = 3) -> bool:
-        """Push commits to remote with retry logic and exponential backoff."""
-        print("\n🚀 Pushing to remote...")
+        # 3. Commit
+        print(f"📝 Committing: {message.splitlines()[0]}")
+        success, _, stderr = self.run_command(["git", "commit", "-m", message])
+        if not success:
+            print(f"❌ Commit failed: {stderr}")
+        return success
+
+    def push_changes(self) -> bool:
+        print("🚀 Pushing to remote...")
+        success, stdout, stderr = self.run_command(["git", "push"])
+        if success:
+            print("✅ Push successful")
+            return True
         
-        for attempt in range(1, max_retries + 1):
-            # Increase timeout for potential large pushes or slow connections
-            current_timeout = 120 * attempt 
-            
-            print(f"  Attempt {attempt}/{max_retries} (Timeout: {current_timeout}s)...")
-            success, stdout, stderr = self.run_command(["git", "push"], timeout=current_timeout)
-            
-            if success:
-                print("✅ Changes pushed successfully")
-                if stdout:
-                    print(stdout)
-                return True
-            
-            err_msg = stderr.strip() if stderr else "Command timed out"
-            
-            # Specialized error handling
-            if "non-fast-forward" in err_msg or "fetch first" in err_msg:
-                print(f"⚠️  Push rejected: remote has changes I don't have.")
-                if self.pull_changes():
-                    print("🔄 Retrying push after successful pull...")
-                    continue # Retry immediately
-                else:
-                    return False # Could not resolve via pull
-            elif "no upstream branch" in err_msg:
-                branch = self.get_current_branch()
-                print(f"⚠️  No upstream branch found. Setting upstream to origin/{branch}...")
-                success, stdout, stderr = self.run_command(["git", "push", "--set-upstream", "origin", branch])
-                if success:
-                    print("✅ Successfully set upstream and pushed")
-                    return True
-                else:
-                    print(f"❌ Failed to set upstream: {stderr}")
-                    return False
-            
-            print(f"⚠️  Attempt {attempt} failed: {err_msg}")
-            
-            if attempt < max_retries:
-                wait_time = 2 ** attempt
-                print(f"  Retrying in {wait_time}s...")
-                time.sleep(wait_time)
+        # Handle missing upstream
+        if "no upstream branch" in stderr:
+            branch = self.get_current_branch()
+            print(f"⚠️ Setting upstream for {branch}...")
+            success, _, _ = self.run_command(["git", "push", "--set-upstream", "origin", branch])
+            return success
         
-        print(f"❌ Failed to push after {max_retries} attempts.")
+        print(f"❌ Push failed: {stderr}")
         return False
 
     def run(self, custom_message: Optional[str] = None, dry_run: bool = False) -> str:
-        """Main execution flow."""
-        branch = self.get_current_branch()
-        print(f"🔍 Checking repository status on branch: {branch}...\n")
-        
-        # Get current status
         changes = self.get_status()
-        
         if not any(changes.values()):
-            print("✨ No changes to commit")
             return "No changes"
-        
-        # Display changes
-        total_changes = sum(len(files) for files in changes.values())
-        print(f"📊 Found {total_changes} file(s) with changes:\n")
-        
-        for change_type, files in changes.items():
-            if files:
-                print(f"  {change_type.upper()}: {len(files)} file(s)")
-                for f in files[:3]:
-                    print(f"    - {f}")
-                if len(files) > 3:
-                    print(f"    ... and {len(files) - 3} more")
-        
-        print()
-        
-        # Generate or use custom commit message
-        if custom_message:
-            commit_message = custom_message
-            print(f"📌 Using custom commit message")
-        else:
-            commit_message = self.generate_commit_message(changes)
-            print(f"🤖 Auto-generated commit message")
+
+        commit_message = custom_message if custom_message else self.generate_commit_message(changes)
         
         if dry_run:
-            print(f"\n🔍 DRY RUN MODE - No changes will be committed\n")
-            print(f"Generated message:\n{'-' * 60}\n{commit_message}\n{'-' * 60}")
+            print(f"🔍 [DRY RUN] Message: {commit_message}")
             return "Dry run completed"
-        
-        # Stage changes
-        if not self.stage_changes():
-            return "Failed to stage"
-        
-        # Commit changes
-        if not self.commit_changes(commit_message):
-            return "Failed to commit"
-        
-        # Push changes
-        if not self.push_changes():
-            return "Failed to push"
-        
-        print("\n✨ All operations completed successfully!")
-        return "Success"
 
-    def watch(self, interval: int = 5):
-        """Watch for changes and auto-commit."""
-        print(f"👀 Watching for changes (polling every {interval}s)...")
-        print("Press Ctrl+C to stop.")
-        
+        if self.stage_and_commit(commit_message):
+            if self.push_changes():
+                return "Success"
+        return "Failed"
+
+    def watch(self):
+        print("👀 Watching for changes... (Ctrl+C to stop)")
         try:
             while True:
-                # Check for changes silently first
                 changes = self.get_status()
-                
                 if any(changes.values()):
                     print(f"\n⚡ Changes detected at {datetime.now().strftime('%H:%M:%S')}")
-                    # Debounce: wait a bit to ensure file writes are finished
-                    time.sleep(2)
-                    
-                    # Double check changes
-                    changes = self.get_status()
-                    if any(changes.values()):
-                        self.run()
-                        print(f"\n👀 Resuming watch (polling every {interval}s)...")
-                
-                time.sleep(interval)
-                
+                    time.sleep(2) # Debounce
+                    self.run()
+                time.sleep(10)
         except KeyboardInterrupt:
-            print("\n👋 Watch stopped by user.")
-            return "Stopped"
-        except Exception as e:
-            print(f"\n❌ Error in watch loop: {e}")
-            return "Error"
-
+            print("\n👋 Stopped.")
 
 def main():
-    """Main entry point."""
-    # Parse arguments
-    help_requested = any(arg in sys.argv for arg in ["--help", "-h"])
     dry_run = "--dry-run" in sys.argv
     watch_mode = "--watch" in sys.argv
-    custom_message = None
-    
-    if help_requested:
-        print(__doc__)
-        return 0
+    msg = next((arg for arg in sys.argv[1:] if not arg.startswith("-")), None)
 
-    # Remove flags from argv
-    args = [arg for arg in sys.argv[1:] if not arg.startswith("-")]
-    
-    if args:
-        custom_message = " ".join(args)
-    
-    # Run automation
     git_auto = GitAutomation()
-    
     if watch_mode:
         git_auto.watch()
-        result = "Success"
     else:
-        result = git_auto.run(custom_message=custom_message, dry_run=dry_run)
-    
-    return 0 if result in ["Success", "No changes", "Dry run completed", "Stopped"] else 1
-
+        git_auto.run(custom_message=msg, dry_run=dry_run)
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
