@@ -47,23 +47,23 @@ graph TD
 
 ## 🗺️ Curriculum Path
 
-### 🏗️ [Part 1: Foundations & Architecture](./Part-1-Foundations/README.md)
+### 🏗️ [Part 1: Foundations & Architecture](README.md)
 *Junior, learn the anatomy before you perform surgery.* 
 Master the Control Plane, `kubectl` productivity, and the Request Lifecycle.
 
-### 🔄 [Part 2: Workload Management](./Part-2-Workload-Management/README.md)
+### 🔄 [Part 2: Workload Management](README.md)
 *Treat your containers like cattle, not pets.* 
 Deployments, Replicasets, and managing the application lifecycle at scale.
 
-### 🚦 [Part 3: Networking and Config](./Part-3-Networking-and-Config/README.md)
+### 🚦 [Part 3: Networking and Config](README.md)
 *Traffic control for the cloud.* 
 Services, Ingress Controllers, and decoupling config through ConfigMaps and Secrets.
 
-### 💾 [Part 4: State and Persistence](./Part-4-State-and-Persistence/README.md)
+### 💾 [Part 4: State and Persistence](README.md)
 *Data that survives the storm.* 
 PVs, PVCs, and StatefulSets. Learn how to run databases in a world where containers are ephemeral.
 
-### 🛡️ [Part 5: Cloud Ops and Administration](./Part-5-Cloud-Ops-and-Admin/README.md)
+### 🛡️ [Part 5: Cloud Ops and Administration](README.md)
 *Governance and Identity.* 
 RBAC, Namespaces, EKS management, and multi-tenant security hardening.
 
@@ -148,5 +148,15 @@ RBAC, Namespaces, EKS management, and multi-tenant security hardening.
 
 ## 🔗 Next Steps
 Junior, the command center is active. Let's see how to monitor its health.
-1. Proceed to: **[02. Observability Foundations](./Part-2-Workload-Management/README.md)** →
+1. Proceed to: **[02. Observability Foundations](README.md)** →
 2. Return to: **[Phase 3 Hub](../README.md)** →
+
+
+---
+## 🧭 Additional Modules
+- [01 Foundations](01-Foundations/README.md)
+- [02 Workload Management](02-Workload-Management/README.md)
+- [03 Networking and Config](03-Networking-and-Config/README.md)
+- [04 State and Persistence](04-State-and-Persistence/README.md)
+- [05 Cloud Ops and Admin](05-Cloud-Ops-and-Admin/README.md)
+- [06 Mastery and Resources](06-Mastery-and-Resources/README.md)

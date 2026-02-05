@@ -3,8 +3,8 @@
 Packer handles the creation of machine images for multiple platforms (AWS, Azure, GCP, VMware, VirtualBox) using a single configuration file. It implements the "Immutable Infrastructure" pattern.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `aws-ubuntu.pkr.hcl` (AMI buildup).
-- **[CHALLENGES](./CHALLENGES.md)**: Multi-provisioning and post-processing manifests.
+- **[Boilerplates](README.md)**: `aws-ubuntu.pkr.hcl` (AMI buildup).
+- **[CHALLENGES](../../../03-Server-Configuration-and-Ansible/01-Ansible/Learning-Modules/01-Fundamentals/CHALLENGES.md)**: Multi-provisioning and post-processing manifests.
 
 ---
 

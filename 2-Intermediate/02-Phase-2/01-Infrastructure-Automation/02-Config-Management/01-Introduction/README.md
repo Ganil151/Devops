@@ -120,4 +120,4 @@ graph TD
 
 You've bridged the gap. Now let's start provisioning the foundation of the cloud.
 
-**Proceed to**: [IaC Foundations & Terraform →](../01-IaC-Foundations-and-Terraform/README.md)
+**Proceed to**: [IaC Foundations & Terraform →](README.md)

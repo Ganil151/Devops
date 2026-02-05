@@ -189,4 +189,4 @@ echo -e "${GREEN}✓ Success${NC}"
 
 ## Next Steps
 
-Complete these challenges, then proceed to **[Terminal Navigation](../02-Terminal-and-Finder/CHALLENGES.md)** →
+Complete these challenges, then proceed to **[Terminal Navigation](CHALLENGES.md)** →

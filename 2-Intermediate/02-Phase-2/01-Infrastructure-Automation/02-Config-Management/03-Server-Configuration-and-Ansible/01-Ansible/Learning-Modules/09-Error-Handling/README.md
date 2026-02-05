@@ -111,3 +111,10 @@ Use blocks to group operations and catch errors precisely.
 ---
 
 [⬅️ Back to Ansible Index](../README.md) | [Next: Ansible Vault](../10-Ansible-Vault/README.md) ➡️
+
+---
+## 🧭 Additional Modules
+- [01 Failure Strategies](01-Failure-Strategies/README.md)
+- [02 Debugging Tools](02-Debugging-Tools/README.md)
+- [03 Handler Management](03-Handler-Management/README.md)
+- [04 Validation and Abortion](04-Validation-and-Abortion/README.md)

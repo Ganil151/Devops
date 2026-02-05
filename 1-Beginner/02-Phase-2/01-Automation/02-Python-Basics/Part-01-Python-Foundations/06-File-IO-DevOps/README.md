@@ -2,7 +2,7 @@
 
 > **"Infrastructure is code, and code is data. Mastering File I/O is how you bridge the gap between static YAML configs, dynamic JSON API responses, and the persistent audit logs that keep your systems accountable."**
 
-![File I/O Architecture](../assets/file_io.png)
+![File I/O Architecture](../../PlayGround/files-IO/file-rw.py)
 
 ---
 
@@ -128,14 +128,14 @@ with open("config.yaml", "r") as f:
 
 ### 📊 File Mode Reference
 
-| Mode | Name | Behavior | Use Case |
-|:-----|:-----|:---------|:---------|
-| **`r`** | Read | Read existing file | Reading configs, logs |
-| **`w`** | Write | Create new or **overwrite** existing | Writing state files |
-| **`a`** | Append | Add to end of existing file | Appending to logs |
-| **`r+`** | Read/Write | Read and write existing file | Updating configs |
-| **`rb`** | Read Binary | Read binary file | Reading images, PDFs |
-| **`wb`** | Write Binary | Write binary file | Writing images, PDFs |
+| Mode | Name         | Behavior                             | Use Case              |
+| :--- | :----------- | :----------------------------------- | :-------------------- |
+| `r`  | Read         | Read existing file                   | Reading configs, logs |
+| `w`  | Write        | Create new or **overwrite** existing | Writing state files   |
+| `a`  | Append       | Add to end of existing file          | Appending to logs     |
+| `r+` | Read/Write   | Read and write existing file         | Updating configs      |
+| `rb` | Read Binary  | Read binary file                     | Reading images, PDFs  |
+| `wb` | Write Binary | Write binary file                    | Writing images, PDFs  |
 
 ### 🔧 Mode Examples
 

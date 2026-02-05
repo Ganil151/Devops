@@ -1,6 +1,6 @@
 # 06: Real-Life Scenarios
 
-**[⬅️ Back to MCP Module Index](../README.md)** | **[Next: Advanced Level ➡️](../../../README.md)**
+**[⬅️ Back to MCP Module Index](../README.md)** | **[Next: Advanced Level ➡️](README.md)**
 
 ---
 

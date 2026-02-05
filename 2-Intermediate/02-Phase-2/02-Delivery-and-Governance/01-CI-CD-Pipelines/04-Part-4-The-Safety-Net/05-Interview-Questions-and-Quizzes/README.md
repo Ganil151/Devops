@@ -296,3 +296,7 @@ Answer: B
 - [x] Passed the 20-Question Quiz
 - [x] Reviewed the Top 20 Interview Questions
 - [x] Understand the difference between CI, CD and Continuous Deployment
+
+---
+## 🧭 Additional Modules
+- [02 Jenkins](02-Jenkins/README.md)

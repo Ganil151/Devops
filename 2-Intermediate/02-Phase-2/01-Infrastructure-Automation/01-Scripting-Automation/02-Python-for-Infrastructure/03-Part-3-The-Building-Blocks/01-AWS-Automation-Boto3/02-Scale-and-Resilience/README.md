@@ -17,11 +17,12 @@ Welcome to **Advanced Boto3 Operations**. In this module, we move beyond "Happy 
 2. [Mastering Paginators: Config & Filtering](#-mastering-paginators-config--filtering)
 3. [The "Wait-for-State" Pattern: Custom Pollers](#-the-wait-for-state-pattern-custom-pollers)
 4. [The Resilience Layer: Standard vs Adaptive Retries](#-the-resilience-layer-standard-vs-adaptive-retries)
-5. [Real-World DevOps Scenarios](#-real-world-devops-scenarios)
-6. [Advanced Resilience Code Structure](#-advanced-resilience-code-structure)
-7. [Hands-On Challenge: The "Ghost" Volume Reaper](#-hands-on-challenge-the-ghost-volume-reaper)
-8. [Interview Preparation](#-interview-preparation)
-9. [Knowledge Check](#-knowledge-check)
+5. [💰 Cost Management: Automation & FinOps](./Cost-Management.md)
+6. [Real-World DevOps Scenarios](#-real-world-devops-scenarios)
+7. [Advanced Resilience Code Structure](#-advanced-resilience-code-structure)
+8. [Hands-On Challenge: The "Ghost" Volume Reaper](#-hands-on-challenge-the-ghost-volume-reaper)
+9. [Interview Preparation](#-interview-preparation)
+10. [Knowledge Check](#-knowledge-check)
 
 ---
 

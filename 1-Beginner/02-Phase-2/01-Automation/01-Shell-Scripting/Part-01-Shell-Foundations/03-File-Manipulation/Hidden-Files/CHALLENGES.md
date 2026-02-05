@@ -272,4 +272,4 @@ export PS1='[\[\033[01;33m\]${AWS_PROFILE}\[\033[00m\]] \[\033[01;32m\]\u\[\033[
 | `.kube/config` | Kubernetes cluster config |
 
 ## Next Steps
-Complete these challenges, then proceed to **[Searching in Files](../05-Searching-in-Files/CHALLENGES.md)** →
+Complete these challenges, then proceed to **[Searching in Files](CHALLENGES.md)** →

@@ -52,19 +52,19 @@ graph TD
 
 ## 🗺️ Curriculum Path
 
-### 🏗️ [Part 1: Gateway Fundamentals](./Part-1-Gateway-Fundamentals/README.md)
+### 🏗️ [Part 1: Gateway Fundamentals](README.md)
 *Junior, learn the rules of the gate.* 
 Architectural patterns, tool selection (Kong vs. Apigee), and the Backend-for-Frontend (BFF) pattern.
 
-### 🔑 [Part 2: Security & Authentication](./Part-2-Security-and-Authentication/README.md)
+### 🔑 [Part 2: Security & Authentication](README.md)
 *Don't let just anyone in.* 
 Deep dive into JWT, OAuth2 flows, and OpenID Connect (OIDC). Learn to validate tokens at the edge.
 
-### 🚦 [Part 3: Traffic Management & Docs](./Part-3-Traffic-Management-and-Docs/README.md)
+### 🚦 [Part 3: Traffic Management & Docs](README.md)
 *Control the flow.* 
 Rate limiting, Circuit breaking, and the OpenAPI (Swagger) standard. Learn to treat your API as a contract.
 
-### 🎓 [Part 4: Mastery and Resources](./Part-4-Mastery-and-Resources/README.md)
+### 🎓 [Part 4: Mastery and Resources](README.md)
 *The Architect Screening.* 
 Advanced security patterns, interview prep, and real-world API outage scenarios.
 
@@ -151,3 +151,10 @@ Advanced security patterns, interview prep, and real-world API outage scenarios.
 Junior, the borders are secure. Now let's see how our Intelligent Agents use these tools.
 1. Proceed to: **[04. MCP (Model Context Protocol)](../04-MCP/README.md)** →
 2. Return to: **[Phase 3 Hub](../README.md)** →
+
+---
+## 🧭 Additional Modules
+- [01 Gateway Fundamentals](01-Gateway-Fundamentals/README.md)
+- [02 Security and Authentication](02-Security-and-Authentication/README.md)
+- [03 Traffic Management and Docs](03-Traffic-Management-and-Docs/README.md)
+- [04 Mastery and Resources](04-Mastery-and-Resources/README.md)

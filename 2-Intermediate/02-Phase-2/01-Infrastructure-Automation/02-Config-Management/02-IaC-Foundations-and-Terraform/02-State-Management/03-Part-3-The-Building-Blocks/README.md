@@ -6,11 +6,11 @@ Welcome to **Part 3**. This is where we move beyond "Storing State" and start "O
 
 ## 🛣️ The Curriculum
 
-### [01-State-Operations](./01-State-Operations/README.md)
+### [01-State-Operations](README.md)
 **The Objective**: Mastering the surgical tools of state (mv, rm, import).
 *   **Key Concepts**: Precision refactoring, adopting "Shadow IT," and surgical resource decoupling.
 
-### [02-State-Migration](./02-State-Migration/README.md)
+### [02-State-Migration](README.md)
 **The Objective**: Evolving your storage architecture without data loss.
 *   **Key Concepts**: The `terraform init` handshake, state versioning as an "Undo Button," and architectural decomposition.
 

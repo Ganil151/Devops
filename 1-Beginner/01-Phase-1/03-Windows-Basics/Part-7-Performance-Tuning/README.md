@@ -51,3 +51,11 @@ Explore the [06-Labs-and-Challenges](./06-Labs-and-Challenges) directory for han
 
 ---
 *Senior Windows Systems Engineer & Technical Content Architect*
+
+
+---
+## 🧭 Additional Modules
+- [07 WSL2 Optimization](07-WSL2-Optimization/README.md)
+- [08 Server Hardening](08-Server-Hardening/README.md)
+- [09 Maintenance Automation](09-Maintenance-Automation/README.md)
+- [10 Health Monitoring](10-Health-Monitoring/README.md)

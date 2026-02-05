@@ -51,4 +51,4 @@ AWS EFS is a fully managed NFS (Network File System) that automatically scales f
 - **Infrequent Access (IA)**: Significantly cheaper for data not accessed daily, managed by Lifecycle Policies.
 
 ---
-**Next Step**: Learn how to create and mount your first file system in the [Hands-on EFS Guide](../../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/12-File-Storage-EFS/efs-hands-on.md)
+**Next Step**: Learn how to create and mount your first file system in the [Hands-on EFS Guide](../../../../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/03-Networking-and-Security/03-Identity-and-Access-Control/AWS-IAM-Cognito/cognito-hands-on.md)

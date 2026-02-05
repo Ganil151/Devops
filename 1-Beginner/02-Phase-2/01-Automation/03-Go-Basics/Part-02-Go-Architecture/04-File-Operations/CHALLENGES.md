@@ -90,4 +90,4 @@ go run patcher.go --file app.bin --find "OLD_KEY" --replace "NEW_KEY"
 # Expected: Binary file patched successfully
 ```
 
-**Next Step**: [Working with JSON →](../09-Working-with-JSON/CHALLENGES.md)
+**Next Step**: [Working with JSON →](CHALLENGES.md)

@@ -45,4 +45,4 @@ Lambda supports multiple languages natively:
 - **Resource-based Policy**: Grants other AWS services permission to invoke your function.
 
 ---
-**Next Step**: Learn how to deploy and test your first function in the [Hands-on Lambda Guide](../../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/01-Compute-and-Containers/14-Serverless-Lambda/aws-lambda-hands-on.md)
+**Next Step**: Learn how to deploy and test your first function in the [Hands-on Lambda Guide](../../../../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/02-Compute-and-Scale/03-Serverless-Orchestration/AWS-Lambda/aws-lambda-hands-on.md)

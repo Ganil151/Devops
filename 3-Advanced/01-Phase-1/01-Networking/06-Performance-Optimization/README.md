@@ -1006,9 +1006,9 @@ if __name__ == '__main__':
 
 ## 🔗 Next Steps
 
-- [Network Automation](../Network-Automation/) - Automated performance optimization
-- [Service Mesh](../Service-Mesh/) - Service-level performance optimization
-- [Cloud Networking](../Cloud-Networking/) - Cloud performance optimization
+- [Network Automation](README.md) - Automated performance optimization
+- [Service Mesh](README.md) - Service-level performance optimization
+- [Cloud Networking](README.md) - Cloud performance optimization
 
 ---
 

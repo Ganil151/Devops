@@ -122,5 +122,5 @@ graph LR
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Persistence and Storage](../../Part-4-State-and-Persistence/08-Persistence-and-Storage/README.md)
+- [Next: Persistence and Storage](README.md)
 - [Back: Ingress Controllers](../06-Ingress-Controllers/README.md)

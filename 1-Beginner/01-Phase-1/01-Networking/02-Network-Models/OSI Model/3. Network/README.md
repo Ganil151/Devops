@@ -341,4 +341,4 @@ scrape_configs:
 
 ### ⏭️ Next Step
 
-Move up to [Layer 4: Transport Layer](../4.%20Transport/README.md).
+Move up to [Layer 4: Transport Layer](README.md).

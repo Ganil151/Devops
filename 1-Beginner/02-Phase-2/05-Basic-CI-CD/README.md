@@ -30,7 +30,7 @@ graph LR
 This curriculum moves from the theoretical concepts of "Pipelines" to the hands-on implementation of automated workflows that power the world's most successful tech companies.
 
 ## Core Concept: The Immutability Pattern
-**[REFERENCE: Pipeline Governance](../../REFERENCE/Pipeline-Governance-Ref.md)**
+**[REFERENCE: Pipeline Governance](REFERENCE/Pipeline-Governance-Ref.md)**
 
 The golden rule of CI/CD is: **Build Once, Deploy Many**.
 - **The Artifact**: We do not move *code* to production; we move *binaries*.
@@ -38,7 +38,7 @@ The golden rule of CI/CD is: **Build Once, Deploy Many**.
 - **Why?** Rebuilding code for each environment introduces variables (different compiler versions, network glitches) that break consistency.
 
 ## Enterprise Governance
-**[REFERENCE: CI Architecture & Components](../../REFERENCE/CI-Architecture-Components-Ref.md)**
+**[REFERENCE: CI Architecture & Components](REFERENCE/CI-Architecture-Components-Ref.md)**
 
 At scale, we don't just run scripts. We manage:
 - **Controller/Agent Architecture**: Ensuring the brain (Controller) never executes code directly (Security risk).

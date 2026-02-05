@@ -2,7 +2,7 @@
 
 > **"If you have a problem and you decide to use regex, now you have two problems. But if you're a DevOps engineer with 10 gigabytes of unstructured log files, regex is the ONLY solution."**
 
-![Regex matching visualization](../../assets/regex_visualization.png)
+![Regex matching visualization](../../../03-Go-Basics/Part-02-Go-Architecture/07-Regular-Expressions/go_regex_hero.png)
 
 ---
 
@@ -210,10 +210,10 @@ log_entry = "API Request: endpoint=/login params={user='alice', password='SuperS
 # Pattern explanation:
 # password=  : Literal match
 # ['\"]      : Match either single or double quote
-# (.*?)      : Match anything (Group 1) - Non-greedy!
+# (README.md)      : Match anything (Group 1) - Non-greedy!
 # ['\"]      : Match closing quote
 clean_log = re.sub(
-    r"password=['\"](.*?)['\"]", 
+    r"password=['\"](README.md)['\"]", 
     "password='***REDACTED***'", 
     log_entry
 )

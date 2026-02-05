@@ -163,5 +163,5 @@ To make Anaconda seamless in your IDE:
 ---
 
 ## 🎯 Next Steps
-*   **[Hands-on Challenges](./CHALLENGES.md)**: Practice creating and exporting environments.
+*   **[Hands-on Challenges](../../CHALLENGES.md)**: Practice creating and exporting environments.
 *   **[Package Management Basics](../02-Pip-Basics/README.md)**: Understand how pip works inside Conda.

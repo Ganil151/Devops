@@ -123,3 +123,13 @@ graph TD
 ---
 
 [⬅️ Back to Infrastructure Automation Index](../README.md)
+
+
+---
+## 🧭 Additional Modules
+- [01 Introduction](01-Introduction/README.md)
+- [02 Compute and Scale](02-Compute-and-Scale/README.md)
+- [03 Networking and Security](03-Networking-and-Security/README.md)
+- [04 Data and Automation](04-Data-and-Automation/README.md)
+- [05 Assessments](05-Assessments/README.md)
+- [REFERENCE](REFERENCE/README.md)

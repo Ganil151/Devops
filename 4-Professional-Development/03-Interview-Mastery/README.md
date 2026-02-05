@@ -63,5 +63,5 @@ To impress a Senior Engineer, your project should include:
 
 ---
 
-**Challenges**: [technical_scenarios.md](./challenges/technical_scenarios.md)
-**Showcase**: [00-Resources/05-Projects-Showcase](../../00-Resources/05-Projects-Showcase/README.md)
+**Challenges**: [technical_scenarios.md](../../6-Quizzes/1-Beginner/Networking-Scenarios.md)
+**Showcase**: [00-Resources/05-Projects-Showcase](README.md)

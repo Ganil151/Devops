@@ -391,4 +391,4 @@ echo "Database: $DB_HOST"
 ```
 
 ## Next Steps
-Complete these challenges, then proceed to **[Vim Crash Course](../10-Vim-Crash-Course/CHALLENGES.md)** →
+Complete these challenges, then proceed to **[Vim Crash Course](CHALLENGES.md)** →

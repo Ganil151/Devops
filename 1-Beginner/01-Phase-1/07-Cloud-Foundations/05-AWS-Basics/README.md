@@ -10,7 +10,7 @@ Amazon Web Services (AWS) is the world's most comprehensive and broadly adopted 
 - **[Compute & EC2 Vertical Mastery](04-Compute-Serverless/ec2-compute-fundamentals.md)**: Hardware isolation, EBS vs. Instance Store, and Spot lifecycles.
 - **[S3 & Object Storage Mastery](03-Storage/s3-storage-fundamentals.md)**: Consistency models, performance tiers, and lifecycle policies.
 - **[Identity & AD Federation](06-Identity/iam-ad-fundamentals.md)**: SAML 2.0 protocol flows and Windows AD protocol joins.
-- **[VPC & Networking](01-Basic-Networking/networking-fundamentals.md)**: BGP, Subnetting, and Transit Gateways.
+- **[VPC & Networking](../01-Basic-Networking/networking-fundamentals.md)**: BGP, Subnetting, and Transit Gateways.
 - **[EKS Managed Kubernetes](05-Containers/EKS/README.md)**: Control plane mechanics and Fargate comparison.
 
 ## 🛠️ 2. AWS CLI Quick Start
@@ -93,3 +93,14 @@ aws ec2 describe-instances --filters "Name=instance-state-name,Values=running"
 ---
 
 **Next Steps**: Explore [Advanced AWS Services](../../../../README.md) for EKS, CloudFormation, and more.
+
+---
+## 🧭 Additional Modules
+- [01 Introduction](01-Introduction/README.md)
+- [02 Networking](02-Networking/README.md)
+- [03 Storage](03-Storage/README.md)
+- [04 Compute Serverless](04-Compute-Serverless/README.md)
+- [05 Containers](05-Containers/README.md)
+- [06 Identity](06-Identity/README.md)
+- [07 Messaging](07-Messaging/README.md)
+- [08 Web Hosting](08-Web-Hosting/README.md)

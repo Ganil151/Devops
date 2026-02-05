@@ -32,3 +32,8 @@ This content is aligned with the following professional certifications:
 ---
 
 [⬅️ Back to System Administration](../README.md)
+
+
+---
+## 🧭 Additional Modules
+- [Solutions](Solutions/README.md)

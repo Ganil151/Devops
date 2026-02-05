@@ -588,7 +588,7 @@ class UniversalRepositoryManager:
         
         for platform_name, platform_config in self.config['platforms'].items():
             if platform_name in platform_classes:
-                self.platforms[platform_name] = platform_classes[platform_name](platform_config)
+                self.platforms[platform_name] = platform_classes[platform_name](README.md)
     
     def create_repository_everywhere(self, repo_name: str, client_requirements: Dict):
         """Create repository on all required platforms"""

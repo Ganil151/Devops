@@ -25,5 +25,5 @@ The API as a product.
 2. Build professional **Documentation** to enable other teams to use your APIs safely.
 
 ---
-- [Next Part: Mastery and Resources](../Part-4-Mastery-and-Resources/README.md)
+- [Next Part: Mastery and Resources](README.md)
 - [Back to Main Curriculum](../README.md)

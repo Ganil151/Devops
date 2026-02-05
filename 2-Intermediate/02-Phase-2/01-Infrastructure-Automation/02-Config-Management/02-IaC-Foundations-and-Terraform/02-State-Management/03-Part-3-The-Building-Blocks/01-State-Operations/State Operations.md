@@ -288,7 +288,7 @@ If you `state rm` a resource but leave the code in `main.tf`, Terraform will see
 
 After mastering the surgical CLI, you are ready to learn how to move the entire "Mind" of the project across boundaries.
 
-**Proceed to**: [Part 2: State Migration & Versioning](../02-State-Migration/README.md)
+**Proceed to**: [Part 2: State Migration & Versioning](../README.md)
 
 ---
 ## 🎓 Self-Assessment Checklist

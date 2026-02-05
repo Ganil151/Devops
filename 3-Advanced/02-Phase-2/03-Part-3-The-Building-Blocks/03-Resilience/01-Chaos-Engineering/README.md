@@ -16,10 +16,10 @@ Chaos Engineering is the discipline of experimenting on a system in order to bui
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Foundations-of-Chaos](./01-Foundations-of-Chaos/)**
+1. **[🔴 01-Foundations-of-Chaos](README.md)**
    - Game Days vs. Automated Chaos.
    - Defining Blast Radius and Steady State.
-2. **[🔴 02-Injecting-Faults-with-Chaos-Mesh](./02-Injecting-Faults-with-Chaos-Mesh/)**
+2. **[🔴 02-Injecting-Faults-with-Chaos-Mesh](README.md)**
    - YAML-based experiment definitions.
    - Fault types: CPU Stress, Clock Skew, IO Faults.
 
@@ -70,4 +70,4 @@ spec:
 Don't wait for production to run chaos tests. Integrate Chaos Mesh into your **Staging/QA Pipelines**. Use it to verify that your Canary deployments automatically rollback when latency is injected or pods are killed during the rollout.
 
 ---
-**Next Step**: Start with [Foundations of Chaos](./01-Foundations-of-Chaos/) 🚀
+**Next Step**: Start with [Foundations of Chaos](README.md) 🚀

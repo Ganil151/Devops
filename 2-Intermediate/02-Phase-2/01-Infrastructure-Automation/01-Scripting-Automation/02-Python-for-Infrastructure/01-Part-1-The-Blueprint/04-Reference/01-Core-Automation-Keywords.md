@@ -1,4 +1,4 @@
-# 🛠️ 01. Core Automation: The Python Engine Room
+# 🛠️ Core Automation: The Python Engine Room
 
 > **"Scripts break. Software endures. The difference is structure. In the world of high-availability infrastructure, your core automation must be cross-platform, resource-safe, and self-documenting."**
 
@@ -7,7 +7,6 @@ This reference covers the fundamental building blocks of robust Python automatio
 ---
 
 ## 🏗️ The Automation Lifecycle
-
 Modern automation follows the **Initialize → Execute → Close** pattern, ensuring system resources are never leaked.
 
 ```mermaid
@@ -25,17 +24,15 @@ graph TD
 ---
 
 ## 📂 1. Path & File Operations (`pathlib`)
-
 Stop using strings for file paths. Strings lead to slash errors (`\` vs `/`) and "Path Injection" vulnerabilities. Use `pathlib` for object-oriented filesystem handling.
 
-| Keyword | Use Case | Staff Pattern |
-|:---|:---|:---|
-| `Path.home()` | Get User Directory. | `Path.home() / ".aws" / "config"` |
-| `.exists()` | Safety Check. | `if not p.exists(): raise FileNotFoundError` |
-| `.mkdir()` | Setup Workspace. | `p.mkdir(parents=True, exist_ok=True)` |
-| `.stat()` | Metadata check. | `if p.stat().st_size > 1024: ...` |
-| `.read_text()` | Quick extraction. | `raw = Path('config.ini').read_text()` |
-
+| Keyword        | Use Case            | Staff Pattern                                |
+| :------------- | :------------------ | :------------------------------------------- |
+| `Path.home()`  | Get User Directory. | `Path.home() / ".aws" / "config"`            |
+| `.exists()`    | Safety Check.       | `if not p.exists(): raise FileNotFoundError` |
+| `.mkdir()`     | Setup Workspace.    | `p.mkdir(parents=True, exist_ok=True)`       |
+| `.stat()`      | Metadata check.     | `if p.stat().st_size > 1024: ...`            |
+| `.read_text()` | Quick extraction.   | `raw = Path('config.ini').read_text()`       |
 ### 🚀 Staff Pattern: The Atomic Write
 ```python
 from pathlib import Path
@@ -50,9 +47,7 @@ def atomic_write(dest: Path, content: str):
 ```
 
 ---
-
 ## ⚡ 2. Subprocess Management (`subprocess`)
-
 The bridge to the OS. **Never use `os.system`**—it is vulnerable to shell injection and offers zero capture logic.
 
 | Keyword | Use Case | Example |

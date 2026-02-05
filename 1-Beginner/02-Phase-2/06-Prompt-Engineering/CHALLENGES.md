@@ -28,7 +28,7 @@ Master the art of AI communication by completing these 10 progressive challenges
 
 ### Challenge 04: The "Sanitized" Debugger
 
-- **Task**: Take a "Fake" error log (provided in the [Debugging Module](./04-Debugging-with-AI/README.md)) that contains specific IP addresses.
+- **Task**: Take a "Fake" error log (provided in the [Debugging Module](README.md)) that contains specific IP addresses.
 - **Goal**: Create a prompt that sanitizes those IPs into placeholders and asks for a root cause analysis.
 - **Success Criteria**: The AI identifies the error correctly without ever seeing the real IP data.
 
@@ -79,7 +79,7 @@ Master the art of AI communication by completing these 10 progressive challenges
 ---
 
 ## 💡 Stuck?
-- Review the [Mental Models](./01-Foundations-and-Mental-Models/README.md) to understand AI limits.
+- Review the [Mental Models](README.md) to understand AI limits.
 - Use **Context Tags** (e.g., `<logs> ... </logs>`) if the AI gets confused.
 - Ask the AI: *"Why did you give me that specific answer?"* to learn its logic.
 

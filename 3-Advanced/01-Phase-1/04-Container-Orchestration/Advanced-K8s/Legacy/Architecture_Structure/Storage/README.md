@@ -31,43 +31,43 @@
 
 ## Storage Components
 
-### 1. [Persistent Volumes (PV)](./persistent-volumes/)
+### 1. [Persistent Volumes (PV)](README.md)
 - **Cluster Resources**: Storage resources in the cluster
 - **Lifecycle**: Independent of pod lifecycle
 - **Access Modes**: ReadWriteOnce, ReadOnlyMany, ReadWriteMany
 - **Reclaim Policies**: Retain, Delete, Recycle
 
-### 2. [Storage Classes](./storage-class/)
+### 2. [Storage Classes](README.md)
 - **Dynamic Provisioning**: Automatic PV creation
 - **Storage Templates**: Define storage characteristics
 - **Provisioner Integration**: Cloud and CSI driver support
 - **Policy Configuration**: Binding modes and reclaim policies
 
-### 3. [CSI Drivers](./csi-drivers/)
+### 3. [CSI Drivers](README.md)
 - **Container Storage Interface**: Standardized storage plugin API
 - **Vendor Integration**: Support for various storage systems
 - **Feature Support**: Snapshots, cloning, expansion
 - **Lifecycle Management**: Volume creation, attachment, mounting
 
-### 4. [Volume Types](./volume-types/)
+### 4. [Volume Types](README.md)
 - **Ephemeral Volumes**: EmptyDir, ConfigMap, Secret
 - **Network Volumes**: NFS, iSCSI, Ceph
 - **Cloud Volumes**: AWS EBS, GCE PD, Azure Disk
 - **Local Volumes**: HostPath, Local PV
 
-### 5. [Volume Snapshots](./volume-snapshots/)
+### 5. [Volume Snapshots](README.md)
 - **Point-in-Time Copies**: Volume state preservation
 - **Backup Integration**: Data protection strategies
 - **Clone Operations**: Volume duplication
 - **Restore Capabilities**: Data recovery
 
-### 6. [Dynamic Provisioning](./dynamic-provisioning/)
+### 6. [Dynamic Provisioning](README.md)
 - **Automatic Creation**: On-demand PV provisioning
 - **Template-Based**: StorageClass-driven provisioning
 - **Parameter Passing**: Custom storage configuration
 - **Lifecycle Management**: Creation and deletion automation
 
-### 7. [Backup & Restore](./backup-restore/)
+### 7. [Backup & Restore](README.md)
 - **Data Protection**: Backup strategies and tools
 - **Disaster Recovery**: Cross-cluster data migration
 - **Snapshot Management**: Automated backup workflows

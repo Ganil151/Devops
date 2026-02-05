@@ -156,4 +156,4 @@ Don't manually copy your settings. Use a **Bare Git Repo** or **GNU Stow** to sy
 
 Now that you've mastered the invisible layer, let's learn how to find exactly what you're looking for inside your files!
 
-Proceed to: **[Searching in Files](../05-Searching-in-Files/README.md)** →
+Proceed to: **[Searching in Files](README.md)** →

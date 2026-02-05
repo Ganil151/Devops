@@ -148,3 +148,9 @@ Using Infracost in CI/CD, automated shutdown scripts, and setting up anomaly det
 Junior, you've mastered the books. You are now a High-Level Architect.
 1. Return to: **[Phase 3 Hub](../README.md)** →
 2. Graduation: **[Advanced Course](../../../README.md)** →
+
+---
+## 🧭 Additional Modules
+- [04 Showback Chargeback](04-Showback-Chargeback/README.md)
+- [06 Interview Questions and Quizzes](06-Interview-Questions-and-Quizzes/README.md)
+- [07 Real Life Scenarios](07-Real-Life-Scenarios/README.md)

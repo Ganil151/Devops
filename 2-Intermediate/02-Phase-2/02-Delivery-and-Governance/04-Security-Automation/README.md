@@ -74,4 +74,9 @@ trivy image --format json --output results.json my-app:latest
 ```
 
 ---
-**Next Step**: [Trivy Implementation](./01-Trivy-Implementation/) 🚀
+**Next Step**: [Trivy Implementation](README.md) 🚀
+
+
+---
+## 🧭 Additional Modules
+- [05 Security Testing General](05-Security-Testing-General/README.md)

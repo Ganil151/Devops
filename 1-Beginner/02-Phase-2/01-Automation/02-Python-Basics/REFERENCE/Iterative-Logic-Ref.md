@@ -1,6 +1,6 @@
 # Python Iterative Logic & Loops: The DevOps Reference
 
-> **Navigation**: [DevOps Home](../../../../../../../README.md) → [Automation](../../../README.md) → [Python Basics](../../README.md) → Iterative Logic Ref
+> **Navigation**: [DevOps Home](../README.md) → [Automation](../README.md) → [Python Basics](../../README.md) → Iterative Logic Ref
 >
 > **Purpose**: A technical dictionary and high-performance reference for loop structures, control flow keywords, and iteration handling in Python.
 

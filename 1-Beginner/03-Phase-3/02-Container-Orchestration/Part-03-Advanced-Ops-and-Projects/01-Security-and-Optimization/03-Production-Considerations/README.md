@@ -164,4 +164,4 @@ services:
 
 The Docker journey is complete. You are now ready to step into the massive world of Orchestration and Cluster Management.
 
-Proceed to: **[Module 02: Real-World DevOps Projects](../02-Real-World-Projects/README.md)** →
+Proceed to: **[Module 02: Real-World DevOps Projects](README.md)** →

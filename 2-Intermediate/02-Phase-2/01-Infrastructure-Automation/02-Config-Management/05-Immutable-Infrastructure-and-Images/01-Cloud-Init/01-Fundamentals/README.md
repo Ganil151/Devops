@@ -3,8 +3,8 @@
 Cloud-init is the standard method for cross-platform cloud instance initialization. It is the "User Data" that runs the first time a server boots, allowing you to turn a generic OS image into a configured server.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `cloud-config.yaml` (Full instance setup).
-- **[CHALLENGES](./CHALLENGES.md)**: Multi-user setups and disk management.
+- **[Boilerplates](README.md)**: `cloud-config.yaml` (Full instance setup).
+- **[CHALLENGES](../../../03-Server-Configuration-and-Ansible/01-Ansible/Learning-Modules/01-Fundamentals/CHALLENGES.md)**: Multi-user setups and disk management.
 
 ---
 

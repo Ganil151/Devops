@@ -3,8 +3,8 @@
 CloudFormation is the native infrastructure-as-code service for AWS. It allows you to model your entire AWS infrastructure in single, text-based templates (YAML or JSON).
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `template.yaml` (S3 and Parameters).
-- **[CHALLENGES](./CHALLENGES.md)**: Stack updates, intrinsic functions, and deletion policies.
+- **[Boilerplates](README.md)**: `template.yaml` (S3 and Parameters).
+- **[CHALLENGES](../../03-Server-Configuration-and-Ansible/01-Ansible/Learning-Modules/01-Fundamentals/CHALLENGES.md)**: Stack updates, intrinsic functions, and deletion policies.
 
 ---
 
@@ -58,3 +58,11 @@ CloudFormation automatically rolls back the entire stack if a single resource fa
 ---
 
 [⬅️ Back to Vendor Tools Index](../README.md)
+
+
+---
+## 🧭 Additional Modules
+- [Advanced](Advanced/README.md)
+- [Beginner](Beginner/README.md)
+- [Intermediate](Intermediate/README.md)
+- [Interview Questions](Interview-Questions/README.md)

@@ -110,4 +110,4 @@ Data sources are resolved during the `plan` phase. If you have 50 data sources q
 
 ---
 
-**Next Step**: Learn to bundle these patterns into LEGO blocks in **[Part 2: Modular Architecture](../02-Modules-and-Environment-Isolation/)** 🟡
+**Next Step**: Learn to bundle these patterns into LEGO blocks in **[Part 2: Modular Architecture](README.md)** 🟡

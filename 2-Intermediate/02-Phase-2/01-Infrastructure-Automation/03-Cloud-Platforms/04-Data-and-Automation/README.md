@@ -69,3 +69,11 @@ Intermediate DevOps focus shifts from "How do I store this?" to "How do I manage
 - **Q2**: Which AWS service monitors configuration changes against a desired baseline? (AWS Config)
 - **Q3**: Does vertical scaling of a database usually require downtime? (Yes)
 *Full 10-question quiz in `technical-guides/quiz.md`*
+
+
+---
+## 🧭 Additional Modules
+- [01 Relational and NoSQL Databases](01-Relational-and-NoSQL-Databases/README.md)
+- [02 Storage and Lifecycle Management](02-Storage-and-Lifecycle-Management/README.md)
+- [03 Data Backup and Recovery](03-Data-Backup-and-Recovery/README.md)
+- [04 Infrastructure Governance and Audit](04-Infrastructure-Governance-and-Audit/README.md)

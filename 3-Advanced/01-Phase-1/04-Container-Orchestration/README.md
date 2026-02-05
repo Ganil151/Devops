@@ -24,4 +24,4 @@ Managing security and consistency across hundreds of clusters globally:
 - [Enterprise Orchestration](./Enterprise-Container-Orchestration/README.md) - Managed Kubernetes (EKS/GKE) and production scaling.
 
 ---
-**Next Step**: Learn about [Enterprise Security (DevSecOps)](../07-Security/README.md).
+**Next Step**: Learn about [Enterprise Security (DevSecOps)](README.md).

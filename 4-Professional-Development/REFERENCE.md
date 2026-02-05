@@ -36,7 +36,7 @@ We have organized your career development into **4 Mastery Parts**:
 *Proof of Work.*
 
 - **Golden Project**: Building high-fidelity, automated infrastructure repos.
-- **Showcase**: Integration with the [Global Showcase Hub](../../00-Resources/05-Projects-Showcase/README.md).
+- **Showcase**: Integration with the [Global Showcase Hub](01-Career-Strategy/README.md).
 
 ---
 
@@ -69,3 +69,8 @@ By mastering this tier, you move from a **Tool Operator** to a **Production Engi
 ---
 
 **Start your professional ascent**: [Part 1: Career Strategy](./01-Career-Strategy/README.md).
+
+
+---
+## 🧭 Additional Modules
+- [Images](Images/README.md)

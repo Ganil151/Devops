@@ -2,7 +2,7 @@
 
 > **"A server is a software artifact, not a physical object. If you have to SSH into a production server to fix a bug, your process has failed. Build. Bake. Replace."**
 
-![Packer & Immutable Lifecycle](../../assets/immutable_infrastructure.png)
+![Packer & Immutable Lifecycle](../00-Reference-and-Metadata/Immutable-Infrastructure-Governance-Ref.md)
 
 ---
 
@@ -155,4 +155,11 @@ Use User-Data to apply unique settings *only* at first boot (hostname, SSH keys)
 
 You've built the foundation and the OS images. Now let's manage the most complex environment of all: Kubernetes.
 
-**Proceed to**: [Kubernetes Config & Helm →](../05-Kubernetes-Config-and-Templating/README.md)
+**Proceed to**: [Kubernetes Config & Helm →](README.md)
+
+
+---
+## 🧭 Additional Modules
+- [01 Cloud Init](01-Cloud-Init/README.md)
+- [02 Packer](02-Packer/README.md)
+- [03 Vagrant](03-Vagrant/README.md)

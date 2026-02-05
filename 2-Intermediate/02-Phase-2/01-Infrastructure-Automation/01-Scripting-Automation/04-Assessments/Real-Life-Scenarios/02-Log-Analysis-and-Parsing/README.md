@@ -3,7 +3,7 @@
 Automation isn't just about changing systems; it's about making sense of the mountains of data they produce.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `analyze_logs.sh` (Top IPs and Errors).
+- **[Boilerplates](README.md)**: `analyze_logs.sh` (Top IPs and Errors).
 - **[CHALLENGES](./CHALLENGES.md)**: Building custom dashboards from raw text.
 
 ---

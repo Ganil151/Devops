@@ -42,7 +42,7 @@ Learn how to install the Unified Agent, configure Logs Insights queries, and man
 ---
 
 ## 🔗 Internal Navigation
-- [Next Part: Distributed Tracing](../../Part-3-Distributed-Tracing-and-APM/README.md)
+- [Next Part: Distributed Tracing](README.md)
 - [Back: Log Management](../02-Log-Management/README.md)
 
 ---

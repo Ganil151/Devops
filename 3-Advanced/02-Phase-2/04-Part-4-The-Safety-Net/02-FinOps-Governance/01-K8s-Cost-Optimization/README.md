@@ -15,10 +15,10 @@ Kubernetes makes it easy to requested more resources than you actually need. Thi
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-VPA-Vertical-Pod-Autoscaler](./01-VPA-Vertical-Pod-Autoscaler/)**
+1. **[🔴 01-VPA-Vertical-Pod-Autoscaler](README.md)**
    - Installing the VPA controller.
    - Analyzing `Recommended` vs. `Actual` usage.
-2. **[🔴 02-Goldilocks-Rightsizing](./02-Goldilocks-Rightsizing/)**
+2. **[🔴 02-Goldilocks-Rightsizing](README.md)**
    - Dashboarding recommendations for all namespaces.
    - Setting "Fair" vs. "Aggressive" optimization profiles.
 
@@ -62,4 +62,4 @@ spec:
 When starting with VPA, always use `updateMode: "Off"`. Let it collect 7+ days of metrics to account for traffic spikes (e.g., weekend surges). Only once the recommendations have stabilized should you consider moving to `"Auto"` mode for non-critical workloads.
 
 ---
-**Next Step**: Start with [VPA Fundamentals](./01-VPA-Vertical-Pod-Autoscaler/) 🚀
+**Next Step**: Start with [VPA Fundamentals](README.md) 🚀

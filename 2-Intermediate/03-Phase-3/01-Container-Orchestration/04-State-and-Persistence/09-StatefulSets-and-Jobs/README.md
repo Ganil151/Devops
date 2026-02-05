@@ -114,5 +114,5 @@ spec:
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Managed Kubernetes EKS](../../Part-5-Cloud-Ops-and-Admin/10-Managed-Kubernetes-EKS/README.md)
+- [Next: Managed Kubernetes EKS](README.md)
 - [Back: Persistence and Storage](../08-Persistence-and-Storage/README.md)

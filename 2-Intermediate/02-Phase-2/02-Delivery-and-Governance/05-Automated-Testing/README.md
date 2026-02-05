@@ -477,3 +477,10 @@ npm test -- --reporter mochawesome
 - Container image scanning
 - Infrastructure security testing
 ```
+
+---
+## 🧭 Additional Modules
+- [API Testing](API-Testing/README.md)
+- [Integration Testing](Integration-Testing/README.md)
+- [Performance Testing](Performance-Testing/README.md)
+- [Unit Testing](Unit-Testing/README.md)

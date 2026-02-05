@@ -595,9 +595,9 @@ graph TB
 
 ## 📚 Additional Resources
 
-- **[gRPC Best Practices](./GRPC_BEST_PRACTICES.md)**
+- **[gRPC Best Practices](../../../01-Enterprise-Multi-Cloud/08-S3-Enterprise/s3-security-best-practices.md)**
 - **[Kafka Schema Registry Setup](./SCHEMA_REGISTRY_SETUP.md)**
-- **[Protobuf Style Guide](./PROTOBUF_STYLE_GUIDE.md)**
+- **[Protobuf Style Guide](../../../../../../../1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/REFERENCE/Python-PEP8-Style-Guide.md)**
 
 ---
 

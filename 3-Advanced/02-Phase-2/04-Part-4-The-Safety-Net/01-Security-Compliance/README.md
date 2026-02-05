@@ -50,8 +50,8 @@ These modules should be completed in the order shown above for optimal learning 
 
 ## 🔗 Related Parts
 
-- [Part 1: Service Mesh](../Part-01-Service-Mesh/) - mTLS
-- [Part 2: GitOps](../Part-02-GitOps-Fleet/) - Security pipelines
+- [Part 1: Service Mesh](README.md) - mTLS
+- [Part 2: GitOps](README.md) - Security pipelines
 
 
 ---

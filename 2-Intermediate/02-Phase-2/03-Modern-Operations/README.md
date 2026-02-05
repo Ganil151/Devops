@@ -147,3 +147,8 @@ Junior, you have mastered the engine, the assembly line, and the central intelli
 
 1. Proceed to: **[Phase 3: High Fidelity Orchestration](../../03-Phase-3/README.md)** →
 2. Return to: **[Phase 2 Hub](../README.md)** →
+
+
+---
+## 🧭 Additional Modules
+- [05 Serverless Architecture](05-Serverless-Architecture/README.md)

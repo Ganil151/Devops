@@ -166,3 +166,8 @@ The journey into the machine begins with the heart of the system: services.
 
 Proceed to: **[01. Systemd & Service Management](./01-Systemd-and-Services/README.md)** →
 Node: This link points to the first technical deep-dive.
+
+
+---
+## 🧭 Additional Modules
+- [Server](Server/README.md)

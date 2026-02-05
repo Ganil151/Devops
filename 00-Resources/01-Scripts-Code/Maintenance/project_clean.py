@@ -5,9 +5,7 @@ Project Cleanup Utility
 A robust utility for auditing and cleaning project directories by removing
 specified file patterns. Supports dry-run mode, recursive search, backup
 functionality, and comprehensive error handling.
-
-Author: DevOps Team
-Version: 2.0.0
+@TRINITY: Project Cleaner | python 00-Resources/01-Scripts-Code/Maintenance/project_clean.py
 """
 
 import os

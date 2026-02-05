@@ -94,4 +94,12 @@ If it stops at the destination VPC Router, it's a Security Group / NACL issue.
 
 You can route packets, but can you prove they are safe?
 
-Proceed to: **[Security Groups & NACLs](../../02-Advanced-Networking/README.md)** →
+Proceed to: **[Security Groups & NACLs](README.md)** →
+
+
+---
+## 🧭 Additional Modules
+- [01 Route Table Fundamentals](01-Route-Table-Fundamentals/README.md)
+- [02 Priority Logic LPM](02-Priority-Logic-LPM/README.md)
+- [03 Gateway Routing and Middleboxes](03-Gateway-Routing-and-Middleboxes/README.md)
+- [04 Troubleshooting and Blackholes](04-Troubleshooting-and-Blackholes/README.md)

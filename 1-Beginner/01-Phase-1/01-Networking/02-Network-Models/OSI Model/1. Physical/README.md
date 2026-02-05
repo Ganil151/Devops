@@ -19,4 +19,4 @@ Functions of a Physical layer:
 ---
 
 ### ⏭️ Next Step
-Move up to [Layer 2: Data Link Layer](../2.%20Data%20Link/README.md).
+Move up to [Layer 2: Data Link Layer](README.md).

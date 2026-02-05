@@ -60,3 +60,8 @@ graph TD
 ---
 
 [⬅️ Back to Cloud Platforms Index](../README.md)
+
+
+---
+## 🧭 Additional Modules
+- [samples](samples/README.md)

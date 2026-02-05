@@ -162,4 +162,4 @@ for page in paginator.paginate(Bucket='giant-data-bucket'):
 Congratulations! You've completed the Cloud Automation module. You are now ready to:
 - Build self-healing infrastructure.
 - Automate cost reporting and resource lifecycle.
-- Integrate these scripts into your **[CI/CD Pipelines](../05-DevOps-Integration/CI-CD/README.md)**.
+- Integrate these scripts into your **[CI/CD Pipelines](README.md)**.

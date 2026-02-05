@@ -41,7 +41,7 @@ Learn the trade-offs between Path-based and Header-based versioning and master t
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Mastery and Resources Overview](../../Part-4-Mastery-and-Resources/README.md)
+- [Next: Mastery and Resources Overview](README.md)
 - [Back: Traffic Management Hub](../README.md)
 
 ---

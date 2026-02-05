@@ -407,7 +407,7 @@ They implemented a strict **"No Sudo Pip"** policy. Every Jenkins job now create
 
 Now that your environment is isolated and safe, let's learn how to effectively manage the packages that live inside it.
 
-**Proceed to**: [Package Management →](../07-Package-Management/README.md)
+**Proceed to**: [Package Management →](README.md)
 
 ---
 

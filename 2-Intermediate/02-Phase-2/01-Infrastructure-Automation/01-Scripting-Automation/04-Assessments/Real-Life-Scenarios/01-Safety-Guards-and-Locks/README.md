@@ -3,7 +3,7 @@
 Destructive automation requires multiple layers of safety. A single unset variable should never result in `rm -rf /`.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `safe_cleanup.sh` (Locking and Variable checks).
+- **[Boilerplates](README.md)**: `safe_cleanup.sh` (Locking and Variable checks).
 - **[CHALLENGES](./CHALLENGES.md)**: Building a "Self-Protecting" script.
 
 ---

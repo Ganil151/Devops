@@ -30,4 +30,4 @@ If you were auditing a Linux server right now, check these 3 files:
 
 ---
 
-**Next Step**: Prove your skills in **[CHALLENGES.md](../../CHALLENGES.md)** 🚀
+**Next Step**: Prove your skills in **[CHALLENGES.md](../../../02-API-Basics/CHALLENGES.md)** 🚀

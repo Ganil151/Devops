@@ -60,3 +60,9 @@ graph TD
 ---
 
 **Next Step**: [Mastering Async Programming →](./01-Async-Programming-asyncio/README.md)
+
+
+---
+## 🧭 Additional Modules
+- [06 Generic Automation Framework](06-Generic-Automation-Framework/README.md)
+- [07 Infrastructure as Code Python](07-Infrastructure-as-Code-Python/README.md)

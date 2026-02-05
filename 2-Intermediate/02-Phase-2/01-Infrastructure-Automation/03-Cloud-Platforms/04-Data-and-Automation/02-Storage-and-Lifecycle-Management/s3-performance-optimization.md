@@ -634,7 +634,7 @@ benchmark_upload('multipart', 'large.zip', 'my-bucket', 'test/multipart.zip')
 
 ## Additional Resources
 
-- [S3 Advanced README](../../../../../README.md)
+- [S3 Advanced README](README.md)
 - [AWS S3 Performance Guidelines](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html)
 - [Transfer Acceleration](https://docs.aws.amazon.com/AmazonS3/latest/userguide/transfer-acceleration.html)
 - [Multipart Upload](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html)

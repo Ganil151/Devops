@@ -32,10 +32,10 @@ Managing thousands of disconnected locations requires unique standards:
 
 ## 🗺️ Module Structure
 
-1. **[🟢 01-K3s-Installation](./01-K3s-Installation/)**
+1. **[🟢 01-K3s-Installation](README.md)**
    - Single-node setup with `curl -sfL https://get.k3s.io | sh -`.
    - Managing `kubeconfig` and node tokens.
-2. **[🟢 02-Resource-Constraints](./02-Resource-Constraints/)**
+2. **[🟢 02-Resource-Constraints](README.md)**
    - Disabling unnecessary features (Traefik, ServiceLB).
    - Tuning the K3s server for low-memory environments (< 512MB RAM).
 
@@ -76,4 +76,4 @@ graph TD
 When deploying to Edge, always strip out default addons you don't use. Use `--disable traefik` during K3s installation if you plan to use an Nginx ingress or if you don't need a load balancer at the edge.
 
 ---
-**Next Step**: Start with [K3s Installation](./01-K3s-Installation/) 🚀
+**Next Step**: Start with [K3s Installation](README.md) 🚀

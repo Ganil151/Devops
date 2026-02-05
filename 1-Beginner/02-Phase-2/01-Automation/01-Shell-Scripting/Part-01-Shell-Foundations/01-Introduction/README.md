@@ -249,4 +249,4 @@ exit 0
 
 Ready to move into the cockpit?
 
-Proceed to: **[Terminal Navigation](../02-Terminal-and-Finder/README.md)** →
+Proceed to: **[Terminal Navigation](README.md)** →

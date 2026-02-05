@@ -26,5 +26,5 @@ Ensuring workload availability.
 
 ---
 ---
-- [Next: Part 2 - Logging & Cloud Metrics](../Part-2-Logging-and-Cloud-Metrics/README.md)
+- [Next: Part 2 - Logging & Cloud Metrics](README.md)
 - [Back to Main Curriculum](../README.md)

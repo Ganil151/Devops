@@ -88,7 +88,7 @@ flowchart TD
 
 ## 📂 Learning Path
 
-1.  **[04-Cloud-Fundamentals](./04-Cloud-Fundamentals/README.md)**: Compute, Storage, and the Shared Responsibility model.
+1.  **[04-Cloud-Fundamentals](README.md)**: Compute, Storage, and the Shared Responsibility model.
 2.  **[01-Basic-Networking](./01-Basic-Networking/README.md)**: VPCs and Subnets (Your private slice of the cloud).
 3.  **[05-AWS-Basics](./05-AWS-Basics/README.md)**: Mastering the market leader.
 4.  **[06-Azure-Basics](./06-Azure-Basics/README.md)**: Enterprise integration and Windows-first cloud.
@@ -134,4 +134,10 @@ flowchart TD
 
 ---
 
-**Next Step**: Start with **[Cloud Fundamentals](./04-Cloud-Fundamentals/README.md)**
+**Next Step**: Start with **[Cloud Fundamentals](README.md)**
+
+
+---
+## 🧭 Additional Modules
+- [02 Storage Fundamentals](02-Storage-Fundamentals/README.md)
+- [03 Global Infrastructure](03-Global-Infrastructure/README.md)

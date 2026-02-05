@@ -119,4 +119,4 @@ You can reach any service using this standard format:
 
 ## 🔗 Internal Navigation
 - [Next: Ingress Controllers](../06-Ingress-Controllers/README.md)
-- [Back: Deployments and Scaling](../../Part-2-Workload-Management/04-Deployments-and-Scaling/README.md)
+- [Back: Deployments and Scaling](README.md)

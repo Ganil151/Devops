@@ -2,6 +2,8 @@
 """
 DevOps Repository Sanitization, Deep-Dive & Purge Audit Script
 Performs comprehensive structural, content, and hygiene audit
+
+@TRINITY: Repo Auditor | python 00-Resources/01-Scripts-Code/Maintenance/repository_audit.py
 """
 
 import os

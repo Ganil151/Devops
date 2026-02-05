@@ -76,3 +76,11 @@ Handling complex stateful applications and cloud-native services.
 
 ---
 **Next Step**: Learn how to bridge these clusters with enterprise-scale automation in the [Advanced Automation Module](../../../../README.md).
+
+---
+## 🧭 Additional Modules
+- [BackupRestore](BackupRestore/README.md)
+- [CNI](CNI/README.md)
+- [CRI](CRI/README.md)
+- [GitOps](GitOps/README.md)
+- [VolumeSnapshots](VolumeSnapshots/README.md)

@@ -7,79 +7,79 @@ This directory contains comprehensive documentation for all major Kubernetes arc
 ## Architecture Components
 
 ### Control Plane Components
-- **[1-Cloud_Controller_Manager](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Control-Plane/1-Cloud_Controller_Manager)** - Cloud provider integration and management
-- **[2-Kube_Api_Server](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Control-Plane/2-Kube_Api_Server)** - Central API gateway and cluster management
-- **[3-ETCD](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Control-Plane/3-ETCD)** - Distributed key-value store for cluster data
-- **[4-Kube-Scheduler](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Control-Plane/4-Kube-Scheduler)** - Pod scheduling and placement decisions
-- **[5-Kube_Controller_Manager](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Control-Plane/5-Kube_Controller_Manager)** - Controller processes and state reconciliation
+- **[1-Cloud_Controller_Manager](README.md)** - Cloud provider integration and management
+- **[2-Kube_Api_Server](README.md)** - Central API gateway and cluster management
+- **[3-ETCD](README.md)** - Distributed key-value store for cluster data
+- **[4-Kube-Scheduler](README.md)** - Pod scheduling and placement decisions
+- **[5-Kube_Controller_Manager](README.md)** - Controller processes and state reconciliation
 
 ### Node Components
-- **[kubelet](kubelet/)** - Node agent for pod lifecycle management
-- **[nodes](nodes/)** - Worker node architecture and management
-- **[crictl](crictl/)** - Container runtime interface CLI tool
+- **[kubelet](README.md)** - Node agent for pod lifecycle management
+- **[nodes](README.md)** - Worker node architecture and management
+- **[crictl](README.md)** - Container runtime interface CLI tool
 
 ### Core Workload Resources
-- **[pods](pods/)** - Basic execution units and container management
-- **[deployments](deployments/)** - Declarative application deployment and updates
+- **[pods](README.md)** - Basic execution units and container management
+- **[deployments](README.md)** - Declarative application deployment and updates
 - **[statefulsets](statefulsets/)** - Stateful application management
-- **[daemonsets](daemonsets/)** - Node-wide service deployment
-- **[jobs](jobs/)** - Batch job execution
-- **[cronjobs](cronjobs/)** - Scheduled job execution
+- **[daemonsets](README.md)** - Node-wide service deployment
+- **[jobs](README.md)** - Batch job execution
+- **[cronjobs](README.md)** - Scheduled job execution
 
 ### Networking
-- **[services](services/)** - Service discovery and load balancing
-- **[ingress](ingress/)** - External access and HTTP routing
-- **[network-policies](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Legacy/Architecture_Structure/Networking/network-policies)** - Network security and micro-segmentation
+- **[services](README.md)** - Service discovery and load balancing
+- **[ingress](README.md)** - External access and HTTP routing
+- **[network-policies](README.md)** - Network security and micro-segmentation
 
 ### Storage
-- **[persistent-volumes](persistent-volumes/)** - Durable storage management
-- **[storage-class](storage-class/)** - Dynamic storage provisioning
+- **[persistent-volumes](README.md)** - Durable storage management
+- **[storage-class](README.md)** - Dynamic storage provisioning
 
 ### Configuration and Security
-- **[configMaps](configMaps/)** - Configuration data management
-- **[secrets](secrets/)** - Sensitive data management
-- **[service-accounts](service-accounts/)** - Pod identity and authentication
-- **[rbac](rbac/)** - Role-based access control
+- **[configMaps](README.md)** - Configuration data management
+- **[secrets](README.md)** - Sensitive data management
+- **[service-accounts](README.md)** - Pod identity and authentication
+- **[rbac](README.md)** - Role-based access control
 
 ### Cluster Management
-- **[cluster](cluster/)** - Overall cluster architecture and setup
-- **[namespaces](namespaces/)** - Resource isolation and multi-tenancy
-- **[kubectl](kubctl/)** - Command-line interface and cluster interaction
+- **[cluster](README.md)** - Overall cluster architecture and setup
+- **[namespaces](README.md)** - Resource isolation and multi-tenancy
+- **[kubectl](README.md)** - Command-line interface and cluster interaction
 
 ### Autoscaling and Availability
-- **[hpa](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Autoscaling/hpa)** - Horizontal Pod Autoscaler
-- **[vpa](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Autoscaling/vpa)** - Vertical Pod Autoscaler
-- **[pdb](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Autoscaling/pdb)** - Pod Disruption Budget
+- **[hpa](README.md)** - Horizontal Pod Autoscaler
+- **[vpa](README.md)** - Vertical Pod Autoscaler
+- **[pdb](README.md)** - Pod Disruption Budget
 
 ## Quick Navigation
 
 ### Getting Started
-1. [Cluster Architecture](cluster/) - Understanding Kubernetes clusters
-2. [Nodes](nodes/) - Worker node components and management
-3. [Pods](pods/) - Basic workload units
-4. [Services](services/) - Networking and service discovery
+1. [Cluster Architecture](README.md) - Understanding Kubernetes clusters
+2. [Nodes](README.md) - Worker node components and management
+3. [Pods](README.md) - Basic workload units
+4. [Services](README.md) - Networking and service discovery
 
 ### Core Concepts
-1. [Deployments](deployments/) - Application deployment patterns
-2. [ConfigMaps](configMaps/) & [Secrets](secrets/) - Configuration management
-3. [Namespaces](namespaces/) - Resource organization
-4. [RBAC](rbac/) - Security and access control
+1. [Deployments](README.md) - Application deployment patterns
+2. [ConfigMaps](README.md) & [Secrets](README.md) - Configuration management
+3. [Namespaces](README.md) - Resource organization
+4. [RBAC](README.md) - Security and access control
 
 ### Advanced Topics
 1. [StatefulSets](statefulsets/) - Stateful applications
-2. [Ingress](ingress/) - External access patterns
-3. [Network Policies](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Legacy/Architecture_Structure/Networking/network-policies) - Security policies
-4. [Autoscaling](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Autoscaling/hpa) - Dynamic scaling strategies
+2. [Ingress](README.md) - External access patterns
+3. [Network Policies](README.md) - Security policies
+4. [Autoscaling](README.md) - Dynamic scaling strategies
 
 ### Operations
-1. [kubectl](kubctl/) - Command-line operations
-2. [Jobs](jobs/) & [CronJobs](cronjobs/) - Batch processing
-3. [PDB](../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/Autoscaling/pdb) - Availability management
-4. [Storage](persistent-volumes/) - Data persistence
+1. [kubectl](README.md) - Command-line operations
+2. [Jobs](README.md) & [CronJobs](README.md) - Batch processing
+3. [PDB](README.md) - Availability management
+4. [Storage](README.md) - Data persistence
 
 ## Architecture Diagrams
 
-Visual representations and diagrams for various components can be found in the [Images](Images/) directory.
+Visual representations and diagrams for various components can be found in the [Images](README.md) directory.
 
 ## Best Practices
 
@@ -107,3 +107,7 @@ When adding new documentation:
 - [Kubernetes Concepts](https://kubernetes.io/docs/concepts/)
 
 This documentation serves as a comprehensive reference for understanding, deploying, and managing Kubernetes clusters and applications.
+
+---
+## 🧭 Additional Modules
+- [statefulsets](statefulsets/README.md)

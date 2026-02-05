@@ -2,7 +2,7 @@
 
 > **"If Provisioning builds the house, Configuration moves the furniture in and sets the alarm. A server is just a blank canvas; the configuration is the art of production-ready engineering."**
 
-![Ansible Architecture](../../assets/ansible_architecture.png)
+![Ansible Architecture](01-Ansible/ansible-health-check.sh)
 
 ---
 
@@ -157,4 +157,12 @@ Never put 1,000 lines in one file. Use **Roles**.
 
 Servers are provisioned and configured. But what happens if we want to move even faster? Let's explore the world of "Baking" instead of "Cooking."
 
-**Proceed to**: [Immutable Infrastructure & Packer →](../04-Immutable-Infrastructure-and-Images/README.md)
+**Proceed to**: [Immutable Infrastructure & Packer →](README.md)
+
+
+---
+## 🧭 Additional Modules
+- [01 Ansible](01-Ansible/README.md)
+- [02 Chef](02-Chef/README.md)
+- [03 Puppet](03-Puppet/README.md)
+- [04 SaltStack](04-SaltStack/README.md)

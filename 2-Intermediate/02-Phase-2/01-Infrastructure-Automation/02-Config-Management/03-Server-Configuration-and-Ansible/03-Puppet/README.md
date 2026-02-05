@@ -428,3 +428,7 @@ end
 **Next Steps**: Master Puppet fundamentals, explore enterprise features, and integrate with existing infrastructure automation workflows.
 
 *"Infrastructure as code with enterprise-grade reliability and compliance."*
+
+---
+## 🧭 Additional Modules
+- [02 Manifests and Classes](02-Manifests-and-Classes/README.md)

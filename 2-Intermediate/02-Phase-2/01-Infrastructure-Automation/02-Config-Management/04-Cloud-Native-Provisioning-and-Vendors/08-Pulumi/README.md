@@ -865,3 +865,7 @@ export class CustomResource extends pulumi.dynamic.Resource {
 **Next Steps**: Master Pulumi fundamentals with your preferred programming language, explore component resources, and integrate with CI/CD pipelines for modern infrastructure automation.
 
 *"Infrastructure as code with the full power of programming languages."*
+
+---
+## 🧭 Additional Modules
+- [01 Fundamentals](01-Fundamentals/README.md)

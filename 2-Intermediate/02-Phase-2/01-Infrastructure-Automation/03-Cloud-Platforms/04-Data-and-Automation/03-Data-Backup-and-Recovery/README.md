@@ -30,5 +30,5 @@ Move older snapshots to "Cold" tiers (e.g., AWS Backup Archive) for long-term re
 ---
 
 ## 📂 Implementation Guides
-- [Backup-Strategies](./backup-strategies.md): Planning for 3-2-1 backup methodology.
-- [DR-Patterns](./dr-patterns.md): Pilot Light vs. Warm Standby vs. Multi-Site.
+- [Backup-Strategies](../../../02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/20-Testing-Strategies/Testing Strategies.md): Planning for 3-2-1 backup methodology.
+- [DR-Patterns](../../../02-Config-Management/00-Reference-and-Metadata/IaC-Architecture-Patterns-Ref.md): Pilot Light vs. Warm Standby vs. Multi-Site.

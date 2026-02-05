@@ -33,4 +33,4 @@ Production-ready pipeline templates for various deployment scenarios:
 
 - **[Setup Scripts](./jenkins_setup.sh)** - Automated Jenkins installation
 - **[Assets](./assets/)** - Architecture diagrams and reference materials
-- **[Resources](./resources/)** - Cheat sheets and guides
+- **[Resources](README.md)** - Cheat sheets and guides

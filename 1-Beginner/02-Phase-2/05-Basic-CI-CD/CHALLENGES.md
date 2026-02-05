@@ -80,7 +80,7 @@ Master Continuous Integration and Deployment by completing these 10 progressive 
 
 ## 💡 Stuck?
 
-- Check the [Foundations Guide](./01-CI-CD-Foundations/README.md).
+- Check the [Foundations Guide](README.md).
 - Search the [GitHub Marketplace](https://github.com/marketplace?type=actions) for pre-built actions.
 - Use the `workflow_dispatch` event to test your pipeline manually without pushing.
 

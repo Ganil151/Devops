@@ -342,7 +342,7 @@ if __name__ == "__main__":
 3. Logs packet size and destination IP
 4. Calculates bandwidth usage in real-time
 
-**Solution**: See [challenges/01-packet-inspection/](./challenges/01-packet-inspection/)
+**Solution**: See [challenges/01-packet-inspection/](README.md)
 
 ### Lab 2: Process Monitoring
 
@@ -354,7 +354,7 @@ if __name__ == "__main__":
 3. Detects suspicious commands (e.g., `/bin/sh -c curl`)
 4. Sends alerts to Slack/PagerDuty
 
-**Solution**: See [challenges/02-process-monitoring/](./challenges/02-process-monitoring/)
+**Solution**: See [challenges/02-process-monitoring/](README.md)
 
 ### Lab 3: Service Mesh Acceleration
 
@@ -366,7 +366,7 @@ if __name__ == "__main__":
 3. Performance comparison: iptables vs eBPF
 4. Measure latency improvement
 
-**Solution**: See [challenges/03-service-mesh-acceleration/](./challenges/03-service-mesh-acceleration/)
+**Solution**: See [challenges/03-service-mesh-acceleration/](README.md)
 
 ---
 
@@ -460,9 +460,9 @@ Example: Cloudflare uses XDP to handle 26M requests/second during DDoS attacks.
 
 ### Internal Modules
 
-- [Service Mesh Deep-Dive](../01-Service-Mesh/) - eBPF-powered networking
-- [Advanced Networking with Cilium](../03-Multi-Cluster/02-Advanced-Networking-Cilium/) - CNI with eBPF
-- [Runtime Security](../05-Security-Compliance/02-Runtime-Security-Compliance/) - Falco and eBPF
+- [Service Mesh Deep-Dive](README.md) - eBPF-powered networking
+- [Advanced Networking with Cilium](README.md) - CNI with eBPF
+- [Runtime Security](README.md) - Falco and eBPF
 
 ### External Documentation
 
@@ -501,11 +501,11 @@ Example: Cloudflare uses XDP to handle 26M requests/second during DDoS attacks.
    sudo execsnoop
    ```
 
-3. **Complete the Labs**: Start with [Lab 1: Packet Inspection](./challenges/01-packet-inspection/)
+3. **Complete the Labs**: Start with [Lab 1: Packet Inspection](README.md)
 
 4. **Explore Advanced Topics**:
-   - [Cilium Service Mesh](../03-Multi-Cluster/02-Advanced-Networking-Cilium/)
-   - [Falco Runtime Security](../05-Security-Compliance/02-Runtime-Security-Compliance/)
+   - [Cilium Service Mesh](README.md)
+   - [Falco Runtime Security](README.md)
 
 ---
 

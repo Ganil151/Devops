@@ -28,13 +28,13 @@ Why use AWS managed databases?
 
 ## 3. Learning Path & Sub-Modules
 
-### 🐘 [RDS Advanced Overviews](../../../../../README.md)
+### 🐘 [RDS Advanced Overviews](README.md)
 Deep dive into Read Replicas, Multi-AZ failover, and performance tuning.
 
-### ⚡ [DynamoDB Operations](../../../../../README.md)
+### ⚡ [DynamoDB Operations](README.md)
 Mastering partitions, indexes (GSI/LSI), and DAX for caching.
 
-### 🏎️ [In-Memory Caching](../../../../../README.md)
+### 🏎️ [In-Memory Caching](README.md)
 Using Redis and Memcached with ElastiCache to speed up your apps.
 
 ---
@@ -45,4 +45,4 @@ Using Redis and Memcached with ElastiCache to speed up your apps.
 - **Monitor IOPS**: Ensure your database has enough "Provisioned IOPS" to handle disk heavy workloads.
 
 ---
-**Security**: See [Database Security](../../../../../README.md) for enterprise encryption and IAM integration.
+**Security**: See [Database Security](README.md) for enterprise encryption and IAM integration.

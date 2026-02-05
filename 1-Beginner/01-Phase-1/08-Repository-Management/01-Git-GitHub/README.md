@@ -129,9 +129,9 @@ git commit --amend -m "Corrected message"
 ---
 
 ## 🔗 Next Steps
-- **[Data Formats](../05-Data-Formats/)** - Master YAML and JSON for configuration.
-- **[Docker Basics](../06-Docker/)** - Containerize your code versions.
-- **[GitHub Actions](../08-Basic-CI-CD/)** - Automate your Git workflow.
+- **[Data Formats](README.md)** - Master YAML and JSON for configuration.
+- **[Docker Basics](README.md)** - Containerize your code versions.
+- **[GitHub Actions](README.md)** - Automate your Git workflow.
 
 ---
 *Version control is a muscle—the more you commit, the stronger your repository becomes.*

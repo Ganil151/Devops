@@ -675,6 +675,6 @@ message ConfigResponse {
 
 ## 🔗 Next Steps
 
-- [Network Automation](../Network-Automation/) - Advanced automation techniques
-- [Cloud Networking](../Cloud-Networking/) - SDN in cloud environments
-- [Container Networking](../Container-Networking/) - SDN for containers
+- [Network Automation](README.md) - Advanced automation techniques
+- [Cloud Networking](README.md) - SDN in cloud environments
+- [Container Networking](README.md) - SDN for containers

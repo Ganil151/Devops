@@ -80,8 +80,8 @@ graph TD
 1. **[Environment and Syntax](./01-Environment-and-Syntax/)**: Setting up for success and mastering the basics.
 2. **[OS and File Ops](./02-OS-and-File-Ops/)**: Taking control of the file system.
 3. **[Log Parsing and Regex](./03-Log-Parsing-and-Regex/)**: Extracting signal from noise.
-4. **[Resources](./04-Resources/)**: Helper scripts and boilerplates.
-5. **[Reference](./05-Reference/)**: Cheat sheets and syntax cards.
+4. **[Resources](README.md)**: Helper scripts and boilerplates.
+5. **[Reference](README.md)**: Cheat sheets and syntax cards.
 
 ---
 
@@ -135,3 +135,8 @@ graph TD
 Once you can control your local files and parse data, it's time to connect to other systems.
 
 **Proceed to**: [Part 2: The Engine (Connectivity) →](../02-Part-2-The-Engine/README.md)
+
+
+---
+## 🧭 Additional Modules
+- [04 Reference](04-Reference/README.md)

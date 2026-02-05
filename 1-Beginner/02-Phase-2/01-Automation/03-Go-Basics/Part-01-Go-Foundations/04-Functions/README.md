@@ -213,4 +213,4 @@ A team was building a tool to interact with AWS, Azure, and GCP. Each API return
 
 Now that you can modularize your logic, let's learn how to group related data and behavior into custom structures.
 
-Proceed to: **[Structs and Methods →](../05-Structs-and-Methods/README.md)**
+Proceed to: **[Structs and Methods →](README.md)**

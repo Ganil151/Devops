@@ -32,10 +32,10 @@ Enforcing standards through code logic instead of manual reviews:
 
 ## 🗺️ Module Structure
 
-1. **[🟢 01-AWS-CDK-Python](./01-AWS-CDK-Python/)**
+1. **[🟢 01-AWS-CDK-Python](README.md)**
    - Installing `aws-cdk`.
    - Creating stacks and nested constructs.
-2. **[🟢 02-Pulumi-Foundations](./02-Pulumi-Foundations/)**
+2. **[🟢 02-Pulumi-Foundations](README.md)**
    - State management in Pulumi Cloud.
    - Resource mapping and secret encryption.
 
@@ -79,4 +79,4 @@ class MyServerlessStack(core.Stack):
 Treat your IaC like a regular software project. Use unit tests (e.g., `pytest` for CDK) to verify that your synthesized templates contain the expected security groups and tags before they ever reach the cloud.
 
 ---
-**Next Step**: Start with [AWS CDK with Python](./01-AWS-CDK-Python/) 🚀
+**Next Step**: Start with [AWS CDK with Python](README.md) 🚀

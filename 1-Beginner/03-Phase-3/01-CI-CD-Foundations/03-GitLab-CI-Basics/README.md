@@ -110,4 +110,4 @@ This is the #1 point of confusion for DevOps engineers.
 
 ## 🎯 Next Steps
 *   **[CHALLENGES](./CHALLENGES.md)**: Practice artifact passing and environments.
-*   **[Artifact Registry Management](../../04-Artifact-Registry-Management/README.md)**: Storing and versioning binaries.
+*   **[Artifact Registry Management](README.md)**: Storing and versioning binaries.

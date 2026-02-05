@@ -81,4 +81,4 @@ If a service in the middle of your chain doesn't forward these headers, the trac
 
 ## 🔗 Internal Navigation
 - [Back: Advanced Insight Overview](../README.md)
-- [Next Part: Mastery and Resources](../../Part-4-Mastery-and-Resources/README.md)
+- [Next Part: Mastery and Resources](README.md)

@@ -63,4 +63,16 @@ graph TD
 
 ---
 
-[Next: Secret Scanning](../03-Secret-Scanning-TruffleHog/README.md)
+[Next: Secret Scanning](README.md)
+
+---
+## 🧭 Additional Modules
+- [Backup Recovery](Backup-Recovery/README.md)
+- [Best Practices](Best-Practices/README.md)
+- [Installation](Installation/README.md)
+- [Integration](Integration/README.md)
+- [Monitoring](Monitoring/README.md)
+- [Pipelines](Pipelines/README.md)
+- [Plugins](Plugins/README.md)
+- [Scaling](Scaling/README.md)
+- [Security](Security/README.md)

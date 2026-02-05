@@ -7,7 +7,7 @@
 Modern enterprises don't run on a single Kubernetes cluster. They run on dozens or hundreds across multiple clouds (AWS, GCP, Azure) and on-premises data centers. Multi-Cluster Management (MCM) is the discipline of treating these as a unified fleet.
 
 ## Core Concept: Declarative Fleet Management
-**[REFERENCE: Multi-Cluster \u0026 CAPI Architecture](./REFERENCE/Multi-Cluster-CAPI-Architecture-Ref.md)**
+**[REFERENCE: Multi-Cluster \u0026 CAPI Architecture](../REFERENCE/Multi-Cluster-CAPI-Architecture-Ref.md)**
 
 Treating infrastructure as code extends beyond the application to the cluster lifecycle itself:
 - **ClusterAPI (CAPI)**: Managing clusters as native Kubernetes objects, allowing for automated provisioning across AWS, GCP, and vSphere.
@@ -15,7 +15,7 @@ Treating infrastructure as code extends beyond the application to the cluster li
 - **Bootstrapping Providers**: Automating the transformation of raw virtual machines into secured, ready-to-use Kubernetes nodes.
 
 ## Enterprise Governance: Global Consistency
-**[REFERENCE: Multi-Cluster \u0026 CAPI Architecture](./REFERENCE/Multi-Cluster-CAPI-Architecture-Ref.md)**
+**[REFERENCE: Multi-Cluster \u0026 CAPI Architecture](../REFERENCE/Multi-Cluster-CAPI-Architecture-Ref.md)**
 
 Scaling the fleet without compromising security or architectural standards:
 - **Infrastructure Providability**: Mandating version-controlled CAPI manifests for all cluster creation to eliminate "snowflake" environments.
@@ -105,4 +105,4 @@ Never configure clusters individually. Use a "Fleet-wide" policy engine.
 Use a Global Server Load Balancer (GSLB) or ExternalDNS with multi-cluster ingress to route traffic to the healthiest or nearest cluster in your fleet.
 
 ---
-**Next Step**: [Cluster Provisioning with CAPI](./01-ClusterAPI-Basics/) 🚀
+**Next Step**: [Cluster Provisioning with CAPI](README.md) 🚀

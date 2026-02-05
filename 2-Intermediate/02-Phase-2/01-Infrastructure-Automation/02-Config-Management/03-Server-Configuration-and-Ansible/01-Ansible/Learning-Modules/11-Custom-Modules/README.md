@@ -3,7 +3,7 @@
 While Ansible has thousands of built-in modules, you will eventually hit a wall where no standard module exists for your specific internal tool or complex business logic. Custom modules allow you to write your own logic in **Python** and use it just like a native Ansible task.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `my_custom_module.py` (A scaffold for creating your own module).
+- **[Boilerplates](README.md)**: `my_custom_module.py` (A scaffold for creating your own module).
 - **[CHALLENGES](./CHALLENGES.md)**: Creating greetings, system info tools, and adding validation.
 
 ---
@@ -57,3 +57,10 @@ graph TD
 ---
 
 [⬅️ Back to Ansible Index](../README.md)
+
+---
+## 🧭 Additional Modules
+- [01 Module Development Basics](01-Module-Development-Basics/README.md)
+- [02 AnsibleModule Utility](02-AnsibleModule-Utility/README.md)
+- [03 Returns and Idempotency](03-Returns-and-Idempotency/README.md)
+- [04 Testing and Distribution](04-Testing-and-Distribution/README.md)

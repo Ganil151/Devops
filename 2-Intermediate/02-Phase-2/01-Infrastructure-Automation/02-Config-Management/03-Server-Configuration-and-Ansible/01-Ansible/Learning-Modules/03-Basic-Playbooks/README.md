@@ -3,7 +3,7 @@
 A Playbook is a YAML file used to deploy configuration. While ad-hoc commands are for one-off tasks, Playbooks are for repeatable, version-controlled automation.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `site.yml` (Anatomy of a Play).
+- **[Boilerplates](README.md)**: `site.yml` (Anatomy of a Play).
 - **[CHALLENGES](./CHALLENGES.md)**: File creation, Multi-play targeting.
 
 ---
@@ -58,3 +58,9 @@ If you run the **GOOD** example twice, Ansible sees "It is already present" and 
 ---
 
 [Next: Core Modules](../04-Core-Modules/README.md)
+
+---
+## 🧭 Additional Modules
+- [01 Playbook Structure](01-Playbook-Structure/README.md)
+- [02 YAML Syntax](02-YAML-Syntax/README.md)
+- [03 Task Execution Flow](03-Task-Execution-Flow/README.md)

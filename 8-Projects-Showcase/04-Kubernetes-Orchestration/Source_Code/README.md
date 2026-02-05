@@ -38,7 +38,7 @@ graph TD
 
 - **Provisioning**: Terraform (VPC, EKS, RDS).
 - **Configuration**: Ansible (Security Hardening, Vault Setup).
-- **Delivery**: [Jenkins Enterprise Blueprint](../../../2-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/Jenkins/blueprints/blueprint-enterprise-k8s-full.groovy).
+- **Delivery**: [Jenkins Enterprise Blueprint](../../../2-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/02-Part-2-The-Engine/Jenkins/blueprints/blueprint-enterprise-k8s-full.groovy).
 - **Security**:
   - **Istio**: Zero-Trust mTLS.
   - **Trivy**: Container vulnerability scanning.
@@ -59,7 +59,7 @@ graph TD
 ## 📁 Project Structure
 
 - **[infra/](./infra/)**: Terraform modules for AWS EKS provisioning.
-- **[pipeline/](./pipeline/)**: The customized `Jenkinsfile` based on our Enterprise Blueprint.
+- **[pipeline/](README.md)**: The customized `Jenkinsfile` based on our Enterprise Blueprint.
 - **[gitops/](./gitops/)**: ArgoCD ApplicationSet manifests for automated delivery.
 
 ---

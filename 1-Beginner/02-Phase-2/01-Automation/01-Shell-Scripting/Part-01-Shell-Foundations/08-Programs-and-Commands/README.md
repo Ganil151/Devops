@@ -276,4 +276,4 @@ hash -r
 
 Now that you've mastered the programs, let's learn how to store and manage the data they use!
 
-Proceed to: **[Basic Variables](../09-Basic-Variables/README.md)** →
+Proceed to: **[Basic Variables](README.md)** →

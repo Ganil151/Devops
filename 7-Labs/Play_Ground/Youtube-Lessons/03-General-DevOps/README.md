@@ -61,7 +61,7 @@ cd YoutubeDownLoader/
 
 ## Related Documentation
 
-- [Docker Documentation](../../../1-Beginner/03-Docker/)
+- [Docker Documentation](README.md)
 - [Kubernetes Documentation](../01-Kubernetes)
 - [All YouTube Lessons](../README.md)
 

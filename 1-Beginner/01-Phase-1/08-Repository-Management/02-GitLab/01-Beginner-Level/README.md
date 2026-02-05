@@ -42,14 +42,14 @@ By the end of this level, you will:
 - Time tracking and estimation
 - Project management features
 
-### [05-User-Management](./05-User-Management/)
+### [05-User-Management](README.md)
 - User accounts and authentication
 - Groups and projects organization
 - Permission levels and access control
 - SSH keys and personal access tokens
 - Basic LDAP integration
 
-### [06-Basic-Security](./06-Basic-Security/)
+### [06-Basic-Security](README.md)
 - Security best practices
 - Repository security settings
 - Basic vulnerability scanning

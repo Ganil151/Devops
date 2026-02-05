@@ -78,4 +78,4 @@ Run code at the edge to customize content for each user with ultra-low latency.
 | **Slow Propagation** | Distribution is "In Progress" | CloudFront distributions can take 15-20 minutes to fully deploy globally. |
 
 ---
-**Next Step**: Master container orchestration with [AWS ECS Deep Dive](../../01-Compute-and-Containers/01-Advanced-Compute/aws-ecs-fargate-guide.md)
+**Next Step**: Master container orchestration with [AWS ECS Deep Dive](../../../02-Compute-and-Scale/01-Compute-Services/AWS-EC2-ECS/aws-ecs-fargate-guide.md)

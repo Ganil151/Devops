@@ -5,14 +5,14 @@
 ## 📖 Overview
 
 ## Enterprise Governance & Supply Chain Security
-**[REFERENCE: Enterprise Security & Settings](../../REFERENCE/Enterprise-Security-Settings-Ref.md)**
+**[REFERENCE: Enterprise Security & Settings](../REFERENCE/Enterprise-Security-Settings-Ref.md)**
 
 At the enterprise level, Maven is the gatekeeper of your software supply chain.
 - **Dependency Governance**: Using `dependencyManagement` in a Parent POM to enforce versions across 100s of apps.
 - **Vulnerability Blocking**: Stopping a build if a library has a CVE (using OWASP plugin).
 - **Artifact Authority**: We only trust artifacts that come from *our* Nexus/Artifactory, never direct from the internet.
 
-> See **[Dependency-Mechanism-Ref.md](../../REFERENCE/Dependency-Mechanism-Ref.md)** for how to win the war against Dependency Hell.
+> See **[Dependency-Mechanism-Ref.md](../REFERENCE/Dependency-Mechanism-Ref.md)** for how to win the war against Dependency Hell.
 
 This final part bridges the gap between local development and enterprise-scale delivery. We move beyond simply building code to **optimizing** the process, integrating with **CI/CD Pipelines**, and adhering to **Best Practices** that keep builds fast and reliable.
 

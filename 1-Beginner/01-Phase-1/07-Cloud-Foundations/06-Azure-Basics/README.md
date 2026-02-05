@@ -26,3 +26,13 @@ Introduction to Azure DevOps Services and Pipelines.
 
 ---
 **Root Roadmap**: Return to the [Cloud Foundations Overview](../README.md).
+
+
+---
+## 🧭 Additional Modules
+- [01 Fundamentals](01-Fundamentals/README.md)
+- [02 Compute](02-Compute/README.md)
+- [03 Storage](03-Storage/README.md)
+- [04 Networking](04-Networking/README.md)
+- [05 Security](05-Security/README.md)
+- [06 DevOps](06-DevOps/README.md)

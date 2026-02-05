@@ -78,7 +78,7 @@ To build reliable automation, your environment needs to be consistent and reprod
 
 ### 1. Installation and Environment Variables
 
-If you haven't followed the [Foundations Guide](../00-Foundations/README.md), ensure Go is installed and these variables are configured:
+If you haven't followed the [Foundations Guide](README.md), ensure Go is installed and these variables are configured:
 
 * **`GOROOT`**: The directory where the Go toolchain is installed.
 * **`GOPATH`**: Your workspace directory (default: `~/go`).

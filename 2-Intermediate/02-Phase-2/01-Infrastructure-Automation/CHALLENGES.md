@@ -15,7 +15,7 @@ Welcome to the Forge. These challenges are designed to push you beyond "coding" 
 5.  **Graceful Exit:** Handle `SIGTERM` to shut down both the watchdog and the monitored process.
 
 **Visual Tag:** `![Complexity: Hard] ![Focus: Reliability]`
-**Solution:** [self_healing_daemon.py](./01-Scripting-Automation/challenges/labs/solutions/self_healing_daemon.py)
+**Solution:** [self_healing_daemon.py](../../01-Phase-1/03-Runbooks-Procedures/03-Auto-Remediation-Patterns/REFERENCE/Safety-Governance-Self-Healing-Ref.md)
 
 ---
 
@@ -43,7 +43,7 @@ Welcome to the Forge. These challenges are designed to push you beyond "coding" 
 4.  **CLI Interface:** Use `argparse` to allow users to specify input/output directories and a `--validate-only` flag.
 
 **Visual Tag:** `![Complexity: Hard] ![Focus: Pipeline-Tooling]`
-**Solution:** [manifest_transformer.py](./01-Scripting-Automation/challenges/labs/solutions/manifest_transformer.py)
+**Solution:** [manifest_transformer.py](../../../1-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/03-YAML-Handling/challenges/challenge_01_manifest_gen.py)
 
 ---
 

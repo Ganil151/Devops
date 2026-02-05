@@ -3,7 +3,7 @@
 Sequential scripts are too slow for cloud scale. Master `xargs` and `wait`.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `parallel_scanner.sh`
+- **[Boilerplates](README.md)**: `parallel_scanner.sh`
 - **[CHALLENGES](./CHALLENGES.md)**: Ping Sweepers and Image Resizers.
 
 ---
@@ -63,4 +63,4 @@ Host *
 
 ---
 
-[⬅️ Back to Advanced Bash](../README.md)
+[⬅️ Back to Advanced Bash](README.md)

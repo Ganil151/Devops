@@ -105,5 +105,5 @@ Alter the syntax to run your backup script **every Friday at 11:00 PM**.
 
 ---
 
-Proceed to: **[02. Intermediate Automation Scheduling](../02-Intermediate-Automation-Scheduling/README.md)** →
+Proceed to: **[02. Intermediate Automation Scheduling](README.md)** →
 Node: Moving to robust execution patterns.

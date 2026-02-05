@@ -20,5 +20,5 @@ The foundation of modern traffic routing.
 2. Explore Part 2 to learn how to secure the entrance.
 
 ---
-- [Next: Part 2 - Security & Authentication](../Part-2-Security-and-Authentication/README.md)
+- [Next: Part 2 - Security & Authentication](README.md)
 - [Back to Main Curriculum](../README.md)

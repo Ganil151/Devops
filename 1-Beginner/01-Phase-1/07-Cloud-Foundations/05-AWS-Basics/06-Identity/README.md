@@ -184,3 +184,8 @@ Answer: A) Set the maximum permissions an entity can have (Guardrails)</b>
 <summary>Show Answer</summary>
 Answer: A) One login for multiple AWS accounts and apps</b>
 </details>
+
+
+---
+## 🧭 Additional Modules
+- [Cognito](Cognito/README.md)

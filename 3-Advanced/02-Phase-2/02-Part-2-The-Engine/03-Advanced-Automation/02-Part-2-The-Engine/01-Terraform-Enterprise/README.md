@@ -16,10 +16,10 @@ Intermediate Terraformers use modules; masters build factories. This module dive
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Iterative-Patterns](./01-Iterative-Patterns/)**
+1. **[🔴 01-Iterative-Patterns](README.md)**
    - Handling complex nested data structures.
    - Using the `flatten` function to simplify `for_each` loops.
-2. **[🔴 02-Custom-Data-Sources](./02-Custom-Data-Sources/)**
+2. **[🔴 02-Custom-Data-Sources](README.md)**
    - Writing Python scripts to fetch dynamic metadata.
    - Managing `depends_on` in complex graph scenarios.
 
@@ -75,4 +75,4 @@ variable "service_ports" {
 Don't bake your environment values into your HCL logic. Keep your Terraform code strictly for **Architectural Logic** and use **YAML/JSON files** for your **Environment Configuration**. Your module should read the YAML file, parse it into a map, and use `for_each` to create the infrastructure. This allows you to add new environments or services just by editing a simple data file—zero HCL changes required.
 
 ---
-**Next Step**: Start with [Iterative Patterns](./01-Iterative-Patterns/) 🚀
+**Next Step**: Start with [Iterative Patterns](README.md) 🚀

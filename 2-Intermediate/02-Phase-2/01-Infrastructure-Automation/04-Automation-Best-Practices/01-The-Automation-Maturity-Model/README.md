@@ -3,7 +3,7 @@
 Not all automation is created equal. The Maturity Model helps teams evaluate where they are and identifies the technical gaps they need to close to reach "Elite" status (SRE Standard).
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `maturity_scorecard.txt` (Self-assessment tool).
+- **[Boilerplates](README.md)**: `maturity_scorecard.txt` (Self-assessment tool).
 - **[CHALLENGES](./CHALLENGES.md)**: Auditing a legacy script into Level 3.
 
 ---

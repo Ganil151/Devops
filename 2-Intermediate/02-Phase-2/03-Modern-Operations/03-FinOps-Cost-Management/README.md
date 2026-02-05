@@ -33,10 +33,10 @@ Enforcing financial rigor within the automation lifecycle:
 
 ## 🗺️ Module Structure
 
-1. **[🟢 01-Infracost-CI-CD](./01-Infracost-CI-CD/)**
+1. **[🟢 01-Infracost-CI-CD](README.md)**
    - Analyzing plan JSONs.
    - Setting up PR comments for cost changes.
-2. **[🟢 02-Kubecost-Basics](./02-Kubecost-Basics/)**
+2. **[🟢 02-Kubecost-Basics](README.md)**
    - Deploying Kubecost via Helm.
    - Mapping costs to Namespaces and Labels.
 
@@ -89,4 +89,4 @@ if __name__ == "__main__":
 ```
 
 ---
-**Next Step**: [Infracost in CI/CD](./01-Infracost-CI-CD/) 🚀
+**Next Step**: [Infracost in CI/CD](README.md) 🚀

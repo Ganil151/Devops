@@ -6,15 +6,15 @@ Welcome to the DevOps Quizzes section! This directory contains multiple-choice q
 
 Explore the quizzes tailored to your current learning stage:
 
-### 1. [Beginner level](./Beginner/README.md)
+### 1. [Beginner level](1-Beginner/README.md)
 **Focus**: Foundations, Git, Linux, Docker Basics, and basic CI/CD concepts.
 - *Ideal for*: Newcomers to DevOps and those solidifying their fundamental skills.
 
-### 2. [Intermediate Level](./Intermediate/README.md)
+### 2. [Intermediate Level](1-Beginner/README.md)
 **Focus**: Orchestration (Kubernetes), IaC (Terraform), Configuration Management (Ansible), and complex CI/CD pipelines.
 - *Ideal for*: Those familiar with the basics looking to master automation and cluster management.
 
-### 3. [Advanced Level](./Advanced/README.md)
+### 3. [Advanced Level](1-Beginner/README.md)
 **Focus**: GitOps, Observability, Service Meshes, DevSecOps, and Resilience Engineering.
 - *Ideal for*: Experienced practitioners focusing on production-grade infrastructure and scaling.
 
@@ -27,3 +27,8 @@ Explore the quizzes tailored to your current learning stage:
 - Use these quizzes as a revision tool after completing the corresponding learning modules in the main `Devops` directory.
 
 Happy Learning! 🚀
+
+---
+## 🧭 Additional Modules
+- [2 Intermediate](2-Intermediate/README.md)
+- [3 Advanced](3-Advanced/README.md)

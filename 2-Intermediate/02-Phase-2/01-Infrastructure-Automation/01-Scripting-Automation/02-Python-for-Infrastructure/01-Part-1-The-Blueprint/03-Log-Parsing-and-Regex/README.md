@@ -296,4 +296,4 @@ Before moving to the next module, ensure you can:
 
 **Score yourself**: 5+/5 = Ready to advance | <5 = Review exercises
 
-[⬅️ Back to Pytest](../07-Testing-Automation-with-Pytest/README.md) | [Next: Remote Execution](../09-Remote-Execution-and-SSH/README.md) ➡️
+[⬅️ Back to Pytest](README.md) | [Next: Remote Execution](README.md) ➡️

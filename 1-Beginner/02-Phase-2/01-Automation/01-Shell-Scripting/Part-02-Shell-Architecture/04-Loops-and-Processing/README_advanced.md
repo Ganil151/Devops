@@ -456,4 +456,4 @@ echo "All items processed successfully"
 
 ## 🔗 Next Steps
 
-Proceed to: **[Signal Handling & Trap Mechanisms](../Part-XX-Signal-Handling/README.md)** →
+Proceed to: **[Signal Handling & Trap Mechanisms](README.md)** →

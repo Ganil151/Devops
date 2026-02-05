@@ -38,7 +38,7 @@ Advanced database services:
 
 ## Prerequisites
 
-- Completed [Intermediate Database Services](../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/09-Database-Services)
+- Completed [Intermediate Database Services](README.md)
 - Production experience with AWS databases
 - Advanced AWS networking knowledge
 - Infrastructure as Code expertise
@@ -65,3 +65,11 @@ Advanced database services:
 - [AWS Database Migration Service](https://aws.amazon.com/dms/)
 - [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
 - [Database Encryption Best Practices](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Encryption.html)
+
+
+---
+## 🧭 Additional Modules
+- [01 Database Architecture](01-Database-Architecture/README.md)
+- [02 Database Performance](02-Database-Performance/README.md)
+- [03 Database Security](03-Database-Security/README.md)
+- [04 Specialized Databases](04-Specialized-Databases/README.md)

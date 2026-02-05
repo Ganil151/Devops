@@ -25,7 +25,7 @@ Integrating AI into the production lifecycle with safety:
 
 This module is organized into 6 progressive phases:
 
-1.  **[01-Chain-of-Thought-DevOps](Chain-of-Thought%20(CoT)%20for%20DevOps.md)**
+1.  **[01-Chain-of-Thought-DevOps](README.md)%20for%20DevOps.md)**
     *   CoT for complex troubleshooting (Networking, K8s).
     *   Reasoning traces and verification steps.
 
@@ -33,7 +33,7 @@ This module is organized into 6 progressive phases:
     *   Converting logs to structured documentation.
     *   Prompt templates for incident post-mortems.
 
-3.  **[03-Few-Shot-and-Role-Prompting](03-Few-Shot-and-Role-Prompting/Few-Shot%20and%20Role%20Prompting.md)**
+3.  **[03-Few-Shot-and-Role-Prompting](03-Few-Shot-and-Role-Prompting/Few-Shot and Role Prompting.md)**
     *   Role-based prompts for Security and SRE personas.
     *   Using Few-Shot examples for consistent Infrastructure-as-Code.
 

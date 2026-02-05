@@ -4,7 +4,7 @@ CI/CD is the backbone of modern software delivery. It automates the transition f
 
 ## 📚 Module Structure
 
-- **[Boilerplates](./Boilerplates/)**: `ci_cd_skeleton.sh` (Logical flow of a pipeline).
+- **[Boilerplates](README.md)**: `ci_cd_skeleton.sh` (Logical flow of a pipeline).
 - **[CHALLENGES](./CHALLENGES.md)**: Designing workflows and understanding failure.
 
 ---
@@ -61,4 +61,4 @@ graph TD
 
 ---
 
-[Next: Jenkins Mastery](../02-Jenkins-Mastery/README.md)
+[Next: Jenkins Mastery](README.md)

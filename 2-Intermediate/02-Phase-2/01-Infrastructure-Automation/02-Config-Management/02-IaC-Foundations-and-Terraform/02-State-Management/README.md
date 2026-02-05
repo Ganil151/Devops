@@ -8,12 +8,12 @@ Welcome to the **State Management Mastery** module. This is the definitive guide
 
 This module is architected into **4 Strategic Phases**, mirroring the growth of a professional SRE.
 
-### [📐 Part 1: The Blueprint (Foundations)](./01-Part-1-The-Blueprint/README.md)
+### [📐 Part 1: The Blueprint (Foundations)](README.md)
 *   **The Mindset**: Understanding the "Map vs. The Territory."
 *   **Key Skills**: Anatomy of a State File, Local vs. Remote risk assessment, and the "Golden Rules" of state hygiene.
 *   **Success Metric**: You understand why `terraform.tfstate` is your project's most sensitive secret.
 
-### [⚙️ Part 2: The Engine (Execution)](./02-Part-2-The-Engine/README.md)
+### [⚙️ Part 2: The Engine (Execution)](README.md)
 *   **The Mindset**: Building the "Collaborative Vault."
 *   **Key Skills**: S3 + DynamoDB architecture, Atomic Locking, Encryption-at-Rest, and State Isolation (Directories vs. Workspaces).
 *   **Success Metric**: You can build a multi-environment remote backend from scratch with zero hardcoded credentials.

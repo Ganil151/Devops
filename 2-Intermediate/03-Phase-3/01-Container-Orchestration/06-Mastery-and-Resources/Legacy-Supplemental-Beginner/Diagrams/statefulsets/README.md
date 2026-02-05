@@ -437,5 +437,5 @@ These diagrams illustrate key StatefulSet concepts:
 8. **Recovery**: How StatefulSets handle failures
 
 For practical examples, see:
-- [Intermediate StatefulSet Guide](../../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/StatefulSets)
-- [Advanced StatefulSet Patterns](../../../../../../3-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/StatefulSets)
+- [Intermediate StatefulSet Guide](README.md)
+- [Advanced StatefulSet Patterns](README.md)

@@ -77,7 +77,7 @@ Master the lifecycle of applications by completing these 10 progressive challeng
 ## 💡 Stuck?
 
 - Review the [Master README](./README.md) for concepts.
-- Check the [Docker Documentation](./Docker/README.md) for more examples.
+- Check the [Docker Documentation](README.md) for more examples.
 - Use `docker system prune` to clean up your workspace between challenges.
 
 **Good luck, Container Architect!**

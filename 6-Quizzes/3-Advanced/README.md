@@ -78,7 +78,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 04: DevSecOps & Security
-**Study Resource**: [Enterprise Security](../../3-Advanced/01-Phase-1/07-Security/README.md)
+**Study Resource**: [Enterprise Security](README.md)
 
 11. Which tool is used for secrets management?
 - A) Jenkins
@@ -211,7 +211,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 08: Microservices & Architectural Patterns
-**Study Resource**: [Microservices Guide](../../README.md) & [Specialized Tech](../../3-Advanced/03-Phase-3/11-Specialized-Tech/README.md)
+**Study Resource**: [Microservices Guide](../../README.md) & [Specialized Tech](README.md)
 
 30. In the **12-Factor App** methodology, how should application configuration be stored?
 - A) Hardcoded in the source code

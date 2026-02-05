@@ -2,7 +2,7 @@
 
 > **"If Python is the engine of automation, JSON is the fuel. Every cloud API speaks JSON. Master this, and you master cloud automation."**
 
-![JSON Data Flow](../assets/json_data_flow.png)
+![JSON Data Flow](../../../../../../5-Boilerplates/2-Intermediate/Python/PythonDevOps-Working-with-Data-JSON-YAML-data_parser.py)
 
 ---
 
@@ -943,7 +943,7 @@ echo '{"name": "web-01",}' | python -m json.tool
 
 Now that you've mastered JSON, it's time to learn YAML—the human-friendly configuration language used by Kubernetes, Ansible, and Docker Compose.
 
-**Proceed to**: [YAML Handling →](../04-YAML-Handling/README.md)
+**Proceed to**: [YAML Handling →](README.md)
 
 ---
 

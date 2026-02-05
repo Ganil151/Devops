@@ -3,8 +3,8 @@
 Helm helps you manage Kubernetes applications. Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `deployment.yaml` (Chart Template).
-- **[CHALLENGES](./CHALLENGES.md)**: Overriding values, debugging, and rollbacks.
+- **[Boilerplates](README.md)**: `deployment.yaml` (Chart Template).
+- **[CHALLENGES](../../../03-Server-Configuration-and-Ansible/01-Ansible/Learning-Modules/01-Fundamentals/CHALLENGES.md)**: Overriding values, debugging, and rollbacks.
 
 ---
 

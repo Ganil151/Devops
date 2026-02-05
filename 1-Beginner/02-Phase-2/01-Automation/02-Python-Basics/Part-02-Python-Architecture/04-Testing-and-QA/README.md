@@ -2,7 +2,7 @@
 
 > **"Untested automation is just a bug waiting to happen in production. If you don't test your backup script, you don't have a backup script—you have a hope and a prayer."**
 
-![Testing Pyramid](../../assets/testing_pyramid.png)
+![Testing Pyramid](../../REFERENCE/Python-DevOps-Testing-Ref.md)
 
 ---
 
@@ -306,7 +306,7 @@ The engineer fixed the logic, added a guard clause, and re-pushed.
 
 You have a robust, tested architecture. Now let's organize it into a proper project structure.
 
-**Proceed to**: [Project Structure →](../09-Project-Structure/README.md)
+**Proceed to**: [Project Structure →](README.md)
 
 ---
 

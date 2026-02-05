@@ -63,4 +63,4 @@ Master programmatic infrastructure by building these typed cloud managers.
 
 ---
 
-**Next Step**: [Terraform CDK with Python →](../../../../../README.md)
+**Next Step**: [Terraform CDK with Python →](README.md)

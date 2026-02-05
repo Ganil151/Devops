@@ -31,12 +31,12 @@ This level is organized into a tiered journey across **16 specialized modules**.
 - Writing production-grade SOPs and Runbooks.
 - Incident management workflows and self-healing patterns.
 
-#### 4️⃣ [04-Repository-Management](./01-Phase-1/04-Repository-Management/README.md)
+#### 4️⃣ [04-Repository-Management](01-Phase-1/README.md)
 **Enterprise Version Control & Branching Models**
 - Git, GitLab, Bitbucket, and multi-repo architectures.
 - Trunk-based development and GitFlow strategies.
 
-#### 5️⃣ [05-Databases](./01-Phase-1/05-Databases/README.md)
+#### 5️⃣ [05-Databases](01-Phase-1/README.md)
 **Database DevOps & State Management**
 - PostgreSQL, MySQL, and Amazon RDS mastery.
 - NoSQL scaling with MongoDB, Redis, and DynamoDB.
@@ -120,8 +120,8 @@ By the end of this level, you will be able to:
 1. **Networking** - [01-Networking](./01-Phase-1/01-Networking/README.md)
 2. **Linux** - [02-Linux](./01-Phase-1/02-Linux/README.md)
 3. **Runbooks** - [03-Runbooks-Procedures](./01-Phase-1/03-Runbooks-Procedures/README.md)
-4. **Repos** - [04-Repository-Management](./01-Phase-1/04-Repository-Management/README.md)
-5. **Databases** - [05-Databases](./01-Phase-1/05-Databases/README.md)
+4. **Repos** - [04-Repository-Management](01-Phase-1/README.md)
+5. **Databases** - [05-Databases](01-Phase-1/README.md)
 
 ### Phase 2: Core Skills (Weeks 5-10)
 1. **IaC** - [01-Infrastructure-Automation](./02-Phase-2/01-Infrastructure-Automation/README.md)
@@ -142,7 +142,7 @@ By the end of this level, you will be able to:
 
 Before starting this level, you should have completed:
 
-- **[1-Beginner](../1-Beginner/Quick_Reference.md)** - Foundational DevOps knowledge
+- **[1-Beginner](../1-Beginner/REFERENCE.md)** - Foundational DevOps knowledge
 - Basic understanding of Linux command line
 - Familiarity with Git and version control
 - Understanding of networking fundamentals
@@ -178,9 +178,9 @@ Each module contains interview questions, quizzes, real-life scenarios, and arch
 
 ---
 
-**Ready for the Enterprise?** Once you've mastered orchestration and automation, advance to the [Advanced Level](../3-Advanced/Quick_Reference.md) to learn platform engineering, SRE practices, and enterprise architecture.
+**Ready for the Enterprise?** Once you've mastered orchestration and automation, advance to the [Advanced Level](../3-Advanced/REFERENCE.md) to learn platform engineering, SRE practices, and enterprise architecture.
 
-**Need to review basics?** Return to [Beginner Level](../1-Beginner/Quick_Reference.md) for foundational concepts.
+**Need to review basics?** Return to [Beginner Level](../1-Beginner/REFERENCE.md) for foundational concepts.
 
 ---
 

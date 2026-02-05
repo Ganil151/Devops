@@ -47,4 +47,4 @@ Categorize the following AWS services into IaaS, PaaS, or SaaS:
 4. **Office 365**: ________
 
 ---
-**Next Step**: [Deployment Models](./deployment-models-guide.md)
+**Next Step**: [Deployment Models](../Deployment-Models/deployment-models-guide.md)

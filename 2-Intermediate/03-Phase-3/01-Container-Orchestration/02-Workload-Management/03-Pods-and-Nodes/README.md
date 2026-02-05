@@ -132,4 +132,4 @@ In production, you must safely move workloads before restarting a node.
 
 ## 🔗 Internal Navigation
 - [Next: Deployments and Scaling](../04-Deployments-and-Scaling/README.md)
-- [Back: Kubectl Basics](../../Part-1-Foundations/02-Kubectl-Basics/README.md)
+- [Back: Kubectl Basics](README.md)

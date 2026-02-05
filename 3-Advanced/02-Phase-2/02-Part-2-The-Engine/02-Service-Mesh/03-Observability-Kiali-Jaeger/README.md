@@ -16,10 +16,10 @@ In a microservices architecture, a single user request can hop across dozens of 
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Tracing-Fundamentals](./01-Tracing-Fundamentals/)**
+1. **[🔴 01-Tracing-Fundamentals](README.md)**
    - Context Propagation: Headers (x-request-id, b3).
    - Jaeger Collector vs. Agent architecture.
-2. **[🔴 02-Service-Graph-Visualization](./02-Service-Graph-Visualization/)**
+2. **[🔴 02-Service-Graph-Visualization](README.md)**
    - Kiali dynamic topology maps.
    - Circuit Breaker and Retry visibility.
 
@@ -68,4 +68,4 @@ spec:
 Don't just look at average latency. Use Jaeger to filter for the **p99 (99th percentile)** latencies. These are the requests that "feel slow" to users. By examining the span details of these outliers, you can often find unoptimized database queries or external API timeouts that are hidden in the "average" performance metrics.
 
 ---
-**Next Step**: Start with [Tracing Fundamentals](./01-Tracing-Fundamentals/) 🚀
+**Next Step**: Start with [Tracing Fundamentals](README.md) 🚀

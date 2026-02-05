@@ -254,4 +254,4 @@ Before moving to the next module, ensure you can:
 
 **Score yourself**: 5+/5 = Ready to advance | <5 = Review exercises
 
-[⬅️ Back to Data Processing](../README.md) | [Next: Advanced Patterns](../../03-Advanced-Production-Patterns/README.md) ➡️
+[⬅️ Back to Data Processing](../README.md) | [Next: Advanced Patterns](README.md) ➡️

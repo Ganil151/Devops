@@ -13,4 +13,4 @@ Detailed overview of Route 53, including:
 
 ## Learning Path
 1. Start with the Fundamentals guide.
-2. Move to the [Hands-on Guide](../../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/02-Networking-and-Edge/13-Networking-Route53/route53-hands-on.md) to manage your first hosted zone.
+2. Move to the [Hands-on Guide](../../../../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/03-Networking-and-Security/02-DNS-and-Content-Delivery/AWS-Route53-CloudFront/route53-hands-on.md) to manage your first hosted zone.

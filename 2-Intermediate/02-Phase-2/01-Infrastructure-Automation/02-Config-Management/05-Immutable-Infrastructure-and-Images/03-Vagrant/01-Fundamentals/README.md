@@ -3,8 +3,8 @@
 Vagrant is a tool for building and managing virtual machine environments in a single workflow. It ensures that every member of a team is developing on an identical system, reducing the "It works on my machine" problem.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `Vagrantfile` (Multi-machine setup).
-- **[CHALLENGES](./CHALLENGES.md)**: Networking, Synced Folders, and Resource Tuning.
+- **[Boilerplates](README.md)**: `Vagrantfile` (Multi-machine setup).
+- **[CHALLENGES](../../../03-Server-Configuration-and-Ansible/01-Ansible/Learning-Modules/01-Fundamentals/CHALLENGES.md)**: Networking, Synced Folders, and Resource Tuning.
 
 ---
 

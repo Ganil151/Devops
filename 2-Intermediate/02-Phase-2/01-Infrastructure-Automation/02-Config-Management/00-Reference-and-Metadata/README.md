@@ -56,3 +56,8 @@ graph TD
 ---
 
 [⬅️ Back to Config Management Index](../README.md)
+
+
+---
+## 🧭 Additional Modules
+- [samples](samples/README.md)

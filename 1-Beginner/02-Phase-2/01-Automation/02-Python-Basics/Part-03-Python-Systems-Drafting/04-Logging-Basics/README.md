@@ -2,7 +2,7 @@
 
 > **"Proper logging separates amateur scripts from production-ready automation. In DevOps, good logs are the difference between a 5-minute fix and a 5-hour blind investigation."**
 
-![Python Logging Architecture](../../assets/logging_architecture.png)
+![Python Logging Architecture](../../../01-Shell-Scripting/Part-03-System-Drafting/02-Advanced-IO/io_stream_architecture.png)
 
 ---
 

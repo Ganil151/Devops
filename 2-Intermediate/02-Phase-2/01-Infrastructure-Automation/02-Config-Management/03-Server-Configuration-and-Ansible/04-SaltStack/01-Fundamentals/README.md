@@ -3,8 +3,8 @@
 SaltStack (or Salt) is a Python-based, open-source infrastructure management platform. It excels at massive-scale remote execution and event-driven automation.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `init.sls` (Nginx state).
-- **[CHALLENGES](../../../../../1-Beginner/02-Phase-2/01-Automation/01-Shell-Scripting/01-Introduction/CHALLENGES.md)**: Remote execution, Pillars, and Reactors.
+- **[Boilerplates](README.md)**: `init.sls` (Nginx state).
+- **[CHALLENGES](../../01-Ansible/Learning-Modules/01-Fundamentals/CHALLENGES.md)**: Remote execution, Pillars, and Reactors.
 
 ---
 

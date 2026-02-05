@@ -48,7 +48,7 @@ Explore the "BFF" (Backend-for-Frontend) pattern and master the differences betw
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Authentication and JWT](../../Part-2-Security-and-Authentication/02-Authentication-and-JWT/README.md)
+- [Next: Authentication and JWT](README.md)
 - [Back: Gateway Fundamentals Overview](../README.md)
 
 ---

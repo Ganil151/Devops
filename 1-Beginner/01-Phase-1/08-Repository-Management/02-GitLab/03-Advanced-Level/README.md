@@ -22,7 +22,7 @@ By the end of this level, you will:
 - License management and feature control
 - System monitoring and maintenance
 
-### [02-High-Availability](./02-High-Availability/)
+### [02-High-Availability](README.md)
 - HA architecture design
 - Load balancing and clustering
 - Database replication and failover
@@ -30,7 +30,7 @@ By the end of this level, you will:
 - Geographic distribution
 - Performance monitoring
 
-### [03-Advanced-Security](./03-Advanced-Security/)
+### [03-Advanced-Security](README.md)
 - Enterprise security frameworks
 - Advanced authentication methods
 - Security scanning at scale
@@ -38,7 +38,7 @@ By the end of this level, you will:
 - Threat detection and response
 - Security policy enforcement
 
-### [04-Custom-Integrations](./04-Custom-Integrations/)
+### [04-Custom-Integrations](README.md)
 - Custom webhook development
 - GitLab API extensions
 - Third-party tool integrations
@@ -46,7 +46,7 @@ By the end of this level, you will:
 - Plugin development
 - Microservices integration
 
-### [05-Performance-Optimization](../../../../../1-Beginner/02-Phase-2/03-Nginx/05-Performance-Optimization)
+### [05-Performance-Optimization](README.md)
 - Performance monitoring and tuning
 - Database optimization
 - Caching strategies
@@ -54,7 +54,7 @@ By the end of this level, you will:
 - Network optimization
 - Capacity planning
 
-### [06-Compliance-Governance](./06-Compliance-Governance/)
+### [06-Compliance-Governance](README.md)
 - Regulatory compliance frameworks
 - Audit trails and reporting
 - Policy as Code implementation

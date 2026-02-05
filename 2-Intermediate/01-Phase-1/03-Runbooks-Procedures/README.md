@@ -48,8 +48,8 @@ graph LR
 
 1. **[01-Runbook-Fundamentals](./01-Runbook-Fundamentals/README.md)**: Philosophy, doc hierarchy, and 10-part deep dive into SRE standards.
 2. **[02-Writing-Effective-SOPs](./02-Writing-Effective-SOPs/Writing Effective SOP's.md)**: The "Docs-as-Code" philosophy and standard templates.
-3. **[03-Auto-Remediation-Patterns](./03-Auto-Remediation-Patterns/Auto-Remediation Patterns.md)**: Building self-healing infrastructure.
-4. **[04-Incident-Management-and-Response](./04-Incident-Management-and-Response/Incident Management and Response.md)**: Roles, escalation, and post-mortems.
+3. **[03-Auto-Remediation-Patterns](03-Auto-Remediation-Patterns/REFERENCE/Auto-Remediation-Architectures-Ref.md)**: Building self-healing infrastructure.
+4. **[04-Incident-Management-and-Response](REFERENCE/Incident-Response-Governance-Ref.md)**: Roles, escalation, and post-mortems.
 5. **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/Interview Questions and Quizzes.md)**: Career validation.
 
 ---

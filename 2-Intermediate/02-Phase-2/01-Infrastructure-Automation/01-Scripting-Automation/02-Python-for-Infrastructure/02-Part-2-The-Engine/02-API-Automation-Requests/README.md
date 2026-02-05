@@ -380,4 +380,4 @@ Before moving to the next module, ensure you can:
 
 **Score yourself**: 5+/6 = Ready to advance | <5 = Review exercises
 
-[⬅️ Back to Data Ops](../03-Working-with-Data-JSON-YAML/README.md) | [Next: Cloud Automation](../05-Cloud-Automation-Boto3-Deep-Dive/README.md) ➡️
+[⬅️ Back to Data Ops](README.md) | [Next: Cloud Automation](README.md) ➡️

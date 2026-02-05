@@ -75,4 +75,4 @@ This allows for instant dashboarding (e.g., "Show me a pie chart of error types 
 ## 🔗 Internal Navigation
 - [Next: AWS CloudWatch](../07-AWS-CloudWatch/README.md)
 - [Back: Logging and Cloud Metrics Overview](../README.md)
-- [Foundation: Monitoring Basics](../../Part-1-Monitoring-Foundations/01-Monitoring-Basics/README.md)
+- [Foundation: Monitoring Basics](README.md)

@@ -767,7 +767,7 @@ else:
 
 Now that you can make decisions, you're ready to learn how to repeat operations efficiently.
 
-**Proceed to**: [Iterative Logic and Loops →](../03-Iterative-Logic/README.md)
+**Proceed to**: [Iterative Logic and Loops →](README.md)
 
 ---
 

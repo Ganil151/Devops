@@ -54,15 +54,15 @@ graph TD
 
 ## 🗺️ Curriculum Path
 
-### 1. [Part 1: Fundamentals](./Part-1-Fundamentals/README.md)
+### 1. [Part 1: Fundamentals](README.md)
 *Junior, don't build on sand.* 
 Master the OSI & TCP/IP models, IPv4 subnetting logic, and the mechanics of DNS and DHCP.
 
-### 2. [Part 2: Advanced Networking](./Part-2-Advanced-Networking/README.md)
+### 2. [Part 2: Advanced Networking](README.md)
 *Traffic control is an art form.* 
 VLANs, Switching, L4 (TCP) vs L7 (Application) Load Balancing, and Enterprise firewall architectures.
 
-### 3. [Part 3: Tools & Utilities](./Part-3-Tools-and-Utilities/README.md)
+### 3. [Part 3: Tools & Utilities](README.md)
 *If you can't see it, you can't fix it.* 
 Mastering `tcpdump`, `wireshark`, `ip route`, and cloud-native observability tools.
 
@@ -147,5 +147,12 @@ Mastering `tcpdump`, `wireshark`, `ip route`, and cloud-native observability too
 
 ## 🔗 Next Steps
 Junior, the digital highway is ready for traffic. Let's start with the fundamentals.
-1. Proceed to: **[Part 1: Fundamentals](./Part-1-Fundamentals/README.md)** →
+1. Proceed to: **[Part 1: Fundamentals](README.md)** →
 2. Return to: **[Phase 1 Hub](../README.md)** →
+
+
+---
+## 🧭 Additional Modules
+- [01 Fundamentals](01-Fundamentals/README.md)
+- [02 Advanced Networking](02-Advanced-Networking/README.md)
+- [03 Tools and Utilities](03-Tools-and-Utilities/README.md)

@@ -29,14 +29,14 @@ By the end of this level, you will:
 - Advanced deployment patterns
 - Pipeline as Code best practices
 
-### [02-GitLab-Runner-Management](./02-GitLab-Runner-Management/)
+### [02-GitLab-Runner-Management](README.md)
 - Runner architecture and scaling
 - Custom executor configuration
 - Runner security and isolation
 - Performance optimization
 - Monitoring and maintenance
 
-### [03-Container-Registry](./03-Container-Registry/)
+### [03-Container-Registry](README.md)
 - Docker image management
 - Registry configuration and security
 - Image scanning and vulnerability management
@@ -51,7 +51,7 @@ By the end of this level, you will:
 - License compliance
 - Security dashboard and reporting
 
-### [05-GitLab-API](./05-GitLab-API/)
+### [05-GitLab-API](README.md)
 - REST API fundamentals
 - GraphQL API usage
 - Authentication and authorization
@@ -59,7 +59,7 @@ By the end of this level, you will:
 - Webhook configuration
 - Custom integrations
 
-### [06-Package-Management](./06-Package-Management/)
+### [06-Package-Management](README.md)
 - Package registry configuration
 - Multi-language package support
 - Dependency management

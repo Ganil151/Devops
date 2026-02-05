@@ -56,8 +56,8 @@ graph TD
 
 ### 🚀 Intermediate Topics
 - **[System Administration](./03-System-Administration/README.md)**: Master the core engine - Systemd, Processes, Storage, and Identity.
-- **[Shell Scripting](../02-Automation/01-Shell-Scripting-Basics/)**: Moving from command snippets to robust, idempotent automation.
-- **[Linux Networking](./01-Networking/README.md)**: Deep dives into `ss`, `ip`, `netstat`, and MTU troubleshooting.
+- **[Shell Scripting](README.md)**: Moving from command snippets to robust, idempotent automation.
+- **[Linux Networking](README.md)**: Deep dives into `ss`, `ip`, `netstat`, and MTU troubleshooting.
 - **[Intermediate SSH](./02-SSH/README.md)**: Config files, ProxyJump, Tunneling, and Key management.
 
 ---

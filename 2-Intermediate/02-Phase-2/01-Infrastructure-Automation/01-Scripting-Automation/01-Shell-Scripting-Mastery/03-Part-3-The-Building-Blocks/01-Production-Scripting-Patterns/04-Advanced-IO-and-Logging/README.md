@@ -83,4 +83,4 @@ This module masterclass on data plumbing. Intermediate shell scripting is 50% lo
 ---
 
 ## 🔗 Next Steps
-Proceed to: **[Signal Handling & Traps](../05-Signal-Handling-and-Traps/README.md)** →
+Proceed to: **[Signal Handling & Traps](README.md)** →

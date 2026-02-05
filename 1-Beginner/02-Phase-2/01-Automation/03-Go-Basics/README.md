@@ -47,4 +47,9 @@ Or run the tests:
 
 ## 📚 Master Index
 
-For a flat list of all concepts, see the [Legacy Index](./LEGACY_INDEX.md).
+For a flat list of all concepts, see the [Legacy Index](GO_AUTOMATION_MASTER_INDEX.md).
+
+
+---
+## 🧭 Additional Modules
+- [00 Foundations](00-Foundations/README.md)

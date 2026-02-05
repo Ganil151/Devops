@@ -170,4 +170,4 @@ go build hello.go
 
 Now that your environment is ready, let's learn about variables, data types, and how Go manages memory.
 
-Proceed to: **[Go Fundamentals →](../01-Go-Fundamentals/README.md)**
+Proceed to: **[Go Fundamentals →](README.md)**

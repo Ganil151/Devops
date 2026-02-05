@@ -27,8 +27,8 @@ All projects in this portfolio are audited against the **[Definition of Done Che
 ---
 
 ## 📂 Category Guides & Templates
-- **[Category Guides](./Category-Guides/README.md)**: High-level architectural patterns for specific technology stacks.
-- **[Archive](./Archive/README.md)**: Legacy projects and configuration snapshots.
+- **[Category Guides](README.md)**: High-level architectural patterns for specific technology stacks.
+- **[Archive](README.md)**: Legacy projects and configuration snapshots.
 
 ---
 **Learning Path**: These projects represent the final capstone work for the **Advanced DevOps & SRE** track.

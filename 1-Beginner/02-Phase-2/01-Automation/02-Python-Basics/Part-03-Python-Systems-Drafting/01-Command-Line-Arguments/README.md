@@ -2,7 +2,7 @@
 
 > **"Bash scripts are for quick fixes, but Python CLIs are for enterprise automation. If you want your tools to be used by fellow engineers, you must build them with a professional interface."**
 
-![Python CLI Architecture](../../assets/cli_architecture.png)
+![Python CLI Architecture](challenges/challenge_06_cli_wrapper.py)
 
 ---
 
@@ -322,7 +322,7 @@ An engineer meant to type `python clean.py staging` but hit `Enter` too early af
 
 You have a professional interface. Now let's explore how to navigate the file system with modern tools.
 
-**Proceed to**: [Pathlib Modern Files →](../../Part-02-Python-Architecture/02-Pathlib-Modern-Files/README.md)
+**Proceed to**: [Pathlib Modern Files →](README.md)
 
 ---
 

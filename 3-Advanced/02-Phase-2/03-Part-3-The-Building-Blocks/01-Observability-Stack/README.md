@@ -50,14 +50,14 @@ These modules should be completed in the order shown above for optimal learning 
 Accelerate your observability skills with production-ready monitoring:
 
 - **[Prometheus Lab Scripts](./Prometheus/)**: Installation guides and node exporter setup.
-- **[Loki & Grafana Dashboards](./Logging-Loki-FluentBit/)**: Examples of log aggregation and visualization.
+- **[Loki & Grafana Dashboards](README.md)**: Examples of log aggregation and visualization.
 
 ---
 
 ## 🔗 Related Parts
 
-- [Part 1: Service Mesh](../01-Service-Mesh/) - Service metrics
-- [Part 8: Resilience](../08-Resilience/) - Incident response
+- [Part 1: Service Mesh](README.md) - Service metrics
+- [Part 8: Resilience](README.md) - Incident response
 
 ---
 

@@ -257,4 +257,4 @@ Create a comprehensive configuration file generator for a DevOps service.
 
 ---
 
-**Next**: [Data Structures Challenges →](../02-Data-Structures/CHALLENGES.md)
+**Next**: [Data Structures Challenges →](CHALLENGES.md)

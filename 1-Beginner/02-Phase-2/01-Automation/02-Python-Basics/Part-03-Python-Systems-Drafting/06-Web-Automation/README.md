@@ -2,7 +2,7 @@
 
 > **"When simple HTTP requests fail because a site is 'too interactive,' Selenium steps in. It's the digital hand that clicks, types, and navigates the web exactly like a human engineer."**
 
-![Browser Automation Architecture](../../assets/selenium_architecture.png)
+![Browser Automation Architecture](../../../01-Shell-Scripting/Part-03-System-Drafting/02-Advanced-IO/io_stream_architecture.png)
 
 ---
 

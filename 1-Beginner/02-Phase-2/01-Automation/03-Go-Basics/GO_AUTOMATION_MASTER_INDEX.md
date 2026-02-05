@@ -59,7 +59,7 @@ Master Go fundamentals and build your first CLI tools.
 | # | Topic | Description | Key Learning | Hours |
 | :--- | :--- | :--- | :--- | :--- |
 | 00 | [**Go Foundations**](./00-Foundations/README.md) | What is Go?, history, install, config | Path to Devops | 4h |
-| 01 | [**Go Fundamentals**](./01-Go-Fundamentals/README.md) | Syntax, packages, go modules | First Go program | 4-5h |
+| 01 | [**Go Fundamentals**](README.md) | Syntax, packages, go modules | First Go program | 4-5h |
 | 02 | **Variables and Types** | Types, constants, iota | Type system | 3-4h |
 | 03 | **Control Flow** | if/else, switch, loops | Go idioms | 3-4h |
 | 04 | **Functions** | Functions, closures, defer | Function patterns | 4-5h |

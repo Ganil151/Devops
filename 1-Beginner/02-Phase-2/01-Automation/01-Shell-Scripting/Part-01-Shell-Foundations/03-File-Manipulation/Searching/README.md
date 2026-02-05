@@ -313,4 +313,4 @@ fi
 
 Now that you can find the data, let's learn how to read through massive files without crashing your terminal!
 
-Proceed to: **[Paging Files](../06-Paging-Files/README.md)** →
+Proceed to: **[Paging Files](README.md)** →

@@ -74,4 +74,4 @@ groups:
 ```
 
 ---
-**Next Step**: [Prometheus & Grafana via Helm](./01-Prometheus-Grafana-Helm/) 🚀
+**Next Step**: [Prometheus & Grafana via Helm](README.md) 🚀

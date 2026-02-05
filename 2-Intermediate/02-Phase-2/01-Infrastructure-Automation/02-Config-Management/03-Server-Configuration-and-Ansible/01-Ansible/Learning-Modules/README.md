@@ -108,3 +108,13 @@ The technical manual for every Ansible component, from `become` to `handlers`.
 ---
 
 [⬅️ Back to Infrastructure Automation](../README.md)
+
+---
+## 🧭 Additional Modules
+- [03 Basic Playbooks](03-Basic-Playbooks/README.md)
+- [04 Core Modules](04-Core-Modules/README.md)
+- [05 Variables and Facts](05-Variables-and-Facts/README.md)
+- [06 Templates and Files](06-Templates-and-Files/README.md)
+- [08 Conditionals and Loops](08-Conditionals-and-Loops/README.md)
+- [09 Error Handling](09-Error-Handling/README.md)
+- [11 Custom Modules](11-Custom-Modules/README.md)

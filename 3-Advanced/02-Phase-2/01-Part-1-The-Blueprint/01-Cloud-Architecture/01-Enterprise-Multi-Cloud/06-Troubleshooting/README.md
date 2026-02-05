@@ -19,10 +19,10 @@ Successful troubleshooting is a systematic process of elimination:
 ### 🛡️ [Security Hacks & Troubleshooting](security-hacks-troubleshooting.md)
 Resolving IAM permission issues, WAF blocks, and connectivity failures.
 
-### 🤖 [Automation Troubleshooting & Hacks](../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/05-DevOps-and-Automation/10-Cloud-Automation/automation-troubleshooting-hacks.md)
+### 🤖 [Automation Troubleshooting & Hacks](../../../../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/04-Infrastructure-Governance-and-Audit/automation-troubleshooting-hacks.md)
 Debugging failed scripts and handling cloud API limits.
 
-### ☸️ [Container Troubleshooting](../../../../01-Phase-1/04-Container-Orchestration/Enterprise-Container-Orchestration/aws-eks-production-ready.md)
+### ☸️ [Container Troubleshooting](../../../../../01-Phase-1/04-Container-Orchestration/Enterprise-Container-Orchestration/aws-eks-production-ready.md)
 Diagnosing pod restarts, image pull errors, and cluster connectivity.
 
 ---

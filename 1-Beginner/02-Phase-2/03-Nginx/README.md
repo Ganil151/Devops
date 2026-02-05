@@ -34,7 +34,7 @@ graph TD
 Nginx (pronounced "Engine-X") is the backbone of modern web infrastructure. It functions as a high-performance HTTP server, a sophisticated **Reverse Proxy**, and a robust **Load Balancer**.
 
 ## Core Concept: The Asynchronous Edge
-**[REFERENCE: Nginx Architecture](../../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/04-System-Administration/REFERENCE/Linux-Kernel-Architecture-Ref.md)**
+**[REFERENCE: Nginx Architecture](../../../2-Intermediate/01-Phase-1/02-Linux/REFERENCE/Linux-Kernel-Architecture-Ref.md)**
 
 Nginx is the "Traffic Controller" for the digital highway:
 - **Event-Driven Model**: Handling thousands of concurrent connections with a small memory footprint.
@@ -42,7 +42,7 @@ Nginx is the "Traffic Controller" for the digital highway:
 - **Load Balancing**: Distributing traffic across multiple servers using algorithms like Round Robin or Least Conn.
 
 ## Enterprise Governance: Hardened Visibility
-**[REFERENCE: Nginx Security](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/21-Service-Mesh-Security-mTLS-SPIFFE/README.md)**
+**[REFERENCE: Nginx Security](README.md)**
 
 Protecting the production gateway:
 - **SSL/TLS Termination**: Centralizing certificate management and enforcing modern encryption standards.

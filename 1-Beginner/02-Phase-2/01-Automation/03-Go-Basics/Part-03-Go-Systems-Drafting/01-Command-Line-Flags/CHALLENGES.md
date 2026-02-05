@@ -105,4 +105,4 @@ go run deploy.go \
 # Should parse all flags correctly and display deployment plan
 ```
 
-**Next Step**: [Environment Variables →](../12-Environment-Variables/CHALLENGES.md)
+**Next Step**: [Environment Variables →](CHALLENGES.md)

@@ -24,7 +24,7 @@ We have broken down this critical concept into three actionable layers.
 ### 🏗️ Part 3: State Management (The Future)
 *Declarative tools that handle idempotency for you.*
 
-*   **[01. Ansible & Terraform](./Part-03-State-Management/01-Declarative-Tools.md)**: Why we use them over Bash scripts.
+*   **[01. Ansible & Terraform](REFERENCE/State-Management-Declarative-Tools-Ref.md)**: Why we use them over Bash scripts.
 
 ---
 

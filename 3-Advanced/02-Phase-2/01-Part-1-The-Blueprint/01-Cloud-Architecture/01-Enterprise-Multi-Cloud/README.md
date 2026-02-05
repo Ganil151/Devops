@@ -53,3 +53,14 @@ Advanced cloud management includes mastering the economics of the cloud:
 ---
 
 **The Ultimate Goal**: Become a Cloud Solution Architect capable of designing secure, scalable, and cost-effective systems that solve complex business problems globally.
+
+---
+## 🧭 Additional Modules
+- [03 Container Registry ECR](03-Container-Registry-ECR/README.md)
+- [04 Cost Optimization](04-Cost-Optimization/README.md)
+- [05 Best Practices](05-Best-Practices/README.md)
+- [08 S3 Enterprise](08-S3-Enterprise/README.md)
+- [09 Infrastructure as Code](09-Infrastructure-as-Code/README.md)
+- [11 Application Integration](11-Application-Integration/README.md)
+- [14 Networking Route53](14-Networking-Route53/README.md)
+- [15 Serverless Lambda](15-Serverless-Lambda/README.md)

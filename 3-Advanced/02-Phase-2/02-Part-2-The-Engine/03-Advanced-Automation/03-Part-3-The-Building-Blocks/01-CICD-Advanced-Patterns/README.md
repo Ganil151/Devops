@@ -16,10 +16,10 @@ Modern CI/CD is about scalability and security. **Advanced GitHub Actions** patt
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Reusable-Workflows](./01-Reusable-Workflows/)**
+1. **[🔴 01-Reusable-Workflows](README.md)**
    - Centralizing logic in a `.github` repository.
    - Passing secrets and inputs safely.
-2. **[🔴 02-Custom-Actions-and-Security](./02-Custom-Actions-and-Security/)**
+2. **[🔴 02-Custom-Actions-and-Security](README.md)**
    - JavaScript Actions vs. Docker Actions.
    - Hardening Runners and using OIDC.
 
@@ -78,4 +78,4 @@ jobs:
 Stop storing AWS Access Keys or GCP JSON Keys in GitHub Secrets. Use **GitHub Actions OIDC**. By configuring a trust relationship between GitHub and your Cloud Provider, your runner can fetch short-lived tokens on the fly. This eliminates the risk of static credential theft and simplifies security audits.
 
 ---
-**Next Step**: Start with [Reusable Workflows](./01-Reusable-Workflows/) 🚀
+**Next Step**: Start with [Reusable Workflows](README.md) 🚀

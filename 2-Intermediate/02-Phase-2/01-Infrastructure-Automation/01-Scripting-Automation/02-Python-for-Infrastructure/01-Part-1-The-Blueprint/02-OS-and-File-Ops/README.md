@@ -1634,7 +1634,7 @@ After mastering this module, you should be able to:
 
 **Ready to continue?**
 
-[⬅️ Back to Python Environment](../01-Python-Environment-and-Basics/README.md) | [Next: Data Manipulation](../03-Working-with-Data-JSON-YAML/README.md) ➡️
+[⬅️ Back to Python Environment](README.md) | [Next: Data Manipulation](README.md) ➡️
 
 ---
 

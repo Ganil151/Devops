@@ -185,3 +185,8 @@ Answer: A) The message becomes visible again in the queue for another consumer t
 <summary>Show Answer</summary>
 Answer: A) 256 KB</b>
 </details>
+
+
+---
+## 🧭 Additional Modules
+- [SQS](SQS/README.md)

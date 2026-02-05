@@ -118,5 +118,5 @@ kubectl get pods -o custom-columns="POD_NAME:.metadata.name,RESTARTS:.status.con
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Pods and Nodes](../../Part-2-Workload-Management/03-Pods-and-Nodes/README.md)
+- [Next: Pods and Nodes](README.md)
 - [Back: Cluster Architecture](../01-Cluster-Architecture/README.md)

@@ -147,3 +147,8 @@ Container scanning, SBOM management, and automated vulnerability patching.
 Junior, the assembly line is secure. Now let's learn how to monitor it.
 1. Proceed to: **[Part 3: Modern Operations](../03-Modern-Operations/README.md)** →
 2. Return to: **[Phase 2 Hub](../README.md)** →
+
+
+---
+## 🧭 Additional Modules
+- [05 Automated Testing](05-Automated-Testing/README.md)

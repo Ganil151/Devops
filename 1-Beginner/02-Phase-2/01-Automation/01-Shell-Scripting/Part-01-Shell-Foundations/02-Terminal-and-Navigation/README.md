@@ -297,4 +297,4 @@ cd -  # Jumps back to nginx
 
 Now that you can move through the system, let's learn how to manipulate the files you find!
 
-Proceed to: **[Basic File Manipulation](../03-Basic-File-Manipulation/README.md)** →
+Proceed to: **[Basic File Manipulation](README.md)** →

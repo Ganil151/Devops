@@ -2,7 +2,7 @@
 
 > **"Theory becomes power only when it is applied. This capstone project combines every module you've studied—from Variables to Microservices—into a single, production-grade automation engine."**
 
-![Automation Architecture](../../assets/capstone_architecture.png)
+![Automation Architecture](../../../01-Shell-Scripting/Part-03-System-Drafting/02-Advanced-IO/io_stream_architecture.png)
 
 ---
 

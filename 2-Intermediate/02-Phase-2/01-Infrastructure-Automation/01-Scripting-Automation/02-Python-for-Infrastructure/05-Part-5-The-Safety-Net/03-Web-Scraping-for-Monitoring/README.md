@@ -242,4 +242,4 @@ Before moving to the next module, ensure you can:
 
 **Score yourself**: 5+/5 = Ready to advance | <5 = Review exercises
 
-[⬅️ Back to Docker SDK](../11-Docker-and-Kubernetes-SDKs/README.md) | [Next: Pandas](../13-Data-Processing-with-Pandas/README.md) ➡️
+[⬅️ Back to Docker SDK](README.md) | [Next: Pandas](README.md) ➡️

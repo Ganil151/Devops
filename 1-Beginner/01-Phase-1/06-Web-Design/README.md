@@ -2,7 +2,7 @@
 
 > **"A website is the first point of contact between your system and the world. In DevOps, we don't just 'design' pages; we engineer robust portals. If your frontend is slow, it doesn't matter how fast your database is—the user has already left."**
 
-![Web Design Architecture](../../assets/web_design_banner.png)
+![Web Design Architecture](REFERENCE/Web-Design-Best-Practices-Ref.md)
 
 ---
 
@@ -130,3 +130,12 @@ graph TD
 ---
 
 **Next Step**: Start with **[Environment Setup](./Environment-Setup.md)**
+
+
+---
+## 🧭 Additional Modules
+- [Angular](Angular/README.md)
+- [Django](Django/README.md)
+- [Mobile](Mobile/README.md)
+- [SpringBoot](SpringBoot/README.md)
+- [VueJs](VueJs/README.md)

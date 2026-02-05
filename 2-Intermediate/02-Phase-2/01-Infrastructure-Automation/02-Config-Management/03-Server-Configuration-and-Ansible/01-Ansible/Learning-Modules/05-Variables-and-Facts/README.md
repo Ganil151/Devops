@@ -3,7 +3,7 @@
 Hardcoding values (IPs, Paths, Users) is the enemy of automation. Variables allow you to reuse code across Dev, Test, and Prod.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `group_vars/all.yml`.
+- **[Boilerplates](README.md)**: `group_vars/all.yml`.
 - **[CHALLENGES](./CHALLENGES.md)**: Fact finding, Variable Precedence.
 
 ---
@@ -58,3 +58,10 @@ graph LR
 ---
 
 [Next: Templates & Files](../06-Templates-and-Files/README.md)
+
+---
+## 🧭 Additional Modules
+- [01 Variable Hierarchy](01-Variable-Hierarchy/README.md)
+- [02 Ansible Facts](02-Ansible-Facts/README.md)
+- [03 Magic Variables](03-Magic-Variables/README.md)
+- [04 Dynamic Data](04-Dynamic-Data/README.md)

@@ -152,3 +152,8 @@ Unit, Integration, and Fork testing. Public Testnets (Sepolia) and managing fauc
 Junior, the ledger is secure. Now let's learn how to balance the Cloud Books.
 1. Proceed to: **[06. FinOps Mastery](../06-FinOps/README.md)** →
 2. Return to: **[Phase 3 Hub](../README.md)** →
+
+---
+## 🧭 Additional Modules
+- [05 Interview Questions and Quizzes](05-Interview-Questions-and-Quizzes/README.md)
+- [06 Real Life Scenarios](06-Real-Life-Scenarios/README.md)

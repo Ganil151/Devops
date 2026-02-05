@@ -425,7 +425,7 @@ def deploy_application(app_name, version):
     Deploy application with specified version
     """
     cmd = f'docker run -d --name {app_name} myapp:{version}'
-    result = __salt__['cmd.run'](cmd)
+    result = __salt__['cmd.run'](README.md)
     return result
 
 def get_app_status(app_name):
@@ -433,7 +433,7 @@ def get_app_status(app_name):
     Get application status
     """
     cmd = f'docker inspect {app_name}'
-    return __salt__['cmd.run'](cmd, python_shell=False)
+    return __salt__['cmd.run'](README.md)
 ```
 
 ### **Custom State Modules**
@@ -445,10 +445,10 @@ def deployed(name, version, port=8080):
     """
     ret = {'name': name, 'changes': {}, 'result': True, 'comment': ''}
     
-    current_version = __salt__['custom_app.get_app_status'](name)
+    current_version = __salt__['custom_app.get_app_status'](README.md)
     
     if current_version != version:
-        __salt__['custom_app.deploy_application'](name, version)
+        __salt__['custom_app.deploy_application'](README.md)
         ret['changes']['version'] = {'old': current_version, 'new': version}
         ret['comment'] = f'Application {name} updated to version {version}'
     else:
@@ -477,3 +477,7 @@ def deployed(name, version, port=8080):
 **Next Steps**: Master Salt fundamentals, explore event-driven automation, and integrate with cloud and container platforms for comprehensive infrastructure management.
 
 *"Event-driven automation that scales with your infrastructure needs."*
+
+---
+## 🧭 Additional Modules
+- [01 Fundamentals](01-Fundamentals/README.md)

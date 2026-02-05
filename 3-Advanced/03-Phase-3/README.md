@@ -64,22 +64,22 @@ graph TD
 
 Explore the operations side of specialized engineering fields.
 
-- **[Specialized Tech (MLOps, Web3, SaaS)](./11-Specialized-Tech/README.md)**
-- **[Blockchain Ops & Security](./14-Blockchain/README.md)**
+- **[Specialized Tech (MLOps, Web3, SaaS)](README.md)**
+- **[Blockchain Ops & Security](README.md)**
 
 ### 🟡 2. AI-Native DevOps
 
 Master the integration of Large Language Models and Agents into the SDLC.
 
-- **[Prompt Engineering for Agents](./12-Prompt-Engineering/README.md)**
-- **[Model Context Protocol (MCP)](./13-MCP/README.md)**
+- **[Prompt Engineering for Agents](README.md)**
+- **[Model Context Protocol (MCP)](README.md)**
 
 ### 🔴 3. Enterprise Strategy
 
 Align technical excellence with organizational and financial goals.
 
-- **[Enterprise FinOps](./15-FinOps/README.md)**
-- **[Advanced API Architectures](./16-Advanced-API-Architectures/README.md)**
+- **[Enterprise FinOps](README.md)**
+- **[Advanced API Architectures](README.md)**
 
 ---
 
@@ -97,7 +97,17 @@ Align technical excellence with organizational and financial goals.
 ## 🔗 Quick Links
 
 - 📘 **[Full Master Index](./PHASE_3_MASTER_INDEX.md)** - Detailed topic breakdown and time estimates.
-- 🎓 **[Certification Path](../README.md)** - How Phase 3 fits into your professional growth.
-- 🤝 **[Contribution Guide](../README.md)** - Help us expand the frontier.
+- 🎓 **[Certification Path](README.md)** - How Phase 3 fits into your professional growth.
+- 🤝 **[Contribution Guide](README.md)** - Help us expand the frontier.
 
-**Ready to reach the pinnacle? Start with [Specialized Tech](./11-Specialized-Tech/README.md) or [FinOps](./15-FinOps/README.md)!** 🚀
+**Ready to reach the pinnacle? Start with [Specialized Tech](README.md) or [FinOps](README.md)!** 🚀
+
+
+---
+## 🧭 Additional Modules
+- [01 Specialized Tech](01-Specialized-Tech/README.md)
+- [02 Prompt Engineering](02-Prompt-Engineering/README.md)
+- [03 MCP](03-MCP/README.md)
+- [04 Blockchain](04-Blockchain/README.md)
+- [05 FinOps](05-FinOps/README.md)
+- [06 Advanced API Architectures](06-Advanced-API-Architectures/README.md)

@@ -138,5 +138,5 @@ Junior admins often keep everything open and "block the bad stuff." Senior secur
 
 You've mastered the defensive boundaries. Now let's dive into the cloud-specific implementation of these patterns using AWS Security Groups and NACLs.
 
-Proceed to: **[05. Cloud Network Security (SGs & NACLs)](../05-Network-Security-NACLs-SGs/README.md)** →
+Proceed to: **[05. Cloud Network Security (SGs & NACLs)](README.md)** →
 Node: This link points to the next logical step in the curriculum.

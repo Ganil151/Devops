@@ -3,7 +3,7 @@
 Automation requires logic. "Do this 5 times." "Do this only if X is true."
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `logic.yml` (Loops, Register, When).
+- **[Boilerplates](README.md)**: `logic.yml` (Loops, Register, When).
 - **[CHALLENGES](./CHALLENGES.md)**: Refactoring lists, OS-specific logic.
 
 ---
@@ -64,3 +64,10 @@ Assert state before proceeding.
 ---
 
 [Next: Error Handling](../09-Error-Handling/README.md)
+
+---
+## 🧭 Additional Modules
+- [01 Conditional Execution](01-Conditional-Execution/README.md)
+- [02 Looping Mechanics](02-Looping-Mechanics/README.md)
+- [03 Error Handling Blocks](03-Error-Handling-Blocks/README.md)
+- [04 Advanced Logic Control](04-Advanced-Logic-Control/README.md)

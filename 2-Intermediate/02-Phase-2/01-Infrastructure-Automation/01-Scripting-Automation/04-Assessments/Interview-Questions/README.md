@@ -66,4 +66,4 @@ Answer: B
 
 ---
 
-[Next: Real-Life Scenarios →](../07-Real-Life-Scenarios/README.md)
+[Next: Real-Life Scenarios →](README.md)

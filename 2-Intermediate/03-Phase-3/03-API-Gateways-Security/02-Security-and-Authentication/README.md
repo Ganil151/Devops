@@ -18,5 +18,5 @@ The "Passports" of the web.
 - Complete **JWT Foundations** before moving to traffic management. Security is the first layer of the gateway.
 
 ---
-- [Next: Part 3 - Traffic Management & Docs](../Part-3-Traffic-Management-and-Docs/README.md)
+- [Next: Part 3 - Traffic Management & Docs](README.md)
 - [Back to Main Curriculum](../README.md)

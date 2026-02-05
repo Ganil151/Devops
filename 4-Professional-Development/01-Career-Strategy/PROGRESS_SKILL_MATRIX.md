@@ -8,10 +8,10 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 
 | Skill | Status | Deliverable |
 | :--- | :--- | :--- |
-| **Linux Administration** | ✅ Done | [Lab Manuals](../../1-Beginner/01-Linux-Foundations/) |
-| **Networking 101** | ✅ Done | [Architecture Guides](../../1-Beginner/02-Networking-Fundamentals/) |
-| **Python Logic** | ✅ Done | [Script Library](../../1-Beginner/04-Python-for-DevOps/) |
-| **Docker & Containers** | ✅ Done | [Foundation Challenges](../../1-Beginner/05-Container-Foundations/) |
+| **Linux Administration** | ✅ Done | [Lab Manuals](README.md) |
+| **Networking 101** | ✅ Done | [Architecture Guides](README.md) |
+| **Python Logic** | ✅ Done | [Script Library](README.md) |
+| **Docker & Containers** | ✅ Done | [Foundation Challenges](README.md) |
 
 ---
 
@@ -20,11 +20,11 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 | Skill | Status | Deliverable |
 | :--- | :--- | :--- |
 | **Cloud VPC / Networking** | ✅ Done | [VPC Boilerplates](../../2-Intermediate/01-Phase-1/01-Networking/) |
-| **Terraform IaC** | ✅ Done | [Module Gallery](../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/Terraform/modules/) |
-| **Ansible Config** | ✅ Done | [Standard Playbooks](../../2-Intermediate/02-Phase-2/Part-2-Config-Management/) |
-| **Kubernetes Admin** | ✅ Done | [Cluster Ops Guides](../../2-Intermediate/README.md) |
-| **Enterprise CI/CD** | ✅ Done | [Jenkins Blueprints Master](../../2-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/Jenkins/blueprints/) |
-| **FinOps / Cost Mgmt** | ✅ Done | [Modern Ops Quiz](../../6-Quizzes/Intermediate/Modern-Ops-Quiz.md) |
+| **Terraform IaC** | ✅ Done | [Module Gallery](README.md) |
+| **Ansible Config** | ✅ Done | [Standard Playbooks](README.md) |
+| **Kubernetes Admin** | ✅ Done | [Cluster Ops Guides](README.md) |
+| **Enterprise CI/CD** | ✅ Done | [Jenkins Blueprints Master](README.md) |
+| **FinOps / Cost Mgmt** | ✅ Done | [Modern Ops Quiz](../../6-Quizzes/2-Intermediate/Modern-Ops-Quiz.md) |
 
 ---
 
@@ -32,11 +32,11 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 
 | Skill | Status | Deliverable |
 | :--- | :--- | :--- |
-| **Service Mesh (Istio)** | 🚧 In Progress | [Advanced Labs](../../3-Advanced/02-Phase-2/01-Service-Mesh/) |
-| **GitOps (ArgoCD)** | ✅ Done | [Technical Deep-Dive](../../00-Resources/01-Scripts-Code/ArgoCD/ARGO_DEEP_DIVE.md) |
-| **Platform Eng (Backstage)** | 🚧 In Progress | [IDP Challenges](../../3-Advanced/02-Phase-2/04-Platform-Engineering/) |
-| **Policy-as-Code** | ✅ Done | [OPA Deep-Dive](../../00-Resources/01-Scripts-Code/Terraform/POLICY_AS_CODE_DEEP_DIVE.md) |
-| **Specialized (AI/MLOps)** | 🚧 In Progress | [Advanced Tech Quiz](../../6-Quizzes/Advanced/Specialized-Tech-Quiz.md) |
+| **Service Mesh (Istio)** | 🚧 In Progress | [Advanced Labs](README.md) |
+| **GitOps (ArgoCD)** | ✅ Done | [Technical Deep-Dive](../../3-Advanced/02-Phase-2/02-Part-2-The-Engine/01-GitOps-Fleet/ArgoCD/ARGO_DEEP_DIVE.md) |
+| **Platform Eng (Backstage)** | 🚧 In Progress | [IDP Challenges](README.md) |
+| **Policy-as-Code** | ✅ Done | [OPA Deep-Dive](../../5-Boilerplates/2-Intermediate/Infracost/Infracost-Automation-Policy-as-Code-Guardrails-cost_policy.rego) |
+| **Specialized (AI/MLOps)** | 🚧 In Progress | [Advanced Tech Quiz](../../6-Quizzes/3-Advanced/Specialized-Tech-Quiz.md) |
 
 ---
 
@@ -55,11 +55,11 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 
 For a step-by-step implementation of a professional-grade project, see the:
 
-👉 **[Golden Project Implementation Guide](./GOLDEN_PROJECT_GUIDE.md)**
+👉 **[Golden Project Implementation Guide](../04-Portfolio-Projects/GOLDEN_PROJECT_GUIDE.md)**
 
 ---
 
-**Showcase Hub**: [00-Resources/05-Projects-Showcase](../../00-Resources/05-Projects-Showcase/README.md)
+**Showcase Hub**: [00-Resources/05-Projects-Showcase](README.md)
 
 ---
 

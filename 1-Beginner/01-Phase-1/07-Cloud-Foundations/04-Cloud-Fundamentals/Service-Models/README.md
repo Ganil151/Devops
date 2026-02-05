@@ -1204,5 +1204,5 @@ This comprehensive guide covers all major cloud service models, helping organiza
 
 ---
 
-**Next Step**: Master the **[Account & Billing Strategy (IAM/FinOps) →](../../02-Account-and-Billing/README.md)**
+**Next Step**: Master the **[Account & Billing Strategy (IAM/FinOps) →](README.md)**
 

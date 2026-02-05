@@ -30,7 +30,7 @@ In the modern infrastructure landscape, **Prompt Engineering** is the art of com
 This curriculum teaches you how to turn AI into your most powerful "Force Multiplier."
 
 ## Core Concept: The Deterministic Pipeline
-**[REFERENCE: Advanced Prompting](../../REFERENCE/Advanced-Prompting-Frameworks-Ref.md)**
+**[REFERENCE: Advanced Prompting](REFERENCE/Advanced-Prompting-Frameworks-Ref.md)**
 
 In DevOps, we do not want "Creative" AI; we want "Reliable" AI.
 - **Temperature Control**: Setting $T=0$ to ensure the same input always yields the same output.
@@ -38,7 +38,7 @@ In DevOps, we do not want "Creative" AI; we want "Reliable" AI.
 - **Chain of Thought**: Forcing the AI to "Show its work" before executing a destructive command.
 
 ## Enterprise Governance & Security
-**[REFERENCE: AI Security & Governance](../../REFERENCE/AI-Security-Governance-Ref.md)**
+**[REFERENCE: AI Security & Governance](REFERENCE/AI-Security-Governance-Ref.md)**
 
 AI is a new attack surface.
 - **Injection Attacks**: Malicious user input overriding system instructions.
@@ -120,3 +120,8 @@ Fed a 100-line Linux kernel log or an Nginx error trace? AI can spot the pattern
 The tools are ready. Now let's master the language.
 
 Proceed to: **[Part 1: The AI Mindset](./Part-01-AI-Fundamentals/README.md)** 🚀
+
+
+---
+## 🧭 Additional Modules
+- [examples](examples/README.md)

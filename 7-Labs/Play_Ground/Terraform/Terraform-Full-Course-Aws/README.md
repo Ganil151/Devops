@@ -119,13 +119,13 @@ This course consists of video lessons covering basic to advanced Terraform conce
 - Built-in functions
 - Practical examples
 - tasks for practice
-- [Code Sample](/lessons/day11)
+- [Code Sample](README.md)
 
 #### Video 12: Functions in Terraform(Continue..)
 - Built-in functions
 - Practical examples
 - tasks for practice
-- [Code Sample](/lessons/day12)
+- [Code Sample](README.md)
 
 #### Video 13: Data Sources
 - Using data sources

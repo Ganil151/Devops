@@ -26,7 +26,7 @@
 
 ## Security Components
 
-### 1. [Authentication & Authorization](./rbac/)
+### 1. [Authentication & Authorization](README.md)
 - **RBAC**: Role-Based Access Control
 - **Service Accounts**: Pod identity management
 - **User Management**: Human user authentication
@@ -36,7 +36,7 @@
 - **Service Mesh**: Advanced networking security
 - **Encryption**: Data in transit protection
 
-### 3. [Pod Security](./pod-security/)
+### 3. [Pod Security](README.md)
 - **Pod Security Standards**: Security policy enforcement
 - **Security Contexts**: Runtime security controls
 - **Resource Limits**: DoS protection
@@ -46,17 +46,17 @@
 - **Encryption at Rest**: Data protection
 - **Key Management**: Cryptographic key handling
 
-### 5. [Admission Control](./admission-controllers/)
+### 5. [Admission Control](README.md)
 - **Admission Controllers**: Policy enforcement
 - **Validating Webhooks**: Custom validation
 - **Mutating Webhooks**: Resource modification
 
-### 6. [Image Security](./image-security/)
+### 6. [Image Security](README.md)
 - **Image Scanning**: Vulnerability detection
 - **Image Signing**: Supply chain security
 - **Registry Security**: Secure image distribution
 
-### 7. [Compliance & Auditing](./compliance/)
+### 7. [Compliance & Auditing](README.md)
 - **Audit Logging**: Security event tracking
 - **Compliance Frameworks**: Standards adherence
 - **Security Benchmarks**: Best practice validation

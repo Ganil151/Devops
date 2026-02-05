@@ -81,4 +81,4 @@ When you are tasked with reviewing or debugging a script, walk through this chec
 
 ---
 
-**Next Step**: Learn how these scripts integrate into the broader [DevOps Automation Workflow](./devops_automation_workflow.md).
+**Next Step**: Learn how these scripts integrate into the broader [DevOps Automation Workflow](../Part-01-Philosophy-and-Mindset/02-Automation-Workflow.md).

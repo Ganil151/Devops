@@ -23,4 +23,4 @@ Put your scripting skills into practice with these real-world DevOps challenges.
 
 ---
 
-[Next: Infracost Automation →](../08-Infracost-Automation/README.md)
+[Next: Infracost Automation →](README.md)

@@ -121,5 +121,5 @@ kubectl autoscale deployment/web-app --min=2 --max=10 --cpu-percent=80
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Services and Networking](../../Part-3-Networking-and-Config/05-Services-and-Networking/README.md)
+- [Next: Services and Networking](README.md)
 - [Back: Pods and Nodes](../03-Pods-and-Nodes/README.md)

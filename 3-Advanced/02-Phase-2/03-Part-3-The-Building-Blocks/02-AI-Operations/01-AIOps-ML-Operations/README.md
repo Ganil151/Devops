@@ -71,4 +71,4 @@ Reactive scaling (HPA) waits for CPU to hit 80%. Predictive scaling uses histori
 For critical remediations (like deleting a Production DB), the AIOps engine should propose a solution and wait for a human "Thumb's Up" via Slack/Teams before executing.
 
 ---
-**Next Step**: [Anomaly Detection Fundamentals](./01-Anomaly-Detection/) 🚀
+**Next Step**: [Anomaly Detection Fundamentals](README.md) 🚀

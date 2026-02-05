@@ -137,5 +137,5 @@ Standard switches use **VLAN 1** as the default "Native" VLAN for untagged manag
 
 You've mastered Layer 2. Now let's jump to Layer 3 and see how routers make the world's most complex decisions.
 
-Proceed to: **[03. Advanced Routing](../03-Advanced-Routing/README.md)** →
+Proceed to: **[03. Advanced Routing](README.md)** →
 Node: This link points to the next logical step in the curriculum.

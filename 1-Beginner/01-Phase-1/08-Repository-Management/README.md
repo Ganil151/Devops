@@ -127,3 +127,8 @@ flowchart LR
 ---
 
 **Next Step**: Start with **[Git & GitHub Fundamentals](./01-Git-GitHub/README.md)**
+
+---
+## 🧭 Additional Modules
+- [05 Mercurial](05-Mercurial/README.md)
+- [06 Subversion SVN](06-Subversion-SVN/README.md)

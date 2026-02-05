@@ -999,6 +999,6 @@ if __name__ == '__main__':
 
 ## 🔗 Next Steps
 
-- [Performance Optimization](../Performance-Optimization/) - Automated performance tuning
-- [Cloud Networking](../Cloud-Networking/) - Cloud automation integration
-- [Service Mesh](../Service-Mesh/) - Service mesh automation
+- [Performance Optimization](README.md) - Automated performance tuning
+- [Cloud Networking](README.md) - Cloud automation integration
+- [Service Mesh](README.md) - Service mesh automation

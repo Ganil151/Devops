@@ -49,4 +49,4 @@ CMD ["python", "app.py"]
 
 ---
 
-**Next Step**: Prove your skills in **[CHALLENGES.md](../../CHALLENGES.md)** 🚀
+**Next Step**: Prove your skills in **[CHALLENGES.md](../../../02-API-Basics/CHALLENGES.md)** 🚀

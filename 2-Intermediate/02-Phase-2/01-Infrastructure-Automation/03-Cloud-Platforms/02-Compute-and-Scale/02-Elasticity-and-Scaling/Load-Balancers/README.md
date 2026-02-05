@@ -355,3 +355,13 @@ Resources:
 ```
 
 This comprehensive guide covers cloud load balancing concepts, implementations, and best practices across major cloud platforms.
+
+---
+## 🧭 Additional Modules
+- [Algorithms](Algorithms/README.md)
+- [AWS](AWS/README.md)
+- [Azure](Azure/README.md)
+- [Best Practices](Best-Practices/README.md)
+- [Configuration](Configuration/README.md)
+- [GCP](GCP/README.md)
+- [Monitoring](Monitoring/README.md)

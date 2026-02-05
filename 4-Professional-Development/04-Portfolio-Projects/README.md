@@ -35,4 +35,4 @@ For a step-by-step implementation of a professional-grade project, see the:
 
 ---
 
-**Showcase Hub**: [00-Resources/05-Projects-Showcase](../../00-Resources/05-Projects-Showcase/README.md)
+**Showcase Hub**: [00-Resources/05-Projects-Showcase](README.md)

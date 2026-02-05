@@ -16,10 +16,10 @@ In a cloud-native environment, "trust" cannot be based on IP addresses. **Servic
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-mTLS-Fundamentals](./01-mTLS-Fundamentals/)**
+1. **[🔴 01-mTLS-Fundamentals](README.md)**
    - Certificate Authorities (CA) in Kubernetes.
    - Enforcing Strict vs. Permissive mTLS modes.
-2. **[🔴 02-SPIRE-Workload-Identity](./02-SPIRE-Workload-Identity/)**
+2. **[🔴 02-SPIRE-Workload-Identity](README.md)**
    - Workload Attestation: How SPIRE proves who a pod is.
    - Using the SPIRE Agent and Server.
 
@@ -63,4 +63,4 @@ spec:
 Never use API Keys for internal service-to-service communication. Use the **Workload SVID** handled by SPIRE. By baking identity into the connection itself (via mTLS), you remove the risk of leaked keys and simplify your secret management—as the "secret" is a short-lived certificate rotated every few hours.
 
 ---
-**Next Step**: Start with [mTLS Fundamentals](./01-mTLS-Fundamentals/) 🚀
+**Next Step**: Start with [mTLS Fundamentals](README.md) 🚀

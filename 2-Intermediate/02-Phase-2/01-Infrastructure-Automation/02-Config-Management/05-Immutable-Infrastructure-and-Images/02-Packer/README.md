@@ -605,3 +605,7 @@ variable "environment" {
 **Next Steps**: Master Packer fundamentals, implement automated image pipelines, and integrate with infrastructure automation workflows for consistent, secure deployments.
 
 *"Build once, deploy everywhere with consistent, reproducible machine images."*
+
+---
+## 🧭 Additional Modules
+- [01 Fundamentals](01-Fundamentals/README.md)

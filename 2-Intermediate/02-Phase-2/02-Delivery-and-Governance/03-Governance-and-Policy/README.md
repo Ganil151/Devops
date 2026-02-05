@@ -63,4 +63,4 @@ download-external-modules: true
 In Kubernetes, use OPA/Gatekeeper as an Admission Controller. This ensures that even if someone bypasses the CI/CD pipeline, the cluster itself will reject any manifest that violates your security policies.
 
 ---
-**Next Step**: [OPA & Rego Basics](./01-OPA-and-Rego-Basics/) 🚀
+**Next Step**: [OPA & Rego Basics](README.md) 🚀

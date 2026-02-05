@@ -15,10 +15,10 @@ Bare Metal Automation is the process of provisioning physical hardware without m
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-PXE-Fundamentals](./01-PXE-Fundamentals/)**
+1. **[🔴 01-PXE-Fundamentals](README.md)**
    - Setting up a PXE boot environment.
    - Configuring `dnsmasq` for DHCP and TFTP.
-2. **[🔴 02-Metal-as-a-Service-MaaS](./02-Metal-as-a-Service-MaaS/)**
+2. **[🔴 02-Metal-as-a-Service-MaaS](README.md)**
    - Fleet discovery and labeling.
    - Commissioning and deploying physical OS images.
 
@@ -59,4 +59,4 @@ menuentry 'Install Ubuntu 22.04 LTS (Network)' {
 Always leverage out-of-band management interfaces (**IPMI**, **iDRAC**, **iLO**). By using tools like **Redfish API**, you can programmatically reboot a server, change its boot order, or monitor fan speeds without ever entering the data center.
 
 ---
-**Next Step**: Start with [PXE Fundamentals](./01-PXE-Fundamentals/) 🚀
+**Next Step**: Start with [PXE Fundamentals](README.md) 🚀

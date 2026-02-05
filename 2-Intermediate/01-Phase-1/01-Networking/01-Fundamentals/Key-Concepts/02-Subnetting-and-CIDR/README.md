@@ -93,3 +93,9 @@ Don't guess. Use the **Standard Tier Model**.
 You have the addresses. Now, how do packets know which road to take?
 
 Proceed to: **[Routing & Traffic Control](../04-Routing-and-Route-Tables/README.md)** →
+
+
+---
+## 🧭 Additional Modules
+- [02 CIDR Math and Calculation](02-CIDR-Math-and-Calculation/README.md)
+- [03 Public and Private Zoning](03-Public-and-Private-Zoning/README.md)

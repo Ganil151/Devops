@@ -141,5 +141,5 @@ In large networks, Managing thousands of routes with individual prefix lists is 
 
 You've mastered the logic of the network. Now let's explore the physical and virtual boundaries that keep us safe.
 
-Proceed to: **[04. Network Security](../04-Network-Security/README.md)** →
+Proceed to: **[04. Network Security](README.md)** →
 Node: This link points to the next logical step in the curriculum.

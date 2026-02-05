@@ -6,7 +6,7 @@ This is the flagship project for your professional portfolio. It demonstrates th
 
 ## 🏛️ Project Architecture
 
-**Full Capstone Repo**: [Global-Microservices-Mesh](../../00-Resources/05-Projects-Showcase/Global-Microservices-Mesh/README.md)
+**Full Capstone Repo**: [Global-Microservices-Mesh](README.md)
 
 ### Why this is a "Golden" Project
 
@@ -73,10 +73,10 @@ For a step-by-step implementation of a professional-grade project, see the:
 
 ---
 
-**Showcase Hub**: [00-Resources/05-Projects-Showcase](../../00-Resources/05-Projects-Showcase/README.md)
+**Showcase Hub**: [00-Resources/05-Projects-Showcase](README.md)
 
 ### Seniority Note
 
 *"Seniority is not time-served; it is the breadth of your implementation gallery."*
 
-**Next Steps**: Follow the [Implementation Roadmap](../../00-Resources/05-Projects-Showcase/Global-Microservices-Mesh/README.md#📋-implementation-roadmap) to build it.
+**Next Steps**: Follow the [Implementation Roadmap](README.md#📋-implementation-roadmap) to build it.

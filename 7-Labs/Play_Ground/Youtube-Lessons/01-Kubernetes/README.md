@@ -35,8 +35,8 @@ cd Anton_Putra/devops-youtube-course-2025/
 ### Related Resources
 
 - [Kubernetes Main Documentation](.)
-- [Docker Documentation](../../../1-Beginner/03-Docker/)
-- [Helm Documentation](../../../2-Intermediate/02-Helm/)
+- [Docker Documentation](README.md)
+- [Helm Documentation](README.md)
 
 ---
 

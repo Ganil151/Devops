@@ -140,3 +140,15 @@ Avoid building every VPC Subnet manually. Use `Vpc.fromLookup()` or `new Vpc()` 
 ---
 
 **Return to [Strategic IaC Overview](../README.md)**
+
+
+---
+## 🧭 Additional Modules
+- [01 AWS CloudFormation](01-AWS-CloudFormation/README.md)
+- [02 AWS CDK](02-AWS-CDK/README.md)
+- [03 AWS SAM](03-AWS-SAM/README.md)
+- [04 Azure ARM](04-Azure-ARM/README.md)
+- [05 Azure Bicep](05-Azure-Bicep/README.md)
+- [06 GCP Deployment Manager](06-GCP-Deployment-Manager/README.md)
+- [07 GCP Config Connector](07-GCP-Config-Connector/README.md)
+- [08 Pulumi](08-Pulumi/README.md)

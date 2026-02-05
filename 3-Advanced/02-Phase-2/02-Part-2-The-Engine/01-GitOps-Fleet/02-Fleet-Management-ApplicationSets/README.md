@@ -16,10 +16,10 @@ Managing 5 Kubernetes applications is easy; managing 500 across 50 clusters is i
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Matrix-Generators](./01-Matrix-Generators/)**
+1. **[🔴 01-Matrix-Generators](README.md)**
    - Combining Cluster secrets with Git path configurations.
    - Using Templating and Go text/template syntax.
-2. **[🔴 02-Git-Generators](./02-Git-Generators/)**
+2. **[🔴 02-Git-Generators](README.md)**
    - Automatic application creation via folder discovery.
    - Filtering with glob patterns.
 
@@ -88,4 +88,4 @@ spec:
 Stop writing individual YAML files for every new application. Standardize your repository structure (e.g., `/apps/<app-name>/base/`) and use the **Git Generator**. When a developer opens a PR to add a new folder to `/apps`, ArgoCD detects it and automatically creates the Application, Deployment, and Service—realizing a true **Developer Self-Service** model.
 
 ---
-**Next Step**: Start with [Matrix Generators](./01-Matrix-Generators/) 🚀
+**Next Step**: Start with [Matrix Generators](README.md) 🚀

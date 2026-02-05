@@ -488,7 +488,7 @@ After completing all challenges, verify your understanding:
 
 ## 🔗 **NEXT STEPS**
 
-Continue to: **[Finally Scripting](../12-Finally-Scripting/README.md)** →
+Continue to: **[Finally Scripting](README.md)** →
 
 **Prerequisites for Next Module**:
 - Understanding of file permissions and security
@@ -496,5 +496,5 @@ Continue to: **[Finally Scripting](../12-Finally-Scripting/README.md)** →
 - Familiarity with text editors
 
 **Related Modules**:
-- **[Linux Basics](../../../../../README.md)** - Foundation concepts
-- **[Security Fundamentals](../../../../../README.md)** - Advanced security topics
+- **[Linux Basics](README.md)** - Foundation concepts
+- **[Security Fundamentals](README.md)** - Advanced security topics

@@ -8,7 +8,7 @@
 - **Emphasis**: `*italics*`, `**bold**`
 - **Lists**: `1.`, `-`, `*`
 - **Code Blocks**: Backticks `` ` `` or triple backticks ` ``` `
-- **Links & Images**: `[text](url)` and `![alt](url)`
+- **Links & Images**: `[text](README.md)` and `![alt](README.md)`
 
 ---
 

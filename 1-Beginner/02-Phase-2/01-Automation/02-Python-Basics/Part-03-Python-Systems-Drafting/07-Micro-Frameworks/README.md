@@ -2,7 +2,7 @@
 
 > **"In DevOps, you don't always need a massive enterprise server. Sometimes you just need a 10-line Webhook receiver that can handle 10,000 requests a second without breaking a sweat."**
 
-![FastAPI vs Flask](../../assets/api_frameworks.png)
+![FastAPI vs Flask](../05-Working-with-the-Web/web_api_demo.py)
 
 ---
 

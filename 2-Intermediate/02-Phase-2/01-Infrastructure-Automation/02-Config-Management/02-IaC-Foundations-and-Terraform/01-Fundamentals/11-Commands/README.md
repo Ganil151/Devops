@@ -27,12 +27,12 @@ This directory contains comprehensive documentation for all essential Terraform 
 ### Advanced Commands
 13. **[13-Graph.md](13-Graph.md)** - `terraform graph` - Generate dependency graph
 14. **[14-Console.md](14-Console.md)** - `terraform console` - Interactive console
-15. **[15-Providers.md](15-Providers.md)** - `terraform providers` - Manage providers
+15. **[15-Providers.md](../06-Providers/Providers.md)** - `terraform providers` - Manage providers
 16. **[16-Refresh.md](16-Refresh.md)** - `terraform refresh` - Sync state with reality
 
 ### Utility Commands
-17. **[17-Version.md](17-Version.md)** - `terraform version` - Show version information
-18. **[18-Get.md](18-Get.md)** - `terraform get` - Download modules
+17. **[17-Version.md](../18-Version-Control-Integration/Version Control Integration.md)** - `terraform version` - Show version information
+18. **[18-Get.md](../../../../05-System-Administration/04-Log-Management-and-Auditing/Get-TaskAudit.ps1)** - `terraform get` - Download modules
 19. **[19-Login-Logout.md](19-Login-Logout.md)** - `terraform login/logout` - Terraform Cloud auth
 
 ### Advanced Topics

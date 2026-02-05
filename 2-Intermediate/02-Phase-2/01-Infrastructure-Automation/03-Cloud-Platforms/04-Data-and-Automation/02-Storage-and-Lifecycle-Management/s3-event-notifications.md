@@ -687,7 +687,7 @@ Permission Errors:
 
 ## Additional Resources
 
-- [S3 Advanced README](../../../../../README.md)
+- [S3 Advanced README](README.md)
 - [AWS S3 Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/userguide/NotificationHowTo.html)
 - [Lambda with S3](https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html)
 - [EventBridge with S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/EventBridge.html)

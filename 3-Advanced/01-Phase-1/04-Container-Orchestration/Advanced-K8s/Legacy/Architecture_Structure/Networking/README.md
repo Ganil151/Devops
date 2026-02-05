@@ -30,14 +30,14 @@ This directory contains comprehensive documentation for all Kubernetes networkin
 ## Networking Components
 
 ### Core Networking
-- **[services](services/)** - Service discovery, load balancing, and network endpoints
-- **[dns](dns/)** - DNS resolution and service discovery within the cluster
-- **[cni-plugins](cni-plugins/)** - Container Network Interface plugins for pod networking
+- **[services](README.md)** - Service discovery, load balancing, and network endpoints
+- **[dns](README.md)** - DNS resolution and service discovery within the cluster
+- **[cni-plugins](README.md)** - Container Network Interface plugins for pod networking
 
 ### Traffic Management
-- **[ingress](ingress/)** - External access, HTTP routing, and SSL termination
-- **[load-balancers](load-balancers/)** - Load balancing strategies and implementations
-- **[service-mesh](service-mesh/)** - Advanced traffic management and observability
+- **[ingress](README.md)** - External access, HTTP routing, and SSL termination
+- **[load-balancers](README.md)** - Load balancing strategies and implementations
+- **[service-mesh](README.md)** - Advanced traffic management and observability
 
 ### Security
 - **[network-policies](network-policies/)** - Network security and micro-segmentation
@@ -71,14 +71,14 @@ External Client ←→ Ingress/LoadBalancer ←→ Service ←→ Pods
 ## Quick Navigation
 
 ### Getting Started
-1. [CNI Plugins](cni-plugins/) - Pod networking foundation
-2. [Services](services/) - Service discovery and load balancing
-3. [DNS](dns/) - Name resolution and service discovery
+1. [CNI Plugins](README.md) - Pod networking foundation
+2. [Services](README.md) - Service discovery and load balancing
+3. [DNS](README.md) - Name resolution and service discovery
 
 ### Traffic Management
-1. [Ingress](ingress/) - External HTTP/HTTPS access
-2. [Load Balancers](load-balancers/) - Traffic distribution strategies
-3. [Service Mesh](service-mesh/) - Advanced traffic management
+1. [Ingress](README.md) - External HTTP/HTTPS access
+2. [Load Balancers](README.md) - Traffic distribution strategies
+3. [Service Mesh](README.md) - Advanced traffic management
 
 ### Security
 1. [Network Policies](network-policies/) - Network security rules
@@ -243,3 +243,7 @@ curl -v http://example.com
 - Better multi-tenancy support
 
 This networking documentation provides comprehensive coverage of Kubernetes networking concepts, from basic pod communication to advanced service mesh implementations, enabling effective network design and troubleshooting in Kubernetes environments.
+
+---
+## 🧭 Additional Modules
+- [network policies](network-policies/README.md)

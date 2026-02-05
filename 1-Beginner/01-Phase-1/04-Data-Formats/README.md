@@ -2,7 +2,7 @@
 
 > **"Data is the oil of automation, and JSON/YAML is the pipeline. In the cloud, if you can't parse data, you can't automate systems. A missing space in YAML isn't just a typo; it's a production outage."**
 
-![Data Formats Architecture](../../assets/data_formats_banner.png)
+![Data Formats Architecture](REFERENCE/Data-Formats-Best-Practices-Ref.md)
 
 ---
 
@@ -121,3 +121,8 @@ flowchart LR
 ---
 
 **Next Step**: Start with **[YAML Mastery](./Yaml/README.md)**
+
+
+---
+## 🧭 Additional Modules
+- [Markdown](Markdown/README.md)

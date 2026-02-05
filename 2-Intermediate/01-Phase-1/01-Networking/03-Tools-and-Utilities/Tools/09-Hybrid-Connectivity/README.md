@@ -145,3 +145,11 @@ You've built the global bridge. Now let's explore how to monitor every single pa
 
 Proceed to: **[10. Monitoring & Troubleshooting](../10-Monitoring-and-Troubleshooting/README.md)** →
 Node: This link points to the next logical step in the curriculum.
+
+
+---
+## 🧭 Additional Modules
+- [01 VPN Site to Site Fundamentals](01-VPN-Site-to-Site-Fundamentals/README.md)
+- [02 Direct Connect Deep Dive](02-Direct-Connect-Deep-Dive/README.md)
+- [03 TGW and Hybrid Architectures](03-TGW-and-Hybrid-Architectures/README.md)
+- [04 Resiliency and Security Hybrid](04-Resiliency-and-Security-Hybrid/README.md)

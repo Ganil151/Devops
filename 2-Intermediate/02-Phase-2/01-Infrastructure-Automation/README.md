@@ -79,6 +79,16 @@ Platform-specific patterns for AWS, Azure, and Google Cloud. Scaling resources a
 
 ---
 
+## 📖 The Architect's Reference Library
+
+These deep-dive documents serve as the source of truth for "Staff Level" automation patterns.
+
+1.  **[IaC & State Management](./REFERENCE/IaC-State-Management-Ref.md)**: Deep-dive into remote backends, state locking, and refactoring lifecycle.
+2.  **[Compliance & Governance](./REFERENCE/Infrastructure-Compliance-Ref.md)**: Policy as Code (OPA/Sentinel), cost analysis, and immutable image lifecycles.
+3.  **[Automation Resilience](./REFERENCE/Automation-Resilience-Ref.md)**: Exponential backoff, atomic writes, and the chaos engineering mindset.
+
+---
+
 ## 🏆 Real-World DevOps Story: The Infinite Loop
 
 **The Scenario**: A Junior engineer wrote a script to clean up old files but accidentally pointed it at the root directory `/` because a variable was empty.
@@ -160,3 +170,8 @@ Platform-specific patterns for AWS, Azure, and Google Cloud. Scaling resources a
 Junior, the portal is open. Let's start with the glue that holds it all together.
 1. Proceed to: **[🤖 Scripting Automation](./01-Scripting-Automation/README.md)** →
 2. Return to: **[Phase 2 Hub](../README.md)** →
+
+
+---
+## 🧭 Additional Modules
+- [05 System Administration](05-System-Administration/README.md)

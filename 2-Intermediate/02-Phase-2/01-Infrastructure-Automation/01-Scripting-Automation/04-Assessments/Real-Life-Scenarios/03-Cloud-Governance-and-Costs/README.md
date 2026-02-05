@@ -3,7 +3,7 @@
 Cloud bills can spiral out of control. Automation is the only way to enforce tagging policies and clean up orphaned resources at scale.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `ec2_enforcer.py` (Stopping untagged instances).
+- **[Boilerplates](README.md)**: `ec2_enforcer.py` (Stopping untagged instances).
 - **[CHALLENGES](./CHALLENGES.md)**: Orphaned volume cleanup and snapshot pruning.
 
 ---

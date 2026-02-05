@@ -411,14 +411,14 @@ Performance Alerts:
 
 ### Beginner Level
 - [S3 Fundamentals](../../../../README.md)
-- [S3 Bucket Policies](../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-bucket-policies.md)
-- [Static Website Hosting](../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-static-website.md)
+- [S3 Bucket Policies](../../../../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-bucket-policies.md)
+- [Static Website Hosting](../../../../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-static-website.md)
 
 ### Intermediate Level
 - [S3 Advanced Features](../../../../README.md)
-- [S3 Replication](../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-replication.md)
-- [Event Notifications](../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-event-notifications.md)
-- [Performance Optimization](../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/03-Storage-and-Databases/08-S3-Advanced/s3-performance-optimization.md)
+- [S3 Replication](../../../../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-replication.md)
+- [Event Notifications](../../../../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-event-notifications.md)
+- [Performance Optimization](../../../../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-performance-optimization.md)
 
 ### Advanced Level (This Section)
 - Security Best Practices

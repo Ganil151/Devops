@@ -99,4 +99,4 @@ What happens to the physical disk when you delete the `PersistentVolumeClaim`?
 
 ## 🔗 Internal Navigation
 - [Next: StatefulSets and Jobs](../09-StatefulSets-and-Jobs/README.md)
-- [Back: ConfigMaps and Secrets](../../Part-3-Networking-and-Config/07-ConfigMaps-and-Secrets/README.md)
+- [Back: ConfigMaps and Secrets](README.md)

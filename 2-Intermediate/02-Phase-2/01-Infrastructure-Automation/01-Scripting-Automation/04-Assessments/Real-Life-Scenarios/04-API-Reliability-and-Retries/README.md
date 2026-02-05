@@ -3,7 +3,7 @@
 The network is unreliable. External APIs will fail. Your automation must handle these failures gracefully using retries, timeouts, and backoff.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `resilient_api.py` (Request sessions with retries).
+- **[Boilerplates](README.md)**: `resilient_api.py` (Request sessions with retries).
 - **[CHALLENGES](./CHALLENGES.md)**: Handling 429 errors and circuit breakers.
 
 ---

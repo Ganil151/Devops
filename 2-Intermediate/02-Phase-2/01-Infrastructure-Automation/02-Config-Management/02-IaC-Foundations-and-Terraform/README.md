@@ -2,7 +2,7 @@
 
 > **"If Terraform is the engine of modern infrastructure, the State File is the flight recorder. Without it, you are just running scripts; with it, you are managing reality."**
 
-![Terraform Lifecycle Architecture](../../assets/terraform_lifecycle.png)
+![Terraform Lifecycle Architecture](01-Fundamentals/02-What-is-Terraform/What is Terraform.md)
 
 ---
 
@@ -143,4 +143,4 @@ flowchart LR
 
 Now that you understand the "How," let's dive into the "What." Start with the core building blocks of infrastructure.
 
-**Proceed to**: [Terraform Fundamentals →](./01-Fundamentals/README.md)
+**Proceed to**: [Terraform Fundamentals →](README.md)

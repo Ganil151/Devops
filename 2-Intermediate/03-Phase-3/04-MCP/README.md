@@ -152,3 +152,8 @@ The Human-in-the-loop security model. Ensuring your AI agent doesn't accidentall
 Junior, the nervous system is alive. Now let's learn how to manage the Immutable Ledger.
 1. Proceed to: **[05. Blockchain Infrastructure](../05-Blockchain/README.md)** →
 2. Return to: **[Phase 3 Hub](../README.md)** →
+
+---
+## 🧭 Additional Modules
+- [05 Interview Questions and Quizzes](05-Interview-Questions-and-Quizzes/README.md)
+- [06 Real Life Scenarios](06-Real-Life-Scenarios/README.md)

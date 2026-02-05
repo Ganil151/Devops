@@ -76,10 +76,10 @@ Master the fundamentals of shell scripting and terminal navigation.
 
 | # | Topic | Description | Status |
 | --- | --- | --- | --- |
-| 01 | [**Introduction**](./01-Shell-Scripting/01-Introduction/) | Shell types, first script | ✅ |
-| 02 | [**Terminal and Finder**](./01-Shell-Scripting/02-Terminal-and-Finder/) | Navigation, paths | ✅ |
-| 03 | [**Basic File Manipulation**](./01-Shell-Scripting/03-Basic-File-Manipulation/) | cp, mv, rm | ✅ |
-| ... | [**View Full Beginner Index**](./AUTOMATION_MASTER_INDEX.md) | Topics 04-24 (Mastered) | ✅ |
+| 01 | [**Introduction**](README.md) | Shell types, first script | ✅ |
+| 02 | [**Terminal and Finder**](README.md) | Navigation, paths | ✅ |
+| 03 | [**Basic File Manipulation**](README.md) | cp, mv, rm | ✅ |
+| ... | [**View Full Beginner Index**](03-Go-Basics/GO_AUTOMATION_MASTER_INDEX.md) | Topics 04-24 (Mastered) | ✅ |
 
 ---
 
@@ -89,17 +89,17 @@ Functional modules for building real-world tools.
 
 | # | Module | Description | Path |
 | :---: | :--- | :--- | :---: |
-| 01 | **Intermediate Shell** | Functions, Loops, Strict Mode | [Explore Module](../../../2-Intermediate/02-Phase-2/01-Automation/01-Intermediate-Shell-Scripting) |
-| 02 | **Advanced Bash** | jq, sed, awk, xargs, traps | [Explore Module](../../../2-Intermediate/02-Phase-2/01-Automation/02-Advanced-Bash-Automation) |
-| 03 | **Python for DevOps** | Boto3, APIs, Web Scraping | [Explore Module](../../../2-Intermediate/02-Phase-2/01-Automation/03-Python-for-DevOps) |
+| 01 | **Intermediate Shell** | Functions, Loops, Strict Mode | [Explore Module](README.md) |
+| 02 | **Advanced Bash** | jq, sed, awk, xargs, traps | [Explore Module](README.md) |
+| 03 | **Python for DevOps** | Boto3, APIs, Web Scraping | [Explore Module](README.md) |
 | 04 | **Job Scheduling & Cron** | Crontab, Overlap, K8s Jobs | [Explore Module](./04-Job-Scheduling-and-Cron/) |
 | 05 | **Event-Driven Webhooks** | HTTP POST, Security, Async | [Explore Module](./05-Event-Driven-Webhooks/) |
 | 06 | **Ansible Dynamic Inventory** | Plugins, Keyed Groups, Caching | [Explore Module](./06-Ansible-Dynamic-Inventory/) |
 | 07 | **Terraform Patterns** | Modules, State Locking, DRY | [Explore Module](./07-Terraform-Patterns/) |
-| 08 | **Best Practices** | Idempotency, Secrets | [Explore Module](../../../2-Intermediate/02-Phase-2/01-Automation/04-Automation-Best-Practices) |
-| 09 | **Ansible Fundamentals** | Playbooks, Roles | [Explore Module](../../../2-Intermediate/02-Phase-2/01-Automation/05-Ansible) |
-| 10 | **Real Life Scenarios** | Troubleshooting War Stories | [Explore Module](../../2-Intermediate/02-Phase-2/01-Automation/07-Real-Life-Scenarios/) |
-| 11 | **FinOps (Cost as Code)** | Infracost, Kubecost | [Explore Module](../../../2-Intermediate/02-Phase-2/06-FinOps-Cost-as-Code/) |
+| 08 | **Best Practices** | Idempotency, Secrets | [Explore Module](README.md) |
+| 09 | **Ansible Fundamentals** | Playbooks, Roles | [Explore Module](README.md) |
+| 10 | **Real Life Scenarios** | Troubleshooting War Stories | [Explore Module](README.md) |
+| 11 | **FinOps (Cost as Code)** | Infracost, Kubecost | [Explore Module](README.md) |
 
 ---
 
@@ -107,33 +107,33 @@ Functional modules for building real-world tools.
 
 High-level implementation strategies.
 
-- **[GitOps](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/05-GitOps)**
-- **[Service Mesh](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/05-Service-Mesh-Istio)**
-- **[Multi-Cluster K8s](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/07-Multi-Cluster-Kubernetes)**
-- **[AIOps & Incident Response](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/10-AI-Driven-Operations-AIOps)**
-- **[Platform Engineering](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/13-Platform-Engineering-Backstage)**
-- **[Supply Chain Security](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/15-Supply-Chain-Security)**
-- **[Bare Metal Automation](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/16-Bare-Metal-Automation)**
-- **[Serverless Incident Mgmt](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/17-Serverless-Incident-Management)**
-- **[FinOps K8s Optimization](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/18-FinOps-K8s-Optimization)**
-- **[Chaos Engineering](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/19-Chaos-Engineering-Chaos-Mesh)**
-- **[Advanced Identity Federation](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/20-Advanced-Identity-Federation)**
-- **[Service Mesh Security](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/21-Service-Mesh-Security-mTLS-SPIFFE)**
-- **[Automated Compliance Auditing](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/22-Automated-Compliance-Auditing-Cloud-Custodian)**
-- **[Secret Management (Vault)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/23-Advanced-Secret-Management-Vault)**
-- **[Fleet Mgmt (ApplicationSets)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/24-Fleet-Management-ArgoCD-ApplicationSets)**
-- **[Admission Controllers (OPA)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/25-K8s-Admission-Controllers-OPA)**
-- **[Advanced CI/CD Patterns](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/26-Advanced-CICD-Patterns-GH-Actions)**
-- **[Service Mesh Observability](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/27-Service-Mesh-Observability-Kiali-Jaeger)**
-- **[Cloud-Native Backup (Velero)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/28-Cloud-Native-Backup-Velero)**
-- **[Automated Security Scanning](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/29-Automated-Security-Scanning)**
-- **[Advanced Terraform Workflows](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/30-Advanced-Terraform-Workflows)**
-- **[Automated Performance Testing](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/31-Automated-Performance-Testing-Locust-k6)**
-- **[Cloud-Native Logging (Loki)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/32-Cloud-Native-Logging-Loki-FluentBit)**
-- **[Cost Governance (Infracost)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/33-Infrastructure-Cost-Governance-Infracost)**
-- **[Advanced K8s Networking (eBPF)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/34-Advanced-K8s-Networking-Cilium)**
-- **[DBRE (Database Reliability)](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/14-Database-Reliability-DBRE)**
-- **[Observability](../../../3-Advanced/02-Phase-2-BACKUP-20260119_022016/06-Observability)**
+- **[GitOps](README.md)**
+- **[Service Mesh](README.md)**
+- **[Multi-Cluster K8s](README.md)**
+- **[AIOps & Incident Response](README.md)**
+- **[Platform Engineering](README.md)**
+- **[Supply Chain Security](README.md)**
+- **[Bare Metal Automation](README.md)**
+- **[Serverless Incident Mgmt](README.md)**
+- **[FinOps K8s Optimization](README.md)**
+- **[Chaos Engineering](README.md)**
+- **[Advanced Identity Federation](README.md)**
+- **[Service Mesh Security](README.md)**
+- **[Automated Compliance Auditing](README.md)**
+- **[Secret Management (Vault)](README.md)**
+- **[Fleet Mgmt (ApplicationSets)](README.md)**
+- **[Admission Controllers (OPA)](README.md)**
+- **[Advanced CI/CD Patterns](README.md)**
+- **[Service Mesh Observability](README.md)**
+- **[Cloud-Native Backup (Velero)](README.md)**
+- **[Automated Security Scanning](README.md)**
+- **[Advanced Terraform Workflows](README.md)**
+- **[Automated Performance Testing](README.md)**
+- **[Cloud-Native Logging (Loki)](README.md)**
+- **[Cost Governance (Infracost)](README.md)**
+- **[Advanced K8s Networking (eBPF)](README.md)**
+- **[DBRE (Database Reliability)](README.md)**
+- **[Observability](README.md)**
 
 ---
 
@@ -155,3 +155,11 @@ Build your first tools with these guided examples:
 - **[Python Basics](./02-Python-Basics/examples/)**: Essential syntax and automation logic for DevOps.
 
 **Happy Automating!** 🤖
+
+
+---
+## 🧭 Additional Modules
+- [00 Foundations](00-Foundations/README.md)
+- [03 Go Basics](03-Go-Basics/README.md)
+- [03 Idempotency](03-Idempotency/README.md)
+- [resources](resources/README.md)

@@ -100,4 +100,4 @@ Run `terraform plan`. Observe the addresses:
 
 ---
 
-**Next Step**: Learn to manage state at scale and refactor without downtime in **[Part 3: Advanced Workflows](../03-Advanced-State-and-DRY-Patterns/)** 🔴
+**Next Step**: Learn to manage state at scale and refactor without downtime in **[Part 3: Advanced Workflows](README.md)** 🔴

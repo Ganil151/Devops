@@ -313,4 +313,11 @@ cat ./config_template > "$SCRATCH_FILE"
 
 Now that you can build the structure, let's learn how some files hide in plain sight!
 
-Proceed to: **[Hidden Files](../04-Hidden-Files/README.md)** →
+Proceed to: **[Hidden Files](README.md)** →
+
+
+---
+## 🧭 Additional Modules
+- [Hidden Files](Hidden-Files/README.md)
+- [Paging](Paging/README.md)
+- [Searching](Searching/README.md)

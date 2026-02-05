@@ -210,4 +210,4 @@ Standard tool for changing an image tag or environment variable across a massive
 
 Now that you can edit files like a pro, let's learn how to secure them!
 
-Proceed to: **[File Permissions](../Part-10-File-Permissions/README.md)** →
+Proceed to: **[File Permissions](README.md)** →

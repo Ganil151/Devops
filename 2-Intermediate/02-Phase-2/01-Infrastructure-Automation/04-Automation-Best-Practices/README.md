@@ -2,7 +2,7 @@
 
 > **"If you haven't automated it, you haven't understood it. If you have automated it without error handling, you just haven't broken it yet."**
 
-![Reliability Blueprint](../../assets/automation_best_practices.png)
+![Reliability Blueprint](../../../../5-Boilerplates/2-Intermediate/Best_Practices/Automation-Best-Practices-Failure-Handling-and-Atomicity-atomic_write.py)
 
 ---
 
@@ -142,3 +142,12 @@ def ensure_s3_bucket(bucket_name: str) -> bool:
 ---
 
 [⬅️ Back to Infrastructure Automation Index](../README.md)
+
+
+---
+## 🧭 Additional Modules
+- [01 The Automation Maturity Model](01-The-Automation-Maturity-Model/README.md)
+- [02 Idempotency Patterns Check Act Verify](02-Idempotency-Patterns-Check-Act-Verify/README.md)
+- [03 Parameterization and Secrets Management](03-Parameterization-and-Secrets-Management/README.md)
+- [04 Failure Handling and Atomicity](04-Failure-Handling-and-Atomicity/README.md)
+- [05 Observability and Logging](05-Observability-and-Logging/README.md)

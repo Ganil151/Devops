@@ -21,7 +21,7 @@ Envoy is a high-performance proxy for service mesh architectures.
 
 ### Files:
 - [`envoy-sidecar.yaml`](./envoy-sidecar.yaml) - Deployment with Envoy sidecar
-- [`envoy-config.yaml`](./envoy-config.yaml) - Envoy configuration
+- [`envoy-config.yaml`](envoy-sidecar.yaml) - Envoy configuration
 
 ### Usage:
 ```bash
@@ -43,7 +43,7 @@ Dapr (Distributed Application Runtime) provides building blocks for microservice
 
 ### Files:
 - [`dapr-configuration.yaml`](./dapr-configuration.yaml) - Dapr configuration
-- [`dapr-deployment.yaml`](./dapr-deployment.yaml) - Deployment with Dapr sidecar
+- [`dapr-deployment.yaml`](dapr-configuration.yaml) - Deployment with Dapr sidecar
 
 ### Usage:
 ```bash
@@ -69,7 +69,7 @@ Istio VirtualService defines routing rules for traffic management.
 
 ### Files:
 - [`istio-virtualservice.yaml`](./istio-virtualservice.yaml) - VirtualService definition
-- [`istio-destinationrule.yaml`](./istio-destinationrule.yaml) - Service subsets
+- [`istio-destinationrule.yaml`](istio-virtualservice.yaml) - Service subsets
 
 ### Usage:
 ```bash

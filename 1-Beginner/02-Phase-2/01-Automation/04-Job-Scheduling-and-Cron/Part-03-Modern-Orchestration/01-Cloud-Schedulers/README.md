@@ -120,5 +120,5 @@ Write a Go function that uses a `time.Ticker` to perform an API health check eve
 
 ---
 
-Return to: **[Main Index](../../../../README.md)** | **[All Automation Modules](../README.md)**
+Return to: **[Main Index](README.md)** | **[All Automation Modules](README.md)**
 Node: Congratulations, you have mastered the timeline of DevOps tasks.

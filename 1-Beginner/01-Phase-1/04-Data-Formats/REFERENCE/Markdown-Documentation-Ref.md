@@ -20,7 +20,7 @@ Markdown is a lightweight markup language that allows you to write structured co
 ```
 
 ### Links & Images
-**Standard**: `[Text](URL)` for links and `![Alt Text](Path)` for images.
+**Standard**: `[Text](../README.md)` for links and `![Alt Text](../README.md)` for images.
 **Example**:
 ```markdown
 [Deployment Logs](https://logs.prod.com)

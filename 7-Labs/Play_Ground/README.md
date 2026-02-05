@@ -32,3 +32,8 @@ There is no automated submission. Run your scripts locally and verify they work!
 
 ---
 **Happy Scripting!** 🐧
+
+
+---
+## 🧭 Additional Modules
+- [Youtube Lessons](Youtube-Lessons/README.md)

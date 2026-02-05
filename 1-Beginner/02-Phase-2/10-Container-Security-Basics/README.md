@@ -7,14 +7,14 @@
 Container security involves protecting the containerized applications from the build phase to the runtime phase. In this beginner module, we focus on the **Supply Chain**—ensuring the images we use are free from known vulnerabilities.
 
 ## Core Concept: Shared Kernel Risk
-**[REFERENCE: Container Runtime Security](../../REFERENCE/Container-Runtime-Ref.md)**
+**[REFERENCE: Container Runtime Security](REFERENCE/Container-Runtime-Ref.md)**
 
 A Container is **NOT** a VM.
 - **Shared Kernel**: All containers on a host share the same Linux Kernel. If you crash the kernel, you crash everyone.
 - **Escape Risk**: If an attacker gets `root` inside a container, and that container is privileged, they own the host.
 - **Mitigation**: `USER 1000` (Non-Root) is not just a suggestion; it's a mandatory requirement.
 
-> See **[Container-Runtime-Ref.md](../../REFERENCE/Container-Runtime-Ref.md)** for how Namespaces and Cgroups actually isolate processes.
+> See **[Container-Runtime-Ref.md](REFERENCE/Container-Runtime-Ref.md)** for how Namespaces and Cgroups actually isolate processes.
 
 ## 🎯 Learning Objectives
 

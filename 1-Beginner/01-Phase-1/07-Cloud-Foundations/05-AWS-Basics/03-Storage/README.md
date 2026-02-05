@@ -171,3 +171,9 @@ Answer: A) Pre-signed URLs or CloudFront Signed Cookies</b>
 <summary>Show Answer</summary>
 Answer: A) No, it uses "Prefixes" to simulate folders</b>
 </details>
+
+
+---
+## 🧭 Additional Modules
+- [EFS](EFS/README.md)
+- [s3 bucket](s3-bucket/README.md)

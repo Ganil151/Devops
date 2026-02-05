@@ -108,3 +108,10 @@ db_password: "$ANSIBLE_VAULT;1.1;AES256;... (encrypted data) ..."
 ---
 
 [⬅️ Back to Ansible Index](../README.md) | [Next: Custom Modules](../11-Custom-Modules/README.md) ➡️
+
+---
+## 🧭 Additional Modules
+- [01 Vault CLI Operations](01-Vault-CLI-Operations/README.md)
+- [02 Automation Workflow](02-Automation-Workflow/README.md)
+- [03 Vault in CI CD](03-Vault-in-CI-CD/README.md)
+- [04 Security Best Practices](04-Security-Best-Practices/README.md)

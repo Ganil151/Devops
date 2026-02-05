@@ -6,11 +6,11 @@ Welcome to **Part 4**. This is the "Staff Level" finale of the State Management 
 
 ## 🛣️ The Curriculum
 
-### [01-Troubleshooting](./01-Troubleshooting/README.md)
+### [01-Troubleshooting](README.md)
 **The Objective**: Mastering the art of the fix.
 *   **Key Concepts**: Stuck locks, drift detection, recovery from corruption, and using the `TF_LOG` "Black Box" to see inside the engine.
 
-### [02-Advanced-Patterns](./02-Advanced-Patterns/README.md)
+### [02-Advanced-Patterns](README.md)
 **The Objective**: Architecting for 100x scale.
 *   **Key Concepts**: Multi-layer state (Foundation/Platform/App), Directory vs. Workspace strategies, and secure cross-account state handshakes.
 

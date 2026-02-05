@@ -672,7 +672,7 @@ Before proceeding, ensure you can:
 ## 🔗 Next Steps
 
 - **[Basic Troubleshooting](../06-Basic-Troubleshooting/)** - Network diagnostic techniques
-- **[Intermediate Level](../../../../2-Intermediate/README.md)** - Advanced concepts
+- **[Intermediate Level](README.md)** - Advanced concepts
 
 ---
 

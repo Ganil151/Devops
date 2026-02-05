@@ -9,7 +9,7 @@
 - **Concept**: Pre-built component library (Buttons, Modals, Navbars).
 - **Best For**: Rapidly building "admin-style" interfaces with standard layouts.
 
-### [TailwindCSS](../TailwindCSS/README.md)
+### [TailwindCSS](README.md)
 - **Concept**: Utility-first CSS.
 - **Best For**: Custom themes and highly optimized designs.
 
@@ -23,3 +23,8 @@
 - [ ] Is there a "Global Design System" to ensure consistency?
 - [ ] Are CSS files minified during the build process?
 - [ ] Is "Unused CSS" being purged from the production bundle?
+
+
+---
+## 🧭 Additional Modules
+- [TailwindCSS](TailwindCSS/README.md)

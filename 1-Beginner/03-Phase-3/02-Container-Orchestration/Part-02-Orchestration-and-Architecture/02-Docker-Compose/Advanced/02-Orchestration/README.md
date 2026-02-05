@@ -142,4 +142,4 @@ Stop naming your servers "Titan" or "Venus." Name them "node-01," "node-02," etc
 
 You have reached the end of the Docker World. You are now prepared to dive deep into the ultimate orchestrator.
 
-Proceed to: **[Part 3: Advanced Ops & Projects](../../../Part-03-Advanced-Ops-and-Projects/README.md)** →
+Proceed to: **[Part 3: Advanced Ops & Projects](README.md)** →

@@ -253,4 +253,4 @@ echo "This line will NOT be reached if ls fails."
 
 You have mastered the core mechanics of the shell. You are now ready to graduate to more advanced programming logic.
 
-Next Module: **[Python for DevOps Automation](../02-Python-Basics/README.md)** →
+Next Module: **[Python for DevOps Automation](README.md)** →

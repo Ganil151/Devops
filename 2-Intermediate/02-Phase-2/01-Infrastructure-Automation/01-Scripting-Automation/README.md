@@ -2,7 +2,7 @@
 
 Automation is the glue that binds the DevOps lifecycle. This module transitions you from "writing scripts" to "building automation platforms."
 
-![Automation Pyramid Placeholder](Descriptive Diagram: Bottom layer 'Ad-Hoc Shell Scripts', Middle layer 'Python/Go Tooling', Top layer 'Orchestration (Ansible/Terraform)'. Shows the evolution of maturity.)
+![Automation Pyramid Placeholder](README.md)'. Shows the evolution of maturity.)
 
 ## 🏗️ The Automation Hierarchy
 
@@ -52,4 +52,8 @@ Scripts should be runnable multiple times without side effects.
 
 ## 🛠️ Assets
 - **[Automation-Challenges.md](./Automation-Challenges.md)**: From "Log Rotator" to "Auto-Remediation Bot".
-- **[Interview-Questions.md](./Interview-Questions.md)**: Senior scripting questions.
+- **[Interview-Questions.md](01-Shell-Scripting-Mastery/04-Part-4-The-Safety-Net/01-Skill-Assessments/Interview-Questions.md)**: Senior scripting questions.
+
+---
+## 🧭 Additional Modules
+- [00 Reference Metadata](00-Reference-Metadata/README.md)

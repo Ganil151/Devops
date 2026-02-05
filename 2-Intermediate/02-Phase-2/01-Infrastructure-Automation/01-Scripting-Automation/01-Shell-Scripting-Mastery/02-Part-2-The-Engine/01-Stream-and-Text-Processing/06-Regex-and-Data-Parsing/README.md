@@ -217,4 +217,4 @@ Before moving to the next module, ensure you can:
 
 **Score yourself**: 5+/5 = Ready to advance | <5 = Review exercises
 
-[⬅️ Back to Data Processing](../README.md) | [Next: Assessments](../07-Assessments/README.md) ➡️
+[⬅️ Back to Data Processing](../README.md) | [Next: Assessments](README.md) ➡️

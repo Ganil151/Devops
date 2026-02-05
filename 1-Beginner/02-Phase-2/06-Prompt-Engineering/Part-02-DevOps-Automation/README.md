@@ -7,14 +7,14 @@
 This is where the rubber meets the road. In this part, we apply our prompt engineering skills to the core tasks of DevOps: **Scripting**, **Infrastructure as Code (IaC)**, and **Troubleshooting**. You will learn how to generate complex Terraform modules, translate legacy scripts, and diagnose cryptic error logs 10x faster than before.
 
 ## Core Concept: Determinism in Automation
-**[REFERENCE: Advanced Prompting Frameworks](../../../REFERENCE/Advanced-Prompting-Frameworks-Ref.md)**
+**[REFERENCE: Advanced Prompting Frameworks](../REFERENCE/Advanced-Prompting-Frameworks-Ref.md)**
 
 When integrating AI into pipelines (e.g., generating changelogs or summarizing alerts):
 - **Temperature = 0**: You MUST force the model to be deterministic.
 - **Output Parsing**: We do not want "Chat". We want JSON or Shell.
 - **Chain of Thought**: For debugging, force the model to *explain* the error before *fixing* it.
 
-> See **[Advanced-Prompting-Frameworks-Ref.md](../../../REFERENCE/Advanced-Prompting-Frameworks-Ref.md)** for how to implement **CoT** and **ReAct**.
+> See **[Advanced-Prompting-Frameworks-Ref.md](../REFERENCE/Advanced-Prompting-Frameworks-Ref.md)** for how to implement **CoT** and **ReAct**.
 
 ---
 

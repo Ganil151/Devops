@@ -2,7 +2,7 @@
 
 > **"In Linux, everything is a file. In Windows, everything is an Object. If you treat PowerShell like Bash, you will fight the system; if you treat it like a .NET engine, you will dominate the enterprise."**
 
-![Windows Automation Architecture](../../assets/windows_banner.png)
+![Windows Automation Architecture](Product Key Windows 2019.md)
 
 ---
 
@@ -126,3 +126,8 @@ flowchart LR
 ---
 
 **Next Step**: Start with **[PowerShell Automation](./Part-1-PowerShell-Automation/README.md)**
+
+
+---
+## 🧭 Additional Modules
+- [Part 6 System Auditing](Part-6-System-Auditing/README.md)

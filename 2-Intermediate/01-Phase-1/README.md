@@ -41,11 +41,11 @@ Dive into intermediate system administration, deep process management, and using
 *If it isn't documented, it's a liability.* 
 Learn to write professional SOPs, design auto-remediation patterns, and handle the "3 AM Incident" with calm, automated precision.
 
-### 📁 [04. Repository Management](./04-Repository-Management/README.md)
+### 📁 [04. Repository Management](README.md)
 *Git is for collaboration, not just storage.* 
 Enterprise Git strategies, multi-repo vs. monorepo architectures, and mastering branching models that survive 100+ developers.
 
-### 💾 [05. Databases](./05-Databases/README.md)
+### 💾 [05. Databases](README.md)
 *Data is the company's lifeblood.* 
 Go beyond simple DBs to managed RDS scaling, NoSQL performance tuning, and high-availability disaster recovery strategies.
 
@@ -56,3 +56,8 @@ Junior, by the end of this phase, you will understand the "under-the-hood" syste
 
 ---
 *Next Step: Stop guessing and start designing. Head into [01. Networking](./01-Networking/README.md).*
+
+
+---
+## 🧭 Additional Modules
+- [04 Databases](04-Databases/README.md)

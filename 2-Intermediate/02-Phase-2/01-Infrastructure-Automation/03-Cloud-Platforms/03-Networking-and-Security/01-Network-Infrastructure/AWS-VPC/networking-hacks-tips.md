@@ -698,6 +698,6 @@ Outputs:
 ---
 
 **More Resources**:
-- [VPC Getting Started](../../Beginner-Level/05-Basic-Networking/vpc-getting-started.md)
-- [Advanced Networking](../../Advanced-Level/02-Networking-VPC/networking-pro-tips.md)
+- [VPC Getting Started](../../../../../../01-Phase-1/04-Databases/00-Database-Basics/02-RDS-Basics/rds-getting-started.md)
+- [Advanced Networking](networking-hacks-tips.md)
 - [Troubleshooting Guide](../../../../../README.md)

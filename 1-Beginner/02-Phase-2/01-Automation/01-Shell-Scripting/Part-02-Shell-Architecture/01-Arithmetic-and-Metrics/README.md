@@ -326,4 +326,4 @@ Used for subnet calculations, flag masks, and performance-tuned logic.
 
 Ready to master the editor of the gods?
 
-Proceed to: **[User Input](../Part-13-User-Input/README.md)** →
+Proceed to: **[User Input](README.md)** →

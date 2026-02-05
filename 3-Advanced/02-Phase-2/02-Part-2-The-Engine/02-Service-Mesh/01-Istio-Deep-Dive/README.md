@@ -94,4 +94,4 @@ spec:
 ```
 
 ---
-**Next Step**: [Traffic Management](./01-Traffic-Management/) 🚀
+**Next Step**: [Traffic Management](README.md) 🚀

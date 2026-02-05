@@ -143,4 +143,9 @@ Treat your infra like your app code.
 
 You've mastered Provisioning, Configuration, Imaging, and Orchestration. You are now an **Infrastructure Architect**.
 
-**Proceed to**: [Assessments & Certification →](../06-Assessments/README.md)
+**Proceed to**: [Assessments & Certification →](README.md)
+
+
+---
+## 🧭 Additional Modules
+- [01 Helm](01-Helm/README.md)

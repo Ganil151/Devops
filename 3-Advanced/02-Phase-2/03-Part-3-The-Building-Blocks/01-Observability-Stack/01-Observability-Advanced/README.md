@@ -13,14 +13,8 @@ Monitoring tells you *if* a system is failing; Observability helps you understan
 <b>4. [📈 Datadog</b>
 <details>
 <summary>Show Answer</summary>
-Answer: Enterprise SaaS)](./06-Datadog-SaaS/README.md
-</details>
-
-
-A complete observability strategy requires correlating three distinct types of data:
-
-### 1. Metrics (Numerical History)
-- **Tool**: [Prometheus](../../../../00-Resources/01-Scripts-Code/Prometheus) & Grafana.
+Answer: Enterprise SaaS)](README.md#)
+- **Tool**: [Prometheus](README.md) & Grafana.
 - **Example Alerting Rule**:
 ```yaml
 groups:
@@ -114,3 +108,7 @@ Classical infrastructure monitoring. Learn host/service definitions, NRPE-based 
 ---
 
 **Cloud Observability**: See how to implement these patterns in AWS using [CloudWatch and X-Ray](../../../README.md).
+
+---
+## 🧭 Additional Modules
+- [06 Datadog SaaS](06-Datadog-SaaS/README.md)

@@ -40,7 +40,7 @@ Master the "Stateless vs. Stateful" debate and learn why **PKCE** is non-negotia
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Traffic Control and Rate Limiting](../../Part-3-Traffic-Management-and-Docs/03-Traffic-Control-and-Rate-Limiting/README.md)
+- [Next: Traffic Control and Rate Limiting](README.md)
 - [Back: Security & Authentication Overview](../README.md)
 
 ---

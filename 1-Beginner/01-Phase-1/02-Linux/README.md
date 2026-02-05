@@ -2,7 +2,7 @@
 
 > **"Linux is the bedrock of the cloud. Almost all containers, servers, and cloud services run on a Linux kernel. If you treat Linux like Windows, you will fail; if you treat it like an engine, you will fly."**
 
-![Linux Architecture](../../assets/linux_banner.png)
+![Linux Architecture](REFERENCE/Linux-Best-Practices-Ref.md)
 
 ---
 
@@ -133,3 +133,7 @@ flowchart TD
 ---
 
 **Next Step**: Start with **[Introduction to Linux](./01-Introduction/README.md)**
+
+---
+## 🧭 Additional Modules
+- [05 Distros](05-Distros/README.md)

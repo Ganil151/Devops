@@ -907,6 +907,6 @@ query_id = analyzer.analyze_traffic_patterns('vpc-12345678')
 
 ## 🔗 Next Steps
 
-- [Network Automation](../Network-Automation/) - Cloud network automation
-- [Performance Optimization](../Performance-Optimization/) - Global optimization
-- [Service Mesh](../Service-Mesh/) - Multi-cloud service mesh
+- [Network Automation](README.md) - Cloud network automation
+- [Performance Optimization](README.md) - Global optimization
+- [Service Mesh](README.md) - Multi-cloud service mesh

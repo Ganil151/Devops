@@ -107,5 +107,5 @@ Control the "dangerous" things a pod can do (like running as root or accessing t
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Interview Prep & Quizzes](../../Part-6-Mastery-and-Resources/12-Interview-Questions-and-Quizzes/README.md)
+- [Next: Interview Prep & Quizzes](README.md)
 - [Back: Managed Kubernetes EKS](../10-Managed-Kubernetes-EKS/README.md)

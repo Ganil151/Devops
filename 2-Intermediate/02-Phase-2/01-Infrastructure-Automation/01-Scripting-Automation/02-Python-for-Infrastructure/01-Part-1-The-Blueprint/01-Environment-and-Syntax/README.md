@@ -1317,7 +1317,7 @@ After mastering this module, you should be able to:
 
 **Ready to continue?**
 
-[⬅️ Back to Python for DevOps](../README.md) | [Next: System Operations](../02-System-and-File-Operations/README.md) ➡️
+[⬅️ Back to Python for DevOps](../README.md) | [Next: System Operations](README.md) ➡️
 
 ---
 

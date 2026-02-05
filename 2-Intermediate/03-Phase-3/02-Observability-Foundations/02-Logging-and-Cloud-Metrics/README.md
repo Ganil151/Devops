@@ -26,5 +26,5 @@ Observability on the world's most popular cloud.
 
 ---
 ---
-- [Next: Part 3 - Distributed Tracing & APM](../Part-3-Distributed-Tracing-and-APM/README.md)
+- [Next: Part 3 - Distributed Tracing & APM](README.md)
 - [Back to Main Curriculum](../README.md)

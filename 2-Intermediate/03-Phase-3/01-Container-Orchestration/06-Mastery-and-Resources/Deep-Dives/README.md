@@ -96,3 +96,10 @@ Raw YAML is difficult to manage at scale. **[Helm](./Helm/README.md)** allows yo
 ## 🔗 Internal Navigation
 - [Back: Part 6 Overview](../README.md)
 - [View Resource List: Observability Foundations](../../../02-Observability-Foundations/README.md)
+
+
+---
+## 🧭 Additional Modules
+- [CronJobs](CronJobs/README.md)
+- [LoadBalancers](LoadBalancers/README.md)
+- [Observability](Observability/README.md)

@@ -72,4 +72,4 @@ sequenceDiagram
 For managing complex environments, use the **App-of-Apps** pattern. One ArgoCD Application manages a directory of other ArgoCD Applications, allowing you to bootstrap an entire cluster with a single Git command.
 
 ---
-**Next Step**: [ArgoCD Setup](./01-ArgoCD-Helm-Setup/) 🚀
+**Next Step**: [ArgoCD Setup](README.md) 🚀

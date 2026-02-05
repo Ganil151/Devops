@@ -61,7 +61,7 @@ Deep dive into the core components.
 ---
 
 ## 🛡️ Chef vs. Other Tools
-Chef is often compared to **[Ansible](../04-Ansible/)**. While Ansible is agentless and push-based (better for quick tasks), Chef is agent-based and pull-based (excellent for persistent compliance and very large fleets).
+Chef is often compared to **[Ansible](README.md)**. While Ansible is agentless and push-based (better for quick tasks), Chef is agent-based and pull-based (excellent for persistent compliance and very large fleets).
 
 ---
 
@@ -75,8 +75,8 @@ Chef is often compared to **[Ansible](../04-Ansible/)**. While Ansible is agentl
 ---
 
 ## 🔗 Next Steps
-- **[Helm (Microservices Packaging)](../08-Helm/)** - Package applications for Kubernetes.
-- **[CI/CD Pipelines](../06-CI-CD/)** - Automate your cookbook testing and deployment.
+- **[Helm (Microservices Packaging)](README.md)** - Package applications for Kubernetes.
+- **[CI/CD Pipelines](README.md)** - Automate your cookbook testing and deployment.
 
 ---
 *Code your infrastructure. Govern your fleet.*

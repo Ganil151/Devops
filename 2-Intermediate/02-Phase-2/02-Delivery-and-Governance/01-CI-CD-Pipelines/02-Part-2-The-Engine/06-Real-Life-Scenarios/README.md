@@ -52,3 +52,8 @@ See how pipeline automation solves production-level bottlenecks and quality issu
 
 ## 💡 Key Takeaway
 Modern CI/CD isn't just about moving code; it's about **Quality Assurance**, **Security Compliance**, and **Business Agility**. A good pipeline is one that allows you to sleep peacefully while code is being deployed to production.
+
+
+---
+## 🧭 Additional Modules
+- [01 Pipeline Failures](01-Pipeline-Failures/README.md)

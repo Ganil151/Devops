@@ -3,8 +3,8 @@
 Chef is a powerful configuration management tool that transforms infrastructure into code. Using a Ruby-based Domain Specific Language (DSL), Chef allows you to define exactly how your servers should be configured.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `default.rb` (Nginx installation recipe).
-- **[CHALLENGES](./CHALLENGES.md)**: User management and attribute-driven logic.
+- **[Boilerplates](README.md)**: `default.rb` (Nginx installation recipe).
+- **[CHALLENGES](../../01-Ansible/Learning-Modules/01-Fundamentals/CHALLENGES.md)**: User management and attribute-driven logic.
 
 ---
 

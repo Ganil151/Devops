@@ -3,7 +3,7 @@
 Copying static files is rarely enough. Configuration files (nginx.conf, postgresql.conf) need to be dynamic—adapting to the hostname, IP, and hardware of the target machine.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: `nginx.conf.j2` (Complex Jinja2 with loops/conditions).
+- **[Boilerplates](README.md)**: `nginx.conf.j2` (Complex Jinja2 with loops/conditions).
 - **[CHALLENGES](./CHALLENGES.md)**: MOTD generation, Dynamic Host files.
 
 ---
@@ -66,3 +66,10 @@ $db_host = "{{ db_endpoint }}";
 ---
 
 [Next: Ansible Roles](../07-Ansible-Roles/README.md)
+
+---
+## 🧭 Additional Modules
+- [01 Jinja2 Basics](01-Jinja2-Basics/README.md)
+- [02 Jinja2 Advanced Logic](02-Jinja2-Advanced-Logic/README.md)
+- [03 Deployment Strategies](03-Deployment-Strategies/README.md)
+- [04 Safe Deploy Validation](04-Safe-Deploy-Validation/README.md)

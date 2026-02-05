@@ -44,4 +44,4 @@ A container for records that specify how you want to route traffic for a domain 
 5. The Resolver returns the IP to the browser, which then connects to the server.
 
 ---
-**Next Step**: Learn how to manage DNS records in the [Hands-on Route 53 Guide](../../../../../../2-Intermediate/02-Phase-2/04-Cloud-Engineering/02-Networking-and-Edge/13-Networking-Route53/route53-hands-on.md)
+**Next Step**: Learn how to manage DNS records in the [Hands-on Route 53 Guide](../../../../../../2-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/03-Networking-and-Security/02-DNS-and-Content-Delivery/AWS-Route53-CloudFront/route53-hands-on.md)

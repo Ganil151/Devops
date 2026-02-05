@@ -15,10 +15,10 @@ Supply Chain Security is the practice of ensuring the integrity and security of 
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-SBOM-Generation](./01-SBOM-Generation/)**
+1. **[🔴 01-SBOM-Generation](README.md)**
    - Generating Syft SBOMs in JSON/SPDX format.
    - Analyzing image layers for hidden vulnerabilities.
-2. **[🔴 02-Attestations-and-Signing](./02-Attestations-and-Signing/)**
+2. **[🔴 02-Attestations-and-Signing](README.md)**
    - Image signing with Keyless signing.
    - Verifying build provenance in CI/CD.
 
@@ -71,4 +71,4 @@ cosign attest --key cosign.key --type spdx --predicate sbom.json my-registry.com
 Integrate image verification into your Kubernetes admission controller (using **Policy Controller** or **Kyverno**). Ensure that any image missing a valid signature or an accompanying SBOM attestation is blocked from deployment to production.
 
 ---
-**Next Step**: Start with [SBOM Generation](./01-SBOM-Generation/) 🚀
+**Next Step**: Start with [SBOM Generation](README.md) 🚀

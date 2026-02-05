@@ -81,7 +81,7 @@
 +*Interacting with the OS and building production tools.*
 +
 +*   **[03. Subprocess Module](./Part-03-Python-Systems-Drafting/03-Subprocess-Execution/README.md)**: Controlling the Shell.
-+*   **[04. Logging Basics](./Part-04-Logging-Basics/README.md)**: The flight recorder.
++*   **[04. Logging Basics](README.md)**: The flight recorder.
 +*   **[08. Capstone Script](./Part-03-Python-Systems-Drafting/08-Capstone-Script/README.md)**: The Health Monitor.
 +
 +---

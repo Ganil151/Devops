@@ -572,3 +572,7 @@ end
 **Next Steps**: Master Vagrant fundamentals, create standardized development environments, and integrate with team workflows for consistent, reproducible development setups.
 
 *"Reproducible development environments that work the same way everywhere."*
+
+---
+## 🧭 Additional Modules
+- [01 Fundamentals](01-Fundamentals/README.md)

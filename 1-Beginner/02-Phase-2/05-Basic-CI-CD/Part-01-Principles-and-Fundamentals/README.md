@@ -7,14 +7,14 @@
 In this part, we strip away the tools and focus on the **Concepts**. What actually IS a pipeline? Why do we distinguish between Delivery and Deployment? Understanding these core principles is what separates a "Yaml Engineer" from a true "DevOps Engineer."
 
 ## Core Concept: The Controller & The Agent
-**[REFERENCE: CI Architecture Components](../../../REFERENCE/CI-Architecture-Components-Ref.md)**
+**[REFERENCE: CI Architecture Components](../REFERENCE/CI-Architecture-Components-Ref.md)**
 
 Understanding the **Event Loop** is critical:
 1.  **Event**: Git Push.
 2.  **Controller**: Receives via Webhook, finds a worker.
 3.  **Agent**: "Checkout Code" -> "Run Scripts" -> "Report Status".
 
-> See **[CI-Architecture-Components-Ref.md](../../../REFERENCE/CI-Architecture-Components-Ref.md)** for the deep dive on Webhooks vs Polling.
+> See **[CI-Architecture-Components-Ref.md](../REFERENCE/CI-Architecture-Components-Ref.md)** for the deep dive on Webhooks vs Polling.
 
 ---
 

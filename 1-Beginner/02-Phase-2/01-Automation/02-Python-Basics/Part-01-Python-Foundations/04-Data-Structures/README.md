@@ -907,7 +907,7 @@ Running servers: 2
 ## 🔗 Next Steps
 Now that you understand data structures, you're ready to build functions that process them efficiently.
 
-**Proceed to**: [Functions and Modules →](../05-Functions-and-Modules/README.md)
+**Proceed to**: [Functions and Modules →](README.md)
 
 ---
 

@@ -323,7 +323,7 @@ security_scan:
 
 - [Docker Security](../../../README.md) - Container security basics
 - [Kubernetes Security](../../../README.md) - K8s security
-- [CI/CD Documentation](../../2-Intermediate/05-CI-CD/) - Pipeline integration
+- [CI/CD Documentation](README.md) - Pipeline integration
 - [Identity & Governance](../../../README.md) - Access management
 - [Compliance](../04-Container-Orchestration/Advanced-K8s/Compliance) - Kubernetes compliance
 

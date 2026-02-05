@@ -171,3 +171,8 @@ Answer: A) A specified number of tasks are always running (auto-restart)</b>
 <summary>Show Answer</summary>
 Answer: A) Yes</b>
 </details>
+
+
+---
+## 🧭 Additional Modules
+- [ECR Registry](ECR-Registry/README.md)

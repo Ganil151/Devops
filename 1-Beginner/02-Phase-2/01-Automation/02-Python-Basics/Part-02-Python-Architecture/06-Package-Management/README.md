@@ -430,7 +430,7 @@ safety check
 
 You have Isolated Workshops (Venvs) and Supply Chain Management (Pip). Now it's time to learn how to **Log** what happens inside your application.
 
-**Proceed to**: [Logging →](../06-Logging/README.md)
+**Proceed to**: [Logging →](README.md)
 
 ---
 

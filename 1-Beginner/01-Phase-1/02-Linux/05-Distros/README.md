@@ -80,3 +80,11 @@ Do not wipe your main computer yet. Try one of the following:
 - [ ] I understand that a Distro = Kernel + Tools + Package Manager.
 - [ ] I know the difference between `apt` (Debian/Ubuntu) and `dnf` (Fedora).
 - [ ] I have selected a beginner distro (Mint or Ubuntu recommended).
+
+
+---
+## 🧭 Additional Modules
+- [01 RHEL Family](01-RHEL-Family/README.md)
+- [02 Debian Family](02-Debian-Family/README.md)
+- [03 SUSE Family](03-SUSE-Family/README.md)
+- [04 Lightweight and Cloud Native](04-Lightweight-and-Cloud-Native/README.md)

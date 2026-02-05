@@ -76,5 +76,5 @@ The "Advanced Tier" of ArgoCD. It allows you to automate the creation of hundred
 ---
 
 ## 🔗 Learning Links
-- [Practice Lab: Install ArgoCD](../../00-Resources/01-Scripts-Code/ArgoCD/install-argo.sh)
-- [Mastery Challenges: GitOps](../../2-Intermediate/02-Phase-2/02-Delivery-and-Governance/02-GitOps-Mastery/CHALLENGES.md)
+- [Practice Lab: Install ArgoCD](install-argo.sh)
+- [Mastery Challenges: GitOps](../../02-Service-Mesh/01-Istio-Deep-Dive/CHALLENGES.md)

@@ -3,7 +3,7 @@
 **Defensive programming** is the difference between a script that fails silently and one that saves your infrastructure. This module covers `set -euo pipefail`, signal trapping, lockfiles, and advanced error handling.
 
 ## 📚 Module Structure
-- **[Boilerplates](./Boilerplates/)**: Production-ready templates (`robust_template.sh`).
+- **[Boilerplates](README.md)**: Production-ready templates (`robust_template.sh`).
 - **[CHALLENGES](./CHALLENGES.md)**: Hands-on exercises to test your resilience.
 
 ---
@@ -110,4 +110,4 @@ flock -n 200 || { echo "Already running."; exit 1; }
 
 ---
 
-[⬅️ Back to Advanced Bash](../README.md)
+[⬅️ Back to Advanced Bash](README.md)

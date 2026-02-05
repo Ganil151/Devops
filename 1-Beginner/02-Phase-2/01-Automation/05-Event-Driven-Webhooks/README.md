@@ -37,14 +37,14 @@ By the end of this module, you will:
 
 | Level | Topic | Description |
 | :--- | :--- | :--- |
-| **[01. Beginner](./01-Beginner-Webhook-Basics/)** | **The Foundation** | Understanding HTTP POST, JSON Payloads, and simple receivers. |
+| **[01. Beginner](README.md)** | **The Foundation** | Understanding HTTP POST, JSON Payloads, and simple receivers. |
 ### 🔒 Part 2: Security & Implementation (The Defense)
 *Hardening public endpoints against malicious traffic.*
 
 - **[01. Secret Signatures (HMAC)](./Part-02-Security-and-Implementation/01-HMAC-Verification.md)**: Authenticating payloads.
-| **[02. Intermediate](./02-Intermediate-Implementation-Security/)** | **Security & Robustness** | HMAC signatures, API keys, and handling payload variance. |
+| **[02. Intermediate](README.md)** | **Security & Robustness** | HMAC signatures, API keys, and handling payload variance. |
 ### 🦅 Part 3: Event-Driven Architectures (The System)
-| **[03. Advanced](./03-Advanced-Event-Driven-Pipelines/)** | **Cloud Orchestration** | Async processing, Redis queues, and Kubernetes ingress. |
+| **[03. Advanced](README.md)** | **Cloud Orchestration** | Async processing, Redis queues, and Kubernetes ingress. |
 
 ---
 
@@ -90,5 +90,5 @@ A public webhook endpoint is a security risk. If an attacker knows your URL, the
 
 ---
 
-Proceed to: **[01. Beginner Webhook Basics](./01-Beginner-Webhook-Basics/README.md)** →
+Proceed to: **[01. Beginner Webhook Basics](README.md)** →
 Node: Start your journey into event-driven architecture.
