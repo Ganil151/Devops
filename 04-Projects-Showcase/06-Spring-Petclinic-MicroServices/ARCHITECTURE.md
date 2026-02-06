@@ -27,15 +27,9 @@ This document outlines the architectural decisions made for the Spring PetClinic
 **Decision**: Synchronous RESTful communication with Spring Cloud Netflix Eureka for service discovery.
 **Rationale**: Industry standard for Spring-based microservices, providing robust load balancing and service transparency.
 
-## 8. GenAI Integration: Vertex AI / Bedrock
-**Decision**: Integrate a Python-based `genai-service` using LangChain and AWS Bedrock (Claude 3).
-**Rationale**: Provides vets with automated clinical summaries and diagnostic suggestions based on historical pet data, demonstrating a modern "AI-Augmented" SRE platform.
-
-## 9. FinOps & Resource Optimization
-**Decision**: Implement a multi-layered cost optimization strategy.
-- **Compute**: Spot Instances for `Dev` (70% savings).
-- **Storage**: S3 Intelligent-Tiering for remote state and logs.
-- **Lifecycle**: Automatic scaling down to 0 replicas for non-essential services during weekends in non-production environments.
+## 7. Cost Management (FinOps)
+**Decision**: Use EC2 Spot Instances for non-critical workloads and Dev/QA environments.
+**Rationale**: Maximizes resource utilization while minimizing unnecessary cloud spend.
 
 ---
 *Last Updated: 2026-02-06*
