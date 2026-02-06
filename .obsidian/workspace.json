@@ -201,6 +201,7 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "09-resources/01-scripts-code/maintenance/final_sync.py",
     "00-REFACTOR-LOG.md",
     "09-resources/01-scripts-code/maintenance/dry_run_audit.py",
     "09-Resources/01-Scripts-Code/Maintenance/generate_reference.py",
@@ -236,7 +237,6 @@
     "07-boilerplates/01-beginner/shell/shell-man-pages-readme.md",
     "07-boilerplates/01-beginner/shell/shell-intro-readme.md",
     "07-boilerplates/01-beginner/shell/shell-input-output-readme.md",
-    "07-boilerplates/01-beginner/shell/shell-hidden-files-readme.md",
     "09-resources/images/screenshot-99.png",
     "09-resources/images/screenshot-98.png",
     "09-resources/images/screenshot-97.png",
