@@ -115,7 +115,6 @@ aws lambda update-function-code \
     --function-name DevOpsFunction \
     --zip-file fileb://updated-function.zip
 ```
-
 ### Storage Services
 
 #### S3 (Simple Storage Service)
