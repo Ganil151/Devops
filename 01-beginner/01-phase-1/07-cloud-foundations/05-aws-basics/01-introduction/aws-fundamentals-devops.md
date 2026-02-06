@@ -422,9 +422,7 @@ aws logs put-log-events \
     --log-stream-name application-logs \
     --log-events timestamp=1642694400000,message="Application started successfully"
 ```
-
-### CloudTrail
-
+### Cloud-Trail
 ```bash
 # Create trail
 aws cloudtrail create-trail \
