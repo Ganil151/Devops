@@ -167,7 +167,6 @@ aws ec2 create-snapshot \
     --volume-id vol-1234567890abcdef0 \
     --description "DevOps volume backup $(date)"
 ```
-
 ### Database Services
 
 #### RDS (Relational Database Service)
