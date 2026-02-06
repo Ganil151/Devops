@@ -3,7 +3,7 @@
 ## Introduction
 This guide contains battle-tested networking hacks, shortcuts, and best practices from real-world AWS deployments. These tips will save you time, reduce costs, and help you avoid common pitfalls.
 
-## Quick Wins
+## [01] Quick Wins | CLI & Shortcuts
 
 ### One-Liner Commands for Common Tasks
 ```bash
@@ -58,7 +58,7 @@ alias myip='curl -s ifconfig.me'
 ```
 ___
 
-## Cost Optimization Hacks
+## [02] Cost Hacks | NAT & Endpoints
 
 ### 1. Single NAT Gateway for Development
 **Problem**: NAT Gateways cost ~$32/month each  
@@ -173,7 +173,7 @@ aws s3 cp large-file.zip s3://my-bucket/ --endpoint-url https://my-bucket.s3-acc
 ```
 ___
 
-## Performance Hacks
+## [03] Performance Hacks | MTU & Speed
 
 ### 1. Enhanced Networking (FREE Performance Boost!)
 ```bash
@@ -244,7 +244,7 @@ ping -M do -s 8973 <target-ip>  # 8973 + 28 header = 9001
 ```
 ___
 
-## Automation Hacks
+## [04] Automation Hacks | TF & Python
 
 ### 1. Terraform Module for Standard VPC
 ```hcl
@@ -367,7 +367,7 @@ echo
 echo "=== Diagnostics Complete ==="
 ```
 
-## Security Hacks
+## [05] Security Hacks | SG Templates
 
 ### 1. Least-Privilege Security Group Templates
 ```bash
@@ -499,7 +499,7 @@ if __name__ == '__main__':
 ```
 ___
 
-## Troubleshooting Hacks
+## [06] Troubleshooting | Diagnostics
 
 ### 1. Quick Connectivity Test
 ```bash
