@@ -210,7 +210,6 @@ Answer: C.</b> The largest block AWS allows is /16 (65,536 IPs).
 </details>
 
 
-
 <details>
 <b>4. Are Network ACLs stateful or stateless?</b>
 <details>
