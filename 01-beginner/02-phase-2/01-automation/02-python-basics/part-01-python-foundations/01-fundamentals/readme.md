@@ -2,7 +2,7 @@
 
 > **"Bash is the glue for the OS, but Python is the glue for the Cloud. It turns complex infrastructure into manageable, readable code."**
 
-![Python DevOps Hub](../../assets/python_devops_hub.png)
+![Python DevOps Hub](../../assets/python-devops-hub.png)
 
 ---
 
@@ -846,7 +846,7 @@ with open('unified_inventory.json', 'w') as f:
 
 Now that you understand Python fundamentals, you're ready to learn how to make decisions in your code.
 
-**Proceed to**: [Control Flow →](../02-Control-Flow/README.md)
+**Proceed to**: [Control Flow →](../02-control-flow/readme.md)
 
 ---
 

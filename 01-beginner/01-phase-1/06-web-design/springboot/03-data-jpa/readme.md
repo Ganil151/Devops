@@ -45,4 +45,4 @@ Combined with **Flyway** or **Liquibase**, Spring Boot can automatically manage 
 - [ ] Are sensitive database credentials stored as environment variables or secrets?
 
 ---
-**Next Step**: [04-Actuator-and-Monitoring](../04-Actuator-and-Monitoring/README.md)
+**Next Step**: [04-Actuator-and-Monitoring](../04-actuator-and-monitoring/readme.md)

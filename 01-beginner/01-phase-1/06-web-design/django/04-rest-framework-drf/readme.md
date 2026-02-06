@@ -42,4 +42,4 @@ Exposing your infrastructure inventory database to a React dashboard or an autom
 - [ ] Is "Filtering" enabled via `django-filter`?
 
 ---
-**Back to Module**: [Django Main Guide](../README.md)
+**Back to Module**: [Django Main Guide](../readme.md)

@@ -64,4 +64,4 @@ Network issues are rarely "random." They follow specific logic based on the OSI 
 - **Step 3**: Inspect the Load Balancer latency metrics in CloudWatch/Grafana.
 
 ---
-**Next Step**: [Back to Fundamentals →](./Network-Models-Ref.md)
+**Next Step**: [Back to Fundamentals →](./network-models-ref.md)

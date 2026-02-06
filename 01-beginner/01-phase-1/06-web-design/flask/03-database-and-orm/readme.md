@@ -45,4 +45,4 @@ Use **Flask-Migrate** (powered by Alembic) to handle database schema changes wit
 - [ ] Is there a scheduled backup for the DB file/instance?
 
 ---
-**Next Step**: [04-Production-Deployment](../04-Production-Deployment/README.md)
+**Next Step**: [04-Production-Deployment](../04-production-deployment/readme.md)

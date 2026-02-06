@@ -2,7 +2,7 @@
 
 > **"If you have a problem and you decide to use regex, now you have two problems. But if you're a DevOps engineer with 10 gigabytes of unstructured log files, regex is the ONLY solution."**
 
-![Regex matching visualization](../../../03-Go-Basics/Part-02-Go-Architecture/07-Regular-Expressions/go_regex_hero.png)
+![Regex matching visualization](../../../03-go-basics/part-02-go-architecture/07-regular-expressions/go-regex-hero.png)
 
 ---
 
@@ -213,7 +213,7 @@ log_entry = "API Request: endpoint=/login params={user='alice', password='SuperS
 # (README.md)      : Match anything (Group 1) - Non-greedy!
 # ['\"]      : Match closing quote
 clean_log = re.sub(
-    r"password=['\"](README.md)['\"]", 
+    r"password=['\"](readme.md)['\"]", 
     "password='***REDACTED***'", 
     log_entry
 )
@@ -373,7 +373,7 @@ for line in file_stream:
 
 You can now parse unstructured text. But what if you need to fetch that text from the web?
 
-**Proceed to**: [Working with the Web →](../../Part-03-Python-Systems-Drafting/05-Working-with-the-Web/README.md)
+**Proceed to**: [Working with the Web →](../../part-03-python-systems-drafting/05-working-with-the-web/readme.md)
 
 ---
 

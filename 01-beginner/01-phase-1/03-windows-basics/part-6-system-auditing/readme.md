@@ -38,4 +38,4 @@ Use the `Get-DiskUsage.ps1` script to find volumes that are running low on space
 
 ---
 
-**[⬅️ Back to Windows Basics](../README.md)** | **[Next Level: Intermediate Auditing](README.md)**
+**[⬅️ Back to Windows Basics](../readme.md)** | **[Next Level: Intermediate Auditing](readme.md)**

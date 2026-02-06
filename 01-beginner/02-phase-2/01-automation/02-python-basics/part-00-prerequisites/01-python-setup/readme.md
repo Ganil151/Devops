@@ -120,7 +120,7 @@ which python3
 ## 🏆 Professional Alternative: Anaconda
 If you are moving towards **Data Engineering**, **AI-driven DevOps**, or need to handle complex binary dependencies, consider using Anaconda/Miniconda.
 
-*   **[Anaconda Setup Guide →](../04-Anaconda-Setup/README.md)**: The professional standard for data-heavy automation.
+*   **[Anaconda Setup Guide →](../04-anaconda-setup/readme.md)**: The professional standard for data-heavy automation.
 
 ---
-**Next Step**: [Pip Essentials →](../02-Pip-Basics/README.md)
+**Next Step**: [Pip Essentials →](../02-pip-basics/readme.md)

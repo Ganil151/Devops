@@ -61,4 +61,4 @@ def health():
 - **Thread Safety**: Ensure your Flask routes are stateless, as the server will likely be handling requests concurrently across multiple worker processes.
 
 ---
-**Next Step**: [Django Fullstack Framework →](./Django-Fullstack-Ref.md)
+**Next Step**: [Django Fullstack Framework →](./django-fullstack-ref.md)

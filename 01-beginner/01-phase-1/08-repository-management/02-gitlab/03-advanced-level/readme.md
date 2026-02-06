@@ -14,7 +14,7 @@ By the end of this level, you will:
 
 ## 📚 Topics Covered
 
-### [01-Enterprise-Administration](./01-Enterprise-Administration/)
+### [01-Enterprise-Administration](./01-enterprise-administration/)
 - GitLab architecture for enterprise
 - Multi-node deployment strategies
 - Advanced user and group management
@@ -22,7 +22,7 @@ By the end of this level, you will:
 - License management and feature control
 - System monitoring and maintenance
 
-### [02-High-Availability](README.md)
+### [02-High-Availability](readme.md)
 - HA architecture design
 - Load balancing and clustering
 - Database replication and failover
@@ -30,7 +30,7 @@ By the end of this level, you will:
 - Geographic distribution
 - Performance monitoring
 
-### [003-Advanced-Security](README.md)
+### [003-Advanced-Security](readme.md)
 - Enterprise security frameworks
 - Advanced authentication methods
 - Security scanning at scale
@@ -38,7 +38,7 @@ By the end of this level, you will:
 - Threat detection and response
 - Security policy enforcement
 
-### [04-Custom-Integrations](README.md)
+### [04-Custom-Integrations](readme.md)
 - Custom webhook development
 - GitLab API extensions
 - Third-party tool integrations
@@ -46,7 +46,7 @@ By the end of this level, you will:
 - Plugin development
 - Microservices integration
 
-### [05-Performance-Optimization](README.md)
+### [05-Performance-Optimization](readme.md)
 - Performance monitoring and tuning
 - Database optimization
 - Caching strategies
@@ -54,7 +54,7 @@ By the end of this level, you will:
 - Network optimization
 - Capacity planning
 
-### [06-Compliance-Governance](README.md)
+### [06-Compliance-Governance](readme.md)
 - Regulatory compliance frameworks
 - Audit trails and reporting
 - Policy as Code implementation

@@ -210,4 +210,4 @@ def calculate_drift(target: int, actual: int) -> int:
 - **Simple is better than complex**: If a 50-line Python script can be a 10-line Bash script, use Bash.
 
 ---
-**Next Step**: [Keywords Reference →](Python-PEP8-Style-Guide.md)
+**Next Step**: [Keywords Reference →](python-pep8-style-guide.md)

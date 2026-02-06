@@ -58,4 +58,4 @@ The Linux Filesystem Hierarchy Standard (FHS) defines where binaries, configurat
 - **Mount Points**: Use `df -h` to see which physical disks are mapped to which FHS directories.
 
 ---
-**Next Step**: [Permissions & Ownership →](./Linux-Permissions-Ownership-Ref.md)
+**Next Step**: [Permissions & Ownership →](./linux-permissions-ownership-ref.md)

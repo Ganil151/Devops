@@ -87,4 +87,4 @@ One of the biggest time-wasters in CI/CD is re-downloading dependencies on every
 
 The pipeline is live. Now let's prove your mastery.
 
-Proceed to: **[07-Best-Practices](../02-Best-Practices/README.md)** →
+Proceed to: **[07-Best-Practices](../02-best-practices/readme.md)** →

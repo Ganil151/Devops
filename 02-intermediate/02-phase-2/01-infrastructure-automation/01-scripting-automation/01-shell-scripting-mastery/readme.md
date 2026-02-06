@@ -8,22 +8,22 @@ Welcome to **Shell Scripting Mastery**. In a world of high-level tools, Bash rem
 
 This module is re-architected into **4 Logical Parts**, mirroring the journey from "Command Line User" to "Automation Engineer."
 
-### [📐 Part 1: The Blueprint (Foundations)](./01-Part-1-The-Blueprint/)
+### [📐 Part 1: The Blueprint (Foundations)](./01-part-1-the-blueprint/)
 *   **Focus**: Mastery of the Basics.
 *   **Topics**: Shebangs, Variables, Logic, Strict Mode, and the Reference Library.
 *   **Goal**: Write scripts that don't crash silently and handle errors gracefully.
 
-### [⚙️ Part 2: The Engine (Processing & Data)](./02-Part-2-The-Engine/)
+### [⚙️ Part 2: The Engine (Processing & Data)](./02-part-2-the-engine/)
 *   **Focus**: The Power of Pipelines.
 *   **Topics**: Stream processing with `sed`, `awk`, and `jq` (The "Big Three").
 *   **Goal**: Master text-based data processing at the command line.
 
-### [🧩 Part 3: The Building Blocks (Production Patterns)](./03-Part-3-The-Building-Blocks/)
+### [🧩 Part 3: The Building Blocks (Production Patterns)](./03-part-3-the-building-blocks/)
 *   **Focus**: Engineering for Reality.
 *   **Topics**: Advanced patterns (Loops, Traps, Parallelism) and enterprise-grade samples.
 *   **Goal**: Build scripts that can manage complex software installations.
 
-### [🛡️ Part 4: The Safety Net (Testing & Assessment)](./04-Part-4-The-Safety-Net/)
+### [🛡️ Part 4: The Safety Net (Testing & Assessment)](./04-part-4-the-safety-net/)
 *   **Focus**: Proving Competence.
 *   **Topics**: Skill assessments, quizzes, and interview preparation.
 *   **Goal**: Ensure you are ready for the production environment.

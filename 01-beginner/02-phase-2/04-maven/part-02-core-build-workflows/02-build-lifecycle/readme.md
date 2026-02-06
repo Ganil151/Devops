@@ -94,4 +94,4 @@ Phases are "empty containers." **Plugins** provide the actual code that runs dur
 
 The build is running perfectly. Now let's talk about the elite standards.
 
-Proceed to: **[06-CI-CD-Integration](../../Part-03-Enterprise-Maven-and-Optimization/01-CI-CD-Integration/README.md)** →
+Proceed to: **[06-CI-CD-Integration](../../part-03-enterprise-maven-and-optimization/01-ci-cd-integration/readme.md)** →

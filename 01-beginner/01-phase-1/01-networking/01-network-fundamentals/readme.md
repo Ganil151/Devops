@@ -334,4 +334,4 @@ Before proceeding, ensure you can:
 
 ---
 
-*Next: [Network Models](../02-Network-Models/) - Deep dive into OSI and TCP/IP models*
+*Next: [Network Models](../02-network-models/) - Deep dive into OSI and TCP/IP models*

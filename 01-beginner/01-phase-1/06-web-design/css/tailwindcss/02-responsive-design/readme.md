@@ -32,4 +32,4 @@ Tailwind uses a **Mobile-First** approach. Classes without a prefix apply at all
 Always test your dashboards on small screens. An on-call engineer might need to check a status bar on their phone while away from their keyboard.
 
 ---
-**Next Step**: [03-Custom-Config](../03-Custom-Config/README.md)
+**Next Step**: [03-Custom-Config](../03-custom-config/readme.md)

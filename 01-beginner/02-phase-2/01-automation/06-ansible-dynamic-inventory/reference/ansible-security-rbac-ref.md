@@ -51,4 +51,4 @@ Modern security uses **ABAC** (Attribute-Based Access Control).
 5. **Describe how you would implement a "Secure Bastion Host" logic within an Ansible inventory.**
 
 ---
-**Back to foundations**: [Inventory Architecture →](./Ansible-Inventory-Core-Ref.md)
+**Back to foundations**: [Inventory Architecture →](./ansible-inventory-core-ref.md)

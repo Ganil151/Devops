@@ -67,4 +67,4 @@ If an API is down, the scheduler should not retry 100 times in 1 second.
 5. **What is "Work Stealing" in the context of high-performance task runners?**
 
 ---
-**Back to foundations**: [Cron Syntax →](./Cron-Syntax-Standard-Ref.md)
+**Back to foundations**: [Cron Syntax →](./cron-syntax-standard-ref.md)

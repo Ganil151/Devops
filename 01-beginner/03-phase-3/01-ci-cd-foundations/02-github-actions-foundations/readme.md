@@ -100,5 +100,5 @@ The gold standard for cloud security. Instead of saving a "Key" that can be stol
 ---
 
 ## 🎯 Next Steps
-*   **[CHALLENGES](./CHALLENGES.md)**: Practice caching and matrix builds.
-*   **[GitLab CI Basics](README.md)**: Learning the enterprise powerhouse alternative.
+*   **[CHALLENGES](./challenges.md)**: Practice caching and matrix builds.
+*   **[GitLab CI Basics](readme.md)**: Learning the enterprise powerhouse alternative.

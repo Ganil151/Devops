@@ -75,12 +75,12 @@ In a professional environment, containers are **Disposable**. They can be killed
 
 ## 🗺️ Included Sub-Modules
 
-1. **[01-Docker-Networking](./01-Docker-Networking/README.md)**: Connecting containers and DNS magic.
-2. **[02-Docker-Volumes](./02-Docker-Volumes/README.md)**: Ensuring your data survives the "cull."
-3. **[03-Multi-Stage-Builds](./03-Multi-Stage-Builds/README.md)**: Speeding up deployment with tiny images.
-4. **[04-Private-Registry](./04-Private-Registry/README.md)**: Building your own "Docker Hub."
-5. **[05-Backup-Restore-Migration](./05-Backup-Restore-Migration/README.md)**: Moving data between servers.
-6. **[06-Nginx-SSL](./06-Nginx-SSL/README.md)**: The professional front door.
+1. **[01-Docker-Networking](./01-docker-networking/readme.md)**: Connecting containers and DNS magic.
+2. **[02-Docker-Volumes](./02-docker-volumes/readme.md)**: Ensuring your data survives the "cull."
+3. **[03-Multi-Stage-Builds](./03-multi-stage-builds/readme.md)**: Speeding up deployment with tiny images.
+4. **[04-Private-Registry](./04-private-registry/readme.md)**: Building your own "Docker Hub."
+5. **[05-Backup-Restore-Migration](./05-backup-restore-migration/readme.md)**: Moving data between servers.
+6. **[06-Nginx-SSL](./06-nginx-ssl/readme.md)**: The professional front door.
 
 ---
 
@@ -126,4 +126,4 @@ In a professional environment, containers are **Disposable**. They can be killed
 
 ## 🎯 Next Steps
 
-Start with **[01-Docker-Networking](./01-Docker-Networking/README.md)** 🚀
+Start with **[01-Docker-Networking](./01-docker-networking/readme.md)** 🚀

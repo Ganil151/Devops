@@ -149,4 +149,4 @@ In the VM world, we used to write logs to `/var/log/myapp.log`. In the Docker wo
 
 The kitchen is fixed. Now let's build something massive.
 
-Proceed to: **[Part 2: Orchestration & Architecture](../../../Part-02-Orchestration-and-Architecture/README.md)** →
+Proceed to: **[Part 2: Orchestration & Architecture](../../../part-02-orchestration-and-architecture/readme.md)** →

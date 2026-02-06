@@ -50,4 +50,4 @@ Add functionality like `typography` (for styling raw markdown) or `forms` (to re
 - [ ] Is `darkMode` enabled for late-night on-call shifts?
 
 ---
-**Back to Module**: [TailwindCSS Main Guide](../README.md)
+**Back to Module**: [TailwindCSS Main Guide](../readme.md)

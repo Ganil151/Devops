@@ -18,4 +18,4 @@ Welcome to the **Prompt Library**. This directory contains production-ready syst
 4. **Execute!**
 
 ---
-Return to: **[Main Curriculum](../README.md)**
+Return to: **[Main Curriculum](../readme.md)**

@@ -1,6 +1,6 @@
 # ♾️ The Master DevOps Platform: Zero to Enterprise & Beyond
 
-![DevOps Continuous Learning](./assets/devops_master_banner.png)
+![DevOps Continuous Learning](./assets/devops-master-banner.png)
 
 > **The Ultimate DevOps Learning & Implementation Platform**  
 > *Structured. Enterprise-Grade. Production-Ready.*
@@ -40,7 +40,7 @@ graph TD
 
 ## 📂 Curriculum
 
-### 🧭 [Phase 0: Career & Persona Mastery](./00-Career-Mastery/README.md)
+### 🧭 [Phase 0: Career & Persona Mastery](./00-career-mastery/readme.md)
 *Mindset, Strategic Roadmap, Resume Engineering, and Interview Tactics*
 
 - **Focus**: Transitioning from "Learning Tools" to "Being an Engineer."
@@ -48,15 +48,15 @@ graph TD
 
 ### 🌱 Tier 1: Beginner - Foundations
 
-[**View Foundations Overview**](./01-Beginner/REFERENCE.md)
-*Networking, Linux, Windows Basics, and [**Data Formats**](./01-Beginner/01-Phase-1/04-Data-Formats/README.md)*
+[**View Foundations Overview**](./01-beginner/reference.md)
+*Networking, Linux, Windows Basics, and [**Data Formats**](./01-beginner/01-phase-1/04-data-formats/readme.md)*
 
 - **Focus**: Building the "Infrastructure Layer" skills.
 - **Mastery**: Linux File Systems, IP Subnetting, and Schema Interoperability.
 
 ### ⚙️ Tier 2: Intermediate - Automation
 
-[**View Automation Hub**](./02-Intermediate/REFERENCE.md)
+[**View Automation Hub**](./02-intermediate/reference.md)
 *IaC, Kubernetes, CI/CD, and Production Scripting*
 
 - **Focus**: "Orchestration Layer" & Automating everything with Shell/Python.
@@ -64,7 +64,7 @@ graph TD
 
 ### 🏛️ Tier 3: Advanced - Enterprise Strategy
 
-[**View Enterprise Command Center**](./03-Advanced/REFERENCE.md)
+[**View Enterprise Command Center**](./03-advanced/reference.md)
 *Service Mesh, GitOps, DevSecOps, and Observability Stack*
 
 - **Focus**: "Architectural Layer" for multi-cloud, high-scale systems.
@@ -74,11 +74,11 @@ graph TD
 
 ## �️ Global Hubs & Resources
 
-- **[Project Showcase](./04-Projects-Showcase/README.md)**: Proof-of-work labs and enterprise projects.
-- **[Labs & Sandboxes](./05-Labs/README.md)**: Interactive playgrounds for tool testing.
-- **[Quizzes](./06-Quizzes/REFERENCE.md)**: 300+ Advanced Questions & Cert Prep.
-- **[Boilerplate Vault](./07-Boilerplates/REFERENCE.md)**: 200+ Templates (Terraform, Ansible, K8s).
-- **[Global Resources](./08-Resources/REFERENCE.md)**: Central scripts and maintenance audits.
+- **[Project Showcase](./04-projects-showcase/readme.md)**: Proof-of-work labs and enterprise projects.
+- **[Labs & Sandboxes](./05-labs/readme.md)**: Interactive playgrounds for tool testing.
+- **[Quizzes](./06-quizzes/reference.md)**: 300+ Advanced Questions & Cert Prep.
+- **[Boilerplate Vault](./07-boilerplates/reference.md)**: 200+ Templates (Terraform, Ansible, K8s).
+- **[Global Resources](./08-resources/reference.md)**: Central scripts and maintenance audits.
 
 ---
 
@@ -86,8 +86,8 @@ graph TD
 
 This repository is maintained using automated auditing tools to ensure zero "Content Rot."
 
-- **[Link Scanner](./08-Resources/01-Scripts-Code/Maintenance/repository_audit.py)**: Audit internal linking health.
-- **Standard Pattern**: Every module contains `challenges/`, `solutions/`, and links to the [Central Boilerplate Hub](REFERENCE.md).
+- **[Link Scanner](./08-resources/01-scripts-code/maintenance/repository-audit.py)**: Audit internal linking health.
+- **Standard Pattern**: Every module contains `challenges/`, `solutions/`, and links to the [Central Boilerplate Hub](reference.md).
 
 ---
 

@@ -64,4 +64,4 @@ Bash provides "Quality of Life" features that make scripting faster but break po
 5. **How does `source` differ from `.` in terms of shell compatibility?**
 
 ---
-**Next Step**: [Regular Expressions Reference →](./Regular-Expressions-Ref.md)
+**Next Step**: [Regular Expressions Reference →](./regular-expressions-ref.md)

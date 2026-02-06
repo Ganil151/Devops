@@ -93,4 +93,4 @@ Don't trust developers to "remember" to run tests. Configure **GitHub Branch Pro
 
 The code is safe. Now let's ship it.
 
-Proceed to: **[Module 05: Continuous Deployment](../02-Continuous-Deployment/README.md)** →
+Proceed to: **[Module 05: Continuous Deployment](../02-continuous-deployment/readme.md)** →

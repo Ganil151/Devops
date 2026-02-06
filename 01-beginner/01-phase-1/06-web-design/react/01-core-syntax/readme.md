@@ -41,4 +41,4 @@ Props (short for properties) are read-only inputs passed from a parent component
 3. Render the `Header` in the main `App` component.
 
 ---
-**Next Step**: [02-Hooks-and-State](../02-Hooks-and-State/README.md)
+**Next Step**: [02-Hooks-and-State](../02-hooks-and-state/readme.md)

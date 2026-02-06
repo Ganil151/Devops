@@ -82,6 +82,6 @@ sequenceDiagram
 ---
 
 ## 🔗 Related Resources
-- [Linux Filesystem Mastery](../02-Filesystem/README.md)
-- [Linux Permissions](../04-Permissions/README.md)
-- [SSH Mastery](../SSH/README.md)
+- [Linux Filesystem Mastery](../02-filesystem/readme.md)
+- [Linux Permissions](../04-permissions/readme.md)
+- [SSH Mastery](../ssh/readme.md)

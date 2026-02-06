@@ -85,4 +85,4 @@ This module covers **Resilient Scripting**. You will learn how to protect your s
 ---
 
 ## 🔗 Next Steps
-Proceed to: **[Regex & Data Parsing](README.md)** →
+Proceed to: **[Regex & Data Parsing](readme.md)** →

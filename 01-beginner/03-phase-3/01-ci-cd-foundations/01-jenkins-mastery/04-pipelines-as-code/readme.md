@@ -131,5 +131,5 @@ pipeline {
 ---
 
 ## 🎯 Next Steps
-*   **[CHALLENGES](./CHALLENGES.md)**: Build your first multi-stage pipeline.
-*   **[CI/CD Integrations](../05-Integrations-and-Plugins/README.md)**: Learning how to connect Jenkins to Webhooks and Registry.
+*   **[CHALLENGES](./challenges.md)**: Build your first multi-stage pipeline.
+*   **[CI/CD Integrations](../05-integrations-and-plugins/readme.md)**: Learning how to connect Jenkins to Webhooks and Registry.

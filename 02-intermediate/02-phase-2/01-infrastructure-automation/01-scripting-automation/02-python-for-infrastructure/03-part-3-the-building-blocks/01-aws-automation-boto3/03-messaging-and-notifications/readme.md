@@ -71,12 +71,12 @@ graph TD
 
 ## 📁 Sub-Modules
 
-1.  **[01-SMS-Alerts-SNS](./01-SMS-Alerts-SNS/README.md)**: Master the broadcast.
-2.  **[02-Email-Automation-SES](./02-Email-Automation-SES/README.md)**: Professional identity and delivery.
-3.  **[03-Application-PubSub-SQS](./03-Application-PubSub-SQS/README.md)**: Building decoupled, fanned-out architectures.
-4.  **[04-Mobile-Push-Pinpoint](./04-Mobile-Push-Pinpoint/README.md)**: Reaching users where they are (Mobile).
+1.  **[01-SMS-Alerts-SNS](./01-sms-alerts-sns/readme.md)**: Master the broadcast.
+2.  **[02-Email-Automation-SES](./02-email-automation-ses/readme.md)**: Professional identity and delivery.
+3.  **[03-Application-PubSub-SQS](./03-application-pubsub-sqs/readme.md)**: Building decoupled, fanned-out architectures.
+4.  **[04-Mobile-Push-Pinpoint](./04-mobile-push-pinpoint/readme.md)**: Reaching users where they are (Mobile).
 
 ---
 
 ## 🏆 Ready for the Challenge?
-Check out **[CHALLENGES.md](./CHALLENGES.md)** to put your skills to the test with real-world scenarios.
+Check out **[CHALLENGES.md](./challenges.md)** to put your skills to the test with real-world scenarios.

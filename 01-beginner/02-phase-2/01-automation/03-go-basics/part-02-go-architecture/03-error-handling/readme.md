@@ -4,7 +4,7 @@
 
 In Go, there are no exceptions like in Python or Java. Instead, functions that can fail return an `error` as their last return value. This explicit approach prevents silent failures and ensures that your DevOps scripts are robust and predictable.
 
-![Error Handling Diagram](./go_error_handling_diagram.png)
+![Error Handling Diagram](./go-error-handling-diagram.png)
 
 ## Table of Contents
 
@@ -232,4 +232,4 @@ An SRE was debugging a "Connection Refused" error in a complex microservice chai
 
 ---
 
-**Next Step**: [File Operations →](../04-File-Operations/README.md)
+**Next Step**: [File Operations →](../04-file-operations/readme.md)

@@ -13,4 +13,4 @@ Detailed overview of SNS, including:
 
 ## Learning Path
 1. Start with the Fundamentals guide.
-2. Move to the [Hands-on Guide](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/02-Compute-and-Scale/04-Messaging-and-Integration/AWS-SNS-SQS/sns-hands-on.md) to create your first topic.
+2. Move to the [Hands-on Guide](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/02-compute-and-scale/04-messaging-and-integration/aws-sns-sqs/sns-hands-on.md) to create your first topic.

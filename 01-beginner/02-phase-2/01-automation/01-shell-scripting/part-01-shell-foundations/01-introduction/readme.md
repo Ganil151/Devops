@@ -2,7 +2,7 @@
 
 > **"The shell is the command interpreter in Linux. It is the protective 'shell' around the Operating System Kernel, translating human commands into machine action."**
 
-![Shell Scripting Architecture](./shell_architecture.png)
+![Shell Scripting Architecture](./shell-architecture.png)
 
 ## 📚 Overview
 
@@ -249,4 +249,4 @@ exit 0
 
 Ready to move into the cockpit?
 
-Proceed to: **[Terminal Navigation](README.md)** →
+Proceed to: **[Terminal Navigation](readme.md)** →

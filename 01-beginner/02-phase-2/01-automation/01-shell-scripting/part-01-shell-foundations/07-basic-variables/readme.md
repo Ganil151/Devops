@@ -302,4 +302,4 @@ Now, if the variable is empty, the shell triggers an immediate failure and exits
 
 Now that you've mastered state management, let's look at the "Admin Console" of the terminal!
 
-Proceed to: **[Arithmetic & Metrics](README.md)** →
+Proceed to: **[Arithmetic & Metrics](readme.md)** →

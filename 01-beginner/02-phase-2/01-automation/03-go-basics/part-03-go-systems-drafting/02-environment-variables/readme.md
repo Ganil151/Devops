@@ -4,7 +4,7 @@
 
 In DevOps, we never hardcode secrets or configuration. Instead, we use **Environment Variables** to inject external state into our applications. Go's `os` package provides simple yet powerful tools to read, validate, and provide defaults for these variables, ensuring your automation is both portable and secure.
 
-![Environment Variables for DevOps](./go_env_vars_hero.png)
+![Environment Variables for DevOps](./go-env-vars-hero.png)
 
 ## Table of Contents
 
@@ -193,4 +193,4 @@ An automation tool ran perfectly on a developer's Mac but failed in a Linux Dock
 
 ---
 
-**Next Step**: [Testing Basics →](../03-Testing-Basics/README.md)
+**Next Step**: [Testing Basics →](../03-testing-basics/readme.md)

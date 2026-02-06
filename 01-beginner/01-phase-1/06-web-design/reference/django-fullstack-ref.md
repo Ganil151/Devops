@@ -56,4 +56,4 @@ Django is a high-level Python web framework that encourages rapid development an
 - **Static Asset Management**: Use `WhiteNoise` or Amazon S3 for serving static files efficiently in containerized environments.
 
 ---
-**Next Step**: [SpringBoot Enterprise Java →](./SpringBoot-Enterprise-Ref.md)
+**Next Step**: [SpringBoot Enterprise Java →](./springboot-enterprise-ref.md)

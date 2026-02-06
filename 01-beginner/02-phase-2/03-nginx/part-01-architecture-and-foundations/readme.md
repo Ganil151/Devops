@@ -49,8 +49,8 @@ By the end of this part, you will:
 
 ## 🗺️ Included Modules
 
-1. **[01-Architecture & Installation](./01-Architecture-and-Installation/README.md)**: Learning the event-driven model and getting our hands dirty with the first installation.
-2. **[02-Reverse Proxy Basics](./02-Reverse-Proxy-Basics/README.md)**: Turning Nginx into a shield. Understanding how to forward traffic and manage headers.
+1. **[01-Architecture & Installation](./01-architecture-and-installation/readme.md)**: Learning the event-driven model and getting our hands dirty with the first installation.
+2. **[02-Reverse Proxy Basics](./02-reverse-proxy-basics/readme.md)**: Turning Nginx into a shield. Understanding how to forward traffic and manage headers.
 
 ---
 
@@ -74,4 +74,4 @@ In a production environment, you **never** restart Nginx without testing your co
 
 ---
 
-**Next Step**: Dive into **[01-Architecture & Installation](./01-Architecture-and-Installation/README.md)** 🚀
+**Next Step**: Dive into **[01-Architecture & Installation](./01-architecture-and-installation/readme.md)** 🚀

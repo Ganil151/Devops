@@ -71,9 +71,9 @@ graph LR
 
 ### 📖 Table of Contents
 
-1. **[Data Formats: JSON & YAML](./01-Data-Formats-JSON-YAML/)**: The fuel for your automation engine.
-2. **[API Automation: Requests](./02-API-Automation-Requests/)**: Talking to the cloud and beyond.
-3. **[Remote Ops and SSH](./03-Remote-Ops-and-SSH/)**: Controlling the terminal from Python.
+1. **[Data Formats: JSON & YAML](./01-data-formats-json-yaml/)**: The fuel for your automation engine.
+2. **[API Automation: Requests](./02-api-automation-requests/)**: Talking to the cloud and beyond.
+3. **[Remote Ops and SSH](./03-remote-ops-and-ssh/)**: Controlling the terminal from Python.
 
 ---
 
@@ -126,4 +126,4 @@ graph LR
 
 You've connected to the system. Now it's time to build with it.
 
-**Proceed to**: [Part 3: The Building Blocks (Cloud Automation) →](../03-Part-3-The-Building-Blocks/README.md)
+**Proceed to**: [Part 3: The Building Blocks (Cloud Automation) →](../03-part-3-the-building-blocks/readme.md)

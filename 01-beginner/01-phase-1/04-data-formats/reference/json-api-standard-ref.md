@@ -96,4 +96,4 @@ JSON (JavaScript Object Notation) is a lightweight, language-independent data-in
 - **Double Quotes Only**: Unlike Python or JavaScript, keys and strings **must** use double quotes (`"`), not single quotes (`'`).
 
 ---
-**Next Step**: [TOML Configuration Standard →](./TOML-Configuration-Ref.md)
+**Next Step**: [TOML Configuration Standard →](./toml-configuration-ref.md)

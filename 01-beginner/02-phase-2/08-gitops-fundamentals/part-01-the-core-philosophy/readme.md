@@ -8,8 +8,8 @@ In this part, we explore the fundamental rule of GitOps: **The Single Source of 
 
 ## 🗺️ Included Modules
 
-1. **[01-Git-Source-of-Truth](./01-Git-Source-of-Truth/README.md)**: Declarative vs. Imperative, and the immutable audit log.
+1. **[01-Git-Source-of-Truth](./01-git-source-of-truth/readme.md)**: Declarative vs. Imperative, and the immutable audit log.
 
 ---
 
-**Next Step**: Learn the truth in **[01-Git-Source-of-Truth](./01-Git-Source-of-Truth/README.md)** 🚀
+**Next Step**: Learn the truth in **[01-Git-Source-of-Truth](./01-git-source-of-truth/readme.md)** 🚀

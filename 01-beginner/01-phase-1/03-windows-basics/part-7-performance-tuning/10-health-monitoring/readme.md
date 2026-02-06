@@ -9,7 +9,7 @@ This module provides **comprehensive system health monitoring** with multi-forma
 
 ## 📊 Metrics Collected
 
-### [Get-SystemHealthScore.ps1](./Get-SystemHealthScore.ps1)
+### [Get-SystemHealthScore.ps1](./get-systemhealthscore.ps1)
 
 **Purpose**: System health monitoring with JSON/CSV/InfluxDB export for automation platforms.
 

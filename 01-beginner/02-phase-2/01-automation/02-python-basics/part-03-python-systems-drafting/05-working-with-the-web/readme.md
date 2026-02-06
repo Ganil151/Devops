@@ -2,7 +2,7 @@
 
 > **"If a system is connected, it has an interface. Whether it's a sleek REST API or a messy HTML status page, Python is the universal key that unlocks and automates those interactions."**
 
-![API Request Lifecycle](web_api_demo.py)
+![API Request Lifecycle](web-api-demo.py)
 
 ---
 
@@ -319,7 +319,7 @@ if status_div:
 
 Fetching specific endpoints is great. But sometimes you need to drive a real browser to click buttons.
 
-**Proceed to**: [Web Automation (Selenium) →](../06-Web-Automation/README.md)
+**Proceed to**: [Web Automation (Selenium) →](../06-web-automation/readme.md)
 
 ---
 

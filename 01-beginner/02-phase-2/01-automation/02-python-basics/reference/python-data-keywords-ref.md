@@ -1,6 +1,6 @@
 # Python Data Keywords & Built-ins: The DevOps Reference
 
-> **Navigation**: [DevOps Home](../README.md) → [Automation](../README.md) → [Python Basics](../../README.md) → Data Keywords Ref
+> **Navigation**: [DevOps Home](../readme.md) → [Automation](../readme.md) → [Python Basics](../../readme.md) → Data Keywords Ref
 >
 > **Purpose**: A high-density reference for data manipulation keywords, casting, and inspection tools, optimized for high-performance automation scripts.
 

@@ -87,4 +87,4 @@ In a world of GUIs, the Linux Terminal is the professional interface for high-ve
 - **Sudo (`sudo !!`)**: Re-run the last command with root privileges.
 
 ---
-**Next Step**: [SSH Security & Configuration →](./Linux-SSH-Security-Ref.md)
+**Next Step**: [SSH Security & Configuration →](./linux-ssh-security-ref.md)

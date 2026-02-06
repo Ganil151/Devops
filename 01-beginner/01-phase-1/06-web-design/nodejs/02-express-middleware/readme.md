@@ -33,4 +33,4 @@ Create an Express app with:
 2. A route at `/info` that returns system details.
 
 ---
-**Next Step**: [03-PM2-Operations](../03-PM2-Operations/README.md)
+**Next Step**: [03-PM2-Operations](../03-pm2-operations/readme.md)

@@ -5,19 +5,19 @@
 
 ## 🗺️ Learning Roadmap
 
-### [01-Inversion-of-Control](./01-Inversion-of-Control/)
+### [01-Inversion-of-Control](./01-inversion-of-control/)
 - **Concepts**: Dependency Injection, Beans, Context.
 - **Goal**: Understand how Spring manages your application lifecycle.
 
-### [02-Rest-Controllers](./02-Rest-Controllers/)
+### [02-Rest-Controllers](./02-rest-controllers/)
 - **Concepts**: `@RestController`, `@GetMapping`, `@RequestBody`.
 - **Goal**: Build standardized REST endpoints.
 
-### [03-Data-JPA](./03-Data-JPA/)
+### [03-Data-JPA](./03-data-jpa/)
 - **Concepts**: Repositories, Entities, H2 Database.
 - **Goal**: Persistent storage for enterprise data.
 
-### [04-Actuator-and-Monitoring](./04-Actuator-and-Monitoring/)
+### [04-Actuator-and-Monitoring](./04-actuator-and-monitoring/)
 - **Concepts**: `/health`, `/metrics`, Custom Indicators.
 - **Goal**: Expose telemetry for Prometheus and Kubernetes.
 

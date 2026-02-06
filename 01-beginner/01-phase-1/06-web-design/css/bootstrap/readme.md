@@ -20,4 +20,4 @@ A 12-column responsive layout based on Flexbox.
 - **Cards**: Containers for grouped content.
 
 ---
-**Back to CSS Module**: [CSS Main Guide](../README.md)
+**Back to CSS Module**: [CSS Main Guide](../readme.md)

@@ -64,4 +64,4 @@ A production Linux server is a high-availability asset. Following these best pra
 - [ ] Is the system backup verified and recoverable?
 
 ---
-**Next Step**: [Back to Filesystem Hierarchy →](./Linux-Filesystem-Ref.md)
+**Next Step**: [Back to Filesystem Hierarchy →](./linux-filesystem-ref.md)

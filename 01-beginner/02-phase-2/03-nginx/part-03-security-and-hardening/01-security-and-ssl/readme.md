@@ -121,8 +121,8 @@ client_max_body_size 10M; # Default is 1M, set what you need.
 
 Congratulations! You have hardened the edge.
 
-Proceed to: **[Nginx Mastery Home](../../README.md)** 🚀
+Proceed to: **[Nginx Mastery Home](../../readme.md)** 🚀
 
 ---
 
-[Back to Part 3 Overview](../README.md) | [Back to Home](../../README.md)
+[Back to Part 3 Overview](../readme.md) | [Back to Home](../../readme.md)

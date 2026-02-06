@@ -8,19 +8,19 @@ This reference hub provides a deep-dive into the technical keywords, configurati
 
 Choose a topic to explore its core architectural keywords:
 
-### 1. [🛡️ Robust Execution](./Robust-Execution-Keywords.md)
+### 1. [🛡️ Robust Execution](./robust-execution-keywords.md)
 Fail-fast protocols (`set -e`), Signal management (`trap`), and Mutex locking (`flock`).
 
-### 2. [📟 Argument Parsing](./Argument-Parsing-Keywords.md)
+### 2. [📟 Argument Parsing](./argument-parsing-keywords.md)
 Building CLI interfaces with `getopts`, handling `$OPTARG`, and standardizing `usage()` menus.
 
-### 3. [🔍 JQ Processing](./JQ-Processing-Keywords.md)
+### 3. [🔍 JQ Processing](./jq-processing-keywords.md)
 Transforming API data with iteration (`[]`), filtering (`select`), and raw transformation (`-r`).
 
-### 4. [🧶 Sed & Awk](./Sed-Awk-Keywords.md)
+### 4. [🧶 Sed & Awk](./sed-awk-keywords.md)
 Mastering stream editing and columnar data reporting using the "Grandfather" tools of Unix.
 
-### 5. [⚡ Parallelism](./Parallelism-Keywords.md)
+### 5. [⚡ Parallelism](./parallelism-keywords.md)
 Scaling execution with `xargs -P`, backgrounding tasks, and coordinating with `wait`.
 
 ---
@@ -39,4 +39,4 @@ In Advanced Bash, your code is no longer judged by "Does it work?", but by "How 
 
 ---
 
-[⬅️ Back to Advanced Bash](../README.md)
+[⬅️ Back to Advanced Bash](../readme.md)

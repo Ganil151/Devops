@@ -201,4 +201,4 @@ chmod +x ~/refactor_me.sh ~/clean_logic.sh
 ---
 
 ## 🔗 **NEXT STEPS**
-Proceed to **[Loops & Processing](../04-Loops-and-Processing/README.md)** →
+Proceed to **[Loops & Processing](../04-loops-and-processing/readme.md)** →

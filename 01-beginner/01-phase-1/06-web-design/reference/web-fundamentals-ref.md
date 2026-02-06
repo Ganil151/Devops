@@ -74,4 +74,4 @@ async function getData() {
 - **Console Errors**: Always check `console.log` for client-side JavaScript crashes that might prevent your app from functioning.
 
 ---
-**Next Step**: [React Frontend Mastery →](./React-Frontend-Ref.md)
+**Next Step**: [React Frontend Mastery →](./react-frontend-ref.md)

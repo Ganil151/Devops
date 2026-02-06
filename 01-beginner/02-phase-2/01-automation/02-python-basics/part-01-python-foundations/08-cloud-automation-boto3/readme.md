@@ -248,4 +248,4 @@ Don't test in production! Learn how to mock AWS services locally without spendin
 
 Ready to put your Python skills to work in the sky?
 
-Proceed to: **[Time & Date Operations](../09-Time-and-Date/README.md)** →
+Proceed to: **[Time & Date Operations](../09-time-and-date/readme.md)** →

@@ -39,4 +39,4 @@ Used to access DOM elements directly or to store values that don't trigger a re-
 - **Cleanups**: Always return a cleanup function in `useEffect` for timers or socket connections to prevent memory leaks.
 
 ---
-**Next Step**: [03-Routing](../03-Routing/README.md)
+**Next Step**: [03-Routing](../03-routing/readme.md)

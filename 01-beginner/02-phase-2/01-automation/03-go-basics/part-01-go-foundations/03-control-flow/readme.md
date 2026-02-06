@@ -4,7 +4,7 @@
 
 Control flow determines the path your program takes during execution. In Go, the philosophy is "simplicity over complexity"—there is only one way to loop, and conditional logic is designed to be as readable as possible.
 
-![Control flow](../03-Control-Flow/go-control-flow.png)
+![Control flow](../03-control-flow/go-control-flow.png)
 
 ## Visualizing Control Flow Patterns
 
@@ -197,4 +197,4 @@ A custom Kubernetes administrator needed to monitor a cluster and delete any pod
 
 Now that you can control the logic of your scripts, it's time to organize your code into reusable units.
 
-Proceed to: **[Functions →](../04-Functions/README.md)**
+Proceed to: **[Functions →](../04-functions/readme.md)**

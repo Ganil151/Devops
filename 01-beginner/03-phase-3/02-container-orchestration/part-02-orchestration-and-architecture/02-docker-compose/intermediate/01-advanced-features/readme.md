@@ -156,4 +156,4 @@ services:
 
 The configuration is modular. Now let's learn how to manage the "Highway" of internal data and traffic.
 
-Proceed to: **[Module 18: Advanced Networks & Volumes](../02-Networks-Volumes/README.md)** →
+Proceed to: **[Module 18: Advanced Networks & Volumes](../02-networks-volumes/readme.md)** →

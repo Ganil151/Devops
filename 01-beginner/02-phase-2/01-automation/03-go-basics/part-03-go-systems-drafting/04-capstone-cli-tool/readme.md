@@ -4,7 +4,7 @@
 
 The power of Go in DevOps comes from its ability to compile into a single, static binary that runs anywhere. We will combine **Command Line Flags**, **Structs**, **JSON**, and **Switch Statements** to build a tool that supports subcommands (`list` and `check`), output formatting, and Linux/MacOS cross-compilation.
 
-![Go CLI Tool Architecture](./go_cli_hero.png)
+![Go CLI Tool Architecture](./go-cli-hero.png)
 
 ## Table of Contents
 

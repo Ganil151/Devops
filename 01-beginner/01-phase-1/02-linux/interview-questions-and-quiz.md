@@ -8,11 +8,11 @@ This document aggregates the most important questions and quizzes across all Lin
 
 | Category | Top Question | Detailed Link |
 | :--- | :--- | :--- |
-| **Intro** | What is the Linux Kernel? | [Interview Questions](./01-Introduction/Interview_Questions.md) |
-| **Filesystem** | What is an Inode? | [Interview Questions](./02-Filesystem/Interview_Questions.md) |
-| **Commands** | What is Load Average? | [Interview Questions](./03-Commands/Interview_Questions.md) |
-| **Permissions** | What is the Sticky Bit? | [Interview Questions](./04-Permissions/Interview_Questions.md) |
-| **SSH** | What is SSH Multiplexing? | [Interview Questions](./SSH/Interview_Questions.md) |
+| **Intro** | What is the Linux Kernel? | [Interview Questions](./01-introduction/interview-questions.md) |
+| **Filesystem** | What is an Inode? | [Interview Questions](./02-filesystem/interview-questions.md) |
+| **Commands** | What is Load Average? | [Interview Questions](./03-commands/interview-questions.md) |
+| **Permissions** | What is the Sticky Bit? | [Interview Questions](./04-permissions/interview-questions.md) |
+| **SSH** | What is SSH Multiplexing? | [Interview Questions](./ssh/interview-questions.md) |
 
 ---
 
@@ -69,11 +69,11 @@ This document aggregates the most important questions and quizzes across all Lin
 ---
 
 ## 🚀 Module-Specific Quizzes
-- [Intro Quiz](./01-Introduction/Quiz.md)
-- [Filesystem Quiz](./02-Filesystem/Quiz.md)
-- [Commands Quiz](./03-Commands/Quiz.md)
-- [Permissions Quiz](./04-Permissions/Quiz.md)
-- [SSH Quiz](./SSH/Quiz.md)
+- [Intro Quiz](./01-introduction/quiz.md)
+- [Filesystem Quiz](./02-filesystem/quiz.md)
+- [Commands Quiz](./03-commands/quiz.md)
+- [Permissions Quiz](./04-permissions/quiz.md)
+- [SSH Quiz](./ssh/quiz.md)
 
 ---
 

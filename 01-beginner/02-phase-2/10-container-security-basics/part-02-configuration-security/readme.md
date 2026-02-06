@@ -8,8 +8,8 @@ In this part, we audit the `Dockerfile` itself. We look for the "Root User" anti
 
 ## 🗺️ Included Modules
 
-1. **[02-Manual-Docker-Audit](./02-Manual-Docker-Audit/README.md)**: Auditing Dockerfiles.
+1. **[02-Manual-Docker-Audit](./02-manual-docker-audit/readme.md)**: Auditing Dockerfiles.
 
 ---
 
-**Next Step**: Audit your images in **[02-Manual-Docker-Audit](./02-Manual-Docker-Audit/README.md)** 🚀
+**Next Step**: Audit your images in **[02-Manual-Docker-Audit](./02-manual-docker-audit/readme.md)** 🚀

@@ -100,4 +100,4 @@ http {
 
 Mastered the Edge? Let's move deeper into the build pipeline!
 
-Proceed to: **[Maven and Build Tools](../../../README.md)** →
+Proceed to: **[Maven and Build Tools](../../../readme.md)** →

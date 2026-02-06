@@ -84,6 +84,6 @@ Beyond standard `rwx`, Linux has special bits for specific use cases:
 ---
 
 ## 🔗 Related Resources
-- [Essential Linux Commands](../03-Commands/README.md)
-- [Linux Filesystem Mastery](../02-Filesystem/README.md)
-- [SSH Mastery](../SSH/README.md)
+- [Essential Linux Commands](../03-commands/readme.md)
+- [Linux Filesystem Mastery](../02-filesystem/readme.md)
+- [SSH Mastery](../ssh/readme.md)

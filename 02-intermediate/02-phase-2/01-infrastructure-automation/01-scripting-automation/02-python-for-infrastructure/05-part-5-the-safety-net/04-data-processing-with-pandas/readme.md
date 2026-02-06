@@ -243,4 +243,4 @@ Before moving to the next module, ensure you can:
 
 **Score yourself**: 5+/5 = Ready to advance | <5 = Review exercises
 
-[⬅️ Back to Web Scraping](README.md) | [Next: Capstone Project](README.md) ➡️
+[⬅️ Back to Web Scraping](readme.md) | [Next: Capstone Project](readme.md) ➡️

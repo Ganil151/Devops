@@ -175,4 +175,4 @@ Answer: A) Yes</b>
 
 ---
 ## 🧭 Additional Modules
-- [ECR Registry](ECR-Registry/README.md)
+- [ECR Registry](ecr-registry/readme.md)

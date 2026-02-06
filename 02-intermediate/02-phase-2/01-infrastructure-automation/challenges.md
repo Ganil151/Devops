@@ -15,7 +15,7 @@ Welcome to the Forge. These challenges are designed to push you beyond "coding" 
 5.  **Graceful Exit:** Handle `SIGTERM` to shut down both the watchdog and the monitored process.
 
 **Visual Tag:** `![Complexity: Hard] ![Focus: Reliability]`
-**Solution:** [self_healing_daemon.py](../../01-Phase-1/03-Runbooks-Procedures/03-Auto-Remediation-Patterns/REFERENCE/Safety-Governance-Self-Healing-Ref.md)
+**Solution:** [self_healing_daemon.py](../../01-phase-1/03-runbooks-procedures/03-auto-remediation-patterns/reference/safety-governance-self-healing-ref.md)
 
 ---
 
@@ -29,7 +29,7 @@ Welcome to the Forge. These challenges are designed to push you beyond "coding" 
 4.  **Reporting:** Generate a markdown report of all "Zombies" discovered and the cost savings realized.
 
 **Visual Tag:** `![Complexity: Intermediate] ![Focus: Cost-Optimization]`
-**Solution:** [cloud_zombie_hunter.py](./01-Scripting-Automation/challenges/labs/solutions/cloud_zombie_hunter.py)
+**Solution:** [cloud_zombie_hunter.py](./01-scripting-automation/challenges/labs/solutions/cloud-zombie-hunter.py)
 
 ---
 
@@ -43,7 +43,7 @@ Welcome to the Forge. These challenges are designed to push you beyond "coding" 
 4.  **CLI Interface:** Use `argparse` to allow users to specify input/output directories and a `--validate-only` flag.
 
 **Visual Tag:** `![Complexity: Hard] ![Focus: Pipeline-Tooling]`
-**Solution:** [manifest_transformer.py](../../../01-Beginner/02-Phase-2/01-Automation/02-Python-Basics/Part-02-Python-Architecture/03-YAML-Handling/challenges/challenge_01_manifest_gen.py)
+**Solution:** [manifest_transformer.py](../../../01-beginner/02-phase-2/01-automation/02-python-basics/part-02-python-architecture/03-yaml-handling/challenges/challenge-01-manifest-gen.py)
 
 ---
 

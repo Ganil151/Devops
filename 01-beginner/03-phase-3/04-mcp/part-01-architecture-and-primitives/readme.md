@@ -103,4 +103,4 @@ A common mistake is turning every data source into a "Tool." If an AI only needs
 
 You've mastered the theory. Now let's see it in action by exploring the local ecosystem and working with real servers.
 
-Proceed to: **[Part 02: Ecosystem & Servers](../Part-02-Ecosystem-and-Servers/README.md)** →
+Proceed to: **[Part 02: Ecosystem & Servers](../part-02-ecosystem-and-servers/readme.md)** →

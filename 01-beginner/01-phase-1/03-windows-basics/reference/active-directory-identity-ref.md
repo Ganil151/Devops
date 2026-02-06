@@ -65,4 +65,4 @@ Active Directory (AD) is the primary directory service for Windows Domain networ
 - **AD Recycle Bin**: Always enable the "Active Directory Recycle Bin" to recover deleted objects without full tape restores.
 
 ---
-**Next Step**: [Windows Troubleshooting & Performance →](./SRE-Windows-Troubleshooting-Ref.md)
+**Next Step**: [Windows Troubleshooting & Performance →](./sre-windows-troubleshooting-ref.md)

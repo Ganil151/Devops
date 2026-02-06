@@ -8,15 +8,15 @@ Welcome to the **Serverless Automation** curriculum. In modern DevOps, we move a
 
 ## 🛣️ The Curriculum Path
 
-### [01. 🏗️ Lambda Foundations](./01-Lambda-Foundations/README.md)
+### [01. 🏗️ Lambda Foundations](./01-lambda-foundations/readme.md)
 **The Objective**: Mastering the Anatomy and Lifecycle.
 *   **Key Concepts**: The `lambda_handler`, Cold vs. Warm Starts, and the strategic use of Global Scope for high-performance execution.
 
-### [02. ⚡ Event Architecture](./02-Event-Architecture/README.md)
+### [02. ⚡ Event Architecture](./02-event-architecture/readme.md)
 **The Objective**: Designing Reactive, Idempotent Systems.
 *   **Key Concepts**: JSON triggering from S3/SNS/EventBridge and the "#1 Rule of Serverless": **Idempotency**.
 
-### [03. 🏆 Production Reliability](./03-Production-Reliability/README.md)
+### [03. 🏆 Production Reliability](./03-production-reliability/readme.md)
 **The Objective**: Governance, Security, and Networking.
 *   **Key Concepts**: Minimal IAM Roles, Lambda Layers for dependency management, VPC Networking, and Dead-Letter Queue (DLQ) resilience.
 

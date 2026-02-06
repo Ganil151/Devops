@@ -5,12 +5,12 @@
 
 ## 🗺️ Frameworks Breakdown
 
-### [ReactNative](./ReactNative/README.md)
+### [ReactNative](./reactnative/readme.md)
 - **Engine**: JavaScript + React.
 - **Goal**: Build mobile apps using the same logic as your React web apps.
 - **Best For**: React teams who need to build mobile diagnostic tools.
 
-### [Flutter](./Flutter/README.md)
+### [Flutter](./flutter/readme.md)
 - **Engine**: Dart.
 - **Goal**: Build highly-performant, beautiful native apps for iOS, Android, and Web from a single codebase.
 - **Best For**: High-fidelity graphics and consistent UI across all platforms.

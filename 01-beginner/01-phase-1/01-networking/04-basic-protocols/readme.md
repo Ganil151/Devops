@@ -249,7 +249,7 @@ graph TD
 ```
 
 ### DNS Hierarchy
-![DNS Hierarchy](../dns_hierarchy.png)
+![DNS Hierarchy](../dns-hierarchy.png)
 
 ### DNS Record Types
 **A Record (Address):**
@@ -387,7 +387,7 @@ When a server starts in a VPC, it shouts for an IP (DHCP Discover). The DHCP ser
 ### DHCP Process (DORA)
 *Visualizing the Handshake: Discover (Client), Offer (Server), Request (Client), Acknowledge (Server).*
 
-![DHCP DORA Process](../dhcp_dora_process.png)
+![DHCP DORA Process](../dhcp-dora-process.png)
 
 ### DHCP Relay Agents (IP Helper)
 Since DHCP Discover packets are broadcasts, they don't cross routers by default. A **DHCP Relay Agent** (installed on a router or server) listens for these broadcasts on a local subnet and forwards them as unicast packets to a DHCP server on a different subnet. This allows one central DHCP server to serve multiple subnets.
@@ -1466,9 +1466,9 @@ Before proceeding, ensure you can:
 
 ## 🔗 Next Steps
 
-- **[Network Devices](../05-Network-Devices/)** - Learn about network infrastructure
-- **[Basic Troubleshooting](../06-Basic-Troubleshooting/)** - Develop diagnostic skills
-- **[Intermediate Level](../../../02-Phase-2/)** - Advanced concepts
+- **[Network Devices](../05-network-devices/)** - Learn about network infrastructure
+- **[Basic Troubleshooting](../06-basic-troubleshooting/)** - Develop diagnostic skills
+- **[Intermediate Level](../../../02-phase-2/)** - Advanced concepts
 
 ---
 

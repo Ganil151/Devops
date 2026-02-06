@@ -44,4 +44,4 @@ A hook used to capture dynamic parts of the URL.
 - **Protected Routes**: Wrap routes in an `AuthProvider` check to redirect unauthorized users to the login page.
 
 ---
-**Next Step**: [04-API-Integration](../04-API-Integration/README.md)
+**Next Step**: [04-API-Integration](../04-api-integration/readme.md)

@@ -191,4 +191,4 @@ The foundation of FinOps is **Tagging**. If a resource isn't tagged, you don't k
 
 ## 🔗 Next Steps
 
-Proceed to: **[Part 02: Cloud Billing Basics](../Part-02-Cloud-Billing-Basics/README.md)** →
+Proceed to: **[Part 02: Cloud Billing Basics](../part-02-cloud-billing-basics/readme.md)** →

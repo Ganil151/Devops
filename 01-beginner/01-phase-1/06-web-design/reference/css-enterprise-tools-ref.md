@@ -57,4 +57,4 @@ Enterprise-grade styling requires more than raw CSS. **Sass** adds programmatic 
 - **Purge CSS**: For large projects, use a tool to scan your HTML and delete unused Bootstrap components to save bundle size.
 
 ---
-**Next Step**: [Tailwind CSS Architecture →](./TailwindCSS-Architecture-Ref.md)
+**Next Step**: [Tailwind CSS Architecture →](./tailwindcss-architecture-ref.md)

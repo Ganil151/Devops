@@ -57,4 +57,4 @@ Google Cloud Platform (GCP) is known for its high-performance networking, best-i
 - **Preemptible VMs**: Use Preemptible (Spot) instances for fault-tolerant batch jobs to save up to 80% in costs.
 
 ---
-**Next Step**: [Cloud Security & Compliance →](./Cloud-Security-Compliance-Ref.md)
+**Next Step**: [Cloud Security & Compliance →](./cloud-security-compliance-ref.md)

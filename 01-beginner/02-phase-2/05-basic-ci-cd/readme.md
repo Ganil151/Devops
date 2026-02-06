@@ -30,7 +30,7 @@ graph LR
 This curriculum moves from the theoretical concepts of "Pipelines" to the hands-on implementation of automated workflows that power the world's most successful tech companies.
 
 ## Core Concept: The Immutability Pattern
-**[REFERENCE: Pipeline Governance](REFERENCE/Pipeline-Governance-Ref.md)**
+**[REFERENCE: Pipeline Governance](reference/pipeline-governance-ref.md)**
 
 The golden rule of CI/CD is: **Build Once, Deploy Many**.
 - **The Artifact**: We do not move *code* to production; we move *binaries*.
@@ -38,7 +38,7 @@ The golden rule of CI/CD is: **Build Once, Deploy Many**.
 - **Why?** Rebuilding code for each environment introduces variables (different compiler versions, network glitches) that break consistency.
 
 ## Enterprise Governance
-**[REFERENCE: CI Architecture & Components](REFERENCE/CI-Architecture-Components-Ref.md)**
+**[REFERENCE: CI Architecture & Components](reference/ci-architecture-components-ref.md)**
 
 At scale, we don't just run scripts. We manage:
 - **Controller/Agent Architecture**: Ensuring the brain (Controller) never executes code directly (Security risk).
@@ -62,9 +62,9 @@ By the end of this curriculum, you will:
 
 | Part | Topic | Description |
 | :--- | :--- | :--- |
-| **[🟢 Part 1](./Part-01-Principles-and-Fundamentals/)** | **Foundations** | The Philosophy. Core concepts, terminologies, and the "Pipeline" mindset. |
-| **[🟡 Part 2](./Part-02-GitHub-Actions-Core/)** | **Implementation** | The Engine. YAML syntax, Events, Runners, and Components. |
-| **[🔴 Part 3](./Part-003-Advanced-Workflows/)** | **Advanced Ops** | Reaching Production. Quality Gates, Security Scans, and CD. |
+| **[🟢 Part 1](./part-01-principles-and-fundamentals/)** | **Foundations** | The Philosophy. Core concepts, terminologies, and the "Pipeline" mindset. |
+| **[🟡 Part 2](./part-02-github-actions-core/)** | **Implementation** | The Engine. YAML syntax, Events, Runners, and Components. |
+| **[🔴 Part 3](./part-003-advanced-workflows/)** | **Advanced Ops** | Reaching Production. Quality Gates, Security Scans, and CD. |
 
 ---
 
@@ -147,4 +147,4 @@ Automated pipelines act as a safety net. If a deployment fails, the pipeline can
 
 Ready to automate the world?
 
-Proceed to: **[Part 1: Principles & Fundamentals](./Part-01-Principles-and-Fundamentals/README.md)** 🚀
+Proceed to: **[Part 1: Principles & Fundamentals](./part-01-principles-and-fundamentals/readme.md)** 🚀

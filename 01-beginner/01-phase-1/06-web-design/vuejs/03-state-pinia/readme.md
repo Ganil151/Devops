@@ -28,4 +28,4 @@ Unlike standard JS objects, state in Pinia is reactive—changing it automatical
 Use plugins like `pinia-plugin-persistedstate` to keep user settings after a page refresh.
 
 ---
-**Back to Module**: [VueJS Main Guide](../README.md)
+**Back to Module**: [VueJS Main Guide](../readme.md)

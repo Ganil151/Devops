@@ -41,8 +41,8 @@ By the end of this part, you will:
 
 ## 🗺️ Included Modules
 
-1. **[01-Dependencies](./01-Dependencies/README.md)**: Handling external libraries and transitive dependencies.
-2. **[02-Build-Lifecycle](./02-Build-Lifecycle/README.md)**: Understanding the phases of a build.
+1. **[01-Dependencies](./01-dependencies/readme.md)**: Handling external libraries and transitive dependencies.
+2. **[02-Build-Lifecycle](./02-build-lifecycle/readme.md)**: Understanding the phases of a build.
 
 ---
 
@@ -60,4 +60,4 @@ When you have a library you use in *every* project (like JUnit or Jackson), mana
 
 ---
 
-**Next Step**: Dive into **[01-Dependencies](./01-Dependencies/README.md)** 🚀
+**Next Step**: Dive into **[01-Dependencies](./01-dependencies/readme.md)** 🚀

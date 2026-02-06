@@ -150,4 +150,4 @@ Protect your database by keeping it on a network that the Frontend cannot even s
 
 The pathways are set. Now let's learn how to handle the "Sensitive" stuff: secrets and configurations.
 
-Proceed to: **[Module 19: Secrets & Configs](../03-Secrets-Configs/README.md)** →
+Proceed to: **[Module 19: Secrets & Configs](../03-secrets-configs/readme.md)** →

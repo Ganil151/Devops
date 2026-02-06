@@ -39,8 +39,8 @@ graph TD
 
 ## 🗺️ Included Modules
 
-1. **[01-MELT-Introduction](./01-MELT-Introduction/README.md)**: A deep dive into the 4 pillars.
+1. **[01-MELT-Introduction](./01-melt-introduction/readme.md)**: A deep dive into the 4 pillars.
 
 ---
 
-**Next Step**: Learn the pillars in **[01-MELT-Introduction](./01-MELT-Introduction/README.md)** 🚀
+**Next Step**: Learn the pillars in **[01-MELT-Introduction](./01-melt-introduction/readme.md)** 🚀

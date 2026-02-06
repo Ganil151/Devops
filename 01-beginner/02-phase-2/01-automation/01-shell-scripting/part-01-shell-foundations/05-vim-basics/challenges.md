@@ -383,6 +383,6 @@ sudo systemctl reload nginx
 ❌ Not learning macros for repetitive tasks  
 
 ## Next Steps
-Complete these challenges, then proceed to **[File Permissions](CHALLENGES.md)** →
+Complete these challenges, then proceed to **[File Permissions](challenges.md)** →
 
 **💡 Practice Tip**: Spend 10 minutes daily in Vim. Configure your terminal to use Vim for git commits: `git config --global core.editor vim`

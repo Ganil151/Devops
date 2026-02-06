@@ -4,7 +4,7 @@
 
 While JSON is common for APIs, **YAML** (YAML Ain't Markup Language) is the undisputed king of human-readable configuration. Go doesn't have YAML support in the standard library, but the `gopkg.in/yaml.v3` package is the industry standard, providing a seamless, struct-based experience similar to JSON.
 
-![YAML Configurations for DevOps](./go_yaml_hero.png)
+![YAML Configurations for DevOps](./go-yaml-hero.png)
 
 ## Table of Contents
 
@@ -216,4 +216,4 @@ An SRE team needed to create 50 identical Kubernetes ConfigMaps, each with a uni
 
 ---
 
-**Next Step**: [Regular Expressions →](../07-Regular-Expressions/README.md)
+**Next Step**: [Regular Expressions →](../07-regular-expressions/readme.md)

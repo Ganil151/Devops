@@ -32,4 +32,4 @@ export class AppComponent {
 - **Event Binding**: `(event)="handler()"`.
 
 ---
-**Next Step**: [02-Directives-and-Pipes](../02-Directives-and-Pipes/README.md)
+**Next Step**: [02-Directives-and-Pipes](../02-directives-and-pipes/readme.md)

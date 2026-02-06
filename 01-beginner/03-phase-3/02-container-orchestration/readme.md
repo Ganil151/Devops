@@ -97,9 +97,9 @@ While **Docker** provides the engine to run a single container, orchestration to
 ## 🏗️ Curriculum Structure
 | Part | Topic | Description |
 | :--- | :--- | :--- |
-| **[🟢 Part 1](./Part-01-Docker-Fundamentals/)** | **The Engine** | Images, Containers, and the Dockerfile. |
-| **[🟡 Part 2](./Part-02-Orchestration-and-Architecture/)** | **Orchestration** | Networking, Storage, and Docker Compose. |
-| **[🔴 Part 3](./Part-003-Advanced-Ops-and-Projects/)** | **Production** | Security, Optimization, and Real-world Projects. |
+| **[🟢 Part 1](./part-01-docker-fundamentals/)** | **The Engine** | Images, Containers, and the Dockerfile. |
+| **[🟡 Part 2](./part-02-orchestration-and-architecture/)** | **Orchestration** | Networking, Storage, and Docker Compose. |
+| **[🔴 Part 3](./part-003-advanced-ops-and-projects/)** | **Production** | Security, Optimization, and Real-world Projects. |
 
 ---
 
@@ -116,8 +116,8 @@ In the container world, containers are **"Cattle"**.
 ---
 
 ## 💡 Stuck?
-- Review the [Master README](./README.md) for concepts.
-- Check the **[Interview Prep](./INTERVIEW_PREP.md)** for deep dives.
+- Review the [Master README](./readme.md) for concepts.
+- Check the **[Interview Prep](./interview-prep.md)** for deep dives.
 - Use `docker system prune` to clean up your workspace between challenges.
 
 ---
@@ -168,5 +168,5 @@ In the container world, containers are **"Cattle"**.
 
 ## 🔗 Next Steps
 The warehouse is open. Let's start packing the boxes.
-1. Proceed to: **[CHALLENGES.md](./CHALLENGES.md)** →
-2. Start the first module: **[Docker Foundations](./Part-01-Docker-Fundamentals/README.md)** →
+1. Proceed to: **[CHALLENGES.md](./challenges.md)** →
+2. Start the first module: **[Docker Foundations](./part-01-docker-fundamentals/readme.md)** →

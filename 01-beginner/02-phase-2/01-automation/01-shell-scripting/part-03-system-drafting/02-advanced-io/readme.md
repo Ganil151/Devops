@@ -2,7 +2,7 @@
 
 > **"In Unix, everything is a file. If it isn't a file, it's a stream. If it isn't a stream, it's a pipe."**
 
-![I/O Stream Architecture](./io_stream_architecture.png)
+![I/O Stream Architecture](./io-stream-architecture.png)
 
 ## 📚 Overview
 
@@ -253,4 +253,4 @@ echo "This line will NOT be reached if ls fails."
 
 You have mastered the core mechanics of the shell. You are now ready to graduate to more advanced programming logic.
 
-Next Module: **[Python for DevOps Automation](README.md)** →
+Next Module: **[Python for DevOps Automation](readme.md)** →

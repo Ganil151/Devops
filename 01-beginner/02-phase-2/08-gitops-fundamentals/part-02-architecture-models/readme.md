@@ -8,8 +8,8 @@ In this part, we compare the two ways to implement CD: **Push** (traditional) an
 
 ## 🗺️ Included Modules
 
-1. **[02-Push-vs-Pull-Basics](./02-Push-vs-Pull-Basics/README.md)**: Agentless vs. Agent-based deployment.
+1. **[02-Push-vs-Pull-Basics](./02-push-vs-pull-basics/readme.md)**: Agentless vs. Agent-based deployment.
 
 ---
 
-**Next Step**: Compare architectures in **[02-Push-vs-Pull-Basics](./02-Push-vs-Pull-Basics/README.md)** 🚀
+**Next Step**: Compare architectures in **[02-Push-vs-Pull-Basics](./02-push-vs-pull-basics/readme.md)** 🚀

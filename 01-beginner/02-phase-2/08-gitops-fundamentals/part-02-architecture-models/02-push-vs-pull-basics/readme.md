@@ -26,4 +26,4 @@ An "Agent" running *inside* the cluster constantly watches the Git Repo. When it
 
 ---
 
-**Next Step**: Prove your skills in **[CHALLENGES.md](../../CHALLENGES.md)** 🚀
+**Next Step**: Prove your skills in **[CHALLENGES.md](../../challenges.md)** 🚀

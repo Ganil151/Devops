@@ -8,8 +8,8 @@ In this part, we get practical. We look at the industry standard for security co
 
 ## 🗺️ Included Modules
 
-1. **[02-Manual-Security-Checklists](./02-Manual-Security-Checklists/README.md)**: Turning requirements into checklists.
+1. **[02-Manual-Security-Checklists](./02-manual-security-checklists/readme.md)**: Turning requirements into checklists.
 
 ---
 
-**Next Step**: Start auditing in **[02-Manual-Security-Checklists](./02-Manual-Security-Checklists/README.md)** 🚀
+**Next Step**: Start auditing in **[02-Manual-Security-Checklists](./02-manual-security-checklists/readme.md)** 🚀

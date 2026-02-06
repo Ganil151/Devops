@@ -112,4 +112,4 @@ Don't let the AI push code directly to `main`.
 
 You've completed the MCP track! You now have the skills to build a bridge between AI and infrastructure safely.
 
-Return to: **[The MCP Master Hub](../README.md)** →
+Return to: **[The MCP Master Hub](../readme.md)** →

@@ -2,7 +2,7 @@
 
 > **"Code without version control is just a rumor. In DevOps, your repository is the single source of truth. If it isn't in Git, it doesn't exist. If it's in Git but you can't find it, it's useless."**
 
-![Git Architecture](../../assets/repository_management_banner.png)
+![Git Architecture](../../assets/repository-management-banner.png)
 
 ---
 
@@ -110,10 +110,10 @@ flowchart LR
 
 ## 📂 Repository Technologies
 
-1.  **[01-Git-GitHub](./01-Git-GitHub/README.md)**: The global standard for version control.
-2.  **[02-GitLab](./02-GitLab/README.md)**: The all-in-one DevOps platform.
-3.  **[03-Bitbucket](./03-Bitbucket/README.md)**: Enterprise integration with Jira/Confluence.
-4.  **[04-Azure-DevOps-Repos](./04-Azure-DevOps-Repos/README.md)**: Microsoft's cloud-native repository system.
+1.  **[01-Git-GitHub](./01-git-github/readme.md)**: The global standard for version control.
+2.  **[02-GitLab](./02-gitlab/readme.md)**: The all-in-one DevOps platform.
+3.  **[03-Bitbucket](./03-bitbucket/readme.md)**: Enterprise integration with Jira/Confluence.
+4.  **[04-Azure-DevOps-Repos](./04-azure-devops-repos/readme.md)**: Microsoft's cloud-native repository system.
 
 ---
 
@@ -155,9 +155,9 @@ flowchart LR
 
 ---
 
-**Next Step**: Start with **[Git & GitHub Fundamentals](./01-Git-GitHub/README.md)**
+**Next Step**: Start with **[Git & GitHub Fundamentals](./01-git-github/readme.md)**
 
 ---
 ## 🧭 Additional Modules
-- [05 Mercurial](05-Mercurial/README.md)
-- [06 Subversion SVN](06-Subversion-SVN/README.md)
+- [05 Mercurial](05-mercurial/readme.md)
+- [06 Subversion SVN](06-subversion-svn/readme.md)

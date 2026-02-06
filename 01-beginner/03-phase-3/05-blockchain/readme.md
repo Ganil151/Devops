@@ -59,10 +59,10 @@ graph LR
 
 ## 🗺️ Curriculum Path
 
-1. **[Part 01: Architecture & Node Types](./Part-01-Architecture-and-Node-Types/README.md)**: The "Who, what, and why" of decentralized infrastructure.
-2. **[Part 02: Infrastructure & Resources](./Part-02-Infrastructure-and-Resources/README.md)**: Disk I/O, RAM, and the geometry of P2P networking.
-3. **[Part 03: Decentralized Operations](./Part-03-Decentralized-Operations/README.md)**: Consensus mechanisms and RPC management.
-4. **[Part 04: Maintenance & Governance](./Part-04-Maintenance-and-Governance/README.md)**: Hard forks, zero-downtime upgrades, and monitoring.
+1. **[Part 01: Architecture & Node Types](./part-01-architecture-and-node-types/readme.md)**: The "Who, what, and why" of decentralized infrastructure.
+2. **[Part 02: Infrastructure & Resources](./part-02-infrastructure-and-resources/readme.md)**: Disk I/O, RAM, and the geometry of P2P networking.
+3. **[Part 03: Decentralized Operations](./part-03-decentralized-operations/readme.md)**: Consensus mechanisms and RPC management.
+4. **[Part 04: Maintenance & Governance](./part-04-maintenance-and-governance/readme.md)**: Hard forks, zero-downtime upgrades, and monitoring.
 
 ---
 
@@ -145,5 +145,5 @@ graph LR
 
 ## 🔗 Next Steps
 The ledger is waiting. Let's start with the architecture.
-1. Proceed to: **[Part 01: Architecture & Node Types](./Part-01-Architecture-and-Node-Types/README.md)** →
-2. Return to: **[Phase 3 Hub](../README.md)** →
+1. Proceed to: **[Part 01: Architecture & Node Types](./part-01-architecture-and-node-types/readme.md)** →
+2. Return to: **[Phase 3 Hub](../readme.md)** →

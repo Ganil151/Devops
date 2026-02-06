@@ -31,4 +31,4 @@ constructor(private status: StatusService) {}
 Control the lifetime of a service by where you provide it (Root, Module, or Component).
 
 ---
-**Next Step**: [04-RxJS-and-Observables](../04-RxJS-and-Observables/README.md)
+**Next Step**: [04-RxJS-and-Observables](../04-rxjs-and-observables/readme.md)

@@ -127,4 +127,4 @@ If you have 1,000 unit tests, running them one by one is slow. Configure the **S
 
 Standards are set. Now let's learn how to fix things when they break.
 
-Proceed to: **[08-Troubleshooting](../03-Troubleshooting/README.md)** →
+Proceed to: **[08-Troubleshooting](../03-troubleshooting/readme.md)** →

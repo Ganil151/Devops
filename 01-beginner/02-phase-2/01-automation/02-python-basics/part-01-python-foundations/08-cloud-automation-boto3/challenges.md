@@ -113,4 +113,4 @@ if __name__ == "__main__":
 ---
 
 ## 🔗 **NEXT STEPS**
-Proceed to **[Time & Date Operations](../09-Time-and-Date/README.md)** →
+Proceed to **[Time & Date Operations](../09-time-and-date/readme.md)** →

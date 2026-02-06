@@ -58,4 +58,4 @@ If a deployment fails halfway through, an idempotent script can be re-run safely
 5. **Why is `rm -rf /` considered an idempotent operation despite its destructive nature?**
 
 ---
-**Next Step**: [Design Patterns for Idempotency →](./Design-Patterns-Idempotency-Ref.md)
+**Next Step**: [Design Patterns for Idempotency →](./design-patterns-idempotency-ref.md)

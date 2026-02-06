@@ -2,7 +2,7 @@
 
 > **"In the DevOps world, 'when' is just as important as 'what'. If your automation can't handle timezones, offsets, and durations, your production schedule will eventually drift into chaos."**
 
-![Python Datetime Flow](../../../03-Go-Basics/Part-01-Go-Foundations/03-Control-Flow/go-control-flow.png)
+![Python Datetime Flow](../../../03-go-basics/part-01-go-foundations/03-control-flow/go-control-flow.png)
 
 ---
 
@@ -684,7 +684,7 @@ if datetime.now(timezone.utc).hour == target_hour_utc:
 
 Now that you can handle time correctly, you've completed Part 01: Python Foundations! 🎊
 
-**Proceed to**: [Part 02: Python Architecture →](README.md)
+**Proceed to**: [Part 02: Python Architecture →](readme.md)
 
 ---
 

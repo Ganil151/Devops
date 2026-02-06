@@ -2,7 +2,7 @@
 
 > **"When simple HTTP requests fail because a site is 'too interactive,' Selenium steps in. It's the digital hand that clicks, types, and navigates the web exactly like a human engineer."**
 
-![Browser Automation Architecture](../../../01-Shell-Scripting/Part-03-System-Drafting/02-Advanced-IO/io_stream_architecture.png)
+![Browser Automation Architecture](../../../01-shell-scripting/part-03-system-drafting/02-advanced-io/io-stream-architecture.png)
 
 ---
 
@@ -299,7 +299,7 @@ export_btn.click()
 
 You can request APIs and drive Browsers. Now let's explore how to build **your own simple web interface** to trigger these automations.
 
-**Proceed to**: [Micro-Frameworks (FastAPI) →](../07-Micro-Frameworks/README.md)
+**Proceed to**: [Micro-Frameworks (FastAPI) →](../07-micro-frameworks/readme.md)
 
 ---
 

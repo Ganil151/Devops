@@ -217,4 +217,4 @@ fi
 
 Now that your scripts can listen to you, let's learn how to make them think!
 
-Proceed to: **[Conditionals](../03-Conditionals/README.md)** →
+Proceed to: **[Conditionals](../03-conditionals/readme.md)** →

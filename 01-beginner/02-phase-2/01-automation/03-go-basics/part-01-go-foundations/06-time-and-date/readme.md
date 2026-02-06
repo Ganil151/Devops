@@ -4,7 +4,7 @@
 
 Go's approach to time handling is unique and powerful. Unlike many languages that use string-based format patterns, Go uses a reference time (`Mon Jan 2 15:04:05 MST 2006`) to define formats. This makes formatting both memorable and type-safe.
 
-![Time Handling for DevOps](./go_time_hero.png)
+![Time Handling for DevOps](./go-time-hero.png)
 
 ## Table of Contents
 
@@ -258,4 +258,4 @@ A monitoring tool was measuring API response times using `time.Now()` before and
 
 ---
 
-**Next Step**: [Part 02: Go Architecture - Structs and Methods →](../../Part-02-Go-Architecture/01-Structs-and-Methods/README.md)
+**Next Step**: [Part 02: Go Architecture - Structs and Methods →](../../part-02-go-architecture/01-structs-and-methods/readme.md)

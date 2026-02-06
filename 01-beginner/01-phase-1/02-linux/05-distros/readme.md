@@ -84,7 +84,7 @@ Do not wipe your main computer yet. Try one of the following:
 
 ---
 ## 🧭 Additional Modules
-- [01 RHEL Family](01-RHEL-Family/README.md)
-- [02 Debian Family](02-Debian-Family/README.md)
-- [03 SUSE Family](03-SUSE-Family/README.md)
-- [04 Lightweight and Cloud Native](04-Lightweight-and-Cloud-Native/README.md)
+- [01 RHEL Family](01-rhel-family/readme.md)
+- [02 Debian Family](02-debian-family/readme.md)
+- [03 SUSE Family](03-suse-family/readme.md)
+- [04 Lightweight and Cloud Native](04-lightweight-and-cloud-native/readme.md)

@@ -120,8 +120,8 @@ server {
 
 The shield is up. Now let's handle the crowd!
 
-Proceed to: **[Part 2: Traffic Management & Performance](../../Part-02-Traffic-Management-and-Performance/01-Load-Balancing-Strategies/README.md)** →
+Proceed to: **[Part 2: Traffic Management & Performance](../../part-02-traffic-management-and-performance/01-load-balancing-strategies/readme.md)** →
 
 ---
 
-[Back to Part 1 Overview](../README.md) | [Back to Home](../../README.md)
+[Back to Part 1 Overview](../readme.md) | [Back to Home](../../readme.md)

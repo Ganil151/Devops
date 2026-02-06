@@ -177,4 +177,4 @@ When things go wrong (and they will), use these tools.
 
 **Completion**: You have completed the **Dynamic Inventory** module! You now possess the skills to manage 10 servers or 10,000 servers with equal ease.
 
-Return to the [Module Index](../../README.md) to continue your journey. 🏆
+Return to the [Module Index](../../readme.md) to continue your journey. 🏆

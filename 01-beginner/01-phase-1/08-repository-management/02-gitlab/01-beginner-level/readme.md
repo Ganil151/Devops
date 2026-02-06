@@ -14,42 +14,42 @@ By the end of this level, you will:
 
 ## 📚 Topics Covered
 
-### [01-GitLab-Fundamentals](./01-GitLab-Fundamentals/)
+### [01-GitLab-Fundamentals](./01-gitlab-fundamentals/)
 - What is GitLab and its benefits
 - GitLab architecture overview
 - GitLab editions (CE vs EE)
 - Installation and initial setup
 - GitLab interface navigation
 
-### [02-Repository-Management](./02-Repository-Management/)
+### [02-Repository-Management](./02-repository-management/)
 - Creating and configuring repositories
 - Git integration and workflows
 - Branching strategies
 - Merge requests and code review
 - Repository settings and permissions
 
-### [03-Basic-CICD](./03-Basic-CICD/)
+### [03-Basic-CICD](./03-basic-cicd/)
 - Introduction to CI/CD concepts
 - GitLab CI/CD pipeline basics
 - .gitlab-ci.yml configuration
 - Jobs, stages, and artifacts
 - Basic pipeline examples
 
-### [04-Issue-Tracking](./04-Issue-Tracking/)
+### [04-Issue-Tracking](./04-issue-tracking/)
 - Creating and managing issues
 - Labels, milestones, and boards
 - Issue templates and workflows
 - Time tracking and estimation
 - Project management features
 
-### [05-User-Management](README.md)
+### [05-User-Management](readme.md)
 - User accounts and authentication
 - Groups and projects organization
 - Permission levels and access control
 - SSH keys and personal access tokens
 - Basic LDAP integration
 
-### [06-Basic-Security](README.md)
+### [06-Basic-Security](readme.md)
 - Security best practices
 - Repository security settings
 - Basic vulnerability scanning

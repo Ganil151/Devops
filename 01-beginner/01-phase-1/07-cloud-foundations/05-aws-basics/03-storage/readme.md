@@ -175,5 +175,5 @@ Answer: A) No, it uses "Prefixes" to simulate folders</b>
 
 ---
 ## 🧭 Additional Modules
-- [EFS](EFS/README.md)
-- [s3 bucket](s3-bucket/README.md)
+- [EFS](efs/readme.md)
+- [s3 bucket](s3-bucket/readme.md)

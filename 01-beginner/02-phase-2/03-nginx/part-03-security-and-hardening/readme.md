@@ -43,7 +43,7 @@ By the end of this part, you will:
 
 ## 🗺️ Included Modules
 
-1. **[01-Security & SSL](./01-Security-and-SSL/README.md)**: Turning on the lights. Certificates, Ciphers, and modern encryption standards.
+1. **[01-Security & SSL](./01-security-and-ssl/readme.md)**: Turning on the lights. Certificates, Ciphers, and modern encryption standards.
 
 ---
 
@@ -75,4 +75,4 @@ Turning `server_tokens off` removes the version number from headers and default 
 
 ---
 
-**Next Step**: Start with **[01-Security & SSL](./01-Security-and-SSL/README.md)** 🚀
+**Next Step**: Start with **[01-Security & SSL](./01-security-and-ssl/readme.md)** 🚀

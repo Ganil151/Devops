@@ -113,4 +113,4 @@ flowchart TD
 ---
 
 ## 🎯 Next Steps
-*   **[Installation and Setup](../03-Installation-and-Setup/README.md)**: Putting theory into practice with Docker.
+*   **[Installation and Setup](../03-installation-and-setup/readme.md)**: Putting theory into practice with Docker.

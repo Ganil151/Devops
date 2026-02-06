@@ -71,4 +71,4 @@ Always use a **Version Pin** when calling remote modules to prevent "Breaking Ch
 5. **Describe the impact of the `terraform get` command.**
 
 ---
-**Next Step**: [Security, Sentinel & Compliance →](./Terraform-Security-Compliance-Ref.md)
+**Next Step**: [Security, Sentinel & Compliance →](./terraform-security-compliance-ref.md)

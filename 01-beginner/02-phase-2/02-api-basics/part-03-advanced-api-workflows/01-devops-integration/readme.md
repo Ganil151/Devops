@@ -94,4 +94,4 @@ cURL is the ultimate low-level debugger for API issues.
 ---
 
 **Completion**: You have completed the **API Basics** module! 🏆
-Return to the [Automation Track](../../README.md) to explore the next frontier.
+Return to the [Automation Track](../../readme.md) to explore the next frontier.

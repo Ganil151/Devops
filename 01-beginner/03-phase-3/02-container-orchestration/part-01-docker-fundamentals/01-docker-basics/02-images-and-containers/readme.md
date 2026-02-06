@@ -38,7 +38,7 @@ By the end of this module, you will:
 
 A Docker Image is an immutable file that contains your application code, runtime, libraries, environment variables, and config files.
 
-![Docker Image Layers](../../../images/dockerImageLayer.png)
+![Docker Image Layers](../../../images/dockerimagelayer.png)
 
 ### The Power of Layers
 Images are built in **Layers**. Every instruction in a Dockerfile adds a new layer.
@@ -51,7 +51,7 @@ Images are built in **Layers**. Every instruction in a Dockerfile adds a new lay
 
 A container is a lightweight, isolated process that runs an image. When you start a container, Docker adds a **thin writable layer** on top of the read-only image layers.
 
-![Container Lifecycle](../../../images/containerLifecycle.png)
+![Container Lifecycle](../../../images/containerlifecycle.png)
 
 ### Essential Command Toolkit
 
@@ -151,4 +151,4 @@ In a professional DevOps environment:
 
 The blueprints are clear. Now let's learn how to draw them.
 
-Proceed to: **[Module 03: Dockerfile Basics](../03-Dockerfile-Basics/README.md)** →
+Proceed to: **[Module 03: Dockerfile Basics](../03-dockerfile-basics/readme.md)** →

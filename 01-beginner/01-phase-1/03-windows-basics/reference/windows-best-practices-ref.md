@@ -64,4 +64,4 @@ Windows automation at scale requires shifting from a "GUI-first" mindset to a "C
 - [ ] Is the "Administrator" account renamed and heavily restricted?
 
 ---
-**Next Step**: [Back to System Architecture →](./Windows-System-Architecture-Ref.md)
+**Next Step**: [Back to System Architecture →](./windows-system-architecture-ref.md)

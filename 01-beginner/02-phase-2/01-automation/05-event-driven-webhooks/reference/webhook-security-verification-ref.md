@@ -63,4 +63,4 @@ def verify_signature(payload_body, secret_token, signature_header):
 5. **What is an "OAuth 2.0 Client Credentials Flow" and can it be used as an alternative to shared secrets?**
 
 ---
-**Next Step**: [Event-Driven Patterns →](./Event-Driven-Patterns-Ref.md)
+**Next Step**: [Event-Driven Patterns →](./event-driven-patterns-ref.md)

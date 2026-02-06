@@ -31,4 +31,4 @@ Create a `main.py` that:
 2. Defines a GET `/status` endpoint returning a dictionary of system stats.
 
 ---
-**Next Step**: [02-Pydantic-Validation](../02-Pydantic-Validation/README.md)
+**Next Step**: [02-Pydantic-Validation](../02-pydantic-validation/readme.md)

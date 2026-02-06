@@ -2,7 +2,7 @@
 
 > **"A script without conditionals is just a list. A script with conditionals is a decision-maker capable of autonomous action."**
 
-![Conditional Logic Flow](./conditional_logic_flow.png)
+![Conditional Logic Flow](./conditional-logic-flow.png)
 
 ## 📚 Overview
 
@@ -361,4 +361,4 @@ fi
 
 Now that your script can think, give it a task to repeat!
 
-Proceed to: **[Loops & Processing](../04-Loops-and-Processing/README.md)** →
+Proceed to: **[Loops & Processing](../04-loops-and-processing/readme.md)** →

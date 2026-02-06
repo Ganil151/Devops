@@ -5,19 +5,19 @@
 
 ## 🗺️ Learning Roadmap
 
-### [01-Core-Syntax](./01-Core-Syntax/)
+### [01-Core-Syntax](./01-core-syntax/)
 - **Concepts**: JSX, Components, Props.
 - **Goal**: Understand how to build modular, reusable UI blocks.
 
-### [02-Hooks-and-State](./02-Hooks-and-State/)
+### [02-Hooks-and-State](./02-hooks-and-state/)
 - **Concepts**: `useState`, `useEffect`, `useRef`.
 - **Goal**: Manage dynamic data and lifecycle side-effects (API calls).
 
-### [03-Routing](./03-Routing/)
+### [03-Routing](./03-routing/)
 - **Concepts**: React Router, Link components, Dynamic URLs.
 - **Goal**: Build Multi-Page Applications (SPA) with seamless navigation.
 
-### [04-API-Integration](./04-API-Integration/)
+### [04-API-Integration](./04-api-integration/)
 - **Concepts**: Fetching data, Loading skeletons, Error boundaries.
 - **Goal**: Connect your UI to backend microservices (FastAPI/Flask).
 

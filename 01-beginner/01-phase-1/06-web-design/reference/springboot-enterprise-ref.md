@@ -63,4 +63,4 @@ public Status getStatus() {
 - **Logging with Logback**: Standardize logs into JSON format using Logback to ensure easy ingestion into centralized logging stacks.
 
 ---
-**Next Step**: [Web Design Best Practices →](./Web-Design-Best-Practices-Ref.md)
+**Next Step**: [Web Design Best Practices →](./web-design-best-practices-ref.md)

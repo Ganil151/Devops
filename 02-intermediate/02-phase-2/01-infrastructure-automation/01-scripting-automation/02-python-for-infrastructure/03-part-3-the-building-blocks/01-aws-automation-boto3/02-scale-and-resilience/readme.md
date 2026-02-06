@@ -17,7 +17,7 @@ Welcome to **Advanced Boto3 Operations**. In this module, we move beyond "Happy 
 2. [Mastering Paginators: Config & Filtering](#-mastering-paginators-config--filtering)
 3. [The "Wait-for-State" Pattern: Custom Pollers](#-the-wait-for-state-pattern-custom-pollers)
 4. [The Resilience Layer: Standard vs Adaptive Retries](#-the-resilience-layer-standard-vs-adaptive-retries)
-5. [💰 Cost Management: Automation & FinOps](./Cost-Management.md)
+5. [💰 Cost Management: Automation & FinOps](./cost-management.md)
 6. [Real-World DevOps Scenarios](#-real-world-devops-scenarios)
 7. [Advanced Resilience Code Structure](#-advanced-resilience-code-structure)
 8. [Hands-On Challenge: The "Ghost" Volume Reaper](#-hands-on-challenge-the-ghost-volume-reaper)
@@ -237,4 +237,4 @@ iterator = paginator.paginate(Filters=[{'Name': 'status', 'Values': ['available'
 
 **Ready to move to Production Readiness?**
 
-[⬅️ Back to Boto3 Foundations](./README.md) | [Next: Production Patterns →](Production%20Patterns.md)
+[⬅️ Back to Boto3 Foundations](./readme.md) | [Next: Production Patterns →](production%20patterns.md)

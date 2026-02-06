@@ -148,4 +148,4 @@ Instead of mounting individual files, senior engineers often use a **Sidecar** (
 
 The vault is locked. Now let's learn how to take all these pieces and run them in a high-stakes production environment.
 
-Proceed to: **[Module 01: Production Ready](../../Advanced/01-Production/README.md)** →
+Proceed to: **[Module 01: Production Ready](../../advanced/01-production/readme.md)** →

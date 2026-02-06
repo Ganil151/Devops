@@ -321,4 +321,4 @@ echo "✓ Complete"
 
 ## Next Steps
 
-Complete these challenges, then proceed to **[Hidden Files](CHALLENGES.md)** →
+Complete these challenges, then proceed to **[Hidden Files](challenges.md)** →

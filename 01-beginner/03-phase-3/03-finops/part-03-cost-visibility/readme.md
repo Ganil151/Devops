@@ -212,4 +212,4 @@ graph TD
 
 Visibility is set. Now let's learn how to draw a line in the sand and ensure we don't cross it using **Budgets**.
 
-Proceed to: **[Part 04: Budgeting Basics](../Part-04-Budgeting-Basics/README.md)** →
+Proceed to: **[Part 04: Budgeting Basics](../part-04-budgeting-basics/readme.md)** →

@@ -20,4 +20,4 @@ An object-oriented, class-tailored language with static typing and sound type-sa
 Flutter paints every pixel directly on the screen, bypassing platform-specific widgets for consistent behavior.
 
 ---
-**Back to Module**: [Mobile Main Guide](../README.md)
+**Back to Module**: [Mobile Main Guide](../readme.md)

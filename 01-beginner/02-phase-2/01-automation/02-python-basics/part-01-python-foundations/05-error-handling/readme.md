@@ -2,7 +2,7 @@
 
 > **"In DevOps, failure is not an option—it's a certainty. The difference between a script that crashes at 3 AM and one that recovers gracefully is how you handle the unexpected."**
 
-![Python Error Handling](../assets/python_error_handling.png)
+![Python Error Handling](../assets/python-error-handling.png)
 
 ---
 
@@ -854,7 +854,7 @@ flowchart TD
 
 Now that your scripts are resilient, let's learn how to work with files and data formats.
 
-**Proceed to**: [File I/O for DevOps →](../06-File-IO-DevOps/README.md)
+**Proceed to**: [File I/O for DevOps →](../06-file-io-devops/readme.md)
 
 ---
 

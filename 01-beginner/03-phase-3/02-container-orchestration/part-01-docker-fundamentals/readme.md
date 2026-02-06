@@ -33,7 +33,7 @@ graph LR
 
 ---
 
-1. **[01-Docker-Basics](./01-Docker-Basics/README.md)**: Introduction to the Docker CLI and Architecture.
+1. **[01-Docker-Basics](./01-docker-basics/readme.md)**: Introduction to the Docker CLI and Architecture.
 
 ---
 
@@ -47,4 +47,4 @@ Docker is the **Base Language** of modern DevOps. By mastering this part, you mo
 
 ---
 
-**Next Step**: Build your first container in **[01-Docker-Basics](./01-Docker-Basics/README.md)** 🚀
+**Next Step**: Build your first container in **[01-Docker-Basics](./01-docker-basics/readme.md)** 🚀

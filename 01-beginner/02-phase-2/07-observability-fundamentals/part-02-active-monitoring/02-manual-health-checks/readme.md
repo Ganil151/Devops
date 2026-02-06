@@ -59,4 +59,4 @@ chmod +x manual_health_check.sh
 
 ---
 
-**Next Step**: Prove your skills in **[CHALLENGES.md](../../CHALLENGES.md)** 🚀
+**Next Step**: Prove your skills in **[CHALLENGES.md](../../challenges.md)** 🚀

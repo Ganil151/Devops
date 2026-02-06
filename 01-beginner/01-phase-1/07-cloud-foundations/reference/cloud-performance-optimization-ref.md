@@ -48,4 +48,4 @@ Performance in the cloud is not just about raw CPU power; it's about architectur
 - [ ] Are global applications using **Multi-Region** replication for low-latency access?
 
 ---
-**Back to Foundations**: [Cloud Computing Models →](./Cloud-Computing-Models-Ref.md)
+**Back to Foundations**: [Cloud Computing Models →](./cloud-computing-models-ref.md)

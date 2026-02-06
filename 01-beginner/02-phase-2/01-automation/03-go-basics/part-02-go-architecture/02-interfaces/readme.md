@@ -4,7 +4,7 @@
 
 Interfaces in Go are different from many other languages. They are **implicit**, meaning you don't need a keyword like `implements`. If a type provides the methods an interface requires, it automatically satisfies that contract. This "duck typing" philosophy is a core strength of Go's modular architecture.
 
-![Go Interfaces Diagram](./go_interfaces_diagram.png)
+![Go Interfaces Diagram](./go-interfaces-diagram.png)
 
 ## Table of Contents
 
@@ -262,4 +262,4 @@ You have a function that deletes files from an S3 bucket. Testing this in a CI/C
 
 ---
 
-**Next Step**: [Error Handling →](../03-Error-Handling/README.md)
+**Next Step**: [Error Handling →](../03-error-handling/readme.md)

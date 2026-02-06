@@ -46,4 +46,4 @@ While Docker runs containers, **Orchestration** manages their lifecycle across a
 - **Spot Instances**: Use Spot instances for low-priority worker nodes to save 70%+ costs.
 
 ---
-**Next Step**: [FinOps & Cloud Economics →](./FinOps-Cloud-Economics-Ref.md)
+**Next Step**: [FinOps & Cloud Economics →](./finops-cloud-economics-ref.md)

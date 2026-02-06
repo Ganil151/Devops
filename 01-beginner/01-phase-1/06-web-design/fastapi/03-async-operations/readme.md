@@ -47,4 +47,4 @@ async def trigger_cleanup(tasks: BackgroundTasks):
 - [ ] Is the worker count configured to match CPU cores in production?
 
 ---
-**Next Step**: [04-Authed-Endpoints](../04-Authed-Endpoints/README.md)
+**Next Step**: [04-Authed-Endpoints](../04-authed-endpoints/readme.md)

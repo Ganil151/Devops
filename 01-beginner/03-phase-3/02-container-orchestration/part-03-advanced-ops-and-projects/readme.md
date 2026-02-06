@@ -39,8 +39,8 @@ graph TD
 
 ## 🗺️ Included Modules
 
-1. **[01-Security-and-Optimization](./01-Security-and-Optimization/README.md)**: Hardening your containers.
-2. **[02-Real-World-Projects](./02-Real-World-Projects/README.md)**: Hands-on labs (MERN Stack, Python Microservices).
+1. **[01-Security-and-Optimization](./01-security-and-optimization/readme.md)**: Hardening your containers.
+2. **[02-Real-World-Projects](./02-real-world-projects/readme.md)**: Hands-on labs (MERN Stack, Python Microservices).
 
 ---
 
@@ -54,4 +54,4 @@ This is where you separate yourself from the "Tutorial Experts." Companies don't
 
 ---
 
-**Next Step**: Secure your stack in **[01-Security-and-Optimization](./01-Security-and-Optimization/README.md)** 🚀
+**Next Step**: Secure your stack in **[01-Security-and-Optimization](./01-security-and-optimization/readme.md)** 🚀

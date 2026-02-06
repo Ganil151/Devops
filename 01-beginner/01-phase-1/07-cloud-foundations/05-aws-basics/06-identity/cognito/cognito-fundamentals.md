@@ -47,4 +47,4 @@ Identity Pools (Federated Identities) enable you to create unique identities for
 - **Compliance**: PCI DSS, SOC, ISO/IEC, HIPAA, and more.
 
 ---
-**Next Step**: Learn how to set up Cognito in the [Hands-on Cognito Guide](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/03-Networking-and-Security/03-Identity-and-Access-Control/AWS-IAM-Cognito/cognito-hands-on.md)
+**Next Step**: Learn how to set up Cognito in the [Hands-on Cognito Guide](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/03-identity-and-access-control/aws-iam-cognito/cognito-hands-on.md)

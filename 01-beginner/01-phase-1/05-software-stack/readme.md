@@ -2,7 +2,7 @@
 
 > **"An application is not a single file; it is a stack of specialized workers. If you don't understand the layers, you won't know where the fire is when the 'Stack' starts burning. In DevOps, we don't just write code; we architect the bridge between Front and Back."**
 
-![Software Stack Architecture](../../assets/software_stack_banner.png)
+![Software Stack Architecture](../../assets/software-stack-banner.png)
 
 ---
 
@@ -145,4 +145,4 @@ flowchart TD
 
 ---
 
-**Next Step**: Move to **[Web Design & Frameworks](../06-Web-Design/README.md)**
+**Next Step**: Move to **[Web Design & Frameworks](../06-web-design/readme.md)**

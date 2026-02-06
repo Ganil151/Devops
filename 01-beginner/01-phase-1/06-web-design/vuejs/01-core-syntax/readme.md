@@ -28,4 +28,4 @@ const count = ref(0)
 Putting `<template>`, `<script>`, and `<style>` in one `.vue` file.
 
 ---
-**Next Step**: [02-Vue-Router](../02-Vue-Router/README.md)
+**Next Step**: [02-Vue-Router](../02-vue-router/readme.md)

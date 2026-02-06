@@ -194,4 +194,4 @@ bash -x ./my-script.sh
 
 Now that you can write the code, let's learn how to make it survive the real world!
 
-Proceed to: **[Advanced I/O](../02-Advanced-IO/README.md)** →
+Proceed to: **[Advanced I/O](../02-advanced-io/readme.md)** →

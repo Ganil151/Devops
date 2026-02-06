@@ -36,8 +36,8 @@ graph TD
 
 ## 🗺️ Included Modules
 
-1. **[01-Networking-and-Storage](./01-Networking-and-Storage/README.md)**: Connecting containers and persisting data.
-2. **[02-Docker-Compose](./02-Docker-Compose/README.md)**: The "Infrastructure as Code" of local development.
+1. **[01-Networking-and-Storage](./01-networking-and-storage/readme.md)**: Connecting containers and persisting data.
+2. **[02-Docker-Compose](./02-docker-compose/readme.md)**: The "Infrastructure as Code" of local development.
 
 ---
 
@@ -51,4 +51,4 @@ Managing one container is a hobby; managing a **system** is a profession. This p
 
 ---
 
-**Next Step**: Connect your containers in **[01-Networking-and-Storage](./01-Networking-and-Storage/README.md)** 🚀
+**Next Step**: Connect your containers in **[01-Networking-and-Storage](./01-networking-and-storage/readme.md)** 🚀

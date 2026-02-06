@@ -123,4 +123,4 @@ LLMs are excellent at fixing their own mistakes **if** the error message is desc
 
 You can now build and use your own tools. The final piece of the puzzle is ensuring that these "hands" are used safely and ethically.
 
-Proceed to: **[Part 04: Security & Best Practices](../Part-04-Security-and-Best-Practices/README.md)** →
+Proceed to: **[Part 04: Security & Best Practices](../part-04-security-and-best-practices/readme.md)** →

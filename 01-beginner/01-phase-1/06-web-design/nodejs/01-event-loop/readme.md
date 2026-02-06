@@ -29,4 +29,4 @@ While the JS thread is single, Node delegates I/O (Crypto, FS) to a multi-thread
 Never perform CPU-intensive tasks inside a Node.js web server. If you must process massive data, delegate it to a Worker Thread or a separate Python script.
 
 ---
-**Next Step**: [02-Express-Middleware](../02-Express-Middleware/README.md)
+**Next Step**: [02-Express-Middleware](../02-express-middleware/readme.md)

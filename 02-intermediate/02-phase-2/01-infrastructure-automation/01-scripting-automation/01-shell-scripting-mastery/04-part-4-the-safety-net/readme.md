@@ -6,7 +6,7 @@ Welcome to **The Safety Net**. This is the final stage of the Shell Scripting Ma
 
 ## 🛣️ The Curriculum
 
-### [01-Skill-Assessments](./01-Skill-Assessments/)
+### [01-Skill-Assessments](./01-skill-assessments/)
 **The Objective**: Verify your mastery of the shell.
 *   **Contents**: 
     *   **The Log Analyzer Challenge**: Parse and report on production logs.

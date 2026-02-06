@@ -217,4 +217,4 @@ A team has 50 different microservices. Some output too much info, others too lit
 
 ---
 
-**Next Step**: [Environment Variables →](../02-Environment-Variables/README.md)
+**Next Step**: [Environment Variables →](../02-environment-variables/readme.md)

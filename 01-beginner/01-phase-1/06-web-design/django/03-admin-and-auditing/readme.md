@@ -38,4 +38,4 @@ Django tracks every change made via the admin interface automatically in the `Lo
 - [ ] Are sensitive fields (like API keys) masked in the admin view?
 
 ---
-**Next Step**: [04-Rest-Framework-DRF](../04-Rest-Framework-DRF/README.md)
+**Next Step**: [04-Rest-Framework-DRF](../04-rest-framework-drf/readme.md)

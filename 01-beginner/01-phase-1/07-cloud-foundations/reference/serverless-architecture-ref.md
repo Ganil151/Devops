@@ -47,4 +47,4 @@ Serverless allows developers to build and run applications without managing infr
 - **Small Packages**: Keep your function zip files small to reduce cold start times.
 
 ---
-**Next Step**: [FinOps & Cloud Economics →](./FinOps-Cloud-Economics-Ref.md)
+**Next Step**: [FinOps & Cloud Economics →](./finops-cloud-economics-ref.md)

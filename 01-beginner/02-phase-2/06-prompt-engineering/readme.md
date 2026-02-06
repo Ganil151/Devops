@@ -30,7 +30,7 @@ In the modern infrastructure landscape, **Prompt Engineering** is the art of com
 This curriculum teaches you how to turn AI into your most powerful "Force Multiplier."
 
 ## Core Concept: The Deterministic Pipeline
-**[REFERENCE: Advanced Prompting](REFERENCE/Advanced-Prompting-Frameworks-Ref.md)**
+**[REFERENCE: Advanced Prompting](reference/advanced-prompting-frameworks-ref.md)**
 
 In DevOps, we do not want "Creative" AI; we want "Reliable" AI.
 - **Temperature Control**: Setting $T=0$ to ensure the same input always yields the same output.
@@ -38,7 +38,7 @@ In DevOps, we do not want "Creative" AI; we want "Reliable" AI.
 - **Chain of Thought**: Forcing the AI to "Show its work" before executing a destructive command.
 
 ## Enterprise Governance & Security
-**[REFERENCE: AI Security & Governance](REFERENCE/AI-Security-Governance-Ref.md)**
+**[REFERENCE: AI Security & Governance](reference/ai-security-governance-ref.md)**
 
 AI is a new attack surface.
 - **Injection Attacks**: Malicious user input overriding system instructions.
@@ -62,9 +62,9 @@ By the end of this curriculum, you will:
 
 | Part | Topic | Description |
 | :--- | :--- | :--- |
-| **[🟢 Part 1](./Part-01-AI-Fundamentals/)** | **The AI Mindset** | How LLMs work, Mental Models, and the Professional Prompt Toolkit. |
-| **[🟡 Part 2](./Part-02-DevOps-Automation/)** | **DevOps Workflows** | Generating Code, IaC, and Troubleshooting with AI. |
-| **[🔴 Part 3](./Part-03-Governance-and-Ethics/)** | **Best Practices** | Security, Ethics, and the Limits of AI. |
+| **[🟢 Part 1](./part-01-ai-fundamentals/)** | **The AI Mindset** | How LLMs work, Mental Models, and the Professional Prompt Toolkit. |
+| **[🟡 Part 2](./part-02-devops-automation/)** | **DevOps Workflows** | Generating Code, IaC, and Troubleshooting with AI. |
+| **[🔴 Part 3](./part-03-governance-and-ethics/)** | **Best Practices** | Security, Ethics, and the Limits of AI. |
 
 ---
 
@@ -119,9 +119,9 @@ Fed a 100-line Linux kernel log or an Nginx error trace? AI can spot the pattern
 
 The tools are ready. Now let's master the language.
 
-Proceed to: **[Part 1: The AI Mindset](./Part-01-AI-Fundamentals/README.md)** 🚀
+Proceed to: **[Part 1: The AI Mindset](./part-01-ai-fundamentals/readme.md)** 🚀
 
 
 ---
 ## 🧭 Additional Modules
-- [examples](examples/README.md)
+- [examples](examples/readme.md)

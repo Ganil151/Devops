@@ -27,4 +27,4 @@ Transform data for display purposes without changing the underlying value.
 - `AsyncPipe`: Automated subscription for Observables.
 
 ---
-**Next Step**: [03-Dependency-Injection](../03-Dependency-Injection/README.md)
+**Next Step**: [03-Dependency-Injection](../03-dependency-injection/readme.md)

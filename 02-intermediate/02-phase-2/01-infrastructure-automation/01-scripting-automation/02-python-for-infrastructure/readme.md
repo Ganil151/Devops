@@ -8,27 +8,27 @@ Welcome to the **Python for Infrastructure** module. This curriculum is designed
 
 This module is re-architected into **5 Logical Parts**, mirroring the automation lifecycle.
 
-### [📐 Part 1: The Blueprint (Foundations)](./01-Part-1-The-Blueprint/)
+### [📐 Part 1: The Blueprint (Foundations)](./01-part-1-the-blueprint/)
 *   **Focus**: Replacing Bash with Python.
 *   **Modules**: Environment Setup, System/File Ops (`os`, `shutil`), Log Parsing (Regex).
 *   **Goal**: Write scripts that manipulate the local system robustly.
 
-### [⚙️ Part 2: The Engine (Scripting Workflow)](./02-Part-2-The-Engine/)
+### [⚙️ Part 2: The Engine (Scripting Workflow)](./02-part-2-the-engine/)
 *   **Focus**: Talking to the outside world.
 *   **Modules**: Data serialization (`json`, `yaml`), HTTP APIs (`requests`), SSH Automation (`paramiko`).
 *   **Goal**: Create scripts that configure software and query APIs.
 
-### [🧩 Part 3: The Building Blocks (Cloud Automation)](./03-Part-3-The-Building-Blocks/)
+### [🧩 Part 3: The Building Blocks (Cloud Automation)](./03-part-3-the-building-blocks/)
 *   **Focus**: Automating AWS and Containers.
 *   **Modules**: AWS SDK (`boto3`), Serverless (Lambda), Docker/K8s SDKs.
 *   **Goal**: Build "Infrastructure as Code" using pure Python logic.
 
-### [🤖 Part 4: Operational Automation (ChatOps & Tickets)](./04-Part-4-Operational-Automation/)
+### [🤖 Part 4: Operational Automation (ChatOps & Tickets)](./04-part-4-operational-automation/)
 *   **Focus**: The Connective Tissue.
 *   **Modules**: Slack Integration (Webhooks), Jira API, Multi-Cloud Notifiers.
 *   **Goal**: Bridge the gap between infrastructure events and human communication.
 
-### [🛡️ Part 5: The Safety Net (Testing & Reliability)](./05-Part-5-The-Safety-Net/)
+### [🛡️ Part 5: The Safety Net (Testing & Reliability)](./05-part-5-the-safety-net/)
 *   **Focus**: Production-grade engineering.
 *   **Modules**: Testing (`pytest`), Databases (SQL), Data Analysis (`pandas`), Final Capstone.
 *   **Goal**: Ensure your automation is testable, reliable, and auditable.

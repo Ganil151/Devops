@@ -42,4 +42,4 @@ Use OAuth2 scopes to differentiate between users (e.g., `read_logs` vs `trigger_
 - [ ] Is Rate Limiting (throttling) active to prevent brute force?
 
 ---
-**Back to Module**: [FastAPI Main Guide](../README.md)
+**Back to Module**: [FastAPI Main Guide](../readme.md)

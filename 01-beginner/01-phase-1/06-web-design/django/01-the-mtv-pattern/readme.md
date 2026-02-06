@@ -30,4 +30,4 @@ The `urls.py` file provides a clean, regex-based mapping for your views.
 3. Map the view to `/nodes/`.
 
 ---
-**Next Step**: [02-Django-ORM](../02-Django-ORM/README.md)
+**Next Step**: [02-Django-ORM](../02-django-orm/readme.md)

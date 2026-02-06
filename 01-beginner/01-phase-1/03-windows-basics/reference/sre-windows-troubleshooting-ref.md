@@ -70,4 +70,4 @@ Systematic troubleshooting on Windows requires moving beyond "Task Manager." SRE
 - **Restart SCM**: `Restart-Service` automatically kills and restarts dependent services if configured properly.
 
 ---
-**Next Step**: [Windows Best Practices →](./Windows-Best-Practices-Ref.md)
+**Next Step**: [Windows Best Practices →](./windows-best-practices-ref.md)

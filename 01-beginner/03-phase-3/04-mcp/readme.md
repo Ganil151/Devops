@@ -80,10 +80,10 @@ graph TD
 
 ## 🗺️ Curriculum Path
 
-1. **[Part 01: Architecture & Primitives](./Part-01-Architecture-and-Primitives/README.md)**: Understanding the core building blocks of AI connectivity.
-2. **[Part 02: Ecosystem & Servers](./Part-02-Ecosystem-and-Servers/README.md)**: Working with the filesystem, GitHub, and external search servers.
-3. **[Part 03: Building Custom Servers](./Part-03-Building-Custom-Servers/README.md)**: Creating your own tools using the MCP SDK (Node.js/Python).
-4. **[Part 04: Security & Best Practices](./Part-04-Security-and-Best-Practices/README.md)**: Hardening the AI's "hands" with sandboxing and governance.
+1. **[Part 01: Architecture & Primitives](./part-01-architecture-and-primitives/readme.md)**: Understanding the core building blocks of AI connectivity.
+2. **[Part 02: Ecosystem & Servers](./part-02-ecosystem-and-servers/readme.md)**: Working with the filesystem, GitHub, and external search servers.
+3. **[Part 03: Building Custom Servers](./part-03-building-custom-servers/readme.md)**: Creating your own tools using the MCP SDK (Node.js/Python).
+4. **[Part 04: Security & Best Practices](./part-04-security-and-best-practices/readme.md)**: Hardening the AI's "hands" with sandboxing and governance.
 
 ---
 
@@ -165,5 +165,5 @@ graph TD
 
 ## 🔗 Next Steps
 The bridge is built. Now let's dive into the core primitives.
-1. Proceed to: **[Part 01: Architecture & Primitives](./Part-01-Architecture-and-Primitives/README.md)** →
-2. Return to: **[Phase 3 Hub](../README.md)** →
+1. Proceed to: **[Part 01: Architecture & Primitives](./part-01-architecture-and-primitives/readme.md)** →
+2. Return to: **[Phase 3 Hub](../readme.md)** →

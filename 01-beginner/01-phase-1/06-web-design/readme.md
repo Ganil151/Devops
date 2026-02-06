@@ -2,7 +2,7 @@
 
 > **"A website is the first point of contact between your system and the world. In DevOps, we don't just 'design' pages; we engineer robust portals. If your frontend is slow, it doesn't matter how fast your database is—the user has already left."**
 
-![Web Design Architecture](REFERENCE/Web-Design-Best-Practices-Ref.md)
+![Web Design Architecture](reference/web-design-best-practices-ref.md)
 
 ---
 
@@ -111,12 +111,12 @@ graph TD
 
 ## 📂 Framework Roadmaps
 
--   **[React](./React/)**: Hooks, State, and the modern UI standard.
--   **[FastAPI](./FastAPI/)**: The king of high-performance Python APIs.
--   **[Flask](./Flask/)**: Perfect for internal DevOps dashboards.
--   **[NextJS](./NextJS/)**: The world-class standard for React applications.
--   **[NodeJS](./NodeJS/)**: Driving the backend with JavaScript.
--   **[Tailwind CSS](./CSS/)**: Designing at the speed of thought.
+-   **[React](./react/)**: Hooks, State, and the modern UI standard.
+-   **[FastAPI](./fastapi/)**: The king of high-performance Python APIs.
+-   **[Flask](./flask/)**: Perfect for internal DevOps dashboards.
+-   **[NextJS](./nextjs/)**: The world-class standard for React applications.
+-   **[NodeJS](./nodejs/)**: Driving the backend with JavaScript.
+-   **[Tailwind CSS](./css/)**: Designing at the speed of thought.
 
 ---
 
@@ -158,13 +158,13 @@ graph TD
 
 ---
 
-**Next Step**: Start with **[Environment Setup](./Environment-Setup.md)**
+**Next Step**: Start with **[Environment Setup](./environment-setup.md)**
 
 
 ---
 ## 🧭 Additional Modules
-- [Angular](Angular/README.md)
-- [Django](Django/README.md)
-- [Mobile](Mobile/README.md)
-- [SpringBoot](SpringBoot/README.md)
-- [VueJs](VueJs/README.md)
+- [Angular](angular/readme.md)
+- [Django](django/readme.md)
+- [Mobile](mobile/readme.md)
+- [SpringBoot](springboot/readme.md)
+- [VueJs](vuejs/readme.md)

@@ -2,7 +2,7 @@
 
 > **"If you do it once, it's a task. If you do it 1,000 times, it's automation. Loops are the gears that turn a single line of code into a fleet-wide operation."**
 
-![Loop Logic Flow](../assets/loop_visual_flow.png)
+![Loop Logic Flow](../assets/loop-visual-flow.png)
 
 ---
 
@@ -748,7 +748,7 @@ while True:
 
 Now that you can iterate through data efficiently, you're ready to learn how to organize and store it.
 
-**Proceed to**: [Data Structures →](../04-Data-Structures/README.md)
+**Proceed to**: [Data Structures →](../04-data-structures/readme.md)
 
 ---
 

@@ -118,8 +118,8 @@ sudo yum install nginx -y
 
 Architecture is solid. Now let's build the shield.
 
-Proceed to: **[02-Reverse Proxy Basics](../02-Reverse-Proxy-Basics/README.md)** →
+Proceed to: **[02-Reverse Proxy Basics](../02-reverse-proxy-basics/readme.md)** →
 
 ---
 
-[Back to Part 1 Overview](../README.md) | [Back to Home](../../README.md)
+[Back to Part 1 Overview](../readme.md) | [Back to Home](../../readme.md)

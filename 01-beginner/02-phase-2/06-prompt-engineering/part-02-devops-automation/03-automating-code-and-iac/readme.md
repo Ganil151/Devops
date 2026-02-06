@@ -94,4 +94,4 @@ Don't ask AI to write the whole project at once. Ask for the **Boilerplate** fir
 
 The code is generated. Now let's learn how to fix it when it fails.
 
-Proceed to: **[Module 04: Troubleshooting & Debugging](../04-Debugging-with-AI/README.md)** →
+Proceed to: **[Module 04: Troubleshooting & Debugging](../04-debugging-with-ai/readme.md)** →

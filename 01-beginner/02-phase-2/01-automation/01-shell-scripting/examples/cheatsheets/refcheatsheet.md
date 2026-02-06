@@ -933,9 +933,9 @@ alias cheat='less ~/cheatsheet.md'
 ```
 
 **🔗 Related Resources**:
-- [Main Automation README](../../../README.md)
-- [Master Index](../../../03-Go-Basics/GO_AUTOMATION_MASTER_INDEX.md)
-- [Organization Plan](../../../03-Go-Basics/GO_AUTOMATION_ORGANIZATION_PLAN.md)
+- [Main Automation README](../../../readme.md)
+- [Master Index](../../../03-go-basics/go-automation-master-index.md)
+- [Organization Plan](../../../03-go-basics/go-automation-organization-plan.md)
 
 ---
 

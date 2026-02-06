@@ -667,10 +667,10 @@ alias dps='kubectl get pods'   # Redirect to new command
 
 ### 📚 Recommended Learning Path
 
-1. **[Hidden Files Deep Dive](../README.md)**: Master dotfile management
-2. **[Shell Scripting Basics](../README.md)**: Automate your workflows
-3. **[Advanced Bash Scripting](../README.md)**: Build complex automation
-4. **[System Administration](../README.md)**: Apply shell skills to infrastructure
+1. **[Hidden Files Deep Dive](../readme.md)**: Master dotfile management
+2. **[Shell Scripting Basics](../readme.md)**: Automate your workflows
+3. **[Advanced Bash Scripting](../readme.md)**: Build complex automation
+4. **[System Administration](../readme.md)**: Apply shell skills to infrastructure
 
 ### 🔌 External Resources
 

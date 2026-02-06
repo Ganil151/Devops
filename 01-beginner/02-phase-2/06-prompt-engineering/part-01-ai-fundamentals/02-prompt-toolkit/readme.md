@@ -113,4 +113,4 @@ I need you to refactor this script.
 
 The framework is solid. Now let's generate some infrastructure.
 
-Proceed to: **[Module 03: Automating Code & IaC](../../Part-02-DevOps-Automation/03-Automating-Code-and-IaC/README.md)** →
+Proceed to: **[Module 03: Automating Code & IaC](../../part-02-devops-automation/03-automating-code-and-iac/readme.md)** →

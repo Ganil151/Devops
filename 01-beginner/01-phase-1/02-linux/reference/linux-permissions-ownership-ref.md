@@ -67,4 +67,4 @@ Linux is a multi-user system where access is controlled by two factors: **Who ow
 - **Sticky Bit**: Used on directories like `/tmp` to ensure that only the owner of a file can delete it, even if others have write access to the directory.
 
 ---
-**Next Step**: [Essential SRE Commands →](./Linux-Essential-Commands-Ref.md)
+**Next Step**: [Essential SRE Commands →](./linux-essential-commands-ref.md)

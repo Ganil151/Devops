@@ -167,9 +167,9 @@ sed -i.bak 's/foo/bar/' file.txt
 
 Dive deep into each tool:
 
-- **[03-JSON-Processing-with-JQ](./03-JSON-Processing-with-JQ/README.md)**: Mastering JSON APIs.
-- **[04-Data-Wrangling-with-Sed-and-Awk](./04-Data-Wrangling-with-Sed-and-Awk/README.md)**: Advanced Stream Editing.
-- **[06-Regex-and-Data-Parsing](./06-Regex-and-Data-Parsing/README.md)**: The art of matching text.
+- **[03-JSON-Processing-with-JQ](./03-json-processing-with-jq/readme.md)**: Mastering JSON APIs.
+- **[04-Data-Wrangling-with-Sed-and-Awk](./04-data-wrangling-with-sed-and-awk/readme.md)**: Advanced Stream Editing.
+- **[06-Regex-and-Data-Parsing](./06-regex-and-data-parsing/readme.md)**: The art of matching text.
 
 ---
 

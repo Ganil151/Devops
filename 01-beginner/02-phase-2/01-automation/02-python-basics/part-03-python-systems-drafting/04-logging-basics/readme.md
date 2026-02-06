@@ -2,7 +2,7 @@
 
 > **"Proper logging separates amateur scripts from production-ready automation. In DevOps, good logs are the difference between a 5-minute fix and a 5-hour blind investigation."**
 
-![Python Logging Architecture](../../../01-Shell-Scripting/Part-03-System-Drafting/02-Advanced-IO/io_stream_architecture.png)
+![Python Logging Architecture](../../../01-shell-scripting/part-03-system-drafting/02-advanced-io/io-stream-architecture.png)
 
 ---
 
@@ -361,7 +361,7 @@ logger.info("User logged in")
 
 Your script now records its history. Next, let's learn how to verify that your history is correct in advance.
 
-**Proceed to**: [CLI Arguments →](../01-Command-Line-Arguments/README.md)
+**Proceed to**: [CLI Arguments →](../01-command-line-arguments/readme.md)
 
 ---
 

@@ -93,5 +93,5 @@ In a professional environment, pulling a file isn't enough; you must prove it ha
 ---
 
 ## 🎯 Next Steps
-*   **[CHALLENGES](./CHALLENGES.md)**: Practice local artifact management.
-*   **[Container Orchestration](../../02-Container-Orchestration/README.md)**: Learning to package your artifacts into Docker.
+*   **[CHALLENGES](./challenges.md)**: Practice local artifact management.
+*   **[Container Orchestration](../../02-container-orchestration/readme.md)**: Learning to package your artifacts into Docker.

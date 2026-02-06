@@ -4,7 +4,7 @@
 
 In Go, there are no classes. Instead, we use **Structs** to define the shape of our data and **Methods** to define its behavior. This approach encourages composition over inheritance, leading to cleaner and more maintainable codebases.
 
-![Structs and Methods Diagram](./structs_and_methods_diagram.png)
+![Structs and Methods Diagram](./structs-and-methods-diagram.png)
 
 ## Table of Contents
 - [💼 The Automation Why: The Blueprint for Complexity](#-the-automation-why-the-blueprint-for-complexity)
@@ -248,4 +248,4 @@ A CLI tool reads a YAML config file into a struct.
 
 ---
 
-**Next Step**: [Interfaces →](../02-Interfaces/README.md)
+**Next Step**: [Interfaces →](../02-interfaces/readme.md)

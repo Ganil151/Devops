@@ -16,27 +16,27 @@ This level is organized into a tiered journey across **16 specialized modules**.
 
 ### 🌱 Phase 1: Foundations (The Core)
 
-#### 1️⃣ [01-Networking](./01-Phase-1/01-Networking/README.md)
+#### 1️⃣ [01-Networking](./01-phase-1/01-networking/readme.md)
 **Advanced Cloud Networking & VPC Architecture**
 - VPC fundamentals, subnetting, and CIDR blocks.
 - Peering, Transit Gateways, and Hybrid Connectivity.
 
-#### 2️⃣ [02-Linux](./01-Phase-1/02-Linux/README.md)
+#### 2️⃣ [02-Linux](./01-phase-1/02-linux/readme.md)
 **Intermediate System Administration & Observability**
 - Master systemd, signals, and process lifecycles.
 - SSH hardening and diagnostic tools.
 
-#### 3️⃣ [03-Runbooks-Procedures](./01-Phase-1/03-Runbooks-Procedures/README.md)
+#### 3️⃣ [03-Runbooks-Procedures](./01-phase-1/03-runbooks-procedures/readme.md)
 **Operational Excellence & Automated Remediation**
 - Writing production-grade SOPs and Runbooks.
 - Incident management workflows and self-healing patterns.
 
-#### 4️⃣ [04-Repository-Management](01-Phase-1/README.md)
+#### 4️⃣ [04-Repository-Management](01-phase-1/readme.md)
 **Enterprise Version Control & Branching Models**
 - Git, GitLab, Bitbucket, and multi-repo architectures.
 - Trunk-based development and GitFlow strategies.
 
-#### 5️⃣ [05-Databases](01-Phase-1/README.md)
+#### 5️⃣ [05-Databases](01-phase-1/readme.md)
 **Database DevOps & State Management**
 - PostgreSQL, MySQL, and Amazon RDS mastery.
 - NoSQL scaling with MongoDB, Redis, and DynamoDB.
@@ -45,17 +45,17 @@ This level is organized into a tiered journey across **16 specialized modules**.
 
 ### ⚙️ Phase 2: Core Skills (The Automation)
 
-#### 6️⃣ [01-Infrastructure-Automation](./02-Phase-2/01-Infrastructure-Automation/README.md)
+#### 6️⃣ [01-Infrastructure-Automation](./02-phase-2/01-infrastructure-automation/readme.md)
 **IaC & Configuration Management Mastery**
 - **Terraform**: Provisioning and State management.
 - **Ansible**: Config management and modular playbooks.
 
-#### 7️⃣ [02-Delivery-and-Governance](./02-Phase-2/02-Delivery-and-Governance/README.md)
+#### 7️⃣ [02-Delivery-and-Governance](./02-phase-2/02-delivery-and-governance/readme.md)
 **Advanced CI/CD & Policy Enforcement**
 - Secure pipelines and GitOps (ArgoCD/Flux).
 - Policy-as-Code and Automated Governance.
 
-#### 8️⃣ [03-Modern-Operations](./02-Phase-2/03-Modern-Operations/README.md)
+#### 8️⃣ [03-Modern-Operations](./02-phase-2/03-modern-operations/readme.md)
 **AI-Ops, Serverless & Edge Computing**
 - Serverless architecture and Edge Delivery (CDN).
 - AI-driven troubleshooting (Prompt Engineering for SRE).
@@ -64,32 +64,32 @@ This level is organized into a tiered journey across **16 specialized modules**.
 
 ### 🏛️ Phase 3: Advanced Concepts (The Orchestration)
 
-#### 9️⃣ [01-Container-Orchestration](./03-Phase-3/01-Container-Orchestration/README.md)
+#### 9️⃣ [01-Container-Orchestration](./03-phase-3/01-container-orchestration/readme.md)
 **Kubernetes (K8s) & Cluster Management**
 - Control plane architecture and secure networking.
 - Ingress, Service Mesh, and Cluster Administration.
 
-#### 🔟 [02-Observability-Foundations](./03-Phase-3/02-Observability-Foundations/README.md)
+#### 🔟 [02-Observability-Foundations](./03-phase-3/02-observability-foundations/readme.md)
 **Telemetry & Full-Stack Visibility**
 - Prometheus/Grafana (Metrics) & ELK/Loki (Logs).
 - Distributed Tracing with Jaeger and OpenTelemetry.
 
-#### 1️⃣1️⃣ [03-API-Gateways-Security](./03-Phase-3/03-API-Gateways-Security/README.md)
+#### 1️⃣1️⃣ [03-API-Gateways-Security](./03-phase-3/03-api-gateways-security/readme.md)
 **Traffic Management & Identity**
 - API Gateway architecture (Kong, Nginx, AWS).
 - OIDC, JWT, and mTLS security patterns.
 
-#### 1️⃣2️⃣ [04-MCP](./03-Phase-3/04-MCP/README.md)
+#### 1️⃣2️⃣ [04-MCP](./03-phase-3/04-mcp/readme.md)
 **Model Context Protocol for AI Agents**
 - Building agentic tool-servers for infrastructure.
 - MCP Ecosystem integration with K8s and Cloud.
 
-#### 1️⃣3️⃣ [05-Blockchain](./03-Phase-3/05-Blockchain/README.md)
+#### 1️⃣3️⃣ [05-Blockchain](./03-phase-3/05-blockchain/readme.md)
 **Web3 Infrastructure & Smart Contract CI/CD**
 - Node management (Ethereum/Geth/L2s).
 - Decentralized operations and infrastructure auditing.
 
-#### 1️⃣4️⃣ [06-FinOps](./03-Phase-3/06-FinOps/README.md)
+#### 1️⃣4️⃣ [06-FinOps](./03-phase-3/06-finops/readme.md)
 **Cloud Cost Optimization & Economics**
 - Cost allocation, Tagging, and Financial Governance.
 - Rightsizing and Reserved Instance optimization strategies.
@@ -117,24 +117,24 @@ By the end of this level, you will be able to:
 ## 📊 Recommended Learning Path
 
 ### Phase 1: Foundations (Weeks 1-4)
-1. **Networking** - [01-Networking](./01-Phase-1/01-Networking/README.md)
-2. **Linux** - [02-Linux](./01-Phase-1/02-Linux/README.md)
-3. **Runbooks** - [03-Runbooks-Procedures](./01-Phase-1/03-Runbooks-Procedures/README.md)
-4. **Repos** - [04-Repository-Management](01-Phase-1/README.md)
-5. **Databases** - [05-Databases](01-Phase-1/README.md)
+1. **Networking** - [01-Networking](./01-phase-1/01-networking/readme.md)
+2. **Linux** - [02-Linux](./01-phase-1/02-linux/readme.md)
+3. **Runbooks** - [03-Runbooks-Procedures](./01-phase-1/03-runbooks-procedures/readme.md)
+4. **Repos** - [04-Repository-Management](01-phase-1/readme.md)
+5. **Databases** - [05-Databases](01-phase-1/readme.md)
 
 ### Phase 2: Core Skills (Weeks 5-10)
-1. **IaC** - [01-Infrastructure-Automation](./02-Phase-2/01-Infrastructure-Automation/README.md)
-2. **Delivery** - [02-Delivery-and-Governance](./02-Phase-2/02-Delivery-and-Governance/README.md)
-3. **Operations** - [03-Modern-Operations](./02-Phase-2/03-Modern-Operations/README.md)
+1. **IaC** - [01-Infrastructure-Automation](./02-phase-2/01-infrastructure-automation/readme.md)
+2. **Delivery** - [02-Delivery-and-Governance](./02-phase-2/02-delivery-and-governance/readme.md)
+3. **Operations** - [03-Modern-Operations](./02-phase-2/03-modern-operations/readme.md)
 
 ### Phase 3: Advanced (Weeks 11-16)
-1. **K8s** - [01-Container-Orchestration](./03-Phase-3/01-Container-Orchestration/README.md)
-2. **Observability** - [02-Observability-Foundations](./03-Phase-3/02-Observability-Foundations/README.md)
-3. **Gateways** - [03-API-Gateways-Security](./03-Phase-3/03-API-Gateways-Security/README.md)
-4. **MCP** - [04-MCP](./03-Phase-3/04-MCP/README.md)
-5. **Blockchain** - [05-Blockchain](./03-Phase-3/05-Blockchain/README.md)
-6. **FinOps** - [06-FinOps](./03-Phase-3/06-FinOps/README.md)
+1. **K8s** - [01-Container-Orchestration](./03-phase-3/01-container-orchestration/readme.md)
+2. **Observability** - [02-Observability-Foundations](./03-phase-3/02-observability-foundations/readme.md)
+3. **Gateways** - [03-API-Gateways-Security](./03-phase-3/03-api-gateways-security/readme.md)
+4. **MCP** - [04-MCP](./03-phase-3/04-mcp/readme.md)
+5. **Blockchain** - [05-Blockchain](./03-phase-3/05-blockchain/readme.md)
+6. **FinOps** - [06-FinOps](./03-phase-3/06-finops/readme.md)
 
 ---
 
@@ -142,7 +142,7 @@ By the end of this level, you will be able to:
 
 Before starting this level, you should have completed:
 
-- **[01-Beginner](../01-Beginner/REFERENCE.md)** - Foundational DevOps knowledge
+- **[01-Beginner](../01-beginner/reference.md)** - Foundational DevOps knowledge
 - Basic understanding of Linux command line
 - Familiarity with Git and version control
 - Understanding of networking fundamentals
@@ -173,14 +173,14 @@ Most modules include curated YouTube lessons - look for `Youtube_Lessons.md` fil
 
 Each module contains interview questions, quizzes, real-life scenarios, and architecture diagrams.
 
-🔍 **Looking for structured Day-by-Day training?** Check out the [Labs](../05-Labs) directory for organized daily tasks and deep dives.
-🚀 **Cross-Platform Master Scripts:** Explore the [Trinity Suite](./01-Phase-1/03-Runbooks-Procedures/scripts/resource_monitor.py) for advanced system orchestration.
+🔍 **Looking for structured Day-by-Day training?** Check out the [Labs](../05-labs) directory for organized daily tasks and deep dives.
+🚀 **Cross-Platform Master Scripts:** Explore the [Trinity Suite](./01-phase-1/03-runbooks-procedures/scripts/resource-monitor.py) for advanced system orchestration.
 
 ---
 
-**Ready for the Enterprise?** Once you've mastered orchestration and automation, advance to the [Advanced Level](../03-Advanced/REFERENCE.md) to learn platform engineering, SRE practices, and enterprise architecture.
+**Ready for the Enterprise?** Once you've mastered orchestration and automation, advance to the [Advanced Level](../03-advanced/reference.md) to learn platform engineering, SRE practices, and enterprise architecture.
 
-**Need to review basics?** Return to [Beginner Level](../01-Beginner/REFERENCE.md) for foundational concepts.
+**Need to review basics?** Return to [Beginner Level](../01-beginner/reference.md) for foundational concepts.
 
 ---
 

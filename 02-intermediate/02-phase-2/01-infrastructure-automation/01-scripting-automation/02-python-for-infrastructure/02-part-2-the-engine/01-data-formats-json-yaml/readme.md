@@ -341,4 +341,4 @@ Before moving to the next module, ensure you can:
 
 **Score yourself**: 5+/6 = Ready to advance | <5 = Review exercises
 
-[⬅️ Back to File Ops](README.md) | [Next: API Mastery](README.md) ➡️
+[⬅️ Back to File Ops](readme.md) | [Next: API Mastery](readme.md) ➡️

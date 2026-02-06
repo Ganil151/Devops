@@ -70,9 +70,9 @@ By the end of this deep dive, you will be able to:
 
 | Part | Topic | Description |
 | :--- | :--- | :--- |
-| **[🟢 Part 1](./Part-01-Core-Fundamentals/01-Foundations-and-Variables/)** | **Core Fundamentals** | Beyond basics: Variable validation, data source chaining, and dependency graphs. |
-| **[🟡 Part 2](./Part-02-Modular-Architecture/01-Modules-and-Environment-Isolation/)** | **Modular Architecture** | Building the "LEGO blocks" of infra. Modules, scaling logic, and environment splitting. |
-| **[🔴 Part 3](./Part-003-Advanced-Workflows/01-Advanced-State-and-DRY-Patterns/)** | **Advanced Workflows** | Enterprise patterns: State Locking, Terragrunt, and refactoring techniques. |
+| **[🟢 Part 1](./part-01-core-fundamentals/01-foundations-and-variables/)** | **Core Fundamentals** | Beyond basics: Variable validation, data source chaining, and dependency graphs. |
+| **[🟡 Part 2](./part-02-modular-architecture/01-modules-and-environment-isolation/)** | **Modular Architecture** | Building the "LEGO blocks" of infra. Modules, scaling logic, and environment splitting. |
+| **[🔴 Part 3](./part-003-advanced-workflows/01-advanced-state-and-dry-patterns/)** | **Advanced Workflows** | Enterprise patterns: State Locking, Terragrunt, and refactoring techniques. |
 
 ---
 
@@ -100,9 +100,9 @@ To participate in the advanced labs:
 ## 🏢 Reference Library
 *Deep-dive documentation for at-a-glance problem solving.*
 
-*   **[State Management](./REFERENCE/Terraform-State-Management-Ref.md)**: Lifecycle, locking, remote backends, and advanced ops.
-*   **[Modular Architecture](./REFERENCE/Terraform-Modular-Architecture-Ref.md)**: Structure, pathing, versioning, and abstraction standards.
-*   **[Security & Compliance](./REFERENCE/Terraform-Security-Compliance-Ref.md)**: Secrets, OPA policies, and automated drift detection.
+*   **[State Management](./reference/terraform-state-management-ref.md)**: Lifecycle, locking, remote backends, and advanced ops.
+*   **[Modular Architecture](./reference/terraform-modular-architecture-ref.md)**: Structure, pathing, versioning, and abstraction standards.
+*   **[Security & Compliance](./reference/terraform-security-compliance-ref.md)**: Secrets, OPA policies, and automated drift detection.
 
 ---
 
@@ -114,4 +114,4 @@ To participate in the advanced labs:
 
 ---
 
-**Next Step**: Start with **[Part 1: Core Fundamentals](./Part-01-Core-Fundamentals/01-Foundations-and-Variables/)** 🚀
+**Next Step**: Start with **[Part 1: Core Fundamentals](./part-01-core-fundamentals/01-foundations-and-variables/)** 🚀

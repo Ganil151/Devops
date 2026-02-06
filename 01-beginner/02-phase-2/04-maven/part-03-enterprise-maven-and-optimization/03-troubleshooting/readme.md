@@ -95,4 +95,4 @@ mvn clean install
 
 The tools are mastered. Now it's time to build your own artifacts!
 
-Proceed to: **[Basic CI/CD](../../../05-Basic-CI-CD/README.md)** →
+Proceed to: **[Basic CI/CD](../../../05-basic-ci-cd/readme.md)** →

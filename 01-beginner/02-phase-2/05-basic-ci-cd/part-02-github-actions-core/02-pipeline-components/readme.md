@@ -98,4 +98,4 @@ strategy:
 
 The pipeline is logical. Now let's make it safe.
 
-Proceed to: **[Module 04: Quality & Security](../../Part-003-Advanced-Workflows/01-Security-and-Quality-Gates/README.md)** →
+Proceed to: **[Module 04: Quality & Security](../../part-003-advanced-workflows/01-security-and-quality-gates/readme.md)** →

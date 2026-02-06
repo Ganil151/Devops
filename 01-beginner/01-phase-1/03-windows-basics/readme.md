@@ -2,7 +2,7 @@
 
 > **"In Linux, everything is a file. In Windows, everything is an Object. If you treat PowerShell like Bash, you will fight the system; if you treat it like a .NET engine, you will dominate the enterprise."**
 
-![Windows Automation Architecture](Product Key Windows 2019.md)
+![Windows Automation Architecture](product-key-windows-2019.md)
 
 ---
 
@@ -108,11 +108,11 @@ flowchart LR
 
 ## 📂 Curriculum Roadmap
 
-1.  **[PowerShell Automation](./Part-1-PowerShell-Automation)**: The Core Engine (Objects, Pipes, Scripts).
-2.  **[WSL Integration](./Part-2-WSL-Linux-Integration)**: Bridging the gap (Running Linux on Windows).
-3.  **[Package Management](./Part-3-Package-Management)**: CLI-based software installs (Winget).
-4.  **[Server Administration](./Part-4-Server-Administration)**: Roles, Features, and Fleet Control.
-5.  **[Performance Tuning](./Part-7-Performance-Tuning)**: SRE-level Kernel and Registry optimization.
+1.  **[PowerShell Automation](./part-1-powershell-automation)**: The Core Engine (Objects, Pipes, Scripts).
+2.  **[WSL Integration](./part-2-wsl-linux-integration)**: Bridging the gap (Running Linux on Windows).
+3.  **[Package Management](./part-3-package-management)**: CLI-based software installs (Winget).
+4.  **[Server Administration](./part-4-server-administration)**: Roles, Features, and Fleet Control.
+5.  **[Performance Tuning](./part-7-performance-tuning)**: SRE-level Kernel and Registry optimization.
 
 ---
 
@@ -154,9 +154,9 @@ flowchart LR
 
 ---
 
-**Next Step**: Start with **[PowerShell Automation](./Part-1-PowerShell-Automation/README.md)**
+**Next Step**: Start with **[PowerShell Automation](./part-1-powershell-automation/readme.md)**
 
 
 ---
 ## 🧭 Additional Modules
-- [Part 6 System Auditing](Part-6-System-Auditing/README.md)
+- [Part 6 System Auditing](part-6-system-auditing/readme.md)

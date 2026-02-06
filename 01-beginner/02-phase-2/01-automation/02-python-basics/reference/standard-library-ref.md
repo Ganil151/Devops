@@ -64,4 +64,4 @@ While Python's external ecosystem (PyPI) is massive, a Senior DevOps engineer pr
 5. **How does the `atexit` module help with idempotent resource cleanup?**
 
 ---
-**Next Step**: [Python Automation Patterns →](./Python-Automation-Patterns-Ref.md)
+**Next Step**: [Python Automation Patterns →](./python-automation-patterns-ref.md)

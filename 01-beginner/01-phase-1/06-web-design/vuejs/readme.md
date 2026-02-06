@@ -5,15 +5,15 @@
 
 ## 🗺️ Learning Roadmap
 
-### [01-Core-Syntax](./01-Core-Syntax/)
+### [01-Core-Syntax](./01-core-syntax/)
 - **Concepts**: Directives, SFCs, Composition API.
 - **Goal**: Build your first reactive component.
 
-### [02-Vue-Router](./02-Vue-Router/)
+### [02-Vue-Router](./02-vue-router/)
 - **Concepts**: Components as pages, Guarded routes.
 - **Goal**: Navigate through your specialized Vue app.
 
-### [03-State-Pinia](./03-State-Pinia/)
+### [03-State-Pinia](./03-state-pinia/)
 - **Concepts**: Reactive stores, Persisting data.
 - **Goal**: Share logic across your entire dashboard.
 

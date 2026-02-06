@@ -97,6 +97,6 @@ df -i
 ---
 
 ## 🔗 Related Resources
-- [Essential Linux Commands](../03-Commands/README.md)
-- [Linux Permissions](../04-Permissions/README.md)
-- [System Architecture](../01-Introduction/README.md)
+- [Essential Linux Commands](../03-commands/readme.md)
+- [Linux Permissions](../04-permissions/readme.md)
+- [System Architecture](../01-introduction/readme.md)

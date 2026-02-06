@@ -124,5 +124,5 @@ pipeline {
 ---
 
 ## 🎯 Next Steps
-*   **[GitHub Actions Foundations](../../02-GitHub-Actions-Foundations/README.md)**: Learning the cloud-native alternative to Jenkins.
-*   **[GitLab CI Basics](../../03-GitLab-CI-Basics/README.md)**: Handling the entire lifecycle in one platform.
+*   **[GitHub Actions Foundations](../../02-github-actions-foundations/readme.md)**: Learning the cloud-native alternative to Jenkins.
+*   **[GitLab CI Basics](../../03-gitlab-ci-basics/readme.md)**: Handling the entire lifecycle in one platform.

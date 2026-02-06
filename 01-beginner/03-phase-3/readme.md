@@ -37,27 +37,27 @@
 
 ## 🗺️ Phase 3 Modules
 
-### 🏗️ [01. CI/CD Foundations](./01-CI-CD-Foundations/README.md)
+### 🏗️ [01. CI/CD Foundations](./01-ci-cd-foundations/readme.md)
 *Mastering the delivery pipeline: Jenkins, GitHub Actions, and GitLab CI.*
 *   **The Mission**: Turning code commits into production-ready artifacts without human intervention.
 *   **Skills**: DAGs, Parallelization, and Pipeline-as-Code.
 
-### 🐳 [02. Container Orchestration](./02-Container-Orchestration/README.md)
+### 🐳 [02. Container Orchestration](./02-container-orchestration/readme.md)
 *Running applications in isolated, scalable environments.*
 *   **The Mission**: Packaging applications so they run exactly the same on your laptop as they do in the Cloud.
 *   **Skills**: Multi-stage builds, Self-healing clusters, and Volume persistence.
 
-### 💰 [03. FinOps](./03-FinOps/README.md)
+### 💰 [03. FinOps](./03-finops/readme.md)
 *The intersection of Cloud, Finance, and Engineering.*
 *   **The Mission**: Ensuring the Cloud bill doesn't bankrupt the company through "Ghost Resources" and over-provisioning.
 *   **Skills**: Cost Attribution, Unit Economics, and Automated "Reapers."
 
-### 🔌 [04. MCP (Model Context Protocol)](./04-MCP/README.md)
+### 🔌 [04. MCP (Model Context Protocol)](./04-mcp/readme.md)
 *Modern agentic ecosystems and server architecture.*
 *   **The Mission**: Building the infrastructure that allows AI agents to safely interact with your databases and filesystems.
 *   **Skills**: JSON-RPC, Prompt Grounding, and Agentic Governance.
 
-### ⛓️ [05. Blockchain Infrastructure](./05-Blockchain/README.md)
+### ⛓️ [05. Blockchain Infrastructure](./05-blockchain/readme.md)
 *Decentralized systems and node management.*
 *   **The Mission**: Managing the nodes that power the decentralized web.
 *   **Skills**: P2P Gossip protocols, Consensus logic, and NVMe-optimized storage.
@@ -73,4 +73,4 @@ By the end of Phase 3, you will move beyond being a "user of tools" to a **desig
 In Phase 3, we adopt the iron-clad rule of the Senior SRE: **Automate yourself out of a job.** If you have to log into a server to fix a configuration, the system design has failed. We fix the **Code**, not the **Server**.
 
 ---
-*Next Step: Dive into [01. CI/CD Foundations](./01-CI-CD-Foundations/README.md) to build your first software factory.*
+*Next Step: Dive into [01. CI/CD Foundations](./01-ci-cd-foundations/readme.md) to build your first software factory.*

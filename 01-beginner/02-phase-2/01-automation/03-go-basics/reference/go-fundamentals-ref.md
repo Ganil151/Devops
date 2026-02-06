@@ -59,4 +59,4 @@ fmt.Println(*p) // output: 10
 5. **How does the Go compiler handle "Unused Variables" and "Unused Imports"?**
 
 ---
-**Next Step**: [Go Data Modeling & Interfaces →](./Go-Data-Modeling-Ref.md)
+**Next Step**: [Go Data Modeling & Interfaces →](./go-data-modeling-ref.md)

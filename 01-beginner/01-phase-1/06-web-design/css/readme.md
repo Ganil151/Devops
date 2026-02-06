@@ -5,15 +5,15 @@
 
 ## 🗺️ Tooling Roadmap
 
-### [Bootstrap](./Bootstrap/README.md)
+### [Bootstrap](./bootstrap/readme.md)
 - **Concept**: Pre-built component library (Buttons, Modals, Navbars).
 - **Best For**: Rapidly building "admin-style" interfaces with standard layouts.
 
-### [TailwindCSS](README.md)
+### [TailwindCSS](readme.md)
 - **Concept**: Utility-first CSS.
 - **Best For**: Custom themes and highly optimized designs.
 
-### [Sass](./Sass/README.md)
+### [Sass](./sass/readme.md)
 - **Concept**: CSS Pre-processor (Variables, Nesting, Mixins).
 - **Goal**: Add logic and programmatic structures to standard CSS.
 
@@ -27,4 +27,4 @@
 
 ---
 ## 🧭 Additional Modules
-- [TailwindCSS](TailwindCSS/README.md)
+- [TailwindCSS](tailwindcss/readme.md)

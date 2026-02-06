@@ -46,7 +46,7 @@ By the end of this module, you will:
 
 The key difference lies in the **Kernel**. While VMs virtualize the entire hardware (including a heavy Guest OS), containers virtualize the **Operating System**.
 
-![Docker vs VM](../../../images/virtualVsDocker.png)
+![Docker vs VM](../../../images/virtualvsdocker.png)
 
 | Feature | Virtual Machines (VMs) | Docker Containers |
 | :--- | :--- | :--- |
@@ -62,7 +62,7 @@ The key difference lies in the **Kernel**. While VMs virtualize the entire hardw
 
 Docker follows a **Client-Server** pattern. You (the user) talk to the **Client**, which sends commands to the **Daemon** (the engine behind the scenes).
 
-![Docker Architecture](../../../images/dockerArch.png)
+![Docker Architecture](../../../images/dockerarch.png)
 
 ```mermaid
 graph LR
@@ -186,4 +186,4 @@ This ensures that your environment is always predictable, testable, and version-
 
 The engine is running. Now let's look at the cargo.
 
-Proceed to: **[Module 02: Images & Containers](../02-Images-and-Containers/README.md)** →
+Proceed to: **[Module 02: Images & Containers](../02-images-and-containers/readme.md)** →

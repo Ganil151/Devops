@@ -159,4 +159,4 @@ Never hardcode your passwords or API keys inside your `docker-compose.yml`. If y
 
 The orchestra is playing. Now let's learn how to make sure they never lose their memory.
 
-Proceed to: **[Module 02: Volumes](../02-Volumes/README.md)** →
+Proceed to: **[Module 02: Volumes](../02-volumes/readme.md)** →

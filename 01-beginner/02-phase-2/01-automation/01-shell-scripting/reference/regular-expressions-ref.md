@@ -65,4 +65,4 @@ grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}T' production.log
 5. **Describe how you would use a "Negative Lookahead" to find lines that contain "ERROR" but NOT "Timeout".**
 
 ---
-**Back to foundations**: [Shell Fundamentals →](./Shell-Fundamentals-Ref.md)
+**Back to foundations**: [Shell Fundamentals →](./shell-fundamentals-ref.md)

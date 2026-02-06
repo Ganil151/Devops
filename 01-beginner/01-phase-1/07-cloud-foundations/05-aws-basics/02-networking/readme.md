@@ -188,4 +188,4 @@ Answer: A) Terminate all instances inside it</b>
 
 ---
 ## 🧭 Additional Modules
-- [VPC Networking](VPC-Networking/README.md)
+- [VPC Networking](vpc-networking/readme.md)

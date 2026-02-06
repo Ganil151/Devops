@@ -40,4 +40,4 @@ Create a Flask app that:
 2. Accepts a GET to `/api/v1/node/<int:node_id>`.
 
 ---
-**Next Step**: [02-Request-and-Response](../02-Request-and-Response/README.md)
+**Next Step**: [02-Request-and-Response](../02-request-and-response/readme.md)

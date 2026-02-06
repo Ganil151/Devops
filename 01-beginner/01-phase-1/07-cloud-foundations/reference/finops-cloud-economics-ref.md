@@ -57,4 +57,4 @@ Most cloud providers charge **$0.00** to bring data in (Ingress), but up to **$0
 5. **What is the significance of the "Amortized Cost" vs "Unblended Cost" in billing reports?**
 
 ---
-**Back to foundations**: [Cloud Computing Models →](./Cloud-Computing-Models-Ref.md)
+**Back to foundations**: [Cloud Computing Models →](./cloud-computing-models-ref.md)

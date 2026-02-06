@@ -4,7 +4,7 @@
 
 Go's `regexp` package implements the **RE2** syntax, which guarantees linear time execution. This avoids the "catastrophic backtracking" issues found in other languages, making Go regex safe to run on untrusted user input—a critical feature for secure web services.
 
-![Regular Expressions for DevOps](./go_regex_hero.png)
+![Regular Expressions for DevOps](./go-regex-hero.png)
 
 ## Table of Contents
 
@@ -202,4 +202,4 @@ An automation tool needed to find all variables in a config file formatted like 
 
 ---
 
-**Next Step**: [Part 03: Systems Drafting - Command Line Flags →](../../Part-03-Go-Systems-Drafting/01-Command-Line-Flags/README.md)
+**Next Step**: [Part 03: Systems Drafting - Command Line Flags →](../../part-03-go-systems-drafting/01-command-line-flags/readme.md)

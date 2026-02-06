@@ -65,4 +65,4 @@ Instead of a local file, state is stored in a shared location.
 5. **Describe a scenario where you would use `terraform state mv` instead of changing the resource name in code.**
 
 ---
-**Next Step**: [Modular Architecture & Abstraction →](./Terraform-Modular-Architecture-Ref.md)
+**Next Step**: [Modular Architecture & Abstraction →](./terraform-modular-architecture-ref.md)

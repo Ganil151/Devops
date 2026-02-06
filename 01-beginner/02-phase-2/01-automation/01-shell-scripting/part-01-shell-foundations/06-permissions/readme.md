@@ -296,4 +296,4 @@ touch secret.log
 
 Now that you've secured your files, it's time to put everything together and start building real automation!
 
-Proceed to: **[Basic Variables](README.md)** →
+Proceed to: **[Basic Variables](readme.md)** →

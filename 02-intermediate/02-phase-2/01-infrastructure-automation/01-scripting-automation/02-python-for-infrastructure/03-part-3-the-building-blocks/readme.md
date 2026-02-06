@@ -73,11 +73,11 @@ graph TD
 
 ### 📖 Table of Contents
 
-1. **[AWS Automation: Boto3](./01-AWS-Automation-Boto3/)**: The foundation of cloud automation.
-2. **[Serverless and Lambda](./02-Serverless-and-Lambda/)**: Code that triggers on events.
-3. **[Container and K8s SDKs](./03-Container-and-K8s-SDKs/)**: Python-native orchestration.
-4. **[GCP Automation SDK](./04-GCP-Automation-SDK/)**: Navigating the Google Cloud landscape.
-5. **[Azure Automation SDK](./05-Azure-Automation-SDK/)**: Orchestrating Azure resources at scale.
+1. **[AWS Automation: Boto3](./01-aws-automation-boto3/)**: The foundation of cloud automation.
+2. **[Serverless and Lambda](./02-serverless-and-lambda/)**: Code that triggers on events.
+3. **[Container and K8s SDKs](./03-container-and-k8s-sdks/)**: Python-native orchestration.
+4. **[GCP Automation SDK](./04-gcp-automation-sdk/)**: Navigating the Google Cloud landscape.
+5. **[Azure Automation SDK](./05-azure-automation-sdk/)**: Orchestrating Azure resources at scale.
 
 ---
 
@@ -130,4 +130,4 @@ Whether you're in AWS, GCP, or Azure, avoid hardcoding keys. Always use **Manage
 
 You can now build and control the multi-cloud. But how do you know it's working properly?
 
-**Proceed to**: [Part 4: The Safety Net (Testing & Reliability) →](README.md)
+**Proceed to**: [Part 4: The Safety Net (Testing & Reliability) →](readme.md)

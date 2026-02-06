@@ -111,5 +111,5 @@ Sometimes, due to network issues, a source will send the same webhook twice. Thi
 
 ---
 
-Proceed to: **[03. Advanced Event-Driven Pipelines](README.md)** →
+Proceed to: **[03. Advanced Event-Driven Pipelines](readme.md)** →
  Node: Moving to high-scale asynchronous orchestration.

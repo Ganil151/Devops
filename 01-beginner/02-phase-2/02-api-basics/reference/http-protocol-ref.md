@@ -250,4 +250,4 @@ response = requests.get(url, headers=headers)
 
 ---
 
-**Next Step**: [REST Architecture Principles →](./REST-Architecture-Ref.md)
+**Next Step**: [REST Architecture Principles →](./rest-architecture-ref.md)

@@ -2,7 +2,7 @@
 
 > **"If JSON is the language of APIs, YAML is the language of Infrastructure. Every Kubernetes manifest, Ansible playbook, and Docker Compose file speaks YAML. Master this, and you master Infrastructure as Code."**
 
-![YAML Configuration Flow](../assets/yaml_config_flow.png)
+![YAML Configuration Flow](../assets/yaml-config-flow.png)
 
 ---
 
@@ -896,7 +896,7 @@ def check_for_tabs(filepath: str) -> bool:
 
 Now that you've mastered YAML, you're ready to learn how to make your scripts configurable using environment variables.
 
-**Proceed to**: [Environment Variables →](../../Part-03-Python-Systems-Drafting/02-Environment-Variables/README.md)
+**Proceed to**: [Environment Variables →](../../part-03-python-systems-drafting/02-environment-variables/readme.md)
 
 ---
 

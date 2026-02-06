@@ -60,4 +60,4 @@ Tailwind CSS is a utility-first CSS framework packed with classes that can be co
 - **Precedence**: Remember that Tailwind utilities always have higher specificity than base CSS if used correctly; avoid using `!important` unless absolutely necessary.
 
 ---
-**Next Step**: [Back to Web Design Best Practices →](./Web-Design-Best-Practices-Ref.md)
+**Next Step**: [Back to Web Design Best Practices →](./web-design-best-practices-ref.md)

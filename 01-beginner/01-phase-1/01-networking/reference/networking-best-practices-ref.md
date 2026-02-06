@@ -64,4 +64,4 @@ Network reliability is the foundation of all high-availability systems. These be
 - [ ] Are SSL certificates automatically renewed (e.g., via Let's Encrypt)?
 
 ---
-**Next Step**: [Network Troubleshooting Playbook →](./Network-Troubleshooting-Ref.md)
+**Next Step**: [Network Troubleshooting Playbook →](./network-troubleshooting-ref.md)

@@ -717,4 +717,4 @@ http {
 
 ---
 
-**Next Step**: [Nginx Troubleshooting →](./Nginx-Troubleshooting-Ref.md)
+**Next Step**: [Nginx Troubleshooting →](./nginx-troubleshooting-ref.md)

@@ -58,36 +58,36 @@
 +### 🔹 Part 1: Python Foundations (The Engine)
 +*Junior, build your first automation tools.*
 +
-+*   **[01. Fundamentals](./Part-01-Python-Foundations/01-Fundamentals/README.md)**: Syntax, Types, and PEP 8.
-+*   **[02. Control Flow](./Part-01-Python-Foundations/02-Control-Flow/README.md)**: Decision logic.
-+*   **[03. Iterative Logic](./Part-01-Python-Foundations/03-Iterative-Logic-and-Loops/README.md)**: The Inventory Loop.
-+*   **[04. Data Structures](./Part-01-Python-Foundations/04-Data-Structures/README.md)**: Managing server lists.
-+*   **[05. Error Handling](./Part-01-Python-Foundations/05-Error-Handling/README.md)**: Fault-tolerant code.
-+*   **[06. File I/O](./Part-01-Python-Foundations/06-File-IO-DevOps/README.md)**: Reading logs and configs.
-+*   **[07. Functions & Modules](./Part-01-Python-Foundations/07-Functions-and-Modules/README.md)**: Reusable automation.
-+*   **[08. Cloud Automation (Boto3)](./Part-01-Python-Foundations/08-Cloud-Automation-Boto3/README.md)**: Managing AWS.
++*   **[01. Fundamentals](./part-01-python-foundations/01-fundamentals/readme.md)**: Syntax, Types, and PEP 8.
++*   **[02. Control Flow](./part-01-python-foundations/02-control-flow/readme.md)**: Decision logic.
++*   **[03. Iterative Logic](./part-01-python-foundations/03-iterative-logic-and-loops/readme.md)**: The Inventory Loop.
++*   **[04. Data Structures](./part-01-python-foundations/04-data-structures/readme.md)**: Managing server lists.
++*   **[05. Error Handling](./part-01-python-foundations/05-error-handling/readme.md)**: Fault-tolerant code.
++*   **[06. File I/O](./part-01-python-foundations/06-file-io-devops/readme.md)**: Reading logs and configs.
++*   **[07. Functions & Modules](./part-01-python-foundations/07-functions-and-modules/readme.md)**: Reusable automation.
++*   **[08. Cloud Automation (Boto3)](./part-01-python-foundations/08-cloud-automation-boto3/readme.md)**: Managing AWS.
 +
 +### 🛠️ Part 2: Architecture & Advanced Tooling
 +*Modularity and Environment isolation.*
 +
-+*   **[01. Pathlib](./Part-02-Python-Architecture/01-Pathlib-Modern-Files/README.md)**: Modern path manipulation.
-+*   **[02. JSON Operations](./Part-02-Python-Architecture/02-JSON-Handling/README.md)**: Parsing APIs.
-+*   **[03. YAML Operations](./Part-02-Python-Architecture/03-YAML-Handling/README.md)**: K8s and Ansible logic.
-+*   **[04. Testing & QA](./Part-02-Python-Architecture/04-Testing-and-QA/README.md)**: Pytest and Mocking.
-+*   **[05. Virtual Environments](./Part-02-Python-Architecture/05-Virtual-Environments/README.md)**: Project isolation.
-+*   **[06. Package Management](./Part-02-Python-Architecture/06-Package-Management/README.md)**: Pip and requirements.
++*   **[01. Pathlib](./part-02-python-architecture/01-pathlib-modern-files/readme.md)**: Modern path manipulation.
++*   **[02. JSON Operations](./part-02-python-architecture/02-json-handling/readme.md)**: Parsing APIs.
++*   **[03. YAML Operations](./part-02-python-architecture/03-yaml-handling/readme.md)**: K8s and Ansible logic.
++*   **[04. Testing & QA](./part-02-python-architecture/04-testing-and-qa/readme.md)**: Pytest and Mocking.
++*   **[05. Virtual Environments](./part-02-python-architecture/05-virtual-environments/readme.md)**: Project isolation.
++*   **[06. Package Management](./part-02-python-architecture/06-package-management/readme.md)**: Pip and requirements.
 +
 +### 🚀 Part 3: Systems Drafting (The Automation)
 +*Interacting with the OS and building production tools.*
 +
-+*   **[03. Subprocess Module](./Part-03-Python-Systems-Drafting/03-Subprocess-Execution/README.md)**: Controlling the Shell.
-+*   **[04. Logging Basics](README.md)**: The flight recorder.
-+*   **[08. Capstone Script](./Part-03-Python-Systems-Drafting/08-Capstone-Script/README.md)**: The Health Monitor.
++*   **[03. Subprocess Module](./part-03-python-systems-drafting/03-subprocess-execution/readme.md)**: Controlling the Shell.
++*   **[04. Logging Basics](readme.md)**: The flight recorder.
++*   **[08. Capstone Script](./part-03-python-systems-drafting/08-capstone-script/readme.md)**: The Health Monitor.
 +
 +---
 +
 +## 🏆 Graduation Challenges
-+Ready to prove your skills? Complete the **[Capstone Challenges](./CHALLENGES.md)**.
++Ready to prove your skills? Complete the **[Capstone Challenges](./challenges.md)**.
 +
 +---
 +**Maintained by the DevOps Academy**

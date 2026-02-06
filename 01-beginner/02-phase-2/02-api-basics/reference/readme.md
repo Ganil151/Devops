@@ -13,7 +13,7 @@ This reference library provides in-depth technical documentation for API develop
 
 ## 🗂️ Reference Documents
 
-### 🌐 [HTTP Protocol Reference](./HTTP-Protocol-Ref.md)
+### 🌐 [HTTP Protocol Reference](./http-protocol-ref.md)
 **The Foundation of Web Communication**
 
 Master the HTTP protocol from first principles to advanced patterns:
@@ -28,7 +28,7 @@ Master the HTTP protocol from first principles to advanced patterns:
 
 ---
 
-### 🏛️ [REST Architecture Reference](./REST-Architecture-Ref.md)
+### 🏛️ [REST Architecture Reference](./rest-architecture-ref.md)
 **Representational State Transfer Principles**
 
 Design scalable, maintainable APIs following REST constraints:
@@ -43,7 +43,7 @@ Design scalable, maintainable APIs following REST constraints:
 
 ---
 
-### 🔐 [API Authentication & Security Reference](./API-Authentication-Ref.md)
+### 🔐 [API Authentication & Security Reference](./api-authentication-ref.md)
 **Securing Machine-to-Machine Communication**
 
 Implement robust authentication and authorization:
@@ -61,7 +61,7 @@ Implement robust authentication and authorization:
 
 ---
 
-### ⚠️ [API Error Handling & Status Codes Reference](./API-Error-Handling-Ref.md)
+### ⚠️ [API Error Handling & Status Codes Reference](./api-error-handling-ref.md)
 **Graceful Failure in Distributed Systems**
 
 Handle errors professionally and informatively:
@@ -76,7 +76,7 @@ Handle errors professionally and informatively:
 
 ---
 
-### 🏆 [API Best Practices Reference](./API-Best-Practices-Ref.md)
+### 🏆 [API Best Practices Reference](./api-best-practices-ref.md)
 **Production-Grade API Design and Implementation**
 
 Build APIs that scale, perform, and delight developers:
@@ -93,7 +93,7 @@ Build APIs that scale, perform, and delight developers:
 
 ---
 
-### 🧪 [API Testing & DevOps Integration Reference](./API-Testing-DevOps-Ref.md)
+### 🧪 [API Testing & DevOps Integration Reference](./api-testing-devops-ref.md)
 **From Development to Production**
 
 Test APIs comprehensively and integrate into CI/CD:
@@ -130,9 +130,9 @@ Test APIs comprehensively and integrate into CI/CD:
 ### Path 1: API Fundamentals (Beginner)
 **Goal**: Understand HTTP and basic API concepts
 
-1. [HTTP Protocol Reference](./HTTP-Protocol-Ref.md) - Sections: Request/Response Anatomy, Methods, Status Codes
-2. [REST Architecture Reference](./REST-Architecture-Ref.md) - Sections: REST Constraints, Resource Design
-3. [Error Handling Reference](./API-Error-Handling-Ref.md) - Sections: 2xx, 4xx, 5xx Status Codes
+1. [HTTP Protocol Reference](./http-protocol-ref.md) - Sections: Request/Response Anatomy, Methods, Status Codes
+2. [REST Architecture Reference](./rest-architecture-ref.md) - Sections: REST Constraints, Resource Design
+3. [Error Handling Reference](./api-error-handling-ref.md) - Sections: 2xx, 4xx, 5xx Status Codes
 
 **Estimated Time**: 4-6 hours
 
@@ -141,10 +141,10 @@ Test APIs comprehensively and integrate into CI/CD:
 ### Path 2: API Security (Intermediate)
 **Goal**: Secure APIs in production
 
-1. [HTTP Protocol Reference](./HTTP-Protocol-Ref.md) - Section: HTTPS vs HTTP
-2. [Authentication Reference](./API-Authentication-Ref.md) - All sections
-3. [Error Handling Reference](./API-Error-Handling-Ref.md) - Sections: 401, 403, Security Best Practices
-4. [Testing Reference](./API-Testing-DevOps-Ref.md) - Section: Security Testing
+1. [HTTP Protocol Reference](./http-protocol-ref.md) - Section: HTTPS vs HTTP
+2. [Authentication Reference](./api-authentication-ref.md) - All sections
+3. [Error Handling Reference](./api-error-handling-ref.md) - Sections: 401, 403, Security Best Practices
+4. [Testing Reference](./api-testing-devops-ref.md) - Section: Security Testing
 
 **Estimated Time**: 6-8 hours
 
@@ -153,10 +153,10 @@ Test APIs comprehensively and integrate into CI/CD:
 ### Path 3: Production-Ready APIs (Advanced)
 **Goal**: Build resilient, scalable APIs
 
-1. [REST Architecture Reference](./REST-Architecture-Ref.md) - Sections: Advanced Patterns, Versioning
-2. [Error Handling Reference](./API-Error-Handling-Ref.md) - Sections: Error Response Design, Circuit Breakers
-3. [Testing Reference](./API-Testing-DevOps-Ref.md) - Sections: Testing Pyramid, CI/CD Integration, Performance Testing
-4. [Authentication Reference](./API-Authentication-Ref.md) - Sections: OAuth 2.0, mTLS
+1. [REST Architecture Reference](./rest-architecture-ref.md) - Sections: Advanced Patterns, Versioning
+2. [Error Handling Reference](./api-error-handling-ref.md) - Sections: Error Response Design, Circuit Breakers
+3. [Testing Reference](./api-testing-devops-ref.md) - Sections: Testing Pyramid, CI/CD Integration, Performance Testing
+4. [Authentication Reference](./api-authentication-ref.md) - Sections: OAuth 2.0, mTLS
 
 **Estimated Time**: 8-12 hours
 
@@ -165,10 +165,10 @@ Test APIs comprehensively and integrate into CI/CD:
 ### Path 4: DevOps Integration (Specialized)
 **Goal**: Integrate APIs into DevOps workflows
 
-1. [Testing Reference](./API-Testing-DevOps-Ref.md) - All sections
-2. [Error Handling Reference](./API-Error-Handling-Ref.md) - Sections: Retry Logic, Exponential Backoff
-3. [REST Architecture Reference](./REST-Architecture-Ref.md) - Sections: Idempotency, Health Checks
-4. [HTTP Protocol Reference](./HTTP-Protocol-Ref.md) - Sections: DevOps Best Practices
+1. [Testing Reference](./api-testing-devops-ref.md) - All sections
+2. [Error Handling Reference](./api-error-handling-ref.md) - Sections: Retry Logic, Exponential Backoff
+3. [REST Architecture Reference](./rest-architecture-ref.md) - Sections: Idempotency, Health Checks
+4. [HTTP Protocol Reference](./http-protocol-ref.md) - Sections: DevOps Best Practices
 
 **Estimated Time**: 6-8 hours
 
@@ -179,28 +179,28 @@ Test APIs comprehensively and integrate into CI/CD:
 ### Common Scenarios
 
 **"My API call is failing with 401"**
-→ [Authentication Reference](./API-Authentication-Ref.md) + [Error Handling Reference](./API-Error-Handling-Ref.md#401-unauthorized)
+→ [Authentication Reference](./api-authentication-ref.md) + [Error Handling Reference](./api-error-handling-ref.md#401-unauthorized)
 
 **"How do I implement retry logic?"**
-→ [Error Handling Reference](./API-Error-Handling-Ref.md#client-side-error-handling)
+→ [Error Handling Reference](./api-error-handling-ref.md#client-side-error-handling)
 
 **"What's the difference between PUT and PATCH?"**
-→ [HTTP Protocol Reference](./HTTP-Protocol-Ref.md#http-methods) + [REST Architecture Reference](./REST-Architecture-Ref.md#http-method-mapping)
+→ [HTTP Protocol Reference](./http-protocol-ref.md#http-methods) + [REST Architecture Reference](./rest-architecture-ref.md#http-method-mapping)
 
 **"How do I secure my API?"**
-→ [Authentication Reference](./API-Authentication-Ref.md)
+→ [Authentication Reference](./api-authentication-ref.md)
 
 **"How do I test my API in CI/CD?"**
-→ [Testing Reference](./API-Testing-DevOps-Ref.md#cicd-integration)
+→ [Testing Reference](./api-testing-devops-ref.md#cicd-integration)
 
 **"What status code should I return?"**
-→ [Error Handling Reference](./API-Error-Handling-Ref.md)
+→ [Error Handling Reference](./api-error-handling-ref.md)
 
 **"How do I design RESTful endpoints?"**
-→ [REST Architecture Reference](./REST-Architecture-Ref.md#restful-resource-design)
+→ [REST Architecture Reference](./rest-architecture-ref.md#restful-resource-design)
 
 **"How do I handle rate limiting?"**
-→ [Error Handling Reference](./API-Error-Handling-Ref.md#429-too-many-requests) + [Authentication Reference](./API-Authentication-Ref.md#rate-limiting)
+→ [Error Handling Reference](./api-error-handling-ref.md#429-too-many-requests) + [Authentication Reference](./api-authentication-ref.md#rate-limiting)
 
 ---
 

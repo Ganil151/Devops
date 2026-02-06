@@ -102,4 +102,4 @@ my-enterprise-app/
 
 The folders are ready. Now let's look at the brain that controls them.
 
-Proceed to: **[03-POM-Configuration](../03-POM-Configuration/README.md)** →
+Proceed to: **[03-POM-Configuration](../03-pom-configuration/readme.md)** →

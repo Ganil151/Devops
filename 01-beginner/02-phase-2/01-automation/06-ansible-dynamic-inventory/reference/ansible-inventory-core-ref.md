@@ -68,4 +68,4 @@ ansible web -i my_inv.yml -m ping
 5. **How does Ansible handle SSH credentials for hosts discovered via a dynamic plugin?**
 
 ---
-**Next Step**: [Cloud Inventory Plugins (AWS/Azure/GCP) →](./Ansible-Cloud-Resource-Ref.md)
+**Next Step**: [Cloud Inventory Plugins (AWS/Azure/GCP) →](./ansible-cloud-resource-ref.md)

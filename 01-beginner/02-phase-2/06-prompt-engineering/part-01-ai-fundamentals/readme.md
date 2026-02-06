@@ -7,14 +7,14 @@
 In this part, we explore the fundamental mechanics of Large Language Models (LLMs). We move beyond simple questions and learn how to construct **Structured Prompts** using proven frameworks. We also build your professional **Prompt Toolkit**—a collection of reusable personas and instructions for daily DevOps tasks.
 
 ## Core Concept: Tokens & Probabilities
-**[REFERENCE: LLM Architecture](../REFERENCE/LLM-Architecture-Internals-Ref.md)**
+**[REFERENCE: LLM Architecture](../reference/llm-architecture-internals-ref.md)**
 
 LLMs do not understand English; they understand **Tokens**.
 - **Tokenization**: "DevOps" becomes two integers (e.g., `4521`, `9912`).
 - **Probabilistic Nature**: The model predicts the *next likely token*. It does not "Know" facts; it knows "Correlations".
 - **Implication**: This is why simple prompts fail on math. They are predicting text patterns, not calculating.
 
-> See **[LLM-Architecture-Internals-Ref.md](../REFERENCE/LLM-Architecture-Internals-Ref.md)** for the visualizing the Transformer Attention mechanism.
+> See **[LLM-Architecture-Internals-Ref.md](../reference/llm-architecture-internals-ref.md)** for the visualizing the Transformer Attention mechanism.
 
 ---
 
@@ -49,8 +49,8 @@ By the end of this part, you will:
 
 ## 🗺️ Included Modules
 
-1. **[01-Foundations-and-Mental-Models](./01-Foundations-and-Mental-Models/README.md)**: How LLMs "think" (probabilities) and how to guide them.
-2. **[02-Prompt-Toolkit](./02-Prompt-Toolkit/README.md)**: Your personal library of high-fidelity prompts.
+1. **[01-Foundations-and-Mental-Models](./01-foundations-and-mental-models/readme.md)**: How LLMs "think" (probabilities) and how to guide them.
+2. **[02-Prompt-Toolkit](./02-prompt-toolkit/readme.md)**: Your personal library of high-fidelity prompts.
 
 ---
 
@@ -62,4 +62,4 @@ By the end of this part, you will:
 
 ---
 
-**Next Step**: Start with **[01-Foundations-and-Mental-Models](./01-Foundations-and-Mental-Models/README.md)** 🚀
+**Next Step**: Start with **[01-Foundations-and-Mental-Models](./01-foundations-and-mental-models/readme.md)** 🚀

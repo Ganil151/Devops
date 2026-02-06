@@ -2,7 +2,7 @@
 
 > **"Code is static, but environments are dynamic. If you hardcode credentials or a URL, you've built a fragile script. If you use environment variables, you've built a portable tool."**
 
-![Environment Variables](env_config_demo.py)
+![Environment Variables](env-config-demo.py)
 
 ---
 
@@ -768,7 +768,7 @@ repos:
 
 Now that you can manage configuration securely, you're ready to learn how to build command-line interfaces.
 
-**Proceed to**: [CLI Arguments →](README.md)
+**Proceed to**: [CLI Arguments →](readme.md)
 
 ---
 

@@ -152,4 +152,4 @@ services:
 
 The data is safe. Now let's build the bridges that let your containers talk.
 
-Proceed to: **[Module 01: Advanced Features](../../Intermediate/01-Advanced-Features/README.md)** →
+Proceed to: **[Module 01: Advanced Features](../../intermediate/01-advanced-features/readme.md)** →

@@ -20,7 +20,7 @@ Markdown is a lightweight markup language that allows you to write structured co
 ```
 
 ### Links & Images
-**Standard**: `[Text](../README.md)` for links and `![Alt Text](../README.md)` for images.
+**Standard**: `[Text](../readme.md)` for links and `![Alt Text](../readme.md)` for images.
 **Example**:
 ```markdown
 [Deployment Logs](https://logs.prod.com)
@@ -93,4 +93,4 @@ graph LR
 - **Explicitness**: Always specify the language in code blocks (e.g., ```yaml) to ensure readers see correct highlighting.
 
 ---
-**Next Step**: [Data Formats Best Practices →](./Data-Formats-Best-Practices-Ref.md)
+**Next Step**: [Data Formats Best Practices →](./data-formats-best-practices-ref.md)

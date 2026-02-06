@@ -133,4 +133,4 @@ This allows you to roll back to a specific "Point in Time" if your migration fai
 
 The archives are safe. Now let's learn how to put a professional "Face" on our applications using the world's most popular web server.
 
-Proceed to: **[Module 06: Nginx & SSL](../06-Nginx-SSL/README.md)** →
+Proceed to: **[Module 06: Nginx & SSL](../06-nginx-ssl/readme.md)** →

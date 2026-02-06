@@ -158,9 +158,9 @@ block-beta
 
 ## 🗺️ Learning Path & References
 
-1. **[Physical Layer](README.md)**: Cables & Signals.
-2. **[Ref: Network Models](../REFERENCE/Network-Models-Ref.md)**: The technical deep-dive.
-3. **[Real-Life Scenarios](OSI Model/Real-Life-Scenarios.md)**: Applying the model to production bugs.
+1. **[Physical Layer](readme.md)**: Cables & Signals.
+2. **[Ref: Network Models](../reference/network-models-ref.md)**: The technical deep-dive.
+3. **[Real-Life Scenarios](osi-model/real-life-scenarios.md)**: Applying the model to production bugs.
 
 ---
-**Next Step**: Start with [Layer 1: Physical](README.md), Junior!
+**Next Step**: Start with [Layer 1: Physical](readme.md), Junior!

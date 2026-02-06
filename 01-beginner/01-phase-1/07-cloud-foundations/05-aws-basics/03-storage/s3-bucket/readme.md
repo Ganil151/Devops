@@ -9,7 +9,7 @@ Amazon S3 (Simple Storage Service) is the cornerstone of AWS storage. It is an *
 S3 is not a traditional file system; it's a key-value store for objects. Unlike EBS which is "Block Storage" (structured like a hard drive), S3 is "Object Storage".
 
 ### Visual Architecture
-![S3 Architecture](./Images/S3_Architecture.png)
+![S3 Architecture](./images/s3-architecture.png)
 
 ### Key Concepts
 - **Buckets**: Containers for objects. Names must be **globally unique**.
@@ -276,6 +276,6 @@ aws s3api put-bucket-encryption \
 
 ## 🔗 Related Resources
 - [S3 CLI Deep Dive](./s3-cli-guide.md)
-- [S3 Bucket Policies (Intermediate)](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-bucket-policies.md)
-- [S3 Static Web Hosting (Intermediate)](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-static-website.md)
-- [AWS Storage Overview](../README.md)
+- [S3 Bucket Policies (Intermediate)](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/04-data-and-automation/02-storage-and-lifecycle-management/s3-bucket-policies.md)
+- [S3 Static Web Hosting (Intermediate)](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/04-data-and-automation/02-storage-and-lifecycle-management/s3-static-website.md)
+- [AWS Storage Overview](../readme.md)

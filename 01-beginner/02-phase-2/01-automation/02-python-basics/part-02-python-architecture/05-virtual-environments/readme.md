@@ -2,7 +2,7 @@
 
 > **"A script that runs on your laptop but fails in production isn't automated—it's broken. Virtual environments are the 'Shipping Containers' of Python, ensuring your code carries its own dependencies wherever it goes."**
 
-![Python Subprocess Ecosystem](../../assets/python_ecosystem.png)
+![Python Subprocess Ecosystem](../../assets/python-ecosystem.png)
 
 ---
 
@@ -407,7 +407,7 @@ They implemented a strict **"No Sudo Pip"** policy. Every Jenkins job now create
 
 Now that your environment is isolated and safe, let's learn how to effectively manage the packages that live inside it.
 
-**Proceed to**: [Package Management →](README.md)
+**Proceed to**: [Package Management →](readme.md)
 
 ---
 

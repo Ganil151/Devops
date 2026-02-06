@@ -45,4 +45,4 @@ A CIDR (Classless Inter-Domain Routing) block consists of an IP and a mask (e.g.
   3. The NAT Gateway has an Elastic IP assigned.
 
 ---
-**Back to Module**: [Networking Overview](./README.md)
+**Back to Module**: [Networking Overview](./readme.md)

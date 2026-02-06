@@ -140,4 +140,4 @@ chmod +x ~/ping_bash.sh
 ## 🔗 **NEXT STEPS**
 **Beginner Shell Scripting Complete!** 🚀
 
-Proceed to: **[Python for DevOps Automation](README.md)** →
+Proceed to: **[Python for DevOps Automation](readme.md)** →

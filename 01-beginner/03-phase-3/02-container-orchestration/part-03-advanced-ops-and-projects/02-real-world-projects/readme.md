@@ -1292,7 +1292,7 @@ Visit your domain, and you should see the frontend displaying data fetched from 
 
 ## Operational Documentation
 For managing, troubleshooting, and automating this project, refer to:
-- **[Project Runbook](./RUNBOOK.md)**: Standard operating procedures for deployment and recovery.
+- **[Project Runbook](./runbook.md)**: Standard operating procedures for deployment and recovery.
 - **[Ansible Playbook](./ansible/setup.yml)**: Automation for host setup and production deployment.
 
 ___
@@ -1465,5 +1465,5 @@ dependency failed to start: container projects-flask-1 is unhealthy
 
 Congratulations! You have completed the Container Orchestration track. You are now ready to scale these skills to production clusters.
 
-Proceed to: **[Phase 4: Kubernetes Mastery](../../../../../README.md)** →
+Proceed to: **[Phase 4: Kubernetes Mastery](../../../../../readme.md)** →
 

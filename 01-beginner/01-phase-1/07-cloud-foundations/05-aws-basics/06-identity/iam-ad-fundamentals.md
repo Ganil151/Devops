@@ -62,4 +62,4 @@ aws iam list-attached-role-policies --role-name MyAppRole
 - **Solution**: Use the **IAM Policy Simulator** or CloudTrail logs to identify which specific policy is rejecting the request.
 
 ---
-**Detailed Guide**: [Active Directory Configuration](./Active%20Directory%20%20Configuration.md)
+**Detailed Guide**: [Active Directory Configuration](./active%20directory%20%20configuration.md)

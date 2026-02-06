@@ -112,4 +112,4 @@ You don't want your database password for Production sitting in your source code
 
 The brain is configured. Now let's feed it the libraries it needs.
 
-Proceed to: **[04-Dependencies](../../Part-02-Core-Build-Workflows/01-Dependencies/README.md)** →
+Proceed to: **[04-Dependencies](../../part-02-core-build-workflows/01-dependencies/readme.md)** →

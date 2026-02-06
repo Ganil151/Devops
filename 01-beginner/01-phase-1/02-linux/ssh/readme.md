@@ -109,6 +109,6 @@ ssh -L 8888:localhost:3306 user@remote-db-server
 ---
 
 ## 🔗 Related Resources
-- [Linux Commands](../03-Commands/README.md)
-- [Filesystem Mastery](../02-Filesystem/README.md)
-- [Permissions & Security](../04-Permissions/README.md)
+- [Linux Commands](../03-commands/readme.md)
+- [Filesystem Mastery](../02-filesystem/readme.md)
+- [Permissions & Security](../04-permissions/readme.md)

@@ -2,7 +2,7 @@
 
 > **"Don't Repeat Yourself (DRY). If you write the same automation logic twice, you've inherited a maintenance nightmare. If you turn it into a function, you've built a reusable asset."**
 
-![Anatomy of a Function](../assets/function_anatomy.png)
+![Anatomy of a Function](../assets/function-anatomy.png)
 
 ---
 
@@ -911,7 +911,7 @@ ec2 = get_client('ec2', 'us-east-1')
 
 Now that you can build modular, reusable code, you're ready to learn how to interact with the filesystem.
 
-**Proceed to**: [Cloud Automation (Boto3) →](../08-Cloud-Automation-Boto3/README.md)
+**Proceed to**: [Cloud Automation (Boto3) →](../08-cloud-automation-boto3/readme.md)
 
 ---
 

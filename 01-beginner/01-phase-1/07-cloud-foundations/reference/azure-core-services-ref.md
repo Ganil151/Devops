@@ -56,4 +56,4 @@ Microsoft Azure is a leading cloud platform favored by enterprises for its deep 
 - **Policy**: Use **Azure Policy** to enforce organizational standards and assess compliance at scale.
 
 ---
-**Next Step**: [GCP Core Services →](./GCP-Core-Services-Ref.md)
+**Next Step**: [GCP Core Services →](./gcp-core-services-ref.md)

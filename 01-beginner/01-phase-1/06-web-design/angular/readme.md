@@ -5,19 +5,19 @@
 
 ## 🗺️ Learning Roadmap
 
-### [01-Core-Syntax](./01-Core-Syntax/)
+### [01-Core-Syntax](./01-core-syntax/)
 - **Concepts**: TypeScript, Components (`@Component`), Templates.
 - **Goal**: Understand the highly-opinionated structure of an Angular application.
 
-### [02-Directives-and-Pipes](./02-Directives-and-Pipes/)
+### [02-Directives-and-Pipes](./02-directives-and-pipes/)
 - **Concepts**: `*ngIf`, `*ngFor`, Custom Directives, Async Pipes.
 - **Goal**: Master DOM manipulation and data transformation.
 
-### [03-Dependency-Injection](./03-Dependency-Injection/)
+### [03-Dependency-Injection](./03-dependency-injection/)
 - **Concepts**: Services (`@Injectable`), Providers, Hierarchical Injectors.
 - **Goal**: Handle business logic and data fetching outside of components.
 
-### [04-RxJS-and-Observables](./04-RxJS-and-Observables/)
+### [04-RxJS-and-Observables](./04-rxjs-and-observables/)
 - **Concepts**: Streams, Map/Filter operators, Subscription management.
 - **Goal**: Manage complex asynchronous event streams.
 

@@ -68,7 +68,7 @@ Master Apache Maven by completing these 10 progressive challenges.
 ---
 
 ## 💡 Stuck?
-- Refer to the [Troubleshooting Guide](README.md).
+- Refer to the [Troubleshooting Guide](readme.md).
 - Use `mvn -X` to see exactly what is happening under the hood.
 - Check the official [Maven Documentation](https://maven.apache.org/guides/index.html).
 

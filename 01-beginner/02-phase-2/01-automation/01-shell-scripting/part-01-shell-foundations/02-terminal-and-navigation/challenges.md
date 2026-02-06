@@ -299,4 +299,4 @@ ls -lt | head  # See recent logs
 tail -f access.log  # Monitor live
 ```
 ## Next Steps
-Complete these challenges, then proceed to **[File Manipulation](CHALLENGES.md)** →
+Complete these challenges, then proceed to **[File Manipulation](challenges.md)** →

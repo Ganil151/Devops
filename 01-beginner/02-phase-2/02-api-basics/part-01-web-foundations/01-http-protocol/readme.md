@@ -12,7 +12,7 @@
 
 The lifecycle of an HTTP interaction.
 
-![HTTP Request and Response Flow](../../assets/http_request_response_flow.png)
+![HTTP Request and Response Flow](../../assets/http-request-response-flow.png)
 
 ```mermaid
 sequenceDiagram
@@ -33,7 +33,7 @@ sequenceDiagram
 
 ## 🌐 Protocol Evolution
 
-![HTTP Versions Comparison](../../assets/http_versions_comparison.png)
+![HTTP Versions Comparison](../../assets/http-versions-comparison.png)
 
 ---
 
@@ -110,4 +110,4 @@ curl -A "CI-Pipeline-Bot/2.1" <https://api.prod.example.com/deploy>
 
 ---
 
-**Next Step**: [Part 1.2: REST Architecture](../02-REST-Architecture/) 🚀
+**Next Step**: [Part 1.2: REST Architecture](../02-rest-architecture/) 🚀

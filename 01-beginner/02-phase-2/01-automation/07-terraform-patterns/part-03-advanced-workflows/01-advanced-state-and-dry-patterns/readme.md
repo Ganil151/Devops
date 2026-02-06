@@ -104,4 +104,4 @@ Open a new terminal window and try running `terraform plan`.
 ---
 
 **Next Step**: Congratulations! You've mastered Terraform Patterns. 🏆
-Return to the [Automation Index](../../README.md) to explore other modules. 
+Return to the [Automation Index](../../readme.md) to explore other modules. 

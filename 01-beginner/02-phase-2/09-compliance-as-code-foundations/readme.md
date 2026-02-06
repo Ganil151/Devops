@@ -7,14 +7,14 @@
 Compliance as Code (CaC) is the automation of auditing and managing regulatory requirements using software best practices. Instead of manual spreadsheets, we use declarative policies to ensure our infrastructure meets security standards.
 
 ## Core Concept: The Immutable Audit
-**[REFERENCE: Policy Architecture](REFERENCE/Policy-Architecture-Ref.md)**
+**[REFERENCE: Policy Architecture](reference/policy-architecture-ref.md)**
 
 It's not enough to be secure; you must *prove* it.
 - **Decoupling**: Business logic does *not* decide authorization. A separate Policy Engine does.
 - **Deterministic**: The same input + same policy = same decision, forever.
 - **Traceability**: Every decision (Allow/Deny) is logged as a JSON event, creating an unforgeable audit trail.
 
-> See **[Policy-Architecture-Ref.md](REFERENCE/Policy-Architecture-Ref.md)** for the OPA/Rego architecture.
+> See **[Policy-Architecture-Ref.md](reference/policy-architecture-ref.md)** for the OPA/Rego architecture.
 
 ## 🎯 Learning Objectives
 
@@ -29,8 +29,8 @@ It's not enough to be secure; you must *prove* it.
 
 | Part | Topic | Description |
 | :--- | :--- | :--- |
-| **[🟢 Part 1](./Part-01-Policy-Foundations/)** | **Policy** | Definitions, frameworks, and imperative vs. declarative. |
-| **[🟡 Part 2](./Part-02-Security-Auditing/)** | **Auditing** | CIS Benchmarks and manual checklists. |
+| **[🟢 Part 1](./part-01-policy-foundations/)** | **Policy** | Definitions, frameworks, and imperative vs. declarative. |
+| **[🟡 Part 2](./part-02-security-auditing/)** | **Auditing** | CIS Benchmarks and manual checklists. |
 
 ---
 
@@ -55,4 +55,4 @@ Before building a single resource, define the guardrails. For example, "No S3 bu
 
 ---
 
-**Next Step**: Start with **[Part 1: Policy Foundations](./Part-01-Policy-Foundations/README.md)** 🚀
+**Next Step**: Start with **[Part 1: Policy Foundations](./part-01-policy-foundations/readme.md)** 🚀

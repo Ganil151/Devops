@@ -62,4 +62,4 @@ When a single webhook needs to trigger 10 different tasks.
 5. **Describe a scenario where Event-Driven architecture might be a POOR choice compared to Synchronous APIs.**
 
 ---
-**Back to foundations**: [Webhook Architecture →](./Webhook-Architecture-Ref.md)
+**Back to foundations**: [Webhook Architecture →](./webhook-architecture-ref.md)

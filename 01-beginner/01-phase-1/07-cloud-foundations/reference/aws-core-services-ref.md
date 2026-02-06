@@ -58,4 +58,4 @@ Amazon Web Services (AWS) is the world's most comprehensive and broadly adopted 
 - **CloudWatch**: Centralize all logs and metrics here to build your monitoring dashboards.
 
 ---
-**Next Step**: [Azure Core Services →](./Azure-Core-Services-Ref.md)
+**Next Step**: [Azure Core Services →](./azure-core-services-ref.md)

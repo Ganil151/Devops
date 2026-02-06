@@ -61,4 +61,4 @@ curl http://169.254.169.254/latest/meta-data/spot/termination-time
 - **Root Cause Check 3**: **Public IP**. Did you assign a Public IP or EIP, or are you trying to connect to a private address?
 
 ---
-**Back to Module**: [Compute Overview](./README.md)
+**Back to Module**: [Compute Overview](./readme.md)

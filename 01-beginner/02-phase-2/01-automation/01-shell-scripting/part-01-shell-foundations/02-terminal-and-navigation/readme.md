@@ -2,7 +2,7 @@
 
 > **"You can't automate where you haven't been. Mastering navigation is the first step to controlling the machine."**
 
-![Navigation Architecture](./navigation_architecture.png)
+![Navigation Architecture](./navigation-architecture.png)
 
 ## 📚 Overview
 
@@ -297,4 +297,4 @@ cd -  # Jumps back to nginx
 
 Now that you can move through the system, let's learn how to manipulate the files you find!
 
-Proceed to: **[Basic File Manipulation](README.md)** →
+Proceed to: **[Basic File Manipulation](readme.md)** →

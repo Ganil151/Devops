@@ -25,4 +25,4 @@ The placeholder where the current route's component is rendered.
 Code that runs before a route change. Perfect for authentication checks.
 
 ---
-**Next Step**: [03-State-Pinia](../03-State-Pinia/README.md)
+**Next Step**: [03-State-Pinia](../03-state-pinia/readme.md)

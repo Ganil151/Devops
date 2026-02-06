@@ -1,5 +1,5 @@
 # Physical Layer (Layer 1) - OSI Model
-![Physical Layer](../Images/network-layer.png)
+![Physical Layer](../images/network-layer.png)
 
 The physical layer is the lowest layer. This layer provides mechanical, electrical and other functional aids available to enable or disable, they maintain and transmit bits about physical connections. This may for example be electrical signals, optical signals (optical fiber, laser), electromagnetic waves (wireless networks) or sound. The techniques used are called technical transmission process. Devices and network components that are associated with the physical layer, for example, the antenna and the amplifier, plug and socket for the network cable, the repeater, the stroke, the transceiver, the T-bar and the terminator are (Terminator).
 
@@ -19,4 +19,4 @@ Functions of a Physical layer:
 ---
 
 ### ⏭️ Next Step
-Move up to [Layer 2: Data Link Layer](README.md).
+Move up to [Layer 2: Data Link Layer](readme.md).

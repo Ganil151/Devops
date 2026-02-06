@@ -212,4 +212,4 @@ A senior engineer knows that the base price of an EC2 instance is only half the 
 
 The bill is no longer a mystery. Now let's learn how to label every single dollar using Tagging and Reporting.
 
-Proceed to: **[Part 03: Cost Visibility](../Part-03-Cost-Visibility/README.md)** →
+Proceed to: **[Part 03: Cost Visibility](../part-03-cost-visibility/readme.md)** →

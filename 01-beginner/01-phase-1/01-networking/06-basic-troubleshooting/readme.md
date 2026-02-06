@@ -910,8 +910,8 @@ Before proceeding, ensure you can:
 
 ## 🔗 Next Steps
 
-- **[Intermediate Level](README.md)** - Advanced troubleshooting techniques
-- **[Advanced Level](README.md)** - Enterprise architectures and observability
+- **[Intermediate Level](readme.md)** - Advanced troubleshooting techniques
+- **[Advanced Level](readme.md)** - Enterprise architectures and observability
 
 ---
 

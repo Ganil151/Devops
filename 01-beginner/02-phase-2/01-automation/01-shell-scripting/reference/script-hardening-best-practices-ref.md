@@ -74,4 +74,4 @@ log_error() {
 5. **Describe how "Command Injection" occurs in a script that processes filenames provided by a user.**
 
 ---
-**Next Step**: [POSIX vs. Bash Compatibility →](./POSIX-vs-Bash-Compatibility-Ref.md)
+**Next Step**: [POSIX vs. Bash Compatibility →](./posix-vs-bash-compatibility-ref.md)

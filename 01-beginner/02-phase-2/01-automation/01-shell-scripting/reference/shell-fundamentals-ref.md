@@ -75,4 +75,4 @@ Shell scripting is the automated execution of a sequence of commands for a shell
 5. **What is the difference between `source script.sh` and `./script.sh` in terms of memory and process space?**
 
 ---
-**Next Step**: [Bash Architecture & Signals →](./Bash-Architecture-Ref.md)
+**Next Step**: [Bash Architecture & Signals →](./bash-architecture-ref.md)

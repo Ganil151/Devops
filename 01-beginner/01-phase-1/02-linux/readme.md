@@ -2,7 +2,7 @@
 
 > **"Linux is the bedrock of the cloud. Almost all containers, servers, and cloud services run on a Linux kernel. If you treat Linux like Windows, you will fail; if you treat it like an engine, you will fly."**
 
-![Linux Architecture](REFERENCE/Linux-Best-Practices-Ref.md)
+![Linux Architecture](reference/linux-best-practices-ref.md)
 
 ---
 
@@ -111,11 +111,11 @@ flowchart TD
 
 ## 📂 Learning Paths
 
-1.  **[01-Introduction](./01-Introduction/README.md)**: Kernel vs. Distros (RHEL, Debian, Alpine).
-2.  **[02-Filesystem](./02-Filesystem/README.md)**: The FHS Standard (Where do things go?).
-3.  **[03-Commands](./03-Commands/README.md)**: The SRE Essential Toolkit.
-4.  **[04-Permissions](./04-Permissions/README.md)**: The Security Model (u, g, o).
-5.  **[SSH Mastery](./SSH/README.md)**: Secure remote administration.
+1.  **[01-Introduction](./01-introduction/readme.md)**: Kernel vs. Distros (RHEL, Debian, Alpine).
+2.  **[02-Filesystem](./02-filesystem/readme.md)**: The FHS Standard (Where do things go?).
+3.  **[03-Commands](./03-commands/readme.md)**: The SRE Essential Toolkit.
+4.  **[04-Permissions](./04-permissions/readme.md)**: The Security Model (u, g, o).
+5.  **[SSH Mastery](./ssh/readme.md)**: Secure remote administration.
 
 ---
 
@@ -159,8 +159,8 @@ flowchart TD
 
 ---
 
-**Next Step**: Start with **[Introduction to Linux](./01-Introduction/README.md)**
+**Next Step**: Start with **[Introduction to Linux](./01-introduction/readme.md)**
 
 ---
 ## 🧭 Additional Modules
-- [05 Distros](05-Distros/README.md)
+- [05 Distros](05-distros/readme.md)

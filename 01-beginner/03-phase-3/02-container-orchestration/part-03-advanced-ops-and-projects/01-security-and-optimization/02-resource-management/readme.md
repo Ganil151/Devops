@@ -143,5 +143,5 @@ This provided a live dashboard of your "Elephants" and "Ants."
 
 The engine is tuned. Now let's learn how to prep for the big move: taking our containers into a real-world production environment.
 
-Proceed to: **[Module 14: Production Considerations](../03-Production-Considerations/README.md)** →
+Proceed to: **[Module 14: Production Considerations](../03-production-considerations/readme.md)** →
 翻

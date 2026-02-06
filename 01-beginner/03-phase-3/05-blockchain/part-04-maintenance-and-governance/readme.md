@@ -102,5 +102,5 @@ For high-availability RPC layers, you must upgrade nodes without stopping user t
 
 You are now ready to step into the world of **Intermediate Level** infrastructure, where we combine these skills into complex, multi-cloud enterprise architectures.
 
-Return to: **[The Phase 3 Hub](../README.md)** →
-Proceed to: **[Phase 4: Intermediate Level](../../../../README.md)** →
+Return to: **[The Phase 3 Hub](../readme.md)** →
+Proceed to: **[Phase 4: Intermediate Level](../../../../readme.md)** →

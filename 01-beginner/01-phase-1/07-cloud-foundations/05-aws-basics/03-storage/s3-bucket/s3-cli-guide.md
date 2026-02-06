@@ -656,7 +656,7 @@ aws s3 ls s3://my-bucket-name
 
 ## Additional Resources
 
-- [S3 Main README](./README.md)
-- [S3 Bucket Policies (Intermediate)](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-bucket-policies.md)
+- [S3 Main README](./readme.md)
+- [S3 Bucket Policies (Intermediate)](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/04-data-and-automation/02-storage-and-lifecycle-management/s3-bucket-policies.md)
 - [AWS CLI S3 Reference](https://docs.aws.amazon.com/cli/latest/reference/s3/)
 - [AWS CLI S3API Reference](https://docs.aws.amazon.com/cli/latest/reference/s3api/)

@@ -104,4 +104,4 @@ The first time you run `mvn -version`, Maven creates a hidden directory in your 
 
 Installation complete. Now let's see where the files go.
 
-Proceed to: **[02-Project-Structure](../02-Project-Structure/README.md)** →
+Proceed to: **[02-Project-Structure](../02-project-structure/readme.md)** →

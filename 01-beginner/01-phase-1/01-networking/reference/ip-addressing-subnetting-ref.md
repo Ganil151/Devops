@@ -75,4 +75,4 @@ IP addressing is the GPS of network communication. In DevOps, mastering subnetti
 - **Gateway Standard**: By convention, the `.1` IP in a subnet is usually reserved for the Default Gateway (the router).
 
 ---
-**Next Step**: [Network Protocols & Services →](./Network-Protocols-Ref.md)
+**Next Step**: [Network Protocols & Services →](./network-protocols-ref.md)

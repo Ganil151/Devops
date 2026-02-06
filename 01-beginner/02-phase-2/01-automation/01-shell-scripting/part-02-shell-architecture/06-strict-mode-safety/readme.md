@@ -237,4 +237,4 @@ log "INFO" "Starting deployment..."
 
 Now that your scripts are bulletproof, let's learn how to organize them into modular, reusable blocks!
 
-Proceed to: **[Functions and Scope](../05-Functions-and-Scope/README.md)** →
+Proceed to: **[Functions and Scope](../05-functions-and-scope/readme.md)** →

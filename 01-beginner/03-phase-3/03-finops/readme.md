@@ -62,10 +62,10 @@ graph LR
 
 ## 🗺️ Curriculum Path
 
-1. **[Part 01: Introduction](./Part-01-Introduction/README.md)**: The "Who, what, and why" of Cloud Financial Management.
-2. **[Part 02: Billing Basics](./Part-02-Cloud-Billing-Basics/README.md)**: Compute, Storage, and the "Hidden Tax" of Egress.
-3. **[Part 03: Cost Visibility](./Part-03-Cost-Visibility/README.md)**: Tagging, reporting, and mapping spend to business units.
-4. **[Part 04: Budgeting](./Part-04-Budgeting-Basics/README.md)**: Setting guardrails and automating "The Reaper."
+1. **[Part 01: Introduction](./part-01-introduction/readme.md)**: The "Who, what, and why" of Cloud Financial Management.
+2. **[Part 02: Billing Basics](./part-02-cloud-billing-basics/readme.md)**: Compute, Storage, and the "Hidden Tax" of Egress.
+3. **[Part 03: Cost Visibility](./part-03-cost-visibility/readme.md)**: Tagging, reporting, and mapping spend to business units.
+4. **[Part 04: Budgeting](./part-04-budgeting-basics/readme.md)**: Setting guardrails and automating "The Reaper."
 
 ---
 
@@ -148,5 +148,5 @@ graph LR
 
 ## 🔗 Next Steps
 The financial blueprint is ready. Let's start with the foundations.
-1. Proceed to: **[Part 01: Introduction](./Part-01-Introduction/README.md)** →
-2. Return to: **[01-Phase-3 Hub](../README.md)** →
+1. Proceed to: **[Part 01: Introduction](./part-01-introduction/readme.md)** →
+2. Return to: **[01-Phase-3 Hub](../readme.md)** →

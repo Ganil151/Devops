@@ -43,4 +43,4 @@ In high-frequency trading or real-time gaming, a 10ms spike is a failure.
 - **Solution**: Implement a **Global VPC** (GCP) or **Multi-Region Replication** (AWS) with a **CDN** (CloudFront) to cache content in Sydney.
 
 ---
-**Back to Foundations**: [Cloud Fundamentals Overview](README.md)
+**Back to Foundations**: [Cloud Fundamentals Overview](readme.md)

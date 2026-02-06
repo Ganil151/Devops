@@ -189,4 +189,4 @@ Answer: A) 256 KB</b>
 
 ---
 ## 🧭 Additional Modules
-- [SQS](SQS/README.md)
+- [SQS](sqs/readme.md)

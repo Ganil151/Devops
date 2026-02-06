@@ -161,4 +161,4 @@ ansible-inventory -i static_hosts.ini --graph
 
 ---
 
-**Next Step**: [Level 2: Plugin-Based Inventory Management](../../Part-02-Dynamic-Plugins/01-Plugin-Based-Inventory-Management/) 🟡
+**Next Step**: [Level 2: Plugin-Based Inventory Management](../../part-02-dynamic-plugins/01-plugin-based-inventory-management/) 🟡

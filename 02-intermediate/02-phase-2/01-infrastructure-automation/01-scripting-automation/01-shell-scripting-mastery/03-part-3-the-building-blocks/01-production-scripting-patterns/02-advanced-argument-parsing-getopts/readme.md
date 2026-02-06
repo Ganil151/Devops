@@ -74,4 +74,4 @@ Bash's `getopts` does NOT support long options natively. To handle them, you mus
 
 ---
 
-[⬅️ Back to Advanced Bash](README.md)
+[⬅️ Back to Advanced Bash](readme.md)

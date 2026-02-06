@@ -6,14 +6,14 @@ Welcome to **The Blueprint**. This is where we lay the foundation for robust she
 
 ## 🛣️ The Curriculum
 
-### [01-Shell-Fundamentals](./01-Shell-Fundamentals/)
+### [01-Shell-Fundamentals](./01-shell-fundamentals/)
 **The Objective**: Master the core syntax and safety rules.
 *   **Key Concepts**: 
     *   **The Shebang**: `#!/usr/bin/env bash` (Portability).
     *   **Strict Mode**: `set -euo pipefail` (Safety).
     *   **Variables & Quoting**: Understanding why `rm $1` is dangerous but `rm "$1"` is safe.
 
-### [02-Reference-Library](./02-Reference-Library/)
+### [02-Reference-Library](./02-reference-library/)
 **The Objective**: A quick-lookup for the most common Bash patterns.
 *   **Contents**: Cheat sheets for loops, conditionals, signal traps, and exit codes.
 

@@ -127,4 +127,4 @@ In production, never use `restart: always` for everything.
 
 You've mastered the orchestra. Now it's time to see the big picture—the entire world of Container Orchestration across thousands of servers.
 
-Proceed to: **[Module 02: Orchestration Deep-Dive](../02-Orchestration/README.md)** →
+Proceed to: **[Module 02: Orchestration Deep-Dive](../02-orchestration/readme.md)** →

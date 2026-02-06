@@ -71,9 +71,9 @@ By the end of this deep dive, you will be able to:
 
 | Level | Topic | Description |
 | :--- | :--- | :--- |
-| **[🟢 Level 1](./Part-01-Inventory-Foundations/01-Static-vs-Dynamic-Basics/)** | **Basics & JSON Protocol** | Understanding the internal data structure (`hostvars`, `_meta`) that drives dynamic inventory. |
-| **[🟡 Level 2](./Part-02-Dynamic-Plugins/01-Plugin-Based-Inventory-Management/)** | **Plugins & Cloud** | The modern way. Using AWS/Azure plugins, grouping by tags, and filtering instances. |
-| **[🔴 Level 3](./Part-003-Advanced-Strategies/01-Custom-Inventory-Scripts-and-Caching/)** | **Custom Scripts & Performance** | Writing Python scripts for custom CMDBs and tuning cache for speed. |
+| **[🟢 Level 1](./part-01-inventory-foundations/01-static-vs-dynamic-basics/)** | **Basics & JSON Protocol** | Understanding the internal data structure (`hostvars`, `_meta`) that drives dynamic inventory. |
+| **[🟡 Level 2](./part-02-dynamic-plugins/01-plugin-based-inventory-management/)** | **Plugins & Cloud** | The modern way. Using AWS/Azure plugins, grouping by tags, and filtering instances. |
+| **[🔴 Level 3](./part-003-advanced-strategies/01-custom-inventory-scripts-and-caching/)** | **Custom Scripts & Performance** | Writing Python scripts for custom CMDBs and tuning cache for speed. |
 
 ---
 
@@ -111,10 +111,10 @@ To fully participate in the hands-on labs, you will need:
 ## 🏢 Reference Library
 *Deep-dive documentation for at-a-glance problem solving.*
 
-*   **[Inventory Architecture](./REFERENCE/Ansible-Inventory-Core-Ref.md)**: Static vs Dynamic comparison and JSON protocol details.
-*   **[Cloud Plugins Reference](./REFERENCE/Ansible-Cloud-Resource-Ref.md)**: AWS, Azure, and GCP plugin manual with keyed group standards.
-*   **[Security & RBAC](./REFERENCE/Ansible-Security-RBAC-Ref.md)**: Vault encryption, environment secrets, and tag-based access control.
+*   **[Inventory Architecture](./reference/ansible-inventory-core-ref.md)**: Static vs Dynamic comparison and JSON protocol details.
+*   **[Cloud Plugins Reference](./reference/ansible-cloud-resource-ref.md)**: AWS, Azure, and GCP plugin manual with keyed group standards.
+*   **[Security & RBAC](./reference/ansible-security-rbac-ref.md)**: Vault encryption, environment secrets, and tag-based access control.
 
 ---
 
-**Next Step**: Start with **[Level 1: Static vs. Dynamic Basics](./Part-01-Inventory-Foundations/01-Static-vs-Dynamic-Basics/)** 🚀
+**Next Step**: Start with **[Level 1: Static vs. Dynamic Basics](./part-01-inventory-foundations/01-static-vs-dynamic-basics/)** 🚀

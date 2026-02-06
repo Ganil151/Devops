@@ -39,4 +39,4 @@ A representation of a series of causally related distributed events that encode 
 
 ---
 
-**Next Step**: Apply this knowledge in **[Module 02: Manual Health Checks](../../Part-02-Active-Monitoring/02-Manual-Health-Checks/README.md)** 🚀
+**Next Step**: Apply this knowledge in **[Module 02: Manual Health Checks](../../part-02-active-monitoring/02-manual-health-checks/readme.md)** 🚀

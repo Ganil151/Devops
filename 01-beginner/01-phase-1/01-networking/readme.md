@@ -83,23 +83,23 @@ graph LR
 
 ## 🗺️ Learning Path
 
-1. **[Network Fundamentals](./01-Network-Fundamentals/README.md)**: Physical topologies, network types, and core terminology.
-2. **[Network Models](./02-Network-Models/README.md)**: Deep dive into the OSI and TCP/IP models.
-3. **[IP Addressing](./03-IP-Addressing/README.md)**: IPv4, IPv6, subnetting, and planning.
-4. **[Basic Protocols](./04-Basic-Protocols/README.md)**: HTTP, DNS, DHCP, TCP/UDP, and ICMP.
-5. **[Network Devices](./05-Network-Devices/README.md)**: Routers, switches, firewalls, and load balancers.
-6. **[Basic Troubleshooting](./06-Basic-Troubleshooting/README.md)**: Methodology and tools for diagnosing network issues.
-7. **[Troubleshooting Labs](./07-Network-Troubleshooting-Labs/)**: Practical Python scripts for network connectivity and DNS testing.
+1. **[Network Fundamentals](./01-network-fundamentals/readme.md)**: Physical topologies, network types, and core terminology.
+2. **[Network Models](./02-network-models/readme.md)**: Deep dive into the OSI and TCP/IP models.
+3. **[IP Addressing](./03-ip-addressing/readme.md)**: IPv4, IPv6, subnetting, and planning.
+4. **[Basic Protocols](./04-basic-protocols/readme.md)**: HTTP, DNS, DHCP, TCP/UDP, and ICMP.
+5. **[Network Devices](./05-network-devices/readme.md)**: Routers, switches, firewalls, and load balancers.
+6. **[Basic Troubleshooting](./06-basic-troubleshooting/readme.md)**: Methodology and tools for diagnosing network issues.
+7. **[Troubleshooting Labs](./07-network-troubleshooting-labs/)**: Practical Python scripts for network connectivity and DNS testing.
 
 ---
 
 ## 🏢 Reference Library
 
-*   **[Network Models](./REFERENCE/Network-Models-Ref.md)**: OSI and TCP/IP layers.
-*   **[IP Addressing & Subnetting](./REFERENCE/IP-Addressing-Subnetting-Ref.md)**: IPv4/v6, CIDR, and NAT manual.
-*   **[Network Protocols](./REFERENCE/Network-Protocols-Ref.md)**: HTTP, DNS, DHCP guide.
-*   **[Devices & Hardware](./REFERENCE/Network-Devices-Hardware-Ref.md)**: Infrastructure manual.
-*   **[Diagnostic & Troubleshooting](./REFERENCE/Network-Troubleshooting-Ref.md)**: SRE playbook.
+*   **[Network Models](./reference/network-models-ref.md)**: OSI and TCP/IP layers.
+*   **[IP Addressing & Subnetting](./reference/ip-addressing-subnetting-ref.md)**: IPv4/v6, CIDR, and NAT manual.
+*   **[Network Protocols](./reference/network-protocols-ref.md)**: HTTP, DNS, DHCP guide.
+*   **[Devices & Hardware](./reference/network-devices-hardware-ref.md)**: Infrastructure manual.
+*   **[Diagnostic & Troubleshooting](./reference/network-troubleshooting-ref.md)**: SRE playbook.
 
 ---
-**Next Step**: Start with [Network Fundamentals](./01-Network-Fundamentals/README.md), Junior!
+**Next Step**: Start with [Network Fundamentals](./01-network-fundamentals/readme.md), Junior!

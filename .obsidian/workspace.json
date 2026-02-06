@@ -201,6 +201,7 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "09-resources/01-scripts-code/maintenance/fix_links.py",
     "reference.md",
     "09-resources/01-scripts-code/maintenance/restore_reference.py",
     "09-resources/01-scripts-code.conflict/maintenance/system-refactor.py",
@@ -236,7 +237,6 @@
     "07-boilerplates/01-beginner/shell/shell-paging-files-readme.md",
     "07-boilerplates/01-beginner/shell/shell-man-pages-readme.md",
     "07-boilerplates/01-beginner/shell/shell-intro-readme.md",
-    "07-boilerplates/01-beginner/shell/shell-input-output-readme.md",
     "09-resources/images/screenshot-99.png",
     "09-resources/images/screenshot-98.png",
     "09-resources/images/screenshot-97.png",

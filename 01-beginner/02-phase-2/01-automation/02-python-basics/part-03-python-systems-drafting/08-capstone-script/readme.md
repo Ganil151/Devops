@@ -2,7 +2,7 @@
 
 > **"Theory becomes power only when it is applied. This capstone project combines every module you've studied—from Variables to Microservices—into a single, production-grade automation engine."**
 
-![Automation Architecture](../../../01-Shell-Scripting/Part-03-System-Drafting/02-Advanced-IO/io_stream_architecture.png)
+![Automation Architecture](../../../01-shell-scripting/part-03-system-drafting/02-advanced-io/io-stream-architecture.png)
 
 ---
 
@@ -355,4 +355,4 @@ You did it.
 You started with variables and loops. You ended with a Microservice API and a Production CLI Tool.
 You are ready to automate the world.
 
-**Return to [Curriculum Overview](../../../../../../README.md)**
+**Return to [Curriculum Overview](../../../../../../readme.md)**

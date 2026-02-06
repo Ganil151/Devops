@@ -244,4 +244,4 @@ ls -al /etc | less
 
 Now that you can navigate massive data, let's learn how to find the manuals for every tool you use!
 
-Proceed to: **[Man Pages](README.md)** →
+Proceed to: **[Man Pages](readme.md)** →

@@ -2,7 +2,7 @@
 
 > **"The cloud is just someone else's computer, but it's a computer with an infinite credit limit and 1,000 security guards. If you treat the cloud like your laptop, you will waste money; if you treat it like an API, you will scale forever."**
 
-![Cloud Foundations Architecture](../../assets/cloud_foundations_banner.png)
+![Cloud Foundations Architecture](../../assets/cloud-foundations-banner.png)
 
 ---
 
@@ -117,11 +117,11 @@ flowchart TD
 
 ## 📂 Learning Path
 
-1.  **[04-Cloud-Fundamentals](README.md)**: Compute, Storage, and the Shared Responsibility model.
-2.  **[01-Basic-Networking](./01-Basic-Networking/README.md)**: VPCs and Subnets (Your private slice of the cloud).
-3.  **[05-AWS-Basics](./05-AWS-Basics/README.md)**: Mastering the market leader.
-4.  **[06-Azure-Basics](./06-Azure-Basics/README.md)**: Enterprise integration and Windows-first cloud.
-5.  **[07-GCP-Basics](./07-GCP-Basics/README.md)**: Kubernetes-native and Data-heavy cloud.
+1.  **[04-Cloud-Fundamentals](readme.md)**: Compute, Storage, and the Shared Responsibility model.
+2.  **[01-Basic-Networking](./01-basic-networking/readme.md)**: VPCs and Subnets (Your private slice of the cloud).
+3.  **[05-AWS-Basics](./05-aws-basics/readme.md)**: Mastering the market leader.
+4.  **[06-Azure-Basics](./06-azure-basics/readme.md)**: Enterprise integration and Windows-first cloud.
+5.  **[07-GCP-Basics](./07-gcp-basics/readme.md)**: Kubernetes-native and Data-heavy cloud.
 
 ---
 
@@ -163,10 +163,10 @@ flowchart TD
 
 ---
 
-**Next Step**: Start with **[Cloud Fundamentals](README.md)**
+**Next Step**: Start with **[Cloud Fundamentals](readme.md)**
 
 
 ---
 ## 🧭 Additional Modules
-- [02 Storage Fundamentals](02-Storage-Fundamentals/README.md)
-- [03 Global Infrastructure](03-Global-Infrastructure/README.md)
+- [02 Storage Fundamentals](02-storage-fundamentals/readme.md)
+- [03 Global Infrastructure](03-global-infrastructure/readme.md)

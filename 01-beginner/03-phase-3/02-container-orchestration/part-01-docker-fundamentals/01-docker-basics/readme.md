@@ -8,11 +8,11 @@ This module covers the absolute fundamentals of working with Docker. We start wi
 
 ## 🗺️ Included Sub-Modules
 
-1. **[01-Introduction](./01-Introduction/README.md)**: Architecture and Installation.
-2. **[02-Images-and-Containers](./02-Images-and-Containers/README.md)**: The lifecycle commands (`run`, `stop`, `rm`).
-3. **[03-Dockerfile-Basics](./03-Dockerfile-Basics/README.md)**: Writing your first recipe.
-4. **[04-Debugging](./04-Debugging/README.md)**: Inspecting logs and processes.
+1. **[01-Introduction](./01-introduction/readme.md)**: Architecture and Installation.
+2. **[02-Images-and-Containers](./02-images-and-containers/readme.md)**: The lifecycle commands (`run`, `stop`, `rm`).
+3. **[03-Dockerfile-Basics](./03-dockerfile-basics/readme.md)**: Writing your first recipe.
+4. **[04-Debugging](./04-debugging/readme.md)**: Inspecting logs and processes.
 
 ---
 
-**Next Step**: Start with **[01-Introduction](./01-Introduction/README.md)** 🚀
+**Next Step**: Start with **[01-Introduction](./01-introduction/readme.md)** 🚀

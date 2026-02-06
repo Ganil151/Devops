@@ -64,4 +64,4 @@ case <-time.After(1 * time.Second):
 5. **What is a "Data Race" and how does a Mutex solve it?**
 
 ---
-**Next Step**: [Go Toolchain & SRE Tooling →](./Go-Toolchain-SRE-Ref.md)
+**Next Step**: [Go Toolchain & SRE Tooling →](./go-toolchain-sre-ref.md)

@@ -4,7 +4,7 @@
 
 Go's built-in `encoding/json` package provides a powerful, type-safe way to handle JSON data. By using **Struct Tags**, you can map complex JSON keys to clean Go fields, ensuring your code remains idiomatic while the data remains interoperable.
 
-![JSON Handling Diagram](./go_json_diagram.png)
+![JSON Handling Diagram](./go-json-diagram.png)
 
 ## Table of Contents
 
@@ -216,4 +216,4 @@ A microservice was querying a Kubernetes API that returned a 5MB JSON object. Th
 
 ---
 
-**Next Step**: [Working with YAML →](../06-YAML-Handling/README.md)
+**Next Step**: [Working with YAML →](../06-yaml-handling/readme.md)

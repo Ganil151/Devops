@@ -60,4 +60,4 @@ Network hardware form the physical components that carry data. In the modern clo
 - **Port Saturation**: When the physical bandwidth of a switch port (e.g., 1Gbps) is hit, causing packet drops.
 
 ---
-**Next Step**: [Diagnostic Tools & Troubleshooting →](./Network-Troubleshooting-Ref.md)
+**Next Step**: [Diagnostic Tools & Troubleshooting →](./network-troubleshooting-ref.md)

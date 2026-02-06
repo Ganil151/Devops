@@ -88,4 +88,4 @@ Never share a disk volume between your Operating System and your Blockchain Data
 
 Hardware is ready. Now let's dive into the operational logic of reaching consensus and managing RPCs.
 
-Proceed to: **[Part 03: Decentralized Operations](../Part-03-Decentralized-Operations/README.md)** →
+Proceed to: **[Part 03: Decentralized Operations](../part-03-decentralized-operations/readme.md)** →

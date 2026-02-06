@@ -22,4 +22,4 @@ ReactNative uses a subset of CSS via JavaScript objects. Layout is primarily han
 Access camera, GPS, and other hardware using native bridges or libraries like "Expo."
 
 ---
-**Back to Module**: [Mobile Main Guide](../README.md)
+**Back to Module**: [Mobile Main Guide](../readme.md)

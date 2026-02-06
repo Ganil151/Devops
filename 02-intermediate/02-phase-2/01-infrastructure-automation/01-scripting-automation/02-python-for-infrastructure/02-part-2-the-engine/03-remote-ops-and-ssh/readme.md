@@ -43,7 +43,7 @@ graph TD
     style C fill:#f0fdf4,stroke:#15803d
     style D fill:#e0f2fe,stroke:#0369a1
 ```
-![SSH Protocol Architecture](../../../../02-Config-Management/02-IaC-Foundations-and-Terraform/04-Terraform-Cloud-and-GitOps/01-Part-1-The-Blueprint/01-Introduction-and-Architecture/tfc_architecture.png)
+![SSH Protocol Architecture](../../../../02-config-management/02-iac-foundations-and-terraform/04-terraform-cloud-and-gitops/01-part-1-the-blueprint/01-introduction-and-architecture/tfc-architecture.png)
 
 ### 🔍 Concept Breakdown
 1.  **Transport**: The encrypted TCP connection.
@@ -262,4 +262,4 @@ Before moving to the next module, ensure you can:
 
 **Score yourself**: 5+/5 = Ready to advance | <5 = Review exercises
 
-[⬅️ Back to Log Parsing](README.md) | [Next: Database Ops](README.md) ➡️
+[⬅️ Back to Log Parsing](readme.md) | [Next: Database Ops](readme.md) ➡️

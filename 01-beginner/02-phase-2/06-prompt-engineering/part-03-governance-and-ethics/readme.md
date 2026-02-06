@@ -7,14 +7,14 @@
 In the final part, we address the critical non-functional requirements of AI usage: **Security**, **Privacy**, and **Reliability**. We explore the dangers of "Hallucination," the risks of data leakage, and the ethical considerations of automation. We also look at how to build "Guardrails" to ensure AI remains a helper, not a liability.
 
 ## Core Concept: The Injection Attack Surface
-**[REFERENCE: AI Security & Governance](../REFERENCE/AI-Security-Governance-Ref.md)**
+**[REFERENCE: AI Security & Governance](../reference/ai-security-governance-ref.md)**
 
 AI models act on data as if it were code.
 - **Prompt Injection**: "Ignore previous instructions" is the new `DROP TABLE`.
 - **Indirect Injection**: Applications reading an untrusted website and acting on it via an LLM tool.
 - **Defense Depth**: You cannot "Patch" an LLM. You must wrap it in traditional Input/Output Validation layers.
 
-> See **[AI-Security-Governance-Ref.md](../REFERENCE/AI-Security-Governance-Ref.md)** for detailed mitigation strategies.
+> See **[AI-Security-Governance-Ref.md](../reference/ai-security-governance-ref.md)** for detailed mitigation strategies.
 
 ---
 
@@ -50,7 +50,7 @@ By the end of this part, you will:
 
 ## 🗺️ Included Modules
 
-1. **[05-Security-and-Ethics](./05-Security-and-Ethics/README.md)**: Privacy, Security, and Truth.
+1. **[05-Security-and-Ethics](./05-security-and-ethics/readme.md)**: Privacy, Security, and Truth.
 
 ---
 
@@ -62,4 +62,4 @@ By the end of this part, you will:
 
 ---
 
-**Next Step**: Secure your workflow in **[05-Security-and-Ethics](./05-Security-and-Ethics/README.md)** 🚀
+**Next Step**: Secure your workflow in **[05-Security-and-Ethics](./05-security-and-ethics/readme.md)** 🚀

@@ -6,14 +6,14 @@ Welcome to **The Building Blocks**. This is where we take fundamental syntax and
 
 ## 🛣️ The Curriculum
 
-### [01-Production-Scripting-Patterns](./01-Production-Scripting-Patterns/)
+### [01-Production-Scripting-Patterns](./01-production-scripting-patterns/)
 **The Objective**: Advanced logic for real-world scenarios.
 *   **Key Concepts**: 
     *   **Signal Traps**: Cleaning up temp files on Ctrl+C.
     *   **Lockfiles**: Preventing a script from running twice simultaneously.
     *   **Parallelism**: Running 10 tasks in the background and waiting for completion.
 
-### [02-Sample-Enterprise-Installer.sh](./02-Sample-Enterprise-Installer.sh)
+### [02-Sample-Enterprise-Installer.sh](./02-sample-enterprise-installer.sh)
 **The Objective**: A reference implementation of a complex script.
 *   **Key Features**: Logging, validation, multi-stage installation, and rollback logic.
 

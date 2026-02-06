@@ -125,4 +125,4 @@ graph LR
 
 ---
 
-**Next Step**: Learn the different **[Service Models (IaaS/PaaS/SaaS) →](../Service-Models/README.md)**
+**Next Step**: Learn the different **[Service Models (IaaS/PaaS/SaaS) →](../service-models/readme.md)**

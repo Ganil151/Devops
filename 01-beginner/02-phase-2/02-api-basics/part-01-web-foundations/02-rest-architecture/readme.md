@@ -94,4 +94,4 @@ Good APIs are mapped to physical or logical objects.
 
 ---
 
-**Next Step**: [Part 1.3: Status Codes & Error Handling](../03-Status-Codes-and-Errors/) 🚀
+**Next Step**: [Part 1.3: Status Codes & Error Handling](../03-status-codes-and-errors/) 🚀

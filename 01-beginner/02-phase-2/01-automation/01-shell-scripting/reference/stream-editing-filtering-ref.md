@@ -70,4 +70,4 @@ cat access.log | awk '{print $1}' | sort | uniq -c | sort -nr
 5. **Describe how to extract the 3rd to last column of a space-separated file using `awk`.**
 
 ---
-**Next Step**: [Script Hardening & Best Practices →](./Script-Hardening-Best-Practices-Ref.md)
+**Next Step**: [Script Hardening & Best Practices →](./script-hardening-best-practices-ref.md)

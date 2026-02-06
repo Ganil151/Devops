@@ -167,4 +167,4 @@ RUN --mount=type=secret,id=my_token \
 
 The images are lean and mean. Now let's learn how to organize them in our own private vault.
 
-Proceed to: **[Module 04: Private Registry](../04-Private-Registry/README.md)** →
+Proceed to: **[Module 04: Private Registry](../04-private-registry/readme.md)** →

@@ -87,5 +87,5 @@ Create a Python script that searches the crontab and removes any job that has th
 
 ---
 
-Proceed to: **[03. Advanced Distributed Job Orchestration](README.md)** →
+Proceed to: **[03. Advanced Distributed Job Orchestration](readme.md)** →
 Node: Moving to cloud-native and high-precision orchestration.

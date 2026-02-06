@@ -119,4 +119,4 @@ spec:
 - **Schema Validation**: For Kubernetes, use `kubeval` or `datree` to ensure your YAML matches the expected schema.
 
 ---
-**Next Step**: [JSON API Standards →](./JSON-API-Standard-Ref.md)
+**Next Step**: [JSON API Standards →](./json-api-standard-ref.md)

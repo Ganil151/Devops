@@ -191,4 +191,4 @@ graph TD
 
 Congratulations! You've mastered the fundamentals of **FinOps**.
 
-Return to: **[The FinOps Master Hub](../README.md)** →
+Return to: **[The FinOps Master Hub](../readme.md)** →

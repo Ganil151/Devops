@@ -160,4 +160,4 @@ If you don't have active AWS credentials, you can simulate this by looking at th
 
 ---
 
-**Next Step**: [Level 3: Custom Inventory Scripts & Caching](../../Part-003-Advanced-Strategies/01-Custom-Inventory-Scripts-and-Caching/) 🔴
+**Next Step**: [Level 3: Custom Inventory Scripts & Caching](../../part-003-advanced-strategies/01-custom-inventory-scripts-and-caching/) 🔴

@@ -7,7 +7,7 @@
 Modern infrastructure is no longer a collection of isolated servers; it is a complex web of interconnected services. An **API (Application Programming Interface)** is the formal contract that allows these services to communicate, share data, and trigger actions across boundaries.
 
 ## Core Concept: API as a Contract
-**[REFERENCE: REST Architecture](./REFERENCE/REST-Architecture-Ref.md)**
+**[REFERENCE: REST Architecture](./reference/rest-architecture-ref.md)**
 
 Stable distributed systems depend on predictable interfaces:
 - **HTTP/HTTPS Protocol**: Understanding the grammar of the internet (Methods, Headers, Status Codes).
@@ -15,7 +15,7 @@ Stable distributed systems depend on predictable interfaces:
 - **Idempotency**: Ensuring that retrying a failed request (like a payment or deployment) doesn't cause duplicate side effects.
 
 ## Enterprise Governance: Secure Connectivity
-**[REFERENCE: API Authentication](./REFERENCE/API-Authentication-Ref.md)**
+**[REFERENCE: API Authentication](./reference/api-authentication-ref.md)**
 
 Protecting the enterprise "Nervous System" from misuse and breaches:
 - **Zero Trust Authentication**: Utilizing JWT and OAuth2 for every request to verify identity at the service boundary.
@@ -88,9 +88,9 @@ By the end of this module, you will:
 
 | Part | Topic | Description |
 | :--- | :--- | :--- |
-| **[🟢 Part 1](./Part-01-Web-Foundations/)** | **Web Foundations** | The Grammar of the Internet. HTTP Protocol, REST constraints, and Status Codes. |
-| **[🟡 Part 2](./Part-02-API-Security-and-Auth/01-Authentication-and-Security/)** | **Security & Auth** | The Protective Layer. Authentication vs. Authorization, Tokens, and OAuth2. |
-| **[🔴 Part 3](./Part-003-Advanced-API-Workflows/01-DevOps-Integration/)** | **DevOps Workflows** | APIs in Production. Webhooks, Rate Limiting, and Resilient Retries. |
+| **[🟢 Part 1](./part-01-web-foundations/)** | **Web Foundations** | The Grammar of the Internet. HTTP Protocol, REST constraints, and Status Codes. |
+| **[🟡 Part 2](./part-02-api-security-and-auth/01-authentication-and-security/)** | **Security & Auth** | The Protective Layer. Authentication vs. Authorization, Tokens, and OAuth2. |
+| **[🔴 Part 3](./part-003-advanced-api-workflows/01-devops-integration/)** | **DevOps Workflows** | APIs in Production. Webhooks, Rate Limiting, and Resilient Retries. |
 
 ---
 
@@ -114,4 +114,4 @@ By the end of this module, you will:
 
 ---
 
-**Next Step**: Start with **[Part 1: Web Foundations](./Part-01-Web-Foundations/01-HTTP-Protocol/)** 🚀
+**Next Step**: Start with **[Part 1: Web Foundations](./part-01-web-foundations/01-http-protocol/)** 🚀

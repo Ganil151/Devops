@@ -2,7 +2,7 @@
 
 > **"A script without control flow is a static list. A script with professional control flow is an intelligent agent capable of remediating infrastructure, validating global states, and managing massive server inventories."**
 
-![Control Flow Logic](../02-Control-Flow/assets/control_flow_logic.png)
+![Control Flow Logic](../02-control-flow/assets/control-flow-logic.png)
 
 ---
 
@@ -767,7 +767,7 @@ else:
 
 Now that you can make decisions, you're ready to learn how to repeat operations efficiently.
 
-**Proceed to**: [Iterative Logic and Loops →](README.md)
+**Proceed to**: [Iterative Logic and Loops →](readme.md)
 
 ---
 

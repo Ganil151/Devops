@@ -2,7 +2,7 @@
 
 > **"Infrastructure is code, and code is data. Mastering File I/O is how you bridge the gap between static YAML configs, dynamic JSON API responses, and the persistent audit logs that keep your systems accountable."**
 
-![File I/O Architecture](../../PlayGround/files-IO/file-rw.py)
+![File I/O Architecture](../../playground/files-io/file-rw.py)
 
 ---
 
@@ -748,7 +748,7 @@ print(f"Average uptime: {average_uptime:.2f}%")
 
 Now that you can persist data to files, you're ready to learn about modularizing your code with functions.
 
-**Proceed to**: [Functions and Modules →](../07-Functions-and-Modules/README.md)
+**Proceed to**: [Functions and Modules →](../07-functions-and-modules/readme.md)
 
 ---
 

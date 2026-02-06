@@ -28,7 +28,7 @@ graph TD
 Apache Maven is more than just a build tool; it is a software project management and comprehension tool. Based on the concept of a **Project Object Model (POM)**, Maven can manage a project's build, reporting, and documentation from a central piece of information.
 
 ## Core Concept: Declarative Build Lifecycle
-**[REFERENCE: Maven Foundations](REFERENCE/Maven-Lifecycle-Internals-Ref.md)**
+**[REFERENCE: Maven Foundations](reference/maven-lifecycle-internals-ref.md)**
 
 Maven shifts the focus from "How to build" to "What is being built":
 - **The POM (Project Object Model)**: A single XML source of truth for dependencies, versions, and build logic.
@@ -36,7 +36,7 @@ Maven shifts the focus from "How to build" to "What is being built":
 - **Dependency Resolution**: Transitive dependency management that ensures a consistent classpath across environments.
 
 ## Enterprise Governance: The Artifact Supply Chain
-**[REFERENCE: Maven Foundations](REFERENCE/Maven-Lifecycle-Internals-Ref.md)**
+**[REFERENCE: Maven Foundations](reference/maven-lifecycle-internals-ref.md)**
 
 Securing and standardizing the build pipeline:
 - **Centralized Repositories**: Using Nexus or JFrog Artifactory to mirror Maven Central and cache internal artifacts.
@@ -64,9 +64,9 @@ By the end of this curriculum, you will:
 
 | Part | Topic | Description |
 | :--- | :--- | :--- |
-| **[🟢 Part 1](./Part-01-Maven-Fundamentals/)** | **Foundations** | Setting up the Forge. Installation, Directory Structure, and the POM. |
-| **[🟡 Part 2](./Part-02-Core-Build-Workflows/)** | **Build & Manage** | Standing on Shoulders. Dependency Resolution and the Build Lifecycle. |
-| **[🔴 Part 3](./Part-03-Enterprise-Maven-and-Optimization/)** | **Enterprise Ops** | The Golden Pipeline. CI/CD Integration, Best Practices, and Troubleshooting. |
+| **[🟢 Part 1](./part-01-maven-fundamentals/)** | **Foundations** | Setting up the Forge. Installation, Directory Structure, and the POM. |
+| **[🟡 Part 2](./part-02-core-build-workflows/)** | **Build & Manage** | Standing on Shoulders. Dependency Resolution and the Build Lifecycle. |
+| **[🔴 Part 3](./part-03-enterprise-maven-and-optimization/)** | **Enterprise Ops** | The Golden Pipeline. CI/CD Integration, Best Practices, and Troubleshooting. |
 
 ---
 
@@ -98,4 +98,4 @@ By the end of this curriculum, you will:
 
 ---
 
-**Next Step**: Start with **[Part 1: Maven Fundamentals](./Part-01-Maven-Fundamentals/)** 🚀
+**Next Step**: Start with **[Part 1: Maven Fundamentals](./part-01-maven-fundamentals/)** 🚀

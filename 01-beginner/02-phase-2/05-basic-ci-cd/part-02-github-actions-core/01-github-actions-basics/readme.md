@@ -99,4 +99,4 @@ The **GitHub Marketplace** contains thousands of community-maintained actions.
 
 You know the syntax. Now let's build complex logic.
 
-Proceed to: **[Module 03: Pipeline Components](../02-Pipeline-Components/README.md)** →
+Proceed to: **[Module 03: Pipeline Components](../02-pipeline-components/readme.md)** →

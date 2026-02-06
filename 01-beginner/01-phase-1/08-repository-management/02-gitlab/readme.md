@@ -6,21 +6,21 @@ GitLab is a comprehensive DevOps platform that provides source code management, 
 
 This directory is organized into three progressive levels to help you master GitLab:
 
-### [001-Beginner-Level](./001-Beginner-Level/)
+### [001-Beginner-Level](./001-beginner-level/)
 - GitLab fundamentals and basic concepts
 - Repository management and Git integration
 - Basic CI/CD pipeline creation
 - Issue tracking and project management
 - User management and permissions
 
-### [002-Intermediate-Level](./002-Intermediate-Level/)
+### [002-Intermediate-Level](./002-intermediate-level/)
 - Advanced CI/CD pipeline configurations
 - GitLab Runner setup and management
 - Container registry and package management
 - Security scanning and compliance
 - GitLab API and automation
 
-### [003-Advanced-Level](./003-Advanced-Level/)
+### [003-Advanced-Level](./003-advanced-level/)
 - Enterprise GitLab administration
 - High availability and scaling
 - Advanced security and compliance
@@ -38,7 +38,7 @@ By completing all levels, you'll master:
 
 ## 🚀 Getting Started
 
-1. Start with [Beginner Level](./001-Beginner-Level/) if you're new to GitLab
+1. Start with [Beginner Level](./001-beginner-level/) if you're new to GitLab
 2. Progress through each level sequentially
 3. Practice with hands-on examples in each section
 4. Use the provided scripts and configurations

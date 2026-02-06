@@ -1,14 +1,14 @@
 # 🤖 Automation - Shell Scripting Mastery
 
 > **"Automation is the foundation of modern DevOps. Master shell scripting, and you master the infrastructure."**
-![Automation Roadmap](./assets/automation_roadmap.png)
+![Automation Roadmap](./assets/automation-roadmap.png)
 
 ## 📚 Overview
 
 Welcome to the comprehensive **Automation curriculum**! This module is designed to transform you from a beginner to an expert capable of building robust, scalable automation across Shell, Python, and Ansible.
 
 ## Core Concept: The Three Laws of Automation
-**[REFERENCE: Automation Strategy](./REFERENCE/Automation-Strategy-Ref.md)**
+**[REFERENCE: Automation Strategy](./reference/automation-strategy-ref.md)**
 
 Infrastructure scalability begins with a rigorous automation mindset:
 - **Fast Failure**: Using Bash Strict Mode (`set -euo pipefail`) to stop scripts instantly at the first error.
@@ -16,7 +16,7 @@ Infrastructure scalability begins with a rigorous automation mindset:
 - **Tool Selection**: Choosing the right tool for the job—Shell for fast OS tasks, Python for complex API logic.
 
 ## Enterprise Governance: Automation Standards
-**[REFERENCE: Automation Strategy](./REFERENCE/Automation-Strategy-Ref.md)**
+**[REFERENCE: Automation Strategy](./reference/automation-strategy-ref.md)**
 
 Moving from "hacks" to production-grade engineering:
 - **Secret Management**: Mandatory use of Vault or Secret Managers instead of hardcoded strings or `.env` files.
@@ -76,10 +76,10 @@ Master the fundamentals of shell scripting and terminal navigation.
 
 | # | Topic | Description | Status |
 | --- | --- | --- | --- |
-| 01 | [**Introduction**](README.md) | Shell types, first script | ✅ |
-| 02 | [**Terminal and Finder**](README.md) | Navigation, paths | ✅ |
-| 03 | [**Basic File Manipulation**](README.md) | cp, mv, rm | ✅ |
-| ... | [**View Full Beginner Index**](03-Go-Basics/GO_AUTOMATION_MASTER_INDEX.md) | Topics 04-24 (Mastered) | ✅ |
+| 01 | [**Introduction**](readme.md) | Shell types, first script | ✅ |
+| 02 | [**Terminal and Finder**](readme.md) | Navigation, paths | ✅ |
+| 03 | [**Basic File Manipulation**](readme.md) | cp, mv, rm | ✅ |
+| ... | [**View Full Beginner Index**](03-go-basics/go-automation-master-index.md) | Topics 04-24 (Mastered) | ✅ |
 
 ---
 
@@ -89,17 +89,17 @@ Functional modules for building real-world tools.
 
 | # | Module | Description | Path |
 | :---: | :--- | :--- | :---: |
-| 01 | **Intermediate Shell** | Functions, Loops, Strict Mode | [Explore Module](README.md) |
-| 02 | **Advanced Bash** | jq, sed, awk, xargs, traps | [Explore Module](README.md) |
-| 03 | **Python for DevOps** | Boto3, APIs, Web Scraping | [Explore Module](README.md) |
-| 04 | **Job Scheduling & Cron** | Crontab, Overlap, K8s Jobs | [Explore Module](./04-Job-Scheduling-and-Cron/) |
-| 05 | **Event-Driven Webhooks** | HTTP POST, Security, Async | [Explore Module](./05-Event-Driven-Webhooks/) |
-| 06 | **Ansible Dynamic Inventory** | Plugins, Keyed Groups, Caching | [Explore Module](./06-Ansible-Dynamic-Inventory/) |
-| 07 | **Terraform Patterns** | Modules, State Locking, DRY | [Explore Module](./07-Terraform-Patterns/) |
-| 08 | **Best Practices** | Idempotency, Secrets | [Explore Module](README.md) |
-| 09 | **Ansible Fundamentals** | Playbooks, Roles | [Explore Module](README.md) |
-| 10 | **Real Life Scenarios** | Troubleshooting War Stories | [Explore Module](README.md) |
-| 11 | **FinOps (Cost as Code)** | Infracost, Kubecost | [Explore Module](README.md) |
+| 01 | **Intermediate Shell** | Functions, Loops, Strict Mode | [Explore Module](readme.md) |
+| 02 | **Advanced Bash** | jq, sed, awk, xargs, traps | [Explore Module](readme.md) |
+| 03 | **Python for DevOps** | Boto3, APIs, Web Scraping | [Explore Module](readme.md) |
+| 04 | **Job Scheduling & Cron** | Crontab, Overlap, K8s Jobs | [Explore Module](./04-job-scheduling-and-cron/) |
+| 05 | **Event-Driven Webhooks** | HTTP POST, Security, Async | [Explore Module](./05-event-driven-webhooks/) |
+| 06 | **Ansible Dynamic Inventory** | Plugins, Keyed Groups, Caching | [Explore Module](./06-ansible-dynamic-inventory/) |
+| 07 | **Terraform Patterns** | Modules, State Locking, DRY | [Explore Module](./07-terraform-patterns/) |
+| 08 | **Best Practices** | Idempotency, Secrets | [Explore Module](readme.md) |
+| 09 | **Ansible Fundamentals** | Playbooks, Roles | [Explore Module](readme.md) |
+| 10 | **Real Life Scenarios** | Troubleshooting War Stories | [Explore Module](readme.md) |
+| 11 | **FinOps (Cost as Code)** | Infracost, Kubecost | [Explore Module](readme.md) |
 
 ---
 
@@ -107,33 +107,33 @@ Functional modules for building real-world tools.
 
 High-level implementation strategies.
 
-- **[GitOps](README.md)**
-- **[Service Mesh](README.md)**
-- **[Multi-Cluster K8s](README.md)**
-- **[AIOps & Incident Response](README.md)**
-- **[Platform Engineering](README.md)**
-- **[Supply Chain Security](README.md)**
-- **[Bare Metal Automation](README.md)**
-- **[Serverless Incident Mgmt](README.md)**
-- **[FinOps K8s Optimization](README.md)**
-- **[Chaos Engineering](README.md)**
-- **[Advanced Identity Federation](README.md)**
-- **[Service Mesh Security](README.md)**
-- **[Automated Compliance Auditing](README.md)**
-- **[Secret Management (Vault)](README.md)**
-- **[Fleet Mgmt (ApplicationSets)](README.md)**
-- **[Admission Controllers (OPA)](README.md)**
-- **[Advanced CI/CD Patterns](README.md)**
-- **[Service Mesh Observability](README.md)**
-- **[Cloud-Native Backup (Velero)](README.md)**
-- **[Automated Security Scanning](README.md)**
-- **[Advanced Terraform Workflows](README.md)**
-- **[Automated Performance Testing](README.md)**
-- **[Cloud-Native Logging (Loki)](README.md)**
-- **[Cost Governance (Infracost)](README.md)**
-- **[Advanced K8s Networking (eBPF)](README.md)**
-- **[DBRE (Database Reliability)](README.md)**
-- **[Observability](README.md)**
+- **[GitOps](readme.md)**
+- **[Service Mesh](readme.md)**
+- **[Multi-Cluster K8s](readme.md)**
+- **[AIOps & Incident Response](readme.md)**
+- **[Platform Engineering](readme.md)**
+- **[Supply Chain Security](readme.md)**
+- **[Bare Metal Automation](readme.md)**
+- **[Serverless Incident Mgmt](readme.md)**
+- **[FinOps K8s Optimization](readme.md)**
+- **[Chaos Engineering](readme.md)**
+- **[Advanced Identity Federation](readme.md)**
+- **[Service Mesh Security](readme.md)**
+- **[Automated Compliance Auditing](readme.md)**
+- **[Secret Management (Vault)](readme.md)**
+- **[Fleet Mgmt (ApplicationSets)](readme.md)**
+- **[Admission Controllers (OPA)](readme.md)**
+- **[Advanced CI/CD Patterns](readme.md)**
+- **[Service Mesh Observability](readme.md)**
+- **[Cloud-Native Backup (Velero)](readme.md)**
+- **[Automated Security Scanning](readme.md)**
+- **[Advanced Terraform Workflows](readme.md)**
+- **[Automated Performance Testing](readme.md)**
+- **[Cloud-Native Logging (Loki)](readme.md)**
+- **[Cost Governance (Infracost)](readme.md)**
+- **[Advanced K8s Networking (eBPF)](readme.md)**
+- **[DBRE (Database Reliability)](readme.md)**
+- **[Observability](readme.md)**
 
 ---
 
@@ -151,15 +151,15 @@ High-level implementation strategies.
 
 Build your first tools with these guided examples:
 
-- **[Shell Scripting Examples](./01-Shell-Scripting/examples/)**: Hello World, variable tests, and basic OS diagnostics.
-- **[Python Basics](./02-Python-Basics/examples/)**: Essential syntax and automation logic for DevOps.
+- **[Shell Scripting Examples](./01-shell-scripting/examples/)**: Hello World, variable tests, and basic OS diagnostics.
+- **[Python Basics](./02-python-basics/examples/)**: Essential syntax and automation logic for DevOps.
 
 **Happy Automating!** 🤖
 
 
 ---
 ## 🧭 Additional Modules
-- [00 Foundations](00-Foundations/README.md)
-- [03 Go Basics](03-Go-Basics/README.md)
-- [03 Idempotency](03-Idempotency/README.md)
-- [resources](resources/README.md)
+- [00 Foundations](00-foundations/readme.md)
+- [03 Go Basics](03-go-basics/readme.md)
+- [03 Idempotency](03-idempotency/readme.md)
+- [resources](resources/readme.md)

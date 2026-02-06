@@ -48,40 +48,40 @@ graph LR
 ### 🔹 Part 1: Shell Foundations (The Syntax)
 *Junior, learn the language of the machine.*
 
-*   **[01. Introduction](./Part-01-Shell-Foundations/01-Introduction/README.md)**: Why Bash?
-*   **[02. Terminal & Navigation](./Part-01-Shell-Foundations/02-Terminal-and-Navigation/README.md)**: Moving around the OS.
-*   **[03. File Manipulation](./Part-01-Shell-Foundations/03-File-Manipulation/README.md)**: Creating, copying, searching (`grep`, `find`).
-*   **[04. Man Pages](./Part-01-Shell-Foundations/04-Man-Pages-and-Help/README.md)**: Learning how to learn.
-*   **[05. Vim Basics](./Part-01-Shell-Foundations/05-Vim-Basics/README.md)**: Editing text on remote servers.
-*   **[06. Permissions](./Part-01-Shell-Foundations/06-Permissions/README.md)**: `chmod` and `chown`.
-*   **[07. Variables](./Part-01-Shell-Foundations/07-Basic-Variables/README.md)**: Storing data.
-*   **[08. Programs & Commands](./Part-01-Shell-Foundations/08-Programs-and-Commands/README.md)**: Built-ins, Aliases, and PATH.
+*   **[01. Introduction](./part-01-shell-foundations/01-introduction/readme.md)**: Why Bash?
+*   **[02. Terminal & Navigation](./part-01-shell-foundations/02-terminal-and-navigation/readme.md)**: Moving around the OS.
+*   **[03. File Manipulation](./part-01-shell-foundations/03-file-manipulation/readme.md)**: Creating, copying, searching (`grep`, `find`).
+*   **[04. Man Pages](./part-01-shell-foundations/04-man-pages-and-help/readme.md)**: Learning how to learn.
+*   **[05. Vim Basics](./part-01-shell-foundations/05-vim-basics/readme.md)**: Editing text on remote servers.
+*   **[06. Permissions](./part-01-shell-foundations/06-permissions/readme.md)**: `chmod` and `chown`.
+*   **[07. Variables](./part-01-shell-foundations/07-basic-variables/readme.md)**: Storing data.
+*   **[08. Programs & Commands](./part-01-shell-foundations/08-programs-and-commands/readme.md)**: Built-ins, Aliases, and PATH.
 
 ### 🔸 Part 2: Shell Architecture (The Logic)
 *Adding brains to your scripts.*
 
-*   **[01. Arithmetic & Metrics](./Part-02-Shell-Architecture/01-Arithmetic-and-Metrics/README.md)**: Math and `bc`.
-*   **[02. User Input](./Part-02-Shell-Architecture/02-User-Input/README.md)**: `read` and interactive scripts.
-*   **[03. Conditionals](./Part-02-Shell-Architecture/03-Conditionals/README.md)**: `if`, `else`, and logic gates.
-*   **[04. Loops & Processing](./Part-02-Shell-Architecture/04-Loops-and-Processing/README.md)**: Handling lists and files.
-*   **[05. Functions & Scope](./Part-02-Shell-Architecture/05-Functions-and-Scope/README.md)**: Modular scripting.
-*   **[06. Strict Mode & Safety](./Part-02-Shell-Architecture/06-Strict-Mode-Safety/README.md)**: Writing bulletproof code.
+*   **[01. Arithmetic & Metrics](./part-02-shell-architecture/01-arithmetic-and-metrics/readme.md)**: Math and `bc`.
+*   **[02. User Input](./part-02-shell-architecture/02-user-input/readme.md)**: `read` and interactive scripts.
+*   **[03. Conditionals](./part-02-shell-architecture/03-conditionals/readme.md)**: `if`, `else`, and logic gates.
+*   **[04. Loops & Processing](./part-02-shell-architecture/04-loops-and-processing/readme.md)**: Handling lists and files.
+*   **[05. Functions & Scope](./part-02-shell-architecture/05-functions-and-scope/readme.md)**: Modular scripting.
+*   **[06. Strict Mode & Safety](./part-02-shell-architecture/06-strict-mode-safety/readme.md)**: Writing bulletproof code.
 
 ### 🚀 Part 3: System Drafting (The Automation)
 *Building real-world scripts for production.*
 
-*   **[01. Scripting Basics](./Part-03-System-Drafting/01-Scripting-Basics/README.md)**: Your first real scripts.
-*   **[02. Advanced I/O](./Part-03-System-Drafting/02-Advanced-IO/README.md)**: Redirection, pipes, and descriptors.
+*   **[01. Scripting Basics](./part-03-system-drafting/01-scripting-basics/readme.md)**: Your first real scripts.
+*   **[02. Advanced I/O](./part-03-system-drafting/02-advanced-io/readme.md)**: Redirection, pipes, and descriptors.
 
 ---
 
 ## 🏢 Reference Library
 
-*   **[Shell Fundamentals](./REFERENCE/Shell-Fundamentals-Ref.md)**: Variables and execution.
-*   **[Bash Architecture](./REFERENCE/Bash-Architecture-Ref.md)**: Subshells and jobs.
-*   **[Stream Editing & Filtering](./REFERENCE/Stream-Editing-Filtering-Ref.md)**: Grep, Sed, and Awk.
-*   **[Script Hardening](./REFERENCE/Script-Hardening-Best-Practices-Ref.md)**: Security and error handling.
-*   **[POSIX vs. Bash](./REFERENCE/POSIX-vs-Bash-Compatibility-Ref.md)**: Portability standards.
+*   **[Shell Fundamentals](./reference/shell-fundamentals-ref.md)**: Variables and execution.
+*   **[Bash Architecture](./reference/bash-architecture-ref.md)**: Subshells and jobs.
+*   **[Stream Editing & Filtering](./reference/stream-editing-filtering-ref.md)**: Grep, Sed, and Awk.
+*   **[Script Hardening](./reference/script-hardening-best-practices-ref.md)**: Security and error handling.
+*   **[POSIX vs. Bash](./reference/posix-vs-bash-compatibility-ref.md)**: Portability standards.
 
 ---
 
@@ -123,4 +123,4 @@ Week 5-6: System Drafting (I/O Redirection, Advanced Automation)
 ```
 
 ---
-**Next Step**: Go to [01. Introduction](./Part-01-Shell-Foundations/01-Introduction/README.md), Junior!
+**Next Step**: Go to [01. Introduction](./part-01-shell-foundations/01-introduction/readme.md), Junior!

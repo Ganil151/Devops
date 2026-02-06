@@ -39,8 +39,8 @@ graph LR
 
 ## 🗺️ Included Modules
 
-1. **[02-Manual-Health-Checks](./02-Manual-Health-Checks/README.md)**: The essential CLI commands for diagnostics.
+1. **[02-Manual-Health-Checks](./02-manual-health-checks/readme.md)**: The essential CLI commands for diagnostics.
 
 ---
 
-**Next Step**: Get hands-on in **[02-Manual-Health-Checks](./02-Manual-Health-Checks/README.md)** 🚀
+**Next Step**: Get hands-on in **[02-Manual-Health-Checks](./02-manual-health-checks/readme.md)** 🚀

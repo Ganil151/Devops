@@ -5,14 +5,14 @@
 ## 📖 Overview
 
 ## Core Concept: Convention Over Configuration
-**[REFERENCE: Maven Lifecycle & Architecture](../REFERENCE/Maven-Lifecycle-Internals-Ref.md)**
+**[REFERENCE: Maven Lifecycle & Architecture](../reference/maven-lifecycle-internals-ref.md)**
 
 Maven is not a scripting language; it is a **declarative build framework**.
 - **Declarative**: You tell Maven *what* you want (a JAR, a WAR), not *how* to do it.
 - **The Lifecycle**: A state machine that guarantees order (`compile` -> `test` -> `package`).
 - **Reproducibility**: If two developers run `mvn clean install` on the same commit, they should get the same output.
 
-> See **[Maven-Lifecycle-Internals-Ref.md](../REFERENCE/Maven-Lifecycle-Internals-Ref.md)** for the detailed execution graph.
+> See **[Maven-Lifecycle-Internals-Ref.md](../reference/maven-lifecycle-internals-ref.md)** for the detailed execution graph.
 
 This part covers the absolute essentials of Apache Maven. We move from the initial installation to understanding the **Standard Directory Layout** and the brain of any Maven project: the **Project Object Model (POM.xml)**.
 
@@ -46,13 +46,13 @@ By the end of this part, you will:
 
 ---
 ## 🗺️ Included Modules
-1. **[01-Installation](./01-Installation/README.md)**: Setting up the forge. Java verification and Maven setup.
-2. **[02-Project-Structure](./02-Project-Structure/README.md)**: The standard layout. Where code, resources, and tests live.
-3. **[03-POM-Configuration](./03-POM-Configuration/README.md)**: The XML brain. Coordinating your build.
+1. **[01-Installation](./01-installation/readme.md)**: Setting up the forge. Java verification and Maven setup.
+2. **[02-Project-Structure](./02-project-structure/readme.md)**: The standard layout. Where code, resources, and tests live.
+3. **[03-POM-Configuration](./03-pom-configuration/readme.md)**: The XML brain. Coordinating your build.
 
 ---
 ## 🚀 Deep Dive
-Looking for a more detailed theoretical background? Check out our **[DEEP_DIVE.md](./DEEP_DIVE.md)**.
+Looking for a more detailed theoretical background? Check out our **[DEEP_DIVE.md](./deep-dive.md)**.
 
 ---
 
@@ -64,4 +64,4 @@ Looking for a more detailed theoretical background? Check out our **[DEEP_DIVE.m
 
 ---
 
-**Next Step**: Start with **[01-Installation](./01-Installation/README.md)** 🚀
+**Next Step**: Start with **[01-Installation](./01-installation/readme.md)** 🚀

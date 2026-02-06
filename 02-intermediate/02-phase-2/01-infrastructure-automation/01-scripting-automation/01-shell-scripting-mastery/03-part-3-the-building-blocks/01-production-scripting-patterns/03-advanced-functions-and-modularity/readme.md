@@ -83,4 +83,4 @@ This module covers the transition from basic functions to complex modular archit
 ---
 
 ## 🔗 Next Steps
-Proceed to: **[Advanced I/O & Logging](../04-Advanced-IO-and-Logging/README.md)** →
+Proceed to: **[Advanced I/O & Logging](../04-advanced-io-and-logging/readme.md)** →

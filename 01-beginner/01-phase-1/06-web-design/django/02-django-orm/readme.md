@@ -38,4 +38,4 @@ Django tracks every change to your models.
 - [ ] Is there a "Dry Run" check for migrations in the CI pipeline?
 
 ---
-**Next Step**: [03-Admin-and-Auditing](../03-Admin-and-Auditing/README.md)
+**Next Step**: [03-Admin-and-Auditing](../03-admin-and-auditing/readme.md)

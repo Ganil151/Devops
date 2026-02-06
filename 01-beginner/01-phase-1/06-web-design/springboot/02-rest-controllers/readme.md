@@ -30,4 +30,4 @@ Create a `HealthController` that:
 2. Returns a specific pod's status at `/status/{podName}`.
 
 ---
-**Next Step**: [03-Data-JPA](../03-Data-JPA/README.md)
+**Next Step**: [03-Data-JPA](../03-data-jpa/readme.md)

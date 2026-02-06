@@ -33,4 +33,4 @@ The central interface for providing configuration to the application. It loads b
 Decoupling components makes your application extremely easy to unit test. You can "Mock" a database repository and test your business logic in isolation.
 
 ---
-**Next Step**: [02-Rest-Controllers](../02-Rest-Controllers/README.md)
+**Next Step**: [02-Rest-Controllers](../02-rest-controllers/readme.md)

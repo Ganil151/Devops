@@ -147,4 +147,4 @@ CMD ["./myapp"]
 
 The Chef has a recipe. Now let's learn how to fix the kitchen when things go wrong.
 
-Proceed to: **[Module 04: Troubleshooting & Debugging](../04-Debugging/README.md)** →
+Proceed to: **[Module 04: Troubleshooting & Debugging](../04-debugging/readme.md)** →

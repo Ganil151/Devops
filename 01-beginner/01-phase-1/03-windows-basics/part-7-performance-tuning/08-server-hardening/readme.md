@@ -15,7 +15,7 @@ In DevOps infrastructure, servers should run **only the services required** for 
 
 ## ⚠️ Attack Surface Reduction
 
-### [Initialize-ServerHardening.ps1](./Initialize-ServerHardening.ps1)
+### [Initialize-ServerHardening.ps1](./initialize-serverhardening.ps1)
 
 **Purpose**: Enterprise-grade Windows Server hardening automation for CI/CD infrastructure.
 

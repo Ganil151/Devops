@@ -232,4 +232,4 @@ A junior developer accidentally overwrote an `API_KEY` variable mid-script, caus
 
 Now that you can store and represent your data, let's learn how to control the flow of your logic.
 
-Proceed to: **[Control Flow →](../03-Control-Flow/README.md)**
+Proceed to: **[Control Flow →](../03-control-flow/readme.md)**

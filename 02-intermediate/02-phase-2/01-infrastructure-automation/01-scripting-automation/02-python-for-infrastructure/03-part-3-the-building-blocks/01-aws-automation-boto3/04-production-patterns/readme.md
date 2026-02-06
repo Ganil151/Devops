@@ -191,4 +191,4 @@ if __name__ == "__main__":
 
 **Congratulations! You have mastered the Production Engine of Boto3.**
 
-[⬅️ Back to Scale & Resilience](../02-Scale-and-Resilience/README.md) | [Home: Python for Infrastructure](../../README.md)
+[⬅️ Back to Scale & Resilience](../02-scale-and-resilience/readme.md) | [Home: Python for Infrastructure](../../readme.md)

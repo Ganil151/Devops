@@ -61,19 +61,19 @@ graph TD
 
 ## 📂 Core Modules
 
-### 1. [🤖 Scripting Automation](./01-Scripting-Automation/README.md)
+### 1. [🤖 Scripting Automation](./01-scripting-automation/readme.md)
 *Junior, don't just write scripts; build tools.* 
 Master high-performance data parsing (JSON/YAML), Python Boto3 SDKs, and writing CLI tools that other people actually want to use.
 
-### 2. [🛡️ Automation Best Practices](./04-Automation-Best-Practices/README.md)
+### 2. [🛡️ Automation Best Practices](./04-automation-best-practices/readme.md)
 *Reliability isn't an accident.* 
 Deep-dives into **Idempotency**, **Atomicity**, and the **"Guard Clause"** pattern. Learn why `set -euo pipefail` should be in your DNA.
 
-### 3. [⚙️ Config Management](./02-Config-Management/README.md)
+### 3. [⚙️ Config Management](./02-config-management/readme.md)
 *Infrastructure is code.* 
 Terraform for the "Walls" (Provisioning) and Ansible for the "Wallpaper" (Configuration). Learn to manage **State** and detect **Drift**.
 
-### 4. [☁️ Cloud Platforms](./03-Cloud-Platforms/README.md)
+### 4. [☁️ Cloud Platforms](./03-cloud-platforms/readme.md)
 *The global playground.* 
 Platform-specific patterns for AWS, Azure, and Google Cloud. Scaling resources across regions with zero human interaction.
 
@@ -83,9 +83,9 @@ Platform-specific patterns for AWS, Azure, and Google Cloud. Scaling resources a
 
 These deep-dive documents serve as the source of truth for "Staff Level" automation patterns.
 
-1.  **[IaC & State Management](./REFERENCE/IaC-State-Management-Ref.md)**: Deep-dive into remote backends, state locking, and refactoring lifecycle.
-2.  **[Compliance & Governance](./REFERENCE/Infrastructure-Compliance-Ref.md)**: Policy as Code (OPA/Sentinel), cost analysis, and immutable image lifecycles.
-3.  **[Automation Resilience](./REFERENCE/Automation-Resilience-Ref.md)**: Exponential backoff, atomic writes, and the chaos engineering mindset.
+1.  **[IaC & State Management](./reference/iac-state-management-ref.md)**: Deep-dive into remote backends, state locking, and refactoring lifecycle.
+2.  **[Compliance & Governance](./reference/infrastructure-compliance-ref.md)**: Policy as Code (OPA/Sentinel), cost analysis, and immutable image lifecycles.
+3.  **[Automation Resilience](./reference/automation-resilience-ref.md)**: Exponential backoff, atomic writes, and the chaos engineering mindset.
 
 ---
 
@@ -168,10 +168,10 @@ These deep-dive documents serve as the source of truth for "Staff Level" automat
 
 ## 🔗 Next Steps
 Junior, the portal is open. Let's start with the glue that holds it all together.
-1. Proceed to: **[🤖 Scripting Automation](./01-Scripting-Automation/README.md)** →
-2. Return to: **[Phase 2 Hub](../README.md)** →
+1. Proceed to: **[🤖 Scripting Automation](./01-scripting-automation/readme.md)** →
+2. Return to: **[Phase 2 Hub](../readme.md)** →
 
 
 ---
 ## 🧭 Additional Modules
-- [05 System Administration](05-System-Administration/README.md)
+- [05 System Administration](05-system-administration/readme.md)

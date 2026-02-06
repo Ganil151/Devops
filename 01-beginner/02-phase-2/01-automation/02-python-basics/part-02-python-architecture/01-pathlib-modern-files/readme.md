@@ -2,7 +2,7 @@
 
 > **"If os.path is the 'Old Manual Gearbox' of file systems, Pathlib is the 'Automatic Transmission.' It turns complex path logic into readable, object-oriented code that works seamlessly on every OS."**
 
-![Pathlib vs os.path](../../../01-Shell-Scripting/Part-03-System-Drafting/02-Advanced-IO/io_stream_architecture.png)
+![Pathlib vs os.path](../../../01-shell-scripting/part-03-system-drafting/02-advanced-io/io-stream-architecture.png)
 
 ---
 
@@ -306,7 +306,7 @@ Refactored: `report_path = Path("/reports") / date / "data.csv"`.
 
 You can navigate files and parse arguments. Now let's combine everything into your **First Automation Script**.
 
-**Proceed to**: [Project Structure →](README.md) (Checking path...)
+**Proceed to**: [Project Structure →](readme.md) (Checking path...)
 
 ---
 

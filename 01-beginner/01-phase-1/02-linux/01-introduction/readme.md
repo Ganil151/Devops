@@ -103,7 +103,7 @@ As a Site Reliability Engineer (SRE), you should follow these standards:
 ---
 
 ## 🔗 Related Resources
-- [Linux Command Reference](../03-Commands/README.md)
-- [Filesystem Hierarchy](../02-Filesystem/README.md)
-- [Linux Permissions](../04-Permissions/README.md)
-- [SSH Mastery](../SSH/README.md)
+- [Linux Command Reference](../03-commands/readme.md)
+- [Filesystem Hierarchy](../02-filesystem/readme.md)
+- [Linux Permissions](../04-permissions/readme.md)
+- [SSH Mastery](../ssh/readme.md)

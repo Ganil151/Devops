@@ -84,4 +84,4 @@ AI excels at spotting patterns. If you have a suspect piece of Python or Go code
 
 The fires are out. Now let's talk about the rules.
 
-Proceed to: **[Module 05: Security & Ethics](../../Part-03-Governance-and-Ethics/05-Security-and-Ethics/README.md)** →
+Proceed to: **[Module 05: Security & Ethics](../../part-03-governance-and-ethics/05-security-and-ethics/readme.md)** →

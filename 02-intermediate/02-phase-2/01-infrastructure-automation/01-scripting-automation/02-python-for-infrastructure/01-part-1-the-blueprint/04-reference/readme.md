@@ -7,19 +7,19 @@ Welcome to the **Keyword Encyclopedia**. In the world of Infrastructure-as-Pytho
 ## 🏗️ The Curriculum of Mastery
 The reference is organized into four core disciplines, each building on the previous to create a complete Infrastructure Engineer's toolbelt.
 
-### [01. 🛠️ Core Automation](./01-Core-Automation-Keywords.md)
+### [01. 🛠️ Core Automation](./01-core-automation-keywords.md)
 **The Foundation**: Object-oriented filesystem handling (`pathlib`), secure process execution (`subprocess`), and structured logic flow.
 *   **Junior vs Staff**: Stop using `os.system` and hardcoded strings; start using `check=True` and `Path` objects.
 
-### [02. 📊 Data Manipulation](./02-Data-Manipulation-Keywords.md)
+### [02. 📊 Data Manipulation](./02-data-manipulation-keywords.md)
 **The Brain**: Normalizing the chaos of cloud outputs. JSON/YAML parsing, high-performance analysis with Pandas, and Regular Expression mastery.
 *   **Junior vs Staff**: Stop writing nested `for` loops to filter data; start using list comprehensions and vectorization.
 
-### [03. ☁️ Cloud & Networking](./03-Cloud-Networking-Keywords.md)
+### [03. ☁️ Cloud & Networking](./03-cloud-networking-keywords.md)
 **The Reach**: Scripting the global network. Boto3 SDK mastery (Paginators, Waiters), resilient HTTP (`Requests`), and high-scale SSH automation.
 *   **Junior vs Staff**: Stop writing `time.sleep()` loops; start using built-in API Waiters and Retry Adapters.
 
-### [04. 🧪 Testing & Observability](./04-Testing-Observability-Keywords.md)
+### [04. 🧪 Testing & Observability](./04-testing-observability-keywords.md)
 **The Safety Net**: Proving it works before it breaks. Pytest fixtures, AWS mocking with Moto, and structured JSON logging.
 *   **Junior vs Staff**: Stop using `print()` for debugging; start using `logging` severity levels and Mocking to prevent side effects.
 

@@ -115,4 +115,4 @@ In a microservices architecture, you want every service to use the same version 
 
 The libraries are in place. Now let's start the engine.
 
-Proceed to: **[05-Build-Lifecycle](../02-Build-Lifecycle/README.md)** →
+Proceed to: **[05-Build-Lifecycle](../02-build-lifecycle/readme.md)** →

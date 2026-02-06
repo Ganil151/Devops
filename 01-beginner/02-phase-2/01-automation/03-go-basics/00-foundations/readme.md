@@ -2,7 +2,7 @@
 
 > **"Go is not just a language; it's an engineering philosophy. Simple to read, fast to run, and designed from the ground up for the scale of the modern cloud."**
 
-![Go DevOps Hub](../assets/go_devops_hub.png)
+![Go DevOps Hub](../assets/go-devops-hub.png)
 
 ## 📋 Table of Contents
 
@@ -170,4 +170,4 @@ go build hello.go
 
 Now that your environment is ready, let's learn about variables, data types, and how Go manages memory.
 
-Proceed to: **[Go Fundamentals →](README.md)**
+Proceed to: **[Go Fundamentals →](readme.md)**

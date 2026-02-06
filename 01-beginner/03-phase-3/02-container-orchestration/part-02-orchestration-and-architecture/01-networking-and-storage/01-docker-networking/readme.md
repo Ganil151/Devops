@@ -140,4 +140,4 @@ docker run --network my-app-net --name user ...
 
 The bridges are built. Now let's learn how to ship our finished images to a global warehouse.
 
-Proceed to: **[Module 02: Docker Volumes](../02-Docker-Volumes/README.md)** →
+Proceed to: **[Module 02: Docker Volumes](../02-docker-volumes/readme.md)** →

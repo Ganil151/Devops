@@ -302,4 +302,4 @@ Before moving to the next module, ensure you can:
 
 **Score yourself**: 5+/5 = Ready to advance | <5 = Review exercises
 
-[⬅️ Back to Data Processing](../README.md) | [Next: Sed & Awk](../04-Data-Wrangling-with-Sed-and-Awk/README.md) ➡️
+[⬅️ Back to Data Processing](../readme.md) | [Next: Sed & Awk](../04-data-wrangling-with-sed-and-awk/readme.md) ➡️

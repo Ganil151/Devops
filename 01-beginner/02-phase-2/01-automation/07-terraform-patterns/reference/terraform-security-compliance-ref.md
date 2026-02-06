@@ -57,4 +57,4 @@ Infrastructure as Code (IaC) is a double-edged sword. While it provides consiste
 5. **Describe the impact of the `provisioner` block on security and idempotency.**
 
 ---
-**Back to foundations**: [State Management →](./Terraform-State-Management-Ref.md)
+**Back to foundations**: [State Management →](./terraform-state-management-ref.md)

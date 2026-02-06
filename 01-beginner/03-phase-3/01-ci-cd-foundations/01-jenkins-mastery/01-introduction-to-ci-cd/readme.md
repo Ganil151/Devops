@@ -138,4 +138,4 @@ The site is fixed by 4:55 PM. The team goes home on time.
 ---
 
 ## 🎯 Next Steps
-*   **[Jenkins Architecture](../02-Jenkins-Architecture/README.md)**: Deep dive into how Jenkins scale-out workflows function.
+*   **[Jenkins Architecture](../02-jenkins-architecture/readme.md)**: Deep dive into how Jenkins scale-out workflows function.

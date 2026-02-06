@@ -5,15 +5,15 @@
 
 ## 🗺️ Learning Roadmap
 
-### [01-Event-Loop](./01-Event-Loop/)
+### [01-Event-Loop](./01-event-loop/)
 - **Concepts**: Callbacks, Promises, libuv, non-blocking I/O.
 - **Goal**: Understand the engine that powers Node.js.
 
-### [02-Express-Middleware](./02-Express-Middleware/)
+### [02-Express-Middleware](./02-express-middleware/)
 - **Concepts**: Routing, Request pipelining, Error handling.
 - **Goal**: Build flexible and robust web servers.
 
-### [03-PM2-Operations](./03-PM2-Operations/)
+### [03-PM2-Operations](./03-pm2-operations/)
 - **Concepts**: Process clustering, Auto-restart, Monitoring.
 - **Goal**: Run Node.js at production scale.
 

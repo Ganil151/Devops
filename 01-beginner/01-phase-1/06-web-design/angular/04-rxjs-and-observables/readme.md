@@ -22,4 +22,4 @@ Emits values to subscribers using `.subscribe()`.
 Always unsubscribe to prevent memory leaks, or use the `async` pipe.
 
 ---
-**Back to Module**: [Angular Main Guide](../README.md)
+**Back to Module**: [Angular Main Guide](../readme.md)

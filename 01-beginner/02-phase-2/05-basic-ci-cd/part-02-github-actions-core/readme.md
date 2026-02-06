@@ -42,8 +42,8 @@ By the end of this part, you will:
 
 ## 🗺️ Included Modules
 
-1. **[01-GitHub-Actions-Basics](./01-GitHub-Actions-Basics/README.md)**: Your first workflow. Understanding the syntax and structure.
-2. **[02-Pipeline-Components](./02-Pipeline-Components/README.md)**: Advanced building blocks. Jobs, Steps, and Strategy Matrices.
+1. **[01-GitHub-Actions-Basics](./01-github-actions-basics/readme.md)**: Your first workflow. Understanding the syntax and structure.
+2. **[02-Pipeline-Components](./02-pipeline-components/readme.md)**: Advanced building blocks. Jobs, Steps, and Strategy Matrices.
 
 ---
 
@@ -55,4 +55,4 @@ By the end of this part, you will:
 
 ---
 
-**Next Step**: Build your first workflow in **[01-GitHub-Actions-Basics](./01-GitHub-Actions-Basics/README.md)** 🚀
+**Next Step**: Build your first workflow in **[01-GitHub-Actions-Basics](./01-github-actions-basics/readme.md)** 🚀

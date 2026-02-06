@@ -208,4 +208,4 @@ chmod +x ~/user_import.sh
 ---
 
 ## 🔗 **NEXT STEPS**
-Proceed to **[Functions & Scope](../05-Functions-and-Scope/README.md)** →
+Proceed to **[Functions & Scope](../05-functions-and-scope/readme.md)** →

@@ -78,7 +78,7 @@ To build reliable automation, your environment needs to be consistent and reprod
 
 ### 1. Installation and Environment Variables
 
-If you haven't followed the [Foundations Guide](README.md), ensure Go is installed and these variables are configured:
+If you haven't followed the [Foundations Guide](readme.md), ensure Go is installed and these variables are configured:
 
 * **`GOROOT`**: The directory where the Go toolchain is installed.
 * **`GOPATH`**: Your workspace directory (default: `~/go`).
@@ -267,4 +267,4 @@ Before a major production rollout, an SRE team needed to check the health of 200
 
 Now that you understand the fundamental role of Go in the DevOps ecosystem, let's dive into the core syntax.
 
-Proceed to: **[Variables and Types →](../02-Variables-and-Types/README.md)**
+Proceed to: **[Variables and Types →](../02-variables-and-types/readme.md)**

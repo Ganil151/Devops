@@ -2,7 +2,7 @@
 
 > **"Data is the oil of automation, and JSON/YAML is the pipeline. In the cloud, if you can't parse data, you can't automate systems. A missing space in YAML isn't just a typo; it's a production outage."**
 
-![Data Formats Architecture](REFERENCE/Data-Formats-Best-Practices-Ref.md)
+![Data Formats Architecture](reference/data-formats-best-practices-ref.md)
 
 ---
 
@@ -104,10 +104,10 @@ flowchart LR
 
 ## 📂 Deep-Dive Modules
 
-1.  **[🏗️ YAML Mastery](./Yaml/README.md)**: The standard for Kubernetes and Ansible.
-2.  **[⚙️ JSON Fundamentals](./Json/README.md)**: The language of REST APIs and AWS.
-3.  **[🏢 XML & Enterprise Tech](./Xml/README.md)**: Managing legacy and Jenkins internals.
-4.  **[📝 Modern Standards (TOML & Markdown)](./Toml/README.md)**: Pyproject and Documentation.
+1.  **[🏗️ YAML Mastery](./yaml/readme.md)**: The standard for Kubernetes and Ansible.
+2.  **[⚙️ JSON Fundamentals](./json/readme.md)**: The language of REST APIs and AWS.
+3.  **[🏢 XML & Enterprise Tech](./xml/readme.md)**: Managing legacy and Jenkins internals.
+4.  **[📝 Modern Standards (TOML & Markdown)](./toml/readme.md)**: Pyproject and Documentation.
 
 ---
 
@@ -149,9 +149,9 @@ flowchart LR
 
 ---
 
-**Next Step**: Start with **[YAML Mastery](./Yaml/README.md)**
+**Next Step**: Start with **[YAML Mastery](./yaml/readme.md)**
 
 
 ---
 ## 🧭 Additional Modules
-- [Markdown](Markdown/README.md)
+- [Markdown](markdown/readme.md)

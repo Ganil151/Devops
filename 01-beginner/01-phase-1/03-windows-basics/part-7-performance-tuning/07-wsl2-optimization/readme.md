@@ -20,7 +20,7 @@ This module addresses the **"host starvation" problem** that occurs when WSL2 (W
 
 The `Set-WSL2Performance.ps1` script automatically generates an optimized `.wslconfig` file with intelligent resource limits based on your system's capacity.
 
-### [Set-WSL2Performance.ps1](./Set-WSL2Performance.ps1)
+### [Set-WSL2Performance.ps1](./set-wsl2performance.ps1)
 
 **Purpose**: Automated WSL2 resource limiter for Windows 11 DevOps workstations.
 

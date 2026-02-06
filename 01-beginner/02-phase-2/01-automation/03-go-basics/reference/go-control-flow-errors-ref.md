@@ -65,4 +65,4 @@ func QueryDB() error {
 5. **What is a "Sentinel Error"? Give an example.**
 
 ---
-**Next Step**: [Go Concurrency & Goroutines →](./Go-Concurrency-Ref.md)
+**Next Step**: [Go Concurrency & Goroutines →](./go-concurrency-ref.md)

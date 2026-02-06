@@ -146,4 +146,4 @@ docker run --rm \
 
 The data is safe and scalable. Now let's learn how to shrink our images to the absolute minimum size for production.
 
-Proceed to: **[Module 03: Multi-Stage Builds](../03-Multi-Stage-Builds/README.md)** →
+Proceed to: **[Module 03: Multi-Stage Builds](../03-multi-stage-builds/readme.md)** →

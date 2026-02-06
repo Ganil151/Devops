@@ -146,4 +146,4 @@ chmod +x ~/scripts/deploy.sh
 ---
 
 ## 🔗 **NEXT STEPS**
-Proceed to **[Strict Mode & Safety](../06-Strict-Mode-Safety/README.md)** →
+Proceed to **[Strict Mode & Safety](../06-strict-mode-safety/readme.md)** →

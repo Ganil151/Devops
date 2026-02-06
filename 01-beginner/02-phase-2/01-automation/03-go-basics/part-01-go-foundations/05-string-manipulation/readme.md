@@ -4,7 +4,7 @@
 
 Strings in Go are immutable sequences of bytes. While this might seem limiting at first, Go provides a rich set of functions in the `strings` package and efficient builders for constructing new strings. Understanding these tools is essential for writing clean, performant automation scripts.
 
-![String Processing for DevOps](./go_strings_hero.png)
+![String Processing for DevOps](./go-strings-hero.png)
 
 ## Table of Contents
 
@@ -242,4 +242,4 @@ A team had inconsistent server naming conventions across AWS, Azure, and GCP. So
 
 ---
 
-**Next Step**: [Time and Date →](../06-Time-and-Date/README.md)
+**Next Step**: [Time and Date →](../06-time-and-date/readme.md)

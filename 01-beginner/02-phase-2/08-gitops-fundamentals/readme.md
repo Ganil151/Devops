@@ -7,14 +7,14 @@
 GitOps is an operational framework that takes DevOps best practices used for application development, such as version control, collaboration, compliance, and CI/CD, and applies them to infrastructure automation.
 
 ## Core Concept: The Reconciliation Loop
-**[REFERENCE: GitOps Architecture](REFERENCE/GitOps-Architecture-Ref.md)**
+**[REFERENCE: GitOps Architecture](reference/gitops-architecture-ref.md)**
 
 GitOps is not just "storing YAML in Git". It is an active control loop.
 - **Desired State**: What is in Git.
 - **Current State**: What is in the Cluster.
 - **The Operator**: A software agent (like ArgoCD) that constantly calculates `diff(Desired, Current)` and applies fixes.
 
-> See **[GitOps-Architecture-Ref.md](REFERENCE/GitOps-Architecture-Ref.md)** for the security benefits of the Pull Model.
+> See **[GitOps-Architecture-Ref.md](reference/gitops-architecture-ref.md)** for the security benefits of the Pull Model.
 
 ## 🎯 Learning Objectives
 
@@ -29,8 +29,8 @@ GitOps is not just "storing YAML in Git". It is an active control loop.
 
 | Part | Topic | Description |
 | :--- | :--- | :--- |
-| **[🟢 Part 1](./Part-01-The-Core-Philosophy/)** | **Philosophy** | Declarative configuration and Git principles. |
-| **[🟡 Part 2](./Part-02-Architecture-Models/)** | **Architecture** | Push vs. Pull models and security implications. |
+| **[🟢 Part 1](./part-01-the-core-philosophy/)** | **Philosophy** | Declarative configuration and Git principles. |
+| **[🟡 Part 2](./part-02-architecture-models/)** | **Architecture** | Push vs. Pull models and security implications. |
 
 ---
 
@@ -59,4 +59,4 @@ Never use `kubectl edit` or `ansible-playbook` manually on production nodes. If 
 
 ---
 
-**Next Step**: Start with **[Part 1: The Core Philosophy](./Part-01-The-Core-Philosophy/README.md)** 🚀
+**Next Step**: Start with **[Part 1: The Core Philosophy](./part-01-the-core-philosophy/readme.md)** 🚀

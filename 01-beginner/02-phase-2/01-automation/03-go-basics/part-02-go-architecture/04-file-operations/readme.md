@@ -4,7 +4,7 @@
 
 Go's file handling philosophy is built on two pillars: **Explicit Control** and **Efficient Streaming**. Unlike languages that hide buffered I/O, Go makes it easy to choose between reading a small config file in one shot or streaming a 50GB audit log without crashing your system.
 
-![File Operations Diagram](./go_file_operations_diagram.png)
+![File Operations Diagram](./go-file-operations-diagram.png)
 
 ## Table of Contents
 
@@ -208,4 +208,4 @@ A script was generating SSH keys but saving them with the default `0644` permiss
 
 ---
 
-**Next Step**: [Working with JSON →](../05-JSON-Handling/README.md)
+**Next Step**: [Working with JSON →](../05-json-handling/readme.md)

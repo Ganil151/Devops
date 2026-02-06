@@ -68,4 +68,4 @@ Keyed groups create Ansible groups based on metadata.
 5. **Describe how you would use "Instance Profiles" instead of hardcoded API keys for AWS discovery.**
 
 ---
-**Next Step**: [Inventory Security & Secret Management →](./Ansible-Security-RBAC-Ref.md)
+**Next Step**: [Inventory Security & Secret Management →](./ansible-security-rbac-ref.md)

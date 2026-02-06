@@ -11,20 +11,20 @@ We have broken down this critical concept into three actionable layers.
 ### 🧠 Part 1: The Golden Rule (Theory)
 *Understanding the mathematical foundation of reliability.*
 
-*   **[01. What Is Idempotency?](./Part-01-The-Golden-Rule/01-What-Is-Idempotency.md)**: Defining the core principle.
-*   **[02. The "Side Effect" Trap](./Part-01-The-Golden-Rule/02-Side-Effects.md)**: Why simple scripts destroy data.
+*   **[01. What Is Idempotency?](./part-01-the-golden-rule/01-what-is-idempotency.md)**: Defining the core principle.
+*   **[02. The "Side Effect" Trap](./part-01-the-golden-rule/02-side-effects.md)**: Why simple scripts destroy data.
 
 ### 🛠️ Part 2: Implementation (The Code)
 *How to write safe code in any language.*
 
-*   **[01. Bash Patterns](./Part-02-Implementation-Strategies/01-Bash-Patterns.md)**: "Check-Then-Act" logic in shell.
-*   **[02. Python Patterns](./Part-02-Implementation-Strategies/02-Python-Patterns.md)**: Using `os.path.exists` and Exception handling.
-*   **[03. Atomic Operations](./Part-02-Implementation-Strategies/03-Atomic-Operations.md)**: Transactional safety.
+*   **[01. Bash Patterns](./part-02-implementation-strategies/01-bash-patterns.md)**: "Check-Then-Act" logic in shell.
+*   **[02. Python Patterns](./part-02-implementation-strategies/02-python-patterns.md)**: Using `os.path.exists` and Exception handling.
+*   **[03. Atomic Operations](./part-02-implementation-strategies/03-atomic-operations.md)**: Transactional safety.
 
 ### 🏗️ Part 3: State Management (The Future)
 *Declarative tools that handle idempotency for you.*
 
-*   **[01. Ansible & Terraform](REFERENCE/State-Management-Declarative-Tools-Ref.md)**: Why we use them over Bash scripts.
+*   **[01. Ansible & Terraform](reference/state-management-declarative-tools-ref.md)**: Why we use them over Bash scripts.
 
 ---
 
@@ -45,6 +45,6 @@ Idempotency ensures **consistency**, not necessarily **correctness**.
 ## 🏢 Reference Library
 *Deep-dive documentation for at-a-glance problem solving.*
 
-*   **[Core Principles](./REFERENCE/Idempotency-Core-Principles-Ref.md)**: Mathematical definitions and state consistency.
-*   **[Design Patterns](./REFERENCE/Design-Patterns-Idempotency-Ref.md)**: Check-then-act, discovery, and atomic rename patterns.
-*   **[State Management](./REFERENCE/State-Management-Declarative-Tools-Ref.md)**: Declarative tools (Ansible, Terraform) and drift detection.
+*   **[Core Principles](./reference/idempotency-core-principles-ref.md)**: Mathematical definitions and state consistency.
+*   **[Design Patterns](./reference/design-patterns-idempotency-ref.md)**: Check-then-act, discovery, and atomic rename patterns.
+*   **[State Management](./reference/state-management-declarative-tools-ref.md)**: Declarative tools (Ansible, Terraform) and drift detection.

@@ -50,4 +50,4 @@ The EKS Control Plane consists of the Kubernetes API server and the `etcd` datab
 - **Solution**: Run `kubectl describe pod <name>` and look at the "Events" section. Look for messages like "Insufficient cpu" or "FailedScheduling".
 
 ---
-**Back to Module**: [EKS Main Overview](./README.md)
+**Back to Module**: [EKS Main Overview](./readme.md)

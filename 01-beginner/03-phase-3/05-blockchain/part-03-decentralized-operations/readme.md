@@ -102,4 +102,4 @@ Don't trust a single RPC endpoint to tell you the truth.
 
 The traffic is flowing. The final step is learning how to perform upgrades and monitor the health of your decentralized fleet.
 
-Proceed to: **[Part 04: Maintenance & Governance](../Part-04-Maintenance-and-Governance/README.md)** →
+Proceed to: **[Part 04: Maintenance & Governance](../part-04-maintenance-and-governance/readme.md)** →

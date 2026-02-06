@@ -45,4 +45,4 @@ Migration to the cloud is a complex journey. For SREs, the goal is to move workl
 - **Direct Connect / ExpressRoute**: Use private fiber connections for massive data migrations to avoid high data-egress costs over the public internet.
 
 ---
-**Next Step**: [Serverless Architecture →](./Serverless-Architecture-Ref.md)
+**Next Step**: [Serverless Architecture →](./serverless-architecture-ref.md)

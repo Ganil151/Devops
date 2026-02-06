@@ -24,30 +24,30 @@ graph TD
 
 ## 📂 Specialized Modules
 
-### [01-CPU & Process Prioritization](./01-CPU-and-Process-Prioritization)
+### [01-CPU & Process Prioritization](./01-cpu-and-process-prioritization)
 Tuning scheduler quantum and process priority for IDEs and compilers.
 - **Tools**: `Set-ProcessorPerformance.ps1`, `Optimize-SystemPerformance.ps1`
 
-### [02-Memory & Swap](./02-Memory-Management-and-Swap)
+### [02-Memory & Swap](./02-memory-management-and-swap)
 Optimizing RAM allocation and Pagefile behavior for heavy container workloads.
 - **Tools**: `Invoke-SystemAudit.ps1` (Memory Audit)
 
-### [03-Storage & I/O](./03-Storage-I-O-Optimization)
+### [03-Storage & I/O](./03-storage-i-o-optimization)
 Disabling metadata overhead and managing SSD TRIM for sustained database operations.
 - **Tools**: `Invoke-SystemMaintenance.ps1` (TRIM/Cleanup)
 
-### [04-Network Stack Tuning](./04-Network-Stack-Tuning)
+### [04-Network Stack Tuning](./04-network-stack-tuning)
 Deep registry tweaks for TCP Receive Windows and DNS caching architectures.
 - **Tools**: `Optimize-NetworkStack.ps1`
 
-### [05-Power & Thermal Profiles](./05-Power-and-Thermal-Profiles)
+### [05-Power & Thermal Profiles](./05-power-and-thermal-profiles)
 Eliminating frequency scaling jitter.
 - **Tools**: `Optimize-PowerPlan.ps1`
 
 ---
 
 ## 🧪 Labs and Challenges
-Explore the [05-Labs-and-Challenges](./05-Labs-and-Challenges) directory for hands-on performance debugging scenarios.
+Explore the [05-Labs-and-Challenges](./05-labs-and-challenges) directory for hands-on performance debugging scenarios.
 
 ---
 *Senior Windows Systems Engineer & Technical Content Architect*
@@ -55,7 +55,7 @@ Explore the [05-Labs-and-Challenges](./05-Labs-and-Challenges) directory for han
 
 ---
 ## 🧭 Additional Modules
-- [07 WSL2 Optimization](07-WSL2-Optimization/README.md)
-- [08 Server Hardening](08-Server-Hardening/README.md)
-- [09 Maintenance Automation](09-Maintenance-Automation/README.md)
-- [10 Health Monitoring](10-Health-Monitoring/README.md)
+- [07 WSL2 Optimization](07-wsl2-optimization/readme.md)
+- [08 Server Hardening](08-server-hardening/readme.md)
+- [09 Maintenance Automation](09-maintenance-automation/readme.md)
+- [10 Health Monitoring](10-health-monitoring/readme.md)

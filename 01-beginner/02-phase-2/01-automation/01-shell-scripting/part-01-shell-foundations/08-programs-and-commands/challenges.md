@@ -327,4 +327,4 @@ echo $PATH | tr ':' '\n' | nl
 ```
 
 ## Next Steps
-Complete these challenges, then proceed to **[Basic Variables](CHALLENGES.md)** →
+Complete these challenges, then proceed to **[Basic Variables](challenges.md)** →

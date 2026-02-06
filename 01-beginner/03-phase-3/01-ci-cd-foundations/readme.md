@@ -48,7 +48,7 @@ graph LR
 ---
 
 ## 🏗️ Core Concept: The DAG Execution Model
-**[REFERENCE: Pipeline Orchestration Patterns](./REFERENCE/Pipeline-Orchestration-Patterns-Ref.md)**
+**[REFERENCE: Pipeline Orchestration Patterns](./reference/pipeline-orchestration-patterns-ref.md)**
 
 Modern CI/CD is not a linear script; it's a **Directed Acyclic Graph (DAG)**.
 - **Parallelization**: Jobs with no dependencies (e.g., testing on Linux and Windows) execute simultaneously, reducing total pipeline time.
@@ -61,7 +61,7 @@ Modern CI/CD is not a linear script; it's a **Directed Acyclic Graph (DAG)**.
 ---
 
 ## 🛡️ Enterprise Governance & Security
-**[REFERENCE: Jenkins Architecture](./REFERENCE/Jenkins-Architecture-Deep-Dive-Ref.md)** | **[REFERENCE: Artifact Registry](./REFERENCE/Artifact-Registry-Governance-Ref.md)**
+**[REFERENCE: Jenkins Architecture](./reference/jenkins-architecture-deep-dive-ref.md)** | **[REFERENCE: Artifact Registry](./reference/artifact-registry-governance-ref.md)**
 
 At scale, CI/CD is a **trust boundary**:
 - **Controller Isolation**: The Jenkins Controller must NEVER execute builds (RCE risk). Only agents run untrusted code.
@@ -75,23 +75,23 @@ At scale, CI/CD is a **trust boundary**:
 
 ### 🏗️ 01. Jenkins Mastery
 The industry-standard orchestrator for self-managed enterprise pipelines.
-*   **[Introduction to CI/CD](./01-Jenkins-Mastery/01-Introduction-to-CI-CD/README.md)**: Core theory and tool comparison.
-*   **[Jenkins Architecture](./01-Jenkins-Mastery/02-Jenkins-Architecture/README.md)**: Scaling the brain and the muscle.
-*   **[Installation & Setup](./01-Jenkins-Mastery/03-Installation-and-Setup/README.md)**: Docker vs. Native deployment.
-*   **[Pipelines as Code](./01-Jenkins-Mastery/04-Pipelines-as-Code/README.md)**: Mastering the `Jenkinsfile`.
-*   **[Integrations & Plugins](./01-Jenkins-Mastery/05-Integrations-and-Plugins/README.md)**: Webhooks, Secrets, and Tooling.
+*   **[Introduction to CI/CD](./01-jenkins-mastery/01-introduction-to-ci-cd/readme.md)**: Core theory and tool comparison.
+*   **[Jenkins Architecture](./01-jenkins-mastery/02-jenkins-architecture/readme.md)**: Scaling the brain and the muscle.
+*   **[Installation & Setup](./01-jenkins-mastery/03-installation-and-setup/readme.md)**: Docker vs. Native deployment.
+*   **[Pipelines as Code](./01-jenkins-mastery/04-pipelines-as-code/readme.md)**: Mastering the `Jenkinsfile`.
+*   **[Integrations & Plugins](./01-jenkins-mastery/05-integrations-and-plugins/readme.md)**: Webhooks, Secrets, and Tooling.
 
 ### 🌐 02. GitHub Actions Foundations
-*   **[YAML Workflows](./02-GitHub-Actions-Foundations/README.md)**: Modern, cloud-native automation directly inside GitHub.
-*   **[CHALLENGES](./02-GitHub-Actions-Foundations/CHALLENGES.md)**: Matrix builds and Conditional releases.
+*   **[YAML Workflows](./02-github-actions-foundations/readme.md)**: Modern, cloud-native automation directly inside GitHub.
+*   **[CHALLENGES](./02-github-actions-foundations/challenges.md)**: Matrix builds and Conditional releases.
 
 ### 🦊 03. GitLab CI Basics
-*   **[Integrated DevOps](./03-GitLab-CI-Basics/README.md)**: Handling the entire lifecycle in one platform.
-*   **[CHALLENGES](./03-GitLab-CI-Basics/CHALLENGES.md)**: Artifact passing and Environments.
+*   **[Integrated DevOps](./03-gitlab-ci-basics/readme.md)**: Handling the entire lifecycle in one platform.
+*   **[CHALLENGES](./03-gitlab-ci-basics/challenges.md)**: Artifact passing and Environments.
 
 ### 📦 04. Artifact Registry Management
-*   **[JFrog & Nexus](./04-Artifact-Registry-Management/README.md)**: Storing and versioning binaries safely.
-*   **[CHALLENGES](./04-Artifact-Registry-Management/CHALLENGES.md)**: Local Nexus setup and Retention policies.
+*   **[JFrog & Nexus](./04-artifact-registry-management/readme.md)**: Storing and versioning binaries safely.
+*   **[CHALLENGES](./04-artifact-registry-management/challenges.md)**: Local Nexus setup and Retention policies.
 
 ---
 
@@ -103,4 +103,4 @@ As a DevOps engineer, you are measured by the **Cycle Time** (time from code com
 ---
 
 ## 🎯 Getting Started
-Begin with the **[Introduction to CI/CD Foundations](./01-Jenkins-Mastery/01-Introduction-to-CI-CD/README.md)** to understand the high-level theory.
+Begin with the **[Introduction to CI/CD Foundations](./01-jenkins-mastery/01-introduction-to-ci-cd/readme.md)** to understand the high-level theory.

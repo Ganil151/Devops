@@ -111,8 +111,8 @@ If your backend sends huge responses, Nginx needs to buffer them.
 
 Congratulations! You are now a master of the Edge.
 
-Proceed to: **[Part 3: Security & Hardening](../../Part-03-Security-and-Hardening/01-Security-and-SSL/README.md)** 🚀
+Proceed to: **[Part 3: Security & Hardening](../../part-03-security-and-hardening/01-security-and-ssl/readme.md)** 🚀
 
 ---
 
-[Back to Part 2 Overview](../README.md) | [Back to Home](../../README.md)
+[Back to Part 2 Overview](../readme.md) | [Back to Home](../../readme.md)

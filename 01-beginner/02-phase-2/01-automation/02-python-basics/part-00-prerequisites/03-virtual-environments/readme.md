@@ -68,4 +68,4 @@ pip install requests
 1. **Committing `.venv`**: NEVER commit your virtual environment to Git. Add `.venv/` to your `.gitignore`.
 2. **Moving Venvs**: You cannot move a venv folder to a different location. It relies on absolute paths. If you move the project, delete and recreate the venv.
 ---
-**Next Step**: [Python Fundamentals →](README.md)
+**Next Step**: [Python Fundamentals →](readme.md)

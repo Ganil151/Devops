@@ -2,7 +2,7 @@
 
 > **"In DevOps, you don't always need a massive enterprise server. Sometimes you just need a 10-line Webhook receiver that can handle 10,000 requests a second without breaking a sweat."**
 
-![FastAPI vs Flask](../05-Working-with-the-Web/web_api_demo.py)
+![FastAPI vs Flask](../05-working-with-the-web/web-api-demo.py)
 
 ---
 
@@ -281,7 +281,7 @@ async def run_audit():
 
 You have mastered the language, the architecture, and the systems. Now, it is time to build your Masterpiece.
 
-**Proceed to**: [Capstone: The Operations Hub →](../08-Capstone-Script/README.md)
+**Proceed to**: [Capstone: The Operations Hub →](../08-capstone-script/readme.md)
 
 ---
 

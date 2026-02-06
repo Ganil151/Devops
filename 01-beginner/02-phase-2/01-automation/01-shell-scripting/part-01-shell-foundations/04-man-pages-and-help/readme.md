@@ -285,4 +285,4 @@ Inside a man page (which uses `less`), use the **Forensic Search** flow:
 
 Now that you can find the manual for any tool, let's learn how to manage the lifecycle of those tools!
 
-Proceed to: **[Programs and Commands](../08-Programs-and-Commands/README.md)** →
+Proceed to: **[Programs and Commands](../08-programs-and-commands/readme.md)** →

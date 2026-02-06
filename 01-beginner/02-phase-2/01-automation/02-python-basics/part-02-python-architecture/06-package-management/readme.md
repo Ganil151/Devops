@@ -2,7 +2,7 @@
 
 > **"A script is only as reliable as its weakest dependency. In DevOps, package management isn't just about 'installing stuff'—it's about ensuring your automation supply chain is secure, reproducible, and conflict-free."**
 
-![Package Management Ecosystem in Python](../../assets/python_package_mgmt.png)
+![Package Management Ecosystem in Python](../../assets/python-package-mgmt.png)
 
 ---
 
@@ -430,7 +430,7 @@ safety check
 
 You have Isolated Workshops (Venvs) and Supply Chain Management (Pip). Now it's time to learn how to **Log** what happens inside your application.
 
-**Proceed to**: [Logging →](README.md)
+**Proceed to**: [Logging →](readme.md)
 
 ---
 

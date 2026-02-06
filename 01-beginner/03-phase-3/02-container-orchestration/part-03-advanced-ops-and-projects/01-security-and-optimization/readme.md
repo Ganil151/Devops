@@ -76,9 +76,9 @@ In a professional DevOps environment, we never give a process more power than it
 
 ## 🗺️ Included Sub-Modules
 
-1. **[01-Docker-Security](./01-Docker-Security/README.md)**: Hardening the boundary between app and host.
-2. **[02-Resource-Management](./02-Resource-Management/README.md)**: Ensuring "Noisy Neighbors" don't crash the system.
-3. **[03-Production-Considerations](./03-Production-Considerations/README.md)**: The final checklist for Go-Live.
+1. **[01-Docker-Security](./01-docker-security/readme.md)**: Hardening the boundary between app and host.
+2. **[02-Resource-Management](./02-resource-management/readme.md)**: Ensuring "Noisy Neighbors" don't crash the system.
+3. **[03-Production-Considerations](./03-production-considerations/readme.md)**: The final checklist for Go-Live.
 
 ---
 
@@ -123,4 +123,4 @@ In a professional DevOps environment, we never give a process more power than it
 
 ## 🎯 Next Steps
 
-Start with **[01-Docker-Security](./01-Docker-Security/README.md)** 🚀
+Start with **[01-Docker-Security](./01-docker-security/readme.md)** 🚀

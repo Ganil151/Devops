@@ -2,7 +2,7 @@
 
 > **"Don't Repeat Yourself (DRY). If you type the same logic twice, you've inherited a maintenance nightmare. If you make it a function, you've built a reusable asset."**
 
-![Modular Script Architecture](./modular_architecture.png)
+![Modular Script Architecture](./modular-architecture.png)
 
 ## 📚 Overview
 
@@ -266,4 +266,4 @@ For high-performance loops, you can write to a global variable (risky) or use **
 
 Ready to handle data streams and advanced file descriptors?
 
-Proceed to: **[Strict Mode & Safety](../06-Strict-Mode-Safety/README.md)** →
+Proceed to: **[Strict Mode & Safety](../06-strict-mode-safety/readme.md)** →

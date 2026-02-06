@@ -27,7 +27,7 @@ This module provides automated cleanup of build artifacts, temporary files, and 
 
 ## ✅ The Solution
 
-### [Invoke-ArtifactCleanup.ps1](./Invoke-ArtifactCleanup.ps1)
+### [Invoke-ArtifactCleanup.ps1](./invoke-artifactcleanup.ps1)
 
 **Purpose**: DevOps maintenance tool for automated artifact and cache cleanup.
 

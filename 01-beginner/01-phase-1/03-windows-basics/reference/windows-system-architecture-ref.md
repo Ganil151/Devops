@@ -58,4 +58,4 @@ Windows architecture is built on a hybrid kernel design. For DevOps practitioner
 - **Log Forwarding**: In production, use "Windows Event Forwarding" (WEF) to send logs to a central Linux-based SIEM or ELK stack.
 
 ---
-**Next Step**: [PowerShell Automation Fundamentals →](./PowerShell-Automation-Ref.md)
+**Next Step**: [PowerShell Automation Fundamentals →](./powershell-automation-ref.md)

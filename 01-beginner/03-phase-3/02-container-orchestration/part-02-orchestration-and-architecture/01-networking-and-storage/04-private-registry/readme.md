@@ -136,4 +136,4 @@ Edit your `/etc/docker/daemon.json` (Linux) or Docker Desktop Settings (Windows/
 
 The warehouse is secure. Now let's learn how to pack our bags for a long move.
 
-Proceed to: **[Module 05: Backup & Restore](../05-Backup-Restore-Migration/README.md)** →
+Proceed to: **[Module 05: Backup & Restore](../05-backup-restore-migration/readme.md)** →

@@ -5,7 +5,7 @@ Build upon your GitLab fundamentals with advanced features and enterprise-grade 
 ## 📋 Learning Objectives
 
 ## Enterprise Architecture & Governance
-**[REFERENCE: GitLab vs GitHub Enterprise](../../REFERENCE/GitLab-vs-GitHub-Enterprise-Ref.md)**
+**[REFERENCE: GitLab vs GitHub Enterprise](../../reference/gitlab-vs-github-enterprise-ref.md)**
 
 At the Intermediate level, GitLab becomes more than a repo—it is a **complete DevOps Platform**.
 - **Runner Architecture**: Understanding how to scale builds using custom runners.
@@ -22,28 +22,28 @@ By the end of this level, you will:
 
 ## 📚 Topics Covered
 
-### [01-Advanced-CICD](./01-Advanced-CICD/)
+### [01-Advanced-CICD](./01-advanced-cicd/)
 - Complex pipeline architectures
 - Multi-project pipelines
 - Pipeline optimization strategies
 - Advanced deployment patterns
 - Pipeline as Code best practices
 
-### [02-GitLab-Runner-Management](README.md)
+### [02-GitLab-Runner-Management](readme.md)
 - Runner architecture and scaling
 - Custom executor configuration
 - Runner security and isolation
 - Performance optimization
 - Monitoring and maintenance
 
-### [03-Container-Registry](README.md)
+### [03-Container-Registry](readme.md)
 - Docker image management
 - Registry configuration and security
 - Image scanning and vulnerability management
 - Multi-registry strategies
 - Cleanup and retention policies
 
-### [04-Security-Scanning](./04-Security-Scanning/)
+### [04-Security-Scanning](./04-security-scanning/)
 - SAST (Static Application Security Testing)
 - DAST (Dynamic Application Security Testing)
 - Dependency scanning
@@ -51,7 +51,7 @@ By the end of this level, you will:
 - License compliance
 - Security dashboard and reporting
 
-### [05-GitLab-API](README.md)
+### [05-GitLab-API](readme.md)
 - REST API fundamentals
 - GraphQL API usage
 - Authentication and authorization
@@ -59,7 +59,7 @@ By the end of this level, you will:
 - Webhook configuration
 - Custom integrations
 
-### [06-Package-Management](README.md)
+### [06-Package-Management](readme.md)
 - Package registry configuration
 - Multi-language package support
 - Dependency management

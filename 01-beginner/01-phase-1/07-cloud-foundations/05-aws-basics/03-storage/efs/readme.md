@@ -13,4 +13,4 @@ Detailed overview of EFS, including:
 
 ## Learning Path
 1. Start with the Fundamentals guide.
-2. Move to the [Hands-on Guide](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/03-Networking-and-Security/03-Identity-and-Access-Control/AWS-IAM-Cognito/cognito-hands-on.md) to create and mount your first file system.
+2. Move to the [Hands-on Guide](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/03-identity-and-access-control/aws-iam-cognito/cognito-hands-on.md) to create and mount your first file system.

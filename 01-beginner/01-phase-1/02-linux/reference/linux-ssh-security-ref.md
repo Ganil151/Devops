@@ -61,4 +61,4 @@ Secure Shell (SSH) is the industry standard for remote server administration. Fo
 - **Dynamic Forwarding (SOCKS)**: Use a remote server as a proxy for all browser traffic. `ssh -D 8080 user@proxy-host`.
 
 ---
-**Next Step**: [Linux Best Practices →](./Linux-Best-Practices-Ref.md)
+**Next Step**: [Linux Best Practices →](./linux-best-practices-ref.md)

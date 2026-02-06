@@ -67,4 +67,4 @@ Protocols are the "rules of engagement" that allow different systems to communic
 - **Handshake Failures**: "Connection Reset by Peer." → Usually implies a firewall dropped the TCP SYN-ACK or the service isn't listening.
 
 ---
-**Next Step**: [Network Hardware & Devices →](./Network-Devices-Hardware-Ref.md)
+**Next Step**: [Network Hardware & Devices →](./network-devices-hardware-ref.md)

@@ -77,4 +77,4 @@ When calling external APIs (e.g., AWS, Stripe), network timeouts can lead to dup
 5. **Describe the "Reconciliation Loop" pattern used in Kubernetes Controllers.**
 
 ---
-**Next Step**: [State Management & Declarative Tools →](./State-Management-Declarative-Tools-Ref.md)
+**Next Step**: [State Management & Declarative Tools →](./state-management-declarative-tools-ref.md)

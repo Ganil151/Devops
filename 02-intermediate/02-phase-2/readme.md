@@ -30,15 +30,15 @@
 
 ## 🗺️ Curriculum Path
 
-### 1. [01. Infrastructure Automation](./01-Infrastructure-Automation/README.md)
+### 1. [01. Infrastructure Automation](./01-infrastructure-automation/readme.md)
 *Junior, stop clicking buttons and start writing code.* 
 Master **Terraform** for provisioning, **Ansible** for configuration, and the "Target State" paradigm. Learn how to manage the lifecycle of a cloud resource from cradle to grave without ever touching a console.
 
-### 2. [02. Delivery & Governance](./02-Delivery-and-Governance/README.md)
+### 2. [02. Delivery & Governance](./02-delivery-and-governance/readme.md)
 *A commit shouldn't just be 'saved'; it should be 'shipped'.* 
 Build high-fidelity **CI/CD pipelines**, implement **GitOps** for zero-touch deployments, and enforce **Governance** so you don't accidentally deploy a security hole.
 
-### 3. [03. Modern Operations](./03-Modern-Operations/README.md)
+### 3. [03. Modern Operations](./03-modern-operations/readme.md)
 *If a tree falls in the forest and Prometheus doesn't scrape it, did it happen?* 
 Go beyond simple CPU charts to **Full-Stack Observability**, **LLM-assisted SRE**, and **FinOps** as an automated guardrail.
 
@@ -52,4 +52,4 @@ Junior, by completing Phase 2, you transition from a "SysAdmin" to a **Site Reli
 - Sleep soundly because you know your **Policy-as-Code** is blocking unauthorized changes.
 
 ---
-*Next Step: Take the controls, Junior. Head into [01. Infrastructure Automation](./01-Infrastructure-Automation/README.md).*
+*Next Step: Take the controls, Junior. Head into [01. Infrastructure Automation](./01-infrastructure-automation/readme.md).*

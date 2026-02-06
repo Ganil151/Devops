@@ -39,4 +39,4 @@ spec:
 
 ---
 
-**Next Step**: Explore models in **[Module 02: Push vs. Pull](../../Part-02-Architecture-Models/02-Push-vs-Pull-Basics/README.md)** 🚀
+**Next Step**: Explore models in **[Module 02: Push vs. Pull](../../part-02-architecture-models/02-push-vs-pull-basics/readme.md)** 🚀

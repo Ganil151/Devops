@@ -34,7 +34,7 @@ graph TD
 Nginx (pronounced "Engine-X") is the backbone of modern web infrastructure. It functions as a high-performance HTTP server, a sophisticated **Reverse Proxy**, and a robust **Load Balancer**.
 
 ## Core Concept: The Asynchronous Edge
-**[REFERENCE: Nginx Architecture](../../../02-Intermediate/01-Phase-1/02-Linux/REFERENCE/Linux-Kernel-Architecture-Ref.md)**
+**[REFERENCE: Nginx Architecture](../../../02-intermediate/01-phase-1/02-linux/reference/linux-kernel-architecture-ref.md)**
 
 Nginx is the "Traffic Controller" for the digital highway:
 - **Event-Driven Model**: Handling thousands of concurrent connections with a small memory footprint.
@@ -42,7 +42,7 @@ Nginx is the "Traffic Controller" for the digital highway:
 - **Load Balancing**: Distributing traffic across multiple servers using algorithms like Round Robin or Least Conn.
 
 ## Enterprise Governance: Hardened Visibility
-**[REFERENCE: Nginx Security](README.md)**
+**[REFERENCE: Nginx Security](readme.md)**
 
 Protecting the production gateway:
 - **SSL/TLS Termination**: Centralizing certificate management and enforcing modern encryption standards.
@@ -68,9 +68,9 @@ By the end of this curriculum, you will:
 
 | Part | Topic | Description |
 | :--- | :--- | :--- |
-| **[🟢 Part 1](./Part-01-Architecture-and-Foundations/)** | **Foundations** | The Engine Under the Hood. Architecture, Installation, and Reverse Proxying. |
-| **[🟡 Part 2](./Part-02-Traffic-Management-and-Performance/)** | **Traffic & Speed** | Moving at Scale. Load balancing strategies and extreme performance tuning. |
-| **[🔴 Part 3](./Part-03-Security-and-Hardening/)** | **Security** | Locking the Gates. SSL/TLS termination, WAF basics, and hardening. |
+| **[🟢 Part 1](./part-01-architecture-and-foundations/)** | **Foundations** | The Engine Under the Hood. Architecture, Installation, and Reverse Proxying. |
+| **[🟡 Part 2](./part-02-traffic-management-and-performance/)** | **Traffic & Speed** | Moving at Scale. Load balancing strategies and extreme performance tuning. |
+| **[🔴 Part 3](./part-03-security-and-hardening/)** | **Security** | Locking the Gates. SSL/TLS termination, WAF basics, and hardening. |
 
 ---
 
@@ -94,4 +94,4 @@ By the end of this curriculum, you will:
 
 ---
 
-**Next Step**: Start with **[Part 1: Architecture & Foundations](./Part-01-Architecture-and-Foundations/01-Architecture-and-Installation/)** 🚀
+**Next Step**: Start with **[Part 1: Architecture & Foundations](./part-01-architecture-and-foundations/01-architecture-and-installation/)** 🚀

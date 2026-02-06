@@ -154,4 +154,4 @@ Even if a hacker gets "root" inside the container, they cannot change the `nginx
 
 The memory is set. Now let's learn how to organize the communication lines.
 
-Proceed to: **[Module 03: Databases in Compose](../03-Database-Storage/README.md)** →
+Proceed to: **[Module 03: Databases in Compose](../03-database-storage/readme.md)** →

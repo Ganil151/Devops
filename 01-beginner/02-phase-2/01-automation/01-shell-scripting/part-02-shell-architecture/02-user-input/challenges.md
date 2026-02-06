@@ -682,4 +682,4 @@ Deployment of v1.2 to prod successful.
 - [ ] Do you understand how to separate "Input" from "Logic"?
 
 ## 🔗 **NEXT STEPS**
-Continue to **[Conditionals](../03-Conditionals/README.md)** →
+Continue to **[Conditionals](../03-conditionals/readme.md)** →

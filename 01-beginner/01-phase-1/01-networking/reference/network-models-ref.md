@@ -108,4 +108,4 @@ Network models provide a standardized language for describing how data moves fro
 **Action**: Check Peering connections, Route Tables, and CIDR overlaps.
 
 ---
-**Next Step**: [IP Addressing & Subnetting →](./IP-Addressing-Subnetting-Ref.md)
+**Next Step**: [IP Addressing & Subnetting →](./ip-addressing-subnetting-ref.md)

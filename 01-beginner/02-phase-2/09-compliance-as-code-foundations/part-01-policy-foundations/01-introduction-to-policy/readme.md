@@ -28,4 +28,4 @@ Compliance often feels like a burden because it is traditionally manual. "Policy
 
 ---
 
-**Next Step**: Learn to audit in **[Module 02: Auditing](../../Part-02-Security-Auditing/02-Manual-Security-Checklists/README.md)** 🚀
+**Next Step**: Learn to audit in **[Module 02: Auditing](../../part-02-security-auditing/02-manual-security-checklists/readme.md)** 🚀

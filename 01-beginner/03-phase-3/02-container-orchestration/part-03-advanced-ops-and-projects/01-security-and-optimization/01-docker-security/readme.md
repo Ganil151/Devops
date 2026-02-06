@@ -169,4 +169,4 @@ CMD ["server.js"]
 
 The locks are on. Now let's learn how to balance the engine for maximum performance.
 
-Proceed to: **[Module 13: Resource Management](../02-Resource-Management/README.md)** →
+Proceed to: **[Module 13: Resource Management](../02-resource-management/readme.md)** →

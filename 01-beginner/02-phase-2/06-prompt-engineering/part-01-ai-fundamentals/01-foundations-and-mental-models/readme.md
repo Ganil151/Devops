@@ -94,4 +94,4 @@ When generating a complex automation script, don't just ask for the code. Use **
 
 The mindset is sharp. Now let's build the toolbox.
 
-Proceed to: **[Module 02: Prompt Toolkit](../02-Prompt-Toolkit/README.md)** →
+Proceed to: **[Module 02: Prompt Toolkit](../02-prompt-toolkit/readme.md)** →

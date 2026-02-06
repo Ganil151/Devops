@@ -63,4 +63,4 @@ dbHost := os.Getenv("DB_HOST")
 5. **What is the difference between `json.Marshal` and `json.Encoder`? When would you use one over the other?**
 
 ---
-**Back to foundations**: [Go Fundamentals →](./Go-Fundamentals-Ref.md)
+**Back to foundations**: [Go Fundamentals →](./go-fundamentals-ref.md)

@@ -312,4 +312,4 @@ kubectl --help
 ```
 
 ## Next Steps
-Complete these challenges, then proceed to **[Programs and Commands](../08-Programs-and-Commands/CHALLENGES.md)** →
+Complete these challenges, then proceed to **[Programs and Commands](../08-programs-and-commands/challenges.md)** →

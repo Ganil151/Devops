@@ -355,4 +355,4 @@ client_us = session_us.client('s3', config=secure_config)
 
 **Ready to handle Scale and Resilience?**
 
-[⬅️ Back to Cloud Overview](../../README.md) | [Next: Scale & Resilience →](../02-Scale-and-Resilience/README.md)
+[⬅️ Back to Cloud Overview](../../readme.md) | [Next: Scale & Resilience →](../02-scale-and-resilience/readme.md)

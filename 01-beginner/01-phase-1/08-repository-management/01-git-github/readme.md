@@ -12,18 +12,18 @@ Git is the foundation of DevOps. It allows teams to collaborate, track changes, 
 ## 📂 Module Structure
 
 ### 🔰 Beginner Level
-- **[01-Introduction](./01-Beginner-Level/01-Introduction/)**: Core concepts of Version Control, Git, and GitHub.
-- **[02-Git-Fundamentals](./01-Beginner-Level/02-Git-Fundamentals/)**: Architecture, object models, and basic workflows.
-- **[03-Git-Commands](./01-Beginner-Level/03-Git-Commands/)**: Essential commands for initialization, staging, and committing.
+- **[01-Introduction](./01-beginner-level/01-introduction/)**: Core concepts of Version Control, Git, and GitHub.
+- **[02-Git-Fundamentals](./01-beginner-level/02-git-fundamentals/)**: Architecture, object models, and basic workflows.
+- **[03-Git-Commands](./01-beginner-level/03-git-commands/)**: Essential commands for initialization, staging, and committing.
 
 ### 🚀 Intermediate Level
-- **[01-Git-Workflows](./02-Intermediate-Level/01-Git-Workflows/)**: GitFlow, GitHub Flow, and Trunk-Based Development.
-- **[02-GitHub-Integration](./02-Intermediate-Level/02-GitHub-Integration/)**: Issues, Projects, and Pull Requests.
-- **[03-GitHub-Actions](./02-Intermediate-Level/03-GitHub-Actions/)**: CI/CD basics with GitHub Actions.
+- **[01-Git-Workflows](./02-intermediate-level/01-git-workflows/)**: GitFlow, GitHub Flow, and Trunk-Based Development.
+- **[02-GitHub-Integration](./02-intermediate-level/02-github-integration/)**: Issues, Projects, and Pull Requests.
+- **[03-GitHub-Actions](./02-intermediate-level/03-github-actions/)**: CI/CD basics with GitHub Actions.
 
 ### 🛡️ Advanced Level
-- **[01-Git-Advanced](./03-Advanced-Level/01-Git-Advanced/)**: Rebasing, hooks, stashing, and internals.
-- **[02-Security-Best-Practices](./03-Advanced-Level/02-Security-Best-Practices/)**: Signing commits, scanning for secrets, and branch protection.
+- **[01-Git-Advanced](./03-advanced-level/01-git-advanced/)**: Rebasing, hooks, stashing, and internals.
+- **[02-Security-Best-Practices](./03-advanced-level/02-security-best-practices/)**: Signing commits, scanning for secrets, and branch protection.
 
 ---
 
@@ -129,9 +129,9 @@ git commit --amend -m "Corrected message"
 ---
 
 ## 🔗 Next Steps
-- **[Data Formats](README.md)** - Master YAML and JSON for configuration.
-- **[Docker Basics](README.md)** - Containerize your code versions.
-- **[GitHub Actions](README.md)** - Automate your Git workflow.
+- **[Data Formats](readme.md)** - Master YAML and JSON for configuration.
+- **[Docker Basics](readme.md)** - Containerize your code versions.
+- **[GitHub Actions](readme.md)** - Automate your Git workflow.
 
 ---
 *Version control is a muscle—the more you commit, the stronger your repository becomes.*

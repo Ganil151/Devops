@@ -7,14 +7,14 @@
 Observability is the ability to measure the internal states of a system by examining its outputs. In this module, we move beyond simple "is it running?" checks and into understanding system health through data. We explore the **MELT** framework and hands-on tools for manual diagnostics.
 
 ## Core Concept: Symptom-Based Alerting
-**[REFERENCE: Monitoring Strategies](REFERENCE/Monitoring-Strategies-Ref.md)**
+**[REFERENCE: Monitoring Strategies](reference/monitoring-strategies-ref.md)**
 
 Don't page on CPU usage. Page on User Pain.
 - **RED Method**: Rate, Errors, Duration (For Services).
 - **USE Method**: Utilization, Saturation, Errors (For Hardware).
 - **High Cardinality**: The database killer. Never put a UserID in a Metric label.
 
-> See **[Observability-Architecture-Ref.md](REFERENCE/Observability-Architecture-Ref.md)** for the architectural breakdown of Signals (Metrics vs Logs).
+> See **[Observability-Architecture-Ref.md](reference/observability-architecture-ref.md)** for the architectural breakdown of Signals (Metrics vs Logs).
 
 ## 🎯 Learning Objectives
 
@@ -29,8 +29,8 @@ Don't page on CPU usage. Page on User Pain.
 
 | Part | Topic | Description |
 | :--- | :--- | :--- |
-| **[🟢 Part 1](./Part-01-The-Signals/)** | **The Signals** | Understanding Concepts: Metrics, Logs, Traces. |
-| **[🟡 Part 2](./Part-02-Active-Monitoring/)** | **Active Ops** | Hands-on Health Checks and Diagnostics. |
+| **[🟢 Part 1](./part-01-the-signals/)** | **The Signals** | Understanding Concepts: Metrics, Logs, Traces. |
+| **[🟡 Part 2](./part-02-active-monitoring/)** | **Active Ops** | Hands-on Health Checks and Diagnostics. |
 
 ---
 
@@ -55,4 +55,4 @@ Always implement a `/health` or `/ready` endpoint in your services. This allows 
 
 ---
 
-**Next Step**: Start with **[Part 1: The Signals](./Part-01-The-Signals/README.md)** 🚀
+**Next Step**: Start with **[Part 1: The Signals](./part-01-the-signals/readme.md)** 🚀

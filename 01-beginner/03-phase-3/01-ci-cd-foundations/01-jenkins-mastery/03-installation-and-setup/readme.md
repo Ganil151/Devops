@@ -111,4 +111,4 @@ Used for dedicated servers where Docker is unavailable. Requires manual Java 11/
 ---
 
 ## 🎯 Next Steps
-*   **[Pipelines as Code](../04-Pipelines-as-Code/README.md)**: Moving from UI clicks to `Jenkinsfile` logic.
+*   **[Pipelines as Code](../04-pipelines-as-code/readme.md)**: Moving from UI clicks to `Jenkinsfile` logic.

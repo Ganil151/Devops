@@ -27,4 +27,4 @@ Use square brackets to capture URL segments: `app/blog/[slug]/page.js`.
 Server Components allow you to fetch data directly in the component using `async/await`, eliminating the need for complex state management for data fetching.
 
 ---
-**Next Step**: [02-SSR-and-ISR](../02-SSR-and-ISR/README.md)
+**Next Step**: [02-SSR-and-ISR](../02-ssr-and-isr/readme.md)

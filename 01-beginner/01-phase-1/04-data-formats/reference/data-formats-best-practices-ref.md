@@ -67,4 +67,4 @@ query_timeout: 60
 - [ ] Is every README using a consistent heading structure?
 
 ---
-**Next Step**: [Back to YAML Deep Dive →](./YAML-Deep-Dive-Ref.md)
+**Next Step**: [Back to YAML Deep Dive →](./yaml-deep-dive-ref.md)

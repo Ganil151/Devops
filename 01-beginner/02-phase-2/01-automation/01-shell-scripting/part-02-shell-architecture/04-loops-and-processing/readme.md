@@ -2,7 +2,7 @@
 
 > **"If you do it more than 3 times, write a loop. If you do it more than 10 times, rewrite the loop to be parallel."**
 
-![Iteration Control](./iteration_mechanics.png)
+![Iteration Control](./iteration-mechanics.png)
 
 ## 📚 Overview
 
@@ -429,7 +429,7 @@ The junior engineer used `for f in $(ls *.conf)`; a file named `Backup Site.conf
 
 ## 🔗 Next Steps
 
-Proceed to: **[Functions & Scope](../05-Functions-and-Scope/README.md)** →
+Proceed to: **[Functions & Scope](../05-functions-and-scope/readme.md)** →
 
 ---
 

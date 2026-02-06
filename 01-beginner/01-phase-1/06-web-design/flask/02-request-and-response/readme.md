@@ -33,4 +33,4 @@ Always return unambiguous status codes.
 Building a "Log Collector" that receives JSON logs via POST and returns a `201 Created` if successful.
 
 ---
-**Next Step**: [03-Database-and-ORM](../03-Database-and-ORM/README.md)
+**Next Step**: [03-Database-and-ORM](../03-database-and-orm/readme.md)

@@ -66,4 +66,4 @@ DevOps engineers spend the majority of their time at Layer 7:
 ---
 
 ### ⏭️ Next Step
-Now that you've mastered the Network Models, explore [IP Addressing](../../../03-IP-Addressing/README.md) to understand how data is routed across the internet!
+Now that you've mastered the Network Models, explore [IP Addressing](../../../03-ip-addressing/readme.md) to understand how data is routed across the internet!

@@ -44,8 +44,8 @@ By the end of this part, you will:
 
 ## 🗺️ Included Modules
 
-1. **[01-Load Balancing Strategies](./01-Load-Balancing-Strategies/README.md)**: Learning how to distribute traffic and build resilient clusters.
-2. **[02-Performance Optimization](./02-Performance-Optimization/README.md)**: Speeding up the edge. Gzip, Caching, and connection tuning.
+1. **[01-Load Balancing Strategies](./01-load-balancing-strategies/readme.md)**: Learning how to distribute traffic and build resilient clusters.
+2. **[02-Performance Optimization](./02-performance-optimization/readme.md)**: Speeding up the edge. Gzip, Caching, and connection tuning.
 
 ---
 
@@ -76,4 +76,4 @@ upstream backend_pool {
 
 ---
 
-**Next Step**: Start with **[01-Load Balancing Strategies](./01-Load-Balancing-Strategies/README.md)** 🚀
+**Next Step**: Start with **[01-Load Balancing Strategies](./01-load-balancing-strategies/readme.md)** 🚀

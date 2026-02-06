@@ -54,4 +54,4 @@ A queue where messages are sent if the source queue cannot process them successf
 - **Encryption**: KMS (SSE-KMS) used for data at rest.
 
 ---
-**Next Step**: Learn how to use SQS in the [Hands-on SQS Guide](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/02-Compute-and-Scale/04-Messaging-and-Integration/AWS-SNS-SQS/sqs-hands-on.md)
+**Next Step**: Learn how to use SQS in the [Hands-on SQS Guide](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/02-compute-and-scale/04-messaging-and-integration/aws-sns-sqs/sqs-hands-on.md)

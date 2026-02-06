@@ -172,7 +172,7 @@ waiter.wait(InstanceIds=[id])
 
 ---
 ## 🧭 Additional Modules
-- [01 Boto3 Foundations](01-Boto3-Foundations/README.md)
-- [02 Scale and Resilience](02-Scale-and-Resilience/README.md)
-- [03 Messaging and Notifications](03-Messaging-and-Notifications/README.md)
-- [04 Production Patterns](04-Production-Patterns/README.md)
+- [01 Boto3 Foundations](01-boto3-foundations/readme.md)
+- [02 Scale and Resilience](02-scale-and-resilience/readme.md)
+- [03 Messaging and Notifications](03-messaging-and-notifications/readme.md)
+- [04 Production Patterns](04-production-patterns/readme.md)

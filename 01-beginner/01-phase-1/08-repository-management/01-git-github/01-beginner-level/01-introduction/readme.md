@@ -30,5 +30,5 @@ GitHub is a **hosting platform** for Git repositories. It provides a web-based i
 
 Start by learning the core commands:
 
-- **[Git Fundamentals](../02-Git-Fundamentals/README.md)**: Deep dive into how Git works.
-- **[Git Commands](../03-Git-Commands/README.md)**: The essential CLI toolkit.
+- **[Git Fundamentals](../02-git-fundamentals/readme.md)**: Deep dive into how Git works.
+- **[Git Commands](../03-git-commands/readme.md)**: The essential CLI toolkit.

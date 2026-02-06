@@ -39,8 +39,8 @@ By the end of this part, you will:
 
 ## 🗺️ Included Modules
 
-1. **[01-Security-and-Quality-Gates](./01-Security-and-Quality-Gates/README.md)**: Blocking bad code before it merges. Linting, Testing, and Scanning.
-2. **[02-Continuous-Deployment](./02-Continuous-Deployment/README.md)**: The final mile. Automated release strategies.
+1. **[01-Security-and-Quality-Gates](./01-security-and-quality-gates/readme.md)**: Blocking bad code before it merges. Linting, Testing, and Scanning.
+2. **[02-Continuous-Deployment](./02-continuous-deployment/readme.md)**: The final mile. Automated release strategies.
 
 ---
 
@@ -52,4 +52,4 @@ By the end of this part, you will:
 
 ---
 
-**Next Step**: Secure your code in **[01-Security-and-Quality-Gates](./01-Security-and-Quality-Gates/README.md)** 🚀
+**Next Step**: Secure your code in **[01-Security-and-Quality-Gates](./01-security-and-quality-gates/readme.md)** 🚀

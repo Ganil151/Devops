@@ -83,4 +83,4 @@ curl -s https://api.github.com/users/octocat/repos | jq -r '.[].name'
 
 Mastered the challenges? Let's look at the backbone of these APIs!
 
-Proceed to: **[01-HTTP-Protocol](README.md)** →
+Proceed to: **[01-HTTP-Protocol](readme.md)** →

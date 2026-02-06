@@ -8,7 +8,7 @@ Anaconda is more than just a Python distribution; it is a powerful package and e
 ## 🏗️ Conda Architecture
 Conda is a **language-agnostic** binary package manager. Unlike `pip`, which only manages Python packages and relies on the system for C-libraries, Conda bundles everything you need into the environment.
 
-![Conda Architecture](./assets/conda_architecture.png)
+![Conda Architecture](./assets/conda-architecture.png)
 
 ### Conda vs. Pip + Venv
 | Feature | Pip + Venv | Anaconda (Conda) |
@@ -106,7 +106,7 @@ While you can install thousands of packages, these are the heavy hitters found i
 
 ## �🛠️ The "Golden Commands" (Cheat Sheet)
 
-![Environment Lifecycle](./assets/environment_lifecycle.png)
+![Environment Lifecycle](./assets/environment-lifecycle.png)
 
 ### 1. Environment Lifecycle (Management)
 
@@ -163,5 +163,5 @@ To make Anaconda seamless in your IDE:
 ---
 
 ## 🎯 Next Steps
-*   **[Hands-on Challenges](../../CHALLENGES.md)**: Practice creating and exporting environments.
-*   **[Package Management Basics](../02-Pip-Basics/README.md)**: Understand how pip works inside Conda.
+*   **[Hands-on Challenges](../../challenges.md)**: Practice creating and exporting environments.
+*   **[Package Management Basics](../02-pip-basics/readme.md)**: Understand how pip works inside Conda.

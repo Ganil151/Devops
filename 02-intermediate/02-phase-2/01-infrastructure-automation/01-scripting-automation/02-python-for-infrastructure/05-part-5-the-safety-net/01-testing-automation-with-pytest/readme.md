@@ -282,4 +282,4 @@ def test_check_iam_users_empty():
 
 ---
 
-[⬅️ Back to Serverless Automation](../../03-Part-3-The-Building-Blocks/02-Serverless-and-Lambda/README.md) | [Next: Infrastructure as Code (Terraform) →](README.md)
+[⬅️ Back to Serverless Automation](../../03-part-3-the-building-blocks/02-serverless-and-lambda/readme.md) | [Next: Infrastructure as Code (Terraform) →](readme.md)

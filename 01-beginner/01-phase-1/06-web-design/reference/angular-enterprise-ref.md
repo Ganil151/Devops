@@ -66,4 +66,4 @@ this.data$ = this.http.get('/api/status').pipe(
 - **Control Flow**: Use the modern `@if`, `@for`, and `@switch` syntax (Angular 17+) for significantly better performance over legacy directives.
 
 ---
-**Next Step**: [React Frontend Mastery →](./React-Frontend-Ref.md)
+**Next Step**: [React Frontend Mastery →](./react-frontend-ref.md)

@@ -16,7 +16,7 @@ By completing these labs, you will:
 
 ## 📚 Available Labs
 
-### [Lab 1: Identifying System Bottlenecks](./Lab-Bottleneck-Resolution.md)
+### [Lab 1: Identifying System Bottlenecks](./lab-bottleneck-resolution.md)
 
 **Difficulty**: Beginner  
 **Duration**: 30-45 minutes  
@@ -224,7 +224,7 @@ Measure-Command { Copy-Item -Path .\large-file.bin -Destination .\test\ }
 
 ## 📖 Additional Resources
 
-- [Performance Audit Template](../Boilerplates/Performance-Audit-Template.xml) - Import into Performance Monitor
+- [Performance Audit Template](../boilerplates/performance-audit-template.xml) - Import into Performance Monitor
 - [Windows Performance Analyzer](https://docs.microsoft.com/en-us/windows-hardware/test/wpt/windows-performance-analyzer)
 - [PowerShell Performance Counters](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.diagnostics/get-counter)
 

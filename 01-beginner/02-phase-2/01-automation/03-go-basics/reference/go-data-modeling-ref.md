@@ -77,4 +77,4 @@ Matches anything. Use with caution as it bypasses Go's type-safety.
 5. **Describe the performance impact of using interfaces (virtual method tables) vs concrete types.**
 
 ---
-**Next Step**: [Go Control Flow & Error Handling →](./Go-Control-Flow-Errors-Ref.md)
+**Next Step**: [Go Control Flow & Error Handling →](./go-control-flow-errors-ref.md)

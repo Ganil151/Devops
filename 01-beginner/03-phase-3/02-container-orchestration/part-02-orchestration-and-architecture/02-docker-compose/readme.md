@@ -82,20 +82,20 @@ Docker Compose is **Declarative**. You define the **Desired State** (*"I want 1 
 
 ### 🟢 Beginner
 
-1. **[01-Basics](./Beginner/01-Basics/README.md)**: Service definitions and core commands (`up`, `down`, `ps`).
-2. **[02-Volumes](./Beginner/02-Volumes/README.md)**: Mounting local code for real-time development.
-3. **[03-Database-Storage](./Beginner/03-Database-Storage/README.md)**: Securely persisting DB data in Compose.
+1. **[01-Basics](./beginner/01-basics/readme.md)**: Service definitions and core commands (`up`, `down`, `ps`).
+2. **[02-Volumes](./beginner/02-volumes/readme.md)**: Mounting local code for real-time development.
+3. **[03-Database-Storage](./beginner/03-database-storage/readme.md)**: Securely persisting DB data in Compose.
 
 ### 🟡 Intermediate
 
-1. **[01-Advanced-Features](./Intermediate/01-Advanced-Features/README.md)**: Profiles, healthchecks, and resource limits.
-2. **[02-Networks-Volumes](./Intermediate/02-Networks-Volumes/README.md)**: Customizing the communication layers.
-3. **[03-Secrets-Configs](./Intermediate/03-Secrets-Configs/README.md)**: Handling passwords and configuration files cleanly.
+1. **[01-Advanced-Features](./intermediate/01-advanced-features/readme.md)**: Profiles, healthchecks, and resource limits.
+2. **[02-Networks-Volumes](./intermediate/02-networks-volumes/readme.md)**: Customizing the communication layers.
+3. **[03-Secrets-Configs](./intermediate/03-secrets-configs/readme.md)**: Handling passwords and configuration files cleanly.
 
 ### 🔴 Advanced
 
-1. **[01-Production](./Advanced/01-Production/README.md)**: Moving from Compose to Cloud-ready configurations.
-2. **[02-Orchestration](./Advanced/02-Orchestration/README.md)**: Scaling services and managing complex dependencies.
+1. **[01-Production](./advanced/01-production/readme.md)**: Moving from Compose to Cloud-ready configurations.
+2. **[02-Orchestration](./advanced/02-orchestration/readme.md)**: Scaling services and managing complex dependencies.
 
 ---
 
@@ -142,4 +142,4 @@ Docker Compose is **Declarative**. You define the **Desired State** (*"I want 1 
 
 ## 🎯 Next Steps
 
-Start with **[Beginner: Basics](./Beginner/01-Basics/README.md)** 🚀
+Start with **[Beginner: Basics](./beginner/01-basics/readme.md)** 🚀

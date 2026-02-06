@@ -1701,7 +1701,7 @@ After completing all challenges, verify your shell scripting mastery:
 
 ## 🔗 **NEXT STEPS**
 
-Continue to: **[User Input](README.md)** →
+Continue to: **[User Input](readme.md)** →
 
 **Prerequisites for Next Module**:
 - Solid understanding of script structure and execution
@@ -1709,9 +1709,9 @@ Continue to: **[User Input](README.md)** →
 - Basic error handling knowledge
 
 **Related Advanced Topics**:
-- **[Advanced Bash Automation](README.md)**
-- **[Python for DevOps](README.md)**
-- **[Infrastructure as Code](README.md)**
+- **[Advanced Bash Automation](readme.md)**
+- **[Python for DevOps](readme.md)**
+- **[Infrastructure as Code](readme.md)**
 
 **Real-World Applications**:
 - Server provisioning and configuration

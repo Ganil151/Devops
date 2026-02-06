@@ -28,4 +28,4 @@ The middle ground. Static pages are regenerated in the background as traffic com
 ISR allows you to serve highly dynamic content with the speed of a static site, reducing load on your origin backend servers.
 
 ---
-**Next Step**: [03-API-Routes](../03-API-Routes/README.md)
+**Next Step**: [03-API-Routes](../03-api-routes/readme.md)

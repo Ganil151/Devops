@@ -66,4 +66,4 @@ Vue.js is designed from the ground up to be incrementally adoptable. The core li
 - **SSR (Nuxt.js)**: For huge public-facing portals, consider **Nuxt.js**, the Vue equivalent of Next.js, for better SEO.
 
 ---
-**Next Step**: [Web Design Best Practices →](./Web-Design-Best-Practices-Ref.md)
+**Next Step**: [Web Design Best Practices →](./web-design-best-practices-ref.md)

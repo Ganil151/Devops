@@ -100,4 +100,4 @@ dependencies = { python = "^3.12", requests = "^2.31" }
 - **Deep Nesting**: Avoid deeply nesting tables. TOML excels at flat configurations. If you need more than 3 levels of nesting, YAML might be a better choice.
 
 ---
-**Next Step**: [XML Enterprise Standards →](./XML-Enterprise-Legacy-Ref.md)
+**Next Step**: [XML Enterprise Standards →](./xml-enterprise-legacy-ref.md)

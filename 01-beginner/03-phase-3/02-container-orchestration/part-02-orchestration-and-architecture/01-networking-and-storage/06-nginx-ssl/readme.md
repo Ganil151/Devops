@@ -150,4 +150,4 @@ add_header X-Content-Type-Options "nosniff";
 
 The gateway is secure. Now let's learn how to manage the "Hard Parts" of production: scaling, secrets, and high-availability.
 
-Proceed to: **[Module 02: Docker Compose](../../02-Docker-Compose/README.md)** →
+Proceed to: **[Module 02: Docker Compose](../../02-docker-compose/readme.md)** →

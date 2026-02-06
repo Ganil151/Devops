@@ -94,4 +94,4 @@ Issue an **Access Token** valid for minutes and a **Refresh Token** valid for da
 
 ---
 
-**Next Step**: [Part 3: Advanced API Workflows](../../Part-003-Advanced-API-Workflows/01-DevOps-Integration/) 🚀
+**Next Step**: [Part 3: Advanced API Workflows](../../part-003-advanced-api-workflows/01-devops-integration/) 🚀

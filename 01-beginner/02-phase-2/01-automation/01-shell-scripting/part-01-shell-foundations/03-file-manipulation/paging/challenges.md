@@ -292,4 +292,4 @@ less +G /var/log/app/service.log  # Opens at end
 ```
 
 ## Next Steps
-Complete these challenges, then proceed to **[Man Pages](CHALLENGES.md)** →
+Complete these challenges, then proceed to **[Man Pages](challenges.md)** →

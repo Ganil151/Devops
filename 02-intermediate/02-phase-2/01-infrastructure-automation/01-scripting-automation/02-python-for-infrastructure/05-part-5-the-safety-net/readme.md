@@ -68,11 +68,11 @@ graph TD
 
 ### 📖 Table of Contents
 
-1.  **[Testing Automation with Pytest](./01-Testing-Automation-with-Pytest/)**: Implementing the "Safety Net" for your logic.
-2.  **[Database Operations](./02-Database-Operations/)**: Moving beyond flat files to structured, persistent state.
-3.  **[Web Scraping for Monitoring](./03-Web-Scraping-for-Monitoring/)**: Defensive data collection for legacy endpoints.
-4.  **[Data Processing with Pandas](./04-Data-Processing-with-Pandas/)**: Turning infrastructure logs into actionable data.
-5.  **[Capstone: S3 Auditor](./05-Capstone-Project-S3-Auditor/)**: Building a production-grade resource controller.
+1.  **[Testing Automation with Pytest](./01-testing-automation-with-pytest/)**: Implementing the "Safety Net" for your logic.
+2.  **[Database Operations](./02-database-operations/)**: Moving beyond flat files to structured, persistent state.
+3.  **[Web Scraping for Monitoring](./03-web-scraping-for-monitoring/)**: Defensive data collection for legacy endpoints.
+4.  **[Data Processing with Pandas](./04-data-processing-with-pandas/)**: Turning infrastructure logs into actionable data.
+5.  **[Capstone: S3 Auditor](./05-capstone-project-s3-auditor/)**: Building a production-grade resource controller.
 
 ---
 
@@ -124,4 +124,4 @@ graph TD
 
 You have mastered the language, the cloud engine, and the building blocks. Now, implement the **Safety Net** to ensure your infrastructure code is bulletproof.
 
-**Proceed to**: [01-Testing-Automation-with-Pytest/README.md](./01-Testing-Automation-with-Pytest/README.md)
+**Proceed to**: [01-Testing-Automation-with-Pytest/README.md](./01-testing-automation-with-pytest/readme.md)

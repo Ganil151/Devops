@@ -32,4 +32,4 @@ Create a "Deployment Status" card:
 3. Add padding to the whole card (`p-6`).
 
 ---
-**Next Step**: [02-Responsive-Design](../02-Responsive-Design/README.md)
+**Next Step**: [02-Responsive-Design](../02-responsive-design/readme.md)

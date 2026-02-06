@@ -61,4 +61,4 @@ Run automated CI jobs that execute `terraform plan`. Any output indicates that t
 5. **Describe the risk of "Manual Overrides" (console changes) in a declarative environment.**
 
 ---
-**Back to foundations**: [Idempotency Core Principles →](./Idempotency-Core-Principles-Ref.md)
+**Back to foundations**: [Idempotency Core Principles →](./idempotency-core-principles-ref.md)

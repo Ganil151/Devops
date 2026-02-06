@@ -6,7 +6,7 @@ Welcome to **The Engine**. This is where you learn to handle data at scale witho
 
 ## 🛣️ The Curriculum
 
-### [01-Stream-and-Text-Processing](./01-Stream-and-Text-Processing/)
+### [01-Stream-and-Text-Processing](./01-stream-and-text-processing/)
 **The Objective**: Master the "Big Three" utilities.
 *   **Key Tools**: 
     *   **sed (Stream Editor)**: Search and replace at scale.

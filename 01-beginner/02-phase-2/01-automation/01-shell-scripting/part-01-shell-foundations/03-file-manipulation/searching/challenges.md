@@ -301,4 +301,4 @@ fi
 | `\|` | OR (with -E) |
 
 ## Next Steps
-Complete these challenges, then proceed to **[Paging Files](CHALLENGES.md)** →
+Complete these challenges, then proceed to **[Paging Files](challenges.md)** →

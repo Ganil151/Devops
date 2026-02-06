@@ -30,4 +30,4 @@ You can call your internal API routes using standard `fetch()` calls from client
 Route Handlers run on the server (often as Serverless Functions). Use them to mask third-party API keys so they never reach the user's browser.
 
 ---
-**Back to Module**: [NextJS Main Guide](../README.md)
+**Back to Module**: [NextJS Main Guide](../readme.md)

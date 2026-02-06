@@ -4,7 +4,7 @@
 
 Unlike other languages that require heavy third-party libraries (like JUnit or PyTest), Go's `testing` package is simple, efficient, and standardized. By mastering Go testing, you ensure your infrastructure tools are reliable before they ever touch production.
 
-![Testing in Go](./go_testing_hero.png)
+![Testing in Go](./go-testing-hero.png)
 
 ## Table of Contents
 
@@ -201,4 +201,4 @@ A log parsing tool was getting slower over time. The team couldn't find the bott
 
 ---
 
-**Next Step**: [Capstone Project: Building a CLI Tool →](../04-Capstone-CLI-Tool/README.md)
+**Next Step**: [Capstone Project: Building a CLI Tool →](../04-capstone-cli-tool/readme.md)

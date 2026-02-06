@@ -66,4 +66,4 @@ Web design is not just how it looks; it's how it performs, fails, and scales. Fo
 - [ ] Does the site have a favicon and a descriptive `<title>` tag for tab navigation?
 
 ---
-**Next Step**: [Back to Web Fundamentals →](./Web-Fundamentals-Ref.md)
+**Next Step**: [Back to Web Fundamentals →](./web-fundamentals-ref.md)

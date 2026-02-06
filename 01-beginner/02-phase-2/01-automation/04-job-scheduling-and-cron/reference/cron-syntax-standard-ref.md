@@ -65,4 +65,4 @@ If a job runs every minute but takes 2 minutes to finish, you will have multiple
 5. **Describe how `anacron` differs from standard `cron` for desktop/laptop environments.**
 
 ---
-**Next Step**: [Systemd Timers Architecture →](./Systemd-Timers-Architecture-Ref.md)
+**Next Step**: [Systemd Timers Architecture →](./systemd-timers-architecture-ref.md)

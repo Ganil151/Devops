@@ -2,7 +2,7 @@
 
 > **"Python is the brain, but the Shell is the muscles. The subprocess module is the nervous system that connects the two, allowing your code to orchestrate everything from Docker to Terraform."**
 
-![Python Subprocess Ecosystem](../../python_devops_learning_path.md)
+![Python Subprocess Ecosystem](../../python-devops-learning-path.md)
 
 ---
 
@@ -992,7 +992,7 @@ except subprocess.TimeoutExpired:
 
 Now that you can interact with the operating system, you're ready to learn modern file path handling.
 
-**Proceed to**: [Pathlib Basics →](README.md)
+**Proceed to**: [Pathlib Basics →](readme.md)
 
 ---
 

@@ -67,10 +67,10 @@ graph LR
 
 ## 📁 Sub-Modules
 
-1.  **[01-Slack-ChatOps-Webhooks](./01-Slack-ChatOps-Webhooks/README.md)**: Master the "Push" notification flow using Webhooks and Rich Blocks.
-2.  **[02-Jira-Automation-API](./02-Jira-Automation-API/README.md)**: Programmatic ticket creation, searching, and transitions.
-3.  **[03-MultiCloud-Notifiers](./03-MultiCloud-Notifiers/README.md)**: Building environment-aware scripts for hybrid-cloud setups.
-4.  **[04-The-Unified-Dispatcher](./04-The-Unified-Dispatcher/README.md)**: Building a reusable `notify.py` library for all your projects.
+1.  **[01-Slack-ChatOps-Webhooks](./01-slack-chatops-webhooks/readme.md)**: Master the "Push" notification flow using Webhooks and Rich Blocks.
+2.  **[02-Jira-Automation-API](./02-jira-automation-api/readme.md)**: Programmatic ticket creation, searching, and transitions.
+3.  **[03-MultiCloud-Notifiers](./03-multicloud-notifiers/readme.md)**: Building environment-aware scripts for hybrid-cloud setups.
+4.  **[04-The-Unified-Dispatcher](./04-the-unified-dispatcher/readme.md)**: Building a reusable `notify.py` library for all your projects.
 
 ---
 
@@ -83,4 +83,4 @@ To move from Junior to Senior, your code must follow these rules:
 ---
 
 ## 🏆 Ready for the Challenge?
-Check out **[CHALLENGES.md](./CHALLENGES.md)** to build your first Auto-Responder and Health Check Bot.
+Check out **[CHALLENGES.md](./challenges.md)** to build your first Auto-Responder and Health Check Bot.

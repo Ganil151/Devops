@@ -2,7 +2,7 @@
 
 > **"A newbie learns syntax. An engineer learns mental models. Data structures are not about storing values—they're about building systems that scale."**
 
-![Python Data Structures](./assets/python_data_structures.png)
+![Python Data Structures](./assets/python-data-structures.png)
 
 ---
 
@@ -907,7 +907,7 @@ Running servers: 2
 ## 🔗 Next Steps
 Now that you understand data structures, you're ready to build functions that process them efficiently.
 
-**Proceed to**: [Functions and Modules →](README.md)
+**Proceed to**: [Functions and Modules →](readme.md)
 
 ---
 

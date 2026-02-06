@@ -39,4 +39,4 @@ Validating a webhook from GitHub or GitLab. By defining the webhook payload as a
 - **Sensitive Data**: Use Pydantic's `SecretStr` to prevent secrets from being accidentally printed in logs.
 
 ---
-**Next Step**: [03-Async-Operations](../03-Async-Operations/README.md)
+**Next Step**: [03-Async-Operations](../03-async-operations/readme.md)

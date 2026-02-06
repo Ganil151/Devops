@@ -80,4 +80,4 @@ flock -n 200 || { echo "Script already running!"; exit 1; }
 5. **What is the "OOM Killer" and how does it relate to intensive shell-loop operations?**
 
 ---
-**Next Step**: [Stream Editing & Filtering Mastery →](./Stream-Editing-Filtering-Ref.md)
+**Next Step**: [Stream Editing & Filtering Mastery →](./stream-editing-filtering-ref.md)

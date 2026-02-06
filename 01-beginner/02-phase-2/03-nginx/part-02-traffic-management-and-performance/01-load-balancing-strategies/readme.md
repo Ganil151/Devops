@@ -112,8 +112,8 @@ upstream my_pool {
 
 The traffic is flowing perfectly. Now let's make it secure.
 
-Proceed to: **[02-Performance Optimization](../02-Performance-Optimization/README.md)** →
+Proceed to: **[02-Performance Optimization](../02-performance-optimization/readme.md)** →
 
 ---
 
-[Back to Part 2 Overview](../README.md) | [Back to Home](../../README.md)
+[Back to Part 2 Overview](../readme.md) | [Back to Home](../../readme.md)

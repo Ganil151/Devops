@@ -9,20 +9,20 @@ This module lays the theoretical and environmental groundwork for your journey i
 ### 🧠 Part 1: Philosophy & Mindset
 *Understanding the "Why" before the "How".*
 
-*   **[01. Maturity Model](./Part-01-Philosophy-and-Mindset/01-Maturity-Model.md)**: From Manual execution to Autonomous self-healing.
-*   **[02. The Automation Workflow](./Part-01-Philosophy-and-Mindset/02-Automation-Workflow.md)**: How to spot automation opportunities in your daily work.
+*   **[01. Maturity Model](./part-01-philosophy-and-mindset/01-maturity-model.md)**: From Manual execution to Autonomous self-healing.
+*   **[02. The Automation Workflow](./part-01-philosophy-and-mindset/02-automation-workflow.md)**: How to spot automation opportunities in your daily work.
 
 ### 🛠️ Part 2: The Tooling Landscape
 *Choosing the right weapon for the battle.*
 
-*   **[01. Tools Comparison](./Part-02-Tooling-Landscape/01-Tools-Comparison.md)**: Bash vs. Python vs. Go. When to use what?
-*   **[02. How to Read Scripts](./Part-02-Tooling-Landscape/02-How-to-Read-Scripts.md)**: Strategies for parsing legacy code bases.
+*   **[01. Tools Comparison](./part-02-tooling-landscape/01-tools-comparison.md)**: Bash vs. Python vs. Go. When to use what?
+*   **[02. How to Read Scripts](./part-02-tooling-landscape/02-how-to-read-scripts.md)**: Strategies for parsing legacy code bases.
 
 ### ⚙️ Part 3: Environment Setup
 *Configuring your local development machine.*
 
-*   **[01. Shell Customization](./Part-03-Environment-Setup/01-Shell-Customization.md)**: Configuring `.bashrc`, aliases, and prompts for maximum productivity.
-*   **[Assets](./Part-03-Environment-Setup/assets/)**: Pre-made aliases and config files.
+*   **[01. Shell Customization](./part-03-environment-setup/01-shell-customization.md)**: Configuring `.bashrc`, aliases, and prompts for maximum productivity.
+*   **[Assets](./part-03-environment-setup/assets/)**: Pre-made aliases and config files.
 
 ---
 

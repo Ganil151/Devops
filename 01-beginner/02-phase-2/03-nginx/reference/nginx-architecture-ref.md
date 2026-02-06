@@ -529,4 +529,4 @@ nginx -s stop
 
 ---
 
-**Next Step**: [Nginx Configuration Patterns →](./Nginx-Configuration-Ref.md)
+**Next Step**: [Nginx Configuration Patterns →](./nginx-configuration-ref.md)

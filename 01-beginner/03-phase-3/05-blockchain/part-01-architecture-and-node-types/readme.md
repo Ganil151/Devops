@@ -94,4 +94,4 @@ Syncing a node from "Block Zero" (the Genesis block) can take weeks. Professiona
 
 Architecture is understood. Now let's talk about the raw power required to run these machines.
 
-Proceed to: **[Part 02: Infrastructure & Resources](../Part-02-Infrastructure-and-Resources/README.md)** →
+Proceed to: **[Part 02: Infrastructure & Resources](../part-02-infrastructure-and-resources/readme.md)** →

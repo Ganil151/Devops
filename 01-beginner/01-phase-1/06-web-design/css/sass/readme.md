@@ -21,4 +21,4 @@ Nesting selectors inside one another to follow the HTML hierarchy.
 Groups of CSS declarations that you can reuse throughout your site.
 
 ---
-**Back to CSS Module**: [CSS Main Guide](../README.md)
+**Back to CSS Module**: [CSS Main Guide](../readme.md)

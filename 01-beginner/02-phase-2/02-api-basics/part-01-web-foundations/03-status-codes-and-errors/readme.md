@@ -82,4 +82,4 @@ Never send a blank 400. Send a helpful JSON body:
 
 ---
 
-**Next Step**: [Part 2: API Security & Authentication](../../Part-02-API-Security-and-Auth/01-Authentication-and-Security/) 🚀
+**Next Step**: [Part 2: API Security & Authentication](../../part-02-api-security-and-auth/01-authentication-and-security/) 🚀

@@ -88,4 +88,4 @@ Instead of updating the live server, you spin up a **New** set of servers (Green
 
 Automation mastered. Now prove it with the challenges.
 
-Proceed to: **[CHALLENGES.md](../../CHALLENGES.md)** →
+Proceed to: **[CHALLENGES.md](../../challenges.md)** →

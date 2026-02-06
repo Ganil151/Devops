@@ -221,4 +221,4 @@ class DBManager:
 
 ---
 
-[⬅️ Back to Pytest Verification](../01-Testing-Automation-with-Pytest/README.md) | [Next: Web Scraping for Monitoring →](../03-Web-Scraping-for-Monitoring/README.md)
+[⬅️ Back to Pytest Verification](../01-testing-automation-with-pytest/readme.md) | [Next: Web Scraping for Monitoring →](../03-web-scraping-for-monitoring/readme.md)

@@ -8,11 +8,11 @@ This directory contains a collection of production-grade shell script samples ma
 
 | # | Sample Script | Topic | Key Engineering Concepts |
 | :--- | :--- | :--- | :--- |
-| **01** | [**logic_and_arrays.sh**](../01-Shell-Fundamentals/002-Intermediate-Logic/logic_and_arrays.sh) | Intermediate Logic | Associative Arrays, Regex Conditionals (`[[ =~ ]]`). |
-| **02** | [**functions_modularity.sh**](../../03-Part-3-The-Building-Blocks/01-Production-Scripting-Patterns/003-Advanced-Functions-and-Modularity/functions_modularity.sh) | Modularity | Local variables, return codes, library-style logic. |
-| **03** | [**log_and_io_plumbing.sh**](../../03-Part-3-The-Building-Blocks/01-Production-Scripting-Patterns/04-Advanced-IO-and-Logging/log_and_io_plumbing.sh) | I/O & Logging | Redirection (`&>`), File Descriptors (3-9), `tee`. |
-| **04** | [**trap_and_signals.sh**](../../03-Part-3-The-Building-Blocks/01-Production-Scripting-Patterns/05-Signal-Handling-Legacy/trap_and_signals.sh) | Signal Handling | Automated cleanup via `trap`, `EXIT` vs `INT` vs `TERM`. |
-| **05** | [**regex_and_parsing.sh**](../../02-Part-2-The-Engine/01-Stream-and-Text-Processing/06-Regex-and-Data-Parsing/regex_and_parsing.sh) | Data Parsing | The "Triple Threat": `grep -E`, `sed`, and `awk`. |
+| **01** | [**logic_and_arrays.sh**](../01-shell-fundamentals/002-intermediate-logic/logic-and-arrays.sh) | Intermediate Logic | Associative Arrays, Regex Conditionals (`[[ =~ ]]`). |
+| **02** | [**functions_modularity.sh**](../../03-part-3-the-building-blocks/01-production-scripting-patterns/003-advanced-functions-and-modularity/functions-modularity.sh) | Modularity | Local variables, return codes, library-style logic. |
+| **03** | [**log_and_io_plumbing.sh**](../../03-part-3-the-building-blocks/01-production-scripting-patterns/04-advanced-io-and-logging/log-and-io-plumbing.sh) | I/O & Logging | Redirection (`&>`), File Descriptors (3-9), `tee`. |
+| **04** | [**trap_and_signals.sh**](../../03-part-3-the-building-blocks/01-production-scripting-patterns/05-signal-handling-legacy/trap-and-signals.sh) | Signal Handling | Automated cleanup via `trap`, `EXIT` vs `INT` vs `TERM`. |
+| **05** | [**regex_and_parsing.sh**](../../02-part-2-the-engine/01-stream-and-text-processing/06-regex-and-data-parsing/regex-and-parsing.sh) | Data Parsing | The "Triple Threat": `grep -E`, `sed`, and `awk`. |
 
 ---
 
@@ -39,4 +39,4 @@ This directory contains a collection of production-grade shell script samples ma
 
 ---
 
-[⬅️ Back to Intermediate Shell](../README.md)
+[⬅️ Back to Intermediate Shell](../readme.md)

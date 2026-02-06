@@ -92,4 +92,4 @@ The most expensive part of software development is finding a bug too late. Pipel
 
 The mindset is set. Now let's build the engine.
 
-Proceed to: **[Module 02: GitHub Actions Basics](../../Part-02-GitHub-Actions-Core/01-GitHub-Actions-Basics/README.md)** →
+Proceed to: **[Module 02: GitHub Actions Basics](../../part-02-github-actions-core/01-github-actions-basics/readme.md)** →

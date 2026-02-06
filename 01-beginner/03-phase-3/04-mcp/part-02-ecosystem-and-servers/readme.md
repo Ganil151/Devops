@@ -130,4 +130,4 @@ When troubleshooting a new technology (e.g., a specific Kubernetes operator), do
 
 The ecosystem is vast. Now that you know how to use existing servers, it's time to learn how to build your own custom tools.
 
-Proceed to: **[Part 03: Building Custom Servers](../Part-03-Building-Custom-Servers/README.md)** →
+Proceed to: **[Part 03: Building Custom Servers](../part-03-building-custom-servers/readme.md)** →
