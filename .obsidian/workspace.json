@@ -213,8 +213,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/readme.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-fundamentals-devops.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-cli-commands.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/REFERENCE/Infrastructure-Compliance-Ref.md",
@@ -250,7 +251,6 @@
     "07-boilerplates/01-beginner/shell/shell-terminal-and-finder-readme.md",
     "07-boilerplates/01-beginner/shell/shell-searching-in-files-readme.md",
     "07-boilerplates/01-beginner/shell/shell-programs-and-commands-readme.md",
-    "07-boilerplates/01-beginner/shell/shell-paging-files-readme.md",
     "09-resources/images/screenshot-99.png",
     "09-resources/images/screenshot-98.png",
     "09-resources/images/screenshot-97.png",
