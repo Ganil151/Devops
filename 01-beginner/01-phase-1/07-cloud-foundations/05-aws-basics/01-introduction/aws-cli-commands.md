@@ -439,7 +439,6 @@ aws ec2 describe-instances \
   --query 'Reservations[].Instances[].[PublicIpAddress, Tags[?Key==`Name`].Value | [0] ]' \
   --output text | sort -k2
 ```
-
 ### Tags
 ```shell
 # list the tags of an instance
@@ -458,7 +457,6 @@ aws ec2 delete-tags \
     --resources "ami-1a2b3c4d" \
     --tags Key=Name,Value=
 ```
-
 ## Cloudwatch
 
 ### Log Groups
