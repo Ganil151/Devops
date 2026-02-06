@@ -309,7 +309,6 @@ aws s3api list-buckets --query 'Buckets[*].[Name]' --output text | xargs -I {} b
 
 aws s3api list-buckets --query 'Buckets[*].[Name]' --output text | xargs -I {} bash -c 'if [[ $(aws s3api get-bucket-acl --bucket {} --query '"'"'Grants[?Grantee.URI==`http://acs.amazonaws.com/groups/global/AllUsers` && Permission==`READ`]'"'"' --output text) ]]; then echo {} ; fi'
 ```
-
 ## EC2
 
 ### keypairs
@@ -340,7 +339,6 @@ aws ec2 import-key-pair \
 aws ec2 delete-key-pair \
     --key-name <value>
 ```
-
 ### Security Groups
 
 http://docs.aws.amazon.com/cli/latest/reference/ec2/index.html
