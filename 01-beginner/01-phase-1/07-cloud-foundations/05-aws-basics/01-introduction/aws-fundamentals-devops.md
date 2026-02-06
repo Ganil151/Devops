@@ -578,9 +578,7 @@ aws configservice put-configuration-recorder \
 # Enable GuardDuty
 aws guardduty create-detector --enable
 ```
-
 ### Secrets Management
-
 ```bash
 # Store secrets in Systems Manager Parameter Store
 aws ssm put-parameter \
