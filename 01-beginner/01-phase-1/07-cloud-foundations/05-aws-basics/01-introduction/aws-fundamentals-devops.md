@@ -267,9 +267,7 @@ aws ec2 associate-route-table \
     --route-table-id rtb-12345678 \
     --subnet-id subnet-12345678
 ```
-
 ### Security Groups and NACLs
-
 ```bash
 # Create security group
 aws ec2 create-security-group \
