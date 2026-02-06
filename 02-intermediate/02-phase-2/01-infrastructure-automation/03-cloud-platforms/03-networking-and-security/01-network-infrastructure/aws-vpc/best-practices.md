@@ -1,5 +1,5 @@
 # 📑 AWS VPC | SRE Best Practices & Design Patterns
-> **"Design for failover, build for isolation, and optimize for cost."**
+> **"Design for fail-over, build for isolation, and optimize for cost."**
 
 ## [01] IPAM & CIDR Planning | The Foundation
 **Keywords:** #ipam #cidr #planning #scalability
