@@ -92,11 +92,21 @@ class GitAutomation:
         # Build short summary
         scope = "auto"
         primary_file = Path(all_files[0]).name
-        commit_msg = f"{prefix}({scope}): {action} {primary_file}"
+        header = f"{prefix}({scope}): {action} {primary_file}"
         if len(all_files) > 1:
-            commit_msg += f" and {len(all_files)-1} others"
+            header += f" and {len(all_files)-1} others"
             
-        return commit_msg
+        # Build Body
+        body = ["\nChanges summary:"]
+        for category, files in changes.items():
+            if files:
+                body.append(f"- {category.capitalize()}: {len(files)} files")
+                for f in files[:3]: # Show first 3 files
+                    body.append(f"  • {f}")
+                if len(files) > 3:
+                    body.append(f"  • ... and {len(files)-3} more")
+        
+        return header + "\n" + "\n".join(body)
 
     def stage_and_commit(self, message: str) -> bool:
         # 1. Stage
@@ -109,7 +119,8 @@ class GitAutomation:
             return False
 
         # 3. Commit
-        print(f"📝 Committing: {message.splitlines()[0]}")
+        print(f"📝 Executing commit with message:")
+        print(f"{'='*40}\n{message}\n{'='*40}")
         success, _, stderr = self.run_command(["git", "commit", "-m", message])
         if not success:
             print(f"❌ Commit failed: {stderr}")
@@ -141,7 +152,8 @@ class GitAutomation:
         commit_message = custom_message if custom_message else self.generate_commit_message(changes)
         
         if dry_run:
-            print(f"🔍 [DRY RUN] Message: {commit_message}")
+            print(f"🔍 [DRY RUN] Generated Commit Message:")
+            print(f"{'='*40}\n{commit_message}\n{'='*40}")
             return "Dry run completed"
 
         if self.stage_and_commit(commit_message):
