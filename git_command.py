@@ -90,7 +90,7 @@ class GitAutomation:
             prefix, action = "refactor", "Update"
 
         # Build short summary
-        scope = "auto"
+        scope = self.repo_path.name
         primary_file = Path(all_files[0]).name
         header = f"{prefix}({scope}): {action} {primary_file}"
         if len(all_files) > 1:
@@ -167,7 +167,7 @@ class GitAutomation:
             while True:
                 changes = self.get_status()
                 if any(changes.values()):
-                    print(f"\n⚡ Changes detected at {datetime.now().strftime('%H:%M:%S')}")
+                    print(f"\n⚡ Changes detected in [{self.repo_path.name}] at {datetime.now().strftime('%H:%M:%S')}")
                     time.sleep(2) # Debounce
                     self.run()
                 time.sleep(10)
