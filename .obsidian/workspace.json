@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/readme.md",
+                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -213,8 +214,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/hands-on-lab.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/best-practices.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/readme.md",
@@ -250,7 +252,6 @@
     "07-boilerplates/02-intermediate/terraform/aws-golden-foundation/changelog.md",
     "07-boilerplates/01-beginner/shell/shell-vim-crash-course-readme.md",
     "07-boilerplates/01-beginner/shell/shell-user-input-readme.md",
-    "07-boilerplates/01-beginner/shell/shell-terminal-and-finder-readme.md",
     "09-resources/images/screenshot-99.png",
     "09-resources/images/screenshot-98.png",
     "09-resources/images/screenshot-97.png",
