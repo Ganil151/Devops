@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/ARCHITECTURE.md",
+                "file": "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/CONTRIBUTING.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "ARCHITECTURE"
+              "title": "CONTRIBUTING"
             }
           }
         ]
@@ -215,10 +215,10 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
-    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/checklist/POST_MORTEM_TEMPLATE.md",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/CICD_IMPLEMENTATION.md",
-    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/CONTRIBUTING.md",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/ARCHITECTURE.md",
+    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/checklist/POST_MORTEM_TEMPLATE.md",
+    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/CONTRIBUTING.md",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/README.md",
     "git_command.py",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/checklist/LAUNCH_CHECKLIST.md",
