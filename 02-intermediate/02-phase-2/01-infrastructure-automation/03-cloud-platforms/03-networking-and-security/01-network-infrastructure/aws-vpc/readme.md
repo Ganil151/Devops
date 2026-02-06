@@ -21,7 +21,7 @@
 ## 🚀 The Intermediate "Level Up"
 At the beginner level, we learn how to put an EC2 in a public subnet. At the **Intermediate Level**, we focus on:
 - **Zero Trust Connectivity**: Using VPC Endpoints (PrivateLink) instead of crossing the public internet.
-- **Enterprise Routing**: Managing Transit Gateways to connect 100+ VPCs without a messy peering web.
+- **Enterprise Routing**: Managing Transit Gateways to connect 100+ VPC's without a messy peering web.
 - **Security Chaining**: Referencing Security Groups by ID across different tiers for dynamic firewalling.
 - **Traffic Audit**: Using VPC Flow Logs to detect "Lateral Movement" by potential attackers.
 
