@@ -189,3 +189,15 @@ AutoScalingGroup:
 ```
 
 This guide covers AWS load balancing services and implementation patterns.
+## �� Junior-Friendly Tip: AMI Management
+AMI IDs change per region and are frequently updated with security patches. **Never hardcode them in production.** 
+
+To find the latest Amazon Linux 2023 ID programmatically via the CLI, run:
+```bash
+aws ec2 describe-images \
+    --owners amazon \
+    --filters "Name=name,Values=al2023-ami-*-x86_64" \
+    --query 'sort_by(Images, &CreationDate)[-1].ImageId' \
+    --output text
+```
+Check the centralized [Global Image Inventory](../../../../../../../../../../../../09-Resources/05-Cloud-Metadata/Global-Image-Inventory.md) for a curated list of IDs.
