@@ -216,6 +216,8 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/SECURITY.md",
+    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/scripts/check_health.sh",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/scripts",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/helm/microservices/templates",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/helm/microservices",
@@ -225,8 +227,6 @@
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/modules/eks",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/modules/vpc",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/modules",
-    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/environments/prod",
-    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/environments/dev",
     "09-Resources/05-Cloud-Reference/IMAGE_CATALOG.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/02-What-is-Terraform/What is Terraform.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/01-IaC-Principles/Infrastructure as Code (IaC) Principles.md",
