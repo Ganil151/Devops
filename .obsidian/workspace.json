@@ -213,8 +213,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "09-Resources/05-Cloud-Metadata/Global-Image-Inventory.md",
+    "09-Resources/05-Cloud-Metadata",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/04-Terraform-Cloud-and-GitOps/01-Part-1-The-Blueprint/10-Enterprise-Best-Practices/README.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/07-Resources/Resources.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/06-Providers/Providers.md",
@@ -231,7 +233,6 @@
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/global",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/modules/rds",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/modules/eks",
-    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/modules/vpc",
     "09-Resources/05-Cloud-Reference/IMAGE_CATALOG.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/02-What-is-Terraform/What is Terraform.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/01-IaC-Principles/Infrastructure as Code (IaC) Principles.md",
@@ -253,7 +254,6 @@
     "04-Projects-Showcase/Category-Guides/Production_Examples/README.md",
     "04-Projects-Showcase/Category-Guides/Multi_Tier_Apps/README.md",
     "04-Projects-Showcase/Category-Guides/Microservices/README.md",
-    "04-Projects-Showcase/00-Governance-Checklists/CI-CD-Pipeline-Checklist.md",
     "09-Resources/Images/Screenshot (99).png",
     "09-Resources/Images/Screenshot (98).png",
     "09-Resources/Images/Screenshot (97).png",
