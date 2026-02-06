@@ -328,9 +328,7 @@ aws iam list-users --output table
 # List groups for user
 aws iam list-groups-for-user --user-name devops-user
 ```
-
 ### Roles and Policies
-
 ```bash
 # Create role
 aws iam create-role \
