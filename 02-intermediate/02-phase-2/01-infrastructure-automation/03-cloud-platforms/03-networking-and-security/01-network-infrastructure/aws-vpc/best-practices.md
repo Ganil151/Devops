@@ -16,7 +16,7 @@
 **Keywords:** #subnets #security #isolation
 
 ### 🏗️ The 3-Tier Pattern (Standard)
-1. **Public Subnet**: Load Balancers, NAT Gateways, Bastion Hosts.
+1. **Public Subnet**: Load Balancer's, NAT Gateways, Bastion Hosts.
 2. **Private App Subnet**: API Gateways, Microservices, Worker Nodes.
 3. **Private Data Subnet**: RDS, ElastiCache, Redshift (No NAT route!).
 
