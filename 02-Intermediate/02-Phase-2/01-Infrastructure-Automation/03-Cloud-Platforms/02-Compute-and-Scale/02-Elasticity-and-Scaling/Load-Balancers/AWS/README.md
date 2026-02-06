@@ -157,7 +157,7 @@ LaunchTemplate:
   Properties:
     LaunchTemplateName: web-server-template
     LaunchTemplateData:
-      ImageId: ami-0abcdef1234567890
+      ImageId: ami-0abcdef1234567890 # Placeholder: See [Global-Image-Inventory.md](../../../../../../../../../../../../09-Resources/05-Cloud-Metadata/Global-Image-Inventory.md)
       InstanceType: t3.medium
       SecurityGroupIds:
         - !Ref WebServerSecurityGroup
