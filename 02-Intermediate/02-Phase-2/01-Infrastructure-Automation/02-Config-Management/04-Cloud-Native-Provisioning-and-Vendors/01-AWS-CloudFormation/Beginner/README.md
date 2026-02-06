@@ -209,6 +209,7 @@ Parameters:
     Description: EC2 instance type
 
 Mappings:
+  # See [Global-Image-Inventory.md](../../../../../../../../../../../09-Resources/05-Cloud-Metadata/Global-Image-Inventory.md) for latest IDs
   RegionMap:
     us-east-1:
       AMI: ami-0c55b159cbfafe1f0
@@ -571,3 +572,16 @@ Before moving to Intermediate level, ensure you can:
 **Next Level**: [Intermediate CloudFormation](../Intermediate/README.md)
 
 **Return to**: [CloudFormation Main](../README.md)
+
+## 💡 Junior-Friendly Tip: AMI Management
+AMI IDs change per region and are frequently updated with security patches. **Never hardcode them in production.** 
+
+To find the latest Amazon Linux 2023 ID programmatically via the CLI, run:
+```bash
+aws ec2 describe-images \
+    --owners amazon \
+    --filters "Name=name,Values=al2023-ami-*-x86_64" \
+    --query 'sort_by(Images, &CreationDate)[-1].ImageId' \
+    --output text
+```
+Check the centralized [Global Image Inventory](../../../../../../../../../../../09-Resources/05-Cloud-Metadata/Global-Image-Inventory.md) for a curated list of IDs.
