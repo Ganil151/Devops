@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/readme.md",
+                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/best-practices.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "best-practices"
             }
           }
         ]
@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/vpc",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/rds",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/eks",
@@ -228,7 +229,6 @@
     "05-labs/play-ground/microservices/spring-petclinic-microservices/helm/microservices",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/checklist/post-mortem-template.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/checklist/launch-checklist.md",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/contributing.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/cicd-implementation.md",
