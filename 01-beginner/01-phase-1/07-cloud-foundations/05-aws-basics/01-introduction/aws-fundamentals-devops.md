@@ -469,9 +469,7 @@ export AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
 export AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
 export AWS_DEFAULT_REGION=us-east-1
 ```
-
 ### CLI Best Practices
-
 ```bash
 # Use IAM roles instead of access keys when possible
 aws sts assume-role \
