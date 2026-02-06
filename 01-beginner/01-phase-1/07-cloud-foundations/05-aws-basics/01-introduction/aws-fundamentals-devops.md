@@ -299,11 +299,9 @@ aws ec2 describe-security-groups \
     --group-ids sg-903004f8 \
     --output table
 ```
-
 ## Identity and Access Management (IAM)
 
 ### Users and Groups
-
 ```bash
 # Create user
 aws iam create-user --user-name devops-user
