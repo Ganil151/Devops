@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/05-Configuration-Language/Configuration-Language-HCL.md",
+                "file": "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/05-Configuration-Language/Expressions.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Configuration-Language-HCL"
+              "title": "Expressions"
             }
           }
         ]
@@ -215,6 +215,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/05-Configuration-Language/Configuration-Language-HCL.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/04-Project-Structure/Project Structure.md",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/scripts/validate_infra.sh",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/SECURITY.md",
@@ -253,7 +254,6 @@
     "01-Beginner/02-Phase-2/05-Basic-CI-CD/Part-01-Principles-and-Fundamentals/README.md",
     "01-Beginner/02-Phase-2/05-Basic-CI-CD/Part-02-GitHub-Actions-Core/README.md",
     "01-Beginner/02-Phase-2/05-Basic-CI-CD/Part-02-GitHub-Actions-Core/01-GitHub-Actions-Basics/README.md",
-    "01-Beginner/02-Phase-2/04-Maven/Part-01-Maven-Fundamentals/03-POM-Configuration/README.md",
     "09-Resources/Images/Screenshot (99).png",
     "09-Resources/Images/Screenshot (98).png",
     "09-Resources/Images/Screenshot (97).png",
