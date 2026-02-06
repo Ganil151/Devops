@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/07-Resources/Resources.md",
+                "file": "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/04-Terraform-Cloud-and-GitOps/01-Part-1-The-Blueprint/10-Enterprise-Best-Practices/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Resources"
+              "title": "README"
             }
           }
         ]
@@ -215,6 +215,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/07-Resources/Resources.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/06-Providers/Providers.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/05-Configuration-Language/Expressions.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/05-Configuration-Language/Configuration-Language-HCL.md",
@@ -253,7 +254,6 @@
     "04-Projects-Showcase/Category-Guides/Microservices/README.md",
     "04-Projects-Showcase/00-Governance-Checklists/CI-CD-Pipeline-Checklist.md",
     "01-Beginner/02-Phase-2/05-Basic-CI-CD/Part-01-Principles-and-Fundamentals/01-CI-CD-Foundations/README.md",
-    "01-Beginner/02-Phase-2/05-Basic-CI-CD/Part-01-Principles-and-Fundamentals/README.md",
     "09-Resources/Images/Screenshot (99).png",
     "09-Resources/Images/Screenshot (98).png",
     "09-Resources/Images/Screenshot (97).png",
