@@ -213,8 +213,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "full_dir_list.txt",
     "README.md",
     "REFERENCE.md",
     "02-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/01-Part-1-The-Blueprint/01-CI-CD-Fundamentals/README.md",
@@ -253,7 +254,6 @@
     "01-Beginner/03-Phase-3/03-FinOps/REFERENCE/Cost-Attribution-Chargeback-Ref.md",
     "01-Beginner/03-Phase-3/03-FinOps/Part-04-Budgeting-Basics/README.md",
     "01-Beginner/03-Phase-3/03-FinOps/Part-03-Cost-Visibility/README.md",
-    "01-Beginner/03-Phase-3/03-FinOps/Part-02-Cloud-Billing-Basics/README.md",
     "09-Resources/Images/Screenshot (99).png",
     "09-Resources/Images/Screenshot (98).png",
     "09-Resources/Images/Screenshot (97).png",
