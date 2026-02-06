@@ -441,11 +441,9 @@ aws cloudtrail lookup-events \
     --start-time 2024-01-01 \
     --end-time 2024-01-31
 ```
-
 ## AWS CLI Configuration and Best Practices
 
 ### CLI Configuration
-
 ```bash
 # Configure AWS CLI
 aws configure
