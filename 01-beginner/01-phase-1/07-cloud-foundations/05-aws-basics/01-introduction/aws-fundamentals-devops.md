@@ -11,13 +11,11 @@ Amazon Web Services (AWS) is a comprehensive cloud computing platform provided b
 - **Terraform Integration**: Multi-cloud infrastructure management
 - **CDK (Cloud Development Kit)**: Define infrastructure using familiar programming languages
 - **Version Control**: Infrastructure changes tracked and managed like code
-
 ### 2. Scalability and Elasticity
 - **Auto Scaling**: Automatic scaling based on demand
 - **Elastic Load Balancing**: Distribute traffic across multiple instances
 - **Global Infrastructure**: Deploy applications worldwide with low latency
 - **Pay-as-you-use**: Cost optimization through elastic resource allocation
-
 ### 3. DevOps Tool Integration
 - **CI/CD Services**: CodePipeline, CodeBuild, CodeDeploy, CodeCommit
 - **Container Services**: ECS, EKS, Fargate for containerized applications
