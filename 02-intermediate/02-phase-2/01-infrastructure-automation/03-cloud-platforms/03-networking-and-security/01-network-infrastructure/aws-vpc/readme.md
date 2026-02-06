@@ -207,3 +207,8 @@ module "vpc" {
 ---
 *Created by Senior Cloud Architect | Optimized for SRE Operational Reality*
 #aws #vpc #networking #security #terraform #finops
+
+---
+### 📚 Supplemental Resources
+- [🚀 VPC CLI Cheatsheet & Automation Scripts](./cheatsheet.md)
+- [🛠️ AWS Troubleshooting Guide](../../../../../readme.md)
