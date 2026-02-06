@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/best-practices.md",
+                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "best-practices"
+              "title": "readme"
             }
           }
         ]
@@ -217,6 +217,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/best-practices.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/vpc",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/rds",
@@ -252,7 +253,6 @@
     "05-labs/06-spring-petclinic-microservices/contributing.md",
     "05-labs/06-spring-petclinic-microservices/cicd-implementation.md",
     "05-labs/06-spring-petclinic-microservices/architecture.md",
-    "04-projects-showcase/05-serverless-data-processor/06-spring-petclinic-microservices/checklist/post-mortem-template.md",
     "09-resources/images/screenshot-99.png",
     "09-resources/images/screenshot-98.png",
     "09-resources/images/screenshot-97.png",
