@@ -359,9 +359,9 @@ terraform destroy
 
 ## 🔗 Related Documentation
 
-- [Terraform Modules](README.md)
-- [Jenkins Blueprints](README.md)
-- [Service Mesh Guide](README.md)
+- [Terraform Modules](readme.md)
+- [Jenkins Blueprints](readme.md)
+- [Service Mesh Guide](readme.md)
 - [Istio Documentation](https://istio.io/latest/docs/)
 - [ArgoCD Documentation](https://argo-cd.readthedocs.io/)
 

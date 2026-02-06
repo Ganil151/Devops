@@ -6,19 +6,19 @@ Connectivity and security are the pillars of production Kubernetes. This part co
 
 ## 📂 Modules in this Part
 
-### 1. [05-Services-and-Networking](./05-Services-and-Networking/README.md)
+### 1. [05-Services-and-Networking](./05-services-and-networking/readme.md)
 Stable endpoints for ephemeral pods.
 - **Service Types**: ClusterIP, NodePort, and LoadBalancer.
 - **Discovery**: Kubernetes DNS and FQDNs.
 - **Routing**: Kube-proxy mechanics.
 
-### 2. [06-Ingress-Controllers](./06-Ingress-Controllers/README.md)
+### 2. [06-Ingress-Controllers](./06-ingress-controllers/readme.md)
 Layer 7 traffic management.
 - **Routing**: Path-based and Host-based routing.
 - **Security**: SSL Termination (TLS).
 - **Tooling**: NGINX vs. Traefik vs. Istio.
 
-### 3. [07-ConfigMaps-and-Secrets](./07-ConfigMaps-and-Secrets/README.md)
+### 3. [07-ConfigMaps-and-Secrets](./07-configmaps-and-secrets/readme.md)
 Decoupling configuration from code.
 - **ConfigMaps**: Application settings and ENV vars.
 - **Secrets**: Encrypted storage for passwords and API keys.
@@ -32,4 +32,4 @@ Decoupling configuration from code.
 3. Use **ConfigMaps & Secrets** to make your applications portable.
 
 ---
-[Back to Main Curriculum](../README.md)
+[Back to Main Curriculum](../readme.md)

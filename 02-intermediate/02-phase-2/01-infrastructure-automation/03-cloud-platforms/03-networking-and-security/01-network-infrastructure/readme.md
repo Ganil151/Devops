@@ -26,6 +26,6 @@ In a traditional data center, once you're inside the network, you're trusted. In
 ---
 
 ## 📂 Multi-Cloud Implementations
-- [AWS-VPC](./AWS-VPC): Security Groups, NACLs, and VPC Endpoints.
-- [Azure-VNet](./Azure-VNet): NSGs, ASGs, and VNet Peering.
-- [GCP-Virtual-Network](./GCP-Virtual-Network): Global VPCs and Firewall Rules.
+- [AWS-VPC](./aws-vpc): Security Groups, NACLs, and VPC Endpoints.
+- [Azure-VNet](./azure-vnet): NSGs, ASGs, and VNet Peering.
+- [GCP-Virtual-Network](./gcp-virtual-network): Global VPCs and Firewall Rules.

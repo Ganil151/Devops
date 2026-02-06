@@ -53,19 +53,19 @@ graph LR
 
 ## 🗺️ Curriculum Path
 
-### 1. [01-Foundations](./01-Blockchain-Development-Foundations/README.md)
+### 1. [01-Foundations](./01-blockchain-development-foundations/readme.md)
 *Junior, learn the laws of the EVM.* 
 Hardhat vs. Foundry. The Smart Contract Build Lifecycle (Bytecode vs. ABI). Gas economics 101.
 
-### 2. [02-CI/CD](./02-Smart-Contract-CI-CD/README.md)
+### 2. [02-CI/CD](./02-smart-contract-ci-cd/readme.md)
 *Automation for the decentralized web.* 
 GitHub Actions for EVM-based projects. Secure Private Key management and "Self-Verifying" deployments.
 
-### 3. [03-Security](./03-Security-and-Analysis/README.md)
+### 3. [03-Security](./03-security-and-analysis/readme.md)
 *Trust, but verify.* 
 Static analysis with Slither and MythX. Fuzz Testing and Formal Verification. Learn why 'Code is Law' means your errors are permanent.
 
-### 4. [04-Testing](./04-Testing-and-Testnets/README.md)
+### 4. [04-Testing](./04-testing-and-testnets/readme.md)
 *Practice on the stage before the big show.* 
 Unit, Integration, and Fork testing. Public Testnets (Sepolia) and managing faucets.
 
@@ -150,10 +150,10 @@ Unit, Integration, and Fork testing. Public Testnets (Sepolia) and managing fauc
 
 ## 🔗 Next Steps
 Junior, the ledger is secure. Now let's learn how to balance the Cloud Books.
-1. Proceed to: **[06. FinOps Mastery](../06-FinOps/README.md)** →
-2. Return to: **[Phase 3 Hub](../README.md)** →
+1. Proceed to: **[06. FinOps Mastery](../06-finops/readme.md)** →
+2. Return to: **[Phase 3 Hub](../readme.md)** →
 
 ---
 ## 🧭 Additional Modules
-- [05 Interview Questions and Quizzes](05-Interview-Questions-and-Quizzes/README.md)
-- [06 Real Life Scenarios](06-Real-Life-Scenarios/README.md)
+- [05 Interview Questions and Quizzes](05-interview-questions-and-quizzes/readme.md)
+- [06 Real Life Scenarios](06-real-life-scenarios/readme.md)

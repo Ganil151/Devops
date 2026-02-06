@@ -27,8 +27,8 @@ Kubernetes is the "Operating System of the Cloud," but its complexity is its gre
 ---
 
 ## 📂 Modules
-- [Advanced K8s](./Advanced-K8s/README.md) - Deep dive into K8s internals, operators, and CRDs.
-- [Enterprise Orchestration](./Enterprise-Container-Orchestration/README.md) - Managed Kubernetes (EKS/GKE) and production scaling.
+- [Advanced K8s](./advanced-k8s/readme.md) - Deep dive into K8s internals, operators, and CRDs.
+- [Enterprise Orchestration](./enterprise-container-orchestration/readme.md) - Managed Kubernetes (EKS/GKE) and production scaling.
 
 ---
-**Next Step**: Learn about [Enterprise Security (DevSecOps)](../05-Security/README.md).
+**Next Step**: Learn about [Enterprise Security (DevSecOps)](../05-security/readme.md).

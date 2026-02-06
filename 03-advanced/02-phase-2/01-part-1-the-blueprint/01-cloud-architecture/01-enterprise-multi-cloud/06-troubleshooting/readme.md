@@ -19,10 +19,10 @@ Successful troubleshooting is a systematic process of elimination:
 ### 🛡️ [Security Hacks & Troubleshooting](security-hacks-troubleshooting.md)
 Resolving IAM permission issues, WAF blocks, and connectivity failures.
 
-### 🤖 [Automation Troubleshooting & Hacks](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/04-Infrastructure-Governance-and-Audit/automation-troubleshooting-hacks.md)
+### 🤖 [Automation Troubleshooting & Hacks](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/04-data-and-automation/04-infrastructure-governance-and-audit/automation-troubleshooting-hacks.md)
 Debugging failed scripts and handling cloud API limits.
 
-### ☸️ [Container Troubleshooting](../../../../../01-Phase-1/04-Container-Orchestration/Enterprise-Container-Orchestration/aws-eks-production-ready.md)
+### ☸️ [Container Troubleshooting](../../../../../01-phase-1/04-container-orchestration/enterprise-container-orchestration/aws-eks-production-ready.md)
 Diagnosing pod restarts, image pull errors, and cluster connectivity.
 
 ---
@@ -33,4 +33,4 @@ Diagnosing pod restarts, image pull errors, and cluster connectivity.
 - **Chaos Engineering**: Proactively test your system's resilience by introducing controlled failures.
 
 ---
-**Observability**: Master the tools for diagnostics in the [Observability & Governance Module](../17-Observability-Governance/README.md).
+**Observability**: Master the tools for diagnostics in the [Observability & Governance Module](../17-observability-governance/readme.md).

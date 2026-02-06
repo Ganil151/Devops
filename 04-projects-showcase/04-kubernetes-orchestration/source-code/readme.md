@@ -38,7 +38,7 @@ graph TD
 
 - **Provisioning**: Terraform (VPC, EKS, RDS).
 - **Configuration**: Ansible (Security Hardening, Vault Setup).
-- **Delivery**: [Jenkins Enterprise Blueprint](../../../02-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/02-Part-2-The-Engine/Jenkins/blueprints/blueprint-enterprise-k8s-full.groovy).
+- **Delivery**: [Jenkins Enterprise Blueprint](../../../02-intermediate/02-phase-2/02-delivery-and-governance/01-ci-cd-pipelines/02-part-2-the-engine/jenkins/blueprints/blueprint-enterprise-k8s-full.groovy).
 - **Security**:
   - **Istio**: Zero-Trust mTLS.
   - **Trivy**: Container vulnerability scanning.
@@ -59,7 +59,7 @@ graph TD
 ## 📁 Project Structure
 
 - **[infra/](./infra/)**: Terraform modules for AWS EKS provisioning.
-- **[pipeline/](README.md)**: The customized `Jenkinsfile` based on our Enterprise Blueprint.
+- **[pipeline/](readme.md)**: The customized `Jenkinsfile` based on our Enterprise Blueprint.
 - **[gitops/](./gitops/)**: ArgoCD ApplicationSet manifests for automated delivery.
 
 ---
@@ -69,7 +69,7 @@ graph TD
 - [x] **Phase 1**: Base Networking (VPC, Subnets, NAT Gateway).
 - [x] **Phase 2**: EKS Control Plane & Worker Node provisioning via Terraform.
 - [x] **Phase 3**: Istio Control Plane & Gateway installation via Helm.
-- [x] **Phase 4**: CI/CD integration with [Jenkinsfile](./Jenkinsfile) and security scans.
+- [x] **Phase 4**: CI/CD integration with [Jenkinsfile](./jenkinsfile) and security scans.
 - [x] **Phase 5**: [GitOps](./gitops/) reconciliation and automated drift detection.
 
 ---
@@ -97,7 +97,7 @@ chmod +x deploy.sh
 
 Follow the comprehensive step-by-step guide:
 
-#### [Complete Deployment Guide](./DEPLOYMENT_GUIDE.md)
+#### [Complete Deployment Guide](./deployment-guide.md)
 
 ### Prerequisites
 

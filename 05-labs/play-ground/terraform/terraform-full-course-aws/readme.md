@@ -119,13 +119,13 @@ This course consists of video lessons covering basic to advanced Terraform conce
 - Built-in functions
 - Practical examples
 - tasks for practice
-- [Code Sample](README.md)
+- [Code Sample](readme.md)
 
 #### Video 12: Functions in Terraform(Continue..)
 - Built-in functions
 - Practical examples
 - tasks for practice
-- [Code Sample](README.md)
+- [Code Sample](readme.md)
 
 #### Video 13: Data Sources
 - Using data sources
@@ -259,7 +259,7 @@ This course consists of video lessons covering basic to advanced Terraform conce
 4. Practice with provided code samples
 
 ## 📝 License
-MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see the [LICENSE](license) file for details.
 
 ## 🔗 Resources
 - [Terraform Documentation](https://www.terraform.io/docs)

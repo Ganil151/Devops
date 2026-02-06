@@ -4,7 +4,7 @@
 
 
 ## Core Concept: AIOps & Intelligent Automation
-**[REFERENCE: AIOps & Intelligent Automation](./REFERENCE/AIOps-Intelligent-Automation-Ref.md)**
+**[REFERENCE: AIOps & Intelligent Automation](./reference/aiops-intelligent-automation-ref.md)**
 
 Transitioning from reactive monitoring to pro-active, machine-driven operations:
 - **Anomaly Detection**: Utilizing ML to identify system deviations from dynamic baselines rather than static thresholds.
@@ -12,7 +12,7 @@ Transitioning from reactive monitoring to pro-active, machine-driven operations:
 - **Predictive Remediation**: Forecasting resource exhaustion and scaling infrastructure before the performance impact occurs.
 
 ## Enterprise Governance: MLOps Platform
-**[REFERENCE: MLOps Platform & Governance](./REFERENCE/MLOps-Platform-Governance-Ref.md)**
+**[REFERENCE: MLOps Platform & Governance](./reference/mlops-platform-governance-ref.md)**
 
 Scaling machine learning workloads with production-grade reliability:
 - **Model Lineage & Auditing**: Ensuring every production prediction can be traced back to the exact dataset and code version used.
@@ -23,7 +23,7 @@ Scaling machine learning workloads with production-grade reliability:
 
 ## 📚 Modules in This Part
 
-1. **[01-AIOps-ML-Operations](./01-AIOps-ML-Operations/)** - 01 AIOps ML Operations
+1. **[01-AIOps-ML-Operations](./01-aiops-ml-operations/)** - 01 AIOps ML Operations
 
 
 ---
@@ -49,4 +49,4 @@ These modules should be completed in the order shown above for optimal learning 
 
 ---
 
-**Part of**: [Advanced Phase-2: Strategic Skills](../README.md)
+**Part of**: [Advanced Phase-2: Strategic Skills](../readme.md)

@@ -7,10 +7,10 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 
 | Skill | Status | Deliverable |
 | :--- | :--- | :--- |
-| **Linux Administration** | ✅ Done | [Lab Manuals](README.md) |
-| **Networking 101** | ✅ Done | [Architecture Guides](README.md) |
-| **Python Logic** | ✅ Done | [Script Library](README.md) |
-| **Docker & Containers** | ✅ Done | [Foundation Challenges](README.md) |
+| **Linux Administration** | ✅ Done | [Lab Manuals](readme.md) |
+| **Networking 101** | ✅ Done | [Architecture Guides](readme.md) |
+| **Python Logic** | ✅ Done | [Script Library](readme.md) |
+| **Docker & Containers** | ✅ Done | [Foundation Challenges](readme.md) |
 
 ---
 
@@ -18,12 +18,12 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 
 | Skill | Status | Deliverable |
 | :--- | :--- | :--- |
-| **Cloud VPC / Networking** | ✅ Done | [VPC Boilerplates](../../02-Intermediate/01-Phase-1/01-Networking/) |
-| **Terraform IaC** | ✅ Done | [Module Gallery](README.md) |
-| **Ansible Config** | ✅ Done | [Standard Playbooks](README.md) |
-| **Kubernetes Admin** | ✅ Done | [Cluster Ops Guides](README.md) |
-| **Enterprise CI/CD** | ✅ Done | [Jenkins Blueprints Master](README.md) |
-| **FinOps / Cost Mgmt** | ✅ Done | [Modern Ops Quiz](../../06-Quizzes/02-Intermediate/Modern-Ops-Quiz.md) |
+| **Cloud VPC / Networking** | ✅ Done | [VPC Boilerplates](../../02-intermediate/01-phase-1/01-networking/) |
+| **Terraform IaC** | ✅ Done | [Module Gallery](readme.md) |
+| **Ansible Config** | ✅ Done | [Standard Playbooks](readme.md) |
+| **Kubernetes Admin** | ✅ Done | [Cluster Ops Guides](readme.md) |
+| **Enterprise CI/CD** | ✅ Done | [Jenkins Blueprints Master](readme.md) |
+| **FinOps / Cost Mgmt** | ✅ Done | [Modern Ops Quiz](../../06-quizzes/02-intermediate/modern-ops-quiz.md) |
 
 ---
 
@@ -31,11 +31,11 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 
 | Skill | Status | Deliverable |
 | :--- | :--- | :--- |
-| **Service Mesh (Istio)** | ✅ Done | [Advanced Labs](../../03-Advanced/02-Phase-2/02-Part-2-The-Engine/02-Service-Mesh/01-Istio-Deep-Dive/README.md) |
-| **GitOps (ArgoCD)** | ✅ Done | [Technical Deep-Dive](../../03-Advanced/02-Phase-2/02-Part-2-The-Engine/01-GitOps-Fleet/ArgoCD/ARGO_DEEP_DIVE.md) |
-| **Platform Eng (Backstage)** | ✅ Done | [IDP Challenges](../../03-Advanced/02-Phase-2/01-Part-1-The-Blueprint/02-Platform-Engineering/01-Backstage-IDP/README.md) |
-| **Policy-as-Code** | ✅ Done | [OPA Deep-Dive](../../07-Boilerplates/02-Intermediate/Infracost/Infracost-Automation-Policy-as-Code-Guardrails-cost_policy.rego) |
-| **Specialized (AI/MLOps)** | ✅ Done | [Advanced Tech Quiz](../../06-Quizzes/3-Advanced/Specialized-Tech-Quiz.md) |
+| **Service Mesh (Istio)** | ✅ Done | [Advanced Labs](../../03-advanced/02-phase-2/02-part-2-the-engine/02-service-mesh/01-istio-deep-dive/readme.md) |
+| **GitOps (ArgoCD)** | ✅ Done | [Technical Deep-Dive](../../03-advanced/02-phase-2/02-part-2-the-engine/01-gitops-fleet/argocd/argo-deep-dive.md) |
+| **Platform Eng (Backstage)** | ✅ Done | [IDP Challenges](../../03-advanced/02-phase-2/01-part-1-the-blueprint/02-platform-engineering/01-backstage-idp/readme.md) |
+| **Policy-as-Code** | ✅ Done | [OPA Deep-Dive](../../07-boilerplates/02-intermediate/infracost/infracost-automation-policy-as-code-guardrails-cost-policy.rego) |
+| **Specialized (AI/MLOps)** | ✅ Done | [Advanced Tech Quiz](../../06-quizzes/3-advanced/specialized-tech-quiz.md) |
 
 ---
 
@@ -43,10 +43,10 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 
 | Asset | Status | Location |
 | :--- | :--- | :--- |
-| **Master Roadmap** | ✅ Done | [Career Strategy Hub](../03-Strategic-Roadmap/README.md) |
-| **Resume Keyword Matrix** | ✅ Done | [Resume Engineering](../04-Resume-Engineering/README.md) |
-| **STAR Scenario Bank** | ✅ Done | [Interview Mastery](../05-Interview-Mastery/README.md) |
-| **Golden Project Checklist** | ✅ Done | [Portfolio Guidance](../06-Portfolio-Guide/README.md) |
+| **Master Roadmap** | ✅ Done | [Career Strategy Hub](../03-strategic-roadmap/readme.md) |
+| **Resume Keyword Matrix** | ✅ Done | [Resume Engineering](../04-resume-engineering/readme.md) |
+| **STAR Scenario Bank** | ✅ Done | [Interview Mastery](../05-interview-mastery/readme.md) |
+| **Golden Project Checklist** | ✅ Done | [Portfolio Guidance](../06-portfolio-guide/readme.md) |
 
 ---
 
@@ -54,11 +54,11 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 
 For a step-by-step implementation of a professional-grade project, see the:
 
-👉 **[Golden Project Implementation Guide](../06-Portfolio-Guide/GOLDEN_PROJECT_GUIDE.md)**
+👉 **[Golden Project Implementation Guide](../06-portfolio-guide/golden-project-guide.md)**
 
 ---
 
-**Showcase Hub**: [08-Resources/05-Projects-Showcase](README.md)
+**Showcase Hub**: [08-Resources/05-Projects-Showcase](readme.md)
 
 ---
 

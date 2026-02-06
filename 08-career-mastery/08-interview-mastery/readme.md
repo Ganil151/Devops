@@ -11,8 +11,8 @@ For every "Tell me about a time..." question, use:
 -   **R**esult: What was the impact? (Use numbers).
 ---
 ## 🎭 Practice Resources
-- 👉 **[The Mock Interview Script (Staff Level)](./Mock-Interview-Script.md)**: A comprehensive guide for technical and behavioral benchmarking.
-- 👉 **[Hiring Logic & Strategies](./Hiring-Logic.md)**: Understanding what managers look for in a Junior candidate.
+- 👉 **[The Mock Interview Script (Staff Level)](./mock-interview-script.md)**: A comprehensive guide for technical and behavioral benchmarking.
+- 👉 **[Hiring Logic & Strategies](./hiring-logic.md)**: Understanding what managers look for in a Junior candidate.
 
 ---
 
@@ -31,4 +31,4 @@ For every "Tell me about a time..." question, use:
 
 ---
 
-**Technical Scenarios**: [06-Quizzes/01-Beginner/Networking-Scenarios.md](../../06-Quizzes/01-Beginner/Networking-Scenarios.md)
+**Technical Scenarios**: [06-Quizzes/01-Beginner/Networking-Scenarios.md](../../06-quizzes/01-beginner/networking-scenarios.md)

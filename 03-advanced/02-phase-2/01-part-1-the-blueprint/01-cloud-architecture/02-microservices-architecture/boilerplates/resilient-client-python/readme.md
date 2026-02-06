@@ -373,8 +373,8 @@ request_counter.labels(
 
 ## Related Files
 
-- [`resilient_client.py`](./resilient_client.py) - Main client implementation
-- [`circuit_breaker.py`](./circuit_breaker.py) - Circuit breaker wrapper
+- [`resilient_client.py`](./resilient-client.py) - Main client implementation
+- [`circuit_breaker.py`](./circuit-breaker.py) - Circuit breaker wrapper
 - [`examples.py`](./examples.py) - Usage examples
 - [`requirements.txt`](./requirements.txt) - Python dependencies
 

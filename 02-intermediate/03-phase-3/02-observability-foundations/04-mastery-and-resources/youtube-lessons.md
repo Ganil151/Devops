@@ -25,4 +25,4 @@ Master the three pillars of observability: Metrics, Logs, and Traces.
 ---
 
 ## 🔗 Internal Navigation
-- [Back to Part 4 Overview](./README.md)
+- [Back to Part 4 Overview](./readme.md)

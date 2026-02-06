@@ -129,5 +129,5 @@ By default, Flow Logs only show the "Infrastructure" IPs. If traffic goes throug
 
 Logs tell you what happened in the past. Now let's look at a tool that can "predict" the future and test paths without sending a single packet: Reachability Analyzer.
 
-Proceed to: **[02. Reachability Analyzer](../02-Reachability-Analyzer-Network-Insights/README.md)** →
+Proceed to: **[02. Reachability Analyzer](../02-reachability-analyzer-network-insights/readme.md)** →
 Node: This link points to the next diagnostic tool.

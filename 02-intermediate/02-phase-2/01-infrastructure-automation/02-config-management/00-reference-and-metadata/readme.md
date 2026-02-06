@@ -6,16 +6,16 @@ Welcome to the central reference hub for **Infrastructure-as-Code (IaC) and Conf
 
 ## 🏗️ Technical Reference Manuals
 
-### 1. [🛠️ Architecture Patterns](./IaC-Architecture-Patterns-Ref.md)
+### 1. [🛠️ Architecture Patterns](./iac-architecture-patterns-ref.md)
 Provisioning vs. Configuration, State management, and the "Module" pattern.
 
-### 2. [🛡️ Immutable Governance](./Immutable-Infrastructure-Governance-Ref.md)
+### 2. [🛡️ Immutable Governance](./immutable-infrastructure-governance-ref.md)
 The "Bake vs. Fry" philosophy, Golden Images, and standardizing the Image Lifecycle.
 
-### 3. [🔐 Provisioning & IaC Keywords](./Provisioning-IaC-Keywords.md)
+### 3. [🔐 Provisioning & IaC Keywords](./provisioning-iac-keywords.md)
 Deep dive into Lifecycle Management: HCL, Providers, Resources, and Backends.
 
-### 4. [📟 Config Management Keywords](./Config-Management-Keywords.md)
+### 4. [📟 Config Management Keywords](./config-management-keywords.md)
 Understanding the "Inside" code: Inventories, Handlers, Roles, and Facts.
 
 ---
@@ -55,9 +55,9 @@ graph TD
 
 ---
 
-[⬅️ Back to Config Management Index](../README.md)
+[⬅️ Back to Config Management Index](../readme.md)
 
 
 ---
 ## 🧭 Additional Modules
-- [samples](samples/README.md)
+- [samples](samples/readme.md)

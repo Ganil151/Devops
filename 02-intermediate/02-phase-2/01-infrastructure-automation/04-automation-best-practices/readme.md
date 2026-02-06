@@ -2,7 +2,7 @@
 
 > **"If you haven't automated it, you haven't understood it. If you have automated it without error handling, you just haven't broken it yet."**
 
-![Reliability Blueprint](../../../../07-Boilerplates/02-Intermediate/Best_Practices/Automation-Best-Practices-Failure-Handling-and-Atomicity-atomic_write.py)
+![Reliability Blueprint](../../../../07-boilerplates/02-intermediate/best-practices/automation-best-practices-failure-handling-and-atomicity-atomic-write.py)
 
 ---
 
@@ -170,13 +170,13 @@ def ensure_s3_bucket(bucket_name: str) -> bool:
 
 ---
 
-[⬅️ Back to Infrastructure Automation Index](../README.md)
+[⬅️ Back to Infrastructure Automation Index](../readme.md)
 
 
 ---
 ## 🧭 Additional Modules
-- [01 The Automation Maturity Model](01-The-Automation-Maturity-Model/README.md)
-- [02 Idempotency Patterns Check Act Verify](02-Idempotency-Patterns-Check-Act-Verify/README.md)
-- [03 Parameterization and Secrets Management](03-Parameterization-and-Secrets-Management/README.md)
-- [04 Failure Handling and Atomicity](04-Failure-Handling-and-Atomicity/README.md)
-- [05 Observability and Logging](05-Observability-and-Logging/README.md)
+- [01 The Automation Maturity Model](01-the-automation-maturity-model/readme.md)
+- [02 Idempotency Patterns Check Act Verify](02-idempotency-patterns-check-act-verify/readme.md)
+- [03 Parameterization and Secrets Management](03-parameterization-and-secrets-management/readme.md)
+- [04 Failure Handling and Atomicity](04-failure-handling-and-atomicity/readme.md)
+- [05 Observability and Logging](05-observability-and-logging/readme.md)

@@ -73,5 +73,5 @@ CloudWatch Events (now managed via Amazon EventBridge) allows you to react to st
 ---
 
 ## 🔗 Internal Navigation
-- [Back: Logging Overview](../README.md)
-- [Next Part: Distributed Tracing](README.md)
+- [Back: Logging Overview](../readme.md)
+- [Next Part: Distributed Tracing](readme.md)

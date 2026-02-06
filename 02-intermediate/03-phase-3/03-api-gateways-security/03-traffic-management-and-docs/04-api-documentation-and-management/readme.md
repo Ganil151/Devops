@@ -41,8 +41,8 @@ Learn the trade-offs between Path-based and Header-based versioning and master t
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Mastery and Resources Overview](README.md)
-- [Back: Traffic Management Hub](../README.md)
+- [Next: Mastery and Resources Overview](readme.md)
+- [Back: Traffic Management Hub](../readme.md)
 
 ---
 *An API is only as good as its documentation.*

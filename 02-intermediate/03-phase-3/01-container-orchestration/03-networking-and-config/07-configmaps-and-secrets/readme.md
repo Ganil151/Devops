@@ -122,5 +122,5 @@ graph LR
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Persistence and Storage](README.md)
-- [Back: Ingress Controllers](../06-Ingress-Controllers/README.md)
+- [Next: Persistence and Storage](readme.md)
+- [Back: Ingress Controllers](../06-ingress-controllers/readme.md)

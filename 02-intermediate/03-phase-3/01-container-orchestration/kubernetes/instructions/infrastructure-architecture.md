@@ -7,7 +7,7 @@ Your Spring Petclinic project uses a **hybrid architecture** combining tradition
 ---
 
 ## 📊 **Server Architecture Diagram**
-[text](../README.md) ![text](../images/infrustructure_architecture_diagram.png) [text](ARCHITECTURE_QUICK_REF.md) [text](ARCHITECTURE.md) [text](CALICO_FIX.md) [text](INFRASTRUCTURE_ARCHITECTURE.md) [text](K8S_INSTALL_TROUBLESHOOTING.md) [text](K8S_QUICK_REFERENCE.md) [text](KUBECTL_CONFIG_FIX.md) [text](KUBERNETES_NOTES.md)
+[text](../readme.md) ![text](../images/infrustructure-architecture-diagram.png) [text](architecture-quick-ref.md) [text](architecture.md) [text](calico-fix.md) [text](infrastructure-architecture.md) [text](k8s-install-troubleshooting.md) [text](k8s-quick-reference.md) [text](kubectl-config-fix.md) [text](kubernetes-notes.md)
 ---
 
 ## 🖥️ **Server Breakdown**

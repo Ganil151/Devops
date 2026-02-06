@@ -81,5 +81,5 @@ These boilerplates demonstrate:
 
 ## Related Resources
 
-- [Parent Module: Introduction](../../../README.md)
-- [Shell Scripting Challenges](../../03-Advanced/01-Self-Healing-Infrastructure/CHALLENGES.md)
+- [Parent Module: Introduction](../../../readme.md)
+- [Shell Scripting Challenges](../../03-advanced/01-self-healing-infrastructure/challenges.md)

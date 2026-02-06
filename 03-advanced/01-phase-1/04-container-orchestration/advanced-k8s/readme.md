@@ -3,9 +3,9 @@
 Welcome to the pinnacle of container orchestration. This module covers the deep technical expertise required to manage mission-critical, high-scale Kubernetes clusters in production environments.
 
 ### Learning Path
-1. [K8s Overview](./README.md)
-2. [📺 YouTube Lessons](./Youtube_Lessons.md)
-3. [❓ Interview Questions & Quiz](./Interview_Questions_and_Quiz.md)
+1. [K8s Overview](./readme.md)
+2. [📺 YouTube Lessons](./youtube-lessons.md)
+3. [❓ Interview Questions & Quiz](./interview-questions-and-quiz.md)
 
 ---
 
@@ -31,56 +31,56 @@ sequenceDiagram
     Etcd-->>API: Success
     API-->>User: 201 Created
 ```
-- **[Control Plane Deep Dive](./Control-Plane/)**: Inside the API Server, Scheduler, Controller Manager, and ETCD.
-- **[Admission Controllers](./AdmissionControllers/)**: Intercepting and validating requests before they are persisted.
-- **[Certificates & PKI](./Certificates/)**: Managing cluster-wide TLS and certificate rotation.
+- **[Control Plane Deep Dive](./control-plane/)**: Inside the API Server, Scheduler, Controller Manager, and ETCD.
+- **[Admission Controllers](./admissioncontrollers/)**: Intercepting and validating requests before they are persisted.
+- **[Certificates & PKI](./certificates/)**: Managing cluster-wide TLS and certificate rotation.
 
 ---
 
 ## 🛡️ Security & Governance
 Hardening the cluster against internal and external threats.
-- **[RBAC (Role-Based Access Control)](./RBAC/)**: Granular permission management following the principle of least privilege.
-- **[Network Policies](./NetworkPolicies/)**: Pod-level firewalling for secure East-West communication.
-- **[Compliance & Policy (OPA/Gatekeeper)](./Compliance/)**: Enforcing baseline and restricted security standards across the cluster.
+- **[RBAC (Role-Based Access Control)](./rbac/)**: Granular permission management following the principle of least privilege.
+- **[Network Policies](./networkpolicies/)**: Pod-level firewalling for secure East-West communication.
+- **[Compliance & Policy (OPA/Gatekeeper)](./compliance/)**: Enforcing baseline and restricted security standards across the cluster.
 
 ---
 
 ## 📈 Scalability & Performance
 
 Managing resource consumption and automated scaling.
-- **[Autoscaling (HPA/VPA)](./Autoscaling/)**: Dynamic scaling of pods and resource request adjustments.
-- **[Advanced Scheduling](./Scheduling/)**: Using Taints, Tolerations, and Affinity to control pod placement.
-- **[High-Performance Storage (CSI)](./CSI/)**: Managing volume snapshots and backup/restore strategies.
+- **[Autoscaling (HPA/VPA)](./autoscaling/)**: Dynamic scaling of pods and resource request adjustments.
+- **[Advanced Scheduling](./scheduling/)**: Using Taints, Tolerations, and Affinity to control pod placement.
+- **[High-Performance Storage (CSI)](./csi/)**: Managing volume snapshots and backup/restore strategies.
 
 ---
 
 ## 🏛️ Advanced Architecture
 
 Handling complex stateful applications and cloud-native services.
-- **[StatefulSets](./StatefulSets/)**: Managing databases and distributed systems with stable identities.
-- **[DaemonSets](./DaemonSets/)**: Running specialized agents (metrics, logging) on every node.
-- **[Service Mesh (Istio/Linkerd)](./ServiceMesh/)**: Advanced traffic management, mutual TLS, and observability.
+- **[StatefulSets](./statefulsets/)**: Managing databases and distributed systems with stable identities.
+- **[DaemonSets](./daemonsets/)**: Running specialized agents (metrics, logging) on every node.
+- **[Service Mesh (Istio/Linkerd)](./servicemesh/)**: Advanced traffic management, mutual TLS, and observability.
 
 ---
 
 ## ☁️ Cloud Specific: EKS Deep Dive
 
-- **[EKS with Terraform](./EKS/EKS-TF/)**: Provisioning production-ready AWS EKS clusters with managed node groups and VPC integration.
+- **[EKS with Terraform](./eks/eks-tf/)**: Provisioning production-ready AWS EKS clusters with managed node groups and VPC integration.
 
 ---
 
 ## 📖 Best Practices
 1. **Immutable Infrastructure**: Changes should be made to templates and images, not running pods.
 2. **Observability First**: Always deploy metrics and tracing before going to production.
-3. **Automate Everything**: Use GitOps patterns to manage your cluster state (see the [GitOps Module](../../../../README.md)).
+3. **Automate Everything**: Use GitOps patterns to manage your cluster state (see the [GitOps Module](../../../../readme.md)).
 
 ---
-**Next Step**: Learn how to bridge these clusters with enterprise-scale automation in the [Advanced Automation Module](../../../../README.md).
+**Next Step**: Learn how to bridge these clusters with enterprise-scale automation in the [Advanced Automation Module](../../../../readme.md).
 
 ---
 ## 🧭 Additional Modules
-- [BackupRestore](BackupRestore/README.md)
-- [CNI](CNI/README.md)
-- [CRI](CRI/README.md)
-- [GitOps](GitOps/README.md)
-- [VolumeSnapshots](VolumeSnapshots/README.md)
+- [BackupRestore](backuprestore/readme.md)
+- [CNI](cni/readme.md)
+- [CRI](cri/readme.md)
+- [GitOps](gitops/readme.md)
+- [VolumeSnapshots](volumesnapshots/readme.md)

@@ -226,7 +226,7 @@ As your architecture grows, you might move from one massive `infrastructure` sta
 
 Now that you've mastered the movement of state, it's time to learn how to lock it down and ensure only the right people (and robots) can access it.
 
-**Proceed to**: [Part 4: The Safety Net (Security & Governance)](../README.md)
+**Proceed to**: [Part 4: The Safety Net (Security & Governance)](../readme.md)
 
 ---
 ## 🎓 Self-Assessment Checklist

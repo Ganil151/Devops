@@ -50,19 +50,19 @@ sequenceDiagram
 
 ## 🗺️ Curriculum Path
 
-### 1. [01-MCP-Fundamentals](./01-MCP-Fundamentals/README.md)
+### 1. [01-MCP-Fundamentals](./01-mcp-fundamentals/readme.md)
 *Junior, learn the language of the agents.* 
 Core Architecture: Hosts, Clients, and Servers. Why JSON-RPC is the bridge to the future.
 
-### 2. [02-Building-MCP-Servers](./02-Building-MCP-Servers/README.md)
+### 2. [02-Building-MCP-Servers](./02-building-mcp-servers/readme.md)
 *Give the AI some eyes.* 
 Using the Python/TS SDKs to build your first server. Implementing Tools, Resources, and Prompts.
 
-### 3. [03-MCP-for-Kubernetes-and-Cloud](./03-MCP-for-Kubernetes-and-Cloud/README.md)
+### 3. [03-MCP-for-Kubernetes-and-Cloud](./03-mcp-for-kubernetes-and-cloud/readme.md)
 *Deploying the SRE Sidekick.* 
 Building expert agents for Kubernetes and AWS. Scaling tool access across the enterprise.
 
-### 4. [04-Security-and-Auth](./04-Security-and-Auth/README.md)
+### 4. [04-Security-and-Auth](./04-security-and-auth/readme.md)
 *The AI Guardrails.* 
 The Human-in-the-loop security model. Ensuring your AI agent doesn't accidentally delete production.
 
@@ -150,10 +150,10 @@ The Human-in-the-loop security model. Ensuring your AI agent doesn't accidentall
 
 ## 🔗 Next Steps
 Junior, the nervous system is alive. Now let's learn how to manage the Immutable Ledger.
-1. Proceed to: **[05. Blockchain Infrastructure](../05-Blockchain/README.md)** →
-2. Return to: **[Phase 3 Hub](../README.md)** →
+1. Proceed to: **[05. Blockchain Infrastructure](../05-blockchain/readme.md)** →
+2. Return to: **[Phase 3 Hub](../readme.md)** →
 
 ---
 ## 🧭 Additional Modules
-- [05 Interview Questions and Quizzes](05-Interview-Questions-and-Quizzes/README.md)
-- [06 Real Life Scenarios](06-Real-Life-Scenarios/README.md)
+- [05 Interview Questions and Quizzes](05-interview-questions-and-quizzes/readme.md)
+- [06 Real Life Scenarios](06-real-life-scenarios/readme.md)

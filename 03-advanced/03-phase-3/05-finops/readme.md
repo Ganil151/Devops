@@ -5,7 +5,7 @@
 This advanced guide covers enterprise-scale FinOps frameworks, multi-cloud cost management, unit economics, and building a sustainable FinOps culture.
 
 ## Core Concept: Unit Economics & Strategic Value
-**[REFERENCE: FinOps Unit Economics & Value Strategy](./REFERENCE/FinOps-Unit-Economics-Strategy-Ref.md)**
+**[REFERENCE: FinOps Unit Economics & Value Strategy](./reference/finops-unit-economics-strategy-ref.md)**
 
 Transforming cloud spend from a "line item cost" into a business value engine:
 - **Unit Cost Normalization**: Strategically mapping spend across AWS, Azure, and GCP into unified business value metrics.
@@ -13,14 +13,14 @@ Transforming cloud spend from a "line item cost" into a business value engine:
 - **Strategic Sourcing**: Maximizing commitment coverage (RI/SP) through global, multi-cloud procurement strategies.
 
 ## Enterprise Governance: Cultural Accountability
-**[REFERENCE: Enterprise FinOps Governance & Cultural Alignment](./REFERENCE/Enterprise-FinOps-Governance-Ref.md)**
+**[REFERENCE: Enterprise FinOps Governance & Cultural Alignment](./reference/enterprise-finops-governance-ref.md)**
 
 Embedding financial discipline into the engineering DNA of the organization:
 - **Automated Financial Guardrails**: Implementing "Shift-Left Cost Estimation" in CI/CD pipelines to block or flag expensive changes before they hit production.
 - **Decentralized Cost Ownership**: Shifting from centralized "Cloud Cops" to empowered engineering teams that manage their own P&L.
 - **Metadata-Driven Governance**: Ensuring absolute cost attribution through mandatory resource tagging and automated remediation of "unowned" resources.
 
-![FinOps Framework](./Images/finops-framework.png)
+![FinOps Framework](./images/finops-framework.png)
 
 ---
 
@@ -28,19 +28,19 @@ Embedding financial discipline into the engineering DNA of the organization:
 
 | Lesson | Topic | Duration |
 |--------|-------|----------|
-| 01 | [FinOps Framework Deep Dive](./01-FinOps-Framework/README.md) | 75 min |
-| 02 | [Multi-Cloud FinOps](./02-Multi-Cloud-FinOps/README.md) | 60 min |
-| 03 | [Unit Economics & Value Metrics](./03-Unit-Economics/README.md) | 60 min |
-| 04 | [Building FinOps Culture](./04-FinOps-Culture/README.md) | 45 min |
-| 05 | [Enterprise Governance](./05-Enterprise-Governance/README.md) | 60 min |
+| 01 | [FinOps Framework Deep Dive](./01-finops-framework/readme.md) | 75 min |
+| 02 | [Multi-Cloud FinOps](./02-multi-cloud-finops/readme.md) | 60 min |
+| 03 | [Unit Economics & Value Metrics](./03-unit-economics/readme.md) | 60 min |
+| 04 | [Building FinOps Culture](./04-finops-culture/readme.md) | 45 min |
+| 05 | [Enterprise Governance](./05-enterprise-governance/readme.md) | 60 min |
 
 ---
 
 ## Prerequisites
 
 Before starting this level, ensure you have completed:
-- ✅ [Beginner FinOps](../../../README.md)
-- ✅ [Intermediate FinOps](../../../README.md)
+- ✅ [Beginner FinOps](../../../readme.md)
+- ✅ [Intermediate FinOps](../../../readme.md)
 - ✅ Experience with cloud cost management
 - ✅ Understanding of organizational structures
 
@@ -199,4 +199,4 @@ graph TB
 
 ## Next Steps
 
-Start with **[Lesson 01: FinOps Framework Deep Dive](./01-FinOps-Framework/README.md)** to master the FinOps Foundation framework!
+Start with **[Lesson 01: FinOps Framework Deep Dive](./01-finops-framework/readme.md)** to master the FinOps Foundation framework!

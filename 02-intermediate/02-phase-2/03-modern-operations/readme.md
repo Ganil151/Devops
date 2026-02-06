@@ -47,19 +47,19 @@ graph LR
 
 ## 🗺️ Curriculum Path
 
-### 1. [Observability](./01-Observability/README.md)
+### 1. [Observability](./01-observability/readme.md)
 *Junior, stop looking at Up/Down lights.* 
 Master Prometheus, Grafana, and the OpenTelemetry standard. Learn to trace a single user request across 5 different services.
 
-### 2. [AI Operations](./02-AI-Operations/README.md)
+### 2. [AI Operations](./02-ai-operations/readme.md)
 *Treat the LLM as your Co-Pilot, not your replacement.* 
 Prompt engineering for DevOps, automated root-cause analysis, and using AI to write complex security policies.
 
-### 3. [FinOps & Cost Management](./03-FinOps-Cost-Management/README.md)
+### 3. [FinOps & Cost Management](./03-finops-cost-management/readme.md)
 *Every byte has a price.* 
 Cloud cost visibility and "Unit Economics." Learn to block expensive infrastructure changes before they are even deployed.
 
-### 4. [Edge & Serverless Controllers](./04-Edge-Computing/README.md)
+### 4. [Edge & Serverless Controllers](./04-edge-computing/readme.md)
 *The server is an implementation detail.* 
 Lightweight Kubernetes (K3s) for the edge and modern event-driven serverless architectures.
 
@@ -145,10 +145,10 @@ Lightweight Kubernetes (K3s) for the edge and modern event-driven serverless arc
 ## 🏁 Phase Complete
 Junior, you have mastered the engine, the assembly line, and the central intelligence. You are now ready for the final ascent.
 
-1. Proceed to: **[Phase 3: High Fidelity Orchestration](../../03-Phase-3/README.md)** →
-2. Return to: **[Phase 2 Hub](../README.md)** →
+1. Proceed to: **[Phase 3: High Fidelity Orchestration](../../03-phase-3/readme.md)** →
+2. Return to: **[Phase 2 Hub](../readme.md)** →
 
 
 ---
 ## 🧭 Additional Modules
-- [05 Serverless Architecture](05-Serverless-Architecture/README.md)
+- [05 Serverless Architecture](05-serverless-architecture/readme.md)

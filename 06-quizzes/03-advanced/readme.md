@@ -3,7 +3,7 @@
 Thrive in mission-critical infrastructure by mastering observability, security-as-code, and advanced orchestration patterns.
 
 ## Module 01: GitOps & DeclarativeCD
-**Study Resource**: [GitOps with ArgoCD](../../README.md)
+**Study Resource**: [GitOps with ArgoCD](../../readme.md)
 
 1. What is GitOps?
 - A) Using Git for operations only
@@ -20,7 +20,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 02: Observability & Monitoring
-**Study Resource**: [Advanced Observability](../../README.md)
+**Study Resource**: [Advanced Observability](../../readme.md)
 
 3. What is Prometheus used for?
 - A) Configuration management
@@ -61,7 +61,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 03: Advanced Orchestration & Networking
-**Study Resource**: [Advanced Kubernetes](../../03-Advanced/01-Phase-1/04-Container-Orchestration/Advanced-K8s/README.md)
+**Study Resource**: [Advanced Kubernetes](../../03-advanced/01-phase-1/04-container-orchestration/advanced-k8s/readme.md)
 
 9. What is the role of Istio in DevOps?
 - A) Version control
@@ -78,7 +78,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 04: DevSecOps & Security
-**Study Resource**: [Enterprise Security](README.md)
+**Study Resource**: [Enterprise Security](readme.md)
 
 11. Which tool is used for secrets management?
 - A) Jenkins
@@ -153,7 +153,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 06: Cloud-Native & Hybrid Networking
-**Study Resource**: [Multi-Cloud Networking](../../README.md)
+**Study Resource**: [Multi-Cloud Networking](../../readme.md)
 
 22. Which Service Mesh feature allows for fine-grained control over traffic splitting (e.g., 90% to v1, 10% to v2)?
 - A) Ingress Gateway
@@ -182,7 +182,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 07: SRE & FinOps Essentials
-**Study Resource**: [Multi-Cloud Management & Governance](../../README.md)
+**Study Resource**: [Multi-Cloud Management & Governance](../../readme.md)
 
 26. What is the main difference between an SLO (Service Level Objective) and an SLA (Service Level Agreement)?
 - A) SLOs are internal goals; SLAs are external legal contracts with customers
@@ -211,7 +211,7 @@ Thrive in mission-critical infrastructure by mastering observability, security-a
 ---
 
 ## Module 08: Microservices & Architectural Patterns
-**Study Resource**: [Microservices Guide](../../README.md) & [Specialized Tech](README.md)
+**Study Resource**: [Microservices Guide](../../readme.md) & [Specialized Tech](readme.md)
 
 30. In the **12-Factor App** methodology, how should application configuration be stored?
 - A) Hardcoded in the source code

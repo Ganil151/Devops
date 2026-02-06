@@ -26,6 +26,6 @@ Why use a CDN?
 ---
 
 ## 📂 Multi-Cloud Implementations
-- [AWS-Route53-CloudFront](./AWS-Route53-CloudFront): Integrated edge security and DNS logic.
-- [Azure-DNS-FrontDoor](./Azure-DNS-FrontDoor): Global HTTP load balancing and CDN.
-- [GCP-Cloud-DNS-CDN](./GCP-Cloud-DNS-CDN): Fast, global Anycast network.
+- [AWS-Route53-CloudFront](./aws-route53-cloudfront): Integrated edge security and DNS logic.
+- [Azure-DNS-FrontDoor](./azure-dns-frontdoor): Global HTTP load balancing and CDN.
+- [GCP-Cloud-DNS-CDN](./gcp-cloud-dns-cdn): Fast, global Anycast network.

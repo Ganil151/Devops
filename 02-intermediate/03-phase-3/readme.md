@@ -59,27 +59,27 @@ graph TD
 
 ## 🗺️ Learning Path
 
-### ☸️ [01. Container Orchestration](./01-Container-Orchestration/README.md)
+### ☸️ [01. Container Orchestration](./01-container-orchestration/readme.md)
 *Junior, the cluster is your canvas.* 
 Advanced Kubernetes mastery, diving into ETCD, API-Server internals, and managing multi-cluster fleets with zero downtime.
 
-### 📊 [02. Observability Foundations](./02-Observability-Foundations/README.md)
+### 📊 [02. Observability Foundations](./02-observability-foundations/readme.md)
 *If you can't measure it, you don't own it.* 
 Moving beyond logs to distributed tracing with **OpenTelemetry**, high-cardinality metrics, and self-healing alert loops.
 
-### 🛡️ [03. API Gateways & Security](./03-API-Gateways-Security/README.md)
+### 🛡️ [03. API Gateways & Security](./03-api-gateways-security/readme.md)
 *The border is the first line of defense.* 
 Mastering OIDC/JWT, rate-limiting, and microservice mesh security using tools like Kong, Istio, or Traefik.
 
-### 🔌 [04. MCP (Model Context Protocol)](./04-MCP/README.md)
+### 🔌 [04. MCP (Model Context Protocol)](./04-mcp/readme.md)
 *Give the AI some hands.* 
 Building the bridge between LLMs and your infrastructure. Learn to build agentic servers that can investigate and fix outages.
 
-### ⛓️ [05. Blockchain Infrastructure](./05-Blockchain/README.md)
+### ⛓️ [05. Blockchain Infrastructure](./05-blockchain/readme.md)
 *Decentralized resilience.* 
 Node deployment, validator security, and managing the infrastructure for the decentralized web (Web3).
 
-### 💰 [06. FinOps Mastery](./06-FinOps/README.md)
+### 💰 [06. FinOps Mastery](./06-finops/readme.md)
 *Efficiency is the ultimate engineering goal.* 
 Cost-as-code, advanced budgeting, and ensuring your "Architectural Masterpiece" doesn't cost $50k/day.
 
@@ -89,4 +89,4 @@ Cost-as-code, advanced budgeting, and ensuring your "Architectural Masterpiece" 
 Junior, by the end of this phase, you will move from being a "builder of parts" to a **Designer of Ecosystems**. You will be ready to lead architectural discussions and design the future of cloud computing.
 
 ---
-*Next Step: Take command, Junior. Head into [01. Container Orchestration](./01-Container-Orchestration/README.md).*
+*Next Step: Take command, Junior. Head into [01. Container Orchestration](./01-container-orchestration/readme.md).*

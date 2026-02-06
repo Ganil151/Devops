@@ -26,17 +26,17 @@ graph TD
 
 ## 📂 Module Structure
 
-### 🔰 [Beginner Level](./Beginner/README.md)
+### 🔰 [Beginner Level](./beginner/readme.md)
 - Installation and Modes (Namespaced vs. Cluster-wide)
 - Basic resource manifests (StorageBucket, ComputeInstance)
 - Understanding the `status` field
 
-### 🚀 [Intermediate Level](./Intermediate/README.md)
+### 🚀 [Intermediate Level](./intermediate/readme.md)
 - Resource references and dependencies
 - Managing IAM with Config Connector
 - Annotations and resource lifecycle (Abandon vs. Delete)
 
-### 🏆 [Advanced Level](./Advanced/README.md)
+### 🏆 [Advanced Level](./advanced/readme.md)
 - Multi-project and Multi-org management
 - GitOps with Config Sync
 - Monitoring and Troubleshooting controllers
@@ -45,4 +45,4 @@ graph TD
 ---
 
 ## ❓ Interview Questions & Quiz
-- [Config Connector Interview Questions & 20+ Quiz Questions](./Interview-Questions/README.md)
+- [Config Connector Interview Questions & 20+ Quiz Questions](./interview-questions/readme.md)

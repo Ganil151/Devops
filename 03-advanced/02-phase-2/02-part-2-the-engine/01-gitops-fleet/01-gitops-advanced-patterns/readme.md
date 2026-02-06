@@ -166,9 +166,9 @@ argocd app sync my-app
 ---
 
 ## 🔗 Next Steps
-- **[Advanced Kubernetes](README.md)** - Master the platform GitOps manages.
-- **[Security Hardening](README.md)** - Secure your GitOps pipelines.
-- **[Enterprise Observability](README.md)** - Monitor your GitOps agent health.
+- **[Advanced Kubernetes](readme.md)** - Master the platform GitOps manages.
+- **[Security Hardening](readme.md)** - Secure your GitOps pipelines.
+- **[Enterprise Observability](readme.md)** - Monitor your GitOps agent health.
 
 ---
 *In GitOps, the commit is the command. Trust the repository.*

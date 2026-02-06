@@ -168,4 +168,4 @@ Senior DevOps engineers avoid "packing" subnets too tightly.
 
 You've mastered the math. Now let's look at the two types of VPCs you'll encounter and why you should almost always build your own.
 
-Proceed to: **[Default vs. Custom VPC](../05-Default-vs-Custom-VPC/README.md)** →
+Proceed to: **[Default vs. Custom VPC](../05-default-vs-custom-vpc/readme.md)** →

@@ -37,4 +37,4 @@ ArgoCD is the most popular GitOps tool.
 - **Revert**: `git revert` is your rollback mechanism.
 - **Drift Detection**: If someone manually changes a value in the cluster (via `kubectl`), ArgoCD detects the drift and warns (or auto-fixes) it.
 
-[Back to Advanced Index](../README.md)
+[Back to Advanced Index](../readme.md)

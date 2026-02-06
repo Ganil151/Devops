@@ -8,10 +8,10 @@ Welcome to the comprehensive reference for **Infracost & Cost Governance**. This
 
 Explore the technical blueprints of automated cost management:
 
-### 1. [🛡️ Core Keywords](./Infracost-Keywords.md)
+### 1. [🛡️ Core Keywords](./infracost-keywords.md)
 The terminology of Shift-Left FinOps: Breakdowns, Diffs, Usage files, and Guardrails.
 
-### 2. [📊 Automation Samples](./samples/README.md)
+### 2. [📊 Automation Samples](./samples/readme.md)
 Production-grade scripts for CLI automation, Python-based guardrails, and CI/CD integration.
 
 ---
@@ -49,4 +49,4 @@ graph LR
 
 ---
 
-[⬅️ Back to Infracost Index](../README.md)
+[⬅️ Back to Infracost Index](../readme.md)

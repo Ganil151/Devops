@@ -10,11 +10,11 @@ These checklists ensure that every project in this directory meets the high stan
 
 Each project should be audited against the relevant domain checklist before being finalized:
 
-1.  **[Infrastructure & Cloud](./Cloud-Infrastructure-Checklist.md)**: Audit for IaC standards, tagging, and cost.
-2.  **[CI/CD Pipelines](./CI-CD-Pipeline-Checklist.md)**: Audit for automation, testing, and security gates.
-3.  **[Containers & K8s](./Container-Orchestration-Checklist.md)**: Audit for image optimization and resource limits.
-4.  **[Security Hardening](./Security-Hardening-Checklist.md)**: Audit for zero-leak secrets and least-privilege.
-5.  **[Monitoring & Observability](./Monitoring-Observability-Checklist.md)**: Audit for logs, metrics, and incident readiness.
+1.  **[Infrastructure & Cloud](./cloud-infrastructure-checklist.md)**: Audit for IaC standards, tagging, and cost.
+2.  **[CI/CD Pipelines](./ci-cd-pipeline-checklist.md)**: Audit for automation, testing, and security gates.
+3.  **[Containers & K8s](./container-orchestration-checklist.md)**: Audit for image optimization and resource limits.
+4.  **[Security Hardening](./security-hardening-checklist.md)**: Audit for zero-leak secrets and least-privilege.
+5.  **[Monitoring & Observability](./monitoring-observability-checklist.md)**: Audit for logs, metrics, and incident readiness.
 
 ---
 

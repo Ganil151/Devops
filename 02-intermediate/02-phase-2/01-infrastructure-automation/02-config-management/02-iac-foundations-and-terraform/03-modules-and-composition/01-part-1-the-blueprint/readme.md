@@ -6,15 +6,15 @@ Welcome to **Part 1**. This phase is about the **Philosophy of Composition**. Be
 
 ## 🛣️ The Curriculum
 
-### [01. 🏗️ Module Fundamentals](./01-Module-Fundamentals/README.md)
+### [01. 🏗️ Module Fundamentals](./01-module-fundamentals/readme.md)
 **The Objective**: Transitioning from "Scripting" to "Packaging."
 *   **Key Concepts**: The Black Box mental model, Abstraction, Encapsulation, and Source Taxonomy.
 
-### [02. 📁 Module Structure](./02-Module-Structure/README.md)
+### [02. 📁 Module Structure](./02-module-structure/readme.md)
 **The Objective**: Designing the "API" of your infrastructure.
 *   **Key Concepts**: The Big Three (`main.tf`, `variables.tf`, `outputs.tf`), `versions.tf` safety belts, and executable examples.
 
-### [03. 🏆 Best Practices](./03-Best-Practices/README.md)
+### [03. 🏆 Best Practices](./03-best-practices/readme.md)
 **The Objective**: Governance and Staff-Level Standards.
 *   **Key Concepts**: SOLID principles for IaC, Naming Taxonomies, and the Secure Module Lifecycle.
 

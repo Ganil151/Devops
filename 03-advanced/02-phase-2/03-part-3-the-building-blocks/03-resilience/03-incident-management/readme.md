@@ -15,10 +15,10 @@ Incident Management is often a high-friction process involving manual alerting, 
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-PagerDuty-API-Automation](README.md)**
+1. **[🔴 01-PagerDuty-API-Automation](readme.md)**
    - Managing API Tokens and Routing Keys.
    - Sending custom event payloads to PagerDuty.
-2. **[🔴 02-Lambda-Auto-Remediation](README.md)**
+2. **[🔴 02-Lambda-Auto-Remediation](readme.md)**
    - Triggering Python functions from CloudWatch Alarms.
    - Using `boto3` to restart services or rotate keys automatically.
 
@@ -72,4 +72,4 @@ def trigger_incident(routing_key, summary, source):
 Never automate every alarm to trigger a call. Use a **Triage Lambda** to de-duplicate events and check for maintenance windows before escalating to a human. If a service is known to be flaky but non-critical, automate the restart and only page a human if the restart fails 3 times.
 
 ---
-**Next Step**: Start with [PagerDuty API Automation](README.md) 🚀
+**Next Step**: Start with [PagerDuty API Automation](readme.md) 🚀

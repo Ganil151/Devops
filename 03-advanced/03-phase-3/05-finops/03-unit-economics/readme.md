@@ -323,4 +323,4 @@ Design a dashboard showing:
 
 ## Next Lesson
 
-Continue to **[Lesson 04: Building FinOps Culture](../04-FinOps-Culture/README.md)** to learn how to embed FinOps practices across your organization.
+Continue to **[Lesson 04: Building FinOps Culture](../04-finops-culture/readme.md)** to learn how to embed FinOps practices across your organization.

@@ -6,15 +6,15 @@ Welcome to **Part 4**. We conclude with the critical guardrails of operational d
 
 ## 🛣️ The Curriculum
 
-### [01-Audit-and-Compliance](./01-Audit-and-Compliance/)
+### [01-Audit-and-Compliance](./01-audit-and-compliance/)
 **The Objective**: Meeting SOC2, HIPAA, and PCI standards.
 *   **Key Concepts**: Audit trails, recertification, and secret hygiene in docs.
 
-### [02-Knowledge-Challenges.md](./02-Knowledge-Challenges.md)
+### [02-Knowledge-Challenges.md](./02-knowledge-challenges.md)
 **The Objective**: Hands-on verification.
 *   **Concepts**: Quiz banks and practical exercises for runbook design.
 
-### [03-Reference-Library](./03-Reference-Library/)
+### [03-Reference-Library](./03-reference-library/)
 **The Objective**: Strategic Depth.
 *   **Contents**: Incident Response Anatomy and specialized documentation standards.
 

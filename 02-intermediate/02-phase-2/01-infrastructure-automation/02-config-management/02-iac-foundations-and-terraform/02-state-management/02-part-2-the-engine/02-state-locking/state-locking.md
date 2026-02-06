@@ -7,10 +7,10 @@
 When you run `terraform apply`, Terraform automatically attempts to <font color="#ffc000">acquire a lock</font> before reading or writing any data. If the lock is held by someone else, Terraform will abort the operation to protect the state.
 
 ### 📊 The Lifecycle of a Lock
-![State Locking Lifecycle](./images/state_locking_lifecycle.png)
+![State Locking Lifecycle](./images/state-locking-lifecycle.png)
 ### ⚠️ The Danger of No Locking (Race Conditions)
 Without locking, two processes could read the *same* base state version, calculate changes, and then overwrite each other's work. This results in **Corrupted State** where the file structure is invalid (malformed JSON) or the mapping to real-world resources is lost.
-![Race Condition Visualization](./images/locking_race_condition.png)
+![Race Condition Visualization](./images/locking-race-condition.png)
 
 ---
 

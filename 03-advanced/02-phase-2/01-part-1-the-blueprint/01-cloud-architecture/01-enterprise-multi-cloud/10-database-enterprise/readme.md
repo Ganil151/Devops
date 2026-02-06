@@ -8,28 +8,28 @@ Master enterprise database architectures including disaster recovery, global dis
 
 ## Learning Path
 
-### 1. [Database Architecture](01-Database-Architecture/)
+### 1. [Database Architecture](01-database-architecture/)
 Enterprise architecture patterns:
 - Multi-region database deployments
 - Disaster recovery and business continuity
 - Database migration strategies
 - Hybrid cloud architectures
 
-### 2. [Database Performance](02-Database-Performance/)
+### 2. [Database Performance](02-database-performance/)
 Advanced optimization techniques:
 - Query optimization and execution plans
 - Connection pooling and management
 - Caching strategies and CDN integration
 - Performance monitoring and troubleshooting
 
-### 3. [Database Security](03-Database-Security/)
+### 3. [Database Security](03-database-security/)
 Comprehensive security implementation:
 - Encryption at rest and in transit
 - IAM database authentication
 - Audit logging and compliance
 - Network isolation and VPC design
 
-### 4. [Specialized Databases](04-Specialized-Databases/)
+### 4. [Specialized Databases](04-specialized-databases/)
 Advanced database services:
 - DocumentDB (MongoDB-compatible)
 - Amazon Redshift data warehousing
@@ -38,7 +38,7 @@ Advanced database services:
 
 ## Prerequisites
 
-- Completed [Intermediate Database Services](README.md)
+- Completed [Intermediate Database Services](readme.md)
 - Production experience with AWS databases
 - Advanced AWS networking knowledge
 - Infrastructure as Code expertise
@@ -69,7 +69,7 @@ Advanced database services:
 
 ---
 ## 🧭 Additional Modules
-- [01 Database Architecture](01-Database-Architecture/README.md)
-- [02 Database Performance](02-Database-Performance/README.md)
-- [03 Database Security](03-Database-Security/README.md)
-- [04 Specialized Databases](04-Specialized-Databases/README.md)
+- [01 Database Architecture](01-database-architecture/readme.md)
+- [02 Database Performance](02-database-performance/readme.md)
+- [03 Database Security](03-database-security/readme.md)
+- [04 Specialized Databases](04-specialized-databases/readme.md)

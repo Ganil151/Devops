@@ -264,7 +264,7 @@ BenchmarkClientWithRetries-16         3200    356789 ns/op
 
 - [`main.go`](./main.go) - Example usage
 - [`client.go`](./client.go) - Main client implementation
-- [`circuit_breaker.go`](./circuit_breaker.go) - Circuit breaker wrapper
+- [`circuit_breaker.go`](./circuit-breaker.go) - Circuit breaker wrapper
 - [`retry.go`](./retry.go) - Retry logic with exponential backoff
 
 ---

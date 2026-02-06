@@ -92,4 +92,4 @@ aws sns delete-topic --topic-arn $TOPIC_ARN
 ```
 
 ---
-**Next Step**: Explore [Advanced SNS Patterns & Troubleshooting](../../../../../../../03-Advanced/02-Phase-2/01-Part-1-The-Blueprint/01-Cloud-Architecture/01-Enterprise-Multi-Cloud/11-Application-Integration/sns-advanced-patterns.md)
+**Next Step**: Explore [Advanced SNS Patterns & Troubleshooting](../../../../../../../03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/11-application-integration/sns-advanced-patterns.md)

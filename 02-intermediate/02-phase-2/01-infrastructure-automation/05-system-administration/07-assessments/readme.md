@@ -6,10 +6,10 @@ Mastery of system administration requires a balance of historical theory and rea
 
 ## 🏛️ Assessment Hub
 
-### 1. [Technical Interview Deep-Dives](./Interview-Questions.md)
+### 1. [Technical Interview Deep-Dives](./interview-questions.md)
 Advanced questions covering Linux internals, security failures, and storage disasters.
 
-### 2. [Knowledge Quizzes](./Quizzes.md)
+### 2. [Knowledge Quizzes](./quizzes.md)
 Multiple-choice evaluations on systemd, LVM, and performance metrics.
 
 ---
@@ -31,9 +31,9 @@ This content is aligned with the following professional certifications:
 
 ---
 
-[⬅️ Back to System Administration](../README.md)
+[⬅️ Back to System Administration](../readme.md)
 
 
 ---
 ## 🧭 Additional Modules
-- [Solutions](Solutions/README.md)
+- [Solutions](solutions/readme.md)

@@ -124,5 +124,5 @@ Junior admins use `Requires=` for everything. This is dangerous because if a non
 
 You've mastered the choreography of services. The phase is now complete. You have the foundational knowledge to manage production services at scale.
 
-Return to: **[System Administration Overview](../README.md)** | Proceed to the next phase: **[Process Management](../../02-Process-Management/README.md)** →
+Return to: **[System Administration Overview](../readme.md)** | Proceed to the next phase: **[Process Management](../../02-process-management/readme.md)** →
  Node: Finalizing Module 01.

@@ -34,9 +34,9 @@ A realistic schedule of a Junior DevOps Engineer:
 ---
 ## 3. The DevOps Curriculum Guide
 This directory is the first step in a larger journey. Once you master the persona, proceed to:
-*   **[02. The Tool Landscape](../02-The-Tool-Landscape/)**: Understanding the "What" (CI/CD, IaC, etc).
-*   **[03. Soft Skills](../03-Soft-Skills/)**: Communication and Blameless Culture.
-*   **[04. Day in the Life](../04-Day-in-the-Life-Operations/)**: Prioritization and Operations.
+*   **[02. The Tool Landscape](../02-the-tool-landscape/)**: Understanding the "What" (CI/CD, IaC, etc).
+*   **[03. Soft Skills](../03-soft-skills/)**: Communication and Blameless Culture.
+*   **[04. Day in the Life](../04-day-in-the-life-operations/)**: Prioritization and Operations.
 
 ---
 ## 4. The "DevOps Mindset" Rules

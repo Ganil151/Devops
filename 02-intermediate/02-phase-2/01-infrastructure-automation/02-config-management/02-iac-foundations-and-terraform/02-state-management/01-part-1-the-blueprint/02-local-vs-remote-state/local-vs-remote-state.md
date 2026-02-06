@@ -240,7 +240,7 @@ terraform {
 
 Now that your state is safely in the cloud, how do you handle secrets that *aren't* in state?
 
-**Proceed to**: [Part 2: Sensitive Data and Secrets →](../../README.md)
+**Proceed to**: [Part 2: Sensitive Data and Secrets →](../../readme.md)
 
 ---
 

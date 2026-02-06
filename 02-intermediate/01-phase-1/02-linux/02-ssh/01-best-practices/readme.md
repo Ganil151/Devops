@@ -169,5 +169,5 @@ Exposing your database or internal application servers to the internet is a card
 
 You've secured the front door. Now let's learn how to use SSH as a "Magic Tunnel" to shuttle traffic securely across networks without a VPN.
 
-Proceed to: **[02. SSH Tunneling & Port Forwarding](../02-Tunneling/README.md)** →
+Proceed to: **[02. SSH Tunneling & Port Forwarding](../02-tunneling/readme.md)** →
 Node: This link leads to the "Magic" of SSH.

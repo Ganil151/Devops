@@ -6,16 +6,16 @@ Welcome to the central reference hub for **Platform Engineering and Cloud Archit
 
 ## 🏗️ Technical Reference Manuals
 
-### 1. [🛠️ Compute & Storage](./Compute-Storage-Keywords.md)
+### 1. [🛠️ Compute & Storage](./compute-storage-keywords.md)
 Elasticity, Instance Types, Block vs. Object Storage, and High-Availability patterns.
 
-### 2. [🛡️ Networking & Identity](./Networking-Identity-Keywords.md)
+### 2. [🛡️ Networking & Identity](./networking-identity-keywords.md)
 VPC design, Transit Gateways, DNS, and the IAM (Identity & Access Management) hierarchy.
 
-### 3. [🔐 Governance & Cost](./Governance-Cost-Keywords.md)
+### 3. [🔐 Governance & Cost](./governance-cost-keywords.md)
 The Well-Architected Framework, Shared Responsibility, SCPs, and FinOps principles.
 
-### 4. [📊 Architecture Frameworks](./Well-Architected-Framework-Ref.md)
+### 4. [📊 Architecture Frameworks](./well-architected-framework-ref.md)
 Deep dive into the five pillars of high-quality cloud design.
 
 ---
@@ -59,9 +59,9 @@ graph TD
 
 ---
 
-[⬅️ Back to Cloud Platforms Index](../README.md)
+[⬅️ Back to Cloud Platforms Index](../readme.md)
 
 
 ---
 ## 🧭 Additional Modules
-- [samples](samples/README.md)
+- [samples](samples/readme.md)

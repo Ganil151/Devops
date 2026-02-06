@@ -16,10 +16,10 @@ Modern security demands that we move away from static, long-lived credentials. *
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Dynamic-Secrets-Generation](README.md)**
+1. **[🔴 01-Dynamic-Secrets-Generation](readme.md)**
    - Configuring the Database Secret Engine.
    - On-the-fly creation of temporary SQL users.
-2. **[🔴 02-Vault-Agent-Auto-Auth](README.md)**
+2. **[🔴 02-Vault-Agent-Auto-Auth](readme.md)**
    - Using Sidecar containers to provide secrets to applications.
    - Managing Token renewal and caching.
 
@@ -69,4 +69,4 @@ resource "vault_database_secret_backend_role" "role" {
 Use **Vault Agent with Template Files**. Instead of your application code knowing how to talk to the Vault API, the Vault Agent sidecar fetches the secret and writes it to a shared volume (memory-backed `emptyDir`) in a standard format (like `.env`). The application just reads a local file, completely unaware of the complex auth and rotation happening in the background.
 
 ---
-**Next Step**: Start with [Dynamic Secrets Generation](README.md) 🚀
+**Next Step**: Start with [Dynamic Secrets Generation](readme.md) 🚀

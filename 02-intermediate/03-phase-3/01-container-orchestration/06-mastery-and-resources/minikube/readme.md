@@ -6,21 +6,21 @@ Minikube is an essential tool for local development, allowing you to run a singl
 
 ## 🎓 Learning Path
 
-### 🟢 [1. Beginner](./Beginner/README.md)
+### 🟢 [1. Beginner](./beginner/readme.md)
 **Getting Started**
 - Installation guides for Windows, macOS, and Linux.
 - Basic commands: `minikube start`, `stop`, `delete`.
 - Visualizing your cluster with the **Minikube Dashboard**.
 - Deploying your first "Hello World" application.
 
-### 🟡 [2. Intermediate](./Intermediate/README.md)
+### 🟡 [2. Intermediate](./intermediate/readme.md)
 **Configuration & Development**
 - **Drivers**: Choosing between Docker, Hyper-V, or VirtualBox.
 - **Resource Tuning**: Allocating specific CPU and RAM to your lab.
 - **Addons**: Enabling Ingress, Metrics-Server, and Registry.
 - **Image Sideloading**: Using local Docker images without a registry.
 
-### 🔴 [3. Advanced](./Advanced/README.md)
+### 🔴 [3. Advanced](./advanced/readme.md)
 **Power User Features**
 - **Multi-node Simulation**: Running 3+ nodes on a single laptop.
 - **Profiles**: Managing multiple independent clusters (e.g., `dev` vs `test`).
@@ -41,4 +41,4 @@ kubectl get nodes
 ---
 
 ## 🔗 Internal Navigation
-- [Back to Part 6 Overview](../README.md)
+- [Back to Part 6 Overview](../readme.md)

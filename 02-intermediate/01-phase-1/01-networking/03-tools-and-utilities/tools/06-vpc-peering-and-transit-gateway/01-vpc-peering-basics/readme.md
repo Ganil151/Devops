@@ -130,5 +130,5 @@ A common pattern for smaller startups is to have a "Tools" or "Shared Services" 
 
 You've built the bridge. Now let's see how to tell your servers how to use it by updating Route Tables and Security Groups.
 
-Proceed to: **[02. Routing & Security in Peering](../02-Routing-and-Security-in-Peering/README.md)** →
+Proceed to: **[02. Routing & Security in Peering](../02-routing-and-security-in-peering/readme.md)** →
 Node: This link points to the next lesson.

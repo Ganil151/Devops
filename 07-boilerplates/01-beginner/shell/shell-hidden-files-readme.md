@@ -73,5 +73,5 @@ ssh dev-bastion
 
 ## Related Resources
 
-- [Parent Module](../../../README.md)
-- [Challenges](../../03-Advanced/01-Self-Healing-Infrastructure/CHALLENGES.md)
+- [Parent Module](../../../readme.md)
+- [Challenges](../../03-advanced/01-self-healing-infrastructure/challenges.md)

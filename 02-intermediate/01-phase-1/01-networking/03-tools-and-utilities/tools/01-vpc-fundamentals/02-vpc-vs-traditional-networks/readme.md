@@ -122,4 +122,4 @@ In a VPC, you treat your network like **"Cattle."**
 
 You understand the "Why." Now let's look at the "What"—the actual gears and cogs that make a VPC work.
 
-Proceed to: **[Module 03: VPC Components Overview](../03-VPC-Components-Overview/README.md)** →
+Proceed to: **[Module 03: VPC Components Overview](../03-vpc-components-overview/readme.md)** →

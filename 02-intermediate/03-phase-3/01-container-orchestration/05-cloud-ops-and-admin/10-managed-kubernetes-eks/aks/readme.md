@@ -43,4 +43,4 @@ az aks scale --resource-group myResourceGroup --name myAKSCluster --node-count 5
 4.  **Security Center**: Enable Microsoft Defender for Containers to scan for image vulnerabilities.
 
 ---
-**Next Step**: Learn about **[GKE (Google Kubernetes Engine)](../GKE/README.md)**.
+**Next Step**: Learn about **[GKE (Google Kubernetes Engine)](../gke/readme.md)**.

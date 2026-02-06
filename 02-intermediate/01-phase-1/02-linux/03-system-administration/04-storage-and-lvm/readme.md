@@ -156,5 +156,5 @@ Junior admins use device names like `/dev/sdb1` in their `/etc/fstab`. Senior ad
 
 Storage holds the state, but logs hold the history. Let's learn to capture and manage those logs properly.
 
-Proceed to: **[05. Logging & Forensics](../05-Log-Management/README.md)** →
+Proceed to: **[05. Logging & Forensics](../05-log-management/readme.md)** →
 Node: This link points to the log management module.

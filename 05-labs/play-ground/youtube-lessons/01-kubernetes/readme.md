@@ -21,7 +21,7 @@ Located in:`Anton_Putra/devops-youtube-course-2025/`
 
 ### Prerequisites
 
-- Docker basics (see [Docker Documentation](../../README.md))
+- Docker basics (see [Docker Documentation](../../readme.md))
 - Linux command line familiarity
 - Basic networking knowledge
 
@@ -35,9 +35,9 @@ cd Anton_Putra/devops-youtube-course-2025/
 ### Related Resources
 
 - [Kubernetes Main Documentation](.)
-- [Docker Documentation](README.md)
-- [Helm Documentation](README.md)
+- [Docker Documentation](readme.md)
+- [Helm Documentation](readme.md)
 
 ---
 
-**[← Back to YouTube Lessons Index](../README.md)**
+**[← Back to YouTube Lessons Index](../readme.md)**

@@ -371,4 +371,4 @@ Build a cost allocation report showing:
 
 ## Next Lesson
 
-Continue to **[Lesson 02: Optimization Strategies](../02-Optimization-Strategies/README.md)** to learn cost reduction techniques.
+Continue to **[Lesson 02: Optimization Strategies](../02-optimization-strategies/readme.md)** to learn cost reduction techniques.

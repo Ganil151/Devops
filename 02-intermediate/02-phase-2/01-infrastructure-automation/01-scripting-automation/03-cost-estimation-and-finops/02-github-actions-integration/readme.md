@@ -207,4 +207,4 @@ Before moving to the next module, ensure you can:
 
 **Score yourself**: 5+/5 = Ready to advance | <5 = Review exercises
 
-[⬅️ Back to CLI](../01-CLI-Automation/README.md) | [Next: Policy as Code](../03-Policy-as-Code-Guardrails/README.md) ➡️
+[⬅️ Back to CLI](../01-cli-automation/readme.md) | [Next: Policy as Code](../03-policy-as-code-guardrails/readme.md) ➡️

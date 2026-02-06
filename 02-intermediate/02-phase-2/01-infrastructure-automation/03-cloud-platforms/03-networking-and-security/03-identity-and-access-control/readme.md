@@ -16,6 +16,6 @@ In professional DevOps, we never use long-lived Access Keys inside applications.
 ---
 
 ## 📂 Multi-Cloud Implementations
-- [AWS-IAM-Cognito](./AWS-IAM-Cognito): Resource-based and Identity-based policies.
-- [Azure-AD](./Azure-AD): Modern enterprise identity management.
-- [GCP-IAM](./GCP-IAM): Hierarchical permissions (Org -> Folder -> Project).
+- [AWS-IAM-Cognito](./aws-iam-cognito): Resource-based and Identity-based policies.
+- [Azure-AD](./azure-ad): Modern enterprise identity management.
+- [GCP-IAM](./gcp-iam): Hierarchical permissions (Org -> Folder -> Project).

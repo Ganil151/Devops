@@ -6,7 +6,7 @@ In a microservice world, a single user request might touch 10 different services
 
 ## 📂 Modules in this Part
 
-### 1. [04-Tracing-Foundations](./04-Tracing-Foundations/README.md)
+### 1. [04-Tracing-Foundations](./04-tracing-foundations/readme.md)
 The pinnacle of observability.
 - **Trace & Spans**: Understanding the tree structure of a request.
 - **Context Propagation**: How to pass IDs between services.
@@ -18,4 +18,4 @@ The pinnacle of observability.
 - This section is advanced. Complete Parts 1 and 2 before diving into **Tracing Foundations**.
 
 ---
-[Back to Main Curriculum](../README.md)
+[Back to Main Curriculum](../readme.md)

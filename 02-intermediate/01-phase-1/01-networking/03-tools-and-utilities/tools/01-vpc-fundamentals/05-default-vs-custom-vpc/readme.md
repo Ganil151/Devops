@@ -148,4 +148,4 @@ In enterprise environments, the first thing many teams do is delete the Default 
 
 Design is one thing; scaling is another. Every cloud environment has "speed limits." Let's look at the quotas you need to know to avoid a production outage.
 
-Proceed to: **[06. VPC Limits & Quotas](../06-VPC-Limits-and-Quotas/README.md)** →
+Proceed to: **[06. VPC Limits & Quotas](../06-vpc-limits-and-quotas/readme.md)** →

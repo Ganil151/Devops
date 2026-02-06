@@ -136,5 +136,5 @@ While you can manually type in IP ranges (Static Routing), senior DevOps enginee
 
 The VPN is great for getting started, but if you need guaranteed performance and high-speed fiber, you need to go "Direct."
 
-Proceed to: **[02. Direct Connect Deep Dive](../02-Direct-Connect-Deep-Dive/README.md)** →
+Proceed to: **[02. Direct Connect Deep Dive](../02-direct-connect-deep-dive/readme.md)** →
 Node: This link points to the next lesson.

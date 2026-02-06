@@ -16,10 +16,10 @@ Traditional logging stacks (ELK) are often heavy and costly to maintain. **Cloud
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Log-Aggregation-Architecture](README.md)**
+1. **[🔴 01-Log-Aggregation-Architecture](readme.md)**
    - FluentBit Parsers and Filters.
    - Routing logs to multiple destinations.
-2. **[🔴 02-LogQL-and-Dashboards](README.md)**
+2. **[🔴 02-LogQL-and-Dashboards](readme.md)**
    - Creating Grafana dashboards from log data.
    - Alerting based on log patterns (e.g., HTTP 500 spikes).
 
@@ -62,4 +62,4 @@ sum by (app) (rate({app="nginx"} [5m])) * 100
 In Loki, labels are everything. **Do not over-index.** Avoid using high-cardinality values (like User IDs or Request IDs) as labels. Instead, use labels for static metadata (cluster, namespace, app) and use **LogQL line filters** or **Parser expressions** to search through the dynamic content. This keeps your Loki index small and your queries lightning fast.
 
 ---
-**Next Step**: Start with [Log Aggregation Architecture](README.md) 🚀
+**Next Step**: Start with [Log Aggregation Architecture](readme.md) 🚀

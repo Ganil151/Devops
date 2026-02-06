@@ -126,5 +126,5 @@ Many high-security partners will not accept your traffic unless you provide a **
 
 You've mastered the hardware and the protocols. Now let's see how to squeeze every bit of performance and security out of your Load Balancers with advanced optimization techniques.
 
-Proceed to: **[04. Advanced ELB Optimization](../04-Advanced-ELB-Optimization/README.md)** →
+Proceed to: **[04. Advanced ELB Optimization](../04-advanced-elb-optimization/readme.md)** →
 Node: This link points to the next lesson.

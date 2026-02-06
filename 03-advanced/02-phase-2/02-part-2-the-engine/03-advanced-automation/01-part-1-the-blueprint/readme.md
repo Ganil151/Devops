@@ -7,11 +7,11 @@ Welcome to the Advanced track. Here, we transition from writing automation "that
 
 | # | Topic | Key Concepts | Tools |
 | :--- | :--- | :--- | :--- |
-| **01** | [**Async Programming**](./01-Async-Programming-asyncio/README.md) | Event Loops, Coroutines, Non-blocking I/O | asyncio, aiohttp |
-| **02** | [**Concurrent Futures**](./02-Concurrent-Futures/README.md) | Parallelism vs Concurrency | ThreadPool, ProcessPool |
-| **03** | [**Advanced OOP & Patterns**](./003-Advanced-OOP-and-Design-Patterns/README.md) | Mixins, Abstract Base Classes, Factories | ABC, Design Patterns |
-| **04** | [**Decorators & Meta**](./04-Metaprogramming-and-Decorators/README.md) | Wrapping logic, Profiling, Code Generation | Wraps, Type Checking |
-| **05** | [**Professional CLIs**](./05-CLI-Frameworks-Click-Typer/README.md) | Arguments, Nesting, Shell Completion | Click, Typer |
+| **01** | [**Async Programming**](./01-async-programming-asyncio/readme.md) | Event Loops, Coroutines, Non-blocking I/O | asyncio, aiohttp |
+| **02** | [**Concurrent Futures**](./02-concurrent-futures/readme.md) | Parallelism vs Concurrency | ThreadPool, ProcessPool |
+| **03** | [**Advanced OOP & Patterns**](./003-advanced-oop-and-design-patterns/readme.md) | Mixins, Abstract Base Classes, Factories | ABC, Design Patterns |
+| **04** | [**Decorators & Meta**](./04-metaprogramming-and-decorators/readme.md) | Wrapping logic, Profiling, Code Generation | Wraps, Type Checking |
+| **05** | [**Professional CLIs**](./05-cli-frameworks-click-typer/readme.md) | Arguments, Nesting, Shell Completion | Click, Typer |
 
 ---
 
@@ -59,10 +59,10 @@ graph TD
 
 ---
 
-**Next Step**: [Mastering Async Programming →](./01-Async-Programming-asyncio/README.md)
+**Next Step**: [Mastering Async Programming →](./01-async-programming-asyncio/readme.md)
 
 
 ---
 ## 🧭 Additional Modules
-- [06 Generic Automation Framework](06-Generic-Automation-Framework/README.md)
-- [07 Infrastructure as Code Python](07-Infrastructure-as-Code-Python/README.md)
+- [06 Generic Automation Framework](06-generic-automation-framework/readme.md)
+- [07 Infrastructure as Code Python](07-infrastructure-as-code-python/readme.md)

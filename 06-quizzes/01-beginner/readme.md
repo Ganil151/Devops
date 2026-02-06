@@ -3,7 +3,7 @@
 Test your knowledge on the fundamental concepts of DevOps.
 
 ## Module 01: Networking Foundations
-**Study Resource**: [Networking Basics](../../01-Beginner/01-Phase-1/01-Networking/README.md)
+**Study Resource**: [Networking Basics](../../01-beginner/01-phase-1/01-networking/readme.md)
 
 1. Which layer of the OSI model is responsible for IP addressing and routing?
 - A) Layer 2 (Data Link)
@@ -50,7 +50,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 02: Linux & Operating Systems
-**Study Resource**: [Linux Basics](../../README.md)
+**Study Resource**: [Linux Basics](../../readme.md)
 
 5. Which command is used to list files in a directory in Linux?
 - A) cd
@@ -67,7 +67,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 03: SSH & Remote Access
-**Study Resource**: [SSH Guide](../../README.md)
+**Study Resource**: [SSH Guide](../../readme.md)
 
 7. Which file on the REMOTE server stores the public keys of authorized users?
 - A) ~/.ssh/id_rsa.pub
@@ -84,7 +84,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 04: Version Control (Git)
-**Study Resource**: [Git Fundamentals](../../README.md)
+**Study Resource**: [Git Fundamentals](../../readme.md)
 
 9. Which tool is commonly used for version control in DevOps?
 - A) Git
@@ -101,7 +101,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 05: Data Formats (YAML & JSON)
-**Study Resource**: [Data Formats](../../README.md)
+**Study Resource**: [Data Formats](../../readme.md)
 
 11. In YAML, how are lists (arrays) represented?
 - A) Using curly braces `{}`
@@ -118,7 +118,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 06: Docker Basics
-**Study Resource**: [Docker Basics](../../README.md)
+**Study Resource**: [Docker Basics](../../readme.md)
 
 13. What is a container in DevOps?
 - A) A virtual machine
@@ -135,7 +135,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 07: Maven & Build Tools
-**Study Resource**: [Maven Basics](../../README.md)
+**Study Resource**: [Maven Basics](../../readme.md)
 
 15. Which file is the primary configuration file for a Maven project?
 - A) package.json
@@ -152,7 +152,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 08: Basic CI/CD
-**Study Resource**: [CI/CD Basics](../../README.md)
+**Study Resource**: [CI/CD Basics](../../readme.md)
 
 17. What does CI/CD stand for?
 - A) Continuous Integration/Continuous Delivery
@@ -169,7 +169,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 09: Cloud Foundations
-**Study Resource**: [Cloud Foundations](../../README.md)
+**Study Resource**: [Cloud Foundations](../../readme.md)
 
 19. What is the fundamental security principle of "Least Privilege"?
 - A) Giving users access to everything by default
@@ -186,7 +186,7 @@ Test your knowledge on the fundamental concepts of DevOps.
 ---
 
 ## Module 10: DevOps Overview
-**Study Resource**: [DevOps Overview](../../README.md)
+**Study Resource**: [DevOps Overview](../../readme.md)
 
 21. What does DevOps stand for?
 - A) Development and Operations
@@ -259,4 +259,4 @@ S3. B
 ---
 
 ### 🚀 Level Up your Troubleshooting!
-Ready for a bigger challenge? Try our **[Advanced Networking Scenarios Quiz](./Networking-Scenarios.md)** with 20+ real-world DevOps networking problems!
+Ready for a bigger challenge? Try our **[Advanced Networking Scenarios Quiz](./networking-scenarios.md)** with 20+ real-world DevOps networking problems!

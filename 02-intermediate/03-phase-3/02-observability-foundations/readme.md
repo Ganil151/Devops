@@ -45,19 +45,19 @@ graph LR
 
 ## 🗺️ Curriculum Path
 
-### 📈 [Part 1: Monitoring Foundations](README.md)
+### 📈 [Part 1: Monitoring Foundations](readme.md)
 *Junior, learn the 'Four Golden Signals'.* 
 Master the metrics that matter: Latency, Traffic, Errors, and Saturation.
 
-### 📜 [Part 2: Logging & Cloud Metrics](README.md)
+### 📜 [Part 2: Logging & Cloud Metrics](readme.md)
 *A log without structure is just noise.* 
 Structured JSON logging, log rotation, and mastering AWS CloudWatch/Loki.
 
-### 🕵️ [Part 3: Distributed Tracing & APM](README.md)
+### 🕵️ [Part 3: Distributed Tracing & APM](readme.md)
 *Trace the needle in the haystack.* 
 Distributed tracing with OpenTelemetry and Jaeger. Follow a single request through the microservices maze.
 
-### 🎓 [Part 4: Mastery and Resources](README.md)
+### 🎓 [Part 4: Mastery and Resources](readme.md)
 *The SRE Interview.* 
 Advanced troubleshooting, interview preparation, and real-world outage scenarios.
 
@@ -142,12 +142,12 @@ Advanced troubleshooting, interview preparation, and real-world outage scenarios
 
 ## 🔗 Next Steps
 Junior, you have the eyes of the Oracle. Now let's learn how to secure the borders.
-1. Proceed to: **[03. API Gateways & Security](../03-API-Gateways-Security/README.md)** →
-2. Return to: **[Phase 3 Hub](../README.md)** →
+1. Proceed to: **[03. API Gateways & Security](../03-api-gateways-security/readme.md)** →
+2. Return to: **[Phase 3 Hub](../readme.md)** →
 
 ---
 ## 🧭 Additional Modules
-- [01 Monitoring Foundations](01-Monitoring-Foundations/README.md)
-- [02 Logging and Cloud Metrics](02-Logging-and-Cloud-Metrics/README.md)
-- [03 Distributed Tracing and APM](03-Distributed-Tracing-and-APM/README.md)
-- [04 Mastery and Resources](04-Mastery-and-Resources/README.md)
+- [01 Monitoring Foundations](01-monitoring-foundations/readme.md)
+- [02 Logging and Cloud Metrics](02-logging-and-cloud-metrics/readme.md)
+- [03 Distributed Tracing and APM](03-distributed-tracing-and-apm/readme.md)
+- [04 Mastery and Resources](04-mastery-and-resources/readme.md)

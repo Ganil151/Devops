@@ -6,9 +6,9 @@ This directory contains production-grade infrastructure blueprints for building 
 
 | Sample File | Use Case | Implementation |
 | :--- | :--- | :--- |
-| [`iam_policy_example.json`](./iam_policy_example.json) | Least-privileged access with IP-based guardrails. | JSON (IAM) |
-| [`asg_ha_example.tf`](./asg_ha_example.tf) | Multi-AZ auto-scaling with Load Balancing. | Terraform |
-| [`s3_bucket_policy.json`](../../04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-bucket-policies.md) | Enforcing SSL and private access at the bucket level. | JSON (Policy) |
+| [`iam_policy_example.json`](./iam-policy-example.json) | Least-privileged access with IP-based guardrails. | JSON (IAM) |
+| [`asg_ha_example.tf`](./asg-ha-example.tf) | Multi-AZ auto-scaling with Load Balancing. | Terraform |
+| [`s3_bucket_policy.json`](../../04-data-and-automation/02-storage-and-lifecycle-management/s3-bucket-policies.md) | Enforcing SSL and private access at the bucket level. | JSON (Policy) |
 
 ---
 

@@ -46,11 +46,11 @@ graph LR
 
 ## 🗺️ Curriculum Path
 
-1. **[01-Runbook-Fundamentals](./01-Runbook-Fundamentals/README.md)**: Philosophy, doc hierarchy, and 10-part deep dive into SRE standards.
-2. **[02-Writing-Effective-SOPs](./02-Writing-Effective-SOPs/Writing Effective SOP's.md)**: The "Docs-as-Code" philosophy and standard templates.
-3. **[03-Auto-Remediation-Patterns](03-Auto-Remediation-Patterns/REFERENCE/Auto-Remediation-Architectures-Ref.md)**: Building self-healing infrastructure.
-4. **[04-Incident-Management-and-Response](REFERENCE/Incident-Response-Governance-Ref.md)**: Roles, escalation, and post-mortems.
-5. **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/Interview Questions and Quizzes.md)**: Career validation.
+1. **[01-Runbook-Fundamentals](./01-runbook-fundamentals/readme.md)**: Philosophy, doc hierarchy, and 10-part deep dive into SRE standards.
+2. **[02-Writing-Effective-SOPs](./02-writing-effective-sops/writing-effective-sop's.md)**: The "Docs-as-Code" philosophy and standard templates.
+3. **[03-Auto-Remediation-Patterns](03-auto-remediation-patterns/reference/auto-remediation-architectures-ref.md)**: Building self-healing infrastructure.
+4. **[04-Incident-Management-and-Response](reference/incident-response-governance-ref.md)**: Roles, escalation, and post-mortems.
+5. **[05-Interview-Questions-and-Quizzes](./05-interview-questions-and-quizzes/interview-questions-and-quizzes.md)**: Career validation.
 
 ---
 
@@ -133,5 +133,5 @@ graph LR
 
 ## 🔗 Next Steps
 Junior, the playbook is ready. Let's learn to write the perfect SOP.
-1. Proceed to: **[01-Runbook-Fundamentals](./01-Runbook-Fundamentals/README.md)** →
-2. Return to: **[Phase 1 Hub](../README.md)** →
+1. Proceed to: **[01-Runbook-Fundamentals](./01-runbook-fundamentals/readme.md)** →
+2. Return to: **[Phase 1 Hub](../readme.md)** →

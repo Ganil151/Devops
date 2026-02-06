@@ -2,7 +2,7 @@
 
 Disaster Recovery (DR) is the process by which an organization anticipates and addresses technology-related disasters.
 
-![Backup Architecture Placeholder](Descriptive Diagram: A backup lifecycle showing daily snapshots, cross-account vaulting for ransomware protection, and a restoration path to a different region.)
+![Backup Architecture Placeholder](descriptive-diagram:-a-backup-lifecycle-showing-daily-snapshots,-cross-account-vaulting-for-ransomware-protection,-and-a-restoration-path-to-a-different-region.)
 
 ## 🚀 The "DevOps Why": RTO and RPO
 Every backup strategy is defined by two metrics:
@@ -30,5 +30,5 @@ Move older snapshots to "Cold" tiers (e.g., AWS Backup Archive) for long-term re
 ---
 
 ## 📂 Implementation Guides
-- [Backup-Strategies](../../../02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/20-Testing-Strategies/Testing Strategies.md): Planning for 3-2-1 backup methodology.
-- [DR-Patterns](../../../02-Config-Management/00-Reference-and-Metadata/IaC-Architecture-Patterns-Ref.md): Pilot Light vs. Warm Standby vs. Multi-Site.
+- [Backup-Strategies](../../../02-config-management/02-iac-foundations-and-terraform/01-fundamentals/20-testing-strategies/testing-strategies.md): Planning for 3-2-1 backup methodology.
+- [DR-Patterns](../../../02-config-management/00-reference-and-metadata/iac-architecture-patterns-ref.md): Pilot Light vs. Warm Standby vs. Multi-Site.

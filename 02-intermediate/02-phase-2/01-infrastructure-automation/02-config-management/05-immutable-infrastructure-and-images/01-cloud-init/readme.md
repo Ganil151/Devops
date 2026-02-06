@@ -6,10 +6,10 @@ Cloud-init is the industry-standard method for cross-platform cloud instance ini
 
 | Stage | Topic | Objective |
 | :--- | :--- | :--- |
-| **01** | **[Fundamentals](./01-Fundamentals/README.md)** | Boot Stages, Data Sources, and Basic YAML. |
-| **02** | **[Config Formats](./02-Configuration-Formats/README.md)** | Shell Scripts, MIME Multi-Part, and Includes. |
-| **03** | **[System Ops](./03-System-Configuration/README.md)** | User management, Package audits, and Disk setup. |
-| **04** | **[Advanced Features](./04-Advanced-Features/README.md)** | Network Bonding, Custom Modules, and Debugging. |
+| **01** | **[Fundamentals](./01-fundamentals/readme.md)** | Boot Stages, Data Sources, and Basic YAML. |
+| **02** | **[Config Formats](./02-configuration-formats/readme.md)** | Shell Scripts, MIME Multi-Part, and Includes. |
+| **03** | **[System Ops](./03-system-configuration/readme.md)** | User management, Package audits, and Disk setup. |
+| **04** | **[Advanced Features](./04-advanced-features/readme.md)** | Network Bonding, Custom Modules, and Debugging. |
 
 ---
 
@@ -43,9 +43,9 @@ graph LR
 ---
 
 ## ❓ Interview Prep & Resources
-- **[Interview Questions & Quizzes](./05-Interview-Questions-and-Quiz/README.md)**
-- **[Real-Life Scenarios](./06-Real-Life-Scenarios/README.md)**
+- **[Interview Questions & Quizzes](./05-interview-questions-and-quiz/readme.md)**
+- **[Real-Life Scenarios](./06-real-life-scenarios/readme.md)**
 
 ---
 
-[⬅️ Back to Configuration Tools Index](../README.md)
+[⬅️ Back to Configuration Tools Index](../readme.md)

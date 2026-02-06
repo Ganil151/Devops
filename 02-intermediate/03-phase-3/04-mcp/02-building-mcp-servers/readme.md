@@ -1,6 +1,6 @@
 # 02: Building MCP Servers
 
-**[⬅️ Back to MCP Module Index](../README.md)** | **[Next: MCP for Kubernetes ➡️](../03-MCP-for-Kubernetes-and-Cloud/README.md)**
+**[⬅️ Back to MCP Module Index](../readme.md)** | **[Next: MCP for Kubernetes ➡️](../03-mcp-for-kubernetes-and-cloud/readme.md)**
 
 ---
 

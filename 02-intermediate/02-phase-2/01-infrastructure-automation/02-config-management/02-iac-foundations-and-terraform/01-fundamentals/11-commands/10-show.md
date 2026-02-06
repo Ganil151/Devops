@@ -93,4 +93,4 @@ A security team requires that no S3 buckets are public. They run a script that:
 
 ---
 
-**[⬅️ Back to Commands README](README.md)** | **[Previous: terraform fmt](09-Fmt.md)** | **[Next: terraform output](11-Output.md)**
+**[⬅️ Back to Commands README](readme.md)** | **[Previous: terraform fmt](09-fmt.md)** | **[Next: terraform output](11-output.md)**

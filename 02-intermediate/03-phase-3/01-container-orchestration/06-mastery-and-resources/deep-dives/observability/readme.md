@@ -63,4 +63,4 @@ readinessProbe:
 - **Liveness Fail**: Kubelet restarts the container.
 - **Readiness Fail**: Endpoints controller removes pod from Service load balancing.
 
-[Back to Intermediate Index](../README.md)
+[Back to Intermediate Index](../readme.md)

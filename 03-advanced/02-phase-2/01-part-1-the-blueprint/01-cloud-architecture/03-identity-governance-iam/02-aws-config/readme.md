@@ -41,4 +41,4 @@ One of the most powerful features of Config is the ability to automatically fix 
 
 ---
 
-**Next Step**: Explore automated threat detection with **[AWS GuardDuty](../03-AWS-GuardDuty/README.md)**.
+**Next Step**: Explore automated threat detection with **[AWS GuardDuty](../03-aws-guardduty/readme.md)**.

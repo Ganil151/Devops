@@ -63,6 +63,6 @@ The Circuit Breaker prevents "Cascading Failures" by detecting when a backend se
 ---
 
 ## 🔗 Internal Navigation
-- [Next: API Documentation and Management](../04-API-Documentation-and-Management/README.md)
-- [Back: Traffic Management and Docs Overview](../README.md)
-- [Security Base: Authentication and JWT](README.md)
+- [Next: API Documentation and Management](../04-api-documentation-and-management/readme.md)
+- [Back: Traffic Management and Docs Overview](../readme.md)
+- [Security Base: Authentication and JWT](readme.md)

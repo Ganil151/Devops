@@ -1,6 +1,6 @@
 # 03: MCP for Kubernetes and Cloud
 
-**[⬅️ Back to MCP Module Index](../README.md)** | **[Next: Security and Auth ➡️](../04-Security-and-Auth/README.md)**
+**[⬅️ Back to MCP Module Index](../readme.md)** | **[Next: Security and Auth ➡️](../04-security-and-auth/readme.md)**
 
 ---
 

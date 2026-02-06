@@ -64,10 +64,10 @@ Navigate through the technical deep-dives of Systemd:
 
 | Module | Topic | Description |
 | :--- | :--- | :--- |
-| **[01.01](./01-Unit-File-Fundamentals/)** | **Unit File Fundamentals** | Anatomy of .service, .timer, and .socket files. |
-| **[01.02](./02-Service-State-Management/)** | **Service State Management** | Commands, Masking, and Lifecycle control. |
-| **[01.03](./03-Hardening-and-Security/)** | **Hardening & Security** | Sandboxing, Namespaces, and systemd-analyze. |
-| **[01.04](./04-Dependencies-and-Targets/)** | **Dependencies & Targets** | Ordering, Requirements, and Runlevels. |
+| **[01.01](./01-unit-file-fundamentals/)** | **Unit File Fundamentals** | Anatomy of .service, .timer, and .socket files. |
+| **[01.02](./02-service-state-management/)** | **Service State Management** | Commands, Masking, and Lifecycle control. |
+| **[01.03](./03-hardening-and-security/)** | **Hardening & Security** | Sandboxing, Namespaces, and systemd-analyze. |
+| **[01.04](./04-dependencies-and-targets/)** | **Dependencies & Targets** | Ordering, Requirements, and Runlevels. |
 
 ---
 
@@ -175,5 +175,5 @@ Junior admins restart services manually when they crash. Senior engineers let th
 
 Services consume resources. Let's learn how to monitor, prioritize, and control those resources in the next module.
 
-Proceed to: **[02. Process Management](../02-Process-Management/README.md)** →
+Proceed to: **[02. Process Management](../02-process-management/readme.md)** →
 Node: This link points to the resource control module.

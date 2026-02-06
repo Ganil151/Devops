@@ -1,6 +1,6 @@
 # 04: Security and Authorization
 
-**[⬅️ Back to MCP Module Index](../README.md)** | **[Next: Interview Questions ➡️](../05-Interview-Questions-and-Quizzes/README.md)**
+**[⬅️ Back to MCP Module Index](../readme.md)** | **[Next: Interview Questions ➡️](../05-interview-questions-and-quizzes/readme.md)**
 
 ---
 

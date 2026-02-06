@@ -31,10 +31,10 @@ At the kernel level, a single character change in a config file can bring down a
 ## 📂 Module Structure
 
 ### 🛡️ Advanced Topics
-- **[Security & Hardening](./Security/)**: SELinux, AppArmor, `sysctl` hardening, and auditing.
-- **[Performance & Optimization](./Performance/)**: CPU/IO tuning, `eBPF`, and observability tools (`perf`, `bpftrace`).
-- **[Virtualization & WSL](./Virtualization-WSL/)**: Advanced WSL2 config, KVM/QEMU, and container runtimes.
-- **[Advanced SSH](./SSH/)**: Certificates, Bastion hosts, and proxying.
+- **[Security & Hardening](./security/)**: SELinux, AppArmor, `sysctl` hardening, and auditing.
+- **[Performance & Optimization](./performance/)**: CPU/IO tuning, `eBPF`, and observability tools (`perf`, `bpftrace`).
+- **[Virtualization & WSL](./virtualization-wsl/)**: Advanced WSL2 config, KVM/QEMU, and container runtimes.
+- **[Advanced SSH](./ssh/)**: Certificates, Bastion hosts, and proxying.
 
 ---
 
@@ -80,7 +80,7 @@ graph TB
 ---
 
 ## ❓ Interview Questions & Quiz
-**[Explore Advanced Interview Questions & Quizzes](./Interview_Questions_and_Quiz.md)**
+**[Explore Advanced Interview Questions & Quizzes](./interview-questions-and-quiz.md)**
 
 ---
 

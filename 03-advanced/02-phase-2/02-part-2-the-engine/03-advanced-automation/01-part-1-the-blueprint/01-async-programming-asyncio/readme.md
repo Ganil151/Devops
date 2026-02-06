@@ -61,9 +61,9 @@ Master asynchronous execution by building these high-performance tools.
 
 | Challenge | Topic | Description | Starter Code | Solution |
 | :--- | :--- | :--- | :--- | :--- |
-| **01. Bulk Site Pinger** | I/O Concurrency | Build an async script using `aiohttp` to ping 50 websites simultaneously. | [Link](./challenges/challenge_01_bulk_pinger.py) | [Link](./challenges/solutions/solution_01_bulk_pinger.py) |
-| **02. Async Task Queue** | Producers/Consumers | Implement a Task Queue where multiple "worker" coroutines process an async `Queue`. | [Link](./challenges/challenge_02_async_queue.py) | [Link](./challenges/solutions/solution_02_async_queue.py) |
-| **03. Throttled Scanner** | Semaphores | Use `asyncio.Semaphore` to limit the number of concurrent connections to 5. | [Link](./challenges/challenge_03_throttled_scanner.py) | [Link](./challenges/solutions/solution_03_throttled_scanner.py) |
+| **01. Bulk Site Pinger** | I/O Concurrency | Build an async script using `aiohttp` to ping 50 websites simultaneously. | [Link](./challenges/challenge-01-bulk-pinger.py) | [Link](./challenges/solutions/solution-01-bulk-pinger.py) |
+| **02. Async Task Queue** | Producers/Consumers | Implement a Task Queue where multiple "worker" coroutines process an async `Queue`. | [Link](./challenges/challenge-02-async-queue.py) | [Link](./challenges/solutions/solution-02-async-queue.py) |
+| **03. Throttled Scanner** | Semaphores | Use `asyncio.Semaphore` to limit the number of concurrent connections to 5. | [Link](./challenges/challenge-03-throttled-scanner.py) | [Link](./challenges/solutions/solution-03-throttled-scanner.py) |
 
 ---
 
@@ -78,4 +78,4 @@ Master asynchronous execution by building these high-performance tools.
 
 ---
 
-**Next Step**: [Concurrent Futures & Parallelism →](../02-Concurrent-Futures/README.md)
+**Next Step**: [Concurrent Futures & Parallelism →](../02-concurrent-futures/readme.md)

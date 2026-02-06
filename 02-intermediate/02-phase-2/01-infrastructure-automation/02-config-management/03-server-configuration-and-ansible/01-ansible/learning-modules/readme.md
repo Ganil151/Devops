@@ -51,19 +51,19 @@ graph TD
 
 ## 🗺️ Module Roadmap
 
-### 01. [Fundamentals & Agentless Design](./01-Fundamentals/README.md)
+### 01. [Fundamentals & Agentless Design](./01-fundamentals/readme.md)
 The philosophy of "Push" vs. "Pull" and setting up your first Control Node.
 
-### 02. [Inventory & Dynamic Discovery](./02-Inventory-Management/README.md)
+### 02. [Inventory & Dynamic Discovery](./02-inventory-management/readme.md)
 Moving beyond static files. Integrating with Cloud APIs (AWS/GCP/Azure tags).
 
-### 03. [Standard Playbooks & Roles](./07-Ansible-Roles/README.md)
+### 03. [Standard Playbooks & Roles](./07-ansible-roles/readme.md)
 Building "States," not scripts. Variable precedence and reusable library structures.
 
-### 04. [Security & Secrets (Vault)](./10-Ansible-Vault/README.md)
+### 04. [Security & Secrets (Vault)](./10-ansible-vault/readme.md)
 Protecting API keys and passwords with AES256 encryption.
 
-### 05. [📚 Keyword Encyclopedia](./REFERENCE/README.md)
+### 05. [📚 Keyword Encyclopedia](./reference/readme.md)
 The technical manual for every Ansible component, from `become` to `handlers`.
 
 ---
@@ -107,14 +107,14 @@ The technical manual for every Ansible component, from `become` to `handlers`.
 
 ---
 
-[⬅️ Back to Infrastructure Automation](../README.md)
+[⬅️ Back to Infrastructure Automation](../readme.md)
 
 ---
 ## 🧭 Additional Modules
-- [03 Basic Playbooks](03-Basic-Playbooks/README.md)
-- [04 Core Modules](04-Core-Modules/README.md)
-- [05 Variables and Facts](05-Variables-and-Facts/README.md)
-- [06 Templates and Files](06-Templates-and-Files/README.md)
-- [08 Conditionals and Loops](08-Conditionals-and-Loops/README.md)
-- [09 Error Handling](09-Error-Handling/README.md)
-- [11 Custom Modules](11-Custom-Modules/README.md)
+- [03 Basic Playbooks](03-basic-playbooks/readme.md)
+- [04 Core Modules](04-core-modules/readme.md)
+- [05 Variables and Facts](05-variables-and-facts/readme.md)
+- [06 Templates and Files](06-templates-and-files/readme.md)
+- [08 Conditionals and Loops](08-conditionals-and-loops/readme.md)
+- [09 Error Handling](09-error-handling/readme.md)
+- [11 Custom Modules](11-custom-modules/readme.md)

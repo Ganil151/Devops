@@ -639,10 +639,10 @@ def test_order_creation():
 
 ## 📚 Additional Resources
 
-- **[OAuth2 Flows Deep Dive](./OAUTH2_FLOWS.md)**
-- **[JWT Security Checklist](../../../../../../../04-Projects-Showcase/00-Governance-Checklists/Security-Hardening-Checklist.md)**
-- **[mTLS Configuration](../../../../../../../01-Beginner/02-Phase-2/03-Nginx/REFERENCE/Nginx-Configuration-Ref.md)**
-- **[Service Mesh Security](../../../../../02-Part-2-The-Engine/02-Service-Mesh/REFERENCE/Service-Mesh-Architecture-Ref.md)**
+- **[OAuth2 Flows Deep Dive](./oauth2-flows.md)**
+- **[JWT Security Checklist](../../../../../../../04-projects-showcase/00-governance-checklists/security-hardening-checklist.md)**
+- **[mTLS Configuration](../../../../../../../01-beginner/02-phase-2/03-nginx/reference/nginx-configuration-ref.md)**
+- **[Service Mesh Security](../../../../../02-part-2-the-engine/02-service-mesh/reference/service-mesh-architecture-ref.md)**
 
 ---
 

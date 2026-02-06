@@ -6,21 +6,21 @@ Welcome to **The Engine**. In Phase 1, you learned CI/CD pipelines. In Phase 2, 
 
 ## 🛣️ The Curriculum
 
-### [01-GitOps-Fleet](./01-GitOps-Fleet/)
+### [01-GitOps-Fleet](./01-gitops-fleet/)
 **The Objective**: Manage 100 clusters as easily as 1.
 *   **Key Concepts**: 
     *   **App of Apps Pattern**: Using ArgoCD to bootstrap entire cluster stacks.
     *   **ApplicationSets**: Generating applications from Git folder structures.
     *   **Progressive Delivery**: Canary deployments with Argo Rollouts (Traffic shifting).
 
-### [02-Service-Mesh](./02-Service-Mesh/)
+### [02-Service-Mesh](./02-service-mesh/)
 **The Objective**: Decouple "Networking" from "Application Code".
 *   **Key Concepts**:
     *   **mTLS Everywhere**: Zero-trust security without code changes.
     *   **Traffic Management**: Circuit breaking, retries, timeouts, and fault injection configuration in YAML.
     *   **Observability**: Golden metrics (Latency, Traffic, Errors) for free.
 
-### [003-Advanced-Automation](./003-Advanced-Automation/)
+### [003-Advanced-Automation](./003-advanced-automation/)
 **The Objective**: If you do it twice, automate it. If you need it done instantly, use Events.
 *   **Key Concepts**:
     *   **Event-Driven Architecture**: Triggering Lambda/Functions from Kafka/SQS events.

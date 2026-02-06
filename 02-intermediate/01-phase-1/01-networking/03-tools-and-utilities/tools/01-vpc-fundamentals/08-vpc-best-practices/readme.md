@@ -137,4 +137,4 @@ Senior DevOps engineers don't "fix" network configurations in the AWS console. T
 
 You've mastered the AWS way. But the cloud is a big place. Let's see how these concepts translate to Azure and Google Cloud.
 
-Proceed to: **[09. Cloud Provider Comparison](../09-Cloud-Provider-Comparison/README.md)** →
+Proceed to: **[09. Cloud Provider Comparison](../09-cloud-provider-comparison/readme.md)** →

@@ -74,4 +74,4 @@ kubectl expose deployment hello-minikube --type=NodePort --port=8080
 minikube service hello-minikube
 ```
 
-[Next: Intermediate Level](../Intermediate/README.md)
+[Next: Intermediate Level](../intermediate/readme.md)

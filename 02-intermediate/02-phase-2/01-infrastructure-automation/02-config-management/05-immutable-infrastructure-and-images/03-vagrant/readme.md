@@ -575,4 +575,4 @@ end
 
 ---
 ## 🧭 Additional Modules
-- [01 Fundamentals](01-Fundamentals/README.md)
+- [01 Fundamentals](01-fundamentals/readme.md)

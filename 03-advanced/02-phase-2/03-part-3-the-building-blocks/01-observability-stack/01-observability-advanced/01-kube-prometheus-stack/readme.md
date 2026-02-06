@@ -122,4 +122,4 @@ spec:
 
 ---
 
-**Next Steps**: Learn how to correlate these metrics with logs in the [ELK Stack Guide](../03-Logging-ELK/README.md) or dive deeper into [Advanced Kubernetes Patterns](../../../../README.md).
+**Next Steps**: Learn how to correlate these metrics with logs in the [ELK Stack Guide](../03-logging-elk/readme.md) or dive deeper into [Advanced Kubernetes Patterns](../../../../readme.md).

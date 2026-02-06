@@ -710,7 +710,7 @@ Monitoring:
 
 ## Additional Resources
 
-- [S3 Advanced README](README.md)
+- [S3 Advanced README](readme.md)
 - [AWS S3 Replication Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication.html)
 - [Replication Time Control](https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-time-control.html)
 - [Batch Replication](https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-batch-replication-batch.html)

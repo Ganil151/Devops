@@ -170,12 +170,12 @@ Junior admins often check if Port 80 is open. If the server is 100% CPU but Port
 
 You can distribute traffic. But can you distinguish a friend from a foe?
 
-Proceed to: **[Network Security & Firewalls](../03-Cloud-Network-Security/README.md)** →
+Proceed to: **[Network Security & Firewalls](../03-cloud-network-security/readme.md)** →
 
 
 ---
 ## 🧭 Additional Modules
-- [01 ELB Types and Fundamentals](01-ELB-Types-and-Fundamentals/README.md)
-- [02 ALB Deep Dive L7 Routing](02-ALB-Deep-Dive-L7-Routing/README.md)
-- [03 NLB and GLB Architecture](03-NLB-and-GLB-Architecture/README.md)
-- [04 Advanced ELB Optimization](04-Advanced-ELB-Optimization/README.md)
+- [01 ELB Types and Fundamentals](01-elb-types-and-fundamentals/readme.md)
+- [02 ALB Deep Dive L7 Routing](02-alb-deep-dive-l7-routing/readme.md)
+- [03 NLB and GLB Architecture](03-nlb-and-glb-architecture/readme.md)
+- [04 Advanced ELB Optimization](04-advanced-elb-optimization/readme.md)

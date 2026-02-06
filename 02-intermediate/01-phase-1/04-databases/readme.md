@@ -56,11 +56,11 @@ graph TD
 
 ## 🗺️ Curriculum Path
 
-1. **[01-Database-Fundamentals](./01-Database-Fundamentals/README.md)**: SQL vs NoSQL, ACID/BASE, and Managed vs Self-hosted.
-2. **[02-PostgreSQL-DevOps](./02-PostgreSQL-DevOps/README.md)**: Advanced features and performance tuning.
-3. **[03-MySQL-and-RDS](README.md)**: Cloud implementation via Amazon RDS.
-4. **[04-NoSQL-MongoDB-Redis](./04-NoSQL-MongoDB-Redis/README.md)**: Document stores and high-performance caching.
-5. **[05-Backup-and-Monitoring](./05-Backup-and-Monitoring/README.md)**: Data durability and snapshots.
+1. **[01-Database-Fundamentals](./01-database-fundamentals/readme.md)**: SQL vs NoSQL, ACID/BASE, and Managed vs Self-hosted.
+2. **[02-PostgreSQL-DevOps](./02-postgresql-devops/readme.md)**: Advanced features and performance tuning.
+3. **[03-MySQL-and-RDS](readme.md)**: Cloud implementation via Amazon RDS.
+4. **[04-NoSQL-MongoDB-Redis](./04-nosql-mongodb-redis/readme.md)**: Document stores and high-performance caching.
+5. **[05-Backup-and-Monitoring](./05-backup-and-monitoring/readme.md)**: Data durability and snapshots.
 
 ---
 
@@ -143,12 +143,12 @@ graph TD
 
 ## 🔗 Next Steps
 Junior, the persistence layer is secure. Now let's learn how to monitor its health.
-1. Proceed to: **[01-Database-Fundamentals](./01-Database-Fundamentals/README.md)** →
-2. Return to: **[Phase 1 Hub](../README.md)** →
+1. Proceed to: **[01-Database-Fundamentals](./01-database-fundamentals/readme.md)** →
+2. Return to: **[Phase 1 Hub](../readme.md)** →
 
 ---
 ## 🧭 Additional Modules
-- [00 Database Basics](00-Database-Basics/README.md)
-- [06 Interview Questions and Quizzes](06-Interview-Questions-and-Quizzes/README.md)
-- [07 Real Life Scenarios](07-Real-Life-Scenarios/README.md)
-- [MySql](MySql/README.md)
+- [00 Database Basics](00-database-basics/readme.md)
+- [06 Interview Questions and Quizzes](06-interview-questions-and-quizzes/readme.md)
+- [07 Real Life Scenarios](07-real-life-scenarios/readme.md)
+- [MySql](mysql/readme.md)

@@ -526,9 +526,9 @@ echo "✅ Cleanup complete!"
 Now that you have a working RDS instance:
 
 1. **[RDS Backups & Snapshots](./rds-backups-snapshots.md)** - Learn data protection
-2. **[RDS Multi-AZ](../../Intermediate-Level/09-Database-Services/01-RDS-Advanced/rds-multi-az-read-replicas.md)** - High availability
-3. **[RDS Performance](../../Intermediate-Level/09-Database-Services/01-RDS-Advanced/rds-performance-tuning.md)** - Optimization
-4. **[DynamoDB Getting Started](../03-DynamoDB-Basics/dynamodb-getting-started.md)** - Try NoSQL
+2. **[RDS Multi-AZ](../../intermediate-level/09-database-services/01-rds-advanced/rds-multi-az-read-replicas.md)** - High availability
+3. **[RDS Performance](../../intermediate-level/09-database-services/01-rds-advanced/rds-performance-tuning.md)** - Optimization
+4. **[DynamoDB Getting Started](../03-dynamodb-basics/dynamodb-getting-started.md)** - Try NoSQL
 
 ## Quick Reference
 

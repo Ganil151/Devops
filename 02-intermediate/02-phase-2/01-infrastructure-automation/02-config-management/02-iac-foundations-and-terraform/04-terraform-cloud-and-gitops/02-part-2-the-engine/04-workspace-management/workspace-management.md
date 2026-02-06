@@ -1,4 +1,4 @@
-![TFC Architecture](../../01-Part-1-The-Blueprint/01-Introduction-and-Architecture/tfc_architecture.png)
+![TFC Architecture](../../01-part-1-the-blueprint/01-introduction-and-architecture/tfc-architecture.png)
 In HCP Terraform, a **Workspace** is significantly more than just a state file. It is a comprehensive **<font color="#92d050">Management Hub</font>** that encapsulates the state history, variable configuration, access controls, and full audit trail for a specific infrastructure environment.
 
 ---

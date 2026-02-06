@@ -6,13 +6,13 @@ Monitoring is the process of collecting, aggregating, and analyzing quantitative
 
 ## 📂 Modules in this Part
 
-### 1. [01-Monitoring-Basics](./01-Monitoring-Basics/README.md)
+### 1. [01-Monitoring-Basics](./01-monitoring-basics/readme.md)
 The theory and practice of system metrics.
 - **The Four Golden Signals**: Latency, Traffic, Errors, and Saturation.
 - **Monitoring Types**: White-box (Internal) vs. Black-box (External).
 - **Architecture**: Pull-based vs. Push-based metrics collection.
 
-### 2. [03-Health-Checks-and-Probers](./03-Health-Checks-and-Probers/README.md)
+### 2. [03-Health-Checks-and-Probers](./03-health-checks-and-probers/readme.md)
 Ensuring workload availability.
 - **Kubernetes Probes**: Liveness, Readiness, and Startup logic.
 - **Synthetic Monitoring**: Simulating user journeys to detect downtime.
@@ -26,5 +26,5 @@ Ensuring workload availability.
 
 ---
 ---
-- [Next: Part 2 - Logging & Cloud Metrics](README.md)
-- [Back to Main Curriculum](../README.md)
+- [Next: Part 2 - Logging & Cloud Metrics](readme.md)
+- [Back to Main Curriculum](../readme.md)

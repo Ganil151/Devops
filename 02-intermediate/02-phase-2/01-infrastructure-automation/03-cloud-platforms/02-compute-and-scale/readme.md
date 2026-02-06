@@ -1,6 +1,6 @@
 # Multi-Cloud Compute & Elasticity Framework
 
-![Cloud Compute Ecosystem](/home/gsmash/.gemini/antigravity/brain/7def5311-fe37-4d3f-9c26-76fa450f1d0a/cloud_compute_ecosystem_1769827880881.png)
+![Cloud Compute Ecosystem](/home/gsmash/.gemini/antigravity/brain/7def5311-fe37-4d3f-9c26-76fa450f1d0a/cloud-compute-ecosystem-1769827880881.png)
 
 ## 🌐 The Multi-Cloud Pillar
 This framework objective is to provide a unified approach to architecting, deploying, and scaling compute resources across major cloud providers (AWS, Azure, GCP). By focusing on technical functions rather than provider-specific nomenclature, we ensure architectural portability and standard high-availability patterns.
@@ -32,25 +32,25 @@ In the modern DevOps landscape, "Elasticity" is the golden standard. We move awa
 
 ## 📂 Framework Structure
 
-### [01-Compute-Services](./01-Compute-Services)
+### [01-Compute-Services](./01-compute-services)
 Deep dives into VM and Container orchestration.
 - **AWS-EC2-ECS**: Elastic Compute Cloud and Elastic Container Service.
 - **Azure-VM-Container-Instances**: Scalable VMs and serverless containers.
 - **GCP-Compute-Engine-GKE**: High-performance VMs and Google Kubernetes Engine.
 
-### [02-Elasticity-and-Scaling](./02-Elasticity-and-Scaling)
+### [02-Elasticity-and-Scaling](./02-elasticity-and-scaling)
 The core of high availability.
 - **Auto-Scaling-Groups**: Dynamic fleet management.
 - **Load-Balancers**: Traffic distribution (ALB/NLB/Global).
 - **Scaling-Policies**: Predictive vs Reactive logic.
 
-### [03-Serverless-Orchestration](./03-Serverless-Orchestration)
+### [03-Serverless-Orchestration](./03-serverless-orchestration)
 Event-driven compute.
 - **AWS-Lambda**: Trigger-based execution.
 - **Azure-Functions**: Bindings and triggers.
 - **GCP-Cloud-Functions**: Lightweight event handling.
 
-### [04-Messaging-and-Integration](./04-Messaging-and-Integration)
+### [04-Messaging-and-Integration](./04-messaging-and-integration)
 Decoupling services for scale.
 - **AWS-SNS-SQS**: Fan-out and Buffer patterns.
 - **Azure-Service-Bus**: Enterprise messaging.

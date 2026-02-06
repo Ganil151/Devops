@@ -306,4 +306,4 @@ Build a report showing:
 
 ## Next Lesson
 
-Continue to **[Lesson 04: Showback & Chargeback](../04-Showback-Chargeback/README.md)** to learn about allocating costs to teams.
+Continue to **[Lesson 04: Showback & Chargeback](../04-showback-chargeback/readme.md)** to learn about allocating costs to teams.

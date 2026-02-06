@@ -15,19 +15,19 @@ Welcome to the **FinOps** module. **FinOps** is the operating model for the clou
 
 This section is divided into three practical levels:
 
-### 1. [CLI Automation (The Engine)](./01-CLI-Automation/README.md)
+### 1. [CLI Automation (The Engine)](./01-cli-automation/readme.md)
 Master the tools used to predict and analyze costs.
 - **Infracost**: Predictive analysis (Pre-Deploy).
 - **AWS CLI**: Historical analysis (Post-Deploy).
 - **Usage Files**: Estimating "Usage-Based" costs like Lambda.
 
-### 2. [GitHub Actions Integration (Visiblity)](./02-GitHub-Actions-Integration/README.md)
+### 2. [GitHub Actions Integration (Visiblity)](./02-github-actions-integration/readme.md)
 Bring cost data into the developer's workflow.
 - **PR Comments**: Automated feedback loops.
 - **Secrets Management**: Securely storing API keys.
 - **Pipeline Architecture**: Where FinOps fits in CI/CD.
 
-### 3. [Policy-as-Code (Guardrails)](./03-Policy-as-Code-Guardrails/README.md)
+### 3. [Policy-as-Code (Guardrails)](./03-policy-as-code-guardrails/readme.md)
 Stop bad deploys before they happen.
 - **Enforcement**: Blocking builds that exceed budget.
 - **OPA/Rego**: The industry standard for policy.
@@ -75,9 +75,9 @@ Before skipping any modules, ensure you can:
 - [ ] Explain **Shift-Left Cost** to a manager.
 - [ ] Differentiate between **CapEx** and **OpEx**.
 
-[⬅️ Back to Scripting Automation](../README.md)
+[⬅️ Back to Scripting Automation](../readme.md)
 
 
 ---
 ## 🧭 Additional Modules
-- [REFERENCE](REFERENCE/README.md)
+- [REFERENCE](reference/readme.md)

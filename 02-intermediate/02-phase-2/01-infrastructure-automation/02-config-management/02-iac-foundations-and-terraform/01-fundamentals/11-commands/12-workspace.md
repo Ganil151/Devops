@@ -114,4 +114,4 @@ resource "aws_instance" "web" {
 
 ---
 
-**[⬅️ Back to Commands README](README.md)** | **[Previous: terraform output](11-Output.md)** | **[Next: terraform graph](13-Graph.md)**
+**[⬅️ Back to Commands README](readme.md)** | **[Previous: terraform output](11-output.md)** | **[Next: terraform graph](13-graph.md)**

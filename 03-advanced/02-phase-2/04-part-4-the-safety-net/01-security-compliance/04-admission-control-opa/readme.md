@@ -16,10 +16,10 @@ As Kubernetes environments grow, manual governance becomes impossible. **Admissi
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Admission-Controller-Architecture](README.md)**
+1. **[🔴 01-Admission-Controller-Architecture](readme.md)**
    - The API Server Pipeline.
    - External Webhooks and Security.
-2. **[🔴 02-OPA-Gatekeeper-Policies](README.md)**
+2. **[🔴 02-OPA-Gatekeeper-Policies](readme.md)**
    - Writing Rego for the real world.
    - Audit vs. Enforce modes.
 
@@ -65,4 +65,4 @@ violation[{"msg": msg, "details": {}}] {
 Don't wait for the Admission Controller to reject a developer's PR. Use **`gator`** (the Gatekeeper CLI) or **`opa test`** in your CI/CD pipeline to validate Kubernetes manifests against your OPA policies *before* they are even sent to the cluster. This provides instant feedback and prevents broken deployments from reaching the API server.
 
 ---
-**Next Step**: Start with [Admission Controller Architecture](README.md) 🚀
+**Next Step**: Start with [Admission Controller Architecture](readme.md) 🚀

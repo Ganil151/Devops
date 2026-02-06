@@ -116,7 +116,7 @@ Images/
 ### From Nested Directory
 ```markdown
 # From 00-Action-Plans/01-Consulting-30-Day-Plan.md
-![Pricing](../Images/infographics/pricing-comparison.png)
+![Pricing](../images/infographics/pricing-comparison.png)
 
 # From 07-FinOps/README.md
 > **⚠️ Missing Image**: *Lifecycle* ('../../01-Beginner/03-Phase-3/02-FinOps/Images/finops-lifecycle.png')

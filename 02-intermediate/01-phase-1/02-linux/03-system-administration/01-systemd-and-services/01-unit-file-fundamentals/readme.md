@@ -128,5 +128,5 @@ Junior admins often let their applications write logs to custom files like `/var
 
 ## 🔗 Next Steps
 
-Now that you know how to build a blueprint, let's learn how to drive the engine. Proceed to: **[02. Service State Management](../02-Service-State-Management/README.md)** →
+Now that you know how to build a blueprint, let's learn how to drive the engine. Proceed to: **[02. Service State Management](../02-service-state-management/readme.md)** →
  Node: Moving from configuration to operation.

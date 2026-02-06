@@ -30,4 +30,4 @@ Basic shell scripting is the foundation of DevOps. You are expected to know Bash
 ## 🛠️ Performance Task
 **Task**: Build a script that finds all `.log` files in `/tmp` and moves them to `/tmp/backup` only if they are older than 7 days.
 
-[Check challenges for more tasks.](./CHALLENGES.md)
+[Check challenges for more tasks.](./challenges.md)

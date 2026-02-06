@@ -5,7 +5,7 @@
 Transitioning from manual checks to automated policy enforcement using industry-standard tools like **Open Policy Agent (OPA)** and **Checkov**. This module focuses on "Static Analysis"—preventing insecure infrastructure from ever being deployed.
 
 ## Core Concept: Decoupled Authorization
-**[REFERENCE: Policy-as-Code Architecture](./REFERENCE/Policy-as-Code-Architecture-Ref.md)**
+**[REFERENCE: Policy-as-Code Architecture](./reference/policy-as-code-architecture-ref.md)**
 
 Moving security logic out of the application and into a centralized engine:
 - **Rego Language**: A purpose-built declarative language for expressing logic as code.
@@ -13,7 +13,7 @@ Moving security logic out of the application and into a centralized engine:
 - **Static Analysis**: Scanning Infrastructure as Code (Terraform, K8s) *before* deployment to identify risks for pennies.
 
 ## Enterprise Governance: The "Fail-Fast" Guardrails
-**[REFERENCE: Policy-as-Code Architecture](./REFERENCE/Policy-as-Code-Architecture-Ref.md)**
+**[REFERENCE: Policy-as-Code Architecture](./reference/policy-as-code-architecture-ref.md)**
 
 Enforcing organizational standards automatically:
 - **Mandatory Tagging**: Requiring every cloud resource to have an 'Owner' and 'CostCenter'.
@@ -63,4 +63,4 @@ download-external-modules: true
 In Kubernetes, use OPA/Gatekeeper as an Admission Controller. This ensures that even if someone bypasses the CI/CD pipeline, the cluster itself will reject any manifest that violates your security policies.
 
 ---
-**Next Step**: [OPA & Rego Basics](README.md) 🚀
+**Next Step**: [OPA & Rego Basics](readme.md) 🚀

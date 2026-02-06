@@ -37,14 +37,14 @@ graph LR
 
 ## 📂 Module Structure
 
-### 🛠️ [GCP Deployment Manager](./06-GCP-Deployment-Manager/README.md)
-- [Beginner](./06-GCP-Deployment-Manager/Beginner/README.md)
-- [Intermediate](./06-GCP-Deployment-Manager/Intermediate/README.md)
-- [Advanced](./06-GCP-Deployment-Manager/Advanced/README.md)
-- [Interview & Quiz](./06-GCP-Deployment-Manager/Interview-Questions/README.md)
+### 🛠️ [GCP Deployment Manager](./06-gcp-deployment-manager/readme.md)
+- [Beginner](./06-gcp-deployment-manager/beginner/readme.md)
+- [Intermediate](./06-gcp-deployment-manager/intermediate/readme.md)
+- [Advanced](./06-gcp-deployment-manager/advanced/readme.md)
+- [Interview & Quiz](./06-gcp-deployment-manager/interview-questions/readme.md)
 
-### ☸️ [GCP Config Connector](./07-GCP-Config-Connector/README.md)
-- [Beginner](./07-GCP-Config-Connector/Beginner/README.md)
-- [Intermediate](./07-GCP-Config-Connector/Intermediate/README.md)
-- [Advanced](./07-GCP-Config-Connector/Advanced/README.md)
-- [Interview & Quiz](./07-GCP-Config-Connector/Interview-Questions/README.md)
+### ☸️ [GCP Config Connector](./07-gcp-config-connector/readme.md)
+- [Beginner](./07-gcp-config-connector/beginner/readme.md)
+- [Intermediate](./07-gcp-config-connector/intermediate/readme.md)
+- [Advanced](./07-gcp-config-connector/advanced/readme.md)
+- [Interview & Quiz](./07-gcp-config-connector/interview-questions/readme.md)

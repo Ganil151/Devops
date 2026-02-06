@@ -141,5 +141,5 @@ Many companies force all traffic through the VPN (**Full-Tunnel**). While secure
 
 You've built the secure tunnels. Now let's see how to distribute traffic across your servers to ensure they never get overwhelmed.
 
-Proceed to: **[06. Load Balancing](README.md)** →
+Proceed to: **[06. Load Balancing](readme.md)** →
 Node: This link points to the next logical step in the curriculum.

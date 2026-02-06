@@ -65,5 +65,5 @@ One of the biggest bottlenecks in DevOps is Frontend/Mobile teams waiting for th
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Mastery and Resources Overview](README.md)
-- [Back: Traffic Management Hub](../README.md)
+- [Next: Mastery and Resources Overview](readme.md)
+- [Back: Traffic Management Hub](../readme.md)

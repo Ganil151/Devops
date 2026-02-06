@@ -145,4 +145,4 @@ Senior DevOps engineers don't wait for a `QuotaExceeded` error to appear in the 
 
 You've learned the rules of the road. Now let's explore how to scale across multiple VPCs for massive enterprise environments.
 
-Proceed to: **[07. Multi-VPC Strategies](../07-Multi-VPC-Strategies/README.md)** →
+Proceed to: **[07. Multi-VPC Strategies](../07-multi-vpc-strategies/readme.md)** →

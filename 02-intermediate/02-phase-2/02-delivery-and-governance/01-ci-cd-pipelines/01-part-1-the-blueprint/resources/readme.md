@@ -462,8 +462,8 @@ npm test -- --reporter mochawesome
 
 ---
 ## 🧭 Additional Modules
-- [API Testing](API-Testing/README.md)
-- [Integration Testing](Integration-Testing/README.md)
-- [Performance Testing](Performance-Testing/README.md)
-- [Security Testing](Security-Testing/README.md)
-- [Unit Testing](Unit-Testing/README.md)
+- [API Testing](api-testing/readme.md)
+- [Integration Testing](integration-testing/readme.md)
+- [Performance Testing](performance-testing/readme.md)
+- [Security Testing](security-testing/readme.md)
+- [Unit Testing](unit-testing/readme.md)

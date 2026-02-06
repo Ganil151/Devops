@@ -2,7 +2,7 @@
 
 Governance is the framework of rules and practices by which a company ensures its cloud resources are compliant, secure, and cost-effective.
 
-![Governance Architecture Placeholder](Descriptive Diagram: A continuous audit loop showing a resource change triggering an EventBridge event, which AWS Config evaluates against a rule, and a Lambda function auto-remediates by adding a missing tag or disabling public access.)
+![Governance Architecture Placeholder](descriptive-diagram:-a-continuous-audit-loop-showing-a-resource-change-triggering-an-eventbridge-event,-which-aws-config-evaluates-against-a-rule,-and-a-lambda-function-auto-remediates-by-adding-a-missing-tag-or-disabling-public-access.)
 
 ## 🚀 The "DevOps Why": Compliance at Scale
 In a large organization with 1,000+ engineers, you cannot manually check if every S3 bucket is public or if every VM has an owner tag. You must **Automate Governance**.

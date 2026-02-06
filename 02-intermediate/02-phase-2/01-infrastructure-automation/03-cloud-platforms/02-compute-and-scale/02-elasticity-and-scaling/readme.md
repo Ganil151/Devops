@@ -5,7 +5,7 @@ Elasticity is the ability of a system to grow or shrink its infrastructure resou
 ## 🏗️ Load Balancing Architecture
 Load Balancers (LBs) are the entry point of your scalable infrastructure. They distribute incoming traffic across multiple targets to ensure no single resource is overwhelmed.
 
-![Load Balancing Architecture](/home/gsmash/.gemini/antigravity/brain/7def5311-fe37-4d3f-9c26-76fa450f1d0a/load_balancing_architecture_1769828105050.png)
+![Load Balancing Architecture](/home/gsmash/.gemini/antigravity/brain/7def5311-fe37-4d3f-9c26-76fa450f1d0a/load-balancing-architecture-1769828105050.png)
 
 ### Deep-Dive: L4 vs L7 Balancing
 
@@ -28,7 +28,7 @@ A Load Balancer is only as good as its health checks.
 ## 📈 Scaling Mechanics
 Scaling ensures your application can handle load while maintaining performance and cost-efficiency.
 
-![Auto Scaling Mechanics](/home/gsmash/.gemini/antigravity/brain/7def5311-fe37-4d3f-9c26-76fa450f1d0a/auto_scaling_mechanics_1769828067760.png)
+![Auto Scaling Mechanics](/home/gsmash/.gemini/antigravity/brain/7def5311-fe37-4d3f-9c26-76fa450f1d0a/auto-scaling-mechanics-1769828067760.png)
 
 ### Vertical vs Horizontal Scaling
 - **Vertical Scaling (Scaling Up/Down)**: Increasing the "size" of a single resource (e.g., upgrading from a 2vCPU to a 16vCPU instance). 
@@ -65,6 +65,6 @@ resource "aws_autoscaling_group" "web_asg" {
 ```
 
 ## 📂 Section Navigation
-- [Auto-Scaling-Groups](./Auto-Scaling-Groups): Implementation guides for ASG/VMSS.
-- [Load-Balancers](./Load-Balancers): L4/L7 configuration and algorithms.
-- [Scaling-Policies](./Scaling-Policies): Designing effective triggers.
+- [Auto-Scaling-Groups](./auto-scaling-groups): Implementation guides for ASG/VMSS.
+- [Load-Balancers](./load-balancers): L4/L7 configuration and algorithms.
+- [Scaling-Policies](./scaling-policies): Designing effective triggers.

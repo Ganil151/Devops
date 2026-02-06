@@ -50,9 +50,9 @@ graph TD
 
 ## 🚀 3. Provider Specifics
 
-- **[AWS EKS](README.md)**: Deep integration with AWS VPC and IAM. Uses `eksctl` as the standard CLI tool.
-- **[Google GKE](./GKE/README.md)**: The original and most advanced managed service. Offers **Autopilot** for a fully-managed experience.
-- **[Azure AKS](./AKS/README.md)**: Features seamless integration with Azure DevOps and Microsoft Entra ID (formerly Azure AD).
+- **[AWS EKS](readme.md)**: Deep integration with AWS VPC and IAM. Uses `eksctl` as the standard CLI tool.
+- **[Google GKE](./gke/readme.md)**: The original and most advanced managed service. Offers **Autopilot** for a fully-managed experience.
+- **[Azure AKS](./aks/readme.md)**: Features seamless integration with Azure DevOps and Microsoft Entra ID (formerly Azure AD).
 
 ---
 
@@ -88,5 +88,5 @@ graph TD
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Cluster Administration](../11-Cluster-Administration/README.md)
-- [Back: StatefulSets and Jobs](README.md)
+- [Next: Cluster Administration](../11-cluster-administration/readme.md)
+- [Back: StatefulSets and Jobs](readme.md)

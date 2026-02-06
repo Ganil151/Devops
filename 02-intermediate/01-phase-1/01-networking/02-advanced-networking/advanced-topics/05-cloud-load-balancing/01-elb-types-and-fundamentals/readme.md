@@ -134,5 +134,5 @@ Many legacy partners or financial institutions require you to provide a **Static
 
 You've mastered the basics. Now let's dive into the "Brain" of the ALB: Content-Based Routing.
 
-Proceed to: **[02. ALB Deep Dive (L7 Routing)](../02-ALB-Deep-Dive-L7-Routing/README.md)** →
+Proceed to: **[02. ALB Deep Dive (L7 Routing)](../02-alb-deep-dive-l7-routing/readme.md)** →
 Node: This link points to the next lesson.

@@ -112,11 +112,11 @@ Always structure your top-level playbooks to be descriptive and modular.
 
 ---
 
-[⬅️ Back to Ansible Index](../README.md) | [Next: Conditionals & Loops](../08-Conditionals-and-Loops/README.md) ➡️
+[⬅️ Back to Ansible Index](../readme.md) | [Next: Conditionals & Loops](../08-conditionals-and-loops/readme.md) ➡️
 
 ---
 ## 🧭 Additional Modules
-- [01 Role Standard Structure](01-Role-Standard-Structure/README.md)
-- [02 Advanced Role Usage](02-Advanced-Role-Usage/README.md)
-- [03 Galaxy and Collections](03-Galaxy-and-Collections/README.md)
-- [04 Testing with Molecule](04-Testing-with-Molecule/README.md)
+- [01 Role Standard Structure](01-role-standard-structure/readme.md)
+- [02 Advanced Role Usage](02-advanced-role-usage/readme.md)
+- [03 Galaxy and Collections](03-galaxy-and-collections/readme.md)
+- [04 Testing with Molecule](04-testing-with-molecule/readme.md)

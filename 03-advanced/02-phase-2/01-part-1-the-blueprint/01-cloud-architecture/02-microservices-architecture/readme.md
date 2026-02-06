@@ -132,10 +132,10 @@ graph TB
 
 For advanced technical deep-dives, see these specialized directories:
 
-- **[Saga Distributed Transactions](./Patterns/Saga-Distributed-Transactions/)** - Choreography vs Orchestration
-- **[gRPC vs Event-Driven](./Communication/gRPC-vs-Event-Driven/)** - Protocol comparison (Protobuf/Avro/JSON)
-- **[Service Mesh & Retries](./Resiliency/Service-Mesh-and-Retries/)** - Circuit breakers, Istio config
-- **[OAuth2 & JWT Propagation](./Security/OAuth2-and-JWT-Propagation/)** - Identity across services
+- **[Saga Distributed Transactions](./patterns/saga-distributed-transactions/)** - Choreography vs Orchestration
+- **[gRPC vs Event-Driven](./communication/grpc-vs-event-driven/)** - Protocol comparison (Protobuf/Avro/JSON)
+- **[Service Mesh & Retries](./resiliency/service-mesh-and-retries/)** - Circuit breakers, Istio config
+- **[OAuth2 & JWT Propagation](./security/oauth2-and-jwt-propagation/)** - Identity across services
 
 ---
 
@@ -1411,7 +1411,7 @@ graph TB
 - ✅ Advanced load balancing (client-side)
 - ✅ Centralized policy management
 
-**Implementation:** See [`Resiliency/Service-Mesh-and-Retries/`](./Resiliency/Service-Mesh-and-Retries/) for detailed Istio configuration.
+**Implementation:** See [`Resiliency/Service-Mesh-and-Retries/`](./resiliency/service-mesh-and-retries/) for detailed Istio configuration.
 
 ---
 

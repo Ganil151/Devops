@@ -788,10 +788,10 @@ spec:
 ## Related Documentation
 
 - **[Intermediate StatefulSets](.)**: Core concepts and basic examples
-- **[StatefulSet Diagrams](README.md)**: Visual architecture guides
-- **[Persistent Volumes](README.md)**: Storage fundamentals
-- **[Pod Disruption Budgets](../Autoscaling/pdb)**: Availability management
-- **[VPA with StatefulSets](../Autoscaling/vpa)**: Vertical scaling patterns
+- **[StatefulSet Diagrams](readme.md)**: Visual architecture guides
+- **[Persistent Volumes](readme.md)**: Storage fundamentals
+- **[Pod Disruption Budgets](../autoscaling/pdb)**: Availability management
+- **[VPA with StatefulSets](../autoscaling/vpa)**: Vertical scaling patterns
 
 ---
 

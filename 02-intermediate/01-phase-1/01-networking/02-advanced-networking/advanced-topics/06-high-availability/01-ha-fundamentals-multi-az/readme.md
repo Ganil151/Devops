@@ -141,5 +141,5 @@ A common junior mistake is to put a single NAT Gateway in AZ-A and point your se
 
 You've built a resilient home in one region. Now let's explore how to design for total regional destruction using Disaster Recovery strategies.
 
-Proceed to: **[02. Disaster Recovery Strategies](../02-Disaster-Recovery-Strategies/README.md)** →
+Proceed to: **[02. Disaster Recovery Strategies](../02-disaster-recovery-strategies/readme.md)** →
 Node: This link points to the next lesson.

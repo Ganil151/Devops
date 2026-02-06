@@ -107,15 +107,15 @@ CI/CD best practices, troubleshooting guides, and configuration notes.
 
 ## Related Documentation
 
-- [CI/CD Main Documentation](README.md)
-- [Terraform Documentation](README.md)
-- [Ansible Documentation](README.md)
+- [CI/CD Main Documentation](readme.md)
+- [Terraform Documentation](readme.md)
+- [Ansible Documentation](readme.md)
 
 ---
 
-**[← Back to YouTube Lessons Index](../README.md)**
+**[← Back to YouTube Lessons Index](../readme.md)**
 
 
 ---
 ## 🧭 Additional Modules
-- [Notes](Notes/README.md)
+- [Notes](notes/readme.md)

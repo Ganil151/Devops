@@ -5,7 +5,7 @@
 Welcome to the Terraform Functions comprehensive learning guide! This two-day module covers Terraform's built-in functions through 12 hands-on assignments. Each assignment focuses on specific functions and real-world use cases.
 
 
-**📋 For step-by-step demo instructions, see [DEMO_GUIDE.md](../day19/code/provisioner-demo/DEMO_GUIDE.md)**
+**📋 For step-by-step demo instructions, see [DEMO_GUIDE.md](../day19/code/provisioner-demo/demo-guide.md)**
 
 ---
 
@@ -190,7 +190,7 @@ Read JSON config and store in Secrets Manager
 - [Terraform Functions Docs](https://www.terraform.io/language/functions)
 - [Terraform Console](https://www.terraform.io/cli/commands/console)
 - [AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
-- [DEMO_GUIDE.md](../day19/code/provisioner-demo/DEMO_GUIDE.md) - Complete demo instructions
+- [DEMO_GUIDE.md](../day19/code/provisioner-demo/demo-guide.md) - Complete demo instructions
 
 ---
 

@@ -48,19 +48,19 @@ graph TD
 
 ## 🗺️ Curriculum Path
 
-### 1. [CI/CD Pipelines](./01-CI-CD-Pipelines/README.md)
+### 1. [CI/CD Pipelines](./01-ci-cd-pipelines/readme.md)
 *Junior, keep your hands off the production servers.* 
 Master Jenkins, GitHub Actions, and artifact management. Build pipelines that fail fast and give clear feedback.
 
-### 2. [GitOps Mastery](./02-GitOps-Mastery/README.md)
+### 2. [GitOps Mastery](./02-gitops-mastery/readme.md)
 *Git is the only source of truth.* 
 Deep dive into ArgoCD and Flux. Learn how to manage cluster state without ever running a direct command.
 
-### 3. [Governance & Policy](./03-Governance-and-Policy/README.md)
+### 3. [Governance & Policy](./03-governance-and-policy/readme.md)
 *Automate your 'No'.* 
 Implementing OPA Gatekeeper and Kyverno. Ensure no developer (including you, Junior) can deploy an unencrypted volume or a public LoadBalancer by mistake.
 
-### 4. [Security Automation](./04-Security-Automation/README.md)
+### 4. [Security Automation](./04-security-automation/readme.md)
 *Hackers don't wait for your 'Security Review'.* 
 Container scanning, SBOM management, and automated vulnerability patching.
 
@@ -145,10 +145,10 @@ Container scanning, SBOM management, and automated vulnerability patching.
 
 ## 🔗 Next Steps
 Junior, the assembly line is secure. Now let's learn how to monitor it.
-1. Proceed to: **[Part 3: Modern Operations](../03-Modern-Operations/README.md)** →
-2. Return to: **[Phase 2 Hub](../README.md)** →
+1. Proceed to: **[Part 3: Modern Operations](../03-modern-operations/readme.md)** →
+2. Return to: **[Phase 2 Hub](../readme.md)** →
 
 
 ---
 ## 🧭 Additional Modules
-- [05 Automated Testing](05-Automated-Testing/README.md)
+- [05 Automated Testing](05-automated-testing/readme.md)

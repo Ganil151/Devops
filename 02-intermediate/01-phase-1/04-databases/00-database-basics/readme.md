@@ -7,7 +7,7 @@ Welcome to the Database Fundamentals section! This directory contains foundation
 Databases are essential components of modern applications, providing structured data storage, retrieval, and management capabilities. This section will guide you through the basics of database concepts and introduce you to AWS's managed database services.
 
 ## Core Concept: Cloud Database Architectures
-**[REFERENCE: Cloud Database Architectures & Selection](./REFERENCE/Cloud-Database-Architectures-Ref.md)**
+**[REFERENCE: Cloud Database Architectures & Selection](./reference/cloud-database-architectures-ref.md)**
 
 Navigating the strategic landscape of modern data storage:
 - **SQL vs. NoSQL**: Understanding the tradeoff between rigid transactional consistency (ACID) and massive horizontal scalability.
@@ -15,7 +15,7 @@ Navigating the strategic landscape of modern data storage:
 - **Distributed CAP Theorem**: Managing the balance between Consistency, Availability, and Partition Tolerance in global-scale operations.
 
 ## Enterprise Governance: Data Protection & Reliability
-**[REFERENCE: Database Governance, Reliability & Security](./REFERENCE/Database-Governance-Reliability-Ref.md)**
+**[REFERENCE: Database Governance, Reliability & Security](./reference/database-governance-reliability-ref.md)**
 
 Scaling database management with high-maturity reliability and security guardrails:
 - **Resilient Multi-AZ Design**: Implementing synchronous failover and asynchronous read replicas to satisfy zero-downtime SLAs.
@@ -27,21 +27,21 @@ Scaling database management with high-maturity reliability and security guardrai
 
 ### 1. Database Basics
 Start here to understand fundamental database concepts:
-- [Database Concepts](01-Database-Basics/Database%20Concepts%20and%20Fundamentals.md) - Core database principles
-- [Relational vs NoSQL](01-Database-Basics/relational-vs-nosql.md) - Understanding different database types
-- [Choosing Database Type](01-Database-Basics/Choosing%20the%20Right%20Database%20Type.md) - Decision-making guide
+- [Database Concepts](01-database-basics/database%20concepts%20and%20fundamentals.md) - Core database principles
+- [Relational vs NoSQL](01-database-basics/relational-vs-nosql.md) - Understanding different database types
+- [Choosing Database Type](01-database-basics/choosing%20the%20right%20database%20type.md) - Decision-making guide
 
 ### 2. RDS Basics
 Learn about Amazon Relational Database Service:
-- [RDS Introduction](02-RDS-Basics/rds-introduction.md) - What is RDS and why use it
-- [RDS Getting Started](02-RDS-Basics/rds-getting-started.md) - Create your first RDS instance
-- [RDS Backups & Snapshots](02-RDS-Basics/rds-backups-snapshots.md) - Data protection basics
+- [RDS Introduction](02-rds-basics/rds-introduction.md) - What is RDS and why use it
+- [RDS Getting Started](02-rds-basics/rds-getting-started.md) - Create your first RDS instance
+- [RDS Backups & Snapshots](02-rds-basics/rds-backups-snapshots.md) - Data protection basics
 
 ### 3. DynamoDB Basics
 Introduction to AWS's NoSQL database service:
-- [DynamoDB Introduction](03-DynamoDB-Basics/dynamodb-introduction.md) - NoSQL with DynamoDB
-- [DynamoDB Tables & Items](03-DynamoDB-Basics/dynamodb-tables-items.md) - Core concepts
-- [DynamoDB Getting Started](03-DynamoDB-Basics/dynamodb-getting-started.md) - Hands-on guide
+- [DynamoDB Introduction](03-dynamodb-basics/dynamodb-introduction.md) - NoSQL with DynamoDB
+- [DynamoDB Tables & Items](03-dynamodb-basics/dynamodb-tables-items.md) - Core concepts
+- [DynamoDB Getting Started](03-dynamodb-basics/dynamodb-getting-started.md) - Hands-on guide
 
 ## Prerequisites
 
@@ -63,8 +63,8 @@ By completing this section, you will:
 ## Next Steps
 
 After mastering these fundamentals, progress to:
-- **Intermediate Level**: [Database Services](../../../../README.md) for advanced RDS features, DynamoDB design patterns, Aurora, and ElastiCache
-- **Advanced Level**: [Database Enterprise](../../../../README.md) for multi-region deployments, performance optimization, and enterprise security
+- **Intermediate Level**: [Database Services](../../../../readme.md) for advanced RDS features, DynamoDB design patterns, Aurora, and ElastiCache
+- **Advanced Level**: [Database Enterprise](../../../../readme.md) for multi-region deployments, performance optimization, and enterprise security
 
 ## Additional Resources
 
@@ -75,7 +75,7 @@ After mastering these fundamentals, progress to:
 
 ---
 
-**Ready to start?** Begin with [Database Concepts](01-Database-Basics/Database%20Concepts%20and%20Fundamentals.md)!
+**Ready to start?** Begin with [Database Concepts](01-database-basics/database%20concepts%20and%20fundamentals.md)!
 
 ## Database Architecture
 ```mermaid

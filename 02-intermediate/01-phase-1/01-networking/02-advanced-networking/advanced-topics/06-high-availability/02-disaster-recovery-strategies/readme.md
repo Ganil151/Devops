@@ -135,5 +135,5 @@ The database is the hardest part of DR because data has "gravity" and "integrity
 
 You've planned for the worst. Now let's explore the tools that help users find your application across the globe: Route 53 and Global Accelerator.
 
-Proceed to: **[03. Global Accelerator & Route 53](../03-Global-Accelerator-and-Route53/README.md)** →
+Proceed to: **[03. Global Accelerator & Route 53](../03-global-accelerator-and-route53/readme.md)** →
 Node: This link points to the next lesson.

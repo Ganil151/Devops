@@ -73,4 +73,4 @@ Splunk alerts are triggered by search results. You can configure:
 
 ---
 
-**Next Steps**: Check out [Nagios](../05-Nagios/README.md) for infrastructure-level monitoring.
+**Next Steps**: Check out [Nagios](../05-nagios/readme.md) for infrastructure-level monitoring.

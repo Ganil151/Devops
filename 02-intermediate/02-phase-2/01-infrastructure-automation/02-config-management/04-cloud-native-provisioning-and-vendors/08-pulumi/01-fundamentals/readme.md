@@ -3,8 +3,8 @@
 Pulumi is a modern IaC tool that allows you to use standard programming languages (Python, TypeScript, Go, C#) to provision cloud infrastructure. It bridges the gap between Developers and SREs.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `__main__.py` (S3 provisioning in Python).
-- **[CHALLENGES](../../../03-Server-Configuration-and-Ansible/01-Ansible/Learning-Modules/01-Fundamentals/CHALLENGES.md)**: Stacks, classes, and AWSX.
+- **[Boilerplates](readme.md)**: `__main__.py` (S3 provisioning in Python).
+- **[CHALLENGES](../../../03-server-configuration-and-ansible/01-ansible/learning-modules/01-fundamentals/challenges.md)**: Stacks, classes, and AWSX.
 
 ---
 
@@ -62,4 +62,4 @@ def test_bucket_tags(args):
 
 ---
 
-[Next: Vendor Tools](../../../../../README.md)
+[Next: Vendor Tools](../../../../../readme.md)

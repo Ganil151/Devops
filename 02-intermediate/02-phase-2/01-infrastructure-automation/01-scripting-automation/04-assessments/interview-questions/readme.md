@@ -8,10 +8,10 @@ Solidify your understanding of automation and prepare for the technical screenin
 
 | Module | Description | Key Focus |
 | :--- | :--- | :--- |
-| **01. [Shell Scripting](./01-Shell-Scripting-Fundamentals/README.md)** | Direct OS interactions. | Strict mode, Redirection, Sed/Awk. |
-| **02. [Python Automation](./02-Python-Automation/README.md)** | Complex Logic & SDKs. | Boto3, Requests, JSON processing. |
-| **03. [Ansible Orchestration](./03-Ansible-Orchestration/README.md)** | Config Management. | Roles, Inventory, Handlers. |
-| **04. [SRE Best Practices](./04-SRE-Best-Practices/README.md)** | Reliability & Patterns. | Idempotency, Atomicity, Maturity Model. |
+| **01. [Shell Scripting](./01-shell-scripting-fundamentals/readme.md)** | Direct OS interactions. | Strict mode, Redirection, Sed/Awk. |
+| **02. [Python Automation](./02-python-automation/readme.md)** | Complex Logic & SDKs. | Boto3, Requests, JSON processing. |
+| **03. [Ansible Orchestration](./03-ansible-orchestration/readme.md)** | Config Management. | Roles, Inventory, Handlers. |
+| **04. [SRE Best Practices](./04-sre-best-practices/readme.md)** | Reliability & Patterns. | Idempotency, Atomicity, Maturity Model. |
 
 ---
 
@@ -66,4 +66,4 @@ Answer: B
 
 ---
 
-[Next: Real-Life Scenarios →](README.md)
+[Next: Real-Life Scenarios →](readme.md)

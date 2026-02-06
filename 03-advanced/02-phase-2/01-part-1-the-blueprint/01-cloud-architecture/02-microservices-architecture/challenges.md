@@ -499,7 +499,7 @@ After completing these challenges, you will be able to:
 6. Document your learnings
 
 **Need Help?**  
-- Refer to the main [README.md](./README.md) for pattern explanations
+- Refer to the main [README.md](./readme.md) for pattern explanations
 - Check the [boilerplates](./boilerplates/) for code examples
 - Review real-world case studies for inspiration
 

@@ -6,13 +6,13 @@ Managing how much traffic flows to your services and how those services are docu
 
 ## 📂 Modules in this Part
 
-### 1. [03-Traffic-Control-and-Rate-Limiting](./03-Traffic-Control-and-Rate-Limiting/README.md)
+### 1. [03-Traffic-Control-and-Rate-Limiting](./03-traffic-control-and-rate-limiting/readme.md)
 Protecting the cluster from a "Hug of Death."
 - **Rate Limiting Algorithms**: Token Bucket, Leaky Bucket, and Fixed Window.
 - **Circuit Breakers**: Gracefully failing when a backend is overwhelmed.
 - **Throttling**: Prioritizing premium users over anonymous traffic.
 
-### 2. [04-API-Documentation-and-Management](./04-API-Documentation-and-Management/README.md)
+### 2. [04-API-Documentation-and-Management](./04-api-documentation-and-management/readme.md)
 The API as a product.
 - **OpenAPI / Swagger**: Creating a machine-readable contract.
 - **Versioning**: Header-based vs. Path-based versioning strategies.
@@ -25,5 +25,5 @@ The API as a product.
 2. Build professional **Documentation** to enable other teams to use your APIs safely.
 
 ---
-- [Next Part: Mastery and Resources](README.md)
-- [Back to Main Curriculum](../README.md)
+- [Next Part: Mastery and Resources](readme.md)
+- [Back to Main Curriculum](../readme.md)

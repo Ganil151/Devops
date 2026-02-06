@@ -7,17 +7,17 @@ Google Cloud Deployment Manager is an infrastructure deployment service that aut
 
 ## 📂 Module Structure
 
-### 🔰 [Beginner Level](./Beginner/README.md)
+### 🔰 [Beginner Level](./beginner/readme.md)
 - Configuration file structure (YAML)
 - Basic resource types (compute, storage)
 - `gcloud` commands for DM
 
-### 🚀 [Intermediate Level](./Intermediate/README.md)
+### 🚀 [Intermediate Level](./intermediate/readme.md)
 - Templating with Jinja2 and Python
 - Imports and composite types
 - Configuration parameters
 
-### 🏆 [Advanced Level](./Advanced/README.md)
+### 🏆 [Advanced Level](./advanced/readme.md)
 - Runtime Configurator and Wait Conditions
 - Managing complex hierarchies (Projects, Folders)
 - Multi-step deployments
@@ -25,4 +25,4 @@ Google Cloud Deployment Manager is an infrastructure deployment service that aut
 ---
 
 ## ❓ Interview Questions & Quiz
-- [GCP DM Interview Questions & 20+ Quiz Questions](./Interview-Questions/README.md)
+- [GCP DM Interview Questions & 20+ Quiz Questions](./interview-questions/readme.md)

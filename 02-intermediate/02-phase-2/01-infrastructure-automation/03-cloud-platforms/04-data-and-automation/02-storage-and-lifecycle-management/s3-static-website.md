@@ -779,6 +779,6 @@ SEO:
 
 ## Additional Resources
 
-- [S3 Main README](README.md)
+- [S3 Main README](readme.md)
 - [S3 Bucket Policies](s3-bucket-policies.md)
 - [AWS S3 Website Hosting Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)

@@ -1,6 +1,6 @@
 # 01: MCP Fundamentals
 
-**[⬅️ Back to MCP Module Index](../README.md)** | **[Next: Building MCP Servers ➡️](../02-Building-MCP-Servers/README.md)**
+**[⬅️ Back to MCP Module Index](../readme.md)** | **[Next: Building MCP Servers ➡️](../02-building-mcp-servers/readme.md)**
 
 ---
 

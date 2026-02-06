@@ -1,4 +1,4 @@
-![TFC Architecture](../../01-Part-1-The-Blueprint/01-Introduction-and-Architecture/tfc_architecture.png)
+![TFC Architecture](../../01-part-1-the-blueprint/01-introduction-and-architecture/tfc-architecture.png)
 In a collaborative environment, managing credentials, API keys, and configuration toggles is a major security challenge. HCP Terraform centralizes this through **<font color="#92d050">Secure Variables</font>**, ensuring that sensitive data never touches a developer's local disk or Git history.
 
 ---

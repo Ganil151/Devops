@@ -6,15 +6,15 @@ Welcome to **Part 2**. This is where we look under the hood. We study the anatom
 
 ## 🛣️ The Curriculum
 
-### [01-Runbook-Anatomy](./01-Runbook-Anatomy/)
+### [01-Runbook-Anatomy](./01-runbook-anatomy/)
 **The Objective**: The essential sections of a "War-Ready" document.
 *   **Key Sections**: Abstract, Impact, Verification, Rollback, Post-mortem links.
 
-### [02-Tools-and-Platforms](./02-Tools-and-Platforms/)
+### [02-Tools-and-Platforms](./02-tools-and-platforms/)
 **The Objective**: Moving from Wikis to "Docs-as-Code."
 *   **Key Tools**: Markdown, Git, CI/CD for docs, Jupyter Notebooks as "Executable Runbooks."
 
-### [03-Manual-vs-Automated](./03-Manual-vs-Automated/)
+### [03-Manual-vs-Automated](./03-manual-vs-automated/)
 **The Objective**: The friction of manual steps and the bridge to self-healing.
 *   **Key Concepts**: Identifying toil and the "Automation ROI" (Return on Investment).
 

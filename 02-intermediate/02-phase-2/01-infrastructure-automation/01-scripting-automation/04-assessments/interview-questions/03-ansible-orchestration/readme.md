@@ -30,4 +30,4 @@ Ansible is the king of configuration management. You should know Roles, Inventor
 ## 🛠️ Performance Task
 **Task**: Build a Role that installs Nginx, configures a basic site using a Jinja2 template, and ensures the service is running.
 
-[Check challenges for more tasks.](./CHALLENGES.md)
+[Check challenges for more tasks.](./challenges.md)

@@ -6,10 +6,10 @@ Helm treats Kubernetes infrastructure as "Apps." Instead of managing hundreds of
 
 | Stage | Topic | Focus |
 | :--- | :--- | :--- |
-| **01** | **[Fundamentals](./01-Helm-Fundamentals/README.md)** | V3 Architecture, Repos, and Releases. |
-| **02** | **[Chart Templating](./02-Chart-Templating/README.md)** | Dynamic YAML, Go Templates, and Values. |
-| **03** | **[Intermediate Patterns](./03-Intermediate-Helm/README.md)** | Subcharts and Dependencies. |
-| **04** | **[Advanced Ops](./04-Advanced-Helm/README.md)** | Security, Plugins, and CI/CD Integration. |
+| **01** | **[Fundamentals](./01-helm-fundamentals/readme.md)** | V3 Architecture, Repos, and Releases. |
+| **02** | **[Chart Templating](./02-chart-templating/readme.md)** | Dynamic YAML, Go Templates, and Values. |
+| **03** | **[Intermediate Patterns](./03-intermediate-helm/readme.md)** | Subcharts and Dependencies. |
+| **04** | **[Advanced Ops](./04-advanced-helm/readme.md)** | Security, Plugins, and CI/CD Integration. |
 
 ---
 
@@ -43,9 +43,9 @@ graph LR
 ---
 
 ## ❓ Interview Prep & Resources
-- **[Interview Questions & Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**
-- **[Real-Life War Stories](./06-Real-Life-Scenarios/README.md)**
+- **[Interview Questions & Quizzes](./05-interview-questions-and-quizzes/readme.md)**
+- **[Real-Life War Stories](./06-real-life-scenarios/readme.md)**
 
 ---
 
-[⬅️ Back to Configuration Tools Index](../README.md)
+[⬅️ Back to Configuration Tools Index](../readme.md)

@@ -137,5 +137,5 @@ Junior admins run everything at the default priority. Senior admins ensure that 
 
 Resources are safe when access is controlled. Let's learn to manage users and privilege boundaries.
 
-Proceed to: **[03. User & Identity Management](../03-User-and-Group-Management/README.md)** →
+Proceed to: **[03. User & Identity Management](../03-user-and-group-management/readme.md)** →
 Node: This link points to the security and identity module.

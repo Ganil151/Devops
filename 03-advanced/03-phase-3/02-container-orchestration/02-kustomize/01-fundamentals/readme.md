@@ -3,8 +3,8 @@
 Kustomize introduces a template-free way to customize Kubernetes objects. Instead of using a templating engine (like Helm), it uses a "Base and Overlay" model to patch YAML files.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `kustomization.yaml` (Base configuration).
-- **[CHALLENGES](../../../03-Server-Configuration-and-Ansible/01-Ansible/Learning-Modules/01-Fundamentals/CHALLENGES.md)**: Overlays and ConfigMap generators.
+- **[Boilerplates](readme.md)**: `kustomization.yaml` (Base configuration).
+- **[CHALLENGES](../../../03-server-configuration-and-ansible/01-ansible/learning-modules/01-fundamentals/challenges.md)**: Overlays and ConfigMap generators.
 
 ---
 
@@ -62,4 +62,4 @@ images:
 
 ---
 
-[Next: Puppet](../../../../../README.md)
+[Next: Puppet](../../../../../readme.md)

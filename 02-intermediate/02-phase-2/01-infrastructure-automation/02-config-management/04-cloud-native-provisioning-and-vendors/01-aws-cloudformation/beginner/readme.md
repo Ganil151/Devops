@@ -209,7 +209,7 @@ Parameters:
     Description: EC2 instance type
 
 Mappings:
-  # See [Global-Image-Inventory.md](../../../../../../../../../../../09-Resources/05-Cloud-Metadata/Global-Image-Inventory.md) for latest IDs
+  # See [Global-Image-Inventory.md](../../../../../../../../../../../09-resources/05-cloud-metadata/global-image-inventory.md) for latest IDs
   RegionMap:
     us-east-1:
       AMI: ami-0c55b159cbfafe1f0
@@ -569,9 +569,9 @@ Before moving to Intermediate level, ensure you can:
 
 ---
 
-**Next Level**: [Intermediate CloudFormation](../Intermediate/README.md)
+**Next Level**: [Intermediate CloudFormation](../intermediate/readme.md)
 
-**Return to**: [CloudFormation Main](../README.md)
+**Return to**: [CloudFormation Main](../readme.md)
 
 ## 💡 Junior-Friendly Tip: AMI Management
 AMI IDs change per region and are frequently updated with security patches. **Never hardcode them in production.** 
@@ -584,4 +584,4 @@ aws ec2 describe-images \
     --query 'sort_by(Images, &CreationDate)[-1].ImageId' \
     --output text
 ```
-Check the centralized [Global Image Inventory](../../../../../../../../../../../09-Resources/05-Cloud-Metadata/Global-Image-Inventory.md) for a curated list of IDs.
+Check the centralized [Global Image Inventory](../../../../../../../../../../../09-resources/05-cloud-metadata/global-image-inventory.md) for a curated list of IDs.

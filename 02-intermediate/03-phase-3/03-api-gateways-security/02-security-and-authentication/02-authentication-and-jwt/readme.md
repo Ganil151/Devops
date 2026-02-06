@@ -40,8 +40,8 @@ Master the "Stateless vs. Stateful" debate and learn why **PKCE** is non-negotia
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Traffic Control and Rate Limiting](README.md)
-- [Back: Security & Authentication Overview](../README.md)
+- [Next: Traffic Control and Rate Limiting](readme.md)
+- [Back: Security & Authentication Overview](../readme.md)
 
 ---
 *Identity is the new perimeter. Validate everything.*

@@ -31,28 +31,28 @@ Networking is the most common cause of "Phantom Outages" in the cloud.
 ## 📂 Module Structure
 
 ### 🔰 Beginner Level
-- **[01-Network-Fundamentals](../../../01-Beginner/01-Phase-1/01-Networking/01-Network-Fundamentals)**: Basics of networking.
-- **[02-Network-Models](../../../01-Beginner/01-Phase-1/01-Networking/02-Network-Models)**: OSI and TCP/IP models.
-- **[03-IP-Addressing](../../../01-Beginner/01-Phase-1/01-Networking/03-IP-Addressing)**: IPv4, IPv6, Subnetting.
-- **[04-Basic-Protocols](../../../01-Beginner/01-Phase-1/01-Networking/04-Basic-Protocols)**: TCP, UDP, HTTP, DNS.
-- **[05-Network-Devices](../../../01-Beginner/01-Phase-1/01-Networking/05-Network-Devices)**: Routers, Switches, Firewalls.
-- **[06-Basic-Troubleshooting](../../../01-Beginner/01-Phase-1/01-Networking/06-Basic-Troubleshooting)**: Diagnosing connectivity issues.
+- **[01-Network-Fundamentals](../../../01-beginner/01-phase-1/01-networking/01-network-fundamentals)**: Basics of networking.
+- **[02-Network-Models](../../../01-beginner/01-phase-1/01-networking/02-network-models)**: OSI and TCP/IP models.
+- **[03-IP-Addressing](../../../01-beginner/01-phase-1/01-networking/03-ip-addressing)**: IPv4, IPv6, Subnetting.
+- **[04-Basic-Protocols](../../../01-beginner/01-phase-1/01-networking/04-basic-protocols)**: TCP, UDP, HTTP, DNS.
+- **[05-Network-Devices](../../../01-beginner/01-phase-1/01-networking/05-network-devices)**: Routers, Switches, Firewalls.
+- **[06-Basic-Troubleshooting](../../../01-beginner/01-phase-1/01-networking/06-basic-troubleshooting)**: Diagnosing connectivity issues.
 
 ### 🚀 Intermediate Level
-- **[01-VPC-Fundamentals](README.md)**: Core network services.
-- **[02-Subnetting-and-CIDR](README.md)**: Layer 2 segmentation.
-- **[03-Internet-and-NAT-Gateways](README.md)**: OSPF, BGP, Static routing.
-- **[04-Routing-and-Route-Tables](README.md)**: Firewalls, VPNs, Security Groups.
-- **[05-Network-Security-NACLs-SGs](README.md)**: Remote access and Site-to-Site.
-- **[06-VPC-Peering-and-Transit-Gateway](README.md)**: Distributing traffic.
+- **[01-VPC-Fundamentals](readme.md)**: Core network services.
+- **[02-Subnetting-and-CIDR](readme.md)**: Layer 2 segmentation.
+- **[03-Internet-and-NAT-Gateways](readme.md)**: OSPF, BGP, Static routing.
+- **[04-Routing-and-Route-Tables](readme.md)**: Firewalls, VPNs, Security Groups.
+- **[05-Network-Security-NACLs-SGs](readme.md)**: Remote access and Site-to-Site.
+- **[06-VPC-Peering-and-Transit-Gateway](readme.md)**: Distributing traffic.
 
 ### 🛡️ Advanced Level
-- **[01-Cloud-Networking](./01-Cloud-Networking/)**: VPCs, Cloud Load Balancers.
-- **[02-Container-Networking](./02-Container-Networking/)**: Docker and CNI.
-- **[03-Service-Mesh](./03-Service-Mesh/)**: Istio, Linkerd.
-- **[04-SDN-NFV](./04-SDN-NFV/)**: Software Defined Networking.
-- **[05-Network-Automation](./05-Network-Automation/)**: NetDevOps.
-- **[06-Performance-Optimization](./06-Performance-Optimization/)**: Tuning and latency reduction.
+- **[01-Cloud-Networking](./01-cloud-networking/)**: VPCs, Cloud Load Balancers.
+- **[02-Container-Networking](./02-container-networking/)**: Docker and CNI.
+- **[03-Service-Mesh](./03-service-mesh/)**: Istio, Linkerd.
+- **[04-SDN-NFV](./04-sdn-nfv/)**: Software Defined Networking.
+- **[05-Network-Automation](./05-network-automation/)**: NetDevOps.
+- **[06-Performance-Optimization](./06-performance-optimization/)**: Tuning and latency reduction.
 
 ---
 
@@ -127,7 +127,7 @@ Based on industry standards and the *Linux Command Line* guide:
 
 ## 🛠️ The DevOps Toolbelt
 Mastering theory is only half the battle. You must master the diagnostic and scanning tools used in the field:
-- **[Networking Tools Deep Dive](../../../README.md)**: Master **Wireshark**, **Nmap**, and **Tcpdump**.
+- **[Networking Tools Deep Dive](../../../readme.md)**: Master **Wireshark**, **Nmap**, and **Tcpdump**.
 
 -----
 
@@ -153,4 +153,4 @@ Mastering theory is only half the battle. You must master the diagnostic and sca
 
 ---
 
- **Next Step**: Learn how to securely log into these networked systems in the [Linux Basics Module](../../../README.md).
+ **Next Step**: Learn how to securely log into these networked systems in the [Linux Basics Module](../../../readme.md).

@@ -7,9 +7,9 @@
 ## 📖 Where to Begin
 
 ### If you're new to microservices:
-1. Start with [README.md](./README.md) - Section: "From Monolith to Microservices"
+1. Start with [README.md](./readme.md) - Section: "From Monolith to Microservices"
 2. Read the patterns overview
-3. Try [Challenge 1](./CHALLENGES.md#challenge-1-design-a-saga-pattern-🟡) (Design a Saga)
+3. Try [Challenge 1](./challenges.md#challenge-1-design-a-saga-pattern-🟡) (Design a Saga)
 
 ### If you want hands-on code:
 1. Go to [`boilerplates/resilient-client-python/`](./boilerplates/resilient-client-python/)
@@ -17,8 +17,8 @@
 3. Run: `python examples.py`
 
 ### If you're preparing for interviews:
-1. Jump to [README.md - Interview Preparation](./README.md#interview-preparation)
-2. Review [Real-World Case Studies](./README.md#real-world-case-studies)
+1. Jump to [README.md - Interview Preparation](./readme.md#interview-preparation)
+2. Review [Real-World Case Studies](./readme.md#real-world-case-studies)
 3. Answer the 5 senior architect questions
 
 ### If you need deployment examples:
@@ -263,9 +263,9 @@ You've mastered this module when you can:
 
 ---
 
-**Ready to dive in?** → Start with [README.md](./README.md)  
+**Ready to dive in?** → Start with [README.md](./readme.md)  
 **Need code now?** → Jump to [boilerplates](./boilerplates/)  
-**Want a challenge?** → Open [CHALLENGES.md](./CHALLENGES.md)
+**Want a challenge?** → Open [CHALLENGES.md](./challenges.md)
 
 ---
 

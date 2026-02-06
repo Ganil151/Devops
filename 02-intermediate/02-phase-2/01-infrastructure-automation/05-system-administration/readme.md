@@ -73,13 +73,13 @@ By the end of this module, you will be able to:
 
 | Phase | Topic | Focus |
 | :--- | :--- | :--- |
-| **01** | [**Introduction**](./01-Introduction/README.md) | Platform Engineering vs. Traditional SysAdmin. |
-| **02** | [**Server Hardening**](./02-Server-Hardening/README.md) | Firewalls, SSH Security, and MAC (SELinux). |
-| **03** | [**Performance Tuning**](./03-Performance-Tuning/README.md) | Resource Monitoring and Kernel Parameters. |
-| **04** | [**Log Management & Auditing**](./04-Log-Management-and-Auditing/README.md) | Journald, Auditd, and Log Rotation. |
-| **05** | [**Kernel & Boot Systems**](./05-Kernel-and-Boot-Systems/README.md) | Systemd Units and the Boot Lifecycle. |
-| **06** | [**Advanced Storage (LVM)**](./06-Advanced-Storage-LVM/README.md) | Dynamic Storage and Redundancy. |
-| **07** | [**Assessments**](./07-Assessments/README.md) | Interview Prep, Quizzes, and Solutions. |
+| **01** | [**Introduction**](./01-introduction/readme.md) | Platform Engineering vs. Traditional SysAdmin. |
+| **02** | [**Server Hardening**](./02-server-hardening/readme.md) | Firewalls, SSH Security, and MAC (SELinux). |
+| **03** | [**Performance Tuning**](./03-performance-tuning/readme.md) | Resource Monitoring and Kernel Parameters. |
+| **04** | [**Log Management & Auditing**](./04-log-management-and-auditing/readme.md) | Journald, Auditd, and Log Rotation. |
+| **05** | [**Kernel & Boot Systems**](./05-kernel-and-boot-systems/readme.md) | Systemd Units and the Boot Lifecycle. |
+| **06** | [**Advanced Storage (LVM)**](./06-advanced-storage-lvm/readme.md) | Dynamic Storage and Redundancy. |
+| **07** | [**Assessments**](./07-assessments/readme.md) | Interview Prep, Quizzes, and Solutions. |
 
 ---
 
@@ -92,4 +92,4 @@ All administration practices in this module follow the **SRE (Site Reliability E
 
 ---
 
-[⬅️ Back to Infrastructure Automation](../README.md)
+[⬅️ Back to Infrastructure Automation](../readme.md)

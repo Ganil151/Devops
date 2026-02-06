@@ -125,4 +125,4 @@ Standard DNS is unencrypted UDP. It can be spoofed (Man-in-the-Middle).
 
 DNS tells us *where* to go. Now let's see *how* the network is sliced up to get there.
 
-Proceed to: **[Subnetting & CIDR](../02-Subnetting-and-CIDR/README.md)** →
+Proceed to: **[Subnetting & CIDR](../02-subnetting-and-cidr/readme.md)** →

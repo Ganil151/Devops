@@ -41,16 +41,16 @@ Advanced networking is about control, security, and scale. In this part, we expl
 
 ## 📄 Resources
 
-- **[Advanced-Topics/](./Advanced-Topics/)**: Deep-dives into VLANs, Security, Load Balancing, and HA.
-- **[Configuration-Files/](./Configuration-Files/)**: Real-world templates for Nginx, HAProxy, and Cisco-style configs.
-- **[Scripts/](./Scripts/)**: Automation scripts for network health checks and port monitoring.
-- **[Case-Studies/](./Case-Studies/)**: Real-world scenarios (e.g., "The Zero-Downtime Migration").
+- **[Advanced-Topics/](./advanced-topics/)**: Deep-dives into VLANs, Security, Load Balancing, and HA.
+- **[Configuration-Files/](./configuration-files/)**: Real-world templates for Nginx, HAProxy, and Cisco-style configs.
+- **[Scripts/](./scripts/)**: Automation scripts for network health checks and port monitoring.
+- **[Case-Studies/](./case-studies/)**: Real-world scenarios (e.g., "The Zero-Downtime Migration").
 
 ---
 
 ## 📂 Subdirectories
 
-- **[Advanced-Topics/](./Advanced-Topics/)**: The core educational modules.
-- **[Configuration-Files/](./Configuration-Files/)**: Practical implementation templates.
-- **[Scripts/](./Scripts/)**: Operational automation code.
-- **[Case-Studies/](./Case-Studies/)**: Industry scenarios and architecture reviews.
+- **[Advanced-Topics/](./advanced-topics/)**: The core educational modules.
+- **[Configuration-Files/](./configuration-files/)**: Practical implementation templates.
+- **[Scripts/](./scripts/)**: Operational automation code.
+- **[Case-Studies/](./case-studies/)**: Industry scenarios and architecture reviews.

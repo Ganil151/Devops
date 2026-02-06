@@ -23,7 +23,7 @@ The workstation relies on the **Chef Development Kit (Chef DK)** or the newer **
 4.  **Bootstrap**: Use `knife bootstrap` to install Chef Client on a target node.
 
 ## 2. Architecture Diagram
-![Chef Technical Architecture](assets/chef_workstation_architecture.png)
+![Chef Technical Architecture](assets/chef-workstation-architecture.png)
 
 ## 3. Real-Life Scenarios
 

@@ -6,13 +6,13 @@ Kubernetes was originally designed for stateless apps, but the world runs on dat
 
 ## 📂 Modules in this Part
 
-### 1. [08-Persistence-and-Storage](./08-Persistence-and-Storage/README.md)
+### 1. [08-Persistence-and-Storage](./08-persistence-and-storage/readme.md)
 The foundation of data in containers.
 - **Volumes**: PV (PersistentVolume) and PVC (PersistentVolumeClaim).
 - **Provisioning**: StorageClasses and CSI Drivers.
 - **Lifecycles**: Retain, Delete, and Recycle.
 
-### 2. [09-StatefulSets-and-Jobs](./09-StatefulSets-and-Jobs/README.md)
+### 2. [09-StatefulSets-and-Jobs](./09-statefulsets-and-jobs/readme.md)
 Orchestrating stateful apps and one-off tasks.
 - **StatefulSets**: Stable network IDs and persistent disk mapping.
 - **Jobs**: Batch processing and "run to completion" tasks.
@@ -25,4 +25,4 @@ Orchestrating stateful apps and one-off tasks.
 2. Advance to **StatefulSets** to understand how to manage databases and stateful clusters.
 
 ---
-[Back to Main Curriculum](../README.md)
+[Back to Main Curriculum](../readme.md)

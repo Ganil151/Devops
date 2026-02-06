@@ -6,7 +6,7 @@ The API Gateway is the single entry point for all clients. This part covers why 
 
 ## 📂 Modules in this Part
 
-### 1. [01-API-Gateway-Basics](./01-API-Gateway-Basics/README.md)
+### 1. [01-API-Gateway-Basics](./01-api-gateway-basics/readme.md)
 The foundation of modern traffic routing.
 - **Routing & Reverse Proxy**: Mapping external paths to internal services.
 - **Protocol Translation**: Converting HTTP/1.1 to gRPC or WebSockets.
@@ -20,5 +20,5 @@ The foundation of modern traffic routing.
 2. Explore Part 2 to learn how to secure the entrance.
 
 ---
-- [Next: Part 2 - Security & Authentication](README.md)
-- [Back to Main Curriculum](../README.md)
+- [Next: Part 2 - Security & Authentication](readme.md)
+- [Back to Main Curriculum](../readme.md)

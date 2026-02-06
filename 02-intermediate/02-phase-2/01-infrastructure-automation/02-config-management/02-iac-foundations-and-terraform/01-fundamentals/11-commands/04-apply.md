@@ -110,4 +110,4 @@ terraform apply -replace="aws_instance.app_server"
 
 ---
 
-**[⬅️ Back to Commands README](README.md)** | **[Previous: terraform plan](03-Plan.md)** | **[Next: terraform destroy](05-Destroy.md)**
+**[⬅️ Back to Commands README](readme.md)** | **[Previous: terraform plan](03-plan.md)** | **[Next: terraform destroy](05-destroy.md)**

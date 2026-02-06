@@ -30,13 +30,13 @@ graph TD
 
 ## 📂 Evaluation Components
 
-### 1. [🎙️ Technical Interview Deep-Dives](./Interview-Questions/README.md)
+### 1. [🎙️ Technical Interview Deep-Dives](./interview-questions/readme.md)
 Advanced Q&A covering architectural trade-offs, Zero-Trust identity frameworks, and "Grey Failure" scenarios.
 
-### 2. [🛡️ Real-World Disaster Scenarios](./Real-Life-Scenarios/README.md)
+### 2. [🛡️ Real-World Disaster Scenarios](./real-life-scenarios/readme.md)
 Practical walkthroughs of production crises. You are given a failure (e.g., "The site is slow in APAC but fast in US") and must architect a global solution.
 
-### 3. [📊 Design & Audit Challenges](./README.md)
+### 3. [📊 Design & Audit Challenges](./readme.md)
 Find the "Single Point of Failure" in complex diagrams and propose a "Well-Architected" remediation.
 
 ---
@@ -52,4 +52,4 @@ In every assessment, evaluate your solution against these four architectural pil
 
 ---
 
-[⬅️ Back to Cloud Platforms Index](../README.md)
+[⬅️ Back to Cloud Platforms Index](../readme.md)

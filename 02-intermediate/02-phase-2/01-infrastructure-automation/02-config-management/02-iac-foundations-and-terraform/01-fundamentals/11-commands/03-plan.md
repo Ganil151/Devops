@@ -542,4 +542,4 @@ output "connection_string" {
 
 ---
 
-**[⬅️ Back to Commands README](README.md)** | **[Next: terraform apply ➡️](04-Apply.md)**
+**[⬅️ Back to Commands README](readme.md)** | **[Next: terraform apply ➡️](04-apply.md)**

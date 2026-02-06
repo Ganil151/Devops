@@ -16,10 +16,10 @@ Compliance shouldn't be a quarterly audit; it should be a real-time event. **Clo
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Custodian-Policy-Language](README.md)**
+1. **[🔴 01-Custodian-Policy-Language](readme.md)**
    - Writing your first policy: "Finding Orphaned Volumes".
    - Using the `custodian` CLI for dry-runs.
-2. **[🔴 02-Real-time-Remediation](README.md)**
+2. **[🔴 02-Real-time-Remediation](readme.md)**
    - Deploying policies as AWS Lambda functions.
    - Responding to `RunInstances` events to enforce encryption.
 
@@ -69,4 +69,4 @@ When enforcing compliance on existing resources, don't terminate them immediatel
 3. **Destroy**: If the tag is still present after 72 hours, automatically terminate or disable the resource.
 
 ---
-**Next Step**: Start with [Custodian Policy Language](README.md) 🚀
+**Next Step**: Start with [Custodian Policy Language](readme.md) 🚀

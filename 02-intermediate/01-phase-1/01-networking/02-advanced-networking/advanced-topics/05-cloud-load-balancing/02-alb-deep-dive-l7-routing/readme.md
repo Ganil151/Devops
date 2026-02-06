@@ -128,5 +128,5 @@ When deploying a major update, senior engineers don't just "switch the code." Th
 
 You've mastered the intelligent "Layer 7" world. Now let's look at the high-performance giants: the NLB and the GLB.
 
-Proceed to: **[03. NLB & GLB Architecture](../03-NLB-and-GLB-Architecture/README.md)** →
+Proceed to: **[03. NLB & GLB Architecture](../03-nlb-and-glb-architecture/readme.md)** →
 Node: This link points to the next lesson.

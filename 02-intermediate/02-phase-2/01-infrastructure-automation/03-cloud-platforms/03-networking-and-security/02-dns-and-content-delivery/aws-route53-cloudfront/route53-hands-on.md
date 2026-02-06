@@ -112,4 +112,4 @@ aws route53 delete-hosted-zone --id $ZONE_ID
 ```
 
 ---
-**Next Step**: Master [Advanced Route 53 Patterns & Troubleshooting](../../../../../../../03-Advanced/02-Phase-2/01-Part-1-The-Blueprint/01-Cloud-Architecture/01-Enterprise-Multi-Cloud/14-Networking-Route53/route53-advanced-patterns.md)
+**Next Step**: Master [Advanced Route 53 Patterns & Troubleshooting](../../../../../../../03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/14-networking-route53/route53-advanced-patterns.md)

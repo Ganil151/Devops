@@ -94,4 +94,4 @@ To mount a directory from your host into the Minikube VM:
 minikube mount /home/user/data:/data
 ```
 
-[Back: Beginner Level](../Beginner/README.md) | [Next: Advanced Level](../Advanced/README.md)
+[Back: Beginner Level](../beginner/readme.md) | [Next: Advanced Level](../advanced/readme.md)

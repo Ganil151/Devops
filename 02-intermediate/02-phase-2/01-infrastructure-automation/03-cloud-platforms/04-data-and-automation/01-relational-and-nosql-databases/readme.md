@@ -2,7 +2,7 @@
 
 Cloud databases offer managed scalability, automated patching, and built-in high availability.
 
-![Database Architecture Placeholder](Descriptive Diagram: A Multi-AZ RDS deployment showing a Primary instance in Zone A and a Synchronous Standby in Zone B, with Async Read Replicas across regions.)
+![Database Architecture Placeholder](descriptive-diagram:-a-multi-az-rds-deployment-showing-a-primary-instance-in-zone-a-and-a-synchronous-standby-in-zone-b,-with-async-read-replicas-across-regions.)
 
 ## 🏗️ High Availability Patterns
 

@@ -5,39 +5,39 @@ This directory contains comprehensive documentation for all essential Terraform 
 ## 📚 Directory Structure
 
 ### Core Workflow Commands
-1. **[01-Init.md](01-Init.md)** - `terraform init` - Initialize working directory
-2. **[02-Validate.md](02-Validate.md)** - `terraform validate` - Validate configuration syntax
-3. **[03-Plan.md](03-Plan.md)** - `terraform plan` - Preview infrastructure changes
-4. **[04-Apply.md](04-Apply.md)** - `terraform apply` - Create/update infrastructure
-5. **[05-Destroy.md](05-Destroy.md)** - `terraform destroy` - Destroy infrastructure
+1. **[01-Init.md](01-init.md)** - `terraform init` - Initialize working directory
+2. **[02-Validate.md](02-validate.md)** - `terraform validate` - Validate configuration syntax
+3. **[03-Plan.md](03-plan.md)** - `terraform plan` - Preview infrastructure changes
+4. **[04-Apply.md](04-apply.md)** - `terraform apply` - Create/update infrastructure
+5. **[05-Destroy.md](05-destroy.md)** - `terraform destroy` - Destroy infrastructure
 
 ### State Management Commands
-6. **[06-State.md](06-State.md)** - `terraform state` - Advanced state manipulation
-7. **[07-Import.md](07-Import.md)** - `terraform import` - Import existing resources
-8. **[08-Taint.md](08-Taint.md)** - `terraform taint/untaint` - Mark resources for recreation
+6. **[06-State.md](06-state.md)** - `terraform state` - Advanced state manipulation
+7. **[07-Import.md](07-import.md)** - `terraform import` - Import existing resources
+8. **[08-Taint.md](08-taint.md)** - `terraform taint/untaint` - Mark resources for recreation
 
 ### Formatting & Documentation
-9. **[09-Fmt.md](09-Fmt.md)** - `terraform fmt` - Format Terraform code
-10. **[10-Show.md](10-Show.md)** - `terraform show` - Display state or plan details
-11. **[11-Output.md](11-Output.md)** - `terraform output` - Extract output values
+9. **[09-Fmt.md](09-fmt.md)** - `terraform fmt` - Format Terraform code
+10. **[10-Show.md](10-show.md)** - `terraform show` - Display state or plan details
+11. **[11-Output.md](11-output.md)** - `terraform output` - Extract output values
 
 ### Workspace Management
-12. **[12-Workspace.md](12-Workspace.md)** - `terraform workspace` - Manage workspaces
+12. **[12-Workspace.md](12-workspace.md)** - `terraform workspace` - Manage workspaces
 
 ### Advanced Commands
-13. **[13-Graph.md](13-Graph.md)** - `terraform graph` - Generate dependency graph
-14. **[14-Console.md](14-Console.md)** - `terraform console` - Interactive console
-15. **[15-Providers.md](../06-Providers/Providers.md)** - `terraform providers` - Manage providers
-16. **[16-Refresh.md](16-Refresh.md)** - `terraform refresh` - Sync state with reality
+13. **[13-Graph.md](13-graph.md)** - `terraform graph` - Generate dependency graph
+14. **[14-Console.md](14-console.md)** - `terraform console` - Interactive console
+15. **[15-Providers.md](../06-providers/providers.md)** - `terraform providers` - Manage providers
+16. **[16-Refresh.md](16-refresh.md)** - `terraform refresh` - Sync state with reality
 
 ### Utility Commands
-17. **[17-Version.md](../18-Version-Control-Integration/Version Control Integration.md)** - `terraform version` - Show version information
-18. **[18-Get.md](../../../../05-System-Administration/04-Log-Management-and-Auditing/Get-TaskAudit.ps1)** - `terraform get` - Download modules
-19. **[19-Login-Logout.md](19-Login-Logout.md)** - `terraform login/logout` - Terraform Cloud auth
+17. **[17-Version.md](../18-version-control-integration/version-control-integration.md)** - `terraform version` - Show version information
+18. **[18-Get.md](../../../../05-system-administration/04-log-management-and-auditing/get-taskaudit.ps1)** - `terraform get` - Download modules
+19. **[19-Login-Logout.md](19-login-logout.md)** - `terraform login/logout` - Terraform Cloud auth
 
 ### Advanced Topics
-20. **[20-Force-Unlock.md](20-Force-Unlock.md)** - `terraform force-unlock` - Release state locks
-21. **[21-Quick-Reference.md](21-Quick-Reference.md)** - Cheat sheet of all commands
+20. **[20-Force-Unlock.md](20-force-unlock.md)** - `terraform force-unlock` - Release state locks
+21. **[21-Quick-Reference.md](21-quick-reference.md)** - Cheat sheet of all commands
 
 ---
 

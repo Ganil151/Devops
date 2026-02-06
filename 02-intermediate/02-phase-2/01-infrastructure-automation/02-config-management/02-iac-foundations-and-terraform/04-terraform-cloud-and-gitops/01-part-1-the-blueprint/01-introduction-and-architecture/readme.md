@@ -1,4 +1,4 @@
-![HCP Terraform Architecture](tfc_architecture.png)
+![HCP Terraform Architecture](tfc-architecture.png)
 
 # Introduction and Architecture
 

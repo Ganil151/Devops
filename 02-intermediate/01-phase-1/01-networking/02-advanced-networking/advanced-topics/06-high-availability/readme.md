@@ -141,13 +141,13 @@ DNS failover (Route 53) is subject to **TTL Caching**. If an ISP ignores your 60
 
 You've designed for total resilience. Now let's explore how to connect your cloud empire back to your physical data centers.
 
-Proceed to: **[09. Hybrid Connectivity](README.md)** →
+Proceed to: **[09. Hybrid Connectivity](readme.md)** →
 Node: This link points to the next logical step in the curriculum.
 
 
 ---
 ## 🧭 Additional Modules
-- [01 HA Fundamentals Multi AZ](01-HA-Fundamentals-Multi-AZ/README.md)
-- [02 Disaster Recovery Strategies](02-Disaster-Recovery-Strategies/README.md)
-- [03 Global Accelerator and Route53](03-Global-Accelerator-and-Route53/README.md)
-- [04 Multi Region Networking](04-Multi-Region-Networking/README.md)
+- [01 HA Fundamentals Multi AZ](01-ha-fundamentals-multi-az/readme.md)
+- [02 Disaster Recovery Strategies](02-disaster-recovery-strategies/readme.md)
+- [03 Global Accelerator and Route53](03-global-accelerator-and-route53/readme.md)
+- [04 Multi Region Networking](04-multi-region-networking/readme.md)

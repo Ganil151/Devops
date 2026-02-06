@@ -3,7 +3,7 @@
 DevOps focuses on the *process*; Platform Engineering focuses on the *product*. This phase teaches you how to build internal platforms that provide a "Golden Path" for developers, reducing cognitive load and increasing velocity.
 
 ## Core Concept: The Internal Developer Portal (IDP)
-**[REFERENCE: Internal Developer Platforms](./REFERENCE/Internal-Developer-Platforms-Ref.md)**
+**[REFERENCE: Internal Developer Platforms](./reference/internal-developer-platforms-ref.md)**
 
 Organizing complexity through a "Golden Path" for engineers:
 - **Backstage Architecture**: Utilizing the industry-standard framework to centralize discovery, documentation, and service health.
@@ -11,7 +11,7 @@ Organizing complexity through a "Golden Path" for engineers:
 - **TechDocs-as-Code**: Bridging the gap between engineering and knowledge through distributed metadata.
 
 ## Enterprise Governance: The Platform-as-a-Product
-**[REFERENCE: Database SRE \u0026 Platforms](./REFERENCE/Database-SRE-Platform-Ref.md)**
+**[REFERENCE: Database SRE \u0026 Platforms](./reference/database-sre-platform-ref.md)**
 
 Scaling infrastructure through self-service and strict guardrails:
 - **Managed State (DBaaS)**: Encapsulating database lifecycle (backups, HA, encryption) behind declarative APIs using Crossplane or ACK.
@@ -33,10 +33,10 @@ Platform Engineering is the discipline of designing and building toolchains and 
 
 ## 📚 Modules in This Part
 
-### 1️⃣ [01-Backstage-IDP](./01-Backstage-IDP/README.md)
+### 1️⃣ [01-Backstage-IDP](./01-backstage-idp/readme.md)
 The industry standard Internal Developer Portal (IDP) by Spotify. Learn how to create Service Catalogs, software templates, and technical documentation as code.
 
-### 2️⃣ [02-Database-SRE](./02-Database-SRE/README.md)
+### 2️⃣ [02-Database-SRE](./02-database-sre/readme.md)
 Platformizing state. Learn how to provide "Database-as-a-Service" internally using Kubernetes Operators like Crossplane or ACK.
 
 ---
@@ -47,4 +47,4 @@ Platformizing state. Learn how to provide "Database-as-a-Service" internally usi
 
 ---
 
-**Parent Path**: [Advanced Phase-2: Strategic Skills](../README.md)
+**Parent Path**: [Advanced Phase-2: Strategic Skills](../readme.md)

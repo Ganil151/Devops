@@ -3,7 +3,7 @@
 Complete guide to testing strategies, tools, and practices in DevOps environments.
 
 ## Core Concept: The Testing Pyramid
-**[REFERENCE: DevOps Testing Strategy](./REFERENCE/DevOps-Testing-Strategy-Ref.md)**
+**[REFERENCE: DevOps Testing Strategy](./reference/devops-testing-strategy-ref.md)**
 
 Effective testing balances speed, cost, and confidence:
 - **Unit (70%)**: Rapid, isolated logic checks.
@@ -12,7 +12,7 @@ Effective testing balances speed, cost, and confidence:
 - **Environment Parity**: Ensuring tests run on infrastructure identical to production.
 
 ## Enterprise Governance: Quality & Data
-**[REFERENCE: DevOps Testing Strategy](./REFERENCE/DevOps-Testing-Strategy-Ref.md)**
+**[REFERENCE: DevOps Testing Strategy](./reference/devops-testing-strategy-ref.md)**
 
 Scaling quality across the organization:
 - **Test Data Management**: Ensuring zero production data enters test environments. Synthetic data generation via Faker.
@@ -480,7 +480,7 @@ npm test -- --reporter mochawesome
 
 ---
 ## 🧭 Additional Modules
-- [API Testing](API-Testing/README.md)
-- [Integration Testing](Integration-Testing/README.md)
-- [Performance Testing](Performance-Testing/README.md)
-- [Unit Testing](Unit-Testing/README.md)
+- [API Testing](api-testing/readme.md)
+- [Integration Testing](integration-testing/readme.md)
+- [Performance Testing](performance-testing/readme.md)
+- [Unit Testing](unit-testing/readme.md)

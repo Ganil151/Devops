@@ -361,4 +361,4 @@ Map your organization's FinOps stakeholders:
 
 ## Next Lesson
 
-Continue to **[Lesson 02: Multi-Cloud FinOps](../02-Multi-Cloud-FinOps/README.md)** to learn strategies for managing costs across cloud providers.
+Continue to **[Lesson 02: Multi-Cloud FinOps](../02-multi-cloud-finops/readme.md)** to learn strategies for managing costs across cloud providers.

@@ -102,4 +102,4 @@ An engineer created a few Lambda functions manually for a "quick fix."
 
 ---
 
-**[⬅️ Back to Commands README](README.md)** | **[Previous: terraform state](06-State.md)** | **[Next: terraform fmt](09-Fmt.md)**
+**[⬅️ Back to Commands README](readme.md)** | **[Previous: terraform state](06-state.md)** | **[Next: terraform fmt](09-fmt.md)**

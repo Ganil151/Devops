@@ -6,14 +6,14 @@ Welcome to **The Safety Net**. In Advanced DevOps, you don't secure single serve
 
 ## 🛣️ The Curriculum
 
-### [01-Security-Compliance](./01-Security-Compliance/)
+### [01-Security-Compliance](./01-security-compliance/)
 **The Objective**: Move from "Security Gate" (Blocking) to "Guardrails" (Guiding).
 *   **Key Concepts**: 
     *   **DevSecOps**: Integrating scanners (Trivy, Grype) into the pipeline.
     *   **Policy as Code**: Using OPA/Kyverno to prevent bad deployments automatically.
     *   **Supply Chain Security**: Signing images (Cosign) and generating SBOMs.
 
-### [02-FinOps-Governance](./02-FinOps-Governance/)
+### [02-FinOps-Governance](./02-finops-governance/)
 **The Objective**: Stop the bleeding. Cloud bills grow faster than revenue if unchecked.
 *   **Key Concepts**:
     *   **Unit Economics**: Measuring "Cost per Transaction" not just "Total Cost".

@@ -143,13 +143,13 @@ A single Direct Connect link is a single point of failure (SPOF). Physical fiber
 
 You've built the global bridge. Now let's explore how to monitor every single packet and troubleshoot the inevitable issues that arise in high-scale networks.
 
-Proceed to: **[10. Monitoring & Troubleshooting](../10-Monitoring-and-Troubleshooting/README.md)** →
+Proceed to: **[10. Monitoring & Troubleshooting](../10-monitoring-and-troubleshooting/readme.md)** →
 Node: This link points to the next logical step in the curriculum.
 
 
 ---
 ## 🧭 Additional Modules
-- [01 VPN Site to Site Fundamentals](01-VPN-Site-to-Site-Fundamentals/README.md)
-- [02 Direct Connect Deep Dive](02-Direct-Connect-Deep-Dive/README.md)
-- [03 TGW and Hybrid Architectures](03-TGW-and-Hybrid-Architectures/README.md)
-- [04 Resiliency and Security Hybrid](04-Resiliency-and-Security-Hybrid/README.md)
+- [01 VPN Site to Site Fundamentals](01-vpn-site-to-site-fundamentals/readme.md)
+- [02 Direct Connect Deep Dive](02-direct-connect-deep-dive/readme.md)
+- [03 TGW and Hybrid Architectures](03-tgw-and-hybrid-architectures/readme.md)
+- [04 Resiliency and Security Hybrid](04-resiliency-and-security-hybrid/readme.md)

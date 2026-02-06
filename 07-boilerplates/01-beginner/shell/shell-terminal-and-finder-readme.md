@@ -81,5 +81,5 @@ These boilerplates demonstrate:
 
 ## Related Resources
 
-- [Parent Module: Terminal and Finder](../../../README.md)
-- [Challenges](../../03-Advanced/01-Self-Healing-Infrastructure/CHALLENGES.md)
+- [Parent Module: Terminal and Finder](../../../readme.md)
+- [Challenges](../../03-advanced/01-self-healing-infrastructure/challenges.md)

@@ -30,4 +30,4 @@ File permission and scheduling scripts.
 
 ## Related Resources
 
-- [Parent Module](../../../README.md)
+- [Parent Module](../../../readme.md)

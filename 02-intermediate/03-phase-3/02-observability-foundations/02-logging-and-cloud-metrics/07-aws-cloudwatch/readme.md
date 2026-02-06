@@ -42,8 +42,8 @@ Learn how to install the Unified Agent, configure Logs Insights queries, and man
 ---
 
 ## 🔗 Internal Navigation
-- [Next Part: Distributed Tracing](README.md)
-- [Back: Log Management](../02-Log-Management/README.md)
+- [Next Part: Distributed Tracing](readme.md)
+- [Back: Log Management](../02-log-management/readme.md)
 
 ---
 *Cloud visibility is the foundation of cloud control.*

@@ -2,7 +2,7 @@
 
 ## 📚 Study Materials Created
 
-I've created comprehensive Kubernetes notes in [`KUBERNETES_NOTES.md`](KUBERNETES_NOTES.md) covering:
+I've created comprehensive Kubernetes notes in [`KUBERNETES_NOTES.md`](kubernetes-notes.md) covering:
 
 ### Core Topics Covered
 
@@ -173,7 +173,7 @@ sudo journalctl -u kubelet -f
 
 ## 🔗 Additional Resources
 
-- **Full Notes**: [`KUBERNETES_NOTES.md`](KUBERNETES_NOTES.md)
+- **Full Notes**: [`KUBERNETES_NOTES.md`](kubernetes-notes.md)
 - **Official Docs**: <https://kubernetes.io/docs/>
 - **kubectl Cheat Sheet**: <https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
 - **Interactive Tutorial**: <https://kubernetes.io/docs/tutorials/>

@@ -16,10 +16,10 @@ Reliability isn't just about code correctness; it's about performance under pres
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Load-Testing-Foundations](README.md)**
+1. **[🔴 01-Load-Testing-Foundations](readme.md)**
    - Writing your first test script.
    - Understanding User behavior simulation.
-2. **[🔴 02-CI-CD-Performance-Gates](README.md)**
+2. **[🔴 02-CI-CD-Performance-Gates](readme.md)**
    - Integrating k6 with GitHub Actions.
    - Setting hard failure thresholds.
 
@@ -73,4 +73,4 @@ export default function () {
 Treat performance like a financial budget. Define **SLIs (Service Level Indicators)** for every service. If a new PR increases the p99 latency by more than 10%, the build fails automatically. This prevents "latency creep" where small, unmonitored changes eventually lead to a degraded user experience.
 
 ---
-**Next Step**: Start with [Load Testing Foundations](README.md) 🚀
+**Next Step**: Start with [Load Testing Foundations](readme.md) 🚀

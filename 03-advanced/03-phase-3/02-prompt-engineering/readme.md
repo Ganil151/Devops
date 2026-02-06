@@ -3,7 +3,7 @@
 > **Agentic AI systems, autonomous workflows, and intelligent DevOps guardrails**
 
 ## Core Concept: Agentic Systems & Continuous Reasoning
-**[REFERENCE: Prompt Engineering & Agentic Workflows](./REFERENCE/Prompt-Engineering-Agentic-Workflows-Ref.md)**
+**[REFERENCE: Prompt Engineering & Agentic Workflows](./reference/prompt-engineering-agentic-workflows-ref.md)**
 
 At the enterprise level, Prompt Engineering transitions from manual interaction to **Agentic Systems** that can plan, execute, and self-correct across highly complex environments:
 - **Autonomous Reasoning (ReAct)**: Utilizing specialized "Thought-Action-Observation" loops to interact with CLIs, APIs, and clusters without human intervention.
@@ -11,7 +11,7 @@ At the enterprise level, Prompt Engineering transitions from manual interaction 
 - **Task Orchestration**: Breaking complex DevOps goals (e.g., "Migrate this app to AWS") into verifiable sub-tasks managed by AI planners.
 
 ## Enterprise Governance: The Governed AI Guardrail
-**[REFERENCE: AI Governance & DevOps Guardrails](./REFERENCE/AI-Governance-DevOps-Guardrails-Ref.md)**
+**[REFERENCE: AI Governance & DevOps Guardrails](./reference/ai-governance-devops-guardrails-ref.md)**
 
 Scaling AI assistance while maintaining strict security, cost, and safety standards:
 - **Multi-Agent Orchestration**: Implementing "Red-Team/Blue-Team" workflows where agent outputs are rigorously critiqued by independent security agents.

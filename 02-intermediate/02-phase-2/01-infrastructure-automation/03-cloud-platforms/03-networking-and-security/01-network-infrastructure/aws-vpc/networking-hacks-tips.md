@@ -698,6 +698,6 @@ Outputs:
 ---
 
 **More Resources**:
-- [VPC Getting Started](../../../../../../01-Phase-1/04-Databases/00-Database-Basics/02-RDS-Basics/rds-getting-started.md)
+- [VPC Getting Started](../../../../../../01-phase-1/04-databases/00-database-basics/02-rds-basics/rds-getting-started.md)
 - [Advanced Networking](networking-hacks-tips.md)
-- [Troubleshooting Guide](../../../../../README.md)
+- [Troubleshooting Guide](../../../../../readme.md)

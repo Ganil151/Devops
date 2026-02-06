@@ -8,22 +8,22 @@ Welcome to **Runbook Fundamentals**. In the world of high-stakes operations, "Tr
 
 This module is re-architected into **4 Logical Parts**, mirroring the journey from documentation philosophy to production-grade automation.
 
-### [📐 Part 1: The Blueprint (Concepts & Design)](./01-Part-1-The-Blueprint/)
+### [📐 Part 1: The Blueprint (Concepts & Design)](./01-part-1-the-blueprint/)
 *   **Focus**: The "SRE Standard" for documentation.
 *   **Topics**: Philosophy & Goals, SRE Standards (Google model), Documentation Hierarchy, and Standard Templates.
 *   **Goal**: Design documentation that survives the "3:00 AM Stress Test."
 
-### [⚙️ Part 2: The Engine (Anatomy & Execution)](./02-Part-2-The-Engine/)
+### [⚙️ Part 2: The Engine (Anatomy & Execution)](./02-part-2-the-engine/)
 *   **Focus**: Building and Automating.
 *   **Topics**: Runbook Anatomy, Tools & Platforms (Docs-as-Code), Manual vs. Automated workflows.
 *   **Goal**: Transform static text into executable logic.
 
-### [🧩 Part 3: The Building Blocks (Operations & Scenarios)](./03-Part-3-The-Building-Blocks/)
+### [🧩 Part 3: The Building Blocks (Operations & Scenarios)](./03-part-3-the-building-blocks/)
 *   **Focus**: Living the Lifecycle.
 *   **Topics**: Operational Scenarios (Real-world cases), Feedback Loops, and Continuous Iteration (Gamedays).
 *   **Goal**: Ensure your docs evolve as fast as your application code.
 
-### [🛡️ Part 4: The Safety Net (Governance & Reliability)](./04-Part-4-The-Safety-Net/)
+### [🛡️ Part 4: The Safety Net (Governance & Reliability)](./04-part-4-the-safety-net/)
 *   **Focus**: Integrity & Compliance.
 *   **Topics**: Auditing & Compliance (SOC2/HIPAA), Incident Response Reference Library, and Skill Assessments.
 *   **Goal**: Prove you can manage high-stakes operations under pressure.

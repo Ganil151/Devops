@@ -31,43 +31,43 @@
 
 ## Storage Components
 
-### 1. [Persistent Volumes (PV)](README.md)
+### 1. [Persistent Volumes (PV)](readme.md)
 - **Cluster Resources**: Storage resources in the cluster
 - **Lifecycle**: Independent of pod lifecycle
 - **Access Modes**: ReadWriteOnce, ReadOnlyMany, ReadWriteMany
 - **Reclaim Policies**: Retain, Delete, Recycle
 
-### 2. [Storage Classes](README.md)
+### 2. [Storage Classes](readme.md)
 - **Dynamic Provisioning**: Automatic PV creation
 - **Storage Templates**: Define storage characteristics
 - **Provisioner Integration**: Cloud and CSI driver support
 - **Policy Configuration**: Binding modes and reclaim policies
 
-### 3. [CSI Drivers](README.md)
+### 3. [CSI Drivers](readme.md)
 - **Container Storage Interface**: Standardized storage plugin API
 - **Vendor Integration**: Support for various storage systems
 - **Feature Support**: Snapshots, cloning, expansion
 - **Lifecycle Management**: Volume creation, attachment, mounting
 
-### 4. [Volume Types](README.md)
+### 4. [Volume Types](readme.md)
 - **Ephemeral Volumes**: EmptyDir, ConfigMap, Secret
 - **Network Volumes**: NFS, iSCSI, Ceph
 - **Cloud Volumes**: AWS EBS, GCE PD, Azure Disk
 - **Local Volumes**: HostPath, Local PV
 
-### 5. [Volume Snapshots](README.md)
+### 5. [Volume Snapshots](readme.md)
 - **Point-in-Time Copies**: Volume state preservation
 - **Backup Integration**: Data protection strategies
 - **Clone Operations**: Volume duplication
 - **Restore Capabilities**: Data recovery
 
-### 6. [Dynamic Provisioning](README.md)
+### 6. [Dynamic Provisioning](readme.md)
 - **Automatic Creation**: On-demand PV provisioning
 - **Template-Based**: StorageClass-driven provisioning
 - **Parameter Passing**: Custom storage configuration
 - **Lifecycle Management**: Creation and deletion automation
 
-### 7. [Backup & Restore](README.md)
+### 7. [Backup & Restore](readme.md)
 - **Data Protection**: Backup strategies and tools
 - **Disaster Recovery**: Cross-cluster data migration
 - **Snapshot Management**: Automated backup workflows

@@ -6,21 +6,21 @@ Welcome to **The Blueprint**. This is where we stop thinking about "Servers" and
 
 ## 🛣️ The Curriculum
 
-### [01-Cloud-Architecture](./01-Cloud-Architecture/)
+### [01-Cloud-Architecture](./01-cloud-architecture/)
 **The Objective**: Apply the AWS Well-Architected Framework to everything.
 *   **Key Concepts**: 
     *   **The 6 Pillars**: Operational Excellence, Security, Reliability, Performance, Cost, Sustainability.
     *   **Trade-offs**: CAP Theorem, Eventual Consistency, and picking the right database.
     *   **Hybrid Cloud**: Designing for connectivity between On-Prem and AWS (Direct Connect, VPN).
 
-### [02-Platform-Engineering](./02-Platform-Engineering/)
+### [02-Platform-Engineering](./02-platform-engineering/)
 **The Objective**: Stop being the bottleneck. Build an Internal Developer Platform (IDP).
 *   **Key Concepts**:
     *   **Product Thinking**: Your users are the developers.
     *   **Self-Service**: If they have to open a Jira ticket to get a database, you failed.
     *   **Backstage**: Building a developer portal.
 
-### [03-Multi-Cluster](./03-Multi-Cluster/)
+### [03-Multi-Cluster](./03-multi-cluster/)
 **The Objective**: One Kubernetes cluster is a pet. Ten clusters are cattle.
 *   **Key Concepts**:
     *   **Cluster API**: Provisioning clusters using K8s manifests.

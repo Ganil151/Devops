@@ -3,8 +3,8 @@
 A script that fails halfway is more dangerous than a script that doesn't run at all. **Atomicity** ensures that an operation either completes successfully or has no effect at all—leaving no "half-finished" mess.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `atomic_write.py` (Writing files safely).
-- **[CHALLENGES](./CHALLENGES.md)**: Building pre-flight checks and rollbacks.
+- **[Boilerplates](readme.md)**: `atomic_write.py` (Writing files safely).
+- **[CHALLENGES](./challenges.md)**: Building pre-flight checks and rollbacks.
 
 ---
 
@@ -67,4 +67,4 @@ except Exception:
 
 ---
 
-[Next: Observability and Logging](../05-Observability-and-Logging/README.md)
+[Next: Observability and Logging](../05-observability-and-logging/readme.md)

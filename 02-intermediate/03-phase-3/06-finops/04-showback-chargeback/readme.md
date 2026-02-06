@@ -335,4 +335,4 @@ Create a policy document covering:
 
 ## Next Lesson
 
-Continue to **[Lesson 05: Automation & Tooling](../05-Automation/README.md)** to learn how to automate FinOps processes.
+Continue to **[Lesson 05: Automation & Tooling](../05-automation/readme.md)** to learn how to automate FinOps processes.

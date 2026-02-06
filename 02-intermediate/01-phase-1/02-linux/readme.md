@@ -55,10 +55,10 @@ graph TD
 ## 🗺️ Curriculum Path
 
 ### 🚀 Intermediate Topics
-- **[System Administration](./03-System-Administration/README.md)**: Master the core engine - Systemd, Processes, Storage, and Identity.
-- **[Shell Scripting](README.md)**: Moving from command snippets to robust, idempotent automation.
-- **[Linux Networking](README.md)**: Deep dives into `ss`, `ip`, `netstat`, and MTU troubleshooting.
-- **[Intermediate SSH](./02-SSH/README.md)**: Config files, ProxyJump, Tunneling, and Key management.
+- **[System Administration](./03-system-administration/readme.md)**: Master the core engine - Systemd, Processes, Storage, and Identity.
+- **[Shell Scripting](readme.md)**: Moving from command snippets to robust, idempotent automation.
+- **[Linux Networking](readme.md)**: Deep dives into `ss`, `ip`, `netstat`, and MTU troubleshooting.
+- **[Intermediate SSH](./02-ssh/readme.md)**: Config files, ProxyJump, Tunneling, and Key management.
 
 ---
 
@@ -141,5 +141,5 @@ graph TD
 
 ## 🔗 Next Steps
 Junior, the kernel is healthy. Now let's learn how to manage the services.
-1. Proceed to: **[System Administration](./03-System-Administration/README.md)** →
-2. Return to: **[Phase 1 Hub](../README.md)** →
+1. Proceed to: **[System Administration](./03-system-administration/readme.md)** →
+2. Return to: **[Phase 1 Hub](../readme.md)** →

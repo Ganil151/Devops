@@ -6,18 +6,18 @@ Finalize your observability expertise with technical assessments and real-world 
 
 ## 📂 Resources in this Part
 
-### 1. [05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)
+### 1. [05-Interview-Questions-and-Quizzes](./05-interview-questions-and-quizzes/readme.md)
 Prepare for technical screenings.
 - **Top 20 Questions**: SRE and DevOps interview preparation.
 - **Quizzes**: Interactive knowledge checks.
 
-### 2. [06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)
+### 2. [06-Real-Life-Scenarios](./06-real-life-scenarios/readme.md)
 Learn from the trenches.
 - **Troubleshooting Stories**: High-pressure post-mortems.
 - **Architecture Challenges**: Designing visibility for scale.
 
-### 3. [📺 YouTube Mastery](./Youtube_Lessons.md)
+### 3. [📺 YouTube Mastery](./youtube-lessons.md)
 - Curated video tutorials from industry experts.
 
 ---
-[Back to Main Curriculum](../README.md)
+[Back to Main Curriculum](../readme.md)

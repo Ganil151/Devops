@@ -60,6 +60,6 @@ For every "Tell me about a time..." question, use:
 5. **Q: How do you prioritize your tasks when everything is "Urgent"?**
    - *A: Use the Eisenhower Matrix or follow "Customer Impact" first. Focus on tasks that stabilize the environment or unblock the most people.*
 ---
-**Templates**: [devops_resume_template.md](resources/DevOps Resume Ganil Batist.docx)
+**Templates**: [devops_resume_template.md](resources/devops-resume-ganil-batist.docx)
 
-**Challenges**: [technical_scenarios.md](../../06-Quizzes/01-Beginner/Networking-Scenarios.md)
+**Challenges**: [technical_scenarios.md](../../06-quizzes/01-beginner/networking-scenarios.md)

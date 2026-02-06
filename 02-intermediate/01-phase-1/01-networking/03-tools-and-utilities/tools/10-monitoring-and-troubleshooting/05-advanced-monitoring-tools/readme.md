@@ -137,5 +137,5 @@ In an enterprise, a developer might accidentally create a peering connection tha
 
 You have reached the end of the Networking Curriculum. You now possess the tools to build, secure, and monitor enterprise-grade global networks.
 
-Return to: **[Networking Phase Overview](../README.md)** or Proceed to: **[Phase 2: Linux Mastery](README.md)** →
+Return to: **[Networking Phase Overview](../readme.md)** or Proceed to: **[Phase 2: Linux Mastery](readme.md)** →
 Node: Final link of the module.

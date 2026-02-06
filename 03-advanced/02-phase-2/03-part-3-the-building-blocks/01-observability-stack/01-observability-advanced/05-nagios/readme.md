@@ -83,4 +83,4 @@ Nagios is the master of **State-Based Monitoring**.
 
 ---
 
-**Next Steps**: Return to the [Observability Home](../README.md) for more advanced monitoring patterns.
+**Next Steps**: Return to the [Observability Home](../readme.md) for more advanced monitoring patterns.

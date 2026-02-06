@@ -15,10 +15,10 @@ As fleets grow across multiple clouds and clusters, managing individual users be
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-OIDC-SAML-Fundamentals](README.md)**
+1. **[🔴 01-OIDC-SAML-Fundamentals](readme.md)**
    - OAuth 2.0 Scopes and ID Tokens.
    - SAML XML assertions vs. JWT.
-2. **[🔴 02-Identity-Proxy-Dex](README.md)**
+2. **[🔴 02-Identity-Proxy-Dex](readme.md)**
    - Installing Dex in Kubernetes.
    - Connecting Dex to upstream connectors (LDAP, Google, GitHub).
 
@@ -70,4 +70,4 @@ connectors:
 Never map individual users to Kubernetes Roles. Always use **OIDC Group Scopes**. Map your GitHub/Okta teams to K8s `ClusterRoleBindings`. If a user joins the "SRE" team in Okta, they should automatically inherit the "sre-admin" role in all Kubernetes clusters via Dex.
 
 ---
-**Next Step**: Start with [OIDC & SAML Fundamentals](README.md) 🚀
+**Next Step**: Start with [OIDC & SAML Fundamentals](readme.md) 🚀

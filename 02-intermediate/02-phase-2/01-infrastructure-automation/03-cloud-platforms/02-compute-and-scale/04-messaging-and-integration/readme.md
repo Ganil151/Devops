@@ -2,7 +2,7 @@
 
 Architectures that scale are architectures that are decoupled. Messaging services allow different components of a system to communicate without being directly connected, enabling independent scaling and fault tolerance.
 
-![Event-Driven Messaging](/home/gsmash/.gemini/antigravity/brain/7def5311-fe37-4d3f-9c26-76fa450f1d0a/event_driven_messaging_1769828081108.png)
+![Event-Driven Messaging](/home/gsmash/.gemini/antigravity/brain/7def5311-fe37-4d3f-9c26-76fa450f1d0a/event-driven-messaging-1769828081108.png)
 
 ## 🔄 Core Messaging Patterns
 
@@ -33,6 +33,6 @@ In the asynchronous model, the Queue buffers the requests until the database is 
 ---
 
 ## 📂 Multi-Cloud Implementation
-- [AWS-SNS-SQS](./AWS-SNS-SQS): Detailed guides on IAM roles, Dead Letter Queues (DLQ), and Visibility Timeouts.
-- [Azure-Service-Bus](./Azure-Service-Bus): Exploring namespaces, queues, and topics in Azure.
-- [GCP-Pub-Sub](./GCP-Pub-Sub): Globally distributed message ingestion and subscription models.
+- [AWS-SNS-SQS](./aws-sns-sqs): Detailed guides on IAM roles, Dead Letter Queues (DLQ), and Visibility Timeouts.
+- [Azure-Service-Bus](./azure-service-bus): Exploring namespaces, queues, and topics in Azure.
+- [GCP-Pub-Sub](./gcp-pub-sub): Globally distributed message ingestion and subscription models.

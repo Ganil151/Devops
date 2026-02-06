@@ -147,4 +147,4 @@ A common mistake is deploying a single NAT Gateway for the entire VPC. If that A
 
 You've met the team. Now let's learn how to address them using the language of the internet.
 
-Proceed to: **[04. IP Addressing Basics](../04-IP-Addressing-Basics/README.md)** →
+Proceed to: **[04. IP Addressing Basics](../04-ip-addressing-basics/readme.md)** →

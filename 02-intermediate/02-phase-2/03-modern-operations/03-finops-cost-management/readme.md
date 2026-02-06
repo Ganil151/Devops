@@ -7,7 +7,7 @@
 FinOps is an evolving cloud financial management discipline and cultural practice that enables organizations to get maximum business value by helping engineering, finance, technology and business teams to collaborate on data-driven spending decisions.
 
 ## Core Concept: The FinOps Lifecycle
-**[REFERENCE: FinOps Architecture](./REFERENCE/FinOps-Architecture-Ref.md)**
+**[REFERENCE: FinOps Architecture](./reference/finops-architecture-ref.md)**
 
 Managing cost is a continuous technical and cultural discipline:
 - **Inform**: Gaining total visibility into spending through granular tagging and Kubecost allocation.
@@ -16,7 +16,7 @@ Managing cost is a continuous technical and cultural discipline:
 - **Unit Economics**: Measuring "Cost per Transaction" rather than just the total cloud bill.
 
 ## Enterprise Governance: Cost as Code
-**[REFERENCE: FinOps Architecture](./REFERENCE/FinOps-Architecture-Ref.md)**
+**[REFERENCE: FinOps Architecture](./reference/finops-architecture-ref.md)**
 
 Enforcing financial rigor within the automation lifecycle:
 - **Infracost PR Comments**: Automatically adding cost projections to every Pull Request to empower developer decisions.
@@ -33,10 +33,10 @@ Enforcing financial rigor within the automation lifecycle:
 
 ## 🗺️ Module Structure
 
-1. **[🟢 01-Infracost-CI-CD](README.md)**
+1. **[🟢 01-Infracost-CI-CD](readme.md)**
    - Analyzing plan JSONs.
    - Setting up PR comments for cost changes.
-2. **[🟢 02-Kubecost-Basics](README.md)**
+2. **[🟢 02-Kubecost-Basics](readme.md)**
    - Deploying Kubecost via Helm.
    - Mapping costs to Namespaces and Labels.
 
@@ -89,4 +89,4 @@ if __name__ == "__main__":
 ```
 
 ---
-**Next Step**: [Infracost in CI/CD](README.md) 🚀
+**Next Step**: [Infracost in CI/CD](readme.md) 🚀

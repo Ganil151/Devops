@@ -67,4 +67,4 @@ helm list
 helm uninstall my-nginx
 ```
 
-[Back to Intermediate Index](../README.md)
+[Back to Intermediate Index](../readme.md)

@@ -3,7 +3,7 @@
 > **Declarative operations and multi-cluster deployment**
 
 ## Core Concept: Pull-Based Reconciliation
-**[REFERENCE: Advanced GitOps Architecture](./REFERENCE/Advanced-GitOps-Patterns-Ref.md)**
+**[REFERENCE: Advanced GitOps Architecture](./reference/advanced-gitops-patterns-ref.md)**
 
 GitOps shifts the paradigm from pushing changes to a "Continuous Reconciliation" model:
 - **Desired vs. Actual**: The GitOps agent constantly ensures the cluster state matches the Git repository.
@@ -11,7 +11,7 @@ GitOps shifts the paradigm from pushing changes to a "Continuous Reconciliation"
 - **Drift Detection**: Automatically identifying and reverting manual cluster modifications to maintain the source of truth in Git.
 
 ## Enterprise Governance: Fleet Orchestration
-**[REFERENCE: Fleet Management \u0026 Scale](./REFERENCE/Fleet-Management-Scale-Ref.md)**
+**[REFERENCE: Fleet Management \u0026 Scale](./reference/fleet-management-scale-ref.md)**
 
 Scaling operations across hundreds of clusters without operational linear growth:
 - **ApplicationSets**: Utilizing dynamic generators to automate application delivery across entire cluster fleets based on labels and properties.
@@ -23,8 +23,8 @@ Scaling operations across hundreds of clusters without operational linear growth
 
 ## 📚 Modules in This Part
 
-1. **[01-GitOps-Advanced-Patterns](./01-GitOps-Advanced-Patterns/)** - 01 GitOps Advanced Patterns
-2. **[02-Fleet-Management-ApplicationSets](./02-Fleet-Management-ApplicationSets/)** - 02 Fleet Management ApplicationSets
+1. **[01-GitOps-Advanced-Patterns](./01-gitops-advanced-patterns/)** - 01 GitOps Advanced Patterns
+2. **[02-Fleet-Management-ApplicationSets](./02-fleet-management-applicationsets/)** - 02 Fleet Management ApplicationSets
 
 ---
 
@@ -49,11 +49,11 @@ These modules should be completed in the order shown above for optimal learning 
 
 Accelerate your GitOps mastery with enterprise patterns:
 
-- **[ArgoCD Deep Dive](./ArgoCD/ARGO_DEEP_DIVE.md)**: Technical guide on installation and advanced patterns.
-- **[Installation Scripts](./ArgoCD/)**: Automated setup for ArgoCD on Kubernetes.
+- **[ArgoCD Deep Dive](./argocd/argo-deep-dive.md)**: Technical guide on installation and advanced patterns.
+- **[Installation Scripts](./argocd/)**: Automated setup for ArgoCD on Kubernetes.
 
 ---
 
 ## 🔗 Related Parts
 
-**Part of**: [Advanced Phase-2: Strategic Skills](../README.md)
+**Part of**: [Advanced Phase-2: Strategic Skills](../readme.md)

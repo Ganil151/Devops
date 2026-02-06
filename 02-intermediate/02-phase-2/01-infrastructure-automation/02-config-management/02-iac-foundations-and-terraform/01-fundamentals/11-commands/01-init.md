@@ -439,4 +439,4 @@ Always run `terraform init` when:
 
 ---
 
-**[⬅️ Back to Commands README](README.md)** | **[Next: terraform validate ➡️](02-Validate.md)**
+**[⬅️ Back to Commands README](readme.md)** | **[Next: terraform validate ➡️](02-validate.md)**

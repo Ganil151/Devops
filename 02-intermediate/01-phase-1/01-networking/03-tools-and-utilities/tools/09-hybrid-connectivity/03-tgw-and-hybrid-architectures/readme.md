@@ -138,5 +138,5 @@ A global company has their primary data center in London and dozens of VPCs in I
 
 You've built the global highway. Now let's explore how to make it unbreakable using advanced resiliency and security patterns.
 
-Proceed to: **[04. Resiliency & Security in Hybrid](../04-Resiliency-and-Security-Hybrid/README.md)** →
+Proceed to: **[04. Resiliency & Security in Hybrid](../04-resiliency-and-security-hybrid/readme.md)** →
 Node: This link points to the next lesson.

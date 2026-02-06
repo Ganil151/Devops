@@ -25,13 +25,13 @@ Organizations adopt multi-cloud for several reasons:
 
 ## 3. Detailed Guides
 
-### 🏗️ [Architectural Fundamentals](../../../../README.md)
+### 🏗️ [Architectural Fundamentals](../../../../readme.md)
 Patterns for portability, cross-cloud connectivity (VPN/Peering), and data replication strategies.
 
-### 🛡️ [Security & Identity](../../../../README.md)
+### 🛡️ [Security & Identity](../../../../readme.md)
 Federating identities via SAML/OIDC, securing cross-cloud traffic, and mTLS across boundaries.
 
-### 💼 [Management & Governance](../../../../README.md)
+### 💼 [Management & Governance](../../../../readme.md)
 Unified FinOps, Centralized Observability (Grafana/Prometheus), and Policy-as-Code (OPA).
 
 ---
@@ -48,11 +48,11 @@ Unified FinOps, Centralized Observability (Grafana/Prometheus), and Policy-as-Co
 
 ---
 
-**Troubleshooting**: Master diagnostics in the [Troubleshooting Guide](../06-Troubleshooting/README.md).
+**Troubleshooting**: Master diagnostics in the [Troubleshooting Guide](../06-troubleshooting/readme.md).
 
 
 ---
 ## 🧭 Additional Modules
-- [Fundamentals](Fundamentals/README.md)
-- [Management](Management/README.md)
-- [Security](Security/README.md)
+- [Fundamentals](fundamentals/readme.md)
+- [Management](management/readme.md)
+- [Security](security/readme.md)

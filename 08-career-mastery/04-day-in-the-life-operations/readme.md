@@ -12,15 +12,15 @@ Welcome to the **SRE Bridge**. In this module, we move beyond definitions. You a
 ### 🌅 08:00 - 09:30 | The Morning Triage
 *   **The Goal**: Establish situational awareness.
 *   **The Routine**: Check `#alerts-critical`, scan the Grafana dashboard for overnight spikes, and triage the JIRA/ServiceNow board.
-*   **The Simulation**: Head to [01-Morning-Triage-Sim](./01-Morning-Triage-Sim/README.md).
+*   **The Simulation**: Head to [01-Morning-Triage-Sim](./01-morning-triage-sim/readme.md).
 ### ⚙️ 10:00 - 12:30 | Infrastructure & Pipelines
 *   **The Goal**: Clean the runway.
 *   **The Routine**: Reviewing Pull Requests (PRs), fixing broken build dependencies, and executing planned IaC changes.
-*   **The Standard**: [02-The-Code-Review-Gate](./02-The-Code-Review-Gate/README.md).
+*   **The Standard**: [02-The-Code-Review-Gate](./02-the-code-review-gate/readme.md).
 ### 🚨 13:30 - 16:00 | The Afternoon "Incident"
 *   **The Goal**: Restore service; avoid finger-pointing.
 *   **The Routine**: Handling production outages, participating in war rooms, and executing rollbacks if a change went south.
-*   **The Recovery**: [03-Rollback-Procedures](./03-Rollback-Procedures/README.md).
+*   **The Recovery**: [03-Rollback-Procedures](./03-rollback-procedures/readme.md).
 ### 📚 16:30 - Evening | The Long Game
 *   **The Goal**: Sharpen the axe.
 *   **The Routine**: Updating documentation, working on long-term automation projects (to reduce toil), and reading CNCF whitepapers or tool release notes.
@@ -56,7 +56,7 @@ graph TD
 ## 📅 Weekly & Monthly Responsibilities
 
 ### 1. The Blameless Post-Mortem
-When things break, we don't look for people to blame; we look for systems to fix. Use our [Post-Mortem Template](./Templates/Post-Mortem-Template.md) to document every incident.
+When things break, we don't look for people to blame; we look for systems to fix. Use our [Post-Mortem Template](./templates/post-mortem-template.md) to document every incident.
 
 ### 2. The On-Call Rotation (Holding the Pager)
 You will eventually join the "Pager Rotation." This means being available 24/7 for a week to respond to high-priority alerts via **PagerDuty** or **OpsGenie**.
@@ -66,7 +66,7 @@ You will eventually join the "Pager Rotation." This means being available 24/7 f
 ---
 
 ## 🏁 Your Next Steps
-1.  Complete the [Morning Triage Simulation](./01-Morning-Triage-Sim/README.md).
-2.  Master the [Prioritization Framework (Eisenhower Matrix)](./PRIORITIZATION_FRAMEWORK.md).
-3.  Review the [Security-First Gate](./02-The-Code-Review-Gate/README.md).
-4.  Print the [Daily Success Checklist](../DAILY_CHECKLIST.md) and keep it on your desk.
+1.  Complete the [Morning Triage Simulation](./01-morning-triage-sim/readme.md).
+2.  Master the [Prioritization Framework (Eisenhower Matrix)](./prioritization-framework.md).
+3.  Review the [Security-First Gate](./02-the-code-review-gate/readme.md).
+4.  Print the [Daily Success Checklist](../daily-checklist.md) and keep it on your desk.

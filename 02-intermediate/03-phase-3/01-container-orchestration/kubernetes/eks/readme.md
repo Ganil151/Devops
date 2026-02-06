@@ -633,9 +633,9 @@ AWS Pricing Calculator: https://calculator.aws/
 
 | File | Description |
 |------|-------------|
-| [EKS_MIGRATION_GUIDE.md](EKS_MIGRATION_GUIDE.md) | Step-by-step migration from self-managed K8s |
-| [EKS_COMMAND_REFERENCE.md](EKS_COMMAND_REFERENCE.md) | Common kubectl and eksctl commands |
-| [EKS_QUICK_REFERENCE.md](EKS_QUICK_REFERENCE.md) | Quick command cheatsheet |
+| [EKS_MIGRATION_GUIDE.md](eks-migration-guide.md) | Step-by-step migration from self-managed K8s |
+| [EKS_COMMAND_REFERENCE.md](eks-command-reference.md) | Common kubectl and eksctl commands |
+| [EKS_QUICK_REFERENCE.md](eks-quick-reference.md) | Quick command cheatsheet |
 | [eks-health-check.sh](eks-health-check.sh) | Comprehensive cluster health check script |
 | [check-eks-network.sh](check-eks-network.sh) | Network connectivity verification |
 
@@ -682,9 +682,9 @@ After successful deployment:
 
 | File | Description |
 |------|-------------|
-| [EKS_MIGRATION_GUIDE.md](EKS_MIGRATION_GUIDE.md) | Step-by-step migration from self-managed K8s |
-| [EKS_COMMAND_REFERENCE.md](EKS_COMMAND_REFERENCE.md) | Common kubectl and eksctl commands |
-| [EKS_QUICK_REFERENCE.md](EKS_QUICK_REFERENCE.md) | Quick command cheatsheet |
+| [EKS_MIGRATION_GUIDE.md](eks-migration-guide.md) | Step-by-step migration from self-managed K8s |
+| [EKS_COMMAND_REFERENCE.md](eks-command-reference.md) | Common kubectl and eksctl commands |
+| [EKS_QUICK_REFERENCE.md](eks-quick-reference.md) | Quick command cheatsheet |
 | [eks-health-check.sh](eks-health-check.sh) | Comprehensive cluster health check script |
 | [check-eks-network.sh](check-eks-network.sh) | Network connectivity verification |
 

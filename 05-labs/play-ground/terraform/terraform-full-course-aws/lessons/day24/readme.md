@@ -89,7 +89,7 @@ terraform destroy -auto-approve
 
 ## 📚 Resources
 
-- [Detailed Demo Guide](../day19/code/provisioner-demo/DEMO_GUIDE.md) - Complete walkthrough with troubleshooting
+- [Detailed Demo Guide](../day19/code/provisioner-demo/demo-guide.md) - Complete walkthrough with troubleshooting
 - [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
 - [Terraform AWS Provider Docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 

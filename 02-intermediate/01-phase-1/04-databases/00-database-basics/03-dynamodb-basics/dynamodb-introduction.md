@@ -539,7 +539,7 @@ Ready to create your first DynamoDB table?
 
 1. **[DynamoDB Getting Started](./dynamodb-getting-started.md)** - Hands-on tutorial
 2. **[DynamoDB Tables & Items](./dynamodb-tables-items.md)** - Deep dive into data modeling
-3. **[Intermediate DynamoDB](../README.md)** - Advanced patterns
+3. **[Intermediate DynamoDB](../readme.md)** - Advanced patterns
 
 ## Summary
 

@@ -358,10 +358,10 @@ This comprehensive guide covers cloud load balancing concepts, implementations, 
 
 ---
 ## 🧭 Additional Modules
-- [Algorithms](Algorithms/README.md)
-- [AWS](AWS/README.md)
-- [Azure](Azure/README.md)
-- [Best Practices](Best-Practices/README.md)
-- [Configuration](Configuration/README.md)
-- [GCP](GCP/README.md)
-- [Monitoring](Monitoring/README.md)
+- [Algorithms](algorithms/readme.md)
+- [AWS](aws/readme.md)
+- [Azure](azure/readme.md)
+- [Best Practices](best-practices/readme.md)
+- [Configuration](configuration/readme.md)
+- [GCP](gcp/readme.md)
+- [Monitoring](monitoring/readme.md)

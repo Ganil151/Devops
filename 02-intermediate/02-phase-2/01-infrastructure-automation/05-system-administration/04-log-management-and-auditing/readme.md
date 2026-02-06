@@ -73,4 +73,4 @@ This module covers **System Accountability**. You will learn how to manage the m
 ---
 
 ## 🔗 Next Steps
-Proceed to: **[Kernel & Boot Systems](../05-Kernel-and-Boot-Systems/README.md)** →
+Proceed to: **[Kernel & Boot Systems](../05-kernel-and-boot-systems/readme.md)** →

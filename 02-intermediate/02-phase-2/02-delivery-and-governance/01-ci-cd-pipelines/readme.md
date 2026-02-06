@@ -8,22 +8,22 @@ Welcome to the **CI/CD Pipelines** module. This is the heart of modern DevOps "D
 
 This module is re-architected into **4 Logical Parts**, mirroring the journey from "Hello World" to "Production Pipeline."
 
-### [📐 Part 1: The Blueprint (Foundations)](./01-Part-1-The-Blueprint/)
+### [📐 Part 1: The Blueprint (Foundations)](./01-part-1-the-blueprint/)
 *   **Focus**: Understanding the Factory.
 *   **Topics**: What is CI vs CD? The Software Delivery Lifecycle (SDLC).
 *   **Goal**: Design a pipeline before building it.
 
-### [⚙️ Part 2: The Engine (Jenkins & Automation)](./02-Part-2-The-Engine/)
+### [⚙️ Part 2: The Engine (Jenkins & Automation)](./02-part-2-the-engine/)
 *   **Focus**: Building the Factory.
 *   **Topics**: Jenkins Mastery (`Jenkinsfile`), Distributed builds (Master/Agent), Real-life scenarios.
 *   **Goal**: Build a robust, declarative pipeline in code.
 
-### [🧩 Part 3: The Building Blocks (Quality & Security)](./03-Part-3-The-Building-Blocks/)
+### [🧩 Part 3: The Building Blocks (Quality & Security)](./03-part-3-the-building-blocks/)
 *   **Focus**: Quality Gates.
 *   **Topics**: Static Analysis (SonarQube), Secret Scanning (TruffleHog).
 *   **Goal**: "Shift Left" - finding bugs and leaks *before* deployment.
 
-### [🛡️ Part 4: The Safety Net (Review & Assessment)](./04-Part-4-The-Safety-Net/)
+### [🛡️ Part 4: The Safety Net (Review & Assessment)](./04-part-4-the-safety-net/)
 *   **Focus**: Proving Competence.
 *   **Topics**: Interview Prep, Troubleshooting Challenges, Reference Architecture.
 *   **Goal**: Pass the "Senior DevOps" interview.

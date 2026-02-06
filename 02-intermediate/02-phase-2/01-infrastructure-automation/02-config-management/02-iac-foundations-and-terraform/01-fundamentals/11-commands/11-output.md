@@ -116,4 +116,4 @@ output "db_password" {
 
 ---
 
-**[⬅️ Back to Commands README](README.md)** | **[Previous: terraform show](10-Show.md)** | **[Next: terraform workspace](12-Workspace.md)**
+**[⬅️ Back to Commands README](readme.md)** | **[Previous: terraform show](10-show.md)** | **[Next: terraform workspace](12-workspace.md)**

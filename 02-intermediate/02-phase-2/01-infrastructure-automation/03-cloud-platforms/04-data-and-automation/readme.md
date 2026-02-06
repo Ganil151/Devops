@@ -73,7 +73,7 @@ Intermediate DevOps focus shifts from "How do I store this?" to "How do I manage
 
 ---
 ## 🧭 Additional Modules
-- [01 Relational and NoSQL Databases](01-Relational-and-NoSQL-Databases/README.md)
-- [02 Storage and Lifecycle Management](02-Storage-and-Lifecycle-Management/README.md)
-- [03 Data Backup and Recovery](03-Data-Backup-and-Recovery/README.md)
-- [04 Infrastructure Governance and Audit](04-Infrastructure-Governance-and-Audit/README.md)
+- [01 Relational and NoSQL Databases](01-relational-and-nosql-databases/readme.md)
+- [02 Storage and Lifecycle Management](02-storage-and-lifecycle-management/readme.md)
+- [03 Data Backup and Recovery](03-data-backup-and-recovery/readme.md)
+- [04 Infrastructure Governance and Audit](04-infrastructure-governance-and-audit/readme.md)

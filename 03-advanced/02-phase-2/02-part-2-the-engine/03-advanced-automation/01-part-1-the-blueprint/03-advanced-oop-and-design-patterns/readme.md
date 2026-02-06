@@ -70,9 +70,9 @@ Master architectural design by building these modular systems.
 
 | Challenge | Topic | Description | Starter Code | Solution |
 | :--- | :--- | :--- | :--- | :--- |
-| **01. Multi-Cloud Engine** | Factory Pattern | Build a unified CLI that provisions resources on AWS/GCP based on a YAML config. | [Link](./challenges/challenge_01_cloud_factory.py) | [Link](./challenges/solutions/solution_01_cloud_factory.py) |
-| **02. Slack Monitor** | Observer Pattern | Create an alert system where different services "Subscribe" to deployment events. | [Link](./challenges/challenge_02_alert_observer.py) | [Link](./challenges/solutions/solution_02_alert_observer.py) |
-| **03. Global Config** | Singleton | Implement a Thread-Safe Singleton that loads environment variables once for the whole app. | [Link](./challenges/challenge_03_singleton_config.py) | [Link](./challenges/solutions/solution_03_singleton_config.py) |
+| **01. Multi-Cloud Engine** | Factory Pattern | Build a unified CLI that provisions resources on AWS/GCP based on a YAML config. | [Link](./challenges/challenge-01-cloud-factory.py) | [Link](./challenges/solutions/solution-01-cloud-factory.py) |
+| **02. Slack Monitor** | Observer Pattern | Create an alert system where different services "Subscribe" to deployment events. | [Link](./challenges/challenge-02-alert-observer.py) | [Link](./challenges/solutions/solution-02-alert-observer.py) |
+| **03. Global Config** | Singleton | Implement a Thread-Safe Singleton that loads environment variables once for the whole app. | [Link](./challenges/challenge-03-singleton-config.py) | [Link](./challenges/solutions/solution-03-singleton-config.py) |
 
 ---
 
@@ -87,4 +87,4 @@ Master architectural design by building these modular systems.
 
 ---
 
-**Next Step**: [Metaprogramming & Decorators →](../04-Metaprogramming-and-Decorators/README.md)
+**Next Step**: [Metaprogramming & Decorators →](../04-metaprogramming-and-decorators/readme.md)

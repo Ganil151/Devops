@@ -16,10 +16,10 @@ Cloud waste is a billion-dollar problem. **Infrastructure Cost Governance** shif
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Cost-as-Code-Foundations](README.md)**
+1. **[🔴 01-Cost-as-Code-Foundations](readme.md)**
    - The breakdown of cloud pricing models.
    - Using `infracost diff` to see delta costs.
-2. **[🔴 02-OIDC-Cost-Automation](README.md)**
+2. **[🔴 02-OIDC-Cost-Automation](readme.md)**
    - Securely connecting GitHub to Cloud Pricing APIs.
    - Organization-wide cost governance strategies.
 
@@ -79,4 +79,4 @@ jobs:
 Don't just observe costs; enforce them. Implement **Cost Guardrails**: If a PR increase exceeds a specific threshold (e.g., 20% increase in monthly spend), the build status should turn yellow (warning) or red (failure), requiring a manual override from the FinOps or Platform Engineering team. This democratizes cost awareness across the entire engineering organization.
 
 ---
-**Next Step**: Start with [Cost as Code Foundations](README.md) 🚀
+**Next Step**: Start with [Cost as Code Foundations](readme.md) 🚀

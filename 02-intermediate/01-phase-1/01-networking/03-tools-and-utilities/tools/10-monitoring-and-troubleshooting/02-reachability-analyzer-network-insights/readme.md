@@ -127,5 +127,5 @@ Junior engineers deploy code and then spend 2 hours debugging why it can't talk 
 
 Reachability Analyzer tests the "Logic." Now let's dive into the "Body" of the packet: Traffic Mirroring for deep packet inspection and intrusion detection.
 
-Proceed to: **[03. Traffic Mirroring](../03-Traffic-Mirroring-Deep-Packet-Inspection/README.md)** →
+Proceed to: **[03. Traffic Mirroring](../03-traffic-mirroring-deep-packet-inspection/readme.md)** →
 Node: This link points to the deep-dive diagnostic tool.

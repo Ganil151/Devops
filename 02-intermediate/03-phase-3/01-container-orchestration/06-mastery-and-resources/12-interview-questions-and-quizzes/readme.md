@@ -70,6 +70,6 @@ When you run `kubectl delete`, what actually happens?
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Real-Life Scenarios](../13-Real-Life-Scenarios/README.md)
-- [Back: Part 6 Overview](../README.md)
-- [Mastery: Deep Dives](../Deep-Dives/README.md)
+- [Next: Real-Life Scenarios](../13-real-life-scenarios/readme.md)
+- [Back: Part 6 Overview](../readme.md)
+- [Mastery: Deep Dives](../deep-dives/readme.md)

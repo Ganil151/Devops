@@ -116,5 +116,5 @@ Junior admins let their web servers write all over the disk. Senior admins lock 
 
 ## 🔗 Next Steps
 
-Security isn't just about cages; it's also about timing and relationships. Let's learn how to orchestrate service startups. Proceed to: **[04. Dependencies & Targets](../04-Dependencies-and-Targets/README.md)** →
+Security isn't just about cages; it's also about timing and relationships. Let's learn how to orchestrate service startups. Proceed to: **[04. Dependencies & Targets](../04-dependencies-and-targets/readme.md)** →
  Node: Moving into orchestration.

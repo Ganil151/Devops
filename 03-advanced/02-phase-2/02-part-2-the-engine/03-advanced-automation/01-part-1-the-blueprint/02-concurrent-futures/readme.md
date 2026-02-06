@@ -58,9 +58,9 @@ Master parallel execution by building these high-performance workers.
 
 | Challenge | Topic | Description | Starter Code | Solution |
 | :--- | :--- | :--- | :--- | :--- |
-| **01. Log Hasher** | Multiprocessing | Compute hashes for 10 large log files in parallel using `ProcessPoolExecutor`. | [Link](./challenges/challenge_01_log_hasher.py) | [Link](./challenges/solutions/solution_01_log_hasher.py) |
-| **02. SSH Batcher** | Threading | Use `ThreadPoolExecutor` to run the same command on 20 servers simultaneously. | [Link](./challenges/challenge_02_ssh_batch.py) | [Link](./challenges/solutions/solution_02_ssh_batch.py) |
-| **03. Hybrid Worker** | Hybrid Logic | Build a script that uses Threads for fetching data and Processes for parsing it. | [Link](./challenges/challenge_03_hybrid.py) | [Link](./challenges/solutions/solution_03_hybrid.py) |
+| **01. Log Hasher** | Multiprocessing | Compute hashes for 10 large log files in parallel using `ProcessPoolExecutor`. | [Link](./challenges/challenge-01-log-hasher.py) | [Link](./challenges/solutions/solution-01-log-hasher.py) |
+| **02. SSH Batcher** | Threading | Use `ThreadPoolExecutor` to run the same command on 20 servers simultaneously. | [Link](./challenges/challenge-02-ssh-batch.py) | [Link](./challenges/solutions/solution-02-ssh-batch.py) |
+| **03. Hybrid Worker** | Hybrid Logic | Build a script that uses Threads for fetching data and Processes for parsing it. | [Link](./challenges/challenge-03-hybrid.py) | [Link](./challenges/solutions/solution-03-hybrid.py) |
 
 ---
 
@@ -75,4 +75,4 @@ Master parallel execution by building these high-performance workers.
 
 ---
 
-**Next Step**: [Advanced OOP & Design Patterns →](../003-Advanced-OOP-and-Design-Patterns/README.md)
+**Next Step**: [Advanced OOP & Design Patterns →](../003-advanced-oop-and-design-patterns/readme.md)

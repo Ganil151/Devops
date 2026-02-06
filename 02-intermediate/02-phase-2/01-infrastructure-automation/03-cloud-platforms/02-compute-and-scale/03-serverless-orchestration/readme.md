@@ -22,6 +22,6 @@ In Serverless, you deal with **Functions** and **Events**.
 ---
 
 ## 📂 Cloud Offerings
-- [AWS-Lambda](./AWS-Lambda): The industry standard for event-driven compute.
-- [Azure-Functions](./Azure-Functions): Powerful bindings and integration with .NET ecosystem.
-- [GCP-Cloud-Functions](./GCP-Cloud-Functions): Google's lightweight response to cloud events.
+- [AWS-Lambda](./aws-lambda): The industry standard for event-driven compute.
+- [Azure-Functions](./azure-functions): Powerful bindings and integration with .NET ecosystem.
+- [GCP-Cloud-Functions](./gcp-cloud-functions): Google's lightweight response to cloud events.

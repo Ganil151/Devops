@@ -31,4 +31,4 @@ GuardDuty is most effective when integrated with **AWS EventBridge** and **AWS L
 
 ---
 
-**Next Step**: Return to the **[Identity & Governance Overview](../README.md)** to see how these tools work together.
+**Next Step**: Return to the **[Identity & Governance Overview](../readme.md)** to see how these tools work together.

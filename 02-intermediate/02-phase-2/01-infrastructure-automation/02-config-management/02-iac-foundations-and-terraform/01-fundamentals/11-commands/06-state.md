@@ -107,4 +107,4 @@ A resource is stuck "deleting" in AWS but preventing your whole pipeline from ru
 
 ---
 
-**[⬅️ Back to Commands README](README.md)** | **[Previous: terraform destroy](05-Destroy.md)** | **[Next: terraform import](07-Import.md)**
+**[⬅️ Back to Commands README](readme.md)** | **[Previous: terraform destroy](05-destroy.md)** | **[Next: terraform import](07-import.md)**

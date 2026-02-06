@@ -36,14 +36,14 @@ A networking expert is only as good as their tools. In this part, we cover:
 
 ## 📚 Resources
 
-- **[Tools/](./Tools/)**: Detailed modules on VPC, Gateways, and Peering.
-- **[Documentation/](./Documentation/)**: Installation guides and cheat sheets for Wireshark, Nmap, and Cloud CLI.
-- **[Best-Practices/](./Best-Practices/)**: Security hardening guides for network tools and cloud configurations.
+- **[Tools/](./tools/)**: Detailed modules on VPC, Gateways, and Peering.
+- **[Documentation/](./documentation/)**: Installation guides and cheat sheets for Wireshark, Nmap, and Cloud CLI.
+- **[Best-Practices/](./best-practices/)**: Security hardening guides for network tools and cloud configurations.
 
 ---
 
 ## 📂 Subdirectories
 
-- **[Tools/](./Tools/)**: Core cloud networking and troubleshooting modules.
-- **[Documentation/](./Documentation/)**: "How-to" guides and reference manuals.
-- **[Best-Practices/](./Best-Practices/)**: Compliance, security, and performance standards.
+- **[Tools/](./tools/)**: Core cloud networking and troubleshooting modules.
+- **[Documentation/](./documentation/)**: "How-to" guides and reference manuals.
+- **[Best-Practices/](./best-practices/)**: Compliance, security, and performance standards.

@@ -7,79 +7,79 @@ This directory contains comprehensive documentation for all major Kubernetes arc
 ## Architecture Components
 
 ### Control Plane Components
-- **[1-Cloud_Controller_Manager](README.md)** - Cloud provider integration and management
-- **[2-Kube_Api_Server](README.md)** - Central API gateway and cluster management
-- **[3-ETCD](README.md)** - Distributed key-value store for cluster data
-- **[4-Kube-Scheduler](README.md)** - Pod scheduling and placement decisions
-- **[5-Kube_Controller_Manager](README.md)** - Controller processes and state reconciliation
+- **[1-Cloud_Controller_Manager](readme.md)** - Cloud provider integration and management
+- **[2-Kube_Api_Server](readme.md)** - Central API gateway and cluster management
+- **[3-ETCD](readme.md)** - Distributed key-value store for cluster data
+- **[4-Kube-Scheduler](readme.md)** - Pod scheduling and placement decisions
+- **[5-Kube_Controller_Manager](readme.md)** - Controller processes and state reconciliation
 
 ### Node Components
-- **[kubelet](README.md)** - Node agent for pod lifecycle management
-- **[nodes](README.md)** - Worker node architecture and management
-- **[crictl](README.md)** - Container runtime interface CLI tool
+- **[kubelet](readme.md)** - Node agent for pod lifecycle management
+- **[nodes](readme.md)** - Worker node architecture and management
+- **[crictl](readme.md)** - Container runtime interface CLI tool
 
 ### Core Workload Resources
-- **[pods](README.md)** - Basic execution units and container management
-- **[deployments](README.md)** - Declarative application deployment and updates
+- **[pods](readme.md)** - Basic execution units and container management
+- **[deployments](readme.md)** - Declarative application deployment and updates
 - **[statefulsets](statefulsets/)** - Stateful application management
-- **[daemonsets](README.md)** - Node-wide service deployment
-- **[jobs](README.md)** - Batch job execution
-- **[cronjobs](README.md)** - Scheduled job execution
+- **[daemonsets](readme.md)** - Node-wide service deployment
+- **[jobs](readme.md)** - Batch job execution
+- **[cronjobs](readme.md)** - Scheduled job execution
 
 ### Networking
-- **[services](README.md)** - Service discovery and load balancing
-- **[ingress](README.md)** - External access and HTTP routing
-- **[network-policies](README.md)** - Network security and micro-segmentation
+- **[services](readme.md)** - Service discovery and load balancing
+- **[ingress](readme.md)** - External access and HTTP routing
+- **[network-policies](readme.md)** - Network security and micro-segmentation
 
 ### Storage
-- **[persistent-volumes](README.md)** - Durable storage management
-- **[storage-class](README.md)** - Dynamic storage provisioning
+- **[persistent-volumes](readme.md)** - Durable storage management
+- **[storage-class](readme.md)** - Dynamic storage provisioning
 
 ### Configuration and Security
-- **[configMaps](README.md)** - Configuration data management
-- **[secrets](README.md)** - Sensitive data management
-- **[service-accounts](README.md)** - Pod identity and authentication
-- **[rbac](README.md)** - Role-based access control
+- **[configMaps](readme.md)** - Configuration data management
+- **[secrets](readme.md)** - Sensitive data management
+- **[service-accounts](readme.md)** - Pod identity and authentication
+- **[rbac](readme.md)** - Role-based access control
 
 ### Cluster Management
-- **[cluster](README.md)** - Overall cluster architecture and setup
-- **[namespaces](README.md)** - Resource isolation and multi-tenancy
-- **[kubectl](README.md)** - Command-line interface and cluster interaction
+- **[cluster](readme.md)** - Overall cluster architecture and setup
+- **[namespaces](readme.md)** - Resource isolation and multi-tenancy
+- **[kubectl](readme.md)** - Command-line interface and cluster interaction
 
 ### Autoscaling and Availability
-- **[hpa](README.md)** - Horizontal Pod Autoscaler
-- **[vpa](README.md)** - Vertical Pod Autoscaler
-- **[pdb](README.md)** - Pod Disruption Budget
+- **[hpa](readme.md)** - Horizontal Pod Autoscaler
+- **[vpa](readme.md)** - Vertical Pod Autoscaler
+- **[pdb](readme.md)** - Pod Disruption Budget
 
 ## Quick Navigation
 
 ### Getting Started
-1. [Cluster Architecture](README.md) - Understanding Kubernetes clusters
-2. [Nodes](README.md) - Worker node components and management
-3. [Pods](README.md) - Basic workload units
-4. [Services](README.md) - Networking and service discovery
+1. [Cluster Architecture](readme.md) - Understanding Kubernetes clusters
+2. [Nodes](readme.md) - Worker node components and management
+3. [Pods](readme.md) - Basic workload units
+4. [Services](readme.md) - Networking and service discovery
 
 ### Core Concepts
-1. [Deployments](README.md) - Application deployment patterns
-2. [ConfigMaps](README.md) & [Secrets](README.md) - Configuration management
-3. [Namespaces](README.md) - Resource organization
-4. [RBAC](README.md) - Security and access control
+1. [Deployments](readme.md) - Application deployment patterns
+2. [ConfigMaps](readme.md) & [Secrets](readme.md) - Configuration management
+3. [Namespaces](readme.md) - Resource organization
+4. [RBAC](readme.md) - Security and access control
 
 ### Advanced Topics
 1. [StatefulSets](statefulsets/) - Stateful applications
-2. [Ingress](README.md) - External access patterns
-3. [Network Policies](README.md) - Security policies
-4. [Autoscaling](README.md) - Dynamic scaling strategies
+2. [Ingress](readme.md) - External access patterns
+3. [Network Policies](readme.md) - Security policies
+4. [Autoscaling](readme.md) - Dynamic scaling strategies
 
 ### Operations
-1. [kubectl](README.md) - Command-line operations
-2. [Jobs](README.md) & [CronJobs](README.md) - Batch processing
-3. [PDB](README.md) - Availability management
-4. [Storage](README.md) - Data persistence
+1. [kubectl](readme.md) - Command-line operations
+2. [Jobs](readme.md) & [CronJobs](readme.md) - Batch processing
+3. [PDB](readme.md) - Availability management
+4. [Storage](readme.md) - Data persistence
 
 ## Architecture Diagrams
 
-Visual representations and diagrams for various components can be found in the [Images](README.md) directory.
+Visual representations and diagrams for various components can be found in the [Images](readme.md) directory.
 
 ## Best Practices
 
@@ -110,4 +110,4 @@ This documentation serves as a comprehensive reference for understanding, deploy
 
 ---
 ## 🧭 Additional Modules
-- [statefulsets](statefulsets/README.md)
+- [statefulsets](statefulsets/readme.md)

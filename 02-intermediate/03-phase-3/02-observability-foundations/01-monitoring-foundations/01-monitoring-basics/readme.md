@@ -49,8 +49,8 @@ Ready to master the Four Golden Signals? Explore technical interview questions a
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Health Checks and Probers](../03-Health-Checks-and-Probers/README.md)
-- [Back: Foundations Overview](../README.md)
+- [Next: Health Checks and Probers](../03-health-checks-and-probers/readme.md)
+- [Back: Foundations Overview](../readme.md)
 
 ---
 *If you can't measure it, you can't improve it.*

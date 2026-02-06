@@ -3,7 +3,7 @@
 As microservices scale, the "Network" becomes the most complex and fragile part of your system. Service Mesh technology decouples networking logic (encryption, retries, routing) from the application code by using a sidecar proxy.
 
 ## Core Concept: Decoupled Networking
-**[REFERENCE: Service Mesh Architecture](./REFERENCE/Service-Mesh-Architecture-Ref.md)**
+**[REFERENCE: Service Mesh Architecture](./reference/service-mesh-architecture-ref.md)**
 
 Managing complex communication through a unified Control Plane:
 - **Control vs. Data Plane**: Utilizing Istiod to govern a global fleet of Envoy proxies.
@@ -11,7 +11,7 @@ Managing complex communication through a unified Control Plane:
 - **Traffic Steering**: Implementing advanced VirtualServices and DestinationRules for path-based routing and circuit breaking.
 
 ## Enterprise Governance: Zero-Trust Identity
-**[REFERENCE: Zero-Trust Workload Identity](./REFERENCE/Zero-Trust-Workload-Identity-Ref.md)**
+**[REFERENCE: Zero-Trust Workload Identity](./reference/zero-trust-workload-identity-ref.md)**
 
 Securing the data plane through cryptographically provable identities:
 - **SPIFFE/SPIRE Standards**: Assigning unique, verifiable identities to every workload regardless of platform.
@@ -36,15 +36,15 @@ A Service Mesh is a dedicated infrastructure layer built into your cluster that 
 
 ## 📚 Modules in This Part
 
-### 1️⃣ [01-Istio-Deep-Dive](./01-Istio-Deep-Dive/README.md)
+### 1️⃣ [01-Istio-Deep-Dive](./01-istio-deep-dive/readme.md)
 
 Master the industry standard mesh. Deep dive into VirtualServices, DestinationRules, and Gateway resources.
 
-### 2️⃣ [02-Security-mTLS-SPIFFE](./02-Security-mTLS-SPIFFE/README.md)
+### 2️⃣ [02-Security-mTLS-SPIFFE](./02-security-mtls-spiffe/readme.md)
 
 Identity at scale. Learn how SPIRE provides cryptographically unique IDs to workloads for zero-trust authorization.
 
-### 3️⃣ [03-Observability-Kiali-Jaeger](./03-Observability-Kiali-Jaeger/README.md)
+### 3️⃣ [03-Observability-Kiali-Jaeger](./03-observability-kiali-jaeger/readme.md)
 
 Visualizing the invisible. Use Kiali for topology mapping and Jaeger for distributed tracing through the Envoy proxies.
 
@@ -57,4 +57,4 @@ Visualizing the invisible. Use Kiali for topology mapping and Jaeger for distrib
 
 ---
 
-**Parent Path**: [Advanced Phase-2: Strategic Skills](../README.md)
+**Parent Path**: [Advanced Phase-2: Strategic Skills](../readme.md)

@@ -29,7 +29,7 @@ FinOps (Cloud Financial Management) is an evolving cloud financial management di
 ## 3. Best Practices
 - **Tagging & Allocation**: Use `CostCenter` and `Project` tags to automate chargebacks to internal teams.
 - **Unused Resource Cleanup**: Automate the deletion of unattached EBS volumes and outdated Snapshots.
-- **Anomaly Detection**: Enable [CloudWatch Alarms](../../../../README.md) for unexpected spend spikes.
+- **Anomaly Detection**: Enable [CloudWatch Alarms](../../../../readme.md) for unexpected spend spikes.
 
 ---
-**Governance**: Control spend at scale with [AWS Config Rules](../../../../README.md).
+**Governance**: Control spend at scale with [AWS Config Rules](../../../../readme.md).

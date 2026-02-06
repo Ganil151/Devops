@@ -125,4 +125,4 @@ Senior DevOps engineers know that removing an IGW in an emergency isn't as simpl
 
 The front door is open. Now let's explore how to let your private servers "talk out" without letting the "world in."
 
-Proceed to: **[02. NAT Gateway Deep Dive](../../../../../README.md)** →
+Proceed to: **[02. NAT Gateway Deep Dive](../../../../../readme.md)** →

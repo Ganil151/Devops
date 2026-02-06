@@ -46,8 +46,8 @@ Master the technical nuances of Token vs. Leaky bucket algorithms and learn how 
 ---
 
 ## 🔗 Internal Navigation
-- [Next: API Documentation and Management](../04-API-Documentation-and-Management/README.md)
-- [Back: Traffic Management Hub](../README.md)
+- [Next: API Documentation and Management](../04-api-documentation-and-management/readme.md)
+- [Back: Traffic Management Hub](../readme.md)
 
 ---
 *Fail fast. Recover faster.*

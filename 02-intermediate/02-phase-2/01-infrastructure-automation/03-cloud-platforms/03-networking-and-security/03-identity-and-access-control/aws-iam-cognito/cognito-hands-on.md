@@ -105,4 +105,4 @@ aws cognito-idp delete-user-pool --user-pool-id $USER_POOL_ID
 ```
 
 ---
-**Next Step**: Explore [Advanced Cognito Patterns & Troubleshooting](../../../../../../../03-Advanced/02-Phase-2/01-Part-1-The-Blueprint/01-Cloud-Architecture/01-Enterprise-Multi-Cloud/12-Identity-Management/cognito-advanced-patterns.md)
+**Next Step**: Explore [Advanced Cognito Patterns & Troubleshooting](../../../../../../../03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/12-identity-management/cognito-advanced-patterns.md)

@@ -133,13 +133,13 @@ Even in a Transit Gateway architecture, senior engineers sometimes use Peering f
 
 You've connected your VPCs. Now let's explore how to distribute traffic across your servers using Cloud Load Balancers.
 
-Proceed to: **[07. Cloud Load Balancers (ALB/NLB)](README.md)** →
+Proceed to: **[07. Cloud Load Balancers (ALB/NLB)](readme.md)** →
 Node: This link points to the next logical step in the curriculum.
 
 
 ---
 ## 🧭 Additional Modules
-- [01 VPC Peering Basics](01-VPC-Peering-Basics/README.md)
-- [02 Routing and Security in Peering](02-Routing-and-Security-in-Peering/README.md)
-- [03 Transit Gateway Architecture](03-Transit-Gateway-Architecture/README.md)
-- [04 Interconnectivity Optimization](04-Interconnectivity-Optimization/README.md)
+- [01 VPC Peering Basics](01-vpc-peering-basics/readme.md)
+- [02 Routing and Security in Peering](02-routing-and-security-in-peering/readme.md)
+- [03 Transit Gateway Architecture](03-transit-gateway-architecture/readme.md)
+- [04 Interconnectivity Optimization](04-interconnectivity-optimization/readme.md)

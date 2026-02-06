@@ -9,14 +9,14 @@
 
 ### 1. Structural Expansion - NEW Directories Created
 
-✅ **[Patterns/Saga-Distributed-Transactions/](./Patterns/Saga-Distributed-Transactions/)**
+✅ **[Patterns/Saga-Distributed-Transactions/](./patterns/saga-distributed-transactions/)**
 - Comprehensive choreography vs orchestration comparison
 - Compensating transaction patterns with Mermaid sequence diagrams
 - Production implementations (Python choreography, Go/Temporal orchestration)
 - Testing strategies for both approaches
 - Decision matrix for choosing approach
 
-✅ **[Communication/gRPC-vs-Event-Driven/](./Communication/gRPC-vs-Event-Driven/)**
+✅ **[Communication/gRPC-vs-Event-Driven/](./communication/grpc-vs-event-driven/)**
 - Protocol comparison: Protobuf vs Avro vs JSON
 - Size comparison table (320 bytes JSON → 72 bytes Avro)
 - Full gRPC service implementation (Go server, Python client)
@@ -24,7 +24,7 @@
 - Schema evolution patterns
 - When to use sync vs async decision framework
 
-✅ **[Resiliency/Service-Mesh-and-Retries/](./Resiliency/Service-Mesh-and-Retries/)**
+✅ **[Resiliency/Service-Mesh-and-Retries/](./resiliency/service-mesh-and-retries/)**
 - Production-grade circuit breaker implementation (Go)
 - Bulkhead pattern with semaphore-based resource isolation
 - Istio DestinationRule and VirtualService configs
@@ -32,7 +32,7 @@
 - Prometheus metrics integration
 - Grafana dashboard query examples
 
-✅ **[Security/OAuth2-and-JWT-Propagation/](./Security/OAuth2-and-JWT-Propagation/)**
+✅ **[Security/OAuth2-and-JWT-Propagation/](./security/oauth2-and-jwt-propagation/)**
 - OAuth2 authorization flows (Authorization Code, PKCE, Client Credentials)
 - JWT structure deep-dive (Header, Payload, Signature)
 - Token propagation patterns (Relay, Token Exchange, Service Account)

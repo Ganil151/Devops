@@ -16,7 +16,7 @@ Youtube-Lessons/
 
 ### 🐳 Kubernetes Lessons
 
-**Location**: [01-Kubernetes/](01-Kubernetes/README.md)
+**Location**: [01-Kubernetes/](01-kubernetes/readme.md)
 
 - **Anton Putra DevOps Course 2025**: Complete Kubernetes course
   - Modern Kubernetes practices
@@ -29,7 +29,7 @@ Youtube-Lessons/
 
 ### ⚙️ CI/CD Lessons
 
-**Location**: [02-CI-CD/](02-CI-CD/README.md)
+**Location**: [02-CI-CD/](02-ci-cd/readme.md)
 
 **Development Projects** (`Dev/`):
 - Amazon Prime Clone CI/CD
@@ -53,7 +53,7 @@ Youtube-Lessons/
 
 ### 📚 General DevOps Resources
 
-**Location**: [03-General-DevOps/](03-General-DevOps/README.md)
+**Location**: [03-General-DevOps/](03-general-devops/readme.md)
 
 **DEVOPS_NOTES/**:
 - Docker Compose notes (PDF)
@@ -76,7 +76,7 @@ Youtube-Lessons/
 
 ### 🛠️ Project-Based Learning
 
-**Location**: [04-Projects/](04-Projects/README.md)
+**Location**: [04-Projects/](04-projects/readme.md)
 
 **terraform_server_v1**:
 - Complete Terraform server deployment project
@@ -243,10 +243,10 @@ All old directories have been removed after successful consolidation.
 
 ## 🔗 Related Documentation
 
-- [Docker Documentation](../README.md) - Comprehensive Docker guide
-- [Kubernetes Documentation](../README.md) - K8s concepts
-- [CI/CD Documentation](../README.md) - Pipeline guides
-- [Terraform Documentation](../README.md) - IaC guides
+- [Docker Documentation](../readme.md) - Comprehensive Docker guide
+- [Kubernetes Documentation](../readme.md) - K8s concepts
+- [CI/CD Documentation](../readme.md) - Pipeline guides
+- [Terraform Documentation](../readme.md) - IaC guides
 
 ## 📚 Additional Resources
 
@@ -318,4 +318,4 @@ cd 01-Kubernetes/Anton_Putra/devops-youtube-course-2025/
 **Consolidation Date**: 2025-12-21  
 **Total Content**: ~107MB across 4 categories
 
-For questions or issues, refer to the main [Devops README](../README.md) or specific topic documentation in the main directory structure.
+For questions or issues, refer to the main [Devops README](../readme.md) or specific topic documentation in the main directory structure.

@@ -89,6 +89,6 @@ graph TD
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Final Assessment](../12-Interview-Questions-and-Quizzes/README.md)
-- [Back: Part 6 Overview](../README.md)
-- [Mastery: Deep Dives](../Deep-Dives/README.md)
+- [Next: Final Assessment](../12-interview-questions-and-quizzes/readme.md)
+- [Back: Part 6 Overview](../readme.md)
+- [Mastery: Deep Dives](../deep-dives/readme.md)

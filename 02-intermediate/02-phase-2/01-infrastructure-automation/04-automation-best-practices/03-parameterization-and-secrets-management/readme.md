@@ -3,8 +3,8 @@
 Hardcoding is the root of all technical debt. If you change a server IP or a password and have to edit 10 different scripts, your automation is broken. **Parameterization** decouples your logic from your data.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `config_loader.py` (Env vars and defaults).
-- **[CHALLENGES](./CHALLENGES.md)**: Building secure loaders.
+- **[Boilerplates](readme.md)**: `config_loader.py` (Env vars and defaults).
+- **[CHALLENGES](./challenges.md)**: Building secure loaders.
 
 ---
 
@@ -67,4 +67,4 @@ def login(password):
 
 ---
 
-[Next: Failure Handling and Atomicity](../04-Failure-Handling-and-Atomicity/README.md)
+[Next: Failure Handling and Atomicity](../04-failure-handling-and-atomicity/readme.md)

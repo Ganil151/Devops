@@ -26,4 +26,4 @@ This project demonstrates a production-grade 3-tier architecture (Web, App, and 
 3. **Apply**: `terraform apply "tfplan"`
 
 ---
-**Learning Integration**: This project is the capstone of the [Intermediate Terraform](../../README.md) module.
+**Learning Integration**: This project is the capstone of the [Intermediate Terraform](../../readme.md) module.

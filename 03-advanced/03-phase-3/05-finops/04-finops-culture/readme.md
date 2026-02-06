@@ -391,4 +391,4 @@ Answer: 1 per team
 
 ## Next Lesson
 
-Continue to **[Lesson 05: Enterprise Governance](../05-Enterprise-Governance/README.md)** to learn how to implement policies and controls at scale.
+Continue to **[Lesson 05: Enterprise Governance](../05-enterprise-governance/readme.md)** to learn how to implement policies and controls at scale.

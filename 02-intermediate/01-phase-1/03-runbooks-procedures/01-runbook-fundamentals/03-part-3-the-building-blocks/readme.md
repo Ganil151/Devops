@@ -6,11 +6,11 @@ Welcome to **Part 3**. We move from theory to reality. We explore real-world ope
 
 ## 🛣️ The Curriculum
 
-### [01-Operational-Scenarios](./01-Operational-Scenarios/)
+### [01-Operational-Scenarios](./01-operational-scenarios/)
 **The Objective**: Building docs for Different Day-2 Ops.
 *   **Categories**: Deployment, Scaling, Disaster Recovery, Security Patching.
 
-### [02-Feedback-and-Iteration](./02-Feedback-and-Iteration/)
+### [02-Feedback-and-Iteration](./02-feedback-and-iteration/)
 **The Objective**: Continuous Improvement or "Gamedays."
 *   **Key Concepts**: Post-mortems as documentation drivers. Improving docs after every incident.
 

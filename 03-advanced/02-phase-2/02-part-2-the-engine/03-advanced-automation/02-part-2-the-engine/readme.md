@@ -6,14 +6,14 @@ This module covers the "Extremes" of automation: Physical Hardware and Enterpris
 
 ## 🛣️ The Curriculum
 
-### [01-Terraform-Enterprise](./01-Terraform-Enterprise/)
+### [01-Terraform-Enterprise](./01-terraform-enterprise/)
 **Focus**: Managing Terraform at Scale.
 *   **Concepts**:
     *   **Private Module Registry**: Sharing blessed modules across the org.
     *   **Sentinel Policy Sets**: "Hard" vs "Soft" mandatory policies.
     *   **Workspaces & State**: Managing 5,000 state files without losing your mind.
 
-### [02-Bare-Metal-Infrastructure](./02-Bare-Metal-Infrastructure/)
+### [02-Bare-Metal-Infrastructure](./02-bare-metal-infrastructure/)
 **Focus**: Automating the Data Center.
 *   **Concepts**:
     *   **PXE Boot**: Booting over the network.

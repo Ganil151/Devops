@@ -2,7 +2,7 @@
 
 > **"In the physical world, hardware is slow to change. In the cloud world, hardware is just a variable in a YAML file. If you treat your servers like pets, you will fail; if you treat them like cattle, you will scale."**
 
-![IaC Strategy Framework](../../assets/iac_strategy_banner.png)
+![IaC Strategy Framework](../../assets/iac-strategy-banner.png)
 
 ---
 
@@ -89,13 +89,13 @@ By the end of this module, you will:
 
 61: The content is organized into a logical progression that mirrors a real-world project lifecycle:
 62: 
-63: 1.  **[01-Introduction](./01-Introduction)**: The core concepts of Configuration Management.
-64: 2.  **[02-IaC Foundations and Terraform](./02-IaC-Foundations-and-Terraform)**: Provisioning the "Moat and Castle".
-65: 3.  **[03-Server Configuration and Ansible](./03-Server-Configuration-and-Ansible)**: Managing the "Furniture and Utilities".
-66: 4.  **[04-Cloud-Native Provisioning](./04-Cloud-Native-Provisioning-and-Vendors)**: Multi-language IaC (Pulumi/CDK).
-67: 5.  **[05-Immutable Infrastructure](./05-Immutable-Infrastructure-and-Images)**: Building "Golden Images" with Packer.
-68: 6.  **[06-Kubernetes Config](./06-Kubernetes-Config-and-Templating)**: Helm and K8s complexity.
-69: 7.  **[07-Assessments](./07-Assessments)**: Quizzes and Portfolio Challenges.
+63: 1.  **[01-Introduction](./01-introduction)**: The core concepts of Configuration Management.
+64: 2.  **[02-IaC Foundations and Terraform](./02-iac-foundations-and-terraform)**: Provisioning the "Moat and Castle".
+65: 3.  **[03-Server Configuration and Ansible](./03-server-configuration-and-ansible)**: Managing the "Furniture and Utilities".
+66: 4.  **[04-Cloud-Native Provisioning](./04-cloud-native-provisioning-and-vendors)**: Multi-language IaC (Pulumi/CDK).
+67: 5.  **[05-Immutable Infrastructure](./05-immutable-infrastructure-and-images)**: Building "Golden Images" with Packer.
+68: 6.  **[06-Kubernetes Config](./06-kubernetes-config-and-templating)**: Helm and K8s complexity.
+69: 7.  **[07-Assessments](./07-assessments)**: Quizzes and Portfolio Challenges.
 
 ---
 
@@ -127,16 +127,16 @@ In IaC, your **State File** is the source of truth.
 
 ## 🛠️ Performance & Strategy Assets
 
-- **[INTERVIEW_PREP.md](./INTERVIEW_PREP.md)**: 10 Senior-Level Platform Engineering questions.
-- **[Automation-Challenges-Portfolio.md](./Automation-Challenges-Portfolio.md)**: Tiered challenges from "Junior" to "Architect."
+- **[INTERVIEW_PREP.md](./interview-prep.md)**: 10 Senior-Level Platform Engineering questions.
+- **[Automation-Challenges-Portfolio.md](./automation-challenges-portfolio.md)**: Tiered challenges from "Junior" to "Architect."
 
 ---
 
 ## 📝 Knowledge Checks
 
-106: - **[Terraform Quiz](./07-Assessments/terraform-quiz.md)**
-107: - **[Ansible Quiz](./07-Assessments/ansible-quiz.md)**
-108: - **[Helm Quiz](./07-Assessments/helm-quiz.md)**
+106: - **[Terraform Quiz](./07-assessments/terraform-quiz.md)**
+107: - **[Ansible Quiz](./07-assessments/ansible-quiz.md)**
+108: - **[Helm Quiz](./07-assessments/helm-quiz.md)**
 
 ---
 
@@ -145,4 +145,4 @@ In IaC, your **State File** is the source of truth.
 
 ---
 ## 🧭 Additional Modules
-- [00 Reference and Metadata](00-Reference-and-Metadata/README.md)
+- [00 Reference and Metadata](00-reference-and-metadata/readme.md)

@@ -31,8 +31,8 @@ To impress a Senior Engineer, your project should include:
 
 ## 🚀 The Flagship Implementation
 For a step-by-step implementation of a professional-grade project, see the:
-👉 **[Golden Project Implementation Guide](./GOLDEN_PROJECT_GUIDE.md)**
+👉 **[Golden Project Implementation Guide](./golden-project-guide.md)**
 
 ---
 
-**Showcase Hub**: [08-Resources/05-Projects-Showcase](README.md)
+**Showcase Hub**: [08-Resources/05-Projects-Showcase](readme.md)

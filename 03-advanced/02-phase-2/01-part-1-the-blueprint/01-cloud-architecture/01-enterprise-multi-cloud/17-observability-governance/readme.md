@@ -37,4 +37,4 @@ Use **AWS Config** to ensure your infrastructure stays compliant with enterprise
 - **Dashboards**: Build unified CloudWatch ServiceLens dashboards for your entire application stack.
 
 ---
-**Next Step**: Learn how these patterns apply across multiple clouds in the [Multi-Cloud Architecture Module](../01-Multi-Cloud-Architecture/README.md)
+**Next Step**: Learn how these patterns apply across multiple clouds in the [Multi-Cloud Architecture Module](../01-multi-cloud-architecture/readme.md)

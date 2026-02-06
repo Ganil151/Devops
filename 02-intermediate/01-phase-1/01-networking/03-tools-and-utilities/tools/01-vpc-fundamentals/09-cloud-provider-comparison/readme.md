@@ -142,4 +142,4 @@ If you are working in a multi-cloud environment, don't use provider-specific qui
 
 You've finished the theory. Now it's time to build. Let's get your hands on the keyboard and deploy a production-grade VPC.
 
-Proceed to: **[10. Getting Started Guide](../10-Getting-Started-Guide/README.md)** →
+Proceed to: **[10. Getting Started Guide](../10-getting-started-guide/readme.md)** →

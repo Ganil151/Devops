@@ -65,4 +65,4 @@ Capacity Providers allow you to define how your cluster uses Fargate (including 
 | **Service not stable** | Health checks failing | Verify the ALB health check path and port match the application. |
 
 ---
-**Next Step**: Level up to Kubernetes with [AWS EKS Production-Ready Guide](../../../../../../../03-Advanced/01-Phase-1/04-Container-Orchestration/Enterprise-Container-Orchestration/aws-eks-production-ready.md)
+**Next Step**: Level up to Kubernetes with [AWS EKS Production-Ready Guide](../../../../../../../03-advanced/01-phase-1/04-container-orchestration/enterprise-container-orchestration/aws-eks-production-ready.md)

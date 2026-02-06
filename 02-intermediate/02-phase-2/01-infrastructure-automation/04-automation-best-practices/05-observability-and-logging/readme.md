@@ -3,8 +3,8 @@
 If a script runs in a forest and no one is there to see the logs, did it actually succeed? In production, automation is often run by machines (Cron, CI/CD). **Observability** gives you the "eyes" to see how your automation is performing.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `logging_setup.py` (Structured logging with JSON).
-- **[CHALLENGES](./CHALLENGES.md)**: Building dry-run guards and audit logs.
+- **[Boilerplates](readme.md)**: `logging_setup.py` (Structured logging with JSON).
+- **[CHALLENGES](./challenges.md)**: Building dry-run guards and audit logs.
 
 ---
 
@@ -70,4 +70,4 @@ logger.error("Failed to delete log file: Access Denied")
 
 ---
 
-[Next: CI/CD Foundations →](../../../../../README.md)
+[Next: CI/CD Foundations →](../../../../../readme.md)

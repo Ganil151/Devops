@@ -145,5 +145,5 @@ Never leave persistent tunnels open to production databases. It increases the ri
 
 You've mastered the art of shifting traffic. Now let's look at how to scale these operations across thousands of servers using **SSH Automation**.
 
-Proceed to: **[03. SSH Automation & Scripting](../03-Automation/README.md)** →
+Proceed to: **[03. SSH Automation & Scripting](../03-automation/readme.md)** →
 Node: This link points to the final frontier of SSH efficiency.

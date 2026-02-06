@@ -441,7 +441,7 @@ graph LR
 
 Congratulations! You've completed the **Intermediate FinOps** level! 🎉
 
-Continue to **[Advanced FinOps](../../../../README.md)** to learn:
+Continue to **[Advanced FinOps](../../../../readme.md)** to learn:
 - Enterprise FinOps frameworks
 - Multi-cloud cost management
 - Unit economics and cost per customer

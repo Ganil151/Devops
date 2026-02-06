@@ -366,4 +366,4 @@ Analyze commitment opportunities:
 
 ## Next Lesson
 
-Continue to **[Lesson 03: Unit Economics & Value Metrics](../03-Unit-Economics/README.md)** to learn how to connect cloud costs to business value.
+Continue to **[Lesson 03: Unit Economics & Value Metrics](../03-unit-economics/readme.md)** to learn how to connect cloud costs to business value.

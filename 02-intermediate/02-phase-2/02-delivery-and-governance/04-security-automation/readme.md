@@ -5,7 +5,7 @@
 Mastering automated vulnerability scanning using **Trivy**. This module covers how to integrate scanning into the developer workflow and CI/CD pipelines to achieve "Shift-Left Security."
 
 ## Core Concept: The Security Feedback Loop
-**[REFERENCE: Vulnerability Management](./REFERENCE/Vulnerability-Management-Ref.md)**
+**[REFERENCE: Vulnerability Management](./reference/vulnerability-management-ref.md)**
 
 Security automation provides immediate feedback to engineers:
 - **Shift-Left**: Scanning code and images during the build, not after deployment.
@@ -13,7 +13,7 @@ Security automation provides immediate feedback to engineers:
 - **Severity Triage**: Using CVSS scores to focus on the 20% of vulnerabilities that cause 80% of the risk.
 
 ## Enterprise Governance: Vulnerability Guardrails
-**[REFERENCE: Vulnerability Management](./REFERENCE/Vulnerability-Management-Ref.md)**
+**[REFERENCE: Vulnerability Management](./reference/vulnerability-management-ref.md)**
 
 Protecting the production environment from insecure artifacts:
 - **Threshold Enforcement**: Automatically failing any pipeline that contains a "CRITICAL" vulnerability with a known fix.
@@ -74,9 +74,9 @@ trivy image --format json --output results.json my-app:latest
 ```
 
 ---
-**Next Step**: [Trivy Implementation](README.md) 🚀
+**Next Step**: [Trivy Implementation](readme.md) 🚀
 
 
 ---
 ## 🧭 Additional Modules
-- [05 Security Testing General](05-Security-Testing-General/README.md)
+- [05 Security Testing General](05-security-testing-general/readme.md)

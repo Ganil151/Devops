@@ -80,4 +80,4 @@ This module is about **Observability**. You will learn how to look inside the "B
 ---
 
 ## 🔗 Next Steps
-Proceed to: **[Log Management & Auditing](../04-Log-Management-and-Auditing/README.md)** →
+Proceed to: **[Log Management & Auditing](../04-log-management-and-auditing/readme.md)** →

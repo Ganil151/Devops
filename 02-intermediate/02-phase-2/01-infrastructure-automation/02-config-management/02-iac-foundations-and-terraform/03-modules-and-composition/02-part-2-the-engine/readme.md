@@ -6,15 +6,15 @@ Welcome to **Part 2**. This phase is the "Workshop". You will learn how to build
 
 ## 🛣️ The Curriculum
 
-### [01. 🏗️ Creating Modules](./01-Creating-Modules/README.md)
+### [01. 🏗️ Creating Modules](./01-creating-modules/readme.md)
 **The Objective**: Building your first production-grade component.
 *   **Key Concepts**: The Variable-Logic-Output lifecycle, `validation` logic, and "Shift Left" testing.
 
-### [02. 🧩 Module Composition](./02-Module-Composition/README.md)
+### [02. 🧩 Module Composition](./02-module-composition/readme.md)
 **The Objective**: Orchestration and the "Service Layer" design.
 *   **Key Concepts**: Passing outputs as inputs, circular dependency resolution, and logical layering.
 
-### [03. 🌍 Real-World Examples](./03-Real-World-Examples/README.md)
+### [03. 🌍 Real-World Examples](./03-real-world-examples/readme.md)
 **The Objective**: Learning from the "Battlefield."
 *   **Key Concepts**: Industry-standard module patterns for EKS, VPCs, and serverless stacks.
 

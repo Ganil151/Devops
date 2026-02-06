@@ -7,7 +7,7 @@
 As Kubernetes networking scales, traditional technologies like `iptables` become a bottleneck. **Cilium** leverages **eBPF (Extended Berkeley Packet Filter)** to provide high-performance networking, security, and observability directly in the Linux kernel. This module covers replacing the standard CNI with Cilium to gain transparent encryption, advanced network policies, and deep visibility into every packet.
 
 ## Core Concept: The eBPF Data Plane
-**[REFERENCE: Cilium \u0026 eBPF Architecture](../REFERENCE/Cilium-eBPF-Architecture-Ref.md)**
+**[REFERENCE: Cilium \u0026 eBPF Architecture](../reference/cilium-ebpf-architecture-ref.md)**
 
 Moving beyond legacy iptables for cloud-native performance:
 - **Kernel-Level Execution**: Running networking logic directly in the kernel for O(1) performance at any scale.
@@ -15,7 +15,7 @@ Moving beyond legacy iptables for cloud-native performance:
 - **Sidecar-Less security**: Implementing security and observability without the CPU/Memory overhead of a sidecar proxy.
 
 ## Enterprise Governance: Hardened Networking
-**[REFERENCE: Cilium \u0026 eBPF Architecture](../REFERENCE/Cilium-eBPF-Architecture-Ref.md)**
+**[REFERENCE: Cilium \u0026 eBPF Architecture](../reference/cilium-ebpf-architecture-ref.md)**
 
 Securing the enterprise data plane with identities, not just IPs:
 - **L7-Aware Policy**: Enforcing security at the protocol level (HTTP, gRPC, Kafka) for fine-grained authorization.
@@ -33,10 +33,10 @@ Securing the enterprise data plane with identities, not just IPs:
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Cilium-eBPF-Fundamentals](README.md)**
+1. **[🔴 01-Cilium-eBPF-Fundamentals](readme.md)**
    - Kernel hooks vs. User-space proxies.
    - The Cilium agent and Operator architecture.
-2. **[🔴 02-Network-Policy-and-Observability](README.md)**
+2. **[🔴 02-Network-Policy-and-Observability](readme.md)**
    - Hubble dynamic service maps.
    - L7 enforcement (HTTP method/path filtering).
 
@@ -95,9 +95,9 @@ spec:
 Don't force developers to manage certificates or mTLS logic in their code. Use **Cilium Transparent Encryption**. By enabling a single flag in the Cilium configuration, the kernel automatically encrypts all traffic between nodes using WireGuard or IPsec. This provides at-rest security for data in flight without the performance overhead or complexity of a full service mesh sidecar.
 
 ---
-**Next Step**: Start with [Cilium eBPF Fundamentals](README.md) 🚀
+**Next Step**: Start with [Cilium eBPF Fundamentals](readme.md) 🚀
 
 
 ---
 ## 🧭 Additional Modules
-- [eBPF Deep Dive](eBPF-Deep-Dive/README.md)
+- [eBPF Deep Dive](ebpf-deep-dive/readme.md)

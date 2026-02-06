@@ -13,22 +13,26 @@ def update_links(root_path):
         for f in filenames:
             if f.endswith('.md'):
                 p = Path(dirpath) / f
-                content = p.read_text()
-                
-                def replace_link(match):
-                    label = match.group(1)
-                    url = match.group(2)
-                    # Ignore external links
-                    if url.startswith('http') or url.startswith('#'):
-                        return match.group(0)
+                try:
+                    content = p.read_text(encoding='utf-8')
                     
-                    # Fix: 01 Networking -> 01-networking
-                    new_url = url.lower().replace(' ', '-').replace('_', '-')
-                    return f"[{label}]({new_url})"
+                    def replace_link(match):
+                        label = match.group(1)
+                        url = match.group(2)
+                        # Ignore external links or anchor links
+                        if url.startswith('http') or url.startswith('#') or url.startswith('mailto:'):
+                            return match.group(0)
+                        
+                        # Fix: Standardize to kebab-case
+                        # We only target local paths that don't look like protocols
+                        new_url = url.lower().replace(' ', '-').replace('_', '-')
+                        return f"[{label}]({new_url})"
 
-                new_content = link_pattern.sub(replace_link, content)
-                if content != new_content:
-                    p.write_text(new_content)
+                    new_content = link_pattern.sub(replace_link, content)
+                    if content != new_content:
+                        p.write_text(new_content, encoding='utf-8')
+                except (UnicodeDecodeError, PermissionError):
+                    continue
                     # print(f"  [FIXED LINKS] {p}")
 
 if __name__ == "__main__":

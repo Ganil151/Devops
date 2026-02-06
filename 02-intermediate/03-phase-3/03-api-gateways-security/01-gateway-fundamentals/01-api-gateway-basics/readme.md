@@ -48,8 +48,8 @@ Explore the "BFF" (Backend-for-Frontend) pattern and master the differences betw
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Authentication and JWT](README.md)
-- [Back: Gateway Fundamentals Overview](../README.md)
+- [Next: Authentication and JWT](readme.md)
+- [Back: Gateway Fundamentals Overview](../readme.md)
 
 ---
 *The gateway is your system's first impression. Make it count.*

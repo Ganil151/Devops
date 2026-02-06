@@ -96,4 +96,4 @@ Many teams use a GitHub Action that runs `terraform fmt -check`. If it fails, th
 
 ---
 
-**[⬅️ Back to Commands README](README.md)** | **[Previous: terraform import](07-Import.md)** | **[Next: terraform show](10-Show.md)**
+**[⬅️ Back to Commands README](readme.md)** | **[Previous: terraform import](07-import.md)** | **[Next: terraform show](10-show.md)**

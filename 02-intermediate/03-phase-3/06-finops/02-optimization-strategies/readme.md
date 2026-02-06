@@ -335,4 +335,4 @@ graph LR
 
 ## Next Lesson
 
-Continue to **[Lesson 03: Reserved Instances & Savings Plans](../03-Reserved-Instances/README.md)** to learn about commitment-based discounts.
+Continue to **[Lesson 03: Reserved Instances & Savings Plans](../03-reserved-instances/readme.md)** to learn about commitment-based discounts.

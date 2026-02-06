@@ -71,4 +71,4 @@ X-Ray includes advanced features for automated anomaly detection.
 | **Segment size exceeded** | Large custom data in subsegments | Limit the amount of metadata added to subsegments or use X-Ray annotations for searching. |
 
 ---
-**Next Step**: Complete the governance module with [AWS Config & Governance Guide](../../../../../02-Intermediate/02-Phase-2/04-Cloud-Engineering/06-Observability-and-Compliance/16-Governance-Compliance/aws-config-governance.md)
+**Next Step**: Complete the governance module with [AWS Config & Governance Guide](../../../../../02-intermediate/02-phase-2/04-cloud-engineering/06-observability-and-compliance/16-governance-compliance/aws-config-governance.md)

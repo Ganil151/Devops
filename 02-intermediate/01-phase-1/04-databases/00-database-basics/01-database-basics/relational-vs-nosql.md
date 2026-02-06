@@ -414,9 +414,9 @@ Pay only for what you use
 
 ## Next Steps
 
-- **[Choosing Database Type](Choosing%20the%20Right%20Database%20Type.md)** - Practical decision guide
-- **[RDS Introduction](../02-RDS-Basics/rds-introduction.md)** - Start with relational databases
-- **[DynamoDB Introduction](../03-DynamoDB-Basics/dynamodb-introduction.md)** - Explore NoSQL
+- **[Choosing Database Type](choosing%20the%20right%20database%20type.md)** - Practical decision guide
+- **[RDS Introduction](../02-rds-basics/rds-introduction.md)** - Start with relational databases
+- **[DynamoDB Introduction](../03-dynamodb-basics/dynamodb-introduction.md)** - Explore NoSQL
 
 ---
 

@@ -3,8 +3,8 @@
 Destructive automation requires multiple layers of safety. A single unset variable should never result in `rm -rf /`.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `safe_cleanup.sh` (Locking and Variable checks).
-- **[CHALLENGES](./CHALLENGES.md)**: Building a "Self-Protecting" script.
+- **[Boilerplates](readme.md)**: `safe_cleanup.sh` (Locking and Variable checks).
+- **[CHALLENGES](./challenges.md)**: Building a "Self-Protecting" script.
 
 ---
 
@@ -39,4 +39,4 @@ A junior engineer once ran a script that was supposed to clear `/tmp/cache`. Due
 
 ---
 
-[Next: Log Analysis](../02-Log-Analysis-and-Parsing/README.md)
+[Next: Log Analysis](../02-log-analysis-and-parsing/readme.md)

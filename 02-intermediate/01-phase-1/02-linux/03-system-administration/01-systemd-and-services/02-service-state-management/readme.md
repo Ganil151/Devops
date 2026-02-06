@@ -123,5 +123,5 @@ Before you run an automation script or perform a migration, you should audit exa
 
 ## 🔗 Next Steps
 
-Operating a service is one thing; making it production-ready and secure is another. Proceed to: **[03. Hardening & Security](../03-Hardening-and-Security/README.md)** →
+Operating a service is one thing; making it production-ready and secure is another. Proceed to: **[03. Hardening & Security](../03-hardening-and-security/readme.md)** →
  Node: Moving into production standards.

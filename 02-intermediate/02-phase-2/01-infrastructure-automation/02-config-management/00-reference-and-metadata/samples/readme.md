@@ -6,10 +6,10 @@ This directory contains production-grade samples for infrastructure provisioning
 
 | Sample File | Use Case | Tool |
 | :--- | :--- | :--- |
-| [`modular_vpc.tf`](./modular_vpc.tf) | Clean, scalable network provisioning. | Terraform |
-| [`golden_image.pkr.hcl`](./golden_image.pkr.hcl) | Baking security-hardened AMIs. | Packer |
-| [`cloud_init_bootstrap.yaml`](./cloud_init_bootstrap.yaml) | Zero-day server initialization. | Cloud-Init |
-| [`ha_web_stack.yml`](./ha_web_stack.yml) | Multi-node configuration with handlers. | Ansible |
+| [`modular_vpc.tf`](./modular-vpc.tf) | Clean, scalable network provisioning. | Terraform |
+| [`golden_image.pkr.hcl`](./golden-image.pkr.hcl) | Baking security-hardened AMIs. | Packer |
+| [`cloud_init_bootstrap.yaml`](./cloud-init-bootstrap.yaml) | Zero-day server initialization. | Cloud-Init |
+| [`ha_web_stack.yml`](./ha-web-stack.yml) | Multi-node configuration with handlers. | Ansible |
 
 ---
 

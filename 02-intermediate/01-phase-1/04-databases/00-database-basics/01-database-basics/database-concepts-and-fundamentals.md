@@ -2,7 +2,7 @@
 A database is an organized collection of structured data that is stored electronically and accessed through a computer system. Databases are managed by Database Management Systems (DBMS) which provide an interface for storing, retrieving, and manipulating data efficiently.
 
 ### Why Use Databases?
-![File Storage vs Database](../Images/FstorageVsDatabase.png)
+![File Storage vs Database](../images/fstoragevsdatabase.png)
 
 **Key Benefits:**
 - **Data Integrity**: Ensures data accuracy and consistency
@@ -273,10 +273,10 @@ WHERE id = 5;
 Organize data to reduce redundancy:
 
 **Before (Denormalized)**:
-![Denormalized](../Images/databaseDenormalized.png)
+![Denormalized](../images/databasedenormalized.png)
 
 **After (Normalized)**:
-![Normalized](../Images/databaseNormalized.png)
+![Normalized](../images/databasenormalized.png)
 
 ### 2. Use Appropriate Data Types
 ```sql
@@ -342,8 +342,8 @@ CREATE TABLE products (
 Now that you understand database fundamentals, continue your learning:
 
 1. **[Relational vs NoSQL](./relational-vs-nosql.md)** - Deep dive into choosing the right database type
-2. **[Choosing Database Type](Choosing%20the%20Right%20Database%20Type.md)** - Decision framework for your use case
-3. **[RDS Introduction](../02-RDS-Basics/rds-introduction.md)** - Start with AWS managed relational databases
+2. **[Choosing Database Type](choosing%20the%20right%20database%20type.md)** - Decision framework for your use case
+3. **[RDS Introduction](../02-rds-basics/rds-introduction.md)** - Start with AWS managed relational databases
 
 ## Key Takeaways
 

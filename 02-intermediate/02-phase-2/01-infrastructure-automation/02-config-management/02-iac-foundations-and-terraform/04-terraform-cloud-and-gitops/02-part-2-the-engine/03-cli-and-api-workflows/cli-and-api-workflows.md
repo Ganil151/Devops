@@ -1,4 +1,4 @@
-![TFC Architecture](../../01-Part-1-The-Blueprint/01-Introduction-and-Architecture/tfc_architecture.png)
+![TFC Architecture](../../01-part-1-the-blueprint/01-introduction-and-architecture/tfc-architecture.png)
 
 While the VCS-driven workflow is the standard for long-term GitOps, HCP Terraform provides the **CLI** and **API** workflows for maximum flexibility. These enable local development testing, emergency overrides, and full programmatic automation of the infrastructure platform itself.
 

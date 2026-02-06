@@ -82,4 +82,4 @@ Switching between `multi-user.target` (Servers) and `emergency.target` (Troubles
 ---
 
 ## 🔗 Next Steps
-Proceed to: **[Advanced Storage (LVM)](../06-Advanced-Storage-LVM/README.md)** →
+Proceed to: **[Advanced Storage (LVM)](../06-advanced-storage-lvm/readme.md)** →

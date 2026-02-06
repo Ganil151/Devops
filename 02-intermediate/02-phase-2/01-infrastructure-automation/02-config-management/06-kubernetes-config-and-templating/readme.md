@@ -2,7 +2,7 @@
 
 > **\"Kubernetes is the new Operating System. Helm and Kustomize are the new package managers. If you are managing raw YAML files, you aren't an engineer—you're a copy-paste technician.\"**
 
-![Kubernetes Config Architecture](../../assets/k8s_config_banner.png)
+![Kubernetes Config Architecture](../../assets/k8s-config-banner.png)
 
 ---
 
@@ -143,9 +143,9 @@ Treat your infra like your app code.
 
 You've mastered Provisioning, Configuration, Imaging, and Orchestration. You are now an **Infrastructure Architect**.
 
-**Proceed to**: [Assessments & Certification →](README.md)
+**Proceed to**: [Assessments & Certification →](readme.md)
 
 
 ---
 ## 🧭 Additional Modules
-- [01 Helm](01-Helm/README.md)
+- [01 Helm](01-helm/readme.md)

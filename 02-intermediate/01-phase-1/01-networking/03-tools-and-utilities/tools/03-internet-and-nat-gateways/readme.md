@@ -37,10 +37,10 @@ Gateways are the critical intersections where your private network meets the glo
 
 | # | Topic | Focus | Key Deliverable |
 | :--- | :--- | :--- | :--- |
-| **01** | [**IGW Fundamentals**](./01-Internet-Gateway-Fundamentals/README.md) | Bidirectional entry | Configure the 1-to-1 NAT boundary |
-| **02** | [**NAT Gateway Deep Drive**](./02-NAT-Gateway-Deep-Dive/README.md) | Private egress | Master PAT (Port Address Translation) |
-| **03** | [**IPv6 & Egress-Only**](./03-IPv6-and-Egress-Only-Gateways/README.md) | Modern networking | Secure unidirectional IPv6 traffic |
-| **04** | [**HA & Optimization**](./04-High-Availability-and-Optimization/README.md) | Enterprise scale | Design multi-AZ redundant gateways |
+| **01** | [**IGW Fundamentals**](./01-internet-gateway-fundamentals/readme.md) | Bidirectional entry | Configure the 1-to-1 NAT boundary |
+| **02** | [**NAT Gateway Deep Drive**](./02-nat-gateway-deep-dive/readme.md) | Private egress | Master PAT (Port Address Translation) |
+| **03** | [**IPv6 & Egress-Only**](./03-ipv6-and-egress-only-gateways/readme.md) | Modern networking | Secure unidirectional IPv6 traffic |
+| **04** | [**HA & Optimization**](./04-high-availability-and-optimization/readme.md) | Enterprise scale | Design multi-AZ redundant gateways |
 
 ---
 
@@ -126,4 +126,4 @@ A common mistake is deploying a single NAT Gateway for the entire VPC to save $3
 
 You've opened the doors. Now let's dive into the core engine of the Internet Gateway.
 
-Proceed to: **[01. Internet Gateway Fundamentals](./01-Internet-Gateway-Fundamentals/README.md)** →
+Proceed to: **[01. Internet Gateway Fundamentals](./01-internet-gateway-fundamentals/readme.md)** →

@@ -3,8 +3,8 @@
 In DevOps, failure is inevitable. Networks drop, disks fill up, and scripts crash. **Idempotency** is the property that allows you to re-run the same script multiple times without causing duplicate configurations or errors.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `idempotent_pattern.py` (The logic structure).
-- **[CHALLENGES](./CHALLENGES.md)**: Safe folder managers and user creates.
+- **[Boilerplates](readme.md)**: `idempotent_pattern.py` (The logic structure).
+- **[CHALLENGES](./challenges.md)**: Safe folder managers and user creates.
 
 ---
 
@@ -67,4 +67,4 @@ else:
 
 ---
 
-[Next: Secrets & Parameters](../03-Parameterization-and-Secrets-Management/README.md)
+[Next: Secrets & Parameters](../03-parameterization-and-secrets-management/readme.md)

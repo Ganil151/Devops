@@ -3,8 +3,8 @@
 Leaking credentials in a Git repository is one of the most common causes of multi-million dollar security breaches. TruffleHog is an automated tool that scans your entire Git history for high-entropy strings and secrets.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `scan_repo.sh` (Local repo scanning script).
-- **[CHALLENGES](./CHALLENGES.md)**: Detecting history-based leaks and CI integration.
+- **[Boilerplates](readme.md)**: `scan_repo.sh` (Local repo scanning script).
+- **[CHALLENGES](./challenges.md)**: Detecting history-based leaks and CI integration.
 
 ---
 
@@ -49,4 +49,4 @@ graph LR
 
 ---
 
-[Next: SonarQube Quality Gates](../04-Static-Code-Analysis-SonarQube/README.md)
+[Next: SonarQube Quality Gates](../04-static-code-analysis-sonarqube/readme.md)

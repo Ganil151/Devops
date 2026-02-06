@@ -2,7 +2,7 @@
 
 > **"Vendor tools provide the deepest integration at the cost of portability. Choosing the right tool isn't about avoiding lock-in—it's about choosing the right lock for your castle."**
 
-![Vendor IaC Architecture](../../assets/vendor_iac_banner.png)
+![Vendor IaC Architecture](../../assets/vendor-iac-banner.png)
 
 ---
 
@@ -139,16 +139,16 @@ Avoid building every VPC Subnet manually. Use `Vpc.fromLookup()` or `new Vpc()` 
 
 ---
 
-**Return to [Strategic IaC Overview](../README.md)**
+**Return to [Strategic IaC Overview](../readme.md)**
 
 
 ---
 ## 🧭 Additional Modules
-- [01 AWS CloudFormation](01-AWS-CloudFormation/README.md)
-- [02 AWS CDK](02-AWS-CDK/README.md)
-- [03 AWS SAM](03-AWS-SAM/README.md)
-- [04 Azure ARM](04-Azure-ARM/README.md)
-- [05 Azure Bicep](05-Azure-Bicep/README.md)
-- [06 GCP Deployment Manager](06-GCP-Deployment-Manager/README.md)
-- [07 GCP Config Connector](07-GCP-Config-Connector/README.md)
-- [08 Pulumi](08-Pulumi/README.md)
+- [01 AWS CloudFormation](01-aws-cloudformation/readme.md)
+- [02 AWS CDK](02-aws-cdk/readme.md)
+- [03 AWS SAM](03-aws-sam/readme.md)
+- [04 Azure ARM](04-azure-arm/readme.md)
+- [05 Azure Bicep](05-azure-bicep/readme.md)
+- [06 GCP Deployment Manager](06-gcp-deployment-manager/readme.md)
+- [07 GCP Config Connector](07-gcp-config-connector/readme.md)
+- [08 Pulumi](08-pulumi/readme.md)

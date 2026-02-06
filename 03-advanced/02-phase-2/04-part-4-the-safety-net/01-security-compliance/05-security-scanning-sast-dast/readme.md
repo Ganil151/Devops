@@ -16,10 +16,10 @@ Security must be an automated gate, not a manual checkbox. This module focuses o
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Image-Vulnerability-Scanning](README.md)**
+1. **[🔴 01-Image-Vulnerability-Scanning](readme.md)**
    - High vs. Critical CVE filtering strategies.
    - Base image selection and optimization.
-2. **[🔴 02-Secret-Leakage-Prevention](README.md)**
+2. **[🔴 02-Secret-Leakage-Prevention](readme.md)**
    - Scanning full Git history for historical leaks.
    - Integrating with GitHub/GitLab protected branches.
 
@@ -71,4 +71,4 @@ jobs:
 Don't wait for the Admission Controller to reject a developer's PR. Use **`gator`** (the Gatekeeper CLI) or **`opa test`** in your CI/CD pipeline to validate Kubernetes manifests against your OPA policies *before* they are even sent to the cluster. This provides instant feedback and prevents broken deployments from reaching the API server.
 
 ---
-**Next Step**: Start with [Image Vulnerability Scanning](README.md) 🚀
+**Next Step**: Start with [Image Vulnerability Scanning](readme.md) 🚀

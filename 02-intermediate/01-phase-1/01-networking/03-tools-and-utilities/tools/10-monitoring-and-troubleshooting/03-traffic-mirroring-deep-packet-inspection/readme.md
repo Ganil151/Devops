@@ -130,5 +130,5 @@ Security teams often fear that putting scanners on their network will slow down 
 
 You've mastered the advanced tools. Now let's look at the most common real-world networking disasters and how to fix them using everything you've learned.
 
-Proceed to: **[04. Common Troubleshooting Scenarios](../04-Common-Troubleshooting-Scenarios/README.md)** →
+Proceed to: **[04. Common Troubleshooting Scenarios](../04-common-troubleshooting-scenarios/readme.md)** →
 Node: This link points to the "Final Exam" of troubleshooting.

@@ -1,4 +1,4 @@
-![TFC Architecture](../../01-Part-1-The-Blueprint/01-Introduction-and-Architecture/tfc_architecture.png)
+![TFC Architecture](../../01-part-1-the-blueprint/01-introduction-and-architecture/tfc-architecture.png)
 
 # Policy as Code (OPA)
 

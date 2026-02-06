@@ -16,10 +16,10 @@ Kubernetes is ephemeral, but your data isn't. **Velero** is the industry standar
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Stateful-Backup-Logic](README.md)**
+1. **[🔴 01-Stateful-Backup-Logic](readme.md)**
    - Volume Snapshot Locations (VSL) vs. Backup Storage Locations (BSL).
    - Hooking into databases (Pre-backup fs-freeze).
-2. **[🔴 02-Disaster-Recovery-Testing](README.md)**
+2. **[🔴 02-Disaster-Recovery-Testing](readme.md)**
    - Simulated cluster failure and recovery steps.
    - Resource filtering (excluding temp pods/logs).
 
@@ -67,4 +67,4 @@ velero backup describe prod-backup-latest
 Never assume your backups work. Implement an **Automated Restore Drill**: Once a week, a CI/CD job should trigger a Velero restore into a "Shadow Namespace" or a separate staging cluster. The job then runs a smoke test against the internal database to ensure data integrity. If the test fails, an incident is triggered.
 
 ---
-**Next Step**: Start with [Stateful Backup Logic](README.md) 🚀
+**Next Step**: Start with [Stateful Backup Logic](readme.md) 🚀

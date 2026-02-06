@@ -1179,9 +1179,9 @@ spec:
 
 ## 🔗 Next Steps
 
-- **[Performance Optimization](README.md)** - Advanced performance tuning
-- **[Cloud Networking](README.md)** - Multi-cloud service mesh
-- **[Network Automation](README.md)** - Service mesh automation
+- **[Performance Optimization](readme.md)** - Advanced performance tuning
+- **[Cloud Networking](readme.md)** - Multi-cloud service mesh
+- **[Network Automation](readme.md)** - Service mesh automation
 
 ---
 

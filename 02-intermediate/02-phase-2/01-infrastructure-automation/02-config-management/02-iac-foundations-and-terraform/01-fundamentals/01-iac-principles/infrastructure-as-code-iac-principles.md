@@ -7,7 +7,7 @@ This paradigm shift moves infrastructure from being a "<font color="#ffc000">har
 Before diving into the technical principles, it's essential to understand the mindset change. Traditional infrastructure management treats servers as "**<font color="#ff0000">Pets</font>**"—unique, named, and carefully nurtured. If a pet gets sick, you nurse it back to health (manual patching).
 
 Modern IaC treats infrastructure as "**<font color="#ff0000">Cattle</font>**"—identical, numbered, and easily replaceable. If a cow gets sick, you replace it with a healthy one from the herd (immutable infrastructure).
-![Snowflake vs Cattle Infrastructure](snowflake_vs_cattle.png)
+![Snowflake vs Cattle Infrastructure](snowflake-vs-cattle.png)
 
 ---
 
@@ -22,7 +22,7 @@ Instead of logging into a server to update a package or change a config file (mu
 ### 3. <font color="#ff0000">Declarative</font> over <font color="#ff0000">Procedural</font>
 - **Procedural (The "How")**: Like a cooking recipe. "1. Open AWS Console, 2. Click EC2, 3. Select t3.micro..." Tools like Ansible follow this step-by-step logic.
 - **Declarative (The "What")**: Like a blueprint. "I need 3 t3.micro servers in the US-East-1 region." Tools like **Terraform** handle the "How" automatically by calculating the difference between the blueprint and reality.
-![Declarative vs Procedural Logic](declarative_vs_procedural.png)
+![Declarative vs Procedural Logic](declarative-vs-procedural.png)
 ### 4. <font color="#ff0000">Version Control</font> (<font color="#ff0000">The Single Source of Truth</font>)
 IaC means your infrastructure lives in **Git**. This enables:
 - **Audit Trails**: See exactly who changed what, when, and why.
@@ -41,7 +41,7 @@ IaC means your infrastructure lives in **Git**. This enables:
 ---
 ## 🔄 <font color="#ff0000">The IaC Workflow</font> (<font color="#ff0000">The Modern Pipeline</font>)
 Modern infrastructure isn't "clicked" into existence; it is **deployed** through a structured lifecycle.
-![IaC Workflow Lifecycle](iac_workflow.png)
+![IaC Workflow Lifecycle](iac-workflow.png)
 
 1.  **Code**: Define your infrastructure using HCL (HashiCorp Configuration Language).
 2.  **Commit**: Push your code to a Version Control System (GitHub/GitLab).

@@ -59,5 +59,5 @@ One of the most powerful features of a gateway is the ability to reduce "round-t
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Authentication and JWT](README.md)
-- [Back: Gateway Fundamentals Overview](../README.md)
+- [Next: Authentication and JWT](readme.md)
+- [Back: Gateway Fundamentals Overview](../readme.md)

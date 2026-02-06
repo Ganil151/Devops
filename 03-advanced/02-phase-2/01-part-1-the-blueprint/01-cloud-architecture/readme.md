@@ -4,7 +4,7 @@
 
 
 ## Core Concept: Multi-Cloud Strategic Fleet
-**[REFERENCE: Multi-Cloud Architecture](./REFERENCE/Multi-Cloud-Architecture-Ref.md)**
+**[REFERENCE: Multi-Cloud Architecture](./reference/multi-cloud-architecture-ref.md)**
 
 Scaling beyond vendor boundaries to achieve global resilience and agility:
 - **Cloud-Agnostic Abstractions**: Utilizing Kubernetes and Crossplane to provide a consistent operational interface across AWS, GCP, and Azure.
@@ -12,7 +12,7 @@ Scaling beyond vendor boundaries to achieve global resilience and agility:
 - **Hybrid Connectivity**: Seamlessly bridging on-premises legacy systems with modern cloud-native services.
 
 ## Enterprise Governance: Identity-First Security
-**[REFERENCE: Identity Governance & Security](./REFERENCE/Identity-Governance-Security-Ref.md)**
+**[REFERENCE: Identity Governance & Security](./reference/identity-governance-security-ref.md)**
 
 Unified control over human and machine access in a distributed landscape:
 - **Zero-Static-Credential Policy**: Enforcing Workload Identity Federation (OIDC) for all machine-to-machine communications.
@@ -23,10 +23,10 @@ Unified control over human and machine access in a distributed landscape:
 
 ## 📚 Modules in This Part
 
-1. **[01-Enterprise-Multi-Cloud](./01-Enterprise-Multi-Cloud/)** - 01 Enterprise Multi Cloud
-2. **[02-Microservices-Architecture](./02-Microservices-Architecture/)** - 02 Microservices Architecture
-3. **[03-Identity-Governance-IAM](./03-Identity-Governance-IAM/)** - 03 Identity Governance IAM
-4. **[04-Identity-Federation-SSO](./04-Identity-Federation-SSO/)** - 04 Identity Federation SSO
+1. **[01-Enterprise-Multi-Cloud](./01-enterprise-multi-cloud/)** - 01 Enterprise Multi Cloud
+2. **[02-Microservices-Architecture](./02-microservices-architecture/)** - 02 Microservices Architecture
+3. **[03-Identity-Governance-IAM](./03-identity-governance-iam/)** - 03 Identity Governance IAM
+4. **[04-Identity-Federation-SSO](./04-identity-federation-sso/)** - 04 Identity Federation SSO
 
 
 ---
@@ -52,4 +52,4 @@ These modules should be completed in the order shown above for optimal learning 
 
 ---
 
-**Part of**: [Advanced Phase-2: Strategic Skills](../README.md)
+**Part of**: [Advanced Phase-2: Strategic Skills](../readme.md)

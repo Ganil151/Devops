@@ -48,4 +48,4 @@ Kubernetes can record every API request (who, what, when, where).
 - configured via flags on the `kube-apiserver` (`--audit-policy-file`, `--audit-log-path`).
 - Critical for compliance (SOC2, PCI-DSS).
 
-[Back to Advanced Index](../README.md)
+[Back to Advanced Index](../readme.md)

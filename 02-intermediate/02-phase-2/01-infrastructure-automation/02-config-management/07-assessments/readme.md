@@ -29,13 +29,13 @@ graph TD
 
 ## ?? Evaluation Components
 
-### 1. [??? Staff Interview Prep](./Interview-Questions.md)
+### 1. [??? Staff Interview Prep](./interview-questions.md)
 Deep-dives into the "Why" of infrastructure. Focuses on State Management, Immutable Governance, and Fail-safe Orchestration.
 
-### 2. [?? Knowledge Check Quizzes](./Quizzes.md)
+### 2. [?? Knowledge Check Quizzes](./quizzes.md)
 Rapid-fire verification of technical keywords, tool-specific behaviors, and lifecycle commands.
 
-### 3. [? Solution Architectural Key](./Solutions/README.md)
+### 3. [? Solution Architectural Key](./solutions/readme.md)
 Comprehensive explanations and "Professional Standards" for all assessment topics.
 
 ---
@@ -49,4 +49,4 @@ Comprehensive explanations and "Professional Standards" for all assessment topic
 
 ---
 
-[?? Back to Config Management Index](../README.md)
+[?? Back to Config Management Index](../readme.md)

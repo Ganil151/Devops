@@ -1,6 +1,6 @@
 # 🌐 Services and Networking: Connecting the Cluster
 
-![Services Networking Hub](./assets/services_networking_hub.png)
+![Services Networking Hub](./assets/services-networking-hub.png)
 
 ## 📋 Overview
 
@@ -118,5 +118,5 @@ You can reach any service using this standard format:
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Ingress Controllers](../06-Ingress-Controllers/README.md)
-- [Back: Deployments and Scaling](README.md)
+- [Next: Ingress Controllers](../06-ingress-controllers/readme.md)
+- [Back: Deployments and Scaling](readme.md)

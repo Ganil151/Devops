@@ -30,4 +30,4 @@ Python is the standard for complex automation. You are expected to know `request
 ## 🛠️ Performance Task
 **Task**: Build a script that calls the GitHub API and lists all repositories for a given user that haven't been updated in 6 months.
 
-[Check challenges for more tasks.](./CHALLENGES.md)
+[Check challenges for more tasks.](./challenges.md)

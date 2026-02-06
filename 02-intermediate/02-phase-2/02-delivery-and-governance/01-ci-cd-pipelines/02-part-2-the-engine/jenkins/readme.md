@@ -16,7 +16,7 @@ Production-ready pipeline templates for various deployment scenarios:
 - **[Quality Gates & SAST](./blueprints/blueprint-quality-gates-sast.groovy)** - Security-first pipelines
 - **[Enterprise K8s Full](./blueprints/blueprint-enterprise-k8s-full.groovy)** - Full-scale orchestration
 
-👉 **[View Full Blueprint Documentation](./blueprints/README.md)**
+👉 **[View Full Blueprint Documentation](./blueprints/readme.md)**
 
 ---
 
@@ -31,6 +31,6 @@ Production-ready pipeline templates for various deployment scenarios:
 
 ## 📚 Resources
 
-- **[Setup Scripts](./jenkins_setup.sh)** - Automated Jenkins installation
+- **[Setup Scripts](./jenkins-setup.sh)** - Automated Jenkins installation
 - **[Assets](./assets/)** - Architecture diagrams and reference materials
-- **[Resources](README.md)** - Cheat sheets and guides
+- **[Resources](readme.md)** - Cheat sheets and guides

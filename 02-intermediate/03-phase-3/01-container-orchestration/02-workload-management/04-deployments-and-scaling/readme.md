@@ -1,6 +1,6 @@
 # 🚀 Deployments and Scaling: Managing State
 
-![Deployment Scaling Hub](./assets/deployment_scaling_hub.png)
+![Deployment Scaling Hub](./assets/deployment-scaling-hub.png)
 
 ## 📋 Overview
 
@@ -121,5 +121,5 @@ kubectl autoscale deployment/web-app --min=2 --max=10 --cpu-percent=80
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Services and Networking](README.md)
-- [Back: Pods and Nodes](../03-Pods-and-Nodes/README.md)
+- [Next: Services and Networking](readme.md)
+- [Back: Pods and Nodes](../03-pods-and-nodes/readme.md)

@@ -128,5 +128,5 @@ Instead of allowing "All traffic from 10.0.0.0/16," senior architects use **Secu
 
 Peering works for pairs, but what happens when you have 100 VPCs? Let's look at the centralized "Cloud Router" that solves the mesh complexity.
 
-Proceed to: **[03. Transit Gateway Architecture](../03-Transit-Gateway-Architecture/README.md)** →
+Proceed to: **[03. Transit Gateway Architecture](../03-transit-gateway-architecture/readme.md)** →
 Node: This link points to the next lesson.

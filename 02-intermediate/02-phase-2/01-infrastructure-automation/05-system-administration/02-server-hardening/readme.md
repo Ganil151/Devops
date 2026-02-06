@@ -82,4 +82,4 @@ Learning to interpret "Audit Denials" and correctly setting booleans instead of 
 ---
 
 ## 🔗 Next Steps
-Proceed to: **[Performance Tuning](../03-Performance-Tuning/README.md)** →
+Proceed to: **[Performance Tuning](../03-performance-tuning/readme.md)** →

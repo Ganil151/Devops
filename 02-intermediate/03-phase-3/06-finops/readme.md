@@ -49,19 +49,19 @@ graph TD
 
 ## 🗺️ Curriculum Path
 
-### 🏗️ [Part 1: Cost Allocation](./01-Cost-Allocation/README.md)
+### 🏗️ [Part 1: Cost Allocation](./01-cost-allocation/readme.md)
 *Junior, follow the money.* 
 Tagging governance, showback vs. chargeback models, and mapping cloud spend to business units.
 
-### 🔄 [Part 2: Optimization Strategies](./02-Optimization-Strategies/README.md)
+### 🔄 [Part 2: Optimization Strategies](./02-optimization-strategies/readme.md)
 *Cut the fat, keep the muscle.* 
 Right-sizing instances, storage tiering (S3 Glacier), and cleaning up "zombie" resources.
 
-### 📉 [Part 3: Reserved Capacity](./03-Reserved-Instances/README.md)
+### 📉 [Part 3: Reserved Capacity](./03-reserved-instances/readme.md)
 *The Broker's game.* 
 Mastering Savings Plans, Reserved Instances (RI), and building a commitment portfolio.
 
-### 🤖 [Part 4: Automation & FinOps-as-Code](./05-Automation/README.md)
+### 🤖 [Part 4: Automation & FinOps-as-Code](./05-automation/readme.md)
 *Build the cost guardrails.* 
 Using Infracost in CI/CD, automated shutdown scripts, and setting up anomaly detection alerts.
 
@@ -146,11 +146,11 @@ Using Infracost in CI/CD, automated shutdown scripts, and setting up anomaly det
 
 ## 🔗 Next Steps
 Junior, you've mastered the books. You are now a High-Level Architect.
-1. Return to: **[Phase 3 Hub](../README.md)** →
-2. Graduation: **[Advanced Course](../../../README.md)** →
+1. Return to: **[Phase 3 Hub](../readme.md)** →
+2. Graduation: **[Advanced Course](../../../readme.md)** →
 
 ---
 ## 🧭 Additional Modules
-- [04 Showback Chargeback](04-Showback-Chargeback/README.md)
-- [06 Interview Questions and Quizzes](06-Interview-Questions-and-Quizzes/README.md)
-- [07 Real Life Scenarios](07-Real-Life-Scenarios/README.md)
+- [04 Showback Chargeback](04-showback-chargeback/readme.md)
+- [06 Interview Questions and Quizzes](06-interview-questions-and-quizzes/readme.md)
+- [07 Real Life Scenarios](07-real-life-scenarios/readme.md)

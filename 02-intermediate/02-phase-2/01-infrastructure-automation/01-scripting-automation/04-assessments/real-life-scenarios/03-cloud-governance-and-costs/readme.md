@@ -3,8 +3,8 @@
 Cloud bills can spiral out of control. Automation is the only way to enforce tagging policies and clean up orphaned resources at scale.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `ec2_enforcer.py` (Stopping untagged instances).
-- **[CHALLENGES](./CHALLENGES.md)**: Orphaned volume cleanup and snapshot pruning.
+- **[Boilerplates](readme.md)**: `ec2_enforcer.py` (Stopping untagged instances).
+- **[CHALLENGES](./challenges.md)**: Orphaned volume cleanup and snapshot pruning.
 
 ---
 
@@ -40,4 +40,4 @@ A company found a rogue AWS account that was costing $500/month. No one at the c
 
 ---
 
-[Next: API Reliability](../04-API-Reliability-and-Retries/README.md)
+[Next: API Reliability](../04-api-reliability-and-retries/readme.md)

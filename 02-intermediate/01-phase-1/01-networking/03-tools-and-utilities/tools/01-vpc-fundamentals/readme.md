@@ -28,16 +28,16 @@ Mastering **Virtual Private Clouds (VPC)** is essential for any DevOps engineer.
 
 | Module | Level | Focus | Key Deliverable |
 | :--- | :--- | :--- | :--- |
-| **[01. What is a VPC?](./01-What-is-a-VPC/README.md)** | 🟢 Beginner | Definitions | Define logical isolation & SDN |
-| **[02. VPC vs. Traditional](./02-VPC-vs-Traditional-Networks/README.md)** | 🟢 Beginner | Comparison | Understand hardware vs. software ops |
-| **[03. Core Components](./03-VPC-Components-Overview/README.md)** | 🟡 Inter | Architecture | Map Subnets, RTs, and Gateways |
-| **[04. IP Addressing](./04-IP-Addressing-Basics/README.md)** | 🟡 Inter | Strategy | Master CIDR & RFC 1918 planning |
-| **[05. Custom VPCs](./05-Default-vs-Custom-VPC/README.md)** | 🟡 Inter | Compliance | Build a 3-tier isolated VPC |
-| **[06. Limits & Quotas](./06-VPC-Limits-and-Quotas/README.md)** | 🟢 Beginner | Constraints | Plan for regional design limits |
-| **[07. Multi-VPC Prep](./07-Multi-VPC-Strategies/README.md)** | 🔴 Advanced | Scale | Peer-to-Peer vs. Hub-and-Spoke |
-| **[08. Best Practices](./08-VPC-Best-Practices/README.md)** | 🔴 Advanced | Governance | HA, DR, and Least-Privilege design |
-| **[09. Cloud Comp](./09-Cloud-Provider-Comparison/README.md)** | 🔴 Advanced | Multi-Cloud | AWS vs. Azure vs. GCP networking |
-| **[10. Start Guide](./10-Getting-Started-Guide/README.md)** | 🟢 Beginner | Hands-on | Deploy your first Production-grade VPC |
+| **[01. What is a VPC?](./01-what-is-a-vpc/readme.md)** | 🟢 Beginner | Definitions | Define logical isolation & SDN |
+| **[02. VPC vs. Traditional](./02-vpc-vs-traditional-networks/readme.md)** | 🟢 Beginner | Comparison | Understand hardware vs. software ops |
+| **[03. Core Components](./03-vpc-components-overview/readme.md)** | 🟡 Inter | Architecture | Map Subnets, RTs, and Gateways |
+| **[04. IP Addressing](./04-ip-addressing-basics/readme.md)** | 🟡 Inter | Strategy | Master CIDR & RFC 1918 planning |
+| **[05. Custom VPCs](./05-default-vs-custom-vpc/readme.md)** | 🟡 Inter | Compliance | Build a 3-tier isolated VPC |
+| **[06. Limits & Quotas](./06-vpc-limits-and-quotas/readme.md)** | 🟢 Beginner | Constraints | Plan for regional design limits |
+| **[07. Multi-VPC Prep](./07-multi-vpc-strategies/readme.md)** | 🔴 Advanced | Scale | Peer-to-Peer vs. Hub-and-Spoke |
+| **[08. Best Practices](./08-vpc-best-practices/readme.md)** | 🔴 Advanced | Governance | HA, DR, and Least-Privilege design |
+| **[09. Cloud Comp](./09-cloud-provider-comparison/readme.md)** | 🔴 Advanced | Multi-Cloud | AWS vs. Azure vs. GCP networking |
+| **[10. Start Guide](./10-getting-started-guide/readme.md)** | 🟢 Beginner | Hands-on | Deploy your first Production-grade VPC |
 
 ---
 
@@ -147,4 +147,4 @@ graph TD
 
 You've got the map. Now let's dive into the first module.
 
-Proceed to: **[01. What is a VPC?](./01-What-is-a-VPC/README.md)** →
+Proceed to: **[01. What is a VPC?](./01-what-is-a-vpc/readme.md)** →

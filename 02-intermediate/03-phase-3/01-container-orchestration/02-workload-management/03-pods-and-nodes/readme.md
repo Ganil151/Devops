@@ -1,6 +1,6 @@
 # 📦 Pods and Nodes: The Building Blocks
 
-![Pods and Nodes Hub](./assets/pods_nodes_hub.png)
+![Pods and Nodes Hub](./assets/pods-nodes-hub.png)
 
 ## 📋 Overview
 
@@ -131,5 +131,5 @@ In production, you must safely move workloads before restarting a node.
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Deployments and Scaling](../04-Deployments-and-Scaling/README.md)
-- [Back: Kubectl Basics](README.md)
+- [Next: Deployments and Scaling](../04-deployments-and-scaling/readme.md)
+- [Back: Kubectl Basics](readme.md)

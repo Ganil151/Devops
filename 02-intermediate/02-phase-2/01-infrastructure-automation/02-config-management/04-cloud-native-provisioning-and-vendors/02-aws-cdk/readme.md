@@ -26,19 +26,19 @@ graph TD
 
 ## 📂 Module Structure
 
-### 🔰 [Beginner Level](./Beginner/README.md)
+### 🔰 [Beginner Level](./beginner/readme.md)
 - Installation and Environment Setup
 - CDK CLI commands (init, synth, deploy, diff)
 - Understanding Stacks and Apps
 - Basics of L1 and L2 Constructs
 
-### 🚀 [Intermediate Level](./Intermediate/README.md)
+### 🚀 [Intermediate Level](./intermediate/readme.md)
 - Custom Constructs (L3)
 - Context and Environment variables
 - Assets (Local files/images)
 - Testing your CDK app (Fine-grained and Snapshot testing)
 
-### 🏆 [Advanced Level](./Advanced/README.md)
+### 🏆 [Advanced Level](./advanced/readme.md)
 - CDK Pipelines for self-mutating CI/CD
 - Cross-account and cross-region deployments
 - Aspects for governance and tagging
@@ -47,4 +47,4 @@ graph TD
 ---
 
 ## ❓ Interview Questions & Quiz
-- [CDK Interview Questions & 20+ Quiz Questions](./Interview-Questions/README.md)
+- [CDK Interview Questions & 20+ Quiz Questions](./interview-questions/readme.md)

@@ -126,5 +126,5 @@ Standard DNS failover is unreliable because you cannot control the world's ISPs.
 
 You've mastered global entry. Now let's explore how the regions themselves talk to each other to replicate data and maintain your global backbone.
 
-Proceed to: **[04. Multi-Region Networking](../04-Multi-Region-Networking/README.md)** →
+Proceed to: **[04. Multi-Region Networking](../04-multi-region-networking/readme.md)** →
 Node: This link points to the next lesson.

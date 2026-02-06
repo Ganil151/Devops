@@ -272,9 +272,9 @@ graph TD
 
 ### Internal Documentation
 
-- [Terraform Modules](README.md)
-- [Jenkins Blueprints](README.md)
-- [Service Mesh Guide](README.md)
+- [Terraform Modules](readme.md)
+- [Jenkins Blueprints](readme.md)
+- [Service Mesh Guide](readme.md)
 
 ### External Documentation
 
@@ -381,7 +381,7 @@ terraform destroy
 
 ---
 
-**Ready to Deploy?** Start with the [Pre-Deployment Checklist](./PRE_DEPLOYMENT_CHECKLIST.md)!
+**Ready to Deploy?** Start with the [Pre-Deployment Checklist](./pre-deployment-checklist.md)!
 
 ---
 

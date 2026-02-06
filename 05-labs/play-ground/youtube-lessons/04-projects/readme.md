@@ -43,15 +43,15 @@ For more Terraform examples, check:
 
 ## Related Documentation
 
-- [Terraform Main Documentation](README.md)
-- [Cloud Engineering Documentation](README.md)
-- [AWS Documentation](README.md)
+- [Terraform Main Documentation](readme.md)
+- [Cloud Engineering Documentation](readme.md)
+- [AWS Documentation](readme.md)
 
 ---
 
-**[← Back to YouTube Lessons Index](../README.md)**
+**[← Back to YouTube Lessons Index](../readme.md)**
 
 
 ---
 ## 🧭 Additional Modules
-- [terraform_server_v1](terraform_server_v1/README.md)
+- [terraform_server_v1](terraform-server-v1/readme.md)

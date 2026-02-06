@@ -129,4 +129,4 @@ graph LR
 
 The math is done. Now let's draw the map.
 
-Proceed to: **[03. Public and Private Zoning](../03-Public-and-Private-Zoning/README.md)** →
+Proceed to: **[03. Public and Private Zoning](../03-public-and-private-zoning/readme.md)** →

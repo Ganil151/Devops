@@ -44,9 +44,9 @@ To begin deploying or contributing to this showcase, please follow these steps:
    - Navigate to `terraform/environments/dev`.
    - Run `terraform init` and `terraform apply`.
 2. **Pipeline Setup**:
-   - Refer to the [CI/CD Implementation Guide](./CICD_IMPLEMENTATION.md) for Jenkins configuration.
+   - Refer to the [CI/CD Implementation Guide](./cicd-implementation.md) for Jenkins configuration.
 3. **Validation**:
-   - Use the [Launch Checklist](./checklist/LAUNCH_CHECKLIST.md) to verify your environment status.
+   - Use the [Launch Checklist](./checklist/launch-checklist.md) to verify your environment status.
 
 ## ⚖️ Governance & Standards
 This project follows strictly enforced standards for:

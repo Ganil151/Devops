@@ -71,4 +71,4 @@ In this module, you will move beyond `ls` and `cd` into the "Power Tools" of a S
 ---
 
 ## 🔗 Next Steps
-Proceed to: **[Server Hardening](../02-Server-Hardening/README.md)** →
+Proceed to: **[Server Hardening](../02-server-hardening/readme.md)** →

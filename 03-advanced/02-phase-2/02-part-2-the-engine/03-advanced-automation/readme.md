@@ -6,26 +6,26 @@ Welcome to **Advanced Automation**. This is where we break out of "Simple Script
 
 ## 🛣️ The Curriculum
 
-### [📐 Part 1: The Blueprint (Advanced Python)](./01-Part-1-The-Blueprint/)
+### [📐 Part 1: The Blueprint (Advanced Python)](./01-part-1-the-blueprint/)
 **The Objective**: Write software, not scripts.
 *   **Key Concepts**: 
     *   **AsyncIO**: Managing 1,000 concurrent API calls.
     *   **Decorators**: Meta-programming for logging and retry logic.
     *   **Design Patterns**: Factory and Strategy patterns for multi-cloud abstraction.
 
-### [⚙️ Part 2: The Engine (Infra Scale)](./02-Part-2-The-Engine/)
+### [⚙️ Part 2: The Engine (Infra Scale)](./02-part-2-the-engine/)
 **The Objective**: Provisioning beyond the basics.
 *   **Key Concepts**:
     *   **Terraform Enterprise**: Private Module Registries and Sentinel Policy Sets.
     *   **Bare Metal**: PXE Boot, MaaS, and automating physical hardware.
 
-### [🧩 Part 3: The Building Blocks (Orchestration)](./03-Part-3-The-Building-Blocks/)
+### [🧩 Part 3: The Building Blocks (Orchestration)](./03-part-3-the-building-blocks/)
 **The Objective**: Complex Workflows.
 *   **Key Concepts**:
     *   **Advanced CI/CD**: Dynamic Pipelines generated at runtime.
     *   **Custom Scripts**: Integration glue for weird legacy systems.
 
-### [🛡️ Part 4: The Safety Net (Performance)](./04-Part-4-The-Safety-Net/)
+### [🛡️ Part 4: The Safety Net (Performance)](./04-part-4-the-safety-net/)
 **The Objective**: Automation must be fast and safe.
 *   **Key Concepts**:
     *   **Performance Testing**: Load testing APIs with Locust.

@@ -3,8 +3,8 @@
 Automation isn't just about changing systems; it's about making sense of the mountains of data they produce.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `analyze_logs.sh` (Top IPs and Errors).
-- **[CHALLENGES](./CHALLENGES.md)**: Building custom dashboards from raw text.
+- **[Boilerplates](readme.md)**: `analyze_logs.sh` (Top IPs and Errors).
+- **[CHALLENGES](./challenges.md)**: Building custom dashboards from raw text.
 
 ---
 
@@ -42,4 +42,4 @@ A sysadmin noticed high CPU on a web server. They ran a one-liner to see the Top
 
 ---
 
-[Next: Cloud Governance](../03-Cloud-Governance-and-Costs/README.md)
+[Next: Cloud Governance](../03-cloud-governance-and-costs/readme.md)

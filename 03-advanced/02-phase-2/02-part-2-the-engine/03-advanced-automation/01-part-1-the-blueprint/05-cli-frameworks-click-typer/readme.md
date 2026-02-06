@@ -66,9 +66,9 @@ Master CLI construction by building these professional interfaces.
 
 | Challenge | Topic | Description | Starter Code | Solution |
 | :--- | :--- | :--- | :--- | :--- |
-| **01. Cluster Manager** | Command Nesting | Build a nested CLI `cluster [create|delete|list]` with Click or Typer. | [Link](./challenges/challenge_01_cli_nesting.py) | [Link](./challenges/solutions/solution_01_cli_nesting.py) |
-| **02. Multi-Select Prompt** | Interactivity | Create a Typer CLI that presents a list of instances and allows the user to select one for a restart. | [Link](./challenges/challenge_02_cli_interact.py) | [Link](./challenges/solutions/solution_02_cli_interact.py) |
-| **03. Progress Dashboard** | Visuals | Integrate `rich` with `click` to show a beautiful progress bar during a simulated 10-server deployment. | [Link](./challenges/challenge_03_cli_rich.py) | [Link](./challenges/solutions/solution_03_cli_rich.py) |
+| **01. Cluster Manager** | Command Nesting | Build a nested CLI `cluster [create|delete|list]` with Click or Typer. | [Link](./challenges/challenge-01-cli-nesting.py) | [Link](./challenges/solutions/solution-01-cli-nesting.py) |
+| **02. Multi-Select Prompt** | Interactivity | Create a Typer CLI that presents a list of instances and allows the user to select one for a restart. | [Link](./challenges/challenge-02-cli-interact.py) | [Link](./challenges/solutions/solution-02-cli-interact.py) |
+| **03. Progress Dashboard** | Visuals | Integrate `rich` with `click` to show a beautiful progress bar during a simulated 10-server deployment. | [Link](./challenges/challenge-03-cli-rich.py) | [Link](./challenges/solutions/solution-03-cli-rich.py) |
 
 ---
 
@@ -83,4 +83,4 @@ Master CLI construction by building these professional interfaces.
 
 ---
 
-**Next Step**: [Generic Automation Framework Design →](../06-Generic-Automation-Framework/README.md)
+**Next Step**: [Generic Automation Framework Design →](../06-generic-automation-framework/readme.md)

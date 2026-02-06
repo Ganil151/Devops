@@ -42,8 +42,8 @@ Understand the ELK Stack, log rotation strategies, and the power of Correlation 
 ---
 
 ## 🔗 Internal Navigation
-- [Next: AWS CloudWatch](../07-AWS-CloudWatch/README.md)
-- [Back: Logging Overview](../README.md)
+- [Next: AWS CloudWatch](../07-aws-cloudwatch/readme.md)
+- [Back: Logging Overview](../readme.md)
 
 ---
 *Logs are expensive. Make every line count.*

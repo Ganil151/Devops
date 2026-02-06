@@ -2,7 +2,7 @@
 
 > **"If Terraform is the engine of modern infrastructure, the State File is the flight recorder. Without it, you are just running scripts; with it, you are managing reality."**
 
-![Terraform Lifecycle Architecture](01-Fundamentals/02-What-is-Terraform/What is Terraform.md)
+![Terraform Lifecycle Architecture](01-fundamentals/02-what-is-terraform/what-is-terraform.md)
 
 ---
 
@@ -82,10 +82,10 @@ flowchart LR
 
 ## 📂 Learning Path
 
-1.  **[01-Fundamentals](./01-Fundamentals)**: Providers, Resources, Variables, and the Data flow.
-2.  **[02-State-Management](./02-State-Management)**: The source of truth. Remote backends and Locking.
-3.  **[03-Modules-and-Composition](./03-Modules-and-Composition)**: Building reusable components.
-4.  **[04-Terraform-Cloud-and-GitOps](./04-Terraform-Cloud-and-GitOps)**: Automating the pipeline.
+1.  **[01-Fundamentals](./01-fundamentals)**: Providers, Resources, Variables, and the Data flow.
+2.  **[02-State-Management](./02-state-management)**: The source of truth. Remote backends and Locking.
+3.  **[03-Modules-and-Composition](./03-modules-and-composition)**: Building reusable components.
+4.  **[04-Terraform-Cloud-and-GitOps](./04-terraform-cloud-and-gitops)**: Automating the pipeline.
 
 ---
 
@@ -143,4 +143,4 @@ flowchart LR
 
 Now that you understand the "How," let's dive into the "What." Start with the core building blocks of infrastructure.
 
-**Proceed to**: [Terraform Fundamentals →](README.md)
+**Proceed to**: [Terraform Fundamentals →](readme.md)

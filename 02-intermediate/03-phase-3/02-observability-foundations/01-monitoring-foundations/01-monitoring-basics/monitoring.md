@@ -71,5 +71,5 @@ Standardized by Google's SRE team, these four metrics are the "North Star" of se
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Health Checks and Probers](../03-Health-Checks-and-Probers/README.md)
-- [Back: Observability Overview](../../README.md)
+- [Next: Health Checks and Probers](../03-health-checks-and-probers/readme.md)
+- [Back: Observability Overview](../../readme.md)

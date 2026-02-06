@@ -135,14 +135,14 @@ When a connection fails, don't just start clicking randomly in the console. Foll
 
 Congratulations! You've completed the Intermediate Networking curriculum. You now have the skills to build, scale, and protect production networks in the cloud.
 
-Proceed to: **[Phase 2: Linux & Automation](README.md)** →
+Proceed to: **[Phase 2: Linux & Automation](readme.md)** →
 Node: This link points to the next phase of the curriculum.
 
 
 ---
 ## 🧭 Additional Modules
-- [01 VPC Flow Logs Network Visibility](01-VPC-Flow-Logs-Network-Visibility/README.md)
-- [02 Reachability Analyzer Network Insights](02-Reachability-Analyzer-Network-Insights/README.md)
-- [03 Traffic Mirroring Deep Packet Inspection](03-Traffic-Mirroring-Deep-Packet-Inspection/README.md)
-- [04 Common Troubleshooting Scenarios](04-Common-Troubleshooting-Scenarios/README.md)
-- [05 Advanced Monitoring Tools](05-Advanced-Monitoring-Tools/README.md)
+- [01 VPC Flow Logs Network Visibility](01-vpc-flow-logs-network-visibility/readme.md)
+- [02 Reachability Analyzer Network Insights](02-reachability-analyzer-network-insights/readme.md)
+- [03 Traffic Mirroring Deep Packet Inspection](03-traffic-mirroring-deep-packet-inspection/readme.md)
+- [04 Common Troubleshooting Scenarios](04-common-troubleshooting-scenarios/readme.md)
+- [05 Advanced Monitoring Tools](05-advanced-monitoring-tools/readme.md)

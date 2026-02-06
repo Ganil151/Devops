@@ -41,4 +41,4 @@ gcloud container clusters upgrade my-cluster --zone us-central1-a
 4.  **Shielded GKE Nodes**: Use hardened kernel and secure boot to prevent node-level attacks.
 
 ---
-**Next Step**: Return to the **[Kubernetes Index](../../README.md)**.
+**Next Step**: Return to the **[Kubernetes Index](../../readme.md)**.

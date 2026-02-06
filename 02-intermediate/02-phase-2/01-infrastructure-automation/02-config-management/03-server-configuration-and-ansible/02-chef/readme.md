@@ -35,21 +35,21 @@ Knife -->|Uploads Policy| API
 
 Follow these modules in order to master Chef:
 
-### **[1. Architecture & Setup](./01-Architecture-and-Setup/)**
+### **[1. Architecture & Setup](./01-architecture-and-setup/)**
 Deep dive into the core components.
-*   **[01-Workstation](01-Architecture-and-Setup/01-Workstation/The%20Developer's%20Command%20Center.md)**: Your development cluster (Knife, ChefDK).
-*   **[02-Chef-Server](./01-Architecture-and-Setup/02-Chef-Server/README.md)**: The central brain and system of record.
-*   **[03-Nodes](./01-Architecture-and-Setup/03-Nodes/README.md)**: The managed servers runs the convergence loop.
+*   **[01-Workstation](01-architecture-and-setup/01-workstation/the%20developer's%20command%20center.md)**: Your development cluster (Knife, ChefDK).
+*   **[02-Chef-Server](./01-architecture-and-setup/02-chef-server/readme.md)**: The central brain and system of record.
+*   **[03-Nodes](./01-architecture-and-setup/03-nodes/readme.md)**: The managed servers runs the convergence loop.
 
 ### 2. Core Concepts
-*   **[02-Cookbooks-and-Recipes](./02-Cookbooks-and-Recipes/README.md)**: Deep dive into the Ruby DSL and core Resources (package, service, template).
-*   **[03-Attributes-and-Ohai](./03-Attributes-and-Ohai/README.md)**: Dynamic configuration using system profiling data.
-*   **[04-Environments-and-Data-Bags](./04-Environments-and-Data-Bags/README.md)**: Managing stage-based releases and sharing global configuration data.
+*   **[02-Cookbooks-and-Recipes](./02-cookbooks-and-recipes/readme.md)**: Deep dive into the Ruby DSL and core Resources (package, service, template).
+*   **[03-Attributes-and-Ohai](./03-attributes-and-ohai/readme.md)**: Dynamic configuration using system profiling data.
+*   **[04-Environments-and-Data-Bags](./04-environments-and-data-bags/readme.md)**: Managing stage-based releases and sharing global configuration data.
 
 ### 3. Mastery
-*   **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**: Test your knowledge and prepare for technical roles.
-*   **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshooting and architectural challenges.
-*   **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
+*   **[05-Interview-Questions-and-Quizzes](./05-interview-questions-and-quizzes/readme.md)**: Test your knowledge and prepare for technical roles.
+*   **[06-Real-Life-Scenarios](./06-real-life-scenarios/readme.md)**: Practical troubleshooting and architectural challenges.
+*   **[📺 YouTube Lessons](./youtube-lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 
@@ -61,7 +61,7 @@ Deep dive into the core components.
 ---
 
 ## 🛡️ Chef vs. Other Tools
-Chef is often compared to **[Ansible](README.md)**. While Ansible is agentless and push-based (better for quick tasks), Chef is agent-based and pull-based (excellent for persistent compliance and very large fleets).
+Chef is often compared to **[Ansible](readme.md)**. While Ansible is agentless and push-based (better for quick tasks), Chef is agent-based and pull-based (excellent for persistent compliance and very large fleets).
 
 ---
 
@@ -75,8 +75,8 @@ Chef is often compared to **[Ansible](README.md)**. While Ansible is agentless a
 ---
 
 ## 🔗 Next Steps
-- **[Helm (Microservices Packaging)](README.md)** - Package applications for Kubernetes.
-- **[CI/CD Pipelines](README.md)** - Automate your cookbook testing and deployment.
+- **[Helm (Microservices Packaging)](readme.md)** - Package applications for Kubernetes.
+- **[CI/CD Pipelines](readme.md)** - Automate your cookbook testing and deployment.
 
 ---
 *Code your infrastructure. Govern your fleet.*

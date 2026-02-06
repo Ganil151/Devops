@@ -268,7 +268,7 @@ terraform {
 
 Now that you've mastered the backends, it's time to learn how to keep your code clean and portable.
 
-**Proceed to**: [Part 2: State Isolation Patterns →](../../README.md)
+**Proceed to**: [Part 2: State Isolation Patterns →](../../readme.md)
 
 ---
 

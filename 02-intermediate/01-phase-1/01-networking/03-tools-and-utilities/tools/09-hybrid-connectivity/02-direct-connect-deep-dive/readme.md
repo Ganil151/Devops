@@ -141,5 +141,5 @@ For large enterprises, connecting one Direct Connect link to 50 different VPCs m
 
 You've built the physical bridge. Now let's explore the "Hub" that manages these links at an enterprise scale: Transit Gateway for Hybrid.
 
-Proceed to: **[03. TGW and Hybrid Architectures](../03-TGW-and-Hybrid-Architectures/README.md)** →
+Proceed to: **[03. TGW and Hybrid Architectures](../03-tgw-and-hybrid-architectures/readme.md)** →
 Node: This link points to the next lesson.

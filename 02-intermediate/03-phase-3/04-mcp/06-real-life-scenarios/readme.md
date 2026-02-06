@@ -1,6 +1,6 @@
 # 06: Real-Life Scenarios
 
-**[⬅️ Back to MCP Module Index](../README.md)** | **[Next: Advanced Level ➡️](README.md)**
+**[⬅️ Back to MCP Module Index](../readme.md)** | **[Next: Advanced Level ➡️](readme.md)**
 
 ---
 
@@ -104,5 +104,5 @@ The MCP server implements a tool `run_smoke_test(api_key_secret_name: str)`.
 
 These scenarios demonstrate that MCP is not just about "chatting with code". It is about **orchestrating complex, multi-step engineering tasks** while keeping the human in the loop for critical decisions.
 
-Ready to build these systems? Return to **[02-Building-MCP-Servers](../02-Building-MCP-Servers/README.md)** to start coding.
+Ready to build these systems? Return to **[02-Building-MCP-Servers](../02-building-mcp-servers/readme.md)** to start coding.
 

@@ -3,8 +3,8 @@
 Not all automation is created equal. The Maturity Model helps teams evaluate where they are and identifies the technical gaps they need to close to reach "Elite" status (SRE Standard).
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `maturity_scorecard.txt` (Self-assessment tool).
-- **[CHALLENGES](./CHALLENGES.md)**: Auditing a legacy script into Level 3.
+- **[Boilerplates](readme.md)**: `maturity_scorecard.txt` (Self-assessment tool).
+- **[CHALLENGES](./challenges.md)**: Auditing a legacy script into Level 3.
 
 ---
 
@@ -49,4 +49,4 @@ To move beyond basic scripting (Level 2), your automation must include:
 
 ---
 
-[Next: Idempotency Patterns](../02-Idempotency-Patterns-Check-Act-Verify/README.md)
+[Next: Idempotency Patterns](../02-idempotency-patterns-check-act-verify/readme.md)

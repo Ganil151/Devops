@@ -7,14 +7,14 @@ Monitoring tells you *if* a system is failing; Observability helps you understan
 ## 🏛️ The Three Pillars of Observability
 
 ### Learning Path
-1. [Observability Overview](./README.md)
-2. [📺 YouTube Lessons](./Youtube_Lessons.md)
-3. [❓ Interview Questions & Quiz](./Interview_Questions_and_Quiz.md)
+1. [Observability Overview](./readme.md)
+2. [📺 YouTube Lessons](./youtube-lessons.md)
+3. [❓ Interview Questions & Quiz](./interview-questions-and-quiz.md)
 <b>4. [📈 Datadog</b>
 <details>
 <summary>Show Answer</summary>
-Answer: Enterprise SaaS)](README.md#)
-- **Tool**: [Prometheus](README.md) & Grafana.
+Answer: Enterprise SaaS)](readme.md#)
+- **Tool**: [Prometheus](readme.md) & Grafana.
 - **Example Alerting Rule**:
 ```yaml
 groups:
@@ -86,16 +86,16 @@ Combining logs, metrics, and traces into a single Grafana view (ServiceLens).
 
 ## 4. Advanced Sub-Modules
 
-### ☸️ [Kube-Prometheus-Stack](./01-Kube-Prometheus-Stack/README.md)
+### ☸️ [Kube-Prometheus-Stack](./01-kube-prometheus-stack/readme.md)
 The Kubernetes-native monitoring solution. Learn the Operator pattern, CRDs (ServiceMonitors/PrometheusRules), and Helm-based deployment for production clusters.
 
-### 🪵 [ELK Stack](./03-Logging-ELK/README.md)
+### 🪵 [ELK Stack](./03-logging-elk/readme.md)
 Advanced log management and search. Master the ingestion flow (Beats -> Logstash -> ES -> Kibana) and set up production-grade log processing pipelines.
 
-### 🔍 [Splunk](./04-Splunk/README.md)
+### 🔍 [Splunk](./04-splunk/readme.md)
 Enterprise-grade SIEM and log analysis. Understand the Search Head/Indexer architecture and the power of SPL for complex analytics.
 
-### 🛡️ [Nagios](./05-Nagios/README.md)
+### 🛡️ [Nagios](./05-nagios/readme.md)
 Classical infrastructure monitoring. Learn host/service definitions, NRPE-based remote checks, and the status-based alerting philosophy.
 
 ---
@@ -107,8 +107,8 @@ Classical infrastructure monitoring. Learn host/service definitions, NRPE-based 
 
 ---
 
-**Cloud Observability**: See how to implement these patterns in AWS using [CloudWatch and X-Ray](../../../README.md).
+**Cloud Observability**: See how to implement these patterns in AWS using [CloudWatch and X-Ray](../../../readme.md).
 
 ---
 ## 🧭 Additional Modules
-- [06 Datadog SaaS](06-Datadog-SaaS/README.md)
+- [06 Datadog SaaS](06-datadog-saas/readme.md)

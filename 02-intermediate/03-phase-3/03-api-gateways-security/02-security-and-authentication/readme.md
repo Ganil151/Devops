@@ -6,7 +6,7 @@ A gateway without security is just an open door. This part focuses on identity v
 
 ## 📂 Modules in this Part
 
-### 1. [02-Authentication-and-JWT](./02-Authentication-and-JWT/README.md)
+### 1. [02-Authentication-and-JWT](./02-authentication-and-jwt/readme.md)
 The "Passports" of the web.
 - **JWT (JSON Web Tokens)**: Header, Payload, and Signature mechanics.
 - **OAuth2 & OIDC**: Flow types (Authorization Code vs. Client Credentials).
@@ -18,5 +18,5 @@ The "Passports" of the web.
 - Complete **JWT Foundations** before moving to traffic management. Security is the first layer of the gateway.
 
 ---
-- [Next: Part 3 - Traffic Management & Docs](README.md)
-- [Back to Main Curriculum](../README.md)
+- [Next: Part 3 - Traffic Management & Docs](readme.md)
+- [Back to Main Curriculum](../readme.md)

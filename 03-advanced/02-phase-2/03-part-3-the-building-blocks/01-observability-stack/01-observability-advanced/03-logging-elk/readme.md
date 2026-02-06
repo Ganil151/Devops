@@ -125,4 +125,4 @@ output {
 
 ---
 
-**Advanced Patterns**: Learn how to correlate these logs with live metrics in the [Kube-Prometheus-Stack Guide](../01-Kube-Prometheus-Stack/README.md).
+**Advanced Patterns**: Learn how to correlate these logs with live metrics in the [Kube-Prometheus-Stack Guide](../01-kube-prometheus-stack/readme.md).

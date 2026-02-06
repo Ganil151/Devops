@@ -15,10 +15,10 @@ Platform Engineering is the discipline of designing and building self-service ca
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Internal-Developer-Portals](README.md)**
+1. **[🔴 01-Internal-Developer-Portals](readme.md)**
    - The "Self-Service" philosophy.
    - Core components: Catalog, Scaffolder, Search.
-2. **[🔴 02-Software-Templates](README.md)**
+2. **[🔴 02-Software-Templates](readme.md)**
    - Creating a "New Service" template with automated CI/CD and K8s manifests.
 
 ---
@@ -94,4 +94,4 @@ spec:
 The platform team shouldn't say "No" to a developer's chosen tool, but they should make the "Right way" the "Easiest way". By providing a pre-configured, secure template, developers naturally follow best practices.
 
 ---
-**Next Step**: Start with [Internal Developer Portals](README.md) 🚀
+**Next Step**: Start with [Internal Developer Portals](readme.md) 🚀

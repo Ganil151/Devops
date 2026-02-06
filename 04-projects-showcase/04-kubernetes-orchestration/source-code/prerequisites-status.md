@@ -228,9 +228,9 @@ Once Helm is installed:
 
 ### Internal Resources
 
-- [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
-- [PRE_DEPLOYMENT_CHECKLIST.md](./PRE_DEPLOYMENT_CHECKLIST.md)
-- [DEPLOYMENT_RESOURCES.md](./DEPLOYMENT_RESOURCES.md)
+- [DEPLOYMENT_GUIDE.md](./deployment-guide.md)
+- [PRE_DEPLOYMENT_CHECKLIST.md](./pre-deployment-checklist.md)
+- [DEPLOYMENT_RESOURCES.md](./deployment-resources.md)
 
 ---
 

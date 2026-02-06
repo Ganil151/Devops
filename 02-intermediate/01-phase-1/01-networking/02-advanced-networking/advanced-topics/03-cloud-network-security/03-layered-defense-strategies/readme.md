@@ -134,4 +134,4 @@ Professional DevOps teams use a standard "Tiered" approach to minimize the acces
 
 You've built the fortress. Now let's learn how to look inside the logs to find out who is knocking at the gate.
 
-Proceed to: **[04. Advanced Troubleshooting](../../../../../README.md)** →
+Proceed to: **[04. Advanced Troubleshooting](../../../../../readme.md)** →

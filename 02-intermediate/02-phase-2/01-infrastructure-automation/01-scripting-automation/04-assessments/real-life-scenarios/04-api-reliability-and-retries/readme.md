@@ -3,8 +3,8 @@
 The network is unreliable. External APIs will fail. Your automation must handle these failures gracefully using retries, timeouts, and backoff.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `resilient_api.py` (Request sessions with retries).
-- **[CHALLENGES](./CHALLENGES.md)**: Handling 429 errors and circuit breakers.
+- **[Boilerplates](readme.md)**: `resilient_api.py` (Request sessions with retries).
+- **[CHALLENGES](./challenges.md)**: Handling 429 errors and circuit breakers.
 
 ---
 
@@ -51,4 +51,4 @@ A microservice was calling another service without a timeout. When the second se
 
 ---
 
-[⬅️ Back to Automation Index](../README.md)
+[⬅️ Back to Automation Index](../readme.md)

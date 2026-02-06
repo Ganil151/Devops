@@ -25,4 +25,4 @@ Master the orchestration of containerized applications at scale.
 ---
 
 ## 🔗 Internal Navigation
-- [Back to Part 6 Overview](./README.md)
+- [Back to Part 6 Overview](./readme.md)

@@ -2,7 +2,7 @@
 
 > **"A cloud platform is not a destination; it is a programmable runway for innovation. If you are clicking buttons, you are an operator. If you are writing APIs and policy, you are an architect."**
 
-![Cloud Platform Architecture](../../assets/cloud_platform_banner.png)
+![Cloud Platform Architecture](../../assets/cloud-platform-banner.png)
 
 ---
 
@@ -151,14 +151,14 @@ graph TD
 
 ---
 
-[⬅️ Back to Infrastructure Automation Index](../README.md)
+[⬅️ Back to Infrastructure Automation Index](../readme.md)
 
 
 ---
 ## 🧭 Additional Modules
-- [01 Introduction](01-Introduction/README.md)
-- [02 Compute and Scale](02-Compute-and-Scale/README.md)
-- [03 Networking and Security](03-Networking-and-Security/README.md)
-- [04 Data and Automation](04-Data-and-Automation/README.md)
-- [05 Assessments](05-Assessments/README.md)
-- [REFERENCE](REFERENCE/README.md)
+- [01 Introduction](01-introduction/readme.md)
+- [02 Compute and Scale](02-compute-and-scale/readme.md)
+- [03 Networking and Security](03-networking-and-security/readme.md)
+- [04 Data and Automation](04-data-and-automation/readme.md)
+- [05 Assessments](05-assessments/readme.md)
+- [REFERENCE](reference/readme.md)

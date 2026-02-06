@@ -750,7 +750,7 @@ Before running `terraform apply` in production:
 
 ---
 
-**[⬅️ Back to Commands README](README.md)**
+**[⬅️ Back to Commands README](readme.md)**
 
 ---
 

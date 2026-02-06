@@ -315,7 +315,7 @@ Ready to create your first RDS database?
 
 1. **[RDS Getting Started](./rds-getting-started.md)** - Step-by-step guide to create your first RDS instance
 2. **[RDS Backups & Snapshots](./rds-backups-snapshots.md)** - Learn about data protection
-3. **[Intermediate RDS](../README.md)** - Advanced features
+3. **[Intermediate RDS](../readme.md)** - Advanced features
 
 ## Additional Resources
 

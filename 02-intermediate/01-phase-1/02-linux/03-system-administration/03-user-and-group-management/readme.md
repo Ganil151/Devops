@@ -149,5 +149,5 @@ Junior admins create service accounts with default shells. Senior DevOps enginee
 
 Identity defines who can touch the data. Now let's learn how to structure and grow the place where that data lives: Storage.
 
-Proceed to: **[04. Storage & LVM](../04-Storage-and-LVM/README.md)** →
+Proceed to: **[04. Storage & LVM](../04-storage-and-lvm/readme.md)** →
 Node: This link points to the disk management module.

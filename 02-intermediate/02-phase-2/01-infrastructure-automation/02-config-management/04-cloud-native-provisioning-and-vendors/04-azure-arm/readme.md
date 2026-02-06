@@ -7,18 +7,18 @@ ARM templates are JSON files that define the infrastructure and configuration fo
 
 ## 📂 Module Structure
 
-### 🔰 [Beginner Level](./Beginner/README.md)
+### 🔰 [Beginner Level](./beginner/readme.md)
 - Template anatomy (`$schema`, `parameters`, `variables`, `resources`, `outputs`)
 - Basic deployment with Azure Portal and CLI
 - Simple resource definitions (Storage Account, VNet)
 
-### 🚀 [Intermediate Level](./Intermediate/README.md)
+### 🚀 [Intermediate Level](./intermediate/readme.md)
 - Resource dependencies and ordering
 - Advanced expressions and template functions
 - Linked and nested templates
 - Deployment scripts
 
-### 🏆 [Advanced Level](./Advanced/README.md)
+### 🏆 [Advanced Level](./advanced/readme.md)
 - Enterprise-scale governance with Blueprints and Policy
 - CI/CD integration with Azure DevOps and GitHub Actions
 - Template Specs for resource sharing
@@ -27,4 +27,4 @@ ARM templates are JSON files that define the infrastructure and configuration fo
 ---
 
 ## ❓ Interview Questions & Quiz
-- [ARM Interview Questions & 20+ Quiz Questions](./Interview-Questions/README.md)
+- [ARM Interview Questions & 20+ Quiz Questions](./interview-questions/readme.md)

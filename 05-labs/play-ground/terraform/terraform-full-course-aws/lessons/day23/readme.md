@@ -82,4 +82,4 @@ terraform destroy -var="security_alert_email=your-email@example.com"
 
 ---
 ## 🧭 Additional Modules
-- [aws lamda monitoring](aws-lamda-monitoring/README.md)
+- [aws lamda monitoring](aws-lamda-monitoring/readme.md)

@@ -42,8 +42,8 @@ Master the concepts of trace sampling, header propagation (W3C vs B3), and laten
 ---
 
 ## 🔗 Internal Navigation
-- [Next Part: Mastery and Resources](README.md)
-- [Back: Advanced Insight Overview](../README.md)
+- [Next Part: Mastery and Resources](readme.md)
+- [Back: Advanced Insight Overview](../readme.md)
 
 ---
 *Follow the thread. Find the truth.*

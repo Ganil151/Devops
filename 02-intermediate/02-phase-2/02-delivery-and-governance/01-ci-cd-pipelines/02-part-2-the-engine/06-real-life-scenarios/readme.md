@@ -56,4 +56,4 @@ Modern CI/CD isn't just about moving code; it's about **Quality Assurance**, **S
 
 ---
 ## 🧭 Additional Modules
-- [01 Pipeline Failures](01-Pipeline-Failures/README.md)
+- [01 Pipeline Failures](01-pipeline-failures/readme.md)

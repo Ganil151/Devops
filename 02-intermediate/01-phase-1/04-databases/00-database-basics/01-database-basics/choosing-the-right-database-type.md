@@ -3,7 +3,7 @@
 This guide provides a practical decision-making framework to help you choose the appropriate database for your specific use case.
 
 ## Start Here: Decision Tree
-![Decision Tree](../Images/decisionTree.png)
+![Decision Tree](../images/decisiontree.png)
 
 ## Quick Reference Matrix
 
@@ -347,8 +347,8 @@ Answer: usually RDS
 
 Ready to implement? Choose your path:
 
-- **Relational Path**: [RDS Introduction](../02-RDS-Basics/rds-introduction.md)
-- **NoSQL Path**: [DynamoDB Introduction](../03-DynamoDB-Basics/dynamodb-introduction.md)
+- **Relational Path**: [RDS Introduction](../02-rds-basics/rds-introduction.md)
+- **NoSQL Path**: [DynamoDB Introduction](../03-dynamodb-basics/dynamodb-introduction.md)
 - **Need Both**: Start with RDS, add DynamoDB as needed
 
 ---

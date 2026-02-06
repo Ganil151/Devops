@@ -773,10 +773,10 @@ Background (20%): Analytics, Logging
 
 ## 📚 Additional Resources
 
-- **[Circuit Breaker Patterns](./CIRCUIT_BREAKER_PATTERNS.md)**
-- **[Istio Traffic Management](./ISTIO_TRAFFIC_MANAGEMENT.md)**
-- **[Retry Best Practices](../../../01-Enterprise-Multi-Cloud/08-S3-Enterprise/s3-security-best-practices.md)**
-- **[Service Mesh Comparison](../../../../../02-Part-2-The-Engine/02-Service-Mesh/REFERENCE/Service-Mesh-Architecture-Ref.md)**
+- **[Circuit Breaker Patterns](./circuit-breaker-patterns.md)**
+- **[Istio Traffic Management](./istio-traffic-management.md)**
+- **[Retry Best Practices](../../../01-enterprise-multi-cloud/08-s3-enterprise/s3-security-best-practices.md)**
+- **[Service Mesh Comparison](../../../../../02-part-2-the-engine/02-service-mesh/reference/service-mesh-architecture-ref.md)**
 
 ---
 

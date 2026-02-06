@@ -1060,9 +1060,9 @@ curl localhost:8080
 
 ## 🔗 Next Steps
 
-- **[Service Mesh](README.md)** - Advanced service-to-service communication
-- **[Cloud Networking](README.md)** - Multi-cloud networking strategies
-- **[Performance Optimization](README.md)** - Network performance tuning
+- **[Service Mesh](readme.md)** - Advanced service-to-service communication
+- **[Cloud Networking](readme.md)** - Multi-cloud networking strategies
+- **[Performance Optimization](readme.md)** - Network performance tuning
 
 ---
 

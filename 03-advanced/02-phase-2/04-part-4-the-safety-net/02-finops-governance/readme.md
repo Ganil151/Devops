@@ -4,7 +4,7 @@
 
 
 ## Core Concept: Financial Accountability
-**[REFERENCE: FinOps & Cloud Optimization](./REFERENCE/FinOps-Cloud-Optimization-Ref.md)**
+**[REFERENCE: FinOps & Cloud Optimization](./reference/finops-cloud-optimization-ref.md)**
 
 Bringing financial visibility and accountability to the cloud-native era:
 - **Cost Attribution**: Utilizing Kubecost to gain granular visibility into cluster spend by namespace, team, and service.
@@ -12,7 +12,7 @@ Bringing financial visibility and accountability to the cloud-native era:
 - **Right-Sizing Strategy**: Implementing automated pod and node scaling to eliminate idle resource waste.
 
 ## Enterprise Governance: Cost Guardrails
-**[REFERENCE: Cost Governance & Reporting](./REFERENCE/Cost-Governance-Reporting-Ref.md)**
+**[REFERENCE: Cost Governance & Reporting](./reference/cost-governance-reporting-ref.md)**
 
 Embedding cost-awareness into the engineering workflow:
 - **Shift-Left Cost Estimation**: Using Infracost in CI/CD pipelines to visualize the financial impact of infrastructure changes before they are applied.
@@ -23,8 +23,8 @@ Embedding cost-awareness into the engineering workflow:
 
 ## 📚 Modules in This Part
 
-1. **[01-K8s-Cost-Optimization](./01-K8s-Cost-Optimization/)** - 01 K8s Cost Optimization
-2. **[02-Cost-Governance-Infracost](./02-Cost-Governance-Infracost/)** - 02 Cost Governance Infracost
+1. **[01-K8s-Cost-Optimization](./01-k8s-cost-optimization/)** - 01 K8s Cost Optimization
+2. **[02-Cost-Governance-Infracost](./02-cost-governance-infracost/)** - 02 Cost Governance Infracost
 
 
 ---
@@ -50,4 +50,4 @@ These modules should be completed in the order shown above for optimal learning 
 
 ---
 
-**Part of**: [Advanced Phase-2: Strategic Skills](../README.md)
+**Part of**: [Advanced Phase-2: Strategic Skills](../readme.md)

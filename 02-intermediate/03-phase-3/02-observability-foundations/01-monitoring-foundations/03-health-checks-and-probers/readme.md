@@ -37,8 +37,8 @@ Master the senior-level trade-offs between different probing strategies and depe
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Part 2 Overview](README.md)
-- [Back: Monitoring Basics](../01-Monitoring-Basics/README.md)
+- [Next: Part 2 Overview](readme.md)
+- [Back: Monitoring Basics](../01-monitoring-basics/readme.md)
 
 ---
 *Self-healing systems require accurate signals. Be precise.*

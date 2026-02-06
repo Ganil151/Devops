@@ -7,23 +7,23 @@ Welcome to the practice grounds. These labs are designed to test your knowledge 
 
 ## 🛠️ Lab List
 
-1. **[Log Rotation](./Shell-Scripting/01-Log-Rotation.md)**
+1. **[Log Rotation](./shell-scripting/01-log-rotation.md)**
    - Archive & Cleanup Logs.
    - **Skills**: `mv`, date command, variables.
 
-2. **[API Polling](./Shell-Scripting/02-API-Polling.md)**
+2. **[API Polling](./shell-scripting/02-api-polling.md)**
    - API interaction with exponential backoff.
    - **Skills**: `curl`, `sleep`, loops.
 
-3. **[Backup System](./Shell-Scripting/03-Backup-Automation.md)**
+3. **[Backup System](./shell-scripting/03-backup-automation.md)**
    - Backup automation with atomic locks.
    - **Skills**: `tar`, locks, error handling.
 
-4. **[User Audit](./Shell-Scripting/04-User-Audit.md)**
+4. **[User Audit](./shell-scripting/04-user-audit.md)**
    - Parse /etc/passwd and audit users.
    - **Skills**: `awk`, file reading, conditions.
 
-5. **[Pre-Flight Checks](./Shell-Scripting/05-Pre-Flight-Checks.md)**
+5. **[Pre-Flight Checks](./shell-scripting/05-pre-flight-checks.md)**
    - System requirement validation script.
    - **Skills**: `df`, system checks, reporting.
 
@@ -36,4 +36,4 @@ There is no automated submission. Run your scripts locally and verify they work!
 
 ---
 ## 🧭 Additional Modules
-- [Youtube Lessons](Youtube-Lessons/README.md)
+- [Youtube Lessons](youtube-lessons/readme.md)

@@ -117,5 +117,5 @@ Annotations allow you to pass specific instructions to your Ingress Controller.
 ---
 
 ## 🔗 Internal Navigation
-- [Next: ConfigMaps and Secrets](../07-ConfigMaps-and-Secrets/README.md)
-- [Back: Services and Networking](../05-Services-and-Networking/README.md)
+- [Next: ConfigMaps and Secrets](../07-configmaps-and-secrets/readme.md)
+- [Back: Services and Networking](../05-services-and-networking/readme.md)

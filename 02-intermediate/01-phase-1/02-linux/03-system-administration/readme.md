@@ -3,7 +3,7 @@
 > **"A server is a living thing. It breathes through its processes, consumes resources from its hardware, and leaves a trail of its life in the logs. A great administrator doesn't just fix servers; they understand their heartbeat."**
 
 ## Core Concept: The System Lifecycle
-**[REFERENCE: System Architecture & Services](./REFERENCE/System-Architecture-Services-Ref.md)**
+**[REFERENCE: System Architecture & Services](./reference/system-architecture-services-ref.md)**
 
 Mastering the internal mechanics that keep enterprise servers running:
 - **Service Orchestration**: Utilizing `systemd` to manage application lifecycles, dependencies, and automated recovery.
@@ -11,7 +11,7 @@ Mastering the internal mechanics that keep enterprise servers running:
 - **Kernel-User Interface**: Navigating the boundary between hardware-level kernel operations and isolated user-space applications.
 
 ## Enterprise Governance: Compliance & Resilience
-**[REFERENCE: Storage, Security & Governance](./REFERENCE/Storage-Security-Governance-Ref.md)**
+**[REFERENCE: Storage, Security & Governance](./reference/storage-security-governance-ref.md)**
 
 Scaling Linux management with professional standards and strict guardrails:
 - **Flexible Storage (LVM)**: Designing resilient disk architectures that can expand dynamically without downtime.
@@ -75,11 +75,11 @@ By the end of this phase, you will:
 
 | Module | Description | Key Tools |
 | :--- | :--- | :--- |
-| **[01. Systemd & Service Management](./01-Systemd-and-Services/)** | Control the lifecycle of your applications. | `systemctl`, `journalctl` |
-| **[02. Process Management](./02-Process-Management/)** | Monitor and optimize system resources. | `htop`, `top`, `kill`, `nice` |
-| **[03. User & Identity Management](./03-User-and-Group-Management/)** | Secure access and define privilege boundaries. | `visudo`, `chage`, `usermod` |
-| **[04. Storage & LVM](./04-Storage-and-LVM/)** | Design flexible and resilient disk architectures. | `pvcreate`, `vgextend`, `lvextend` |
-| **[05. Logging & Forensics](./05-Log-Management/)** | Capture and analyze the system's heartbeat. | `logrotate`, `journalctl -f` |
+| **[01. Systemd & Service Management](./01-systemd-and-services/)** | Control the lifecycle of your applications. | `systemctl`, `journalctl` |
+| **[02. Process Management](./02-process-management/)** | Monitor and optimize system resources. | `htop`, `top`, `kill`, `nice` |
+| **[03. User & Identity Management](./03-user-and-group-management/)** | Secure access and define privilege boundaries. | `visudo`, `chage`, `usermod` |
+| **[04. Storage & LVM](./04-storage-and-lvm/)** | Design flexible and resilient disk architectures. | `pvcreate`, `vgextend`, `lvextend` |
+| **[05. Logging & Forensics](./05-log-management/)** | Capture and analyze the system's heartbeat. | `logrotate`, `journalctl -f` |
 
 ---
 
@@ -164,10 +164,10 @@ Junior admins fix things by typing commands in the shell. Senior admins fix thin
 
 The journey into the machine begins with the heart of the system: services.
 
-Proceed to: **[01. Systemd & Service Management](./01-Systemd-and-Services/README.md)** →
+Proceed to: **[01. Systemd & Service Management](./01-systemd-and-services/readme.md)** →
 Node: This link points to the first technical deep-dive.
 
 
 ---
 ## 🧭 Additional Modules
-- [Server](Server/README.md)
+- [Server](server/readme.md)

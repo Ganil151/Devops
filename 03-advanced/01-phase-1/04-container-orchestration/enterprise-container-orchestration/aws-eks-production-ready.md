@@ -84,4 +84,4 @@ The default networking plugin for EKS. It assigns real VPC IP addresses to each 
 | **OIDC errors** | Mismatch between OIDC provider and IAM Role trust policy | Re-verify the OIDC URL and the `sub` claim in the trust policy. |
 
 ---
-**Next Step**: Learn how to monitor everything together in the [AWS X-Ray Observability Guide](../../../02-Phase-2/01-Part-1-The-Blueprint/01-Cloud-Architecture/01-Enterprise-Multi-Cloud/17-Observability-Governance/aws-xray-observability.md)
+**Next Step**: Learn how to monitor everything together in the [AWS X-Ray Observability Guide](../../../02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/17-observability-governance/aws-xray-observability.md)

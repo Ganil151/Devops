@@ -6,9 +6,9 @@ Jenkins is the world's most popular open-source automation server. It acts as th
 
 | Stage | Topic | Focus |
 | :--- | :--- | :--- |
-| **01** | **[Architecture & Setup](./01-Architecture-and-Setup/README.md)** | Controllers, Agents, and Docker Integration. |
-| **02** | **[Pipelines as Code](../../../../README.md)** | Jenkinsfile syntax, Stages, and Post-build logic. |
-| **03** | **[Security & Admin](../../../../README.md)** | RBAC, Backups, and Plugin management. |
+| **01** | **[Architecture & Setup](./01-architecture-and-setup/readme.md)** | Controllers, Agents, and Docker Integration. |
+| **02** | **[Pipelines as Code](../../../../readme.md)** | Jenkinsfile syntax, Stages, and Post-build logic. |
+| **03** | **[Security & Admin](../../../../readme.md)** | RBAC, Backups, and Plugin management. |
 
 ---
 
@@ -63,16 +63,16 @@ graph TD
 
 ---
 
-[Next: Secret Scanning](README.md)
+[Next: Secret Scanning](readme.md)
 
 ---
 ## 🧭 Additional Modules
-- [Backup Recovery](Backup-Recovery/README.md)
-- [Best Practices](Best-Practices/README.md)
-- [Installation](Installation/README.md)
-- [Integration](Integration/README.md)
-- [Monitoring](Monitoring/README.md)
-- [Pipelines](Pipelines/README.md)
-- [Plugins](Plugins/README.md)
-- [Scaling](Scaling/README.md)
-- [Security](Security/README.md)
+- [Backup Recovery](backup-recovery/readme.md)
+- [Best Practices](best-practices/readme.md)
+- [Installation](installation/readme.md)
+- [Integration](integration/readme.md)
+- [Monitoring](monitoring/readme.md)
+- [Pipelines](pipelines/readme.md)
+- [Plugins](plugins/readme.md)
+- [Scaling](scaling/readme.md)
+- [Security](security/readme.md)

@@ -82,22 +82,22 @@ graph TD
 
 Explore the operations side of specialized engineering fields.
 
-- **[Specialized Tech (MLOps, Web3, SaaS)](README.md)**
-- **[Blockchain Ops & Security](README.md)**
+- **[Specialized Tech (MLOps, Web3, SaaS)](readme.md)**
+- **[Blockchain Ops & Security](readme.md)**
 
 ### 🟡 2. AI-Native DevOps
 
 Master the integration of Large Language Models and Agents into the SDLC.
 
-- **[Prompt Engineering for Agents](README.md)**
-- **[Model Context Protocol (MCP)](README.md)**
+- **[Prompt Engineering for Agents](readme.md)**
+- **[Model Context Protocol (MCP)](readme.md)**
 
 ### 🔴 3. Enterprise Strategy
 
 Align technical excellence with organizational and financial goals.
 
-- **[Enterprise FinOps](README.md)**
-- **[Advanced API Architectures](README.md)**
+- **[Enterprise FinOps](readme.md)**
+- **[Advanced API Architectures](readme.md)**
 
 ---
 
@@ -114,18 +114,18 @@ Align technical excellence with organizational and financial goals.
 
 ## 🔗 Quick Links
 
-- 📘 **[Full Master Index](./PHASE_3_MASTER_INDEX.md)** - Detailed topic breakdown and time estimates.
-- 🎓 **[Certification Path](README.md)** - How Phase 3 fits into your professional growth.
-- 🤝 **[Contribution Guide](README.md)** - Help us expand the frontier.
+- 📘 **[Full Master Index](./phase-3-master-index.md)** - Detailed topic breakdown and time estimates.
+- 🎓 **[Certification Path](readme.md)** - How Phase 3 fits into your professional growth.
+- 🤝 **[Contribution Guide](readme.md)** - Help us expand the frontier.
 
-**Ready to reach the pinnacle? Start with [Specialized Tech](README.md) or [FinOps](README.md)!** 🚀
+**Ready to reach the pinnacle? Start with [Specialized Tech](readme.md) or [FinOps](readme.md)!** 🚀
 
 
 ---
 ## 🧭 Additional Modules
-- [01 Specialized Tech](01-Specialized-Tech/README.md)
-- [02 Prompt Engineering](02-Prompt-Engineering/README.md)
-- [03 MCP](03-MCP/README.md)
-- [04 Blockchain](04-Blockchain/README.md)
-- [05 FinOps](05-FinOps/README.md)
-- [06 Advanced API Architectures](06-Advanced-API-Architectures/README.md)
+- [01 Specialized Tech](01-specialized-tech/readme.md)
+- [02 Prompt Engineering](02-prompt-engineering/readme.md)
+- [03 MCP](03-mcp/readme.md)
+- [04 Blockchain](04-blockchain/readme.md)
+- [05 FinOps](05-finops/readme.md)
+- [06 Advanced API Architectures](06-advanced-api-architectures/readme.md)

@@ -29,9 +29,9 @@ Security in DevOps isn't just about locks; it's about **System Integrity**.
 ---
 
 ### Learning Path
-1. [Security Overview](./README.md)
-2. [📺 YouTube Lessons](./Youtube_Lessons.md)
-3. [❓ Interview Questions & Quiz](./Interview_Questions_and_Quiz.md)
+1. [Security Overview](./readme.md)
+2. [📺 YouTube Lessons](./youtube-lessons.md)
+3. [❓ Interview Questions & Quiz](./interview-questions-and-quiz.md)
 
 ## ⬅️ The Shift-Left Philosophy
 
@@ -143,7 +143,7 @@ style SECURE fill:#c8e6c9
 
 ## 📚 Documentation Structure
 
-### 🟢 [Security Fundamentals](01-Security-Fundamentals/README.md)
+### 🟢 [Security Fundamentals](01-security-fundamentals/readme.md)
 
 Core DevSecOps concepts and principles:
 - Shift-Left security explained
@@ -151,16 +151,16 @@ Core DevSecOps concepts and principles:
 - Threat modeling basics
 - Security mindset for developers
 
-### 🔧 [Security Tools](../../../README.md)
+### 🔧 [Security Tools](../../../readme.md)
 
 Comprehensive guides for each tool:
-- **[Trivy](../../../README.md)**: Container and filesystem scanning
-- **[SonarQube](../../../README.md)**: Code quality and security
-- **[Vault](../../../README.md)**: Secrets management
-- **[Snyk](../../../README.md)**: Developer security platform
-- **[OWASP Tools](../../../README.md)**: Dependency checking
+- **[Trivy](../../../readme.md)**: Container and filesystem scanning
+- **[SonarQube](../../../readme.md)**: Code quality and security
+- **[Vault](../../../readme.md)**: Secrets management
+- **[Snyk](../../../readme.md)**: Developer security platform
+- **[OWASP Tools](../../../readme.md)**: Dependency checking
 
-### 🔍 [SAST & DAST](../../../README.md)
+### 🔍 [SAST & DAST](../../../readme.md)
 
 Implementation guides for security testing:
 - Static Application Security Testing (SAST)
@@ -168,7 +168,7 @@ Implementation guides for security testing:
 - Interactive Application Security Testing (IAST)
 - Integration patterns and best practices
 
-### 🐳 [Container Security](../../../README.md)
+### 🐳 [Container Security](../../../readme.md)
 
 Securing containerized applications:
 - Image scanning and hardening
@@ -176,7 +176,7 @@ Securing containerized applications:
 - Registry security
 - Best practices and patterns
 
-### 🔐 [Secrets Management](../../../README.md)
+### 🔐 [Secrets Management](../../../readme.md)
 
 Managing sensitive data securely:
 - HashiCorp Vault implementation
@@ -184,7 +184,7 @@ Managing sensitive data securely:
 - Secret rotation strategies
 - Best practices and anti-patterns
 
-### 📋 [Compliance as Code](../../../README.md)
+### 📋 [Compliance as Code](../../../readme.md)
 
 Automating compliance and auditing:
 - Open Policy Agent (OPA) policies
@@ -192,7 +192,7 @@ Automating compliance and auditing:
 - Automated audit trails
 - Compliance frameworks (SOC2, HIPAA, PCI-DSS)
 
-### 🔄 [CI/CD Security](../../../README.md)
+### 🔄 [CI/CD Security](../../../readme.md)
 
 Securing the deployment pipeline:
 - Secure pipeline design
@@ -206,19 +206,19 @@ Securing the deployment pipeline:
 
 ### Beginner Path (1-2 weeks)
 
-1. **[Security Fundamentals](01-Security-Fundamentals/README.md)** - Understand core concepts
-2. **[Container Security Basics](../../../README.md)** - Secure your containers
-3. **[Secrets Management](../../../README.md)** - Never hardcode credentials
-4. **[CI/CD Security](../../../README.md)** - Basic pipeline security
+1. **[Security Fundamentals](01-security-fundamentals/readme.md)** - Understand core concepts
+2. **[Container Security Basics](../../../readme.md)** - Secure your containers
+3. **[Secrets Management](../../../readme.md)** - Never hardcode credentials
+4. **[CI/CD Security](../../../readme.md)** - Basic pipeline security
 
 **Goal**: Implement basic security practices in your pipeline
 
 ### Intermediate Path (2-4 weeks)
 
 1. Complete Beginner Path
-2. **[Security Tools](../../../README.md)** - Master Trivy, SonarQube
-3. **[SAST/DAST](../../../README.md)** - Implement automated testing
-4. **[Compliance](../../../README.md)** - Policy enforcement with OPA
+2. **[Security Tools](../../../readme.md)** - Master Trivy, SonarQube
+3. **[SAST/DAST](../../../readme.md)** - Implement automated testing
+4. **[Compliance](../../../readme.md)** - Policy enforcement with OPA
 
 **Goal**: Automate security across development lifecycle
 
@@ -314,11 +314,11 @@ security_scan:
 
 ### Internal Resources
 
-- [Docker Security](../../../README.md) - Container security basics
-- [Kubernetes Security](../../../README.md) - K8s security
-- [CI/CD Documentation](README.md) - Pipeline integration
-- [Identity & Governance](../../../README.md) - Access management
-- [Compliance](../04-Container-Orchestration/Advanced-K8s/Compliance) - Kubernetes compliance
+- [Docker Security](../../../readme.md) - Container security basics
+- [Kubernetes Security](../../../readme.md) - K8s security
+- [CI/CD Documentation](readme.md) - Pipeline integration
+- [Identity & Governance](../../../readme.md) - Access management
+- [Compliance](../04-container-orchestration/advanced-k8s/compliance) - Kubernetes compliance
 
 ### External Resources
 
@@ -465,9 +465,9 @@ Answer: Vault, cloud providers
 
 ## 📞 Next Steps
 
-1. **Start**: Begin with [Security Fundamentals](01-Security-Fundamentals/README.md)
-2. **Implement**: Pick a tool from [Security Tools](../../../README.md)
-3. **Integrate**: Add security to your [CI/CD Pipeline](../../../README.md)
+1. **Start**: Begin with [Security Fundamentals](01-security-fundamentals/readme.md)
+2. **Implement**: Pick a tool from [Security Tools](../../../readme.md)
+3. **Integrate**: Add security to your [CI/CD Pipeline](../../../readme.md)
 4. **Expand**: Explore advanced topics as needed
 
 **Remember**: DevSecOps is a journey, not a destination. Start small, iterate, and continuously improve.

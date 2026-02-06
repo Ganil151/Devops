@@ -1,6 +1,6 @@
 # ⌨️ kubectl: The Kubernetes Command Center
 
-![kubectl CLI Hub](./assets/kubectl_cli_hub.png)
+![kubectl CLI Hub](./assets/kubectl-cli-hub.png)
 
 ## 📋 Overview
 
@@ -118,5 +118,5 @@ kubectl get pods -o custom-columns="POD_NAME:.metadata.name,RESTARTS:.status.con
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Pods and Nodes](README.md)
-- [Back: Cluster Architecture](../01-Cluster-Architecture/README.md)
+- [Next: Pods and Nodes](readme.md)
+- [Back: Cluster Architecture](../01-cluster-architecture/readme.md)

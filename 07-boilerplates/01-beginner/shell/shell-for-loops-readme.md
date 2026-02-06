@@ -42,4 +42,4 @@ Batch operations and iteration for DevOps automation.
 
 ## Related Resources
 
-- [Parent Module](../../../README.md)
+- [Parent Module](../../../readme.md)

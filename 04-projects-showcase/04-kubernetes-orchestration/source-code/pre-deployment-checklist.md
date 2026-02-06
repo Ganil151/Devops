@@ -176,7 +176,7 @@ Use this checklist to ensure you're ready to deploy the Global Microservices Mes
 
 ## 📝 Documentation Review
 
-- [ ] Read the complete [Deployment Guide](./DEPLOYMENT_GUIDE.md)
+- [ ] Read the complete [Deployment Guide](./deployment-guide.md)
 
 - [ ] Understand the architecture diagram
 
@@ -282,7 +282,7 @@ After deployment, verify:
 
 ---
 
-**Ready to Deploy?** Proceed to the [Deployment Guide](./DEPLOYMENT_GUIDE.md) or run the automated deployment script!
+**Ready to Deploy?** Proceed to the [Deployment Guide](./deployment-guide.md) or run the automated deployment script!
 
 ```powershell
 # Windows

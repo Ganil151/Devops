@@ -131,4 +131,4 @@ The biggest security hole in AWS is a Main Route Table that has a route to the i
 
 You've learned the structure. Now let's learn the "Logic of the Winner"—how the router decides which path to take when multiple routes match.
 
-Proceed to: **[02. Priority Logic (LPM)](../../../../../README.md)** →
+Proceed to: **[02. Priority Logic (LPM)](../../../../../readme.md)** →

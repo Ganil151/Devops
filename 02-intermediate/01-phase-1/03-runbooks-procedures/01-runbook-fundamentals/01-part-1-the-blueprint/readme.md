@@ -6,19 +6,19 @@ Welcome to **Part 1**. This is where we define the standard for operational exce
 
 ## 🛣️ The Curriculum
 
-### [01-Philosophy-and-Goals](./01-Philosophy-and-Goals/)
+### [01-Philosophy-and-Goals](./01-philosophy-and-goals/)
 **The Objective**: Moving from MTTR (Mean Time to Resolution) to TOIL reduction.
 *   **Key Concepts**: The goal of a runbook is its own obsolescence (Automation).
 
-### [02-Documentation-Hierarchy](./02-Documentation-Hierarchy/)
+### [02-Documentation-Hierarchy](./02-documentation-hierarchy/)
 **The Objective**: Knowing the difference between a Policy, an SOP, and a Runbook.
 *   **Key Concepts**: High-level vs. Action-level documentation.
 
-### [03-The-SRE-Standard](./03-The-SRE-Standard/)
+### [03-The-SRE-Standard](./03-the-sre-standard/)
 **The Objective**: Adopting the Google SRE model for docs.
 *   **Key Concepts**: Service Level Objectives (SLOs) and how they trigger runbook execution.
 
-### [04-Standard-Templates](./04-Standard-Templates/)
+### [04-Standard-Templates](./04-standard-templates/)
 **The Objective**: Consistency as a safety feature.
 *   **Key Concepts**: Lowering cognitive load through repeatable layouts.
 

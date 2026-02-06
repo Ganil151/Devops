@@ -46,8 +46,8 @@ Enterprise Features:
 
 Before implementing enterprise S3 features:
 
-- [S3 Fundamentals](../../../../README.md)
-- [S3 Advanced Features](../../../../README.md)
+- [S3 Fundamentals](../../../../readme.md)
+- [S3 Advanced Features](../../../../readme.md)
 - AWS Organizations understanding
 - IAM advanced policies
 - VPC networking knowledge
@@ -410,15 +410,15 @@ Performance Alerts:
 ## Documentation Links
 
 ### Beginner Level
-- [S3 Fundamentals](../../../../README.md)
-- [S3 Bucket Policies](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-bucket-policies.md)
-- [Static Website Hosting](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-static-website.md)
+- [S3 Fundamentals](../../../../readme.md)
+- [S3 Bucket Policies](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/04-data-and-automation/02-storage-and-lifecycle-management/s3-bucket-policies.md)
+- [Static Website Hosting](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/04-data-and-automation/02-storage-and-lifecycle-management/s3-static-website.md)
 
 ### Intermediate Level
-- [S3 Advanced Features](../../../../README.md)
-- [S3 Replication](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-replication.md)
-- [Event Notifications](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-event-notifications.md)
-- [Performance Optimization](../../../../../../02-Intermediate/02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-performance-optimization.md)
+- [S3 Advanced Features](../../../../readme.md)
+- [S3 Replication](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/04-data-and-automation/02-storage-and-lifecycle-management/s3-replication.md)
+- [Event Notifications](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/04-data-and-automation/02-storage-and-lifecycle-management/s3-event-notifications.md)
+- [Performance Optimization](../../../../../../02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/04-data-and-automation/02-storage-and-lifecycle-management/s3-performance-optimization.md)
 
 ### Advanced Level (This Section)
 - Security Best Practices

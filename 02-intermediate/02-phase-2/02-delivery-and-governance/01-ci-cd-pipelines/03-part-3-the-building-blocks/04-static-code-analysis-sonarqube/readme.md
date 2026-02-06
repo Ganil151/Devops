@@ -3,8 +3,8 @@
 SonarQube is the "Quality Guardian" of your CI/CD pipeline. It automatically cleans your code by identifying bugs, security vulnerabilities, and code smells before they reach production.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `sonar-project.properties` (Scanner configuration).
-- **[CHALLENGES](./CHALLENGES.md)**: Enforcing quality gates and reducing technical debt.
+- **[Boilerplates](readme.md)**: `sonar-project.properties` (Scanner configuration).
+- **[CHALLENGES](./challenges.md)**: Enforcing quality gates and reducing technical debt.
 
 ---
 
@@ -57,9 +57,9 @@ A **Quality Gate** is a set of boolean conditions (e.g., `Coverage > 80%`). If a
 
 ---
 
-[⬅️ Back to CI/CD Index](README.md)
+[⬅️ Back to CI/CD Index](readme.md)
 
 ---
 ## 🧭 Additional Modules
-- [Configuration](Configuration/README.md)
-- [Installation](Installation/README.md)
+- [Configuration](configuration/readme.md)
+- [Installation](installation/readme.md)

@@ -144,4 +144,4 @@ Don't peer every VPC with every other VPC. Use a "Hub" for common resources.
 
 Scale is nothing without safety. Now that you know how to build a massive network, let's look at the "Checklist for Success"—the Best Practices every pro lives by.
 
-Proceed to: **[08. VPC Best Practices](../08-VPC-Best-Practices/README.md)** →
+Proceed to: **[08. VPC Best Practices](../08-vpc-best-practices/readme.md)** →

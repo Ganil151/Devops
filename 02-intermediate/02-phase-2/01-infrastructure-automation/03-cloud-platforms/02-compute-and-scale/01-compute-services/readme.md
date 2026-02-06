@@ -24,6 +24,6 @@ A common senior-level decision point:
 ---
 
 ## 📂 Multi-Cloud Services
-- [AWS-EC2-ECS](./AWS-EC2-ECS): Deep dive into Elastic Compute and Container logic.
-- [Azure-VM-Container-Instances](./Azure-VM-Container-Instances): Azure's scalable compute offerings.
-- [GCP-Compute-Engine-GKE](./GCP-Compute-Engine-GKE): High-speed networking and Google-managed Kubernetes.
+- [AWS-EC2-ECS](./aws-ec2-ecs): Deep dive into Elastic Compute and Container logic.
+- [Azure-VM-Container-Instances](./azure-vm-container-instances): Azure's scalable compute offerings.
+- [GCP-Compute-Engine-GKE](./gcp-compute-engine-gke): High-speed networking and Google-managed Kubernetes.

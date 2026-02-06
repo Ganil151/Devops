@@ -217,9 +217,9 @@ spring-petclinic-microservices/
 
 ## 📚 Documentation
 
-- **Full Architecture**: [ARCHITECTURE.md](ARCHITECTURE.md)
-- **Kubernetes Notes**: [kubernetes/KUBERNETES_NOTES.md](KUBERNETES_NOTES.md)
-- **Kubernetes Quick Ref**: [kubernetes/K8S_QUICK_REFERENCE.md](K8S_QUICK_REFERENCE.md)
+- **Full Architecture**: [ARCHITECTURE.md](architecture.md)
+- **Kubernetes Notes**: [kubernetes/KUBERNETES_NOTES.md](kubernetes-notes.md)
+- **Kubernetes Quick Ref**: [kubernetes/K8S_QUICK_REFERENCE.md](k8s-quick-reference.md)
 
 ---
 

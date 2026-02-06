@@ -107,4 +107,4 @@ lint:
 
 ---
 
-**[⬅️ Back to Commands README](README.md)** | **[Previous: terraform init](01-Init.md)** | **[Next: terraform plan](03-Plan.md)**
+**[⬅️ Back to Commands README](readme.md)** | **[Previous: terraform init](01-init.md)** | **[Next: terraform plan](03-plan.md)**

@@ -41,4 +41,4 @@ When multiple tasks are in Q1, use the **Customer Impact** lens to decide what t
 ---
 
 ### 🚀 Practical Application
-Apply these frameworks in the **[Morning Triage Simulation](./01-Morning-Triage-Sim/README.md)** to decide which alert to investigate first.
+Apply these frameworks in the **[Morning Triage Simulation](./01-morning-triage-sim/readme.md)** to decide which alert to investigate first.

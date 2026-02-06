@@ -29,23 +29,23 @@
 
 ## 🗺️ Learning Path
 
-### 🕸️ [01. Networking](./01-Networking/README.md)
+### 🕸️ [01. Networking](./01-networking/readme.md)
 *Junior, you can't just 'hope' data reaches the server.* 
 Master advanced CIDR subnetting, VPC Peering, Transit Gateways, and the dark arts of BGP and Hybrid Cloud connectivity.
 
-### 🐧 [02. Linux Observability](./02-Linux/README.md)
+### 🐧 [02. Linux Observability](./02-linux/readme.md)
 *Restarting a server isn't 'troubleshooting'.* 
 Dive into intermediate system administration, deep process management, and using `eBPF` and `strace` to see what the kernel is actually doing.
 
-### 📜 [03. Runbooks & Procedures](./03-Runbooks-Procedures/README.md)
+### 📜 [03. Runbooks & Procedures](./03-runbooks-procedures/readme.md)
 *If it isn't documented, it's a liability.* 
 Learn to write professional SOPs, design auto-remediation patterns, and handle the "3 AM Incident" with calm, automated precision.
 
-### 📁 [04. Repository Management](README.md)
+### 📁 [04. Repository Management](readme.md)
 *Git is for collaboration, not just storage.* 
 Enterprise Git strategies, multi-repo vs. monorepo architectures, and mastering branching models that survive 100+ developers.
 
-### 💾 [05. Databases](README.md)
+### 💾 [05. Databases](readme.md)
 *Data is the company's lifeblood.* 
 Go beyond simple DBs to managed RDS scaling, NoSQL performance tuning, and high-availability disaster recovery strategies.
 
@@ -55,9 +55,9 @@ Go beyond simple DBs to managed RDS scaling, NoSQL performance tuning, and high-
 Junior, by the end of this phase, you will understand the "under-the-hood" systems of the cloud so well that when you start automating them in Phase 2, you'll be building on bedrock, not sand.
 
 ---
-*Next Step: Stop guessing and start designing. Head into [01. Networking](./01-Networking/README.md).*
+*Next Step: Stop guessing and start designing. Head into [01. Networking](./01-networking/readme.md).*
 
 
 ---
 ## 🧭 Additional Modules
-- [04 Databases](04-Databases/README.md)
+- [04 Databases](04-databases/readme.md)

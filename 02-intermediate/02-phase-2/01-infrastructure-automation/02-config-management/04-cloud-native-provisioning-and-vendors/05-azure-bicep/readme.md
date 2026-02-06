@@ -26,18 +26,18 @@ graph LR
 
 ## 📂 Module Structure
 
-### 🔰 [Beginner Level](./Beginner/README.md)
+### 🔰 [Beginner Level](./beginner/readme.md)
 - Bicep syntax and file structure
 - Resource, Parameter, and Variable declarations
 - Deploying Bicep files with CLI and PowerShell
 
-### 🚀 [Intermediate Level](./Intermediate/README.md)
+### 🚀 [Intermediate Level](./intermediate/readme.md)
 - Modules and code reuse
 - Scopes (Resource Group, Subscription, Management Group)
 - Conditional logic and loops
 - Existing resources
 
-### 🏆 [Advanced Level](./Advanced/README.md)
+### 🏆 [Advanced Level](./advanced/readme.md)
 - Bicep Registry for private modules
 - Advanced patterns (Linter customization)
 - Deploying across multiple scopes
@@ -46,4 +46,4 @@ graph LR
 ---
 
 ## ❓ Interview Questions & Quiz
-- [Bicep Interview Questions & 20+ Quiz Questions](./Interview-Questions/README.md)
+- [Bicep Interview Questions & 20+ Quiz Questions](./interview-questions/readme.md)

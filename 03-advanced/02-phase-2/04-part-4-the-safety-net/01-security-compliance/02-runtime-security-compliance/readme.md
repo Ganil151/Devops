@@ -54,4 +54,4 @@ Cosign allows you to sign your images so that only trusted images are run in you
 3.  **Verify**: `cosign verify --key cosign.pub my-registry/my-app:1.0`
 
 ---
-**Next Step**: [Runtime Security with Falco](README.md) 🚀
+**Next Step**: [Runtime Security with Falco](readme.md) 🚀

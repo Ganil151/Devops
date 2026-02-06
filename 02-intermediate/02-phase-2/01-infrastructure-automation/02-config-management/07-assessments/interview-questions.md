@@ -254,4 +254,4 @@ replicas: 3
 
 ---
 
-[⬅️ Back to Assessments](./README.md)
+[⬅️ Back to Assessments](./readme.md)

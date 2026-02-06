@@ -1,4 +1,4 @@
-![TFC Architecture](../../01-Part-1-The-Blueprint/01-Introduction-and-Architecture/tfc_architecture.png)
+![TFC Architecture](../../01-part-1-the-blueprint/01-introduction-and-architecture/tfc-architecture.png)
 
 The **VCS-Driven Workflow** is the primary operational model for HCP Terraform. It represents a paradigm shift from **"Manual Infrastructure"** to **<font color="#92d050">Automated GitOps</font>**, where the Version Control System (VCS) acts as the bridge between developer intent and cloud reality.
 

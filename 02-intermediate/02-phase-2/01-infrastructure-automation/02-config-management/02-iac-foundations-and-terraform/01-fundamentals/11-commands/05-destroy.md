@@ -114,4 +114,4 @@ If a deployment fails halfway and leaves "orphaned" or broken resources, a `dest
 
 ---
 
-**[⬅️ Back to Commands README](README.md)** | **[Previous: terraform apply](04-Apply.md)** | **[Next: terraform state](06-State.md)**
+**[⬅️ Back to Commands README](readme.md)** | **[Previous: terraform apply](04-apply.md)** | **[Next: terraform state](06-state.md)**

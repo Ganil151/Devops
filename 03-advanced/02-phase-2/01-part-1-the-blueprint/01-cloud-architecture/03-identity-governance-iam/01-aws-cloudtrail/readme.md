@@ -66,4 +66,4 @@ AND eventTime >= '2023-12-01T00:00:00Z'
 
 ---
 
-**Next Step**: Learn how to monitor resource configurations over time with **[AWS Config](../02-AWS-Config/README.md)**.
+**Next Step**: Learn how to monitor resource configurations over time with **[AWS Config](../02-aws-config/readme.md)**.

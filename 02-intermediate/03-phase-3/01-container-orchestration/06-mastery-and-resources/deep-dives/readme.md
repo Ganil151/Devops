@@ -17,7 +17,7 @@ By the end of this resource hub, you will:
 
 ## 🏗️ 1. Kubelet Internals: The Heart of the Node
 
-The **[Kubelet](./Kubelet/README.md)** is the primary "node agent." It ensures that containers described in PodSpecs are running and healthy.
+The **[Kubelet](./kubelet/readme.md)** is the primary "node agent." It ensures that containers described in PodSpecs are running and healthy.
 
 ### The Sync Loop & PLEG
 - **Sync Loop**: The main process that continuously compares "Actual" vs "Desired" state.
@@ -35,7 +35,7 @@ graph LR
 
 ## 📦 2. Helm: The Kubernetes Package Manager
 
-Raw YAML is difficult to manage at scale. **[Helm](./Helm/README.md)** allows you to package, version, and share Kubernetes applications.
+Raw YAML is difficult to manage at scale. **[Helm](./helm/readme.md)** allows you to package, version, and share Kubernetes applications.
 
 ### Key Components
 - **Value Templates**: Use variables in your YAML (e.g., `{{ .Values.replicaCount }}`).
@@ -46,7 +46,7 @@ Raw YAML is difficult to manage at scale. **[Helm](./Helm/README.md)** allows yo
 
 ## 🛡️ 3. ServiceAccounts: Non-Human Identities
 
-**[ServiceAccounts](./ServiceAccounts/README.md)** provide identities for processes that run in a Pod. 
+**[ServiceAccounts](./serviceaccounts/readme.md)** provide identities for processes that run in a Pod. 
 
 - **Automation**: Used by tools like Jenkins, Prometheus, or the Kubernetes Dashboard.
 - **RBAC**: You can grant specific permissions to a ServiceAccount to talk to the API Server.
@@ -55,8 +55,8 @@ Raw YAML is difficult to manage at scale. **[Helm](./Helm/README.md)** allows yo
 
 ## 📘 4. Advanced Storage Options
 
-- **[Dynamic Provisioning](./DynamicProvisioning/README.md)**: Automatically creating cloud disks when a user requests storage.
-- **[Volume Types](./VolumeTypes/README.md)**: Deep dive into the different ways to store data, from ephemeral `EmptyDir` to cross-node `NFS`.
+- **[Dynamic Provisioning](./dynamicprovisioning/readme.md)**: Automatically creating cloud disks when a user requests storage.
+- **[Volume Types](./volumetypes/readme.md)**: Deep dive into the different ways to store data, from ephemeral `EmptyDir` to cross-node `NFS`.
 
 ---
 
@@ -94,12 +94,12 @@ Raw YAML is difficult to manage at scale. **[Helm](./Helm/README.md)** allows yo
 ---
 
 ## 🔗 Internal Navigation
-- [Back: Part 6 Overview](../README.md)
-- [View Resource List: Observability Foundations](../../../02-Observability-Foundations/README.md)
+- [Back: Part 6 Overview](../readme.md)
+- [View Resource List: Observability Foundations](../../../02-observability-foundations/readme.md)
 
 
 ---
 ## 🧭 Additional Modules
-- [CronJobs](CronJobs/README.md)
-- [LoadBalancers](LoadBalancers/README.md)
-- [Observability](Observability/README.md)
+- [CronJobs](cronjobs/readme.md)
+- [LoadBalancers](loadbalancers/readme.md)
+- [Observability](observability/readme.md)

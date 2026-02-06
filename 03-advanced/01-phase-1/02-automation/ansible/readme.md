@@ -15,7 +15,7 @@ By completing this level, you will:
 
 ## 📚 Module Overview
 
-### [01-Ansible-Collections](./01-Ansible-Collections/)
+### [01-Ansible-Collections](./01-ansible-collections/)
 **Duration**: 3 weeks  
 **Focus**: Collection development, packaging, and distribution
 
@@ -34,7 +34,7 @@ By completing this level, you will:
 - [ ] Manage collection dependencies and versioning
 - [ ] Create enterprise collection standards
 
-### [02-Performance-Optimization](./02-Performance-Optimization/)
+### [02-Performance-Optimization](./02-performance-optimization/)
 **Duration**: 2 weeks  
 **Focus**: Scale, efficiency, and performance tuning
 
@@ -53,7 +53,7 @@ By completing this level, you will:
 - [ ] Optimize resource utilization
 - [ ] Handle large-scale deployments effectively
 
-### [03-Enterprise-Patterns](./03-Enterprise-Patterns/)
+### [03-Enterprise-Patterns](./03-enterprise-patterns/)
 **Duration**: 3 weeks  
 **Focus**: Architecture patterns and organizational practices
 
@@ -72,7 +72,7 @@ By completing this level, you will:
 - [ ] Enable multi-team collaboration
 - [ ] Create automation standards and policies
 
-### [04-Security-Hardening](./04-Security-Hardening/)
+### [04-Security-Hardening](./04-security-hardening/)
 **Duration**: 2 weeks  
 **Focus**: Security automation and compliance
 
@@ -91,7 +91,7 @@ By completing this level, you will:
 - [ ] Design zero-trust automation patterns
 - [ ] Create security testing frameworks
 
-### [05-CI-CD-Integration](./05-CI-CD-Integration/)
+### [05-CI-CD-Integration](./05-ci-cd-integration/)
 **Duration**: 2 weeks  
 **Focus**: Advanced pipeline integration and automation
 

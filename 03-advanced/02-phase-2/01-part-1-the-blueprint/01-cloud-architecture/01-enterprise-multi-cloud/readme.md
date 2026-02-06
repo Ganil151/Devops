@@ -19,21 +19,21 @@ The advanced level focuses on the "Big Picture"—building resilient global syst
 
 ### 🌍 01. Multi-Cloud Architecture
 Architectures that span across AWS, Azure, and GCP.
-- [Multi-Cloud Design Patterns](01-Multi-Cloud-Architecture/README.md)
-- [Enterprise Patterns & Governance](07-Enterprise-Patterns/README.md)
+- [Multi-Cloud Design Patterns](01-multi-cloud-architecture/readme.md)
+- [Enterprise Patterns & Governance](07-enterprise-patterns/readme.md)
 
 ### 📦 16. Advanced Orchestration
-- **Kubernetes**: [EKS Production-Ready Guide](../../../README.md)
-- **Secrets & Identity**: [Cognito & Advanced IAM](12-Identity-Management/README.md)
+- **Kubernetes**: [EKS Production-Ready Guide](../../../readme.md)
+- **Secrets & Identity**: [Cognito & Advanced IAM](12-identity-management/readme.md)
 
 ### 🔍 17. Observability & SRE
 Monitor what matters and automate remediation.
-- **Tracing**: [Distributed Tracing (X-Ray)](17-Observability-Governance/README.md)
-- **Troubleshooting**: [Enterprise Troubleshooting Guide](06-Troubleshooting/README.md)
+- **Tracing**: [Distributed Tracing (X-Ray)](17-observability-governance/readme.md)
+- **Troubleshooting**: [Enterprise Troubleshooting Guide](06-troubleshooting/readme.md)
 
 ### 💾 10. Enterprise Database & Storage
-- **Security**: [Database Security Best Practices](10-Database-Enterprise/README.md)
-- **Scalability**: [Advanced EFS Patterns](13-File-Storage-EFS/README.md)
+- **Security**: [Database Security Best Practices](10-database-enterprise/readme.md)
+- **Scalability**: [Advanced EFS Patterns](13-file-storage-efs/readme.md)
 
 ---
 
@@ -56,11 +56,11 @@ Advanced cloud management includes mastering the economics of the cloud:
 
 ---
 ## 🧭 Additional Modules
-- [03 Container Registry ECR](03-Container-Registry-ECR/README.md)
-- [04 Cost Optimization](04-Cost-Optimization/README.md)
-- [05 Best Practices](05-Best-Practices/README.md)
-- [08 S3 Enterprise](08-S3-Enterprise/README.md)
-- [09 Infrastructure as Code](09-Infrastructure-as-Code/README.md)
-- [11 Application Integration](11-Application-Integration/README.md)
-- [14 Networking Route53](14-Networking-Route53/README.md)
-- [15 Serverless Lambda](15-Serverless-Lambda/README.md)
+- [03 Container Registry ECR](03-container-registry-ecr/readme.md)
+- [04 Cost Optimization](04-cost-optimization/readme.md)
+- [05 Best Practices](05-best-practices/readme.md)
+- [08 S3 Enterprise](08-s3-enterprise/readme.md)
+- [09 Infrastructure as Code](09-infrastructure-as-code/readme.md)
+- [11 Application Integration](11-application-integration/readme.md)
+- [14 Networking Route53](14-networking-route53/readme.md)
+- [15 Serverless Lambda](15-serverless-lambda/readme.md)

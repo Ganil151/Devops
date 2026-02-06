@@ -15,6 +15,6 @@ Why not just encrypt the data directly?
 ---
 
 ## 📂 Multi-Cloud Implementations
-- [AWS-Shield-WAF-KMS](./AWS-Shield-WAF-KMS): Enterprise-grade encryption and defense.
-- [Azure-Security-Center-KeyVault](./Azure-Security-Center-KeyVault): Integrated secret vault and security compliance.
-- [GCP-Armor-SecretManager](./GCP-Armor-SecretManager): Global edge protection and secret storage.
+- [AWS-Shield-WAF-KMS](./aws-shield-waf-kms): Enterprise-grade encryption and defense.
+- [Azure-Security-Center-KeyVault](./azure-security-center-keyvault): Integrated secret vault and security compliance.
+- [GCP-Armor-SecretManager](./gcp-armor-secretmanager): Global edge protection and secret storage.

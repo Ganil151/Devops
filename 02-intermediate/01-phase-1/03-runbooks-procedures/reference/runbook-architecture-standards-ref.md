@@ -115,8 +115,8 @@ Who to contact if this doesn't work.
 Links to related procedures.
 ```markdown
 ## Related Runbooks
-- [Database Performance Tuning](../../../02-Phase-2/01-Infrastructure-Automation/03-Cloud-Platforms/04-Data-and-Automation/02-Storage-and-Lifecycle-Management/s3-performance-optimization.md)
-- [PostgreSQL Restart Procedure](../../../../01-Beginner/01-Phase-1/03-Windows-Basics/Part-1-PowerShell-Automation/Commands/Network/Restart-NetAdapter.md)
+- [Database Performance Tuning](../../../02-phase-2/01-infrastructure-automation/03-cloud-platforms/04-data-and-automation/02-storage-and-lifecycle-management/s3-performance-optimization.md)
+- [PostgreSQL Restart Procedure](../../../../01-beginner/01-phase-1/03-windows-basics/part-1-powershell-automation/commands/network/restart-netadapter.md)
 ```
 
 ---

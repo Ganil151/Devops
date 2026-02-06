@@ -97,11 +97,11 @@ ansible redis -m service -a "name=redis-server state=restarted" --become
 
 ---
 
-[⬅️ Back to Ansible Index](../README.md) | [Next: Inventory Management](../02-Inventory-Management/README.md) ➡️
+[⬅️ Back to Ansible Index](../readme.md) | [Next: Inventory Management](../02-inventory-management/readme.md) ➡️
 
 ---
 ## 🧭 Additional Modules
-- [01 Control Node](01-Control-Node/README.md)
-- [02 Inventory Architecture](02-Inventory-Architecture/README.md)
-- [03 Transport Protocols](03-Transport-Protocols/README.md)
-- [04 Module Architecture](04-Module-Architecture/README.md)
+- [01 Control Node](01-control-node/readme.md)
+- [02 Inventory Architecture](02-inventory-architecture/readme.md)
+- [03 Transport Protocols](03-transport-protocols/readme.md)
+- [04 Module Architecture](04-module-architecture/readme.md)

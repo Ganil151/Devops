@@ -4,7 +4,7 @@ DevOps is constantly evolving. This module explores cutting-edge technologies an
 
 
 ## Core Concept: Intelligent & Decentralized Systems
-**[REFERENCE: Intelligent & Decentralized Systems](./REFERENCE/Intelligent-Decentralized-Systems-Ref.md)**
+**[REFERENCE: Intelligent & Decentralized Systems](./reference/intelligent-decentralized-systems-ref.md)**
 
 Navigating the convergence of machine learning and blockchain infrastructure:
 - **MLOps Lifecycles**: Standardizing the flow from data engineering to production inference with strict reproducibility.
@@ -12,7 +12,7 @@ Navigating the convergence of machine learning and blockchain infrastructure:
 - **Security in New Frontiers**: Protecting against model poisoning and ensuring smart contract integrity.
 
 ## Enterprise Governance: Modern Platform Delivery
-**[REFERENCE: Modern Platform Delivery Patterns](./REFERENCE/Modern-Platform-Delivery-Patterns-Ref.md)**
+**[REFERENCE: Modern Platform Delivery Patterns](./reference/modern-platform-delivery-patterns-ref.md)**
 
 Scaling SaaS, Serverless, and Edge architectures with fiscal and operational discipline:
 - **Multi-Tenant Governance**: Implementing robust isolation models (Silo vs. Pool) for scalable SaaS applications.
@@ -23,7 +23,7 @@ Scaling SaaS, Serverless, and Edge architectures with fiscal and operational dis
 
 ## 📚 Core Modules
 
-### 🤖 [01-MLOps](./01-MLOps/README.md)
+### 🤖 [01-MLOps](./01-mlops/readme.md)
 Machine Learning Operations - Deploy, monitor, and maintain ML models in production using DevOps practices.
 
 **Topics**:
@@ -37,7 +37,7 @@ Machine Learning Operations - Deploy, monitor, and maintain ML models in product
 
 ---
 
-### 🌐 [02-Web3-DevOps](./02-Web3-DevOps/README.md)
+### 🌐 [02-Web3-DevOps](./02-web3-devops/readme.md)
 Blockchain infrastructure, smart contract deployment, and decentralized application operations.
 
 **Topics**:
@@ -51,7 +51,7 @@ Blockchain infrastructure, smart contract deployment, and decentralized applicat
 
 ---
 
-### ☁️ [03-SaaS-PaaS](./03-SaaS-PaaS/README.md)
+### ☁️ [03-SaaS-PaaS](./03-saas-paas/readme.md)
 Platform as a Service and Software as a Service - Building and deploying cloud-native applications.
 
 **Topics**:
@@ -65,7 +65,7 @@ Platform as a Service and Software as a Service - Building and deploying cloud-n
 
 ---
 
-### ⚡ [Serverless Architecture](../../../README.md)
+### ⚡ [Serverless Architecture](../../../readme.md)
 Event-driven design patterns and serverless best practices.
 
 **Topics**:
@@ -77,7 +77,7 @@ Event-driven design patterns and serverless best practices.
 
 ---
 
-### 🌍 [Edge Computing](../../../README.md)
+### 🌍 [Edge Computing](../../../readme.md)
 Architecture for low-latency, geographically distributed applications.
 
 **Topics**:
@@ -93,7 +93,7 @@ Architecture for low-latency, geographically distributed applications.
 
 ### Infrastructure as Code (IaC) - Advanced
 
-**Covered in**: [02-Intermediate/04-Terraform](../../../README.md)
+**Covered in**: [02-Intermediate/04-Terraform](../../../readme.md)
 
 **Advanced Topics**:
 - Multi-cloud IaC (Terraform, Pulumi, Crossplane)
@@ -106,7 +106,7 @@ Architecture for low-latency, geographically distributed applications.
 
 ### FinOps (Cloud Financial Operations)
 
-**Covered in**: [00-Career-Mastery/07-FinOps](../../../README.md)
+**Covered in**: [00-Career-Mastery/07-FinOps](../../../readme.md)
 
 **Topics**:
 - Cloud cost optimization
@@ -146,7 +146,7 @@ Architecture for low-latency, geographically distributed applications.
 
 **Tools**: Istio, Linkerd, Consul
 
-**Covered in**: [03-Advanced/06-Microservices](../../../README.md)
+**Covered in**: [03-Advanced/06-Microservices](../../../readme.md)
 
 ---
 
@@ -176,7 +176,7 @@ Architecture for low-latency, geographically distributed applications.
 - **Serverless**: Function injection, over-privileged roles
 - **Edge**: DDoS protection, data sovereignty
 
-**Covered in**: [03-Advanced/04-Security](../../../README.md)
+**Covered in**: [03-Advanced/04-Security](../../../readme.md)
 
 ---
 
@@ -186,7 +186,7 @@ Architecture for low-latency, geographically distributed applications.
 - **Traces**: Jaeger, Tempo
 - **Unified**: Datadog, New Relic, Grafana Cloud
 
-**Covered in**: [03-Advanced/02-Observability](../../../README.md)
+**Covered in**: [03-Advanced/02-Observability](../../../readme.md)
 
 ---
 
@@ -196,7 +196,7 @@ Architecture for low-latency, geographically distributed applications.
 - **Reserved capacity**: 30-70% savings
 - **Auto-scaling**: Scale to zero when possible
 
-**Covered in**: [00-Career-Mastery/07-FinOps](../../../README.md)
+**Covered in**: [00-Career-Mastery/07-FinOps](../../../readme.md)
 
 ---
 

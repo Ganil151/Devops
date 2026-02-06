@@ -343,7 +343,7 @@ terraform {
 
 After mastering State Fundamentals, you are ready to stop working on your machine and move to **Team Operations**.
 
-**Proceed to**: [Part 1: Local vs Remote State →](../../README.md)
+**Proceed to**: [Part 1: Local vs Remote State →](../../readme.md)
 
 ---
 

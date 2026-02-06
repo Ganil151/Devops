@@ -1,6 +1,6 @@
 # ☸️ Kubernetes Cluster Architecture
 
-![Kubernetes Cluster Architecture Hub](./assets/k8s_cluster_architecture_hub.png)
+![Kubernetes Cluster Architecture Hub](./assets/k8s-cluster-architecture-hub.png)
 
 ## 📋 Overview
 
@@ -249,5 +249,5 @@ kubectl get events --all-namespaces --sort-by='.lastTimestamp'
 
 ## 🔗 Internal Navigation
 
-- [Next: Kubectl Basics](../02-Kubectl-Basics/README.md)
-- [Back: Foundations Overview](../README.md)
+- [Next: Kubectl Basics](../02-kubectl-basics/readme.md)
+- [Back: Foundations Overview](../readme.md)

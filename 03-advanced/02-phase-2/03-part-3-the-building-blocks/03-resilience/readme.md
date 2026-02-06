@@ -4,7 +4,7 @@ In Advanced DevOps, we assume that failure will happen. This phase focuses on bu
 
 
 ## Core Concept: Anti-Fragile Systems
-**[REFERENCE: Chaos Engineering & System Resilience](./REFERENCE/Chaos-Engineering-Architecture-Ref.md)**
+**[REFERENCE: Chaos Engineering & System Resilience](./reference/chaos-engineering-architecture-ref.md)**
 
 Building systems that thrive on turbulence through controlled experimentation:
 - **Steady State Analysis**: Defining what a "healthy" system looks like under load to detect subtle failures.
@@ -12,7 +12,7 @@ Building systems that thrive on turbulence through controlled experimentation:
 - **Blast Radius Mitigation**: Ensuring that experiments are isolated and do not impact global user experience.
 
 ## Enterprise Governance: Continuity & Recovery
-**[REFERENCE: Business Continuity & Disaster Recovery](./REFERENCE/Business-Continuity-DR-Ref.md)**
+**[REFERENCE: Business Continuity & Disaster Recovery](./reference/business-continuity-dr-ref.md)**
 
 Ensuring the business survives catastrophic infrastructure failure:
 - **Defined Recovery Metrics (RTO/RPO)**: Aligning technical recovery capabilities with business-critical SLAs.
@@ -33,13 +33,13 @@ Resilience is the ability of a system to recover quickly from difficulties. In t
 
 ## 📚 Modules in This Part
 
-### 1️⃣ [01-Chaos-Engineering](./01-Chaos-Engineering/README.md)
+### 1️⃣ [01-Chaos-Engineering](./01-chaos-engineering/readme.md)
 The discipline of experimenting on a system in order to build confidence in its capability to withstand turbulent conditions. Tools: LitmusChaos, Gremlin.
 
-### 2️⃣ [02-Backup-DR-Velero](./02-Backup-DR-Velero/README.md)
+### 2️⃣ [02-Backup-DR-Velero](./02-backup-dr-velero/readme.md)
 Mastering **Velero** for cluster-wide backups. Recovering from a total region loss or accidental `kubectl delete namespace prod`.
 
-### 3️⃣ [03-Incident-Management](./03-Incident-Management/README.md)
+### 3️⃣ [03-Incident-Management](./03-incident-management/readme.md)
 Connecting technical failures to human response. Mastering PagerDuty APIs, SlackOps, and automated post-mortems.
 
 ---
@@ -50,4 +50,4 @@ Connecting technical failures to human response. Mastering PagerDuty APIs, Slack
 
 ---
 
-**Parent Path**: [Advanced Phase-2: Strategic Skills](../README.md)
+**Parent Path**: [Advanced Phase-2: Strategic Skills](../readme.md)

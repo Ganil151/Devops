@@ -88,4 +88,4 @@ Creating an "LVM Snapshot" of a database volume before a major migration, provid
 ---
 
 ## 🔗 Next Steps
-Proceed to: **[Assessments](../07-Assessments/README.md)** →
+Proceed to: **[Assessments](../07-assessments/readme.md)** →

@@ -62,5 +62,5 @@ While most focus on Liveness and Readiness, the **Startup Probe** is vital for l
 
 ## 🔗 Internal Navigation
 
-* [Back: Foundations Overview](../README.md)
-* [Next Part: Logging and Cloud Metrics](../../02-Logging-and-Cloud-Metrics/README.md)
+* [Back: Foundations Overview](../readme.md)
+* [Next Part: Logging and Cloud Metrics](../../02-logging-and-cloud-metrics/readme.md)

@@ -46,9 +46,9 @@ Master programmatic infrastructure by building these typed cloud managers.
 
 | Challenge | Topic | Description | Starter Code | Solution |
 | :--- | :--- | :--- | :--- | :--- |
-| **01. Dynamic Multi-Region**| Abstraction | Write a Python script that iterates over a list of regions and provisions an S3 bucket in each using a single class. | [Link](./challenges/challenge_01_multi_region.py) | [Link](./challenges/solutions/solution_01_multi_region.py) |
-| **02. Compliance Unit Test** | Quality | Use `pytest` to audit an IaC declaration and raise an error if an S3 bucket is defined without `public_access_block`. | [Link](./challenges/challenge_02_iac_test.py) | [Link](./challenges/solutions/solution_02_iac_test.py) |
-| **03. Auto-Tagging Engine** | Mixins | Implement a base IaC class that automatically adds `Owner` and `CostCenter` tags to every resource it creates. | [Link](./challenges/challenge_03_auto_tags.py) | [Link](./challenges/solutions/solution_03_auto_tags.py) |
+| **01. Dynamic Multi-Region**| Abstraction | Write a Python script that iterates over a list of regions and provisions an S3 bucket in each using a single class. | [Link](./challenges/challenge-01-multi-region.py) | [Link](./challenges/solutions/solution-01-multi-region.py) |
+| **02. Compliance Unit Test** | Quality | Use `pytest` to audit an IaC declaration and raise an error if an S3 bucket is defined without `public_access_block`. | [Link](./challenges/challenge-02-iac-test.py) | [Link](./challenges/solutions/solution-02-iac-test.py) |
+| **03. Auto-Tagging Engine** | Mixins | Implement a base IaC class that automatically adds `Owner` and `CostCenter` tags to every resource it creates. | [Link](./challenges/challenge-03-auto-tags.py) | [Link](./challenges/solutions/solution-03-auto-tags.py) |
 
 ---
 
@@ -63,4 +63,4 @@ Master programmatic infrastructure by building these typed cloud managers.
 
 ---
 
-**Next Step**: [Terraform CDK with Python →](README.md)
+**Next Step**: [Terraform CDK with Python →](readme.md)

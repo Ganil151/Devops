@@ -3,7 +3,7 @@
 Deepen your understanding of cluster management, infrastructure as code, and automated configuration.
 
 ## Module 01: Kubernetes Core
-**Study Resource**: [Kubernetes Modules](../../README.md)
+**Study Resource**: [Kubernetes Modules](../../readme.md)
 
 1. What is Kubernetes primarily used for?
 - A) Container orchestration
@@ -44,7 +44,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 02: Helm & Application Packaging
-**Study Resource**: [Helm Packaging](../../README.md)
+**Study Resource**: [Helm Packaging](../../readme.md)
 
 7. What is Helm in Kubernetes?
 - A) A container runtime
@@ -79,7 +79,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 03: Ansible & Configuration Management
-**Study Resource**: [Ansible Automation](../../README.md)
+**Study Resource**: [Ansible Automation](../../readme.md)
 
 12. What is Ansible used for in DevOps?
 - A) Container building
@@ -114,7 +114,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 4: Terraform (Infrastructure as Code)
-**Study Resource**: [Terraform IaC](../../README.md)
+**Study Resource**: [Terraform IaC](../../readme.md)
 
 17. What is Infrastructure as Code (IaC)?
 - A) Writing code for hardware
@@ -149,7 +149,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 05: CI/CD Pipelines & Testing
-**Study Resource**: [Intermediate CI/CD](../../README.md)
+**Study Resource**: [Intermediate CI/CD](../../readme.md)
 
 22. What is the difference between Continuous Delivery and Continuous Deployment?
 - A) They are the same
@@ -178,7 +178,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 06: Cloud Networking (VPC & Routing)
-**Study Resource**: [VPC Networking](../../02-Intermediate/01-Phase-1/01-Networking/README.md)
+**Study Resource**: [VPC Networking](../../02-intermediate/01-phase-1/01-networking/readme.md)
 
 26. Which CIDR notation represents a network with 256 IP addresses?
 - A) /32
@@ -207,7 +207,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 07: Managed Databases & Serverless
-**Study Resource**: [Cloud Foundations](../../README.md)
+**Study Resource**: [Cloud Foundations](../../readme.md)
 
 30. What is a primary advantage of using a Managed Database service (like Amazon RDS) instead of running a DB on a VM?
 - A) It is always free
@@ -242,7 +242,7 @@ Deepen your understanding of cluster management, infrastructure as code, and aut
 ---
 
 ## Module 08: Scripting & Advanced Config (Chef)
-**Study Resource**: [Chef Automation](../../README.md) & [Automation Foundations](../../README.md)
+**Study Resource**: [Chef Automation](../../readme.md) & [Automation Foundations](../../readme.md)
 
 35. In a Bash script, which variable contains the exit status of the most recently executed command?
 - A) `$@`

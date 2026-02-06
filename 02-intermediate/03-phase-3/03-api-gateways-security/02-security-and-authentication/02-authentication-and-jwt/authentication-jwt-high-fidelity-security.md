@@ -67,5 +67,5 @@ In a secure microservice architecture, the Gateway might perform "Token Exchange
 ---
 
 ## 🔗 Internal Navigation
-- [Next: Traffic Control and Rate Limiting](README.md)
-- [Back: Security & Authentication Overview](../README.md)
+- [Next: Traffic Control and Rate Limiting](readme.md)
+- [Back: Security & Authentication Overview](../readme.md)

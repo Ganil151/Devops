@@ -30,4 +30,4 @@ Reliability is the goal of automation. You should know the "Check-Act-Verify" pa
 ## 🛠️ Performance Task
 **Task**: Build a "Safety First" script that performs a destructive action (like clearing a folder) but requires a `--force` flag and checks for a specific "guard" file before proceeding.
 
-[Check challenges for more tasks.](./CHALLENGES.md)
+[Check challenges for more tasks.](./challenges.md)

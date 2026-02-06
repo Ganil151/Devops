@@ -6,14 +6,14 @@ Welcome to the foundational stage of Kubernetes. Here, we move beyond "running c
 
 ## 📂 Modules in this Part
 
-### 1. [01-Cluster-Architecture](./01-Cluster-Architecture/README.md)
+### 1. [01-Cluster-Architecture](./01-cluster-architecture/readme.md)
 Deep dive into the brains of Kubernetes.
 - **Control Plane**: API Server, Scheduler, and Controller Manager.
 - **Data Plane**: Kubelet and Kube-proxy.
 - **Storage**: etcd and the Raft consensus algorithm.
 - **Topologies**: High Availability (HA) patterns.
 
-### 2. [02-Kubectl-Basics](./02-Kubectl-Basics/README.md)
+### 2. [02-Kubectl-Basics](./02-kubectl-basics/readme.md)
 Master the essential tool for cluster interaction.
 - **productivity**: Aliases and auto-completion.
 - **Output Control**: JSONPath, Custom Columns, and Go-templates.
@@ -26,4 +26,4 @@ Master the essential tool for cluster interaction.
 2. Follow up with **Kubectl Basics** to learn *how* to manage it.
 
 ---
-[Back to Main Curriculum](../README.md)
+[Back to Main Curriculum](../readme.md)

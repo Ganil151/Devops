@@ -6,13 +6,13 @@ While metrics tell you *something* is wrong, logs tell you *what* is wrong. This
 
 ## 📂 Modules in this Part
 
-### 1. [02-Log-Management](./02-Log-Management/README.md)
+### 1. [02-Log-Management](./02-log-management/readme.md)
 Mastering the story of your application.
 - **Log Levels**: Debug, Info, Warn, Error, and Fatal.
 - **Structured Logging**: Why JSON is the industry standard for logs.
 - **Log Rotation**: Managing disk space and retention.
 
-### 2. [07-AWS-CloudWatch](./07-AWS-CloudWatch/README.md)
+### 2. [07-AWS-CloudWatch](./07-aws-cloudwatch/readme.md)
 Observability on the world's most popular cloud.
 - **CloudWatch Metrics**: Performance monitoring for EC2, RDS, and Lambda.
 - **CloudWatch Logs**: Centralized logging and Querying (Log Insights).
@@ -26,5 +26,5 @@ Observability on the world's most popular cloud.
 
 ---
 ---
-- [Next: Part 3 - Distributed Tracing & APM](README.md)
-- [Back to Main Curriculum](../README.md)
+- [Next: Part 3 - Distributed Tracing & APM](readme.md)
+- [Back to Main Curriculum](../readme.md)

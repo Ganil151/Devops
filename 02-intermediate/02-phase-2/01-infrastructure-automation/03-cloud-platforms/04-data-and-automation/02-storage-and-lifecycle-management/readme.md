@@ -2,7 +2,7 @@
 
 Storage in the cloud is more than just a place to put files; it is a programmable, tiered ecosystem designed for extreme durability and cost-efficiency.
 
-![Storage Architecture Placeholder](Descriptive Diagram: A multi-tiered storage bucket showing data flowing from Standard to Infrequent Access to Archive/Glacier based on time-based rules.)
+![Storage Architecture Placeholder](descriptive-diagram:-a-multi-tiered-storage-bucket-showing-data-flowing-from-standard-to-infrequent-access-to-archive/glacier-based-on-time-based-rules.)
 
 ## 🚀 The "DevOps Why": Storage Economics
 Storing 10TB of logs in a "Hot" (Standard) tier for a year is a FinOps failure. An Intermediate DevOps engineer automates the movement of data to "Glacier" after a period of inactivity, saving up to 90% in storage costs.

@@ -6,18 +6,18 @@ Finalize your API Gateway expertise with technical assessments and real-world in
 
 ## 📂 Resources in this Part
 
-### 1. [05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)
+### 1. [05-Interview-Questions-and-Quizzes](./05-interview-questions-and-quizzes/readme.md)
 Technical screening preparation.
 - **Top 20 Questions**: Microservices architecture and API security.
 - **Quizzes**: Validating your knowledge of JWT and Throttling.
 
-### 2. [06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)
+### 2. [06-Real-Life-Scenarios](./06-real-life-scenarios/readme.md)
 Incident post-mortems and design challenges.
 - **Troubleshooting**: Debugging broken OAuth flows.
 - **Architecture**: Design a gateway for 10 million daily users.
 
-### 3. [📺 YouTube Mastery](./Youtube_Lessons.md)
+### 3. [📺 YouTube Mastery](./youtube-lessons.md)
 - Curated video tutorials from industry experts.
 
 ---
-[Back to Main Curriculum](../README.md)
+[Back to Main Curriculum](../readme.md)

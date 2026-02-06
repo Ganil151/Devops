@@ -3,7 +3,7 @@
 Scaling from simple scripts to complex automation requires advanced prompting techniques. At this level, we focus on **Chain-of-Thought (CoT)**, structured **Runbook** generation, and the fine-tuning of AI parameters for reliability and precision.
 
 ## Core Concept: Chain-of-Thought Reasoning
-**[REFERENCE: AI-Operations & Advanced Prompting](./REFERENCE/AI-Ops-Architecture-Ref.md)**
+**[REFERENCE: AI-Operations & Advanced Prompting](./reference/ai-ops-architecture-ref.md)**
 
 Moving beyond "Simple Q&A" to architectural analysis:
 - **Reasoning Traces**: Forcing the model to explain its logic before suggesting a command.
@@ -11,7 +11,7 @@ Moving beyond "Simple Q&A" to architectural analysis:
 - **Parameter Optimization**: Using low Temperature (0.0-0.2) and Top-P to ensure deterministic code generation.
 
 ## Enterprise Governance: Guardrails & Privacy
-**[REFERENCE: AI-Operations & Advanced Prompting](./REFERENCE/AI-Ops-Architecture-Ref.md)**
+**[REFERENCE: AI-Operations & Advanced Prompting](./reference/ai-ops-architecture-ref.md)**
 
 Integrating AI into the production lifecycle with safety:
 - **Personalized Context (RAG)**: Providing the model with internal docs to ensure suggested tools match company standards.
@@ -25,28 +25,28 @@ Integrating AI into the production lifecycle with safety:
 
 This module is organized into 6 progressive phases:
 
-1.  **[01-Chain-of-Thought-DevOps](README.md)%20for%20DevOps.md)**
+1.  **[01-Chain-of-Thought-DevOps](readme.md)%20for%20DevOps.md)**
     *   CoT for complex troubleshooting (Networking, K8s).
     *   Reasoning traces and verification steps.
 
-2.  **[02-Runbook-Automation](02-Runbook-Automation/Runbook%20Automation.md)**
+2.  **[02-Runbook-Automation](02-runbook-automation/runbook%20automation.md)**
     *   Converting logs to structured documentation.
     *   Prompt templates for incident post-mortems.
 
-3.  **[03-Few-Shot-and-Role-Prompting](03-Few-Shot-and-Role-Prompting/Few-Shot and Role Prompting.md)**
+3.  **[03-Few-Shot-and-Role-Prompting](03-few-shot-and-role-prompting/few-shot-and-role-prompting.md)**
     *   Role-based prompts for Security and SRE personas.
     *   Using Few-Shot examples for consistent Infrastructure-as-Code.
 
-4.  **[04-LLM-Settings-for-Code](./04-LLM-Settings-for-Code/README.md)**
+4.  **[04-LLM-Settings-for-Code](./04-llm-settings-for-code/readme.md)**
     *   Understanding Temperature, Top-P, and Max Tokens.
     *   DevOps "Golden Configurations" for different tasks.
 
-5.  **[05-Interview-Questions-and-Quizzes](./05-Interview-Questions-and-Quizzes/README.md)**
+5.  **[05-Interview-Questions-and-Quizzes](./05-interview-questions-and-quizzes/readme.md)**
     *   20 Essential interview questions for AI-driven DevOps roles.
     *   20-Question Knowledge Quiz to test your understanding.
 
-6.  **[06-Real-Life-Scenarios](./06-Real-Life-Scenarios/README.md)**: Practical troubleshootng and architecture challenges.
-7.  **[📺 YouTube Lessons](./Youtube_Lessons.md)**: Curated video tutorials for visual learning.
+6.  **[06-Real-Life-Scenarios](./06-real-life-scenarios/readme.md)**: Practical troubleshootng and architecture challenges.
+7.  **[📺 YouTube Lessons](./youtube-lessons.md)**: Curated video tutorials for visual learning.
 
 ---
 
@@ -59,4 +59,4 @@ By the end of this module, you will be able to:
 5.  Leverage **Role-Based** prompting to conduct automated security and compliance reviews.
 
 ---
-**Ready for the Future?** Proceed to the **[Advanced Level](DevOps%20Prompt%20Engineering%20-%20Advanced%20Level.md)** to explore Agentic Workflows and Autonomous Remediation.
+**Ready for the Future?** Proceed to the **[Advanced Level](devops%20prompt%20engineering%20-%20advanced%20level.md)** to explore Agentic Workflows and Autonomous Remediation.

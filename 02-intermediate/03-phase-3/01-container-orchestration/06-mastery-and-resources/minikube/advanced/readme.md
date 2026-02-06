@@ -66,4 +66,4 @@ minikube service list
 For advanced testing scenarios (like in CI/CD pipelines or Go test suites), you can use Minikube as a library.
 (See [Minikube Go Library](https://pkg.go.dev/k8s.io/minikube/pkg/minikube/libmachine) documentation)
 
-[Back: Intermediate Level](../Intermediate/README.md) | [Minikube Index](../README.md)
+[Back: Intermediate Level](../intermediate/readme.md) | [Minikube Index](../readme.md)

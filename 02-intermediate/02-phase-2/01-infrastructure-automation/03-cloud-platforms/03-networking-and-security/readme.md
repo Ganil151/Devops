@@ -30,25 +30,25 @@ Traditional networking relied on "Castles and Moats." Cloud networking uses "Sof
 
 ## 📂 Framework Structure
 
-### [01-Network-Infrastructure](./01-Network-Infrastructure)
+### [01-Network-Infrastructure](./01-network-infrastructure)
 The foundational connectivity layer.
 - **AWS-VPC**: Subnets, IGW, NAT, and Peering.
 - **Azure-VNet**: Hub-and-Spoke architectures.
 - **GCP-Virtual-Network**: Global VPCs and VPC Service Controls.
 
-### [02-DNS-and-Content-Delivery](./02-DNS-and-Content-Delivery)
+### [02-DNS-and-Content-Delivery](./02-dns-and-content-delivery)
 Global traffic steering and performance.
 - **AWS-Route53-CloudFront**: High-availability DNS and global caching.
 - **Azure-DNS-FrontDoor**: Modern CDN with integrated security.
 - **GCP-Cloud-DNS-CDN**: Fast, global edge infrastructure.
 
-### [03-Identity-and-Access-Control](./03-Identity-and-Access-Control)
+### [03-Identity-and-Access-Control](./03-identity-and-access-control)
 Who can do what, and from where?
 - **AWS-IAM-Cognito**: Roles, Policies, and Consumer identity.
 - **Azure-AD**: Enterprise identity and B2C.
 - **GCP-IAM**: Resource-based hierarchy and service accounts.
 
-### [04-Security-and-Secrets-Management](./04-Security-and-Secrets-Management)
+### [04-Security-and-Secrets-Management](./04-security-and-secrets-management)
 Defending the perimeter and protecting data.
 - **AWS-Shield-WAF-KMS**: Encryption and DDoS defense.
 - **Azure-Security-Center-KeyVault**: Unified security management.

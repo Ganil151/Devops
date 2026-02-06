@@ -15,10 +15,10 @@ Database Reliability Engineering (DBRE) is the application of SRE principles to 
 
 ## 🗺️ Module Structure
 
-1. **[🔴 01-Database-Operators](README.md)**
+1. **[🔴 01-Database-Operators](readme.md)**
    - CloudNativePG and Vitess.
    - Using Operators to manage PVCs, Backups, and Failover.
-2. **[🔴 02-Scalability-Patterns](README.md)**
+2. **[🔴 02-Scalability-Patterns](readme.md)**
    - Read Replicas vs. Proxy-based sharding (ProxySQL).
    - Multi-Region data synchronization.
 
@@ -82,4 +82,4 @@ spec:
 Never perform manual `ALTER TABLE` commands on a production database. Use a migration tool (Flyway, Liquibase, or Golang Migrate) integrated into your CI/CD pipeline, and always test migrations against a production-sized staging database before applying them to PROD.
 
 ---
-**Next Step**: Start with [Database Operators](README.md) 🚀
+**Next Step**: Start with [Database Operators](readme.md) 🚀

@@ -131,5 +131,5 @@ Security teams often require all traffic between VPCs to be inspected by a firew
 
 You've built the network. Now let's explore how to optimize it for cost and performance.
 
-Proceed to: **[04. Interconnectivity Optimization](../04-Interconnectivity-Optimization/README.md)** →
+Proceed to: **[04. Interconnectivity Optimization](../04-interconnectivity-optimization/readme.md)** →
 Node: This link points to the next lesson.

@@ -12,7 +12,7 @@ resource "resource_type" "local_name" {
 
 ### 💎 Expressions & Logic
 For a deep dive into how Terraform handles data, logic, and transformations, see the comprehensive guide:
-👉 **[Detailed Terraform Expressions Guide](Expressions.md)**
+👉 **[Detailed Terraform Expressions Guide](expressions.md)**
 
 ---
 

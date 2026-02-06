@@ -14,7 +14,7 @@ Use this checklist during your first 90 days to ensure you are maintaining "Situ
 - [ ] **Secret Hygiene**: Run a quick scan of the repos you worked on today (e.g., `gitleaks protect --staged`).
 
 ### 🚨 Operational Readiness
-- [ ] **Incident Rehearsal**: Do you know the exact command to roll back the current production version of the primary service? (Check the [Rollback Guide](./02-Day-in-the-Life-Operations/03-Rollback-Procedures/README.md)).
+- [ ] **Incident Rehearsal**: Do you know the exact command to roll back the current production version of the primary service? (Check the [Rollback Guide](./02-day-in-the-life-operations/03-rollback-procedures/readme.md)).
 - [ ] **On-Call Handover**: If you are entering the rotation, verify your PagerDuty schedule and ensure your notification settings are loud enough.
 
 ### 🌇 The Legacy Check (End of Day)

@@ -4,8 +4,8 @@ Jenkins shouldn't just run on one big server. To scale for an enterprise, you mu
 
 ## 📚 Module Structure
 
-- **[Boilerplates](README.md)**: `agent-setup.sh` (Connecting an SSH agent).
-- **[CHALLENGES](../CHALLENGES.md)**: Setting up Docker-based agents.
+- **[Boilerplates](readme.md)**: `agent-setup.sh` (Connecting an SSH agent).
+- **[CHALLENGES](../challenges.md)**: Setting up Docker-based agents.
 
 ---
 

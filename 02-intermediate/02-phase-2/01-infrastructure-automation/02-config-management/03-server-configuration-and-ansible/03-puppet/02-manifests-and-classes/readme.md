@@ -3,8 +3,8 @@
 Puppet is a declarative, model-driven configuration management tool. It focuses on the "Desired State" and uses a specialized language to describe the configuration of your systems.
 
 ## 📚 Module Structure
-- **[Boilerplates](README.md)**: `init.pp` (Web server class).
-- **[CHALLENGES](../../01-Ansible/Learning-Modules/01-Fundamentals/CHALLENGES.md)**: User guardianship and module creation.
+- **[Boilerplates](readme.md)**: `init.pp` (Web server class).
+- **[CHALLENGES](../../01-ansible/learning-modules/01-fundamentals/challenges.md)**: User guardianship and module creation.
 
 ---
 
@@ -54,4 +54,4 @@ graph TD
 
 ---
 
-[Next: SaltStack](../../../../../README.md)
+[Next: SaltStack](../../../../../readme.md)

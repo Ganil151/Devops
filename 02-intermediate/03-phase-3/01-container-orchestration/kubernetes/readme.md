@@ -462,4 +462,4 @@ kube-scheduler-k8s-master-server            1/1     Running   3          6h13m
 
 ---
 ## 🧭 Additional Modules
-- [EKS](EKS/README.md)
+- [EKS](eks/readme.md)

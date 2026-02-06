@@ -100,4 +100,4 @@ HealthCheck:
 
 ---
 
-[⬅️ Back to Cloud Platforms Index](../README.md) | [Next: Compute & Scale](../02-Compute-and-Scale/README.md) ➡️
+[⬅️ Back to Cloud Platforms Index](../readme.md) | [Next: Compute & Scale](../02-compute-and-scale/readme.md) ➡️

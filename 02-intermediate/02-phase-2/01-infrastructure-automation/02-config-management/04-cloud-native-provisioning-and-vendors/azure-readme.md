@@ -32,14 +32,14 @@ graph TD
 
 ## 📂 Module Structure
 
-### 🔷 [Azure ARM Templates](./04-Azure-ARM/README.md)
-- [Beginner](./04-Azure-ARM/Beginner/README.md)
-- [Intermediate](./04-Azure-ARM/Intermediate/README.md)
-- [Advanced](./04-Azure-ARM/Advanced/README.md)
-- [Interview & Quiz](./04-Azure-ARM/Interview-Questions/README.md)
+### 🔷 [Azure ARM Templates](./04-azure-arm/readme.md)
+- [Beginner](./04-azure-arm/beginner/readme.md)
+- [Intermediate](./04-azure-arm/intermediate/readme.md)
+- [Advanced](./04-azure-arm/advanced/readme.md)
+- [Interview & Quiz](./04-azure-arm/interview-questions/readme.md)
 
-### 📐 [Azure Bicep](./05-Azure-Bicep/README.md)
-- [Beginner](./05-Azure-Bicep/Beginner/README.md)
-- [Intermediate](./05-Azure-Bicep/Intermediate/README.md)
-- [Advanced](./05-Azure-Bicep/Advanced/README.md)
-- [Interview & Quiz](./05-Azure-Bicep/Interview-Questions/README.md)
+### 📐 [Azure Bicep](./05-azure-bicep/readme.md)
+- [Beginner](./05-azure-bicep/beginner/readme.md)
+- [Intermediate](./05-azure-bicep/intermediate/readme.md)
+- [Advanced](./05-azure-bicep/advanced/readme.md)
+- [Interview & Quiz](./05-azure-bicep/interview-questions/readme.md)

@@ -5,9 +5,9 @@ Choose the installation method that best fits your environment and requirements.
 ## Available Installation Methods
 
 ### 1. Native Installation
-- **[Ubuntu Installation Guide](./Native/ubuntu-installation-guide.md)** - Complete native installation on Ubuntu 24.04
-- **[Original Install Guide](./Native/install-sonarQube.md)** - Step-by-step installation instructions
-- **[SystemD Service](./Native/systemd-service-config.md)** - Service configuration for system management
+- **[Ubuntu Installation Guide](./native/ubuntu-installation-guide.md)** - Complete native installation on Ubuntu 24.04
+- **[Original Install Guide](./native/install-sonarqube.md)** - Step-by-step installation instructions
+- **[SystemD Service](./native/systemd-service-config.md)** - Service configuration for system management
 
 **Best for:**
 - Production environments requiring maximum performance
@@ -15,9 +15,9 @@ Choose the installation method that best fits your environment and requirements.
 - Custom security and compliance needs
 
 ### 2. Docker Installation
-- **[Docker Installation Guide](./Docker/docker-installation-guide.md)** - Comprehensive Docker setup with PostgreSQL
-- **[Docker Quick Start](./Docker/docker-quick-start.md)** - Fast Docker deployment
-- **[Container Notes](./Docker/docker-container-notes.md)** - Docker-specific configurations
+- **[Docker Installation Guide](./docker/docker-installation-guide.md)** - Comprehensive Docker setup with PostgreSQL
+- **[Docker Quick Start](./docker/docker-quick-start.md)** - Fast Docker deployment
+- **[Container Notes](./docker/docker-container-notes.md)** - Docker-specific configurations
 
 **Best for:**
 - Development and testing environments
@@ -25,7 +25,7 @@ Choose the installation method that best fits your environment and requirements.
 - Containerized infrastructure
 
 ### 3. Kubernetes Installation
-- **[Kubernetes Deployment Guide](./Kubernetes/kubernetes-deployment-guide.md)** - Production-ready Kubernetes deployment
+- **[Kubernetes Deployment Guide](./kubernetes/kubernetes-deployment-guide.md)** - Production-ready Kubernetes deployment
 
 **Best for:**
 - Cloud-native environments
@@ -70,7 +70,7 @@ Choose the installation method that best fits your environment and requirements.
 ## Next Steps
 
 After installation:
-- Configure [Database](README.md) settings
-- Set up [Security](README.md) and authentication
-- Optimize [Performance](README.md) settings
-- Integrate with [CI/CD](../CI-CD-Integration/) pipelines
+- Configure [Database](readme.md) settings
+- Set up [Security](readme.md) and authentication
+- Optimize [Performance](readme.md) settings
+- Integrate with [CI/CD](../ci-cd-integration/) pipelines

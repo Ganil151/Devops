@@ -3,7 +3,7 @@
 > **Distributed Kubernetes and eBPF-based networking**
 
 ## Core Concept: The Distributed Fleet
-**[REFERENCE: Multi-Cluster & CAPI](./REFERENCE/Multi-Cluster-CAPI-Architecture-Ref.md)**
+**[REFERENCE: Multi-Cluster & CAPI](./reference/multi-cluster-capi-architecture-ref.md)**
 
 Scaling infrastructure beyond the single-cluster boundary:
 - **Declarative Provisioning**: Using ClusterAPI to manage the global lifecycle of clusters as code.
@@ -11,7 +11,7 @@ Scaling infrastructure beyond the single-cluster boundary:
 - **Hybrid Connectivity**: Unifying on-prem and cloud workloads through standard, secure tunnels.
 
 ## Enterprise Governance: Fleet Security
-**[REFERENCE: Cilium & eBPF Architecture](./REFERENCE/Cilium-eBPF-Architecture-Ref.md)**
+**[REFERENCE: Cilium & eBPF Architecture](./reference/cilium-ebpf-architecture-ref.md)**
 
 Maintaining uniform control and performance across a distributed landscape:
 - **Policy Synchronization**: Enforcing L7-aware network security policies consistently across every cluster in the fleet.
@@ -23,8 +23,8 @@ Maintaining uniform control and performance across a distributed landscape:
 
 ## 📚 Modules in This Part
 
-1. **[01-Multi-Cluster-Federation](./01-Multi-Cluster-Federation/)** - 01 Multi Cluster Federation
-2. **[02-Advanced-Networking-Cilium](./02-Advanced-Networking-Cilium/)** - 02 Advanced Networking Cilium
+1. **[01-Multi-Cluster-Federation](./01-multi-cluster-federation/)** - 01 Multi Cluster Federation
+2. **[02-Advanced-Networking-Cilium](./02-advanced-networking-cilium/)** - 02 Advanced Networking Cilium
 
 
 ---
@@ -50,4 +50,4 @@ These modules should be completed in the order shown above for optimal learning 
 
 ---
 
-**Part of**: [Advanced Phase-2: Strategic Skills](../README.md)
+**Part of**: [Advanced Phase-2: Strategic Skills](../readme.md)

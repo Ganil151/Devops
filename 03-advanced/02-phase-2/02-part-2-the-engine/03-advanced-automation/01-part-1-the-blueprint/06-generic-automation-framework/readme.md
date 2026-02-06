@@ -38,9 +38,9 @@ Master architectural scaling by building your own micro-framework.
 
 | Challenge | Topic | Description | Starter Code | Solution |
 | :--- | :--- | :--- | :--- | :--- |
-| **01. Dynamic Plugin Loader** | Metaprogramming | Write a script that automatically finds and loads all classes inheriting from `BaseTask` in a `/plugins` folder. | [Link](./challenges/challenge_01_plugin_loader.py) | [Link](./challenges/solutions/solution_01_plugin_loader.py) |
-| **02. Dependency Runner** | DAG Logic | Implement a simple task runner where Task B only runs if Task A succeeds. | [Link](./challenges/challenge_02_task_deps.py) | [Link](./challenges/solutions/solution_02_task_deps.py) |
-| **03. Global State Manager** | Context Pattern | Build a framework where every task adds metadata to a shared `Context` object that is exported at the end. | [Link](./challenges/challenge_03_gaf_context.py) | [Link](./challenges/solutions/solution_03_gaf_context.py) |
+| **01. Dynamic Plugin Loader** | Metaprogramming | Write a script that automatically finds and loads all classes inheriting from `BaseTask` in a `/plugins` folder. | [Link](./challenges/challenge-01-plugin-loader.py) | [Link](./challenges/solutions/solution-01-plugin-loader.py) |
+| **02. Dependency Runner** | DAG Logic | Implement a simple task runner where Task B only runs if Task A succeeds. | [Link](./challenges/challenge-02-task-deps.py) | [Link](./challenges/solutions/solution-02-task-deps.py) |
+| **03. Global State Manager** | Context Pattern | Build a framework where every task adds metadata to a shared `Context` object that is exported at the end. | [Link](./challenges/challenge-03-gaf-context.py) | [Link](./challenges/solutions/solution-03-gaf-context.py) |
 
 ---
 
@@ -55,4 +55,4 @@ Master architectural scaling by building your own micro-framework.
 
 ---
 
-**Next Step**: [Python for Infrastructure as Code →](../07-Infrastructure-as-Code-Python/README.md)
+**Next Step**: [Python for Infrastructure as Code →](../07-infrastructure-as-code-python/readme.md)

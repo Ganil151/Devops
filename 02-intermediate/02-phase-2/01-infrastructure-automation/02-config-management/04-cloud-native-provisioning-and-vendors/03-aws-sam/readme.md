@@ -27,17 +27,17 @@ graph LR
 
 ## 📂 Module Structure
 
-### 🔰 [Beginner Level](./Beginner/README.md)
+### 🔰 [Beginner Level](./beginner/readme.md)
 - Introduction to SAM and Serverless basics
 - Template structure and simple Function/API definitions
 - SAM CLI commands (init, build, deploy)
 
-### 🚀 [Intermediate Level](./Intermediate/README.md)
+### 🚀 [Intermediate Level](./intermediate/readme.md)
 - Local testing with `sam local invoke` and `sam local start-api`
 - Managing environments with Parameter Store and Secrets Manager
 - Event mapping (S3 triggers, DynamoDB Streams)
 
-### 🏆 [Advanced Level](./Advanced/README.md)
+### 🏆 [Advanced Level](./advanced/readme.md)
 - Canary and Linear deployments with CodeDeploy
 - SAM Pipelines for CI/CD
 - Nested applications and global configurations
@@ -46,4 +46,4 @@ graph LR
 ---
 
 ## ❓ Interview Questions & Quiz
-- [SAM Interview Questions & 20+ Quiz Questions](./Interview-Questions/README.md)
+- [SAM Interview Questions & 20+ Quiz Questions](./interview-questions/readme.md)

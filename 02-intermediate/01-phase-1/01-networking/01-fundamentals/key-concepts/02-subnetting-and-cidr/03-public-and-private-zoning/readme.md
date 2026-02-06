@@ -122,4 +122,4 @@ graph TD
 
 The Zones are set. Now let's calculate the cost of these choices.
 
-Proceed to: **[Routing & Route Tables](../../04-Routing-and-Route-Tables/README.md)** →
+Proceed to: **[Routing & Route Tables](../../04-routing-and-route-tables/readme.md)** →

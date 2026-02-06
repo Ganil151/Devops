@@ -476,9 +476,9 @@ func TestOrderSagaWorkflow_PaymentFailure_Compensation(t *testing.T) {
 
 ## 📚 Additional Resources
 
-- **[Saga Pattern](../../../../../../../05-Labs/Play_Ground/Youtube-Lessons/05-Shell-Scripting/Course-2/loops/all_example)** - Full choreography implementation
-- **[Orchestration Example](../../../../../../../04-Projects-Showcase/00-Governance-Checklists/Container-Orchestration-Checklist.md)** - Full orchestration implementation
-- **[Compensation Strategies](../../../../../../../01-Beginner/03-Phase-3/03-FinOps/REFERENCE/Cost-Optimization-Strategies-Ref.md)** - Deep dive into rollback patterns
+- **[Saga Pattern](../../../../../../../05-labs/play-ground/youtube-lessons/05-shell-scripting/course-2/loops/all-example)** - Full choreography implementation
+- **[Orchestration Example](../../../../../../../04-projects-showcase/00-governance-checklists/container-orchestration-checklist.md)** - Full orchestration implementation
+- **[Compensation Strategies](../../../../../../../01-beginner/03-phase-3/03-finops/reference/cost-optimization-strategies-ref.md)** - Deep dive into rollback patterns
 
 ---
 

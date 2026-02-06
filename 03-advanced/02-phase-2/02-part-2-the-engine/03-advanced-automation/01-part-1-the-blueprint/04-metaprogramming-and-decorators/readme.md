@@ -56,9 +56,9 @@ Master metaprogramming by building these advanced wrappers.
 
 | Challenge | Topic | Description | Starter Code | Solution |
 | :--- | :--- | :--- | :--- | :--- |
-| **01. Performance Profiler** | Profiling | Build a `@profile` decorator that logs the execution time and memory usage of any function. | [Link](./challenges/challenge_01_profiler.py) | [Link](./challenges/solutions/solution_01_profiler.py) |
-| **02. Slack Guardrail** | Alerting | Create a `@slack_on_fail` decorator that automatically sends a notification if a function crashes. | [Link](./challenges/challenge_02_slack_fail.py) | [Link](./challenges/solutions/solution_02_slack_fail.py) |
-| **03. Cache Engine** | Memoization | Implement a `@cache_result` decorator that stores results of expensive API calls in memory. | [Link](./challenges/challenge_03_cache.py) | [Link](./challenges/solutions/solution_03_cache.py) |
+| **01. Performance Profiler** | Profiling | Build a `@profile` decorator that logs the execution time and memory usage of any function. | [Link](./challenges/challenge-01-profiler.py) | [Link](./challenges/solutions/solution-01-profiler.py) |
+| **02. Slack Guardrail** | Alerting | Create a `@slack_on_fail` decorator that automatically sends a notification if a function crashes. | [Link](./challenges/challenge-02-slack-fail.py) | [Link](./challenges/solutions/solution-02-slack-fail.py) |
+| **03. Cache Engine** | Memoization | Implement a `@cache_result` decorator that stores results of expensive API calls in memory. | [Link](./challenges/challenge-03-cache.py) | [Link](./challenges/solutions/solution-03-cache.py) |
 
 ---
 
@@ -73,4 +73,4 @@ Master metaprogramming by building these advanced wrappers.
 
 ---
 
-**Next Step**: [Professional CLI Frameworks →](../05-CLI-Frameworks-Click-Typer/README.md)
+**Next Step**: [Professional CLI Frameworks →](../05-cli-frameworks-click-typer/readme.md)

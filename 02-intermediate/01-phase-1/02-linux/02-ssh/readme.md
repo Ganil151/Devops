@@ -5,7 +5,7 @@
 SSH is the backbone of remote management, secure tunneling, and automated deployments (Ansible/Terraform). This module takes you from "just logging in" to designing secure, high-performance connectivity for global fleets.
 
 ## Core Concept: Cryptographic Perimeter
-**[REFERENCE: SSH Architecture & Security](./REFERENCE/SSH-Architecture-Security-Ref.md)**
+**[REFERENCE: SSH Architecture & Security](./reference/ssh-architecture-security-ref.md)**
 
 Building a secure shell environment starts with understanding identity and encryption:
 - **Key-Based Identity**: Transitioning from fragile passwords to high-entropy Ed25519 keys for tamper-proof authentication.
@@ -13,7 +13,7 @@ Building a secure shell environment starts with understanding identity and encry
 - **The Bastion Hub**: Protecting private internal networks by funneling all administrative traffic through a single, ultra-hardened entry point.
 
 ## Enterprise Governance: Automation & Resilience
-**[REFERENCE: SSH Enterprise Automation & Hardening](./REFERENCE/SSH-Enterprise-Automation-Hardening-Ref.md)**
+**[REFERENCE: SSH Enterprise Automation & Hardening](./reference/ssh-enterprise-automation-hardening-ref.md)**
 
 Scaling operations across hundreds of clusters with performance and safety:
 - **High-Performance Tunneling**: Utilizing SSH Multiplexing to speed up automation (Ansible) by up to 10x through persistent connection reuse.
@@ -25,9 +25,9 @@ Scaling operations across hundreds of clusters with performance and safety:
 
 ## 📚 Modules in This Part
 
-1. **[01-Best-Practices](./01-Best-Practices/README.md)** - Key management and server hardening.
-2. **[02-Tunneling](./02-Tunneling/README.md)** - Port forwarding and secure proxies.
-3. **[03-Automation](./03-Automation/README.md)** - Scripting SSH and advanced configuration.
+1. **[01-Best-Practices](./01-best-practices/readme.md)** - Key management and server hardening.
+2. **[02-Tunneling](./02-tunneling/readme.md)** - Port forwarding and secure proxies.
+3. **[03-Automation](./03-automation/readme.md)** - Scripting SSH and advanced configuration.
 
 ---
 
@@ -46,4 +46,4 @@ Scaling operations across hundreds of clusters with performance and safety:
 
 ---
 
-**Part of**: [Intermediate Linux: System Administration & Operations](../README.md)
+**Part of**: [Intermediate Linux: System Administration & Operations](../readme.md)

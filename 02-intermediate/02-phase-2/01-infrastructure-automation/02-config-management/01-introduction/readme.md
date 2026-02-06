@@ -2,7 +2,7 @@
 
 > **"In the physical world, hardware is slow to change. In the cloud world, hardware is just a variable in a YAML file. If you treat your servers like pets, you will fail; if you treat them like cattle, you will scale."**
 
-![IaC Foundations](../../assets/iac_intro_banner.png)
+![IaC Foundations](../../assets/iac-intro-banner.png)
 
 ---
 
@@ -120,4 +120,4 @@ graph TD
 
 You've bridged the gap. Now let's start provisioning the foundation of the cloud.
 
-**Proceed to**: [IaC Foundations & Terraform →](README.md)
+**Proceed to**: [IaC Foundations & Terraform →](readme.md)

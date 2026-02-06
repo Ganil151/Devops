@@ -431,4 +431,4 @@ end
 
 ---
 ## 🧭 Additional Modules
-- [02 Manifests and Classes](02-Manifests-and-Classes/README.md)
+- [02 Manifests and Classes](02-manifests-and-classes/readme.md)

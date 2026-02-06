@@ -8,13 +8,13 @@ Welcome to the comprehensive reference hub for **Ansible Infrastructure Automati
 
 Explore the architectural toolkit of the Ansible Engineer:
 
-### 1. [🛡️ Core Keywords](./Ansible-Core-Keywords.md)
+### 1. [🛡️ Core Keywords](./ansible-core-keywords.md)
 Fundamentals of agentless automation: Idempotency, Inventory, Modules, andPrivilege Escalation (`become`).
 
-### 2. [📟 Playbooks & Variables](./Playbook-Variable-Keywords.md)
+### 2. [📟 Playbooks & Variables](./playbook-variable-keywords.md)
 Structuring automation: Play structures, Variable precedence, and the power of `ANSIBLE_FACTS`.
 
-### 3. [🔐 Safety & Security](./Error-Handling-Vault-Keywords.md)
+### 3. [🔐 Safety & Security](./error-handling-vault-keywords.md)
 Defensive engineering: `block/rescue` patterns, `no_log` protection, and `Ansible Vault` secrets management.
 
 ---
@@ -33,4 +33,4 @@ In a production environment, Ansible code is judged by its **Reliability**, **Se
 
 ---
 
-[⬅️ Back to Ansible Index](../README.md)
+[⬅️ Back to Ansible Index](../readme.md)

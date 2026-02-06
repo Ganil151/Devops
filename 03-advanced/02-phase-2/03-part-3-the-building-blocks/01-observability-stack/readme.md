@@ -3,7 +3,7 @@
 > **Advanced monitoring, logging, and distributed tracing**
 
 ## Core Concept: The Unified Observability Fabric
-**[REFERENCE: Observability Strategy & Architecture](./REFERENCE/Observability-Strategy-Architecture-Ref.md)**
+**[REFERENCE: Observability Strategy & Architecture](./reference/observability-strategy-architecture-ref.md)**
 
 Moving beyond simple monitoring to deep systems understanding:
 - **Unified Data Model**: Utilizing OpenTelemetry to bridge metrics, logs, and traces into a single correlated context.
@@ -11,7 +11,7 @@ Moving beyond simple monitoring to deep systems understanding:
 - **High-Cardinality Analysis**: Enabling granular debugging through advanced metric and trace indexing.
 
 ## Enterprise Governance: Observability Compliance
-**[REFERENCE: Log Aggregation & Compliance](./REFERENCE/Log-Aggregation-Compliance-Ref.md)**
+**[REFERENCE: Log Aggregation & Compliance](./reference/log-aggregation-compliance-ref.md)**
 
 Scaling visibility while maintaining security and cost control:
 - **Centralized Audit Trails**: Ensuring every API call and system change is immutably recorded for regulatory proof.
@@ -23,8 +23,8 @@ Scaling visibility while maintaining security and cost control:
 
 ## 📚 Modules in This Part
 
-1. **[01-Observability-Advanced](./01-Observability-Advanced/)** - 01 Observability Advanced
-2. **[02-Logging-Loki-FluentBit](./02-Logging-Loki-FluentBit/)** - 02 Logging Loki FluentBit
+1. **[01-Observability-Advanced](./01-observability-advanced/)** - 01 Observability Advanced
+2. **[02-Logging-Loki-FluentBit](./02-logging-loki-fluentbit/)** - 02 Logging Loki FluentBit
 
 ---
 
@@ -49,16 +49,16 @@ These modules should be completed in the order shown above for optimal learning 
 
 Accelerate your observability skills with production-ready monitoring:
 
-- **[Prometheus Lab Scripts](./Prometheus/)**: Installation guides and node exporter setup.
-- **[Loki & Grafana Dashboards](README.md)**: Examples of log aggregation and visualization.
+- **[Prometheus Lab Scripts](./prometheus/)**: Installation guides and node exporter setup.
+- **[Loki & Grafana Dashboards](readme.md)**: Examples of log aggregation and visualization.
 
 ---
 
 ## 🔗 Related Parts
 
-- [Part 1: Service Mesh](README.md) - Service metrics
-- [Part 8: Resilience](README.md) - Incident response
+- [Part 1: Service Mesh](readme.md) - Service metrics
+- [Part 8: Resilience](readme.md) - Incident response
 
 ---
 
-**Part of**: [Advanced Phase-2: Strategic Skills](../README.md)
+**Part of**: [Advanced Phase-2: Strategic Skills](../readme.md)

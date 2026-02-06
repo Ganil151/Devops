@@ -164,12 +164,12 @@ Senior security architects avoid using a single "Catch-All" Security Group. Inst
 
 You have secured the gates. Now let's build the highway.
 
-Proceed to: **[High Availability & VPNs](../06-High-Availability/README.md)** →
+Proceed to: **[High Availability & VPNs](../06-high-availability/readme.md)** →
 
 
 ---
 ## 🧭 Additional Modules
-- [01 Security Groups Stateful](01-Security-Groups-Stateful/README.md)
-- [02 Network ACLs Stateless](02-Network-ACLs-Stateless/README.md)
-- [03 Layered Defense Strategies](03-Layered-Defense-Strategies/README.md)
-- [04 Advanced Troubleshooting](04-Advanced-Troubleshooting/README.md)
+- [01 Security Groups Stateful](01-security-groups-stateful/readme.md)
+- [02 Network ACLs Stateless](02-network-acls-stateless/readme.md)
+- [03 Layered Defense Strategies](03-layered-defense-strategies/readme.md)
+- [04 Advanced Troubleshooting](04-advanced-troubleshooting/readme.md)

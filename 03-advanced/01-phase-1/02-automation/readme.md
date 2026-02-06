@@ -27,10 +27,10 @@ Advanced automation is a "Heavy Machinery" environment. Small mistakes lead to m
 ---
 
 ### Learning Path
-1. [Advanced Terraform](./Terraform/)
-2. [Advanced Ansible](./Ansible/)
-3. [Spacelift & GitOps](./Spacelift/)
-4. [❓ Interview Questions & Quiz](./Interview_Questions_and_Quiz.md)
+1. [Advanced Terraform](./terraform/)
+2. [Advanced Ansible](./ansible/)
+3. [Spacelift & GitOps](./spacelift/)
+4. [❓ Interview Questions & Quiz](./interview-questions-and-quiz.md)
 
 ---
 
@@ -71,7 +71,7 @@ terraform {
 ## 🚀 Collaborative IaC (Spacelift)
 
 Standard Terraform works fine for individuals, but teams need a "Management Plane."
-**[Explore the Spacelift Module](./Spacelift/README.md)** covering:
+**[Explore the Spacelift Module](./spacelift/readme.md)** covering:
 - **Stacks & Contexts**: Organizing enterprise state.
 - **Policy as Code**: Writing OPA/Rego guardrails.
 - **Drift Detection**: Automatic self-healing of infrastructure.
@@ -79,7 +79,7 @@ Standard Terraform works fine for individuals, but teams need a "Management Plan
 ---
 
 ## ❓ Interview Questions & Quiz
-**[Test your knowledge!](./Interview_Questions_and_Quiz.md)**
+**[Test your knowledge!](./interview-questions-and-quiz.md)**
 
 ---
 
@@ -119,4 +119,4 @@ Using advanced loops and conditional filters to manage complex system states.
 3. **Automated Testing**: Use tools like `tflint`, `ansible-lint`, and `molecule` to verify your code before it hits production.
 
 ---
-**EKS Automation**: See how these tools combine to build managed Kubernetes clusters in the [Advanced K8s Module](../../../README.md).
+**EKS Automation**: See how these tools combine to build managed Kubernetes clusters in the [Advanced K8s Module](../../../readme.md).

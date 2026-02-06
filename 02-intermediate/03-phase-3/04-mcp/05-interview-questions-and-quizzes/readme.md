@@ -1,6 +1,6 @@
 # 05: Interview Questions and Quizzes
 
-**[⬅️ Back to MCP Module Index](../README.md)** | **[Next: Real-Life Scenarios ➡️](../06-Real-Life-Scenarios/README.md)**
+**[⬅️ Back to MCP Module Index](../readme.md)** | **[Next: Real-Life Scenarios ➡️](../06-real-life-scenarios/readme.md)**
 
 ---
 

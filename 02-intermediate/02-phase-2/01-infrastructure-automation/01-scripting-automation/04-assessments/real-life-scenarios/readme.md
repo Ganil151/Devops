@@ -8,10 +8,10 @@ Put your scripting skills into practice with these real-world DevOps challenges.
 
 | Module | Focus Scenarios | Skillsets |
 | :--- | :--- | :--- |
-| **01. [Safety Guards](./01-Safety-Guards-and-Locks/README.md)** | Recursive Deletes, Race Conditions. | Bash, Locking, Defensive Logic. |
-| **02. [Log Analysis](./02-Log-Analysis-and-Parsing/README.md)** | DDoS Detection, Error Reporting. | AWK, Sed, Grep, Sort. |
-| **03. [Cloud Governance](./03-Cloud-Governance-and-Costs/README.md)** | Tagging Enforcement, Cost Saving. | Python, Boto3, AWS APIs. |
-| **04. [API Reliability](./04-API-Reliability-and-Retries/README.md)** | Rate Limits, Hanging Requests. | Requests, Retries, Timeouts. |
+| **01. [Safety Guards](./01-safety-guards-and-locks/readme.md)** | Recursive Deletes, Race Conditions. | Bash, Locking, Defensive Logic. |
+| **02. [Log Analysis](./02-log-analysis-and-parsing/readme.md)** | DDoS Detection, Error Reporting. | AWK, Sed, Grep, Sort. |
+| **03. [Cloud Governance](./03-cloud-governance-and-costs/readme.md)** | Tagging Enforcement, Cost Saving. | Python, Boto3, AWS APIs. |
+| **04. [API Reliability](./04-api-reliability-and-retries/readme.md)** | Rate Limits, Hanging Requests. | Requests, Retries, Timeouts. |
 
 ---
 
@@ -23,4 +23,4 @@ Put your scripting skills into practice with these real-world DevOps challenges.
 
 ---
 
-[Next: Infracost Automation →](README.md)
+[Next: Infracost Automation →](readme.md)

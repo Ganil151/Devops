@@ -114,11 +114,11 @@ hostnames:
 
 ---
 
-[⬅️ Back to Ansible Index](../README.md) | [Next: Basic Playbooks](../03-Basic-Playbooks/README.md) ➡️
+[⬅️ Back to Ansible Index](../readme.md) | [Next: Basic Playbooks](../03-basic-playbooks/readme.md) ➡️
 
 ---
 ## 🧭 Additional Modules
-- [01 Static Inventory](01-Static-Inventory/README.md)
-- [02 Patterns and Targeting](02-Patterns-and-Targeting/README.md)
-- [03 Inventory Variables](03-Inventory-Variables/README.md)
-- [04 Dynamic Plugins](04-Dynamic-Plugins/README.md)
+- [01 Static Inventory](01-static-inventory/readme.md)
+- [02 Patterns and Targeting](02-patterns-and-targeting/readme.md)
+- [03 Inventory Variables](03-inventory-variables/readme.md)
+- [04 Dynamic Plugins](04-dynamic-plugins/readme.md)

@@ -7,7 +7,7 @@
 Modern IaC follows two paths: **Declarative** (HCL/YAML like Terraform) and **Imperative/Construct-based** (TypeScript/Python like AWS CDK and Pulumi). This module focuses on using real programming languages to define and deploy cloud infrastructure.
 
 ## Core Concept: Infrastructure as Software
-**[REFERENCE: Serverless IaC Architecture](./REFERENCE/Serverless-IaC-Architecture-Ref.md)**
+**[REFERENCE: Serverless IaC Architecture](./reference/serverless-iac-architecture-ref.md)**
 
 Using the power of general-purpose languages to manage environments:
 - **Synthesis Lifecycle**: Understanding how high-level code is translated into low-level templates (CloudFormation).
@@ -15,7 +15,7 @@ Using the power of general-purpose languages to manage environments:
 - **Unit Testing IaC**: Applying software engineering rigor (Pytest/Snapshots) to verify templates before deployment.
 
 ## Enterprise Governance: Compliance as Logic
-**[REFERENCE: Serverless IaC Architecture](./REFERENCE/Serverless-IaC-Architecture-Ref.md)**
+**[REFERENCE: Serverless IaC Architecture](./reference/serverless-iac-architecture-ref.md)**
 
 Enforcing standards through code logic instead of manual reviews:
 - **CDK Aspects**: Utilizing visitor patterns to automatically apply security tags or encryption to all resources in a stack.
@@ -32,10 +32,10 @@ Enforcing standards through code logic instead of manual reviews:
 
 ## 🗺️ Module Structure
 
-1. **[🟢 01-AWS-CDK-Python](README.md)**
+1. **[🟢 01-AWS-CDK-Python](readme.md)**
    - Installing `aws-cdk`.
    - Creating stacks and nested constructs.
-2. **[🟢 02-Pulumi-Foundations](README.md)**
+2. **[🟢 02-Pulumi-Foundations](readme.md)**
    - State management in Pulumi Cloud.
    - Resource mapping and secret encryption.
 
@@ -79,4 +79,4 @@ class MyServerlessStack(core.Stack):
 Treat your IaC like a regular software project. Use unit tests (e.g., `pytest` for CDK) to verify that your synthesized templates contain the expected security groups and tags before they ever reach the cloud.
 
 ---
-**Next Step**: Start with [AWS CDK with Python](README.md) 🚀
+**Next Step**: Start with [AWS CDK with Python](readme.md) 🚀
