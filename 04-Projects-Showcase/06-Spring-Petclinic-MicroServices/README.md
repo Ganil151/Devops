@@ -27,13 +27,16 @@ The system is composed of several independent microservices, each with a specifi
 ```text
 .
 ├── checklist/                  # Operational Readiness Checklists
-│   └── LAUNCH_CHECKLIST.md     # Production release requirements
+│   ├── LAUNCH_CHECKLIST.md     # Production release requirements
+│   └── POST_MORTEM_TEMPLATE.md # Incident review template
 ├── terraform/                  # Enterprise IaC (Multi-environment)
 │   ├── environments/           # Dev/Prod root modules
 │   └── modules/                # Reusable LEGO-style modules
 ├── helm/                       # K8s manifests and deployment charts
 ├── scripts/                    # Automation and utility scripts
-├── CICD_IMPLEMENTATION.md      # Detailed Pipeline Guide
+├── ARCHITECTURE.md             # Architecture Decision Records (ADR)
+├── SECURITY.md                 # Security policies and guardrails
+├── CICD_IMPLEMENTATION.md      # Detailed Jenkins Pipeline Guide
 └── README.md                   # You are here
 ```
 
