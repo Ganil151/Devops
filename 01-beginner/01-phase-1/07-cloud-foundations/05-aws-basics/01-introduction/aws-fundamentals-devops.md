@@ -352,9 +352,7 @@ aws iam add-role-to-instance-profile \
 # List roles
 aws iam list-roles --output table
 ```
-
 ### Custom Policies
-
 ```json
 {
   "Version": "2012-10-17",
