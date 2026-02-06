@@ -32,7 +32,6 @@ cd /media/aws-admin/
 sh ./VBoxLinuxAdditions.run
 shutdown now
 ```
-
 ### install AWS CLI
 ```shell
 sudo apt-get install -y python-dev python-pip
@@ -40,7 +39,6 @@ sudo pip install awscli
 aws --version
 aws configure
 ```
-
 ### Bash one-liners
 ```shell
 cat <file> # output a file
