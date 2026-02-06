@@ -30,7 +30,6 @@ Think of it like a City:
 ---
 
 ## 🎯 Learning Objectives
-
 - Understand different types of network devices and their functions
 - Learn router configuration and routing concepts
 - Master switch operations and VLAN basics
