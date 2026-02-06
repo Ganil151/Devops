@@ -201,6 +201,7 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "final_tree.txt",
     "09-resources/01-scripts-code/maintenance/fix_links.py",
     "reference.md",
     "09-resources/01-scripts-code/maintenance/restore_reference.py",
@@ -212,7 +213,6 @@
     "09-resources/01-scripts-code/maintenance/dry-run-audit.py",
     "09-resources/01-scripts-code/maintenance/system-refactor.py",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/chromeonpowershell/chromemandownload.dup",
-    "09-resources/01-scripts-code/maintenance/final_sync.py",
     "00-REFACTOR-LOG.md",
     "07-boilerplates/04-playground/block-popups/security-enhancements.md",
     "07-boilerplates/04-playground/block-popups/migration-notes.md",
