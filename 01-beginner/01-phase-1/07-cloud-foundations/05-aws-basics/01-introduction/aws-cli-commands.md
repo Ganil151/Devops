@@ -278,10 +278,6 @@ aws iam detach-group-policy \
 aws iam delete-group \
     --group-name FullAdmins
 ```
-<br/
-
-
-
 
 ## S3
 
