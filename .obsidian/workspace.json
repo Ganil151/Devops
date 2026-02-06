@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -216,6 +215,8 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/checklist/POST_MORTEM_TEMPLATE.md",
+    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/CONTRIBUTING.md",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/ARCHITECTURE.md",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/README.md",
     "git_command.py",
@@ -243,8 +244,6 @@
     "01-Beginner/02-Phase-2/04-Maven/Part-01-Maven-Fundamentals/01-Installation/README.md",
     "01-Beginner/01-Phase-1/08-Repository-Management/01-Git-GitHub/1-Beginner-Level/02-Git-Fundamentals/README.md",
     "01-Beginner/01-Phase-1/08-Repository-Management/01-Git-GitHub/2-Intermediate-Level/01-Git-Workflows/README.md",
-    "01-Beginner/01-Phase-1/08-Repository-Management/01-Git-GitHub/1-Beginner-Level/03-Git-Commands/README.md",
-    "01-Beginner/01-Phase-1/08-Repository-Management/REFERENCE/Git-Internal-Architecture-Ref.md",
     "08-Career-Mastery/07-Resume-Engineering/resources/DevOps_Resume_Ganil_Batist.pdf/DevOps_Resume.pdf",
     "08-Career-Mastery/07-Resume-Engineering/resources/Resume-Examples",
     "08-Career-Mastery/07-Resume-Engineering/resources/DevOps_Resume_Ganil_Batist.pdf/DevOps_Resume.docx",
