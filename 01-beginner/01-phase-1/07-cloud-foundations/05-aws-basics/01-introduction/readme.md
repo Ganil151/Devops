@@ -29,7 +29,7 @@ class Region region
 
 ## Real World Scenarios
 ### Scenario: Automated Nightly Reports
-**Context:** You manually login to the console every night to download billing CSVs.
+**Context:** You manually login to the console every night to download billing CSV's.
 **Solution:**
 - **AWS CLI:** Write a simple bash script using `aws ce get-cost-and-usage`.
 - **Cron Job:** Schedule it to run at 2 AM.
