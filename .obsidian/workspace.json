@@ -11,10 +11,24 @@
             "id": "19ac471caa0c1888",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-cli-commands.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "aws-cli-commands"
             }
           }
         ]
@@ -74,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -199,8 +214,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/REFERENCE/Infrastructure-Compliance-Ref.md",
     "final_tree.txt",
     "09-resources/01-scripts-code/maintenance/fix_links.py",
     "reference.md",
@@ -212,7 +228,6 @@
     "09-resources/01-scripts-code/maintenance/final-sync.py",
     "09-resources/01-scripts-code/maintenance/dry-run-audit.py",
     "09-resources/01-scripts-code/maintenance/system-refactor.py",
-    "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/chromeonpowershell/chromemandownload.dup",
     "00-REFACTOR-LOG.md",
     "07-boilerplates/04-playground/block-popups/security-enhancements.md",
     "07-boilerplates/04-playground/block-popups/migration-notes.md",
