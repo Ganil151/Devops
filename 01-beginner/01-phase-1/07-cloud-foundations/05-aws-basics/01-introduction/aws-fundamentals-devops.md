@@ -378,11 +378,9 @@ aws iam list-roles --output table
   ]
 }
 ```
-
 ## Monitoring and Logging
 
 ### CloudWatch
-
 ```bash
 # List metrics
 aws cloudwatch list-metrics --namespace AWS/EC2
