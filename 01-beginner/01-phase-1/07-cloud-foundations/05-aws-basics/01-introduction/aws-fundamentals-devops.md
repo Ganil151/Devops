@@ -519,7 +519,6 @@ aws budgets create-budget \
     --account-id 123456789012 \
     --budget file://budget.json
 ```
-
 ### Resource Tagging Strategy
 
 ```bash
