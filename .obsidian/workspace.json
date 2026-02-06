@@ -215,6 +215,7 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "DIRECTORY_MAP.md",
     "09-Resources/01-Scripts-Code/Maintenance/audit_names.py",
     "file_list_sample.txt",
     "full_dir_list.txt",
@@ -237,7 +238,6 @@
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/helm/microservices/templates",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/helm/microservices",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/helm",
-    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/global",
     "09-Resources/05-Cloud-Reference/IMAGE_CATALOG.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/02-What-is-Terraform/What is Terraform.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/01-IaC-Principles/Infrastructure as Code (IaC) Principles.md",
