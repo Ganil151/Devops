@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/01-Part-1-The-Blueprint/01-CI-CD-Fundamentals/README.md",
+                "file": "REFERENCE.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "REFERENCE"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/01-Part-1-The-Blueprint/01-CI-CD-Fundamentals/README.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/04-Terraform-Cloud-and-GitOps/02-Part-2-The-Engine/02-VCS-Driven-Workflow/VCS Driven Workflow (GitOps).md",
     "09-Resources/05-Cloud-Metadata/Global-Image-Inventory.md",
     "09-Resources/05-Cloud-Metadata",
@@ -253,7 +255,6 @@
     "01-Beginner/03-Phase-3/03-FinOps/Part-02-Cloud-Billing-Basics/README.md",
     "01-Beginner/03-Phase-3/03-FinOps/Part-01-Introduction/README.md",
     "04-Projects-Showcase/Category-Guides/Production_Examples/README.md",
-    "04-Projects-Showcase/Category-Guides/Multi_Tier_Apps/README.md",
     "09-Resources/Images/Screenshot (99).png",
     "09-Resources/Images/Screenshot (98).png",
     "09-Resources/Images/Screenshot (97).png",
