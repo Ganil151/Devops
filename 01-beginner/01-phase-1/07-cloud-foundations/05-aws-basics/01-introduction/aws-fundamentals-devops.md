@@ -520,7 +520,6 @@ aws budgets create-budget \
     --budget file://budget.json
 ```
 ### Resource Tagging Strategy
-
 ```bash
 # Tag resources consistently
 aws ec2 create-tags \
@@ -544,11 +543,9 @@ xargs -I {} aws ec2 create-tags \
     --resources {} \
     --tags Key=Environment,Value=Untagged
 ```
-
 ## Security Best Practices
 
 ### Security Fundamentals
-
 ```bash
 # Enable MFA for root account
 aws iam create-virtual-mfa-device \
