@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/REFERENCE/Infrastructure-Compliance-Ref.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Infrastructure-Compliance-Ref"
             }
           }
         ]
@@ -215,6 +215,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "README.md",
     "REFERENCE.md",
     "02-Intermediate/02-Phase-2/02-Delivery-and-Governance/01-CI-CD-Pipelines/01-Part-1-The-Blueprint/01-CI-CD-Fundamentals/README.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/04-Terraform-Cloud-and-GitOps/02-Part-2-The-Engine/02-VCS-Driven-Workflow/VCS Driven Workflow (GitOps).md",
@@ -253,7 +254,6 @@
     "01-Beginner/03-Phase-3/03-FinOps/Part-04-Budgeting-Basics/README.md",
     "01-Beginner/03-Phase-3/03-FinOps/Part-03-Cost-Visibility/README.md",
     "01-Beginner/03-Phase-3/03-FinOps/Part-02-Cloud-Billing-Basics/README.md",
-    "01-Beginner/03-Phase-3/03-FinOps/Part-01-Introduction/README.md",
     "09-Resources/Images/Screenshot (99).png",
     "09-Resources/Images/Screenshot (98).png",
     "09-Resources/Images/Screenshot (97).png",
