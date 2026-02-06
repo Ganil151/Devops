@@ -493,11 +493,9 @@ aws ec2 describe-instances \
 aws ec2 describe-instances --output table
 aws ec2 describe-instances --output text --query 'Reservations[].Instances[].[InstanceId,PublicIpAddress]'
 ```
-
-## Cost Management and Optimization
+### Cost Management and Optimization
 
 ### Cost Monitoring
-
 ```bash
 # Get cost and usage
 aws ce get-cost-and-usage \
