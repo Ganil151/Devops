@@ -91,7 +91,6 @@ aws ec2 create-image \
     --name "DevOps-Server-$(date +%Y%m%d)" \
     --description "DevOps server image"
 ```
-
 #### Lambda (Serverless Computing)
 ```bash
 # List functions
