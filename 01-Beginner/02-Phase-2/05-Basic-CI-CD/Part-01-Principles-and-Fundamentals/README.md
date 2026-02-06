@@ -34,11 +34,9 @@ graph LR
 ```
 
 ---
-
 ## 🎯 Learning Objectives
 
 By the end of this part, you will:
-
 - ✅ Define the **CI/CD Lifecycle**.
 - ✅ Understand the **"Fail Fast"** philosophy.
 - ✅ Master the vocabulary: **Artifacts**, **Stages**, **Jobs**, and **Steps**.

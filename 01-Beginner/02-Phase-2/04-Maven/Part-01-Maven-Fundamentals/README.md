@@ -19,7 +19,6 @@ This part covers the absolute essentials of Apache Maven. We move from the initi
 ---
 
 ## 🏗️ The Project Blueprint
-
 Maven enforces "Convention over Configuration." If you follow the standard structure, everything "just works."
 
 ```mermaid
@@ -38,28 +37,21 @@ graph TD
 ```
 
 ---
-
 ## 🎯 Learning Objectives
-
 By the end of this part, you will:
-
 - ✅ **Install** Maven and configure your environment variables (`JAVA_HOME`, `MAVEN_HOME`).
 - ✅ **Navigate** the standard directory hierarchy.
 - ✅ **Understand** the GAV coordinates (GroupId, ArtifactId, Version).
 - ✅ **Configure** basic project metadata in the `pom.xml`.
 
 ---
-
 ## 🗺️ Included Modules
-
 1. **[01-Installation](./01-Installation/README.md)**: Setting up the forge. Java verification and Maven setup.
 2. **[02-Project-Structure](./02-Project-Structure/README.md)**: The standard layout. Where code, resources, and tests live.
 3. **[03-POM-Configuration](./03-POM-Configuration/README.md)**: The XML brain. Coordinating your build.
 
 ---
-
 ## 🚀 Deep Dive
-
 Looking for a more detailed theoretical background? Check out our **[DEEP_DIVE.md](./DEEP_DIVE.md)**.
 
 ---

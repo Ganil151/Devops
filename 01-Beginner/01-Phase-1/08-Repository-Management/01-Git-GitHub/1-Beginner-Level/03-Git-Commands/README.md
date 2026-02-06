@@ -6,10 +6,9 @@
 - Git Clone
 - Git Config
 - Git Alias: are used to create shorter commands that map to longer commands
-
 #### Save Changes
 - Git Add : to update and save a snapshot
-- Git Commit : git commit -m "<message>"
+- Git Commit : git commit -m "messages"
 - Git Diff : finds the changes between the files or branch
 - Git Stash : if you are switching from branch to branch without committing changes, it stashes the changes until you commit then
 git stash pop : to add the changes

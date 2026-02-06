@@ -19,9 +19,7 @@ graph TD
 ## 📚 Overview
 
 Before we touch a single line of YAML, we must understand the "Why." Continuous Integration and Continuous Deployment represent a shift from "Project-based" thinking to "Product-based" thinking. This module covers the essential vocabulary and the fundamental principles that guide a DevOps Engineer's decision-making.
-
 ## 🎓 Learning Objectives
-
 - ✅ Define **Continuous Integration (CI)**.
 - ✅ Understand the nuance between **Delivery** and **Deployment**.
 - ✅ Learn the importance of the **Single Source of Truth** (Git).
@@ -33,13 +31,11 @@ Before we touch a single line of YAML, we must understand the "Why." Continuous 
 ## 🏗️ The CI/CD Hierarchy
 
 ### 1. Continuous Integration (CI)
-
 The practice of merging all developer working copies to a shared mainline several times a day.
 - **Requirement**: Automated builds and testing.
 - **Goal**: Find and fix bugs quicker.
 
 ### 2. Continuous Delivery (CD)
-
 An extension of CI where the code is always in a "Deployable" state.
 - **Requirement**: Automated release process to a staging environment.
 - **Goal**: Reduce the risk and friction of manual releases.
@@ -66,7 +62,7 @@ The most expensive part of software development is finding a bug too late. Pipel
 
 ## 🏆 Real-World DevOps Story: The Integration Hell
 
-**The Scenario**: In the early 2000s, a software company had 50 developers working on separate "Feature Branches" for six months without ever merging them.
+**The Scenario**: In the early 2000's, a software company had 50 developers working on separate "Feature Branches" for six months without ever merging them.
 **The Crisis**: When they finally tried to merge all 50 branches together ("The Big Bang Merge"), nothing worked. It took the team **three months** of manual debugging just to get the application to start.
 **The Fix**: This experience led to the birth of Modern CI. Today, developers merge their code **every few hours**.
 **The Lesson**: Large merges are painful. **Small, frequent merges** are easy.

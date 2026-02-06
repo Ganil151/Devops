@@ -1,21 +1,17 @@
 # Advanced Microservices & Orchestration
-
 This directory contains production-ready microservice implementations designed for Kubernetes environments, specifically optimized for AWS EKS.
 
 ---
-
 ## 🏛️ Project Architecture
 
 ### 1. Service Communication
 - **REST & gRPC**: High-performance communication patterns between services.
 - **Service Mesh (Istio)**: Mutual TLS, Traffic Splitting (Canary), and Circuit Breaking.
-
 ### 2. Infrastructure
 - **Manifests**: Standard YAML declarations for Deployments, Services, and ConfigMaps.
 - **Helm Charts**: Templatized deployments for scaling across environments.
 
 ---
-
 ## 🔍 Observability Stack
 - **Prometheus**: Real-time metrics collection.
 - **Grafana**: Visualizing service health and performance.

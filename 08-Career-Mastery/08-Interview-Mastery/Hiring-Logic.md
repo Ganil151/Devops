@@ -15,7 +15,6 @@ We hire for **Potential + Aptitude**.
 | **Communication** | clear READMEs, well-commented code, articulate interview answers. |
 
 ---
-
 ## 2. The Portfolio (GitHub Presence)
 Your GitHub is your resume. It doesn't need 1,000 green squares, but it needs **Quality**.
 
@@ -36,10 +35,8 @@ A recruiter should be able to clone your repo and run it.
 - [ ] Is there a diagram?
 
 ---
-
 ## 3. The Technical Interview
 It's rarely a trivia quiz. It's a logic test.
-
 ### The "Whiteboard" Challenge
 **Question:** "Design a scalable web application on AWS."
 
@@ -55,7 +52,6 @@ It's rarely a trivia quiz. It's a logic test.
 4.  *Tell me about a time you broke production.* (Honesty test!).
 
 ---
-
 ## 4. Red Flags to Avoid
 *   **"It works on my machine."** (Shows lack of awareness of environments).
 *   **Hiding mistakes.** (We need transparency).

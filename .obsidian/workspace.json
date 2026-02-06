@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "070c34be6f57c998",
+        "id": "87f9b6e41ca7cc06",
         "type": "tabs",
         "children": [
           {
-            "id": "e142cfc2dc308a10",
+            "id": "19ac471caa0c1888",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08-Career-Mastery/05-Strategic-Roadmap/README.md",
+                "file": "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/CICD_IMPLEMENTATION.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "CICD_IMPLEMENTATION"
             }
           }
         ]
@@ -88,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
+    "width": 200,
     "collapsed": true
   },
   "right": {
@@ -214,23 +214,44 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e142cfc2dc308a10",
+  "active": "19ac471caa0c1888",
   "lastOpenFiles": [
-    "09-Resources/01-Scripts-Code/Converter/requirements.txt",
-    "09-Resources/01-Scripts-Code/Converter/docx_to_pdf.py",
-    "09-Resources/01-Scripts-Code/Converter",
-    "09-Resources/01-Scripts-Code/Maintenance/__pycache__/project_clean.cpython-314.pyc",
-    "09-Resources/01-Scripts-Code/Maintenance/__pycache__/git_command.cpython-314.pyc",
-    "09-Resources/01-Scripts-Code/Maintenance/test_project_clean.py",
-    "09-Resources/01-Scripts-Code/Maintenance/repository_audit.py",
-    "09-Resources/01-Scripts-Code/Maintenance/quick_reference.sh",
-    "09-Resources/01-Scripts-Code/Maintenance/readme_enhancer.py",
-    "09-Resources/01-Scripts-Code/Maintenance/project_clean.py",
-    "09-Resources/01-Scripts-Code/Maintenance/git_command.py",
-    "09-Resources/01-Scripts-Code/Maintenance/SIMPLIFICATION_SUMMARY.md",
-    "09-Resources/01-Scripts-Code/Maintenance/README.md",
-    "09-Resources/01-Scripts-Code/Maintenance/QUICK_REFERENCE.md",
-    "09-Resources/01-Scripts-Code/Maintenance/PROJECT_CLEAN_README.md",
+    "git_command.py",
+    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/checklist/LAUNCH_CHECKLIST.md",
+    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/CICD_IMPLEMENTATION.md",
+    "01-Beginner/03-Phase-3/03-FinOps/ENHANCEMENT_SUMMARY.md",
+    "01-Beginner/03-Phase-3/03-FinOps/REFERENCE/Cost-Attribution-Chargeback-Ref.md",
+    "01-Beginner/03-Phase-3/03-FinOps/Part-04-Budgeting-Basics/README.md",
+    "01-Beginner/03-Phase-3/03-FinOps/Part-03-Cost-Visibility/README.md",
+    "01-Beginner/03-Phase-3/03-FinOps/Part-02-Cloud-Billing-Basics/README.md",
+    "01-Beginner/03-Phase-3/03-FinOps/Part-01-Introduction/README.md",
+    "04-Projects-Showcase/Category-Guides/Production_Examples/README.md",
+    "04-Projects-Showcase/Category-Guides/Multi_Tier_Apps/README.md",
+    "04-Projects-Showcase/Category-Guides/Microservices/README.md",
+    "04-Projects-Showcase/00-Governance-Checklists/CI-CD-Pipeline-Checklist.md",
+    "01-Beginner/02-Phase-2/05-Basic-CI-CD/Part-01-Principles-and-Fundamentals/01-CI-CD-Foundations/README.md",
+    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/checklist",
+    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices",
+    "01-Beginner/02-Phase-2/05-Basic-CI-CD/Part-01-Principles-and-Fundamentals/README.md",
+    "01-Beginner/02-Phase-2/05-Basic-CI-CD/Part-02-GitHub-Actions-Core/README.md",
+    "01-Beginner/02-Phase-2/05-Basic-CI-CD/Part-02-GitHub-Actions-Core/01-GitHub-Actions-Basics/README.md",
+    "01-Beginner/02-Phase-2/04-Maven/Part-01-Maven-Fundamentals/03-POM-Configuration/README.md",
+    "01-Beginner/02-Phase-2/04-Maven/Part-01-Maven-Fundamentals/DEEP_DIVE.md",
+    "01-Beginner/02-Phase-2/04-Maven/Part-01-Maven-Fundamentals/README.md",
+    "01-Beginner/02-Phase-2/04-Maven/Part-01-Maven-Fundamentals/01-Installation/README.md",
+    "01-Beginner/01-Phase-1/08-Repository-Management/01-Git-GitHub/1-Beginner-Level/02-Git-Fundamentals/README.md",
+    "01-Beginner/01-Phase-1/08-Repository-Management/01-Git-GitHub/2-Intermediate-Level/01-Git-Workflows/README.md",
+    "01-Beginner/01-Phase-1/08-Repository-Management/01-Git-GitHub/1-Beginner-Level/03-Git-Commands/README.md",
+    "01-Beginner/01-Phase-1/08-Repository-Management/REFERENCE/Git-Internal-Architecture-Ref.md",
+    "04-Projects-Showcase/00-Governance-Checklists/Cloud-Infrastructure-Checklist.md",
+    "08-Career-Mastery/07-Resume-Engineering/resources/DevOps_Resume_Ganil_Batist.pdf/DevOps_Resume.pdf",
+    "08-Career-Mastery/07-Resume-Engineering/resources/Resume-Examples",
+    "08-Career-Mastery/07-Resume-Engineering/resources/DevOps_Resume_Ganil_Batist.pdf/DevOps_Resume.docx",
+    "08-Career-Mastery/07-Resume-Engineering/resources/DevOps_Resume_Ganil_Batist.pdf/DevOps_Resume_Ganil_Batist.docx",
+    "08-Career-Mastery/07-Resume-Engineering/resources/DevOps_Resume_Ganil_Batist.pdf/DevOps_Resume_Ganil_Batist.pdf",
+    "08-Career-Mastery/07-Resume-Engineering/resources/DevOps_Resume_Ganil_Batist.pdf/lu23243w2v6.tmp",
+    "08-Career-Mastery/07-Resume-Engineering/resources/DevOps_Resume.docx",
+    "08-Career-Mastery/07-Resume-Engineering/resources/DevOps Resume_Ganil_Batist.docx",
     "09-Resources/Images/Screenshot (99).png",
     "09-Resources/Images/Screenshot (98).png",
     "09-Resources/Images/Screenshot (97).png",
@@ -241,27 +262,6 @@
     "09-Resources/Images/Screenshot (90).png",
     "09-Resources/Images/Screenshot (89).png",
     "09-Resources/Images/Screenshot (88).png",
-    "09-Resources/README.md",
-    "09-Resources/LINK_REPAIR_SUMMARY.md",
-    "09-Resources/LINK_AUDIT_REPORT.md",
-    "00-Career-Mastery/06-Portfolio-Guide/GOLDEN_PROJECT_GUIDE.md",
-    "08-Career-Mastery/04-Day-in-the-Life-Operations/02-The-Code-Review-Gate/README.md",
-    "08-Career-Mastery/04-Day-in-the-Life-Operations/Templates/Post-Mortem-Template.md",
-    "08-Career-Mastery/04-Day-in-the-Life-Operations/03-Rollback-Procedures/README.md",
-    "08-Career-Mastery/04-Day-in-the-Life-Operations/01-Morning-Triage-Sim/README.md",
-    "08-Career-Mastery/Images/README.md",
-    "08-Career-Mastery/Images/IMAGE-ANALYSIS-REPORT.md",
-    "08-Career-Mastery/08-Interview-Mastery/README.md",
-    "08-Career-Mastery/08-Interview-Mastery/Mock-Interview-Script.md",
-    "08-Career-Mastery/08-Interview-Mastery/Hiring-Logic.md",
-    "08-Career-Mastery/07-Resume-Engineering/README.md",
-    "08-Career-Mastery/06-Portfolio-Guide/README.md",
-    "08-Career-Mastery/06-Portfolio-Guide/GOLDEN_PROJECT_GUIDE.md",
-    "08-Career-Mastery/04-Day-in-the-Life-Operations/README.md",
-    "08-Career-Mastery/04-Day-in-the-Life-Operations/PRIORITIZATION_FRAMEWORK.md",
-    "08-Career-Mastery/05-Strategic-Roadmap/README.md",
-    "08-Career-Mastery/05-Strategic-Roadmap/PROGRESS_SKILL_MATRIX.md",
-    "08-Career-Mastery/03-Soft-Skills/README.md",
     "Untitled.canvas"
   ]
 }

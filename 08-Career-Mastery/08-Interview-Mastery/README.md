@@ -3,20 +3,14 @@
 Mastering the interview is about storytelling. You need to prove you have both the "Hard Skills" to build and the "Soft Skills" to collaborate.
 
 ---
-
 ## 🏗️ The STAR Method (Behavioral)
-
 For every "Tell me about a time..." question, use:
-
 -   **S**ituation: Set the scene.
 -   **T**ask: What was the goal?
 -   **A**ction: What **did you do**? (Be specific).
 -   **R**esult: What was the impact? (Use numbers).
-
 ---
-
 ## 🎭 Practice Resources
-
 - 👉 **[The Mock Interview Script (Staff Level)](./Mock-Interview-Script.md)**: A comprehensive guide for technical and behavioral benchmarking.
 - 👉 **[Hiring Logic & Strategies](./Hiring-Logic.md)**: Understanding what managers look for in a Junior candidate.
 

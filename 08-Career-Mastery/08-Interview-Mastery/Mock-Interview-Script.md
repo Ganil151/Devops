@@ -1,16 +1,13 @@
 # 👔 The Mock Interview Script (Staff Level Benchmarking)
-
 This script is designed for peer-to-peer practice or self-reflection. It covers the three distinct phases of a high-tier DevOps/SRE interview.
 
 ---
-
 ## 🏗️ Phase 1: The Behavioral Deep-Dive (STAR Method)
 **The Goal**: Assess ownership and "Soft Skills for Engineers."
 
 **1. Question**: "Tell me about a time you broke a production environment. What did you do?"
 *   **Junior Trap**: Blaming someone else or saying "I've never broken anything."
 *   **SRE Standard**: Own the mistake. Explain the **Detection** (how you found out), the **Mitigation** (how you fixed it fast), and the **Prevention** (the PR you wrote to ensure it never happens again).
-
 **2. Question**: "How do you handle a conflict with a developer who insists their broken code is an infrastructure issue?"
 *   **Goal**: Assess empathy and data-driven communication.
 *   **Key Phrase**: "I use logs and metrics as the 'Shared Source of Truth' to guide the conversation toward a solution rather than an argument."

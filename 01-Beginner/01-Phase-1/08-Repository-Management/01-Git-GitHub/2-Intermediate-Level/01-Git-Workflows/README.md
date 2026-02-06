@@ -7,11 +7,8 @@ Git workflows define how teams collaborate using Git and establish conventions f
 ## Popular Git Workflows
 
 ### 1. GitFlow Workflow
-
 GitFlow is a branching model designed around project releases, providing a robust framework for managing features, releases, and hotfixes.
-
 #### Branch Structure
-
 ```
 main (production)
 ├── develop (integration)
@@ -20,9 +17,7 @@ main (production)
 ├── release/v1.2.0
 └── hotfix/security-patch
 ```
-
 #### Branch Types and Purposes
-
 ```bash
 # Main branches (permanent)
 main                    # Production-ready code
@@ -33,9 +28,7 @@ feature/feature-name    # New feature development
 release/version-number  # Release preparation
 hotfix/issue-name      # Emergency production fixes
 ```
-
 #### GitFlow Commands
-
 ```bash
 # Initialize GitFlow
 git flow init
@@ -78,27 +71,20 @@ git checkout develop
 git merge --no-ff release/1.2.0
 git branch -d release/1.2.0
 ```
-
 #### GitFlow Pros and Cons
-
 **Advantages:**
 - Clear separation of concerns
 - Parallel development support
 - Structured release process
 - Hotfix capability without disrupting development
-
 **Disadvantages:**
 - Complex branch management
 - Slower integration cycles
 - Not suitable for continuous deployment
 - Overhead for small teams
-
 ### 2. GitHub Flow (Simplified Workflow)
-
 GitHub Flow is a lightweight, branch-based workflow designed for teams that deploy regularly.
-
 #### Workflow Process
-
 ```bash
 # 1. Create branch from main
 git checkout main

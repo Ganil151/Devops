@@ -1,7 +1,6 @@
 # Git Fundamentals for DevOps Engineers
 
 ## What is Git?
-
 Git is a distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Created by Linus Torvalds in 2005, Git has become the de facto standard for version control in software development and DevOps practices.
 
 ## Core Concept: The Philosophy of Git
@@ -25,20 +24,18 @@ Beyond the commands, Git is a **Content-Addressable Filesystem**.
 
 ### 2. Collaboration and Team Coordination
 
-- **Distributed Development**: Multiple developers working on the same codebase
+- **Distributed Development**: Multiple developers working on the same code-base
 - **Merge Conflict Resolution**: Tools to resolve conflicting changes
 - **Code Reviews**: Integration with pull/merge request workflows
 - **Team Synchronization**: Keep team members in sync with latest changes
 
 ### 3. CI/CD Pipeline Integration
-
 - **Automated Triggers**: Git hooks trigger CI/CD pipelines
 - **Branch-based Deployments**: Different branches for different environments
 - **Release Management**: Tag-based releases and semantic versioning
 - **Infrastructure as Code**: Version control for infrastructure configurations
 
 ### 4. DevOps Workflow Enablement
-
 - **GitOps**: Git as single source of truth for infrastructure and applications
 - **Configuration Management**: Version control for configuration files
 - **Documentation**: Keep documentation in sync with code changes
@@ -67,9 +64,7 @@ Beyond the commands, Git is a **Content-Addressable Filesystem**.
 ├── logs/                  # Reference logs
 └── index                  # Staging area (index file)
 ```
-
 ### Git Object Model
-
 ```bash
 # Git objects hierarchy
 Repository
@@ -81,9 +76,7 @@ Repository
 ├── Tags                  # Fixed pointers to specific commits
 └── HEAD                  # Pointer to current branch/commit
 ```
-
 ### Git Workflow Areas
-
 ```bash
 # Three main areas in Git workflow
 Working Directory  →  Staging Area (Index)  →  Repository (.git)
@@ -92,11 +85,9 @@ Working Directory  →  Staging Area (Index)  →  Repository (.git)
      ↓                      ↓                      ↓
   git add            git commit              git push (to remote)
 ```
-
 ## Essential Git Commands
 
 ### Repository Initialization and Cloning
-
 ```bash
 # Initialize new repository
 git init                           # Initialize empty repository
@@ -114,9 +105,7 @@ git remote add origin <url>        # Add remote repository
 git remote set-url origin <new-url> # Change remote URL
 git remote remove origin           # Remove remote repository
 ```
-
 ### Basic File Operations
-
 ```bash
 # Check repository status
 git status                         # Show working directory status
@@ -141,9 +130,7 @@ git rm <file>                      # Remove file from repository
 git rm --cached <file>             # Remove from repository, keep in working directory
 git mv <old-name> <new-name>       # Rename/move file
 ```
-
 ### Viewing History and Changes
-
 ```bash
 # View commit history
 git log                            # Show commit history
@@ -167,11 +154,9 @@ git show <commit-hash>             # Show specific commit details
 git show HEAD                      # Show latest commit
 git show HEAD~2                    # Show commit 2 steps back
 ```
-
 ## Branching and Merging
 
 ### Branch Management
-
 ```bash
 # List branches
 git branch                         # List local branches
@@ -195,9 +180,7 @@ git push origin --delete <branch>  # Delete remote branch
 git branch -m <old-name> <new-name> # Rename branch
 git branch -m <new-name>           # Rename current branch
 ```
-
 ### Merging Strategies
-
 ```bash
 # Merge branches
 git merge <branch-name>            # Merge branch into current branch
@@ -214,9 +197,7 @@ git rebase --abort                 # Abort rebase operation
 git cherry-pick <commit-hash>      # Apply specific commit to current branch
 git cherry-pick <commit1>..<commit2> # Cherry-pick range of commits
 ```
-
 ### Merge Conflict Resolution
-
 ```bash
 # When merge conflicts occur
 git status                         # Check conflicted files
@@ -233,11 +214,9 @@ git config --global merge.tool vimdiff # Set default merge tool
 # Abort merge if needed
 git merge --abort                  # Abort current merge
 ```
-
 ## Remote Repository Operations
 
 ### Working with Remotes
-
 ```bash
 # Fetch and pull changes
 git fetch                          # Download changes without merging
@@ -257,9 +236,7 @@ git push --force-with-lease        # Safer force push
 git branch -u origin/main          # Set upstream for current branch
 git checkout -b local-branch origin/remote-branch # Track remote branch
 ```
-
 ### Synchronization Strategies
-
 ```bash
 # Keep fork synchronized (common in open source)
 git remote add upstream <original-repo-url>
@@ -272,11 +249,9 @@ git push origin main
 git fetch --all                    # Fetch all remotes
 git remote prune origin            # Remove stale remote branches
 ```
-
 ## Advanced Git Operations
 
 ### Stashing Changes
-
 ```bash
 # Stash operations
 git stash                          # Stash current changes
@@ -289,9 +264,7 @@ git stash pop                      # Apply and remove latest stash
 git stash drop                     # Delete latest stash
 git stash clear                    # Delete all stashes
 ```
-
 ### Reset and Revert Operations
-
 ```bash
 # Reset operations (changes history)
 git reset --soft HEAD~1            # Undo last commit, keep changes staged
@@ -304,9 +277,7 @@ git revert <commit-hash>           # Revert specific commit
 git revert HEAD                    # Revert last commit
 git revert --no-commit <commit>    # Revert without auto-commit
 ```
-
 ### Tagging and Releases
-
 ```bash
 # Create tags
 git tag                            # List all tags
@@ -323,11 +294,9 @@ git push --follow-tags             # Push commits and associated tags
 git tag -d v1.0.0                  # Delete local tag
 git push origin --delete v1.0.0    # Delete remote tag
 ```
-
 ## Git Configuration and Customization
 
 ### Global Configuration
-
 ```bash
 # User configuration
 git config --global user.name "Your Name"
@@ -367,11 +336,9 @@ git config core.filemode false     # Ignore file permission changes
 ~/.gitconfig                       # Global configuration file
 .git/config                        # Repository-specific configuration
 ```
-
 ## Git Hooks for DevOps Automation
 
 ### Client-side Hooks
-
 ```bash
 # Pre-commit hook example
 #!/bin/bash
@@ -397,9 +364,7 @@ if grep -r "password\|secret\|key" --include="*.js" --include="*.py" .; then
     exit 1
 fi
 ```
-
 ### Server-side Hooks
-
 ```bash
 # Post-receive hook for deployment
 #!/bin/bash
@@ -421,9 +386,7 @@ while read oldrev newrev refname; do
     fi
 done
 ```
-
 ### Hook Management
-
 ```bash
 # Make hooks executable
 chmod +x .git/hooks/pre-commit
@@ -434,11 +397,9 @@ git config --global init.templatedir '~/.git-templates'
 mkdir -p ~/.git-templates/hooks
 cp hooks/* ~/.git-templates/hooks/
 ```
-
 ## Git Workflows for DevOps
 
 ### GitFlow Workflow
-
 ```bash
 # GitFlow branch structure
 main                    # Production-ready code
@@ -506,7 +467,6 @@ infrastructure/
 ## Git Best Practices for DevOps
 
 ### Commit Message Standards
-
 ```bash
 # Conventional Commits format
 <type>[optional scope]: <description>
@@ -528,9 +488,7 @@ chore: update dependencies
 feat!: remove deprecated API endpoints
 BREAKING CHANGE: The old API endpoints have been removed
 ```
-
 ### Branch Naming Conventions
-
 ```bash
 # Branch naming patterns
 feature/JIRA-123-user-authentication
@@ -544,9 +502,7 @@ main                    # Production
 develop                 # Development integration
 staging                 # Staging environment
 ```
-
 ### .gitignore Best Practices
-
 ```bash
 # .gitignore for different environments
 
@@ -594,11 +550,9 @@ __pycache__/           # Python
 target/                # Java/Maven
 bin/                   # Go
 ```
-
 ## Git Security and Compliance
 
 ### Signing Commits
-
 ```bash
 # GPG key setup
 gpg --gen-key                      # Generate GPG key
@@ -640,11 +594,9 @@ trufflehog --regex --entropy=False .
 # Require up-to-date branches
 # Restrict pushes to main branch
 ```
-
 ## Troubleshooting Common Git Issues
 
 ### Merge Conflicts
-
 ```bash
 # Resolve merge conflicts
 git status                         # Check conflicted files
@@ -660,9 +612,7 @@ git commit                         # Complete merge
 # Use merge tools
 git mergetool                      # Launch configured merge tool
 ```
-
 ### Undoing Changes
-
 ```bash
 # Undo uncommitted changes
 git checkout -- <file>             # Discard changes to file
