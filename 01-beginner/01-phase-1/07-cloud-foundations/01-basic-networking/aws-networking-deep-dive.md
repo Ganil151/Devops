@@ -225,7 +225,6 @@ Answer: B.</b> VPC Flow Logs.
 </details>
 
 
-
 <details>
 <b>6. When peering VPCs, is the connection transitive? (If A peers B, and B peers C, can A talk to C?)</b>
 <details>
