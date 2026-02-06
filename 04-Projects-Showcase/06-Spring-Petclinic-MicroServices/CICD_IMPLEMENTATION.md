@@ -39,23 +39,39 @@ For production-grade environments, we separate state files and configurations us
 
 ```text
 terraform/
-├── environments/           # Environment-specific configurations
+├── environments/               # Environment-specific root modules (State separation)
 │   ├── dev/
-│   │   ├── main.tf         # Root module calling standard modules
+│   │   ├── main.tf             # Calls modules with Dev-specific parameters
 │   │   ├── variables.tf
-│   │   ├── dev.tfvars      # Dev-specific overrides (t3.medium)
-│   │   └── backend.conf    # Dev S3 backend bucket config
+│   │   ├── outputs.tf          # Proxies module outputs for local use
+│   │   ├── providers.tf        # AWS provider & version constraints
+│   │   ├── dev.tfvars          # Override values (e.g., node_count = 2)
+│   │   └── backend.conf        # S3 Bucket/DynamoDB Partition for Dev state
 │   └── prod/
-│       ├── main.tf
+│       ├── main.tf             # Calls modules with Production parameters
 │       ├── variables.tf
-│       ├── prod.tfvars     # Prod-specific overrides (m5.large)
-│       └── backend.conf    # Prod S3 backend bucket config
-├── modules/                # Reusable, versioned infrastructure modules
-│   ├── vpc/                # Networking & Private Link
-│   ├── eks/                # EKS Cluster & IAM OIDC
-│   ├── rds/                # Multi-AZ Database
-│   └── security/           # WAF & SG Hardening
-└── global/                 # Global resources (Route53, S3 State Buckets)
+│       ├── outputs.tf
+│       ├── providers.tf
+│       ├── prod.tfvars         # Override values (e.g., node_count = 5)
+│       └── backend.conf        # S3 Bucket/DynamoDB Partition for Prod state
+├── modules/                    # Reusable, versioned "LEGO" bricks
+│   ├── vpc/                    # Networking (VPC, Subnets, NAT, IGW)
+│   │   ├── main.tf             # Resource definitions
+│   │   ├── variables.tf        # Input definitions
+│   │   ├── outputs.tf          # Export Subnet IDs, VPC CIDR
+│   │   ├── locals.tf           # Computed values (Tags, Naming)
+│   │   ├── data.tf             # External lookups (AZs, AWS caller ID)
+│   │   └── versions.tf         # Min Terraform & Provider versions
+│   ├── eks/                    # Cluster, Managed Node Groups, IAM OIDC
+│   ├── rds/                    # DB Instance, Parameter Groups, Subnet Groups
+│   ├── acm/                    # SSL/TLS Certificate management
+│   ├── cloudwatch/             # Logs, Metrics, Alarms
+│   └── security/               # IAM Roles, S3 Policies, WAF, SGs
+├── global/                     # Shared cross-environment resources
+│   ├── route53/                # Centralized Hosted Zones
+│   ├── s3-state-store/         # Backend resources (Buckets/DynamoDB)
+│   └── iam-users/              # Admin/CI-CD user definitions
+└── README.md                   # Technical documentation for IaC workflows
 ```
 
 ---
