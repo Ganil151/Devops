@@ -60,7 +60,6 @@ uniq # show only unique entries
 paste # combine rows of text, by line
 join # combine rows of text, by initial column value
 ```
-
 ## Cloudtrail - Logging and Auditing
 
 http://docs.aws.amazon.com/cli/latest/reference/cloudtrail/
