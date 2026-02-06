@@ -242,7 +242,6 @@ Answer: C.</b> A VPC Gateway Endpoint for S3 allows internal access to S3 withou
 </details>
 
 
-
 <details>
 <b>8. Which IP address is reserved by AWS in every subnet for the router?</b>
 <details>
