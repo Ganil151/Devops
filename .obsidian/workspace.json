@@ -201,6 +201,7 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "09-Resources/01-Scripts-Code/Maintenance/system_refactor.py",
     "09-Resources/01-Scripts-Code/Maintenance/generate_reference.py",
     "09-Resources/01-Scripts-Code/Maintenance",
     "09-Resources/01-Scripts-Code",
@@ -212,7 +213,6 @@
     "09-resources/01-scripts-code/maintenance/test-project-clean.py",
     "09-resources/01-scripts-code/maintenance/summary.txt",
     "09-resources/01-scripts-code/maintenance/simplification-summary.md",
-    "09-resources/01-scripts-code/maintenance/repository-audit.py",
     "09-resources/01-scripts-code/maintenance/readme.md",
     "09-resources/01-scripts-code/maintenance/quick-reference.md",
     "09-resources/01-scripts-code/maintenance/project-clean-readme.md",
