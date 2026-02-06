@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/04-Project-Structure/Project Structure.md",
+                "file": "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/05-Configuration-Language/Configuration-Language-HCL.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Project Structure"
+              "title": "Configuration-Language-HCL"
             }
           }
         ]
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 279.5,
-    "collapsed": true
+    "width": 279.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -216,6 +215,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/04-Project-Structure/Project Structure.md",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/scripts/validate_infra.sh",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/SECURITY.md",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/scripts/check_health.sh",
@@ -227,7 +227,6 @@
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/modules/rds",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/modules/eks",
     "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/modules/vpc",
-    "04-Projects-Showcase/06-Spring-Petclinic-MicroServices/terraform/modules",
     "09-Resources/05-Cloud-Reference/IMAGE_CATALOG.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/02-What-is-Terraform/What is Terraform.md",
     "02-Intermediate/02-Phase-2/01-Infrastructure-Automation/02-Config-Management/02-IaC-Foundations-and-Terraform/01-Fundamentals/01-IaC-Principles/Infrastructure as Code (IaC) Principles.md",
