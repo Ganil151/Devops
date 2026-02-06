@@ -201,7 +201,6 @@ Answer: A.</b> Use SGs as "roles" (e.g., "WebServers") and attach them to as man
 </details>
 
 
-
 <details>
 <b>3. What is the maximum size of a VPC CIDR block?</b>
 <details>
@@ -216,7 +215,6 @@ Answer: C.</b> The largest block AWS allows is /16 (65,536 IPs).
 <summary>Show Answer</summary>
 Answer: B.</b> Stateless. You must explicitly define both inbound and outbound rules.
 </details>
-
 
 
 <details>
