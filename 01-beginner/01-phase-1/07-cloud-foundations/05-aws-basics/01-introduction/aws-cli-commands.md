@@ -159,7 +159,6 @@ for userName in $allUsers; do
         --user-name $userName
 done
 ```
-
 ### Password policy
 
 http://docs.aws.amazon.com/cli/latest/reference/iam/
@@ -183,7 +182,6 @@ aws iam update-account-password-policy \
 # http://docs.aws.amazon.com/cli/latest/reference/iam/delete-account-password-policy.html
 aws iam delete-account-password-policy
 ```
-
 ### Access Keys
 
 http://docs.aws.amazon.com/cli/latest/reference/iam/
