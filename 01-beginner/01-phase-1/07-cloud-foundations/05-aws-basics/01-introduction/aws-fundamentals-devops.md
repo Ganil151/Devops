@@ -144,7 +144,6 @@ aws s3api put-bucket-versioning \
     --bucket my-devops-bucket \
     --versioning-configuration Status=Enabled
 ```
-
 #### EBS (Elastic Block Store)
 ```bash
 # List volumes
