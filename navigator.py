@@ -108,7 +108,7 @@ class ModuleScanner:
                 tags = [t for t in found_tags]
 
             # Extract Links
-            raw_links = re.findall(r'(https?://[^\s\)]+)', content)
+            raw_links = re.findall(r"(https?://[^\s\)]+)", content)
             links = list(dict.fromkeys(raw_links))
 
         except Exception:
@@ -211,7 +211,6 @@ class Navigator:
             console.print("[magenta][W][/magenta] Open Documentation Links")
             console.print("[red][B][/red] Back")
 
-            choice = input("\nSelect action [O/V/C/B]: ").strip().upper()
             choice = input("\nSelect action [O/V/C/W/B]: ").strip().upper()
 
             if choice == "O":
@@ -244,9 +243,11 @@ class Navigator:
                 else:
                     print("\nFound Links:")
                     for i, link in enumerate(links):
-                        print(f"[{i+1}] {link}")
-                    
-                    link_choice = input("\nSelect link to open (number) or Enter to cancel: ").strip()
+                        print(f"[{i + 1}] {link}")
+
+                    link_choice = input(
+                        "\nSelect link to open (number) or Enter to cancel: "
+                    ).strip()
                     if link_choice.isdigit():
                         idx = int(link_choice) - 1
                         if 0 <= idx < len(links):
