@@ -127,11 +127,8 @@ graph TB
 11. [Real-World Case Studies](#real-world-case-studies)
 
 ---
-
 ## 🎓 Specialized Deep Dives
-
 For advanced technical deep-dives, see these specialized directories:
-
 - **[Saga Distributed Transactions](./patterns/saga-distributed-transactions/)** - Choreography vs Orchestration
 - **[gRPC vs Event-Driven](./communication/grpc-vs-event-driven/)** - Protocol comparison (Protobuf/Avro/JSON)
 - **[Service Mesh & Retries](./resiliency/service-mesh-and-retries/)** - Circuit breakers, Istio config
