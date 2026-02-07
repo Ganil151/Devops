@@ -48,9 +48,7 @@ Use the **AWS Secrets Store CSI Driver**. This mounts secrets as volumes or sync
 - **Why?** It's more secure than standard K8s secrets (which are just base64 encoded) and easier for developers to consume.
 
 ## 4. Cross-Account Secret Access
-
 Sharing a secret from a "Security" account to a "Production" account.
-
 ### Step 1: Resource-based Policy on the Secret
 ```json
 {
