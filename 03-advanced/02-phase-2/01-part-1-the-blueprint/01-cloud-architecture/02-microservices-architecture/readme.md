@@ -23,7 +23,6 @@ Data Management → Resiliency → Observability → Production
 ---
 
 ## 🎯 Learning Objectives
-
 By the end of this module, you will be able to:
 
 ✅ **Design**: Decompose monoliths using Domain-Driven Design and Bounded Contexts  
