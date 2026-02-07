@@ -166,7 +166,6 @@ module "vpc" {
 ```
 
 ---
-
 ## 🛠️ 8. Troubleshooting Checklist
 **"My EC2 can't reach the internet—what do I check?"**
 
