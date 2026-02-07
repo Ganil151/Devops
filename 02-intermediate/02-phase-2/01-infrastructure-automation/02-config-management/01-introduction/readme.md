@@ -112,7 +112,8 @@ graph TD
    - [ ] b) Idempotent
    - [ ] c) Sequential
    - [ ] d) Declarative
-
+     <details>
+     <summary>Answer</summary>
 
 2. **True or False: Declarative code defines 'How' to build a server.**
    - [ ] a) True
