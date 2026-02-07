@@ -84,13 +84,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,7 +213,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "e5b53e735af933f6",
   "lastOpenFiles": [
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/technical-guides/quiz.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/04-security-and-secrets-management/aws-shield-waf-kms/secrets-best-practices.md",
