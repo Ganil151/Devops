@@ -24,7 +24,7 @@ aws ec2 describe-security-groups \
   --query 'SecurityGroups[?IpPermissions[?IpRanges[?CidrIp==`0.0.0.0/0`]]].{GroupId:GroupId,Name:GroupName}' \
   --output table
 ```
-Get NAT Gateway costs for last month
+- Get NAT Gateway costs for last month
 ```bash
 aws ce get-cost-and-usage \
   --time-period Start=2024-01-01,End=2024-02-01 \
