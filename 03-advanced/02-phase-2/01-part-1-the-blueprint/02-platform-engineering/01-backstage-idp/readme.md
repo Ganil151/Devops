@@ -7,7 +7,6 @@
 Platform Engineering is the discipline of designing and building self-service capabilities for software engineering organizations. An **Internal Developer Portal (IDP)** like **Backstage** (created by Spotify) serves as the "Front door" for developers to manage their services, documentation, and infrastructure without needing to master the underlying cloud complexity.
 
 ## 🎯 Learning Objectives
-
 - ✅ Understand the difference between **DevOps** and **Platform Engineering**.
 - ✅ Master the **Backstage Software Catalog** (entities, relations).
 - ✅ Build **Software Templates** (Scaffolder) to automate "Golden Paths".
