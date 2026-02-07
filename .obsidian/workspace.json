@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/samples/readme.md",
+                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -215,10 +215,10 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/samples/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/iac-architecture-patterns-ref.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/config-management-keywords.md",
-    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/samples/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/01-introduction/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/testing-validation-ref.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/secrets-management-ref.md",
