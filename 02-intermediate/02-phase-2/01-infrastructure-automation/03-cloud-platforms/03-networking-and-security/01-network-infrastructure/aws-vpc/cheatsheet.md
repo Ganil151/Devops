@@ -146,7 +146,6 @@ create_nat_gateway() {
 # Savings: 14 hours/day * 30 days = 420 hours saved
 # $0.045 * 420 = $18.90/month savings per NAT Gateway
 ```
-
 ### 4. Data Transfer Optimization
 ```bash
 # EXPENSIVE: Cross-region data transfer
