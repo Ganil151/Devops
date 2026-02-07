@@ -167,7 +167,6 @@ aws s3api put-bucket-accelerate-configuration \
 aws s3 cp large-file.zip s3://my-bucket/ --endpoint-url https://my-bucket.s3-accelerate.amazonaws.com
 ```
 ___
-
 ## [03] Performance Hacks | MTU & Speed
 
 ### 1. Enhanced Networking (FREE Performance Boost!)
