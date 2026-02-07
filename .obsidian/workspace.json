@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/quick-start.md",
+                "file": "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "quick-start"
+              "title": "readme"
             }
           }
         ]
@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/quick-start.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/readme.md",
     "security",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/assets/readme.md",
@@ -248,7 +249,6 @@
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/cheatsheet.md",
     "09-resources/00-cheatsheets/aws/cheatsheet.md",
     "09-resources/00-cheatsheets/aws",
-    "09-resources/aws/cheatsheet.md",
     "09-resources/aws",
     "09-resources/05-script/pdf-scraper.py",
     "09-resources/05-script/link-auditor.py",
