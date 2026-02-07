@@ -194,7 +194,6 @@ aws ec2 register-image \
 sudo ethtool -i eth0 | grep driver
 # Should show: ena (Elastic Network Adapter)
 ```
-
 ### 2. Placement Groups for Low Latency
 ```bash
 # Cluster placement group: < 1ms latency, 10 Gbps+ bandwidth
