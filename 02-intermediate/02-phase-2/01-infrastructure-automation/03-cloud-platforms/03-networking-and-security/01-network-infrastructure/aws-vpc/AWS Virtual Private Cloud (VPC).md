@@ -87,7 +87,6 @@ When your infrastructure grows beyond a single VPC, you must choose a connectivi
 > **Senior Pro-Tip**: Use **VPC Peering** for simple, low-latency links between two VPCs in the same region. Use **Transit Gateway** for enterprise-scale connectivity, cross-region hubs, and connecting On-Premises via VPN/Direct Connect.
 
 ---
-
 ## 🛡️ 4. Security Hardening: The SRE Way
 
 ### ⛓️ Security Group Chaining
