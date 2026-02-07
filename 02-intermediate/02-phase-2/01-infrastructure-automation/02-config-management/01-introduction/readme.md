@@ -129,8 +129,7 @@ graph TD
    - [ ] a) Plain-text Git repositories.
    - [ ] b) AWS Secrets Manager.
    - [ ] c) HashiCorp Vault.
-   - [ ] d) No
- -   <details>
+     <details>
      <summary>Answer</summary>
       a. Plain-text Git repositories.
      </details>
