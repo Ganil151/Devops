@@ -49,7 +49,6 @@ aws apigatewayv2 create-stage \
 ```
 
 ## 3. Security: Authorizers
-
 Protect your API using one of the following methods:
 - **IAM Authorizers**: Fine-grained access using AWS credentials (best for internal apps).
 - **Cognito User Pools**: Authenticate users via OIDC tokens (best for web/mobile apps).
