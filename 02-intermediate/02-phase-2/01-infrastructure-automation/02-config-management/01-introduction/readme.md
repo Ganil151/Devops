@@ -113,7 +113,7 @@ graph TD
    <details>
    <summary>Answer</summary
     Pets are unique servers you manually nurse. Cattle are identical, replaceable resources. If cattle is sick (unhealthy), you replace it; you don't 'fix' it.
- -  </details>
+   </details>
 
 
 ---
