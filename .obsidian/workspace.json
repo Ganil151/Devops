@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/01-introduction/readme.md",
+                "file": "IAC-AUDIT-REPORT.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "IAC-AUDIT-REPORT"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,6 +216,8 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "TERRAFORM-MODULE-README-TEMPLATE.md",
+    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/01-introduction/readme.md",
     "INDEX.md",
     "CICD-PIPELINE-EXAMPLE.md",
     "EXECUTIVE-SUMMARY.md",
@@ -225,7 +228,6 @@
     "04-projects-showcase/04-kubernetes-orchestration/Infrastructure-Refactored/main.tf",
     "04-projects-showcase/04-kubernetes-orchestration/Infrastructure-Refactored",
     "TERRAFORM-STATE-CORRUPTION-RECOVERY-GUIDE.md",
-    "TERRAFORM-MODULE-README-TEMPLATE.md",
     "IAC-AUDIT-REPORT.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/immutable-infrastructure-governance-ref.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/provisioning-iac-keywords.md",
@@ -247,7 +249,6 @@
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/04-cloud-native-provisioning-and-vendors/01-aws-cloudformation/advanced/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/04-cloud-native-provisioning-and-vendors/01-aws-cloudformation/intermediate/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/04-cloud-native-provisioning-and-vendors/01-aws-cloudformation/beginner/readme.md",
-    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/04-project-structure/project-structure.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
