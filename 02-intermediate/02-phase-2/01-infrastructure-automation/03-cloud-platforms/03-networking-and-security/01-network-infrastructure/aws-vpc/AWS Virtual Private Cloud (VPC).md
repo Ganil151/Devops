@@ -133,7 +133,6 @@ VPC Endpoints (PrivateLink) allow you to connect your VPC to AWS services as if 
 > **Junior Warning**: Without an S3 Gateway Endpoint, your private EC2s must go through the NAT Gateway to talk to S3, incurring $0.045/GB in processing fees. **Always add a Gateway Endpoint for S3.**
 
 ---
-
 ## 💳 6. FinOps: Networking Cost Optimization
 Networking is often the "hidden" cost in AWS.
 
