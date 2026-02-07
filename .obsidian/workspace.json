@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "09-resources/09-cheatsheets",
     "09-cheatsheets",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/AWS Virtual Private Cloud (VPC).md",
     "navigator_requirements.txt",
@@ -229,7 +230,6 @@
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/dev",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/helm/microservices/templates",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/global",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/checklist/post-mortem-template.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/checklist/launch-checklist.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/readme.md",
