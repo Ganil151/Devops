@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/readme.md",
+                "file": "03-advanced/02-phase-2/01-part-1-the-blueprint/02-platform-engineering/01-backstage-idp/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -215,9 +215,9 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/readme.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/assets/microservices_vs_monolith_comparison.png.txt",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/quick-start.md",
-    "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/readme.md",
     "security",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/assets/readme.md",
     "03-advanced/02-phase-2/readme.md",
@@ -260,7 +260,6 @@
     "09-resources/04-images/screenshot-92.png",
     "09-resources/04-images/screenshot-91.png",
     "09-resources/04-images",
-    "09-resources/03-cloud-metadata",
     "Untitled.canvas"
   ]
 }
