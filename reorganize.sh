@@ -1,186 +1,211 @@
 #!/bin/bash
 
-# ==============================================================================
-# Script Name: reorganize.sh
-# Description: Renames and reorders directories to follow a strict numeric sequence.
-#              Cleans names (kebab-case), pads numbers (01-), and handles conflicts.
-# Author:      Gemini Code Assist
-# ==============================================================================
+# ============================================================
+# auto_reorg.sh — Robust Recursive Folder Renaming Script
+# Author: Senior Linux Systems Administrator
+# Purpose: Recursively rename folders to a strict numeric sequence
+#          with sanitization, dry-run safety, and exclusion rules.
+# ============================================================
 
-# --- Configuration & Defaults ---
-LOG_FILE="migration_report.log"
-DRY_RUN=false
-RECURSIVE=false
-START_INDEX=1
-TARGET_PATH=""
-
-# Colors for output
+# ANSI color codes for visual feedback
 RED='\033[0;31m'
 GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
+YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
-# --- Functions ---
+# Default values
+DRY_RUN=true
+FORCE=false
+RECURSIVE=false
+EXCLUDE_LIST=(".git" ".terraform" "__pycache__" "node_modules")
 
-usage() {
-    echo -e "${BLUE}Usage: $0 -p <path> [-s <start_index>] [-r] [-d]${NC}"
-    echo ""
-    echo "Options:"
-    echo "  -p <path>   Target directory path (Required)"
-    echo "  -s <num>    Start index for numbering (Default: 1)"
-    echo "  -r          Recursive mode (Process sub-directories)"
-    echo "  -d          Dry-run mode (Show changes without executing)"
-    echo "  -h          Show this help message"
-    echo ""
-    echo "Examples:"
-    echo "  $0 -p /home/gsmash/docs -d        (Dry run on docs folder)"
-    echo "  $0 -p /home/gsmash/docs -r        (Recursive cleanup)"
-    exit 1
+# Function: Print usage information
+print_usage() {
+    echo -e "${YELLOW}Usage:${NC}"
+    echo -e "  $0 [-r|--recursive] [-f|--force] [--dry-run]"
+    echo -e ""
+    echo -e "Options:"
+    echo -e "  -r, --recursive     Apply renaming recursively to subdirectories"
+    echo -e "  -f, --force         Execute actual renames (bypass dry-run)"
+    echo -e "  --dry-run           Show what would be renamed (default)"
+    echo -e ""
+    echo -e "Example:"
+    echo -e "  $0 --recursive -f        # Rename all folders recursively with force"
+    echo -e "  $0 --dry-run             # Simulate renaming without changes"
 }
 
-log_change() {
-    local old="$1"
-    local new="$2"
-    local status="$3"
-    local timestamp=$(date "+%Y-%m-%d %H:%M:%S")
-    
-    # Console output
-    if [ "$status" == "DRY-RUN" ]; then
-        echo -e "${YELLOW}[DRY-RUN]${NC} Rename: '$old' -> '$new'"
-    elif [ "$status" == "SUCCESS" ]; then
-        echo -e "${GREEN}[OK]${NC} Renamed: '$old' -> '$new'"
-    elif [ "$status" == "SKIPPED" ]; then
-        echo -e "${BLUE}[SKIP]${NC} No change: '$old'"
+# Function: Sanitize folder name (replace spaces with hyphens, remove special chars)
+sanitize_name() {
+    local input="$1"
+    # Replace spaces with hyphens
+    local sanitized="${input// /-}"
+    # Remove non-alphanumeric characters except hyphens and underscores
+    sanitized=$(echo "$sanitized" | sed 's/[^a-zA-Z0-9_-]/-/g')
+    # Convert to lowercase
+    sanitized=$(echo "$sanitized" | tr '[:upper:]' '[:lower:]')
+    # Trim leading/trailing hyphens
+    sanitized=$(echo "$sanitized" | sed 's/^-*//;s/-*$//')
+    # If empty after sanitization, default to 'unknown'
+    [ -z "$sanitized" ] && sanitized="unknown"
+    echo "$sanitized"
+}
+
+# Function: Check if folder is already numbered (matches ^[0-9]{2}-)
+is_numbered() {
+    local folder="$1"
+    [[ "$folder" =~ ^[0-9]{2}- ]] && return 0 || return 1
+}
+
+# Function: Check if folder should be excluded
+should_exclude() {
+    local folder="$1"
+    for exclude in "${EXCLUDE_LIST[@]}"; do
+        if [ "$folder" = "$exclude" ]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+# Function: Get next available number (based on existing numbered folders)
+get_next_number() {
+    local dir="$1"
+    local max_num=0
+    local numbered_folders=()
+
+    # Find all numbered folders in the current directory
+    for entry in "$dir"/*; do
+        if [ -d "$entry" ]; then
+            basename_entry=$(basename "$entry")
+            if is_numbered "$basename_entry"; then
+                # Extract number part (first 2 digits)
+                num_part=$(echo "$basename_entry" | sed 's/^[0-9]\{2\}-//')
+                if [[ "$num_part" =~ ^[0-9]+$ ]]; then
+                    numbered_folders+=("$num_part")
+                fi
+            fi
+        fi
+    done
+
+    # Sort numbers and find max + 1
+    if [ ${#numbered_folders[@]} -eq 0 ]; then
+        echo "01"
     else
-        echo -e "${RED}[ERROR]${NC} $status: '$old'"
-    fi
-
-    # File logging
-    echo "[$timestamp] [$status] $old -> $new" >> "$LOG_FILE"
-}
-
-clean_name() {
-    local input_name="$1"
-    
-    # 1. Convert to lowercase
-    local clean="${input_name,,}"
-    
-    # 2. Extract existing number if present (e.g., "1-intro" -> "1", "intro" -> "")
-    local number=""
-    if [[ "$clean" =~ ^([0-9]+)[^0-9] ]]; then
-        number="${BASH_REMATCH[1]}"
-    elif [[ "$clean" =~ ^([0-9]+)$ ]]; then
-        number="${BASH_REMATCH[1]}"
-    fi
-
-    # 3. Remove the number from the string for cleaning
-    if [[ -n "$number" ]]; then
-        clean="${clean#$number}"
-    fi
-
-    # 4. Replace special characters, spaces, parentheses with hyphens
-    clean=$(echo "$clean" | sed -E 's/[^a-z0-9]+/-/g')
-
-    # 5. Remove leading/trailing hyphens
-    clean=$(echo "$clean" | sed -E 's/^-+|-+$//g')
-
-    # 6. Pad number to 2 digits (or use provided start index logic if needed)
-    # Note: This script prioritizes preserving existing numbers but padding them.
-    if [[ -n "$number" ]]; then
-        local padded_num=$(printf "%02d" "$number")
-        echo "${padded_num}-${clean}"
-    else
-        # If no number exists, just return the cleaned name
-        # (Auto-numbering unnumbered folders would require sorting logic not available in simple iteration)
-        echo "$clean"
+        IFS=$'\n' sorted=($(sort -n <<<"${numbered_folders[*]}"))
+        unset IFS
+        max_num=${sorted[-1]}
+        next_num=$((max_num + 1))
+        printf "%02d\n" "$next_num"
     fi
 }
 
+# Function: Process a single directory (rename unnumbered folders)
 process_directory() {
-    local dir_path="$1"
-    local parent_dir=$(dirname "$dir_path")
-    local base_name=$(basename "$dir_path")
+    local dir="$1"
+    local next_num=$(get_next_number "$dir")
 
-    # Skip if base_name is empty or root
-    [[ -z "$base_name" || "$base_name" == "." || "$base_name" == "/" ]] && return
+    # Get list of folders to process
+    local folders=()
+    for entry in "$dir"/*; do
+        if [ -d "$entry" ]; then
+            local folder_name=$(basename "$entry")
+            # Skip if already numbered or excluded
+            if is_numbered "$folder_name" || should_exclude "$folder_name"; then
+                continue
+            fi
+            folders+=("$entry")
+        fi
+    done
 
-    local new_base=$(clean_name "$base_name")
-    local new_full_path="${parent_dir}/${new_base}"
+    # Sort alphabetically
+    IFS=$'\n' sorted_folders=($(sort <<<"${folders[*]}"))
+    unset IFS
 
-    # If name hasn't changed, skip
-    if [[ "$dir_path" == "$new_full_path" ]]; then
-        log_change "$dir_path" "$new_full_path" "SKIPPED"
-        return
-    fi
+    # Process each folder
+    for folder in "${sorted_folders[@]}"; do
+        local old_name=$(basename "$folder")
+        local new_name=$(sanitize_name "$old_name")
+        local new_fullname="${next_num}-${new_name}"
 
-    # Conflict Handling
-    if [[ -e "$new_full_path" && "$dir_path" != "$new_full_path" ]]; then
-        # If target exists (and isn't us, e.g. case change on case-insensitive FS), append timestamp
-        local timestamp=$(date +%s)
-        new_full_path="${new_full_path}_conflict_${timestamp}"
-    fi
-
-    if [ "$DRY_RUN" = true ]; then
-        log_change "$dir_path" "$new_full_path" "DRY-RUN"
-    else
-        if mv "$dir_path" "$new_full_path"; then
-            log_change "$dir_path" "$new_full_path" "SUCCESS"
+        # Display action
+        if $DRY_RUN; then
+            echo -e "${YELLOW}[DRY-RUN]${NC} Would rename '${old_name}' -> '${new_fullname}'"
         else
-            log_change "$dir_path" "$new_full_path" "FAILED"
-            return 1
+            echo -e "${GREEN}[RENAME]${NC} Renaming '${old_name}' -> '${new_fullname}'"
+            mv "$folder" "${dir}/${new_fullname}" || {
+                echo -e "${RED}[ERROR]${NC} Failed to rename '${old_name}' to '${new_fullname}'"
+                return 1
+            }
+        fi
+
+        # Increment next number
+        next_num=$(printf "%02d" $((next_num + 1)))
+    done
+
+    return 0
+}
+
+# Function: Main script logic
+main() {
+    # Parse command line arguments
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            -r|--recursive)
+                RECURSIVE=true
+                shift
+                ;;
+            -f|--force)
+                DRY_RUN=false
+                FORCE=true
+                shift
+                ;;
+            --dry-run)
+                DRY_RUN=true
+                FORCE=false
+                shift
+                ;;
+            -*)
+                echo -e "${RED}[ERROR]${NC} Unknown option: $1"
+                print_usage
+                exit 1
+                ;;
+            *)
+                break
+                ;;
+        esac
+    done
+
+    # Validate: must run from project root (or specify path via args)
+    if [ $# -eq 0 ]; then
+        CURRENT_DIR="."
+    else
+        CURRENT_DIR="$1"
+        if [ ! -d "$CURRENT_DIR" ]; then
+            echo -e "${RED}[ERROR]${NC} Directory '$CURRENT_DIR' does not exist."
+            exit 1
         fi
     fi
+
+    # Start processing
+    echo -e "${YELLOW}[INFO]${NC} Starting reorganization in: $CURRENT_DIR"
+
+    if $RECURSIVE; then
+        # Traverse recursively using find
+        find "$CURRENT_DIR" -type d -exec bash -c '
+            DIR="$1"
+            if [ -d "$DIR" ]; then
+                process_directory "$DIR"
+            fi
+        ' _ {} \;
+    else
+        # Process only current directory
+        process_directory "$CURRENT_DIR"
+    fi
+
+    echo -e "${GREEN}[SUCCESS]${NC} Reorganization complete."
 }
 
-# --- Main Execution ---
-
-# Parse arguments
-while getopts "p:s:rdh" opt; do
-    case $opt in
-        p) TARGET_PATH="$OPTARG" ;;
-        s) START_INDEX="$OPTARG" ;;
-        r) RECURSIVE=true ;;
-        d) DRY_RUN=true ;;
-        h) usage ;;
-        *) usage ;;
-    esac
-done
-
-# Validation
-if [[ -z "$TARGET_PATH" ]]; then
-    echo -e "${RED}Error: Target path (-p) is required.${NC}"
-    usage
+# Entry point
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    main "$@"
 fi
-
-if [[ ! -d "$TARGET_PATH" ]]; then
-    echo -e "${RED}Error: Directory '$TARGET_PATH' does not exist.${NC}"
-    exit 1
-fi
-
-# Initialize Log
-echo "--- Migration Started: $(date) ---" >> "$LOG_FILE"
-if [ "$DRY_RUN" = true ]; then
-    echo -e "${YELLOW}Starting Dry-Run Mode...${NC}"
-else
-    echo -e "${BLUE}Starting Migration...${NC}"
-fi
-
-# Traversal Logic
-# We use find with -depth to rename children before parents, ensuring paths remain valid.
-FIND_CMD="find \"$TARGET_PATH\" -mindepth 1 -type d"
-
-if [ "$RECURSIVE" = false ]; then
-    FIND_CMD="$FIND_CMD -maxdepth 1"
-fi
-
-# Add -depth to process leaves first
-FIND_CMD="$FIND_CMD -depth"
-
-# Execute find and loop
-eval "$FIND_CMD" | while read -r dir; do
-    process_directory "$dir"
-done
-
-echo -e "${BLUE}Operation Complete. Check $LOG_FILE for details.${NC}"
-
