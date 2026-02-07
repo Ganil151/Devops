@@ -58,7 +58,6 @@ Control how clients consume your API to prevent abuse and manage costs.
 - **Throttling**: Limit the rate of requests (Requests Per Second).
 - **Quota**: Limit the total number of requests per day/week/month.
 - **API Keys**: Identify and authorize unique clients.
-
 ## 5. Troubleshooting Guide
 
 | Symptom | Probable Cause | Resolution |
