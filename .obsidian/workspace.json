@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "04-projects-showcase/04-kubernetes-orchestration/Infrastructure-Refactored/outputs.tf",
     "04-projects-showcase/04-kubernetes-orchestration/Infrastructure-Refactored/variables.tf",
     "04-projects-showcase/04-kubernetes-orchestration/Infrastructure-Refactored/main.tf",
     "04-projects-showcase/04-kubernetes-orchestration/Infrastructure-Refactored",
@@ -254,7 +255,6 @@
     "09-resources/00-cheatsheets/aws",
     "09-resources/aws",
     "09-resources/05-script/pdf-scraper.py",
-    "09-resources/05-script/link-auditor.py",
     "09-resources/04-images/screenshot-99.png",
     "09-resources/04-images/screenshot-98.png",
     "09-resources/04-images/screenshot-97.png",
