@@ -29,11 +29,13 @@ Think of Config Management like a **Thermostat**:
 ## 📚 Why This Module Matters for Juniors
 
 **Before this module**, you might think:
+
 - "Documentation is how we remember what we built"
 - "Scripts are fine for cloud setup"
 - "Manual changes are necessary for 'quick' fixes"
 
 **After this module**, you'll understand:
+
 - **Code IS the documentation**.
 - **Idempotency** is the superpower that makes automation safe.
 - **Drift** is the enemy of stability.
@@ -99,9 +101,7 @@ graph TD
    - **Answer:** It ensures that running a tool twice doesn't cause duplicate resources or errors. It makes it safe to run on a schedule.
 
 4. **Q: Explain 'Cattle vs Pets'.**
-   - **Answer:** Pets are unique servers you manually nurse. Cattle are identical, replaceable resources. If cattle is sick (unhealthy), you replace it; you don't 'fix' it. 
-
-
+   - **Answer:** Pets are unique servers you manually nurse. Cattle are identical, replaceable resources. If cattle is sick (unhealthy), you replace it; you don't 'fix' it.
 
 ---
 
