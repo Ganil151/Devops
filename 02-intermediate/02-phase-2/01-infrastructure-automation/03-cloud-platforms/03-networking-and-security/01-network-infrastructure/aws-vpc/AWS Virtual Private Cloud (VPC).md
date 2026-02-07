@@ -176,7 +176,6 @@ module "vpc" {
 5.  **DNS**: Are `enableDnsHostnames` and `enableDnsSupport` set to `true`?
 
 ---
-
 ## 🧪 9. Hands-On Lab: The Secure 3-Tier Mission
 **Objective**: Build a production-grade network that isolates data and optimizes cost.
 
