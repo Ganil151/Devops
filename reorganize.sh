@@ -11,7 +11,6 @@ BLUE='\033[0;34m'
 NC='\033[0m' 
 
 DRY_RUN=true
-FORCE=false
 RECURSIVE=false
 EXCLUDE_LIST=(".git" ".terraform" "__pycache__" "node_modules")
 
@@ -25,11 +24,6 @@ usage() {
 }
 
 sanitize_name() {
-    local sanitized
-    # Remove existing "00-" prefix if present to get the raw name
-    local raw_name=$(echo "$1" | sed 's/^[0-9]\{2\}-//')
-    
-    sanitized="${raw_name//[ _]/-}"
     local name="$1"
     # Replace spaces and underscores with hyphens
     local sanitized="${name//[ _]/-}"
@@ -61,9 +55,6 @@ process_directory() {
 
     echo -e "${BLUE}[PROCESSING]${NC} $target_dir"
 
-    # 1. Get all directories, sort them alphabetically (ignoring old numbers)
-    # We use a temp array to store the original names
-    local folders=()
     local max_index=0
     local unnumbered_dirs=()
 
@@ -75,7 +66,6 @@ process_directory() {
             local base=$(basename "$entry")
             
             if ! should_exclude "$base"; then
-                folders+=("$base")
                 # Check if already numbered (01-name)
                 if [[ "$base" =~ ^[0-9]{2}- ]]; then
                     # Extract the number part
@@ -97,30 +87,14 @@ process_directory() {
     done
     shopt -u nullglob
 
-    # Sort folders alphabetically based on their sanitized/raw names
-    IFS=$'\n' sorted_folders=($(sort <<<"${folders[*]}"))
-    unset IFS
     # 2. Sort unnumbered folders alphabetically
     if [[ ${#unnumbered_dirs[@]} -gt 0 ]]; then
         IFS=$'\n' sorted_folders=($(sort <<<"${unnumbered_dirs[*]}"))
         unset IFS
 
-    # 2. Re-index from 00
-    local count=0
-    for old_name in "${sorted_folders[@]}"; do
-        local prefix=$(printf "%02d" $count)
-        local clean_name=$(sanitize_name "$old_name")
-        local new_name="${prefix}-${clean_name}"
         # 3. Rename unnumbered folders
         local current_index=$((max_index + 1))
         
-        # Only rename if the name actually needs to change
-        if [[ "$old_name" != "$new_name" ]]; then
-            if $DRY_RUN; then
-                echo -e "  ${YELLOW}[DRY-RUN]${NC} '$old_name' -> '$new_name'"
-            else
-                if mv "$target_dir/$old_name" "$target_dir/$new_name" 2>/dev/null; then
-                    echo -e "  ${GREEN}[FIXED]${NC} '$old_name' -> '$new_name'"
         for old_name in "${sorted_folders[@]}"; do
             local clean_name=$(sanitize_name "$old_name")
             local prefix=$(printf "%02d" $current_index)
@@ -130,7 +104,6 @@ process_directory() {
                 if $DRY_RUN; then
                     echo -e "  ${YELLOW}[DRY-RUN]${NC} '$old_name' -> '$new_name'"
                 else
-                    echo -e "  ${RED}[ERROR]${NC} Failed: '$old_name'"
                     # Check for collision
                     if [[ -e "$target_dir/$new_name" ]]; then
                          echo -e "  ${RED}[CONFLICT]${NC} Cannot rename '$old_name' to '$new_name' (Target exists)"
@@ -143,12 +116,6 @@ process_directory() {
                     fi
                 fi
             fi
-        else
-            echo -e "  ${NC}[STABLE]${NC} '$old_name' (already correct)"
-        fi
-        
-        ((count++))
-    done
             ((current_index++))
         done
     fi
@@ -158,7 +125,6 @@ process_directory() {
         shopt -s nullglob
         for entry in "$target_dir"/*; do
             if [[ -d "$entry" ]]; then
-                process_directory "$entry"
                 local base=$(basename "$entry")
                 if ! should_exclude "$base"; then
                     process_directory "$entry"
@@ -174,7 +140,6 @@ main() {
     while [[ $# -gt 0 ]]; do
         case $1 in
             -r|--recursive) RECURSIVE=true; shift ;;
-            -f|--force)     DRY_RUN=false; FORCE=true; shift ;;
             -f|--force)     DRY_RUN=false; shift ;;
             --dry-run)      DRY_RUN=true; shift ;;
             -h|--help)      usage; exit 0 ;;
@@ -187,11 +152,6 @@ main() {
     # Remove trailing slash if present
     target_dir="${target_dir%/}"
 
-    if [[ "$FORCE" == "true" ]]; then
-        echo -e "${RED}FORCE MODE ENABLED.${NC} This will re-index ALL folders to 00, 01, 02..."
-        read -p "Continue? (y/N): " -n 1 -r
-        echo
-        [[ ! $REPLY =~ ^[Yy]$ ]] && exit 0
     if $DRY_RUN; then
         echo -e "${YELLOW}*** DRY RUN MODE ***${NC} (Use -f or --force to execute)"
     fi
