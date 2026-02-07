@@ -200,7 +200,6 @@ A shared vocabulary between developers and domain experts that appears in code, 
 ✅ Use: "Order", "LineItem", "Product", "Checkout"
 ❌ Avoid: "Record", "Data", "Thing", "Process"
 ```
-
 #### 2. **Bounded Contexts**
 Explicit boundaries within which a domain model applies. Different contexts can have different models for the same concept.
 
