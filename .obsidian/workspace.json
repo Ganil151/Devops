@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/AWS Virtual Private Cloud (VPC).md",
+                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/02-dns-and-content-delivery/aws-route53-cloudfront/aws-api-gateway-guide.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AWS Virtual Private Cloud (VPC)"
+              "title": "aws-api-gateway-guide"
             }
           }
         ]
@@ -215,6 +215,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/AWS Virtual Private Cloud (VPC).md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/cheatsheet.md",
     "09-resources/00-cheatsheets/aws/cheatsheet.md",
     "09-resources/00-cheatsheets/aws",
@@ -239,7 +240,6 @@
     "09-resources/02-books-guides/morebooks.txt",
     "09-resources/02-books-guides",
     "09-resources/07-script/pdf-scraper.py",
-    "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/AWS Virtual Private Cloud (VPC).md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/best-practices.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/checklist/post-mortem-template.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/checklist/launch-checklist.md",
