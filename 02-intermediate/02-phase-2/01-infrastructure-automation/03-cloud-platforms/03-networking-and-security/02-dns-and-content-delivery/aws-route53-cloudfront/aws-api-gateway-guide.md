@@ -53,9 +53,7 @@ Protect your API using one of the following methods:
 - **IAM Authorizers**: Fine-grained access using AWS credentials (best for internal apps).
 - **Cognito User Pools**: Authenticate users via OIDC tokens (best for web/mobile apps).
 - **Lambda Authorizers**: Custom logic to validate tokens or headers.
-
 ## 4. Usage Plans & Throttling (REST API Only)
-
 Control how clients consume your API to prevent abuse and manage costs.
 - **Throttling**: Limit the rate of requests (Requests Per Second).
 - **Quota**: Limit the total number of requests per day/week/month.
