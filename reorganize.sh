@@ -154,4 +154,8 @@ main() {
         [[ ! $REPLY =~ ^[Yy]$ ]] && echo "Aborted." && exit 0
     fi
 
-    process_
+    process_directory "$target_dir"
+    echo -e "\n${GREEN}[SUCCESS]${NC} Operation Complete."
+}
+
+main "$@"
