@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/03-identity-and-access-control/aws-iam-cognito/aws-iam-comprehensive.md",
+                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/04-security-and-secrets-management/aws-shield-waf-kms/secrets-best-practices.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "aws-iam-comprehensive"
+              "title": "secrets-best-practices"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/03-identity-and-access-control/aws-iam-cognito/aws-iam-comprehensive.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/02-dns-and-content-delivery/aws-route53-cloudfront/aws-api-gateway-guide.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/AWS Virtual Private Cloud (VPC).md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/cheatsheet.md",
@@ -260,7 +262,6 @@
     "05-labs/play-ground/06-spring-petclinic-microservices/contributing.md",
     "05-labs/play-ground/06-spring-petclinic-microservices/cicd-implementation.md",
     "05-labs/play-ground/06-spring-petclinic-microservices/architecture.md",
-    "05-labs/06-spring-petclinic-microservices/checklist/post-mortem-template.md",
     "Untitled.canvas"
   ]
 }
