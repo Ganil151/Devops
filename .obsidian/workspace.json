@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/04-cloud-native-provisioning-and-vendors/01-aws-cloudformation/beginner/readme.md",
+                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/04-cloud-native-provisioning-and-vendors/01-aws-cloudformation/beginner/CloudFormation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "CloudFormation"
             }
           }
         ]
