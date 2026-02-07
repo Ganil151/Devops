@@ -104,7 +104,6 @@ resource "aws_security_group_rule" "allow_app" {
 }
 ```
 *Why?* If you scale your App tier or change its CIDR, the DB tier automatically adapts. It's **Identity-based networking**.
-
 ### 🔍 VPC Flow Logs: The Auditor's Eye
 Enable Flow Logs to monitor every packet.
 ```bash
@@ -113,7 +112,6 @@ aws logs filter-log-events \
   --log-group-name /aws/vpc/flowlogs \
   --filter-pattern "[version, account, eni, source, destination, srcport, destport, protocol, packets, bytes, windowstart, windowend, action=REJECT, flowlogstatus]"
 ```
-
 ### 🔓 SSM vs. Bastion Host
 **"Opening Port 22 to the world is a legacy anti-pattern."**
 Use **AWS Systems Manager (SSM) Session Manager**.
