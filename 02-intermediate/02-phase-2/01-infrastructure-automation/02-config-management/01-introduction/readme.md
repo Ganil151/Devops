@@ -14,10 +14,11 @@
 You don't write "steps"; you define "Realities." The tool (Terraform/Ansible) constantly compares reality with your code and "converges" them. If a server dies, the engine notices and brings it back. This is **Self-Healing Infrastructure**.
 
 ### 🏗️ The Infrastructure Analogy
+
 Think of Config Management like a **Thermostat**:
 
 | Concept | Manual Heater | Thermostat (IaC) |
-|:--------|:--------------|:------------------|
+| :------ | :------------ | :---------------- |
 | **Goal** | "Turn on for 1 hour" | "Keep temp at 72°F" |
 | **Philosophy** | Imperative (Procedural) | Declarative (Desired State) |
 | **Logic** | Do X then Y | X must always equal Y |
@@ -89,25 +90,16 @@ graph TD
 ### 🎯 Core Concepts
 
 1. **Q: Imperative vs Declarative?**
-        <details>
-        <summary>Answer</summary>
-        Imperative tells the computer 'How' (step-by-step scripts). Declarative tells the computer 'What' (Desired State). DevOps tools like Terraform/Ansible are Declarative.
+   - **Answer:** Imperative tells the computer 'How' (step-by-step scripts). Declarative tells the computer 'What' (Desired State). DevOps tools like Terraform/Ansible are Declarative.
+
 2. **Q: What is 'Configuration Drift'?**
-        <details>
-        <summary>Answer</summary>
-        The decay of systems where the actual state deviates from the code due to manual changes.*
-        </details> 
-3. **Q: Why is 'Idempotency' required for automation?**       
-       <details>
-        <summary>Answer</summary>
-        It ensures that running a tool twice doesn't cause duplicate resources or errors. It makes it safe to run on a schedule.*
-        </details> 
+   - **Answer:** The decay of systems where the actual state deviates from the code due to manual changes.
+
+3. **Q: Why is 'Idempotency' required for automation?**
+   - **Answer:** It ensures that running a tool twice doesn't cause duplicate resources or errors. It makes it safe to run on a schedule.
 
 4. **Q: Explain 'Cattle vs Pets'.**
-       <details>
-        <summary>Answer</summary>
-       *Answer: Pets are unique servers you manually nurse. Cattle are identical, replaceable resources. If cattle is sick (unhealthy), you replace it; you don't 'fix' it.*
-       </details> 
+   - **Answer:** Pets are unique servers you manually nurse. Cattle are identical, replaceable resources. If cattle is sick (unhealthy), you replace it; you don't 'fix' it. 
 
 
 
@@ -116,16 +108,18 @@ graph TD
 ## 📝 Knowledge Check
 
 1. **Which keyword describes a tool that only makes changes if needed?**
-    * [ ] a) Mutable
-    * [x] b) Idempotent
-    * [ ] c) Sequential
+   - [ ] a) Mutable
+   - [x] b) Idempotent
+   - [ ] c) Sequential
+
 2. **True or False: Declarative code defines 'How' to build a server.**
-    * [ ] a) True
-    * [x] b) False (It defines 'What' it should look like).
+   - [ ] a) True
+   - [x] b) False (It defines 'What' it should look like).
+
 3. **Where should secrets NEVER be stored?**
-    * [x] a) Plain-text Git repositories.
-    * [ ] b) AWS Secrets Manager.
-    * [ ] c) HashiCorp Vault.
+   - [x] a) Plain-text Git repositories.
+   - [ ] b) AWS Secrets Manager.
+   - [ ] c) HashiCorp Vault.
 
 ---
 
