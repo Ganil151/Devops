@@ -11,8 +11,7 @@ This guide contains battle-tested networking hacks, shortcuts, and best practice
 aws ec2 describe-vpcs --query 'Vpcs[].[VpcId,Tags[?Key==`Name`].Value|[0]]' --output table
 ```
 ##### Find all public subnets
-```
-
+```bash
 aws ec2 describe-subnets \
   --filters "Name=map-public-ip-on-launch,Values=true" \
   --query 'Subnets[].[SubnetId,CidrBlock,Tags[?Key==`Name`].Value|[0]]' \
