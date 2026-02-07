@@ -61,9 +61,7 @@ Resources:
   MyFirstBucket:
     Type: AWS::S3::Bucket
 ```
-
 ### Complete Template Sections
-
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'  # Required version string
 Description: String                      # Optional description
