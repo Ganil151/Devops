@@ -215,6 +215,8 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "09-resources/00-cheatsheets/aws/cheatsheet.md",
+    "09-resources/00-cheatsheets/aws",
     "09-resources/aws/cheatsheet.md",
     "09-resources/aws",
     "09-resources/05-script/pdf-scraper.py",
@@ -236,7 +238,6 @@
     "09-resources/02-books-guides/morebooks.txt",
     "09-resources/02-books-guides",
     "09-resources/07-script/pdf-scraper.py",
-    "09-resources/07-script/link-auditor.py",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/AWS Virtual Private Cloud (VPC).md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/cheatsheet.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/best-practices.md",
@@ -260,7 +261,6 @@
     "05-labs/play-ground/06-spring-petclinic-microservices/architecture.md",
     "05-labs/06-spring-petclinic-microservices/checklist/post-mortem-template.md",
     "05-labs/06-spring-petclinic-microservices/checklist/launch-checklist.md",
-    "05-labs/06-spring-petclinic-microservices/readme.md",
     "Untitled.canvas"
   ]
 }
