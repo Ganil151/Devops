@@ -16,8 +16,10 @@ aws ec2 describe-subnets \
   --filters "Name=map-public-ip-on-launch,Values=true" \
   --query 'Subnets[].[SubnetId,CidrBlock,Tags[?Key==`Name`].Value|[0]]' \
   --output table
-``
-# List all security groups with open SSH (security audit)
+```
+
+```
+# 
 aws ec2 describe-security-groups \
   --filters "Name=ip-permission.from-port,Values=22" \
   --query 'SecurityGroups[?IpPermissions[?IpRanges[?CidrIp==`0.0.0.0/0`]]].{GroupId:GroupId,Name:GroupName}' \
