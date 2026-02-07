@@ -10,7 +10,7 @@ This guide contains battle-tested networking hacks, shortcuts, and best practice
 # Get all VPC IDs and names
 aws ec2 describe-vpcs --query 'Vpcs[].[VpcId,Tags[?Key==`Name`].Value|[0]]' --output table
 ```
-# Find all public subnets
+##### Find all public subnets
 ```
 
 aws ec2 describe-subnets \
