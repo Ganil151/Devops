@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ============================================================
-# Robust Recursive Folder Numbering & Sanitization Script
+# auto_reorg.sh — Robust Recursive Folder Numbering
 # ============================================================
 
 # ANSI color codes
@@ -16,7 +16,6 @@ DRY_RUN=true
 FORCE=false
 RECURSIVE=false
 EXCLUDE_LIST=(".git" ".terraform" "__pycache__" "node_modules" "." "..")
-SCRIPT_NAME=$(basename "$0")
 
 print_usage() {
     echo -e "${YELLOW}Usage:${NC} $0 [options] [directory]"
@@ -38,10 +37,12 @@ sanitize_name() {
     # 4. Collapse multiple hyphens and trim
     sanitized=$(echo "$sanitized" | sed 's/-\{2,\}/-/g; s/^-*//; s/-*$//')
     
-    [[ -z "$sanitized" ] ] && echo "unnamed-folder" || echo "$sanitized"
+    # FIXED: Corrected the spacing in the conditional check
+    [[ -z "$sanitized" ]] && echo "unnamed-folder" || echo "$sanitized"
 }
 
 is_numbered() {
+    # Matches exactly two digits followed by a hyphen at the start
     [[ "$1" =~ ^[0-9]{2}- ]]
 }
 
@@ -57,13 +58,13 @@ get_next_number() {
     local dir="$1"
     local max_num=0
     
-    # Efficiently find the highest prefix number
+    # Loop through directories to find the highest prefix
     for entry in "$dir"/*; do
         local base=$(basename "$entry")
         if [[ -d "$entry" ]] && is_numbered "$base"; then
-            local num=${base%%-*} # Extract everything before the first hyphen
-            # Remove leading zero for calculation
-            num=$((10#$num)) 
+            local num_prefix="${base%%-*}"
+            # 10# force base-10 to avoid octal errors with 08, 09
+            local num=$((10#$num_prefix)) 
             (( num > max_num )) && max_num=$num
         fi
     done
@@ -78,14 +79,15 @@ process_directory() {
     local next_num
     next_num=$(get_next_number "$target_dir")
 
-    # Use a null-terminated glob to handle weird filenames safely
+    # Process directories in the current level
     for folder in "$target_dir"/*; do
+        # Ensure it is a directory and not a file
         [[ ! -d "$folder" ]] && continue
         
         local old_name
         old_name=$(basename "$folder")
 
-        # Skip logic
+        # Skip if already numbered or in exclusion list
         if should_exclude "$old_name" || is_numbered "$old_name"; then
             continue
         fi
@@ -105,22 +107,26 @@ process_directory() {
             fi
         fi
 
-        # Increment
+        # Increment with leading zero
         next_num=$(printf "%02d" $((10#$next_num + 1)))
     done
 
-    # Recursive call if flag is set
+    # Recursion Logic
     if $RECURSIVE; then
         for subdir in "$target_dir"/*; do
-            if [[ -d "$subdir" ]] && ! should_exclude "$(basename "$subdir")"; then
-                process_directory "$subdir"
+            if [[ -d "$subdir" ]]; then
+                local base_sub=$(basename "$subdir")
+                if ! should_exclude "$base_sub"; then
+                    process_directory "$subdir"
+                fi
             fi
         done
     fi
 }
 
 main() {
-    # Parse Arguments
+    # Argument Parsing
+    local target_dir=""
     while [[ $# -gt 0 ]]; do
         case $1 in
             -r|--recursive) RECURSIVE=true; shift ;;
@@ -128,26 +134,24 @@ main() {
             --dry-run)      DRY_RUN=true; shift ;;
             -h|--help)      print_usage; exit 0 ;;
             -*)             echo -e "${RED}Error: Unknown option $1${NC}"; print_usage; exit 1 ;;
-            *)              TARGET_DIR="$1"; shift ;;
+            *)              target_dir="$1"; shift ;;
         esac
     done
 
-    TARGET_DIR="${TARGET_DIR:-.}"
+    # Default to current directory if none provided
+    target_dir="${target_dir:-.}"
 
-    if [[ ! -d "$TARGET_DIR" ]]; then
-        echo -e "${RED}[ERROR]${NC} '$TARGET_DIR' is not a valid directory."
+    if [[ ! -d "$target_dir" ]]; then
+        echo -e "${RED}[ERROR]${NC} '$target_dir' is not a valid directory."
         exit 1
     fi
 
+    # Confirmation for destructive actions
     if [[ "$FORCE" == "true" ]]; then
-        echo -e "${RED}WARNING:${NC} About to rename folders in '$TARGET_DIR'."
-        read -p "Proceed? (y/N): " -n 1 -r
+        echo -e "${RED}WARNING:${NC} Reorganizing folders in: $(realpath "$target_dir")"
+        read -p "Proceed with renames? (y/N): " -n 1 -r
         echo
         [[ ! $REPLY =~ ^[Yy]$ ]] && echo "Aborted." && exit 0
     fi
 
-    process_directory "$TARGET_DIR"
-    echo -e "\n${GREEN}Operation Complete.${NC}"
-}
-
-main "$@"
+    process_
