@@ -212,7 +212,6 @@ aws ec2 run-instances \
 # Limitation: Single AZ only
 # Benefit: Sub-millisecond latency between instances
 ```
-
 ### 3. Jumbo Frames (MTU 9001)
 ```bash
 # Default MTU: 1500 bytes
