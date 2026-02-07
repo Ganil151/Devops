@@ -104,6 +104,7 @@ graph TD
         </details> 
 
 4. **Q: Explain 'Cattle vs Pets'.**
+       <>
        *Answer: Pets are unique servers you manually nurse. Cattle are identical, replaceable resources. If cattle is sick (unhealthy), you replace it; you don't 'fix' it.*
 
 ---
