@@ -151,7 +151,6 @@ For advanced technical deep-dives, see these specialized directories:
 - **Technology Diversity**: Choose best tool per service
 - **Faster Deployment**: Deploy services independently
 - **Team Autonomy**: Each team owns their services
-
 #### Migration Strategy Matrix
 
 | Aspect | Monolith | Transitional | Microservices |
