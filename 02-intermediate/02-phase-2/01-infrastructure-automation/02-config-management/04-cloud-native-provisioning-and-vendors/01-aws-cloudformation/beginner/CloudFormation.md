@@ -18,11 +18,9 @@ By the end of this level, you will be able to:
 - Text editor or IDE (VS Code recommended with CloudFormation extension)
 
 ---
-
 ## 📚 Core Concepts
 
 ### What is CloudFormation?
-
 CloudFormation is AWS's Infrastructure as Code service that lets you:
 - **Model** your infrastructure using templates
 - **Provision** resources automatically
