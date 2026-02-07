@@ -126,11 +126,16 @@ graph TD
      </details>
 
 3. **Where should secrets NEVER be stored?**
-   - [x] a) Plain-text Git repositories.
+   - [ ] a) Plain-text Git repositories.
    - [ ] b) AWS Secrets Manager.
    - [ ] c) HashiCorp Vault.
    - [ ] d) 
- -   
+ -    <details>
+     <summary>Answer</summary>
+      a. Plain-text Git repositories.
+     </details>
+
+
 
 ---
 
