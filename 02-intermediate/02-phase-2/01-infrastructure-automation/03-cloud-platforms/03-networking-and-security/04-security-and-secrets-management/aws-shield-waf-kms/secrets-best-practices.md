@@ -19,7 +19,6 @@ Choosing the right tool for the job.
 
 ## 2. Automated Secret Rotation
 Leaving a secret unchanged for years is a high risk. Automated rotation mitigates the impact of a compromised key.
-
 ### Rotation Strategy: The "Single-User" vs "Multi-User"
 - **Single-User**: Changes the password on the original resource. Can cause brief downtime during rotation.
 - **Multi-User**: Uses two sets of credentials. Rotates the inactive one, updates the application, then rotates the previous one. Zero downtime.
