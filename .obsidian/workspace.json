@@ -11,24 +11,12 @@
             "id": "19ac471caa0c1888",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/20-testing-strategies/testing-strategies.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png"
               },
-              "icon": "lucide-file",
-              "title": "testing-strategies"
+              "icon": "lucide-image",
+              "title": "snowflake-vs-cattle"
             }
           }
         ]
@@ -215,6 +203,10 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
+    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
+    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/infrastructure-as-code-iac-principles.md",
+    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/20-testing-strategies/testing-strategies.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/21-documentation-standards/documentation-standards.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/22-basic-examples/basic-examples.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/04-data-and-automation/04-infrastructure-governance-and-audit/cloud-scripting-fundamentals.md",
@@ -244,7 +236,6 @@
     "09-resources/04-images/screenshot-91.png",
     "09-resources/04-images/screenshot-90.png",
     "09-resources/04-images/screenshot-89.png",
-    "09-resources/04-images/screenshot-88.png",
     "09-resources/04-images",
     "09-resources/03-cloud-metadata/global-image-inventory.md",
     "09-resources/03-cloud-metadata",
@@ -258,9 +249,6 @@
     "05-labs/play-ground/microservices/spring-petclinic-microservices/architecture.md",
     "05-labs/play-ground/microservices/06-spring-petclinic-microservices/checklist/post-mortem-template.md",
     "05-labs/play-ground/microservices/06-spring-petclinic-microservices/checklist/launch-checklist.md",
-    "05-labs/play-ground/microservices/06-spring-petclinic-microservices/readme.md",
-    "05-labs/play-ground/microservices/06-spring-petclinic-microservices/contributing.md",
-    "05-labs/play-ground/microservices/06-spring-petclinic-microservices/cicd-implementation.md",
     "Untitled.canvas"
   ]
 }
