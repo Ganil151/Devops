@@ -182,12 +182,10 @@ module "vpc" {
 ### Phase 1: The Deployment
 1. Use the Terraform module above to deploy a VPC.
 2. Verify that instances in the `database_subnets` have **NO** route to the internet.
-
 ### Phase 2: The Security Audit
 1. Enable **VPC Flow Logs**.
 2. Create a Security Group for an App Server and a Database.
 3. **Challenge**: Configure the Database SG to only accept traffic from the App Server SG ID.
-
 ### Phase 3: The Cost Fix
 1. Log into a private EC2. Try to download a file from S3: `aws s3 cp s3://my-bucket/test.txt .`
 2. Check the NAT Gateway CloudWatch metrics—you'll see data spike.
