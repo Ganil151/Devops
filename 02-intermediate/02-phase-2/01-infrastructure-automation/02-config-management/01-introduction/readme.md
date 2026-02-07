@@ -120,6 +120,10 @@ graph TD
 2. **True or False: Declarative code defines 'How' to build a server.**
    - [ ] a) True
    - [ ] b) False (It defines 'What' it should look like).
+     <details>
+     <summary>Answer</summary>
+      b. False
+     </details>
 
 3. **Where should secrets NEVER be stored?**
    - [x] a) Plain-text Git repositories.
