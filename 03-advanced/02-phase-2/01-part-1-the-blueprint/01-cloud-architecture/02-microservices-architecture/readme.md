@@ -207,7 +207,6 @@ Sales Context:     Customer = {name, creditLimit, orders}
 Support Context:   Customer = {name, ticketHistory, satisfaction}
 Shipping Context:  Customer = {name, address, deliveryPreferences}
 ```
-
 #### 3. **Aggregates**
 Cluster of domain objects treated as a single unit for data changes. Each aggregate has a root entity.
 
