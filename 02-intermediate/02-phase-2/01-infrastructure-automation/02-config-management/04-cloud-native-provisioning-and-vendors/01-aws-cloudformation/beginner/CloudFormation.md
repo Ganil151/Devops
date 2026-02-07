@@ -95,11 +95,9 @@ Outputs:                                 # Optional output values
 ```
 
 ---
-
 ## 🛠️ Example 1: Simple S3 Bucket
 
 ### Basic S3 Bucket
-
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'Create a simple S3 bucket'
