@@ -11,9 +11,7 @@ By the end of this level, you will be able to:
 - ✅ Troubleshoot common template errors
 
 ---
-
 ## 🎓 Prerequisites
-
 - AWS Account with appropriate permissions
 - Basic understanding of AWS services (EC2, S3, VPC)
 - AWS CLI installed and configured
