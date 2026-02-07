@@ -1,4 +1,4 @@
-# 🔰 CloudFormation Beginner Level
+# 🔰  Beginner Level
 
 ## 📋 Learning Objectives
 
