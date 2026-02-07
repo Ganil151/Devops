@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03-advanced/02-phase-2/readme.md",
+                "file": "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -215,6 +215,8 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/assets/readme.md",
+    "03-advanced/02-phase-2/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/04-automation-best-practices/04-failure-handling-and-atomicity/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/04-automation-best-practices/03-parameterization-and-secrets-management/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/04-automation-best-practices/02-idempotency-patterns-check-act-verify/readme.md",
@@ -259,8 +261,6 @@
     "09-resources/03-cloud-metadata/global-image-inventory.md",
     "09-resources/03-cloud-metadata",
     "09-resources/02-books-guides/morebooks.txt",
-    "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/best-practices.md",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/checklist/post-mortem-template.md",
     "Untitled.canvas"
   ]
 }
