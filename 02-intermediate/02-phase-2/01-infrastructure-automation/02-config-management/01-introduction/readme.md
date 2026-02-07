@@ -107,7 +107,7 @@ graph TD
 3. **Q: Why is 'Idempotency' required for automation?**
     <details>
     <summary>Answer</summary> 
-   - **Answer:** It ensures that running a tool twice doesn't cause duplicate resources or errors. It makes it safe to run on a schedule.
+    It ensures that running a tool twice doesn't cause duplicate resources or errors. It makes it safe to run on a schedule.
     </details>
 4. **Q: Explain 'Cattle vs Pets'.**
    <details>
