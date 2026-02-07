@@ -162,7 +162,6 @@ For advanced technical deep-dives, see these specialized directories:
 | **Team Structure** | Single team | Domain teams forming | Full autonomous teams |
 
 ---
-
 ### Domain-Driven Design (DDD)
 
 **Core Concepts:**
