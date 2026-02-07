@@ -50,11 +50,9 @@ graph TD
 - **Change Set**: Preview of changes before updating a stack
 
 ---
-
 ## 📝 Template Structure
 
 ### Minimum Template
-
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'My first CloudFormation template'
