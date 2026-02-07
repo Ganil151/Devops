@@ -120,7 +120,6 @@ Use **AWS Systems Manager (SSM) Session Manager**.
 - **Audit Trail**: Every keystroke recorded in S3/CloudWatch.
 
 ---
-
 ## 🔒 5. Zero-Trust Connectivity: VPC Endpoints
 **"Why send traffic over the internet to talk to AWS Services?"**
 
