@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/11-commands/00-verification.md",
+                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/04-data-and-automation/04-infrastructure-governance-and-audit/cloud-scripting-fundamentals.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00-verification"
+              "title": "cloud-scripting-fundamentals"
             }
           }
         ]
@@ -88,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 310.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -213,8 +213,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/11-commands/00-verification.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/technical-guides/quiz.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/04-security-and-secrets-management/aws-shield-waf-kms/secrets-best-practices.md",
     "09-resources/00-cheatsheets/cheatsheet.md",
@@ -260,7 +261,6 @@
     "05-labs/play-ground/microservices/06-spring-petclinic-microservices/architecture.md",
     "05-labs/play-ground/06-spring-petclinic-microservices/checklist/post-mortem-template.md",
     "05-labs/play-ground/06-spring-petclinic-microservices/checklist/launch-checklist.md",
-    "05-labs/play-ground/06-spring-petclinic-microservices/readme.md",
     "Untitled.canvas"
   ]
 }
