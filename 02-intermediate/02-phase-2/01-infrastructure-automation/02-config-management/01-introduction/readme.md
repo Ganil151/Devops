@@ -98,6 +98,7 @@ graph TD
         The decay of systems where the actual state deviates from the code due to manual changes.*
         </details> 
 3. **Q: Why is 'Idempotency' required for automation?**
+       
        <details>
         <summary>Answer</summary>
         It ensures that running a tool twice doesn't cause duplicate resources or errors. It makes it safe to run on a schedule.*
