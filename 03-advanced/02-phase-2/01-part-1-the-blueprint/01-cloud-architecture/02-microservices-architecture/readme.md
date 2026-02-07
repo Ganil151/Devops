@@ -135,13 +135,11 @@ For advanced technical deep-dives, see these specialized directories:
 - **[OAuth2 & JWT Propagation](./security/oauth2-and-jwt-propagation/)** - Identity across services
 
 ---
-
 ## 🎨 Patterns & Principles
 
 ### From Monolith to Microservices
 
 #### Why Migrate?
-
 **Monolithic Challenges:**
 - **Scalability Limits**: Cannot scale components independently
 - **Technology Lock-in**: Entire app uses same tech stack
