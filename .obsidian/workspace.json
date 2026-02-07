@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IAC-AUDIT-REPORT.md",
+                "file": "TERRAFORM-MODULE-README-TEMPLATE.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "IAC-AUDIT-REPORT"
+              "title": "TERRAFORM-MODULE-README-TEMPLATE"
             }
           }
         ]
@@ -216,6 +216,8 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "IAC-AUDIT-REPORT.md",
+    "05-labs/play-ground/IAC-AUDIT-REPORT.md",
     "05-labs/play-ground/CICD-PIPELINE-EXAMPLE.md",
     "05-labs/play-ground/directory-map.md",
     "05-labs/play-ground/EXECUTIVE-SUMMARY.md",
@@ -231,7 +233,6 @@
     "04-projects-showcase/04-kubernetes-orchestration/Infrastructure-Refactored/main.tf",
     "04-projects-showcase/04-kubernetes-orchestration/Infrastructure-Refactored",
     "TERRAFORM-STATE-CORRUPTION-RECOVERY-GUIDE.md",
-    "IAC-AUDIT-REPORT.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/immutable-infrastructure-governance-ref.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/provisioning-iac-keywords.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/config-management-keywords.md",
@@ -248,7 +249,6 @@
     "02-intermediate/02-phase-2/01-infrastructure-automation/04-automation-best-practices/04-failure-handling-and-atomicity/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/04-automation-best-practices/03-parameterization-and-secrets-management/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/04-automation-best-practices/02-idempotency-patterns-check-act-verify/readme.md",
-    "02-intermediate/02-phase-2/01-infrastructure-automation/04-automation-best-practices/01-the-automation-maturity-model/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
