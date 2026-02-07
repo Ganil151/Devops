@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ============================================================
-# auto_reorg.sh — Robust Recursive Folder Renaming Script
+# reorganize.sh — Robust Recursive Folder Renaming Script
 # Author: Senior Linux Systems Administrator
 # Purpose: Recursively rename folders to a strict numeric sequence
 #          with sanitization, dry-run safety, and exclusion rules.
