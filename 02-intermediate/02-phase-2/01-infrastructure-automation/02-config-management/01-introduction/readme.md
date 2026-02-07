@@ -95,8 +95,8 @@ graph TD
 2. **Q: What is 'Configuration Drift'?**
         <details>
         <summary>Answer</summary>
-    *   *Answer: The decay of systems where the actual state deviates from the code due to manual changes.*
-    *   </details>
+        *Answer: The decay of systems where the actual state deviates from the code due to manual changes.*
+        </details> 
 2. **Q: Why is 'Idempotency' required for automation?**
     *   *Answer: It ensures that running a tool twice doesn't cause duplicate resources or errors. It makes it safe to run on a schedule.*
 3. **Q: Explain 'Cattle vs Pets'.**
