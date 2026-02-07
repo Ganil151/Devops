@@ -98,8 +98,9 @@ graph TD
         *Answer: The decay of systems where the actual state deviates from the code due to manual changes.*
         </details> 
 2. **Q: Why is 'Idempotency' required for automation?**
+3. 
     *   *Answer: It ensures that running a tool twice doesn't cause duplicate resources or errors. It makes it safe to run on a schedule.*
-3. **Q: Explain 'Cattle vs Pets'.**
+4. **Q: Explain 'Cattle vs Pets'.**
     *   *Answer: Pets are unique servers you manually nurse. Cattle are identical, replaceable resources. If cattle is sick (unhealthy), you replace it; you don't 'fix' it.*
 
 ---
