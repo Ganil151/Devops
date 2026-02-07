@@ -14,7 +14,6 @@
 You don't write "steps"; you define "Realities." The tool (Terraform/Ansible) constantly compares reality with your code and "converges" them. If a server dies, the engine notices and brings it back. This is **Self-Healing Infrastructure**.
 
 ### 🏗️ The Infrastructure Analogy
-
 Think of Config Management like a **Thermostat**:
 
 | Concept | Manual Heater | Thermostat (IaC) |
