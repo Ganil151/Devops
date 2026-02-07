@@ -1,4 +1,4 @@
-# 🌐 AWS Virtual Private Cloud (VPC) | Senior Architect Guide
+# 🌐 Senior Architect Guide
 > **"Networking in the cloud is not about connecting cables; it's about orchestrating logical isolation boundaries."**
 
 ## [00] Metadata | Architectural Governance
@@ -11,7 +11,6 @@
 | **Last Technical Audit** | 2026-02-06 |
 
 ---
-
 ## 🏗️ 1. The "Junior's Master Architecture": The 3-Tier Standard
 A professional VPC is not a single bucket of resources. It is a layered defense system.
 
