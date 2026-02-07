@@ -21,6 +21,7 @@ systemctl enable nginx
 ```
 
 **Problems:**
+
 - ❌ No idempotency - running twice causes errors
 - ❌ No state tracking - can't detect drift
 - ❌ Procedural logic - tells "how" not "what"
@@ -37,7 +38,7 @@ systemctl enable nginx
       apt:
         name: nginx
         state: present
-    
+
     - name: Nginx service
       service:
         name: nginx
@@ -46,6 +47,7 @@ systemctl enable nginx
 ```
 
 **Advantages:**
+
 - ✅ Idempotent - safe to run 100 times
 - ✅ Declarative - defines desired state
 - ✅ Self-healing - detects and corrects drift
@@ -60,6 +62,7 @@ systemctl enable nginx
 **Definition:** An operation that produces the same result whether executed once or multiple times.
 
 **Why It Matters:**
+
 ```yaml
 # BAD: Imperative (not idempotent)
 - shell: echo "server 10.0.1.5" >> /etc/ntp.conf
@@ -68,7 +71,7 @@ systemctl enable nginx
 # GOOD: Declarative (idempotent)
 - lineinfile:
     path: /etc/ntp.conf
-    line: "server 10.0.1.5"
+    line: 'server 10.0.1.5'
     state: present
   # Running 100 times = same result
 ```
@@ -77,12 +80,13 @@ systemctl enable nginx
 
 ### 2. Push vs. Pull Models
 
-| Model | Tool | Architecture | Use Case |
-| :---- | :--- | :----------- | :------- |
-| **Push (Agentless)** | Ansible | Control node SSH to targets | Quick patches, ad-hoc tasks |
-| **Pull (Agent-based)** | Chef, Puppet | Agents poll master server | Continuous enforcement, large fleets |
+| Model                  | Tool         | Architecture                | Use Case                             |
+| :--------------------- | :----------- | :-------------------------- | :----------------------------------- |
+| **Push (Agentless)**   | Ansible      | Control node SSH to targets | Quick patches, ad-hoc tasks          |
+| **Pull (Agent-based)** | Chef, Puppet | Agents poll master server   | Continuous enforcement, large fleets |
 
 **Ansible (Push Model):**
+
 ```mermaid
 graph LR
     A[Control Node] -->|SSH| B[Server 1]
@@ -92,6 +96,7 @@ graph LR
 ```
 
 **Puppet (Pull Model):**
+
 ```mermaid
 graph LR
     B[Server 1] -->|Poll every 30min| A[Puppet Master]
@@ -101,12 +106,14 @@ graph LR
 ```
 
 **Decision Matrix:**
+
 - **Choose Push (Ansible):** Small-medium fleets, immediate execution, no agent overhead
 - **Choose Pull (Puppet/Chef):** Large fleets (1000+ nodes), continuous compliance, network segmentation
 
 ### 3. Dynamic Inventory: Beyond Static Lists
 
 **The Old Way (Static):**
+
 ```ini
 # /etc/ansible/hosts
 [webservers]
@@ -117,6 +124,7 @@ graph LR
 ```
 
 **The Modern Way (Dynamic):**
+
 ```yaml
 # aws_ec2.yml - Queries AWS API in real-time
 plugin: aws_ec2
@@ -132,12 +140,14 @@ keyed_groups:
 ```
 
 **Benefits:**
+
 - ✅ Auto-discovery of new instances
 - ✅ Automatic removal of terminated instances
 - ✅ Tag-based grouping
 - ✅ Multi-cloud support (AWS, Azure, GCP)
 
 **Usage:**
+
 ```bash
 # List all discovered hosts
 ansible-inventory -i aws_ec2.yml --graph
@@ -155,14 +165,14 @@ ansible-playbook -i aws_ec2.yml site.yml
 **Before:** "I'll SSH into each server and run commands"
 **After:** "I'll write code that describes the desired state and let the engine enforce it"
 
-| Concept | Bash Script Mindset | Config Management Mindset |
-| :------ | :------------------ | :------------------------ |
-| **Logic** | "Install this package" | "Ensure package is present at version X" |
-| **Secrets** | Hardcoded in script | Ansible Vault / AWS Secrets Manager |
-| **Organization** | One 500-line script | Modular roles with clear separation |
-| **Infrastructure** | Manual IP lists | Dynamic inventory from cloud tags |
-| **Testing** | "Hope it works" | Molecule tests in Docker containers |
-| **Rollback** | Manual SSH fixes | Version-controlled playbooks |
+| Concept            | Bash Script Mindset    | Config Management Mindset                |
+| :----------------- | :--------------------- | :--------------------------------------- |
+| **Logic**          | "Install this package" | "Ensure package is present at version X" |
+| **Secrets**        | Hardcoded in script    | Ansible Vault / AWS Secrets Manager      |
+| **Organization**   | One 500-line script    | Modular roles with clear separation      |
+| **Infrastructure** | Manual IP lists        | Dynamic inventory from cloud tags        |
+| **Testing**        | "Hope it works"        | Molecule tests in Docker containers      |
+| **Rollback**       | Manual SSH fixes       | Version-controlled playbooks             |
 
 ### The Convergence Engine
 
@@ -176,7 +186,7 @@ graph TD
     F --> G[Apply Changes]
     G --> H[Verify State]
     H --> B
-    
+
     style B fill:#5c4ee5,color:#fff
     style D fill:#fef3c7,stroke:#a16207
     style F fill:#f0fdf4,stroke:#15803d
@@ -191,6 +201,7 @@ graph TD
 **Mission:** Deploy a production-ready Nginx fleet with security hardening.
 
 **Requirements:**
+
 1. Install Nginx on all webservers
 2. Configure firewall (allow 80, 443, deny all else)
 3. Deploy custom index.html with server-specific variables
@@ -199,33 +210,34 @@ graph TD
 6. Verify service health
 
 **Starter Playbook:**
+
 ```yaml
 ---
 - name: Configure Web Server Fleet
   hosts: webservers
   become: yes
-  
+
   vars:
     nginx_port: 80
     ssl_enabled: true
-    
+
   roles:
     - nginx
     - firewall
     - ssl-certs
-    
+
   tasks:
     - name: Deploy custom index
       template:
         src: templates/index.html.j2
         dest: /var/www/html/index.html
       notify: reload nginx
-    
+
     - name: Health check
       uri:
-        url: "http://{{ ansible_default_ipv4.address }}"
+        url: 'http://{{ ansible_default_ipv4.address }}'
         status_code: 200
-      
+
   handlers:
     - name: reload nginx
       service:
@@ -234,16 +246,19 @@ graph TD
 ```
 
 **Jinja2 Template (templates/index.html.j2):**
+
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>{{ inventory_hostname }}</title></head>
-<body>
-  <h1>Server: {{ inventory_hostname }}</h1>
-  <p>Environment: {{ environment }}</p>
-  <p>IP: {{ ansible_default_ipv4.address }}</p>
-  <p>Deployed: {{ ansible_date_time.iso8601 }}</p>
-</body>
+	<head>
+		<title>{{ inventory_hostname }}</title>
+	</head>
+	<body>
+		<h1>Server: {{ inventory_hostname }}</h1>
+		<p>Environment: {{ environment }}</p>
+		<p>IP: {{ ansible_default_ipv4.address }}</p>
+		<p>Deployed: {{ ansible_date_time.iso8601 }}</p>
+	</body>
 </html>
 ```
 
@@ -252,23 +267,26 @@ graph TD
 ## 🔐 Security: Variables and Secrets Management
 
 ### The Wrong Way (Hardcoded Secrets)
+
 ```yaml
 # NEVER DO THIS!
 - name: Configure database
   mysql_db:
     login_user: admin
-    login_password: SuperSecret123  # Exposed in Git!
+    login_password: SuperSecret123 # Exposed in Git!
     name: production_db
 ```
 
 ### The Right Way (Ansible Vault)
 
 **Step 1: Create encrypted vault**
+
 ```bash
 ansible-vault create group_vars/production/vault.yml
 ```
 
 **Step 2: Store secrets**
+
 ```yaml
 # group_vars/production/vault.yml (encrypted)
 vault_db_password: SuperSecret123
@@ -276,14 +294,16 @@ vault_api_key: abc123xyz789
 ```
 
 **Step 3: Reference in playbooks**
+
 ```yaml
 - name: Configure database
   mysql_db:
-    login_password: "{{ vault_db_password }}"
+    login_password: '{{ vault_db_password }}'
     name: production_db
 ```
 
 **Step 4: Run with vault password**
+
 ```bash
 ansible-playbook site.yml --ask-vault-pass
 # Or use password file
@@ -300,7 +320,7 @@ ansible-playbook site.yml --vault-password-file ~/.vault_pass
 
 - name: Configure database
   mysql_db:
-    login_password: "{{ db_password }}"
+    login_password: '{{ db_password }}'
     name: production_db
 ```
 
@@ -326,6 +346,7 @@ ansible-playbook site.yml --vault-password-file ~/.vault_pass
 ### The Solution: Ansible Roles
 
 **Standard Role Structure:**
+
 ```
 roles/
 ├── nginx/
@@ -346,6 +367,7 @@ roles/
 ```
 
 **Using Roles:**
+
 ```yaml
 # site.yml - Clean and modular
 - hosts: webservers
@@ -362,6 +384,7 @@ roles/
 ```
 
 **Benefits:**
+
 - ✅ Reusable across projects
 - ✅ Testable in isolation
 - ✅ Shareable via Ansible Galaxy
@@ -374,6 +397,7 @@ roles/
 **Why Test?** Don't discover bugs in production at 3 AM.
 
 **Molecule Workflow:**
+
 ```bash
 # Initialize molecule for a role
 cd roles/nginx
@@ -384,12 +408,14 @@ molecule test
 ```
 
 **What Molecule Does:**
+
 1. Spins up Docker container
 2. Runs your playbook
 3. Verifies with testinfra
 4. Destroys container
 
 **Example Test (molecule/default/tests/test_default.py):**
+
 ```python
 def test_nginx_installed(host):
     nginx = host.package("nginx")
@@ -412,12 +438,14 @@ def test_nginx_listening(host):
 ### 1. The Ansible "Hang" Problem
 
 **Problem:** Interactive prompts in automation
+
 ```yaml
 # BAD: Waits for user input
 - shell: apt-get upgrade
 ```
 
 **Solution:** Force non-interactive mode
+
 ```yaml
 # GOOD: No prompts
 - apt:
@@ -432,6 +460,7 @@ def test_nginx_listening(host):
 **Problem:** Manual changes bypass automation
 
 **Solution:** Run in check mode regularly
+
 ```bash
 # Detect drift without making changes
 ansible-playbook site.yml --check --diff
@@ -445,6 +474,7 @@ ansible-playbook site.yml --check --diff
 **Problem:** Secrets in version control
 
 **Solution:** Pre-commit hooks
+
 ```bash
 # .pre-commit-config.yaml
 repos:
@@ -457,15 +487,15 @@ repos:
 
 ## 🛠️ Essential Commands
 
-| Command | Purpose | Example |
-| :------ | :------ | :------ |
-| `ansible-playbook --check` | Dry run - see changes without applying | `ansible-playbook site.yml --check --diff` |
-| `ansible-playbook --syntax-check` | Validate YAML syntax | `ansible-playbook site.yml --syntax-check` |
-| `ansible-inventory --graph` | Visualize inventory structure | `ansible-inventory -i aws_ec2.yml --graph` |
-| `ansible-vault encrypt` | Encrypt sensitive files | `ansible-vault encrypt group_vars/prod/vault.yml` |
-| `ansible-doc` | View module documentation | `ansible-doc apt` |
-| `ansible -m setup` | Gather facts from hosts | `ansible webservers -m setup` |
-| `molecule test` | Test role in isolation | `cd roles/nginx && molecule test` |
+| Command                           | Purpose                                | Example                                           |
+| :-------------------------------- | :------------------------------------- | :------------------------------------------------ |
+| `ansible-playbook --check`        | Dry run - see changes without applying | `ansible-playbook site.yml --check --diff`        |
+| `ansible-playbook --syntax-check` | Validate YAML syntax                   | `ansible-playbook site.yml --syntax-check`        |
+| `ansible-inventory --graph`       | Visualize inventory structure          | `ansible-inventory -i aws_ec2.yml --graph`        |
+| `ansible-vault encrypt`           | Encrypt sensitive files                | `ansible-vault encrypt group_vars/prod/vault.yml` |
+| `ansible-doc`                     | View module documentation              | `ansible-doc apt`                                 |
+| `ansible -m setup`                | Gather facts from hosts                | `ansible webservers -m setup`                     |
+| `molecule test`                   | Test role in isolation                 | `cd roles/nginx && molecule test`                 |
 
 ---
 
@@ -500,15 +530,15 @@ The content follows a logical progression from philosophy to practice:
 
 ## ⚖️ Tool Selection Matrix
 
-| Use Case | Tool | Reason |
-| :------- | :--- | :----- |
-| **Infrastructure Provisioning** | Terraform | Declarative, multi-cloud, state management |
-| **Server Configuration** | Ansible | Agentless, idempotent, easy learning curve |
-| **Continuous Compliance** | Puppet/Chef | Agent-based, pull model, large fleets |
-| **Immutable Images** | Packer | Pre-baked AMIs, fast boot times |
-| **Container Config** | Helm/Kustomize | Kubernetes-native templating |
-| **AWS-Only** | CloudFormation | Deep AWS integration |
-| **Developer-Friendly** | Pulumi | Real programming languages |
+| Use Case                        | Tool           | Reason                                     |
+| :------------------------------ | :------------- | :----------------------------------------- |
+| **Infrastructure Provisioning** | Terraform      | Declarative, multi-cloud, state management |
+| **Server Configuration**        | Ansible        | Agentless, idempotent, easy learning curve |
+| **Continuous Compliance**       | Puppet/Chef    | Agent-based, pull model, large fleets      |
+| **Immutable Images**            | Packer         | Pre-baked AMIs, fast boot times            |
+| **Container Config**            | Helm/Kustomize | Kubernetes-native templating               |
+| **AWS-Only**                    | CloudFormation | Deep AWS integration                       |
+| **Developer-Friendly**          | Pulumi         | Real programming languages                 |
 
 ---
 
@@ -541,7 +571,7 @@ The content follows a logical progression from philosophy to practice:
 - name: Install package
   apt:
     name: nginx
-  become: yes  # Requires root
+  become: yes # Requires root
 ```
 
 ### 3. Fail Fast with Assertions
@@ -552,7 +582,7 @@ The content follows a logical progression from philosophy to practice:
     that:
       - ansible_distribution == "Ubuntu"
       - ansible_distribution_version >= "20.04"
-    fail_msg: "This playbook requires Ubuntu 20.04+"
+    fail_msg: 'This playbook requires Ubuntu 20.04+'
 ```
 
 ### 4. Use Tags for Selective Execution
@@ -560,14 +590,13 @@ The content follows a logical progression from philosophy to practice:
 ```yaml
 - name: Install packages
   apt:
-    name: "{{ item }}"
+    name: '{{ item }}'
   loop:
     - nginx
     - mysql
   tags:
     - packages
     - install
-
 # Run only tagged tasks
 # ansible-playbook site.yml --tags "packages"
 ```
@@ -597,7 +626,7 @@ graph LR
     F -->|No| H[Fix & Retry]
     G --> I[Monitor for Drift]
     I --> J[Scheduled Compliance Checks]
-    
+
     style D fill:#5c4ee5,color:#fff
     style G fill:#f0fdf4,stroke:#15803d
 ```
