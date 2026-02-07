@@ -8,27 +8,26 @@ This reference covers **Terraform** and the Declarative Provisioning model.
 ## 🏗️ 1. The Terraform Lifecycle
 The standard "Plan-Apply" loop.
 
-| Phase | Command | Purpose | Staff Tip |
-| :--- | :--- | :--- | :--- |
-| **Init** | `terraform init` | Download providers/modules. | Use `-backend-config` for dynamic envs. |
-| **Plan** | `terraform plan` | Dry-Run. Shows "The Diff". | Always save it: `-out=tfplan`. |
-| **Apply** | `terraform apply` | Execute API calls. | Apply the *saved plan* only. |
-| **Destroy**| `terraform destroy`| Nuke everything. | Dangerous. Use `prevent_destroy` on DBs. |
+| Phase       | Command             | Purpose                     | Staff Tip                                |
+| :---------- | :------------------ | :-------------------------- | :--------------------------------------- |
+| **Init**    | `terraform init`    | Download providers/modules. | Use `-backend-config` for dynamic envs.  |
+| **Plan**    | `terraform plan`    | Dry-Run. Shows "The Diff".  | Always save it: `-out=tfplan`.           |
+| **Apply**   | `terraform apply`   | Execute API calls.          | Apply the *saved plan* only.             |
+| **Destroy** | `terraform destroy` | Nuke everything.            | Dangerous. Use `prevent_destroy` on DBs. |
 
 ---
 
 ## 📦 2. Essential HCL Keywords
-
 HashiCorp Configuration Language.
 
-| Keyword | Use Case | Example |
-| :--- | :--- | :--- |
-| `resource` | Create something (EC2, S3). | `resource "aws_instance" "web" {}` |
-| `data` | Read existing thing. | `data "aws_ami" "ubuntu" {}` |
-| `variable` | Input parameter. | `variable "region" { default = "us-east-1" }` |
-| `output` | Return value. | `output "ip" { value = aws_instance.web.public_ip }` |
-| `local` | Internal variable. | `locals { common_tags = { Team = "Dev" } }` |
-| `module` | Reusable component. | `module "vpc" { source = "./modules/vpc" }` |
+| Keyword    | Use Case                    | Example                                              |
+| :--------- | :-------------------------- | :--------------------------------------------------- |
+| `resource` | Create something (EC2, S3). | `resource "aws_instance" "web" {}`                   |
+| `data`     | Read existing thing.        | `data "aws_ami" "ubuntu" {}`                         |
+| `variable` | Input parameter.            | `variable "region" { default = "us-east-1" }`        |
+| `output`   | Return value.               | `output "ip" { value = aws_instance.web.public_ip }` |
+| `local`    | Internal variable.          | `locals { common_tags = { Team = "Dev" } }`          |
+| `module`   | Reusable component.         | `module "vpc" { source = "./modules/vpc" }`          |
 
 **Staff Pattern (Dynamic Metadata)**:
 ```hcl
