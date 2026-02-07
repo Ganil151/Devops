@@ -136,7 +136,7 @@ VPC Endpoints (PrivateLink) allow you to connect your VPC to AWS services as if 
 ## 💳 6. FinOps: Networking Cost Optimization
 Networking is often the "hidden" cost in AWS.
 
-1.  **NAT Gateway Consolidation**: In Dev environments, use a **Single NAT Gateway** for all AZs instead of one per AZ. (Savings: ~$64/mo).
+1.  **NAT Gateway Consolidation**: In Dev environments, use a **Single NAT Gateway** for all AZ's instead of one per AZ. (Savings: ~$64/mo).
 2.  **Avoid NAT for AWS APIs**: Use VPC Endpoints to bypass NAT processing fees.
 3.  **Same-AZ Traffic**: Prefer cross-instance communication within the same AZ. Cross-AZ transfer costs $0.01/GB.
 4.  **Egress Fees**: Watch out for "Data Transfer Out." Use CloudFront to cache content and reduce egress costs.
