@@ -117,7 +117,6 @@ aws ec2 create-vpc-endpoint \
 # 1TB data transfer via VPC Endpoint: $0/month
 # Annual savings: $540!
 ```
-
 ### 3. Reserved NAT Gateway Hours? No. Use Scheduled Scaling
 
 **Problem**: NAT Gateways can't be reserved, always on-demand  
