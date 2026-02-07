@@ -5,7 +5,6 @@
 This reference covers **Terraform** and the Declarative Provisioning model.
 
 ---
-
 ## 🏗️ 1. The Terraform Lifecycle
 
 The standard "Plan-Apply" loop.
