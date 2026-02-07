@@ -97,7 +97,6 @@ done
 ### 2. VPC Endpoints = Free Data Transfer
 **Problem**: Data transfer from S3 through NAT Gateway costs $0.045/GB  
 **Solution**: Use VPC Endpoints for S3/DynamoDB (FREE!)
-
 ```bash
 # Create S3 VPC Endpoint (Gateway type - FREE!)
 aws ec2 create-vpc-endpoint \
