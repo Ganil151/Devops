@@ -43,7 +43,6 @@ Reference secrets directly in your task definition environment variables. The EC
   }
 ]
 ```
-
 ### EKS (Kubernetes)
 Use the **AWS Secrets Store CSI Driver**. This mounts secrets as volumes or synchronizes them as K8s native secrets.
 - **Why?** It's more secure than standard K8s secrets (which are just base64 encoded) and easier for developers to consume.
