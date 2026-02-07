@@ -140,9 +140,7 @@ Networking is often the "hidden" cost in AWS.
 2.  **Avoid NAT for AWS APIs**: Use VPC Endpoints to bypass NAT processing fees.
 3.  **Same-AZ Traffic**: Prefer cross-instance communication within the same AZ. Cross-AZ transfer costs $0.01/GB.
 4.  **Egress Fees**: Watch out for "Data Transfer Out." Use CloudFront to cache content and reduce egress costs.
-
 ---
-
 ## 🏗️ 7. From Console to Code: Terraform VPC Module
 ```hcl
 module "vpc" {
