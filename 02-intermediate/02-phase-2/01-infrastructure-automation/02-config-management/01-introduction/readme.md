@@ -99,7 +99,8 @@ graph TD
 
 
 2. **Q: What is 'Configuration Drift'?**
-    <de>
+    <details>
+    <summary>
    - **Answer:** The decay of systems where the actual state deviates from the code due to manual changes.
 
 3. **Q: Why is 'Idempotency' required for automation?**
