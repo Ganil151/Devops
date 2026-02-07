@@ -32,8 +32,9 @@ aws ce get-cost-and-usage \
   --metrics UnblendedCost \
   --filter file://<(echo '{"Dimensions":{"Key":"SERVICE","Values":["Amazon EC2"]}}') \
   --query 'ResultsByTime[].Groups[?contains(Keys[0],`NatGateway`)]'
-
+```
 # Find instances without proper tags
+```
 aws ec2 describe-instances \
   --query 'Reservations[].Instances[?!Tags||!Tags[?Key==`Name`]].{ID:InstanceId,State:State.Name}' \
   --output table
