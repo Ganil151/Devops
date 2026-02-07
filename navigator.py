@@ -5,6 +5,7 @@ import json
 import re
 import subprocess
 import time
+import webbrowser
 from pathlib import Path
 from typing import List, Dict, Optional
 
@@ -45,6 +46,9 @@ class ModuleScanner:
                 with open(CACHE_FILE, "r") as f:
                     data = json.load(f)
                     if isinstance(data, list) and len(data) > 0:
+                        # Ensure cache has new fields
+                        if "links" not in data[0]:
+                            raise ValueError("Stale cache")
                         return data
             except Exception:
                 pass  # Fallback to fresh scan
@@ -74,6 +78,7 @@ class ModuleScanner:
         title = path.parent.name
         tags = []
         phase = "Unknown"
+        links = []
 
         # Detect Phase from path
         path_str = str(path).lower()
@@ -102,6 +107,10 @@ class ModuleScanner:
                 found_tags = re.findall(r"#?([\w-]+)", tag_match.group(1))
                 tags = [t for t in found_tags]
 
+            # Extract Links
+            raw_links = re.findall(r'(https?://[^\s\)]+)', content)
+            links = list(dict.fromkeys(raw_links))
+
         except Exception:
             pass
 
@@ -111,6 +120,7 @@ class ModuleScanner:
             "title": title,
             "tags": tags,
             "phase": phase,
+            "links": links,
         }
 
 
@@ -198,9 +208,11 @@ class Navigator:
             console.print("[green][O][/green] Open in VS Code")
             console.print("[yellow][V][/yellow] View in Terminal (cat/markdown)")
             console.print("[blue][C][/blue] Copy Path")
+            console.print("[magenta][W][/magenta] Open Documentation Links")
             console.print("[red][B][/red] Back")
 
             choice = input("\nSelect action [O/V/C/B]: ").strip().upper()
+            choice = input("\nSelect action [O/V/C/W/B]: ").strip().upper()
 
             if choice == "O":
                 subprocess.run(["code", selected["path"]])
@@ -224,6 +236,26 @@ class Navigator:
                 except FileNotFoundError:
                     print("xclip not found. Path printed below:\n" + selected["path"])
                 time.sleep(1)
+            elif choice == "W":
+                links = selected.get("links", [])
+                if not links:
+                    print("No links found in README.")
+                    time.sleep(1)
+                else:
+                    print("\nFound Links:")
+                    for i, link in enumerate(links):
+                        print(f"[{i+1}] {link}")
+                    
+                    link_choice = input("\nSelect link to open (number) or Enter to cancel: ").strip()
+                    if link_choice.isdigit():
+                        idx = int(link_choice) - 1
+                        if 0 <= idx < len(links):
+                            try:
+                                webbrowser.open(links[idx])
+                                print(f"Opening {links[idx]}...")
+                            except Exception as e:
+                                print(f"Failed to open browser: {e}")
+                            time.sleep(1)
 
         get_app().suspend_to_background(run_action)
 
