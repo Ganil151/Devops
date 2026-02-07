@@ -63,6 +63,6 @@ CloudFormation automatically rolls back the entire stack if a single resource fa
 ---
 ## 🧭 Additional Modules
 - [Advanced](advanced/readme.md)
-- [Beginner](CloudFormation.md)
+- [Beginner](02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/04-cloud-native-provisioning-and-vendors/01-aws-cloudformation/beginner/readme.md)
 - [Intermediate](intermediate/readme.md)
 - [Interview Questions](interview-questions/readme.md)
