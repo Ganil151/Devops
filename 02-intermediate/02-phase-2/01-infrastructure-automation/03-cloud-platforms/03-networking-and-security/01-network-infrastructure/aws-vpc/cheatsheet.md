@@ -67,7 +67,6 @@ ___
 ### 1. Single NAT Gateway for Development
 **Problem**: NAT Gateways cost ~$32/month each  
 **Solution**: Use one NAT Gateway for all Dev/Test environments
-
 ```bash
 # BAD: Multiple NAT Gateways ($$$$)
 # AZ-1a: NAT Gateway ($32/mo)
