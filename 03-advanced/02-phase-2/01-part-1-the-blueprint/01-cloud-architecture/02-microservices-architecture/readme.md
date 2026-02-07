@@ -1,10 +1,10 @@
 # Microservices Architecture
 
 > **Advanced Cloud Architecture Module** | Part 11 - Cloud Architecture  
+
 > Master distributed systems design, resilience patterns, and production-grade microservices
 
 ---
-
 ## 📋 Overview
 
 This module provides a comprehensive, advanced-level guide to microservices architecture patterns, communication strategies, data management techniques, and resiliency patterns used in modern cloud-native applications. You'll learn how to design, implement, and operate production-grade distributed systems.
