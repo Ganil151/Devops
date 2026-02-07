@@ -23,8 +23,10 @@ aws ec2 describe-security-groups \
   --filters "Name=ip-permission.from-port,Values=22" \
   --query 'SecurityGroups[?IpPermissions[?IpRanges[?CidrIp==`0.0.0.0/0`]]].{GroupId:GroupId,Name:GroupName}' \
   --output table
+```
 
-# Get NAT Gateway costs for last month
+```
+# 
 aws ce get-cost-and-usage \
   --time-period Start=2024-01-01,End=2024-02-01 \
   --granularity MONTHLY \
