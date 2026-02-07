@@ -110,10 +110,11 @@ graph TD
     It ensures that running a tool twice doesn't cause duplicate resources or errors. It makes it safe to run on a schedule.
     </details>
 4. **Q: Explain 'Cattle vs Pets'.**
+
 <details>
    <summary>Answer</summary
     Pets are unique servers you manually nurse. Cattle are identical, replaceable resources. If cattle is sick (unhealthy), you replace it; you don't 'fix' it.
-   </details>
+</details>
 
 
 ---
