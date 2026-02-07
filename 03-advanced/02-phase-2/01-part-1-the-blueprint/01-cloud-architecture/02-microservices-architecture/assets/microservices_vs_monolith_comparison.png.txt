@@ -1,0 +1,17 @@
+# Image Placeholder
+
+This file serves as a placeholder for:
+**microservices_vs_monolith_comparison.png**
+
+## Specifications:
+- **Dimensions**: 1920x1080 (16:9)
+- **Format**: PNG with transparency
+- **Color Scheme**: Dark background (#1a1b26)
+
+## Content Description:
+Side-by-side comparison showing:
+- **Left**: Monolithic architecture (single application + database)
+- **Right**: Microservices architecture (multiple services + individual databases)
+
+## To Replace:
+Create the actual image according to specifications in `assets/README.md` and replace this file.
