@@ -130,12 +130,10 @@ graph TD
    - [ ] b) AWS Secrets Manager.
    - [ ] c) HashiCorp Vault.
    - [ ] d) 
- -    <details>
+ -   <details>
      <summary>Answer</summary>
       a. Plain-text Git repositories.
      </details>
-
-
 
 ---
 
