@@ -213,8 +213,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "09-resources/aws",
     "09-resources/05-script/pdf-scraper.py",
     "09-resources/05-script/link-auditor.py",
     "09-resources/05-script",
@@ -236,7 +237,6 @@
     "09-resources/07-script/pdf-scraper.py",
     "09-resources/07-script/link-auditor.py",
     "09-resources/07-script",
-    "09-resources/06-images",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/AWS Virtual Private Cloud (VPC).md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/cheatsheet.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/03-cloud-platforms/03-networking-and-security/01-network-infrastructure/aws-vpc/best-practices.md",
