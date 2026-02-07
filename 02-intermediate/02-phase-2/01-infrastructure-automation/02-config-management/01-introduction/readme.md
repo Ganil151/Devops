@@ -93,12 +93,11 @@ graph TD
         <summary>Answer</summary>
         Imperative tells the computer 'How' (step-by-step scripts). Declarative tells the computer 'What' (Desired State). DevOps tools like Terraform/Ansible are Declarative.
 1. **Q: What is 'Configuration Drift'?**
-2. **Q: What is 'Idempotency'?**
-
+    *   
     *   *Answer: The decay of systems where the actual state deviates from the code due to manual changes.*
-3. **Q: Why is 'Idempotency' required for automation?**
+2. **Q: Why is 'Idempotency' required for automation?**
     *   *Answer: It ensures that running a tool twice doesn't cause duplicate resources or errors. It makes it safe to run on a schedule.*
-4. **Q: Explain 'Cattle vs Pets'.**
+3. **Q: Explain 'Cattle vs Pets'.**
     *   *Answer: Pets are unique servers you manually nurse. Cattle are identical, replaceable resources. If cattle is sick (unhealthy), you replace it; you don't 'fix' it.*
 
 ---
