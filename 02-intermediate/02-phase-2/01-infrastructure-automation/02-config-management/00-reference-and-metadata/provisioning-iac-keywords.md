@@ -52,7 +52,6 @@ resource "aws_s3_bucket" "logs" {
 ---
 
 ## 💾 3. State Management
-
 The `terraform.tfstate` file is the "Brain".
 
 ### Remote Backend (S3 + DynamoDB)
