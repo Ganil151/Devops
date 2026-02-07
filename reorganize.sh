@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ============================================================
-# auto_reorg.sh — Robust Recursive Folder Numbering & Sanitization Script
+# Robust Recursive Folder Numbering & Sanitization Script
 # ============================================================
 
 # ANSI color codes
