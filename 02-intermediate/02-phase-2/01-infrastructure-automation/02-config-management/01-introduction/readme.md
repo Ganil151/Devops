@@ -114,8 +114,8 @@ graph TD
    - [ ] d) Declarative
      <details>
      <summary>Answer</summary>
-      b.
-      
+      b. Idempotent
+     </details>
 
 2. **True or False: Declarative code defines 'How' to build a server.**
    - [ ] a) True
