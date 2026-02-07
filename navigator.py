@@ -139,7 +139,6 @@ class Navigator:
             prompt="Search: ",
             style="class:search-field",
             multiline=False,
-            search_field=True,
         )
         # Hook into buffer change for real-time filtering
         self.search_field.buffer.on_text_changed += self.on_search_change
