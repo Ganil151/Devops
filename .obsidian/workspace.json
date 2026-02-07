@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "terraform",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
