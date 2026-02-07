@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "security",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/assets/readme.md",
     "03-advanced/02-phase-2/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/04-automation-best-practices/04-failure-handling-and-atomicity/readme.md",
@@ -259,7 +260,6 @@
     "09-resources/04-images/screenshot-92.png",
     "09-resources/04-images/screenshot-91.png",
     "09-resources/04-images",
-    "09-resources/03-cloud-metadata/global-image-inventory.md",
     "09-resources/03-cloud-metadata",
     "09-resources/02-books-guides/morebooks.txt",
     "Untitled.canvas"
