@@ -109,8 +109,10 @@ graph TD
 
 1. **Which keyword describes a tool that only makes changes if needed?**
    - [ ] a) Mutable
-   - [x] b) Idempotent
+   - [ ] b) Idempotent
    - [ ] c) Sequential
+   - [ ] d) Declarative
+
 
 2. **True or False: Declarative code defines 'How' to build a server.**
    - [ ] a) True
