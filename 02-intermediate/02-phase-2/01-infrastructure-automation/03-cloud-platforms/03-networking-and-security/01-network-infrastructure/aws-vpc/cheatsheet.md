@@ -93,11 +93,8 @@ for RT in $PRIVATE_RT_1A $PRIVATE_RT_1B $PRIVATE_RT_1C; do
     --nat-gateway-id $NAT_GW
 done
 ```
-
 **Warning**: Not recommended for production (single point of failure)
-
 ### 2. VPC Endpoints = Free Data Transfer
-
 **Problem**: Data transfer from S3 through NAT Gateway costs $0.045/GB  
 **Solution**: Use VPC Endpoints for S3/DynamoDB (FREE!)
 
