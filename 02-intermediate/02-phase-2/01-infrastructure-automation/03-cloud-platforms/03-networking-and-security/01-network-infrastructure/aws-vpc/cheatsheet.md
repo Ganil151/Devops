@@ -118,10 +118,8 @@ aws ec2 create-vpc-endpoint \
 # Annual savings: $540!
 ```
 ### 3. Reserved NAT Gateway Hours? No. Use Scheduled Scaling
-
 **Problem**: NAT Gateways can't be reserved, always on-demand  
 **Solution**: Delete/recreate for non-24/7 workloads
-
 ```bash
 #!/bin/bash
 # Schedule: Delete NAT Gateway at 8 PM, recreate at 8 AM
