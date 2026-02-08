@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/20-minimalist-lambda.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/19-snapstart-lambda.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/18-lambda-architecture.tf",
@@ -251,7 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/13-lambda-destination.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/12-provisioned-concurrency.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/11-alias-version.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/10-container-lambda.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/readme.md",
