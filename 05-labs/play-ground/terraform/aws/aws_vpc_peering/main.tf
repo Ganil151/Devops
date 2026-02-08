@@ -175,7 +175,7 @@ resource "aws_security_group" "primary_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  ingress = {
+  ingress  {
     description = "ICMP from Secondary VPC"
     from_port   = -1
     to_port     = -1
@@ -183,7 +183,7 @@ resource "aws_security_group" "primary_sg" {
     cidr_blocks = [var.secondary_vpc_cidr]
   }
 
-  ingress = {
+  ingress {
     description = "All traffic from Secondary VPC"
     from_port   = 0
     to_port     = 0
@@ -191,7 +191,7 @@ resource "aws_security_group" "primary_sg" {
     cidr_blocks = [var.secondary_vpc_cidr]
   }
 
-  egress = 
+  egress =
 
 
 }
