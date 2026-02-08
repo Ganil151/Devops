@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/20-minimalist-eks.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/19-cluster-tags.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/18-graviton-nodes.tf",
@@ -251,7 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/13-remote-access-nodes.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/12-tainted-node-group.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/11-bottlerocket-nodes.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/10-spot-node-group.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/readme.md",
