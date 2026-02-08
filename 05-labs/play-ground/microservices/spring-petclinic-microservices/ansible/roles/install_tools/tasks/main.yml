@@ -1,0 +1,90 @@
+---
+- name: Update all packages
+  yum:
+    name: "*"
+    state: latest
+  when: ansible_os_family == "RedHat"
+
+- name: Install basic packages
+  yum:
+    name:
+      - curl
+      - unzip
+      - git
+      - jq
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Install Java 17 (Amazon Corretto)
+  yum:
+    name: "{{ java_package }}"
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Install Docker
+  yum:
+    name: docker
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Start and enable Docker
+  service:
+    name: docker
+    state: started
+    enabled: yes
+
+- name: Add ec2-user to docker group
+  user:
+    name: ec2-user
+    groups: docker
+    append: yes
+
+- name: Install Apache Maven
+  block:
+    - name: Download Maven
+      get_url:
+        url: "https://dlcdn.apache.org/maven/maven-3/{{ maven_version }}/binaries/apache-maven-{{ maven_version }}-bin.tar.gz"
+        dest: "/tmp/apache-maven-{{ maven_version }}-bin.tar.gz"
+
+    - name: Extract Maven
+      unarchive:
+        src: "/tmp/apache-maven-{{ maven_version }}-bin.tar.gz"
+        dest: "/opt/"
+        remote_src: yes
+
+    - name: Create symlink for Maven
+      file:
+        src: "/opt/apache-maven-{{ maven_version }}/bin/mvn"
+        dest: "/usr/bin/mvn"
+        state: link
+
+- name: Install kubectl
+  get_url:
+    url: "https://dl.k8s.io/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl"
+    dest: /usr/local/bin/kubectl
+    mode: '0755'
+
+- name: Install Helm
+  shell: |
+    curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+  args:
+    creates: /usr/local/bin/helm
+
+- name: Install AWS CLI v2
+  block:
+    - name: Download AWS CLI
+      get_url:
+        url: "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"
+        dest: "/tmp/awscliv2.zip"
+
+    - name: Unzip AWS CLI
+      unarchive:
+        src: "/tmp/awscliv2.zip"
+        dest: "/tmp"
+        remote_src: yes
+        creates: "/tmp/aws"
+
+    - name: Install AWS CLI
+      command: /tmp/aws/install --update
+      register: aws_install
+      changed_when: "'You can now run' in aws_install.stdout"
