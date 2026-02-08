@@ -241,9 +241,9 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/terraform/aws/aws_vpc_peering/terraform.tfstate",
     "08-career-mastery/07-resume-engineering/resources/devops-resume-ganil-batistpdf/Ganil Batist Yan DevOps Engineer Resume.pdf",
     "Ganil Batist Yan DevOps Engineer Resume.pdf",
-    "05-labs/play-ground/terraform/aws/aws_vpc_peering/terraform.tfstate",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/data.tf",
     "03-advanced/01-phase-1/01-networking/labs/silent-drop-lab.md",
     "03-advanced/01-phase-1/01-networking/labs",
