@@ -94,6 +94,6 @@ resource "aws_route_table" "secondary_route_table" {
 }
 
 
-resource "aws_route_table_association" "name" {
+resource "aws_route_table_association" "primary_rtb" {
   
 }
