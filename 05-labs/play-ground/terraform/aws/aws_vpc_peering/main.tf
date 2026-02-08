@@ -3,5 +3,7 @@ resource "aws_vpc" "primary_vpc" {
   provider = aws.primary
   instance_tenancey ="default"
 
-  tags = {}
+  tags = {
+    Name = "main"
+  }
 }
