@@ -226,5 +226,7 @@ resource "aws_security_group" "secondary_sg" {
     protocol    = "icmp"  
 }
 
+  ingress {}
+
 
 }
