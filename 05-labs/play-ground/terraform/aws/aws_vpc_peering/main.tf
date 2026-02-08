@@ -22,4 +22,10 @@ resource "aws_vpc" "secondary_vpc" {
 
 resource "aws_subnet" "primary_subnet" {
   vpc_id     = aws_vpc.primary_vpc.id
-  cidr_block = var.prima
+  cidr_block = var.primary_subnet_cidr
+  provider   = aws.primary
+
+  tags = {
+    Name = "Primary-Subnet-${var.primary}"
+  }
+} 
