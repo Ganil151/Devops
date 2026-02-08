@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/15-serverless-vpc.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/14-hybrid-vpc.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/13-vpc-security-groups.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/12-vpc-nacl.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/11-vpc-flow-logs.tf",
@@ -250,8 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/07-transit-vpc.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/06-multi-tier-vpc.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/05-isolated-vpc.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/04-private-vpc.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/03-public-vpc.tf",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/secrets-management-ref.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/readme.md",
