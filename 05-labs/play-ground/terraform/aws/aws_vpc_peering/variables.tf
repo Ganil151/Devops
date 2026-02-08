@@ -31,9 +31,13 @@ variable "secondary_subnet_cidr" {
 }
 
 variable "primary_key_name" {
-  default = "vpc-peering-demo.pem"
+  description = "Name of the SSH key pair for Primary VPC instance (us-east-1)"
+  type        = string
+  default     = ""
 }
 
 variable "secondary_key_name" {
-  default = "vpc-peering-demo-west.pem"
+  description = "Name of the SSH key pair for Secondary VPC instance (us-west-2)"
+  type        = string
+  default     = ""
 }
