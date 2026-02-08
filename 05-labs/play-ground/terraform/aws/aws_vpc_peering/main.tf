@@ -46,3 +46,5 @@ resource "aws_subnet" "secondary_subnet" {
   }
 
 }
+
+resource "aws_internet_gateway" "primary_igw" {
