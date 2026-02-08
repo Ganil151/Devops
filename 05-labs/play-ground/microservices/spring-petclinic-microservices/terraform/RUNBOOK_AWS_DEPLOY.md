@@ -104,7 +104,6 @@ terraform init -backend-config=backend.conf
 ```
 
 **Expected Output:**
-
 ```
 Initializing the backend...
 Initializing provider plugins...
