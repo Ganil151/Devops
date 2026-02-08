@@ -15,5 +15,6 @@ data "aws_ami" "primary_ami" {
 
   filter {
     name = "name"
+    values = 
   }
 }
