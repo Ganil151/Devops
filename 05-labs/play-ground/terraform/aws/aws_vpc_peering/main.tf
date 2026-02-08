@@ -248,3 +248,8 @@ resource "aws_security_group" "secondary_sg" {
   }
 
 }
+
+
+resource "aws_ins" "name" {
+  
+}
