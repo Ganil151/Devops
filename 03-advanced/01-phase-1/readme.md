@@ -42,6 +42,18 @@ In this phase, we move beyond "Using the Tool" to "Understanding the Engine."
 
 ---
 
+## 🧪 Practical Laboratories
+
+Throughout this phase, you will perform the following hands-on engineering challenges:
+
+| Domain | Lab Title | Key Technical Skill |
+|:---|:---|:---|
+| **Networking** | [**Diagnosing the Silent Drop**](./01-networking/labs/silent-drop-lab.md) | Debugging a "Black Hole" packet drop using `tcpdump` and `iptables`. |
+| **Automation** | [**The Idempotent Python Module**](./02-automation/ansible/challenges.md) | Writing a custom Ansible module in Python using the `AnsibleModule` API. |
+| **Performance** | [**Network Stress Testing**](./01-networking/06-performance-optimization/readme.md#network-performance-testing-tools) | Using Python to benchmark DNS, Throughput, and Latency under load. |
+
+---
+
 ## 🎯 The "Senior Engineer" Standard
 
 At this level, "It works" is not enough. You must be able to answer:
