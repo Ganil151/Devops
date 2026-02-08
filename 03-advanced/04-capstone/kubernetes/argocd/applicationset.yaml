@@ -1,0 +1,50 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: online-boutique-global
+  namespace: argocd
+spec:
+  generators:
+    - list:
+        elements:
+          - cluster: global-platform-primary
+            url: https://kubernetes.default.svc
+            region: us-east-1
+          - cluster: global-platform-secondary
+            url: https://api.secondary.eu-west-1.eks.amazonaws.com # Placeholder
+            region: eu-west-1
+
+  template:
+    metadata:
+      name: 'online-boutique-{{region}}'
+    spec:
+      project: default
+      source:
+        repoURL: 'https://github.com/GoogleCloudPlatform/microservices-demo.git'
+        targetRevision: main
+        path: release
+        helm:
+           # Override values for Production Resilience
+           values: |
+             global:
+               pdb:
+                 create: true
+                 minAvailable: 1
+             frontend:
+               replicaCount: 3
+               resources:
+                 requests:
+                   cpu: 100m
+                   memory: 64Mi
+                 limits:
+                   cpu: 200m
+                   memory: 128Mi
+      destination:
+        server: '{{url}}'
+        namespace: online-boutique
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
