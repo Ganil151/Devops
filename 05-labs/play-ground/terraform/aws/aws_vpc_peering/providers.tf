@@ -9,11 +9,11 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-  alias = "primary"
+  alias  = "primary"
 }
 
 provider "aws" {
   region = "us-west-1"
-  alias = "secondary"
+  alias  = "secondary"
 }
 
