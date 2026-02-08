@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/14-private-subnet-ec2.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/13-detailed-monitoring.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/12-termination-protection.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/11-key-pair.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/10-unlimited-burst.tf",
@@ -250,8 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/06-iam-role-instance.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/05-user-data-cloud-init.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/04-user-data-shell.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/03-windows-instance.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/02-ubuntu-instance.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/readme.md",
