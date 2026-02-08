@@ -167,7 +167,7 @@ resource "aws_security_group" "primary_sg" {
   description = "Security group for primary VPC instance"
   vpc_id      = aws_vpc.primary_vpc.id
 
-  ingress = {
+  ingress  {
     description = "Allow SSH"
     from_port   = 22
     to_port     = 22
