@@ -7,7 +7,7 @@ resource "aws_secretsmanager_secret_version" "db_creds" {
   secret_id = aws_secretsmanager_secret.db_creds.id
   secret_string = jsonencode({
     username = "admin"
-    password = "change_me"
+    password = var.password
   })
 
   lifecycle {
