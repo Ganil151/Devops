@@ -191,5 +191,7 @@ resource "aws_security_group" "primary_sg" {
     cidr_blocks = [var.secondary_vpc_cidr]
   }
 
+  egress = 
+
 
 }
