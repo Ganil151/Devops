@@ -3,6 +3,6 @@ variable "environment" {
   default = "dev"
 }
 
-variable "" {
-  
+variable "primary" {
+  type = string
 }
