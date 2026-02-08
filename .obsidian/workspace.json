@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/04-user-data-shell.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/03-windows-instance.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/02-ubuntu-instance.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/01-amazon-linux.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/readme.md",
@@ -251,8 +253,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/16-aurora-serverless-v2.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/15-secrets-manager.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/14-iam-auth.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/13-rds-proxy.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/12-subnet-group.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/readme.md",
