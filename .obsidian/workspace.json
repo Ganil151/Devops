@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/cleanup.sh",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/health-check.sh",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/build-and-push.sh",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/deploy.sh",
@@ -252,7 +253,6 @@
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/prod/terraform.tfvars",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/prod/outputs.tf",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/prod/main.tf",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/prod/backend.tf",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/alb/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/monitoring/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/secrets/README.md",
