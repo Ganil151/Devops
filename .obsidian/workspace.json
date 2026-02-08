@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "03-advanced/02-phase-2/01-part-1-the-blueprint/03-multi-cluster/01-multi-cluster-federation/labs/cluster-api-aws-lab.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/03-multi-cluster/01-multi-cluster-federation/labs",
     "03-advanced/sre-final-exam.md",
     "03-advanced/03-phase-3/05-finops/labs/infracost-ci-cd-lab.md",
@@ -260,7 +261,6 @@
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/01-multi-cloud-architecture/connectivity",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/01-multi-cloud-architecture/security/oidc-federation-lab.md",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/terraform.tfvars",
-    "05-labs/play-ground/terraform.tfvars",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/00-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/04-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
