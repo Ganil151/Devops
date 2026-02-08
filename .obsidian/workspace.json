@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/18-log-destination.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/17-insight-rules.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/16-metric-stream.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/15-scheduled-rule.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/14-rds-storage-alarm.tf",
@@ -250,8 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/10-resource-policy.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/09-eventbridge-pipes.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/08-anomaly-detection.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/07-log-subscription.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/06-synthetics-canary.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/readme.md",
