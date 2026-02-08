@@ -30,7 +30,7 @@ variable "secondary_subnet_cidr" {
   default = "10.1.0.0/24"
 }
 
-variable "key_name" {
+variable "primary_key_name" {
   default = ""
 }
 
