@@ -19,5 +19,5 @@ variable "primary_vpc_cidr" {
 }
 
 variable "secondary_vpc" {
-  
+  default = ""
 }
