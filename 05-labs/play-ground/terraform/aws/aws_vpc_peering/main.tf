@@ -53,4 +53,6 @@ resource "aws_internet_gateway" "primary_igw" {
 }
 
 resource "aws_internet_gateway" "secondary_igw" {
-  
+  vpc_id   = aws_vpc.secondary_vpc.id
+  provider = aws.secondary
+}
