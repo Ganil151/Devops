@@ -95,5 +95,8 @@ resource "aws_route_table" "secondary_route_table" {
 
 
 resource "aws_route_table_association" "primary_rtb" {
+  subnet_id      = aws_subnet.primary_subnet.id
+  route_table_id = aws_route_table.primary_route_table.id
+  provider       = aws.primary
   
 }
