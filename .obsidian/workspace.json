@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "03-advanced/sre-final-exam-answer-key.md",
     "03-advanced/04-capstone/kubernetes/argocd/applicationset.yaml",
     "03-advanced/04-capstone/kubernetes/apps/overrides",
     "03-advanced/04-capstone/kubernetes/apps",
@@ -252,7 +253,6 @@
     "03-advanced/04-capstone/terraform/environments/prod/main.tf",
     "03-advanced/04-capstone/terraform/modules/vpc/main.tf",
     "03-advanced/04-capstone/terraform/environments/prod",
-    "03-advanced/04-capstone/terraform/environments",
     "03-advanced/04-capstone/readme.md",
     "03-advanced/01-phase-1/01-networking/labs/silent-drop-lab.md",
     "03-advanced/01-phase-1/readme.md",
