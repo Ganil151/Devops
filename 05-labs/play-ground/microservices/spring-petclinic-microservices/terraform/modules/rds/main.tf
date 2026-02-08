@@ -22,9 +22,9 @@ module "db" {
 
   maintenance_window = "Mon:00:00-Mon:03:00"
   backup_window      = "03:00-06:00"
-  
+
   # For playground/cost - disable multi-az
-  multi_az = false
+  multi_az            = false
   skip_final_snapshot = true
 
   tags = {
