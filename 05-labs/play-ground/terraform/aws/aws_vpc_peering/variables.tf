@@ -5,4 +5,5 @@ variable "environment" {
 
 variable "primary" {
   type = string
+  default = "us-east-1"
 }
