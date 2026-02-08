@@ -116,5 +116,5 @@ resource "aws_vpc_peering_connection" "primary_to_secondary" {
   auto_accept = false
   tags = {
     Name = "Primary-to-Secondary"
-  }
+  } 
 }
