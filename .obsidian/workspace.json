@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "03-advanced/02-phase-2/01-part-1-the-blueprint/03-multi-cluster/01-multi-cluster-federation/labs",
     "03-advanced/sre-final-exam.md",
     "03-advanced/03-phase-3/05-finops/labs/infracost-ci-cd-lab.md",
     "03-advanced/03-phase-3/05-finops/labs",
@@ -276,7 +277,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/rds/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/messaging/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/load_balancer/readme.md",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/lambda/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
