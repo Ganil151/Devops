@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/10-queue-policy.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/09-kms-encrypted-queue.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/08-sns-lambda-subscription.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/07-sns-email-subscription.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/06-sns-sqs-subscription.tf",
@@ -252,8 +254,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/readme.md",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/20-minimalist-cf.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/19-managed-cache-policy.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/readme.md",
