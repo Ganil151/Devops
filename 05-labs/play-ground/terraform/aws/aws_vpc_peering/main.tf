@@ -1,3 +1,3 @@
-resource "aws_vpc" "prim" {
-  
+resource "aws_vpc" "primary_vpc" {
+  cidr_block = var
 }
