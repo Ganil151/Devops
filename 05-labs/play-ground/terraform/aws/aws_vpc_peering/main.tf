@@ -112,5 +112,5 @@ resource "aws_vpc_peering_connection" "primary_to_secondary" {
   provider = aws.primary
   vpc_id = aws_vpc.primary_vpc.id
   peer_vpc_id = aws_vp.id
-  peer_region = var.secondary
+  peer_region = var.secondary_region
 }
