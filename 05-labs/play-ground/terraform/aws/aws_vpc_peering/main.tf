@@ -138,6 +138,9 @@ resource "aws_route" "primary_to_secondary" {
   vpc_peering_connection_id = aws_vpc_peering_connection.primary_to_secondary.id
 }
 
-resource "aws_vpc_peering_connection_accepter" "secondary" {
+resource "aws_vpc_peering_connection_accepter" "secondary_to_primary" {
+  provider = aws.secondary
+  vpc_peering_connection_id = aws_vpc_peering_connection.secondary_to_primary.id
+  auto_accept = true  
   
 }
