@@ -19,5 +19,6 @@ variable "primary_vpc_cidr" {
 }
 
 variable "secondary_vpc" {
-  default = ""
+  default = "10.1.0.0/16"
 }
+
