@@ -247,5 +247,4 @@ resource "aws_security_group" "secondary_sg" {
     Environment = var.environment
   }
 
-
 }
