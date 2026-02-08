@@ -40,5 +40,5 @@ terraform.rc
 # Aws Keys
 *.pem
 .pem
-
+*.key
 # End of https://www.toptal.com/developers/gitignore/api/terraform
