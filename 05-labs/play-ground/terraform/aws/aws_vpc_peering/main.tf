@@ -184,7 +184,7 @@ resource "aws_security_group" "primary_sg" {
   }
 
   ingress = {
-    descr
+    description = "Al"
   }
 
 
