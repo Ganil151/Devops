@@ -109,5 +109,5 @@ resource "aws_route_table_association" "secondary_rtb" {
 
 
 resource "aws_vpc_peering_connection" "primary_to_secondary" {
-  
+  provider = aws
 }
