@@ -61,6 +61,6 @@ resource "aws_internet_gateway" "secondary_igw" {
   provider = aws.secondary
 
   tags = {
-
-  }}
+    Name = "Secondary-IGW-${var.secondary}"
+  }
 }
