@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/terraform/aws/aws_vpc_peering/main.tf",
     "03-advanced/sre-exam-scenario-injector.sh",
     "03-advanced/04-capstone/kubernetes/apps/overrides/values.yaml",
     "03-advanced/sre-final-exam-answer-key.md",
@@ -253,7 +254,6 @@
     "03-advanced/04-capstone/terraform/modules/eks/main.tf",
     "03-advanced/04-capstone/terraform/modules/eks",
     "03-advanced/04-capstone/terraform/environments/prod/main.tf",
-    "03-advanced/04-capstone/terraform/modules/vpc/main.tf",
     "03-advanced/04-capstone/readme.md",
     "03-advanced/01-phase-1/01-networking/labs/silent-drop-lab.md",
     "03-advanced/01-phase-1/readme.md",
