@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "03-advanced/03-phase-3/05-finops/labs",
     "03-advanced/03-phase-3/01-chaos-engineering/labs/aws-fis-resiliency-lab.md",
     "03-advanced/03-phase-3/01-chaos-engineering/readme.md",
     "03-advanced/03-phase-3/01-chaos-engineering/labs",
@@ -276,7 +277,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/load_balancer/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/lambda/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/iam/readme.md",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/eks/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
