@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/03-dead-letter-queue.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/02-fifo-sqs.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/01-standard-sqs.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging",
@@ -253,7 +254,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/16-real-time-logs.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/15-price-class.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/14-s3-logging.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/13-custom-error-pages.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/readme.md",
