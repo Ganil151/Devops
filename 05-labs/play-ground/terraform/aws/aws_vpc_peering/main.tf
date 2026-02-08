@@ -106,3 +106,8 @@ resource "aws_route_table_association" "secondary_rtb" {
   route_table_id = aws_route_table.secondary_route_table.id
   provider       = aws.secondary
 }
+
+
+resource "aws_" "name" {
+  
+}
