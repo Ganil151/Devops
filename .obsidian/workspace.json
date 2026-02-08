@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "03-advanced/04-capstone/readme.md",
     "03-advanced/04-capstone",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/terraform.tfstate",
     "08-career-mastery/07-resume-engineering/resources/devops-resume-ganil-batistpdf/Ganil Batist Yan DevOps Engineer Resume.pdf",
@@ -259,7 +260,6 @@
     "03-advanced/03-phase-3/01-chaos-engineering/labs/aws-fis-resiliency-lab.md",
     "03-advanced/03-phase-3/01-chaos-engineering/readme.md",
     "03-advanced/03-phase-3/01-chaos-engineering/labs",
-    "03-advanced/03-phase-3/01-chaos-engineering",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/observability/distributed-tracing-lab.md",
     "03-advanced/readme.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/07-enterprise-patterns/labs/aws-governance-scp-lab.md",
