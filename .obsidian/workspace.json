@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/11-iam-policy-attachment.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/10-iam-inline-policy.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/09-iam-role-eks-nodes.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/08-iam-role-eks-cluster.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/07-iam-role-rds.tf",
@@ -250,9 +252,7 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/03-iam-policy-json.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/02-iam-group.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/01-iam-user.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/readme.md",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/20-minimalist-ec2.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/readme.md",
