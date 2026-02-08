@@ -30,6 +30,12 @@ variable "secondary_subnet_cidr" {
   default = "10.1.0.0/24"
 }
 
+variable "instance_type" {
+  description = "EC2 instance type"
+  type        = string
+  default     = "t3.micro"
+}
+
 variable "primary_key_name" {
   description = "Name of the SSH key pair for Primary VPC instance (us-east-1)"
   type        = string
