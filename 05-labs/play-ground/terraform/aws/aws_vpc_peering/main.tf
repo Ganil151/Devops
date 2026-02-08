@@ -168,7 +168,7 @@ resource "aws_security_group" "primary_sg" {
   vpc_id = aws_vpc.primary_vpc.id
 
   ingress = {
-    de
+    description = "Allow SSH"
     from_port = 22
     to_port = 22
     protocol = "tcp"
