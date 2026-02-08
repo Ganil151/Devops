@@ -184,7 +184,10 @@ resource "aws_security_group" "primary_sg" {
   }
 
   ingress = {
-    description = "Al"
+    description = "All traffic from Secondary VPC"
+    from_port   = 0
+    to_port     = 0
+
   }
 
 
