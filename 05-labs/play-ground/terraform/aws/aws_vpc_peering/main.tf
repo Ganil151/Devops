@@ -83,4 +83,14 @@ resource "aws_route_table" "secondary_route_table" {
   vpc_id   = aws_vpc.secondary_vpc.id
   provider = aws.secondary
 
-  
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.secondary_igw.id
+  }
+
+  tags = {
+    Name = "Secondary-Route-Table-${var.secondary}"
+  }
+}
+
+
