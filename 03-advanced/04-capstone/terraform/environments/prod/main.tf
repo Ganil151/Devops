@@ -82,6 +82,14 @@ resource "aws_route" "primary_to_secondary" {
   vpc_peering_connection_id = aws_vpc_peering_connection.global_mesh.id
 }
 
+# EU -> US
+resource "aws_route" "secondary_to_primary" {
+  provider                  = aws.secondary
+  route_table_id            = module.vpc_secondary.public_route_table_id # Need to export this
+  destination_cidr_block    = "10.1.0.0/16"
+  vpc_peering_connection_id = aws_vpc_peering_connection.global_mesh.id
+}
+
 # 🦅 Primary Cluster (US-East-1)
 module "eks_primary" {
   source = "../../modules/eks"
