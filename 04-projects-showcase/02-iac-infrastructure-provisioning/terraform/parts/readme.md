@@ -1,6 +1,6 @@
 # Terraform Architectural Patterns Library
 
-This directory serves as a comprehensive library of **200+ reusable Terraform patterns** for AWS infrastructure provisioning. Each sub-directory focuses on a specific AWS service, providing 20 different configuration patterns ranging from basic setups to enterprise-grade architectures involving high availability, security, and compliance.
+This directory serves as a comprehensive library of **300+ reusable Terraform patterns** for AWS infrastructure provisioning. Each sub-directory focuses on a specific AWS service, providing 20 different configuration patterns ranging from basic setups to enterprise-grade architectures involving high availability, security, and compliance.
 
 ## 📂 Library Contents
 
@@ -19,6 +19,9 @@ This directory serves as a comprehensive library of **200+ reusable Terraform pa
 | [**EKS**](./eks/) | Clusters, Node Groups, Fargate, IRSA, and Encryption. | 20 |
 | [**DynamoDB**](./dynamodb/) | On-Demand, GSI/LSI, Streams, Global Tables, and DAX. | 20 |
 | [**CloudFront**](./cloudfront/) | CDN distributions, OAC, Security Headers, and WAF. | 20 |
+| [**Messaging**](./messaging/) | SQS, SNS, EventBridge, Filters, and DLQs. | 20 |
+| [**ECS**](./ecs/) | Fargate, EC2 fleets, Autoscaling, and Service Connect. | 20 |
+| [**CloudWatch**](./cloudwatch/) | Alarms, Dashboards, Logs, and Synthetics Canaries. | 20 |
 
 ## 🚀 How to Use This Library
 
