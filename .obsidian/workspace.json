@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/06-kms-secrets.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/05-private-endpoint.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/04-oidc-provider.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/03-fargate-profile.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/02-managed-node-group.tf",
@@ -251,8 +253,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/18-dual-stack-lb.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/17-cross-zone-lb.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/16-nlb-elastic-ip.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/15-nlb-tls-termination.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/14-sticky-sessions.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/readme.md",
