@@ -109,71 +109,71 @@ resource "aws_route_table_association" "secondary_rtb" {
 
 
 resource "aws_vpc_peering_connection" "primary_to_secondary" {
-  provider = aws.primary
-  vpc_id = aws_vpc.primary_vpc.id
+  provider    = aws.primary
+  vpc_id      = aws_vpc.primary_vpc.id
   peer_vpc_id = aws_vp.id
   peer_region = var.secondary
   auto_accept = false
 
   tags = {
     Name = "Primary-to-Secondary"
-  } 
+  }
 }
 
 resource "aws_vpc_peering_connection" "secondary_to_primary" {
-  provider = aws.secondary
-  vpc_id = aws_vpc.secondary_vpc.id
+  provider    = aws.secondary
+  vpc_id      = aws_vpc.secondary_vpc.id
   peer_vpc_id = aws_vpc.primary_vpc.id
   peer_region = var.primary
   auto_accept = false
 
   tags = {
     Name = "Secondary-to-Primary"
-  } 
-} 
+  }
+}
 resource "aws_route" "primary_to_secondary" {
-  provider = aws.primary
-  route_table_id = aws_route_table.primary_route_table.id
-  destination_cidr_block = aws_vpc.secondary_vpc.cidr_block
+  provider                  = aws.primary
+  route_table_id            = aws_route_table.primary_route_table.id
+  destination_cidr_block    = aws_vpc.secondary_vpc.cidr_block
   vpc_peering_connection_id = aws_vpc_peering_connection.primary_to_secondary.id
-  depends_on = [ aws_vpc_peering_connection_accepter.primary_to_secondary ]
+  depends_on                = [aws_vpc_peering_connection_accepter.primary_to_secondary]
 }
 
 resource "aws_route" "secondary_to_primary" {
-  provider = aws.secondary
-  route_table_id = aws_route_table.secondary_route_table.id
-  destination_cidr_block = aws_vpc.primary_vpc.cidr_block
+  provider                  = aws.secondary
+  route_table_id            = aws_route_table.secondary_route_table.id
+  destination_cidr_block    = aws_vpc.primary_vpc.cidr_block
   vpc_peering_connection_id = aws_vpc_peering_connection.secondary_to_primary.id
-  depends_on = [ aws_vpc_peering_connection_accepter.secondary_to_primary ]
+  depends_on                = [aws_vpc_peering_connection_accepter.secondary_to_primary]
 }
 
 
 resource "aws_vpc_peering_connection_accepter" "secondary_to_primary" {
-  provider = aws.secondary
+  provider                  = aws.secondary
   vpc_peering_connection_id = aws_vpc_peering_connection.secondary_to_primary.id
-  auto_accept = true
-  
-  tags = {
-    Name = "Secondary-to-Primary"
-    Environment = var.environment
-    Side = "Accepter"
+  auto_accept               = true
 
-  } 
+  tags = {
+    Name        = "Secondary-to-Primary"
+    Environment = var.environment
+    Side        = "Accepter"
+
+  }
 }
 
 resource "aws_security_group" "primary_sg" {
-  provider = aws.primary
-  name = "primary-vpc-sg"
+  provider    = aws.primary
+  name        = "primary-vpc-sg"
   description = "Security group for primary VPC instance"
-  vpc_id = aws_vpc.primary_vpc.id
+  vpc_id      = aws_vpc.primary_vpc.id
 
   ingress = {
     description = "Allow SSH"
-    from_port = 22
-    to_port = 22
-    protocol = "tcp"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
 
 }
