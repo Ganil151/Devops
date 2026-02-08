@@ -153,19 +153,3 @@
       service:
         name: jenkins
         state: restarted
-        group: '{{ sonar_group }}'
-        owner: "{{ sonar_user }}"
-        group: "{{ sonar_group }}"
-
-    - name: Configure Sysctl (Elasticsearch requirement)
-      sysctl:
-        name: vm.max_map_count
-        value: '262144'
-        state: present
-        reload: yes
-
-  handlers:
-    - name: Restart Jenkins
-      service:
-        name: jenkins
-        state: restarted
