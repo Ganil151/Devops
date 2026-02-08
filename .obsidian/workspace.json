@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/security_groups",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/20-minimalist-vpc.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/19-cross-account-vpc.tf",
@@ -276,7 +277,6 @@
     "EXECUTIVE-SUMMARY.md",
     "04-projects-showcase/04-kubernetes-orchestration/Infrastructure-Refactored/README.md",
     "TERRAFORM-STATE-CORRUPTION-RECOVERY-GUIDE.md",
-    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/immutable-infrastructure-governance-ref.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
