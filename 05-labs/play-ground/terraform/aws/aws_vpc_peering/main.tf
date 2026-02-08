@@ -216,14 +216,15 @@ resource "aws_security_group" "secondary_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [var.primary_vpc_cidr]
   }
 
   ingress {
     description = "ICMP from Primary VPC"
     from_port   = -1
     to_port     = -1
-    protocol    = "icmp"  
+    protocol    = "icmp" 
+    ccidr_blocks =  
 }
 
   ingress {
