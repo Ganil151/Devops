@@ -264,7 +264,7 @@ resource "aws_instance" "primary_instance" {
   tags = {
     Name        = "Primary-VPC-Instance"
     Environment = "Demo"
-    Region      = var.primary_region
+    Region      = var.primary
   }
 
   depends_on = [aws_vpc_peering_connection_accepter.secondary_accepter]
@@ -284,7 +284,7 @@ resource "aws_instance" "secondary_instance" {
   tags = {
     Name        = "Secondary-VPC-Instance"
     Environment = "Demo"
-    Region      = var.secondary_region
+    Region      = var.secondary
   }
 
   depends_on = [aws_vpc_peering_connection_accepter.secondary_accepter]
