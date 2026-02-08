@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/08-kms-encryption.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/07-streams-enabled.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/06-pitr-backups.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/05-ttl-enabled.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/04-local-secondary-index.tf",
@@ -251,8 +253,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/20-minimalist-eks.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/19-cluster-tags.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/18-graviton-nodes.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/17-oidc-identity-config.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/readme.md",
