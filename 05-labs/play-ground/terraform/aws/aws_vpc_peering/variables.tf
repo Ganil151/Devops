@@ -31,6 +31,7 @@ variable "secondary_subnet_cidr" {
 }
 
 variable "primary_key_name" {
-  default = "vpc-peering-demo"
+  default = "vpc-peering-demo.pem"
 }
+
 
