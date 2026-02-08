@@ -51,7 +51,9 @@ resource "aws_internet_gateway" "primary_igw" {
   vpc_id   = aws_vpc.primary_vpc.id
   provider = aws.primary
 
-  tags = aws_internet_gateway.secondary_igw
+  tags = {
+    Name = "Primary-IGW-${var.primary}"
+  }
 }
 
 resource "aws_internet_gateway" "secondary_igw" {
