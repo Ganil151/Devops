@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/networking/main.tf",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/networking/variables.tf",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/shared/data.tf",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/shared/providers.tf",
@@ -251,7 +252,6 @@
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/monitoring",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/secrets",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/ecr",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/networking",
     "03-advanced/sre-final-exam-answer-key.md",
     "03-advanced/04-capstone/terraform/readme.md",
     "03-advanced/04-capstone/readme.md",
