@@ -7,7 +7,7 @@ variable "vpc_cidr" {
 }
 
 variable "environment" {
-  type = string
+  type    = string
   default = "production"
 }
 
@@ -17,12 +17,12 @@ variable "availability_zones" {
 
 # 1. The Virtual Private Cloud
 resource "aws_vpc" "main" {
-  cidr_block = var.vpc_cidr
+  cidr_block           = var.vpc_cidr
   enable_dns_hostnames = true
   enable_dns_support   = true
 
   tags = {
-    Name = "${var.environment}-vpc-${var.region}"
+    Name        = "${var.environment}-vpc-${var.region}"
     Environment = var.environment
   }
 }
@@ -37,7 +37,7 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "${var.environment}-public-${var.region}-${var.availability_zones[count.index]}"
+    Name                     = "${var.environment}-public-${var.region}-${var.availability_zones[count.index]}"
     "kubernetes.io/role/elb" = "1" # For AWS Load Balancer Controller
   }
 }
@@ -51,9 +51,9 @@ resource "aws_subnet" "private" {
   availability_zone = var.availability_zones[count.index]
 
   tags = {
-    Name = "${var.environment}-private-${var.region}-${var.availability_zones[count.index]}"
+    Name                              = "${var.environment}-private-${var.region}-${var.availability_zones[count.index]}"
     "kubernetes.io/role/internal-elb" = "1"
-    "karpenter.sh/discovery" = "${var.environment}-cluster" # For Karpenter scaling
+    "karpenter.sh/discovery"          = "${var.environment}-cluster" # For Karpenter scaling
   }
 }
 

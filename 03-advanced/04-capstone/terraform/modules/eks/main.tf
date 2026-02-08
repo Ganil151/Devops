@@ -38,8 +38,8 @@ module "eks" {
       desired_size = 2
 
       instance_types = ["t3.medium"] # Keeping it cheap
-      capacity_type  = "SPOT" # 100% Spot per requirements
-      
+      capacity_type  = "SPOT"        # 100% Spot per requirements
+
       # Labels for Node Affinity
       labels = {
         "role" = "general"

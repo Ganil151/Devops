@@ -29,9 +29,9 @@ module "vpc_primary" {
     aws = aws.primary
   }
 
-  environment = "prod"
-  region      = "us-east-1"
-  vpc_cidr    = "10.1.0.0/16"
+  environment        = "prod"
+  region             = "us-east-1"
+  vpc_cidr           = "10.1.0.0/16"
   availability_zones = ["us-east-1a", "us-east-1b"]
 }
 
@@ -42,20 +42,20 @@ module "vpc_secondary" {
     aws = aws.secondary
   }
 
-  environment = "prod"
-  region      = "eu-west-1"
-  vpc_cidr    = "10.2.0.0/16" # NO Overlap allowed for peering!
+  environment        = "prod"
+  region             = "eu-west-1"
+  vpc_cidr           = "10.2.0.0/16" # NO Overlap allowed for peering!
   availability_zones = ["eu-west-1a", "eu-west-1b"]
 }
 
 # 🌉 Cross-Region Peering Connection (The Bridge)
 # Active-Active requires a route between regions.
 resource "aws_vpc_peering_connection" "global_mesh" {
-  provider      = aws.primary
-  vpc_id        = module.vpc_primary.vpc_id
-  peer_vpc_id   = module.vpc_secondary.vpc_id
-  peer_region   = "eu-west-1"
-  auto_accept   = false # Cross-region requires manual accepters
+  provider    = aws.primary
+  vpc_id      = module.vpc_primary.vpc_id
+  peer_vpc_id = module.vpc_secondary.vpc_id
+  peer_region = "eu-west-1"
+  auto_accept = false # Cross-region requires manual accepters
 
   tags = {
     Name = "global-capstone-mesh"
@@ -146,7 +146,7 @@ resource "aws_globalaccelerator_listener" "http" {
 resource "aws_globalaccelerator_endpoint_group" "us_east_1" {
   provider     = aws.primary
   listener_arn = aws_globalaccelerator_listener.http.id
-  
+
   endpoint_region = "us-east-1"
 
   # We need the load balancer ARN here, but it's created by Kubernetes later!
@@ -162,6 +162,6 @@ resource "aws_globalaccelerator_endpoint_group" "us_east_1" {
 resource "aws_globalaccelerator_endpoint_group" "eu_west_1" {
   provider     = aws.primary
   listener_arn = aws_globalaccelerator_listener.http.id
-  
+
   endpoint_region = "eu-west-1"
 }
