@@ -175,5 +175,7 @@ resource "aws_security_group" "primary_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress = {
+
 
 }
