@@ -192,7 +192,10 @@ resource "aws_security_group" "primary_sg" {
   }
 
   egress {
-    description = "Allow all egress"
+    description = "Allow all outbound traffic"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "6
   }
 
 
