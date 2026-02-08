@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/20-minimalist-table.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/19-s3-pointer-pattern.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/18-export-s3-enabled.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/17-import-s3-config.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/16-binary-attributes.tf",
@@ -250,8 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/12-dax-cluster.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/11-autoscaling-policy.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/10-kinesis-streaming.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/09-global-table.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/08-kms-encryption.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/readme.md",
