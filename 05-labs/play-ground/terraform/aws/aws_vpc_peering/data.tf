@@ -33,3 +33,6 @@ data "aws_ami" "primary_ami" {
     values = ["x86_64"]
   }  
 }
+
+data "aws_ami" "secondary_ami" {
+  provider = aws.secondary
