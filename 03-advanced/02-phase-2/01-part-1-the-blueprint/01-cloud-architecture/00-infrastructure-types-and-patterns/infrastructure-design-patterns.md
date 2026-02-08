@@ -209,3 +209,17 @@ legacy-refactor/
 ├── shim-layers/ (Bridges between old and new)
 └── legacy-configs/ (Hardcoded IPs, manual docs)
 ```
+
+---
+
+## 🎓 Senior Architect Pro-Tips: Avoiding "Architecture Astronaut" Syndrome
+
+1.  **Beware of "Resume-Driven Development"**: Just because a Service Mesh is cool doesn't mean your 3-node app needs Istio. Start simple; introduce complexity only when the pain of *not* having it outweighs the overhead of managing it.
+2.  **The "Bus Factor" Test**: If you are the only person who understands the complex hybrid-multi-cloud-serverless-mesh you designed, you haven't built a system; you've built a job security trap for yourself and a liability for the company.
+3.  **Optimize for Deletability**: High-quality architecture isn't just easy to build; it's easy to tear down and replace. Use modules and loose coupling so that when a better technology emerges, you can swap it out without a total system rewrite.
+4.  **State is the Enemy**: Always strive for statelessness. The more state you have (Databases, local storage, sticky sessions), the harder it is to scale, replicate, and recover from disasters.
+5.  **Cost as a First-Class Citizen**: An architect who ignores the monthly AWS bill is just a hobbyist. Use **Cost as an Input** during the design phase (FinOps mindset).
+
+---
+**Module Completed**: 00 Infrastructure Types and Patterns
+**Next Study**: [01 Enterprise Multi-Cloud](../01-enterprise-multi-cloud/)
