@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/03-metric-filter.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/02-cpu-alarm.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/01-log-group.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/readme.md",
@@ -251,8 +253,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/16-ephemeral-storage.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/15-app-mesh.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/14-service-connect.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/13-vpc-networking.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/12-blue-green-service.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/readme.md",
