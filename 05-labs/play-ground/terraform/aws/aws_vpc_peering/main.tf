@@ -252,5 +252,6 @@ resource "aws_security_group" "secondary_sg" {
 
 resource "aws_instance" "primary_instance" {
   provider = aws.primary
-  ami = data
+  ami = data.aws_ami.primary_ami.id
+  
 }
