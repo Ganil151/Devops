@@ -108,6 +108,6 @@ resource "aws_route_table_association" "secondary_rtb" {
 }
 
 
-resource "aws_" "name" {
+resource "aws_vpc_peering_connection" "name" {
   
 }
