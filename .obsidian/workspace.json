@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/readme.md",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/20-minimalist-ecs.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/19-graviton-tasks.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/18-ecs-exec-enabled.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/17-windows-containers.tf",
@@ -250,8 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/13-vpc-networking.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/12-blue-green-service.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/11-secrets-management.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/10-scheduled-task.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/09-efs-volumes.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/readme.md",
