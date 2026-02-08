@@ -1,0 +1,8 @@
+---
+- name: Provision DevOps Tooling on Fleet
+  hosts: dev_servers
+  become: true # Run as root (sudo)
+  gather_facts: true
+
+  roles:
+    - install_tools

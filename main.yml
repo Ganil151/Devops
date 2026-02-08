@@ -30,10 +30,10 @@
 
 - name: Add Users to Docker Group
   user:
-    name: "{{ item }}"
+    name: '{{ item }}'
     groups: docker
     append: yes
-  loop: "{{ docker_users }}"
+  loop: '{{ docker_users }}'
   ignore_errors: yes # Ignore if user doesn't exist on specific OS
 
 # ---------------------------------------------------------
@@ -41,16 +41,16 @@
 # ---------------------------------------------------------
 - name: Download and Unzip Terraform
   unarchive:
-    src: "https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip"
-    dest: "{{ bin_path }}"
+    src: 'https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip'
+    dest: '{{ bin_path }}'
     remote_src: yes
-    creates: "{{ bin_path }}/terraform"
+    creates: '{{ bin_path }}/terraform'
     mode: '0755'
 
 - name: Download Terragrunt
   get_url:
-    url: "https://github.com/gruntwork-io/terragrunt/releases/download/{{ terragrunt_version }}/terragrunt_linux_amd64"
-    dest: "{{ bin_path }}/terragrunt"
+    url: 'https://github.com/gruntwork-io/terragrunt/releases/download/{{ terragrunt_version }}/terragrunt_linux_amd64'
+    dest: '{{ bin_path }}/terragrunt'
     mode: '0755'
 
 # ---------------------------------------------------------
@@ -58,24 +58,24 @@
 # ---------------------------------------------------------
 - name: Check if AWS CLI is installed
   stat:
-    path: "{{ bin_path }}/aws"
+    path: '{{ bin_path }}/aws'
   register: aws_cli_bin
 
 - name: Download and Install AWS CLI v2
   block:
     - name: Download AWS CLI Zip
       get_url:
-        url: "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"
-        dest: "/tmp/awscliv2.zip"
-    
+        url: 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip'
+        dest: '/tmp/awscliv2.zip'
+
     - name: Unzip AWS CLI
       unarchive:
-        src: "/tmp/awscliv2.zip"
-        dest: "/tmp"
+        src: '/tmp/awscliv2.zip'
+        dest: '/tmp'
         remote_src: yes
 
     - name: Run AWS Install Script
-      command: "/tmp/aws/install --update"
+      command: '/tmp/aws/install --update'
   when: not aws_cli_bin.stat.exists
 
 # ---------------------------------------------------------
@@ -83,26 +83,26 @@
 # ---------------------------------------------------------
 - name: Install Kubectl
   get_url:
-    url: "https://dl.k8s.io/release/{{ kubectl_version }}/bin/linux/amd64/kubectl"
-    dest: "{{ bin_path }}/kubectl"
+    url: 'https://dl.k8s.io/release/{{ kubectl_version }}/bin/linux/amd64/kubectl'
+    dest: '{{ bin_path }}/kubectl'
     mode: '0755'
 
 - name: Install Helm
   shell: |
     curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
   args:
-    creates: "{{ bin_path }}/helm"
+    creates: '{{ bin_path }}/helm'
 
 # ---------------------------------------------------------
 # 5. Custom Script Management
 # ---------------------------------------------------------
 - name: Deploy Custom DevOps Scripts
   copy:
-    src: "{{ item }}"
-    dest: "{{ bin_path }}/"
+    src: '{{ item }}'
+    dest: '{{ bin_path }}/'
     mode: '0755'
     owner: root
     group: root
   with_fileglob:
-    - "files/*.sh"
-    - "files/*.py"
+    - 'files/*.sh'
+    - 'files/*.py'
