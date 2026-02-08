@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/19-event-notifications.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/18-multi-region-access.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/17-ip-whitelist-bucket.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/16-mfa-delete-bucket.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/15-requester-pays.tf",
@@ -250,8 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/11-inventory-bucket.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/10-object-lock-bucket.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/09-replication-bucket.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/08-lifecycle-bucket.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/07-private-bucket-bpa.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/readme.md",
