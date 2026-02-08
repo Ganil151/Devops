@@ -131,5 +131,5 @@ resource "aws_vpc_peering_connection" "secondary_to_primary" {
     Name = "Secondary-to-Primary"
   } 
 } 
-resource ""
+resource "aws_ro"
 
