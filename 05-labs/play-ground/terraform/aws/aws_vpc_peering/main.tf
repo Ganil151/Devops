@@ -9,7 +9,7 @@ resource "aws_vpc" "primary_vpc" {
   }
 }
 
-resource "aws_vpc" "primary_vpc" {
+resource "aws_vpc" "secondary_vpc" {
   cidr_block = var.secondary_vpc_cidr
   provider = aws.primary
   enable_dns_hostnames = true
