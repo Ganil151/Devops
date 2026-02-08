@@ -21,3 +21,5 @@ resource "aws_vpc" "secondary_vpc" {
 }
 
 resource "aws_subnet" "primary_subnet" {
+  vpc_id     = aws_vpc.primary_vpc.id
+  cidr_block = "10.0.0.0/24"
