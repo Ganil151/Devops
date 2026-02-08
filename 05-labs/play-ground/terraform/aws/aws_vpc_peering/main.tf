@@ -209,4 +209,13 @@ resource "aws_security_group" "secondary_sg" {
   provider = aws.secondary
   name = "secondary-vpc-sg"
   description = "Security group for Secondary VPC instance"
+  vpc_id = aws_vpc.secondary_vpc.id
+
+  ingress {
+    description = "Allow SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 }
