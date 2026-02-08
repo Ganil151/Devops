@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/11-bottlerocket-nodes.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/10-spot-node-group.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/09-eks-sg-rules.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/08-audit-logging.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/07-cluster-addons.tf",
@@ -251,8 +253,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/02-managed-node-group.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/01-basic-cluster.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/readme.md",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/20-minimalist-lb.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/19-idle-timeout.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/readme.md",
