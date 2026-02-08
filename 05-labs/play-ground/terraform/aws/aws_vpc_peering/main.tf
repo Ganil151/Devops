@@ -230,7 +230,7 @@ resource "aws_security_group" "secondary_sg" {
   ingress {
     description = "All traffic from Primary VPC"
     from_port   = 0
-    to_port     = 0
+    to_port     = 65535
 }
 
 
