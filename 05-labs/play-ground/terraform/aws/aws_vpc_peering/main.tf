@@ -11,7 +11,7 @@ resource "aws_vpc" "primary_vpc" {
 
 resource "aws_vpc" "secondary_vpc" {
   cidr_block = var.secondary_vpc_cidr
-  provider = aws.seconar
+  provider = aws.secondary
   enable_dns_hostnames = true
   enable_dns_support = true
 
