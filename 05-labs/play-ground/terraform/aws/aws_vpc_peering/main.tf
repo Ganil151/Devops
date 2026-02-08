@@ -8,3 +8,4 @@ resource "aws_vpc" "primary_vpc" {
     Name = "Primary-VPC-${var.primary}"
   }
 }
+
