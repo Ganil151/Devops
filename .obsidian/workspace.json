@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "09-Resources/05-Cloud-Metadata/infrastructure-design-patterns.md",
     "09-Resources/05-Cloud-Metadata",
     "09-Resources",
     "audit_report.md",
@@ -255,7 +256,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/vpcs/18-egress-only-vpc.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/vpcs/17-ha-vpc.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/vpcs/16-ipv6-vpc.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/vpcs/15-serverless-vpc.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/subnet/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/security_groups/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/s3_bucket/readme.md",
