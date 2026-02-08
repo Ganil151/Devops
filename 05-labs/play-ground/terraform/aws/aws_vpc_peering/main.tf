@@ -110,5 +110,6 @@ resource "aws_route_table_association" "secondary_rtb" {
 
 resource "aws_vpc_peering_connection" "primary_to_secondary" {
   provider = aws.primary
-  vpc_id = aws_vpc.primary_vpc
+  vpc_id = aws_vpc.primary_vpc.id
+  pe
 }
