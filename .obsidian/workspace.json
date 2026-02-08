@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/05-s3-trigger-lambda.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/04-vpc-lambda.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/03-env-vars-lambda.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/02-node-lambda.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/01-python-lambda.tf",
@@ -251,8 +253,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/18-iam-login-profile.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/17-iam-cross-account.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/16-iam-permission-boundary.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/15-iam-mfa-device.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/14-iam-service-linked-role.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/readme.md",
