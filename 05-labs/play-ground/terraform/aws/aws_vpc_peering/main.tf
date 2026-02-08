@@ -207,5 +207,6 @@ resource "aws_security_group" "primary_sg" {
 
 resource "aws_security_group" "secondary_sg" {
   provider = aws.secondary
-  name = "secondry"
+  name = "secondary-vpc-sg"
+  
 }
