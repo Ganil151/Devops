@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/20-minimalist-cw.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/19-metric-math.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/18-log-destination.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/17-insight-rules.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/16-metric-stream.tf",
@@ -250,8 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/12-lambda-error-alarm.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/11-insight-queries.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/10-resource-policy.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/09-eventbridge-pipes.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/08-anomaly-detection.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/readme.md",
