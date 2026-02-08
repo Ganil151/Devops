@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/20-minimalist-rt.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/19-prefix-list-rt.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/18-hub-rt.tf",
@@ -251,7 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/13-edge-rt.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/12-local-zone-rt.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/11-multi-az-rt.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/10-direct-connect-rt.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
