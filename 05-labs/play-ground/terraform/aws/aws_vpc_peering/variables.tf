@@ -14,6 +14,6 @@ variable "secondary" {
   default = "us-west-2"
 }
 
-variable "" {
-  
+variable "primary_vpc_cidr" {
+  default = 
 }
