@@ -12,4 +12,8 @@ data "aws_ami" "primary_ami" {
   provider = aws.primary
   most_recent = true
   owners = ["amazon"]
+
+  filter {
+    name = "name"
+  }
 }
