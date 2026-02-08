@@ -176,7 +176,7 @@ resource "aws_security_group" "primary_sg" {
   }
 
   ingress = {
-    description = "ICMP from Secondary"
+    description = "ICMP from Secondary VPC"
     from_port   = -1
     to_port     = -1
     protocol    = "icmp"
