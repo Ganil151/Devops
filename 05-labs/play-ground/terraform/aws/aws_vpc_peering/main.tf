@@ -64,3 +64,9 @@ resource "aws_internet_gateway" "secondary_igw" {
     Name = "Secondary-IGW-${var.secondary}"
   }
 }
+
+resource "aws_route_table" "primary_route_table" {
+  vpc_id   = aws_vpc.primary_vpc.id
+  provider = aws.primary
+
+
