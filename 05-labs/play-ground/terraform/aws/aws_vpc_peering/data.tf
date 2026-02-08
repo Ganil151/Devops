@@ -1,10 +1,10 @@
 data "aws_availability_zones" "primary" {
-  state    = available
+  state    = "available"
   provider = aws.primary
 }
 
 data "aws_availability_zones" "secondary" {
-  state    = available
+  state    = "available"
   provider = aws.secondary
 }
 
