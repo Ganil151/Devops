@@ -145,6 +145,7 @@ resource "aws_vpc_peering_connection_accepter" "secondary_to_primary" {
   
   tags = {
     Name = "Secondary-to-Primary"
-    Environment
+    Environment = var.environment
+    
   } 
 }
