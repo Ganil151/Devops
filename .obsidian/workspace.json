@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/backend.conf.example",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/sonarqube/sonar-project.properties",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/unit-tests",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/sonarqube",
@@ -253,7 +254,6 @@
     "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/build-and-push.sh",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/deploy.sh",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/README.md",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/scripts/destroy.sh",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/alb/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/monitoring/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/secrets/README.md",
