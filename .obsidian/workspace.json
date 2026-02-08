@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/07-enterprise-patterns/labs/aws-governance-scp-lab.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/07-enterprise-patterns/labs",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/01-multi-cloud-architecture/connectivity/vpn-mesh-lab.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/01-multi-cloud-architecture/connectivity",
@@ -253,7 +254,6 @@
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/main.tf",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/local.tf",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/backend.tf",
-    "05-labs/play-ground/terraform/aws/aws_vpc_peering",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/00-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/04-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
