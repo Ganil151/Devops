@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/04-multiple-origins.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/03-custom-domain-ssl.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/02-origin-access-control.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/01-basic-distribution.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront",
@@ -251,8 +253,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/17-import-s3-config.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/16-binary-attributes.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/15-multi-tenant-table.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/14-session-store.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/13-resource-policy.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/readme.md",
