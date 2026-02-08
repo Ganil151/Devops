@@ -192,7 +192,7 @@ resource "aws_security_group" "primary_sg" {
   }
 
   egress {
-    des
+    description = "Allow all egress"
   }
 
 
