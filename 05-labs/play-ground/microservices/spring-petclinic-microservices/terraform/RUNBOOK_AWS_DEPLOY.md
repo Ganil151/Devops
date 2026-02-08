@@ -95,9 +95,7 @@ on linux_amd64
 **💡 Pro-Tip:** Lock provider versions in `providers.tf` to prevent breaking changes.
 
 ---
-
 ### Step 1.3: Initialize Terraform Backend
-
 ```bash
 cd /path/to/spring-petclinic-microservices/terraform/env/dev
 
