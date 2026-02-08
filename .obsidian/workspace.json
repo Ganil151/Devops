@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/playbooks/site.yml",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/inventory/prod.ini",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/inventory/dev.ini",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/ansible.cfg",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/backend.conf.example",
@@ -251,8 +253,6 @@
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/integration-tests",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/README.md",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/cleanup.sh",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/health-check.sh",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/alb/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/monitoring/README.md",
