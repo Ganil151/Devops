@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/03-global-secondary-index.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/02-provisioned-table.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/01-basic-ondemand.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/readme.md",
@@ -251,8 +253,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/16-launch-template-nodes.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/15-whitelisted-access.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/14-versioned-cluster.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/13-remote-access-nodes.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/12-tainted-node-group.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/readme.md",
