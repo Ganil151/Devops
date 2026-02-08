@@ -33,6 +33,6 @@ resource "aws_subnet" "primary_subnet" {
   }
 } 
 
-resource "aws_subnet" "" {
+resource "aws_subnet" "secondary_subnet" {
   
 }
