@@ -31,7 +31,5 @@ data "aws_ami" "primary_ami" {
   filter {
     name = "architecture"
     values = ["x86_64"]
-  }
-
-  
+  }  
 }
