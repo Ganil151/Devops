@@ -164,7 +164,9 @@ resource "aws_vpc_peering_connection_accepter" "secondary_to_primary" {
 resource "aws_security_group" "primary_sg" {
   provider = aws.primary
   name = "primary-vpc-sg"
-  description = "Security group for primary VPC"
+  description = "Security group for primary VPC instance"
   vpc_id = aws_vpc.primary_vpc.id
+
+  ingress = {}
 
 }
