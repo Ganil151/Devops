@@ -1,0 +1,11 @@
+variable "identifier" { type = string }
+variable "allocated_storage" { default = 20 }
+variable "engine" { default = "mysql" }
+variable "engine_version" { default = "8.0" }
+variable "instance_class" { default = "db.t3.micro" }
+variable "db_name" { default = "petclinic" }
+variable "username" { default = "admin" }
+variable "password" { sensitive = true }
+variable "subnet_ids" { type = list(string) }
+variable "vpc_id" { type = string }
+variable "environment" { type = string }
