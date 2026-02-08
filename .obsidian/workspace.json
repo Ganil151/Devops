@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/16-launch-template-nodes.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/15-whitelisted-access.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/14-versioned-cluster.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/13-remote-access-nodes.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/12-tainted-node-group.tf",
@@ -250,8 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/08-audit-logging.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/07-cluster-addons.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/06-kms-secrets.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/05-private-endpoint.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/04-oidc-provider.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/readme.md",
