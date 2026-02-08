@@ -131,13 +131,5 @@ resource "aws_vpc_peering_connection" "secondary_to_primary" {
     Name = "Secondary-to-Primary"
   } 
 } 
-resource "aws_vpc_peering_connection_accepter" "secondary_accepts" {
-  provider = aws.secondary
-  vpc_peering_connection_id = aws_vpc_peering_connection.primary_to_secondary.id
-  auto_accept = true
-
-  tags = {
-    Name = "Secondary-accepts-Primary"
-  }
-}
+resource ""
 
