@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/09-lambda-layer.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/08-scheduled-lambda.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/07-api-gateway-rest.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/06-sqs-trigger-lambda.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/05-s3-trigger-lambda.tf",
@@ -251,8 +253,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/20-minimalist-iam.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/19-iam-mfa-condition.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/18-iam-login-profile.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/readme.md",
