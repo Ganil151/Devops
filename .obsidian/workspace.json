@@ -113,8 +113,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5,
-    "collapsed": true
+    "width": 310.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -241,6 +240,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/18-vpc-peering-sg.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/17-vpn-access-sg.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/16-cloud-front-origin-sg.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/15-k8s-cluster-sg.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/14-winrm-management-sg.tf",
@@ -250,8 +251,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/10-redis-cache-sg.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/09-efs-mount-sg.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/08-restricted-egress-sg.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/07-outbound-only-sg.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/06-internal-mesh-sg.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/secrets-management-ref.md",
