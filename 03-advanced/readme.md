@@ -22,6 +22,10 @@ Welcome to the pinnacle of the DevOps curriculum. This section is designed to tr
 - **FinOps Excellence**: The unit economics of the cloud.
 - **Advanced Observability**: Distributed tracing, eBPF, and proactive remediation.
 
+### 🦅 [The Global Capstone](./04-capstone/)
+- **Final Mission**: Build and break a Multi-Region, Chaos-Resilient E-Commerce Platform.
+- **[SRE Final Exam](./sre-final-exam.md)**: The ultimate test of your Principal Architecture skills.
+
 ---
 
 ## 🏆 The "Principal" Mindset
