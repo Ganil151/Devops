@@ -6,8 +6,7 @@ variable "environment" {
   default = "staging"
 }
 
-module "../../../shared/versions.tf" {}
-module "../../../shared/providers.tf" {}
+
 
 module "networking" {
   source = "../../modules/networking"
@@ -34,8 +33,13 @@ module "rds" {
   identifier  = "${var.environment}-petclinic-db"
   vpc_id      = module.networking.vpc_id
   subnet_ids  = module.networking.private_subnets
-  password    = "CHANGE_ME_IN_PRODUCTION"
+  password    = random_password.db_password.result
   environment = var.environment
+}
+
+resource "random_password" "db_password" {
+  length  = 16
+  special = false
 }
 
 module "ecr" {
@@ -52,6 +56,7 @@ module "ecr" {
 module "secrets" {
   source      = "../../modules/secrets"
   environment = var.environment
+  password    = random_password.db_password.result
 }
 
 module "monitoring" {
