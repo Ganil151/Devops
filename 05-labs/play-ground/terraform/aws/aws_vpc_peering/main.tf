@@ -162,5 +162,6 @@ resource "aws_vpc_peering_connection_accepter" "secondary_to_primary" {
 }
 
 resource "aws_security_group" "primary_sg" {
-  
+  provider = aws.primary
+  name = 
 }
