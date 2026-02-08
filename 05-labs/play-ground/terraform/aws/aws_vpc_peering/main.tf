@@ -167,7 +167,7 @@ resource "aws_security_group" "primary_sg" {
   description = "Security group for primary VPC instance"
   vpc_id      = aws_vpc.primary_vpc.id
 
-  ingress  {
+  ingress {
     description = "Allow SSH"
     from_port   = 22
     to_port     = 22
@@ -175,7 +175,7 @@ resource "aws_security_group" "primary_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  ingress  {
+  ingress {
     description = "ICMP from Secondary VPC"
     from_port   = -1
     to_port     = -1
@@ -206,10 +206,10 @@ resource "aws_security_group" "primary_sg" {
 }
 
 resource "aws_security_group" "secondary_sg" {
-  provider = aws.secondary
-  name = "secondary-vpc-sg"
+  provider    = aws.secondary
+  name        = "secondary-vpc-sg"
   description = "Security group for Secondary VPC instance"
-  vpc_id = aws_vpc.secondary_vpc.id
+  vpc_id      = aws_vpc.secondary_vpc.id
 
   ingress {
     description = "Allow SSH"
@@ -223,15 +223,15 @@ resource "aws_security_group" "secondary_sg" {
     description = "ICMP from Primary VPC"
     from_port   = -1
     to_port     = -1
-    protocol    = "icmp" 
-    cidr_blocks = [var.primary_vpc_cidr] 
-}
+    protocol    = "icmp"
+    cidr_blocks = [var.primary_vpc_cidr]
+  }
 
   ingress {
     description = "All traffic from Primary VPC"
     from_port   = 0
     to_port     = 65535
-    protocol = "tcp"
+    protocol    = "tcp"
     cidr_blocks = [var.primary_vpc_cidr]
   }
   egress {
@@ -245,10 +245,7 @@ resource "aws_security_group" "secondary_sg" {
   tags = {
     Name        = "Secondary-VPC-SG-${var.secondary}"
     Environment = var.environment
-  
-
-
-}
+  }
 
 
 }
