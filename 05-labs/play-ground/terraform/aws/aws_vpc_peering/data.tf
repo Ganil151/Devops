@@ -1,1 +1,4 @@
-data "aws_ava"
+data "aws_availability_zones" "primary" {
+  state = available
+
+}
