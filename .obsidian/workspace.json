@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/11-lambda-target.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/10-access-logs.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/09-waf-integration.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/08-cognito-auth.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/07-host-based-routing.tf",
@@ -250,9 +252,7 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/03-network-lb.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/02-internal-alb.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/01-public-alb.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/readme.md",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/lambda/20-minimalist-lambda.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/iam/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/readme.md",
