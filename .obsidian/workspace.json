@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "03-advanced/04-capstone/terraform/modules/eks",
     "03-advanced/04-capstone/terraform/environments/prod/main.tf",
     "03-advanced/04-capstone/terraform/modules/vpc/main.tf",
     "03-advanced/04-capstone/terraform/environments/prod",
@@ -252,7 +253,6 @@
     "03-advanced/04-capstone",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/terraform.tfstate",
     "08-career-mastery/07-resume-engineering/resources/devops-resume-ganil-batistpdf/Ganil Batist Yan DevOps Engineer Resume.pdf",
-    "Ganil Batist Yan DevOps Engineer Resume.pdf",
     "03-advanced/01-phase-1/01-networking/labs/silent-drop-lab.md",
     "03-advanced/01-phase-1/readme.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/03-multi-cluster/02-advanced-networking-cilium/labs/clustermesh-setup-lab.md",
