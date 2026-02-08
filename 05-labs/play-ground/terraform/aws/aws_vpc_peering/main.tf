@@ -195,7 +195,13 @@ resource "aws_security_group" "primary_sg" {
     description = "Allow all outbound traffic"
     from_port   = 0
     to_port     = 0
-    protocol    = "6
+    protocol    = "65535"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name        = "Primary-Security-Group-${var.primary}"
+    Environment = var.environment
   }
 
 
