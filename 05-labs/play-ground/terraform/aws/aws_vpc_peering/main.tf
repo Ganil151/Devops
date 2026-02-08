@@ -50,6 +50,8 @@ resource "aws_subnet" "secondary_subnet" {
 resource "aws_internet_gateway" "primary_igw" {
   vpc_id   = aws_vpc.primary_vpc.id
   provider = aws.primary
+
+  tags = aws_internet_gateway.secondary_igw
 }
 
 resource "aws_internet_gateway" "secondary_igw" {
