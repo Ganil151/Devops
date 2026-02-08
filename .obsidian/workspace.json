@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/06-read-replica.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/05-multi-az-instance.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/04-aurora-postgres.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/03-aurora-mysql.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/02-postgres-instance.tf",
@@ -251,8 +253,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/18-hub-rt.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/17-dual-stack-rt.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/16-outpost-rt.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/15-nat-instance-rt.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/14-blackhole-rt.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
