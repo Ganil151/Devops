@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/14-service-connect.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/13-vpc-networking.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/12-blue-green-service.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/11-secrets-management.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/10-scheduled-task.tf",
@@ -250,8 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/06-capacity-providers.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/05-ec2-service.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/04-ec2-task.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/03-fargate-service.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/02-fargate-task.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/readme.md",
