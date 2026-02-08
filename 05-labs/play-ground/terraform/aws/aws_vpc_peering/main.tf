@@ -176,6 +176,8 @@ resource "aws_security_group" "primary_sg" {
   }
 
   ingress = {
+    des
+  }
 
 
 }
