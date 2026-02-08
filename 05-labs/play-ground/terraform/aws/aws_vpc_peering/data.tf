@@ -28,5 +28,5 @@ data "aws_ami" "primary_ami" {
     values = ["hvm"]
   }
 
-  }
+  fil
 }
