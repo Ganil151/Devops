@@ -19,3 +19,5 @@ resource "aws_vpc" "secondary_vpc" {
     Name = "Primary-VPC-${var.primary}"
   }
 }
+
+resource "aws_subnet" "primary_subnet" {
