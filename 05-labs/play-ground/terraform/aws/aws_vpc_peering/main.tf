@@ -34,5 +34,15 @@ resource "aws_subnet" "primary_subnet" {
 } 
 
 resource "aws_subnet" "secondary_subnet" {
+  vpc_id     = aws_vpc.secondary_vpc.id
+  cidr_block = var.secondary_subnet_cidr
+  availability_zone = data.aws_availability_zones.secondary.names[0]
+  map_public_ip_on_launch = true
+  provider   = aws.secondary
+
+  tags = {
+    Name = "Secondary-Subnet-${var.secondary}"
+    Environment = var.environment
+  }
   
 }
