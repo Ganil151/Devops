@@ -1,1 +1,1 @@
-data 
+data "aws_ava"
