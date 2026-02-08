@@ -187,7 +187,8 @@ resource "aws_security_group" "primary_sg" {
     description = "All traffic from Secondary VPC"
     from_port   = 0
     to_port     = 0
-
+    protocol    = ""
+    cidr_blocks = [var.secondary_vpc_cidr]
   }
 
 
