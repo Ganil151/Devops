@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "03-advanced/02-phase-2/01-part-1-the-blueprint/04-infrastructure-types-and-patterns",
     "09-Resources/05-Cloud-Metadata/infrastructure-design-patterns.md",
     "09-Resources/05-Cloud-Metadata",
     "09-Resources",
@@ -276,7 +277,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/readme.md",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
