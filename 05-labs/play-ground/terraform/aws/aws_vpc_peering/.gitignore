@@ -38,6 +38,7 @@ override.tf.json
 terraform.rc
 
 # Aws Keys
+*.pem
 .pem
 
 # End of https://www.toptal.com/developers/gitignore/api/terraform
