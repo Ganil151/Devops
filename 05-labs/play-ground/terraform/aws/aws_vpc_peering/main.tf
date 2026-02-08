@@ -143,7 +143,7 @@ resource "aws_route" "secondary_to_primary" {
   route_table_id = aws_route_table.secondary_route_table.id
   destination_cidr_block = aws_vpc.primary_vpc.cidr_block
   vpc_peering_connection_id = aws_vpc_peering_connection.secondary_to_primary.id
-  depends_on = [  ]
+  depends_on = [ aws ]
 }
 
 
