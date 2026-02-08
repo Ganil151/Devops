@@ -29,5 +29,6 @@ resource "aws_subnet" "primary_subnet" {
 
   tags = {
     Name = "Primary-Subnet-${var.primary}"
+    
   }
 } 
