@@ -26,27 +26,82 @@ The system is composed of several independent microservices, each with a specifi
 ## 📂 Project Structure
 ```text
 .
-├── checklist/                  # Operational Readiness Checklists
-│   └── LAUNCH_CHECKLIST.md     # Production release requirements
-├── terraform/                  # Enterprise IaC (Multi-environment)
-│   ├── environments/           # Dev/Prod root modules
-│   └── modules/                # Reusable LEGO-style modules
-├── helm/                       # K8s manifests and deployment charts
-├── scripts/                    # Automation and utility scripts
-├── CICD_IMPLEMENTATION.md      # Detailed Pipeline Guide
-└── README.md                   # You are here
+├── checklist/                     # Operational Readiness Checklists
+│   └── LAUNCH_CHECKLIST.md        # Production release requirements
+├── terraform/                     # Enterprise IaC (Modular Architecture)
+│   ├── environments/              # Environment-specific configurations
+│   │   ├── dev/                   # Development (2 AZs, cost-optimized)
+│   │   ├── staging/               # Pre-production testing
+│   │   └── prod/                  # Production (3 AZs, HA)
+│   ├── modules/                   # Reusable infrastructure components
+│   │   ├── networking/            # VPC, Subnets, NAT, IGW
+│   │   ├── eks/                   # Kubernetes cluster
+│   │   ├── rds/                   # MySQL database
+│   │   ├── ecr/                   # Container registries
+│   │   ├── secrets/               # Secrets Manager
+│   │   ├── monitoring/            # CloudWatch logs
+│   │   └── alb/                   # Load balancer config
+│   ├── shared/                    # Shared configurations
+│   ├── scripts/                   # Automation helpers
+│   └── README.md                  # Infrastructure documentation
+├── helm/                          # K8s manifests and deployment charts
+├── scripts/                       # Automation and utility scripts
+├── cicd-implementation.md         # Detailed Pipeline Guide
+└── README.md                      # You are here
 ```
 
 ## 🛠️ Getting Started
-To begin deploying or contributing to this showcase, please follow these steps:
 
-1. **Infrastructure Provisioning**:
-   - Navigate to `terraform/environments/dev`.
-   - Run `terraform init` and `terraform apply`.
-2. **Pipeline Setup**:
+### Prerequisites
+- Terraform >= 1.5.0
+- AWS CLI configured with credentials
+- kubectl >= 1.29
+- Docker (for building images)
+
+### Quick Start
+
+1. **Infrastructure Provisioning** (Using Helper Scripts):
+   ```bash
+   cd terraform
+   
+   # Initialize environment
+   ./scripts/init.sh dev
+   
+   # Review infrastructure plan
+   ./scripts/plan.sh dev
+   
+   # Deploy infrastructure
+   ./scripts/apply.sh dev
+   ```
+
+2. **Configure Kubernetes Access**:
+   ```bash
+   aws eks update-kubeconfig --region us-east-1 --name dev-petclinic-cluster
+   kubectl get nodes
+   ```
+
+3. **Pipeline Setup**:
    - Refer to the [CI/CD Implementation Guide](./cicd-implementation.md) for Jenkins configuration.
-3. **Validation**:
-   - Use the [Launch Checklist](./checklist/launch-checklist.md) to verify your environment status.
+
+4. **Validation**:
+   - Use the [Launch Checklist](./checklist/launch-checklist.md) to verify environment status.
+   - Review the [Infrastructure Runbook](./terraform/RUNBOOK_AWS_DEPLOY.md) for detailed deployment steps.
+
+### Environment-Specific Deployment
+
+Deploy to different environments using the same pattern:
+
+```bash
+# Staging
+./scripts/init.sh staging
+./scripts/plan.sh staging
+./scripts/apply.sh staging
+
+# Production (requires confirmation)
+./scripts/init.sh prod
+./scripts/plan.sh prod
+./scripts/apply.sh prod
+```
 
 ## ⚖️ Governance & Standards
 This project follows strictly enforced standards for:
