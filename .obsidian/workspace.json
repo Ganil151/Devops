@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/07-app-tier-subnet.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/06-database-subnet.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/05-multi-az-subnets.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/04-isolated-subnet.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/03-private-subnet.tf",
@@ -250,8 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ec2_instance",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/readme.md",
