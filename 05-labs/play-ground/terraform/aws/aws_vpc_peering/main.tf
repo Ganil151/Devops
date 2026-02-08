@@ -5,6 +5,6 @@ resource "aws_vpc" "primary_vpc" {
   enable_dns_support = true
 
   tags = {
-    Name = "PrimaryVPC"
+    Name = "Primary-VPC"
   }
 }
