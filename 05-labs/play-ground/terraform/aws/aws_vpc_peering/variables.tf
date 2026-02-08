@@ -17,3 +17,7 @@ variable "secondary" {
 variable "primary_vpc_cidr" {
   default = "10.0.0.0/16"
 }
+
+variable "secondary_vpc" {
+  
+}
