@@ -34,4 +34,6 @@ variable "primary_key_name" {
   default = "vpc-peering-demo.pem"
 }
 
-
+variable "secondary_key_name" {
+  default = "vpc-peering-demo.pem"
+}
