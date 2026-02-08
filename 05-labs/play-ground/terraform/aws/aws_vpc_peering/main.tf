@@ -200,7 +200,7 @@ resource "aws_security_group" "primary_sg" {
   }
 
   tags = {
-    Name        = "Primary-Security-Group-${var.primary}"
+    Name        = "Primary-${var.primary}"
     Environment = var.environment
   }
 
