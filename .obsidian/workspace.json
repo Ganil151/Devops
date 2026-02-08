@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/08-anomaly-detection.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/07-log-subscription.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/06-synthetics-canary.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/05-composite-alarm.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudwatch/04-dashboard.tf",
@@ -251,8 +253,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/20-minimalist-ecs.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/19-graviton-tasks.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/18-ecs-exec-enabled.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/ecs/17-windows-containers.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/messaging/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/readme.md",
