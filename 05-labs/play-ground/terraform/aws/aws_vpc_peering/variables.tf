@@ -31,6 +31,6 @@ variable "secondary_subnet_cidr" {
 }
 
 variable "key_name" {
-  default = 
+  default = ""
 }
 
