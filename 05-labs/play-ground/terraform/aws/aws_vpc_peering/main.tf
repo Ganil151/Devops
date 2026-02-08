@@ -100,3 +100,4 @@ resource "aws_route_table_association" "primary_rtb" {
   provider       = aws.primary
   
 }
+
