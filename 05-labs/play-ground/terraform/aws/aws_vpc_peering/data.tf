@@ -9,4 +9,5 @@ data "aws_availability_zones" "secondary" {
 }
 
 data "aws_ami" "primary_ami" {
+  provider = aws.primary
 }
