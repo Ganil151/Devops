@@ -205,4 +205,6 @@ resource "aws_security_group" "primary_sg" {
   }
 }
 
-
+resource "aws_securi" "name" {
+  
+}
