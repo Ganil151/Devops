@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/observability/distributed-tracing-lab.md",
+    "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/observability",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/vpc-peering-demo-west.pem",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/vpc-peering-demo.pem",
     "03-advanced/readme.md",
@@ -254,8 +256,6 @@
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/variables.tf",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/providers.tf",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/output.tf",
-    "05-labs/play-ground/terraform/aws/aws_vpc_peering/main.tf",
-    "05-labs/play-ground/terraform/aws/aws_vpc_peering/local.tf",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/00-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/04-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
