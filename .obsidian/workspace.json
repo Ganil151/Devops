@@ -35,14 +35,24 @@
             "id": "4f5e8581f8e9c25a",
             "type": "leaf",
             "state": {
-              "type": "webviewer",
+              "type": "markdown",
               "state": {
-                "url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs",
-                "title": "Terraform Registry",
-                "mode": "webview"
+                "file": "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "globe-2",
-              "title": "Terraform Registry"
+              "icon": "lucide-file",
+              "title": "RUNBOOK_AWS_DEPLOY"
             }
           }
         ],
@@ -231,6 +241,11 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/db_setup.yml",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/inventory.ini",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/ansible.cfg",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/backend.conf",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/install_tools.yml",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/secrets-management-ref.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/readme.md",
@@ -261,15 +276,10 @@
     "04-projects-showcase/04-kubernetes-orchestration/Infrastructure-Refactored",
     "TERRAFORM-STATE-CORRUPTION-RECOVERY-GUIDE.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/00-reference-and-metadata/immutable-infrastructure-governance-ref.md",
-    "03-advanced/02-phase-2/01-part-1-the-blueprint/02-platform-engineering/01-backstage-idp/challenge-solutions.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/02-microservices-architecture/assets/microservices_vs_monolith_comparison.png.txt",
-    "security",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
-    "09-resources/00-cheatsheets/generate_library.sh",
-    "centralize_cheatsheets.py",
-    "09-resources/00-cheatsheets/aws",
     "09-resources/04-images/screenshot-99.png",
     "09-resources/04-images/screenshot-98.png",
     "09-resources/04-images/screenshot-97.png",

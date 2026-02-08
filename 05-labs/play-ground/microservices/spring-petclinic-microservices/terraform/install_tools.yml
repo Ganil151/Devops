@@ -1,0 +1,171 @@
+---
+- name: Install CI/CD Toolchain (Jenkins, SonarQube, Docker, Maven)
+  hosts: all
+  become: yes
+  vars:
+    # Versions
+    java_version: '17'
+    sonarqube_version: '9.9.1.69595'
+    sonarqube_zip_url: 'https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-{{ sonarqube_version }}.zip'
+
+    # SonarQube Config
+    sonar_user: 'sonarqube'
+    sonar_group: 'sonarqube'
+    sonar_install_dir: '/opt/sonarqube'
+
+  tasks:
+    # ---------------------------------------------------------
+    # 1. System Prep & Basic Utilities
+    # ---------------------------------------------------------
+    - name: Update system packages (Amazon Linux/RHEL)
+      dnf:
+        update_cache: yes
+        name: '*'
+        state: latest
+      when: ansible_os_family == "RedHat"
+
+    - name: Update system packages (Ubuntu/Debian)
+      apt:
+        update_cache: yes
+        upgrade: dist
+      when: ansible_os_family == "Debian"
+
+    - name: Install Essential Tools
+      package:
+        name:
+          - git
+          - wget
+          - unzip
+          - curl
+          - maven
+        state: present
+
+    # ---------------------------------------------------------
+    # 2. Java Installation (Required for Jenkins & SonarQube)
+    # ---------------------------------------------------------
+    - name: Install Java 17 (Amazon Linux)
+      dnf:
+        name: java-17-amazon-corretto-devel
+        state: present
+      when: ansible_distribution == "Amazon"
+
+    - name: Install Java 17 (Ubuntu/Debian)
+      apt:
+        name: openjdk-17-jdk
+        state: present
+      when: ansible_os_family == "Debian"
+
+    # ---------------------------------------------------------
+    # 3. Jenkins Installation
+    # ---------------------------------------------------------
+    - name: Setup Jenkins Repo (Amazon Linux/RHEL)
+      block:
+        - name: Download Jenkins Repo
+          get_url:
+            url: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+            dest: /etc/yum.repos.d/jenkins.repo
+        - name: Import Jenkins Key
+          rpm_key:
+            state: present
+            key: https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+        - name: Install Jenkins
+          dnf:
+            name: jenkins
+            state: present
+      when: ansible_os_family == "RedHat"
+
+    - name: Setup Jenkins Repo (Ubuntu/Debian)
+      block:
+        - name: Download Jenkins Key
+          get_url:
+            url: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+            dest: /usr/share/keyrings/jenkins-keyring.asc
+        - name: Add Jenkins Repo
+          apt_repository:
+            repo: 'deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/'
+            state: present
+        - name: Install Jenkins
+          apt:
+            name: jenkins
+            state: present
+      when: ansible_os_family == "Debian"
+
+    - name: Start and Enable Jenkins
+      service:
+        name: jenkins
+        state: started
+        enabled: yes
+
+    # ---------------------------------------------------------
+    # 4. Docker Installation (For Building Images)
+    # ---------------------------------------------------------
+    - name: Install Docker
+      package:
+        name: docker
+        state: present
+
+    - name: Start and Enable Docker
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Add Jenkins user to Docker group
+      user:
+        name: jenkins
+        groups: docker
+        append: yes
+      notify: Restart Jenkins
+
+    # ---------------------------------------------------------
+    # 5. SonarQube Installation
+    # ---------------------------------------------------------
+    - name: Create SonarQube User
+      user:
+        name: '{{ sonar_user }}'
+        home: /opt/sonarqube
+        shell: /bin/bash
+
+    - name: Download and Unzip SonarQube
+      unarchive:
+        src: '{{ sonarqube_zip_url }}'
+        dest: /opt/
+        remote_src: yes
+        creates: '/opt/sonarqube-{{ sonarqube_version }}'
+
+    - name: Create Symlink and Set Permissions
+      file:
+        src: '/opt/sonarqube-{{ sonarqube_version }}'
+        dest: '{{ sonar_install_dir }}'
+        state: link
+        owner: '{{ sonar_user }}'
+        group: '{{ sonar_group }}'
+
+    - name: Configure Sysctl (Elasticsearch requirement)
+      sysctl:
+        name: vm.max_map_count
+        value: '262144'
+        state: present
+        reload: yes
+
+  handlers:
+    - name: Restart Jenkins
+      service:
+        name: jenkins
+        state: restarted
+        group: '{{ sonar_group }}'
+        owner: "{{ sonar_user }}"
+        group: "{{ sonar_group }}"
+
+    - name: Configure Sysctl (Elasticsearch requirement)
+      sysctl:
+        name: vm.max_map_count
+        value: '262144'
+        state: present
+        reload: yes
+
+  handlers:
+    - name: Restart Jenkins
+      service:
+        name: jenkins
+        state: restarted
