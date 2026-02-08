@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/11-option-group.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/10-parameter-group.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/09-enhanced-monitoring.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/08-performance-insights.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/07-storage-autoscaling.tf",
@@ -251,8 +253,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/02-postgres-instance.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/rds/01-basic-mysql.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/readme.md",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/20-minimalist-rt.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/route_table/19-prefix-list-rt.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/s3_bucket/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
