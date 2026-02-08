@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "03-advanced/02-phase-2/01-part-1-the-blueprint/04-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/04-infrastructure-types-and-patterns",
     "09-Resources/05-Cloud-Metadata/infrastructure-design-patterns.md",
     "09-Resources/05-Cloud-Metadata",
@@ -256,7 +257,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/vpcs/19-cross-account-vpc.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/vpcs/18-egress-only-vpc.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/vpcs/17-ha-vpc.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/vpcs/16-ipv6-vpc.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/subnet/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/security_groups/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/aws/s3_bucket/readme.md",
