@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/20-minimalist-cf.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/19-managed-cache-policy.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/18-continuous-deployment.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/17-field-level-encryption.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/16-real-time-logs.tf",
@@ -250,8 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/12-geo-restriction.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/11-signed-urls.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/10-cloudfront-functions.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/09-lambda-edge.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/cloudfront/08-waf-integration.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/dynamodb/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/eks/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/load_balancer/readme.md",
