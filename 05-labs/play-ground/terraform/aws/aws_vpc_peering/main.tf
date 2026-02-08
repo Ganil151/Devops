@@ -255,4 +255,5 @@ resource "aws_instance" "primary_instance" {
   ami = data.aws_ami.primary_ami.id
   subnet_id = aws_subnet.primary_subnet.id
   vpc_security_group_ids = [aws_security_group.primary_sg.id]
+  
 }
