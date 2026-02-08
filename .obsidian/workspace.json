@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/terraform/aws/aws_vpc_peering/vpc-peering-demo-west.pem",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/vpc-peering-demo.pem",
     "03-advanced/readme.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/07-enterprise-patterns/labs/aws-governance-scp-lab.md",
@@ -255,7 +256,6 @@
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/output.tf",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/main.tf",
     "05-labs/play-ground/terraform/aws/aws_vpc_peering/local.tf",
-    "05-labs/play-ground/terraform/aws/aws_vpc_peering/backend.tf",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/00-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
     "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/04-infrastructure-types-and-patterns/infrastructure-design-patterns.md",
