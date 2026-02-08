@@ -114,6 +114,7 @@ resource "aws_vpc_peering_connection" "primary_to_secondary" {
   peer_vpc_id = aws_vp.id
   peer_region = var.secondary
   auto_accept = false
+  
   tags = {
     Name = "Primary-to-Secondary"
   } 
