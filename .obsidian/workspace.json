@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/17-reserved-spare-subnet.tf",
+    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/16-dual-stack-subnet.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/15-ipv6-only-subnet.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/14-outpost-subnet.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/13-vpn-traffic-subnet.tf",
@@ -250,8 +252,6 @@
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/09-management-subnet.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/08-web-tier-subnet.tf",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/07-app-tier-subnet.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/06-database-subnet.tf",
-    "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/subnet/05-multi-az-subnets.tf",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/security_groups/readme.md",
     "04-projects-showcase/02-iac-infrastructure-provisioning/terraform/parts/vpcs/readme.md",
