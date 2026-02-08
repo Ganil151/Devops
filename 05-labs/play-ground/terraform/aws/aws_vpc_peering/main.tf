@@ -131,5 +131,10 @@ resource "aws_vpc_peering_connection" "secondary_to_primary" {
     Name = "Secondary-to-Primary"
   } 
 } 
-resource "aws_route" "pr"
+resource "aws_route" "primary_to_secondary" {
+  provider = aws.primary
+  route_table_id = aws_route_table.primary_route_table.id
+  destination_cidr_block = aws_vpc.secondary_vpc.cidr_block
+  vpc_peering_connection_id = aws_vpc_peering_connection.primary_to_secondary.id
+}
 
