@@ -22,7 +22,6 @@ When an interviewer says "Draw a scalable API," they are testing your ability to
 2. **The Compute**: Deploy an **EKS Cluster** with **Horizontal Pod Autoscaling (HPA)**.
 3. **The Database**: Use **Amazon Aurora Global Database** for sub-second latency across regions.
 4. **The Network**: Use **Route 53 Geolocation Routing** to send users to the nearest AWS Region.
-
 ### 🗝️ The "Interviewer's Secret" (The Twist)
 **"What happens if one whole AWS Region goes down?"**
 - **Senior Answer:** "My Route 53 health checks will automatically failover to the secondary region. Because I'm using Aurora Global, the secondary cluster is promoted to 'Writer' in under a minute (Low RTO/RPO)."
