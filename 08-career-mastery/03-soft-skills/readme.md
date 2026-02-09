@@ -50,8 +50,27 @@ DevOps sits between Devs and Ops.
 *   **For Developers:** We build tools to make their lives easier, not to block them with bureaucracy.
 *   **For Users:** We treat uptime as a feature because downtime hurts their business/life.
 
-### Summary Checklist for Soft Skills
+## 5. Managing Up: Tech Debt vs. Features
+As you grow, you will often find yourself in a tug-of-war with Product Managers (PMs) who want new features, while you know the system needs stability (Tech Debt).
+
+### 💬 The "Staff Level" Script
+Don't say: "We can't do that; the codebase is a mess."
+Say: "If we implement [Feature X] without addressing the [Tech Debt Y], we increase the data-loss risk by **20%** and will likely see **3 hours** of additional downtime per month. I recommend a '70/30' sprint where we spend 30% of our capacity on stabilizing the database so the feature can scale securely."
+
+**Key Logic:**
+- **Translate** technical pain into **Business Risk**.
+- **Quantify** the cost of ignoring the problem (Downtime = Lost Revenue).
+- **Propose a Compromise**, don't just say "No."
+
+---
+
+## 🏁 Summary Checklist for Soft Skills
 - [ ] Do I communicate clearly in tickets/chats?
 - [ ] Do I assume positive intent (Collaborative Spirit)?
 - [ ] Is my documentation helpful to strangers?
 - [ ] Do I focus on fixing systems, not blaming people?
+- [ ] Can I translate technical risk into business impact?
+
+---
+
+*This guide is part of the 08-career-mastery module.*
