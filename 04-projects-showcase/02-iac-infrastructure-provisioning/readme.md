@@ -1,44 +1,36 @@
 # Project: Infrastructure as Code (IaC) - Provisioning
 
-**Grade:** production-Ready | **Primary Tool:** Terraform | **Provider:** AWS
+**Grade:** Production-Ready | **Primary Tool:** Terraform | **Provider:** AWS
+
+---
 
 ## 🌟 Overview
-This project showcases a professional approach to Infrastructure as Code (IaC). It isn't just a collection of scripts, but a **Comprehensive Architectural Library** of over **300+ patterns** designed for high availability, security, and scalability on AWS.
+This project showcases a professional approach to Infrastructure as Code (IaC). It is designed as a **Comprehensive Architectural Library** focusing on high availability, security, and scalability on AWS. 
 
-The project is structured to transition from "Atomic Components" (building individual parts) to "Production Blueprints" (fully integrated stacks).
+This repository demonstrates the transition from **Atomic Components** (building blocks) to **Production Blueprints** (fully integrated stacks).
 
 ## 🚀 Key Achievements
-- **Architectural Patterns Library:** 300+ decoupled Terraform modules covering Networking, Compute, Database, Containers, Messaging, and Monitoring.
-- **SRE-Grade Configuration:** Every module follows the **Well-Architected Framework**, including encryption-at-rest, multi-AZ reliability, and principle of least privilege.
-- **Enterprise Patterns:** Implementations for complex scenarios like Transit Gateways, EKS with IRSA, RDS Aurora Clusters, and Global DynamoDB Tables.
+- **Standardized Patterns Library:** Detailed implementations for Networking, Compute (EKS/ECS), Database (RDS/DynamoDB), and Monitoring.
+- **SRE-Grade Configuration:** Every module follows the **AWS Well-Architected Framework**, including encryption-at-rest, multi-AZ reliability, and the principle of least privilege.
+- **Advanced Networking:** Implementations for complex scenarios like Transit Gateways, Shared VPCs, and Zero-Trust private connectivity.
 
-## 📂 Project Structure
-```bash
-.
-├── terraform/
-│   ├── parts/            # The Patterns Library (300+ examples)
-│   │   ├── vpcs/         # 20 VPC design patterns
-│   │   ├── eks/          # Cluster & Node Group patterns
-│   │   ├── security_groups/
-│   │   └── ... (16 categories total)
-│   └── architecture/     # (In Progress) Full-stack blueprints
-└── documentation/        # Best practices and deep-dives
-```
+## 📂 Mapping the Infrastructure
+The actual IaC assets are organized across the following global hubs:
 
-## 🛠️ Technology Stack
-- **Terraform:** HCL for declarative resource management.
-- **AWS Provider:** Leveraging the latest resources (OAC, Transit Gateways, etc.).
-- **Remote State:** (Planned) S3 + DynamoDB for state locking and shared truth.
+### 1. [The Boilerplate Vault](../../07-boilerplates/02-intermediate/terraform/reference.md)
+*   **The Patterns Library**: Contains 300+ reusable HCL snippets.
+*   **Categories**: VPCs (20+ styles), EKS Clusters, RDS Aurora, and security hardening.
+
+### 2. [Live Architecture](../../03-advanced/04-capstone/terraform/readme.md)
+*   **Full-Stack Blueprints**: Real-world integration of the atomic parts into a repeatable environment.
+
+### 3. [Engineering Challenges](./challenges.md)
+*   **Knowledge Checks**: 10+ Scenario-based challenges to test IaC and SRE logic.
 
 ## 🛡️ Security Pillars
-1. **Zero Trust Integration:** Security Groups are strictly scoped to minimal ports/CIDRs.
-2. **Data Sovereignty:** Mandatory encryption-at-rest for S3, RDS, DynamoDB, and EBS.
-3. **Visibility:** Integrated CloudWatch logging (awslogs) and metric filters for anomaly detection.
-
-## 🏁 How to Use
-1. **Explore the Library:** Navigate to `terraform/parts/` to find specific resource patterns.
-2. **Review Best Practices:** Every service category contains a `readme.md` with operational guidance.
-3. **Draft Blueprints:** Combine patterns from the library to build your environment.
+1.  **Zero Trust Integration**: Security Groups are strictly scoped to minimal ports/CIDRs; using OAC for CloudFront/S3 isolation.
+2.  **Data Sovereignty**: Mandatory encryption-at-rest (KMS) for all storage layers (S3, RDS, DynamoDB).
+3.  **State Safety**: Remote state locking via S3 + DynamoDB to prevent race conditions in team environments.
 
 ---
 *This repository is part of the DevOps Portfolio - Specializing in Automated Infrastructure Provisioning.*
