@@ -20,7 +20,6 @@ A realistic schedule of a Junior DevOps Engineer:
 *   **Morning:** Stand-ups, Ticket triage.
 *   **Mid-Day:** Pipeline fixing, Infrastructure updates, Scripting.
 *   **Afternoon:** Documentation, Learning/Research, Collaborative pairing.
-
 ### Analogy
 > "A Developer builds the car (The App); an Operations Engineer maintains the roads (The Infrastructure); a DevOps Engineer builds the **Automated Assembly Line** (The Pipeline)."
 
