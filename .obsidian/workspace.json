@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06-quizzes/03-advanced/05-cicd-observability-sre.md",
+                "file": "06-quizzes/standard_quiz_template.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "05-cicd-observability-sre"
+              "title": "standard_quiz_template"
             }
           }
         ],
@@ -113,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -240,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "06-quizzes/03-advanced/05-cicd-observability-sre.md",
     "06-quizzes/03-advanced/MOCK_INTERVIEW_GUIDE.md",
     "06-quizzes/03-advanced/readme.md",
     "06-quizzes/02-intermediate/03-iac-terraform-ansible.md",
@@ -275,7 +277,6 @@
     "07-boilerplates/02-intermediate/terraform/parts/aws/s3_bucket/readme.md",
     "07-boilerplates/02-intermediate/terraform/parts/aws/route_table/readme.md",
     "07-boilerplates/02-intermediate/terraform/parts/aws/rds/readme.md",
-    "07-boilerplates/02-intermediate/terraform/parts/aws/messaging/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
