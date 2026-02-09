@@ -1,4 +1,4 @@
-# ☸️ Technical Deep Dive: Kubernetes (K8s) Interview Mastery
+# ☸️ Technical Deep Dive: Kubernetes (K8's) Interview Mastery
 
 Master the orchestration questions that separate a "kubectl explorer" from a Platform Engineer.
 
