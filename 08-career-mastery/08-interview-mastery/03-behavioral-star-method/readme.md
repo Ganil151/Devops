@@ -11,7 +11,6 @@ In DevOps, technical skills get you the interview, but behavioral skills get you
 - **R**esult: What was the outcome? (Use numbers/percentages).
 
 ---
-
 ## 🚀 Common DevOps Scenarios
 
 ### 1. "Tell me about a time you broke production."
