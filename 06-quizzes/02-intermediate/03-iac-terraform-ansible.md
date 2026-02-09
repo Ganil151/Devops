@@ -1,4 +1,4 @@
-# 03 IaC: Terraform & Ansible Mastery
+# IaC: Terraform & Ansible Mastery
 
 Standardizing infrastructure through code and configuration management.
 
