@@ -5,37 +5,37 @@ This matrix is tailored to the actual assets, challenges, and deep-dives current
 ---
 ## 🟢 Tier 1: Foundations (100% Repository Coverage)
 
-| Skill | Status | Deliverable |
-| :--- | :--- | :--- |
-| **Linux Administration** | ✅ Done | [Lab Manuals](readme.md) |
-| **Networking 101** | ✅ Done | [Architecture Guides](readme.md) |
-| **Python Logic** | ✅ Done | [Script Library](readme.md) |
-| **Docker & Containers** | ✅ Done | [Foundation Challenges](readme.md) |
+| Skill | Status | Deliverable | Market Alignment |
+| :--- | :--- | :--- | :--- |
+| **Linux Administration** | ✅ Done | [Lab Manuals](readme.md) | Junior System Admins |
+| **Networking 101** | ✅ Done | [Architecture Guides](readme.md) | Network Engineers / Cloud Ops |
+| **Python Logic** | ✅ Done | [Script Library](readme.md) | Automation Engineers |
+| **Docker & Containers** | ✅ Done | [Foundation Challenges](readme.md) | DevOps Engineers |
 
 ---
 
 ## 🟡 Tier 2: Automation & Management (90% Repository Coverage)
 
-| Skill | Status | Deliverable |
-| :--- | :--- | :--- |
-| **Cloud VPC / Networking** | ✅ Done | [VPC Boilerplates](../../02-intermediate/01-phase-1/01-networking/) |
-| **Terraform IaC** | ✅ Done | [Module Gallery](readme.md) |
-| **Ansible Config** | ✅ Done | [Standard Playbooks](readme.md) |
-| **Kubernetes Admin** | ✅ Done | [Cluster Ops Guides](readme.md) |
-| **Enterprise CI/CD** | ✅ Done | [Jenkins Blueprints Master](readme.md) |
-| **FinOps / Cost Mgmt** | ✅ Done | [Modern Ops Quiz](../../06-quizzes/02-intermediate/modern-ops-quiz.md) |
+| Skill | Status | Deliverable | Market Alignment |
+| :--- | :--- | :--- | :--- |
+| **Cloud VPC / Networking** | ✅ Done | [VPC Boilerplates](../../02-intermediate/01-phase-1/01-networking/) | Cloud Infrastructure Architects |
+| **Terraform IaC** | ✅ Done | [Module Gallery](readme.md) | Infrastructure Engineers |
+| **Ansible Config** | ✅ Done | [Standard Playbooks](readme.md) | Configuration Specialists |
+| **Kubernetes Admin** | ✅ Done | [Cluster Ops Guides](readme.md) | Container Platform Engineers |
+| **Enterprise CI/CD** | ✅ Done | [Jenkins Blueprints Master](readme.md) | Release Engineers |
+| **FinOps / Cost Mgmt** | ✅ Done | [Modern Ops Quiz](../../06-quizzes/02-intermediate/modern-ops-quiz.md) | FinOps Analysts / Staff SRE |
 
 ---
 
 ## 🟣 Tier 3: Strategic Excellence (100% Repository Coverage)
 
-| Skill | Status | Deliverable |
-| :--- | :--- | :--- |
-| **Service Mesh (Istio)** | ✅ Done | [Advanced Labs](../../03-advanced/02-phase-2/02-part-2-the-engine/02-service-mesh/01-istio-deep-dive/readme.md) |
-| **GitOps (ArgoCD)** | ✅ Done | [Technical Deep-Dive](../../03-advanced/02-phase-2/02-part-2-the-engine/01-gitops-fleet/argocd/argo-deep-dive.md) |
-| **Platform Eng (Backstage)** | ✅ Done | [IDP Challenges](../../03-advanced/02-phase-2/01-part-1-the-blueprint/02-platform-engineering/01-backstage-idp/readme.md) |
-| **Policy-as-Code** | ✅ Done | [OPA Deep-Dive](../../07-boilerplates/02-intermediate/infracost/infracost-automation-policy-as-code-guardrails-cost-policy.rego) |
-| **Specialized (AI/MLOps)** | ✅ Done | [Advanced Tech Quiz](../../06-quizzes/3-advanced/specialized-tech-quiz.md) |
+| Skill | Status | Deliverable | Market Alignment |
+| :--- | :--- | :--- | :--- |
+| **Service Mesh (Istio)** | ✅ Done | [Advanced Labs](../../03-advanced/02-phase-2/02-part-2-the-engine/02-service-mesh/01-istio-deep-dive/readme.md) | Site Reliability Engineers (SRE) |
+| **GitOps (ArgoCD)** | ✅ Done | [Technical Deep-Dive](../../03-advanced/02-phase-2/02-part-2-the-engine/01-gitops-fleet/argocd/argo-deep-dive.md) | Platform Engineers |
+| **Platform Eng (Backstage)** | ✅ Done | [IDP Challenges](../../03-advanced/02-phase-2/01-part-1-the-blueprint/02-platform-engineering/01-backstage-idp/readme.md) | Staff Platform Engineers |
+| **Policy-as-Code** | ✅ Done | [OPA Deep-Dive](../../07-boilerplates/02-intermediate/infracost/infracost-automation-policy-as-code-guardrails-cost-policy.rego) | Compliance / Security Engineers |
+| **Specialized (AI/MLOps)** | ✅ Done | [Advanced Tech Quiz](../../06-quizzes/3-advanced/specialized-tech-quiz.md) | MLOps Engineers |
 
 ---
 
