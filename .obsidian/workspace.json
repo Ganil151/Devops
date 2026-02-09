@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "08-career-mastery/08-interview-mastery/01-technical-deep-dives/terraform.md",
     "08-career-mastery/08-interview-mastery/04-live-coding-challenges",
     "08-career-mastery/08-interview-mastery/03-behavioral-star-method",
     "08-career-mastery/08-interview-mastery/02-scenario-architecture",
@@ -255,7 +256,6 @@
     "07-boilerplates/02-intermediate/terraform/parts/aws/vpcs/20-minimalist-vpc.tf",
     "07-boilerplates/02-intermediate/terraform/parts/aws/vpcs/19-cross-account-vpc.tf",
     "07-boilerplates/02-intermediate/terraform/parts/aws/vpcs/18-egress-only-vpc.tf",
-    "07-boilerplates/02-intermediate/terraform/parts/aws/vpcs/17-ha-vpc.tf",
     "07-boilerplates/02-intermediate/terraform/parts/aws/subnet/readme.md",
     "07-boilerplates/02-intermediate/terraform/parts/aws/security_groups/readme.md",
     "07-boilerplates/02-intermediate/terraform/parts/aws/s3_bucket/readme.md",
