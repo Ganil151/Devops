@@ -26,7 +26,7 @@ Mastering the high-level architecture of scalable, resilient cloud environments.
 
 ### [Intermediate] How does using EC2 Spot Instances affect your application's architecture?
 - [ ] A) It has no effect; Spot instances are just cheaper.
-- [x] B) Your application must be stateless or able to handle a 2-minute interruption notice.
+- [ ] B) Your application must be stateless or able to handle a 2-minute interruption notice.
 - [ ] C) Spot instances always have better performance than On-Demand.
 - [ ] D) You can only use Spot for databases.
 
