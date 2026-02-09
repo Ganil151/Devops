@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06-quizzes/02-intermediate/modern-ops-quiz.md",
+                "file": "06-quizzes/02-intermediate/02-cloud-aws-infrastructure.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "modern-ops-quiz"
+              "title": "02-cloud-aws-infrastructure"
             }
           }
         ],
@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "06-quizzes/02-intermediate/modern-ops-quiz.md",
     "06-quizzes/02-intermediate/readme.md",
     "08-career-mastery/09-salary-negotiation/readme.md",
     "08-career-mastery/09-salary-negotiation",
@@ -276,7 +277,6 @@
     "07-boilerplates/02-intermediate/terraform/parts/aws/eks/readme.md",
     "07-boilerplates/02-intermediate/terraform/parts/aws/ecs/readme.md",
     "07-boilerplates/02-intermediate/terraform/parts/aws/ec2_instance/readme.md",
-    "07-boilerplates/02-intermediate/terraform/parts/aws/dynamodb/readme.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
