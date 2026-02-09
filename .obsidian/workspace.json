@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-labs/play-ground/EXECUTIVE-SUMMARY.md",
+                "file": "05-labs/play-ground/IAC-AUDIT-REPORT.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "EXECUTIVE-SUMMARY"
+              "title": "IAC-AUDIT-REPORT"
             }
           }
         ],
@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/EXECUTIVE-SUMMARY.md",
     "05-labs/play-ground/directory-map.md",
     "05-labs/play-ground/CICD-PIPELINE-EXAMPLE.md",
     "04-projects-showcase/03-ci-cd-pipeline-automation/source-code/image/screenshot-195.png",
@@ -274,7 +275,6 @@
     "08-career-mastery/08-interview-mastery/03-behavioral-star-method",
     "08-career-mastery/08-interview-mastery/02-scenario-architecture",
     "08-career-mastery/08-interview-mastery/01-technical-deep-dives",
-    "06-quizzes/01-beginner/01-foundations-networking-linux.md",
     "08-career-mastery/07-resume-engineering/Ganil Batist Yan DevOps Engineer Resume.pdf",
     "08-career-mastery/Ganil Batist Yan DevOps Engineer Resume.pdf",
     "07-boilerplates/02-intermediate/terraform/parts/aws/vpcs/21-multi-region-peering.tf",
