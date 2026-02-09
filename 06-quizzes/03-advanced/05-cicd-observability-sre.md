@@ -26,7 +26,7 @@ Closing the loop: building, monitoring, and securing the lifecycle.
 
 ### [Junior] What is the difference between Prometheus and Grafana?
 - [ ] A) Prometheus is for UI, Grafana is for data.
-- [x] B) Prometheus is the time-series database/collector, while Grafana is the visualization layer.
+- [ ] B) Prometheus is the time-series database/collector, while Grafana is the visualization layer.
 - [ ] C) Prometheus only works for Linux, Grafana for Windows.
 - [ ] D) They are the same tool.
 
