@@ -8,6 +8,8 @@ This repository showcases a production-grade, microservices-based deployment of 
 ## 🏗️ Architecture Overview
 The system is composed of several independent microservices, each with a specific domain responsibility, communicating over a high-performance network foundation.
 
+![Architecture Diagram](./images/architecture_diagram.png)
+
 - **API Gateway**: Entry point for all client requests, handling routing and security.
 - **Config Server**: Centralized configuration management using Git.
 - **Discovery Server**: Service registry (Netflix Eureka/Spring Cloud Discovery).

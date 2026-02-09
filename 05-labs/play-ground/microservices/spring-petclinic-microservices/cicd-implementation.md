@@ -4,6 +4,7 @@
 This guide defines the production-grade CI/CD pipeline for the **Spring PetClinic Microservices** architecture using **Jenkins** and **Docker Hub**. We utilize a **Stage-Gate approach** to ensure that only code satisfying all quality, security, and infrastructure requirements reaches the production EKS cluster.
 
 ### 🏗️ The Pipeline Architecture
+![Pipeline Diagram](./images/pipeline_diagram.png)
 The pipeline follows a strict unidirectional flow:
 `Source` → `Build & Artifact` → `Quality & Security` → `Infrastructure Sync` → `Orchestrated Deployment`
 
