@@ -1,34 +1,30 @@
-# 👔 Part 05: Interview Mastery (Technical & Behavioral)
+# 👔 Interview Mastery: The Senior Hiring Manager's Blueprint
 
-Mastering the interview is about storytelling. You need to prove you have both the "Hard Skills" to build and the "Soft Skills" to collaborate.
-
----
-## 🏗️ The STAR Method (Behavioral)
-For every "Tell me about a time..." question, use:
--   **S**ituation: Set the scene.
--   **T**ask: What was the goal?
--   **A**ction: What **did you do**? (Be specific).
--   **R**esult: What was the impact? (Use numbers).
----
-## 🎭 Practice Resources
-- 👉 **[The Mock Interview Script (Staff Level)](./mock-interview-script.md)**: A comprehensive guide for technical and behavioral benchmarking.
-- 👉 **[Hiring Logic & Strategies](./hiring-logic.md)**: Understanding what managers look for in a Junior candidate.
+Mastering the DevOps interview is about moving from "I know how to use this tool" to "I know how this tool solves high-scale business problems."
 
 ---
 
-## 👔 Interview Preparation (Mastery)
-
-1.  **Q: Tell me about a major production outage you handled.**
-    -   *A: Use STAR. Focus on your investigation process (logs/metrics), how you restored service (rollback/fix), and the blameless post-mortem you led.*
-2.  **Q: How do you handle a difference of opinion with a senior developer?**
-    -   *A: Focus on data and technical consensus. Present the trade-offs of both approaches and align on the decision that best serves system stability.*
-3.  **Q: What is your process for learning a new technology?**
-    -   *A: Discuss building "Proof of Concepts" (PoCs), reading documentation, and contributing to open-source or internal wikis.*
-4.  **Q: Explain a complex technical concept (like mTLS) to a manager.**
-    -   *A: Use analogies. "mTLS is like having a secret handshake where both parties must prove who they are before they start talking."*
-5.  **Q: How do you prioritize your tasks when everything is "Urgent"?**
-    -   *A: Use the Eisenhower Matrix or follow "Customer Impact" first. Focus on tasks that stabilize the environment or unblock the most people.*
+## 📂 Mastery Modules
+- ⏱️ **[00-MOCK-INTERVIEW-SCRIPTS.md](./00-MOCK-INTERVIEW-SCRIPTS.md)**: 30-minute timed simulations for different roles.
+- 🏗️ **[01-Technical Deep Dives](./01-technical-deep-dives/)**: Deep dives into K8s, Terraform, and AWS with "Interviewer's Secrets."
+- 🖼️ **[02-Scenario Architecture](./02-scenario-architecture/)**: Whiteboard designs for HA, scaling, and compliance.
+- 🎭 **[03-Behavioral STAR Method](./03-behavioral-star-method/)**: Storytelling framework for soft-skills and incident response.
+- 💻 **[04-Live Coding Challenges](./04-live-coding-challenges/)**: Python and Bash scripts commonly asked in screenings.
 
 ---
 
-**Technical Scenarios**: [06-Quizzes/01-Beginner/Networking-Scenarios.md](../../06-quizzes/01-beginner/networking-scenarios.md)
+## 🔍 The Hiring Manager's Logic
+Before every interview, remember the **Three Pillars of DevOps Hiring**:
+1. **The Builder**: Can you code and configure?
+2. **The SRE**: Do you prioritize stability, monitoring, and "Day 2" operations?
+3. **The Collaborator**: Can you explain technical complexity to a non-technical stakeholder?
+
+---
+
+## 🏆 Career Level Rubric
+- **Junior**: Focus on the "Pipes" (Networking, Linux, basic scripts).
+- **Intermediate**: Focus on the "Orchestration" (K8s, Terraform, Multi-service CI/CD).
+- **Senior/Staff**: Focus on the "Architecture & Strategy" (Disaster Recovery, FinOps, Mentorship).
+
+---
+*This module consolidates all interview intelligence from the curriculum into a single, high-impact career launchpad.*
