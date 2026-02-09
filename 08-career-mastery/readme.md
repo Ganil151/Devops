@@ -64,6 +64,13 @@ Welcome to the **Command Center** for your professional DevOps journey. This mod
 - The **STAR Method** for SRE/DevOps scenarios.
 - Hiring Logic & Whiteboard Strategies.
 
+### 💰 [09. Salary Negotiation & Job Search](./09-salary-negotiation/readme.md)
+
+*Earn What You Are Worth.*
+
+- Market Benchmarking & Total Compensation (TC) logic.
+- Negotiation scripts and the "Operational Value" argument.
+
 ---
 
 ## 🎯 Outcomes
