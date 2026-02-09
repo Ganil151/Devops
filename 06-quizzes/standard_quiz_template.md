@@ -5,7 +5,7 @@
 
 - [ ] A) It uses the Pod's IP address hardcoded in the YAML.
 - [ ] B) It automatically detects all Pods in the same namespace.
-- [x] C) It uses Label Selectors `spec.selector` to match Pod labels `metadata.labels`.
+- [ ] C) It uses Label Selectors `spec.selector` to match Pod labels `metadata.labels`.
 - [ ] D) It uses the Deployment name.
 
 <details>
