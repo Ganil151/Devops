@@ -435,7 +435,7 @@ Deploy a complete production-ready application with:
 ### Quick Access Guides
 
 - [IaC Audit Report](./IAC-AUDIT-REPORT.md)
-- [Terraform Module Template](./TERRAFORM-MODULE-README-TEMPLATE.md)
+- [Terraform Module Template](TERRAFORM-MODULE-README-TEMPLATE.md)
 - [State Corruption Recovery](./TERRAFORM-STATE-CORRUPTION-RECOVERY-GUIDE.md)
 - [CI/CD Pipeline Examples](./CICD-PIPELINE-EXAMPLE.md)
 - [Executive Summary](./EXECUTIVE-SUMMARY.md)
