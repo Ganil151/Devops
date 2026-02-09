@@ -17,6 +17,26 @@ This is the flagship project for your professional portfolio. It demonstrates th
 
 ---
 
+## 🚨 Production-Grade Architecture Checklist
+A project isn't "Golden" until it can survive a direct hit in production. Use this checklist to audit your portfolio projects.
+
+### 1. Observability (The Radar)
+- [ ] **Metrics**: Prometheus & Grafana dashboard tracking the "4 Golden Signals" (Latency, Traffic, Errors, Saturation).
+- [ ] **Logging**: Centralized logs (CloudWatch Logs or ELK Stack) with searchable trace IDs.
+- [ ] **Tracing**: Distributed tracing (Jaeger or AWS X-Ray) to visualize microservice hops.
+
+### 2. Guardrails (The Shield)
+- [ ] **IaC Scanning**: Automated checks for security misconfigurations using **Checkov**, **TFSec**, or **Trivy**.
+- [ ] **Secret Management**: ZERO hardcoded secrets. Using AWS Secrets Manager or HashiCorp Vault.
+- [ ] **Policy as Code**: OPA or Sentinel policies enforced in the pipeline to block "Public S3 Buckets."
+
+### 3. Reliability (The Anchor)
+- [ ] **Multi-AZ**: Highly available deployment across at least 3 Availability Zones.
+- [ ] **Auto-Scaling**: Horizontal Pod Autoscaler (HPA) configured for CPU/RAM spikes.
+- [ ] **Health Checks**: Robust Liveness and Readiness probes that actually check the DB connection.
+
+---
+
 ## 🛠️ Implementation Checklist
 
 - [ ] **Infrastructure (Terraform)**:
