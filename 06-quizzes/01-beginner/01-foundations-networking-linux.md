@@ -22,7 +22,7 @@ This module covers the core pillars of the DevOps world: how packets move and ho
 
 ### [Intermediate] Host A (192.168.1.5/24) cannot ping Host B (192.168.1.130/25). Why?
 - [ ] A) The IP addresses are identical.
-- [x] B) Host B is in a separate subnet (192.168.1.128 - 192.168.1.255) and requires a router for communication.
+- [ ] B) Host B is in a separate subnet (192.168.1.128 - 192.168.1.255) and requires a router for communication.
 - [ ] C) MAC addresses are not configured.
 - [ ] D) Pinging is disabled at the Physical Layer (Layer 1).
 
