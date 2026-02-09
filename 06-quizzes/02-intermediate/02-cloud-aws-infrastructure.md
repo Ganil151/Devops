@@ -9,7 +9,7 @@ Mastering the high-level architecture of scalable, resilient cloud environments.
 ### [Junior] What is the difference between an ASG Launch Configuration and a Launch Template?
 - [ ] A) There is no difference; they are interchangeable.
 - [ ] B) Launch Configurations are newer and support more features.
-- [x] C) Launch Templates are the newer version that supports versioning, T2 Unlimited, and Spot fleets.
+- [ ] C) Launch Templates are the newer version that supports versioning, T2 Unlimited, and Spot fleets.
 - [ ] D) Launch Templates only work for S3.
 
 <details>
