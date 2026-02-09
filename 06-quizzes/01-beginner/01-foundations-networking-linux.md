@@ -40,7 +40,7 @@ This module covers the core pillars of the DevOps world: how packets move and ho
 
 ### [Junior] Which command is used to change the owner of a file?
 - [ ] A) `chmod`
-- [x] B) `chown`
+- [ ] B) `chown`
 - [ ] C) `chgrp`
 - [ ] D) `umask`
 
@@ -55,7 +55,7 @@ This module covers the core pillars of the DevOps world: how packets move and ho
 ### [Senior] What does "Inode exhaustion" mean on a Linux filesystem?
 - [ ] A) The RAM is full and the system is swapping.
 - [ ] B) The disk space is 100% full.
-- [x] C) No more files can be created because the filesystem has run out of index nodes, even if free space exists.
+- [ ] C) No more files can be created because the filesystem has run out of index nodes, even if free space exists.
 - [ ] D) The CPU is pegged at 100% due to context switching.
 
 <details>
