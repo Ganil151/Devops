@@ -19,10 +19,18 @@ In DevOps, you aren't just selling your time; you are selling **Risk Reduction**
 
 ## 💵 Phase 2: Salary Negotiation (The Scripts)
 
-### 1. The "Anchor" Rule
-**Never give a number first.** Information is power.
-- **Interviewer:** "What are your salary expectations?"
-- **You:** "I'm more focused on finding the right fit and understanding the full scope of the role. What is the approved budget/range for this position?"
+### 1. The "Anchor" Rule: First HR Screening
+**Never give a number first.** Information is power. The first HR call is where most candidates accidentally disqualify themselves or leave thousands of dollars on the table.
+
+**The Strategy:** Redirect the question back to their budget.
+
+- **Interviewer:** "What are your salary expectations for this role?"
+- **You (The Script):** "I'm really excited about the technical challenges we discussed. As with any role, I'm more focused on finding the right fit and understanding the full scope of the responsibilities first. Could you share what the approved salary range is for this position?"
+- **If they push:** "I've seen a wide range for SRE roles recently, so I’d rather discuss a full package once we see if there’s a match. What is the company's intended budget for this role?"
+
+**Why this works:** It forces them to reveal their "ceiling" (the highest they can pay) before you reveal your "floor" (the lowest you'll take).
+
+---
 
 ### 2. The "Operational Value" Argument
 When they offer a number, negotiate based on the **ROI** (Return on Investment) you bring.
