@@ -1,6 +1,6 @@
 # 📄 Part 02: Resume Engineering & ATS Optimization
 
-Getting your foot in the door requires a resume that speaks the language of both humans and machines (ATS).
+Getting your foot in the door requires a resume that speaks the language of both humans and machines (ATS). In DevOps, your resume is a **Technical Proposal** for why you should be trusted with production.
 
 ---
 
@@ -16,6 +16,22 @@ Use these keywords to pass automated filters:
 
 ---
 
+## 🚀 Quantifying Impact: The SRE Metric Table
+Recruiters skim for numbers. If a bullet point doesn't have a percentage, a dollar amount, or a time-saved metric, it's a "Junior" bullet point.
+
+| Power Verb | The "Junior" Bullet | The "Senior/Staff" Bullet |
+| :--- | :--- | :--- |
+| **Architected** | Built a Kubernetes cluster on AWS. | Architected a Multi-AZ EKS environment reducing infra-provisioning time by **80%** via Terraform modules. |
+| **Optimized** | Fixed some slow Jenkins jobs. | Optimized CI/CD build scripts, decreasing cycle time from 15 mins to **4 mins** and saving **$2k/mo** in compute. |
+| **Mitigated** | Helped during a production outage. | Mitigated a Tier 0 outage by executing a 30-second Helm rollback, reducing **MTTR by 90%** compared to manual fix. |
+| **Engineered** | Wrote scripts to move data to S3. | Engineered an automated data lifecycle policy using Boto3, reducing storage costs by **35%** ($12k annual savings). |
+
+### 🛠️ The Metric Template (Plug & Play)
+- **[Verb] [Task] using [Tool], resulting in [X% improvement/$$ saved/X hours saved].**
+- *Example:* "Automated secret rotation using Lambda and Secrets Manager, eliminating manual overhead of **8 hours/month** and ensuring 100% compliance."
+
+---
+
 ## 👔 Interview Preparation (Resume)
 
 1. **Q: Why should you use "Action Verbs" on your resume?**
@@ -24,16 +40,6 @@ Use these keywords to pass automated filters:
    - *A: Instead of "Built a pipeline," use "Reduced deployment time by 40% and eliminated 90% of manual deployment errors via automated CI/CD."*
 3. **Q: What is the purpose of an "Executive Summary"?**
    - *A: To provide a 3-sentence high-level overview of your expertise (e.g., "SRE with 5 years experience specializing in high-availability Kubernetes at scale").*
-4. **Q: How many pages should a DevOps resume be?**
-   - *A: Ideally 1-2 pages. Focus on quality of experience over quantity of bullet points.*
-5. **Q: Why is "Version Control" for your resume a good idea?**
-   - *A: Maintaining your resume in LaTeX or Markdown in a private Git repo allows you to track iterations and customize it for specific job descriptions easily.*
-
----
-
-## 👔 Part 03: Interview Mastery (Technical & Behavioral)
-
-Mastering the interview is about storytelling. You need to prove you have both the "Hard Skills" to build and the "Soft Skills" to collaborate.
 
 ---
 
@@ -47,19 +53,6 @@ For every "Tell me about a time..." question, use:
 
 ---
 
-## 👔 Interview Preparation (Mastery)
-
-1. **Q: Tell me about a major production outage you handled.**
-   - *A: Use STAR. Focus on your investigation process (logs/metrics), how you restored service (rollback/fix), and the blameless post-mortem you led.*
-1. **Q: How do you handle a difference of opinion with a senior developer?**
-   - *A: Focus on data and technical consensus. Present the trade-offs of both approaches and align on the decision that best serves system stability.*
-3. **Q: What is your process for learning a new technology?**
-   - *A: Discuss building "Proof of Concepts" (PoC's), reading documentation, and contributing to open-source or internal wikis.*
-1. **Q: Explain a complex technical concept (like mTLS) to a manager.**
-   - *A: Use analogies. "mTLS is like having a secret handshake where both parties must prove who they are before they start talking."*
-5. **Q: How do you prioritize your tasks when everything is "Urgent"?**
-   - *A: Use the Eisenhower Matrix or follow "Customer Impact" first. Focus on tasks that stabilize the environment or unblock the most people.*
----
 **Templates**: [devops_resume_template.md](resources/devops-resume-ganil-batist.docx)
 
 **Challenges**: [technical_scenarios.md](../../06-quizzes/01-beginner/networking-scenarios.md)
