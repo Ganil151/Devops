@@ -4,6 +4,16 @@ In architecture interviews, they aren't looking for a perfect diagram. They are 
 
 ---
 
+## 🎨 The Virtual Whiteboard: How to Talk and Draw
+When an interviewer says "Draw a scalable API," they are testing your ability to think out loud. Use this 4-step framework:
+
+1.  **Clarify the Specs**: Ask "How many users?", "Is it read-heavy or write-heavy?", "What is our latency requirement?"
+2.  **Breadth First**: Draw the "Happy Path" first. (Client -> Load Balancer -> Web Server -> DB).
+3.  **Identify the 'Boom'**: Ask yourself "What happens when the DB hits 100% CPU?" or "What happens if a region goes dark?" and add components (Cache, SQS, Multi-Region) to fix it.
+4.  **Cost vs Benefit**: Always explain your trade-offs. (e.g., "I chose DynamoDB over RDS here because we need sub-millisecond scaling and don't need complex SQL joins.")
+
+---
+
 ## 🏗️ Scenario 1: The Global News Portal
 **Prompt:** "Design a highly available web application that can handle 10 million users globally with minimal latency."
 
