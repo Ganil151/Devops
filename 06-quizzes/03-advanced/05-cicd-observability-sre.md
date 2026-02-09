@@ -8,7 +8,7 @@ Closing the loop: building, monitoring, and securing the lifecycle.
 
 ### [Intermediate] In DevSecOps, what does the term "Shift Left" refer to?
 - [ ] A) Moving application logic to the front-end.
-- [x] B) Implementing security testing and audits earlier in the development lifecycle.
+- [ ] B) Implementing security testing and audits earlier in the development lifecycle.
 - [ ] C) Moving servers to a different cloud region.
 - [ ] D) Using only Bash scripts instead of specialized tools.
 
