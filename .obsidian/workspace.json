@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06-quizzes/00-QUIZ-TRACKER.md",
+                "file": "06-quizzes/02-intermediate/03-iac-terraform-ansible.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00-QUIZ-TRACKER"
+              "title": "03-iac-terraform-ansible"
             }
           }
         ],
@@ -240,8 +240,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
-    "06-quizzes/AUDIT_SUMMARY_REPORT.md",
     "06-quizzes/00-QUIZ-TRACKER.md",
+    "06-quizzes/AUDIT_SUMMARY_REPORT.md",
     "06-quizzes/02-intermediate/03-iac-terraform-ansible.md",
     "06-quizzes/02-intermediate/02-cloud-aws-infrastructure.md",
     "06-quizzes/02-intermediate/modern-ops-quiz.md",
