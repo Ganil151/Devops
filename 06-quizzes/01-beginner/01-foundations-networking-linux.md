@@ -8,7 +8,7 @@ This module covers the core pillars of the DevOps world: how packets move and ho
 
 ### [Junior] What is the primary purpose of a "Subnet Mask"?
 - [ ] A) To encrypt data during transit.
-- [x] B) To distinguish between the network portion and the host portion of an IP address.
+- [ ] B) To distinguish between the network portion and the host portion of an IP address.
 - [ ] C) To increase the baud rate of the physical connection.
 - [ ] D) To manage DNS resolution for local hosts.
 
