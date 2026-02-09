@@ -55,7 +55,18 @@ This directory is the first step in a larger journey. Once you master the person
 *   Practices understanding of the full lifecycle (CI/CD, Networking, Compute).
 
 ---
-## The Role Evolution
+## 🧩 Strategic Branding: The T-Shaped Skills Model
+As you grow, you shouldn't try to be an expert in everything. You want a "T-Shaped" profile: **Broad knowledge** across the stack, and **Deep expertise** in one vertical.
+
+1.  **The Horizontal (Breadth)**: You understand how DNS works, how Linux processes run, and how to write a Python script.
+2.  **The Vertical (Depth)**: You are the "Terraform Guy" or the "Kubernetes Guru."
+
+**Why this matters for your brand:**
+When a Hiring Manager looks at your resume, they should say: *"Ganil is a strong all-around Cloud Engineer, but he's an absolute specialist in Infrastructure-as-Code."*
+
+---
+
+## 📈 The Role Evolution
 Understanding the shift from Student to Professional.
 
 | Topic | Student View | Professional DevOps View |
@@ -63,3 +74,7 @@ Understanding the shift from Student to Professional.
 | **Automation** | Saving time. | Ensuring reproducibility and removing human error. |
 | **Monitoring** | Looking at graphs. | Setting SLAs/SLOs to ensure business uptime. |
 | **Security** | Fixing bugs. | Building a Secure Supply Chain (DevSecOps). |
+
+---
+
+*This guide is part of the 08-career-mastery module.*
