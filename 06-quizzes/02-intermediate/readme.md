@@ -627,7 +627,6 @@ You used Terraform to update your VPC, but the change accidentally blocked all i
 **Scenario S4: The "Silent Database"**
 An application server in a private subnet cannot connect to its database server in another private subnet within the same VPC. Pings are failing. The DB server is verified to be running on the correct port.
 **Question**: If the Network ACL allows the traffic, what is the most likely missing configuration?
-
 - A) The Route Table doesn't have a path to the internet.
 - B) The Security Group of the database doesn't allow inbound traffic from the application server's security group/IP.
 - C) The database needs a Public IP address.
