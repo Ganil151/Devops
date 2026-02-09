@@ -30,7 +30,6 @@ A realistic schedule of a Junior DevOps Engineer:
 
 ---
 
----
 ## 3. The DevOps Curriculum Guide
 This directory is the first step in a larger journey. Once you master the persona, proceed to:
 *   **[02. The Tool Landscape](../02-the-tool-landscape/)**: Understanding the "What" (CI/CD, IaC, etc).
