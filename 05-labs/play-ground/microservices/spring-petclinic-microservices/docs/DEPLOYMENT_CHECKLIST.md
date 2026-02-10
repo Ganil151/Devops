@@ -56,7 +56,9 @@ For this enterprise microservices project, **Amazon Linux 2023** is the preferre
 | CI/CD | Jenkins | `Jenkinsfile`, Git Source | Automated Artifacts/Deploys | Continuous Delivery |
 | Quality| SonarQube| Maven Source | Quality Gate Results | Security/Vulnerability Check |
 | Testing| JUnit/Mockito | Java Source | Test Reports (XML) | Build/Package Stage |
-| Security| Trivy | Docker Images / FS | Vulnerability Reports | Registry Management |
+| Security| Trivy / Checkov | Docker Images / IaC | Vulnerability Reports | Registry Management |
+| Stress | Apache JMeter | User Scenarios | Performance Baseline | SRE Scaling Policy |
+| Chaos  | AWS FIS / Litmus| EKS Pods/Nodes | Resilience Report | DR Strategy |
 | Config | Ansible | EC2 IPs from Terraform | Configured nodes with tools | Pytest, Maven, Docker |
 | Verify | Pytest (Testinfra) | EC2 IPs | Node Configuration Report | Production Readiness |
 | Build | Maven | Source code, `pom.xml` | JAR files | Docker |
@@ -259,6 +261,15 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   ```bash
   terraform fmt -recursive
   ```
+
+### 2.2 Infrastructure Security Audit (Checkov)
+- [ ] **Scan Terraform Code for Misconfigurations**
+  *   **Logic:** Proactively identify security risks (e.g., unencrypted S3, open SG 0.0.0.0/0) before provisioning.
+  ```bash
+  pip install checkov
+  checkov -d . --framework terraform
+  ```
+  *   **Expected Outcome:** 0 High/Critical Failures.
 
 ### 2.3 Configure Variables & Cost Estimation (Infracost)
 - [ ] **Check Infrastructure Costs with Infracost**
@@ -888,6 +899,31 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
     - [ ] `API Gateway` correctly routes traffic to `vets-service`.
     - [ ] `API Gateway` correctly routes traffic to `customers-service`.
     - [ ] Database data is retrievable via the API.
+
+### 5.7 Stress & Load Testing (Apache JMeter)
+*   **Logic:** Validate that the EKS cluster and HPA (Horizontal Pod Autoscaler) respond correctly to simulated traffic spikes.
+
+- [ ] **Run Load Test Suite**
+  ```bash
+  jmeter -n -t tests/performance/petclinic_load_test.jmx -l results.jtl
+  ```
+- [ ] **Verify Auto-scaling**
+  ```bash
+  kubectl get hpa -n petclinic -w
+  ```
+  **Success Metric:** Pod count increases as CPU/Memory thresholds are crossed; zero 503 errors during peak load.
+
+### 5.8 Chaos Engineering (AWS FIS / Chaos Mesh)
+*   **Logic:** Verify the "Self-Healing" capabilities of Kubernetes by intentionally injecting failures into the microservices ecosystem.
+
+- [ ] **Inject Pod Failure**
+  ```bash
+  kubectl delete pod -l app=vets-service -n petclinic --force
+  ```
+- [ ] **Inject Network Latency**
+  *   **Action:** Use AWS FIS or Chaos Mesh to add 200ms of latency between `api-gateway` and `customers-service`.
+- [ ] **Verify Resilience**
+  **Success Metric:** System remains available; K8s `ReplicaSet` automatically recreates the deleted pods; Circuit Breakers (Resilience4j) prevent cascading failures.
 
 ---
 
