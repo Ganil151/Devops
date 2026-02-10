@@ -26,7 +26,7 @@ terraform/
 │   │   ├── variables.tf
 │   │   ├── outputs.tf
 │   │   └── README.md
-│   ├── rds-postgres/
+│   ├── rds/
 │   │   ├── main.tf                       # Multi-AZ RDS + parameter group
 │   │   ├── security-group.tf
 │   │   ├── variables.tf
