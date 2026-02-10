@@ -129,34 +129,33 @@ This checklist provides a comprehensive, step-by-step guide for deploying the Sp
   **Expected Output:** `Docker version 24.x.x`
   **Troubleshooting:** Ensure Docker daemon is running with `sudo systemctl start docker`
 
-### 1.3 State Backend Preparation
+### 1.3 State Backend Preparation: Procedural Deep-Dive
+A reliable "Source of Truth" for Terraform is critical. This setup ensures **Consistency** (locking), **Durability** (versioning), and **Security** (encryption).
 
-- [ ] **Create S3 bucket for Terraform state**
+- [ ] **Step 1: Create S3 Bucket (Storage Layer)**
+  *   **Logic:** Creates a globally unique container to store the `terraform.tfstate` binary.
   ```bash
   export RANDOM_SUFFIX=$(openssl rand -hex 4)
-  aws s3 mb s3://petclinic-terraform-state-${RANDOM_SUFFIX} --region us-west-2
+  export BUCKET_NAME="petclinic-terraform-state-${RANDOM_SUFFIX}"
+  aws s3 mb s3://${BUCKET_NAME} --region us-west-2
   ```
-  **Verification:**
-  ```bash
-  aws s3 ls | grep petclinic-terraform-state
-  ```
-  **Troubleshooting:** If bucket exists, use existing bucket name
+  *   **Expected Outcome:** `make_bucket: petclinic-terraform-state-xxxx`
+  *   **Troubleshooting:** If `BucketAlreadyExists`, change the suffix and try again. Bucket names are shared across all of AWS.
 
-- [ ] **Enable S3 bucket versioning**
+- [ ] **Step 2: Enable Versioning (Durability Layer)**
+  *   **Logic:** Protects against accidental state corruption or manual deletion. Every `terraform apply` creates a new version of the state file.
   ```bash
   aws s3api put-bucket-versioning \
-    --bucket petclinic-terraform-state-${RANDOM_SUFFIX} \
+    --bucket ${BUCKET_NAME} \
     --versioning-configuration Status=Enabled
   ```
-  **Verification:**
-  ```bash
-  aws s3api get-bucket-versioning --bucket petclinic-terraform-state-${RANDOM_SUFFIX}
-  ```
+  *   **Verification:** `aws s3api get-bucket-versioning --bucket ${BUCKET_NAME}` should return `"Status": "Enabled"`.
 
-- [ ] **Enable S3 bucket encryption**
+- [ ] **Step 3: Enable Server-Side Encryption (Security Layer)**
+  *   **Logic:** Ensures the state file (which may contain sensitive plan data) is encrypted at rest using AES-256.
   ```bash
   aws s3api put-bucket-encryption \
-    --bucket petclinic-terraform-state-${RANDOM_SUFFIX} \
+    --bucket ${BUCKET_NAME} \
     --server-side-encryption-configuration '{
       "Rules": [{
         "ApplyServerSideEncryptionByDefault": {
@@ -166,7 +165,16 @@ This checklist provides a comprehensive, step-by-step guide for deploying the Sp
     }'
   ```
 
-- [ ] **Create DynamoDB table for state locking**
+- [ ] **Step 4: Block Public Access (Hardening Layer)**
+  *   **Logic:** Enforces a "Zero Trust" policy at the bucket level, preventing any accidental public exposure of the infrastructure state.
+  ```bash
+  aws s3api put-public-access-block \
+    --bucket ${BUCKET_NAME} \
+    --public-access-block-configuration "BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true"
+  ```
+
+- [ ] **Step 5: Create DynamoDB Table (Locking Layer)**
+  *   **Logic:** Prevents "State Corruption" by ensuring only one person can run `terraform apply` at a time. Terraform writes a `LockID` to this table before executing.
   ```bash
   aws dynamodb create-table \
     --table-name petclinic-terraform-locks \
@@ -175,17 +183,13 @@ This checklist provides a comprehensive, step-by-step guide for deploying the Sp
     --billing-mode PAY_PER_REQUEST \
     --region us-west-2
   ```
-  **Verification:**
-  ```bash
-  aws dynamodb describe-table --table-name petclinic-terraform-locks
-  ```
-  **Troubleshooting:** If table exists, verify it has correct schema
+  *   **Verification:** `aws dynamodb describe-table --table-name petclinic-terraform-locks --query "Table.TableStatus"` (Expected: `ACTIVE`)
 
-- [ ] **Update backend.tf with bucket name**
+- [ ] **Step 6: Inject Configuration into Backend.tf**
+  *   **Logic:** Connects the local Terraform code to the remote AWS resources created above.
   ```bash
-  cd /home/gsmash/Documents/spring-petclinic-microservices/terraform/environments/dev
-  # Edit backend.tf and replace bucket name
-  sed -i "s/petclinic-terraform-state-dev/petclinic-terraform-state-${RANDOM_SUFFIX}/" backend.tf
+  cd /home/gsmash/Documents/Devops/terraform/environments/dev
+  sed -i "s/REPLACE_WITH_BUCKET_NAME/${BUCKET_NAME}/" backend.tf
   ```
 
 ---
