@@ -49,23 +49,23 @@ For this enterprise microservices project, **Amazon Linux 2023** is the preferre
 
 ## Tool Chain Integration Matrix
 
-| Phase | Tool | Input | Output | Next Phase Uses |
-|-------|------|-------|--------|-----------------|
-| Infra | Terraform | `backend.tf`, `terraform.tfvars` | ECR URLs, RDS Endpoint, EKS Config | Infracost, Ansible, Maven |
-| Cost | Infracost | `tfplan.json` | Cost Breakdown/Diff | Budget Approval |
-| CI/CD | Jenkins | `Jenkinsfile`, Git Source | Automated Artifacts/Deploys | Continuous Delivery |
-| Quality| SonarQube| Maven Source | Quality Gate Results | Security/Vulnerability Check |
-| Testing| JUnit/Mockito | Java Source | Test Reports (XML) | Build/Package Stage |
-| Security| Trivy / Checkov | Docker Images / IaC | Vulnerability Reports | Registry Management |
-| Stress | Apache JMeter | User Scenarios | Performance Baseline | SRE Scaling Policy |
-| Chaos  | AWS FIS / Litmus| EKS Pods/Nodes | Resilience Report | DR Strategy |
-| Config | Ansible | EC2 IPs from Terraform | Configured nodes with tools | Pytest, Maven, Docker |
-| Verify | Pytest (Testinfra) | EC2 IPs | Node Configuration Report | Production Readiness |
-| Build | Maven | Source code, `pom.xml` | JAR files | Docker |
-| Package | Docker | JARs, `Dockerfile` | Container images | ECR |
-| Deploy | kubectl | K8s manifests, ECR images | Running pods | Monitoring |
-| Smoke | Pytest (Requests) | Load Balancer DNS | Health/API Verification | User Traffic |
-| Monitor | Prometheus | Pod metrics | Dashboards / Alerts | Operations |
+| Phase    | Tool               | Input                            | Output                             | Next Phase Uses              |
+| -------- | ------------------ | -------------------------------- | ---------------------------------- | ---------------------------- |
+| Infra    | Terraform          | `backend.tf`, `terraform.tfvars` | ECR URLs, RDS Endpoint, EKS Config | Infracost, Ansible, Maven    |
+| Cost     | Infracost          | `tfplan.json`                    | Cost Breakdown/Diff                | Budget Approval              |
+| CI/CD    | Jenkins            | `Jenkinsfile`, Git Source        | Automated Artifacts/Deploys        | Continuous Delivery          |
+| Quality  | SonarQube          | Maven Source                     | Quality Gate Results               | Security/Vulnerability Check |
+| Testing  | JUnit/Mockito      | Java Source                      | Test Reports (XML)                 | Build/Package Stage          |
+| Security | Trivy / Checkov    | Docker Images / IaC              | Vulnerability Reports              | Registry Management          |
+| Stress   | Apache JMeter      | User Scenarios                   | Performance Baseline               | SRE Scaling Policy           |
+| Chaos    | AWS FIS / Litmus   | EKS Pods/Nodes                   | Resilience Report                  | DR Strategy                  |
+| Config   | Ansible            | EC2 IPs from Terraform           | Configured nodes with tools        | Pytest, Maven, Docker        |
+| Verify   | Pytest (Testinfra) | EC2 IPs                          | Node Configuration Report          | Production Readiness         |
+| Build    | Maven              | Source code, `pom.xml`           | JAR files                          | Docker                       |
+| Package  | Docker             | JARs, `Dockerfile`               | Container images                   | ECR                          |
+| Deploy   | kubectl            | K8s manifests, ECR images        | Running pods                       | Monitoring                   |
+| Smoke    | Pytest (Requests)  | Load Balancer DNS                | Health/API Verification            | User Traffic                 |
+| Monitor  | Prometheus         | Pod metrics                      | Dashboards / Alerts                | Operations                   |
 
 ---
 
