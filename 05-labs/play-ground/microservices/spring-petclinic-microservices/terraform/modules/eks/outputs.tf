@@ -1,22 +1,19 @@
+output "cluster_name" {
+  value = aws_eks_cluster.this.name
+}
+
 output "cluster_endpoint" {
-  description = "Endpoint for EKS control plane"
-  value       = module.eks.cluster_endpoint
+  value = aws_eks_cluster.this.endpoint
 }
 
-output "cluster_security_group_id" {
-  description = "Security group ids attached to the cluster control plane"
-  value       = module.eks.cluster_security_group_id
-}
-
-output "cluster_iam_role_name" {
-  description = "The name of the IAM role to allow access to EKS cluster"
-  value       = module.eks.cluster_iam_role_name
+output "cluster_certificate_authority_data" {
+  value = aws_eks_cluster.this.certificate_authority[0].data
 }
 
 output "oidc_provider_arn" {
-  value = module.eks.oidc_provider_arn
+  value = aws_iam_openid_connect_provider.this.arn
 }
 
-output "cluster_name" {
-  value = module.eks.cluster_name
+output "cluster_security_group_id" {
+  value = aws_security_group.cluster.id
 }
