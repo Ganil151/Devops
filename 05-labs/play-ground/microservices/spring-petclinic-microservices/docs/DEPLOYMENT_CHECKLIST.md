@@ -23,17 +23,20 @@ To ensure high-availability and build performance, we utilize the following comp
 | Role | Count | Instance Type | vCPU / RAM | Role Detail |
 | :--- | :---: | :--- | :--- | :--- |
 | **Jenkins Master** | 1 | `t3.large` | 2 / 8GB | Orchestration & Global Config Controller |
-| **EKS Worker Nodes (Slaves)** | 3 | `t3.medium` | 2 / 4GB | Application Hosting & Dynamic Build Execution |
+| **EKS Worker Nodes (Slaves)** | 3 | `t3.medium` | 2 / 4GB | Application Hosting (Legacy EC2 Mode) |
+| **EKS Fargate (Serverless)** | N/A | Serverless | Pod-based | Cost-optimized, zero-management compute for microservices |
 | **SonarQube Server** | 1 | `t2.medium` | 2 / 4GB | Static Code Analysis (External Node) |
 
 ### 2. Architectural Hierarchy
 *   **Jenkins Controller:** Functions as the **Master node**. It manages the pipeline state, credentials, and plugin ecosystem.
 *   **EKS Node Group:** Functions as the **Slave/Worker nodes**. Kubernetes schedules microservice pods here. These nodes also act as "Ephemeral Build Agents" for Docker image packaging.
 *   **AWS Managed Master:** The Kubernetes Control Plane is managed by AWS EKS. We do not provision EC2s for the K8s master; AWS ensures its 99.95% availability.
+*   **Fargate Profiles:** Allows running pods without managing EC2 instances. Pods are billed per vCPU/RAM per second.
 
 ### 3. High Availability & Persistence
-*   **Multi-AZ Strategy:** The 3 Worker Nodes are distributed across `us-west-2a`, `us-west-2b`, and `us-west-2c`. This ensures that even if an entire AWS Data Center fails, 66% of your application capacity remains online.
-*   **Storage (EBS):** Every worker node is backed by a **GP3 EBS Volume** (Minimum 20GB). Microservices requiring persistent storage use **K8s PersistentVolumeClaims (PVCs)** mapped to these EBS volumes.
+*   **Multi-AZ Strategy:** The 3 Worker Nodes (or Fargate Pods) are distributed across `us-west-2a`, `us-west-2b`, and `us-west-2c`. This ensures that even if an entire AWS Data Center fails, 66% of your application capacity remains online.
+*   **DNS Resolution (Route53):** Provides global traffic routing and failover between regions using health checks.
+*   **Storage (EBS/EFS):** EC2 nodes use GP3 EBS. Fargate pods utilize **Amazon EFS** for cross-node persistent storage.
 *   **Database Resilience:** The RDS instance uses **Multi-AZ Replication**, providing a synchronous standby in a different subnet for automatic failover.
 
 ---
@@ -48,7 +51,7 @@ To ensure high-availability and build performance, we utilize the following comp
                          │
 ┌────────────────────────▼────────────────────────────────────────┐
 │              PHASE 2: INFRASTRUCTURE (Terraform)                │
-│  VPC → ECR → RDS → EKS → Secrets → ALB → WAF → Monitoring       │
+│  VPC → ECR → RDS → EKS → ALB → WAF → Route53 → Monitoring       │
 └────────────────────────┬────────────────────────────────────────┘
                          │
 ┌────────────────────────▼────────────────────────────────────────┐
@@ -80,6 +83,8 @@ To ensure high-availability and build performance, we utilize the following comp
 | Testing  | JUnit/Mockito      | Java Source                      | Test Reports (XML)                 | Build/Package Stage          |
 | Security | Trivy / Checkov    | Docker Images / IaC              | Vulnerability Reports              | Registry Management          |
 | Firewall | AWS WAF            | ALB Traffic                      | Blocked/Allowed Requests          | Security Auditing           |
+| DNS      | Route53            | Domain Name, ALB DNS             | Alias Records, Health Checks      | End-User Access             |
+| Compute  | EKS Fargate        | Pod Resource Requirements        | Elastic, Serverless Runtime       | Scaling / Cost Mgmt         |
 | Stress   | Apache JMeter      | User Scenarios                   | Performance Baseline               | SRE Scaling Policy           |
 | Chaos    | AWS FIS / Litmus   | EKS Pods/Nodes                   | Resilience Report                  | DR Strategy                  |
 | Config   | Ansible            | EC2 IPs from Terraform           | Configured nodes with tools        | Pytest, Maven, Docker        |
