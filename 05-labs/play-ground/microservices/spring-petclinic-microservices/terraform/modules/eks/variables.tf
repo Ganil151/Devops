@@ -1,4 +1,4 @@
-variable "cluster_name" {
+variable "environment" {
   type = string
 }
 
@@ -6,21 +6,26 @@ variable "vpc_id" {
   type = string
 }
 
-variable "subnet_ids" {
+variable "private_subnet_ids" {
   type = list(string)
 }
 
-variable "node_group_desired_size" {
+variable "cluster_version" {
+  type    = string
+  default = "1.31"
+}
+
+variable "desired_size" {
   type    = number
   default = 2
 }
 
-variable "node_group_max_size" {
+variable "max_size" {
   type    = number
-  default = 3
+  default = 4
 }
 
-variable "node_group_min_size" {
+variable "min_size" {
   type    = number
   default = 1
 }
@@ -30,6 +35,17 @@ variable "instance_types" {
   default = ["t3.medium"]
 }
 
-variable "environment" {
-  type = string
+variable "capacity_type" {
+  type    = string
+  default = "ON_DEMAND"
+}
+
+variable "enable_fargate" {
+  type    = bool
+  default = false
+}
+
+variable "tags" {
+  type    = map(string)
+  default = {}
 }

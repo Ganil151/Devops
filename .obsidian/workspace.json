@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/eks/fargate.tf",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/networking/routing.tf",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/networking/subnets.tf",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/dev/terragrunt.hcl",
@@ -278,7 +279,6 @@
     "08-career-mastery/08-interview-mastery/01-technical-deep-dives/terraform.md",
     "08-career-mastery/09-salary-negotiation",
     "08-career-mastery/08-interview-mastery/archive",
-    "08-career-mastery/08-interview-mastery/04-live-coding-challenges",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
