@@ -242,6 +242,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/docs",
     "08-career-mastery/08-interview-mastery/01-technical-deep-dives/cicd-automation.md",
     "08-career-mastery/08-interview-mastery/01-technical-deep-dives/cloud-platforms.md",
     "08-career-mastery/08-interview-mastery/01-technical-deep-dives/docker.md",
@@ -269,7 +270,6 @@
     "06-quizzes/03-advanced/05-cicd-observability-sre.md",
     "06-quizzes/03-advanced/MOCK_INTERVIEW_GUIDE.md",
     "06-quizzes/03-advanced/readme.md",
-    "06-quizzes/02-intermediate/03-iac-terraform-ansible.md",
     "08-career-mastery/09-salary-negotiation",
     "08-career-mastery/08-interview-mastery/archive",
     "08-career-mastery/08-interview-mastery/04-live-coding-challenges",
