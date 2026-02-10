@@ -36,7 +36,7 @@ terraform/
 │   │   ├── main.tf                       # ALB + target groups for ingress
 │   │   ├── variables.tf
 │   │   └── outputs.tf
-│   ├── ecr-repositories/
+│   ├── ecr/
 │   │   ├── main.tf                       # Per-service ECR repos (customers, visits, etc.)
 │   │   ├── variables.tf
 │   │   └── outputs.tf
@@ -67,7 +67,7 @@ terraform/
 │       ├── versions.tf
 │       └── security.tf                   # Prod-only: stricter SGs, encryption, backups
 ├── global/                               # ONE-TIME resources (not per-env)
-│   ├── route53-zones/
+│   ├── route53/
 │   │   └── main.tf                       # Shared DNS zones (e.g., petclinic.example.com)
 │   └── iam/
 │       └── main.tf                       # Cross-account roles, SSO permissions
@@ -75,6 +75,27 @@ terraform/
 │   ├── deploy.sh                         # Wrapper: terraform init/plan/apply per env
 │   └── validate-modules.sh               # Check module interfaces pre-commit
 └── README.md                             # Setup guide, env promotion workflow, diagram
+```
+
+### 🛠️ Bootstrapping the Terraform Structure
+Run the following command to initialize the directory structure and placeholder files:
+```bash
+mkdir -p terraform/modules/{vpc,eks,rds,alb,ecr,monitoring} && \
+mkdir -p terraform/environments/{dev,staging,prod} && \
+mkdir -p terraform/global/{route53,iam} && \
+mkdir -p terraform/scripts && \
+touch terraform/modules/vpc/{main,variables,outputs}.tf && \
+touch terraform/modules/eks/{main,variables,addons,irsa,output}.tf && \
+touch terraform/modules/rds/{main,variables,outputs,security-group}.tf && \
+touch terraform/modules/alb/{main,variables,outputs}.tf && \
+touch terraform/modules/ecr/{main,variables,outputs}.tf && \
+touch terraform/environments/dev/{main,backend,providers,variables,versions}.tf && \
+touch terraform/environments/dev/terraform.tfvars && \
+touch terraform/environments/staging/{main,backend,providers,variables,versions}.tf && \
+touch terraform/environments/staging/terraform.tfvars && \
+touch terraform/environments/prod/{main,backend,providers,variables,versions}.tf && \
+touch terraform/environments/prod/terraform.tfvars
+```
 ```
 
 ### Part 2: Layer 2 - Configuration Management (Ansible)
