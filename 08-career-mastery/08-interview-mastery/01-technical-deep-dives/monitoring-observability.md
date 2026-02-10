@@ -96,10 +96,29 @@ Master the "Eyes and Ears" of the stack. Shift from "checking dashboards" to arc
 
 ---
 
+---
+
+## ⚙️ Internal Workflows: Step-by-Step
+
+### 1. Prometheus Metric Ingestion (Pull Model)
+Understanding how Prometheus gets your data:
+1.  **Instrumentation:** Your application uses a client library (e.g., `prom-client`) to record metrics in memory.
+2.  **Exporter/Endpoint:** The application exposes these metrics on an HTTP endpoint, typically `/metrics`, in a plain-text format.
+3.  **Discovery:** Prometheus identifies targets using **Service Discovery** (e.g., K8s API, Consul, or static config).
+4.  **Scrape:** At regular intervals (the "scrape interval"), Prometheus sends an HTTP GET request to the target's endpoint.
+5.  **Storage:** Prometheus validates the data and stores it as time-series samples in its local **TSDB (Time Series Database)**.
+
+### 2. The Incident Response Lifecycle (On-Call Reality)
+What happens when things break at 3 AM:
+1.  **Detection:** A threshold is crossed (e.g., Error rate > 5%). Prometheus triggers an alert.
+2.  **Routing:** **Alertmanager** receives the alert, deduplicates it, and routes it to **PagerDuty** or OpsGenie.
+3.  **Acknowledge (Ack):** The on-call engineer receives the page and acknowledges it, stopping the escalation.
+4.  **Initial Triage:** The engineer checks the **Grafana Dashboard** to see the blast radius (which services are affected?).
+5.  **Deep Dive:** The engineer uses **Loki/Elasticsearch** for logs and **Jaeger** for traces to find the "needle in the haystack."
+6.  **Remediation:** A fix is applied (e.g., `helm rollback`, scaling out, or a hotfix).
+7.  **Verification:** The engineer monitors the metrics to ensure they return to "Steady State."
+8.  **Closure & Post-Mortem:** The incident is resolved, and a blameless post-mortem is scheduled to prevent recurrence.
+
+---
+
 ## 🗝️ Master Key: Interviewer's Secret Summary
-| Concept | What they are REALLY looking for |
-| :--- | :--- |
-| **OpenTelemetry (OTel)** | Do you understand the industry standard for vendor-neutral instrumentation? |
-| **SLI / SLO** | Do you know how to turn technical metrics into business-value reliability targets? |
-| **High Cardinality** | Can you find a bug affecting exactly one user in a sea of millions of requests? |
-| **Push vs Pull** | Can you explain why Prometheus pulls and when you might actually need a push gateway? |

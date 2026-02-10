@@ -56,10 +56,29 @@ Master the "Infrastructure as Code" layer. Shift from "running scripts" to manag
 
 ---
 
+---
+
+## ⚙️ Internal Workflows: Step-by-Step
+
+### 1. The Terraform Execution Lifecycle (The Dependency Graph)
+How Terraform decides what to do:
+1.  **Configuration Loading:** Terraform reads all `.tf` files in the directory and merges them.
+2.  **Provider Initialization:** Infrastructure plugins are downloaded (`terraform init`).
+3.  **State Refresh:** Terraform queries the actual providers to update its local view of the current state.
+4.  **Graph Generation:** Terraform builds a Directed Acyclic Graph (DAG) of all resources to determine the correct order of operations (e.g., must create VPC before Subnet).
+5.  **Plan (The Diff):** Terraform compares the Desired State (code) vs. Actual State (cloud) and the Current State (state file). It generates an execution plan.
+6.  **Approval/Apply:** Upon user approval, Terraform executes the API calls in parallel where possible (based on the DAG).
+7.  **State Update:** After each resource is created/modified, the state file is updated to record the new ID and attributes.
+
+### 2. Standard PR Workflow (Collaborative IaC)
+How a Staff Engineer manages Terraform in a team:
+1.  **Feature Branch:** Create a branch for the new infrastructure change.
+2.  **Automated Plan:** A CI tool (like Atlantis) runs `terraform plan` on the PR and posts the output as a comment.
+3.  **Peer Review:** A human reviews the plan to ensure no accidental destruction of critical resources.
+4.  **Policy Check:** Automated tools (like OPA/Sentinel) check the plan against security policies (e.g., "No public S3 buckets").
+5.  **Merge & Apply:** Upon merge, the CI engine runs `terraform apply` against the remote state.
+6.  **Post-Apply Hooks:** Tagging and documentation updates occur automatically.
+
+---
+
 ## 🗝️ Master Key: Interviewer's Secret Summary
-| Concept | What they are REALLY looking for |
-| :--- | :--- |
-| **State Locking** | Can you work in a team without corrupting the state file? |
-| **Sensitive Data** | Do you know how to handle secrets in Terraform (e.g., using `sensitive = true` or Vault)? |
-| **Tainting** | Do you know how to force a resource to be recreated without changing its code? |
-| **Dependency Graph** | Do you understand how Terraform calculates the order of operations? |
