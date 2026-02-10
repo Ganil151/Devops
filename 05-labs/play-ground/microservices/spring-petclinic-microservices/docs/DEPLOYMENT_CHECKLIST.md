@@ -259,7 +259,9 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
    ↓
 6. waf (Web Application Firewall)
    ↓
-7. monitoring (CloudWatch)
+7. route53 (DNS)
+   ↓
+8. monitoring (CloudWatch)
 ```
 
 ### 2.2 Initialize Terraform
@@ -543,7 +545,44 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   ```
   **Expected Result:** The ALB ARN appears in the protected resources list.
 
-### 2.11 Deploy Monitoring Module
+### 2.11 Deploy Route53 DNS Module
+*   **Logic:** Assign a human-readable domain name to the microservices ecosystem. Route53 Alias records provide a zero-cost, high-performance link to the ALB.
+
+- [ ] **Plan Route53 resources**
+  ```bash
+  terraform plan -target=module.route53
+  ```
+
+- [ ] **Apply Route53 resources**
+  ```bash
+  terraform apply -target=module.route53 -auto-approve
+  ```
+
+- [ ] **Verify DNS Propagation**
+  ```bash
+  export DOMAIN_NAME=$(terraform output -raw domain_name)
+  dig +short ${DOMAIN_NAME}
+  ```
+  **Expected Result:** Returns the ALB's CNAME or associated IP addresses.
+
+### 2.12 EKS Fargate Migration Pattern
+*   **Logic:** Transitioning from EC2 nodes to serverless EKS pods to eliminate OS management overhead and implement per-pod security isolation.
+
+- [ ] **Create Fargate Profile**
+  ```bash
+  aws eks create-fargate-profile \
+    --fargate-profile-name fp-petclinic \
+    --cluster-name $(terraform output -raw eks_cluster_name) \
+    --pod-execution-role-arn $(terraform output -raw fargate_pod_execution_role_arn) \
+    --selectors namespace=petclinic-fargate
+  ```
+
+- [ ] **Verify Fargate Configuration**
+  ```bash
+  kubectl get fargateprofile -n petclinic-fargate
+  ```
+
+### 2.13 Deploy Monitoring Module
 
 - [ ] **Plan monitoring**
   ```bash
@@ -560,7 +599,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   aws cloudwatch describe-alarms --alarm-name-prefix petclinic
   ```
 
-### 2.11 Final Terraform Validation
+### 2.14 Final Terraform Validation
 
 - [ ] **Run full plan**
   ```bash
