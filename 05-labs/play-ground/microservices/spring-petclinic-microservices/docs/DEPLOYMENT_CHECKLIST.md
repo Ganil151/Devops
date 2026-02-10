@@ -849,6 +849,20 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   curl http://${ALB_DNS}/api/vet/vets
   ```
 
+### 5.6 Automated Smoke Testing (Pytest)
+*   **Logic:** Execute a suite of automated functional tests to verify the application is fully operational and reachable by users.
+
+- [ ] **Run Smoke Tests**
+  ```bash
+  export BASE_URL="http://${ALB_DNS}"
+  pytest -v tests/smoke/test_endpoints.py --base-url=${BASE_URL}
+  ```
+  *   **Verification Items:**
+    - [ ] Root endpoint returns `200 OK`.
+    - [ ] `API Gateway` correctly routes traffic to `vets-service`.
+    - [ ] `API Gateway` correctly routes traffic to `customers-service`.
+    - [ ] Database data is retrievable via the API.
+
 ---
 
 ## Troubleshooting Guide
