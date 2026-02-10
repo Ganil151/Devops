@@ -106,7 +106,7 @@ For this enterprise microservices project, **Amazon Linux 2023** is the preferre
 
 - [ ] **Check Terraform version**
   ```bash
-  cd /home/gsmash/Documents/spring-petclinic-microservices/terraform
+  cd /home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices/terraform
   cat .terraform-version
   terraform version
   ```
@@ -132,7 +132,7 @@ For this enterprise microservices project, **Amazon Linux 2023** is the preferre
   java -version
   ```
   **Expected Output:** `openjdk version "21.0.x"`
-  **Troubleshooting:** Follow `/home/gsmash/Documents/spring-petclinic-microservices/JAVA21_MIGRATION.md`
+  **Troubleshooting:** Follow `/home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices/JAVA21_MIGRATION.md`
 
 - [ ] **Check Maven version**
   ```bash
@@ -208,7 +208,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 - [ ] **Step 6: Inject Configuration into Backend.tf**
   *   **Logic:** Connects the local Terraform code to the remote AWS resources created above.
   ```bash
-  cd /home/gsmash/Documents/Devops/terraform/environments/dev
+  cd /home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/dev
   sed -i "s/REPLACE_WITH_BUCKET_NAME/${BUCKET_NAME}/" backend.tf
   ```
 
@@ -238,7 +238,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 
 - [ ] **Navigate to dev environment**
   ```bash
-  cd /home/gsmash/Documents/spring-petclinic-microservices/terraform/environments/dev
+  cd /home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/dev
   ```
 
 - [ ] **Initialize Terraform**
@@ -522,7 +522,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 
 - [ ] **Create Ansible inventory**
   ```bash
-  cd /home/gsmash/Documents/spring-petclinic-microservices/ansible
+  cd /home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices/ansible
   cat > inventory/dynamic_hosts << EOF
   [eks_nodes]
   $(cat /tmp/node_ips.txt | xargs -I {} echo "{} ansible_user=ec2-user")
@@ -626,6 +626,12 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   ```groovy
   pipeline {
       agent any
+      environment {
+          ECR_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.us-west-2.amazonaws.com"
+          AWS_DEFAULT_REGION = "us-west-2"
+          ALB_DNS = "replace-with-actual-alb-dns" // Or retrieve via script
+          APP_NAMESPACE = "petclinic"
+      }
       stages {
           stage('Checkout') { steps { checkout scm } }
           stage('Security Scan (Trivy)') {
@@ -692,7 +698,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 
 - [ ] **Navigate to project root**
   ```bash
-  cd /home/gsmash/Documents/spring-petclinic-microservices
+  cd /home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices
   ```
 
 - [ ] **Clean previous builds**
@@ -768,11 +774,12 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   aws ecr list-images --repository-name dev-petclinic-api-gateway
   ```
 
-### 4.4 Deploy to Kubernetes
+### 4.4 Deploy to Kubernetes (Helm)
+*   **Logic:** Use Helm as the package manager to ensure transactional deployments, rollbacks, and templated configuration management.
 
 - [ ] **Create namespace**
   ```bash
-  kubectl create namespace petclinic
+  kubectl create namespace petclinic || true
   kubectl config set-context --current --namespace=petclinic
   ```
 
@@ -782,40 +789,23 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
     --from-literal=username=petclinic \
     --from-literal=password=${TF_VAR_db_password} \
     --from-literal=endpoint=${RDS_ENDPOINT} \
-    -n petclinic
+    -n petclinic --dry-run=client -o yaml | kubectl apply -f -
   ```
 
-- [ ] **Deploy config server**
+- [ ] **Install/Upgrade Microservices with Helm**
   ```bash
-  kubectl apply -f k8s/config-server.yaml
-  kubectl wait --for=condition=available --timeout=300s deployment/config-server -n petclinic
+  helm upgrade --install petclinic ./helm/microservices \
+    --namespace petclinic \
+    --set global.image.repositoryPrefix=${ECR_REGISTRY}/dev-petclinic- \
+    --set global.image.tag=latest \
+    --wait --timeout 300s
   ```
-
-- [ ] **Deploy discovery server**
-  ```bash
-  kubectl apply -f k8s/discovery-server.yaml
-  kubectl wait --for=condition=available --timeout=300s deployment/discovery-server -n petclinic
-  ```
-
-- [ ] **Deploy microservices**
-  ```bash
-  kubectl apply -f k8s/customers-service.yaml
-  kubectl apply -f k8s/vets-service.yaml
-  kubectl apply -f k8s/visits-service.yaml
-  kubectl apply -f k8s/genai-service.yaml
-  ```
-
-- [ ] **Deploy API gateway**
-  ```bash
-  kubectl apply -f k8s/api-gateway.yaml
-  kubectl wait --for=condition=available --timeout=300s deployment/api-gateway -n petclinic
-  ```
+  **Verification:** `helm list -n petclinic`
 
 - [ ] **Verify all pods running**
   ```bash
   kubectl get pods -n petclinic
   ```
-  **Expected:** All pods in `Running` state
 
 ---
 
