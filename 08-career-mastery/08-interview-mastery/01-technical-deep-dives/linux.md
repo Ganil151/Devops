@@ -66,10 +66,28 @@ Master the OS that runs the cloud. Shift from "copy-pasting commands" to underst
 
 ---
 
+---
+
+## ⚙️ Internal Workflows: Step-by-Step
+
+### 1. The Linux Boot Process (Standard Systemd Flow)
+How a server goes from power-on to login prompt:
+1.  **BIOS/UEFI:** Performs Power-On Self Test (POST) and locates the bootable device.
+2.  **GRUB (Boot Loader):** Loads the Kernel and `initramfs` (initial RAM filesystem) into memory.
+3.  **Kernel Initialization:** The Kernel configures hardware, mounts the root filesystem, and starts the first process: `init` (Systemd).
+4.  **Systemd Targets:** `systemd` reads the `default.target` and starts a hierarchy of services (Network, SSH, Docker).
+5.  **Multi-User Target:** Once all required services are started, the system reaches the `multi-user.target`, and the TTY/Login prompt is presented.
+
+### 2. Anatomy of a Command Execution (Bash)
+What happens in the fractions of a second when you hit Enter:
+1.  **Tokenization:** The Shell breaks the line into tokens (command + arguments).
+2.  **Alias/Keyword Check:** It checks if the command is a Bash keyword (`if`, `for`) or an alias.
+3.  **Built-in Check:** It checks if the command is a Shell Built-in (like `cd` or `echo`).
+4.  **PATH Search:** It searches the directories in your `$PATH` (e.g., `/usr/bin`, `/usr/local/bin`) for an executable file.
+5.  **Fork:** The Shell calls `fork()` to create a child process.
+6.  **Exec:** The child process calls `execve()` to replace its image with the command executable.
+7.  **Wait:** The Shell (parent) waits for the child process to complete and captures the **Exit Code**.
+
+---
+
 ## 🗝️ Master Key: Interviewer's Secret Summary
-| Concept | What they are REALLY looking for |
-| :--- | :--- |
-| **Permissions** | Do you understand `chmod` vs `chown` and what `root` actually means? |
-| **SSH** | Do you know how to manage keys and why password auth should be disabled? |
-| **Package Managers** | Can you explain the difference between `apt`, `yum/dnf`, and `pacman`? |
-| **Kernel Tuning** | Have you ever modified `/etc/sysctl.conf` to optimize network or memory? |

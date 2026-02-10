@@ -82,10 +82,30 @@ Master the container engine that changed everything. Shift from "running images"
 
 ---
 
+---
+
+## ⚙️ Internal Workflows: Step-by-Step
+
+### 1. The Docker Image Build Process (Layered FS)
+How Docker turns a Dockerfile into an Image:
+1.  **Context Preparation:** The Docker client bundles the current directory (minus `.dockerignore` files) and sends it to the Docker Daemon.
+2.  **Base Image Selection:** Docker pulls the base image (e.g., `alpine`) and stores it as the bottom-most read-only layer.
+3.  **Instruction Execution:** For each `RUN`, `COPY`, or `ADD` command:
+    - Docker starts a temporary container from the previous layer.
+    - It executes the command.
+    - it saves the changes (the delta) as a new read-only layer (snapshot).
+4.  **Layer Caching:** If an instruction hasn't changed and the previous layers are identical, Docker reuses the cached layer instead of re-executing.
+5.  **Metadata Attachment:** `ENV`, `EXPOSE`, `CMD`, and `ENTRYPOINT` are added as metadata to the image configuration file (not new FS layers).
+
+### 2. The Container Startup Sequence
+What happens when you run `docker run`:
+1.  **Image Retrieval:** Docker checks if the image exists locally; if not, it pulls it from the Registry.
+2.  **Layer Stacking:** Docker stacks the read-only image layers on top of each other using a **Union File System** (like Overlay2).
+3.  **Writable Layer:** Docker adds a thin, empty **Writable Layer** on top for the container's temporary data.
+4.  **Network Setup:** Docker creates a virtual network interface (veth), assigns an IP, and connects it to the docker bridge.
+5.  **Namespacing & Cgroups:** The kernel creates isolated namespaces (PID, Net, Mount) and sets resource limits (Cgroups).
+6.  **Entrypoint Execution:** The process specified in `ENTRYPOINT` or `CMD` is executed as PID 1 inside the container.
+
+---
+
 ## 🗝️ Master Key: Interviewer's Secret Summary
-| Concept | What they are REALLY looking for |
-| :--- | :--- |
-| **Volumes** | Do you understand the difference between Bind Mounts and Named Volumes? |
-| **Network Modes** | When do you use `bridge` vs `host` vs `none`? |
-| **Entrypoint vs CMD** | Do you know which one allows for dynamic arguments? |
-| **Orphaned resources** | Do you know how to clean up unused images and volumes (`docker system prune`)? |
