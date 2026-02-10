@@ -251,7 +251,9 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
    ↓
 5. alb (Load Balancer)
    ↓
-6. monitoring (CloudWatch)
+6. waf (Web Application Firewall)
+   ↓
+7. monitoring (CloudWatch)
 ```
 
 ### 2.2 Initialize Terraform
@@ -508,7 +510,34 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   echo "ALB DNS: $ALB_DNS"
   ```
 
-### 2.10 Deploy Monitoring Module
+### 2.10 Deploy WAF (Web Application Firewall) Module
+*   **Logic:** Protect the Application Load Balancer from common web exploits (SQL injection, XSS) and bot traffic using AWS WAFv2.
+
+- [ ] **Plan WAF resources**
+  ```bash
+  terraform plan -target=module.waf
+  ```
+
+- [ ] **Apply WAF resources**
+  ```bash
+  terraform apply -target=module.waf -auto-approve
+  ```
+
+- [ ] **Associate WAF with ALB**
+  *   **Logic:** The WAF Web ACL must be associated with the ALB ARN to begin filtering traffic.
+  ```bash
+  export WAF_ACL_ARN=$(terraform output -raw waf_web_acl_arn)
+  export ALB_ARN=$(terraform output -raw alb_arn)
+  aws wafv2 associate-web-acl --web-acl-arn ${WAF_ACL_ARN} --resource-arn ${ALB_ARN}
+  ```
+
+- [ ] **Verify WAF Protection**
+  ```bash
+  aws wafv2 list-resources-for-web-acl --web-acl-arn ${WAF_ACL_ARN}
+  ```
+  **Expected Result:** The ALB ARN appears in the protected resources list.
+
+### 2.11 Deploy Monitoring Module
 
 - [ ] **Plan monitoring**
   ```bash
