@@ -5,7 +5,37 @@ This checklist provides a comprehensive, step-by-step guide for deploying the Sp
 
 ---
 
-## 🏛️ System Decision Record (SDR): OS Selection
+## �️ Project Infrastructure Tree
+This repository follows an **Infrastucture-as-Code (IaC) First** philosophy, segregating configuration, orchestration, and provisioning logic.
+
+```text
+spring-petclinic-microservices/
+├── ansible/                # Configuration Management & System Hardening
+│   ├── inventory/          # Target Host Definitions (Dynamic & Static)
+│   └── playbooks/          # Tooling Automation (Java 21, Docker, kubectl)
+├── docs/                   # SRE Runbooks & Deployment Manuals
+│   └── DEPLOYMENT_CHECKLIST.md
+├── helm/                   # Kubernetes Package Management
+│   └── petclinic-chart/    # Reusable Microservice Blueprints
+├── scripts/                # Bootstrapping & Automation Utilities
+│   ├── apply.sh            # One-click Infrastructure Deployment
+│   └── destroy.sh          # Safe Teardown Procedures
+├── terraform/              # Multi-Environment Infrastructure (AWS)
+│   ├── environments/       # Environment Workspaces (Dev, Staging, Prod)
+│   ├── modules/            # Enterprise-Grade Modular Components
+│   │   ├── networking/     # VPC, Subnets, Security Groups
+│   │   ├── eks/            # Managed Kubernetes Service
+│   │   ├── rds/            # Multi-AZ Database Instances
+│   │   └── alb/            # Application Load Balancing
+│   └── shared/             # Providers & Global Remote State logic
+└── testing/                # Automated Quality Gates
+    ├── infra/              # Pytest-Testinfra (Server Auditing)
+    └── smoke/              # Pytest-Requests (API Verification)
+```
+
+---
+
+## �🏛️ System Decision Record (SDR): OS Selection
 **Recommendation: Amazon Linux 2023 (AL2023)**
 
 For this enterprise microservices project, **Amazon Linux 2023** is the preferred distribution over Ubuntu for the following reasons:
