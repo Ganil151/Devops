@@ -13,35 +13,24 @@ This repository is architected following the **Separation of Concerns** principl
 
 ```text
 terraform/
-├── shared/                       # 🛡️ SOURCE OF TRUTH (Physical files)
-│   ├── main.tf                   # Orchestrates all modules (VPC, EKS, RDS)
-│   ├── providers.tf              # AWS Provider, Region, and Global Tags
-│   ├── variables.tf              # Global variable declarations
-│   ├── versions.tf               # Terraform & Provider version constraints
-│   └── output.tf                 # Aggregate outputs from all modules
-├── modules/                      # 🧱 Component Construction Kits
-│   ├── networking/               # 🌐 VPC & Core Networking
-│   ├── eks/                      # ☸️ Kubernetes & Compute Plane
-│   ├── rds/                      # 🗄️ Database (Persistence Layer)
-│   ├── ec2/                      # 💻 Bastion / Management Plane
-│   └── monitoring/               # 📊 CloudWatch & Dashboards
-└── environments/                 # 🚀 The Deployment Environment Instances
-    ├── dev/                      # Workspace: Development
-    │   ├── backend.tf            # Unique S3 key (dev/terraform.tfstate)
-    │   ├── terraform.tfvars      # Environment-specific values (instance types)
-    │   ├── main.tf               # 🔗 SYMLINK -> ../../shared/main.tf
-    │   ├── outputs.tf            # 🔗 SYMLINK -> ../../shared/output.tf
-    │   ├── providers.tf          # 🔗 SYMLINK -> ../../shared/providers.tf
-    │   ├── variables.tf          # 🔗 SYMLINK -> ../../shared/variables.tf
-    │   └── versions.tf           # 🔗 SYMLINK -> ../../shared/versions.tf
-    ├── staging/                  # Workspace: Pre-production
-    │   ├── backend.tf            # Unique S3 key (staging/terraform.tfstate)
-    │   ├── terraform.tfvars      # Staging values
-    │   └── main.tf (etc...)      # 🔗 SYMLINKS to shared/
-    └── prod/                     # Workspace: Production (High Availability)
-        ├── backend.tf            # Unique S3 key (prod/terraform.tfstate)
-        ├── terraform.tfvars      # Production values (HA=true)
-        └── main.tf (etc...)      # 🔗 SYMLINKS to shared/
+├── shared/                       # SOURCE OF TRUTH (Physical files)
+│   ├── main.tf                   # Orchestrates all modules
+│   ├── providers.tf              # AWS Provider & Tags
+│   ├── variables.tf              # Variable declarations
+│   ├── versions.tf               # Version constraints
+│   └── output.tf                 # Shared outputs
+├── modules/ (networking, eks, rds, ec2) # Component modules
+└── environments/
+    ├── dev/
+    │   ├── backend.tf            # Unique S3 key
+    │   ├── terraform.tfvars      # Unique values
+    │   ├── main.tf               # SYMLINK -> ../../shared/main.tf
+    │   ├── outputs.tf            # SYMLINK -> ../../shared/output.tf
+    │   ├── providers.tf          # SYMLINK -> ../../shared/providers.tf
+    │   ├── variables.tf          # SYMLINK -> ../../shared/variables.tf
+    │   └── versions.tf           # SYMLINK -> ../../shared/versions.tf
+    ├── prod/ ... (Same symlink structure)
+    └── stagging/ ... (Same symlink structure)
 ```
 
 ### Part 2: Layer 2 - Configuration Management (Ansible)
