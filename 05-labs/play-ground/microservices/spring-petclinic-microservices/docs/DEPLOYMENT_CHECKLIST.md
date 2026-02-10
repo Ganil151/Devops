@@ -355,6 +355,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   export ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
   export ECR_REGISTRY="${ACCOUNT_ID}.dkr.ecr.us-west-2.amazonaws.com"
   ```
+  *   **💡 Pro-Tip:** Add `export ECR_REGISTRY=${ACCOUNT_ID}.dkr.ecr.us-west-2.amazonaws.com` to your `~/.bashrc` or `~/.zshrc` to ensure it persists across terminal sessions.
 
 ### 2.6 Deploy RDS Module
 
