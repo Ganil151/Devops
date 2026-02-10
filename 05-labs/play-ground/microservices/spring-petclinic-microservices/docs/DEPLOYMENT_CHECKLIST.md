@@ -242,7 +242,18 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   terraform fmt -recursive
   ```
 
-### 2.3 Configure Variables
+### 2.3 Configure Variables & Cost Estimation (Infracost)
+- [ ] **Check Infrastructure Costs with Infracost**
+  *   **Logic:** Before applying changes, calculate the monthly cost impact of the proposed infrastructure.
+  ```bash
+  # Generate plan JSON for Infracost
+  terraform plan -out=tfplan.binary
+  terraform show -json tfplan.binary > tfplan.json
+
+  # Run Infracost breakdown
+  infracost breakdown --path tfplan.json
+  ```
+  *   **Interviewer's Secret:** Mentioning that you use Infracost to **prevent "Bill Shock"** and include cost estimations in PR comments demonstrates true FinOps awareness.
 
 - [ ] **Review terraform.tfvars**
   ```bash
@@ -547,7 +558,65 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 
 ---
 
-## PHASE 4: Build & Deploy Application
+## 🛠️ PHASE 4: CI/CD Pipeline Automation (Jenkins)
+
+### 4.1 Jenkins Pipeline Integration
+*   **Logic:** Move from manual execution to an automated "Pipeline as Code" model using a `Jenkinsfile`.
+
+- [ ] **Configure Jenkins Master/Agent**
+  *   Ensure Jenkins has the following plugins: `Pipeline`, `Git`, `Docker`, `Terraform`, `Ansible`.
+  *   Configure AWS Credentials in Jenkins Credentials Store (`ID: aws-creds`).
+
+- [ ] **Define Pipeline Stages**
+  ```groovy
+  pipeline {
+      agent any
+      stages {
+          stage('Checkout') { steps { checkout scm } }
+          stage('Security Scan (Trivy)') {
+              steps {
+                  sh 'trivy fs --severity HIGH,CRITICAL .'
+              }
+          }
+          stage('Terraform Plan') {
+              steps {
+                  dir('terraform/environments/dev') {
+                      sh 'terraform init && terraform plan -out=tfplan'
+                      sh 'terraform show -json tfplan > tfplan.json'
+                      sh 'infracost breakdown --path tfplan.json'
+                  }
+              }
+          }
+          stage('Terraform Apply') {
+              steps {
+                  dir('terraform/environments/dev') {
+                      sh 'terraform apply -auto-approve tfplan'
+                  }
+              }
+          }
+          stage('Code Quality (SonarQube)') {
+              steps {
+                  withSonarQubeEnv('SonarQube') {
+                      sh './mvnw sonar:sonar -Dsonar.projectKey=petclinic -Dsonar.host.url=http://sonarqube:9000'
+                  }
+              }
+          }
+          stage('Build & Push') {
+              steps {
+                  sh './mvnw clean install -P buildDocker -Ddocker.image.prefix=${ECR_REGISTRY}/dev-petclinic'
+                  sh 'trivy image --severity HIGH,CRITICAL ${ECR_REGISTRY}/dev-petclinic-api-gateway:latest'
+              }
+          }
+          stage('K8s Deploy') {
+              steps {
+                  sh 'kubectl apply -f k8s/'
+              }
+          }
+      }
+  }
+  ```
+
+---
 
 ### 4.1 Build Application
 
@@ -595,7 +664,18 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   ```
   **Expected:** 8 images
 
-### 4.3 Push Images to ECR
+### 4.3 Container Security Scanning (Trivy)
+*   **Logic:** Shift-Left security by scanning images for vulnerabilities (CVEs) before they reach the registry.
+
+- [ ] **Scan Microservice Images**
+  ```bash
+  for service in api-gateway customers-service vets-service visits-service; do
+    trivy image --severity HIGH,CRITICAL ${ECR_REGISTRY}/dev-petclinic-${service}:latest
+  done
+  ```
+  **Expected Outcome:** No CRITICAL vulnerabilities found. If found, the pipeline should FAIL.
+
+### 4.4 Push Images to ECR
 
 - [ ] **Tag and push all images**
   ```bash
