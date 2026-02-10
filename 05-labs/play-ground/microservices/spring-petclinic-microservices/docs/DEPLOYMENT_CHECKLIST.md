@@ -40,12 +40,16 @@ This checklist provides a comprehensive, step-by-step guide for deploying the Sp
 
 | Phase | Tool | Input | Output | Next Phase Uses |
 |-------|------|-------|--------|-----------------|
-| Infra | Terraform | `backend.tf`, `terraform.tfvars` | ECR URLs, RDS Endpoint, EKS Config | Ansible, Maven, kubectl |
+| Infra | Terraform | `backend.tf`, `terraform.tfvars` | ECR URLs, RDS Endpoint, EKS Config | Infracost, Ansible, Maven |
+| Cost | Infracost | `tfplan.json` | Cost Breakdown/Diff | Budget Approval |
+| CI/CD | Jenkins | `Jenkinsfile`, Git Source | Automated Artifacts/Deploys | Continuous Delivery |
+| Quality| SonarQube| Maven Source | Quality Gate Results | Security/Vulnerability Check |
+| Security| Trivy | Docker Images / FS | Vulnerability Reports | Registry Management |
 | Config | Ansible | EC2 IPs from Terraform | Configured nodes with tools | Maven, Docker |
 | Build | Maven | Source code, `pom.xml` | JAR files | Docker |
 | Package | Docker | JARs, `Dockerfile` | Container images | ECR |
 | Deploy | kubectl | K8s manifests, ECR images | Running pods | Monitoring |
-| Monitor | Prometheus/Grafana | Pod metrics | Dashboards | Operations |
+| Monitor | Prometheus | Pod metrics | Dashboards / Alerts | Operations |
 
 ---
 
