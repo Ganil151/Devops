@@ -927,6 +927,34 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 | ECR push denied | `denied: User not authorized` | Re-authenticate with `aws ecr get-login-password` |
 | Pod CrashLoopBackOff | Pod restarting | Check logs with `kubectl logs <pod>` |
 | ALB 503 errors | Service unavailable | Verify target group health checks |
+| Invalid AWS Token | `ExpiredToken` | Refresh session with `aws sso login` or `aws configure` |
+
+---
+
+## 🛠️ PHASE 6: Continuous Maintenance & Lifecycle
+*   **Logic:** A production system is only as good as its Day-2 operations. These steps ensure long-term stability and cost control.
+
+### 6.1 ECR Image Lifecycle Management
+- [ ] **Configure Image Cleanup**
+  *   **Logic:** Prevent ECR costs from ballooning by deleting untagged or old images.
+  ```bash
+  aws ecr put-lifecycle-policy \
+    --repository-name dev-petclinic-api-gateway \
+    --lifecycle-policy-text '{"rules":[{"rulePriority":1,"selection":{"tagStatus":"untagged","countType":"imageCountMoreThan","countNumber":5},"action":{"type":"expire"}}]}'
+  ```
+
+### 6.2 Logs & Observability Maintenance
+- [ ] **Check CloudWatch Log Retention**
+  *   **Logic:** Ensure logs are not kept indefinitely to save costs. Set to 14 or 30 days.
+  ```bash
+  aws logs put-retention-policy --log-group-name /aws/eks/petclinic/cluster --retention-in-days 30
+  ```
+
+### 6.3 Database Backups (RDS)
+- [ ] **Verify Snapshot Status**
+  ```bash
+  aws rds describe-db-snapshots --db-instance-identifier petclinic-db-dev
+  ```
 
 ---
 
@@ -937,7 +965,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 kubectl delete namespace petclinic
 
 # Destroy Terraform infrastructure
-cd /home/gsmash/Documents/spring-petclinic-microservices/terraform/environments/dev
+cd /home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/dev
 terraform destroy -auto-approve
 ```
 
