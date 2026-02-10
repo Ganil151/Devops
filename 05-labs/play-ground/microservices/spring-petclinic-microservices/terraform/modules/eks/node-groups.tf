@@ -1,6 +1,34 @@
-# Node Groups configuration (Example for separation)
-# In terraform-aws-modules, node groups are defined in main.tf inside the module block usually.
-# But you can define separate managed node groups resource if NOT using the module block for node groups.
+resource "aws_eks_node_group" "this" {
+  cluster_name    = aws_eks_cluster.this.name
+  node_group_name = "${var.environment}-main-nodes"
+  node_role_arn   = aws_iam_role.node_group.arn
+  subnet_ids      = var.private_subnet_ids
 
-# Resource "aws_eks_node_group" "example" { ... } if you wanted.
-# For now, this file is a placeholder for future custom node group definitions.
+  scaling_config {
+    desired_size = var.desired_size
+    max_size     = var.max_size
+    min_size     = var.min_size
+  }
+
+  instance_types = var.instance_types
+  capacity_type  = var.capacity_type # "ON_DEMAND" or "SPOT"
+
+  update_config {
+    max_unavailable = 1
+  }
+
+  labels = merge(
+    var.tags,
+    {
+      role = "worker"
+    }
+  )
+
+  depends_on = [
+    aws_iam_role_policy_attachment.node_group_AmazonEKSWorkerNodePolicy,
+    aws_iam_role_policy_attachment.node_group_AmazonEKS_CNI_Policy,
+    aws_iam_role_policy_attachment.node_group_AmazonEC2ContainerRegistryReadOnly,
+  ]
+
+  tags = var.tags
+}
