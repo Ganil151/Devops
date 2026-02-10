@@ -16,6 +16,23 @@ For this enterprise microservices project, **Amazon Linux 2023** is the preferre
 
 ---
 
+## 🖥️ EC2 Instance Topology & Resource Allocation
+To ensure high-availability and build performance, we utilize the following compute distribution:
+
+### 1. Compute Distribution (Master vs. Slaves)
+| Role | Count | Instance Type | vCPU / RAM | Role Detail |
+| :--- | :---: | :--- | :--- | :--- |
+| **Jenkins Master** | 1 | `t3.large` | 2 / 8GB | Orchestration & Global Config Controller |
+| **EKS Worker Nodes (Slaves)** | 3 | `t3.medium` | 2 / 4GB | Application Hosting & Dynamic Build Execution |
+| **SonarQube Server** | 1 | `t2.medium` | 2 / 4GB | Static Code Analysis (External Node) |
+
+### 2. Architectural Hierarchy
+*   **Jenkins Controller:** Functions as the **Master node**. It manages the pipeline state, credentials, and plugin ecosystem.
+*   **EKS Node Group:** Functions as the **Slave/Worker nodes**. Kubernetes schedules microservice pods here. These nodes also act as "Ephemeral Build Agents" for Docker image packaging.
+*   **AWS Managed Master:** The Kubernetes Control Plane is managed by AWS EKS. We do not provision EC2s for the K8s master; AWS ensures its 99.95% availability.
+
+---
+
 ## Deployment Flow Diagram
 
 ```
