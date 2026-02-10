@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/01-phase-1/08-repository-management/01-git-github/01-beginner-level/02-git-fundamentals/readme.md",
+                "file": "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "DEPLOYMENT_CHECKLIST"
             }
           }
         ],
@@ -113,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -238,8 +239,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "01-beginner/01-phase-1/08-repository-management/01-git-github/01-beginner-level/02-git-fundamentals/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/JAVA21_MIGRATION.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/RUNBOOK_AWS_DEPLOY.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
@@ -268,7 +270,6 @@
     "08-career-mastery/08-interview-mastery/01-technical-deep-dives/terraform.md",
     "08-career-mastery/01-devops-persona/readme.md",
     "06-quizzes/standard_quiz_template.md",
-    "06-quizzes/03-advanced/05-cicd-observability-sre.md",
     "08-career-mastery/09-salary-negotiation",
     "08-career-mastery/08-interview-mastery/archive",
     "08-career-mastery/08-interview-mastery/04-live-coding-challenges",
