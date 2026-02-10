@@ -44,11 +44,14 @@ This checklist provides a comprehensive, step-by-step guide for deploying the Sp
 | Cost | Infracost | `tfplan.json` | Cost Breakdown/Diff | Budget Approval |
 | CI/CD | Jenkins | `Jenkinsfile`, Git Source | Automated Artifacts/Deploys | Continuous Delivery |
 | Quality| SonarQube| Maven Source | Quality Gate Results | Security/Vulnerability Check |
+| Testing| JUnit/Mockito | Java Source | Test Reports (XML) | Build/Package Stage |
 | Security| Trivy | Docker Images / FS | Vulnerability Reports | Registry Management |
-| Config | Ansible | EC2 IPs from Terraform | Configured nodes with tools | Maven, Docker |
+| Config | Ansible | EC2 IPs from Terraform | Configured nodes with tools | Pytest, Maven, Docker |
+| Verify | Pytest (Testinfra) | EC2 IPs | Node Configuration Report | Production Readiness |
 | Build | Maven | Source code, `pom.xml` | JAR files | Docker |
 | Package | Docker | JARs, `Dockerfile` | Container images | ECR |
 | Deploy | kubectl | K8s manifests, ECR images | Running pods | Monitoring |
+| Smoke | Pytest (Requests) | Load Balancer DNS | Health/API Verification | User Traffic |
 | Monitor | Prometheus | Pod metrics | Dashboards / Alerts | Operations |
 
 ---
