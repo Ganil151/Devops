@@ -219,8 +219,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 ### 2.1 Terraform Module Dependency Order
 
 ```
-1. networking (VPC, Subnets, NAT)
-   ↓
+1. networking (VPC, Subnets, N   ↓
 2. ecr (Container Registries)
    ↓
 3. rds (Database)
