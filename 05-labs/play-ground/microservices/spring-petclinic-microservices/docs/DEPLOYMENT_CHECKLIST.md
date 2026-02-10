@@ -118,40 +118,46 @@ ansible/
     └── site.yml                  # Entry point mapping roles to specific node groups
 ```
 
+### 🛠️ Bootstrapping the Ansible Structure
+Run the following command to initialize the Ansible directory structure and role skeleton:
+```bash
+mkdir -p ansible/{inventory/group_vars,roles/security_hardening/tasks,roles/install_tools/{tasks,vars},playbooks} && \
+touch ansible/ansible.cfg && \
+touch ansible/inventory/dev.ini && \
+touch ansible/roles/security_hardening/tasks/main.yml && \
+touch ansible/roles/install_tools/tasks/{java,docker,kubernetes}.yml && \
+touch ansible/roles/install_tools/vars/main.yml && \
+touch ansible/playbooks/site.yml
+```
+
 ### Part 3: Layer 3 - Container Orchestration (Helm & Microservices)
 *Governs the packaging, scaling, and traffic routing for the PetClinic microservices.*
 
-```text
-helm/
-└── microservices/                # The Master "PetClinic" Umbrella Chart
-    ├── Chart.yaml                # Semantic versioning for the deployment bundle
-    ├── values.yaml               # Shared registry URLs & image tag defaults
-    ├── templates/                # Reusable Boilerplate Manifests (High-Fidelity)
-    │   ├── deployment.yaml       # CPU/Mem Limits, Affinity, & Readiness probes
-    │   ├── service.yaml          # ClusterIP (Internal) vs LoadBalancer (External)
-    │   ├── ingress.tf            # ALB Controller & WAF associations
-    │   ├── hpa.yaml              # Horizontal Pod Autoscaling (CPU > 70%)
-    │   └── _helpers.tpl          # Dynamic naming & labelling logic
-    └── overrides/                # Environment-specific value injection
-        ├── dev.yaml              # Single replica, Spot instance selectors
-        └── prod.yaml             # 3+ replicas, Multi-AZ spread constraints
+```
+
+### 🛠️ Bootstrapping the Helm Structure
+Run the following command to initialize the Helm chart structure and templates:
+```bash
+mkdir -p helm/microservices/{templates,overrides} && \
+touch helm/microservices/{Chart.yaml,values.yaml} && \
+touch helm/microservices/templates/{deployment,service,ingress,hpa}.yaml && \
+touch helm/microservices/templates/_helpers.tpl && \
+touch helm/microservices/overrides/{dev,prod}.yaml
 ```
 
 ### Part 4: Layer 4 - Lifecycle Automation (Scripts & Quality)
 *The connective tissue that enforces the CI/CD workflow and production standards.*
 
-```text
-scripts/                          # Master Automation & DX (Dev Experience)
-├── build-and-push.sh*            # Maven build, Docker tag creation, ECR push
-├── deploy.sh*                    # Phase-by-phase execution: TF -> Ansible -> Helm
-├── aws-auth.sh*                  # STS Token refresh & ECR Login automation
-└── cleanup.sh*                   # FinOps utility for destroying orphaned resources
-testing/                          # Automated Quality & Reliability Gates
-├── infra/                        # Testinfra (Verify Package integrity & Ports)
-│   └── test_nodes.py             # Checks Java 21 & Container runtime status
-├── smoke/                        # Requests (End-to-End API/Health verification)
-├── security/                     # OPA Policy checks & Trivy image vulnerability logs
-└── quality/                      # SonarQube quality gate reports & XML logs
+```
+
+### 🛠️ Bootstrapping the Lifecycle & Quality Structure
+Run the following command to initialize the automation scripts and testing framework:
+```bash
+mkdir -p scripts testing/{infra,smoke,security,quality} && \
+touch scripts/{build-and-push,deploy,aws-auth,cleanup}.sh && \
+chmod +x scripts/*.sh && \
+touch testing/infra/test_nodes.py && \
+touch testing/smoke/test_endpoints.py
 ```
 
 ---
