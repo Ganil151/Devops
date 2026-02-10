@@ -565,6 +565,32 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 
 ---
 
+## 🧪 PHASE 3.5: Infrastructure Validation (Pytest-Testinfra)
+
+### 3.4 Automated Server Auditing
+*   **Logic:** Verify that Ansible successfully configured the nodes according to our SRE standards.
+
+- [ ] **Prepare Pytest Environment**
+  ```bash
+  pip install pytest-testinfra
+  ```
+
+- [ ] **Run Infrastructure Tests**
+  *   **Logic:** Checks for specific package versions, running processes, and open ports on the EKS nodes.
+  ```bash
+  # Run tests against all nodes in the inventory
+  pytest -v --hosts='ansible://eks_nodes?ansible_inventory=ansible/inventory/dynamic_hosts' \
+    tests/infra/test_nodes.py
+  ```
+
+- [ ] **Verification Items (NRE Standard)**
+  - [ ] **Java 21** is the default runtime.
+  - [ ] **Docker** daemon is active and responsive.
+  - [ ] **Kubelet** process is running.
+  - [ ] **CloudWatch Agent** is properly configured.
+
+---
+
 ## 🛠️ PHASE 4: CI/CD Pipeline Automation (Jenkins)
 
 ### 4.1 Jenkins Pipeline Integration
@@ -637,9 +663,16 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   ./mvnw clean
   ```
 
+- [ ] **Run Unit and Integration Tests (JUnit/Mockito)**
+  *   **Logic:** Validate business logic and microservice interaction before packaging.
+  ```bash
+  ./mvnw clean test
+  ```
+  *   **Expected Outcome:** All tests pass. Check `target/surefire-reports` for details.
+
 - [ ] **Build all microservices**
   ```bash
-  ./mvnw clean install -DskipTests
+  ./mvnw install -DskipTests
   ```
   **Expected Duration:** 3-5 minutes
   **Troubleshooting:** If build fails, check Java version with `java -version`
