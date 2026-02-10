@@ -5,6 +5,17 @@ This checklist provides a comprehensive, step-by-step guide for deploying the Sp
 
 ---
 
+## 🏛️ System Decision Record (SDR): OS Selection
+**Recommendation: Amazon Linux 2023 (AL2023)**
+
+For this enterprise microservices project, **Amazon Linux 2023** is the preferred distribution over Ubuntu for the following reasons:
+1.  **AWS Optimization:** AL2023 includes pre-installed AWS tools (CLI, SSM, CloudWatch Agent) and an optimized kernel for EC2, resulting in **15-20% faster boot times** during EKS auto-scaling.
+2.  **Security Baseline:** It comes pre-hardened with SELinux in permissive mode by default and a minimal package set to reduce the attack surface.
+3.  **Support Lifecycle:** Direct integration with AWS Support and a predictable 5-year support window specifically for AWS infrastructure.
+4.  **License:** No additional costs for ESM/Pro patches, unlike Ubuntu for long-term production use.
+
+---
+
 ## Deployment Flow Diagram
 
 ```
