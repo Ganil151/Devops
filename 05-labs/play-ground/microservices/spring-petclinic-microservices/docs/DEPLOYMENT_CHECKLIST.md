@@ -13,28 +13,39 @@ This repository is architected following the **Separation of Concerns** principl
 
 ```text
 terraform/
-├── shared/                       # Global state & plugin logic
-│   ├── providers.tf              # AWS, Kubernetes, & Helm provider versions
-│   ├── data.tf                   # Dynamic lookups (AMI IDs, AZ lists, Account ID)
-│   └── versions.tf               # Constraints for TF engine version (v1.6+)
+├── terragrunt.hcl                # Root configuration (Backend & Providers)
 ├── modules/                      # The Enterprise-Grade Blueprint Library
 │   ├── networking/               # 🌐 VPC & Core Networking
-│   │   ├── main.tf               # VPC (10.0.0.0/16), IGW, and NAT Gateways
-│   │   ├── subnets.tf            # Public (ELB) vs Private (App) subnet logic
-│   │   ├── routing.tf            # Route Tables & NAT associations
-│   │   └── outputs.tf            # Exported VPC_ID and Subnet lists
-│   ├── eks/                      # ☸️ Kubernetes & EC2 Compute Plane
-│   │   ├── main.tf               # EKS Cluster Control Plane (v1.29)
-│   │   ├── node-groups.tf        # 💻 EC2 Managed Node Groups (t3.medium)
-│   │   ├── fargate.tf            # Serverless pod execution profiles
-│   │   └── iam.tf                # OIDC & Node Instance IAM Roles
+│   │   ├── main.tf               # VPC & Flow Logs logic
+│   │   ├── subnets.tf            # Public/Private subnet definitions
+│   │   ├── routing.tf            # NAT Gateway & Route Table logic
+│   │   ├── outputs.tf            # Exported VPC/Subnet IDs
+│   │   └── variables.tf          # CIDR & AZ configurations
+│   ├── eks/                      # ☸️ Kubernetes & Compute Plane
+│   │   ├── main.tf               # Control Plane & OIDC logic
+│   │   ├── node-groups.tf        # Managed EC2 Node Groups
+│   │   ├── fargate.tf            # Serverless pod execution
+│   │   ├── iam.tf                # Cluster & Node IAM Roles
+│   │   └── variables.tf          # Instance types & Scaling limits
 │   ├── rds/                      # 🗄️ Database (Multi-AZ MySQL)
-│   └── monitoring/               # 📊 CloudWatch Logs & SNS Alarm logic
+│   │   ├── main.tf               # RDS instance & Security Group
+│   │   └── outputs.tf            # DB endpoints & Identifiers
+│   ├── ec2/                      # 💻 Bastion / Jump Box
+│   │   ├── main.tf               # Bastion host & SSH security
+│   │   └── variables.tf          # Allowed SSH CIDRs
+│   └── monitoring/               # 📊 CloudWatch & Dashboards
+│       └── main.tf               # Metric Alarms & Insights Dashboards
 └── environments/                 # The "Instantiated" Workspace
-    ├── dev/                      # Workspace: Development (Spot EC2 Instances)
-    │   ├── main.tf               # Orchestrates modules/networking + modules/eks
-    │   └── terraform.tfvars      # Credentials (passed via environment vars)
-    └── prod/                     # Workspace: Production (On-Demand EC2 Nodes)
+    ├── dev/                      # Workspace: Development
+    │   ├── main.tf               # Module orchestration
+    │   ├── terragrunt.hcl        # Env-specific Terragrunt config
+    │   └── env.hcl               # Environment namespace (dev)
+    ├── staging/                  # Workspace: Pre-production
+    │   ├── main.tf               # Scaled staging configuration
+    │   └── terragrunt.hcl        # Includes root config
+    └── prod/                     # Workspace: Production (High Availability)
+        ├── main.tf               # Multi-AZ & Instance Hardening
+        └── terragrunt.hcl        # Prod backend configuration
 ```
 
 ### Part 2: Layer 2 - Configuration Management (Ansible)
