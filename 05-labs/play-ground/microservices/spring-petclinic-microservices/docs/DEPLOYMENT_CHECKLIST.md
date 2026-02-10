@@ -6,78 +6,91 @@ This checklist provides a comprehensive, step-by-step guide for deploying the Sp
 ---
 
 ## 🏗️ Detailed Project Infrastructure Breakdown
-This repository is architected following the **Separation of Concerns** principle across four distinct lifecycle phases.
+This repository is architected following the **Separation of Concerns** principle, ensuring each layer of the stack is modular, testable, and independently scalable.
 
 ### Part 1: Layer 1 - Infrastructure Provisioning (Terraform)
-*Defines the "Hard" hardware: VPCs, EKS Clusters, Subnets, and Databases.*
+*Deep-dive into the "Hard" hardware that forms the foundation of the cloud environment.*
 
 ```text
 terraform/
 ├── shared/                       # Global state & plugin logic
-│   ├── providers.tf              # AWS & Kubernetes provider versions
-│   ├── data.tf                   # Shared data sources (Region, Account ID)
-│   └── versions.tf               # Terraform Core constraints
-├── modules/                      # The "Blueprint" Library
-│   ├── networking/               # VPC, Subnets, NAT Gateways
-│   │   ├── security-groups.tf    # Baseline firewall rules
-│   │   └── outputs.tf            # Exported VPC IDs for other modules
-│   ├── eks/                      # Elastic Kubernetes Service logic
-│   │   ├── main.tf               # Control Plane & Node Group definitions
-│   │   └── fargate.tf            # Serverless pod execution profiles
-│   ├── rds/                      # Database (MySQL) layer
-│   └── monitoring/               # CloudWatch Dashboard & Alarms
-└── environments/                 # The "Instantiated" Infrastructure
-    ├── dev/                      # Workspace for feature development
-    │   ├── main.tf               # Environment-specific module calls
-    │   └── terraform.tfvars      # Credentials (Pass @ CLI only!)
-    └── prod/                     # High-Availability production workspace
+│   ├── providers.tf              # AWS, Kubernetes, & Helm provider versions
+│   ├── data.tf                   # Dynamic lookups (AMI IDs, AZ lists, Account ID)
+│   └── versions.tf               # Constraints for TF engine version (v1.6+)
+├── modules/                      # The Enterprise-Grade Blueprint Library
+│   ├── networking/               # 🌐 VPC & Core Networking
+│   │   ├── main.tf               # VPC (10.0.0.0/16), IGW, and NAT Gateways
+│   │   ├── subnets.tf            # Public (ELB) vs Private (App) subnet logic
+│   │   ├── routing.tf            # Route Tables & NAT associations
+│   │   └── outputs.tf            # Exported VPC_ID and Subnet lists
+│   ├── eks/                      # ☸️ Kubernetes & EC2 Compute Plane
+│   │   ├── main.tf               # EKS Cluster Control Plane (v1.29)
+│   │   ├── node-groups.tf        # 💻 EC2 Managed Node Groups (t3.medium)
+│   │   ├── fargate.tf            # Serverless pod execution profiles
+│   │   └── iam.tf                # OIDC & Node Instance IAM Roles
+│   ├── rds/                      # 🗄️ Database (Multi-AZ MySQL)
+│   └── monitoring/               # 📊 CloudWatch Logs & SNS Alarm logic
+└── environments/                 # The "Instantiated" Workspace
+    ├── dev/                      # Workspace: Development (Spot EC2 Instances)
+    │   ├── main.tf               # Orchestrates modules/networking + modules/eks
+    │   └── terraform.tfvars      # Credentials (passed via environment vars)
+    └── prod/                     # Workspace: Production (On-Demand EC2 Nodes)
 ```
 
 ### Part 2: Layer 2 - Configuration Management (Ansible)
-*Hardens the OS and installs the required toolbelt (Docker, Java 21) on EKS nodes.*
+*The "Last Mile" of server setup, hardening the AL2023 OS and configuring the devops toolbelt.*
 
 ```text
 ansible/
-├── ansible.cfg                   # SSH optimization and timeout settings
-├── inventory/                    # Target definitions
-│   ├── dev.ini                   # IP addresses for Dev environment
-│   └── group_vars/               # Global variables (e.g., JAVA_VERSION=21)
-├── roles/                        # Reusable configuration units
-│   └── install_tools/            # The core setup role
-│       ├── tasks/main.yml        # Logic for installing Docker/Kubectl/Java
-│       └── vars/main.yml         # Role-specific constants
-└── playbooks/                    # The execution entry point
-    └── site.yml                  # Main playbook mapping roles to hosts
+├── ansible.cfg                   # SSH Multiplexing & Pipelining optimizations
+├── inventory/                    # Target definitions & Environment mapping
+│   ├── dev.ini                   # Target IPs for Development EKS nodes
+│   └── group_vars/               # Global vars (e.g., JAVA_HOME, DOCKER_VERSION)
+├── roles/                        # Self-contained "Configuration Blocks"
+│   ├── security_hardening/       # SELinux config, SSH hardening, Fail2Ban
+│   └── install_tools/            # The core DevOps toolbelt
+│       ├── tasks/java.yml        # Logic for installing OpenJDK 21
+│       ├── tasks/docker.yml      # Container engine setup & group permissions
+│       ├── tasks/kubernetes.yml  # Master/Worker node CLI tools (kubectl)
+│       └── vars/main.yml         # Role-specific constants and download URLs
+└── playbooks/                    # The Execution Mastermind
+    └── site.yml                  # Entry point mapping roles to specific node groups
 ```
 
-### Part 3: Layer 3 - Container Orchestration (Helm & K8s)
-*Deploys the microservices into the cluster with traffic and scaling logic.*
+### Part 3: Layer 3 - Container Orchestration (Helm & Microservices)
+*Governs the packaging, scaling, and traffic routing for the PetClinic microservices.*
 
 ```text
 helm/
-└── microservices/                # The Master PetClinic Chart
-    ├── Chart.yaml                # Versioning for the deployment bundle
-    ├── values.yaml               # Default image tags and resource limits
-    ├── templates/                # Reusable Boilerplate manifests
-    │   ├── deployment.yaml       # Scaling, Affinity, and HealthProbes
-    │   ├── service.yaml          # ClusterIP & LoadBalancer definitions
-    │   └── _helpers.tpl          # Dynamic naming templates
-    └── values-dev.yaml           # Overrides for limited dev resources
+└── microservices/                # The Master "PetClinic" Umbrella Chart
+    ├── Chart.yaml                # Semantic versioning for the deployment bundle
+    ├── values.yaml               # Shared registry URLs & image tag defaults
+    ├── templates/                # Reusable Boilerplate Manifests (High-Fidelity)
+    │   ├── deployment.yaml       # CPU/Mem Limits, Affinity, & Readiness probes
+    │   ├── service.yaml          # ClusterIP (Internal) vs LoadBalancer (External)
+    │   ├── ingress.tf            # ALB Controller & WAF associations
+    │   ├── hpa.yaml              # Horizontal Pod Autoscaling (CPU > 70%)
+    │   └── _helpers.tpl          # Dynamic naming & labelling logic
+    └── overrides/                # Environment-specific value injection
+        ├── dev.yaml              # Single replica, Spot instance selectors
+        └── prod.yaml             # 3+ replicas, Multi-AZ spread constraints
 ```
 
-### Part 4: Layer 4 - Quality, Security & DX (Scripts & Testing)
-*The glue that binds the phases together and ensures production readiness.*
+### Part 4: Layer 4 - Lifecycle Automation (Scripts & Quality)
+*The connective tissue that enforces the CI/CD workflow and production standards.*
 
 ```text
-scripts/                          # Developer Experience (DX) Utilities
-├── build-and-push.sh*            # Multi-service Maven build & ECR Push
-├── deploy.sh*                    # Orchestration: TF -> Ansible -> Helm
-└── cleanup.sh*                   # Safe teardown of cloud resources
-testing/                          # Automated Quality Gates
-├── infra/                        # Testinfra (Verify OS state & Packages)
-│   └── test_nodes.py             # Checks Java version & Docker daemon
-├── smoke/                        # Requests-based API verification
-└── security/                     # Trivy scan results & Benchmarks
+scripts/                          # Master Automation & DX (Dev Experience)
+├── build-and-push.sh*            # Maven build, Docker tag creation, ECR push
+├── deploy.sh*                    # Phase-by-phase execution: TF -> Ansible -> Helm
+├── aws-auth.sh*                  # STS Token refresh & ECR Login automation
+└── cleanup.sh*                   # FinOps utility for destroying orphaned resources
+testing/                          # Automated Quality & Reliability Gates
+├── infra/                        # Testinfra (Verify Package integrity & Ports)
+│   └── test_nodes.py             # Checks Java 21 & Container runtime status
+├── smoke/                        # Requests (End-to-End API/Health verification)
+├── security/                     # OPA Policy checks & Trivy image vulnerability logs
+└── quality/                      # SonarQube quality gate reports & XML logs
 ```
 
 ---
