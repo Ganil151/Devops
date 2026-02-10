@@ -386,7 +386,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
     --attribute-definitions AttributeName=LockID,AttributeType=S \
     --key-schema AttributeName=LockID,KeyType=HASH \
     --billing-mode PAY_PER_REQUEST \
-    --region us-west-2
+    --region us
   ```
   *   **Verification:** `aws dynamodb describe-table --table-name petclinic-terraform-locks --query "Table.TableStatus"` (Expected: `ACTIVE`)
 
