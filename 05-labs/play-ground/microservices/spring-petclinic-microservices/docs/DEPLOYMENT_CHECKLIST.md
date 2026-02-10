@@ -31,6 +31,11 @@ To ensure high-availability and build performance, we utilize the following comp
 *   **EKS Node Group:** Functions as the **Slave/Worker nodes**. Kubernetes schedules microservice pods here. These nodes also act as "Ephemeral Build Agents" for Docker image packaging.
 *   **AWS Managed Master:** The Kubernetes Control Plane is managed by AWS EKS. We do not provision EC2s for the K8s master; AWS ensures its 99.95% availability.
 
+### 3. High Availability & Persistence
+*   **Multi-AZ Strategy:** The 3 Worker Nodes are distributed across `us-west-2a`, `us-west-2b`, and `us-west-2c`. This ensures that even if an entire AWS Data Center fails, 66% of your application capacity remains online.
+*   **Storage (EBS):** Every worker node is backed by a **GP3 EBS Volume** (Minimum 20GB). Microservices requiring persistent storage use **K8s PersistentVolumeClaims (PVCs)** mapped to these EBS volumes.
+*   **Database Resilience:** The RDS instance uses **Multi-AZ Replication**, providing a synchronous standby in a different subnet for automatic failover.
+
 ---
 
 ## Deployment Flow Diagram
