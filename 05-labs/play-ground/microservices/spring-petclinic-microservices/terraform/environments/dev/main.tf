@@ -36,5 +36,10 @@ resource "random_password" "db_password" {
 module "ecr" {
   source = "../../modules/ecr"
 
-  # Placeholder for ECR logic
+  repository_names = [
+    "petclinic-api-gateway",
+    "petclinic-customers-service",
+    "petclinic-vets-service",
+    "petclinic-visits-service"
+  ]
 }
