@@ -219,18 +219,17 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 ### 2.1 Terraform Module Dependency Order
 
 ```
-1. networking (VPC, Subnets, N   ↓
+1. networking (VPC, Subnets, NAT)
+   ↓
 2. ecr (Container Registries)
    ↓
 3. rds (Database)
    ↓
 4. eks (Kubernetes Cluster)
    ↓
-5. secrets (Secrets Manager)
+5. alb (Load Balancer)
    ↓
-6. alb (Load Balancer)
-   ↓
-7. monitoring (CloudWatch)
+6. monitoring (CloudWatch)
 ```
 
 ### 2.2 Initialize Terraform
@@ -432,26 +431,35 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
     --nodegroup-name petclinic_nodes
   ```
 
-### 2.8 Deploy Secrets Module
+### 2.8 Secrets Management (S3-Based Storage)
+*   **Logic:** For this project, we store microservice secrets (DB passwords, API keys) as an encrypted JSON object in our S3 Backend Bucket. This avoids the cost of AWS Secrets Manager while maintaining encryption at rest.
 
-- [ ] **Plan secrets**
+- [ ] **Prepare Secrets JSON**
   ```bash
-  terraform plan -target=module.secrets
+  cat > secrets.json << EOF
+  {
+    "db_password": "${TF_VAR_db_password}",
+    "openai_api_key": "${TF_VAR_openai_api_key}",
+    "environment": "dev"
+  }
+  EOF
   ```
 
-- [ ] **Apply secrets**
+- [ ] **Upload Encrypted Secrets to S3**
   ```bash
-  terraform apply -target=module.secrets -auto-approve
+  aws s3 cp secrets.json s3://${BUCKET_NAME}/secrets/dev_secrets.json \
+    --sse AES256
+  ```
+  **Verification:** `aws s3 ls s3://${BUCKET_NAME}/secrets/`
+
+- [ ] **Secure Local Cleanup**
+  ```bash
+  rm secrets.json
   ```
 
-- [ ] **Verify secrets**
+- [ ] **Test Secret Retrieval**
   ```bash
-  aws secretsmanager list-secrets | grep petclinic
-  ```
-
-- [ ] **Test secret retrieval**
-  ```bash
-  aws secretsmanager get-secret-value --secret-id dev/petclinic/db/credentials --query SecretString --output text | jq .
+  aws s3 cp s3://${BUCKET_NAME}/secrets/dev_secrets.json - | jq .
   ```
 
 ### 2.9 Deploy ALB Module
