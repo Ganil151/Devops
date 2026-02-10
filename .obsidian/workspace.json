@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
+                "file": "01-beginner/02-phase-2/05-basic-ci-cd/part-01-principles-and-fundamentals/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DEPLOYMENT_CHECKLIST"
+              "title": "readme"
             }
           }
         ],
@@ -240,6 +240,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/aws-auth.sh",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/quality",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/smoke/test_endpoints.py",
@@ -250,7 +251,6 @@
     "05-labs/play-ground/microservices/spring-petclinic-microservices/helm/microservices/templates/ingress.yaml",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/helm/microservices/overrides/prod.yaml",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/helm/microservices/overrides/dev.yaml",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/helm/microservices/overrides",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/ecr/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/vpc/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/ecr-repositories/README.md",
@@ -260,7 +260,6 @@
     "01-beginner/01-phase-1/08-repository-management/01-git-github/01-beginner-level/02-git-fundamentals/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/JAVA21_MIGRATION.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/RUNBOOK_AWS_DEPLOY.md",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
     "08-career-mastery/08-interview-mastery/01-technical-deep-dives/cicd-automation.md",
     "08-career-mastery/08-interview-mastery/01-technical-deep-dives/cloud-platforms.md",
     "08-career-mastery/08-interview-mastery/01-technical-deep-dives/docker.md",
