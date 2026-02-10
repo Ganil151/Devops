@@ -11,25 +11,43 @@ In DevOps, technical skills get you the interview, but behavioral skills get you
 - **R**esult: What was the outcome? (Use numbers/percentages).
 
 ---
-## 🚀 Common DevOps Scenarios
+---
 
-### 1. "Tell me about a time you broke production."
-**Interviewer's Secret:** They aren't looking to punish you. They are checking for **Accountability** and **Post-Mortem Logic**.
+## ⚙️ The STAR Deep Dive: Step-by-Step Execution
+When you are asked a behavioral question, follow this precise mental sequence:
+1.  **Identify the Value:** Before speaking, determine what quality they are testing (e.g., Grit, Empathy, Leadership).
+2.  **Situation (10%):** Spend exactly 2-3 sentences setting the context. Don't get bogged down in technical jargon yet.
+3.  **Task (10%):** State the one specific blocker you faced. "The task was to reduce deploy time, which had ballooned to 45 minutes."
+4.  **Action (60%):** This is the meat. Use **"I" instead of "We."** Break it down:
+    - Phase 1: Analyzed the bottleneck.
+    - Phase 2: Built a prototype.
+    - Phase 3: Socialized the change with the team.
+5.  **Result (20%):** State the outcome with a hard metric. "This reduced deploy time to 8 minutes and saved the team 5 hours per dev/week."
 
-**The STAR Response:**
-- **Situation:** While migrating our database to a new RDS cluster in `eu-west-1`.
-- **Task:** I had to update the connection string in 50+ microservices.
-- **Action:** I used an Ansible playbook to automate the rolling update. However, I missed a character in the ENV variable for the staging environment, which was accidentally applied to Prod.
-- **Result:** System was down for 12 minutes. I immediately rolled back using GitOps (ArgoCD), then lead a "Blameless Post-Mortem" where we implemented a "Dry Run" requirement for all production ENV changes.
+---
 
-### 2. "How do you handle a conflict with a developer who refuses to write tests?"
-**Interviewer's Secret:** They are checking for **Empathy** and **Process Guardrails**.
+## 🏢 Culture & Process Mastery: Q&A
+Based on the **160 Questions** framework.
 
-**The STAR Response:**
-- **Situation:** A Senior Dev was pushing code that consistently failed in the integration stage.
-- **Task:** Increase code coverage without slowing down velocity.
-- **Action:** Instead of arguing, I implemented **SonarQube** in the CI pipeline as a "Quality Gate." If code coverage fell below 70%, the build automatically failed.
-- **Result:** The developer initially complained, but within two weeks, the number of production hotfixes dropped by 40%, and the team agreed it was a necessary safety net.
+#### Q: What is Blameless Culture? [Senior]
+**Solution:** A culture that assumes people come to work to do a good job. When a failure occurs, we look at the system, not the individual.
+**Step-by-Step Post-Mortem:**
+1.  **Timeline Construction:** Exactly what happened and when?
+2.  **Root Cause Analysis (5 Whys):** Dig deep into the system logic.
+3.  **Action Items:** Create JIRA tickets for specific technical guardrails.
+4.  **Publication:** Share the doc with the whole engineering org to prevent recurrence.
+
+#### Q: Explain the hierarchy of SLI, SLO, and SLA [Intermediate]
+**Step-by-Step Implementation:**
+1.  **Select the SLI:** "We will measure Latency at the Load Balancer."
+2.  **Define the SLO:** "99.9% of requests must be < 200ms."
+3.  **Calculate Error Budget:** "This gives us 43 minutes of 'slowness' per month."
+4.  **Agree on SLA:** "If we drop below 99.0%, we owe customers service credits."
+
+#### Q: What is the difference between a Runbook and a Playbook? [Senior]
+**Solution:**
+- **Runbook (Operational):** Step-by-step for a specific technical task (e.g., "How to resize an RDS instance").
+- **Playbook (Strategic):** High-level response strategy for a type of incident (e.g., "DDoS Response Playbook").
 
 ---
 
