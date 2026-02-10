@@ -6,7 +6,14 @@ Master the "Virtual Data Center." Shift from "spinning up instances" to architec
 - [🟢 Junior Tier: The Fundamentals](#-junior-tier-the-fundamentals)
 - [🟡 Intermediate Tier: The Professional](#-intermediate-tier-the-professional)
 - [🔴 Senior Tier: The Staff Engineer](#-senior-tier-the-staff-engineer)
+- [🛡️ Specialized Deep Dives](#️-specialized-deep-dives)
 - [🗝️ Master Key: Interviewer's Secret Summary](#️-master-key-interviewers-secret-summary)
+
+---
+
+## 🛡️ Specialized Deep Dives
+For granular service mastery, see:
+- [[aws-s3|🪣 AWS S3: Storage & Durability Architecture]]
 
 ---
 
