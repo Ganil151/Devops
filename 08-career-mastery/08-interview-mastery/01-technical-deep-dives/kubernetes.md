@@ -104,6 +104,31 @@ Master the orchestration questions that separate a "kubectl explorer" from a Pla
 
 ---
 
+## ⚙️ Internal Workflows: Step-by-Step
+
+### 1. The `kubectl apply` Lifecycle (The Reconciliation Loop)
+When you run `kubectl apply -f deployment.yaml`, the following 10-step sequence occurs:
+1.  **Client-Side Validation:** `kubectl` validates the YAML syntax and converts it to a JSON payload.
+2.  **Authentication/Authorization:** The `API Server` verifies your identity (TLS cert/Token) and RBAC permissions.
+3.  **Admission Control (Mutating):** Mutating webhooks (e.g., Istio sidecar injection) modify the object.
+4.  **Schema Validation:** The `API Server` ensures the object follows the K8s API schema.
+5.  **Admission Control (Validating):** Validating webhooks (e.g., Gatekeeper) check if the object violates policies.
+6.  **Persistence:** The validated object is stored in **etcd**.
+7.  **Controller Management:** The `Deployment Controller` sees the new object and creates a `ReplicaSet`.
+8.  **ReplicaSet Scaling:** The `ReplicaSet Controller` sees the desired count (e.g., 3) and creates 3 `Pod` objects (pending scheduling).
+9.  **Scheduling:** The `Kube-Scheduler` filters nodes (checking resources/taints) and "binds" the Pods to specific nodes.
+10. **Kubelet Execution:** The `Kubelet` on each node detects the assignment, calls the **Container Runtime (CRI)** to pull images, and starts the containers.
+
+### 2. Traffic Flow: From Service to Pod
+How a packet actually reaches its destination:
+1.  **Request Initiation:** A client sends a request to the `ClusterIP` of a Service.
+2.  **Kube-Proxy Interception:** Each node has `kube-proxy` managing **iptables** or **IPVS** rules.
+3.  **NAT (Network Address Translation):** The packet's destination IP is translated from the Service IP to one of the Pod IPs (selected via round-robin or least connection).
+4.  **Pod Routing:** The packet is routed to the target Node and into the Pod's network namespace via the **CNI (Container Network Interface)**.
+5.  **Container Receipt:** The application inside the container receives the packet on the designated port.
+
+---
+
 ## 🗝️ Master Key: Interviewer's Secret Summary
 | Concept | What they are REALLY looking for |
 | :--- | :--- |
