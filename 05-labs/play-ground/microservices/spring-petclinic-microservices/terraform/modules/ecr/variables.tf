@@ -1,1 +1,5 @@
-variable "repository_names" { type = list(string) }
+variable "repository_names" {
+  description = "List of ECR repository names"
+  type        = list(string)
+  default     = []
+}
