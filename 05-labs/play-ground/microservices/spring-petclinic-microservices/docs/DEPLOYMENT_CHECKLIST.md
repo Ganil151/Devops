@@ -96,7 +96,7 @@ touch terraform/environments/staging/terraform.tfvars && \
 touch terraform/environments/prod/{main,backend,providers,variables,versions}.tf && \
 touch terraform/environments/prod/terraform.tfvars
 ```
-```
+
 
 ### Part 2: Layer 2 - Configuration Management (Ansible)
 *The "Last Mile" of server setup, hardening the AL2023 OS and configuring the devops toolbelt.*
