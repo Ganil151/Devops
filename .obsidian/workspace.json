@@ -241,6 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/staging/env.hcl",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/dev/env.hcl",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/terragrunt.hcl",
     "08-career-mastery/08-interview-mastery/01-technical-deep-dives/aws-s3.md",
     "01-beginner/01-phase-1/08-repository-management/01-git-github/01-beginner-level/02-git-fundamentals/readme.md",
@@ -277,8 +279,6 @@
     "08-career-mastery/08-interview-mastery/02-scenario-architecture",
     "08-career-mastery/08-interview-mastery/01-technical-deep-dives",
     "08-career-mastery/07-resume-engineering/Ganil Batist Yan DevOps Engineer Resume.pdf",
-    "08-career-mastery/Ganil Batist Yan DevOps Engineer Resume.pdf",
-    "07-boilerplates/02-intermediate/terraform/parts/aws/vpcs/21-multi-region-peering.tf",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
