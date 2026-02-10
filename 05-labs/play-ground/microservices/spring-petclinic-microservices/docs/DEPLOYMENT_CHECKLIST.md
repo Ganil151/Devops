@@ -13,24 +13,68 @@ This repository is architected following the **Separation of Concerns** principl
 
 ```text
 terraform/
-├── shared/                       # SOURCE OF TRUTH (Physical files)
-│   ├── main.tf                   # Orchestrates all modules
-│   ├── providers.tf              # AWS Provider & Tags
-│   ├── variables.tf              # Variable declarations
-│   ├── versions.tf               # Version constraints
-│   └── output.tf                 # Shared outputs
-├── modules/ (networking, eks, rds, ec2) # Component modules
-└── environments/
-    ├── dev/
-    │   ├── backend.tf            # Unique S3 key
-    │   ├── terraform.tfvars      # Unique values
-    │   ├── main.tf               # SYMLINK -> ../../shared/main.tf
-    │   ├── outputs.tf            # SYMLINK -> ../../shared/output.tf
-    │   ├── providers.tf          # SYMLINK -> ../../shared/providers.tf
-    │   ├── variables.tf          # SYMLINK -> ../../shared/variables.tf
-    │   └── versions.tf           # SYMLINK -> ../../shared/versions.tf
-    ├── prod/ ... (Same symlink structure)
-    └── stagging/ ... (Same symlink structure)
+├── modules/                              # Reusable, parameterized components
+│   ├── vpc/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   │   └── README.md                     # Usage examples & interface contract
+│   ├── eks/
+│   │   ├── main.tf                       # EKS cluster + node groups
+│   │   ├── addons.tf                     # CoreDNS, VPC-CNI, EBS CSI
+│   │   ├── irsa.tf                       # IAM Roles for Service Accounts
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   │   └── README.md
+│   ├── rds-postgres/
+│   │   ├── main.tf                       # Multi-AZ RDS + parameter group
+│   │   ├── security-group.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   │   └── README.md
+│   ├── alb/
+│   │   ├── main.tf                       # ALB + target groups for ingress
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   ├── ecr-repositories/
+│   │   ├── main.tf                       # Per-service ECR repos (customers, visits, etc.)
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   └── monitoring/                       # Optional: CloudWatch dashboards, alerts
+│       ├── main.tf
+│       └── ...
+├── environments/
+│   ├── dev/
+│   │   ├── main.tf                       # Composes modules with dev params
+│   │   ├── backend.tf                    # Unique S3 key: tfstate/dev/...
+│   │   ├── providers.tf                  # Region + alias config
+│   │   ├── terraform.tfvars              # env_name="dev", instance_type="t3.small", etc.
+│   │   ├── variables.tf                  # Declares ONLY environment-specific vars
+│   │   └── versions.tf                   # Terraform + provider versions
+│   ├── staging/
+│   │   ├── main.tf                       # Composes SAME modules with staging params
+│   │   ├── backend.tf                    # Unique S3 key: tfstate/staging/...
+│   │   ├── providers.tf
+│   │   ├── terraform.tfvars              # env_name="staging", instance_type="m6i.large", etc.
+│   │   ├── variables.tf
+│   │   └── versions.tf
+│   └── prod/
+│       ├── main.tf                       # Composes SAME modules with prod params
+│       ├── backend.tf                    # Unique S3 key: tfstate/prod/...
+│       ├── providers.tf
+│       ├── terraform.tfvars              # env_name="prod", instance_type="m6i.xlarge", etc.
+│       ├── variables.tf
+│       ├── versions.tf
+│       └── security.tf                   # Prod-only: stricter SGs, encryption, backups
+├── global/                               # ONE-TIME resources (not per-env)
+│   ├── route53-zones/
+│   │   └── main.tf                       # Shared DNS zones (e.g., petclinic.example.com)
+│   └── iam/
+│       └── main.tf                       # Cross-account roles, SSO permissions
+├── scripts/
+│   ├── deploy.sh                         # Wrapper: terraform init/plan/apply per env
+│   └── validate-modules.sh               # Check module interfaces pre-commit
+└── README.md                             # Setup guide, env promotion workflow, diagram
 ```
 
 ### Part 2: Layer 2 - Configuration Management (Ansible)
