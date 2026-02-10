@@ -48,7 +48,7 @@ To ensure high-availability and build performance, we utilize the following comp
                          │
 ┌────────────────────────▼────────────────────────────────────────┐
 │              PHASE 2: INFRASTRUCTURE (Terraform)                │
-│  VPC → ECR → RDS → EKS → Secrets → ALB → Monitoring           │
+│  VPC → ECR → RDS → EKS → Secrets → ALB → WAF → Monitoring       │
 └────────────────────────┬────────────────────────────────────────┘
                          │
 ┌────────────────────────▼────────────────────────────────────────┐
@@ -79,6 +79,7 @@ To ensure high-availability and build performance, we utilize the following comp
 | Quality  | SonarQube          | Maven Source                     | Quality Gate Results               | Security/Vulnerability Check |
 | Testing  | JUnit/Mockito      | Java Source                      | Test Reports (XML)                 | Build/Package Stage          |
 | Security | Trivy / Checkov    | Docker Images / IaC              | Vulnerability Reports              | Registry Management          |
+| Firewall | AWS WAF            | ALB Traffic                      | Blocked/Allowed Requests          | Security Auditing           |
 | Stress   | Apache JMeter      | User Scenarios                   | Performance Baseline               | SRE Scaling Policy           |
 | Chaos    | AWS FIS / Litmus   | EKS Pods/Nodes                   | Resilience Report                  | DR Strategy                  |
 | Config   | Ansible            | EC2 IPs from Terraform           | Configured nodes with tools        | Pytest, Maven, Docker        |
