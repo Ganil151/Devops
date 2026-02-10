@@ -76,10 +76,28 @@ Master the "Engine Room" of DevOps. Shift from "writing scripts" to architecting
 
 ---
 
+---
+
+## ⚙️ Internal Workflows: Step-by-Step
+
+### 1. The Canary Deployment Lifecycle
+How to safely roll out new code:
+1.  **Stage 1: Deployment:** Deploy the new version (v2) alongside the old version (v1). v2 handles 0% traffic initially.
+2.  **Stage 2: Traffic Shift (e.g., 5%):** Use a Service Mesh (Istio) or Load Balancer to route 5% of traffic to v2.
+3.  **Stage 3: Health Verification:** The CI pipeline monitors key metrics (Error rate, Latency, Saturation) for the 5% segment.
+4.  **Stage 4: Progressive Increase:** If healthy, increase traffic to 25%, 50%, then 100%.
+5.  **Stage 5: Cleanup:** Once 100% of traffic is on v2 and no regressions are found, scale down and delete the v1 pods.
+**Note:** If metrics fail at any stage, an **Automated Rollback** is triggered via the pipeline.
+
+### 2. The GitOps Reconciliation Loop (ArgoCD)
+How Git becomes the source of truth:
+1.  **State Definition:** The developer pushes a change to a K8s manifest in Git.
+2.  **Polling/Webhooks:** ArgoCD detects the new commit in the Git repository.
+3.  **Out-of-Sync Detection:** ArgoCD compares the Git state (Desired) with the Cluster state (Live). It marks the application as `OutOfSync`.
+4.  **Diff Generation:** The user (or auto-sync) triggers a `Sync`. ArgoCD calculates the minimal set of changes needed.
+5.  **Apply:** ArgoCD makes API calls to Kubernetes to patch the resources.
+6.  **Healthy State:** ArgoCD monitors the pods until they reach `Ready` status, marking the app as `Synced` and `Healthy`.
+
+---
+
 ## 🗝️ Master Key: Interviewer's Secret Summary
-| Concept | What they are REALLY looking for |
-| :--- | :--- |
-| **Shift Left** | Are you running security (SAST) and quality checks early in the pipeline? |
-| **Idempotency** | Does your automation handle "interruptions" gracefully? |
-| **Immutable Infra** | Do you "fix" servers or do you "replace" them? |
-| **DORA Metrics** | Do you track Deployment Frequency and Mean Time to Recovery? |
