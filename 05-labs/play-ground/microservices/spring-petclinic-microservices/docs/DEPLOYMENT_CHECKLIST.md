@@ -13,39 +13,35 @@ This repository is architected following the **Separation of Concerns** principl
 
 ```text
 terraform/
-├── terragrunt.hcl                # Root configuration (Backend & Providers)
-├── modules/                      # The Enterprise-Grade Blueprint Library
+├── shared/                       # 🛡️ SOURCE OF TRUTH (Physical files)
+│   ├── main.tf                   # Orchestrates all modules (VPC, EKS, RDS)
+│   ├── providers.tf              # AWS Provider, Region, and Global Tags
+│   ├── variables.tf              # Global variable declarations
+│   ├── versions.tf               # Terraform & Provider version constraints
+│   └── output.tf                 # Aggregate outputs from all modules
+├── modules/                      # 🧱 Component Construction Kits
 │   ├── networking/               # 🌐 VPC & Core Networking
-│   │   ├── main.tf               # VPC & Flow Logs logic
-│   │   ├── subnets.tf            # Public/Private subnet definitions
-│   │   ├── routing.tf            # NAT Gateway & Route Table logic
-│   │   ├── outputs.tf            # Exported VPC/Subnet IDs
-│   │   └── variables.tf          # CIDR & AZ configurations
 │   ├── eks/                      # ☸️ Kubernetes & Compute Plane
-│   │   ├── main.tf               # Control Plane & OIDC logic
-│   │   ├── node-groups.tf        # Managed EC2 Node Groups
-│   │   ├── fargate.tf            # Serverless pod execution
-│   │   ├── iam.tf                # Cluster & Node IAM Roles
-│   │   └── variables.tf          # Instance types & Scaling limits
-│   ├── rds/                      # 🗄️ Database (Multi-AZ MySQL)
-│   │   ├── main.tf               # RDS instance & Security Group
-│   │   └── outputs.tf            # DB endpoints & Identifiers
-│   ├── ec2/                      # 💻 Bastion / Jump Box
-│   │   ├── main.tf               # Bastion host & SSH security
-│   │   └── variables.tf          # Allowed SSH CIDRs
+│   ├── rds/                      # 🗄️ Database (Persistence Layer)
+│   ├── ec2/                      # 💻 Bastion / Management Plane
 │   └── monitoring/               # 📊 CloudWatch & Dashboards
-│       └── main.tf               # Metric Alarms & Insights Dashboards
-└── environments/                 # The "Instantiated" Workspace
+└── environments/                 # 🚀 The Deployment Environment Instances
     ├── dev/                      # Workspace: Development
-    │   ├── main.tf               # Module orchestration
-    │   ├── terragrunt.hcl        # Env-specific Terragrunt config
-    │   └── env.hcl               # Environment namespace (dev)
+    │   ├── backend.tf            # Unique S3 key (dev/terraform.tfstate)
+    │   ├── terraform.tfvars      # Environment-specific values (instance types)
+    │   ├── main.tf               # 🔗 SYMLINK -> ../../shared/main.tf
+    │   ├── outputs.tf            # 🔗 SYMLINK -> ../../shared/output.tf
+    │   ├── providers.tf          # 🔗 SYMLINK -> ../../shared/providers.tf
+    │   ├── variables.tf          # 🔗 SYMLINK -> ../../shared/variables.tf
+    │   └── versions.tf           # 🔗 SYMLINK -> ../../shared/versions.tf
     ├── staging/                  # Workspace: Pre-production
-    │   ├── main.tf               # Scaled staging configuration
-    │   └── terragrunt.hcl        # Includes root config
+    │   ├── backend.tf            # Unique S3 key (staging/terraform.tfstate)
+    │   ├── terraform.tfvars      # Staging values
+    │   └── main.tf (etc...)      # 🔗 SYMLINKS to shared/
     └── prod/                     # Workspace: Production (High Availability)
-        ├── main.tf               # Multi-AZ & Instance Hardening
-        └── terragrunt.hcl        # Prod backend configuration
+        ├── backend.tf            # Unique S3 key (prod/terraform.tfstate)
+        ├── terraform.tfvars      # Production values (HA=true)
+        └── main.tf (etc...)      # 🔗 SYMLINKS to shared/
 ```
 
 ### Part 2: Layer 2 - Configuration Management (Ansible)
