@@ -1,8 +1,4 @@
-variable "environment" {
-  description = "Environment name"
-  type        = string
-  default     = "dev"
-}
+# Variable declarations moved to variables.tf
 
 module "networking" {
   source = "../../modules/networking"
