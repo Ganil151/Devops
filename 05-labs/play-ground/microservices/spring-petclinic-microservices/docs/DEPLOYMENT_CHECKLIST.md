@@ -634,15 +634,30 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
                   }
               }
           }
+          stage('Unit & Integration Tests') {
+              steps {
+                  sh './mvnw test'
+              }
+          }
+          stage('Infrastructure Validation') {
+              steps {
+                  sh "pytest -v --hosts='ansible://eks_nodes?ansible_inventory=ansible/inventory/dynamic_hosts' tests/infra/test_nodes.py"
+              }
+          }
           stage('Build & Push') {
               steps {
-                  sh './mvnw clean install -P buildDocker -Ddocker.image.prefix=${ECR_REGISTRY}/dev-petclinic'
+                  sh './mvnw install -P buildDocker -Ddocker.image.prefix=${ECR_REGISTRY}/dev-petclinic'
                   sh 'trivy image --severity HIGH,CRITICAL ${ECR_REGISTRY}/dev-petclinic-api-gateway:latest'
               }
           }
           stage('K8s Deploy') {
               steps {
                   sh 'kubectl apply -f k8s/'
+              }
+          }
+          stage('Smoke Test') {
+              steps {
+                  sh 'pytest -v tests/smoke/test_endpoints.py --base-url="http://${ALB_DNS}"'
               }
           }
       }
