@@ -90,4 +90,4 @@ Before you prompt, **strip** the sensitive data. After the AI responds, **re-inj
 
 The skills are mastered. The guardrails are in place. Now, let's take the challenge!
 
-Proceed to: **[CHALLENGES.md](../../challenges.md)** →
+Proceed to: **[CHALLENGES.md](../../assessments/challenges.md)** →

@@ -26,6 +26,7 @@ Writing good prompts is a repeatable science. In this module, we introduce the *
 - ✅ Master the **CIRO (Context, Instruction, Role, Output)** framework.
 - ✅ Use **Delimiters** (e.g., `---`, `###`, `xml`) to separate data from instructions.
 - ✅ Implement **Few-Shot Prompting** for complex YAML generation.
+- ✅ Master **[Slash Commands & Shorthands](./slash-commands.md)** for rapid interaction.
 - ✅ Specify **Constraints** to prevent insecure code generation.
 - ✅ Learn how to **Iterate** and refine a prompt for 100% accuracy.
 
@@ -78,6 +79,17 @@ I need you to refactor this script.
 </constraints>
 ```
 **Why it works**: Tags provide clear "Start" and "Stop" signals for the AI's logic, preventing it from mixing instructions with the code it's supposed to analyze.
+
+---
+
+## ⌨️ Rapid Interaction: Slash Commands
+For daily tasks, you don't always need a full CIRO structure. Use **Slash Commands** to instantly set the AI's behavior.
+
+- **`/human`**: Strip robotic AI-isms.
+- **`/k8s-audit`**: Scan YAML for security holes.
+- **`TLDR`**: Get a punchy summary.
+
+👉 **[View the full Slash Command Library](./slash-commands.md)**
 
 ---
 
