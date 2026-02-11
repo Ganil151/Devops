@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
+                "file": "08-career-mastery/06-portfolio-guide/personal-website-guide.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "RUNBOOK_AWS_DEPLOY"
+              "title": "personal-website-guide"
             }
           }
         ]
@@ -215,6 +215,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
     "08-career-mastery/06-portfolio-guide/github-profile-branding.md",
     "08-career-mastery/06-portfolio-guide/github-profile-mastery.md",
     "08-career-mastery/06-portfolio-guide/03-github-profile-branding.md",
