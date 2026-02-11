@@ -79,10 +79,16 @@ When writing your LinkedIn post or GitHub README for this project, focus on the 
    <summary>Answer</summary>
    - *A: GitOps ensures that the cluster state is always re-synced with our Git repository. If a developer manually changes a configuration in the cluster, ArgoCD will detect the drift and automatically revert it to the approved state.*
    </details>
-4. **Q: What was the most challenging part of this deployment?**
+4. **Q: What was the most challenging part of this deployment?**  
+   <details>
+   <summary>Answer</summary>
    - *A: (Personal Insight) Handling the MTU settings for nested networks or configuring the mTLS STRICT mode without breaking legacy internal communication.*
+   </details>
 5. **Q: How would you monitor the health of this mesh?**
+   <details>
+   <summary>Answer</summary>
    - *A: By using Kiali for service topology visualization and Grafana to track the "Four Golden Signals" (Latency, Traffic, Errors, Saturation) for every service hop.*
+   </details>
 
 ---
 
