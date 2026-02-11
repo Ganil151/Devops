@@ -1,6 +1,7 @@
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Ganil%20Batist%20Yan&fontSize=80" />
   
+  
   ![AWS Solutions Architect](https://img.shields.io/badge/AWS-Solutions_Architect_Associate-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
   ![CKA](https://img.shields.io/badge/CNCF-CKA_Certified-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
   ![Terraform](https://img.shields.io/badge/HashiCorp-Terraform_Associate-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
