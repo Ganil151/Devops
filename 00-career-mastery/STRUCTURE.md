@@ -111,7 +111,7 @@ The `/home/gsmash/Documents/Devops/00-career-mastery` directory is now **profess
 - 10-salary-negotiation
 - 11-mock-interview-scripts
 - 12-hiring-logic
-- 10-prompt-engineer (prompts 7-8)
+- 08-prompt-engineer (prompts 7-8)
 
 ---
 
@@ -128,7 +128,7 @@ The `/home/gsmash/Documents/Devops/00-career-mastery` directory is now **profess
 | 7 | final-round-interview | STAR method prep |
 | 8 | salary-negotiation | Market analysis + scripts |
 
-**All in:** `10-prompt-engineer/`
+**All in:** `08-prompt-engineer/`
 
 ---
 
@@ -152,7 +152,7 @@ Monitor these monthly in a spreadsheet:
 This structure follows these principles:
 
 1. **Single Source of Truth** - Everything in `readme.md`
-2. **Numbered Progression** - 01-10 logical sequence
+2. **Numbered Progression** - 01-13 logical sequence
 3. **Zero Redundancy** - No duplicate navigation files
 4. **Self-Documenting** - Structure is intuitive
 5. **Production-Ready** - Professional and maintainable
@@ -190,7 +190,7 @@ Using this module systematically:
 
 ### If This Is Your First Visit:
 1. Read `readme.md` (30-45 min)
-2. Run `10-prompt-engineer/skills-gap-analyzer.md` (get roadmap)
+2. Run `08-prompt-engineer/skills-gap-analyzer.md` (get roadmap)
 3. Follow the recommended path for your career stage
 
 ### If You're Returning:
@@ -223,9 +223,9 @@ Using this module systematically:
 ## 🏆 Bottom Line
 
 This career mastery module is now:
-- **Organized:** Clear numbered progression (01-10)
+- **Organized:** Clear numbered progression (01-13)
 - **Comprehensive:** 50+ markdown files covering student → staff
-- **AI-Enhanced:** 7 prompts for acceleration
+- **AI-Enhanced:** 8 prompts for acceleration
 - **Non-Redundant:** Single source of truth in readme.md
 - **Professional:** Production-ready documentation structure
 
