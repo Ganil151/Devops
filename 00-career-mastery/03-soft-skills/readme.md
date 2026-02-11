@@ -73,4 +73,4 @@ Say: "If we implement [Feature X] without addressing the [Tech Debt Y], we incre
 
 ---
 
-*This guide is part of the 08-career-mastery module.*
+*This guide is part of the 00-career-mastery module.*

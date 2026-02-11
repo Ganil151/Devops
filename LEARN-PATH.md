@@ -442,13 +442,13 @@ Deploy a complete production-ready application with:
 
 ### Cheat Sheets
 
-- [AWS Cheatsheets](./09-resources/00-cheatsheets/aws/)
-- [Command Reference](./09-resources/00-cheatsheets/cheatsheet.md)
+- [AWS Cheatsheets](./08-resources/00-cheatsheets/aws/)
+- [Command Reference](./08-resources/00-cheatsheets/cheatsheet.md)
 
 ### Additional Resources
 
-- [Books and Guides](./09-resources/02-books-guides/)
-- [Scripts and Code](./09-resources/01-scripts-code/)
+- [Books and Guides](./08-resources/02-books-guides/)
+- [Scripts and Code](./08-resources/01-scripts-code/)
 
 ---
 

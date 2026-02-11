@@ -157,7 +157,7 @@ LaunchTemplate:
   Properties:
     LaunchTemplateName: web-server-template
     LaunchTemplateData:
-      ImageId: ami-0abcdef1234567890 # Placeholder: See [Global-Image-Inventory.md](../../../../../../../../../../../../09-resources/05-cloud-metadata/global-image-inventory.md)
+      ImageId: ami-0abcdef1234567890 # Placeholder: See [Global-Image-Inventory.md](../../../../../../../../../../../../08-resources/05-cloud-metadata/global-image-inventory.md)
       InstanceType: t3.medium
       SecurityGroupIds:
         - !Ref WebServerSecurityGroup
@@ -200,4 +200,4 @@ aws ec2 describe-images \
     --query 'sort_by(Images, &CreationDate)[-1].ImageId' \
     --output text
 ```
-Check the centralized [Global Image Inventory](../../../../../../../../../../../../09-resources/05-cloud-metadata/global-image-inventory.md) for a curated list of IDs.
+Check the centralized [Global Image Inventory](../../../../../../../../../../../../08-resources/05-cloud-metadata/global-image-inventory.md) for a curated list of IDs.

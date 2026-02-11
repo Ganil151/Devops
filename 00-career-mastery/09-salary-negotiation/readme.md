@@ -61,4 +61,4 @@ If the base salary is fixed, pivot to the **Total Compensation (TC)**:
 - **Staff/Principal**: $200k+
 
 ---
-*This guide is part of the 08-career-mastery module.*
+*This guide is part of the 00-career-mastery module.*

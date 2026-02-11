@@ -77,4 +77,4 @@ Understanding the shift from Student to Professional.
 
 ---
 
-*This guide is part of the 08-career-mastery module.*
+*This guide is part of the 00-career-mastery module.*

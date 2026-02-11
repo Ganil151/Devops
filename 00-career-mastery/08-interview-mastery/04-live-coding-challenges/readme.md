@@ -138,4 +138,4 @@ if __name__ == "__main__":
 ```
 
 ---
-*This guide is part of the 08-career-mastery module.*
+*This guide is part of the 00-career-mastery module.*

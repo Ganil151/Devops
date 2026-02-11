@@ -132,10 +132,10 @@ images/
 ### Step 2: Add to This Directory
 ```bash
 # From your local machine
-cp /path/to/image.png /home/gsmash/Documents/Devops/08-career-mastery/images/
+cp /path/to/image.png /home/gsmash/Documents/Devops/00-career-mastery/images/
 
 # Verify it's there
-ls -lh /home/gsmash/Documents/Devops/08-career-mastery/images/
+ls -lh /home/gsmash/Documents/Devops/00-career-mastery/images/
 ```
 
 ### Step 3: Reference in Markdown
