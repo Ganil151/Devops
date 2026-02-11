@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
+                "file": "08-career-mastery/prompt-engineer/linkedin-optimizer.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DEPLOYMENT_CHECKLIST"
+              "title": "linkedin-optimizer"
             }
           }
         ],
@@ -238,11 +238,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
     "08-career-mastery/ENHANCEMENT-SUMMARY.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-cli-commands.md",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
     "01-beginner/02-phase-2/05-basic-ci-cd/part-01-principles-and-fundamentals/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/aws-auth.sh",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/quality",
