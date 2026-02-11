@@ -33,6 +33,10 @@ To impress a Senior Engineer, your project should include:
 For a step-by-step implementation of a professional-grade project, see the:
 👉 **[Golden Project Implementation Guide](./golden-project-guide.md)**
 
+## 🌟 Your Public Profile
+Optimizing your GitHub profile is as important as the code itself. Learn how to create a standout landing page:
+👉 **[GitHub Profile Mastery Guide](./github-profile-mastery.md)**
+
 ---
 
 **Showcase Hub**: [08-Resources/05-Projects-Showcase](readme.md)
