@@ -603,6 +603,14 @@ You are breaking down a massive legacy e-commerce monolith. You want to move the
 
 ---
 
+## Module 09: Staff Architectural Mastery
+**Study Resource**: [Staff Level Quizzes](./06-staff-architectural-mastery.md)
+
+1. For high-impact, staff-level architectural trade-offs, see the dedicated assessment:
+👉 **[Staff Level: Architectural Trade-offs & Systems Design](./06-staff-architectural-mastery.md)**
+
+---
+
 ## Answer Key (Summary)
 1. B | 2. C | 3. C | 4. B | 5. B | 6. B | 7. C | 8. D
 K8s/Orchestration: 1. B | 2. A
