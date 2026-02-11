@@ -37,6 +37,10 @@ For a step-by-step implementation of a professional-grade project, see the:
 Optimizing your GitHub profile is as important as the code itself. Learn how to create a standout landing page:
 👉 **[GitHub Profile Mastery Guide](./github-profile-mastery.md)**
 
+## 🌐 Your Personal Website (For Free)
+Go beyond GitHub. Launch a professional portfolio using Static Site Generators and GitHub Pages:
+👉 **[Personal Website Guide](./personal-website-guide.md)**
+
 ---
 
 **Showcase Hub**: [08-Resources/05-Projects-Showcase](readme.md)
