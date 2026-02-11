@@ -67,9 +67,9 @@ I specialize in managing complex, mixed Linux/Windows environments and implement
 
 ---
 
-## 🧪 Featured Project: Enterprise Microservice Failover
+## 🏆 The Golden Project: Enterprise Microservice Failover
 
-> #### Production-Grade Disaster Recovery for Spring PetClinic on AWS EKS
+> #### Production-Grade Disaster Recovery for [Spring PetClinic on AWS EKS](https://github.com/Ganil151/spring-petclinic-microservices.git)
 >
 > **Challenge:** Architect a solution to guarantee 99.99% availability for a critical microservice application, with the ability to survive a full AWS region failure.
 
@@ -78,6 +78,7 @@ I specialize in managing complex, mixed Linux/Windows environments and implement
 > - **🏗️ IaC Foundation:** Multi-region EKS clusters provisioned via modular **Terraform** codebase.
 > - **🔄 GitOps Sync:** **ArgoCD** maintained state parity across primary and standby clusters.
 > - **🛡️ Data Resiliency:** **Amazon RDS Read Replicas** with automated **Route 53** failover.
+> - **📁 Repository:** [Ganil151/spring-petclinic-microservices](https://github.com/Ganil151/spring-petclinic-microservices.git)
 
 ---
 
