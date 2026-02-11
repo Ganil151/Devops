@@ -1,43 +1,64 @@
-### Question Template: Kubernetes Networking
+# 📋 Standard DevOps Quiz Template
 
-**Difficulty:** [Junior | Intermediate | Senior]
-**Question:** Explain how a Service selects the Pods it routes traffic to.
+Use this template to create new assessment files. This ensures consistency, professional appearance, and maximum learning value.
 
-- [ ] A) It uses the Pod's IP address hardcoded in the YAML.
-- [ ] B) It automatically detects all Pods in the same namespace.
-- [ ] C) It uses Label Selectors `spec.selector` to match Pod labels `metadata.labels`.
-- [ ] D) It uses the Deployment name.
+---
+
+### [Tier] Topic: [Specific Concept]
+
+**Difficulty:** `[Junior | Intermediate | Senior | Staff]`  
+**Domain:** `[Infrastructure | CI/CD | Security | SRE | Networking]`
+
+**Question:** 
+[Write a clear, unambiguous question. For Senior/Staff levels, focus on 'Why' or 'Trade-offs' rather than 'What'.]
+
+- [ ] A) [Plausible Option]
+- [ ] B) [Plausible Option]
+- [ ] C) [Correct Option]
+- [ ] D) [Distractor Option]
 
 <details>
-<summary>Click to Reveal Answer</summary>
+<summary>🔍 Click to Reveal Answer & Analysis</summary>
 
-**Correct Answer:** C
+**Correct Answer:** [Letter]
 
-**Why?**
-The mechanism is **Label Selectors**. Services are decoupled from specific Pods (which are ephemeral). By matching labels (e.g., `app: my-app`), the Service dynamically updates its Endpoint list as Pods are created or destroyed.
+#### 🚀 Deep Dive: The "Why"
+[Provide 2-3 sentences explaining the architectural or technical reasoning. Why is this the best practice? What are the common pitfalls of the other options?]
 
-**Certification Alignment:** CKA (Application Lifecycle Management)
+#### 🛡️ Production Hazard
+[Mention a real-world disaster or 'gotcha' related to this question. e.g., "Hardcoding this value will cause a cascading failure if the region goes down."]
+
+#### 🎓 Certification & Industry Alignment
+- **Certification**: [e.g., CKA (Cluster Architecture), AWS SAA (Resilient Architectures)]
+- **Framework**: [e.g., Well-Architected Framework, SRE Handbook]
 </details>
 
 ---
 
-### Question Template: Terraform State
+### Example: Staff-Level Reliability
 
-**Difficulty:** [Intermediate]
-**Question:** What happens if two developers run `terraform apply` at the same time on the same state file?
+**Difficulty:** `Staff`  
+**Domain:** `Reliability / Arch`
 
-- [ ] A) The last write wins.
-- [ ] B) Terraform merges the changes automatically.
-- [x] C) Without state locking, the state file can become corrupted. With locking (e.g., DynamoDB), one operation waits or fails.
-- [ ] D) Terraform creates a conflict file.
+**Question:** You are designing a global DNS-based failover strategy. Why might a low TTL (Time to Live) value (e.g., 60 seconds) be insufficient to guarantee a sub-2 minute RTO (Recovery Time Objective)?
+
+- [ ] A) Modern browsers ignore TTLs lower than 300 seconds.
+- [ ] B) TTL only applies to the root domain, not subdomains.
+- [x] C) Client-side DNS caching and ISP-level recursive resolvers may disregard low TTLs to reduce traffic.
+- [ ] D) Route 53 does not support TTLs below 120 seconds.
 
 <details>
-<summary>Click to Reveal Answer</summary>
+<summary>🔍 Click to Reveal Answer & Analysis</summary>
 
 **Correct Answer:** C
 
-**Why?**
-Terraform state is critical for tracking infrastructure. Concurrent modifications can lead to race conditions where one process's changes are overwritten or the file becomes invalid JSON. **State Locking** prevents this by acquiring a lock before any write operation.
+#### 🚀 Deep Dive: The "Why"
+While DNS is powerful, the engineer does not have total control over the **client**. ISPs and recursive resolvers often override low TTLs (caching them for longer) to improve performance and reduce overhead. Relying solely on DNS for tight RTOs is a common architectural risk.
 
-**Certification Alignment:** HashiCorp Certified: Terraform Associate
+#### 🛡️ Production Hazard
+During a regional outage, even if you update your DNS records, a significant percentage of traffic may still hit the "Dead" region for several minutes (or hours in some legacy ISP cases) due to stale cache.
+
+#### 🎓 Certification & Industry Alignment
+- **Certification**: AWS Certified Solutions Architect - Professional (Network Design)
+- **Framework**: Google SRE Workbook (Reliability Engineering)
 </details>
