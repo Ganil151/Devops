@@ -118,6 +118,7 @@ images/
 | File | Size | Used In | Description |
 |------|------|---------|-------------|
 | pricing-comparison.png | 796 KB | (Reference) | Pricing strategy comparison chart |
+| career-acceleration-loop.png | 71 KB | (Readme) | Career acceleration loop diagram |
 
 ---
 
