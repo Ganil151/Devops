@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08-career-mastery/06-portfolio-guide/personal-website-guide.md",
+                "file": "08-career-mastery/06-portfolio-guide/golden-project-guide.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "personal-website-guide"
+              "title": "golden-project-guide"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,11 +216,11 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "08-career-mastery/06-portfolio-guide/personal-website-guide.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
     "08-career-mastery/06-portfolio-guide/github-profile-branding.md",
     "08-career-mastery/06-portfolio-guide/github-profile-mastery.md",
     "08-career-mastery/06-portfolio-guide/03-github-profile-branding.md",
-    "08-career-mastery/06-portfolio-guide/personal-website-guide.md",
     "08-career-mastery/06-portfolio-guide/README.md",
     "08-career-mastery/06-portfolio-guide/update-read.yml",
     "08-career-mastery/06-portfolio-guide/readme.md",
