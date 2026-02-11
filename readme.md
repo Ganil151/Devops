@@ -31,9 +31,9 @@ graph TD
     classDef adv fill:#fff3e0,stroke:#ef6c00;
     classDef pro fill:#f3e5f5,stroke:#7b1fa2;
 
-    B[<b>Tier 1: Beginner</b><br/>Foundations]:::beginner --> I[<b>Tier 2: Intermediate</b><br/>Automation]:::inter
+    P0[<b>Phase 0: Career</b><br/>Professional Persona]:::pro --> B[<b>Tier 1: Beginner</b><br/>Foundations]:::beginner
+    B --> I[<b>Tier 2: Intermediate</b><br/>Automation]:::inter
     I --> A[<b>Tier 3: Advanced</b><br/>Enterprise Strategy]:::adv
-    A --> P[<b>Tier 4: Professional</b><br/>Career Design]:::pro
 ```
 
 ---
@@ -76,9 +76,9 @@ graph TD
 
 - **[Project Showcase](./04-projects-showcase/readme.md)**: Proof-of-work labs and enterprise projects.
 - **[Labs & Sandboxes](./05-labs/readme.md)**: Interactive playgrounds for tool testing.
-- **[Quizzes](./06-quizzes/reference.md)**: 300+ Advanced Questions & Cert Prep.
+- **[Assessment Hub](./06-quizzes/README.md)**: 300+ Advanced Questions & Cert Prep.
 - **[Boilerplate Vault](./07-boilerplates/reference.md)**: 200+ Templates (Terraform, Ansible, K8s).
-- **[Global Resources](./08-resources/reference.md)**: Central scripts and maintenance audits.
+- **[Global Resources](./08-resources/readme.md)**: Central scripts and maintenance audits.
 
 ---
 
