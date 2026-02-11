@@ -69,6 +69,10 @@ I believe that a well-architected platform is the foundation of developer veloci
 > - **🔄 GitOps Synchronization:** Employed **ArgoCD** to maintain a consistent state across both primary and standby clusters, ensuring application and configuration parity.
 > - **🛡️ Data & Traffic Resiliency:** Utilized cross-region **Amazon RDS Read Replicas** for data redundancy and **Route 53** latency-based routing for automated, sub-10-minute DNS failover.
 
+### 📊 Weekly Coding Activity (WakaTime)
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
 ---
 
 <!-- BLOG-POST-LIST:START -->
