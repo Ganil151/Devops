@@ -158,6 +158,7 @@ This module is organized into **10 progressive stages**, designed to be followed
 - **[Technical Deep Dives](./08-interview-mastery/01-technical-deep-dives/)**: Linux, Kubernetes, CI/CD, AWS (8 topics)
 - **[Scenario Architecture](./08-interview-mastery/02-scenario-architecture/)**: "Design a CI/CD pipeline for..."
 - **[Live Coding Challenges](./08-interview-mastery/04-live-coding-challenges/)**: Bash scripting, Python automation
+- **[Assessment Tests](./08-interview-mastery/05-assessment-tests/)**: Online screenings and take-home project logic
 - **[Hiring Logic](./08-interview-mastery/hiring-logic.md)**: Understand what interviewers are really evaluating
 - **[Mock Interview Scripts](./08-interview-mastery/00-MOCK-INTERVIEW-SCRIPTS.md)**: Practice scenarios
 

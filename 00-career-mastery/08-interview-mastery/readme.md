@@ -10,6 +10,7 @@ Mastering the DevOps interview is about moving from "I know how to use this tool
 - 🖼️ **[02-Scenario Architecture](./02-scenario-architecture/)**: Whiteboard designs for HA, scaling, and compliance.
 - 🎭 **[03-Behavioral STAR Method](./03-behavioral-star-method/)**: Storytelling framework for soft-skills and incident response.
 - 💻 **[04-Live Coding Challenges](./04-live-coding-challenges/)**: Python and Bash scripts commonly asked in screenings.
+- 🧪 **[05-Assessment Tests](./05-assessment-tests/)**: Online screenings, take-homes, and screening survival strategies.
 
 ---
 
