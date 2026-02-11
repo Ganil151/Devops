@@ -10,24 +10,26 @@ This structured learning path is generated from the actual content in this repos
 
 ```mermaid
 graph LR
-    A[Weeks 1-4: Foundations] --> B[Weeks 5-8: Intermediate]
+    P0[Phase 0: Mindset] --> A[Weeks 1-4: Foundations]
+    A --> B[Weeks 5-8: Intermediate]
     B --> C[Weeks 9-12: Advanced]
+    
+    P0 --> P01[Career Mastery]
+    P0 --> P02[Learning Roadmap]
     
     A --> A1[Networking & Linux]
     A --> A2[Cloud Basics]
     A --> A3[Automation]
-    A --> A4[Version Control]
     
-    B --> B1[Infrastructure as Code]
-    B --> B2[CI/CD Pipelines]
-    B --> B3[Containers]
-    B --> B4[Orchestration]
+    B --> B1[IaC: Terraform]
+    B --> B2[Ansible & Pipelines]
+    B --> B3[Docker]
     
-    C --> C1[Kubernetes Advanced]
-    C --> C2[SRE Practices]
-    C --> C3[Security & Compliance]
-    C --> C4[Production Systems]
+    C --> C1[K8s Advanced]
+    C --> C2[Observability]
+    C --> C3[Capstone Project]
     
+    style P0 fill:#f3f4f6
     style A fill:#fef3c7
     style B fill:#dbeafe
     style C fill:#f0fdf4
@@ -35,7 +37,18 @@ graph LR
 
 ---
 
-## 🎯 Phase 1: Foundations (Weeks 1-4)
+## � Phase 0: Career Mastery & Mindset (Pre-work)
+
+**Primary Objective:** Align your technical goals with industry expectations and build a high-conversion professional presence.
+
+**Key Resources:**
+- [DevOps Career Roadmap](./00-career-mastery/readme.md)
+- [Mindset & Philosophy](./00-career-mastery/01-mindset-and-roadmap/readme.md)
+- [The "Live Resume" Strategy](./00-career-mastery/06-portfolio-guide/03-github-profile-branding.md)
+
+---
+
+## �🎯 Phase 1: Foundations (Weeks 1-4)
 
 ### Week 1: Networking & Linux Fundamentals
 
@@ -410,23 +423,34 @@ graph LR
 - [CI/CD Pipeline Automation](./04-projects-showcase/03-ci-cd-pipeline-automation/readme.md)
 - [Kubernetes Orchestration](./04-projects-showcase/04-kubernetes-orchestration/readme.md)
 
-**Capstone Project:**
-Deploy a complete production-ready application with:
+### 🏁 Capstone: The "Golden Project"
+**Project Title**: [Enterprise Spring PetClinic Orchestration](./04-projects-showcase/readme.md)
 
-- Infrastructure provisioned with Terraform
-- Configuration managed with Ansible
-- Application containerized with Docker
-- Orchestrated on Kubernetes
-- CI/CD pipeline automated
-- Full observability stack
-- Security hardening applied
+Deploy a complete production-ready application with:
+- **Infrastructure**: Provisioned with Terraform (VPC, EKS/EC2, RDS).
+- **Configuration**: Managed with Ansible (Node hardening, App config).
+- **CI/CD**: Fully automated GitHub Actions or Jenkins Pipeline.
+- **Orchestration**: Highly available Kubernetes deployment.
+- **Observability**: Prometheus & Grafana monitoring with SLI/SLO alerts.
+- **Security**: OPA Gatekeeper policies and secret management via Vault.
 
 **By Sunday, you should be able to:**
+- Deploy production-grade infrastructure from scratch.
+- Explain every architectural trade-off in your stack.
+- Demonstrate a "Day 2 Operations" mindset (Scaling, Monitoring, Security).
 
-- Deploy production-grade infrastructure
-- Implement all DevOps best practices
-- Troubleshoot complex issues
-- Design scalable architectures
+---
+
+## 📝 Assessments & Certification Prep
+
+This repository includes a centralized **Assessment Hub** to validate your progress at every tier.
+
+👉 **[Launch the DevOps Quiz Hub](./06-quizzes/README.md)**
+
+- **01 Beginner**: Linux, Networking, and Git basics.
+- **02 Intermediate**: AWS infrastructure, Terraform, and Docker.
+- **03 Advanced**: SRE practices, CI/CD, and K8s orchestration.
+- **🦅 Staff Level**: Advanced architectural trade-offs and disaster recovery.
 
 ---
 
@@ -507,6 +531,10 @@ Found an issue or want to improve content? Submit a pull request!
 Create a copy of this checklist to track your progress:
 
 ```markdown
+## Phase 0: Career Mastery
+- [ ] Profile Branding & GitHub "Live Resume"
+- [ ] Roadmap Alignment
+
 ## Phase 1: Foundations
 - [ ] Week 1: Networking & Linux
 - [ ] Week 2: Linux Deep-Dive & Data Formats
@@ -523,7 +551,7 @@ Create a copy of this checklist to track your progress:
 - [ ] Week 9: Kubernetes Fundamentals
 - [ ] Week 10: Kubernetes Advanced & Helm
 - [ ] Week 11: Observability & Monitoring
-- [ ] Week 12: Production Readiness & Capstone
+- [ ] Week 12: Production Readiness & Capstone Project
 ```
 
 ---
