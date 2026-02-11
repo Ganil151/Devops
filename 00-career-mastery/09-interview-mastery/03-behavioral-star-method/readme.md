@@ -60,4 +60,4 @@ When giving your **Result**, try to use these metrics:
 
 ---
 
-*This guide is part of the 08-interview-mastery module.*
+*This guide is part of the 09-interview-mastery module.*
