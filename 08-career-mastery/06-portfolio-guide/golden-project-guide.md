@@ -65,12 +65,20 @@ When writing your LinkedIn post or GitHub README for this project, focus on the 
 ## 👔 Interview Preparation (Project Specific)
 
 1. **Q: Why did you choose Istio over a standard Ingress?**
-   
+   <details>
+   <summary>Answer</summary>
    - *A: Istio provides advanced Layer 7 traffic control (retries, timeouts, circuit breaks) and automatic service-to-service security that standard Ingress controllers do not handle at scale.*
+   </details>
 2. **Q: How does OPA help you manage infrastructure at scale?**
+   <details>
+   <summary>Answer</summary>
    - *A: It allows us to define "Guardrails" as code. For example, we can programmatically prevent anyone from creating unencrypted storage or publicly accessible databases before the resources are even provisioned.*
+   </details>
 3. **Q: Explain the benefit of GitOps in this architecture.**
+   <details>
+   <summary>Answer</summary>
    - *A: GitOps ensures that the cluster state is always re-synced with our Git repository. If a developer manually changes a configuration in the cluster, ArgoCD will detect the drift and automatically revert it to the approved state.*
+   </details>
 4. **Q: What was the most challenging part of this deployment?**
    - *A: (Personal Insight) Handling the MTU settings for nested networks or configuring the mTLS STRICT mode without breaking legacy internal communication.*
 5. **Q: How would you monitor the health of this mesh?**
