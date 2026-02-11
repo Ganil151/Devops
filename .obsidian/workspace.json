@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
+                "file": "08-career-mastery/daily-checklist.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DEPLOYMENT_CHECKLIST"
+              "title": "daily-checklist"
             }
           }
         ],
@@ -241,6 +241,7 @@
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
     "08-career-mastery/STRUCTURE.md",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
     "08-career-mastery/sedR8LhYA",
     "08-career-mastery/daily-checklist.md",
     "08-career-mastery/00-navigation/REORGANIZATION-SUMMARY.md",
@@ -263,7 +264,6 @@
     "08-career-mastery/10-prompt-engineer/ats-stress-test.md",
     "08-career-mastery/10-prompt-engineer/README.md",
     "08-career-mastery/10-prompt-engineer",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
     "08-career-mastery/ENHANCEMENT-SUMMARY.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-cli-commands.md",
     "01-beginner/02-phase-2/05-basic-ci-cd/part-01-principles-and-fundamentals/readme.md",
