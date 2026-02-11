@@ -64,7 +64,7 @@ This module is organized into **10 progressive stages**, designed to be followed
 - **Morning Triage**: Log analysis and Slack simulation exercises
 - [**Prioritization Framework**](./04-day-in-the-life-operations/prioritization-framework.md): Eisenhower Matrix for incidents
 - **Rollback Procedures**: Emergency recovery commands and runbooks
-- [**Daily Success Checklist**](./daily-checklist.md): What "done" looks like
+- [**Daily Success Checklist**](./00-navigation/daily-checklist.md): What "done" looks like
 
 **Outcome:** Build operational muscle memory before production incidents
 
@@ -114,34 +114,34 @@ This module is organized into **10 progressive stages**, designed to be followed
 
 ---
 
-#### 🤖 [10. Prompt Engineer (AI Career Tools)](./prompt-engineer/README.md)
+#### 🤖 [10. Prompt Engineer (AI Career Tools)](./10-prompt-engineer/README.md)
 **What:** AI-powered prompts for every stage of the job search  
 **Why:** Use AI as your personal career coach, available 24/7  
 
 **The 7-Prompt Arsenal:**
 
-1. **[Skills Gap Analyzer](./prompt-engineer/skills-gap-analyzer.md)**  
+1. **[Skills Gap Analyzer](./10-prompt-engineer/skills-gap-analyzer.md)**  
    → Identify critical skill gaps + 90-day learning roadmap
 
-2. **[Portfolio Project Evaluator](./prompt-engineer/portfolio-project-evaluator.md)**  
+2. **[Portfolio Project Evaluator](./10-prompt-engineer/portfolio-project-evaluator.md)**  
    → Validate project ideas + GitHub profile audit
 
-3. **[High-Octane DevOps Recruiter](./prompt-engineer/recruiter-prompt.md)**  
+3. **[High-Octane DevOps Recruiter](./10-prompt-engineer/recruiter-prompt.md)**  
    → Match score analysis + resume keyword optimization
 
-4. **[ATS Stress Test](./prompt-engineer/ats-stress-test.md)**  
+4. **[ATS Stress Test](./10-prompt-engineer/ats-stress-test.md)**  
    → Formatting vulnerability scan + risk report
 
-5. **[LinkedIn Profile Optimizer](./prompt-engineer/linkedin-optimizer.md)**  
+5. **[LinkedIn Profile Optimizer](./10-prompt-engineer/linkedin-optimizer.md)**  
    → Headline/About section rewrite + engagement strategy
 
-6. **[Networking & Cold Outreach](./prompt-engineer/networking-cold-outreach.md)**  
+6. **[Networking & Cold Outreach](./10-prompt-engineer/networking-cold-outreach.md)**  
    → Personalized email templates (30-40% response rate)
 
-7. **[Final Round Interview](./prompt-engineer/final-round-interview.md)**  
+7. **[Final Round Interview](./10-prompt-engineer/final-round-interview.md)**  
    → STAR-method answers for scenario questions
 
-8. **[Salary Negotiation Strategist](./prompt-engineer/salary-negotiation.md)**  
+8. **[Salary Negotiation Strategist](./10-prompt-engineer/salary-negotiation.md)**  
    → Market analysis + negotiation scripts + equity calculator
 
 **Outcome:** AI-assisted career acceleration with measurable improvements
@@ -186,7 +186,7 @@ This module is organized into **10 progressive stages**, designed to be followed
 1. [01. DevOps Persona](./01-devops-persona/) - Understand the mindset
 2. [02. Tool Landscape](./02-the-tool-landscape/) - Know what to learn
 3. [05. Strategic Roadmap](./05-strategic-roadmap/) - Build a 90-day plan
-4. [Prompt: Skills Gap Analyzer](./prompt-engineer/skills-gap-analyzer.md) - Get your learning roadmap
+4. [Prompt: Skills Gap Analyzer](./10-prompt-engineer/skills-gap-analyzer.md) - Get your learning roadmap
 
 **Goal:** Build foundational knowledge and 1-2 portfolio projects
 
@@ -195,10 +195,10 @@ This module is organized into **10 progressive stages**, designed to be followed
 ### **I'm Actively Job Hunting (Ready to apply)**
 **Start Here:**
 1. [07. Resume Engineering](./07-resume-engineering/) - Optimize your resume
-2. [Prompt: Recruiter Prompt](./prompt-engineer/recruiter-prompt.md) - Get match scores
-3. [Prompt: ATS Stress Test](./prompt-engineer/ats-stress-test.md) - Fix formatting issues
-4. [Prompt: LinkedIn Optimizer](./prompt-engineer/linkedin-optimizer.md) - Boost visibility
-5. [Prompt: Networking](./prompt-engineer/networking-cold-outreach.md) - Start outreach
+2. [Prompt: Recruiter Prompt](./10-prompt-engineer/recruiter-prompt.md) - Get match scores
+3. [Prompt: ATS Stress Test](./10-prompt-engineer/ats-stress-test.md) - Fix formatting issues
+4. [Prompt: LinkedIn Optimizer](./10-prompt-engineer/linkedin-optimizer.md) - Boost visibility
+5. [Prompt: Networking](./10-prompt-engineer/networking-cold-outreach.md) - Start outreach
 
 **Goal:** Get 5+ interviews in 30-60 days
 
@@ -207,7 +207,7 @@ This module is organized into **10 progressive stages**, designed to be followed
 ### **I Have Interviews Scheduled (Prep mode)**
 **Start Here:**
 1. [08. Interview Mastery](./08-interview-mastery/) - Technical + behavioral prep
-2. [Prompt: Final Round Interview](./prompt-engineer/final-round-interview.md) - Practice STAR answers
+2. [Prompt: Final Round Interview](./10-prompt-engineer/final-round-interview.md) - Practice STAR answers
 3. [04. Day in the Life](./04-day-in-the-life-operations/) - Understand operational scenarios
 
 **Goal:** Pass technical screens and tell compelling stories
@@ -217,7 +217,7 @@ This module is organized into **10 progressive stages**, designed to be followed
 ### **I Have an Offer (Negotiation time)**
 **Start Here:**
 1. [09. Salary Negotiation](./09-salary-negotiation/) - Understand TC components
-2. [Prompt: Salary Strategist](./prompt-engineer/salary-negotiation.md) - Get counter-offer scripts
+2. [Prompt: Salary Strategist](./10-prompt-engineer/salary-negotiation.md) - Get counter-offer scripts
 
 **Goal:** Negotiate +10-20% above initial offer
 
@@ -227,8 +227,8 @@ This module is organized into **10 progressive stages**, designed to be followed
 **Start Here:**
 1. [05. Strategic Roadmap](./05-strategic-roadmap/) - Plan for promotion
 2. [06. Portfolio Guide](./06-portfolio-guide/) - Build 1 new project/quarter
-3. [Prompt: Skills Gap Analyzer](./prompt-engineer/skills-gap-analyzer.md) - Stay competitive
-4. [Prompt: LinkedIn Optimizer](./prompt-engineer/linkedin-optimizer.md) - Build passive brand
+3. [Prompt: Skills Gap Analyzer](./10-prompt-engineer/skills-gap-analyzer.md) - Stay competitive
+4. [Prompt: LinkedIn Optimizer](./10-prompt-engineer/linkedin-optimizer.md) - Build passive brand
 
 **Goal:** Position yourself for promotion or better opportunities
 
@@ -320,7 +320,7 @@ This module is organized into **10 progressive stages**, designed to be followed
 Many engineers ignore [03. Soft Skills](./03-soft-skills/) because it's "not technical." **This is a mistake.** The difference between mid-level and senior is often communication, not coding.
 
 ### Tip #2: Use the AI Prompts Early and Often
-The [Prompt Engineer](./prompt-engineer/) directory isn't just for resume optimization. Use it to:
+The [Prompt Engineer](./10-prompt-engineer/) directory isn't just for resume optimization. Use it to:
 - Plan your learning roadmap (Skills Gap Analyzer)
 - Validate project ideas (Portfolio Evaluator)
 - Practice interview answers (Final Round Interview)
@@ -371,7 +371,7 @@ What gets measured gets improved.
 
 ### If This Is Your First Time Here:
 1. Read [01. DevOps Persona](./01-devops-persona/) to understand the mindset
-2. Run the [Skills Gap Analyzer](./prompt-engineer/skills-gap-analyzer.md) to get your roadmap
+2. Run the [Skills Gap Analyzer](./10-prompt-engineer/skills-gap-analyzer.md) to get your roadmap
 3. Review the [Strategic Roadmap](./05-strategic-roadmap/) for your career stage
 4. Set up tracking (spreadsheet or Notion) for your progress
 5. Block calendar time for weekly study and portfolio work
