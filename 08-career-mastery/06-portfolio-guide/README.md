@@ -23,8 +23,6 @@
 ---
 
 ### 👨‍💻 About Me
-
-👨‍💻 About Me
 I am a Senior DevOps & Platform Engineer with 4+ years of experience bridging the gap between legacy infrastructure and modern cloud-native automation. My core mission is to build resilient, self-healing platforms that empower developers rather than slowing them down.
 
 I specialize in managing complex, mixed Linux/Windows environments and implementing GitOps-driven CI/CD that delivers measurable business value. I believe that infrastructure should be predictable, automated, and invisible—the "foundation of agility" that allows engineering teams to ship high-quality code at scale.

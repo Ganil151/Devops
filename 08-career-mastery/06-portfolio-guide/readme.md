@@ -30,7 +30,7 @@ To impress a Senior Engineer, your project should include:
 ---
 
 ## 🚀 The Flagship Implementation
-For a step-by-step implementation of a professional-grade project, see the:
+For a step-by-step implementation of the **Spring PetClinic Microservices on AWS**, see the:
 👉 **[Golden Project Implementation Guide](./golden-project-guide.md)**
 
 ## 🌟 Your Public Profile
