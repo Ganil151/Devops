@@ -1,46 +1,55 @@
-# ⌨️ Slash Commands & Prompt Shorthands
+# ⌨️ DevOps Slash Commands & Prompt Shorthands
 
-## Overview
-Speed up your AI interactions using these "Standard Operating Procedures." Instead of writing long explanations, use these shorthands to get the exact output format you need.
+## 🚀 Overview
+Mastering AI-driven automation requires moving beyond "natural language" into **Shorthand Pattern Matching**. In the DevOps technical workflow, speed and precision are paramount. Use these "Standard Operating Procedures" (SOPs) to instantly configure your AI Pair Programmer for specific infrastructure tasks.
 
 ---
 
-## 🚀 The Rapid Interaction Library
+## 🛠️ The Technical Command Arsenal
 
-| Command | Action | AI Interpretation |
+| Command | Action | System Interpretation / Prompt Engineering Logic |
 |:--- |:--- |:--- |
-| **`/human`** | De-robotize | "Write this like a real person. Remove 'tapestry', 'delve', 'crucial', and AI-isms. Keep it punchy and authentic." |
-| **`TLDR` (DLTR)** | Summarize | "Give me a 3-bullet executive summary of the following content. Focus on high-level impact." |
-| **`ELI5`** | Simplify (Junior) | "Explain this technical concept to a 5-year-old using a playground analogy." |
-| **`ELI10`** | Simplify (Mid) | "Explain this architectural concept to a 10-year-old using a LEGO or City-building analogy." |
-| **`LISTIFY`** | Structure | "Convert this block of text into a clean, bulleted list with bold headers for each point." |
-| **`TABULIFY`** | Comparison | "Convert this text into a Markdown table with columns for: Component, Purpose, and Trade-off." |
-| **`STEPIFY`** | Workflow | "Convert this objective into a numbered, step-by-step technical SOP/Runbook." |
-| **`AUDIT`** | Review | "Scan this for 'Senior Red Flags'. Highlight anything that sounds defensive, vague, or junior." |
-| **`CODEONLY`** | Clean Code | "Provide ONLY the code/manifest. No intro text, no 'Here is your code', no closing remarks." |
-| **`REFACTOR`** | Clean Logic | "Improve the readability and efficiency of this code without changing its core behavior." |
+| **`/human`** | De-robotize | "Strip AI-isms. Use active voice. Remove 'delve', 'ensure', 'comprehensive'. Write like a Senior SRE in a Slack thread." |
+| **`/k8s-audit`** | Manifest Review | "Analyze this YAML for security holes (Privileged mode, missing labels, no resource limits) and provide `kubectl patch` fixes." |
+| **`/tf-dry`** | HCL Refactor | "Rewrite this Terraform to be DRY using locals, maps, and for_each. Ensure 0 hardcoded values remain." |
+| **`/log-dna`** | Root Cause | "Identify the 'Signature' of the error in this 100-line log. Separate infrastructure noise from application failure signals." |
+| **`/bash-safe`** | Script Hardening | "Add `set -euo pipefail`, error traps, and input validation to this script. Ensure it handles non-zero exit codes correctly." |
+| **`/doc-md`** | Runbook Gen | "Convert this technical sequence into a production README.md using GitHub Flavored Markdown and Mermaid diagrams for the flow." |
+| **`/sec-scan`** | Security Audit | "Act as a Pen-Tester. Scan this code for Hardcoded Secrets, Insecure API configurations, and Injection vulnerabilities." |
 
 ---
 
-## 💡 How to Use These
+## 📊 Interaction Codes
 
-### Option A: The "Direct Command"
-Simply paste your text followed by the code.
-> *[Pasted Job Description]*  
-> **TLDR**
-
-### Option B: The "Instructional Prefix"
-Start your prompt with the command to set the tone early.
-> **`/human`** write a cold outreach email to a hiring manager at AWS based on my resume below...
-
-### Option C: The "Refinement"
-After getting a response that is too "AI-heavy," simply reply with:
-> **`/human`** make it punchier and remove the fluff.
+| Code | Action | Focus |
+|:--- |:--- |:--- |
+| **`TLDR`** | Executive Summary | 3 bullets: Context, Blocker, Resolution. |
+| **`ELI5`** | Concept Baseline | Simplified mental model for Juniors. |
+| **`CODEONLY`** | Dev Mode | 0% conversational filler. 100% executable code. |
+| **`LISTIFY`** | Structure | Convert unstructured logs/output into actionable JIRA-style bullets. |
+| **`TABULIFY`** | Analysis | Comparison table: (Approach, Pros, Cons, Cost). |
+| **`STEPIFY`** | Implementation | Numbered SOP for a production change window. |
 
 ---
 
-## 🎯 Pro Tip: The "SRE Touch"
-In DevOps, we value **Signal over Noise**. Use `CODEONLY` + `TABULIFY` when reviewing infrastructure changes to get clean, data-driven comparisons without the conversational filler.
+## 🧠 Advanced Pattern: Command Chaining
+You can chain these together for complex, automated workflows.
+
+### Example 1: Security Transformation
+> *[Pasted a legacy Deployment.yaml]*  
+> **`/k8s-audit`** then **`TABULIFY`** the risks then **`CODEONLY`** the fixed version.
+
+### Example 2: Script Migration
+> *[Pasted a Bash script]*  
+> **`/human`** explain the flow then **`/bash-safe`** refactor then **`STEPIFY`** the testing plan.
 
 ---
-*This guide is part of the 08-prompt-engineer arsenal.*
+
+## 🎯 Pro-Tips for Phase 2 Workflows
+
+1. **The Infrastructure Template**: When using `TABULIFY`, ask for a "Complexity Score" column to help decide between AWS native vs. Open Source tools.
+2. **Hallucination Guard**: Follow any generated command with: *"Verify if the flag `--xyz` actually exists in the latest version of the CLI."*
+3. **Context Injection**: Always prefix with: *"Context: We are running on EKS v1.29 using Calico CNI."* before using `/k8s-audit` for accurate networking insights.
+
+---
+*This guide is part of Part 2: DevOps Workflows in the Prompt Engineering Curriculum.*
