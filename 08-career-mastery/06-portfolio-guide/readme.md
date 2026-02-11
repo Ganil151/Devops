@@ -33,17 +33,13 @@ To impress a Senior Engineer, your project should include:
 For a step-by-step implementation of the **Spring PetClinic Microservices on AWS**, see the:
 👉 **[Golden Project Implementation Guide](./golden-project-guide.md)**
 
-## 🌟 Your Public Profile
-Optimizing your GitHub profile is as important as the code itself. Learn how to create a standout landing page:
-👉 **[GitHub Profile Mastery Guide](./github-profile-mastery.md)**
+## 🌟 GitHub Profile Mastery
+Transform your GitHub profile into a high-conversion "Live Resume" with automation, professional branding, and specialized repository shortcuts:
+👉 **[GitHub Profile Branding & Automation Guide](./03-github-profile-branding.md)**
 
 ## 🌐 Your Personal Website (For Free)
 Go beyond GitHub. Launch a professional portfolio using Static Site Generators and GitHub Pages:
 👉 **[Personal Website Guide](./personal-website-guide.md)**
-
-## 🎨 GitHub Profile Branding
-Transform your profile into a high-conversion "Live Resume" with automation and professional polish:
-👉 **[GitHub Profile Branding & Automation Guide](./03-github-profile-branding.md)**
 
 ---
 

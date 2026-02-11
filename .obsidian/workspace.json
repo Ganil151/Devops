@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08-career-mastery/06-portfolio-guide/github-profile-mastery.md",
+                "file": "08-career-mastery/06-portfolio-guide/github-profile-branding.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "github-profile-mastery"
+              "title": "github-profile-branding"
             }
           }
         ],
@@ -241,9 +241,9 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "08-career-mastery/06-portfolio-guide/github-profile-mastery.md",
     "08-career-mastery/06-portfolio-guide/03-github-profile-branding.md",
     "08-career-mastery/06-portfolio-guide/github-profile-branding.md",
-    "08-career-mastery/06-portfolio-guide/github-profile-mastery.md",
     "08-career-mastery/06-portfolio-guide/personal-website-guide.md",
     "08-career-mastery/06-portfolio-guide/README.md",
     "08-career-mastery/06-portfolio-guide/update-read.yml",
