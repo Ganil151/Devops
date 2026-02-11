@@ -1,19 +1,19 @@
-# 🏆 Golden Project: The Global Microservices Mesh
+# 🏆 Golden Project: High-Availability Spring PetClinic
 
-This is the flagship project for your professional portfolio. It demonstrates the ability to architect, secure, and automate a multi-tier cloud environment.
+This is the flagship project for your professional portfolio. It demonstrates the ability to architect, secure, and automate a multi-tier microservice environment using production-grade DevOps patterns.
 
 ---
 
 ## 🏛️ Project Architecture
 
-**Full Capstone Repo**: [Global-Microservices-Mesh](readme.md)
+**Full Capstone Repo**: [spring-petclinic-microservices](https://github.com/Ganil151/spring-petclinic-microservices.git)
 
 ### Why this is a "Golden" Project
 
-1. **Complexity**: Moves beyond a simple "Hello World" app to a Multi-AZ EKS cluster.
-2. **Security**: Implements Zero-Trust (mTLS) via Istio.
-3. **Governance**: Audits IaC via Open Policy Agent (OPA).
-4. **Modernity**: Uses GitOps (ArgoCD) instead of standard push-based delivery.
+1. **Enterprise Scale**: Moves beyond a simple "Hello World" app to a distributed microservice architecture.
+2. **Resilience**: Implements multi-region failover and disaster recovery patterns.
+3. **Security**: Enforces security-at-scale using IAM roles, VPC isolation, and automated scanning.
+4. **Modern Delivery**: Uses GitOps (ArgoCD) to maintain environment parity across clusters.
 
 ---
 
@@ -58,7 +58,7 @@ A project isn't "Golden" until it can survive a direct hit in production. Use th
 
 When writing your LinkedIn post or GitHub README for this project, focus on the **Impact**:
 
-> *"Architected a globally distributed Kubernetes environment using Terraform and EKS. Reduced deployment risk by implementing an Istio-based Canary release strategy (90/10 traffic split) and enforced 100% internal encryption (mTLS) for zero-trust security. Automated the entire lifecycle via Jenkins and GitOps, reducing mean-time-to-change from hours to minutes."*
+> *"Architected a highly available microservice platform for the Spring PetClinic application using AWS EKS and Terraform. Implemented a multi-region disaster recovery strategy with Route 53 failover and RDS cross-region replication. Automated the entire deployment lifecycle via GitHub Actions and GitOps (ArgoCD), achieving a 99.99% availability goal and zero-downtime deployments."*
 
 ---
 
