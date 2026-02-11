@@ -66,6 +66,7 @@ By the end of this curriculum, you will:
 | **[🟡 Part 2](./part-02-devops-automation/)** | **DevOps Workflows** | Generating Code, IaC, and Troubleshooting with AI. |
 | **[🔴 Part 3](./part-03-governance-and-ethics/)** | **Best Practices** | Security, Ethics, and the Limits of AI. |
 | **[📊 Part 4](./assessments/)** | **Assessments** | Real-world challenges to test your prompt proficiency. |
+| **[📂 Examples](./examples/)** | **Prompt Library** | Specific templates for PDF scraping, refactoring, and more. |
 
 ---
 
