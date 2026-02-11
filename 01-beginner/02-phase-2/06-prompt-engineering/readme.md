@@ -65,6 +65,7 @@ By the end of this curriculum, you will:
 | **[🟢 Part 1](./part-01-ai-fundamentals/)** | **The AI Mindset** | How LLMs work, Mental Models, and the Professional Prompt Toolkit. |
 | **[🟡 Part 2](./part-02-devops-automation/)** | **DevOps Workflows** | Generating Code, IaC, and Troubleshooting with AI. |
 | **[🔴 Part 3](./part-03-governance-and-ethics/)** | **Best Practices** | Security, Ethics, and the Limits of AI. |
+| **[⌨️ SOH](./slash-commands.md)** | **Slash Commands** | - **Slash Commands**: Rapid "SRE-style" codes for de-robotizing and formatting. (See [Phase 2: Prompt Engineering](./01-beginner/02-phase-2/06-prompt-engineering/slash-commands.md)) |
 
 ---
 
