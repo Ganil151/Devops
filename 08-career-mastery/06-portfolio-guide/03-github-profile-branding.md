@@ -27,7 +27,7 @@ Don't just say you know AWS; prove it with badges. Use standard `shields.io` bad
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Ganil%20Batist%20Yan&fontSize=80" />
   
-  ![AWS Certified Solutions Architect](https://img.shields.io/badge/AWS-Certified_Solutions_Architect-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+  ![AWS SAA](https://img.shields.io/badge/AWS-Solutions_Architect_Associate-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
   ![CKA](https://img.shields.io/badge/CNCF-CKA_Certified-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
   ![Terraform](https://img.shields.io/badge/HashiCorp-Terraform_Associate-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 </div>
@@ -41,7 +41,7 @@ Recruiters hire problem solvers. Focus on the **Impact**.
 **Markdown Template:**
 ```markdown
 ### 👨‍💻 About Me
-I am a DevOps Engineer focused on **Platform Engineering** and **Cloud Automation**.
+I am a Senior DevOps Engineer focused on **Platform Engineering** and **Cloud Automation**.
 - 🔭 Working on: **Zero-downtime deployment pipelines** for Microservices.
 - 🌱 Learning: **Service Mesh (Istio)** & **eBPF** for observability.
 - 🚀 Mission: To make infrastructure **boring** (predictable, stable, and automated).
@@ -99,7 +99,7 @@ jobs:
 
 ## 🧹 4. Repository "Polish" Standards (The Big 3)
 
-Every "Golden Project" public repo must meet these standards:
+Every "Golden Project" public repo must meet these standards to be taken seriously.
 
 1.  **Professional README:** Architecture diagram, setup scripts, and "How it works".
 2.  **License & Metadata:** MIT license + GitHub Topics (`#terraform`, `#aws`).
@@ -107,23 +107,70 @@ Every "Golden Project" public repo must meet these standards:
 
 ---
 
-## 🃏 5. Portfolio Project Cards
+## 🃏 5. Reference Implementation (The Ganil Profile)
 
-When linking projects, use this high-impact format:
+Below is a production-ready example of a high-conversion DevOps profile. You can copy this structure into your `username/username` repository.
 
-| **Spring PetClinic Microservices on AWS** |
-| :--- |
-| **Description:** Highly available microservice deployment on EKS with automated CI/CD. |
-| **The Stack:** ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white) ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white) |
-| **Key Features:** ✅ Zero-Downtime Blue/Green Deployments via ArgoCD. |
-| **Links:** [📁 Repository](https://github.com/Ganil151/spring-petclinic-microservices) |
+> [!TIP]
+> This template includes **Professional Impact Metrics**, **Tech Stack Badges**, and a **Featured Project Card**.
+
+<details>
+<summary>👉 Click to View Full Profile Template</summary>
+
+```markdown
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Ganil%20Batist%20Yan&fontSize=80" />
+  
+  <div align="center">
+  <h1>Continuous Learning - Continuous Improvement</h1>
+  </div>
+    
+  <div align="center">
+  [![AWS SAA](https://img.shields.io/badge/AWS-Solutions_Architect_Associate-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://credly.com)
+  [![CKA](https://img.shields.io/badge/CNCF-CKA_Certified-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://credly.com)
+  [![Terraform](https://img.shields.io/badge/HashiCorp-Terraform_Associate-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)](https://credly.com)
+  </div>
+</div>
+
+<div align="center">
+  <a href="https://www.linkedin.com/in/ganil-batist-yan/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:ganilbatistyan@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://github.com/Ganil151"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+</div>
+
+---
+
+### 👨‍💻 About Me
+I am a Senior DevOps & Platform Engineer with 4+ years of experience bridging the gap between legacy infrastructure and modern cloud-native automation. My core mission is to build resilient, self-healing platforms.
+
+### 🎯 Engineering Philosophy
+- **Automation over Documentation:** If a task is performed twice, it must be scripted.
+- **Security by Design:** Shifting security left.
+- **Data-Driven Ops:** Making architectural decisions based on SLIs/SLOs.
+
+---
+
+### 🏆 Professional Impact (The Numbers)
+| Metric | Achievement | Impact |
+| :--- | :--- | :--- |
+| 💰 **Cost Reduction** | Automated environment lifecycle | **$66k/year** in AWS savings |
+| ⚡ **Velocity** | Re-engineered CI/CD pipelines | **50%** faster frequency |
+
+---
+
+### 🏆 The Golden Project: Enterprise Microservice Failover
+> #### Production-Grade Disaster Recovery for [Spring PetClinic on AWS EKS](https://github.com/Ganil151/spring-petclinic-microservices.git)
+> **Challenge:** Architect a solution to guarantee 99.99% availability surviving a full AWS region failure.
+> **Links:** [📁 Repository](https://github.com/Ganil151/spring-petclinic-microservices.git)
+```
+</details>
 
 ---
 
 ## 🏁 Summary Checklist
 
-1.  [ ] **Create Repo:** `Ganil151/Ganil151` (Public).
-2.  [ ] **Header:** Add badges and "Problem Solver" bio.
-3.  [ ] **Stats:** Add dynamic GitHub stats.
-4.  [ ] **Automation:** Setup GitHub Actions to update blog/stats.
+1.  [ ] **Create Repo:** `username/username` (Public).
+2.  [ ] **Header/About:** Add badges and "Impact-focused" bio.
+3.  [ ] **Metrics:** Add measurable "Professional Impact" results.
+4.  [ ] **Automation:** Setup GitHub Actions for blog/WakaTime updates.
 5.  [ ] **Polish:** Add licenses and tags to your top 3 repos.
