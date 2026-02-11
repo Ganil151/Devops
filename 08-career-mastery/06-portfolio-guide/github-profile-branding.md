@@ -97,7 +97,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 ```
 
-*> Note: You must add `<!-- BLOG-POST-LIST:START -->` and `<!-- BLOG-POST-LIST:END -->` in your README for the action to inject content.*
+> Note: You must add `<!-- BLOG-POST-LIST:START -->` and `<!-- BLOG-POST-LIST:END -->` in your README for the action to inject content.*
 
 ---
 
