@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08-career-mastery/10-prompt-engineer/linkedin-optimizer.md",
+                "file": "08-career-mastery/STRUCTURE.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "linkedin-optimizer"
+              "title": "STRUCTURE"
             }
           }
         ],
@@ -240,6 +240,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "08-career-mastery/10-prompt-engineer/linkedin-optimizer.md",
     "08-career-mastery/images/career-acceleration-loop.png",
     "08-career-mastery/readme.md",
     "08-career-mastery/images/pricing-comparison.png",
@@ -262,7 +263,6 @@
     "08-career-mastery/10-prompt-engineer/recruiter-prompt.md",
     "08-career-mastery/10-prompt-engineer/portfolio-project-evaluator.md",
     "08-career-mastery/10-prompt-engineer/networking-cold-outreach.md",
-    "08-career-mastery/10-prompt-engineer/linkedin-optimizer.md",
     "08-career-mastery/10-prompt-engineer/final-round-interview.md",
     "08-career-mastery/10-prompt-engineer/ats-stress-test.md",
     "08-career-mastery/10-prompt-engineer/README.md",
@@ -285,7 +285,6 @@
     "09-resources/04-images/screenshot-99.png",
     "09-resources/04-images/screenshot-98.png",
     "09-resources/04-images/screenshot-97.png",
-    "09-resources/04-images/screenshot-94.png",
     "Untitled.canvas"
   ]
 }
