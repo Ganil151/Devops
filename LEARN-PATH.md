@@ -37,18 +37,45 @@ graph LR
 
 ---
 
-## � Phase 0: Career Mastery & Mindset (Pre-work)
+## 🚀 Phase 0: Career Mastery & Mindset (Pre-work)
 
-**Primary Objective:** Align your technical goals with industry expectations and build a high-conversion professional presence.
+**Primary Objective:** Align your technical goals with industry expectations and build a high-conversion professional presence. Use Phase 0 in parallel with technical phases to ensure your resume and portfolio grow as you learn.
 
-**Key Resources:**
-- [DevOps Career Roadmap](./00-career-mastery/readme.md)
-- [Mindset & Philosophy](./00-career-mastery/01-mindset-and-roadmap/readme.md)
-- [The "Live Resume" Strategy](./00-career-mastery/06-portfolio-guide/03-github-profile-branding.md)
+### 🗺️ Phase 0 Curriculum Map
+| Module | Title | Primary Outcome |
+|:--- |:--- |:--- |
+| **01** | [DevOps Persona](./00-career-mastery/01-devops-persona/) | Master the CALMS mindset beyond tools |
+| **02** | [Tool Landscape](./00-career-mastery/02-the-tool-landscape/) | Map the ecosystem & avoid tutorial hell |
+| **03** | [Soft Skills](./00-career-mastery/03-soft-skills/) | Handle incidents & docs like a senior |
+| **04** | [Ops Simulations](./00-career-mastery/04-day-in-the-life-operations/) | Practice "Morning Triage" & Rollbacks |
+| **05** | [Strategic Roadmap](./00-career-mastery/05-strategic-roadmap/) | Plan progression Junior → Staff |
+| **06** | [Portfolio Guide](./00-career-mastery/06-portfolio-guide/) | Build 3-5 "Deployable" GitHub projects |
+| **07** | [Resume Engineering](./00-career-mastery/07-resume-engineering/) | Pass the ATS with 70+ match scores |
+| **08** | [AI Prompt Arsenal](./00-career-mastery/08-prompt-engineer/) | Use AI to accelerate the job search |
+| **09** | [Interview Mastery](./00-career-mastery/09-interview-mastery/) | Pass technical & behavioral drills |
+| **10** | [Salary Negotiation](./00-career-mastery/10-salary-negotiation/) | Benchmarking & offer strategy |
+| **11** | [Mock Scripts](./00-career-mastery/11-mock-interview-scripts/) | 30-min timed simulation practice |
+| **12** | [Hiring Logic](./00-career-mastery/12-hiring-logic/) | Understand the interviewer's POV |
+| **13** | [Daily Checklist](./00-career-mastery/13-daily-checklist/) | Operational muscle memory |
+
+### 🤖 AI Prompts Quick Reference
+Available in [08-prompt-engineer/](./00-career-mastery/08-prompt-engineer/):
+- **Skills Gap Analyzer**: Get a personalized 90-day learning roadmap.
+- **Recruiter Prompt**: Get resume match scores vs. Job Descriptions.
+- **ATS Stress Test**: Fix formatting blockers before applying.
+- **Final Round Interview**: STAR-method prep for leadership rounds.
+
+### 📊 Career Success Metrics
+| Metric | Junior Target | Senior Target |
+|:--- |:--- |:--- |
+| **Resume Response** | 10-15% | 25-30% |
+| **LinkedIn Views** | 100+/mo | 300+/mo |
+| **GitHub Activity** | 3+ days/week | 5+ days/week |
+| **Offer Gain** | Market Entry | +10-20% via Negotiation |
 
 ---
 
-## �🎯 Phase 1: Foundations (Weeks 1-4)
+## 🎯 Phase 1: Foundations (Weeks 1-4)
 
 ### Week 1: Networking & Linux Fundamentals
 
@@ -532,8 +559,19 @@ Create a copy of this checklist to track your progress:
 
 ```markdown
 ## Phase 0: Career Mastery
-- [ ] Profile Branding & GitHub "Live Resume"
-- [ ] Roadmap Alignment
+- [ ] 01. DevOps Persona & CALMS Framework
+- [ ] 02. Landscape & Tool Selection Strategy
+- [ ] 03. Soft Skills & Blameless Culture
+- [ ] 04. Day in the Life: Operational Triage
+- [ ] 13. Daily Checklist: SRE Standards
+- [ ] 05. Strategic Roadmap: 90-Day Learning Plan
+- [ ] 06. Portfolio: GitHub Profile Branding
+- [ ] 07. Resume Engineering: ATS Optimization
+- [ ] 08. AI Prompts: Career Arsenal Setup
+- [ ] 09. Interview Mastery: STAR method stories
+- [ ] 11. Mock Interviews: 30m Time Drills
+- [ ] 12. Hiring Logic: Manager Insight
+- [ ] 10. Salary Negotiation: TC Benchmarking
 
 ## Phase 1: Foundations
 - [ ] Week 1: Networking & Linux
