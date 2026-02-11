@@ -1,0 +1,38 @@
+name: Update Profile README
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Pull Latest Blog Posts
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: 'https://medium.com/feed/@ganilbatistyan' # Verify your handle
+          max_post_count: 5
+
+      - name: Create .env file from Secrets
+        run: |
+          echo "WAKATIME_API_KEY=${{ secrets.WAKATIME_API_KEY }}" > .env
+          echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> .env
+
+      - name: Load Environment Variables from .env
+        uses: falti/dotenv-action@v1
+
+      - name: Update WakaTime Stats
+        uses: athul/waka-readme-stats@v2
+        with:
+          WAKATIME_API_KEY: ${{ env.WAKATIME_API_KEY }}
+          GH_TOKEN: ${{ env.GH_TOKEN }}
+          SHOW_OS: 'true'
+          SHOW_PROJECTS: 'true'
