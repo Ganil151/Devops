@@ -64,6 +64,7 @@ Available in [08-prompt-engineer/](./00-career-mastery/08-prompt-engineer/):
 - **Recruiter Prompt**: Get resume match scores vs. Job Descriptions.
 - **ATS Stress Test**: Fix formatting blockers before applying.
 - **Final Round Interview**: STAR-method prep for leadership rounds.
+- **Slash Commands**: Rapid "SRE-style" codes for de-robotizing and formatting.
 
 ### 📊 Career Success Metrics
 | Metric | Junior Target | Senior Target |
