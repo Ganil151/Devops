@@ -113,8 +113,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5,
-    "collapsed": true
+    "width": 310.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -241,6 +240,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "08-career-mastery/STRUCTURE.md",
     "08-career-mastery/sedR8LhYA",
     "08-career-mastery/daily-checklist.md",
     "08-career-mastery/00-navigation/REORGANIZATION-SUMMARY.md",
@@ -272,7 +272,6 @@
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/smoke/test_endpoints.py",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/smoke",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/infra/test_nodes.py",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/infra",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/ecr/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/vpc/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/ecr-repositories/README.md",
