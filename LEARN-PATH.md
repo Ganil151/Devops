@@ -531,9 +531,12 @@ Found an issue or want to improve content? Submit a pull request!
 Create a copy of this checklist to track your progress:
 
 ```markdown
-## Phase 0: Career Mastery
-- [ ] Profile Branding & GitHub "Live Resume"
-- [ ] Roadmap Alignment
+## Phase 0: Career Mastery (13 Stages)
+- [ ] 01-04: Foundations & Mindset (CALMS)
+- [ ] 05-06: Strategic Portfolio Build
+- [ ] 07-08: Resume & AI Prompt Mastery
+- [ ] 09-12: Interview & Hiring Logic
+- [ ] 13: Daily Operational Habits
 
 ## Phase 1: Foundations
 - [ ] Week 1: Networking & Linux
