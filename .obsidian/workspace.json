@@ -216,6 +216,8 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "00-career-mastery/08-interview-mastery/05-assessment-tests/readme.md",
+    "00-career-mastery/08-interview-mastery/05-assessment-tests",
     "assets/placeholder-pricing-comparison.md",
     "assets/navigation-architecture.svg",
     "assets/cicd-pipeline-architecture.svg",
@@ -247,7 +249,6 @@
     "08-resources/01-scripts-code/maintenance/system-refactor.py",
     "08-resources/01-scripts-code/maintenance/summary.txt",
     "08-resources/01-scripts-code/maintenance/simplification-summary.md",
-    "08-resources/01-scripts-code/maintenance/restore_reference.py",
     "08-resources/01-scripts-code/maintenance/readme.md",
     "08-resources/01-scripts-code/maintenance/quick-reference.md",
     "08-resources/01-scripts-code/maintenance/project-clean-readme.md",
@@ -261,7 +262,6 @@
     "08-resources/03-cloud-metadata/global-image-inventory.md",
     "08-resources/00-cheatsheets/cheatsheet.md",
     "08-resources/readme.md",
-    "00-career-mastery/07-resume-engineering/resources/resume-examples/sre-professional.md",
     "Untitled.canvas"
   ]
 }
