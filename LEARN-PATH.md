@@ -478,7 +478,7 @@ This repository includes a centralized **Assessment Hub** to validate your progr
 - **01 Beginner**: Linux, Networking, and Git basics.
 - **02 Intermediate**: AWS infrastructure, Terraform, and Docker.
 - **03 Advanced**: SRE practices, CI/CD, and K8s orchestration.
-- **🦅 Staff Level**: Advanced architectural trade-offs and disaster recovery.
+- **🦅 Staff Level**: [Advanced Agentic AI & Autonomous Ops](./03-advanced/03-phase-3/02-prompt-engineering/readme.md)
 
 ---
 
@@ -591,6 +591,7 @@ Create a copy of this checklist to track your progress:
 - [ ] Week 10: Kubernetes Advanced & Helm
 - [ ] Week 11: Observability & Monitoring
 - [ ] Week 12: Production Readiness & Capstone Project
+- [ ] 🦅 Staff Track: Agentic AI & Autonomous Ops
 ```
 
 ---
