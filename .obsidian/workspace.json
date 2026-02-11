@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08-career-mastery/06-portfolio-guide/readme.md",
+                "file": "08-career-mastery/06-portfolio-guide/github-profile-mastery.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "github-profile-mastery"
             }
           }
         ],
@@ -113,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -240,8 +241,8 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
-    "08-career-mastery/06-portfolio-guide/github-profile-mastery.md",
     "08-career-mastery/06-portfolio-guide/readme.md",
+    "08-career-mastery/06-portfolio-guide/github-profile-mastery.md",
     "08-career-mastery/06-portfolio-guide/personal-website-guide.md",
     "08-career-mastery/readme.md",
     "08-career-mastery/images/career-acceleration-loop.png",
