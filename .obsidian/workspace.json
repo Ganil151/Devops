@@ -35,12 +35,24 @@
             "id": "4f5e8581f8e9c25a",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "08-career-mastery/images/pricing-comparison.png"
+                "file": "08-career-mastery/readme.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-image",
-              "title": "pricing-comparison"
+              "icon": "lucide-file",
+              "title": "readme"
             }
           }
         ],
@@ -230,10 +242,10 @@
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
     "08-career-mastery/images/career-acceleration-loop.png",
+    "08-career-mastery/images/pricing-comparison.png",
     "08-career-mastery/readme.md",
     "08-career-mastery/STRUCTURE.md",
     "08-career-mastery/10-prompt-engineer/linkedin-optimizer.md",
-    "08-career-mastery/images/pricing-comparison.png",
     "08-career-mastery/daily-checklist.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
     "08-career-mastery/sedR8LhYA",
