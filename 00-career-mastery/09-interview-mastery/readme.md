@@ -5,13 +5,13 @@ Mastering the DevOps interview is about moving from "I know how to use this tool
 ---
 
 ## 📂 Mastery Modules
-- ⏱️ **[Mock Interview Scripts](../mock-interview-scripts.md)**: 30-minute timed simulations for different roles.
+- ⏱️ **[Mock Interview Scripts](../11-mock-interview-scripts/readme.md)**: 30-minute timed simulations for different roles.
 - 🏗️ **[01-Technical Deep Dives](./01-technical-deep-dives/)**: Deep dives into K8s, Terraform, and AWS with "Interviewer's Secrets."
 - 🖼️ **[02-Scenario Architecture](./02-scenario-architecture/)**: Whiteboard designs for HA, scaling, and compliance.
 - 🎭 **[03-Behavioral STAR Method](./03-behavioral-star-method/)**: Storytelling framework for soft-skills and incident response.
 - 💻 **[04-Live Coding Challenges](./04-live-coding-challenges/)**: Python and Bash scripts commonly asked in screenings.
 - 🧪 **[05-Assessment Tests](./05-assessment-tests/)**: Online screenings, take-homes, and screening survival strategies.
-- 👔 **[Hiring Logic](../hiring-logic.md)**: Understand the hiring manager's perspective.
+- 👔 **[Hiring Logic](../12-hiring-logic/readme.md)**: Understand the hiring manager's perspective.
 
 ---
 

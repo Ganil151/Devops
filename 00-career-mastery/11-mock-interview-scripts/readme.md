@@ -46,4 +46,4 @@ Practice these scenarios to build the muscle memory needed for real-time technic
 - **Success Criteria:** Analyzing operational overhead, cost (control plane), flexibility, and team expertise.
 
 ---
-👉 **[Back to Interview Mastery Hub](./08-interview-mastery/readme.md)**
+👉 **[Back to Interview Mastery Hub](../09-interview-mastery/readme.md)**
