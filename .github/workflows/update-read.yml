@@ -24,13 +24,19 @@ jobs:
           feed_list: "https://medium.com/feed/@ganilbatistyan"
           max_post_count: 5
 
-      # --- Step 2: Update WakaTime Metrics ---
-      # This step follows the specific 'athul/waka-readme@master' requirement
+      # --- Step 2: Load Secrets from .env ---
+      - name: Load Environment Variables from .github/.env
+        uses: falti/dotenv-action@v1
+        with:
+          path: ".github/.env"
+          log_variables: true # Set to false in production to avoid leaking keys in logs
+
+      # --- Step 3: Update WakaTime Metrics ---
       - name: Update WakaTime DevMetrics
         uses: athul/waka-readme@master
         with:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GH_TOKEN: ${{ env.GH_TOKEN }}
+          WAKATIME_API_KEY: ${{ env.WAKATIME_API_KEY }}
           ### Meta Configuration
           API_BASE_URL: https://wakatime.com/api
           REPOSITORY: Ganil151/Devops
