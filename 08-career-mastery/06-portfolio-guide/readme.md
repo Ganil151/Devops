@@ -41,6 +41,10 @@ Optimizing your GitHub profile is as important as the code itself. Learn how to 
 Go beyond GitHub. Launch a professional portfolio using Static Site Generators and GitHub Pages:
 👉 **[Personal Website Guide](./personal-website-guide.md)**
 
+## 🎨 GitHub Profile Branding
+Transform your profile into a high-conversion "Live Resume" with automation and professional polish:
+👉 **[GitHub Profile Branding & Automation Guide](./03-github-profile-branding.md)**
+
 ---
 
 **Showcase Hub**: [08-Resources/05-Projects-Showcase](readme.md)
