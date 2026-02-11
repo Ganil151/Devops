@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "assets/placeholder-pricing-comparison.md",
+                "file": "reference.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "placeholder-pricing-comparison"
+              "title": "reference"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "assets/placeholder-pricing-comparison.md",
     "assets/navigation-architecture.svg",
     "assets/cicd-pipeline-architecture.svg",
     "assets/devops-master-banner.png",
@@ -256,7 +258,6 @@
     "08-resources/04-images/screenshot-94.png",
     "08-resources/04-images/screenshot-93.png",
     "08-resources/04-images/screenshot-92.png",
-    "08-resources/04-images/screenshot-91.png",
     "08-resources/03-cloud-metadata/global-image-inventory.md",
     "08-resources/00-cheatsheets/cheatsheet.md",
     "08-resources/readme.md",
