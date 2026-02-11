@@ -23,6 +23,7 @@ The `/home/gsmash/Documents/Devops/00-career-mastery` directory is now **profess
 ├── 📁 06-portfolio-guide/            🏗️ GitHub Best Practices & Projects
 ├── 📁 07-resume-engineering/         📄 ATS Optimization & Resume Templates
 ├── 📁 08-interview-mastery/          👔 Interview Prep (Technical + Behavioral)
+│   ├── 📁 05-assessment-tests/      🧪 Online Screens & Take-Homes
 ├── 📁 09-salary-negotiation/         💰 Compensation Strategies
 ├── 📁 10-prompt-engineer/            🤖 7 AI-Powered Career Tools
 │   ├── README.md                    Hub overview
