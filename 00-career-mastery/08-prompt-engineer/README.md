@@ -1,8 +1,4 @@
-# 🚀 DevOps Career Prompt Engineering Arsenal
-
-## Overview
-
-This directory contains **7 battle-tested AI prompts** designed to accelerate every stage of your DevOps career journey - from skill development to job offers. Each prompt is engineered to extract maximum value from AI assistants (ChatGPT, Claude, Gemini) using proven psychological frameworks and real-world data.
+This directory contains **8 battle-tested AI prompts** designed to accelerate every stage of your DevOps career journey - from skill development to job offers. Each prompt is engineered to extract maximum value from AI assistants (ChatGPT, Claude, Gemini) using proven psychological frameworks and real-world data.
 
 ---
 
@@ -189,7 +185,7 @@ Monitor these KPIs monthly:
 
 ### Within This Repository
 - **`../07-resume-engineering/`** - Resume templates and examples
-- **`../08-interview-mastery/`** - Behavioral and technical question banks
+- **`../09-interview-mastery/`** - Behavioral and technical question banks
 - **`../06-portfolio-guide/`** - Project ideas and GitHub best practices
 - **`../05-strategic-roadmap/`** - Career progression frameworks
 
@@ -295,7 +291,7 @@ When creating your own prompts, use these as templates.
 ---
 
 **Last Updated:** 2026-02-11  
-**Version:** 2.0 (7 prompts)  
+**Version:** 3.0 (8 prompts)  
 **Maintained By:** Career Mastery Module
 
 ---
