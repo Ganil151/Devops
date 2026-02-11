@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Ganil%20Batist%20Yan&fontSize=80" />
   
-  ![AWS Certified Solutions Architect](https://img.shields.io/badge/AWS-Certified_Solutions_Architect-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+  ![AWS Solutions Architect](https://img.shields.io/badge/AWS-Solutions_Architect_Associate-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
   ![CKA](https://img.shields.io/badge/CNCF-CKA_Certified-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
   ![Terraform](https://img.shields.io/badge/HashiCorp-Terraform_Associate-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 </div>
@@ -15,57 +15,71 @@
 ---
 
 ### 👨‍💻 About Me
-I am a **DevOps Engineer** focused on **Platform Engineering** and **Cloud Automation**.
-I specialize in **reducing deployment friction** and **optimizing infrastructure costs**. My mission is to bridge the gap between development and production through **automation**, **observability**, and **reliability**.
+I am a **DevOps & Platform Engineer** dedicated to building resilient, self-healing infrastructure. My expertise lies in **reducing deployment friction**, **optimizing cloud spend**, and implementing **GitOps best practices**. 
 
-- 🔭 **Working on:** Zero-downtime deployment pipelines for Microservices on **AWS EKS**.
-- 🌱 **Learning:** **Service Mesh (Istio)** & **eBPF** for advanced observability.
-- 🚀 **Goal:** To make infrastructure **boring** (predictable, stable, and automated).
-- 🤝 **Collaborating on:** [My DevOps Repository](https://github.com/Ganil151/Devops.git) - A collection of best-practice manifests and scripts.
+I believe that infrastructure should be **boring**—predictable, automated, and invisible to the developers who rely on it.
+
+- 🔭 **Current Focus:** Engineering high-concurrency Microservice architectures on **AWS EKS**.
+- 🌱 **Learning & Research:** Deep-diving into **eBPF-based Observability** (Cilium) and **AI-driven Ops**.
+- 🚀 **Mission:** Bridging the gap between code and production with **Security-first (DevSecOps)** automation.
+- 🤝 **Community:** Active contributor to [Open Source DevOps Manifests](https://github.com/Ganil151/Devops.git).
 
 ---
 
-### 🛠️ Tech Stack
+### 🛠️ My Tech Stack
+
 | Domain | Tools |
 | :--- | :--- |
-| **Cloud & Orchestration** | ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat&logo=amazon-aws&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=flat&logo=kubernetes&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white) ![Karpenter](https://img.shields.io/badge/Karpenter-005571?style=flat&logo=amazon&logoColor=white) |
-| **IaC** | ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=flat&logo=terraform&logoColor=white) ![Ansible](https://img.shields.io/badge/ansible-%231A1918.svg?style=flat&logo=ansible&logoColor=white) ![CloudFormation](https://img.shields.io/badge/CloudFormation-FF4F8B?style=flat&logo=amazon&logoColor=white) |
-| **CI/CD** | ![Jenkins](https://img.shields.io/badge/jenkins-%232C508D.svg?style=flat&logo=jenkins&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=flat&logo=githubactions&logoColor=white) ![ArgoCD](https://img.shields.io/badge/ArgoCD-ef7b4d?style=flat&logo=argocd&logoColor=white) |
-| **Observability** | ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white) |
-| **Scripting** | ![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=white) ![Bash](https://img.shields.io/badge/GNU%20Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white) |
+| **Cloud & Orchestration** | ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat-square&logo=amazon-aws&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=flat-square&logo=kubernetes&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white) ![Karpenter](https://img.shields.io/badge/Karpenter-005571?style=flat-square&logo=amazon&logoColor=white) |
+| **Infrastructure as Code** | ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=flat-square&logo=terraform&logoColor=white) ![Ansible](https://img.shields.io/badge/ansible-%231A1918.svg?style=flat-square&logo=ansible&logoColor=white) ![CloudFormation](https://img.shields.io/badge/CloudFormation-FF4F8B?style=flat-square&logo=amazon&logoColor=white) |
+| **CI/CD & GitOps** | ![Jenkins](https://img.shields.io/badge/jenkins-%232C508D.svg?style=flat-square&logo=jenkins&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=flat-square&logo=githubactions&logoColor=white) ![ArgoCD](https://img.shields.io/badge/ArgoCD-ef7b4d?style=flat-square&logo=argocd&logoColor=white) |
+| **Observability** | ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) ![Loki](https://img.shields.io/badge/Loki-FFFFFF?style=flat-square&logo=grafana&logoColor=black) |
+| **Scripting & OS** | ![Python](https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=white) ![Bash](https://img.shields.io/badge/GNU%20Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) |
 
 ---
 
-### 📊 GitHub Stats
-![Ganil's Stats](https://github-readme-stats.vercel.app/api?username=Ganil151&show_icons=true&theme=radical&count_private=true)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ganil151&layout=compact&theme=radical)
+### 📊 GitHub Activity
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Ganil151&show_icons=true&theme=radical&count_private=true" alt="Ganil's GitHub Stats" />
+</p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ganil151&layout=compact&theme=radical" alt="Top Languages" />
+</p>
 
 ---
 
-### 🏆 Professional Highlights
+### 🏆 Professional Impact
 
-* ⚡ **Speed:** Improved time-to-market by **50%** through optimized CI/CD pipelines.
-* 💰 **Cost Savings:** Reduced monthly cloud spend by **$5,500** via automated environment scheduling.
-* 📈 **Performance:** Boosted Kubernetes performance by **20%** while cutting resource waste by **15%**.
-* 🛡️ **Reliability:** Engineered a multi-region **Disaster Recovery (DR)** solution with seamless failover using Route53 and ArgoCD.
+* ⚡ **Velocity:** Accelerated deployment frequency by **35%** while maintaining a **99.99% successful Change Failure Rate**.
+* 💰 **Cost Governance:** Architected a **FinOps** strategy that reduced wasted cloud resources by **$66k/year** using spot instances and Karpenter.
+* 📈 **Scalability:** Optimized K8s horizontal/vertical scaling, allowing the platform to handle **3x traffic spikes** with zero manual intervention.
+* 🛡️ **Business Continuity:** Implemented a full **Disaster Recovery (DR)** pipeline with < 15 min RTO/RPO using Route53 DNS steering and ArgoCD multi-cluster sync.
 
 ---
 
-### 🧪 Featured Project: Multi-Region EKS Failover
+### 🧪 Featured Project: Enterprise Microservice Failover
 
-| **Spring PetClinic Microservices on AWS** |
+| **Spring PetClinic on AWS EKS (Production-Grade)** |
 | :--- |
-| **Description:** A highly available microservice architecture deployed across US-EAST-1 and US-EAST-2 with automated failover. |
-| **The Stack:** ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white) ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white) ![Helm](https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white) |
-| **Key Features:** <br>✅ **Traffic Management:** Regulated via Route 53 health checks for automated regional failover.<br>✅ **Data Consistency:** Cross-region RDS replication for real-time data sync.<br>✅ **GitOps:** State synchronization using **ArgoCD**.<br>✅ **Observability:** Centralized logging/metrics with Kube-Prometheus-Stack. |
-| **Links:** [📁 Repository](https://github.com/Ganil151/petclinic-microservices) |
+| **The Challenge:** Deploy a distributed retail application that remains resilient even during a total AWS Region outage. |
+| **The Solution:** |
+| 🏗️ **Infrastructure:** Multi-region EKS clusters provisioned via modular **Terraform** workstreams. |
+| 🔄 **GitOps Flow:** Application state synchronized across regions using **ArgoCD** ApplicationSets. |
+| 🛡️ **Resilience:** Cross-region **RDS Read Replicas** with automated promotion logic and **Route 53** failover. |
+| 📊 **Monitoring:** Full-stack observability with **Prometheus**, **Grafana**, and **Alertmanager** integrated into Slack. |
+| **Links:** [📁 View Repository](https://github.com/Ganil151/petclinic-microservices) |
 
 ---
 
-### 📚 Continuous Learning & Certs
-* ☸️ **CKA (Certified Kubernetes Administrator):** Expected Jan 2025
-* ☁️ **AWS SAA-03 (Solutions Architect Associate):** Expected April 2025
-* 🎓 **Acloud Guru:** DevOps Engineer Track (Completed 2024)
+### 📚 Certifications & Education
+* ✅ **CKA (Certified Kubernetes Administrator)** - CNCF (Completed June 2025)
+* ✅ **AWS Solutions Architect Associate (SAA-C03)** - AWS (Completed Sept 2025)
+* 🎓 **Acloud Guru:** DevOps Engineer Track (Mastery Grade)
+* 📜 **HashiCorp Certified:** Terraform Associate
 
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
+
+<p align="center">
+  <i>"Automating the world, one commit at a time."</i>
+</p>
