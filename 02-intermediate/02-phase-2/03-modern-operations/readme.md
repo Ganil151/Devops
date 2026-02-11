@@ -51,7 +51,7 @@ graph LR
 *Junior, stop looking at Up/Down lights.* 
 Master Prometheus, Grafana, and the OpenTelemetry standard. Learn to trace a single user request across 5 different services.
 
-### 2. [AI Operations](./02-ai-operations/readme.md)
+### 2. [Prompt Engineering](./02-prompt-engineering/readme.md)
 *Treat the LLM as your Co-Pilot, not your replacement.* 
 Prompt engineering for DevOps, automated root-cause analysis, and using AI to write complex security policies.
 
