@@ -58,6 +58,9 @@ I believe that infrastructure should be **predictable and automated**—allowing
 
 ---
 
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
 ### ✍️ Latest Blog Posts
 <p align="center">
   <i>"Automating the world, one commit at a time."</i>
