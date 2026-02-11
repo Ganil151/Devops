@@ -13,8 +13,6 @@ The `/home/gsmash/Documents/Devops/00-career-mastery` directory is now **profess
 │
 ├── 📄 readme.md                      ⭐ MAIN GUIDE (All-in-one comprehensive resource)
 ├── 📄 daily-checklist.md             ✅ Daily operational routines
-├── 📄 hiring-logic.md                🔍 The Hiring Manager's perspective
-├── 📄 mock-interview-scripts.md      ⏱️ Targeted interview simulations
 ├── 📄 STRUCTURE.md                   📋 Structure overview & quick reference
 │
 ├── 📁 01-devops-persona/             🎭 Mindset & Culture (CALMS framework)
