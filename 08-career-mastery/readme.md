@@ -272,19 +272,7 @@ This module is organized into **10 progressive stages**, designed to be followed
 
 ## 🔄 The Career Acceleration Loop
 
-```
-┌──────────────────────────────────────────────────────┐
-│  Learning → Building → Documenting → Sharing         │
-│     ↓           ↓            ↓            ↓          │
-│  Skills    Portfolio      Resume      Network        │
-│     ↓           ↓            ↓            ↓          │
-│  Interviews → Offers → Negotiation → Accept          │
-│                            ↓                         │
-│                    Career Growth ✨                   │
-│                            ↓                         │
-│              (Loop back to Learning)                 │
-└──────────────────────────────────────────────────────┘
-```
+![The Career Acceleration Loop - A continuous cycle of Learning, Building, Documenting, and Sharing that leads to Skills, Portfolio, Resume, and Network, resulting in Interviews, Offers, Negotiation, and ultimately Career Growth](./images/career-acceleration-loop.png)
 
 **Key Insight:** This is a continuous loop, not a one-time journey. Even after landing a job, you continue learning → building → sharing to position yourself for promotions.
 
