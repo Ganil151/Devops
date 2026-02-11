@@ -596,6 +596,6 @@ Create a copy of this checklist to track your progress:
 
 **🚀 Ready to start? Begin with [Week 1: Networking & Linux Fundamentals](./01-beginner/01-phase-1/01-networking/readme.md)**
 
-**Last Updated:** 2024  
-**Version:** 1.0  
+**Last Updated:** 2026-02-11  
+**Version:** 4.0 (Centralized Mastery)  
 **Estimated Completion Time:** 12 weeks (15-20 hours/week)
