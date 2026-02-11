@@ -65,6 +65,7 @@ When writing your LinkedIn post or GitHub README for this project, focus on the 
 ## 👔 Interview Preparation (Project Specific)
 
 1. **Q: Why did you choose Istio over a standard Ingress?**
+   
    - *A: Istio provides advanced Layer 7 traffic control (retries, timeouts, circuit breaks) and automatic service-to-service security that standard Ingress controllers do not handle at scale.*
 2. **Q: How does OPA help you manage infrastructure at scale?**
    - *A: It allows us to define "Guardrails" as code. For example, we can programmatically prevent anyone from creating unencrypted storage or publicly accessible databases before the resources are even provisioned.*
