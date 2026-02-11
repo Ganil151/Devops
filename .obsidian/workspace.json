@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "08-career-mastery/00-navigation/DIRECTORY-MAP.md",
     "08-career-mastery/sedhjJJIj",
     "08-career-mastery/sedNla84l",
     "08-career-mastery/00-navigation/daily-checklist.md",
@@ -268,7 +269,6 @@
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/smoke",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/infra/test_nodes.py",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/testing/infra",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/helm/microservices/templates/hpa.yaml",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/ecr/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/vpc/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/ecr-repositories/README.md",
