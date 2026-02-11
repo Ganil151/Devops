@@ -56,4 +56,4 @@ When an interviewer says "Draw a scalable API," they are testing your ability to
 
 ---
 
-*This guide is part of the 08-interview-mastery module.*
+*This guide is part of the 09-interview-mastery module.*

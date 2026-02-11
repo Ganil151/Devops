@@ -49,7 +49,7 @@ images/
 ![Skills Matrix](./images/skills-matrix.png)
 ```
 
-### From Submodules (e.g., from `/08-interview-mastery/01-technical-deep-dives/kubernetes.md`)
+### From Submodules (e.g., from `/09-interview-mastery/01-technical-deep-dives/kubernetes.md`)
 ```markdown
 ![K8s Architecture](../../images/kubernetes-architecture.png)
 ```
