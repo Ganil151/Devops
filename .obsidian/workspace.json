@@ -238,8 +238,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4f5e8581f8e9c25a",
+  "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "08-career-mastery/ENHANCEMENT-SUMMARY.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-cli-commands.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
     "01-beginner/02-phase-2/05-basic-ci-cd/part-01-principles-and-fundamentals/readme.md",
@@ -277,7 +278,6 @@
     "08-career-mastery/images/infographics/pricing-comparison.png",
     "08-career-mastery/readme.md",
     "08-career-mastery/08-interview-mastery/hiring-logic.md",
-    "08-career-mastery/08-interview-mastery/00-MOCK-INTERVIEW-SCRIPTS.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/iac-workflow.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/declarative-vs-procedural.png",
