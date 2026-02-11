@@ -24,14 +24,18 @@
 
 ### 👨‍💻 About Me
 
-I am a **Senior DevOps & Platform Engineer** dedicated to building resilient, self-healing infrastructure. My expertise lies in **reducing deployment friction**, **optimizing cloud spend**, and implementing **GitOps best practices**.
+👨‍💻 About Me
+I am a Senior DevOps & Platform Engineer with 4+ years of experience bridging the gap between legacy infrastructure and modern cloud-native automation. My core mission is to build resilient, self-healing platforms that empower developers rather than slowing them down.
 
-I believe that a well-architected platform is the foundation of developer velocity and business agility. My goal is to make infrastructure **predictable, scalable, and fully automated**, so developers can focus on what they do best: building great products.
+I specialize in managing complex, mixed Linux/Windows environments and implementing GitOps-driven CI/CD that delivers measurable business value. I believe that infrastructure should be predictable, automated, and invisible—the "foundation of agility" that allows engineering teams to ship high-quality code at scale.
 
-- 🔭 **Currently:** Architecting high-throughput, resilient microservice platforms on **AWS EKS**.
-- 🌱 **Exploring:** The future of cloud-native observability with **eBPF/Cilium** and building intelligent **FinOps** automation.
-- 🚀 **Mission:** To engineer secure, self-service platforms that bridge the gap between code and cloud.
-- 🤝 **Collaboration:** I'm an active Open Source contributor and believe in giving back to the community.
+🔭 Current Focus: Engineering high-throughput, multi-region AWS EKS platforms and enhancing security through Zero-Trust networking.
+
+🌱 Exploring: The intersection of eBPF-based Observability (Cilium) and automated FinOps governance.
+
+🚀 Mission: Bridging the gap from manual "snowflake" servers to fully version-controlled, Infrastructure-as-Code (IaC) solutions.
+
+🤝 Collaboration: Active contributor to internal developer platforms (IDP) and an advocate for blameless post-mortem culture.
 
 ---
 
