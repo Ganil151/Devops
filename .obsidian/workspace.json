@@ -241,6 +241,7 @@
   },
   "active": "4f5e8581f8e9c25a",
   "lastOpenFiles": [
+    "08-career-mastery/images/pricing-comparison.png",
     "08-career-mastery/daily-checklist.md",
     "08-career-mastery/STRUCTURE.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
@@ -276,7 +277,6 @@
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/ecr/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/vpc/README.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/ecr-repositories/README.md",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/modules/rds-postgres/README.md",
     "04-projects-showcase/03-ci-cd-pipeline-automation/source-code/image/screenshot-195.png",
     "08-career-mastery/images/infographics/pricing-comparison.png",
     "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/snowflake-vs-cattle.png",
