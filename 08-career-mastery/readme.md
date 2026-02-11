@@ -64,7 +64,7 @@ This module is organized into **10 progressive stages**, designed to be followed
 - **Morning Triage**: Log analysis and Slack simulation exercises
 - [**Prioritization Framework**](./04-day-in-the-life-operations/prioritization-framework.md): Eisenhower Matrix for incidents
 - **Rollback Procedures**: Emergency recovery commands and runbooks
-- [**Daily Success Checklist**](./00-navigation/daily-checklist.md): What "done" looks like
+- [**Daily Success Checklist**](./daily-checklist.md): What "done" looks like
 
 **Outcome:** Build operational muscle memory before production incidents
 
