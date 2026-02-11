@@ -12,9 +12,6 @@ The `/home/gsmash/Documents/Devops/00-career-mastery` directory is now **profess
 00-career-mastery/
 │
 ├── 📄 readme.md                      ⭐ MAIN GUIDE (All-in-one comprehensive resource)
-├── 📄 daily-checklist.md             ✅ Daily operational routines
-├── 📄 hiring-logic.md                👔 Hiring perspective & logic
-├── 📄 mock-interview-scripts.md      ⏱️ 30-min timed simulations
 ├── 📄 STRUCTURE.md                   📋 Structure overview & quick reference
 │
 ├── 📁 01-devops-persona/             🎭 Mindset & Culture (CALMS framework)
@@ -24,19 +21,12 @@ The `/home/gsmash/Documents/Devops/00-career-mastery` directory is now **profess
 ├── 📁 05-strategic-roadmap/          🗺️ Career Progression (Junior → Staff)
 ├── 📁 06-portfolio-guide/            🏗️ GitHub Best Practices & Projects
 ├── 📁 07-resume-engineering/         📄 ATS Optimization & Resume Templates
-├── 📁 08-interview-mastery/          👔 Interview Prep (Technical + Behavioral)
-│   ├── 📁 05-assessment-tests/      🧪 Online Screens & Take-Homes
-├── 📁 09-salary-negotiation/         💰 Compensation Strategies
-├── 📁 10-prompt-engineer/            🤖 7 AI-Powered Career Tools
-│   ├── README.md                    Hub overview
-│   ├── skills-gap-analyzer.md       90-day learning roadmaps
-│   ├── portfolio-project-evaluator.md  Project validation
-│   ├── recruiter-prompt.md          Resume match scoring
-│   ├── ats-stress-test.md           ATS formatting check
-│   ├── linkedin-optimizer.md        Profile optimization
-│   ├── networking-cold-outreach.md  Cold email templates
-│   ├── final-round-interview.md     STAR method answers
-│   └── salary-negotiation.md        Negotiation scripts
+├── 📁 08-prompt-engineer/            🤖 8 AI-Powered Career Tools
+├── 📁 09-interview-mastery/          👔 Interview Prep (Technical + Behavioral)
+├── 📁 10-salary-negotiation/         💰 Compensation Strategies
+├── 📁 11-mock-interview-scripts/     ⏱️ 30-min timed simulations
+├── 📁 12-hiring-logic/               👔 Hiring perspective & logic
+├── 📁 13-daily-checklist/            ✅ Daily operational routines
 │
 └── 📁 images/                        📊 Visual Assets
     ├── readme.md                    Image guidelines & inventory
@@ -53,9 +43,9 @@ The `/home/gsmash/Documents/Devops/00-career-mastery` directory is now **profess
 - Removed redundant documentation files
 
 ### 2. 🗂️ Organized Module Structure
-- Clean numbered progression: `01-10`
-- All career modules in logical order
-- Alphabetical sorting = learning sequence
+- Clean numbered progression: `01-13`
+- All career modules in logical order (Mental → Build → Search → Interview)
+- Sequential numbering matches the Training Phases
 
 ### 3. 📊 Simplified Images Directory
 - Flattened structure (removed nested `infographics/` folder)
@@ -73,11 +63,11 @@ The `/home/gsmash/Documents/Devops/00-career-mastery` directory is now **profess
 
 | Category | Count | Notes |
 |----------|-------|-------|
-| **Root Files** | 3 | readme.md, daily-checklist.md, STRUCTURE.md |
-| **Career Modules** | 10 | Numbered 01-10 for logical progression |
-| **AI Prompts** | 7 | In 10-prompt-engineer/ directory |
+| **Root Files** | 2 | readme.md, STRUCTURE.md |
+| **Career Modules** | 13 | Numbered 01-13 for logical progression |
+| **AI Prompts** | 8 | In 08-prompt-engineer/ directory |
 | **Images** | 1 | pricing-comparison.png (778 KB) |
-| **Total Markdown Files** | ~50+ | Across all modules |
+| **Total Markdown Files** | ~55+ | Across all modules |
 
 ---
 
@@ -88,9 +78,9 @@ The `/home/gsmash/Documents/Devops/00-career-mastery` directory is now **profess
 1. **Open `readme.md`** (main comprehensive guide)
 2. **Find your career stage:**
    - Student / Career Changer → Start with modules 01-04
-   - Actively Job Hunting → Modules 07 + 10-prompt-engineer
-   - Have Interviews → Module 08 + AI prompts
-   - Have Offer → Modules 09 + salary negotiation prompt
+   - Actively Job Hunting → Modules 07 + 08-prompt-engineer
+   - Have Interviews → Module 09 + AI prompts
+   - Have Offer → Modules 10 + salary negotiation prompt
 
 3. **Use `daily-checklist.md`** for operational habits
 
@@ -114,11 +104,13 @@ The `/home/gsmash/Documents/Devops/00-career-mastery` directory is now **profess
 
 #### Phase 3: Job Search (Month 4)
 - 07-resume-engineering
-- 10-prompt-engineer (prompts 3-6)
+- 08-prompt-engineer (prompts 3-6)
 
 #### Phase 4: Interviews & Offers (Months 5-6)
-- 08-interview-mastery
-- 09-salary-negotiation
+- 09-interview-mastery
+- 10-salary-negotiation
+- 11-mock-interview-scripts
+- 12-hiring-logic
 - 10-prompt-engineer (prompts 7-8)
 
 ---
@@ -164,7 +156,7 @@ This structure follows these principles:
 3. **Zero Redundancy** - No duplicate navigation files
 4. **Self-Documenting** - Structure is intuitive
 5. **Production-Ready** - Professional and maintainable
-6. **Scalable** - Easy to add new modules (11, 12, etc.)
+6. **Scalable** - Easy to add new modules (14, 15, etc.)
 
 ---
 
@@ -210,7 +202,7 @@ Using this module systematically:
 
 ## ✅ Structure Validation
 
-- [x] Clean numbered directories (01-10)
+- [x] Clean numbered directories (01-13)
 - [x] No redundant navigation files
 - [x] Single comprehensive README
 - [x] All image references updated
@@ -222,8 +214,8 @@ Using this module systematically:
 ---
 
 **Last Updated:** 2026-02-11  
-**Structure Version:** 4.0 (Final Production)  
-**Total Modules:** 10 career stages + 7 AI tools  
+**Structure Version:** 5.0 (Centralized & Numbered)  
+**Total Modules:** 13 career stages + 8 AI tools  
 **Status:** ✅ Complete & Production-Ready
 
 ---
