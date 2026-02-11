@@ -60,11 +60,11 @@ I believe that a well-architected platform is the foundation of developer veloci
 ### 🧪 Featured Project: Enterprise Microservice Failover
 
 > #### Production-Grade Disaster Recovery for Spring PetClinic on AWS EKS
->
+
 > **Challenge:** Architect a solution to guarantee 99.99% availability for a critical microservice application, with the ability to survive a full AWS region failure.
->
+
 > **Solution Architecture:**
->
+
 > - **🏗️ IaC Foundation:** Provisioned identical, multi-region EKS clusters using a modular and reusable **Terraform** codebase.
 > - **🔄 GitOps Synchronization:** Employed **ArgoCD** to maintain a consistent state across both primary and standby clusters, ensuring application and configuration parity.
 > - **🛡️ Data & Traffic Resiliency:** Utilized cross-region **Amazon RDS Read Replicas** for data redundancy and **Route 53** latency-based routing for automated, sub-10-minute DNS failover.
