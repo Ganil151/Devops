@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "aws ",
+                "query": "aws ec2 create key",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
