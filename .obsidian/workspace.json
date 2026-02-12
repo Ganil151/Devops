@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/09-infrastructure-as-code/terraform-aws-complete.md",
+                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/03-cost-estimation-and-finops/01-cli-automation/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "terraform-aws-complete"
+              "title": "readme"
             }
           }
         ]
@@ -84,8 +84,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -214,8 +213,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "aec6a72c06563655",
+  "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/09-infrastructure-as-code/terraform-aws-complete.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/02-python-for-infrastructure/01-part-1-the-blueprint/02-os-and-file-ops/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/03-cost-estimation-and-finops/01-cli-automation/readme.md",
@@ -248,7 +248,6 @@
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/01-chain-of-thought-devops/chain-of-thought-cot-for-devops.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/youtube-lessons.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/reference",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/readme.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/06-real-life-scenarios",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/05-interview-questions-and-quizzes",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/04-llm-settings-for-code",
