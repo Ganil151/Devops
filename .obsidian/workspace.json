@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/02-phase-2/01-automation/00-foundations/part-03-environment-setup/01-shell-customization.md",
+                "file": "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-cli-commands.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01-shell-customization"
+              "title": "aws-cli-commands"
             }
           }
         ]
@@ -89,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -214,13 +215,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "aec6a72c06563655",
+  "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/02-phase-2/01-automation/00-foundations/part-03-environment-setup/01-shell-customization.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/00-reference-metadata/00-reference-metadata.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/02-python-for-infrastructure/01-part-1-the-blueprint/04-reference/03-cloud-networking-keywords.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/02-python-for-infrastructure/01-part-1-the-blueprint/04-reference/02-data-manipulation-keywords.md",
     "01-beginner/02-phase-2/01-automation/00-foundations/part-02-tooling-landscape/01-tools-comparison.md",
-    "01-beginner/02-phase-2/01-automation/00-foundations/part-03-environment-setup/01-shell-customization.md",
     "01-beginner/02-phase-2/05-basic-ci-cd/part-03-advanced-workflows/02-continuous-deployment/readme.md",
     "01-beginner/02-phase-2/05-basic-ci-cd/part-03-advanced-workflows/01-security-and-quality-gates/readme.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/02-networking/readme.md",
