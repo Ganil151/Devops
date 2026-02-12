@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/02-networking/readme.md",
+                "file": "01-beginner/02-phase-2/05-basic-ci-cd/part-03-advanced-workflows/01-security-and-quality-gates/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/02-networking/readme.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-fundamentals-devops.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-cli-commands.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/02-python-for-infrastructure/01-part-1-the-blueprint/04-reference/03-cloud-networking-keywords.md",
@@ -246,7 +248,6 @@
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/06-real-life-scenarios/readme.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/05-interview-questions-and-quizzes/readme.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/04-llm-settings-for-code/readme.md",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/03-few-shot-and-role-prompting/few-shot-and-role-prompting.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/reference",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/06-real-life-scenarios",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/05-interview-questions-and-quizzes",
