@@ -586,6 +586,7 @@ Create a copy of this checklist to track your progress:
 - [ ] Week 6: Configuration Management - Ansible
 - [ ] Week 7: CI/CD Pipelines
 - [ ] Week 8: Containerization with Docker
+- [ ] 🤖 Modern Ops: Prompt Engineering & Observability
 
 ## Phase 3: Advanced
 - [ ] Week 9: Kubernetes Fundamentals
