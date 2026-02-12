@@ -142,10 +142,10 @@ A senior engineer knows that the base price of an EC2 instance is only half the 
 
 ### 🎯 Core Concepts
 1. **Q: What is the single most effective way to reduce costs for a database that runs 24/7?**
-2. <details>
+   <details>
    <summary>Answer</summary>
    - *A: Purchase a Reserved Instance (RI) or a Savings Plan. Committing to a 1 or 3-year term can save between 30% and 72% over the On-Demand price.*
-
+    
 3. **Q: A developer wants to use Spot Instances for a production database. Why is this a bad idea?**
    - *A: Spot instances are 'preemptible,' meaning they can be terminated by the cloud provider at any time. Databases require high stability and persistence; losing the server abruptly could lead to downtime or corruption.*
 
