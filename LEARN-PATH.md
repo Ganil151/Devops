@@ -65,6 +65,7 @@ Available in [08-prompt-engineer/](./00-career-mastery/08-prompt-engineer/):
 - **ATS Stress Test**: Fix formatting blockers before applying.
 - **Final Round Interview**: STAR-method prep for leadership rounds.
 - **Slash Commands**: Rapid "SRE-style" codes for de-robotizing and formatting. (See [Phase 2: Prompt Engineering](./01-beginner/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/02-prompt-toolkit/slash-commands.md))
+- **Operational Oracle**: Advanced reasoning and runbook automation. (See [Phase 2 Intermediate: Prompt Engineering](./02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/readme.md))
 
 ### 📊 Career Success Metrics
 | Metric | Junior Target | Senior Target |
