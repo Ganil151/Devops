@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ssh",
+                "query": "aws s",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -214,7 +214,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "aec6a72c06563655",
   "lastOpenFiles": [
     "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/02-python-for-infrastructure/01-part-1-the-blueprint/04-reference/02-data-manipulation-keywords.md",
     "01-beginner/02-phase-2/01-automation/00-foundations/part-02-tooling-landscape/01-tools-comparison.md",
