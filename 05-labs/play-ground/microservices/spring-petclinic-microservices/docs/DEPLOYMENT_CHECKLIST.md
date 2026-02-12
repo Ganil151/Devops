@@ -13,82 +13,60 @@ This repository is architected following the **Separation of Concerns** principl
 
 ```text
 terraform/
-├── modules/                              # Reusable, parameterized components
-│   ├── vpc/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   │   └── README.md                     # Usage examples & interface contract
-│   ├── eks/
-│   │   ├── main.tf                       # EKS cluster + node groups
-│   │   ├── addons.tf                     # CoreDNS, VPC-CNI, EBS CSI
-│   │   ├── irsa.tf                       # IAM Roles for Service Accounts
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   │   └── README.md
-│   ├── rds/
-│   │   ├── main.tf                       # Multi-AZ RDS + parameter group
-│   │   ├── security-group.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   │   └── README.md
-│   ├── alb/
-│   │   ├── main.tf                       # ALB + target groups for ingress
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   ├── ecr/
-│   │   ├── main.tf                       # Per-service ECR repos (customers, visits, etc.)
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   └── monitoring/                       # Optional: CloudWatch dashboards, alerts
-│       ├── main.tf
-│       └── ...
-├── environments/
-│   ├── dev/
-│   │   ├── main.tf                       # Composes modules with dev params
-│   │   ├── backend.tf                    # Unique S3 key: tfstate/dev/...
-│   │   ├── providers.tf                  # Region + alias config
-│   │   ├── terraform.tfvars              # env_name="dev", instance_type="t3.small", etc.
-│   │   ├── variables.tf                  # Declares ONLY environment-specific vars
-│   │   └── versions.tf                   # Terraform + provider versions
-│   ├── staging/
-│   │   ├── main.tf                       # Composes SAME modules with staging params
-│   │   ├── backend.tf                    # Unique S3 key: tfstate/staging/...
-│   │   ├── providers.tf
-│   │   ├── terraform.tfvars              # env_name="staging", instance_type="m6i.large", etc.
-│   │   ├── variables.tf
-│   │   └── versions.tf
-│   └── prod/
-│       ├── main.tf                       # Composes SAME modules with prod params
-│       ├── backend.tf                    # Unique S3 key: tfstate/prod/...
-│       ├── providers.tf
-│       ├── terraform.tfvars              # env_name="prod", instance_type="m6i.xlarge", etc.
-│       ├── variables.tf
-│       ├── versions.tf
-│       └── security.tf                   # Prod-only: stricter SGs, encryption, backups
-├── global/                               # ONE-TIME resources (not per-env)
+├── modules/                              # Reusable, parameterized components (SRE-Grade)
+│   ├── networking/                       # Connectivity & Traffic Control
+│   │   ├── vpc/                          # Networking Foundation (L3/L4)
+│   │   ├── sg/                           # Firewall Rules (Security Groups)
+│   │   └── alb/                          # Traffic Ingress (L7 Load Balancing)
+│   ├── compute/                          # Processing & Orchestration
+│   │   ├── eks/                          # Container Orchestration (Control Plane)
+│   │   └── ec2/                          # Compute Layer (DevOps Tooling)
+│   ├── database/                         # Persistence & Data Storage
+│   │   └── rds/                          # Managed MySQL (RDS)
+│   ├── ecr/                              # Container Artifact Storage
+│   ├── waf/                              # Perimeter Security (Web Application Firewall)
+│   └── monitoring/                       # Observability (Health & Performance)
+├── environments/                         # Environment-Specific Workspaces
+│   ├── dev/                              # Sandbox: Cost-Optimized settings
+│   │   ├── main.tf                       # Composes modules (Low-Scale)
+│   │   ├── backend.tf                    # Remote State: s3://.../tfstate/dev/
+│   │   ├── providers.tf                  # Region + Default Tags (CreatedBy: Terraform)
+│   │   ├── terraform.tfvars              # Dev params (Single NAT, t3.small)
+│   │   ├── variables.tf                  # Environment specific variables
+│   │   └── versions.tf                   # Terraform 1.6+ and AWS Provider 6.0+
+│   ├── staging/                          # Pre-Prod: Full Scale Mirror
+│   │   ├── main.tf                       # Composes modules (Prod-Scale)
+│   │   ├── backend.tf                    # Remote State: s3://.../tfstate/staging/
+│   │   └── ...
+│   └── prod/                             # Production: Mission Critical
+│       ├── main.tf                       # Strict security & HA configuration
+│       ├── backend.tf                    # Remote State: s3://.../tfstate/prod/
+│       └── security.tf                   # Prod-specific hardening (WAF, Shield)
+├── global/                               # Shared Multi-Env Resources
 │   ├── route53/
-│   │   └── main.tf                       # Shared DNS zones (e.g., petclinic.example.com)
+│   │   └── main.tf                       # Public Hosted Zones, Shared Records
 │   └── iam/
-│       └── main.tf                       # Cross-account roles, SSO permissions
+│       └── main.tf                       # Cross-account roles, Admin break-glass
 ├── scripts/
-│   ├── deploy.sh                         # Wrapper: terraform init/plan/apply per env
-│   └── validate-modules.sh               # Check module interfaces pre-commit
-└── README.md                             # Setup guide, env promotion workflow, diagram
+│   ├── deploy.sh                         # CI/CD wrapper for TF Apply
+│   └── validate.sh                       # Pre-commit: fmt, validate, checkov
+└── README.md                             # High-level architecture & SDR Link
 ```
 
 ### 🛠️ Bootstrapping the Terraform Structure
 Run the following command to initialize the directory structure and placeholder files:
 ```bash
-mkdir -p terraform/modules/{vpc,eks,rds,alb,ecr,monitoring} && \
+mkdir -p terraform/modules/{vpc,eks,rds,alb,ecr,ec2,waf,monitoring} && \
 mkdir -p terraform/environments/{dev,staging,prod} && \
 mkdir -p terraform/global/{route53,iam} && \
 mkdir -p terraform/scripts && \
 touch terraform/modules/vpc/{main,variables,outputs}.tf && \
-touch terraform/modules/eks/{main,variables,addons,irsa,output}.tf && \
+touch terraform/modules/eks/{main,variables,addons,irsa,outputs}.tf && \
 touch terraform/modules/rds/{main,variables,outputs,security-group}.tf && \
 touch terraform/modules/alb/{main,variables,outputs}.tf && \
 touch terraform/modules/ecr/{main,variables,outputs}.tf && \
+touch terraform/modules/ec2/{main,variables,outputs}.tf && \
+touch terraform/modules/waf/{main,variables,outputs}.tf && \
 touch terraform/environments/dev/{main,backend,providers,variables,versions}.tf && \
 touch terraform/environments/dev/terraform.tfvars && \
 touch terraform/environments/staging/{main,backend,providers,variables,versions}.tf && \
@@ -191,7 +169,7 @@ To ensure high-availability and build performance, we utilize the following comp
 *   **Fargate Profiles:** Allows running pods without managing EC2 instances. Pods are billed per vCPU/RAM per second.
 
 ### 3. High Availability & Persistence
-*   **Multi-AZ Strategy:** The 3 Worker Nodes (or Fargate Pods) are distributed across `us-west-2a`, `us-west-2b`, and `us-west-2c`. This ensures that even if an entire AWS Data Center fails, 66% of your application capacity remains online.
+*   **Multi-AZ Strategy:** The 3 Worker Nodes (or Fargate Pods) are distributed across `us-east-1a`, `us-east-1b`, and `us-east-1c`. This ensures that even if an entire AWS Data Center fails, 66% of your application capacity remains online.
 *   **DNS Resolution (Route53):** Provides global traffic routing and failover between regions using health checks.
 *   **Storage (EBS/EFS):** EC2 nodes use GP3 EBS. Fargate pods utilize **Amazon EFS** for cross-node persistent storage.
 *   **Database Resilience:** The RDS instance uses **Multi-AZ Replication**, providing a synchronous standby in a different subnet for automatic failover.
@@ -276,8 +254,8 @@ To ensure high-availability and build performance, we utilize the following comp
   ```bash
   aws configure get region
   ```
-  **Expected Output:** `us-west-2`
-  **Troubleshooting:** Set region with `export AWS_DEFAULT_REGION=us-west-2`
+  **Expected Output:** `us-east-1`
+  **Troubleshooting:** Set region with `export AWS_DEFAULT_REGION=us-east-1`
 
 - [ ] **Test AWS permissions**
   ```bash
@@ -287,11 +265,43 @@ To ensure high-availability and build performance, we utilize the following comp
   ```
   **Troubleshooting:** If permission denied, verify IAM policies attached to your user/role
 
-### 1.2 Tool Version Verification
+### 1.2 SSH Key Generation & EC2 Linking
+*   **Logic:** Secure communication between the Ansible control node (Jenkins Master) and worker nodes requires SSH keys. We generate a dedicated key pair for this purpose.
+
+- [ ] **Generate SSH Key Pair**
+  ```bash
+  mkdir -p ~/.ssh
+  ssh-keygen -t rsa -b 4096 -f ~/.ssh/spms-dev -N "" -C "jenkins-master-key"
+  chmod 400 ~/.ssh/spms-dev
+  ```
+  *   **Expected Outcome:** Two files created: `~/.ssh/spms-dev` (private) and `~/.ssh/spms-dev.pub` (public).
+
+- [ ] **Import Public Key to AWS**
+  *   **Logic:** AWS needs the public key to inject it into EC2 instances during creation.
+  ```bash
+  aws ec2 import-key-pair \
+    --key-name "spms-dev" \
+    --public-key-material fileb://~/.ssh/spms-dev.pub
+  ```
+  *   **Verification:** `aws ec2 describe-key-pairs --key-names spms-dev`
+
+- [ ] **Distribute Private Key to Jenkins Master**
+  *   **Logic:** For the Master to configure Worker nodes via Ansible, it needs the private key.
+  *   *Note: This step is typically handled via User Data or Secrets Manager in automation, but for manual verification:*
+  ```bash
+  # Get Jenkins Master IP
+  export MASTER_IP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=jenkins-master" --query "Reservations[0].Instances[0].PublicIpAddress" --output text)
+  
+  # Copy private key to Master
+  scp -i ~/.ssh/spms-dev ~/.ssh/spms-dev ec2-user@${MASTER_IP}:/home/ec2-user/.ssh/id_rsa
+  ssh -i ~/.ssh/spms-dev ec2-user@${MASTER_IP} "chmod 600 /home/ec2-user/.ssh/id_rsa"
+  ```
+
+### 1.3 Tool Version Verification
 
 - [ ] **Check Terraform version**
   ```bash
-  cd /home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices/terraform
+  cd /home/gsmash/Documents/spring-petclinic-microservices/terraform
   cat .terraform-version
   terraform version
   ```
@@ -317,7 +327,7 @@ To ensure high-availability and build performance, we utilize the following comp
   java -version
   ```
   **Expected Output:** `openjdk version "21.0.x"`
-  **Troubleshooting:** Follow `/home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices/JAVA21_MIGRATION.md`
+  **Troubleshooting:** Follow `/home/gsmash/Documents/spring-petclinic-microservices/JAVA21_MIGRATION.md`
 
 - [ ] **Check Maven version**
   ```bash
@@ -342,7 +352,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   ```bash
   export RANDOM_SUFFIX=$(openssl rand -hex 4)
   export BUCKET_NAME="petclinic-terraform-state-${RANDOM_SUFFIX}"
-  aws s3 mb s3://${BUCKET_NAME} --region us-west-2
+  aws s3 mb s3://${BUCKET_NAME} --region us-east-1
   ```
   *   **Expected Outcome:** `make_bucket: petclinic-terraform-state-xxxx`
   *   **Troubleshooting:** If `BucketAlreadyExists`, change the suffix and try again. Bucket names are shared across all of AWS.
@@ -393,8 +403,34 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 - [ ] **Step 6: Inject Configuration into Backend.tf**
   *   **Logic:** Connects the local Terraform code to the remote AWS resources created above.
   ```bash
-  cd /home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/dev
-  sed -i "s/REPLACE_WITH_BUCKET_NAME/${BUCKET_NAME}/" backend.tf
+  cd /home/gsmash/Documents/spring-petclinic-microservices/terraform/environments/dev
+  # Example configuration (ensure bucket name matches Step 1)
+  cat > backend.tf << EOF
+  terraform {
+    backend "s3" {
+      bucket         = "REPLACE_WITH_BUCKET_NAME"
+      key            = "tfstate/dev/terraform.tfstate"
+      region         = "us-east-1"
+      dynamodb_table = "petclinic-terraform-locks"
+      encrypt        = true
+    }
+  }
+  EOF
+  ```
+
+- [ ] **Step 7: Migrate Local State to Remote Backend**
+  *   **Logic:** After configuring the backend, you must "migrate" your existing local `terraform.tfstate` to the S3 bucket. Terraform will detect the change and prompt for migration.
+  ```bash
+  terraform init
+  ```
+  *   **Prompt:** When asked `Do you want to copy existing state to the new backend?`, type **yes**.
+  *   **Verification:** Verify the file now exists in S3:
+  ```bash
+  aws s3 ls s3://REPLACE_WITH_BUCKET_NAME/tfstate/dev/
+  ```
+  *   **Cleanup:** Safely remove the local state files (optional but recommended for security):
+  ```bash
+  rm terraform.tfstate terraform.tfstate.backup
   ```
 
 ---
@@ -425,7 +461,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 
 - [ ] **Navigate to dev environment**
   ```bash
-  cd /home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/dev
+  cd /home/gsmash/Documents/spring-petclinic-microservices/terraform/environments/dev
   ```
 
 - [ ] **Initialize Terraform**
@@ -540,9 +576,9 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   ```bash
   terraform output ecr_repository_urls > /tmp/ecr_urls.json
   export ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-  export ECR_REGISTRY="${ACCOUNT_ID}.dkr.ecr.us-west-2.amazonaws.com"
+  export ECR_REGISTRY="${ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com"
   ```
-  *   **💡 Pro-Tip:** Add `export ECR_REGISTRY=${ACCOUNT_ID}.dkr.ecr.us-west-2.amazonaws.com` to your `~/.bashrc` or `~/.zshrc` to ensure it persists across terminal sessions.
+  *   **💡 Pro-Tip:** Add `export ECR_REGISTRY=${ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com` to your `~/.bashrc` or `~/.zshrc` to ensure it persists across terminal sessions.
 
 ### 2.6 Deploy RDS Module
 
@@ -601,7 +637,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 - [ ] **Configure kubectl**
   ```bash
   aws eks update-kubeconfig \
-    --region us-west-2 \
+    --region us-east-1 \
     --name $(terraform output -raw eks_cluster_name)
   ```
 
@@ -783,7 +819,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 
 - [ ] **Create Ansible inventory**
   ```bash
-  cd /home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices/ansible
+  cd /home/gsmash/Documents/spring-petclinic-microservices/ansible
   cat > inventory/dynamic_hosts << EOF
   [eks_nodes]
   $(cat /tmp/node_ips.txt | xargs -I {} echo "{} ansible_user=ec2-user")
@@ -888,8 +924,8 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
   pipeline {
       agent any
       environment {
-          ECR_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.us-west-2.amazonaws.com"
-          AWS_DEFAULT_REGION = "us-west-2"
+          ECR_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com"
+          AWS_DEFAULT_REGION = "us-east-1"
           ALB_DNS = "replace-with-actual-alb-dns" // Or retrieve via script
           APP_NAMESPACE = "petclinic"
       }
@@ -959,7 +995,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 
 - [ ] **Navigate to project root**
   ```bash
-  cd /home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices
+  cd /home/gsmash/Documents/spring-petclinic-microservices
   ```
 
 - [ ] **Clean previous builds**
@@ -991,7 +1027,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 
 - [ ] **Authenticate to ECR**
   ```bash
-  aws ecr get-login-password --region us-west-2 | \
+  aws ecr get-login-password --region us-east-1 | \
     docker login --username AWS --password-stdin ${ECR_REGISTRY}
   ```
 
@@ -1226,7 +1262,7 @@ A reliable "Source of Truth" for Terraform is critical. This setup ensures **Con
 kubectl delete namespace petclinic
 
 # Destroy Terraform infrastructure
-cd /home/gsmash/Documents/Devops/05-labs/play-ground/microservices/spring-petclinic-microservices/terraform/environments/dev
+cd /home/gsmash/Documents/spring-petclinic-microservices/terraform/environments/dev
 terraform destroy -auto-approve
 ```
 
