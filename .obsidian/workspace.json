@@ -84,13 +84,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 310.5,
-    "collapsed": true
+    "width": 310.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,7 +213,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "e5b53e735af933f6",
   "lastOpenFiles": [
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/REFACTORING_SUMMARY.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/QUICK_REFERENCE.md",
