@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ssh",
+                "query": "aws ssh",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -214,7 +214,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "aec6a72c06563655",
   "lastOpenFiles": [
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-cli-commands.md",
     "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/03-cost-estimation-and-finops/01-cli-automation/readme.md",
