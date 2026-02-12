@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/02-phase-2/01-automation/00-foundations/part-03-environment-setup/01-shell-customization.md",
+                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/02-python-for-infrastructure/01-part-1-the-blueprint/04-reference/03-cloud-networking-keywords.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01-shell-customization"
+              "title": "03-cloud-networking-keywords"
             }
           }
         ]
@@ -216,6 +216,9 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/02-python-for-infrastructure/01-part-1-the-blueprint/04-reference/02-data-manipulation-keywords.md",
+    "01-beginner/02-phase-2/01-automation/00-foundations/part-02-tooling-landscape/01-tools-comparison.md",
+    "01-beginner/02-phase-2/01-automation/00-foundations/part-03-environment-setup/01-shell-customization.md",
     "01-beginner/02-phase-2/05-basic-ci-cd/part-03-advanced-workflows/02-continuous-deployment/readme.md",
     "01-beginner/02-phase-2/05-basic-ci-cd/part-03-advanced-workflows/01-security-and-quality-gates/readme.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/02-networking/readme.md",
@@ -239,15 +242,12 @@
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/assessments/readme.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-02-structured-automation/few-shot-and-role-prompting.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-02-structured-automation/runbook-automation.md",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-01-advanced-reasoning/chain-of-thought-cot-for-devops.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/resources",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/examples",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/assessments",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-03-governed-ai",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-02-structured-automation",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-01-advanced-reasoning",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/reference/ai-ops-architecture-ref.md",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/06-real-life-scenarios/readme.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/reference",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/06-real-life-scenarios",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/05-interview-questions-and-quizzes",
