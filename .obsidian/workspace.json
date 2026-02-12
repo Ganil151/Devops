@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
+                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/02-python-for-infrastructure/01-part-1-the-blueprint/02-os-and-file-ops/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DEPLOYMENT_CHECKLIST"
+              "title": "readme"
             }
           }
         ]
@@ -214,10 +214,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "aec6a72c06563655",
+  "active": "19ac471caa0c1888",
   "lastOpenFiles": [
-    "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/03-cost-estimation-and-finops/01-cli-automation/readme.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
+    "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/03-cost-estimation-and-finops/01-cli-automation/readme.md",
     "reference.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-03-governed-ai/privacy-sanitization.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-03-governed-ai/readme.md",
