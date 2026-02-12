@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/02-phase-2/05-basic-ci-cd/part-03-advanced-workflows/02-continuous-deployment/readme.md",
+                "file": "01-beginner/02-phase-2/01-automation/00-foundations/part-03-environment-setup/01-shell-customization.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "01-shell-customization"
             }
           }
         ]
@@ -214,8 +214,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "aec6a72c06563655",
+  "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/02-phase-2/05-basic-ci-cd/part-03-advanced-workflows/02-continuous-deployment/readme.md",
     "01-beginner/02-phase-2/05-basic-ci-cd/part-03-advanced-workflows/01-security-and-quality-gates/readme.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/02-networking/readme.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-fundamentals-devops.md",
@@ -247,7 +248,6 @@
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-01-advanced-reasoning",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/reference/ai-ops-architecture-ref.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/06-real-life-scenarios/readme.md",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/05-interview-questions-and-quizzes/readme.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/reference",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/06-real-life-scenarios",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/05-interview-questions-and-quizzes",
