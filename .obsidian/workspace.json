@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "aws_key_pair",
+                "query": "key_pair",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
