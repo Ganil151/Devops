@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "aws s",
+                "query": "aws ec2",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
