@@ -150,6 +150,19 @@ plugins=(git docker kubectl terraform aws gcloud azure history-substring-search)
 # Initialize Oh My Zsh (CRITICAL: Load this BEFORE custom aliases)
 source $ZSH/oh-my-zsh.sh
 
+# --- 04. Environment Variables ---
+# Set terminal colors to be more readable in dark themes
+export TERM=xterm-256color
+export CLICOLOR=1
+export LSCOLORS="exfxcxdxbxegedabagacad"
+export LESS="-R"
+
+# Set default editor to nano
+export EDITOR="nano"
+
+# Enable color for ls
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:
+
 # ==========================================
 #        01. System & Navigation
 # ==========================================
