@@ -88,19 +88,9 @@ ZSH_THEME="bira"
 #  🔒 SECURE ZSH CONFIGURATION — Optimized for DevOps Engineers
 # =============================================================================
 # --- 01. System Security & Hardening ---
-# Enable strict mode (for shell security)
-set -o errexit
-set -o errtrace
-set -o nounset
-set -o pipefail
-
 # Disable history logging for root
 if [ "$UID" -eq 0 ]; then
   unset HISTFILE
-fi
-
-# Disable command history for root
-if [ "$UID" -eq 0 ]; then
   export HISTFILE=/dev/null
   export HISTCONTROL=ignorespace
 fi
@@ -108,37 +98,30 @@ fi
 # Secure SSH
 if [ -f "$HOME/.ssh/config" ]; then
   export SSH_CONFIG="$HOME/.ssh/config"
-  export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
-  export SSH_AGENT_PID="$HOME/.ssh/agent.pid"
-  export SSH_ASKPASS="/usr/bin/ssh-askpass"
-  export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
-  export SSH_AGENT_PID="$HOME/.ssh/agent.pid"
-  export SSH_ASKPASS="/usr/bin/ssh-askpass"
+  # Avoid hardcoding SSH_AUTH_SOCK if using an agent, but keep config if needed
+  # export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock" 
   export SSH_CONNECTIONS="-o ControlMaster=auto -o ControlPath=$HOME/.ssh/ctrl_%r@%h:%p -o ControlPersist=4h"
   export SSH_COMMANDS="-o StrictHostKeyChecking=ask -o UserKnownHostsFile=$HOME/.ssh/known_hosts -o IdentitiesOnly=yes"
 fi
 
 # --- 02. PATH Management ---
-# If you come from bash you might have to change your $PATH
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
-export PATH="$PATH:/opt/homebrew/bin"  # For macOS users who might have Homebrew
-export PATH="$PATH:/usr/local/go/bin"  # Go development
-export PATH="$PATH:/usr/local/Cellar/terraform/1.6.0/bin"  # Example for Terraform
+path_prepend() {
+  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then export PATH="$1:$PATH"; fi
+}
+path_append() {
+  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then export PATH="$PATH:$1"; fi
+}
 
-# Add directories for common tools
-if [ -d "$HOME/.local/bin" ]; then
-  export PATH="$HOME/.local/bin:$PATH"
-fi
+# Add custom binaries
+path_prepend "$HOME/bin"
+path_prepend "$HOME/.local/bin"
+path_append "/usr/local/bin"
+path_append "/usr/local/go/bin"
+path_append "/opt/homebrew/bin"
+path_append "$HOME/go/bin"
+path_append "$HOME/.local/share/virtualenvs"
 
-# Add Go binary directory if present
-if [ -d "$HOME/go/bin" ]; then
-  export PATH="$HOME/go/bin:$PATH"
-fi
-
-# Add Python virtualenvs to path
-if [ -d "$HOME/.local/share/virtualenvs" ]; then
-  export PATH="$HOME/.local/share/virtualenvs:$PATH"
-fi
+unset -f path_prepend path_append
 
 # --- Oh My Zsh Core ---
 export ZSH="$HOME/.oh-my-zsh"
@@ -161,7 +144,8 @@ export LESS="-R"
 export EDITOR="nano"
 
 # Enable color for ls
-export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:ca=35:st=35:st=35:bd=36:cd=36:or=37:mi=05:co=05:ln=35:
+export LS_COLORS='di=1;34:ln=1;36:so=1;32:pi=1;33:ex=1;31:bd=1;34;46:cd=1;34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43'
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # ==========================================
 #        01. System & Navigation
