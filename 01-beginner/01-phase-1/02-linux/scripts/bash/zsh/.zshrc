@@ -87,6 +87,58 @@ ZSH_THEME="bira"
 # =============================================================================
 #  🔒 SECURE ZSH CONFIGURATION — Optimized for DevOps Engineers
 # =============================================================================
+# --- 01. System Security & Hardening ---
+# Enable strict mode (for shell security)
+set -o errexit
+set -o errtrace
+set -o nounset
+set -o pipefail
+
+# Disable history logging for root
+if [ "$UID" -eq 0 ]; then
+  unset HISTFILE
+fi
+
+# Disable command history for root
+if [ "$UID" -eq 0 ]; then
+  export HISTFILE=/dev/null
+  export HISTCONTROL=ignorespace
+fi
+
+# Secure SSH
+if [ -f "$HOME/.ssh/config" ]; then
+  export SSH_CONFIG="$HOME/.ssh/config"
+  export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
+  export SSH_AGENT_PID="$HOME/.ssh/agent.pid"
+  export SSH_ASKPASS="/usr/bin/ssh-askpass"
+  export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
+  export SSH_AGENT_PID="$HOME/.ssh/agent.pid"
+  export SSH_ASKPASS="/usr/bin/ssh-askpass"
+  export SSH_CONNECTIONS="-o ControlMaster=auto -o ControlPath=$HOME/.ssh/ctrl_%r@%h:%p -o ControlPersist=4h"
+  export SSH_COMMANDS="-o StrictHostKeyChecking=ask -o UserKnownHostsFile=$HOME/.ssh/known_hosts -o IdentitiesOnly=yes"
+fi
+
+# --- 02. PATH Management ---
+# If you come from bash you might have to change your $PATH
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
+export PATH="$PATH:/opt/homebrew/bin"  # For macOS users who might have Homebrew
+export PATH="$PATH:/usr/local/go/bin"  # Go development
+export PATH="$PATH:/usr/local/Cellar/terraform/1.6.0/bin"  # Example for Terraform
+
+# Add directories for common tools
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Add Go binary directory if present
+if [ -d "$HOME/go/bin" ]; then
+  export PATH="$HOME/go/bin:$PATH"
+fi
+
+# Add Python virtualenvs to path
+if [ -d "$HOME/.local/share/virtualenvs" ]; then
+  export PATH="$HOME/.local/share/virtualenvs:$PATH"
+fi
 
 # --- Oh My Zsh Core ---
 export ZSH="$HOME/.oh-my-zsh"
