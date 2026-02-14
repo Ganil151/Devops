@@ -68,7 +68,7 @@ echo "Done! Please restart your browsers for changes to take effect."
 8. ✅ **SSL Error Override Disabled** - Prevents cert bypass
 9. ✅ **Extension Management** - Restricts installations
 10. ✅ **URL Blocklist** - Blocks known malicious domains
-11. ✅ **Download Restrictions** - Warns about dangerous files
+11. ✗ **Download Restrictions** - Disabled (reversed)
 12. ✅ **Audio/Video Capture Blocking** - Media protection
 13. ✅ **WebBluetooth/WebUSB Blocking** - Device access protection
 14. ✅ **Password Leak Detection** - Credential protection
@@ -107,7 +107,7 @@ echo "Done! Please restart your browsers for changes to take effect."
 | **Media Access Attacks** | ❌ None | ✅ Full (camera/mic blocking) |
 | **Network Attacks** | ❌ None | ✅ Full (DNS security + firewall) |
 | **MITM Attacks** | ❌ None | ✅ Full (DoH/DoT + DNSSEC + SSL enforcement) |
-| **Drive-by Downloads** | ❌ None | ✅ Full (download restrictions + safe browsing) |
+| **Drive-by Downloads** | ❌ None | ⚠️ Partial (safe browsing only, restrictions reversed) |
 | **Brute Force** | ❌ None | ✅ Full (SSH rate limiting) |
 | **Port Scanning** | ❌ None | ✅ Full (firewall rules) |
 

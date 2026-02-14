@@ -22,7 +22,7 @@ The original `block_popups.sh` script has been completely rewritten into a produ
 - **SSL Error Override Disabled** - Prevents bypassing certificate warnings
 - **Extension Management** - Restricts unauthorized extension installation
 - **URL Blocklist** - Blocks known ad/tracking domains
-- **Download Restrictions** - Warns about potentially dangerous files
+- **Download Restrictions** - Disabled (reversed)
 - **Audio/Video Capture Blocking** - Prevents unauthorized media access
 - **WebBluetooth/WebUSB Blocking** - Prevents device access attacks
 
@@ -174,10 +174,7 @@ sudo ./block_popups.sh --help
 - ✅ DNS over HTTPS/TLS
 - ✅ DNSSEC validation
 
-### **8. Drive-by Downloads**
-- ✅ Download restrictions
-- ✅ Prompt for download location
-- ✅ Safe browsing checks
+- ✅ **Drive-by Downloads** - Protected by safe browsing (restrictions reversed)
 
 ## Best Practices
 
