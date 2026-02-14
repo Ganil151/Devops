@@ -751,8 +751,18 @@ NEXT STEPS:
         
         self.logger.info(f"{Config.GREEN}[✓]{Config.NC} Report saved to {report_file}")
         
-    def apply_all_hardening(self) -> None:
-        """Apply all security hardening measures."""
+    def apply_all_hardening(
+        self,
+        skip_chrome: bool = False,
+        skip_chromium: bool = False,
+        skip_brave: bool = False,
+        skip_firefox: bool = False,
+        skip_dns: bool = False,
+        skip_firewall: bool = False,
+        skip_hosts: bool = False,
+        skip_system: bool = False
+    ) -> None:
+        """Apply selected security hardening measures."""
         print("=" * 80)
         print("  Browser Security Hardening & Intrusion Protection Script")
         print("=" * 80)
@@ -761,16 +771,24 @@ NEXT STEPS:
         self.logger.info("Starting security hardening process...")
         
         # Apply browser policies
-        self.apply_chrome_policies()
-        self.apply_chromium_policies()
-        self.apply_brave_policies()
-        self.apply_firefox_policies()
+        if not skip_chrome:
+            self.apply_chrome_policies()
+        if not skip_chromium:
+            self.apply_chromium_policies()
+        if not skip_brave:
+            self.apply_brave_policies()
+        if not skip_firefox:
+            self.apply_firefox_policies()
         
         # Apply system-level protections
-        self.setup_dns_blocking()
-        self.setup_firewall_rules()
-        self.update_hosts_file()
-        self.apply_system_hardening()
+        if not skip_dns:
+            self.setup_dns_blocking()
+        if not skip_firewall:
+            self.setup_firewall_rules()
+        if not skip_hosts:
+            self.update_hosts_file()
+        if not skip_system:
+            self.apply_system_hardening()
         
         # Generate report
         self.generate_report()
@@ -825,6 +843,17 @@ EXAMPLES:
         help='Restore previous policies from backup'
     )
     
+    # Service control options
+    group = parser.add_argument_group('Service Control Options')
+    group.add_argument('--skip-chrome', action='store_true', help='Do not apply Chrome policies')
+    group.add_argument('--skip-chromium', action='store_true', help='Do not apply Chromium policies')
+    group.add_argument('--skip-brave', action='store_true', help='Do not apply Brave policies')
+    group.add_argument('--skip-firefox', action='store_true', help='Do not apply Firefox policies')
+    group.add_argument('--skip-dns', action='store_true', help='Do not configure DNS blocking')
+    group.add_argument('--skip-firewall', action='store_true', help='Do not configure firewall rules')
+    group.add_argument('--skip-hosts', action='store_true', help='Do not update hosts file')
+    group.add_argument('--skip-system', action='store_true', help='Do not apply system hardening')
+    
     args = parser.parse_args()
     
     # Check for root privileges
@@ -842,7 +871,16 @@ EXAMPLES:
     if args.rollback:
         manager.rollback_policies()
     else:
-        manager.apply_all_hardening()
+        manager.apply_all_hardening(
+            skip_chrome=args.skip_chrome,
+            skip_chromium=args.skip_chromium,
+            skip_brave=args.skip_brave,
+            skip_firefox=args.skip_firefox,
+            skip_dns=args.skip_dns,
+            skip_firewall=args.skip_firewall,
+            skip_hosts=args.skip_hosts,
+            skip_system=args.skip_system
+        )
 
 
 if __name__ == "__main__":
