@@ -18,7 +18,6 @@ graph LR
 ```
 
 ## 📚 Overview
-
 Writing good prompts is a repeatable science. In this module, we introduce the **CIRO Framework**, a professional standard for structuring high-stakes DevOps prompts. We also move beyond basic text and explore how to use **Advanced Formatting** (XML tags, Markdown) to help the AI categorize information properly.
 
 ## 🎓 Learning Objectives
