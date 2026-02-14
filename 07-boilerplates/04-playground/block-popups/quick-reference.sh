@@ -11,6 +11,7 @@ cat << 'EOF'
 ────────────────────────────────────────────────────────────────────────────────
   Apply Security:     sudo ./block_popups.sh
   Rollback:           sudo ./block_popups.sh --rollback
+  Skip Services:      sudo ./block_popups.sh --skip-dns --skip-firewall
   Help:               ./block_popups.sh --help
 
 🛡️ SECURITY FEATURES APPLIED
