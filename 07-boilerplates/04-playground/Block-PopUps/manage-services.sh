@@ -9,8 +9,7 @@
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
-BASE_DIR="home/gsmash/Documents/Devops/07-boilerplates/04-playground/Block-PopUps
-/block-popups"
+BASE_DIR="home/gsmash/Documents/Devops/07-boilerplates/04-playground/Block-PopUps/block-popups"
 PYTHON_SCRIPT="${BASE_DIR}/block-popups.py"
 SHELL_SCRIPT="${BASE_DIR}/block-popups.sh"
 
