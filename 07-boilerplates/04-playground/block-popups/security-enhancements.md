@@ -66,16 +66,6 @@ The original `block_popups.sh` script has been completely rewritten into a produ
 - Backups stored in `/var/backups/browser-policies/`
 - One-command rollback: `sudo ./block_popups.sh --rollback`
 
-#### **Control Specific Services**
-You can selectively skip services by adding skip flags:
-```bash
-# Python
-sudo ./block_popups.py --skip-dns --skip-firewall
-
-# Bash
-sudo ./block_popups.sh --skip-dns --skip-firewall
-```
-
 #### **Error Handling**
 - Uses `set -euo pipefail` for strict error handling
 - Graceful degradation when optional features are unavailable
@@ -99,11 +89,9 @@ sudo ./block_popups.sh
 sudo ./block_popups.sh --rollback
 ```
 
-#### **Show Help (with options)**
+#### **Show Help**
 ```bash
 sudo ./block_popups.sh --help
-# OR
-sudo ./block_popups.py --help
 ```
 
 ## Security Policies Applied

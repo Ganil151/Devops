@@ -628,16 +628,16 @@ main() {
     log_info "Starting security hardening process..."
     
     # Apply browser policies
-    [ "$SKIP_CHROME" = false ] && apply_chrome_policies
-    [ "$SKIP_CHROMIUM" = false ] && apply_chromium_policies
-    [ "$SKIP_BRAVE" = false ] && apply_brave_policies
-    [ "$SKIP_FIREFOX" = false ] && apply_firefox_policies
+    apply_chrome_policies
+    apply_chromium_policies
+    apply_brave_policies
+    apply_firefox_policies
     
     # Apply system-level protections
-    [ "$SKIP_DNS" = false ] && setup_dns_blocking
-    [ "$SKIP_FIREWALL" = false ] && setup_firewall_rules
-    [ "$SKIP_HOSTS" = false ] && update_hosts_file
-    [ "$SKIP_SYSTEM" = false ] && apply_system_hardening
+    setup_dns_blocking
+    setup_firewall_rules
+    update_hosts_file
+    apply_system_hardening
     
     # Generate report
     generate_report
@@ -656,95 +656,43 @@ main() {
     echo ""
 }
 
-# Initialize default skip variables
-SKIP_CHROME=false
-SKIP_CHROMIUM=false
-SKIP_BRAVE=false
-SKIP_FIREFOX=false
-SKIP_DNS=false
-SKIP_FIREWALL=false
-SKIP_HOSTS=false
-SKIP_SYSTEM=false
-ROLLBACK=false
-
-# Simple argument parsing loop
-while [[ $# -gt 0 ]]; do
-    case "$1" in
-        --rollback)
-            ROLLBACK=true
-            shift
-            ;;
-        --skip-chrome)
-            SKIP_CHROME=true
-            shift
-            ;;
-        --skip-chromium)
-            SKIP_CHROMIUM=true
-            shift
-            ;;
-        --skip-brave)
-            SKIP_BRAVE=true
-            shift
-            ;;
-        --skip-firefox)
-            SKIP_FIREFOX=true
-            shift
-            ;;
-        --skip-dns)
-            SKIP_DNS=true
-            shift
-            ;;
-        --skip-firewall)
-            SKIP_FIREWALL=true
-            shift
-            ;;
-        --skip-hosts)
-            SKIP_HOSTS=true
-            shift
-            ;;
-        --skip-system)
-            SKIP_SYSTEM=true
-            shift
-            ;;
-        --help|-h)
-            cat <<EOF
+# Handle command-line arguments
+case "${1:-}" in
+    --rollback)
+        check_root
+        create_directories
+        rollback_policies
+        ;;
+    --help|-h)
+        cat <<EOF
 Usage: sudo $0 [OPTIONS]
 
 OPTIONS:
-    --rollback      Restore previous policies from backup
-    --skip-chrome   Do not apply Chrome policies
-    --skip-chromium Do not apply Chromium policies
-    --skip-brave    Do not apply Brave policies
-    --skip-firefox  Do not apply Firefox policies
-    --skip-dns      Do not configure DNS blocking
-    --skip-firewall Do not configure firewall rules
-    --skip-hosts    Do not update hosts file
-    --skip-system   Do not apply system hardening
-    --help, -h      Show this help message
+    (none)      Apply security hardening
+    --rollback  Restore previous policies from backup
+    --help, -h  Show this help message
 
 DESCRIPTION:
     This script applies comprehensive browser security policies and system-level
-    intrusion protection measures.
+    intrusion protection measures including:
+    
+    - Popup and notification blocking
+    - Malware and phishing protection
+    - Safe browsing enforcement
+    - Cookie and tracking protection
+    - DNS-level ad/malware blocking
+    - Firewall rules for common attack vectors
+    - Extension installation restrictions
+    
+    Supported browsers: Chrome, Chromium, Brave, Firefox
 
 EXAMPLES:
-    sudo $0                 # Apply all security hardening
-    sudo $0 --skip-dns      # Apply everything except DNS blocking
+    sudo $0                 # Apply security hardening
     sudo $0 --rollback      # Restore previous settings
 
 EOF
-            exit 0
-            ;;
-        *)
-            echo "Unknown option: $1"
-            exit 1
-            ;;
-    esac
-done
-
-if [ "$ROLLBACK" = true ]; then
-    check_root
-    create_directories
-    rollback_policies
-else
-    main
-fi
+        ;;
+    *)
+        main
+        ;;
+esac
