@@ -156,7 +156,65 @@ volumes:
 
 ---
 
-## Task 6: DevOps Use Cases
+## Task 6: AI Automation - Integrating DeepSeek & Qwen
+
+In 2025, the most powerful use case for n8n is **AI Orchestration**. You can connect n8n to Large Language Models (LLMs) to automate decision-making, content generation, or code reviews.
+
+### Option 1: The "Easy Way" (Cloud API)
+Best for quick setup or production environments without local GPU resources.
+
+*   **1.1 Get Your Credentials**:
+    *   **DeepSeek**: Log in to [platform.deepseek.com](https://platform.deepseek.com) and generate an API key.
+    *   **Qwen**: Access through Alibaba Cloud's **DashScope** console and create a key.
+*   **1.2 Configure n8n**:
+    *   Search for the **DeepSeek Chat Model** node (native integration).
+    *   If using Qwen, use the **OpenAI Chat Model** node and set the **Base URL** to the DashScope endpoint.
+*   **1.3 Credential Setup**:
+    *   **Base URL**: `https://api.deepseek.com` (for DeepSeek).
+    *   **Model Name**: Manually type `deepseek-chat`, `deepseek-reasoner` (R1), or `qwen-plus`.
+
+### Option 2: The "DevOps Way" (Local via Ollama)
+The superior learning path for SREs. Run models locally for zero cost and maximum privacy.
+
+#### Step 1: Install & Pull Models
+Install **Ollama** on your host machine. Then, pull the models:
+```bash
+ollama pull deepseek-r1:7b
+ollama pull qwen2.5:7b
+```
+
+#### Step 2: Update Docker Networking
+Because n8n runs inside a container, it cannot reach `localhost` of your computer directly. You must bridge the gap using `host-gateway`.
+
+Update your `docker-compose.yml` service:
+```yaml
+services:
+  n8n:
+    # ... previous configuration ...
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+```
+Run `docker-compose up -d` to apply.
+
+#### Step 3: Connect n8n to Ollama
+1.  Add an **AI Agent** node to the canvas.
+2.  Connect an **Ollama Chat Model** node to it.
+3.  **Credentials**:
+    *   **Base URL**: `http://host.docker.internal:11434`
+    *   **Model Name**: `deepseek-r1:7b` (must match the pulled name).
+
+### AI Setup Summary for DevOps
+| Method | Why do it? | Skill Learned |
+| :--- | :--- | :--- |
+| **DeepSeek API** | Production stability. | API authentication & JSON payloads. |
+| **Ollama (Local)** | Cost-saving & Privacy. | Docker networking (`host-gateway`). |
+| **OpenRouter** | Access to hundreds of models. | Aggregator API management. |
+
+> **Pro-Tip**: To impress in interviews, deploy **Open WebUI** in the same Docker network. It provides a ChatGPT-like interface for your models, while n8n handles the automated background logic.
+
+---
+
+## Task 7: DevOps Use Cases
 
 ### 1. Advanced Alert Routing
 *   **Scenario**: Webhook from AWS CloudWatch or Grafana.
