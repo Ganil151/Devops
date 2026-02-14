@@ -3,8 +3,7 @@
 ################################################################################
 # Browser Security Service Manager
 # Purpose: Interactive menu to manage Python and Shell security services.
-# Path: home/gsmash/Documents/Devops/07-boilerplates/04-playground/Block-PopUps
-manage-services.sh
+# Path: /home/gsmash/Documents/Devops/07-boilerplates/04-playground/block-popups/manage-services.sh
 ################################################################################
 
 # ============================================================================
