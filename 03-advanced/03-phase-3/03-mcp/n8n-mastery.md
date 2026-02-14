@@ -43,8 +43,8 @@ mkdir n8n-docker && cd n8n-docker
 mkdir n8n_data
 ```
 
-### 2. The Basic `docker-compose.yml`
-This manifest defines a single-service stack using the official n8n image.
+### 2. The Basic `docker-compose.yml` (Junior Setup)
+This manifest defines a single-service stack using the official n8n image and a bridge network.
 
 ```yaml
 version: '3.8'
@@ -53,27 +53,44 @@ services:
   n8n:
     image: docker.n8n.io/n8nio/n8n:latest
     container_name: n8n_automation
-...
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - NODE_ENV=production
+      - WEBHOOK_URL=http://localhost:5678/
+      - GENERIC_TIMEZONE=UTC 
+    volumes:
+      - ./n8n_data:/home/node/.n8n
+    networks:
+      - automation_network
+
+networks:
+  automation_network:
+    driver: bridge
 ```
 
 ### 3. Image Preparation & Launch
-In a professional CI/CD environment, we pull images before execution to ensure availability and speed up deployment.
+In a professional DevOps workflow, we explicitly pull images to verify registry connectivity and ensure the latest bits are cached.
 
-*   **Step 3.1: Pull from the Official Registry**  
-    n8n uses its own registry (`docker.n8n.io`) for the latest stable builds. Run this command to fetch the image:
+*   **Step 3.1: Pre-fetch the Image**  
+    n8n hosts its images on its own dedicated registry (`docker.n8n.io`). Pull the image manually to verify your path:
     ```bash
     docker pull docker.n8n.io/n8nio/n8n:latest
     ```
 
 *   **Step 3.2: Launch the Stack**  
-    Start n8n in detached mode (running in the background):
+    Start the container in detached mode:
     ```bash
     docker-compose up -d
     ```
 
 *   **Step 3.3: Verify Deployment**  
-    *   **Monitor**: Run `docker ps`. You should see `n8n_automation` with status "Up".
-    *   **Connectivity**: Open your browser to `http://localhost:5678`.
+    *   **Health Check**: Run `docker ps`. Look for `n8n_automation` with a status of `Up`.
+    *   **Interface**: Access the UI at `http://localhost:5678`.
 
 ---
 
