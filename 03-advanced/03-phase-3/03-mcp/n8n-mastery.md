@@ -3,6 +3,12 @@
 > **Level**: Intermediate  
 > **Tag Justification**: This module tracks the progression from a basic Junior-level setup (SQLite) to an Intermediate-level, production-grade architecture (PostgreSQL, Docker Networking, and Environment Orchestration).
 
+## Prerequisites
+Before you begin, ensure you have:
+*   A machine with **Docker** and **Docker Compose** installed.
+*   A basic understanding of the **terminal**.
+*   Optional: A domain name or public IP if configuring webhooks for external services.
+
 ---
 
 ## Task 1: The "What & Why" (Conceptual)
