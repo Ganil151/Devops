@@ -44,7 +44,6 @@ Use AI to write the "boring" scripts that move files, rotate logs, and check hea
 - **Master Prompt**: *"Write a Python script to scan an S3 bucket for files older than 30 days and move them to Glacier. Use the boto3 library and include logging."*
 
 ### 2. Configuration (The Blueprint)
-
 Generate thousands of lines of YAML for Kubernetes or Ansible in seconds.
 - **Master Prompt**: *"Generate a Kubernetes Deployment and Service for a React app. Use a LoadBalancer, 3 replicas, and include resource limits (256Mi CPU, 512Mi RAM)."*
 
