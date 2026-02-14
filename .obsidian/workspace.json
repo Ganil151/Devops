@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03-advanced/03-phase-3/03-mcp/n8n-mastery.md",
+                "file": "01-beginner/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/01-foundations-and-mental-models/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "n8n-mastery"
+              "title": "readme"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "03-advanced/03-phase-3/03-mcp/n8n-mastery.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-cli-commands.md",
     "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/REFACTORING_SUMMARY.md",
@@ -240,7 +242,6 @@
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-02-structured-automation/readme.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-01-advanced-reasoning/readme.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-02-structured-automation/slash-commands-intermediate.md",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/resources/video-library.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/resources",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/examples",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/assessments",
