@@ -235,7 +235,7 @@ def generate_chromium_policy() -> Dict:
         "DefaultSearchProviderEnabled": True,
         "DefaultSearchProviderSearchURL": "https://www.google.com/search?q={searchTerms}",
         
-        "DownloadRestrictions": 1,
+        "DownloadRestrictions": 0,
         "DownloadDirectory": "${HOME}/Downloads",
         
         "HomepageIsNewTabPage": True,
@@ -718,7 +718,7 @@ SECURITY FEATURES:
 ✓ SSL error override disabled
 ✓ Extension installation restricted
 ✓ Malicious URL blocking
-✓ Download restrictions
+✗ Download restrictions (reversed)
 ✓ Audio/video capture blocked
 
 SYSTEM HARDENING:
