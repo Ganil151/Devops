@@ -214,7 +214,68 @@ Run `docker-compose up -d` to apply.
 
 ---
 
-## Task 7: DevOps Use Cases
+## Task 7: The "God-Mode" Stack (Ollama + n8n + Postgres)
+
+For the ultimate DevOps experience, we can orchestrate the entire automation engine, the database, and the AI model server in a single, unified stack. This simplifies networking and ensures portability.
+
+### The Unified `docker-compose.yml`
+```yaml
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-n8n_user}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-n8n_pass}
+      - POSTGRES_DB=n8n
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama_server
+    restart: always
+    volumes:
+      - ollama_data:/root/.ollama
+    # Note: For GPU support, add the 'deploy' section with 'reservations'
+
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    container_name: n8n_unified
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY}
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_DATABASE=n8n
+      - DB_POSTGRESDB_HOST=db
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_USER=${POSTGRES_USER:-n8n_user}
+      - DB_POSTGRESDB_PASSWORD=${POSTGRES_PASSWORD:-n8n_pass}
+      - OLLAMA_HOST=ollama:11434
+    volumes:
+      - n8n_data:/home/node/.n8n
+    depends_on:
+      - db
+      - ollama
+
+volumes:
+  postgres_data:
+  ollama_data:
+  n8n_data:
+```
+
+### Why this is the "DevOps Way":
+1.  **Service Discovery**: n8n no longer needs `host.docker.internal`. It can reach the database at `db` and the LLM server at `ollama` because they share the same internal Docker network.
+2.  **Zero-Configuration Persistence**: All three services have dedicated volumes, ensuring that workflows, database records, and AI models survive container recreation.
+3.  **Portability**: You can move this entire folder to any Linux server, run `docker-compose up -d`, and the entire automation infrastructure will be identical.
+
+---
+
+## Task 8: DevOps Use Cases
 
 ### 1. Advanced Alert Routing
 *   **Scenario**: Webhook from AWS CloudWatch or Grafana.
