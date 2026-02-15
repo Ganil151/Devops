@@ -1,0 +1,29 @@
+# Multi-Stage Python Dockerfile Boilerplate
+# Reference: 2026 Security Hardening Standards
+
+# --- STAGE 1: Build ---
+FROM python:3.11-slim as builder
+
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --user --no-cache-dir -r requirements.txt
+
+# --- STAGE 2: Final ---
+FROM python:3.11-slim
+
+# Create a non-root user for security
+RUN groupadd -r devops && useradd -r -g devops worker
+USER worker
+
+WORKDIR /home/worker/app
+
+# Copy only the necessary artifacts from the builder stage
+COPY --from=builder /root/.local /home/worker/.local
+COPY . .
+
+# Ensure the local bin is in PATH
+ENV PATH=/home/worker/.local/bin:$PATH
+
+EXPOSE 8000
+
+CMD ["python", "app.py"]

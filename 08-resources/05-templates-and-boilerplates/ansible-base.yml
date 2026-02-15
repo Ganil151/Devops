@@ -1,0 +1,43 @@
+---
+# Ansible Base Hardening Playbook
+# Purpose: Baseline security and tool configuration for new Linux nodes.
+
+- name: Baseline Linux Hardening
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Ensure security packages are present
+      apt:
+        name:
+          - ufw
+          - fail2ban
+          - unattended-upgrades
+        state: present
+
+    - name: Configure basic UFW rules
+      ufw:
+        rule: allow
+        port: "{{ item }}"
+        proto: tcp
+      loop:
+        - 22
+        - 80
+        - 443
+
+    - name: Enable UFW
+      ufw:
+        state: enabled
+
+    - name: Ensure SRE tools are installed
+      apt:
+        name:
+          - htop
+          - curl
+          - git
+          - vim
+        state: present
