@@ -113,7 +113,7 @@ generate_chromium_policy() {
     cat <<'EOF'
 {
   "DefaultPopupsSetting": 2,
-  "PopupsAllowedForUrls": [],
+  "PopupsAllowedForUrls": ["http://ollama:11434", "http://localhost:5678"],
   "PopupsBlockedForUrls": ["*"],
   
   "SafeBrowsingEnabled": true,
@@ -124,7 +124,7 @@ generate_chromium_policy() {
   "PasswordLeakDetectionEnabled": true,
   
   "DefaultCookiesSetting": 1,
-  "CookiesAllowedForUrls": [],
+  "CookiesAllowedForUrls": ["http://ollama:11434", "http://localhost:5678"],
   "CookiesBlockedForUrls": [],
   "BlockThirdPartyCookies": true,
   
@@ -144,7 +144,7 @@ generate_chromium_policy() {
   "AllowCrossOriginAuthPrompt": false,
   
   "DefaultInsecureContentSetting": 2,
-  "InsecureContentAllowedForUrls": [],
+  "InsecureContentAllowedForUrls": ["http://ollama:11434", "http://localhost:5678"],
   
   "URLBlocklist": [
     "*://*.doubleclick.net/*",
@@ -153,6 +153,11 @@ generate_chromium_policy() {
     "*://*.advertising.com/*",
     "*://*.ads-twitter.com/*",
     "*://*.adnxs.com/*"
+  ],
+  
+  "URLAllowlist": [
+    "http://ollama:11434/*",
+    "http://localhost:5678/*"
   ],
   
   "ExtensionInstallBlocklist": ["*"],
@@ -244,6 +249,7 @@ generate_firefox_policy() {
     },
     
     "Cookies": {
+      "Allow": ["http://ollama:11434", "http://localhost:5678"],
       "AcceptThirdParty": "never",
       "Locked": true
     },
@@ -268,6 +274,7 @@ generate_firefox_policy() {
     },
     
     "PopupBlocking": {
+      "Allow": ["http://ollama:11434", "http://localhost:5678"],
       "Default": true,
       "Locked": true
     },
@@ -431,6 +438,10 @@ setup_firewall_rules() {
         # Rate limit SSH to prevent brute force
         ufw limit 22/tcp comment 'Rate limit SSH'
         
+        # Allow Ollama and n8n
+        ufw allow 11434/tcp comment 'Allow Ollama'
+        ufw allow 5678/tcp comment 'Allow n8n'
+        
         log_success "Firewall rules applied"
     elif command -v firewall-cmd &> /dev/null; then
         log_info "Configuring firewalld..."
@@ -438,6 +449,11 @@ setup_firewall_rules() {
         # Block common attack vectors
         firewall-cmd --permanent --add-rich-rule='rule service name="telnet" reject'
         firewall-cmd --permanent --add-rich-rule='rule service name="rpc-bind" reject'
+        
+        # Allow Ollama and n8n
+        firewall-cmd --permanent --add-port=11434/tcp
+        firewall-cmd --permanent --add-port=5678/tcp
+        
         firewall-cmd --reload
         
         log_success "Firewall rules applied"
