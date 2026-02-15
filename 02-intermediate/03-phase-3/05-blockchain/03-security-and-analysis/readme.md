@@ -1,35 +1,67 @@
-# 03: Security and Analysis
+# 🕵️ 03: Security & Analysis
 
-Security is the most critical aspect of Blockchain development. A bug in a smart contract can lead to the permanent loss of millions of dollars with no "Undo" button.
-
-## 🕵️ Static Analysis
-
-Static analysis tools analyze the source code without executing it to find common vulnerabilities (Reentrancy, Integer Overflow, Access Control).
-
-- **Slither**: A Python-based static analysis framework for Solidity. It finds vulnerabilities, enhances code comprehension, and can be integrated into CI.
-- **MythX**: A professional-grade security analysis service for Ethereum smart contracts.
-- **Aderyn**: A Rust-based linter that focuses on finding high-impact vulnerabilities in Solidity code.
+**[⬅️ Back to Module Index](../readme.md)** | **[Next: Testing & Testnets ➡️](../04-testing-and-testnets/readme.md)**
 
 ---
 
-## 🧪 Fuzz Testing
+# 🛡️ Trust, but Formally Verify
 
-Traditional unit tests check specific cases. **Fuzzing** (Invariants) tests the contract against thousands of random inputs to find edge cases where logic breaks.
+Security is not a feature in Web3; it is the **foundation**. If your contract logic fails, there is no "Technical Support" to reverse the transaction. This module covers the tools used to find vulnerabilities before they are exploited.
 
-- **Foundry Invariants**: Allows you to define properties that should *always* be true (e.g., "The total supply of tokens should never exceed 1 billion"). Foundry will try to prove you wrong by generating random transactions.
+## 🔍 Static Analysis (Slither)
+
+Static analysis scans your source code for dangerous patterns without actually running it. 
+
+### Slither Core Capabilities:
+- **Detection**: Finds Reentrancy, Shadowing, and Uninitialized Variables.
+- **Reporting**: Generates visual dependency graphs and inheritance trees.
+- **CI Integration**: Fail your GitHub Actions if Slither finds "High" risk items.
+
+```bash
+# Run slither on the current project
+slither .
+
+# Run and ignore libraries
+slither . --exclude-dependencies
+```
 
 ---
 
-## 📜 Formal Verification
+## 🧪 Fuzz Testing (Foundry Invariants)
 
-The highest level of security. It uses mathematical proofs to ensure the contract's logic perfectly matches its specification.
-- **Certora**: A leading tool for formal verification of smart contracts.
-- **SMTCheckers**: Built directly into the Solidity compiler to find logical contradictions.
+Standard unit tests check "Happy Paths." **Fuzzing** checks the "Impossible Paths."
+
+- **Invariants**: You define a rule that must *always* be true (e.g., `totalDeposit == sum(userBalances)`).
+- **The Engine**: Foundry will generate 10,000+ random transactions to try and find a sequence that breaks your rule.
 
 ---
 
-## 🛑 Security Best Practices (DevOps Focus)
+## 📜 High-Level Security Checklist
 
-1.  **CI Enforcement**: Fail the build if Slither finds any "High" or "Medium" severity issues.
-2.  **Upgradeability**: If using upgradeable contracts (Proxies), the DevOps pipeline must correlate the new implementation with the existing proxy.
-3.  **Multisig**: Use a Multisig (like Gnosis Safe) for administration tasks, requiring multiple human approvals for any contract state changes.
+1.  **Checks-Effects-Interactions (CEI)**: Always update your internal status *before* sending money out.
+2.  **Access Control**: Ensure only the `owner` can call sensitive functions (using OpenZeppelin `Ownable`).
+3.  **Audit History**: Never deploy un-audited code to Mainnet. 
+4.  **Bytecode Verification**: Provenance is key. Verify your code on Etherscan.
+
+---
+
+## 📂 Project Structure
+
+Check out the `src/` directory for security examples:
+- `VulnerableBank.sol`: A contract containing a classic **Reentrancy** bug.
+- `SecureBank.sol`: The corrected version using the CEI pattern and OpenZeppelin's `ReentrancyGuard`.
+
+---
+
+## 🧪 Security Challenge
+
+**Goal**: Identify and resolve a security vulnerability using Slither.
+
+1.  Install Slither (`pip install slither-analyzer`).
+2.  Run Slither on the `src/VulnerableBank.sol` file.
+3.  Analyze the output. What color is the Reentrancy warning?
+4.  Apply the fix from `SecureBank.sol` and run Slither again. Did the warning disappear?
+
+---
+### 🏁 Continue the Journey
+Proceed to **[04: Testing & Testnets](../04-testing-and-testnets/readme.md)**.
