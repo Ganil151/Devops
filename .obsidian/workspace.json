@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/03-git-version-control/01-beginner-level/02-git-fundamentals/readme.md",
+                "file": "01-beginner/03-git-version-control/01-beginner-level/03-git-commands/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/03-git-version-control/01-beginner-level/02-git-fundamentals/readme.md",
     "08-resources/05-templates-and-boilerplates/terraform-aws-base.tf",
     "08-resources/05-templates-and-boilerplates/ansible-base.yml",
     "08-resources/05-templates-and-boilerplates/Dockerfile.python",
@@ -245,7 +246,6 @@
     "08-resources/02-cheat-sheets-and-docs/aws",
     "08-resources/01-scripts-and-code/update-reference.py",
     "08-resources/01-scripts-and-code/pdf-scraper.py",
-    "08-resources/01-scripts-and-code/link-auditor.py",
     "08-resources/01-scripts-and-code/maintenance/simplification-summary.md",
     "08-resources/01-scripts-and-code/maintenance/readme.md",
     "08-resources/01-scripts-and-code/maintenance/quick-reference.md",
