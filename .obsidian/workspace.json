@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/README.md",
+                "file": "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "readme"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/README.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/troubleshooting.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src/index.js",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src/package.json",
@@ -230,7 +232,6 @@
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/deployment",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/TROUBLESHOOTING.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/HOWTO.md",
-    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/README.md",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
     "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/04-debugging/readme.md",
