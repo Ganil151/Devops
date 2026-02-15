@@ -216,6 +216,8 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/05-blockchain/04-testing-and-testnets/src/ForkTest.t.sol",
+    "02-intermediate/03-phase-3/05-blockchain/04-testing-and-testnets/src",
     "02-intermediate/03-phase-3/05-blockchain/03-security-and-analysis/src/SecureBank.sol",
     "02-intermediate/03-phase-3/05-blockchain/03-security-and-analysis/src/VulnerableBank.sol",
     "02-intermediate/03-phase-3/05-blockchain/03-security-and-analysis/src",
@@ -226,8 +228,6 @@
     "02-intermediate/03-phase-3/05-blockchain/01-blockchain-development-foundations/src/Counter.sol",
     "02-intermediate/03-phase-3/05-blockchain/01-blockchain-development-foundations/src",
     "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/challenges.md",
-    "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/src/guardian_server.py",
-    "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/src/requirements.txt",
     "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/challenges.md",
     "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/readme.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/readme.md",
