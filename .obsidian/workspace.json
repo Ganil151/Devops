@@ -215,6 +215,7 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/06-finops/05-automation/src",
     "02-intermediate/03-phase-3/06-finops/02-optimization-strategies/challenges.md",
     "02-intermediate/03-phase-3/06-finops/02-optimization-strategies/src/find_waste.py",
     "02-intermediate/03-phase-3/06-finops/02-optimization-strategies/src",
@@ -260,7 +261,6 @@
     "03-advanced/03-phase-3/03-mcp/MASTER_MCP_REFERENCE.md",
     "02-intermediate/03-phase-3/01-container-orchestration/images/container-lifecycle.png",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/JUNIOR_CLI_REFERENCE.md",
-    "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
     "Untitled.canvas"
   ]
 }
