@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src/simple_devops_server.py",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src/requirements.txt",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/n8n-mastery.md",
@@ -260,7 +261,6 @@
     "03-advanced/03-phase-3/02-prompt-engineering/MASTER_PROMPT_ENGINEERING_REFERENCE.md",
     "03-advanced/03-phase-3/02-prompt-engineering/docs",
     "03-advanced/03-phase-3/02-prompt-engineering/guardrails",
-    "03-advanced/03-phase-3/02-prompt-engineering/evals",
     "02-intermediate/03-phase-3/04-mcp/youtube-lessons.md",
     "Untitled.canvas"
   ]

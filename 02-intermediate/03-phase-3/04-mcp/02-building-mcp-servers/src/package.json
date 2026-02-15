@@ -1,0 +1,13 @@
+{
+  "name": "mcp-devops-node",
+  "version": "1.0.0",
+  "description": "Node.js implementation of a DevOps MCP Server",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
