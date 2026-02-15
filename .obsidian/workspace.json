@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
+                "file": "03-advanced/03-phase-3/03-mcp/MASTER_MCP_REFERENCE.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "JUNIOR_CLI_REFERENCE"
+              "title": "MASTER_MCP_REFERENCE"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,9 +216,9 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
     "02-intermediate/03-phase-3/01-container-orchestration/images/container-lifecycle.png",
     "01-beginner/03-phase-3/02-container-orchestration/docker-mastery/docker-ops-commands.md",
-    "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/JUNIOR_CLI_REFERENCE.md",
@@ -260,7 +261,6 @@
     "03-advanced/04-capstone/terraform/readme.md",
     "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/readme.md",
     "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/readme.md",
-    "assets/navigation-architecture.svg",
     "Untitled.canvas"
   ]
 }
