@@ -8,21 +8,21 @@ Connectivity and security are the pillars of production Kubernetes. This part co
 
 ### 1. [05-Services-and-Networking](./05-services-and-networking/readme.md)
 Stable endpoints for ephemeral pods.
-- **Service Types**: ClusterIP, NodePort, and LoadBalancer.
-- **Discovery**: Kubernetes DNS and FQDNs.
-- **Routing**: Kube-proxy mechanics.
+- **Service Abstraction**: How `kube-proxy` (IPtables vs. IPVS) routes traffic to healthy endpoints.
+- **Service Discovery**: Mastering **CoreDNS** and the structure of Internal FQDNs.
+- **Internal Security**: Implementation of **Network Policies** for zero-trust microservice isolation.
 
 ### 2. [06-Ingress-Controllers](./06-ingress-controllers/readme.md)
-Layer 7 traffic management.
-- **Routing**: Path-based and Host-based routing.
-- **Security**: SSL Termination (TLS).
-- **Tooling**: NGINX vs. Traefik vs. Istio.
+The gateway to your cluster (Layer 7).
+- **Advanced Routing**: Implementing **Canary Traffic Shifting** and **Sticky Sessions**.
+- **Edge Security**: Managing **TLS Certificates** via Cert-Manager and Let's Encrypt.
+- **Architectural Choice**: Comparative analysis of **NGINX**, **Traefik**, and **Istio Gateway**.
 
 ### 3. [07-ConfigMaps-and-Secrets](./07-configmaps-and-secrets/readme.md)
-Decoupling configuration from code.
-- **ConfigMaps**: Application settings and ENV vars.
-- **Secrets**: Encrypted storage for passwords and API keys.
-- **Dynamic Updates**: Refreshing configs without pod restarts.
+Decoupling configuration from execution.
+- **Configuration Injection**: Volume mounts vs. Environment variables (pros and cons).
+- **Intermediate Secret Ops**: Securing traffic via **Sealed Secrets** or **External Secret Operator** (AWS/Vault).
+- **Immutable Configs**: Ensuring versioned configuration for stable rollbacks.
 
 ---
 
