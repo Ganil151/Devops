@@ -95,19 +95,28 @@ To bridge your server to an AI client, update your local configuration file with
 
 ---
 
-## 🛠️ Troubleshooting & Debugging
+## 🛠️ Debugging & Troubleshooting
 
-MCP servers can be tricky to configure. If your server isn't showing up or tools are failing:
+The **MCP Inspector** is a critical developer tool that lets you test your server without an AI client.
 
-1.  **Check the [Troubleshooting Hub](./troubleshooting.md)** for common fixes.
-2.  **Use the Inspector**: `npx @modelcontextprotocol/inspector python src/simple_devops_server.py`.
-3.  **Logs**: Look for errors in `stderr`.
+```bash
+# Debug Python Server
+npx @modelcontextprotocol/inspector python src/simple_devops_server.py
+
+# Debug Node.js Server
+npx @modelcontextprotocol/inspector node src/index.js
+```
+
+### 🔍 Key Debugging Tips
+- **Standard Output**: `stdout` is reserved for MCP JSON-RPC messages. Do not print anything here!
+- **Standard Error**: `stderr` is where your logs and errors should go.
+- **Troubleshooting Hub**: Check our **[Troubleshooting Guide](./troubleshooting.md)** for common fixes regarding paths, environments, and permissions.
 
 ---
 
-## 🚀 Advanced: Low-Code with n8n
+## 🚀 Next Steps: Low-Code with n8n
 
-For complex workflows involving external integrations (Slack, Jira, AWS), check out our **[n8n-MCP Bridge Guide](./n8n/README.md)**. It allows you to build MCP tools using a visual canvas.
+For complex workflows involving external integrations (Slack, Jira, AWS, Database Clusters), check out our **[n8n-MCP Bridge Guide](./n8n/README.md)**. It allows you to build sophisticated MCP tools using a visual canvas instead of raw code.
 
 ---
 
