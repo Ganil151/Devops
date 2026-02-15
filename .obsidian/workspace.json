@@ -213,8 +213,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
+    "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
+    "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/JUNIOR_CLI_REFERENCE.md",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands",
@@ -252,14 +255,11 @@
     "03-advanced/03-phase-3/03-mcp/deployments",
     "03-advanced/03-phase-3/03-mcp/config",
     "03-advanced/03-phase-3/03-mcp/clients",
-    "03-advanced/03-phase-3/03-mcp/servers",
     "02-intermediate/03-phase-3/04-mcp/servers/README.md",
     "03-advanced/04-capstone/terraform/readme.md",
     "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/readme.md",
     "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/readme.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/readme.md",
-    "01-beginner/02-phase-2/06-prompt-engineering/part-02-devops-automation/04-debugging-with-ai/readme.md",
-    "01-beginner/02-phase-2/06-prompt-engineering/part-02-devops-automation/03-automating-code-and-iac/readme.md",
     "assets/navigation-architecture.svg",
     "Untitled.canvas"
   ]
