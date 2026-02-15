@@ -9,31 +9,44 @@ Before proceeding, read the **[MASTER_MCP_REFERENCE.md](./MASTER_MCP_REFERENCE.m
 
 ---
 
-## 🏗️ Visual: The Federated AI Control Plane
+### 🏗️ Visual: The Federated AI Control Plane (Enterprise)
 
 ```mermaid
 graph TB
-    subgraph "AI Hosts (The Brains)"
-        H1(IDE / Zed)
-        H2(Custom Agent)
+    subgraph Host_Layer ["🧠 AI Intelligence Plane"]
+        H1(🧠 IDE / Zed)
+        H2(🤖 Custom Agents)
     end
     
-    subgraph "MCP Gateway (The Arbiter)"
-        GW[Load Balancer]
-        Auth[mTLS / OIDC]
-        Audit[Click-to-Audit]
+    subgraph Gateway_Layer ["🛡️ MCP Federated Gateway"]
+        GW[⚖️ Load Balancer]
+        Auth[🔐 Auth: mTLS / OIDC]
+        Audit[📝 Global Audit Log]
     end
     
-    subgraph "Specialized Servers (The Hands)"
-        S1[K8s Cluster A]
-        S2[AWS us-east-1]
-        S3[On-Prem DB]
+    subgraph Server_Layer ["📦 Specialized MCP Servers"]
+        S1[☸️ K8s Cluster A]
+        S2[☁️ AWS Resource Bridge]
+        S3[🗄️ On-Prem Database]
     end
     
-    H1 & H2 --> GW
+    %% Connections
+    H1 & H2 -->|Secure SSE| GW
     GW --> Auth
-    GW --> S1 & S2 & S3
+    Auth --> S1 & S2 & S3
+
+    %% Styling
+    style Host_Layer fill:#1e1e2e,stroke:#313244,color:#cdd6f4
+    style Gateway_Layer fill:#313244,stroke:#89b4fa,color:#cdd6f4,stroke-width:2px
+    style Server_Layer fill:#1e1e2e,stroke:#313244,color:#cdd6f4
+
+    style GW fill:#f9e2af,stroke:#313244,color:#11111b
+    style Auth fill:#fab387,stroke:#313244,color:#11111b
+    style Audit fill:#cba6f7,stroke:#313244,color:#11111b
+    
+    style S1,S2,S3 fill:#a6e3a1,stroke:#313244,color:#11111b
 ```
+
 
 ---
 

@@ -9,29 +9,39 @@ Before diving into the modules, study the **[MASTER_PROMPT_ENGINEERING_REFERENCE
 
 ---
 
-## 🏗️ Visual: The Agentic Reasoning Loop
+### 🏗️ Visual: The Agentic Reasoning Loop (Staff Pattern)
 
 ```mermaid
 graph TD
-    User([Principal SRE]) -->|Goal: Zero-Trust Migration| Agent[Orchestrator Agent]
-    Agent -->|Decomposition| SubTasks[Plan: Prep, Scan, Move, Verify]
+    User([👤 Principal SRE]) -->|Goal: Zero-Trust Migration| Agent[🧠 Orchestrator Agent]
+    Agent -->|Decomposition| SubTasks[📋 Plan: Prep, Scan, Move, Verify]
     
-    subgraph Agentic Reasoning Loop
-    SubTasks --> Planning[ReAct: Reason + Act]
-    Planning --> Tools{Tool Execution}
-    Tools -->|K8s/Cloud API| Obs[Observation]
-    Obs -->|Refine| Planning
+    subgraph Reasoning_Loop ["🔄 Agentic Reasoning Loop"]
+    SubTasks --> Planning[⚖️ ReAct: Reason + Act]
+    Planning --> Tools{🛠️ Tool Execution}
+    Tools -->|K8s / Cloud / CLI| Obs[👁️ Observation]
+    Obs -->|Refine Plan| Planning
     end
     
-    subgraph Knowledge Augmentation
-    Planning --> RAG[RAG: Enterprise Knowledge Base]
-    RAG --- Docs[Internal Runbooks]
-    RAG --- Logs[Historical RCA Data]
+    subgraph Knowledge_Layer ["📚 Knowledge Augmentation"]
+    Planning --> RAG[🔍 RAG: Enterprise Knowledge]
+    RAG --- Docs[📖 Runbooks]
+    RAG --- Logs[📜 RCA History]
     end
     
-    Obs --> Finalize[Human-in-the-loop Approval]
-    Finalize --> Success((Autonomous Success))
+    Obs --> Finalize[✅ HITL Approval]
+    Finalize --> Success((🚀 Autonomous Success))
+
+    %% Styling
+    style Reasoning_Loop fill:#1e1e2e,stroke:#f9e2af,color:#cdd6f4,stroke-width:2px
+    style Knowledge_Layer fill:#1e1e2e,stroke:#a6e3a1,color:#cdd6f4
+    
+    style Agent fill:#89b4fa,stroke:#313244,color:#11111b
+    style Planning fill:#fab387,stroke:#313244,color:#11111b
+    style Tools fill:#cba6f7,stroke:#313244,color:#11111b
+    style Success fill:#a6e3a1,stroke:#313244,color:#11111b
 ```
+
 
 ---
 
