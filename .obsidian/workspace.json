@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/readme.md",
+                "file": "01-beginner/03-git-version-control/01-beginner-level/01-introduction/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -88,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 200
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -213,8 +213,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/readme.md",
     "02-intermediate/03-phase-3/06-finops/05-automation/challenges.md",
     "02-intermediate/03-phase-3/06-finops/05-automation/src/infracost_ci.yml",
     "02-intermediate/03-phase-3/06-finops/05-automation/src",
@@ -260,7 +261,6 @@
     "01-beginner/03-phase-3/02-container-orchestration/docker-mastery/docker-ops-commands.md",
     "03-advanced/03-phase-3/03-mcp/MASTER_MCP_REFERENCE.md",
     "02-intermediate/03-phase-3/01-container-orchestration/images/container-lifecycle.png",
-    "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/JUNIOR_CLI_REFERENCE.md",
     "Untitled.canvas"
   ]
 }
