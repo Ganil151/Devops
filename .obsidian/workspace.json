@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
+                "file": "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "JUNIOR_CLI_REFERENCE"
+              "title": "INTERMEDIATE_OPS_COMMANDS"
             }
           }
         ]
@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/n8n-mastery.md",
     "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/04-debugging/readme.md",
     "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/01-introduction/readme.md",
@@ -234,7 +235,6 @@
     "01-beginner/03-phase-3/02-container-orchestration/enhancement-summary.md",
     "02-intermediate/03-phase-3/01-container-orchestration/readme.md",
     "01-beginner/03-phase-3/02-container-orchestration/docker-mastery/docker-ops-commands.md",
-    "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
     "03-advanced/03-phase-3/03-mcp/MASTER_MCP_REFERENCE.md",
     "02-intermediate/03-phase-3/01-container-orchestration/images/container-lifecycle.png",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
