@@ -4,125 +4,127 @@
 
 ---
 
-# 🏗️ Building Your First MCP Server
+# 🏗️ Architecting Your Custom MCP Server
 
-Building an MCP server allows you to expose *your* specific tools and data to an AI. While there are pre-built servers for things like Postgres or GitHub, the real power comes from building custom servers for your internal DevOps workflows.
+Welcome to the core of the Model Context Protocol module. While pre-built servers exist for common tools, the true power of MCP lies in **custom server development**. For a DevOps Engineer, this means transforming your scripts, internal APIs, and infrastructure data into actionable AI tools.
+
+## 🌟 Why Build Custom MCP Servers?
+
+- **Context Sovereignty**: Give the AI access to *your* private documentation, CI/CD status, and internal metrics.
+- **Workflow Automation**: Turn complex multi-step CLI operations into a single natural language command.
+- **Security Control**: Filter and sanitize the data exposed to the AI, ensuring only safe operations are executable.
+
+---
 
 ## 📂 Project Structure
 
-We have provided a complete reference implementation in the `src/` directory:
+We have provided reference implementations in both **Python** and **Node.js**:
 
 ```text
-02-Building-MCP-Servers/
-├── README.md
+02-building-mcp-servers/
+├── readme.md
+├── n8n/                      # Low-code MCP Bridge (Advanced)
 └── src/
-    ├── simple_devops_server.py  # A "kitchen sink" server example
-    └── requirements.txt         # Python dependencies
+    ├── simple_devops_server.py # Python Implementation (FastMCP)
+    ├── index.js                # Node.js Implementation (SDK)
+    ├── package.json            # Node.js dependencies
+    └── requirements.txt        # Python dependencies
 ```
 
 ---
 
-## 🚀 Step 1: Installation
+## 🐍 Option A: Python Implementation (Recommended)
 
-You need the `mcp` python package to get started.
+Python is the fastest way to build MCP servers thanks to the `FastMCP` library.
 
+### 1. Installation
 ```bash
 cd src
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-*Note: We recommend running this in a virtual environment (`python -m venv venv`).*
+### 2. Core Concepts
+Open `src/simple_devops_server.py`. We use decorators to define capabilities:
+
+- **Tools (`@mcp.tool`)**: Functions the AI executes (e.g., `check_http_health`).
+- **Resources (`@mcp.resource`)**: Data the AI reads (e.g., `config://app-settings`).
+- **Prompts (`@mcp.prompt`)**: Templates for AI interactions (Advanced).
 
 ---
 
-## 💻 Step 2: Code Walkthrough
+## 🟢 Option B: Node.js Implementation
 
-Open `src/simple_devops_server.py`. Here is how we implement the core primitives using the `FastMCP` class.
+For teams preferring JavaScript/TypeScript or integrating with existing Node.js utilities.
 
-### 1. Initialization
-```python
-from mcp.server.fastmcp import FastMCP
-
-# This name appears in the client UI
-mcp = FastMCP("DevOps-Assistant")
+### 1. Installation
+```bash
+cd src
+npm install
 ```
 
-### 2. Creating a Tool (Action)
-To let the AI *do* something, we use the `@mcp.tool()` decorator. The type hints and docstring are **CRITICAL**—they are converted into the JSON Schema that tells the AI how to use the tool.
-
-```python
-@mcp.tool()
-def check_website_health(url: str) -> str:
-    """
-    Performs a health check on a given URL.
-    Args:
-        url: The full URL to check (e.g., https://google.com)
-    """
-    # ... implementation details ...
-```
-
-### 3. Creating a Resource (Data)
-To let the AI *read* something, we use `@mcp.resource()`. Resources have a URI scheme.
-
-```python
-@mcp.resource("host://env-vars")
-def get_safe_env_vars() -> str:
-    """Returns a filtered list of environment variables."""
-    # ... implementation details ...
+### 2. Execution
+Unlike the high-level FastMCP, the Node.js SDK gives you granular control over the JSON-RPC lifecycle.
+```bash
+node index.js
 ```
 
 ---
 
-## 🔌 Step 3: Connecting to a Client
+## 🔌 Connecting to AI Clients (Claude / Cursor)
 
-To use this server with **Claude Desktop** or **Cursor**, you need to tell the host application how to run your python script.
+To bridge your server to an AI client, update your local configuration file with the **absolute path** to your script.
 
-### Configuration File
-Locate your config file:
-*   **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-*   **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+### Configuration Location
+- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+- **Linux**: `~/.config/Claude/claude_desktop_config.json`
 
-Add your server to the `mcpServers` object:
-
+### Example Config (Python)
 ```json
 {
   "mcpServers": {
-    "devops-assistant": {
-      "command": "python",
-      "args": [
-        "C:\\Users\\Ganil\\Documents\\Devops\\02-Intermediate\\03-Phase-3\\04-MCP\\02-Building-MCP-Servers\\src\\simple_devops_server.py"
-      ]
+    "devops-nexus": {
+      "command": "/path/to/your/venv/bin/python",
+      "args": ["/home/user/Devops/02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src/simple_devops_server.py"]
     }
   }
 }
 ```
 
-> **⚠️ Important**: Always use **absolute paths** for the script location. If you are using a virtual environment, use the absolute path to the `python` executable inside the venv (e.g., `C:/.../venv/Scripts/python.exe`).
-
 ---
 
-## 🐞 Step 4: Debugging with the Inspector
+## 🐞 Debugging with the MCP Inspector
 
-The MCP team provides a web-based inspector to test your server without needing a full AI client.
+The **MCP Inspector** is a critical developer tool that lets you test your server without an AI client.
 
 ```bash
+# Debug Python Server
 npx @modelcontextprotocol/inspector python src/simple_devops_server.py
+
+# Debug Node.js Server
+npx @modelcontextprotocol/inspector node src/index.js
 ```
 
-This will open a browser window where you can:
-1.  See the list of available Tools and Resources.
-2.  Click "Call Tool" to manually execute functions and see the JSON output.
-3.  Read Resources to verify the data stream.
+Standard Output/Error during debugging:
+- `stdout`: Reserved for MCP protocol messages (JSON-RPC).
+- `stderr`: Where your `print()` or `console.log()` messages will appear.
 
 ---
 
-## 🧪 Real-World Challenge
+## 🚀 Advanced: Low-Code with n8n
 
-**Goal**: Extend the `simple_devops_server.py` file.
+For complex workflows involving external integrations (Slack, Jira, AWS), check out our **[n8n-MCP Bridge Guide](./n8n/README.md)**. It allows you to build MCP tools using a visual canvas.
 
-1.  Add a tool named `backup_log_files` that takes a `directory_path`.
-2.  Implement logic to zip the contents of that directory.
-3.  Test it using the Inspector.
+---
 
-Good luck!
+## 🧪 DevOps Challenge
 
+**Goal**: Extend `src/simple_devops_server.py` to include a "Security Auditor" tool.
+
+1. Add a tool named `check_file_permissions` that takes a `file_path`.
+2. Report if the file is world-writable (security risk).
+3. Test your tool using the Inspector.
+
+> **Pro-Tip**: Use the `os.stat()` and `stat.S_IWOTH` in Python to check permissions.
