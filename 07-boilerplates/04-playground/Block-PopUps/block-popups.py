@@ -181,7 +181,7 @@ def generate_chromium_policy() -> Dict:
     """Generate comprehensive security policy for Chromium-based browsers."""
     return {
         "DefaultPopupsSetting": 2,
-        "PopupsAllowedForUrls": [],
+        "PopupsAllowedForUrls": ["http://ollama:11434", "http://localhost:5678"],
         "PopupsBlockedForUrls": ["*"],
         
         "SafeBrowsingEnabled": True,
@@ -192,7 +192,7 @@ def generate_chromium_policy() -> Dict:
         "PasswordLeakDetectionEnabled": True,
         
         "DefaultCookiesSetting": 1,
-        "CookiesAllowedForUrls": [],
+        "CookiesAllowedForUrls": ["http://ollama:11434", "http://localhost:5678"],
         "CookiesBlockedForUrls": [],
         "BlockThirdPartyCookies": True,
         
@@ -212,7 +212,7 @@ def generate_chromium_policy() -> Dict:
         "AllowCrossOriginAuthPrompt": False,
         
         "DefaultInsecureContentSetting": 2,
-        "InsecureContentAllowedForUrls": [],
+        "InsecureContentAllowedForUrls": ["http://ollama:11434", "http://localhost:5678"],
         
         "URLBlocklist": [
             "*://*.doubleclick.net/*",
@@ -310,6 +310,7 @@ def generate_firefox_policy() -> Dict:
             },
             
             "Cookies": {
+                "Allow": ["http://ollama:11434", "http://localhost:5678"],
                 "AcceptThirdParty": "never",
                 "Locked": True
             },
@@ -334,6 +335,7 @@ def generate_firefox_policy() -> Dict:
             },
             
             "PopupBlocking": {
+                "Allow": ["http://ollama:11434", "http://localhost:5678"],
                 "Default": True,
                 "Locked": True
             },
@@ -536,6 +538,8 @@ DNSOverTLS=yes
                 (["ufw", "deny", "445/tcp", "comment", "Block SMB"], "SMB"),
                 (["ufw", "deny", "3389/tcp", "comment", "Block RDP from external"], "RDP"),
                 (["ufw", "limit", "22/tcp", "comment", "Rate limit SSH"], "SSH rate limit"),
+                (["ufw", "allow", "11434/tcp", "comment", "Allow Ollama"], "Ollama"),
+                (["ufw", "allow", "5678/tcp", "comment", "Allow n8n"], "n8n"),
             ]
             
             for cmd, description in firewall_rules:
