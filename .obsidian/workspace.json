@@ -13,10 +13,10 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "01-beginner/03-phase-3/02-container-orchestration/images/dockerimagelayer.png"
+                "file": "01-beginner/03-phase-3/02-container-orchestration/images/docker-network-pattern-3.png"
               },
               "icon": "lucide-image",
-              "title": "dockerimagelayer"
+              "title": "docker-network-pattern-3"
             }
           }
         ]
@@ -204,6 +204,10 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/03-phase-3/02-container-orchestration/images/docker-network-pattern-4.png",
+    "01-beginner/03-phase-3/02-container-orchestration/images/docker-network-pattern-5.png",
+    "01-beginner/03-phase-3/02-container-orchestration/images/dockerarch.png",
+    "01-beginner/03-phase-3/02-container-orchestration/images/dockerimagelayer.png",
     "01-beginner/03-phase-3/02-container-orchestration/images/dockerstoragearch.png",
     "01-beginner/03-phase-3/02-container-orchestration/images/virtualvsdocker.png",
     "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/readme.md",
@@ -219,10 +223,6 @@
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands",
     "01-beginner/03-phase-3/02-container-orchestration/docker-mastery",
-    "01-beginner/03-phase-3/02-container-orchestration/images/dockerimagelayer.png",
-    "01-beginner/03-phase-3/02-container-orchestration/images/dockerarch.png",
-    "01-beginner/03-phase-3/02-container-orchestration/images/docker-network-pattern-5.png",
-    "01-beginner/03-phase-3/02-container-orchestration/images/docker-network-pattern-4.png",
     "01-beginner/03-phase-3/02-container-orchestration/images/docker-network-pattern-3.png",
     "01-beginner/03-phase-3/02-container-orchestration/images/docker-network-pattern-2.png",
     "01-beginner/03-phase-3/02-container-orchestration/images/containerlifecycle.png",
