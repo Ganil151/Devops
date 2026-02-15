@@ -216,6 +216,8 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/05-blockchain/01-blockchain-development-foundations/src/Counter.sol",
+    "02-intermediate/03-phase-3/05-blockchain/01-blockchain-development-foundations/src",
     "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/challenges.md",
     "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/src/guardian_server.py",
     "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/src/requirements.txt",
@@ -231,7 +233,6 @@
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src/index.js",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src/package.json",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src/simple_devops_server.py",
-    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src/requirements.txt",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/n8n-mastery.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/guides/TROUBLESHOOTING.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/guides/HOWTO.md",
@@ -261,7 +262,6 @@
     "02-intermediate/03-phase-3/01-container-orchestration/images/container-lifecycle.png",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/JUNIOR_CLI_REFERENCE.md",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
-    "02-intermediate/03-phase-3/04-mcp/01-mcp-fundamentals/readme.md",
     "Untitled.canvas"
   ]
 }
