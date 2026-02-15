@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/03-phase-3/04-mcp/MASTER_MCP_REFERENCE.md",
+                "file": "02-intermediate/03-phase-3/04-mcp/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MASTER_MCP_REFERENCE"
+              "title": "readme"
             }
           }
         ]
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5,
-    "collapsed": true
+    "width": 310.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -216,6 +215,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/04-mcp/MASTER_MCP_REFERENCE.md",
     "02-intermediate/03-phase-3/04-mcp/reference/mcp-architecture-ref.md",
     "03-advanced/03-phase-3/03-mcp/MASTER_MCP_REFERENCE.md",
     "03-advanced/03-phase-3/03-mcp/deployments",
@@ -228,7 +228,6 @@
     "02-intermediate/03-phase-3/04-mcp/config",
     "02-intermediate/03-phase-3/04-mcp/clients",
     "02-intermediate/03-phase-3/04-mcp/servers",
-    "02-intermediate/03-phase-3/04-mcp/MASTER_MCP_REFERENCE.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/n8n-mastery.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n",
     "03-advanced/04-capstone/terraform/readme.md",
