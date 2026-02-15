@@ -215,6 +215,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/03-phase-3/02-container-orchestration/docker-mastery/docker-ops-commands.md",
     "01-beginner/03-phase-3/02-container-orchestration/docker-mastery",
     "01-beginner/03-phase-3/02-container-orchestration/enhancement-summary.md",
     "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/readme.md",
@@ -249,7 +250,6 @@
     "03-advanced/03-phase-3/03-mcp/clients",
     "03-advanced/03-phase-3/03-mcp/servers",
     "02-intermediate/03-phase-3/04-mcp/config/env.example",
-    "02-intermediate/03-phase-3/04-mcp/clients/claude_desktop_config.json.example",
     "02-intermediate/03-phase-3/04-mcp/servers/README.md",
     "03-advanced/04-capstone/terraform/readme.md",
     "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/readme.md",

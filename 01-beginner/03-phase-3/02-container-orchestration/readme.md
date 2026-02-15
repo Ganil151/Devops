@@ -168,5 +168,6 @@ In the container world, containers are **"Cattle"**.
 
 ## 🔗 Next Steps
 The warehouse is open. Let's start packing the boxes.
-1. Proceed to: **[CHALLENGES.md](./challenges.md)** →
-2. Start the first module: **[Docker Foundations](./part-01-docker-fundamentals/readme.md)** →
+1. Reference the **[Docker Mastery Command Cheat Sheet](./docker-mastery/docker-ops-commands.md)** 🛠️
+2. Proceed to: **[CHALLENGES.md](./challenges.md)** →
+3. Start the first module: **[Docker Foundations](./part-01-docker-fundamentals/readme.md)** →
