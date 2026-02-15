@@ -1,0 +1,46 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: n8n_db
+    restart: always
+    env_file: .env
+    volumes:
+      - ../postgres_data:/var/lib/postgresql/data
+    networks:
+      - automation_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    container_name: n8n_automation
+    restart: always
+    ports:
+      - "5678:5678"
+    env_file: .env
+    volumes:
+      - ../n8n_data:/home/node/.n8n
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - automation_network
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: always
+    env_file: .env
+    volumes:
+      - ../ollama_data:/root/.ollama
+    networks:
+      - automation_network
+    # Automated model provisioning on startup
+    entrypoint: /bin/sh -c "ollama serve & until ollama list > /dev/null 2>&1; do sleep 2; done && ollama pull qwen2.5-coder && wait"
+
+networks:
+  automation_network:
+    driver: bridge
