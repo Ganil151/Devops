@@ -1,43 +1,45 @@
-# Global Resources Hub: Scripts, Lessons & Media
+# 🛠️ DevOps Global Resources Hub
 
-Welcome to the central repository for all auxiliary DevOps assets. This hub is designed to provide quick access to the "hands-on" files, scripts, and visual aids that support our 3-level learning curriculum.
-
----
-
-## 📂 Resource Categories
-
-### [Scripts & Code Assets](./01-scripts-code/readme.md)
-The primary collection of automation and configuration code.
-- **Bash Scripts**: Tool installers, OS hardening, and quick automation snippets.
-- **Python for DevOps**: Boto3 (AWS) automation, API integration, and custom logic.
-- **Automation Folders**: Core scripts for **Ansible, Kubernetes, Terraform, and Docker**.
-
-### [YouTube Lessons & Videos](readme.md)
-Visual learning materials and video-based lesson plans.
-- **Lesson Archives**: Consolidated zip files and note sets for YouTube-based DevOps tutorials.
-- **Tools**: Includes the **YoutubeDownLoader** project and related scripts.
-
-### [Images & Architectural Diagrams](readme.md)
-High-resolution diagrams and screenshots to help visualize complex systems.
-- **Architecture Maps**: Detailed maps for EKS, Docker, Maven, and Terraform operations.
-- **DevOps Lifecycle**: Visual guides to CI/CD and security "shifts."
-
-### [Books, Guides & Checklists](./04-books-guides/readme.md)
-Deep-dive literature and practical operational guides.
-- **PDF Library**: Professional DevOps, Linux, and Python books.
-- **Checklists**: Production readiness and security audit templates.
-- **Resume Hub**: Templates and guides for your career journey.
-
-### [Projects Showcase](./05-projects-showcase/readme.md)
-Production-ready blueprints and complex application stacks.
-- **Spring Petclinic**: Advanced Microservices with Kubernetes and CI/CD.
-- **Enterprise Clones**: Netflix and Amazon Prime architecture clones.
-- **Multi-Tier Apps**: Flask, React, and Django full-stack deployments.
+Welcome to the **Global Resources Hub**. This is the central nerve center for auxiliary assets, scripts, and documentation that power the DevOps curriculum. Restructured for the **2026 Fleet Standard**, this hub provides the "Force Multipliers" for your engineering journey.
 
 ---
 
-## 🎯 Navigating the Hub
-This hub exists alongside the main **[DevOps Roadmap](../readme.md)**. Use these files as you progress through the Beginner, Intermediate, and Advanced levels to see real-world implementation examples.
+## 📂 Standardized Resource Architecture
+
+### 1. [💻 Scripts & Code Assets](./01-scripts-and-code/)
+**Purpose**: Automation, SRE toolkits, and maintenance logic.
+- **Sub-folders**: `maintenance/`, `converter/`, and standalone diagnostic tools.
+- **DevOps Why**: Code is the only source of truth. Manual tasks are errors waiting to happen.
+
+### 2. [📄 Cheat Sheets & Docs](./02-cheat-sheets-and-docs/)
+**Purpose**: High-density reference for CLI commands, cloud inventories, and OS customization.
+- **Includes**: AWS Inventory Masters, Bash customization, and protocol references.
+- **DevOps Why**: Don't memorize what you can look up in 5 seconds. Focus on the logic.
+
+### 3. [📚 Books & PDFs](./03-books-and-pdfs/)
+**Purpose**: Long-form literature and deep-dive technical guides.
+- **DevOps Why**: Tutorials teach you 'How', books teach you 'Why'.
+
+### 4. [🖼️ Images & Infographics](./04-images-and-infographics/)
+**Purpose**: Visualizing complex architectures (EKS, VPC, Docker Layers).
+- **DevOps Why**: An architecture diagram is worth a thousand lines of YAML.
+
+### 5. [🏗️ Templates & Boilerplates](./05-templates-and-boilerplates/)
+**Purpose**: Zero-to-One starting points for Terraform, Ansible, and Docker projects.
+- **DevOps Why**: Standardized starters prevent "Configuration Drift" from day one.
 
 ---
-**Standard**: All scripts are provided as enterprise-grade templates. Use with caution in production and always test in a sandbox environment.
+
+## 🎯 Global Senior SRE Tips
+> **Senior Tip**: Always version control your `01-scripts-and-code`. A script that isn't in Git is a liability, not an asset.
+
+> **Senior Tip**: Treat this hub as your "Personal Knowledge Base" (PKB). If you solve a hard problem, document it here so you never have to solve it twice.
+
+---
+
+## 📝 Compliance & Usage
+- **Testing**: All scripts must be tested in a sandbox before production use.
+- **Security**: Never store live credentials in these directories. Use Environment Variables or Secrets Managers.
+
+---
+*Last Audit & Refactor: 2026-02-15*
