@@ -1,0 +1,22 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "EnforceMandatoryTags",
+      "Effect": "Deny",
+      "Action": [
+        "ec2:RunInstances",
+        "rds:CreateDBInstance",
+        "s3:CreateBucket"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/Environment": "true",
+          "aws:RequestTag/CostCenter": "true",
+          "aws:RequestTag/Owner": "true"
+        }
+      }
+    }
+  ]
+}
