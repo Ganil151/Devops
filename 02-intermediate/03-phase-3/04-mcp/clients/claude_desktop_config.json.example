@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "devops-assistant": {
+      "command": "python",
+      "args": [
+        "/home/gsmash/Documents/Devops/02-intermediate/03-phase-3/04-mcp/servers/python-example/server.py"
+      ],
+      "env": {
+        "KUBECONFIG": "~/.kube/config",
+        "AWS_REGION": "us-east-1"
+      }
+    },
+    "sre-typescript": {
+      "command": "node",
+      "args": [
+        "/home/gsmash/Documents/Devops/02-intermediate/03-phase-3/04-mcp/servers/typescript-example/build/index.js"
+      ]
+    }
+  }
+}

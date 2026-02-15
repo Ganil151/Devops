@@ -50,6 +50,9 @@ sequenceDiagram
 
 ## 🗺️ Curriculum Path
 
+### 0. [🏆 MASTER_MCP_REFERENCE](./MASTER_MCP_REFERENCE.md)
+**The definitive guide for this module.** Start here for the architectural deep-dive, SDK implementations, and security hardening.
+
 ### 1. [01-MCP-Fundamentals](./01-mcp-fundamentals/readme.md)
 *Junior, learn the language of the agents.* 
 Core Architecture: Hosts, Clients, and Servers. Why JSON-RPC is the bridge to the future.
@@ -65,6 +68,15 @@ Building expert agents for Kubernetes and AWS. Scaling tool access across the en
 ### 4. [04-Security-and-Auth](./04-security-and-auth/readme.md)
 *The AI Guardrails.* 
 The Human-in-the-loop security model. Ensuring your AI agent doesn't accidentally delete production.
+
+---
+
+## 📂 Module Structure (The Architect Way)
+We have reorganized this directory to follow standard project layouts:
+- `/servers`: Source code for custom MCP servers (Python/TS).
+- `/clients`: Configuration templates for hosts (Claude/Cursor).
+- `/config`: Centralized environment and security settings.
+
 
 ---
 
