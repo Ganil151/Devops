@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/readme.md",
+                "file": "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/readme.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/README.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/troubleshooting.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src/index.js",
@@ -261,7 +262,6 @@
     "02-intermediate/03-phase-3/04-mcp/reference/mcp-architecture-ref.md",
     "03-advanced/03-phase-3/02-prompt-engineering/templates/sre_react_orchestrator.md",
     "03-advanced/03-phase-3/02-prompt-engineering/MASTER_PROMPT_ENGINEERING_REFERENCE.md",
-    "02-intermediate/03-phase-3/04-mcp/youtube-lessons.md",
     "Untitled.canvas"
   ]
 }
