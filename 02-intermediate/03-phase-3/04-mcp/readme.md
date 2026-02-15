@@ -28,23 +28,41 @@
 
 ---
 
-## 🏗️ Visual: The MCP Handshake
+### 🏗️ Visual: The MCP Handshake (HITL Pattern)
 
 ```mermaid
 sequenceDiagram
-    participant Junior as Junior (Approval)
-    participant Host as AI Host (Brain)
-    participant Server as MCP Server (Hands)
-    participant Infra as Infrastructure (K8s/Cloud)
+    autonumber
+    participant User as 👤 Principal SRE
+    participant Host as 🧠 AI Host (Claude)
+    participant Server as 📦 MCP Server (K8s)
+    participant Infra as 🏗️ Infrastructure
 
-    Host->>Junior: I see an error. Can I list the pods?
-    Junior->>Host: Approved.
-    Host->>Server: call_tool: list_pods
-    Server->>Infra: kubectl get pods
-    Infra-->>Server: Pod List (Error in Service A)
-    Server-->>Host: Resource: Pod Details
-    Host->>Junior: The issue is a OOMKilled event. Should I increase RAM?
+    rect rgb(30, 30, 46)
+    Note over User,Host: The Investigative Phase
+    User->>Host: "Why is the payments service slow?"
+    Host->>Server: call_tool: get_pod_metrics
+    Server->>Infra: kubectl top pods
+    Infra-->>Server: Metrics (High CPU on pod-x)
+    Server-->>Host: Resource: Metric Data
+    end
+
+    rect rgb(49, 50, 68)
+    Note over Host,User: The Human-in-the-Loop (HITL) Check
+    Host->>User: "I found high CPU. Should I scale the deployment?"
+    User->>Host: "Approved. Scale to 3 replicas."
+    end
+
+    rect rgb(17, 17, 27)
+    Note over Host,Infra: The Execution Phase
+    Host->>Server: call_tool: scale_deployment(name='payments', count=3)
+    Server->>Infra: kubectl scale ...
+    Infra-->>Server: Success
+    Server-->>Host: Tool Result: "Deployment Scaled"
+    Host-->>User: "Incident mitigated. 3 pods running."
+    end
 ```
+
 
 ---
 
