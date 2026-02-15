@@ -222,6 +222,10 @@ def generate_chromium_policy() -> Dict:
             "*://*.ads-twitter.com/*",
             "*://*.adnxs.com/*"
         ],
+        "URLAllowlist": [
+            "http://ollama:11434/*",
+            "http://localhost:5678/*"
+        ],
         
         "ExtensionInstallBlocklist": ["*"],
         "ExtensionInstallAllowlist": [
@@ -554,6 +558,8 @@ DNSOverTLS=yes
             firewall_rules = [
                 ["firewall-cmd", "--permanent", "--add-rich-rule=rule service name=\"telnet\" reject"],
                 ["firewall-cmd", "--permanent", "--add-rich-rule=rule service name=\"rpc-bind\" reject"],
+                ["firewall-cmd", "--permanent", "--add-port=11434/tcp"],
+                ["firewall-cmd", "--permanent", "--add-port=5678/tcp"],
             ]
             
             for cmd in firewall_rules:
