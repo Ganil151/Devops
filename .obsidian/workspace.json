@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/03-phase-3/02-container-orchestration/docker-mastery/docker-ops-commands.md",
+                "file": "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "docker-ops-commands"
+              "title": "JUNIOR_CLI_REFERENCE"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -213,8 +214,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5b53e735af933f6",
+  "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/03-phase-3/02-container-orchestration/docker-mastery/docker-ops-commands.md",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands",
@@ -222,7 +224,6 @@
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands",
     "02-intermediate/03-phase-3/01-container-orchestration/readme.md",
-    "01-beginner/03-phase-3/02-container-orchestration/docker-mastery/docker-ops-commands.md",
     "01-beginner/03-phase-3/02-container-orchestration/docker-mastery",
     "01-beginner/03-phase-3/02-container-orchestration/enhancement-summary.md",
     "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/readme.md",
