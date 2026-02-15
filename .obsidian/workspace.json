@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/01-container-orchestration/docker-commands",
     "02-intermediate/03-phase-3/01-container-orchestration/readme.md",
     "01-beginner/03-phase-3/02-container-orchestration/docker-mastery/docker-ops-commands.md",
     "01-beginner/03-phase-3/02-container-orchestration/docker-mastery",
@@ -260,7 +261,6 @@
     "01-beginner/02-phase-2/06-prompt-engineering/part-02-devops-automation/04-debugging-with-ai/readme.md",
     "01-beginner/02-phase-2/06-prompt-engineering/part-02-devops-automation/03-automating-code-and-iac/readme.md",
     "01-beginner/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/02-prompt-toolkit/readme.md",
-    "01-beginner/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/01-foundations-and-mental-models/readme.md",
     "assets/navigation-architecture.svg",
     "Untitled.canvas"
   ]
