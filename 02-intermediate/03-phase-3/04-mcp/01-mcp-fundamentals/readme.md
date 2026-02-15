@@ -102,10 +102,10 @@ Prompts are **templates** embedded in the server.
 
 How do the Client and Server actually talk? MCP defines two main transport types:
 
-| Transport | Description | Best For |
-| :--- | :--- | :--- |
-| **Stdio** | Standard Input/Output. The Client launches the Server as a subprocess and talks via `stdin`/`stdout`. | Local tools, extensive security isolation, private servers running on a developer's laptop. |
-| **SSE (Server-Sent Events)** | HTTP based. The Client connects to a URL endpoint. | Remote servers, shared tools in a team environment, cloud-hosted agents. |
+| Transport                    | Description                                                                                           | Best For                                                                                    |
+| :--------------------------- | :---------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
+| **Stdio**                    | Standard Input/Output. The Client launches the Server as a subprocess and talks via `stdin`/`stdout`. | Local tools, extensive security isolation, private servers running on a developer's laptop. |
+| **SSE (Server-Sent Events)** | HTTP based. The Client connects to a URL endpoint.                                                    | Remote servers, shared tools in a team environment, cloud-hosted agents.                    |
 
 > **Note**: For almost all local DevOps workflows (like controlling Docker or local K8s), **Stdio** is the preferred method because it inherits the user's local authentication and permissions (e.g., `~/.kube/config` or `~/.aws/credentials`).
 

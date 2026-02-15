@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/02-phase-2/06-prompt-engineering/part-02-devops-automation/04-debugging-with-ai/readme.md",
+                "file": "02-intermediate/03-phase-3/04-mcp/reference/mcp-architecture-ref.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "mcp-architecture-ref"
             }
           }
         ]
@@ -216,6 +216,14 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/n8n-mastery.md",
+    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n",
+    "03-advanced/04-capstone/terraform/readme.md",
+    "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/readme.md",
+    "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/readme.md",
+    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/readme.md",
+    "02-intermediate/03-phase-3/04-mcp/01-mcp-fundamentals/readme.md",
+    "01-beginner/02-phase-2/06-prompt-engineering/part-02-devops-automation/04-debugging-with-ai/readme.md",
     "01-beginner/02-phase-2/06-prompt-engineering/part-02-devops-automation/03-automating-code-and-iac/readme.md",
     "01-beginner/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/02-prompt-toolkit/readme.md",
     "01-beginner/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/01-foundations-and-mental-models/readme.md",
@@ -235,13 +243,6 @@
     "01-beginner/02-phase-2/05-basic-ci-cd/part-03-advanced-workflows/01-security-and-quality-gates/readme.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/02-networking/readme.md",
     "01-beginner/01-phase-1/07-cloud-foundations/05-aws-basics/01-introduction/aws-fundamentals-devops.md",
-    "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/03-cost-estimation-and-finops/01-cli-automation/readme.md",
-    "03-advanced/02-phase-2/01-part-1-the-blueprint/01-cloud-architecture/01-enterprise-multi-cloud/09-infrastructure-as-code/terraform-aws-complete.md",
-    "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/02-python-for-infrastructure/01-part-1-the-blueprint/02-os-and-file-ops/readme.md",
-    "reference.md",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-03-governed-ai/privacy-sanitization.md",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-03-governed-ai/readme.md",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-03-governed-ai/llm-settings-for-code.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/resources",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/examples",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/assessments",
@@ -251,7 +252,6 @@
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/reference",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/06-real-life-scenarios",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/05-interview-questions-and-quizzes",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/04-llm-settings-for-code",
     "assets/navigation-architecture.svg",
     "assets/cicd-pipeline-architecture.svg",
     "assets/devops-master-banner.png",
