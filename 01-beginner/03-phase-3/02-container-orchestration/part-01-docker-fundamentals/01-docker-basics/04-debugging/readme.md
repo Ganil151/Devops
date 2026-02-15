@@ -37,12 +37,12 @@ By the end of this module, you will:
 
 ## 🛠️ The "Big Four" Diagnostic Tools
 
-| Command            | Real-World Use Case                                             |
-| :----------------- | :-------------------------------------------------------------- |
-| `docker logs -f`   | Following the "heartbeat" of your app in real-time.             |
-| `docker inspect`   | Finding the "Hidden" IP address or environment variables.       |
-| **`docker stats`** | Identifying "Resource Hogs" that are eating your RAM/CPU.       |
-| **`docker exec`**  | Logged-in exploration to verify files or database connectivity. |
+| Command          | Real-World Use Case                                             |
+| :--------------- | :-------------------------------------------------------------- |
+| `docker logs -f` | Following the "heartbeat" of your app in real-time.             |
+| `docker inspect` | Finding the "Hidden" IP address or environment variables.       |
+| `docker stats`   | Identifying "Resource Hogs" that are eating your RAM/CPU.       |
+| `docker exec`    | Logged-in exploration to verify files or database connectivity. |
 
 ---
 
