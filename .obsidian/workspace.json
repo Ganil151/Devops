@@ -216,6 +216,8 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src/requirements.txt",
+    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/src",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/n8n-mastery.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/guides/TROUBLESHOOTING.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/guides/HOWTO.md",
@@ -259,9 +261,7 @@
     "03-advanced/03-phase-3/02-prompt-engineering/docs",
     "03-advanced/03-phase-3/02-prompt-engineering/guardrails",
     "03-advanced/03-phase-3/02-prompt-engineering/evals",
-    "03-advanced/03-phase-3/02-prompt-engineering/templates",
     "02-intermediate/03-phase-3/04-mcp/youtube-lessons.md",
-    "02-intermediate/03-phase-3/04-mcp/readme.md",
     "Untitled.canvas"
   ]
 }
