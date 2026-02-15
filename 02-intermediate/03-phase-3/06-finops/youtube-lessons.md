@@ -6,21 +6,23 @@ Master the art of bringing financial accountability to your cloud spending.
 
 ## 💰 FinOps Fundamentals
 
-*   **[Introduction to FinOps Best Practices](https://www.youtube.com/watch?v=hiKPPy582vg)** by *Flexera*
-    *   *Focus*: Frameworks, approaches, and why FinOps is essential for the cloud.
-*   **[AWS FinOps Tutorial - Principles of Cloud Finance](https://www.youtube.com/watch?v=tK9Oc6AEnR4)** by *Intellipaat*
-    *   *Focus*: Lifecycle, principles, and specific tools for managing AWS costs.
+*   **[What is FinOps? - A Concise Overview](https://www.youtube.com/watch?v=FbaU3XoH5C0)** by *FinOps Foundation*
+    *   *Focus*: The core principles of Inform, Optimize, and Operate.
+*   **[AWS Cost Explorer & Pricing 101](https://www.youtube.com/watch?v=tK9Oc6AEnR4)** by *AWS*
+    *   *Focus*: Understanding your bill and using native tools to track spend.
 
 ---
 
-## 📈 Optimization & Governance
+## 🏗️ Deep Dives & Optimization
 
-*   **[FinOps and Azure - Why We Care](https://www.youtube.com/watch?v=RR25S8UvPik)**
-    *   *Focus*: Applying FinOps concepts specifically within an Azure environment.
-*   **[Passing the FinOps Foundation Course](https://www.youtube.com/watch?v=gS8H0VvVfIs)**
-    *   *Focus*: Overview of the certification path and core learning modules.
+*   **[Infracost - Cost Estimates for Infrastructure as Code](https://www.youtube.com/watch?v=hiKPPy582vg)** by *Infracost*
+    *   *Focus*: How to shift-left your FinOps by catching cost increases in the PR.
+*   **[Mastering Spot Instances for Kubernetes](https://www.youtube.com/watch?v=RR25S8UvPik)** by *Kubesimplify*
+    *   *Focus*: Saving up to 90% on EKS costs using Karpenter and Spot instances.
+*   **[FinOps Foundation Course Overview](https://www.youtube.com/watch?v=gS8H0VvVfIs)**
+    *   *Focus*: Preparing for the FinOps Certified Practitioner (FCP) exam.
 
 ---
 
 > [!TIP]
-> **Pro Tip**: FinOps is not about *saving* money—it's about *making* money by ensuring every dollar spent in the cloud has a clear ROI.
+> **Pro Tip**: FinOps is not about *saving* money—it's about *making* money by ensuring every dollar spent in the cloud has a clear ROI. Shift-left your costs by integrating Infracost into your CI/CD pipelines.

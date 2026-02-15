@@ -18,12 +18,12 @@
 
 ## 🆚 Junior Way vs. Architect Way
 
-| Feature | The Junior Way (Problematic) | The Architect Way (Strategic) |
+| Feature | The Junior Way | The Architect Way |
 |:---|:---|:---|
 | **Architecture** | "Build it big so it doesn't fail" | **Right-sized & Elastic** |
-| **Visibility** | Looking at the total monthly bill | **Cost-per-unit / Cost-per-team** |
+| **Visibility** | Total monthly bill | **Cost-per-unit / Cost-per-team** |
 | **Commitment** | Always using On-Demand | **Savings Plans & RI Portfolios** |
-| **Efficiency** | Manual cleanup occasionally | **Cost-as-Code** (Infracost/Policies) |
+| **Efficiency** | Manual cleanup occasionally | **Cost-as-Code (Infracost/Policies)** |
 | **Culture** | "Finance handles the money" | **Shared Accountability** |
 
 ---
@@ -49,21 +49,25 @@ graph TD
 
 ## 🗺️ Curriculum Path
 
-### 🏗️ [Part 1: Cost Allocation](./01-cost-allocation/readme.md)
+### 1. [🏁 Cost Allocation](./01-cost-allocation/readme.md)
 *Junior, follow the money.* 
 Tagging governance, showback vs. chargeback models, and mapping cloud spend to business units.
 
-### 🔄 [Part 2: Optimization Strategies](./02-optimization-strategies/readme.md)
+### 2. [🔄 Optimization Strategies](./02-optimization-strategies/readme.md)
 *Cut the fat, keep the muscle.* 
 Right-sizing instances, storage tiering (S3 Glacier), and cleaning up "zombie" resources.
 
-### 📉 [Part 3: Reserved Capacity](./03-reserved-instances/readme.md)
+### 3. [📉 Reserved Capacity](./03-reserved-instances/readme.md)
 *The Broker's game.* 
 Mastering Savings Plans, Reserved Instances (RI), and building a commitment portfolio.
 
-### 🤖 [Part 4: Automation & FinOps-as-Code](./05-automation/readme.md)
+### 4. [📊 Showback & Chargeback](./04-showback-chargeback/readme.md)
+*Accountability in action.* 
+How to report costs to stakeholders and drive financial responsibility within teams.
+
+### 5. [🤖 FinOps-as-Code](./05-automation/readme.md)
 *Build the cost guardrails.* 
-Using Infracost in CI/CD, automated shutdown scripts, and setting up anomaly detection alerts.
+Using Infracost in CI/CD, automated shutdown scripts, and setting up anomaly detection.
 
 ---
 
@@ -76,81 +80,23 @@ Using Infracost in CI/CD, automated shutdown scripts, and setting up anomaly det
 
 ---
 
-## 🎤 Interview Preparation (FinOps)
+## 📂 Module Structure (Standardized)
 
-1. **Q: Junior, what are 'Unit Economics' in the cloud?**
-   - *A: It's the practice of measuring cloud spend against a business metric (e.g., Cost per Transaction) to determine if your architectural scaling is efficient.*
-
-2. **Q: Explain 'Right-sizing'.**
-   - *A: The process of matching instance types and sizes to your workload performance and capacity requirements at the lowest possible cost.*
-
-3. **Q: What is the difference between a Savings Plan and a Reserved Instance?**
-   - *A: **Savings Plans** offer flexibility across instance families and regions in exchange for a dollar-per-hour commitment. **Reserved Instances** are more rigid (specific type/region) but can sometimes offer higher discounts.*
-
-4. **Q: What is a 'Zombie Resource'?**
-   - *A: Resources that are running and costing money but providing no value (e.g., an unattached Elastic IP, a 2-year-old EBS snapshot, or an idle Load Balancer).*
-
-5. **Q: Explain 'Showback' vs. 'Chargeback'.**
-   - *A: **Showback** is "showing" a team how much they spent for awareness. **Chargeback** is actually "charging" that team's budget for their cloud usage.*
-
-6. **Q: What are 'Spot Instances' and when should you NOT use them?**
-   - *A: Spot instances are spare capacity at a huge discount. You should NOT use them for stateful databases or any workload that cannot handle a 2-minute termination notice.*
-
-7. **Q: What is 'Tagging Governance'?**
-   - *A: A policy that requires every resource to have specific metadata (e.g., `Owner`, `Project`, `CostCenter`) so costs can be accurately allocated.*
-
-8. **Q: What does 'Infracost' do?**
-   - *A: It's a tool that sits in your CI/CD pipeline and tells you exactly how much your monthly bill will change BEFORE you merge a Terraform/CloudFormation PR.*
-
-9. **Q: Explain 'Cloud Storage Tiering'.**
-   - *A: Moving data from 'Hot' storage (S3 Standard) to 'Cold' storage (S3 Glacier) based on how often it's accessed to save up to 90% on storage costs.*
-
-10. **Q: Junior, how do you handle a 'Cost Anomaly'?**
-    - *A: First, identify the service causing the spike via Cost Explorer. Second, find the specific resources using tags. Third, determine if it's a bug (e.g., infinite loop) or a valid business spike.*
+We have standardized our reference implementations across all modules:
+- **/src**: Ready-to-run scripts for cost auditing and optimization.
+- **challenges.md**: Hands-on scenarios for each topic.
+- **readme.md**: Detailed architectural walkthroughs.
 
 ---
 
-## 📝 Knowledge Check
-
-1. **Which pricing model offers up to 90% discount but can be reclaimed by the provider?**
-   - [x] Spot Instances.
-
-2. **Which metric is a sign of 'Good' FinOps?**
-   - [x] Decreasing Cost per Unit.
-
-3. **What is the main goal of 'Inform' phase in FinOps?**
-   - [x] Visibility and Cost Allocation.
-
-4. **True/False: You should always use the largest instance size to be safe.**
-   - [x] **False**. (Waste of money; use right-sizing).
-
-5. **Which tool helps predict costs in a Pull Request?**
-   - [x] Infracost.
-
-6. **What is an 'Error Budget' in FinOps?**
-   - [x] Not a standard term, but usually refers to allowed 'Waste' before optimization is required.
-
-7. **Which AWS service helps find idle resources?**
-   - [x] Trusted Advisor.
-
-8. **What happens to an unattached Elastic IP?**
-   - [x] You are charged for it (to encourage you to release it).
-
-9. **What is 'Data Transfer Out' (DTO)?**
-   - [x] The cost of moving data from the cloud provider to the internet (often the most hidden cost).
-
-10. **Which role is responsible for cloud costs in a FinOps culture?**
-    - [x] Everyone (Shared Accountability).
+## 🏆 Final Challenge: The "Cloud Waste Hunter"
+To graduate from this module, you must:
+1.  **Identify** 3 types of cloud waste using an automated script.
+2.  **Calculate** the potential savings if moved to Spot instances or Savings Plans.
+3.  **Implement** a tagging policy that prevents non-compliant resources from being created.
 
 ---
-
-## 🔗 Next Steps
-Junior, you've mastered the books. You are now a High-Level Architect.
+## 🔗 Navigation
 1. Return to: **[Phase 3 Hub](../readme.md)** →
 2. Graduation: **[Advanced Course](../../../readme.md)** →
-
----
-## 🧭 Additional Modules
-- [04 Showback Chargeback](04-showback-chargeback/readme.md)
-- [06 Interview Questions and Quizzes](06-interview-questions-and-quizzes/readme.md)
-- [07 Real Life Scenarios](07-real-life-scenarios/readme.md)
+3. View References: **[📔 YouTube Lessons](./youtube-lessons.md)**
