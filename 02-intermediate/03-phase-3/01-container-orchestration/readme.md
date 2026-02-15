@@ -29,11 +29,24 @@
 
 ---
 
+## 🌉 The Bridge: From Docker Compose to Kubernetes
+**Docker Compose** is great for local development, but it lacks the enterprise features needed for production.
+
+| Feature | Docker Compose | Kubernetes |
+| :--- | :--- | :--- |
+| **Scaling** | Manual (`--replicas`) | Auto-scaling (HPA/VPA) |
+| **Self-Healing** | Limited restart policies | Proactive health checks & rescheduling |
+| **Secrets** | File-based / Env | Centralized Secret Management (etcd) |
+| **Updates** | Downtime often required | Zero-downtime Rolling Updates |
+
+---
+
 ## 🏗️ Visual: The Reconciliation Loop
+Kubernetes is a **Declarative** system. You tell it the "Desired State," and it works tirelessly to match the "Actual State."
 
 ```mermaid
 graph TD
-    User[Junior Engineer] -->|kubectl apply| API[API Server]
+    User[DevOps Engineer] -->|kubectl apply| API[API Server]
     API -->|Stores State| ETCD[(etcd Database)]
     API -->|Notifies| CTRL[Controllers]
     CTRL -->|Reconcile| Node[Worker Nodes]
@@ -47,25 +60,30 @@ graph TD
 
 ## 🗺️ Curriculum Path
 
-### 🏗️ [Part 1: Foundations & Architecture](readme.md)
+### 🏗️ [Part 1: Foundations & Architecture](./01-foundations/readme.md)
 *Junior, learn the anatomy before you perform surgery.* 
 Master the Control Plane, `kubectl` productivity, and the Request Lifecycle.
 
-### 🔄 [Part 2: Workload Management](readme.md)
+### 🔄 [Part 2: Workload Management](./02-workload-management/readme.md)
 *Treat your containers like cattle, not pets.* 
 Deployments, Replicasets, and managing the application lifecycle at scale.
 
-### 🚦 [Part 3: Networking and Config](readme.md)
+### 🚦 [Part 3: Networking and Config](./03-networking-and-config/readme.md)
 *Traffic control for the cloud.* 
 Services, Ingress Controllers, and decoupling config through ConfigMaps and Secrets.
 
-### 💾 [Part 4: State and Persistence](readme.md)
+### 💾 [Part 4: State and Persistence](./04-state-and-persistence/readme.md)
 *Data that survives the storm.* 
 PVs, PVCs, and StatefulSets. Learn how to run databases in a world where containers are ephemeral.
 
-### 🛡️ [Part 5: Cloud Ops and Administration](readme.md)
+### 🛡️ [Part 5: Cloud Ops and Administration](./05-cloud-ops-and-admin/readme.md)
 *Governance and Identity.* 
 RBAC, Namespaces, EKS management, and multi-tenant security hardening.
+
+---
+
+## 🏆 Real-World DevOps Story: The 3 AM Node Failure
+... (rest of the file)
 
 ---
 
