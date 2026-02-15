@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "03-advanced/03-phase-3/03-mcp/MASTER_MCP_REFERENCE.md",
     "03-advanced/03-phase-3/03-mcp/deployments",
     "03-advanced/03-phase-3/03-mcp/config",
     "03-advanced/03-phase-3/03-mcp/clients",
@@ -251,7 +252,6 @@
     "02-intermediate/02-phase-2/01-infrastructure-automation/01-scripting-automation/02-python-for-infrastructure/01-part-1-the-blueprint/04-reference/02-data-manipulation-keywords.md",
     "01-beginner/02-phase-2/01-automation/00-foundations/part-02-tooling-landscape/01-tools-comparison.md",
     "01-beginner/02-phase-2/05-basic-ci-cd/part-03-advanced-workflows/02-continuous-deployment/readme.md",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/resources",
     "assets/navigation-architecture.svg",
     "assets/cicd-pipeline-architecture.svg",
     "assets/devops-master-banner.png",
