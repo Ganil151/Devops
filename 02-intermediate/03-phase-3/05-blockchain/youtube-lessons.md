@@ -4,23 +4,23 @@ Learn to manage and deploy decentralized applications and smart contract infrast
 
 ---
 
-## ⛓️ Blockchain Foundations
+## 🏗️ Blockchain Foundations
 
 *   **[Blockchain Basics Full Course](https://www.youtube.com/watch?v=hiKPPy582vg)** by *freeCodeCamp.org*
     *   *Focus*: Distributed ledgers, consensus mechanisms, and core technology.
-*   **[Blockchain Full Course 2026 - Beginners to Advanced](https://www.youtube.com/watch?v=tK9Oc6AEnR4)** by *Simplilearn*
-    *   *Focus*: Smart contract development and decentralized applications (DApps).
+*   **[Ethereum 101 - How It Works](https://www.youtube.com/watch?v=ZE2HxVa5Abk)** by *Whiteboard Crypto*
+    *   *Focus*: Visual explanation of the EVM, Smart Contracts, and Gas.
 
 ---
 
 ## 🛠️ Web3 Development & DevOps
 
-*   **[Learn Solidity and Full Stack Web3 Development](https://www.youtube.com/watch?v=RR25S8UvPik)** by *freeCodeCamp.org*
-    *   *Focus*: The 32-hour definitive guide to building and deploying on the blockchain.
-*   **[Blockchain Tutorial for Beginners - 8 Hours Masterclass](https://www.youtube.com/watch?v=gS8H0VvVfIs)** by *Edureka*
-    *   *Focus*: Fundamentals of Bitcoin Blockchain, smart contracts, and DApps.
+*   **[Learn Solidity and Foundry - Full Course](https://www.youtube.com/watch?v=umepbfKp5rI)** by *Cyfrin Updraft / Patrick Collins*
+    *   *Focus*: The modern standard for building and testing secure smart contracts.
+*   **[Smart Contract Security & Auditing](https://www.youtube.com/watch?v=RR25S8UvPik)** by *Cyfrin*
+    *   *Focus*: Deep dive into Slither, Fuzzing, and identifying DeFi hacks.
 
 ---
 
 > [!TIP]
-> **Pro Tip**: DevOps for Blockchain involves unique challenges like "Gas" price optimization and state synchronization. Focus on the *infrastructure* behind the chain.
+> **Pro Tip**: Blockchain DevOps (often called Web3 Reliability Engineering) is 90% security and 10% deployment. Mastery of "Mainnet Forking" and "Formal Verification" will set you apart in the job market.
