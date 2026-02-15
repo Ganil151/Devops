@@ -24,22 +24,22 @@ Understanding how a container transitions between states is key to debugging.
 ## 🟢 1. Basic Essentials
 *Checking the health and status of your Docker installation.*
 
-| Command | Explanation | Real-World Example |
-| :--- | :--- | :--- |
-| `docker --version` | Checks which version of Docker you have installed. | `docker --version` |
-| `docker info` | Shows high-level information about your Docker system (containers, images, storage driver). | `docker info` |
-| `docker help` | The "Manual" - gives you a list of all commands or help for a specific one. | `docker help run` |
+| Command            | Explanation                                                                                 | Real-World Example |
+| :----------------- | :------------------------------------------------------------------------------------------ | :----------------- |
+| `docker --version` | Checks which version of Docker you have installed.                                          | `docker --version` |
+| `docker info`      | Shows high-level information about your Docker system (containers, images, storage driver). | `docker info`      |
+| `docker help`      | The "Manual" - gives you a list of all commands or help for a specific one.                 | `docker help run`  |
 
 ---
 
 ## 📦 2. Image Management
 *Managing the "Templates" (Images) used to create containers.*
 
-| Command | Explanation | Real-World Example |
-| :--- | :--- | :--- |
-| `docker pull` | Downloads an image from Docker Hub to your local machine. | `docker pull nginx:latest` |
-| `docker images` | Lists all the images currently stored on your computer. | `docker images` |
-| `docker rmi` | Removes (deletes) a local image. | `docker rmi nginx` |
+| Command           | Explanation                                                         | Real-World Example            |
+| :---------------- | :------------------------------------------------------------------ | :---------------------------- |
+| `docker pull`     | Downloads an image from Docker Hub to your local machine.           | `docker pull nginx:latest`    |
+| `docker images`   | Lists all the images currently stored on your computer.             | `docker images`               |
+| `docker rmi`      | Removes (deletes) a local image.                                    | `docker rmi nginx`            |
 | `docker build -t` | Builds a new image from a `Dockerfile` and gives it a "tag" (name). | `docker build -t my-app:v1 .` |
 
 ---
@@ -47,14 +47,14 @@ Understanding how a container transitions between states is key to debugging.
 ## 🚀 3. Container Operations
 *The core commands for running and managing live containers.*
 
-| Command | Explanation | Real-World Example |
-| :--- | :--- | :--- |
-| `docker run` | Creates AND starts a container. Common flags: `-d` (background), `-p` (ports), `-it` (interactive). | `docker run -d -p 8080:80 nginx` |
-| `docker ps` | Lists all currently **running** containers. | `docker ps` |
-| `docker ps -a` | Lists **all** containers, including those that have stopped. | `docker ps -a` |
-| `docker stop` | Gracefully shuts down a running container. | `docker stop my-nginx` |
-| `docker start` | Re-starts a container that was previously stopped. | `docker start my-nginx` |
-| `docker rm` | Permanently deletes a stopped container. | `docker rm my-nginx` |
+| Command        | Explanation                                                                                         | Real-World Example               |
+| :------------- | :-------------------------------------------------------------------------------------------------- | :------------------------------- |
+| `docker run`   | Creates AND starts a container. Common flags: `-d` (background), `-p` (ports), `-it` (interactive). | `docker run -d -p 8080:80 nginx` |
+| `docker ps`    | Lists all currently **running** containers.                                                         | `docker ps`                      |
+| `docker ps -a` | Lists **all** containers, including those that have stopped.                                        | `docker ps -a`                   |
+| `docker stop`  | Gracefully shuts down a running container.                                                          | `docker stop my-nginx`           |
+| `docker start` | Re-starts a container that was previously stopped.                                                  | `docker start my-nginx`          |
+| `docker rm`    | Permanently deletes a stopped container.                                                            | `docker rm my-nginx`             |
 
 ---
 
