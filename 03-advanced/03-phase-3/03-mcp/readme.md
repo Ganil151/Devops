@@ -1,118 +1,74 @@
-# Model Context Protocol (MCP) - Advanced Level
+# 🔌 Advanced Model Context Protocol (MCP)
 
-## Introduction
+> **"Listen up, Staff Engineer. At this level, we don't just 'run' MCP. We architect global context backbones that unify fragmented infrastructure into a single, intelligent control plane."**
 
-This advanced module covers enterprise MCP deployments, custom transport implementations, advanced security patterns, and building production-grade MCP infrastructure.
+---
 
-## Learning Objectives
+## 🏆 The Advanced Master Reference
+Before proceeding, read the **[MASTER_MCP_REFERENCE.md](./MASTER_MCP_REFERENCE.md)**. It contains the blueprints for Enterprise Gateway patterns, mTLS security, and SSE (Server-Sent Events) transport implementations.
 
-- Design enterprise-scale MCP architectures
-- Implement custom transports and protocols
-- Build production-grade MCP infrastructure
-- Master advanced security and compliance patterns
+---
 
-## Topics Covered
+## 🏗️ Visual: The Federated AI Control Plane
 
-### 1. Enterprise MCP Architecture
 ```mermaid
 graph TB
-    subgraph "AI Hosts"
-        H1[IDE]
-        H2[Chat UI]
-        H3[Automation]
+    subgraph "AI Hosts (The Brains)"
+        H1(IDE / Zed)
+        H2(Custom Agent)
     end
     
-    subgraph "MCP Gateway"
+    subgraph "MCP Gateway (The Arbiter)"
         GW[Load Balancer]
-        AUTH[Auth Service]
-        AUDIT[Audit Log]
+        Auth[mTLS / OIDC]
+        Audit[Click-to-Audit]
     end
     
-    subgraph "MCP Servers"
-        S1[K8s Server]
-        S2[Cloud Server]
-        S3[DB Server]
+    subgraph "Specialized Servers (The Hands)"
+        S1[K8s Cluster A]
+        S2[AWS us-east-1]
+        S3[On-Prem DB]
     end
     
-    H1 --> GW
-    H2 --> GW
-    H3 --> GW
-    GW --> AUTH
-    GW --> S1
-    GW --> S2
-    GW --> S3
-    AUTH --> AUDIT
+    H1 & H2 --> GW
+    GW --> Auth
+    GW --> S1 & S2 & S3
 ```
 
-### 2. Custom Transports
-- HTTP/WebSocket implementations
-- gRPC transport
-- Message queue integration (Kafka, RabbitMQ)
-- Custom protocol development
+---
 
-### 3. High Availability
-- Server clustering
-- State replication
-- Disaster recovery
-- Global distribution
+## 📂 Module Structure (Enterprise Standard)
+This directory has been reorganized to support distributed development:
 
-### 4. Advanced Security
-- Zero-trust architecture
-- mTLS implementation
-- Dynamic credential rotation
-- Security scanning and compliance
+- **[/servers](./servers)**: Source code for high-performance SSE and Webhook servers.
+- **[/deployments](./deployments)**: Helm charts and Docker Compose files for HA clusters.
+- **[/clients](./clients)**: Advanced configurations for connecting proprietary agents.
+- **[/config](./config)**: Security policies, mTLS profiles, and Zero-Trust schemas.
 
-### 5. Performance Optimization
-- Connection pooling
-- Request batching
-- Caching strategies
-- Async processing patterns
+---
 
-### 6. Observability
-- Distributed tracing
-- Metrics collection
-- Log aggregation
-- Alerting and dashboards
+## 🎓 Learning Objectives (Staff Level)
 
-### 7. Multi-Cloud MCP
-- Cross-cloud server federation
-- Unified resource access
-- Cloud-agnostic tooling
-- Hybrid deployments
+1. **Architecting for Scale**: Transitioning from STDIO (local) to SSE (remote).
+2. **Hardening**: Implementing "Double-Isolation" (Docker + Firejail).
+3. **Federation**: Unifying multi-cloud tools into a single context window.
+4. **Governance**: Building audit-ready AI-Ops platforms.
 
-## Production Patterns
+---
 
-### Gateway Pattern
-```python
-class MCPGateway:
-    def __init__(self):
-        self.servers = ServerRegistry()
-        self.auth = AuthService()
-        self.metrics = MetricsCollector()
-    
-    async def route_request(self, request):
-        await self.auth.verify(request)
-        server = self.servers.get_server(request.target)
-        with self.metrics.trace(request):
-            return await server.handle(request)
-```
+## 🚀 Lab: The 2 AM SRE Bot
+**Challenge**: Deploy an SSE-based MCP server to a Kubernetes cluster that allows an AI, connected via a remote gateway, to perform read-only log analysis and suggest 'Safe' restart commands for approval.
 
-### Federation Pattern
-- Cross-organization MCP sharing
-- Federated identity
-- Resource sharing policies
-- Trust establishment
+1. Initialize the Gateway in `servers/gateway`.
+2. Deploy the K8s Sidekick in `deployments/helm`.
+3. Use the `npx @modelcontextprotocol/inspector` to verify the remote SSE connection.
 
-## Case Studies
+---
 
-1. Building a multi-cloud MCP infrastructure
-2. Implementing enterprise MCP gateway
-3. MCP for regulated industries
-4. Global-scale MCP deployment
+## 🎤 Interview Prep (Staff/Principal)
+- **Q**: How do you prevent 'Prompt Injection' in a tool that queries a database?
+- **A**: *By using strict JSON Schema validation (Zod/Pydantic) and mapping natural language queries to predefined, parameterized SQL templates rather than raw execution.*
 
-## Best Practices
+- **Q**: Why use SSE over STDIO in an enterprise environment?
+- **A**: *SSE allows the AI and the Tools to live on different network segments, facilitating mTLS auth, centralized logging, and high availability.*
 
-- Design for failure and resilience
-- Implement comprehensive monitoring
-- Maintain backward compatibility
-- Document all tools and resources
