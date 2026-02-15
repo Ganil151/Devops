@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/n8n-mastery.md",
+                "file": "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/04-debugging/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "n8n-mastery"
+              "title": "readme"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/n8n-mastery.md",
     "02-intermediate/03-phase-3/04-mcp/01-mcp-fundamentals/readme.md",
     "02-intermediate/03-phase-3/04-mcp/reference/mcp-architecture-ref.md",
     "03-advanced/03-phase-3/02-prompt-engineering/templates/sre_react_orchestrator.md",
@@ -234,7 +236,6 @@
     "02-intermediate/03-phase-3/04-mcp/config/env.example",
     "02-intermediate/03-phase-3/04-mcp/clients/claude_desktop_config.json.example",
     "02-intermediate/03-phase-3/04-mcp/servers/README.md",
-    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/n8n-mastery.md",
     "03-advanced/04-capstone/terraform/readme.md",
     "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/readme.md",
     "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/readme.md",
