@@ -11,12 +11,24 @@
             "id": "19ac471caa0c1888",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "01-beginner/03-phase-3/02-container-orchestration/images/containerlifecycle.png"
+                "file": "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/02-images-and-containers/readme.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-image",
-              "title": "containerlifecycle"
+              "icon": "lucide-file",
+              "title": "readme"
             }
           }
         ]
@@ -204,6 +216,8 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/03-dockerfile-basics/readme.md",
+    "01-beginner/03-phase-3/02-container-orchestration/images/containerlifecycle.png",
     "01-beginner/03-phase-3/02-container-orchestration/images/docker-network-pattern-2.png",
     "01-beginner/03-phase-3/02-container-orchestration/images/docker-network-pattern-3.png",
     "01-beginner/03-phase-3/02-container-orchestration/images/docker-network-pattern-4.png",
@@ -225,8 +239,6 @@
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands",
     "01-beginner/03-phase-3/02-container-orchestration/docker-mastery",
-    "01-beginner/03-phase-3/02-container-orchestration/images/containerlifecycle.png",
-    "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/03-dockerfile-basics/readme.md",
     "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/02-images-and-containers/readme.md",
     "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/01-introduction/readme.md",
     "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/04-debugging/readme.md",
