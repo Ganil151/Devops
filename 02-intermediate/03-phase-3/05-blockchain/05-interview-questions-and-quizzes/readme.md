@@ -1,155 +1,73 @@
-# 05: Interview Questions and Quizzes
+# 🎓 05: Interview Mastery & Knowledge Audit
 
-Test your knowledge of Blockchain DevOps and Smart Contract CI/CD.
-
-## 🎤 Top 20 Interview Questions
-
-1.  **What is the difference between a Smart Contract's Bytecode and its ABI?**
-2.  **Why is testing more critical in Blockchain than in traditional web development?**
-3.  **What is a 'Testnet', and name the most common one for Ethereum today.**
-4.  **Explain the role of 'Foundry' in a modern Web3 DevOps workflow.**
-5.  **What is 'Contract Verification', and why is it important for users?**
-6.  **How do you securely manage Private Keys in a GitHub Actions pipeline?**
-7.  **What is 'Fuzz Testing' (Invariants), and why is it used in Solidity?**
-8.  **Explain the difference between Hardhat and Foundry.**
-9.  **What is 'Slither', and what stage of the CI/CD pipeline does it belong to?**
-10. **Explain the concept of 'Forking' a network for local testing.**
-11. **What is an 'EVM' (Ethereum Virtual Machine)?**
-12. **What are 'Gas' fees, and how do they impact deployment strategy?**
-13. **What is a 'Multisig' wallet, and when should a DevOps team use one?**
-14. **Explain 'Reentrancy' and how static analysis tools detect it.**
-15. **What is a 'Faucet' in the context of Blockchain?**
-16. **Why shouldn't you deploy Smart Contracts directly to Mainnet?**
-17. **What is 'Solidity', and what is the difference between it and Vyper?**
-18. **How do you handle 'Upgradeable' contracts in a CI/CD pipeline?**
-19. **What is 'Etherscan', and how does a DevOps engineer interact with it?**
-20. **What is 'Formal Verification', and is it always necessary?**
+**[⬅️ Back to Module Index](../readme.md)** | **[Next: Real-Life Scenarios ➡️](../06-real-life-scenarios/readme.md)**
 
 ---
 
-## 📝 20-Question Knowledge Quiz
+# 🎤 Top 20 Blockchain DevOps Interview Questions
 
-1. **Which file contains the function signatures needed to interact with a contract?**
-   - A) Bytecode
-   - B) ABI (Application Binary Interface)
-   - C) Markdown
-   - D) YAML
+Prepare for your role as a **Web3 Reliability Engineer**. These questions track your progress from Junior fundamentals to Architect-level system design.
 
-2. **Which Ethereum testnet is currently recommended for application developers?**
-   - A) Ropsten
-   - B) Goerli
-   - C) Sepolia
-   - D) Kovan
+### 🏛️ Tier 1: Foundations
+1.  **What is the difference between Bytecode and ABI?**
+    *   *Answer*: Bytecode is the machine code on the EVM; ABI is the JSON interface for human/frontend interaction.
+2.  **Why is testing more critical in Web3 than in Web2?**
+    *   *Answer*: Immutability. Bugs on mainnet are permanent and often involve direct financial value.
+3.  **Name the current standard Ethereum testnet.**
+    *   *Answer*: Sepolia.
+4.  **Explain the role of Foundry in a DevOps workflow.**
+    *   *Answer*: Compilation, rapid testing in Solidity, and deployment orchestration.
+5.  **What is 'Contract Verification' on Etherscan?**
+    *   *Answer*: Matching source code to on-chain bytecode for transparency and interaction.
 
-3. **Foundry is written in which programming language?**
-   - A) JavaScript
-   - B) Python
-   - C) Solidity
-   - D) Rust
+### 🤖 Tier 2: Automation & Security
+6.  **How do you securely manage Private Keys in CI/CD?**
+    *   *Answer*: Use GitHub Secrets for Testnets and Cloud KMS (AWS/GCP) for Production.
+7.  **What is 'Fuzz Testing' (Foundry Invariants)?**
+    *   *Answer*: Generating thousands of random inputs to break logic and find edge cases.
+8.  **Compare Hardhat vs. Foundry for a new project.**
+    *   *Answer*: Hardhat is plugin-rich and uses JS; Foundry is Rust-fast and uses Solidity for tests.
+9.  **Explain 'Slither' and its place in the pipeline.**
+    *   *Answer*: A static analyzer that finds vulnerabilities like Reentrancy during the CI stage.
+10. **What is 'Mainnet Forking' and why do we use it?**
+    *   *Answer*: Local simulation of the entire mainnet state to test against real protocol interactions.
 
-4. **In a CI/CD pipeline, 'Slither' is used for:**
-   - A) Deploying to Mainnet
-   - B) Static Analysis/Security Scanning
-   - C) Generating documentation
-   - D) Mining Bitcoin
+### 🏗️ Tier 3: Architect Level
+11. **Explain the 'Checks-Effects-Interactions' pattern.**
+12. **How would you implement an 'Emergency Pause' mechanism in a contract?**
+13. **What is an 'Upgradeable Proxy' and how does it bypass immutability?**
+14. **Describe a scenario where 'Gas Snapshotting' in CI would save a project money.**
+15. **How do you handle 'Chain Reorgs' in your deployment scripts?**
 
-5. **Storing a production Private Key in a public GitHub repository is:**
-   - A) A great way to share with the team
-   - B) Mandatory for open-source projects
-   - C) A catastrophic security failure
-   - D) Fine if the contract is small
+---
 
-6. **What does 'Contract Verification' on Etherscan provide?**
-   - A) It makes the contract run faster
-   - B) It allows users to see the source code and interact with the contract
-   - C) It pays for the gas fees
-   - D) It encrypts the contract
-
-7. **A 'Fuzz Test' (Invariant) works by:**
-   - A) Writing very long test names
-   - B) Testing with random inputs to find edge cases
-   - C) Running tests on multiple computers
-   - D) Testing only the UI
-
-8. **Which command is used to compile a project in Foundry?**
-   - A) `npx build`
-   - B) `forge compile`
-   - C) `forge build`
-   - D) `rustc build`
-
-9. **'Gas' in Ethereum refers to:**
-   - A) The physical fuel for servers
-   - B) The unit of measure for computational effort and fees
-   - C) A type of database
-   - D) The name of a testnet
-
-10. **What is the primary benefit of 'Forking' a network for testing?**
-    - A) It's faster than a local node
-    - B) It allows you to test against real-world state and contracts locally
-    - C) It earns you real ETH
-    - D) It's more secure than Mainnet
-
-11. **An 'ABI' is usually generated in \_\_\_\_\_\_ format.**
-    - A) XML
-    - B) CSV
-    - C) JSON
-    - D) ProtoBuff
-
-12. **Which tool would you use to find 'Reentrancy' vulnerabilities?**
-    - A) Jenkins
-    - B) Slither
-    - C) Docker
-    - D) Terraform
-
-13. **'Mainnet' is where:**
-    - A) Testing happens
-    - B) Real value lives and transactions have monetary cost
-    - C) Anyone can get free ETH
-    - D) Developers write code
-
-14. **What is a 'Multisig' (like Gnosis Safe)?**
-    - A) A faster type of blockchain
-    - B) A wallet that requires multiple private key signatures to execute an action
-    - C) A tool for building websites
-    - D) A type of smart contract bug
-
-15. **If a Smart Contract is 'Immutable', it means:**
-    - A) It can be deleted anytime
-    - B) Its logic cannot be changed once deployed
-    - C) It runs on a private server
-    - D) It is written in Python
-
-16. **Why do we use 'Cheatcodes' (like `vm.prank`) in Foundry?**
-    - A) To win games
-    - B) To manipulate the blockchain state for testing (e.g., impersonate a user)
-    - C) To bypass security on Mainnet
-    - D) To speed up the internet
-
-17. **A 'Deployment Script' in Foundry is called a:**
-    - A) Playbook
-    - B) Manifest
-    - C) Script (using the `forge script` command)
-    - D) Jenkinsfile
-
-18. **Which status code is NOT relevant for Smart Contract deployments?**
-    - A) Transaction Hash
-    - B) Gas Used
-    - C) 404 Not Found
-    - D) Reverted
-
-19. **'Solhint' is a tool for \_\_\_\_\_\_ Solidity code.**
-    - A) Compiling
-    - B) Linting/Style checking
-    - C) Encrypting
-    - D) Hacking
-
-20. **Combining Blockchain with DevOps is often called:**
-    - A) BlockOps
-    - B) Web3 DevOps / Web3 Reliability Engineering
-    - C) ChainOps
-    - D) No specific name yet
+# 📝 The Blockchain Architect Exam (Self-Assessment)
 
 <details>
-<summary><b>View Answers</b></summary>
-1: B, 2: C, 3: D, 4: B, 5: C, 6: B, 7: B, 8: C, 9: B, 10: B, 11: C, 12: B, 13: B, 14: B, 15: B, 16: B, 17: C, 18: C, 19: B, 20: B
+<summary><b>1. Which file contains the function signatures needed for interaction?</b></summary>
+The **ABI** (Application Binary Interface).
 </details>
+
+<details>
+<summary><b>2. Smart contracts have a size limit of...?</b></summary>
+**24KB** (EIP-170). CI should always check this using `forge build --sizes`.
+</details>
+
+<details>
+<summary><b>3. True or False: Adding a private key to .gitignore makes it safe for production.</b></summary>
+**False**. It prevents accidental commits, but production keys should never exist in plain text on a developer's machine; use an HSM or KMS.
+</details>
+
+---
+
+# 🏆 The Final Challenge: The Security Auditor
+
+**Scenario**: You are reviewing a PR where a developer added a new withdrawal function but forgot to use a `nonReentrant` modifier.
+
+**Task**: 
+1.  Which tool in your CI would catch this automatically?
+2.  Write the one-sentence explanation you would leave on the GitHub PR to explain why this is a high-risk change.
+
+---
+### 🏁 Ready for the wild?
+Proceed to **[06: Real-Life Scenarios](../06-real-life-scenarios/readme.md)** to see these principles in production.
