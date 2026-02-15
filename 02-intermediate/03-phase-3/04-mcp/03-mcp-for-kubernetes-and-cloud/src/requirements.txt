@@ -1,0 +1,4 @@
+mcp
+kubernetes
+boto3
+python-dotenv
