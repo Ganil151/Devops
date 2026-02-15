@@ -39,33 +39,53 @@ MCP operates on a client-server architecture, but with a unique twist: the "User
 4.  **Local Resource**: The actual data or system being managed.
     *   *Examples*: A PostgreSQL database, a Kubernetes Cluster, the local filesystem, or the AWS CLI.
 
-### Architectural Diagram
+### Architectural Diagram: The "Nervous System" Architecture
 
 ```mermaid
-graph TD
-    subgraph "User Environment"
-        User[👤 User] --> Host[🖥️ MCP Host (e.g., Cursor/Claude)]
-        
-        subgraph "Protocol Layer"
-            Host --> Client[🔌 MCP Client]
-        end
+graph TB
+    subgraph User_Space ["👤 User Control Plane"]
+        User([Principal Engineer])
+        Host[🧠 AI Host <br/><i>(Claude Desktop, Cursor, Zed)</i>]
     end
 
-    subgraph "Local or Remote Infrastructure"
-        Client <== "JSON-RPC (Stdio/SSE)" ==> Server1[📦 Git MCP Server]
-        Client <== "JSON-RPC (Stdio/SSE)" ==> Server2[☸️ Kubernetes MCP Server]
-        Client <== "JSON-RPC (Stdio/SSE)" ==> Server3[🐘 Postgres MCP Server]
+    subgraph Protocol_Layer ["🔌 Model Context Protocol"]
+        Client[🔌 MCP Client <br/><i>(Protocol Implementation)</i>]
     end
 
-    Server1 --> git[git CLI]
-    Server2 --> k8s[K8s API]
-    Server3 --> db[SQL Database]
-    
-    style Host fill:#f9f,stroke:#333,stroke-width:2px
-    style Server1 fill:#bbf,stroke:#333,stroke-width:2px
-    style Server2 fill:#bbf,stroke:#333,stroke-width:2px
-    style Server3 fill:#bbf,stroke:#333,stroke-width:2px
+    subgraph Server_Layer ["📦 MCP Servers (The Hands)"]
+        S1[📦 Git Server]
+        S2[☸️ K8s Server]
+        S3[☁️ AWS Server]
+    end
+
+    subgraph Infrastructure ["🏗️ Real-World Infrastructure"]
+        git[Local Git CLI]
+        k8s[K8s API / EKS]
+        aws[AWS SDK / Cloud]
+    end
+
+    %% Connections
+    User -->|Prompts| Host
+    Host -->|Orchestrates| Client
+    Client <== "JSON-RPC over Stdio/SSE" ==> S1
+    Client <== "JSON-RPC over Stdio/SSE" ==> S2
+    Client <== "JSON-RPC over Stdio/SSE" ==> S3
+
+    S1 --> git
+    S2 --> k8s
+    S3 --> aws
+
+    %% Styling
+    style User_Space fill:#1e1e2e,stroke:#313244,color:#cdd6f4
+    style Protocol_Layer fill:#313244,stroke:#45475a,color:#cdd6f4
+    style Server_Layer fill:#1e1e2e,stroke:#313244,color:#cdd6f4
+    style Infrastructure fill:#11111b,stroke:#313244,color:#cdd6f4
+
+    style Host fill:#89b4fa,stroke:#313244,color:#11111b,stroke-width:2px
+    style Client fill:#f9e2af,stroke:#313244,color:#11111b,stroke-width:2px
+    style S1,S2,S3 fill:#a6e3a1,stroke:#313244,color:#11111b
 ```
+
 
 ---
 
