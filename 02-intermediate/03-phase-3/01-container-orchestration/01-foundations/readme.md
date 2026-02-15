@@ -8,10 +8,11 @@ Welcome to the foundational stage of Kubernetes. Here, we move beyond "running c
 
 ### 1. [01-Cluster-Architecture](./01-cluster-architecture/readme.md)
 Deep dive into the brains of Kubernetes.
-- **Control Plane**: API Server, Scheduler, and Controller Manager.
-- **Data Plane**: Kubelet and Kube-proxy.
-- **Storage**: etcd and the Raft consensus algorithm.
-- **Topologies**: High Availability (HA) patterns.
+- **Control Plane internals**: How the **API Server** uses optimistic concurrency control.
+- **Data Plane logic**: The **Kubelet's** role in the reconciliation loop.
+- **Storage Strategy**: Why **etcd** requires an odd number of nodes (Quorum).
+- **The Request Lifecycle**: Trace a request from `kubectl` to a running container.
+- **Topologies**: Distinguishing between Stacked and External etcd HA patterns.
 
 ### 2. [02-Kubectl-Basics](./02-kubectl-basics/readme.md)
 Master the essential tool for cluster interaction.

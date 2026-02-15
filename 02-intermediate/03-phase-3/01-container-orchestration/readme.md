@@ -83,11 +83,6 @@ RBAC, Namespaces, EKS management, and multi-tenant security hardening.
 ---
 
 ## 🏆 Real-World DevOps Story: The 3 AM Node Failure
-... (rest of the file)
-
----
-
-## 🏆 Real-World DevOps Story: The 3 AM Node Failure
 
 **The Scenario**: A cloud provider had a hardware failure that nuked 10 virtual machines instantly. 
 **The Crisis**: In the old manual world, the site would be down for hours. 
