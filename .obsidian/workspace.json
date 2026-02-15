@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03-advanced/03-phase-3/03-mcp/MASTER_MCP_REFERENCE.md",
+                "file": "01-beginner/03-phase-3/02-container-orchestration/enhancement-summary.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MASTER_MCP_REFERENCE"
+              "title": "enhancement-summary"
             }
           }
         ]
@@ -215,15 +215,16 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
-    "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
-    "02-intermediate/03-phase-3/01-container-orchestration/images/container-lifecycle.png",
+    "02-intermediate/03-phase-3/01-container-orchestration/readme.md",
     "01-beginner/03-phase-3/02-container-orchestration/docker-mastery/docker-ops-commands.md",
+    "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
+    "03-advanced/03-phase-3/03-mcp/MASTER_MCP_REFERENCE.md",
+    "02-intermediate/03-phase-3/01-container-orchestration/images/container-lifecycle.png",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/JUNIOR_CLI_REFERENCE.md",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands",
-    "02-intermediate/03-phase-3/01-container-orchestration/readme.md",
     "01-beginner/03-phase-3/02-container-orchestration/docker-mastery",
     "01-beginner/03-phase-3/02-container-orchestration/enhancement-summary.md",
     "01-beginner/03-phase-3/02-container-orchestration/part-01-docker-fundamentals/01-docker-basics/readme.md",
@@ -252,7 +253,6 @@
     "02-intermediate/03-phase-3/04-mcp/youtube-lessons.md",
     "02-intermediate/03-phase-3/04-mcp/readme.md",
     "02-intermediate/03-phase-3/04-mcp/MASTER_MCP_REFERENCE.md",
-    "03-advanced/03-phase-3/03-mcp/MASTER_MCP_REFERENCE.md",
     "03-advanced/03-phase-3/03-mcp/deployments",
     "03-advanced/03-phase-3/03-mcp/config",
     "03-advanced/03-phase-3/03-mcp/clients",
