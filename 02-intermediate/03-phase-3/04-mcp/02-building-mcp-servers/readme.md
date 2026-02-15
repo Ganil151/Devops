@@ -95,21 +95,13 @@ To bridge your server to an AI client, update your local configuration file with
 
 ---
 
-## 🐞 Debugging with the MCP Inspector
+## 🛠️ Troubleshooting & Debugging
 
-The **MCP Inspector** is a critical developer tool that lets you test your server without an AI client.
+MCP servers can be tricky to configure. If your server isn't showing up or tools are failing:
 
-```bash
-# Debug Python Server
-npx @modelcontextprotocol/inspector python src/simple_devops_server.py
-
-# Debug Node.js Server
-npx @modelcontextprotocol/inspector node src/index.js
-```
-
-Standard Output/Error during debugging:
-- `stdout`: Reserved for MCP protocol messages (JSON-RPC).
-- `stderr`: Where your `print()` or `console.log()` messages will appear.
+1.  **Check the [Troubleshooting Hub](./troubleshooting.md)** for common fixes.
+2.  **Use the Inspector**: `npx @modelcontextprotocol/inspector python src/simple_devops_server.py`.
+3.  **Logs**: Look for errors in `stderr`.
 
 ---
 
