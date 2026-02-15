@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/01-container-orchestration/images/container-lifecycle.png",
     "01-beginner/03-phase-3/02-container-orchestration/docker-mastery/docker-ops-commands.md",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/JUNIOR_CLI_REFERENCE.md",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
@@ -260,7 +261,6 @@
     "03-advanced/04-capstone/terraform/readme.md",
     "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/readme.md",
     "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/readme.md",
-    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/readme.md",
     "assets/navigation-architecture.svg",
     "Untitled.canvas"
   ]

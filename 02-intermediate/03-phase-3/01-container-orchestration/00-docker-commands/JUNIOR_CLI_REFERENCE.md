@@ -8,26 +8,7 @@ This reference is designed to help you master the core Docker commands you'll us
 ## 🚦 The Container Lifecycle
 Understanding how a container transitions between states is key to debugging.
 
-```text
-       [ IMAGE ]
-          |
-    ( docker run )
-          |
-          v
-    +-----------+       ( docker stop )       +-----------+
-    |  RUNNING  | --------------------------> |  STOPPED  |
-    +-----------+                             +-----------+
-          |                                         |
-    ( docker exec )                           ( docker start )
-          |                                         |
-          v                                         |
-    [ INTERACT ] <----------------------------------+
-          |
-    ( docker rm )
-          |
-          v
-     [ DELETED ]
-```
+![Docker Container Lifecycle](../images/container-lifecycle.png)
 
 ---
 
