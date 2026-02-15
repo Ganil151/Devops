@@ -7,16 +7,16 @@ Transition from "managing applications" to "managing platforms." This part focus
 ## 📂 Modules in this Part
 
 ### 1. [10-Managed-Kubernetes-EKS](./10-managed-kubernetes-eks/readme.md)
-Cloud-native Kubernetes.
-- **Providers**: EKS (AWS), GKE (Google), and AKS (Azure).
-- **Responsibility**: What the cloud manages vs. what you manage.
-- **Node Groups**: Managing EC2 instances for Kubernetes.
+Production-grade Kubernetes on AWS.
+- **Shared Responsibility**: Understanding the **Control Plane as a Service** model.
+- **Amazon EKS internals**: IAM OIDC providers, IRSA (IAM Roles for Service Accounts), and AWS Load Balancer Controller.
+- **Node Management**: Comparing **Fargate** (Serverless) vs. **Managed Node Groups** vs. **Self-Managed Nodes**.
 
 ### 2. [11-Cluster-Administration](./11-cluster-administration/readme.md)
-Security, Governance, and Multi-tenancy.
-- **RBAC**: Fine-grained access control with Roles and Bindings.
-- **Resource Discipline**: Quotas, Limits, and Namespaces.
-- **Audit**: Identifying who did what in your cluster.
+Securing and Governing the platform.
+- **Identity (RBAC)**: Implementing **Least Privilege** with ClusterRoles, ServiceAccounts, and Groups.
+- **Resource Governance**: Enforcing **Resource Quotas**, **LimitRanges**, and isolation via **Namespaces**.
+- **Security Posture**: Introduction to **Admission Controllers** (OPA/Gatekeeper) and **Network Security** hardening.
 
 ---
 
