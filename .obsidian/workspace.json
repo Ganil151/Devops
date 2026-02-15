@@ -215,6 +215,7 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/06-finops/02-optimization-strategies/challenges.md",
     "02-intermediate/03-phase-3/06-finops/02-optimization-strategies/src/find_waste.py",
     "02-intermediate/03-phase-3/06-finops/02-optimization-strategies/src",
     "02-intermediate/03-phase-3/06-finops/01-cost-allocation/src/terraform_defaults.tf",
@@ -225,7 +226,6 @@
     "02-intermediate/03-phase-3/05-blockchain/03-security-and-analysis/src/SecureBank.sol",
     "02-intermediate/03-phase-3/05-blockchain/03-security-and-analysis/src/VulnerableBank.sol",
     "02-intermediate/03-phase-3/05-blockchain/03-security-and-analysis/src",
-    "02-intermediate/03-phase-3/05-blockchain/02-smart-contract-ci-cd/src/deploy-sepolia.sh",
     "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/challenges.md",
     "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/challenges.md",
     "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/readme.md",
