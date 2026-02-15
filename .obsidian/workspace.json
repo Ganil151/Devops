@@ -216,6 +216,8 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/src/requirements.txt",
+    "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/src",
     "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/challenges.md",
     "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/src/k8s_mcp_server.py",
     "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/src/requirements.txt",
@@ -234,7 +236,6 @@
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/guides/HOWTO.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/guides/mcp-server-bridge.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/guides",
-    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/deployment/docker-compose.yml",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/TROUBLESHOOTING.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/HOWTO.md",
     "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
@@ -261,7 +262,6 @@
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/JUNIOR_CLI_REFERENCE.md",
     "02-intermediate/03-phase-3/01-container-orchestration/docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
     "02-intermediate/03-phase-3/04-mcp/01-mcp-fundamentals/readme.md",
-    "02-intermediate/03-phase-3/04-mcp/reference/mcp-architecture-ref.md",
     "Untitled.canvas"
   ]
 }
