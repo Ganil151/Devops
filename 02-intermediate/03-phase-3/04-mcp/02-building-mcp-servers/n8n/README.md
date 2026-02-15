@@ -12,13 +12,14 @@ Our deployment uses a unified, three-tier architecture:
 ```text
 .
 ├── README.md               <-- You are here
-├── HOWTO.md                <-- Setup & AI Handshake Guide
-├── TROUBLESHOOTING.md      <-- Fixes for loops & connectivity
+├── guides/
+│   ├── HOWTO.md            <-- Setup & AI Handshake Guide
+│   ├── TROUBLESHOOTING.md  <-- Fixes for loops & connectivity
+│   └── mcp-server-bridge.md <-- SSE & Tool Exposure Logic
 ├── deployment/
 │   ├── docker-compose.yml  <-- Standardized Production Stack
 │   └── .env.example        <-- Encrypted Var Template
-└── guides/
-    └── mcp-server-bridge.md <-- SSE & Tool Exposure Logic
+└── n8n-mastery.md          <-- Deep dive into n8n orchestration
 ```
 
 ## 🚀 Key Advantages
