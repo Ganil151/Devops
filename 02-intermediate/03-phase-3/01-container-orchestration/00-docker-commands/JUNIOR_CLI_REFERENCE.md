@@ -61,12 +61,12 @@ Understanding how a container transitions between states is key to debugging.
 ## 🔍 4. Interaction & Debugging
 *Looking inside the box to see why things are (or aren't) working.*
 
-| Command | Explanation | Real-World Example |
-| :--- | :--- | :--- |
-| `docker logs` | Shows the output (console logs) from inside the container. | `docker logs -f <id>` |
+| Command           | Explanation                                                             | Real-World Example               |
+| :---------------- | :---------------------------------------------------------------------- | :------------------------------- |
+| `docker logs`     | Shows the output (console logs) from inside the container.              | `docker logs -f <id>`            |
 | `docker exec -it` | Runs a new command inside a running container (usually to get a shell). | `docker exec -it <id> /bin/bash` |
-| `docker inspect` | Shows detailed JSON configuration for a container or image. | `docker inspect nginx` |
-| `docker top` | Displays the processes currently running inside the container. | `docker top <id>` |
+| `docker inspect`  | Shows detailed JSON configuration for a container or image.             | `docker inspect nginx`           |
+| `docker top`      | Displays the processes currently running inside the container.          | `docker top <id>`                |
 
 ---
 
