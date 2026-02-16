@@ -11,24 +11,10 @@
             "id": "19ac471caa0c1888",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01-beginner/05-foundational-containers/01-docker-basics/04-debugging/readme.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "New tab"
             }
           }
         ]
@@ -216,6 +202,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/05-foundational-containers/01-docker-basics/04-debugging/readme.md",
     "01-beginner/05-foundational-containers/06-The-Cleanup/readme.md",
     "01-beginner/05-foundational-containers/05-The-Storage/readme.md",
     "01-beginner/05-foundational-containers/04-The-Network/readme.md",
@@ -248,7 +235,6 @@
     "01-beginner/03-git-version-control/02-intermediate-level/02-github-integration/readme.md",
     "01-beginner/03-git-version-control/02-intermediate-level/01-git-workflows/readme.md",
     "01-beginner/03-git-version-control/01-beginner-level/03-git-commands/readme.md",
-    "01-beginner/03-git-version-control/01-beginner-level/02-git-fundamentals/readme.md",
     "01-beginner/03-git-version-control/01-beginner-level/03-git-commands",
     "08-resources/05-templates-and-boilerplates/terraform-aws-base.tf",
     "08-resources/05-templates-and-boilerplates/ansible-base.yml",

@@ -1,39 +1,49 @@
-# 🐳 Foundational Containers: Docker Mastery
+# 🐳 Foundational Containers: The SRE Roadmap
 
-> **"Learn to walk before you run. Learn to Dockerize before you Orchestrate. Docker is the universal packaging format for the cloud."**
+> **"It is not enough to run a container. You must understand the engine that drives it, the blueprint that builds it, and the hygiene that sustains it."**
 
----
-
-## 🗺️ Start Here: The Master Map
-For the full curriculum roadmap and architectural overview, start here:
-👉 **[Master_Map.md](./Master_Map.md)**
+Welcome to the **Human-First** guide to Docker. This curriculum is designed to move you from a "Casual Runner" to a "Principal Designer" of immutable infrastructure.
 
 ---
 
-## 🏗️ Images vs. Containers: The Golden Rule
-Understanding the distinction is the first step toward container zen.
+## 🗺️ The Learning Path
 
-| Component | Analogy | DevOps Why |
-| :--- | :--- | :--- |
-| **Dockerfile** | The Recipe | Version-controlled instructions for your environment. |
-| **Image**| The Frozen Meal | The static, immutable artifact ready for deployment. |
-| **Container** | The Cooked Meal | The live, running instance of your application. |
+### [01: The Big Picture](./01-The-Big-Picture/readme.md)
+*   **Concepts**: Client-Server Architecture, The Daemon, Images vs. Containers.
+*   **Analogy**: The Recipe vs. The Cake.
+
+### [02: The Blueprint](./02-The-Blueprint/readme.md)
+*   **Focus**: Writing Dockerfiles, Multi-stage builds, and Security.
+*   **Analogy**: The Master Chef's precise instructions.
+
+### [03: The Runtime](./03-The-Runtime/readme.md)
+*   **Focus**: Lifecycle management, Resource limits, and Troubleshooting.
+*   **Analogy**: The Service Table at the restaurant.
+
+### [04: The Network](./04-The-Network/readme.md)
+*   **Focus**: Bridge networks, Port mapping, and internal DNS.
+*   **Analogy**: The Gated Community.
+
+### [05: The Storage](./05-The-Storage/readme.md)
+*   **Focus**: Persistence, Named Volumes, and Bind Mounts.
+*   **Analogy**: Luggage in a Rental Car.
+
+### [06: The Cleanup](./06-The-Cleanup/readme.md)
+*   **Focus**: Disk hygiene, Pruning, and System maintenance.
+*   **Analogy**: The Messy Roommate.
 
 ---
 
-## 🚀 The DevOps Why: Immutable Infrastructure
-> **Senior Tip**: In the old days, we patched servers (Snowflakes). In the Docker era, we never patch a running container. We update the `Dockerfile`, rebuild the **Image**, and replace the **Container**. This ensures "It works on my machine" translates perfectly to "It works in production."
+## 🏗️ Architectural Overview
+[Image of Docker Client-Server Architecture]
+
+## 🔄 The Lifecycle Flow
+[Image of Container Lifecycle Flow]
 
 ---
 
-## 📂 Curriculum Modules
-
-1.  **[01-Docker-Basics](./01-docker-basics/01-introduction/readme.md)**: Architecture (Daemon vs. CLI) and Engine internals.
-2.  **[02-Dockerfile Best Practices](./02-dockerfile-best-practices.md)**: **[New]** Security, `docker init`, and Multi-stage builds.
-3.  **[03-Persistence & Storage](./03-persistence-and-storage.md)**: **[New]** Bind Mounts vs. Managed Volumes.
-4.  **[04-Networking](./04-networking-and-connectivity.md)**: **[New]** Bridge networks and Port Mapping.
-5.  **[05-Cleanup & Maintenance](./05-cleanup-and-maintenance.md)**: **[New]** The art of the `prune`.
-6.  **[06-Advanced Debugging](./01-docker-basics/04-debugging/readme.md)**: SRE Inspection techniques.
+## 🏛️ The DevOps Why: The "Snowflake" Rule
+In traditional IT, servers were "Snowflakes"—unique, handcrafted, and impossible to replicate. Docker introduces **Immutable Infrastructure**. We never patch a running container; we update the blueprint, rebuild the artifact, and replace the instance.
 
 ---
-*Last Updated: 2026 Audit*
+*Last Updated: 2026 Principal DevOps Audit*
