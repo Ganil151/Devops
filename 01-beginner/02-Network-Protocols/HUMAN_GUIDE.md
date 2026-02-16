@@ -19,10 +19,11 @@ Before a single bit leaves your computer, it goes through the **OSI Model**.
 ### Phase 2: The Address Book (IP Addressing & DNS)
 Every server needs an address (IP) and a human-readable name (DNS).
 - **The DevOps Why**: We use DNS names because IP addresses change constantly in the cloud. We point our code at `database.internal`, not `10.0.1.45`.
+- **The "Handshake"**: Before your application can resolve `database.internal` to an IP, a DNS query handshake occurs. This involves your machine asking a DNS server for the IP address, and the DNS server responding.
 
 ### Phase 3: The Traffic Police (Protocols & Ports)
 HTTP (80), HTTPS (443), SSH (22). Ports are like "apartment numbers" in a building.
-- **The "Handshake"**: When you run a **Docker Container**, you "map" the host port to the container port. Knowing which protocol uses which port is vital for configuring firewalls and security groups.
+- **The "Handshake"**: A pre-commit hook (bash script) can check your **Dockerfile** for security flaws *before* you even push the code. This is called "Shifting Left." It bridges the gap between version control and system security. Knowing which protocol uses which port is vital for configuring firewalls and security groups. Isolated networking in Docker keeps internal database traffic separate from public web traffic.
 
 ### Phase 4: Fixing the Leak (Troubleshooting)
 Tools like `ping`, `traceroute`, `telnet`, and `curl` are your stethoscope.
