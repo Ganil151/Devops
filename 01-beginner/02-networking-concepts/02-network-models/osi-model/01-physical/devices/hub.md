@@ -1,4 +1,0 @@
- > **⚠️ Missing Image**: *file:///tmp/.CFZMW2/1.png* ('file:///tmp/.CFZMW2/1.png')
- A Hub is a hardware device that divides the network connection among multiple devices. When computer requests for some information from a network, it first sends the request to the Hub through cable. Hub will broadcast this request to the entire network. All the devices will check whether the request belongs to them or not. If not, the request will be dropped.
-
- The process used by the Hub consumes more bandwidth and limits the amount of communication. Nowadays, the use of hub is obsolete, and it is replaced by more advanced computer network components such as Switches, Routers.
