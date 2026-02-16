@@ -11,10 +11,24 @@
             "id": "19ac471caa0c1888",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01-beginner_RECOVERY/99-supplemental-content/01-phase-1/03-windows-basics/part-1-powershell-automation/commands/diskandstorage/format-volume.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "format-volume"
             }
           }
         ]
