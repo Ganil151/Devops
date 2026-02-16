@@ -201,6 +201,11 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/05-Container-Essentials/01-Reference/Blueprint/readme.md",
+    "01-beginner/05-Container-Essentials/01-Reference/images",
+    "01-beginner/05-Container-Essentials/01-Reference/Network",
+    "01-beginner/05-Container-Essentials/01-Reference/Runtime",
+    "01-beginner/05-Container-Essentials/01-Reference/Blueprint",
     "01-beginner/04-Scripting-Automation/01-Reference/Automation-Logic/06-strict-mode-safety/readme.md",
     "01-beginner/04-Scripting-Automation/01-Reference/Automation-Logic/06-strict-mode-safety/challenges.md",
     "01-beginner/04-Scripting-Automation/01-Reference/Automation-Logic/06-strict-mode-safety",
@@ -228,16 +233,12 @@
     "01-beginner/04-Scripting-Automation/01-Reference/Automation-Logic/01-arithmetic-and-metrics/readme-advanced.md",
     "01-beginner/04-Scripting-Automation/01-Reference/Automation-Logic/01-arithmetic-and-metrics/operators.sh",
     "01-beginner/04-Scripting-Automation/01-Reference/Automation-Logic/01-arithmetic-and-metrics/challenges.md",
-    "01-beginner/04-Scripting-Automation/01-Reference/Automation-Logic/01-arithmetic-and-metrics/calculate-metrics.sh",
-    "01-beginner/04-Scripting-Automation/01-Reference/Automation-Logic/01-arithmetic-and-metrics",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/08-programs-and-commands/readme.md",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/08-programs-and-commands/command-resolution-order.svg",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/08-programs-and-commands/challenges.md",
-    "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/08-programs-and-commands",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/07-basic-variables/variable-mechanics.svg",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/07-basic-variables/readme.md",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/07-basic-variables/challenges.md",
-    "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/07-basic-variables",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/06-permissions/readme.md",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/06-permissions/permission-architecture.svg",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/06-permissions/challenges.md",
@@ -246,7 +247,6 @@
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/04-man-pages-and-help/readme.md",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/04-man-pages-and-help/challenges.md",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/03-file-manipulation/searching/readme.md",
-    "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/03-file-manipulation/searching/challenges.md",
     "Untitled.canvas"
   ]
 }
