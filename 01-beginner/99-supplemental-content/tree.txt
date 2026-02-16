@@ -1,0 +1,1719 @@
+.
+├── 01-phase-1
+│   ├── 03-windows-basics
+│   │   ├── assets
+│   │   │   ├── powershell-icon.svg
+│   │   │   └── windows-automation-banner.png
+│   │   ├── linkks.md
+│   │   ├── login-screen.md
+│   │   ├── MASTER_README.md
+│   │   ├── part-1-powershell-automation
+│   │   │   ├── commands
+│   │   │   │   ├── diskandstorage
+│   │   │   │   │   ├── format-volume.md
+│   │   │   │   │   ├── get-disk.md
+│   │   │   │   │   ├── get-partition.md
+│   │   │   │   │   ├── get-volume.md
+│   │   │   │   │   ├── initialize-disk.md
+│   │   │   │   │   ├── new-partition.md
+│   │   │   │   │   ├── remove-partition.md
+│   │   │   │   │   ├── resize-partition.md
+│   │   │   │   │   └── set-volume.md
+│   │   │   │   ├── eventlogs
+│   │   │   │   │   ├── get-eventlog.md
+│   │   │   │   │   └── get-winevent.md
+│   │   │   │   ├── fileandacl
+│   │   │   │   │   ├── get-acl.md
+│   │   │   │   │   └── set-acl.md
+│   │   │   │   ├── hacksandtips
+│   │   │   │   │   ├── add-hostsentry.md
+│   │   │   │   │   ├── audit-firewallprofiles.md
+│   │   │   │   │   ├── audit-firewallrules.md
+│   │   │   │   │   ├── get-processconnections.md
+│   │   │   │   │   ├── get-systemuptime.md
+│   │   │   │   │   ├── get-wifipasswords.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   ├── reset-dnscache.md
+│   │   │   │   │   ├── reset-networkstack.md
+│   │   │   │   │   ├── resolve-multidns.md
+│   │   │   │   │   ├── test-tcpport.md
+│   │   │   │   │   ├── toggle-firewallprofile.md
+│   │   │   │   │   ├── trace-blockedtraffic.md
+│   │   │   │   │   └── verify-portstatus.md
+│   │   │   │   ├── network
+│   │   │   │   │   ├── disable-netadapter.md
+│   │   │   │   │   ├── enable-netadapter.md
+│   │   │   │   │   ├── get-dnsclientserveraddress.md
+│   │   │   │   │   ├── get-netadapter.md
+│   │   │   │   │   ├── get-netfirewallrule.md
+│   │   │   │   │   ├── get-netipaddress.md
+│   │   │   │   │   ├── get-netipconfiguration.md
+│   │   │   │   │   ├── get-netnat.md
+│   │   │   │   │   ├── get-netneighbor.md
+│   │   │   │   │   ├── get-netroute.md
+│   │   │   │   │   ├── get-nettcpconnection.md
+│   │   │   │   │   ├── get-netudpendpoint.md
+│   │   │   │   │   ├── new-netfirewallrule.md
+│   │   │   │   │   ├── resolve-dnsname.md
+│   │   │   │   │   ├── restart-netadapter.md
+│   │   │   │   │   ├── set-dnsclientserveraddress.md
+│   │   │   │   │   ├── set-netfirewallrule.md
+│   │   │   │   │   └── test-netconnection.md
+│   │   │   │   ├── ps-commands.md
+│   │   │   │   ├── registry
+│   │   │   │   │   ├── get-item.md
+│   │   │   │   │   ├── get-itemproperty.md
+│   │   │   │   │   ├── new-item.md
+│   │   │   │   │   ├── remove-item.md
+│   │   │   │   │   ├── remove-itemproperty.md
+│   │   │   │   │   └── set-itemproperty.md
+│   │   │   │   ├── remoting
+│   │   │   │   │   ├── enter-pssession.md
+│   │   │   │   │   ├── exit-pssession.md
+│   │   │   │   │   ├── get-pssession.md
+│   │   │   │   │   ├── invoke-command.md
+│   │   │   │   │   ├── new-pssession.md
+│   │   │   │   │   └── remove-pssession.md
+│   │   │   │   ├── scheduledtasks
+│   │   │   │   │   ├── disable-scheduledtask.md
+│   │   │   │   │   ├── enable-scheduledtask.md
+│   │   │   │   │   ├── get-scheduledtaskinfo.md
+│   │   │   │   │   ├── get-scheduledtask.md
+│   │   │   │   │   ├── register-scheduledtask.md
+│   │   │   │   │   ├── set-scheduledtask.md
+│   │   │   │   │   ├── start-scheduledtask.md
+│   │   │   │   │   ├── stop-scheduledtask.md
+│   │   │   │   │   └── unregister-scheduledtask.md
+│   │   │   │   ├── serviceandprocess
+│   │   │   │   │   ├── debug-process.md
+│   │   │   │   │   ├── get-process.md
+│   │   │   │   │   ├── get-service.md
+│   │   │   │   │   ├── new-service.md
+│   │   │   │   │   ├── remove-service.md
+│   │   │   │   │   ├── restart-service.md
+│   │   │   │   │   ├── set-service.md
+│   │   │   │   │   ├── start-process.md
+│   │   │   │   │   ├── start-service.md
+│   │   │   │   │   ├── stop-process.md
+│   │   │   │   │   ├── stop-service.md
+│   │   │   │   │   └── wait-process.md
+│   │   │   │   ├── userandgroup
+│   │   │   │   │   ├── add-localgroupmember.md
+│   │   │   │   │   ├── get-localgroup.md
+│   │   │   │   │   ├── get-localgroupmember.md
+│   │   │   │   │   ├── get-localuser.md
+│   │   │   │   │   ├── new-localgroup.md
+│   │   │   │   │   ├── new-localuser.md
+│   │   │   │   │   ├── remove-localgroup.md
+│   │   │   │   │   ├── remove-localgroupmember.md
+│   │   │   │   │   ├── remove-localuser.md
+│   │   │   │   │   └── set-localuser.md
+│   │   │   │   └── windowsupdate
+│   │   │   │       ├── check-pendingupdates.md
+│   │   │   │       ├── get-hotfix.md
+│   │   │   │       ├── get-windowsupdatelog.md
+│   │   │   │       └── list-updatehistory.md
+│   │   │   ├── devops-assessment.ps1
+│   │   │   ├── devops-assessment.py
+│   │   │   ├── god-mode.txt
+│   │   │   ├── lessons
+│   │   │   │   ├── automation
+│   │   │   │   │   └── active-directory-automation.md
+│   │   │   │   ├── conditional-statements.ps1
+│   │   │   │   ├── customobject.ps1
+│   │   │   │   ├── explain-powershell-pipeline.md
+│   │   │   │   ├── hashtable.ps1
+│   │   │   │   ├── hello-chuck.txt
+│   │   │   │   ├── modules.ps1
+│   │   │   │   ├── pipeline.ps1
+│   │   │   │   ├── powershell.md
+│   │   │   │   ├── pstest.ps1
+│   │   │   │   ├── syntax.ps1
+│   │   │   │   └── systemadmin
+│   │   │   │       └── system-admin.md
+│   │   │   ├── programremoval
+│   │   │   │   ├── purgemcafee.ps1
+│   │   │   │   ├── purgeomen.ps1
+│   │   │   │   ├── windows11debloat.ps1
+│   │   │   │   └── windowstracking.ps1
+│   │   │   ├── readme.md
+│   │   │   └── scripts
+│   │   │       └── manage-localusers.ps1
+│   │   ├── part-2-wsl-linux-integration
+│   │   │   ├── install-aws-cli.sh
+│   │   │   ├── readme.md
+│   │   │   ├── setup-wsl-devops.sh
+│   │   │   └── upgrade-wsl-version.sh
+│   │   ├── part-3-package-management
+│   │   │   ├── install.md
+│   │   │   └── scripts
+│   │   │       └── uninstall-applicationdeep.ps1
+│   │   ├── part-4-server-administration
+│   │   │   ├── datacenter
+│   │   │   │   └── product-key.md
+│   │   │   └── standard
+│   │   │       └── product-key.md
+│   │   ├── part-5-windows-containers
+│   │   │   └── githubdockerlink.txt
+│   │   ├── part-6-system-auditing
+│   │   │   ├── get-diskusage.ps1
+│   │   │   ├── get-systeminventory.ps1
+│   │   │   ├── readme.md
+│   │   │   └── windows11-debloat-risk-assessment.md
+│   │   ├── part-7-performance-tuning
+│   │   │   ├── 01-cpu-and-process-prioritization
+│   │   │   │   ├── optimize-systemperformance.ps1
+│   │   │   │   ├── readme.md
+│   │   │   │   └── set-processorperformance.ps1
+│   │   │   ├── 02-memory-management-and-swap
+│   │   │   │   ├── invoke-systemaudit.ps1
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-storage-i-o-optimization
+│   │   │   │   ├── invoke-systemmaintenance.ps1
+│   │   │   │   └── readme.md
+│   │   │   ├── 04-network-stack-tuning
+│   │   │   │   ├── optimize-networkstack.ps1
+│   │   │   │   ├── optimize-networkstack-server.ps1
+│   │   │   │   └── readme.md
+│   │   │   ├── 05-power-and-thermal-profiles
+│   │   │   │   ├── optimize-powerplan.ps1
+│   │   │   │   └── readme.md
+│   │   │   ├── 06-labs-and-challenges
+│   │   │   │   ├── lab-bottleneck-resolution.md
+│   │   │   │   └── readme.md
+│   │   │   ├── 07-wsl2-optimization
+│   │   │   │   ├── readme.md
+│   │   │   │   └── set-wsl2performance.ps1
+│   │   │   ├── 08-server-hardening
+│   │   │   │   ├── initialize-serverhardening.ps1
+│   │   │   │   └── readme.md
+│   │   │   ├── 09-maintenance-automation
+│   │   │   │   ├── invoke-artifactcleanup.ps1
+│   │   │   │   └── readme.md
+│   │   │   ├── 10-health-monitoring
+│   │   │   │   ├── get-systemhealthscore.ps1
+│   │   │   │   └── readme.md
+│   │   │   ├── audit-report.md
+│   │   │   ├── project-summary.md
+│   │   │   ├── readme.md
+│   │   │   ├── script-reference.md
+│   │   │   └── updated-architecture.md
+│   │   ├── product-key-windows-2019.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── active-directory-identity-ref.md
+│   │   │   ├── powershell-automation-ref.md
+│   │   │   ├── sre-windows-troubleshooting-ref.md
+│   │   │   ├── windows-best-practices-ref.md
+│   │   │   └── windows-system-architecture-ref.md
+│   │   ├── resources
+│   │   │   ├── powershell.pdf
+│   │   │   └── putty-user-manual.pdf
+│   │   └── virtualbox-installations.md
+│   ├── 04-data-formats
+│   │   ├── json
+│   │   │   ├── challenges
+│   │   │   │   └── jq-challenge.md
+│   │   │   ├── progress-tracker.json
+│   │   │   ├── readme.md
+│   │   │   ├── solutions
+│   │   │   │   └── jq-query-solution.sh
+│   │   │   └── unfixable-links.json
+│   │   ├── markdown
+│   │   │   ├── challenges
+│   │   │   │   └── changelog-challenge.md
+│   │   │   ├── readme.md
+│   │   │   └── solutions
+│   │   │       └── changelog-goal.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── data-formats-best-practices-ref.md
+│   │   │   ├── json-api-standard-ref.md
+│   │   │   ├── markdown-documentation-ref.md
+│   │   │   ├── toml-configuration-ref.md
+│   │   │   ├── xml-enterprise-legacy-ref.md
+│   │   │   └── yaml-deep-dive-ref.md
+│   │   ├── scripts
+│   │   │   ├── markdown-linter.py
+│   │   │   ├── toml-config-manager.py
+│   │   │   ├── validate-json.py
+│   │   │   ├── xml-parser.py
+│   │   │   └── yaml-to-json.py
+│   │   ├── toml
+│   │   │   ├── challenges
+│   │   │   │   └── refactor-challenge.md
+│   │   │   ├── readme.md
+│   │   │   └── solutions
+│   │   │       └── modern-config.toml
+│   │   ├── xml
+│   │   │   ├── challenges
+│   │   │   │   └── extraction-challenge.md
+│   │   │   ├── readme.md
+│   │   │   └── solutions
+│   │   │       └── pom-extractor.py
+│   │   ├── yaml
+│   │   │   ├── challenges
+│   │   │   │   └── dry-challenge.md
+│   │   │   ├── readme.md
+│   │   │   └── solutions
+│   │   │       └── dry-config-solution.yaml
+│   │   └── yaml-vs-json.png
+│   ├── 05-software-stack
+│   │   ├── assets
+│   │   │   ├── advancedevops.png
+│   │   │   ├── benifits.png
+│   │   │   ├── core-principles.png
+│   │   │   ├── devmethologies.png
+│   │   │   ├── devmetrics.png
+│   │   │   ├── devops-architecture-mermaid.md
+│   │   │   ├── devopschallanges.png
+│   │   │   ├── devops-lifecycle.png
+│   │   │   ├── devopsmm.png
+│   │   │   ├── devvstrad.png
+│   │   │   └── futureofdevops.png
+│   │   ├── readme.md
+│   │   ├── resources
+│   │   │   ├── devops-automation-cookbook.pdf
+│   │   │   ├── devops-devops-for-dummies.pdf
+│   │   │   ├── devops-directory-mindmap.md
+│   │   │   ├── devops-for-beginners-joseph-joyner.pdf
+│   │   │   ├── devopsinterviewqanda.pdf
+│   │   │   ├── devops.pdf
+│   │   │   └── python4devops.pdf
+│   │   └── scripts
+│   │       ├── backup-configurations.ps1
+│   │       ├── health-check-stack.sh
+│   │       ├── install-software-stack.sh
+│   │       ├── setup-dev-environment.ps1
+│   │       └── verify-dependencies.py
+│   ├── 06-web-design
+│   │   ├── angular
+│   │   │   ├── 01-core-syntax
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-directives-and-pipes
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-dependency-injection
+│   │   │   │   └── readme.md
+│   │   │   ├── 04-rxjs-and-observables
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── css
+│   │   │   ├── bootstrap
+│   │   │   │   └── readme.md
+│   │   │   ├── readme.md
+│   │   │   ├── sass
+│   │   │   │   └── readme.md
+│   │   │   └── tailwindcss
+│   │   │       ├── 01-utility-classes
+│   │   │       │   └── readme.md
+│   │   │       ├── 02-responsive-design
+│   │   │       │   └── readme.md
+│   │   │       ├── 03-custom-config
+│   │   │       │   └── readme.md
+│   │   │       └── readme.md
+│   │   ├── django
+│   │   │   ├── 01-the-mtv-pattern
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-django-orm
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-admin-and-auditing
+│   │   │   │   └── readme.md
+│   │   │   ├── 04-rest-framework-drf
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── environment-setup.md
+│   │   ├── fastapi
+│   │   │   ├── 01-basic-api
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-pydantic-validation
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-async-operations
+│   │   │   │   └── readme.md
+│   │   │   ├── 04-authed-endpoints
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── flask
+│   │   │   ├── 01-routing
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-request-and-response
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-database-and-orm
+│   │   │   │   └── readme.md
+│   │   │   ├── 04-production-deployment
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── mobile
+│   │   │   ├── flutter
+│   │   │   │   └── readme.md
+│   │   │   ├── reactnative
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── nextjs
+│   │   │   ├── 01-app-router
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-ssr-and-isr
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-api-routes
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── nodejs
+│   │   │   ├── 01-event-loop
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-express-middleware
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-pm2-operations
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── react
+│   │   │   ├── 01-core-syntax
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-hooks-and-state
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-routing
+│   │   │   │   └── readme.md
+│   │   │   ├── 04-api-integration
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── angular-enterprise-ref.md
+│   │   │   ├── css-enterprise-tools-ref.md
+│   │   │   ├── django-fullstack-ref.md
+│   │   │   ├── fastapi-modern-python-ref.md
+│   │   │   ├── flask-microservices-ref.md
+│   │   │   ├── mobile-app-frameworks-ref.md
+│   │   │   ├── nextjs-fullstack-react-ref.md
+│   │   │   ├── nodejs-express-ref.md
+│   │   │   ├── react-frontend-ref.md
+│   │   │   ├── springboot-enterprise-ref.md
+│   │   │   ├── tailwindcss-architecture-ref.md
+│   │   │   ├── vuejs-progressive-ref.md
+│   │   │   ├── web-design-best-practices-ref.md
+│   │   │   └── web-fundamentals-ref.md
+│   │   ├── scripts
+│   │   │   ├── build-react-app.ps1
+│   │   │   ├── deploy-flask-app.sh
+│   │   │   ├── springboot-health-check.sh
+│   │   │   ├── test-django-app.py
+│   │   │   └── web-performance-test.js
+│   │   ├── springboot
+│   │   │   ├── 01-inversion-of-control
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-rest-controllers
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-data-jpa
+│   │   │   │   └── readme.md
+│   │   │   ├── 04-actuator-and-monitoring
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   └── vuejs
+│   │       ├── 01-core-syntax
+│   │       │   └── readme.md
+│   │       ├── 02-vue-router
+│   │       │   └── readme.md
+│   │       ├── 03-state-pinia
+│   │       │   └── readme.md
+│   │       └── readme.md
+│   ├── 07-cloud-foundations
+│   │   ├── 01-basic-networking
+│   │   │   ├── aws-networking-deep-dive.md
+│   │   │   ├── networking-fundamentals.md
+│   │   │   └── readme.md
+│   │   ├── 02-storage-fundamentals
+│   │   │   └── readme.md
+│   │   ├── 03-global-infrastructure
+│   │   │   └── readme.md
+│   │   ├── 04-cloud-fundamentals
+│   │   │   ├── cloud-basics
+│   │   │   │   └── readme.md
+│   │   │   ├── deployment-models
+│   │   │   │   ├── deployment-models-guide.md
+│   │   │   │   └── readme.md
+│   │   │   └── service-models
+│   │   │       ├── readme.md
+│   │   │       └── service-models-guide.md
+│   │   ├── 05-aws-basics
+│   │   │   ├── 01-introduction
+│   │   │   │   ├── aws-cli-commands.md
+│   │   │   │   ├── aws-fundamentals-devops.md
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-networking
+│   │   │   │   ├── aws-networking-vpc-guide.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── vpc-networking
+│   │   │   │       └── readme.md
+│   │   │   ├── 03-storage
+│   │   │   │   ├── efs
+│   │   │   │   │   ├── efs-fundamentals.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── readme.md
+│   │   │   │   ├── s3-bucket
+│   │   │   │   │   ├── images
+│   │   │   │   │   │   └── s3-architecture.png
+│   │   │   │   │   ├── main.tf
+│   │   │   │   │   ├── outputs.tf
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   ├── s3-cli-guide.md
+│   │   │   │   │   └── variables.tf
+│   │   │   │   └── s3-storage-fundamentals.md
+│   │   │   ├── 04-compute-serverless
+│   │   │   │   ├── ec2-compute-fundamentals.md
+│   │   │   │   ├── lambda
+│   │   │   │   │   ├── aws-lambda-fundamentals.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── readme.md
+│   │   │   ├── 05-containers
+│   │   │   │   ├── ecr-registry
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── ecs
+│   │   │   │   │   ├── ecs-application-deployment-guide.md
+│   │   │   │   │   ├── ecs-cluster-setup-guide.md
+│   │   │   │   │   ├── ecs-fundamentals-guide.md
+│   │   │   │   │   ├── ecs-monitoring-troubleshooting-guide.md
+│   │   │   │   │   └── ecs-security-networking-guide.md
+│   │   │   │   ├── eks
+│   │   │   │   │   ├── aws-eks-fundamentals.md
+│   │   │   │   │   ├── eks-cluster-setup-guide.md
+│   │   │   │   │   ├── eks-fundamentals-guide.md
+│   │   │   │   │   ├── eks-monitoring-troubleshooting-guide.md
+│   │   │   │   │   ├── eks-security-networking-guide.md
+│   │   │   │   │   ├── eks-workload-deployment-guide.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── readme.md
+│   │   │   ├── 06-identity
+│   │   │   │   ├── active-directory-configuration.md
+│   │   │   │   ├── cognito
+│   │   │   │   │   ├── cognito-fundamentals.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── how-to-join-windows-server-2019-to-an-existing-active-directory-domain.md
+│   │   │   │   ├── iam-ad-fundamentals.md
+│   │   │   │   └── readme.md
+│   │   │   ├── 07-messaging
+│   │   │   │   ├── readme.md
+│   │   │   │   ├── sns
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── sns-fundamentals.md
+│   │   │   │   └── sqs
+│   │   │   │       ├── readme.md
+│   │   │   │       └── sqs-fundamentals.md
+│   │   │   ├── 08-web-hosting
+│   │   │   │   ├── readme.md
+│   │   │   │   ├── route53
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── route53-fundamentals.md
+│   │   │   │   └── wordpress
+│   │   │   │       ├── pwd.md
+│   │   │   │       ├── ubuntuwordpress
+│   │   │   │       └── ubuntuwordpress.md
+│   │   │   ├── 99-resources
+│   │   │   │   └── aws
+│   │   │   │       ├── chromedownload
+│   │   │   │       │   └── chromemandownload
+│   │   │   │       ├── chromeonpowershell
+│   │   │   │       │   ├── chromemandownload
+│   │   │   │       │   └── chromemandownload.dup
+│   │   │   │       ├── connect.md
+│   │   │   │       ├── ec2rescue-latest.zip
+│   │   │   │       ├── fixrdpconnection.txt
+│   │   │   │       ├── meta-data.md
+│   │   │   │       ├── microsoft-visual-c-redistributable-packages.md
+│   │   │   │       ├── notes.md
+│   │   │   │       └── server-manager
+│   │   │   │           ├── dns-server
+│   │   │   │           │   ├── domainchanges.webp
+│   │   │   │           │   ├── download-1024x640.webp
+│   │   │   │           │   ├── download-1-1024x640.webp
+│   │   │   │           │   ├── how-to-install-and-configure-a-dns-server-on-windows-server-2019.md
+│   │   │   │           │   ├── image1.webp
+│   │   │   │           │   ├── image-38-1024x640.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7-10.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7-11.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7-12.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7-1.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7-2.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7-3.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7-4.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7-5.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7-6.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7-7.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7-8.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7-9.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-7.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-8-1.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-8-2.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-8-3.webp
+│   │   │   │           │   ├── screen-shot-2022-09-23-at-8.webp
+│   │   │   │           │   ├── unknown-1-1.webp
+│   │   │   │           │   ├── unknown-1-2.webp
+│   │   │   │           │   ├── unknown-1-3.webp
+│   │   │   │           │   ├── unknown-1.webp
+│   │   │   │           │   ├── unknown-2.webp
+│   │   │   │           │   ├── unknown-3.webp
+│   │   │   │           │   ├── unknown-4.webp
+│   │   │   │           │   └── unknown.webp
+│   │   │   │           └── tools-tab.md
+│   │   │   └── readme.md
+│   │   ├── 06-azure-basics
+│   │   │   ├── 01-fundamentals
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-compute
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-storage
+│   │   │   │   └── readme.md
+│   │   │   ├── 04-networking
+│   │   │   │   └── readme.md
+│   │   │   ├── 05-security
+│   │   │   │   └── readme.md
+│   │   │   ├── 06-devops
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── 07-gcp-basics
+│   │   │   ├── 01-fundamentals
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-compute
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-storage
+│   │   │   │   └── readme.md
+│   │   │   ├── 04-networking
+│   │   │   │   └── readme.md
+│   │   │   ├── 05-security
+│   │   │   │   └── readme.md
+│   │   │   ├── 06-devops
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── aws-core-services-ref.md
+│   │   │   ├── azure-core-services-ref.md
+│   │   │   ├── cloud-computing-models-ref.md
+│   │   │   ├── cloud-performance-optimization-ref.md
+│   │   │   ├── cloud-security-compliance-ref.md
+│   │   │   ├── container-orchestration-cloud-ref.md
+│   │   │   ├── finops-cloud-economics-ref.md
+│   │   │   ├── gcp-core-services-ref.md
+│   │   │   ├── multi-cloud-migration-ref.md
+│   │   │   └── serverless-architecture-ref.md
+│   │   └── scripts
+│   │       ├── aws-resource-inventory.py
+│   │       ├── azure-cost-analyzer.ps1
+│   │       ├── cloud-security-audit.py
+│   │       ├── gcp-project-setup.sh
+│   │       └── multi-cloud-health-check.py
+│   └── 08-repository-management
+│       ├── 02-gitlab
+│       │   ├── 01-beginner-level
+│       │   │   ├── 01-gitlab-fundamentals
+│       │   │   │   └── readme.md
+│       │   │   ├── 02-repository-management
+│       │   │   │   └── readme.md
+│       │   │   ├── 03-basic-cicd
+│       │   │   │   └── readme.md
+│       │   │   ├── 04-issue-tracking
+│       │   │   │   └── readme.md
+│       │   │   └── readme.md
+│       │   ├── 02-intermediate-level
+│       │   │   ├── 01-advanced-cicd
+│       │   │   │   └── readme.md
+│       │   │   ├── 04-security-scanning
+│       │   │   │   └── readme.md
+│       │   │   └── readme.md
+│       │   ├── 03-advanced-level
+│       │   │   ├── 01-enterprise-administration
+│       │   │   │   └── readme.md
+│       │   │   └── readme.md
+│       │   ├── challenges.md
+│       │   ├── learning-path-summary.md
+│       │   └── readme.md
+│       ├── 03-bitbucket
+│       │   ├── challenges.md
+│       │   └── readme.md
+│       ├── 04-azure-devops-repos
+│       │   └── readme.md
+│       ├── 05-mercurial
+│       │   └── readme.md
+│       ├── 06-subversion-svn
+│       │   └── readme.md
+│       ├── assets
+│       │   ├── gitandgithubtalk.png
+│       │   └── gitstructure.png
+│       ├── consolidation-summary.md
+│       ├── interview-questions-and-quiz.md
+│       ├── readme.md
+│       ├── real-life-scenarios.md
+│       ├── reference
+│       │   ├── branching-strategies-comparison-ref.md
+│       │   ├── git-internal-architecture-ref.md
+│       │   ├── gitlab-vs-github-enterprise-ref.md
+│       │   └── legacy-vcs-migration-ref.md
+│       └── resources
+│           └── gitguide.pdf
+├── 02-phase-2
+│   ├── 01-automation
+│   │   ├── 00-foundations
+│   │   │   ├── assets
+│   │   │   │   ├── script-hierarchy.svg
+│   │   │   │   └── script-workflow.svg
+│   │   │   ├── part-01-philosophy-and-mindset
+│   │   │   │   ├── 01-maturity-model.md
+│   │   │   │   └── 02-automation-workflow.md
+│   │   │   ├── part-02-tooling-landscape
+│   │   │   │   ├── 01-tools-comparison.md
+│   │   │   │   └── 02-how-to-read-scripts.md
+│   │   │   ├── part-03-environment-setup
+│   │   │   │   ├── 01-shell-customization.md
+│   │   │   │   └── assets
+│   │   │   │       └── aliases.sh
+│   │   │   └── readme.md
+│   │   ├── 02-python-basics
+│   │   │   ├── assets
+│   │   │   │   ├── python-automation-banner.png
+│   │   │   │   ├── python-data-flow.png
+│   │   │   │   ├── python-devops-hub.png
+│   │   │   │   ├── python-ecosystem.png
+│   │   │   │   ├── python-error-handling.png
+│   │   │   │   ├── python-file-ops.png
+│   │   │   │   ├── python-functions-modules.png
+│   │   │   │   └── python-learning-path.png
+│   │   │   ├── challenges.md
+│   │   │   ├── examples
+│   │   │   │   ├── audit-links.py
+│   │   │   │   ├── automated-virus-scan.md
+│   │   │   │   ├── centralize-boilerplates.py
+│   │   │   │   ├── convert-quiz-format.py
+│   │   │   │   ├── create-missing-files.py
+│   │   │   │   ├── fix-images-script.py
+│   │   │   │   ├── fix-images-v2.py
+│   │   │   │   ├── migration-mapper.py
+│   │   │   │   └── reformat-all-quizzes.py
+│   │   │   ├── part-00-prerequisites
+│   │   │   │   ├── 01-python-setup
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 02-pip-basics
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-virtual-environments
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── 04-anaconda-setup
+│   │   │   │       ├── assets
+│   │   │   │       │   ├── conda-architecture.png
+│   │   │   │       │   └── environment-lifecycle.png
+│   │   │   │       └── readme.md
+│   │   │   ├── part-01-python-foundations
+│   │   │   │   ├── 01-fundamentals
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── system-monitor-demo.py
+│   │   │   │   ├── 02-control-flow
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   └── control-flow-logic.png
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── lab-01-log-filter.py
+│   │   │   │   │   ├── lab-02-validator.py
+│   │   │   │   │   ├── lab-03-port-checker.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-iterative-logic-and-loops
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 04-data-structures
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   ├── dict-vs-set.png
+│   │   │   │   │   │   ├── list-vs-tuple.png
+│   │   │   │   │   │   └── python-data-structures.png
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-inventory-mgmt.py
+│   │   │   │   │   │   ├── challenge-02-log-dedup.py
+│   │   │   │   │   │   ├── challenge-03-config-merger.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-inventory-mgmt.py
+│   │   │   │   │   │       ├── solution-02-log-dedup.py
+│   │   │   │   │   │       └── solution-03-config-merger.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── drift-detector-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 05-error-handling
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-config-loader.py
+│   │   │   │   │   │   ├── challenge-02-health-retry.py
+│   │   │   │   │   │   ├── challenge-03-shutdown-handler.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-config-loader.py
+│   │   │   │   │   │       ├── solution-02-health-retry.py
+│   │   │   │   │   │       └── solution-03-shutdown-handler.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── resilient-deployer-demo.py
+│   │   │   │   ├── 06-file-io-devops
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── log-processor-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 07-functions-and-modules
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   ├── function-anatomy.png
+│   │   │   │   │   │   └── monolith-vs-modular.png
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-health-checker.py
+│   │   │   │   │   │   ├── challenge-02-retry-decorator.py
+│   │   │   │   │   │   ├── challenge-03-config-module.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-health-checker.py
+│   │   │   │   │   │       ├── solution-02-retry-decorator.py
+│   │   │   │   │   │       └── solution-03-config-pkg
+│   │   │   │   │   │           └── config
+│   │   │   │   │   │               ├── init.py
+│   │   │   │   │   │               ├── loader.py
+│   │   │   │   │   │               └── settings.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── cloud-dispatcher-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 08-cloud-automation-boto3
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── conftest.py
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   ├── s3-janitor.py
+│   │   │   │   │   ├── testing-with-moto.md
+│   │   │   │   │   └── test-s3-janitor.py
+│   │   │   │   ├── 09-time-and-date
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-backup-check.py
+│   │   │   │   │   │   ├── challenge-02-log-parser.py
+│   │   │   │   │   │   ├── challenge-03-sla-calculator.py
+│   │   │   │   │   │   ├── challenge-04-scheduler.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-backup-check.py
+│   │   │   │   │   │       ├── solution-02-log-parser.py
+│   │   │   │   │   │       ├── solution-03-sla-calculator.py
+│   │   │   │   │   │       └── solution-04-scheduler.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── log-retention-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── assets
+│   │   │   │       ├── boto3-architecture-diagram.png
+│   │   │   │       ├── boto3-architecture-diagram.svg
+│   │   │   │       ├── function-anatomy.png
+│   │   │   │       ├── loop-visual-flow.png
+│   │   │   │       ├── monolith-vs-modular.png
+│   │   │   │       ├── polling-loop.png
+│   │   │   │       ├── python-data-flow.png
+│   │   │   │       └── python-error-handling.png
+│   │   │   ├── part-02-python-architecture
+│   │   │   │   ├── 01-pathlib-modern-files
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-log-cleanup.py
+│   │   │   │   │   │   ├── challenge-02-project-analyzer.py
+│   │   │   │   │   │   ├── challenge-03-safe-backup.py
+│   │   │   │   │   │   ├── challenge-04-sync-dirs.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-log-cleanup.py
+│   │   │   │   │   │       ├── solution-02-project-analyzer.py
+│   │   │   │   │   │       ├── solution-03-safe-backup.py
+│   │   │   │   │   │       └── solution-04-sync-dirs.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 02-json-handling
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-api-parser.py
+│   │   │   │   │   │   ├── challenge-02-config-validator.py
+│   │   │   │   │   │   ├── challenge-03-json-diff.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-api-parser.py
+│   │   │   │   │   │       ├── solution-02-config-validator.py
+│   │   │   │   │   │       └── solution-03-json-diff.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-yaml-handling
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-manifest-gen.py
+│   │   │   │   │   │   ├── challenge-02-inventory-parser.py
+│   │   │   │   │   │   ├── challenge-03-config-merger.py
+│   │   │   │   │   │   ├── challenge-04-ansible-inventory.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-manifest-gen.py
+│   │   │   │   │   │       ├── solution-02-inventory-parser.py
+│   │   │   │   │   │       ├── solution-03-config-merger.py
+│   │   │   │   │   │       └── solution-04-ansible-inventory.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 04-testing-and-qa
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-config-loader.py
+│   │   │   │   │   │   ├── challenge-02-health-retry.py
+│   │   │   │   │   │   ├── challenge-03-shutdown-handler.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-config-loader.py
+│   │   │   │   │   │       ├── solution-02-health-retry.py
+│   │   │   │   │   │       └── solution-03-shutdown-handler.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── resilient-deployer-demo.py
+│   │   │   │   ├── 05-virtual-environments
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-venv-creator.py
+│   │   │   │   │   │   ├── challenge-02-req-checker.py
+│   │   │   │   │   │   ├── challenge-03-portable-setup.py
+│   │   │   │   │   │   ├── challenge-04-isolated-task.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-venv-creator.py
+│   │   │   │   │   │       ├── solution-02-req-checker.py
+│   │   │   │   │   │       ├── solution-03-portable-setup.py
+│   │   │   │   │   │       └── solution-04-isolated-task.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 06-package-management
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-dependency-analyzer.py
+│   │   │   │   │   │   ├── challenge-02-pip-wrapper.py
+│   │   │   │   │   │   ├── challenge-03-version-bumper.py
+│   │   │   │   │   │   ├── challenge-04-conflict-finder.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-dependency-analyzer.py
+│   │   │   │   │   │       ├── solution-02-pip-wrapper.py
+│   │   │   │   │   │       ├── solution-03-version-bumper.py
+│   │   │   │   │   │       └── solution-04-conflict-finder.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── 07-regular-expressions
+│   │   │   │       ├── challenges
+│   │   │   │       │   ├── challenge-01-nginx-parser.py
+│   │   │   │       │   ├── challenge-02-data-masker.py
+│   │   │   │       │   ├── challenge-03-error-aggregator.py
+│   │   │   │       │   ├── challenge-04-config-extractor.py
+│   │   │   │       │   └── solutions
+│   │   │   │       │       ├── solution-01-nginx-parser.py
+│   │   │   │       │       ├── solution-02-data-masker.py
+│   │   │   │       │       ├── solution-03-error-aggregator.py
+│   │   │   │       │       └── solution-04-config-extractor.py
+│   │   │   │       ├── challenges.md
+│   │   │   │       └── readme.md
+│   │   │   ├── part-03-python-systems-drafting
+│   │   │   │   ├── 01-command-line-arguments
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-port-scanner.py
+│   │   │   │   │   │   ├── challenge-02-file-args.py
+│   │   │   │   │   │   ├── challenge-03-safety-flags.py
+│   │   │   │   │   │   ├── challenge-04-subcommands.py
+│   │   │   │   │   │   ├── challenge-05-env-override.py
+│   │   │   │   │   │   ├── challenge-06-cli-wrapper.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-port-scanner.py
+│   │   │   │   │   │       ├── solution-02-file-args.py
+│   │   │   │   │   │       ├── solution-03-safety-flags.py
+│   │   │   │   │   │       ├── solution-04-subcommands.py
+│   │   │   │   │   │       ├── solution-05-env-override.py
+│   │   │   │   │   │       └── solution-06-cli-wrapper.py
+│   │   │   │   │   ├── deployer-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 02-environment-variables
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-validator.py
+│   │   │   │   │   │   ├── challenge-02-masking-logger.py
+│   │   │   │   │   │   ├── challenge-03-bool-parser.py
+│   │   │   │   │   │   ├── challenge-04-dynamic-loader.py
+│   │   │   │   │   │   ├── challenge-05-prefix-loader.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-validator.py
+│   │   │   │   │   │       ├── solution-02-masking-logger.py
+│   │   │   │   │   │       ├── solution-03-bool-parser.py
+│   │   │   │   │   │       ├── solution-04-dynamic-loader.py
+│   │   │   │   │   │       └── solution-05-prefix-loader.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── env-config-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-subprocess-execution
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-health-checker.py
+│   │   │   │   │   │   ├── challenge-02-git-checker.py
+│   │   │   │   │   │   ├── challenge-03-docker-manager.py
+│   │   │   │   │   │   ├── challenge-04-log-monitor.py
+│   │   │   │   │   │   ├── challenge-05-terraform-wrapper.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-health-checker.py
+│   │   │   │   │   │       ├── solution-02-git-checker.py
+│   │   │   │   │   │       ├── solution-03-docker-manager.py
+│   │   │   │   │   │       └── solution-04-log-monitor.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── system-audit-demo.py
+│   │   │   │   ├── 04-logging-basics
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-basic-setup.py
+│   │   │   │   │   │   ├── challenge-02-rotating-logs.py
+│   │   │   │   │   │   ├── challenge-03-json-formatter.py
+│   │   │   │   │   │   ├── challenge-04-contextual-logging.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-basic-setup.py
+│   │   │   │   │   │       ├── solution-02-rotating-logs.py
+│   │   │   │   │   │       ├── solution-03-json-formatter.py
+│   │   │   │   │   │       └── solution-04-contextual-logging.py
+│   │   │   │   │   ├── enterprise-logger-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 05-working-with-the-web
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── web-api-demo.py
+│   │   │   │   ├── 06-web-automation
+│   │   │   │   │   ├── browser-logic-demo.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 07-micro-frameworks
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── webhook-service-demo.py
+│   │   │   │   └── 08-capstone-script
+│   │   │   │       ├── challenges
+│   │   │   │       │   ├── challenge-01-slack-alerter.py
+│   │   │   │       │   ├── challenge-02-cli-improver.py
+│   │   │   │       │   ├── challenge-03-report-exporter.py
+│   │   │   │       │   ├── challenge-04-port-scanner.py
+│   │   │   │       │   └── solutions
+│   │   │   │       │       ├── solution-01-slack-alerter.py
+│   │   │   │       │       ├── solution-02-cli-improver.py
+│   │   │   │       │       ├── solution-03-report-exporter.py
+│   │   │   │       │       └── solution-04-port-scanner.py
+│   │   │   │       ├── challenges.md
+│   │   │   │       ├── checker.py
+│   │   │   │       ├── ops-mate
+│   │   │   │       │   ├── config
+│   │   │   │       │   │   └── inventory.yaml
+│   │   │   │       │   ├── requirements.txt
+│   │   │   │       │   ├── src
+│   │   │   │       │   │   ├── health.py
+│   │   │   │       │   │   ├── main.py
+│   │   │   │       │   │   └── utils.py
+│   │   │   │       │   └── tests
+│   │   │   │       │       └── test-health.py
+│   │   │   │       ├── readme.md
+│   │   │   │       └── server-health-monitor
+│   │   │   │           ├── config
+│   │   │   │           │   └── servers.json
+│   │   │   │           ├── requirements.txt
+│   │   │   │           └── src
+│   │   │   │               ├── checker.py
+│   │   │   │               ├── main.py
+│   │   │   │               └── reporter.py
+│   │   │   ├── playground
+│   │   │   │   ├── cli-args
+│   │   │   │   │   └── calculator.py
+│   │   │   │   ├── conditional-statements
+│   │   │   │   │   └── ifelselif.py
+│   │   │   │   ├── data-structure
+│   │   │   │   │   ├── lists.py
+│   │   │   │   │   └── tuples.py
+│   │   │   │   ├── dictionary
+│   │   │   │   │   ├── dict.py
+│   │   │   │   │   ├── gitreq.py
+│   │   │   │   │   └── sets.py
+│   │   │   │   ├── env-vars
+│   │   │   │   │   └── envar.py
+│   │   │   │   ├── error-report.txt
+│   │   │   │   ├── files-io
+│   │   │   │   │   ├── file-rw.py
+│   │   │   │   │   └── server.conf
+│   │   │   │   ├── functions
+│   │   │   │   │   ├── calculator-1.py
+│   │   │   │   │   └── calculator.py
+│   │   │   │   ├── input-logs.txt
+│   │   │   │   ├── intermediate
+│   │   │   │   │   └── list-files-in-folders.py
+│   │   │   │   ├── keywords
+│   │   │   │   │   └── links.txt
+│   │   │   │   ├── loop
+│   │   │   │   │   ├── for-loops.py
+│   │   │   │   │   ├── manipulation-loops.py
+│   │   │   │   │   └── while-loops.py
+│   │   │   │   ├── modules
+│   │   │   │   │   ├── calc.py
+│   │   │   │   │   └── calculator.py
+│   │   │   │   └── operators
+│   │   │   │       ├── arithmetic.py
+│   │   │   │       ├── assignment.py
+│   │   │   │       ├── bitwise.py
+│   │   │   │       ├── identity.py
+│   │   │   │       ├── logical.py
+│   │   │   │       ├── membership.py
+│   │   │   │       └── relational-comparsion.py
+│   │   │   ├── python-devops-learning-path.md
+│   │   │   ├── readme.md
+│   │   │   ├── reference
+│   │   │   │   ├── automation-best-practices.md
+│   │   │   │   ├── built-in-functions-ref.md
+│   │   │   │   ├── error-exceptions-ref.md
+│   │   │   │   ├── iterative-logic-ref.md
+│   │   │   │   ├── operators-logic-ref.md
+│   │   │   │   ├── python-automation-patterns-ref.md
+│   │   │   │   ├── python-data-keywords-ref.md
+│   │   │   │   ├── python-devops-testing-ref.md
+│   │   │   │   ├── python-pep8-style-guide.md
+│   │   │   │   └── standard-library-ref.md
+│   │   │   ├── resources
+│   │   │   │   └── python-regular-expression-regex.pdf
+│   │   │   ├── scripts
+│   │   │   │   ├── audit-report.txt
+│   │   │   │   ├── disk-calc.py
+│   │   │   │   ├── fix
+│   │   │   │   │   ├── fix-index.py
+│   │   │   │   │   └── fix-links.py
+│   │   │   │   ├── health-check.py
+│   │   │   │   ├── log-formatter.py
+│   │   │   │   └── sre-linter.py
+│   │   │   └── tree.txt
+│   │   ├── 03-go-basics
+│   │   │   ├── 00-foundations
+│   │   │   │   └── readme.md
+│   │   │   ├── assets
+│   │   │   │   ├── go-concurrency.png
+│   │   │   │   └── go-devops-hub.png
+│   │   │   ├── go-automation-master-index.md
+│   │   │   ├── go-automation-organization-plan.md
+│   │   │   ├── part-01-go-foundations
+│   │   │   │   ├── 01-syntax-and-environment
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── go-devops-environment.png
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 02-variables-and-types
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── go-variables-types.png
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-control-flow
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── go-control-flow.png
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 04-functions
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── go-functions-hero.png
+│   │   │   │   │   ├── go-functions-modular.png
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 05-string-manipulation
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── go-strings-hero.png
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── 06-time-and-date
+│   │   │   │       ├── boilerplate
+│   │   │   │       │   └── location.txt
+│   │   │   │       ├── challenges.md
+│   │   │   │       ├── go-time-hero.png
+│   │   │   │       └── readme.md
+│   │   │   ├── part-02-go-architecture
+│   │   │   │   ├── 01-structs-and-methods
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── structs-and-methods-diagram.png
+│   │   │   │   ├── 02-interfaces
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── go-interfaces-diagram.png
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-error-handling
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── go-error-handling-diagram.png
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 04-file-operations
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── go-file-operations-diagram.png
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 05-json-handling
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── go-json-diagram.png
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 06-yaml-handling
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── go-yaml-hero.png
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── 07-regular-expressions
+│   │   │   │       ├── boilerplate
+│   │   │   │       │   └── location.txt
+│   │   │   │       ├── challenges.md
+│   │   │   │       ├── go-regex-hero.png
+│   │   │   │       └── readme.md
+│   │   │   ├── part-03-go-systems-drafting
+│   │   │   │   ├── 01-command-line-flags
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 02-environment-variables
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── go-env-vars-hero.png
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-testing-basics
+│   │   │   │   │   ├── boilerplate
+│   │   │   │   │   │   └── location.txt
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── go-testing-hero.png
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── 04-capstone-cli-tool
+│   │   │   │       ├── boilerplate
+│   │   │   │       │   └── location.txt
+│   │   │   │       ├── challenges.md
+│   │   │   │       ├── go-cli-hero.png
+│   │   │   │       └── readme.md
+│   │   │   ├── readme.md
+│   │   │   └── reference
+│   │   │       ├── go-concurrency-ref.md
+│   │   │       ├── go-control-flow-errors-ref.md
+│   │   │       ├── go-data-modeling-ref.md
+│   │   │       ├── go-fundamentals-ref.md
+│   │   │       └── go-toolchain-sre-ref.md
+│   │   ├── 03-idempotency
+│   │   │   ├── part-01-the-golden-rule
+│   │   │   │   └── 01-what-is-idempotency.md
+│   │   │   ├── part-02-implementation-strategies
+│   │   │   │   ├── 01-bash-patterns.md
+│   │   │   │   └── 02-python-patterns.md
+│   │   │   ├── readme.md
+│   │   │   └── reference
+│   │   │       ├── design-patterns-idempotency-ref.md
+│   │   │       ├── idempotency-core-principles-ref.md
+│   │   │       └── state-management-declarative-tools-ref.md
+│   │   ├── 04-job-scheduling-and-cron
+│   │   │   ├── part-01-cron-basics
+│   │   │   │   ├── 01-crontab-syntax
+│   │   │   │   │   ├── midnight-backup.sh
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── 02-patterns-and-pitfalls.md
+│   │   │   ├── part-02-systemd-timers
+│   │   │   │   └── 01-systemd-timers
+│   │   │   │       ├── cron-manager.py
+│   │   │   │       └── readme.md
+│   │   │   ├── part-03-modern-orchestration
+│   │   │   │   └── 01-cloud-schedulers
+│   │   │   │       ├── k8s-cronjob.yaml
+│   │   │   │       ├── main.go
+│   │   │   │       └── readme.md
+│   │   │   ├── readme.md
+│   │   │   └── reference
+│   │   │       ├── cron-syntax-standard-ref.md
+│   │   │       ├── distributed-job-scheduling-ref.md
+│   │   │       └── systemd-timers-architecture-ref.md
+│   │   ├── 05-event-driven-webhooks
+│   │   │   ├── part-01-webhook-foundations
+│   │   │   │   └── 01-concepts
+│   │   │   │       └── readme.md
+│   │   │   ├── part-02-security-and-implementation
+│   │   │   │   └── 01-security-patterns
+│   │   │   │       └── readme.md
+│   │   │   ├── part-03-event-driven-architectures
+│   │   │   │   └── 01-pipelines
+│   │   │   │       └── readme.md
+│   │   │   ├── readme.md
+│   │   │   └── reference
+│   │   │       ├── event-driven-patterns-ref.md
+│   │   │       ├── webhook-architecture-ref.md
+│   │   │       └── webhook-security-verification-ref.md
+│   │   ├── 06-ansible-dynamic-inventory
+│   │   │   ├── part-01-inventory-foundations
+│   │   │   │   └── 01-static-vs-dynamic-basics
+│   │   │   │       ├── readme.md
+│   │   │   │       └── static-hosts.ini
+│   │   │   ├── part-02-dynamic-plugins
+│   │   │   │   └── 01-plugin-based-inventory-management
+│   │   │   │       ├── aws-ec2.yml
+│   │   │   │       └── readme.md
+│   │   │   ├── part-03-advanced-strategies
+│   │   │   │   └── 01-custom-inventory-scripts-and-caching
+│   │   │   │       ├── custom-inventory.py
+│   │   │   │       └── readme.md
+│   │   │   ├── readme.md
+│   │   │   └── reference
+│   │   │       ├── ansible-cloud-resource-ref.md
+│   │   │       ├── ansible-inventory-core-ref.md
+│   │   │       └── ansible-security-rbac-ref.md
+│   │   ├── 07-terraform-patterns
+│   │   │   ├── part-01-core-fundamentals
+│   │   │   │   └── 01-foundations-and-variables
+│   │   │   │       ├── main.tf
+│   │   │   │       ├── readme.md
+│   │   │   │       └── variables.tf
+│   │   │   ├── part-02-modular-architecture
+│   │   │   │   └── 01-modules-and-environment-isolation
+│   │   │   │       ├── modules
+│   │   │   │       │   └── s3-bucket
+│   │   │   │       │       └── main.tf
+│   │   │   │       └── readme.md
+│   │   │   ├── part-03-advanced-workflows
+│   │   │   │   └── 01-advanced-state-and-dry-patterns
+│   │   │   │       ├── backend.tf
+│   │   │   │       └── readme.md
+│   │   │   ├── readme.md
+│   │   │   └── reference
+│   │   │       ├── terraform-modular-architecture-ref.md
+│   │   │       ├── terraform-security-compliance-ref.md
+│   │   │       └── terraform-state-management-ref.md
+│   │   ├── assets
+│   │   │   ├── automation-roadmap.png
+│   │   │   ├── devops-learning-path.png
+│   │   │   ├── file-operations.png
+│   │   │   ├── introduction-banner.png
+│   │   │   ├── microservice-architecture.svg
+│   │   │   ├── project-complete-banner.png
+│   │   │   ├── selenium-workflow.svg
+│   │   │   ├── terminal-mastery.png
+│   │   │   └── web-interaction-flow.svg
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   └── automation-strategy-ref.md
+│   │   ├── resources
+│   │   │   ├── beginning-programming-with-python-for-dummies-john-paul-muellerwwwebook-dlcom.pdf
+│   │   │   ├── gobook.pdf
+│   │   │   ├── java
+│   │   │   │   └── upgrade-java-to-21.md
+│   │   │   ├── python-all-in-one-4-dummies.pdf
+│   │   │   ├── python.pdf
+│   │   │   └── readme.md
+│   │   └── scripts
+│   │       ├── audit-system-config.py
+│   │       ├── auto-remediation-bot.py
+│   │       └── cron-job-manager.sh
+│   ├── 02-api-basics
+│   │   ├── assets
+│   │   │   ├── http-request-response-flow.png
+│   │   │   ├── httproperties.png
+│   │   │   ├── https-tls-handshake.png
+│   │   │   └── http-versions-comparison.png
+│   │   ├── challenges.md
+│   │   ├── part-01-web-foundations
+│   │   │   ├── 01-http-protocol
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-rest-architecture
+│   │   │   │   └── readme.md
+│   │   │   └── 03-status-codes-and-errors
+│   │   │       └── readme.md
+│   │   ├── part-02-api-security-and-auth
+│   │   │   └── 01-authentication-and-security
+│   │   │       └── readme.md
+│   │   ├── part-03-advanced-api-workflows
+│   │   │   └── 01-devops-integration
+│   │   │       └── readme.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── api-authentication-ref.md
+│   │   │   ├── api-best-practices-ref.md
+│   │   │   ├── api-error-handling-ref.md
+│   │   │   ├── api-testing-devops-ref.md
+│   │   │   ├── .gitignore
+│   │   │   ├── http-protocol-ref.md
+│   │   │   ├── readme.md
+│   │   │   └── rest-architecture-ref.md
+│   │   └── scripts
+│   │       ├── api-load-tester.js
+│   │       ├── jwt-token-generator.py
+│   │       └── test-api-endpoint.py
+│   ├── 03-nginx
+│   │   ├── challenges.md
+│   │   ├── part-01-architecture-and-foundations
+│   │   │   ├── 01-architecture-and-installation
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-reverse-proxy-basics
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── part-02-traffic-management-and-performance
+│   │   │   ├── 01-load-balancing-strategies
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-performance-optimization
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── part-03-security-and-hardening
+│   │   │   ├── 01-security-and-ssl
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── nginx-architecture-ref.md
+│   │   │   ├── nginx-best-practices-ref.md
+│   │   │   ├── nginx-configuration-ref.md
+│   │   │   ├── nginx-security-performance-ref.md
+│   │   │   └── nginx-troubleshooting-ref.md
+│   │   └── scripts
+│   │       ├── analyze-access-logs.py
+│   │       ├── nginx-config-validator.sh
+│   │       └── setup-reverse-proxy.sh
+│   ├── 04-maven
+│   │   ├── assets
+│   │   │   ├── maven-architecture.png
+│   │   │   └── maven-repository.jpg
+│   │   ├── challenges.md
+│   │   ├── part-01-maven-fundamentals
+│   │   │   ├── 01-installation
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-project-structure
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-pom-configuration
+│   │   │   │   └── readme.md
+│   │   │   ├── deep-dive.md
+│   │   │   └── readme.md
+│   │   ├── part-02-core-build-workflows
+│   │   │   ├── 01-dependencies
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-build-lifecycle
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── part-03-enterprise-maven-and-optimization
+│   │   │   ├── 01-ci-cd-integration
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-best-practices
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-troubleshooting
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── dependency-mechanism-ref.md
+│   │   │   ├── enterprise-security-settings-ref.md
+│   │   │   ├── maven-lifecycle-internals-ref.md
+│   │   │   └── pom-inheritance-reactor-ref.md
+│   │   └── scripts
+│   │       ├── dependency-vulnerability-check.sh
+│   │       ├── generate-multi-module.ps1
+│   │       ├── mvn-build-wrapper.sh
+│   │       └── pom.xml
+│   ├── 05-basic-ci-cd
+│   │   ├── challenges.md
+│   │   ├── images
+│   │   │   ├── cicd.png
+│   │   │   └── pipeline.png
+│   │   ├── part-01-principles-and-fundamentals
+│   │   │   ├── 01-ci-cd-foundations
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── part-02-github-actions-core
+│   │   │   ├── 01-github-actions-basics
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-pipeline-components
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── part-03-advanced-workflows
+│   │   │   ├── 01-security-and-quality-gates
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-continuous-deployment
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── ci-architecture-components-ref.md
+│   │   │   ├── github-actions-internals-ref.md
+│   │   │   └── pipeline-governance-ref.md
+│   │   └── scripts
+│   │       ├── generate-github-workflow.py
+│   │       ├── local-pipeline-runner.sh
+│   │       └── validate-yaml-syntax.py
+│   ├── 06-prompt-engineering
+│   │   ├── assessments
+│   │   │   └── challenges.md
+│   │   ├── examples
+│   │   │   ├── challenges-feedback.txt
+│   │   │   ├── content-architect.md
+│   │   │   ├── full-stack-instructor.md
+│   │   │   ├── pdf-to-json-prompt.md
+│   │   │   ├── readme.md
+│   │   │   └── senior-devops-engineer.md
+│   │   ├── part-01-ai-fundamentals
+│   │   │   ├── 01-foundations-and-mental-models
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-prompt-toolkit
+│   │   │   │   ├── readme.md
+│   │   │   │   └── slash-commands.md
+│   │   │   └── readme.md
+│   │   ├── part-02-devops-automation
+│   │   │   ├── 03-automating-code-and-iac
+│   │   │   │   └── readme.md
+│   │   │   ├── 04-debugging-with-ai
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── part-03-governance-and-ethics
+│   │   │   ├── 05-security-and-ethics
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── advanced-prompting-frameworks-ref.md
+│   │   │   ├── ai-security-governance-ref.md
+│   │   │   └── llm-architecture-internals-ref.md
+│   │   ├── resources
+│   │   │   ├── 22-promptengg.pdf
+│   │   │   ├── book-english-version.pdf
+│   │   │   ├── effectivelycreatingprompts.pdf
+│   │   │   ├── prompt-engineering-lecture-elvis.pdf
+│   │   │   ├── prompts
+│   │   │   │   └── pdf-to-json.md
+│   │   │   ├── thepromptengineeringguide.pdf
+│   │   │   └── top5businessideasprompt.pdf
+│   │   └── scripts
+│   │       ├── explain-error-log.py
+│   │       ├── generate-commit-msg.py
+│   │       └── refactor-code-bot.py
+│   ├── 07-observability-fundamentals
+│   │   ├── challenges.md
+│   │   ├── part-01-the-signals
+│   │   │   ├── 01-melt-introduction
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── part-02-active-monitoring
+│   │   │   ├── 02-manual-health-checks
+│   │   │   │   ├── manual-health-check.sh
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── monitoring-strategies-ref.md
+│   │   │   └── observability-architecture-ref.md
+│   │   └── scripts
+│   │       ├── collect-node-metrics.sh
+│   │       ├── generate-dashboard-config.json
+│   │       └── log-shipper-simulator.py
+│   ├── 08-gitops-fundamentals
+│   │   ├── challenges.md
+│   │   ├── part-01-the-core-philosophy
+│   │   │   ├── 01-git-source-of-truth
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── part-02-architecture-models
+│   │   │   ├── 02-push-vs-pull-basics
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   └── gitops-architecture-ref.md
+│   │   └── scripts
+│   │       ├── generate-argocd-app.yaml
+│   │       ├── sync-repo-state.sh
+│   │       └── validate-k8s-manifests.sh
+│   ├── 09-compliance-as-code-foundations
+│   │   ├── part-01-policy-foundations
+│   │   │   ├── 01-introduction-to-policy
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── part-02-security-auditing
+│   │   │   ├── 02-manual-security-checklists
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   └── policy-architecture-ref.md
+│   │   └── scripts
+│   │       ├── enforce-file-permissions.sh
+│   │       ├── generate-audit-report.md
+│   │       └── scan-compliance.py
+│   └── 10-container-security-basics
+│       ├── part-01-vulnerability-detection
+│       │   ├── 01-image-scanning-fundamentals
+│       │   │   └── readme.md
+│       │   └── readme.md
+│       ├── part-02-configuration-security
+│       │   ├── 02-manual-docker-audit
+│       │   │   └── readme.md
+│       │   └── readme.md
+│       ├── readme.md
+│       ├── reference
+│       │   └── container-runtime-ref.md
+│       └── scripts
+│           ├── container-runtime-check.sh
+│           ├── scan-docker-image.sh
+│           └── validate-dockerfile.py
+├── 03-phase-3
+│   ├── 01-ci-cd-foundations
+│   │   ├── 01-jenkins-mastery
+│   │   │   ├── 01-introduction-to-ci-cd
+│   │   │   │   ├── challenges.md
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-jenkins-architecture
+│   │   │   │   ├── challenges.md
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-installation-and-setup
+│   │   │   │   ├── challenges.md
+│   │   │   │   └── readme.md
+│   │   │   ├── 04-pipelines-as-code
+│   │   │   │   ├── challenges.md
+│   │   │   │   └── readme.md
+│   │   │   └── 05-integrations-and-plugins
+│   │   │       ├── challenges.md
+│   │   │       └── readme.md
+│   │   ├── 02-github-actions-foundations
+│   │   │   ├── challenges.md
+│   │   │   └── readme.md
+│   │   ├── 03-gitlab-ci-basics
+│   │   │   ├── challenges.md
+│   │   │   └── readme.md
+│   │   ├── 04-artifact-registry-management
+│   │   │   ├── challenges.md
+│   │   │   └── readme.md
+│   │   ├── enhancement-summary.md
+│   │   ├── readme.md
+│   │   └── reference
+│   │       ├── artifact-registry-governance-ref.md
+│   │       ├── jenkins-architecture-deep-dive-ref.md
+│   │       └── pipeline-orchestration-patterns-ref.md
+│   ├── 02-container-orchestration
+│   │   ├── challenges.md
+│   │   ├── docker-mastery
+│   │   │   └── docker-ops-commands.md
+│   │   ├── enhancement-summary.md
+│   │   ├── fix-links.py
+│   │   ├── images
+│   │   │   ├── containerlifecycle.png
+│   │   │   ├── dockerarch.png
+│   │   │   ├── dockerimagelayer.png
+│   │   │   ├── docker-network-pattern-1.png
+│   │   │   ├── docker-network-pattern-2.png
+│   │   │   ├── docker-network-pattern-3.png
+│   │   │   ├── docker-network-pattern-4.png
+│   │   │   ├── docker-network-pattern-5.png
+│   │   │   ├── dockerstoragearch.png
+│   │   │   └── virtualvsdocker.png
+│   │   ├── interview-prep.md
+│   │   ├── part-02-orchestration-and-architecture
+│   │   │   ├── 01-networking-and-storage
+│   │   │   │   ├── 01-docker-networking
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 02-docker-volumes
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-multi-stage-builds
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 04-private-registry
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 05-backup-restore-migration
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 06-nginx-ssl
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-docker-compose
+│   │   │   │   ├── advanced
+│   │   │   │   │   ├── 01-production
+│   │   │   │   │   │   ├── challenges.md
+│   │   │   │   │   │   └── readme.md
+│   │   │   │   │   └── 02-orchestration
+│   │   │   │   │       ├── challenges.md
+│   │   │   │   │       └── readme.md
+│   │   │   │   ├── beginner
+│   │   │   │   │   ├── 01-basics
+│   │   │   │   │   │   └── readme.md
+│   │   │   │   │   ├── 02-volumes
+│   │   │   │   │   │   ├── assets
+│   │   │   │   │   │   │   └── volumes-vs-bind-mounts.svg
+│   │   │   │   │   │   └── readme.md
+│   │   │   │   │   └── 03-database-storage
+│   │   │   │   │       └── readme.md
+│   │   │   │   ├── intermediate
+│   │   │   │   │   ├── 01-advanced-features
+│   │   │   │   │   │   └── readme.md
+│   │   │   │   │   ├── 02-networks-volumes
+│   │   │   │   │   │   └── readme.md
+│   │   │   │   │   └── 03-secrets-configs
+│   │   │   │   │       └── readme.md
+│   │   │   │   └── readme.md
+│   │   │   └── readme.md
+│   │   ├── part-03-advanced-ops-and-projects
+│   │   │   ├── 01-security-and-optimization
+│   │   │   │   ├── 01-docker-security
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 02-resource-management
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-production-considerations
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-real-world-projects
+│   │   │   │   ├── ansible
+│   │   │   │   │   └── setup.yml
+│   │   │   │   ├── composeprod.yaml
+│   │   │   │   ├── compose.yaml
+│   │   │   │   ├── docker-composeoverride.yml
+│   │   │   │   ├── flask
+│   │   │   │   │   ├── api-key.txt
+│   │   │   │   │   ├── app.py
+│   │   │   │   │   ├── config-dev.yaml
+│   │   │   │   │   ├── dockerfile
+│   │   │   │   │   ├── dockerfile.dev
+│   │   │   │   │   ├── .dockerignore
+│   │   │   │   │   └── requirements.txt
+│   │   │   │   ├── flask-data
+│   │   │   │   │   └── test.txt
+│   │   │   │   ├── frontend
+│   │   │   │   │   ├── dockerfile
+│   │   │   │   │   └── html
+│   │   │   │   │       └── index.html
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── myapp.conf
+│   │   │   │   ├── nginx.conf
+│   │   │   │   ├── pg-password.txt
+│   │   │   │   ├── readme.md
+│   │   │   │   └── runbook.md
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   └── reference
+│   │       ├── container-networking-deep-dive-ref.md
+│   │       └── k8s-control-plane-architecture-ref.md
+│   ├── 03-finops
+│   │   ├── enhancement-summary.md
+│   │   ├── images
+│   │   │   ├── cloudcapdiscount.png
+│   │   │   ├── cloud-cost-breakdown.png
+│   │   │   ├── finops-lifecycle.png
+│   │   │   ├── pricing-models.png
+│   │   │   └── regiontypecost.png
+│   │   ├── part-01-introduction
+│   │   │   └── readme.md
+│   │   ├── part-02-cloud-billing-basics
+│   │   │   └── readme.md
+│   │   ├── part-03-cost-visibility
+│   │   │   ├── challenges.md
+│   │   │   └── readme.md
+│   │   ├── part-04-budgeting-basics
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   └── reference
+│   │       ├── cost-attribution-chargeback-ref.md
+│   │       └── cost-optimization-strategies-ref.md
+│   ├── 04-mcp
+│   │   ├── challenges.md
+│   │   ├── enhancement-summary.md
+│   │   ├── part-01-architecture-and-primitives
+│   │   │   └── readme.md
+│   │   ├── part-02-ecosystem-and-servers
+│   │   │   └── readme.md
+│   │   ├── part-03-building-custom-servers
+│   │   │   └── readme.md
+│   │   ├── part-04-security-and-best-practices
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   └── reference
+│   │       ├── ai-agent-security-governance-ref.md
+│   │       └── mcp-protocol-architecture-ref.md
+│   ├── 05-blockchain
+│   │   ├── challenges.md
+│   │   ├── enhancement-summary.md
+│   │   ├── part-01-architecture-and-node-types
+│   │   │   └── readme.md
+│   │   ├── part-02-infrastructure-and-resources
+│   │   │   └── readme.md
+│   │   ├── part-03-decentralized-operations
+│   │   │   └── readme.md
+│   │   ├── part-04-maintenance-and-governance
+│   │   │   └── readme.md
+│   │   ├── readme.md
+│   │   └── reference
+│   │       ├── blockchain-infrastructure-operations-ref.md
+│   │       └── blockchain-node-architecture-ref.md
+│   └── readme.md
+└── tree.txt
+
+541 directories, 1176 files
