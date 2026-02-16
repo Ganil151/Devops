@@ -4,6 +4,30 @@ By default, data inside a container is **ephemeral**. When the container is dele
 
 ## 🏗️ The Storage Landscape
 
+```mermaid
+graph TD
+    subgraph Host_Machine
+        subgraph Managed_Space [/var/lib/docker/volumes]
+            V_Data[(Named Volume: my_data)]
+        end
+        subgraph User_Space [/home/user/project]
+            B_Data[Bind Mount: ./code]
+        end
+    end
+
+    subgraph Container_A
+        V_Data ---|Mount| C_Path1[/var/lib/mysql]
+    end
+
+    subgraph Container_B
+        B_Data ---|Mount| C_Path2[/app]
+    end
+
+    style V_Data fill:#e1f5fe,stroke:#01579b
+    style B_Data fill:#fff3e0,stroke:#e65100
+    style Managed_Space fill:#f5f5f5,stroke:#9e9e9e
+```
+
 ### 1. Named Volumes (The Managed Way)
 Volumes are stored in a part of the host filesystem which is *managed by Docker* (`/var/lib/docker/volumes/` on Linux). 
 *   **Best for**: Databases and permanent application data.
