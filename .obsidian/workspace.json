@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/02-phase-2/02-delivery-and-governance/01-ci-cd-pipelines/01-part-1-the-blueprint/01-ci-cd-fundamentals/readme.md",
+                "file": "01-beginner/05-Container-Essentials/01-Reference/Blueprint/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 282.5,
-    "collapsed": true
+    "width": 282.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -216,6 +215,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/02-phase-2/02-delivery-and-governance/01-ci-cd-pipelines/01-part-1-the-blueprint/01-ci-cd-fundamentals/readme.md",
     "01-beginner/05-Container-Essentials/01-Reference/legacy-readme.md",
     "01-beginner/05-Container-Essentials/02-Labs/Multi-Container-Lab.md",
     "01-beginner/02-Networking-Logic/02-Labs/Connectivity-Lab.md",
@@ -259,7 +259,6 @@
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-02-python-architecture/06-package-management/readme.md",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-02-python-architecture/06-package-management/challenges.md",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-02-python-architecture/05-virtual-environments/readme.md",
-    "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-02-python-architecture/05-virtual-environments/challenges.md",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/assets/python-error-handling.png",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/assets/python-data-flow.png",
     "Untitled.canvas"
