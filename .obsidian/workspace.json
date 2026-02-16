@@ -202,6 +202,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/tree.txt",
     "01-beginner/05-foundational-containers/01-docker-basics/04-debugging/readme.md",
     "01-beginner/05-foundational-containers/06-The-Cleanup/readme.md",
     "01-beginner/05-foundational-containers/05-The-Storage/readme.md",
@@ -234,7 +235,6 @@
     "01-beginner/03-git-version-control/02-intermediate-level/03-github-actions/readme.md",
     "01-beginner/03-git-version-control/02-intermediate-level/02-github-integration/readme.md",
     "01-beginner/03-git-version-control/02-intermediate-level/01-git-workflows/readme.md",
-    "01-beginner/03-git-version-control/01-beginner-level/03-git-commands/readme.md",
     "01-beginner/03-git-version-control/01-beginner-level/03-git-commands",
     "08-resources/05-templates-and-boilerplates/terraform-aws-base.tf",
     "08-resources/05-templates-and-boilerplates/ansible-base.yml",
