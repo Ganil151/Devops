@@ -41,7 +41,7 @@ git config --global core.editor "code --wait"
 
 - git remote add origin https://github.com/Ganil151/DevOps.git
 
-- git remote rename <the oldname (the newname)
+- git remote rename (the oldname) (the newname)
   
 - git remote remove name
 
