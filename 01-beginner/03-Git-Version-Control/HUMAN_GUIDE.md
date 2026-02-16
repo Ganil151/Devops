@@ -21,7 +21,7 @@ Branches allow you to work on new features without breaking the "Main" stability
 
 ### Phase 3: The Handshake (Git & Automation)
 Git is the trigger for **CI/CD**. When you `git push`, a robot (GitHub Action or Jenkins) wakes up, builds your code, and deploys it to the cloud.
-- **The "Handshake"**: A pre-commit hook (bash script) can check your **Dockerfile** for security flaws *before* you even push the code. This is called "Shifting Left."
+- **The "Handshake"**: A **Git Hook** (a bash script) can automatically check your code for errors or security leaks *before* you are allowed to commit. This bridges the gap between version control and safe automation.
 
 ---
 

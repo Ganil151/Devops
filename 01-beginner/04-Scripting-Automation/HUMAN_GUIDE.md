@@ -21,6 +21,7 @@ When logic gets complex (JSON parsing, API calls, Cloud SDKs), we switch to Pyth
 - **Linux**: A Bash script using `cron` to rotate logs.
 - **Git**: A Python script using `GitPython` to audit commit history.
 - **Docker**: Using the `docker-py` library to automatically prune old images based on disk usage.
+- **The "Handshake"**: A well-written script ensures that **Linux permissions**, **Network connectivity**, and **Container health** are all verified before a deployment proceeds.
 
 ---
 
