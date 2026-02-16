@@ -216,6 +216,12 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/05-foundational-containers/06-The-Cleanup",
+    "01-beginner/05-foundational-containers/05-The-Storage",
+    "01-beginner/05-foundational-containers/04-The-Network",
+    "01-beginner/05-foundational-containers/03-The-Runtime",
+    "01-beginner/05-foundational-containers/02-The-Blueprint",
+    "01-beginner/05-foundational-containers/01-The-Big-Picture",
     "01-beginner/05-foundational-containers/01-docker-basics/03-dockerfile-basics/readme.md",
     "01-beginner/05-foundational-containers/01-docker-basics/02-images-and-containers/readme.md",
     "01-beginner/05-foundational-containers/05-cleanup-and-maintenance.md",
@@ -256,12 +262,6 @@
     "08-resources/04-images-and-infographics/screenshot-91.png",
     "08-resources/04-images-and-infographics/screenshot-90.png",
     "08-resources/04-images-and-infographics/screenshot-89.png",
-    "08-resources/03-books-and-pdfs/morebooks.txt",
-    "08-resources/02-cheat-sheets-and-docs/aws-inventory-master.md",
-    "08-resources/02-cheat-sheets-and-docs/bashcustomization.txt",
-    "08-resources/02-cheat-sheets-and-docs/generate_library.sh",
-    "08-resources/02-cheat-sheets-and-docs/aws",
-    "08-resources/01-scripts-and-code/update-reference.py",
     "Untitled.canvas"
   ]
 }
