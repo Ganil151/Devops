@@ -40,7 +40,7 @@ Explore how Intermediate Prompt Engineering is applied to solve complex DevOps c
    - "Task: Convert this JSON output into a structured, technical 'Network Architecture' document.
    - Focus: Group resources by VPC, list all peering connections, and describe the flow of traffic.
    - Include: A Mermaid diagram showing the connectivity."
-1. **Outcome**: A high-quality documentation draft is generated in 30 seconds, requiring only minor manual edits.
+3. **Outcome**: A high-quality documentation draft is generated in 30 seconds, requiring only minor manual edits.
 
 ---
 
