@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/01-Linux-Foundations/01-Reference/02-filesystem/readme.md",
+                "file": "01-beginner/01-Linux-Foundations/01-Reference/ssh/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 282.5
+    "width": 282.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/01-Linux-Foundations/01-Reference/02-filesystem/readme.md",
     "01-beginner/05-Container-Essentials/02-Labs/Multi-Container-Lab.md",
     "01-beginner/05-Container-Essentials/01-Reference/legacy-readme.md",
     "01-beginner/05-Container-Essentials/01-Reference/Runtime/Lifecycle-and-Ops.md",
@@ -258,7 +260,6 @@
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-03-python-systems-drafting/05-working-with-the-web/readme.md",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-03-python-systems-drafting/05-working-with-the-web/challenges.md",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-03-python-systems-drafting/02-environment-variables/readme.md",
-    "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-03-python-systems-drafting/02-environment-variables/challenges.md",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/assets/python-error-handling.png",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/assets/python-data-flow.png",
     "Untitled.canvas"
