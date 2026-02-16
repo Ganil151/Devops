@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/99-supplemental-content/00-MASTER_DIRECTORY_MAP.md",
     "02-intermediate/reference.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/examples/readme.md",
     "01-beginner/99-supplemental-content/01-phase-1/03-windows-basics/README_DOCUMENTATION.md",
@@ -261,7 +262,6 @@
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-01-python-foundations/04-data-structures/assets/list-vs-tuple.png",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-01-python-foundations/04-data-structures/assets/dict-vs-set.png",
     "01-beginner/04-Scripting-Automation/part-01-shell-foundations/03-file-manipulation/searching/readme.md",
-    "01-beginner/04-Scripting-Automation/part-01-shell-foundations/03-file-manipulation/searching/challenges.md",
     "Untitled.canvas"
   ]
 }
