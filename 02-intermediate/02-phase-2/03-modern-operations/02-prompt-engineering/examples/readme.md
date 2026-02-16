@@ -64,6 +64,7 @@ Explore how Intermediate Prompt Engineering is applied to solve complex DevOps c
 1. **Input**: Export the Slack thread as a CSV or text file.
 2. **Prompt**:
    > "You are an SRE Manager. Analyze this Slack history to create a 'Production Incident Post-Mortem'.
+
    > Sections needed:
    > - Detection: When was the first alarm?
    > - Timeline: Key technical observations and actions taken.
