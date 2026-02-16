@@ -68,7 +68,23 @@ CMD ["npm", "start"]
 ## 🚀 Performance: Multi-Stage builds
 The goal is to keep your production image as small as possible by leaving build tools (compilers, git, cache) in a temporary "Build" stage.
 
-<DOCKERFILE_LAYER_VISUAL>
+```mermaid
+graph TD
+    subgraph Stage_1_Builder [Stage 1: The Builder (Heavy)]
+        Src[Source Code] -->|COPY| Build_Ctx[Build Context]
+        Build_Ctx -->|RUN npm install| Node_Modules[node_modules]
+        Node_Modules -->|RUN npm build| Dist[./dist folder]
+    end
+
+    subgraph Stage_2_Production [Stage 2: The Runtime (Light)]
+        Base[nginx:alpine]
+        Dist -->|COPY --from=builder| Nginx_Html[/usr/share/nginx/html]
+        Nginx_Html --> Final_Image[Final Slim Image]
+    end
+
+    style Stage_1_Builder fill:#fce4ec,stroke:#333,stroke-dasharray: 5 5
+    style Stage_2_Production fill:#e8f5e9,stroke:#333
+```
 
 ```dockerfile
 # Stage 1: Build (The "Heavy" stage)
