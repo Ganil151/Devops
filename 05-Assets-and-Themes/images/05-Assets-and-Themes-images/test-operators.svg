@@ -1,0 +1,125 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark Mode Test Operators Design -->
+  <defs>
+    <linearGradient id="fileGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stringGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1565C0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="intGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF6C00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="logicGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9C27B0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7B1FA2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#121212" />
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#BB86FC">Bash Test Operators Reference</text>
+
+  <!-- Side-by-Side Groups -->
+  
+  <!-- File Tests -->
+  <g transform="translate(50, 80)">
+    <rect width="330" height="180" rx="10" fill="#1E1E1E" stroke="#4CAF50" stroke-width="2" filter="url(#boxShadow)" />
+    <rect width="330" height="35" rx="10" fill="url(#fileGrad)" />
+    <text x="165" y="23" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#fff">File Tests</text>
+    
+    <text x="20" y="60" font-family="monospace" font-size="14" fill="#E0E0E0">-f file</text>
+    <text x="120" y="60" font-family="Arial" font-size="13" fill="#AAA">Regular file exists</text>
+    
+    <text x="20" y="85" font-family="monospace" font-size="14" fill="#E0E0E0">-d dir</text>
+    <text x="120" y="85" font-family="Arial" font-size="13" fill="#AAA">Directory exists</text>
+    
+    <text x="20" y="110" font-family="monospace" font-size="14" fill="#E0E0E0">-r/w/x</text>
+    <text x="120" y="110" font-family="Arial" font-size="13" fill="#AAA">Read/Write/Exec permission</text>
+    
+    <text x="20" y="135" font-family="monospace" font-size="14" fill="#E0E0E0">-s file</text>
+    <text x="120" y="135" font-family="Arial" font-size="13" fill="#AAA">File is not empty</text>
+    
+    <text x="20" y="160" font-family="monospace" font-size="14" fill="#E0E0E0">-L link</text>
+    <text x="120" y="160" font-family="Arial" font-size="13" fill="#AAA">Symbolic link exists</text>
+  </g>
+
+  <!-- String Tests -->
+  <g transform="translate(420, 80)">
+    <rect width="330" height="180" rx="10" fill="#1E1E1E" stroke="#2196F3" stroke-width="2" filter="url(#boxShadow)" />
+    <rect width="330" height="35" rx="10" fill="url(#stringGrad)" />
+    <text x="165" y="23" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#fff">String Tests</text>
+    
+    <text x="20" y="60" font-family="monospace" font-size="14" fill="#E0E0E0">-z str</text>
+    <text x="120" y="60" font-family="Arial" font-size="13" fill="#AAA">String is empty</text>
+    
+    <text x="20" y="85" font-family="monospace" font-size="14" fill="#E0E0E0">-n str</text>
+    <text x="120" y="85" font-family="Arial" font-size="13" fill="#AAA">String is NOT empty</text>
+    
+    <text x="20" y="110" font-family="monospace" font-size="14" fill="#E0E0E0">== / !=</text>
+    <text x="120" y="110" font-family="Arial" font-size="13" fill="#AAA">Comparison operators</text>
+    
+    <text x="20" y="135" font-family="monospace" font-size="14" fill="#E0E0E0">=~ regex</text>
+    <text x="120" y="135" font-family="Arial" font-size="13" fill="#AAA">Regex matching (in [[ ]])</text>
+    
+    <text x="20" y="160" font-family="monospace" font-size="14" fill="#E0E0E0">&lt; / &gt;</text>
+    <text x="120" y="160" font-family="Arial" font-size="13" fill="#AAA">Lexicographical comparison</text>
+  </g>
+
+  <!-- Integer Tests -->
+  <g transform="translate(50, 280)">
+    <rect width="330" height="180" rx="10" fill="#1E1E1E" stroke="#FF9800" stroke-width="2" filter="url(#boxShadow)" />
+    <rect width="330" height="35" rx="10" fill="url(#intGrad)" />
+    <text x="165" y="23" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#fff">Integer Tests</text>
+    
+    <text x="20" y="60" font-family="monospace" font-size="14" fill="#E0E0E0">-eq</text>
+    <text x="120" y="60" font-family="Arial" font-size="13" fill="#AAA">Equal to</text>
+    
+    <text x="20" y="85" font-family="monospace" font-size="14" fill="#E0E0E0">-ne</text>
+    <text x="120" y="85" font-family="Arial" font-size="13" fill="#AAA">Not equal to</text>
+    
+    <text x="20" y="110" font-family="monospace" font-size="14" fill="#E0E0E0">-gt / -lt</text>
+    <text x="120" y="110" font-family="Arial" font-size="13" fill="#AAA">Greater / Less than</text>
+    
+    <text x="20" y="135" font-family="monospace" font-size="14" fill="#E0E0E0">-ge / -le</text>
+    <text x="120" y="135" font-family="Arial" font-size="13" fill="#AAA">Greater/Less than or Equal</text>
+    
+    <text x="20" y="165" font-family="Arial" font-size="11" font-style="italic" fill="#888">Note: Use (( )) for C-style arithmetic</text>
+  </g>
+
+  <!-- Logical Operators -->
+  <g transform="translate(420, 280)">
+    <rect width="330" height="180" rx="10" fill="#1E1E1E" stroke="#9C27B0" stroke-width="2" filter="url(#boxShadow)" />
+    <rect width="330" height="35" rx="10" fill="url(#logicGrad)" />
+    <text x="165" y="23" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#fff">Logical Operators</text>
+    
+    <text x="20" y="60" font-family="monospace" font-size="14" fill="#E0E0E0">!  (NOT)</text>
+    <text x="120" y="60" font-family="Arial" font-size="13" fill="#AAA">Inverts the exit code</text>
+    
+    <text x="20" y="85" font-family="monospace" font-size="14" fill="#E0E0E0">&amp;&amp; (AND)</text>
+    <text x="120" y="85" font-family="Arial" font-size="13" fill="#AAA">Success if both succeed</text>
+    
+    <text x="20" y="110" font-family="monospace" font-size="14" fill="#E0E0E0">|| (OR)</text>
+    <text x="120" y="110" font-family="Arial" font-size="13" fill="#AAA">Success if either succeeds</text>
+    
+    <text x="20" y="145" font-family="Arial" font-size="12" fill="#BB86FC" font-weight="bold">Standard [ ] vs Bash [[ ]]</text>
+    <text x="20" y="165" font-family="Arial" font-size="11" fill="#888">-a (AND) / -o (OR) used in old [ ]</text>
+  </g>
+
+</svg>

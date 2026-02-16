@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#0f172a"/>
+  
+  <!-- Grid Pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="500" fill="url(#grid)"/>
+  
+  <!-- NORMAL MODE (Center) -->
+  <rect x="460" y="200" width="280" height="100" rx="50" fill="#1e293b" stroke="#3b82f6" stroke-width="3"/>
+  <text x="600" y="240" font-family="Arial, sans-serif" font-size="26" fill="#3b82f6" text-anchor="middle" font-weight="bold">NORMAL MODE</text>
+  <text x="600" y="265" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Navigation Hub (Default)</text>
+  <text x="600" y="285" font-family="monospace" font-size="12" fill="#64748b" text-anchor="middle">Press Esc to return here</text>
+  
+  <!-- INSERT MODE (Top) -->
+  <rect x="480" y="65" width="240" height="70" rx="12" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+  <text x="600" y="95" font-family="Arial, sans-serif" font-size="20" fill="#10b981" text-anchor="middle" font-weight="bold">INSERT MODE</text>
+  <text x="600" y="118" font-family="Arial, sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle">Type text directly</text>
+  
+  <!-- INSERT arrows -->
+  <line x1="580" y1="190" x2="580" y2="145" stroke="#10b981" stroke-width="2"/>
+  <polygon points="580,145 575,155 585,155" fill="#10b981"/>
+  <rect x="555" y="160" width="20" height="18" rx="3" fill="#334155"/>
+  <text x="565" y="173" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">i</text>
+  
+  <line x1="620" y1="145" x2="620" y2="190" stroke="#64748b" stroke-width="2"/>
+  <polygon points="620,190 615,180 625,180" fill="#64748b"/>
+  <rect x="605" y="160" width="35" height="18" rx="3" fill="#334155"/>
+  <text x="622" y="173" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle">Esc</text>
+  
+  <!-- VISUAL MODE (Left) -->
+  <rect x="130" y="215" width="240" height="70" rx="12" fill="#4c1d95" stroke="#a78bfa" stroke-width="2"/>
+  <text x="250" y="245" font-family="Arial, sans-serif" font-size="20" fill="#a78bfa" text-anchor="middle" font-weight="bold">VISUAL MODE</text>
+  <text x="250" y="268" font-family="Arial, sans-serif" font-size="12" fill="#ddd6fe" text-anchor="middle">Highlight text blocks</text>
+  
+  <!-- VISUAL arrows -->
+  <line x1="450" y1="240" x2="380" y2="240" stroke="#a78bfa" stroke-width="2"/>
+  <polygon points="380,240 390,235 390,245" fill="#a78bfa"/>
+  <rect x="405" y="215" width="20" height="18" rx="3" fill="#334155"/>
+  <text x="415" y="228" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">v</text>
+  
+  <line x1="380" y1="260" x2="450" y2="260" stroke="#64748b" stroke-width="2"/>
+  <polygon points="450,260 440,255 440,265" fill="#64748b"/>
+  <rect x="395" y="270" width="35" height="18" rx="3" fill="#334155"/>
+  <text x="412" y="283" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle">Esc</text>
+  
+  <!-- COMMAND MODE (Right) -->
+  <rect x="830" y="215" width="240" height="70" rx="12" fill="#450a0a" stroke="#f87171" stroke-width="2"/>
+  <text x="950" y="245" font-family="Arial, sans-serif" font-size="20" fill="#f87171" text-anchor="middle" font-weight="bold">COMMAND MODE</text>
+  <text x="950" y="268" font-family="Arial, sans-serif" font-size="12" fill="#fca5a5" text-anchor="middle">Save, Quit, Search</text>
+  
+  <!-- COMMAND arrows -->
+  <line x1="750" y1="240" x2="820" y2="240" stroke="#f87171" stroke-width="2"/>
+  <polygon points="820,240 810,235 810,245" fill="#f87171"/>
+  <rect x="775" y="215" width="20" height="18" rx="3" fill="#334155"/>
+  <text x="785" y="228" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">:</text>
+  
+  <line x1="820" y1="260" x2="750" y2="260" stroke="#64748b" stroke-width="2"/>
+  <polygon points="750,260 760,255 760,265" fill="#64748b"/>
+  <rect x="800" y="270" width="45" height="18" rx="3" fill="#334155"/>
+  <text x="822" y="283" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle">Enter</text>
+  
+  <!-- Legend Box -->
+  <rect x="50" y="420" width="500" height="60" rx="5" fill="#1e293b" opacity="0.8"/>
+  <text x="70" y="445" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">💡 Tip: Press</text>
+  <rect x="145" y="432" width="35" height="18" rx="3" fill="#334155"/>
+  <text x="162" y="445" font-family="monospace" font-size="11" fill="#ffffff" text-anchor="middle">Esc</text>
+  <text x="185" y="445" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">from any mode to return to Normal Mode</text>
+  <text x="70" y="465" font-family="Arial, sans-serif" font-size="11" fill="#64748b">Visual Block: Ctrl+v  |  Append: a  |  Open line: o</text>
+  
+  <!-- Branding -->
+  <text x="1150" y="480" font-family="Arial, sans-serif" font-size="16" fill="#475569" text-anchor="end" font-weight="bold">VIM MODE ARCHITECTURE</text>
+</svg>
