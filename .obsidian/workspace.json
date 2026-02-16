@@ -215,6 +215,7 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "01-beginner/05-Container-Essentials/01-Reference/Runtime/Lifecycle-and-Ops.md",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/07-functions-and-modules/challenges/solutions/solution-03-config-pkg/config/init.py",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/07-functions-and-modules/challenges/solutions/solution-03-config-pkg/config/settings.py",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/07-functions-and-modules/challenges/solutions/solution-03-config-pkg/config/loader.py",
@@ -225,7 +226,6 @@
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-03-python-systems-drafting/08-capstone-script/ops-mate/src/main.py",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-03-python-systems-drafting/08-capstone-script/ops-mate/src/health.py",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-03-python-systems-drafting/08-capstone-script/ops-mate/tests/test-health.py",
-    "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-03-python-systems-drafting/08-capstone-script/server-health-monitor/src/reporter.py",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/07-functions-and-modules/assets/monolith-vs-modular.png",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/07-functions-and-modules/assets/function-anatomy.png",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/04-data-structures/assets/python-data-structures.png",
