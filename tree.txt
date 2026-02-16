@@ -85,1010 +85,1143 @@
 │   │   └── readme.md
 │   └── readme.md
 ├── 01-beginner
-│   ├── 01-Linux-Foundations
-│   │   ├── 01-Reference
-│   │   │   ├── 01-introduction
-│   │   │   │   ├── interview-questions.md
-│   │   │   │   ├── quiz.md
+│   ├── 01-Linux-Engineering
+│   │   ├── 01-introduction
+│   │   │   └── readme.md
+│   │   ├── 02-filesystem
+│   │   │   └── readme.md
+│   │   ├── 03-commands
+│   │   │   └── readme.md
+│   │   ├── 04-permissions
+│   │   │   └── readme.md
+│   │   ├── 05-distros
+│   │   │   ├── 01-rhel-family
+│   │   │   │   ├── dnf-cheat-sheet.md
+│   │   │   │   ├── fedora
+│   │   │   │   │   └── scripts
+│   │   │   │   │       ├── bash
+│   │   │   │   │       │   ├── fedora-network.sh
+│   │   │   │   │       │   ├── fedora-security.sh
+│   │   │   │   │       │   ├── fedora-systemaudit.sh
+│   │   │   │   │       │   ├── fedora-toolbox.sh
+│   │   │   │   │       │   ├── optimize-fedorafull.sh
+│   │   │   │   │       │   ├── optimize-intelgpu.sh
+│   │   │   │   │       │   ├── preset-generator.sh
+│   │   │   │   │       │   └── rollback-fedorafull.sh
+│   │   │   │   │       └── python
+│   │   │   │   │           ├── input-enhancer-preset.py
+│   │   │   │   │           └── preseteqgenarator.py
 │   │   │   │   └── readme.md
-│   │   │   ├── 02-filesystem
-│   │   │   │   ├── interview-questions.md
-│   │   │   │   ├── quiz.md
+│   │   │   ├── 02-debian-family
+│   │   │   │   ├── apt-cheat-sheet.md
 │   │   │   │   └── readme.md
-│   │   │   ├── 03-commands
-│   │   │   │   ├── interview-questions.md
-│   │   │   │   ├── quiz.md
+│   │   │   ├── 03-suse-family
+│   │   │   │   ├── readme.md
+│   │   │   │   └── zypper-cheat-sheet.md
+│   │   │   ├── 04-lightweight-and-cloud-native
+│   │   │   │   ├── apk-cheat-sheet.md
+│   │   │   │   ├── pacman-cheat-sheet.md
 │   │   │   │   └── readme.md
-│   │   │   ├── 04-permissions
-│   │   │   │   ├── interview-questions.md
-│   │   │   │   ├── quiz.md
+│   │   │   ├── distro-comparison-matrix.md
+│   │   │   └── readme.md
+│   │   ├── Assessment
+│   │   │   ├── 01-intro-interview.md
+│   │   │   ├── 01-intro-quiz.md
+│   │   │   ├── 02-filesystem-interview.md
+│   │   │   ├── 02-filesystem-quiz.md
+│   │   │   ├── 03-commands-interview.md
+│   │   │   ├── 03-commands-quiz.md
+│   │   │   ├── 04-permissions-interview.md
+│   │   │   ├── 04-permissions-quiz.md
+│   │   │   ├── 05-ssh-interview.md
+│   │   │   └── 05-ssh-quiz.md
+│   │   ├── HUMAN_GUIDE.md
+│   │   ├── interview-questions-and-quiz.md
+│   │   ├── readme.md
+│   │   ├── Reference
+│   │   │   ├── linux-best-practices-ref.md
+│   │   │   ├── linux-essential-commands-ref.md
+│   │   │   ├── linux-filesystem-ref.md
+│   │   │   ├── linux-permissions-ownership-ref.md
+│   │   │   └── linux-ssh-security-ref.md
+│   │   ├── resources
+│   │   │   ├── books
+│   │   │   │   ├── linux-bash.pdf
+│   │   │   │   ├── linux-bash-terminal.pdf
+│   │   │   │   ├── linux-for-dummies.pdf
+│   │   │   │   ├── linux-networking-commands.pdf
+│   │   │   │   ├── python.pdf
+│   │   │   │   ├── the-linux-command-line-a-complete-introduction.pdf
+│   │   │   │   └── xforce-threat-intelligence-2022.pdf
+│   │   │   └── linuxfilesystems.gif
+│   │   ├── Scripts
+│   │   │   ├── bash
+│   │   │   │   ├── disk-usage-analyzer.sh
+│   │   │   │   ├── linux-system-audit.sh
+│   │   │   │   ├── permission-analyzer.sh
+│   │   │   │   ├── process-monitor.sh
+│   │   │   │   ├── ssh-hardening.sh
+│   │   │   │   └── zsh
+│   │   │   │       └── .zshrc
+│   │   │   └── python
+│   │   │       ├── input-enhancer-generator.py
+│   │   │       └── preset-eq-generator.py
+│   │   └── ssh
+│   │       └── readme.md
+│   ├── 01-linux-fundamentals
+│   │   ├── 01-introduction
+│   │   │   ├── interview-questions.md
+│   │   │   ├── quiz.md
+│   │   │   └── readme.md
+│   │   ├── 02-filesystem
+│   │   │   ├── interview-questions.md
+│   │   │   ├── quiz.md
+│   │   │   └── readme.md
+│   │   ├── 03-commands
+│   │   │   ├── interview-questions.md
+│   │   │   ├── quiz.md
+│   │   │   └── readme.md
+│   │   ├── 04-permissions
+│   │   │   ├── interview-questions.md
+│   │   │   ├── quiz.md
+│   │   │   └── readme.md
+│   │   ├── 05-distros
+│   │   │   ├── 01-rhel-family
+│   │   │   │   ├── dnf-cheat-sheet.md
+│   │   │   │   ├── fedora
+│   │   │   │   │   └── scripts
+│   │   │   │   │       ├── bash
+│   │   │   │   │       │   ├── fedora-network.sh
+│   │   │   │   │       │   ├── fedora-security.sh
+│   │   │   │   │       │   ├── fedora-systemaudit.sh
+│   │   │   │   │       │   ├── fedora-toolbox.sh
+│   │   │   │   │       │   ├── optimize-fedorafull.sh
+│   │   │   │   │       │   ├── optimize-intelgpu.sh
+│   │   │   │   │       │   ├── preset-generator.sh
+│   │   │   │   │       │   └── rollback-fedorafull.sh
+│   │   │   │   │       └── python
+│   │   │   │   │           ├── input-enhancer-preset.py
+│   │   │   │   │           └── preseteqgenarator.py
 │   │   │   │   └── readme.md
-│   │   │   ├── 05-distros
-│   │   │   │   ├── 01-rhel-family
-│   │   │   │   │   ├── dnf-cheat-sheet.md
-│   │   │   │   │   ├── fedora
-│   │   │   │   │   │   └── scripts
-│   │   │   │   │   │       ├── bash
-│   │   │   │   │   │       │   ├── fedora-network.sh
-│   │   │   │   │   │       │   ├── fedora-security.sh
-│   │   │   │   │   │       │   ├── fedora-systemaudit.sh
-│   │   │   │   │   │       │   ├── fedora-toolbox.sh
-│   │   │   │   │   │       │   ├── optimize-fedorafull.sh
-│   │   │   │   │   │       │   ├── optimize-intelgpu.sh
-│   │   │   │   │   │       │   ├── preset-generator.sh
-│   │   │   │   │   │       │   └── rollback-fedorafull.sh
-│   │   │   │   │   │       └── python
-│   │   │   │   │   │           ├── input-enhancer-preset.py
-│   │   │   │   │   │           └── preseteqgenarator.py
-│   │   │   │   │   └── readme.md
-│   │   │   │   ├── 02-debian-family
-│   │   │   │   │   ├── apt-cheat-sheet.md
-│   │   │   │   │   └── readme.md
-│   │   │   │   ├── 03-suse-family
-│   │   │   │   │   ├── readme.md
-│   │   │   │   │   └── zypper-cheat-sheet.md
-│   │   │   │   ├── 04-lightweight-and-cloud-native
-│   │   │   │   │   ├── apk-cheat-sheet.md
-│   │   │   │   │   ├── pacman-cheat-sheet.md
-│   │   │   │   │   └── readme.md
-│   │   │   │   ├── distro-comparison-matrix.md
+│   │   │   ├── 02-debian-family
+│   │   │   │   ├── apt-cheat-sheet.md
 │   │   │   │   └── readme.md
-│   │   │   ├── interview-questions-and-quiz.md
-│   │   │   ├── reference
-│   │   │   │   ├── linux-best-practices-ref.md
-│   │   │   │   ├── linux-essential-commands-ref.md
-│   │   │   │   ├── linux-filesystem-ref.md
-│   │   │   │   ├── linux-permissions-ownership-ref.md
-│   │   │   │   └── linux-ssh-security-ref.md
-│   │   │   ├── resources
-│   │   │   │   ├── books
-│   │   │   │   │   ├── linux-bash.pdf
-│   │   │   │   │   ├── linux-bash-terminal.pdf
-│   │   │   │   │   ├── linux-for-dummies.pdf
-│   │   │   │   │   ├── linux-networking-commands.pdf
-│   │   │   │   │   ├── python.pdf
-│   │   │   │   │   ├── the-linux-command-line-a-complete-introduction.pdf
-│   │   │   │   │   └── xforce-threat-intelligence-2022.pdf
-│   │   │   │   └── linuxfilesystems.gif
-│   │   │   ├── scripts
-│   │   │   │   ├── bash
-│   │   │   │   │   ├── disk-usage-analyzer.sh
-│   │   │   │   │   ├── linux-system-audit.sh
-│   │   │   │   │   ├── permission-analyzer.sh
-│   │   │   │   │   ├── process-monitor.sh
-│   │   │   │   │   ├── ssh-hardening.sh
-│   │   │   │   │   └── zsh
-│   │   │   │   │       └── .zshrc
-│   │   │   │   └── python
-│   │   │   │       ├── input-enhancer-generator.py
-│   │   │   │       └── preset-eq-generator.py
-│   │   │   └── ssh
-│   │   │       ├── interview-questions.md
-│   │   │       ├── quiz.md
-│   │   │       └── readme.md
-│   │   ├── 02-Labs
-│   │   │   ├── resources
-│   │   │   │   ├── books
-│   │   │   │   │   ├── linux-bash.pdf
-│   │   │   │   │   ├── linux-bash-terminal.pdf
-│   │   │   │   │   ├── linux-for-dummies.pdf
-│   │   │   │   │   ├── linux-networking-commands.pdf
-│   │   │   │   │   ├── python.pdf
-│   │   │   │   │   ├── the-linux-command-line-a-complete-introduction.pdf
-│   │   │   │   │   └── xforce-threat-intelligence-2022.pdf
-│   │   │   │   └── linuxfilesystems.gif
-│   │   │   └── scripts
-│   │   │       ├── bash
-│   │   │       │   ├── disk-usage-analyzer.sh
-│   │   │       │   ├── linux-system-audit.sh
-│   │   │       │   ├── permission-analyzer.sh
-│   │   │       │   ├── process-monitor.sh
-│   │   │       │   ├── ssh-hardening.sh
-│   │   │       │   └── zsh
-│   │   │       │       └── .zshrc
-│   │   │       └── python
-│   │   │           ├── input-enhancer-generator.py
-│   │   │           └── preset-eq-generator.py
-│   │   └── 03-Assessment
+│   │   │   ├── 03-suse-family
+│   │   │   │   ├── readme.md
+│   │   │   │   └── zypper-cheat-sheet.md
+│   │   │   ├── 04-lightweight-and-cloud-native
+│   │   │   │   ├── apk-cheat-sheet.md
+│   │   │   │   ├── pacman-cheat-sheet.md
+│   │   │   │   └── readme.md
+│   │   │   ├── distro-comparison-matrix.md
+│   │   │   └── readme.md
+│   │   ├── interview-questions-and-quiz.md
+│   │   ├── MASTER_README.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── linux-best-practices-ref.md
+│   │   │   ├── linux-essential-commands-ref.md
+│   │   │   ├── linux-filesystem-ref.md
+│   │   │   ├── linux-permissions-ownership-ref.md
+│   │   │   └── linux-ssh-security-ref.md
+│   │   ├── resources
+│   │   │   ├── books
+│   │   │   │   ├── linux-bash.pdf
+│   │   │   │   ├── linux-bash-terminal.pdf
+│   │   │   │   ├── linux-for-dummies.pdf
+│   │   │   │   ├── linux-networking-commands.pdf
+│   │   │   │   ├── python.pdf
+│   │   │   │   ├── the-linux-command-line-a-complete-introduction.pdf
+│   │   │   │   └── xforce-threat-intelligence-2022.pdf
+│   │   │   └── linuxfilesystems.gif
+│   │   ├── scripts
+│   │   │   ├── bash
+│   │   │   │   ├── disk-usage-analyzer.sh
+│   │   │   │   ├── linux-system-audit.sh
+│   │   │   │   ├── permission-analyzer.sh
+│   │   │   │   ├── process-monitor.sh
+│   │   │   │   ├── ssh-hardening.sh
+│   │   │   │   └── zsh
+│   │   │   │       └── .zshrc
+│   │   │   └── python
+│   │   │       ├── input-enhancer-generator.py
+│   │   │       └── preset-eq-generator.py
+│   │   └── ssh
 │   │       ├── interview-questions.md
-│   │       └── quiz.md
-│   ├── 02-Networking-Logic
-│   │   ├── 01-Reference
-│   │   │   ├── 01-network-fundamentals
+│   │       ├── quiz.md
+│   │       └── readme.md
+│   ├── 02-networking-concepts
+│   │   ├── 01-network-fundamentals
+│   │   │   └── readme.md
+│   │   ├── 02-network-models
+│   │   │   ├── osi-model
+│   │   │   │   ├── 01-physical
+│   │   │   │   │   ├── cables-and-connectors
+│   │   │   │   │   │   ├── 1000base-t.md
+│   │   │   │   │   │   ├── 100base-t.md
+│   │   │   │   │   │   ├── 10-base-t.md
+│   │   │   │   │   │   ├── types.md
+│   │   │   │   │   │   └── wiring.md
+│   │   │   │   │   ├── devices
+│   │   │   │   │   │   ├── computer-network-components.md
+│   │   │   │   │   │   ├── hub.md
+│   │   │   │   │   │   ├── nic.md
+│   │   │   │   │   │   └── router
+│   │   │   │   │   │       ├── components
+│   │   │   │   │   │       │   ├── 1841-cisco-router.md
+│   │   │   │   │   │       │   ├── modem.md
+│   │   │   │   │   │       │   └── router-devices-and-wic-modules.md
+│   │   │   │   │   │       ├── protocols
+│   │   │   │   │   │       │   ├── loop-back-interface.md
+│   │   │   │   │   │       │   ├── ospf.md
+│   │   │   │   │   │       │   ├── route-aggregation.md
+│   │   │   │   │   │       │   ├── routing-alogrithms.md
+│   │   │   │   │   │       │   ├── routing-concepts.md
+│   │   │   │   │   │       │   ├── routing-loops.md
+│   │   │   │   │   │       │   └── routing-protocol-metrics.md
+│   │   │   │   │   │       └── router-main.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 02-data-link
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-network
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 04-transport
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 05-session
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 06-presentation
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 07-application
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── computer-network-models.md
+│   │   │   │   ├── images
+│   │   │   │   │   ├── network-layer.png
+│   │   │   │   │   ├── osi-7-layersjpg.webp
+│   │   │   │   │   ├── osimodel.png
+│   │   │   │   │   └── osi-vs-tcpip-modelsjpg.webp
+│   │   │   │   ├── quiz.md
+│   │   │   │   ├── real-life-scenarios.md
+│   │   │   │   └── slides
+│   │   │   │       ├── applicationlayer.jpg
+│   │   │   │       ├── data-link-layer-osi-model.jpg
+│   │   │   │       ├── internetlayer.jpg
+│   │   │   │       ├── networklayer.jpg
+│   │   │   │       ├── osi-model-application-layer-7.jpg
+│   │   │   │       ├── osi-model-network-layer-3.jpg
+│   │   │   │       ├── osi-model-physical-layer-1.jpg
+│   │   │   │       ├── osi-model-presentation-layer-6.jpg
+│   │   │   │       ├── osi-model-session-layer-5.jpg
+│   │   │   │       ├── osi-model-transport-layer-4.jpg
+│   │   │   │       └── transportlayer.jpg
+│   │   │   └── readme.md
+│   │   ├── 03-ip-addressing
+│   │   │   ├── challenges.md
+│   │   │   └── readme.md
+│   │   ├── 04-basic-protocols
+│   │   │   └── readme.md
+│   │   ├── 05-network-devices
+│   │   │   └── readme.md
+│   │   ├── 06-basic-troubleshooting
+│   │   │   └── readme.md
+│   │   ├── 07-network-troubleshooting-labs
+│   │   │   ├── lab-01-telnet-test.py
+│   │   │   └── lab-02-dns-resolver.py
+│   │   ├── dhcp-dora-process.png
+│   │   ├── dns-hierarchy.png
+│   │   ├── MASTER_README.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── ip-addressing-subnetting-ref.md
+│   │   │   ├── network-devices-hardware-ref.md
+│   │   │   ├── networking-best-practices-ref.md
+│   │   │   ├── network-models-ref.md
+│   │   │   ├── network-protocols-ref.md
+│   │   │   └── network-troubleshooting-ref.md
+│   │   ├── resources
+│   │   │   ├── computer-networking.pdf
+│   │   │   ├── network-security-bible.pdf
+│   │   │   ├── nmap-cheat-sheet.pdf
+│   │   │   ├── nmap.pdf
+│   │   │   └── wireshark.pdf
+│   │   ├── scripts
+│   │   │   ├── get-networkinventory.ps1
+│   │   │   ├── measure-networklatency.ps1
+│   │   │   ├── resolve-dnsissues.ps1
+│   │   │   ├── test-networkdiagnostics.ps1
+│   │   │   └── test-portconnectivity.ps1
+│   │   └── tree.txt
+│   ├── 02-Network-Protocols
+│   │   ├── 01-network-fundamentals
+│   │   │   └── readme.md
+│   │   ├── 02-network-models
+│   │   │   ├── osi-model
+│   │   │   │   ├── 01-physical
+│   │   │   │   │   ├── cables-and-connectors
+│   │   │   │   │   │   ├── 1000base-t.md
+│   │   │   │   │   │   ├── 100base-t.md
+│   │   │   │   │   │   ├── 10-base-t.md
+│   │   │   │   │   │   ├── types.md
+│   │   │   │   │   │   └── wiring.md
+│   │   │   │   │   ├── devices
+│   │   │   │   │   │   ├── computer-network-components.md
+│   │   │   │   │   │   ├── hub.md
+│   │   │   │   │   │   ├── nic.md
+│   │   │   │   │   │   └── router
+│   │   │   │   │   │       ├── components
+│   │   │   │   │   │       │   ├── 1841-cisco-router.md
+│   │   │   │   │   │       │   ├── modem.md
+│   │   │   │   │   │       │   └── router-devices-and-wic-modules.md
+│   │   │   │   │   │       ├── protocols
+│   │   │   │   │   │       │   ├── loop-back-interface.md
+│   │   │   │   │   │       │   ├── ospf.md
+│   │   │   │   │   │       │   ├── route-aggregation.md
+│   │   │   │   │   │       │   ├── routing-alogrithms.md
+│   │   │   │   │   │       │   ├── routing-concepts.md
+│   │   │   │   │   │       │   ├── routing-loops.md
+│   │   │   │   │   │       │   └── routing-protocol-metrics.md
+│   │   │   │   │   │       └── router-main.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 02-data-link
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-network
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 04-transport
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 05-session
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 06-presentation
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 07-application
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── computer-network-models.md
+│   │   │   │   ├── images
+│   │   │   │   │   ├── network-layer.png
+│   │   │   │   │   ├── osi-7-layersjpg.webp
+│   │   │   │   │   ├── osimodel.png
+│   │   │   │   │   └── osi-vs-tcpip-modelsjpg.webp
+│   │   │   │   ├── quiz.md
+│   │   │   │   ├── real-life-scenarios.md
+│   │   │   │   └── slides
+│   │   │   │       ├── applicationlayer.jpg
+│   │   │   │       ├── data-link-layer-osi-model.jpg
+│   │   │   │       ├── internetlayer.jpg
+│   │   │   │       ├── networklayer.jpg
+│   │   │   │       ├── osi-model-application-layer-7.jpg
+│   │   │   │       ├── osi-model-network-layer-3.jpg
+│   │   │   │       ├── osi-model-physical-layer-1.jpg
+│   │   │   │       ├── osi-model-presentation-layer-6.jpg
+│   │   │   │       ├── osi-model-session-layer-5.jpg
+│   │   │   │       ├── osi-model-transport-layer-4.jpg
+│   │   │   │       └── transportlayer.jpg
+│   │   │   └── readme.md
+│   │   ├── 03-ip-addressing
+│   │   │   ├── challenges.md
+│   │   │   └── readme.md
+│   │   ├── 04-basic-protocols
+│   │   │   └── readme.md
+│   │   ├── 05-network-devices
+│   │   │   └── readme.md
+│   │   ├── 06-basic-troubleshooting
+│   │   │   └── readme.md
+│   │   ├── 07-network-troubleshooting-labs
+│   │   │   ├── lab-01-telnet-test.py
+│   │   │   └── lab-02-dns-resolver.py
+│   │   ├── dhcp-dora-process.png
+│   │   ├── dns-hierarchy.png
+│   │   ├── HUMAN_GUIDE.md
+│   │   ├── readme.md
+│   │   ├── Reference
+│   │   │   ├── ip-addressing-subnetting-ref.md
+│   │   │   ├── network-devices-hardware-ref.md
+│   │   │   ├── networking-best-practices-ref.md
+│   │   │   ├── network-models-ref.md
+│   │   │   ├── network-protocols-ref.md
+│   │   │   └── network-troubleshooting-ref.md
+│   │   ├── resources
+│   │   │   ├── computer-networking.pdf
+│   │   │   ├── network-security-bible.pdf
+│   │   │   ├── nmap-cheat-sheet.pdf
+│   │   │   ├── nmap.pdf
+│   │   │   └── wireshark.pdf
+│   │   ├── Scripts
+│   │   │   ├── get-networkinventory.ps1
+│   │   │   ├── measure-networklatency.ps1
+│   │   │   ├── resolve-dnsissues.ps1
+│   │   │   ├── test-networkdiagnostics.ps1
+│   │   │   └── test-portconnectivity.ps1
+│   │   └── tree.txt
+│   ├── 03-git-version-control
+│   │   ├── 01-beginner-level
+│   │   │   ├── 01-introduction
 │   │   │   │   └── readme.md
-│   │   │   ├── 02-network-models
-│   │   │   │   ├── osi-model
-│   │   │   │   │   ├── 01-physical
-│   │   │   │   │   │   ├── cables-and-connectors
-│   │   │   │   │   │   │   ├── 1000base-t.md
-│   │   │   │   │   │   │   ├── 100base-t.md
-│   │   │   │   │   │   │   ├── 10-base-t.md
-│   │   │   │   │   │   │   ├── types.md
-│   │   │   │   │   │   │   └── wiring.md
-│   │   │   │   │   │   ├── devices
-│   │   │   │   │   │   │   ├── computer-network-components.md
-│   │   │   │   │   │   │   ├── hub.md
-│   │   │   │   │   │   │   ├── nic.md
-│   │   │   │   │   │   │   └── router
-│   │   │   │   │   │   │       ├── components
-│   │   │   │   │   │   │       │   ├── 1841-cisco-router.md
-│   │   │   │   │   │   │       │   ├── modem.md
-│   │   │   │   │   │   │       │   └── router-devices-and-wic-modules.md
-│   │   │   │   │   │   │       ├── protocols
-│   │   │   │   │   │   │       │   ├── loop-back-interface.md
-│   │   │   │   │   │   │       │   ├── ospf.md
-│   │   │   │   │   │   │       │   ├── route-aggregation.md
-│   │   │   │   │   │   │       │   ├── routing-alogrithms.md
-│   │   │   │   │   │   │       │   ├── routing-concepts.md
-│   │   │   │   │   │   │       │   ├── routing-loops.md
-│   │   │   │   │   │   │       │   └── routing-protocol-metrics.md
-│   │   │   │   │   │   │       └── router-main.md
-│   │   │   │   │   │   ├── readme.md
-│   │   │   │   │   │   └── README_RESTORED.md
-│   │   │   │   │   ├── 02-data-link
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 03-network
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 04-transport
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 05-session
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 06-presentation
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 07-application
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── computer-network-models.md
-│   │   │   │   │   ├── images
-│   │   │   │   │   │   ├── network-layer.png
-│   │   │   │   │   │   ├── osi-7-layersjpg.webp
-│   │   │   │   │   │   ├── osimodel.png
-│   │   │   │   │   │   └── osi-vs-tcpip-modelsjpg.webp
-│   │   │   │   │   ├── quiz.md
-│   │   │   │   │   ├── real-life-scenarios.md
-│   │   │   │   │   └── slides
-│   │   │   │   │       ├── applicationlayer.jpg
-│   │   │   │   │       ├── data-link-layer-osi-model.jpg
-│   │   │   │   │       ├── internetlayer.jpg
-│   │   │   │   │       ├── networklayer.jpg
-│   │   │   │   │       ├── osi-model-application-layer-7.jpg
-│   │   │   │   │       ├── osi-model-network-layer-3.jpg
-│   │   │   │   │       ├── osi-model-physical-layer-1.jpg
-│   │   │   │   │       ├── osi-model-presentation-layer-6.jpg
-│   │   │   │   │       ├── osi-model-session-layer-5.jpg
-│   │   │   │   │       ├── osi-model-transport-layer-4.jpg
-│   │   │   │   │       └── transportlayer.jpg
+│   │   │   ├── 02-git-fundamentals
 │   │   │   │   └── readme.md
-│   │   │   ├── 03-ip-addressing
+│   │   │   └── 03-git-commands
+│   │   │       └── readme.md
+│   │   ├── 02-intermediate-level
+│   │   │   ├── 01-git-workflows
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-github-integration
+│   │   │   │   └── readme.md
+│   │   │   └── 03-github-actions
+│   │   │       └── readme.md
+│   │   ├── 03-advanced-level
+│   │   │   ├── 01-git-advanced
+│   │   │   │   └── readme.md
+│   │   │   └── 02-security-best-practices
+│   │   │       └── readme.md
+│   │   ├── challenges.md
+│   │   ├── MASTER_README.md
+│   │   └── readme.md
+│   ├── 03-Git-Version-Control
+│   │   ├── 01-beginner-level
+│   │   │   ├── 01-introduction
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-git-fundamentals
+│   │   │   │   └── readme.md
+│   │   │   └── 03-git-commands
+│   │   │       └── readme.md
+│   │   ├── 02-intermediate-level
+│   │   │   ├── 01-git-workflows
+│   │   │   │   └── readme.md
+│   │   │   ├── 02-github-integration
+│   │   │   │   └── readme.md
+│   │   │   └── 03-github-actions
+│   │   │       └── readme.md
+│   │   ├── 03-advanced-level
+│   │   │   ├── 01-git-advanced
+│   │   │   │   └── readme.md
+│   │   │   └── 02-security-best-practices
+│   │   │       └── readme.md
+│   │   ├── Assessment
+│   │   │   └── git-challenges.md
+│   │   ├── HUMAN_GUIDE.md
+│   │   └── readme.md
+│   ├── 04-automation-scripting
+│   │   ├── assets
+│   │   │   ├── arithmetic-metrics-header.svg
+│   │   │   ├── case-logic.svg
+│   │   │   ├── deployment-logic-flow.svg
+│   │   │   ├── dotfiles-iceberg.svg
+│   │   │   ├── function-architecture.svg
+│   │   │   ├── grep-mastery.svg
+│   │   │   ├── paging-ecosystem.svg
+│   │   │   ├── pipeline-architecture.svg
+│   │   │   ├── stream-architecture.png
+│   │   │   ├── stream-architecture.svg
+│   │   │   └── test-operators.svg
+│   │   ├── audit-summary.md
+│   │   ├── examples
+│   │   │   ├── cheatsheets
+│   │   │   │   └── refcheatsheet.md
+│   │   │   └── os-test.sh
+│   │   ├── MASTER_README.md
+│   │   ├── part-01-shell-foundations
+│   │   │   ├── 01-introduction
 │   │   │   │   ├── challenges.md
+│   │   │   │   ├── readme.md
+│   │   │   │   ├── shell-architecture.png
+│   │   │   │   └── shell-architecture.svg
+│   │   │   ├── 02-terminal-and-navigation
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── navigation-architecture.png
 │   │   │   │   └── readme.md
-│   │   │   ├── 04-basic-protocols
+│   │   │   ├── 03-file-manipulation
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── file-lifecycle.svg
+│   │   │   │   ├── hidden-files
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── dotfiles-iceberg.svg
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── paging
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── paging-ecosystem.svg
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── searching
+│   │   │   │       ├── calculate-system-metrics.sh
+│   │   │   │       ├── challenges.md
+│   │   │   │       ├── grep-mastery.svg
+│   │   │   │       └── readme.md
+│   │   │   ├── 04-man-pages-and-help
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── man-pages-structure.svg
 │   │   │   │   └── readme.md
-│   │   │   ├── 05-network-devices
+│   │   │   ├── 05-vim-basics
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── vim-modes-state.svg
+│   │   │   ├── 06-permissions
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── permission-architecture.svg
 │   │   │   │   └── readme.md
-│   │   │   ├── 06-basic-troubleshooting
+│   │   │   ├── 07-basic-variables
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── variable-mechanics.svg
+│   │   │   └── 08-programs-and-commands
+│   │   │       ├── challenges.md
+│   │   │       ├── command-resolution-order.svg
+│   │   │       └── readme.md
+│   │   ├── part-02-shell-architecture
+│   │   │   ├── 01-arithmetic-and-metrics
+│   │   │   │   ├── calculate-metrics.sh
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── operators.sh
+│   │   │   │   ├── readme-advanced.md
 │   │   │   │   └── readme.md
-│   │   │   ├── 07-network-troubleshooting-labs
-│   │   │   │   ├── lab-01-telnet-test.py
-│   │   │   │   └── lab-02-dns-resolver.py
-│   │   │   ├── dhcp-dora-process.png
-│   │   │   ├── dns-hierarchy.png
+│   │   │   ├── 02-user-input
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── input-channels-mapping.svg
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-conditionals
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── conditional-logic-flow.png
+│   │   │   │   ├── conditional-logic-flow.svg
+│   │   │   │   └── readme.md
+│   │   │   ├── 04-loops-and-processing
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── iteration-mechanics.png
+│   │   │   │   ├── iteration-mechanics.svg
+│   │   │   │   ├── readme-advanced.md
+│   │   │   │   └── readme.md
+│   │   │   ├── 05-functions-and-scope
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── modular-architecture.png
+│   │   │   │   ├── modular-architecture.svg
+│   │   │   │   └── readme.md
+│   │   │   └── 06-strict-mode-safety
+│   │   │       ├── challenges.md
+│   │   │       └── readme.md
+│   │   ├── part-03-system-drafting
+│   │   │   ├── 01-scripting-basics
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── scripting-lifecycle.svg
+│   │   │   └── 02-advanced-io
+│   │   │       ├── challenges.md
+│   │   │       ├── io-stream-architecture.png
+│   │   │       ├── io-stream-architecture.svg
+│   │   │       └── readme.md
+│   │   ├── readme.md
+│   │   ├── reference
+│   │   │   ├── bash-architecture-ref.md
+│   │   │   ├── posix-vs-bash-compatibility-ref.md
+│   │   │   ├── regular-expressions-ref.md
+│   │   │   ├── script-hardening-best-practices-ref.md
+│   │   │   ├── shell-fundamentals-ref.md
+│   │   │   └── stream-editing-filtering-ref.md
+│   │   ├── resources
+│   │   │   ├── advanced-bash-scripting-guide.pdf
+│   │   │   ├── automate-it.pdf
+│   │   │   ├── basics-of-web-hacking.pdf
+│   │   │   ├── pdf-scraper.py
+│   │   │   └── shell-scripting.pdf
+│   │   └── tree.txt
+│   ├── 04-Scripting-Automation
+│   │   ├── 02-Python-Basics
+│   │   │   ├── assets
+│   │   │   │   ├── python-automation-banner.png
+│   │   │   │   ├── python-data-flow.png
+│   │   │   │   ├── python-devops-hub.png
+│   │   │   │   ├── python-ecosystem.png
+│   │   │   │   ├── python-error-handling.png
+│   │   │   │   ├── python-file-ops.png
+│   │   │   │   ├── python-functions-modules.png
+│   │   │   │   └── python-learning-path.png
+│   │   │   ├── challenges.md
+│   │   │   ├── examples
+│   │   │   │   ├── audit-links.py
+│   │   │   │   ├── automated-virus-scan.md
+│   │   │   │   ├── centralize-boilerplates.py
+│   │   │   │   ├── convert-quiz-format.py
+│   │   │   │   ├── create-missing-files.py
+│   │   │   │   ├── fix-images-script.py
+│   │   │   │   ├── fix-images-v2.py
+│   │   │   │   ├── migration-mapper.py
+│   │   │   │   └── reformat-all-quizzes.py
+│   │   │   ├── part-00-prerequisites
+│   │   │   │   ├── 01-python-setup
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 02-pip-basics
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-virtual-environments
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── 04-anaconda-setup
+│   │   │   │       ├── assets
+│   │   │   │       │   ├── conda-architecture.png
+│   │   │   │       │   └── environment-lifecycle.png
+│   │   │   │       └── readme.md
+│   │   │   ├── part-01-python-foundations
+│   │   │   │   ├── 01-fundamentals
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── system-monitor-demo.py
+│   │   │   │   ├── 02-control-flow
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   └── control-flow-logic.png
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── lab-01-log-filter.py
+│   │   │   │   │   ├── lab-02-validator.py
+│   │   │   │   │   ├── lab-03-port-checker.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-iterative-logic-and-loops
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 04-data-structures
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   ├── dict-vs-set.png
+│   │   │   │   │   │   ├── list-vs-tuple.png
+│   │   │   │   │   │   └── python-data-structures.png
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-inventory-mgmt.py
+│   │   │   │   │   │   ├── challenge-02-log-dedup.py
+│   │   │   │   │   │   ├── challenge-03-config-merger.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-inventory-mgmt.py
+│   │   │   │   │   │       ├── solution-02-log-dedup.py
+│   │   │   │   │   │       └── solution-03-config-merger.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── drift-detector-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 05-error-handling
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-config-loader.py
+│   │   │   │   │   │   ├── challenge-02-health-retry.py
+│   │   │   │   │   │   ├── challenge-03-shutdown-handler.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-config-loader.py
+│   │   │   │   │   │       ├── solution-02-health-retry.py
+│   │   │   │   │   │       └── solution-03-shutdown-handler.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── resilient-deployer-demo.py
+│   │   │   │   ├── 06-file-io-devops
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── log-processor-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 07-functions-and-modules
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   ├── function-anatomy.png
+│   │   │   │   │   │   └── monolith-vs-modular.png
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-health-checker.py
+│   │   │   │   │   │   ├── challenge-02-retry-decorator.py
+│   │   │   │   │   │   ├── challenge-03-config-module.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-health-checker.py
+│   │   │   │   │   │       ├── solution-02-retry-decorator.py
+│   │   │   │   │   │       └── solution-03-config-pkg
+│   │   │   │   │   │           └── config
+│   │   │   │   │   │               ├── init.py
+│   │   │   │   │   │               ├── loader.py
+│   │   │   │   │   │               └── settings.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── cloud-dispatcher-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 08-cloud-automation-boto3
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── conftest.py
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   ├── s3-janitor.py
+│   │   │   │   │   ├── testing-with-moto.md
+│   │   │   │   │   └── test-s3-janitor.py
+│   │   │   │   ├── 09-time-and-date
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-backup-check.py
+│   │   │   │   │   │   ├── challenge-02-log-parser.py
+│   │   │   │   │   │   ├── challenge-03-sla-calculator.py
+│   │   │   │   │   │   ├── challenge-04-scheduler.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-backup-check.py
+│   │   │   │   │   │       ├── solution-02-log-parser.py
+│   │   │   │   │   │       ├── solution-03-sla-calculator.py
+│   │   │   │   │   │       └── solution-04-scheduler.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── log-retention-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── assets
+│   │   │   │       ├── boto3-architecture-diagram.png
+│   │   │   │       ├── boto3-architecture-diagram.svg
+│   │   │   │       ├── function-anatomy.png
+│   │   │   │       ├── loop-visual-flow.png
+│   │   │   │       ├── monolith-vs-modular.png
+│   │   │   │       ├── polling-loop.png
+│   │   │   │       ├── python-data-flow.png
+│   │   │   │       └── python-error-handling.png
+│   │   │   ├── part-02-python-architecture
+│   │   │   │   ├── 01-pathlib-modern-files
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-log-cleanup.py
+│   │   │   │   │   │   ├── challenge-02-project-analyzer.py
+│   │   │   │   │   │   ├── challenge-03-safe-backup.py
+│   │   │   │   │   │   ├── challenge-04-sync-dirs.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-log-cleanup.py
+│   │   │   │   │   │       ├── solution-02-project-analyzer.py
+│   │   │   │   │   │       ├── solution-03-safe-backup.py
+│   │   │   │   │   │       └── solution-04-sync-dirs.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 02-json-handling
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-api-parser.py
+│   │   │   │   │   │   ├── challenge-02-config-validator.py
+│   │   │   │   │   │   ├── challenge-03-json-diff.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-api-parser.py
+│   │   │   │   │   │       ├── solution-02-config-validator.py
+│   │   │   │   │   │       └── solution-03-json-diff.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-yaml-handling
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-manifest-gen.py
+│   │   │   │   │   │   ├── challenge-02-inventory-parser.py
+│   │   │   │   │   │   ├── challenge-03-config-merger.py
+│   │   │   │   │   │   ├── challenge-04-ansible-inventory.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-manifest-gen.py
+│   │   │   │   │   │       ├── solution-02-inventory-parser.py
+│   │   │   │   │   │       ├── solution-03-config-merger.py
+│   │   │   │   │   │       └── solution-04-ansible-inventory.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 04-testing-and-qa
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-config-loader.py
+│   │   │   │   │   │   ├── challenge-02-health-retry.py
+│   │   │   │   │   │   ├── challenge-03-shutdown-handler.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-config-loader.py
+│   │   │   │   │   │       ├── solution-02-health-retry.py
+│   │   │   │   │   │       └── solution-03-shutdown-handler.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── resilient-deployer-demo.py
+│   │   │   │   ├── 05-virtual-environments
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-venv-creator.py
+│   │   │   │   │   │   ├── challenge-02-req-checker.py
+│   │   │   │   │   │   ├── challenge-03-portable-setup.py
+│   │   │   │   │   │   ├── challenge-04-isolated-task.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-venv-creator.py
+│   │   │   │   │   │       ├── solution-02-req-checker.py
+│   │   │   │   │   │       ├── solution-03-portable-setup.py
+│   │   │   │   │   │       └── solution-04-isolated-task.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 06-package-management
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-dependency-analyzer.py
+│   │   │   │   │   │   ├── challenge-02-pip-wrapper.py
+│   │   │   │   │   │   ├── challenge-03-version-bumper.py
+│   │   │   │   │   │   ├── challenge-04-conflict-finder.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-dependency-analyzer.py
+│   │   │   │   │   │       ├── solution-02-pip-wrapper.py
+│   │   │   │   │   │       ├── solution-03-version-bumper.py
+│   │   │   │   │   │       └── solution-04-conflict-finder.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   └── 07-regular-expressions
+│   │   │   │       ├── challenges
+│   │   │   │       │   ├── challenge-01-nginx-parser.py
+│   │   │   │       │   ├── challenge-02-data-masker.py
+│   │   │   │       │   ├── challenge-03-error-aggregator.py
+│   │   │   │       │   ├── challenge-04-config-extractor.py
+│   │   │   │       │   └── solutions
+│   │   │   │       │       ├── solution-01-nginx-parser.py
+│   │   │   │       │       ├── solution-02-data-masker.py
+│   │   │   │       │       ├── solution-03-error-aggregator.py
+│   │   │   │       │       └── solution-04-config-extractor.py
+│   │   │   │       ├── challenges.md
+│   │   │   │       └── readme.md
+│   │   │   ├── part-03-python-systems-drafting
+│   │   │   │   ├── 01-command-line-arguments
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-port-scanner.py
+│   │   │   │   │   │   ├── challenge-02-file-args.py
+│   │   │   │   │   │   ├── challenge-03-safety-flags.py
+│   │   │   │   │   │   ├── challenge-04-subcommands.py
+│   │   │   │   │   │   ├── challenge-05-env-override.py
+│   │   │   │   │   │   ├── challenge-06-cli-wrapper.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-port-scanner.py
+│   │   │   │   │   │       ├── solution-02-file-args.py
+│   │   │   │   │   │       ├── solution-03-safety-flags.py
+│   │   │   │   │   │       ├── solution-04-subcommands.py
+│   │   │   │   │   │       ├── solution-05-env-override.py
+│   │   │   │   │   │       └── solution-06-cli-wrapper.py
+│   │   │   │   │   ├── deployer-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 02-environment-variables
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-validator.py
+│   │   │   │   │   │   ├── challenge-02-masking-logger.py
+│   │   │   │   │   │   ├── challenge-03-bool-parser.py
+│   │   │   │   │   │   ├── challenge-04-dynamic-loader.py
+│   │   │   │   │   │   ├── challenge-05-prefix-loader.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-validator.py
+│   │   │   │   │   │       ├── solution-02-masking-logger.py
+│   │   │   │   │   │       ├── solution-03-bool-parser.py
+│   │   │   │   │   │       ├── solution-04-dynamic-loader.py
+│   │   │   │   │   │       └── solution-05-prefix-loader.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── env-config-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-subprocess-execution
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-health-checker.py
+│   │   │   │   │   │   ├── challenge-02-git-checker.py
+│   │   │   │   │   │   ├── challenge-03-docker-manager.py
+│   │   │   │   │   │   ├── challenge-04-log-monitor.py
+│   │   │   │   │   │   ├── challenge-05-terraform-wrapper.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-health-checker.py
+│   │   │   │   │   │       ├── solution-02-git-checker.py
+│   │   │   │   │   │       ├── solution-03-docker-manager.py
+│   │   │   │   │   │       └── solution-04-log-monitor.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── system-audit-demo.py
+│   │   │   │   ├── 04-logging-basics
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   │   ├── challenge-01-basic-setup.py
+│   │   │   │   │   │   ├── challenge-02-rotating-logs.py
+│   │   │   │   │   │   ├── challenge-03-json-formatter.py
+│   │   │   │   │   │   ├── challenge-04-contextual-logging.py
+│   │   │   │   │   │   └── solutions
+│   │   │   │   │   │       ├── solution-01-basic-setup.py
+│   │   │   │   │   │       ├── solution-02-rotating-logs.py
+│   │   │   │   │   │       ├── solution-03-json-formatter.py
+│   │   │   │   │   │       └── solution-04-contextual-logging.py
+│   │   │   │   │   ├── enterprise-logger-demo.py
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 05-working-with-the-web
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── web-api-demo.py
+│   │   │   │   ├── 06-web-automation
+│   │   │   │   │   ├── browser-logic-demo.py
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 07-micro-frameworks
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   └── webhook-service-demo.py
+│   │   │   │   └── 08-capstone-script
+│   │   │   │       ├── challenges
+│   │   │   │       │   ├── challenge-01-slack-alerter.py
+│   │   │   │       │   ├── challenge-02-cli-improver.py
+│   │   │   │       │   ├── challenge-03-report-exporter.py
+│   │   │   │       │   ├── challenge-04-port-scanner.py
+│   │   │   │       │   └── solutions
+│   │   │   │       │       ├── solution-01-slack-alerter.py
+│   │   │   │       │       ├── solution-02-cli-improver.py
+│   │   │   │       │       ├── solution-03-report-exporter.py
+│   │   │   │       │       └── solution-04-port-scanner.py
+│   │   │   │       ├── challenges.md
+│   │   │   │       ├── checker.py
+│   │   │   │       ├── ops-mate
+│   │   │   │       │   ├── config
+│   │   │   │       │   │   └── inventory.yaml
+│   │   │   │       │   ├── requirements.txt
+│   │   │   │       │   ├── src
+│   │   │   │       │   │   ├── health.py
+│   │   │   │       │   │   ├── main.py
+│   │   │   │       │   │   └── utils.py
+│   │   │   │       │   └── tests
+│   │   │   │       │       └── test-health.py
+│   │   │   │       ├── readme.md
+│   │   │   │       └── server-health-monitor
+│   │   │   │           ├── config
+│   │   │   │           │   └── servers.json
+│   │   │   │           ├── requirements.txt
+│   │   │   │           └── src
+│   │   │   │               ├── checker.py
+│   │   │   │               ├── main.py
+│   │   │   │               └── reporter.py
+│   │   │   ├── playground
+│   │   │   │   ├── cli-args
+│   │   │   │   │   └── calculator.py
+│   │   │   │   ├── conditional-statements
+│   │   │   │   │   └── ifelselif.py
+│   │   │   │   ├── data-structure
+│   │   │   │   │   ├── lists.py
+│   │   │   │   │   └── tuples.py
+│   │   │   │   ├── dictionary
+│   │   │   │   │   ├── dict.py
+│   │   │   │   │   ├── gitreq.py
+│   │   │   │   │   └── sets.py
+│   │   │   │   ├── env-vars
+│   │   │   │   │   └── envar.py
+│   │   │   │   ├── error-report.txt
+│   │   │   │   ├── files-io
+│   │   │   │   │   ├── file-rw.py
+│   │   │   │   │   └── server.conf
+│   │   │   │   ├── functions
+│   │   │   │   │   ├── calculator-1.py
+│   │   │   │   │   └── calculator.py
+│   │   │   │   ├── input-logs.txt
+│   │   │   │   ├── intermediate
+│   │   │   │   │   └── list-files-in-folders.py
+│   │   │   │   ├── keywords
+│   │   │   │   │   └── links.txt
+│   │   │   │   ├── loop
+│   │   │   │   │   ├── for-loops.py
+│   │   │   │   │   ├── manipulation-loops.py
+│   │   │   │   │   └── while-loops.py
+│   │   │   │   ├── modules
+│   │   │   │   │   ├── calc.py
+│   │   │   │   │   └── calculator.py
+│   │   │   │   └── operators
+│   │   │   │       ├── arithmetic.py
+│   │   │   │       ├── assignment.py
+│   │   │   │       ├── bitwise.py
+│   │   │   │       ├── identity.py
+│   │   │   │       ├── logical.py
+│   │   │   │       ├── membership.py
+│   │   │   │       └── relational-comparsion.py
+│   │   │   ├── python-devops-learning-path.md
 │   │   │   ├── readme.md
 │   │   │   ├── reference
-│   │   │   │   ├── ip-addressing-subnetting-ref.md
-│   │   │   │   ├── network-devices-hardware-ref.md
-│   │   │   │   ├── networking-best-practices-ref.md
-│   │   │   │   ├── network-models-ref.md
-│   │   │   │   ├── network-protocols-ref.md
-│   │   │   │   └── network-troubleshooting-ref.md
+│   │   │   │   ├── automation-best-practices.md
+│   │   │   │   ├── built-in-functions-ref.md
+│   │   │   │   ├── error-exceptions-ref.md
+│   │   │   │   ├── iterative-logic-ref.md
+│   │   │   │   ├── operators-logic-ref.md
+│   │   │   │   ├── python-automation-patterns-ref.md
+│   │   │   │   ├── python-data-keywords-ref.md
+│   │   │   │   ├── python-devops-testing-ref.md
+│   │   │   │   ├── python-pep8-style-guide.md
+│   │   │   │   └── standard-library-ref.md
 │   │   │   ├── resources
-│   │   │   │   ├── computer-networking.pdf
-│   │   │   │   ├── network-security-bible.pdf
-│   │   │   │   ├── nmap-cheat-sheet.pdf
-│   │   │   │   ├── nmap.pdf
-│   │   │   │   └── wireshark.pdf
+│   │   │   │   └── python-regular-expression-regex.pdf
 │   │   │   ├── scripts
-│   │   │   │   ├── get-networkinventory.ps1
-│   │   │   │   ├── measure-networklatency.ps1
-│   │   │   │   ├── resolve-dnsissues.ps1
-│   │   │   │   ├── test-networkdiagnostics.ps1
-│   │   │   │   └── test-portconnectivity.ps1
+│   │   │   │   ├── audit-report.txt
+│   │   │   │   ├── disk-calc.py
+│   │   │   │   ├── fix
+│   │   │   │   │   ├── fix-index.py
+│   │   │   │   │   └── fix-links.py
+│   │   │   │   ├── health-check.py
+│   │   │   │   ├── log-formatter.py
+│   │   │   │   └── sre-linter.py
 │   │   │   └── tree.txt
-│   │   ├── 02-Labs
-│   │   └── 03-Assessment
-│   ├── 03-Git-Version-Control
-│   │   ├── 01-Reference
-│   │   │   ├── 01-beginner-level
-│   │   │   │   ├── 01-introduction
-│   │   │   │   │   └── readme.md
-│   │   │   │   ├── 02-git-fundamentals
-│   │   │   │   │   └── readme.md
-│   │   │   │   └── 03-git-commands
-│   │   │   │       └── readme.md
-│   │   │   ├── 02-intermediate-level
-│   │   │   │   ├── 01-git-workflows
-│   │   │   │   │   └── readme.md
-│   │   │   │   ├── 02-github-integration
-│   │   │   │   │   └── readme.md
-│   │   │   │   └── 03-github-actions
-│   │   │   │       └── readme.md
-│   │   │   └── 03-advanced-level
-│   │   │       ├── 01-git-advanced
-│   │   │       │   └── readme.md
-│   │   │       └── 02-security-best-practices
-│   │   │           └── readme.md
-│   │   ├── 02-Labs
-│   │   └── 03-Assessment
-│   │       └── git-challenges.md
-│   ├── 04-Scripting-Automation
-│   │   ├── 01-Reference
-│   │   │   ├── assets
-│   │   │   │   ├── arithmetic-metrics-header.svg
-│   │   │   │   ├── case-logic.svg
-│   │   │   │   ├── deployment-logic-flow.svg
-│   │   │   │   ├── dotfiles-iceberg.svg
-│   │   │   │   ├── function-architecture.svg
-│   │   │   │   ├── grep-mastery.svg
-│   │   │   │   ├── paging-ecosystem.svg
-│   │   │   │   ├── pipeline-architecture.svg
-│   │   │   │   ├── stream-architecture.png
-│   │   │   │   ├── stream-architecture.svg
-│   │   │   │   └── test-operators.svg
-│   │   │   ├── part-01-shell-foundations
-│   │   │   │   ├── 01-introduction
-│   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── readme.md
-│   │   │   │   │   ├── shell-architecture.png
-│   │   │   │   │   └── shell-architecture.svg
-│   │   │   │   ├── 02-terminal-and-navigation
-│   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── navigation-architecture.png
-│   │   │   │   │   └── readme.md
-│   │   │   │   ├── 03-file-manipulation
-│   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── file-lifecycle.svg
-│   │   │   │   │   ├── hidden-files
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── dotfiles-iceberg.svg
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── paging
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── paging-ecosystem.svg
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── readme.md
-│   │   │   │   │   └── searching
-│   │   │   │   │       ├── calculate-system-metrics.sh
-│   │   │   │   │       ├── challenges.md
-│   │   │   │   │       ├── grep-mastery.svg
-│   │   │   │   │       └── readme.md
-│   │   │   │   ├── 04-man-pages-and-help
-│   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── man-pages-structure.svg
-│   │   │   │   │   └── readme.md
-│   │   │   │   ├── 05-vim-basics
-│   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── readme.md
-│   │   │   │   │   └── vim-modes-state.svg
-│   │   │   │   ├── 06-permissions
-│   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── permission-architecture.svg
-│   │   │   │   │   └── readme.md
-│   │   │   │   ├── 07-basic-variables
-│   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── readme.md
-│   │   │   │   │   └── variable-mechanics.svg
-│   │   │   │   └── 08-programs-and-commands
-│   │   │   │       ├── challenges.md
-│   │   │   │       ├── command-resolution-order.svg
-│   │   │   │       └── readme.md
-│   │   │   ├── part-02-shell-architecture
-│   │   │   │   ├── 01-arithmetic-and-metrics
-│   │   │   │   │   ├── calculate-metrics.sh
-│   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── operators.sh
-│   │   │   │   │   ├── readme-advanced.md
-│   │   │   │   │   └── readme.md
-│   │   │   │   ├── 02-user-input
-│   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── input-channels-mapping.svg
-│   │   │   │   │   └── readme.md
-│   │   │   │   ├── 03-conditionals
-│   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── conditional-logic-flow.png
-│   │   │   │   │   ├── conditional-logic-flow.svg
-│   │   │   │   │   └── readme.md
-│   │   │   │   ├── 04-loops-and-processing
-│   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── iteration-mechanics.png
-│   │   │   │   │   ├── iteration-mechanics.svg
-│   │   │   │   │   ├── readme-advanced.md
-│   │   │   │   │   └── readme.md
-│   │   │   │   ├── 05-functions-and-scope
-│   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── modular-architecture.png
-│   │   │   │   │   ├── modular-architecture.svg
-│   │   │   │   │   └── readme.md
-│   │   │   │   └── 06-strict-mode-safety
-│   │   │   │       ├── challenges.md
-│   │   │   │       └── readme.md
-│   │   │   ├── Python-Basics
-│   │   │   │   ├── assets
-│   │   │   │   │   ├── python-automation-banner.png
-│   │   │   │   │   ├── python-data-flow.png
-│   │   │   │   │   ├── python-devops-hub.png
-│   │   │   │   │   ├── python-ecosystem.png
-│   │   │   │   │   ├── python-error-handling.png
-│   │   │   │   │   ├── python-file-ops.png
-│   │   │   │   │   ├── python-functions-modules.png
-│   │   │   │   │   └── python-learning-path.png
+│   │   ├── assets
+│   │   │   ├── arithmetic-metrics-header.svg
+│   │   │   ├── case-logic.svg
+│   │   │   ├── deployment-logic-flow.svg
+│   │   │   ├── dotfiles-iceberg.svg
+│   │   │   ├── function-architecture.svg
+│   │   │   ├── grep-mastery.svg
+│   │   │   ├── paging-ecosystem.svg
+│   │   │   ├── pipeline-architecture.svg
+│   │   │   ├── stream-architecture.png
+│   │   │   ├── stream-architecture.svg
+│   │   │   └── test-operators.svg
+│   │   ├── audit-summary.md
+│   │   ├── examples
+│   │   │   ├── cheatsheets
+│   │   │   │   └── refcheatsheet.md
+│   │   │   └── os-test.sh
+│   │   ├── HUMAN_GUIDE.md
+│   │   ├── part-01-shell-foundations
+│   │   │   ├── 01-introduction
 │   │   │   │   ├── challenges.md
-│   │   │   │   ├── examples
-│   │   │   │   │   ├── audit-links.py
-│   │   │   │   │   ├── automated-virus-scan.md
-│   │   │   │   │   ├── centralize-boilerplates.py
-│   │   │   │   │   ├── convert-quiz-format.py
-│   │   │   │   │   ├── create-missing-files.py
-│   │   │   │   │   ├── fix-images-script.py
-│   │   │   │   │   ├── fix-images-v2.py
-│   │   │   │   │   ├── migration-mapper.py
-│   │   │   │   │   └── reformat-all-quizzes.py
-│   │   │   │   ├── part-00-prerequisites
-│   │   │   │   │   ├── 01-python-setup
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 02-pip-basics
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 03-virtual-environments
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   └── 04-anaconda-setup
-│   │   │   │   │       ├── assets
-│   │   │   │   │       │   ├── conda-architecture.png
-│   │   │   │   │       │   └── environment-lifecycle.png
-│   │   │   │   │       └── readme.md
-│   │   │   │   ├── part-01-python-foundations
-│   │   │   │   │   ├── 01-fundamentals
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── readme.md
-│   │   │   │   │   │   └── system-monitor-demo.py
-│   │   │   │   │   ├── 02-control-flow
-│   │   │   │   │   │   ├── assets
-│   │   │   │   │   │   │   └── control-flow-logic.png
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── lab-01-log-filter.py
-│   │   │   │   │   │   ├── lab-02-validator.py
-│   │   │   │   │   │   ├── lab-03-port-checker.py
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 03-iterative-logic-and-loops
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 04-data-structures
-│   │   │   │   │   │   ├── assets
-│   │   │   │   │   │   │   ├── dict-vs-set.png
-│   │   │   │   │   │   │   ├── list-vs-tuple.png
-│   │   │   │   │   │   │   └── python-data-structures.png
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-inventory-mgmt.py
-│   │   │   │   │   │   │   ├── challenge-02-log-dedup.py
-│   │   │   │   │   │   │   ├── challenge-03-config-merger.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-inventory-mgmt.py
-│   │   │   │   │   │   │       ├── solution-02-log-dedup.py
-│   │   │   │   │   │   │       └── solution-03-config-merger.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── drift-detector-demo.py
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 05-error-handling
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-config-loader.py
-│   │   │   │   │   │   │   ├── challenge-02-health-retry.py
-│   │   │   │   │   │   │   ├── challenge-03-shutdown-handler.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-config-loader.py
-│   │   │   │   │   │   │       ├── solution-02-health-retry.py
-│   │   │   │   │   │   │       └── solution-03-shutdown-handler.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── readme.md
-│   │   │   │   │   │   └── resilient-deployer-demo.py
-│   │   │   │   │   ├── 06-file-io-devops
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── log-processor-demo.py
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 07-functions-and-modules
-│   │   │   │   │   │   ├── assets
-│   │   │   │   │   │   │   ├── function-anatomy.png
-│   │   │   │   │   │   │   └── monolith-vs-modular.png
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-health-checker.py
-│   │   │   │   │   │   │   ├── challenge-02-retry-decorator.py
-│   │   │   │   │   │   │   ├── challenge-03-config-module.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-health-checker.py
-│   │   │   │   │   │   │       ├── solution-02-retry-decorator.py
-│   │   │   │   │   │   │       └── solution-03-config-pkg
-│   │   │   │   │   │   │           └── config
-│   │   │   │   │   │   │               ├── init.py
-│   │   │   │   │   │   │               ├── loader.py
-│   │   │   │   │   │   │               └── settings.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── cloud-dispatcher-demo.py
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 08-cloud-automation-boto3
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── conftest.py
-│   │   │   │   │   │   ├── readme.md
-│   │   │   │   │   │   ├── s3-janitor.py
-│   │   │   │   │   │   ├── testing-with-moto.md
-│   │   │   │   │   │   └── test-s3-janitor.py
-│   │   │   │   │   ├── 09-time-and-date
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-backup-check.py
-│   │   │   │   │   │   │   ├── challenge-02-log-parser.py
-│   │   │   │   │   │   │   ├── challenge-03-sla-calculator.py
-│   │   │   │   │   │   │   ├── challenge-04-scheduler.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-backup-check.py
-│   │   │   │   │   │   │       ├── solution-02-log-parser.py
-│   │   │   │   │   │   │       ├── solution-03-sla-calculator.py
-│   │   │   │   │   │   │       └── solution-04-scheduler.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── log-retention-demo.py
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   └── assets
-│   │   │   │   │       ├── boto3-architecture-diagram.png
-│   │   │   │   │       ├── boto3-architecture-diagram.svg
-│   │   │   │   │       ├── function-anatomy.png
-│   │   │   │   │       ├── loop-visual-flow.png
-│   │   │   │   │       ├── monolith-vs-modular.png
-│   │   │   │   │       ├── polling-loop.png
-│   │   │   │   │       ├── python-data-flow.png
-│   │   │   │   │       └── python-error-handling.png
-│   │   │   │   ├── part-02-python-architecture
-│   │   │   │   │   ├── 01-pathlib-modern-files
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-log-cleanup.py
-│   │   │   │   │   │   │   ├── challenge-02-project-analyzer.py
-│   │   │   │   │   │   │   ├── challenge-03-safe-backup.py
-│   │   │   │   │   │   │   ├── challenge-04-sync-dirs.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-log-cleanup.py
-│   │   │   │   │   │   │       ├── solution-02-project-analyzer.py
-│   │   │   │   │   │   │       ├── solution-03-safe-backup.py
-│   │   │   │   │   │   │       └── solution-04-sync-dirs.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 02-json-handling
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-api-parser.py
-│   │   │   │   │   │   │   ├── challenge-02-config-validator.py
-│   │   │   │   │   │   │   ├── challenge-03-json-diff.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-api-parser.py
-│   │   │   │   │   │   │       ├── solution-02-config-validator.py
-│   │   │   │   │   │   │       └── solution-03-json-diff.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 03-yaml-handling
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-manifest-gen.py
-│   │   │   │   │   │   │   ├── challenge-02-inventory-parser.py
-│   │   │   │   │   │   │   ├── challenge-03-config-merger.py
-│   │   │   │   │   │   │   ├── challenge-04-ansible-inventory.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-manifest-gen.py
-│   │   │   │   │   │   │       ├── solution-02-inventory-parser.py
-│   │   │   │   │   │   │       ├── solution-03-config-merger.py
-│   │   │   │   │   │   │       └── solution-04-ansible-inventory.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 04-testing-and-qa
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-config-loader.py
-│   │   │   │   │   │   │   ├── challenge-02-health-retry.py
-│   │   │   │   │   │   │   ├── challenge-03-shutdown-handler.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-config-loader.py
-│   │   │   │   │   │   │       ├── solution-02-health-retry.py
-│   │   │   │   │   │   │       └── solution-03-shutdown-handler.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── readme.md
-│   │   │   │   │   │   └── resilient-deployer-demo.py
-│   │   │   │   │   ├── 05-virtual-environments
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-venv-creator.py
-│   │   │   │   │   │   │   ├── challenge-02-req-checker.py
-│   │   │   │   │   │   │   ├── challenge-03-portable-setup.py
-│   │   │   │   │   │   │   ├── challenge-04-isolated-task.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-venv-creator.py
-│   │   │   │   │   │   │       ├── solution-02-req-checker.py
-│   │   │   │   │   │   │       ├── solution-03-portable-setup.py
-│   │   │   │   │   │   │       └── solution-04-isolated-task.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 06-package-management
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-dependency-analyzer.py
-│   │   │   │   │   │   │   ├── challenge-02-pip-wrapper.py
-│   │   │   │   │   │   │   ├── challenge-03-version-bumper.py
-│   │   │   │   │   │   │   ├── challenge-04-conflict-finder.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-dependency-analyzer.py
-│   │   │   │   │   │   │       ├── solution-02-pip-wrapper.py
-│   │   │   │   │   │   │       ├── solution-03-version-bumper.py
-│   │   │   │   │   │   │       └── solution-04-conflict-finder.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   └── 07-regular-expressions
-│   │   │   │   │       ├── challenges
-│   │   │   │   │       │   ├── challenge-01-nginx-parser.py
-│   │   │   │   │       │   ├── challenge-02-data-masker.py
-│   │   │   │   │       │   ├── challenge-03-error-aggregator.py
-│   │   │   │   │       │   ├── challenge-04-config-extractor.py
-│   │   │   │   │       │   └── solutions
-│   │   │   │   │       │       ├── solution-01-nginx-parser.py
-│   │   │   │   │       │       ├── solution-02-data-masker.py
-│   │   │   │   │       │       ├── solution-03-error-aggregator.py
-│   │   │   │   │       │       └── solution-04-config-extractor.py
-│   │   │   │   │       ├── challenges.md
-│   │   │   │   │       └── readme.md
-│   │   │   │   ├── part-03-python-systems-drafting
-│   │   │   │   │   ├── 01-command-line-arguments
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-port-scanner.py
-│   │   │   │   │   │   │   ├── challenge-02-file-args.py
-│   │   │   │   │   │   │   ├── challenge-03-safety-flags.py
-│   │   │   │   │   │   │   ├── challenge-04-subcommands.py
-│   │   │   │   │   │   │   ├── challenge-05-env-override.py
-│   │   │   │   │   │   │   ├── challenge-06-cli-wrapper.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-port-scanner.py
-│   │   │   │   │   │   │       ├── solution-02-file-args.py
-│   │   │   │   │   │   │       ├── solution-03-safety-flags.py
-│   │   │   │   │   │   │       ├── solution-04-subcommands.py
-│   │   │   │   │   │   │       ├── solution-05-env-override.py
-│   │   │   │   │   │   │       └── solution-06-cli-wrapper.py
-│   │   │   │   │   │   ├── deployer-demo.py
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 02-environment-variables
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-validator.py
-│   │   │   │   │   │   │   ├── challenge-02-masking-logger.py
-│   │   │   │   │   │   │   ├── challenge-03-bool-parser.py
-│   │   │   │   │   │   │   ├── challenge-04-dynamic-loader.py
-│   │   │   │   │   │   │   ├── challenge-05-prefix-loader.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-validator.py
-│   │   │   │   │   │   │       ├── solution-02-masking-logger.py
-│   │   │   │   │   │   │       ├── solution-03-bool-parser.py
-│   │   │   │   │   │   │       ├── solution-04-dynamic-loader.py
-│   │   │   │   │   │   │       └── solution-05-prefix-loader.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── env-config-demo.py
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 03-subprocess-execution
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-health-checker.py
-│   │   │   │   │   │   │   ├── challenge-02-git-checker.py
-│   │   │   │   │   │   │   ├── challenge-03-docker-manager.py
-│   │   │   │   │   │   │   ├── challenge-04-log-monitor.py
-│   │   │   │   │   │   │   ├── challenge-05-terraform-wrapper.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-health-checker.py
-│   │   │   │   │   │   │       ├── solution-02-git-checker.py
-│   │   │   │   │   │   │       ├── solution-03-docker-manager.py
-│   │   │   │   │   │   │       └── solution-04-log-monitor.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── readme.md
-│   │   │   │   │   │   └── system-audit-demo.py
-│   │   │   │   │   ├── 04-logging-basics
-│   │   │   │   │   │   ├── challenges
-│   │   │   │   │   │   │   ├── challenge-01-basic-setup.py
-│   │   │   │   │   │   │   ├── challenge-02-rotating-logs.py
-│   │   │   │   │   │   │   ├── challenge-03-json-formatter.py
-│   │   │   │   │   │   │   ├── challenge-04-contextual-logging.py
-│   │   │   │   │   │   │   └── solutions
-│   │   │   │   │   │   │       ├── solution-01-basic-setup.py
-│   │   │   │   │   │   │       ├── solution-02-rotating-logs.py
-│   │   │   │   │   │   │       ├── solution-03-json-formatter.py
-│   │   │   │   │   │   │       └── solution-04-contextual-logging.py
-│   │   │   │   │   │   ├── enterprise-logger-demo.py
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 05-working-with-the-web
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── readme.md
-│   │   │   │   │   │   └── web-api-demo.py
-│   │   │   │   │   ├── 06-web-automation
-│   │   │   │   │   │   ├── browser-logic-demo.py
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   ├── 07-micro-frameworks
-│   │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   │   ├── readme.md
-│   │   │   │   │   │   └── webhook-service-demo.py
-│   │   │   │   │   └── 08-capstone-script
-│   │   │   │   │       ├── challenges
-│   │   │   │   │       │   ├── challenge-01-slack-alerter.py
-│   │   │   │   │       │   ├── challenge-02-cli-improver.py
-│   │   │   │   │       │   ├── challenge-03-report-exporter.py
-│   │   │   │   │       │   ├── challenge-04-port-scanner.py
-│   │   │   │   │       │   └── solutions
-│   │   │   │   │       │       ├── solution-01-slack-alerter.py
-│   │   │   │   │       │       ├── solution-02-cli-improver.py
-│   │   │   │   │       │       ├── solution-03-report-exporter.py
-│   │   │   │   │       │       └── solution-04-port-scanner.py
-│   │   │   │   │       ├── challenges.md
-│   │   │   │   │       ├── checker.py
-│   │   │   │   │       ├── ops-mate
-│   │   │   │   │       │   ├── config
-│   │   │   │   │       │   │   └── inventory.yaml
-│   │   │   │   │       │   ├── requirements.txt
-│   │   │   │   │       │   ├── src
-│   │   │   │   │       │   │   ├── health.py
-│   │   │   │   │       │   │   ├── main.py
-│   │   │   │   │       │   │   └── utils.py
-│   │   │   │   │       │   └── tests
-│   │   │   │   │       │       └── test-health.py
-│   │   │   │   │       ├── readme.md
-│   │   │   │   │       └── server-health-monitor
-│   │   │   │   │           ├── config
-│   │   │   │   │           │   └── servers.json
-│   │   │   │   │           ├── requirements.txt
-│   │   │   │   │           └── src
-│   │   │   │   │               ├── checker.py
-│   │   │   │   │               ├── main.py
-│   │   │   │   │               └── reporter.py
-│   │   │   │   ├── playground
-│   │   │   │   │   ├── cli-args
-│   │   │   │   │   │   └── calculator.py
-│   │   │   │   │   ├── conditional-statements
-│   │   │   │   │   │   └── ifelselif.py
-│   │   │   │   │   ├── data-structure
-│   │   │   │   │   │   ├── lists.py
-│   │   │   │   │   │   └── tuples.py
-│   │   │   │   │   ├── dictionary
-│   │   │   │   │   │   ├── dict.py
-│   │   │   │   │   │   ├── gitreq.py
-│   │   │   │   │   │   └── sets.py
-│   │   │   │   │   ├── env-vars
-│   │   │   │   │   │   └── envar.py
-│   │   │   │   │   ├── error-report.txt
-│   │   │   │   │   ├── files-io
-│   │   │   │   │   │   ├── file-rw.py
-│   │   │   │   │   │   └── server.conf
-│   │   │   │   │   ├── functions
-│   │   │   │   │   │   ├── calculator-1.py
-│   │   │   │   │   │   └── calculator.py
-│   │   │   │   │   ├── input-logs.txt
-│   │   │   │   │   ├── intermediate
-│   │   │   │   │   │   └── list-files-in-folders.py
-│   │   │   │   │   ├── keywords
-│   │   │   │   │   │   └── links.txt
-│   │   │   │   │   ├── loop
-│   │   │   │   │   │   ├── for-loops.py
-│   │   │   │   │   │   ├── manipulation-loops.py
-│   │   │   │   │   │   └── while-loops.py
-│   │   │   │   │   ├── modules
-│   │   │   │   │   │   ├── calc.py
-│   │   │   │   │   │   └── calculator.py
-│   │   │   │   │   └── operators
-│   │   │   │   │       ├── arithmetic.py
-│   │   │   │   │       ├── assignment.py
-│   │   │   │   │       ├── bitwise.py
-│   │   │   │   │       ├── identity.py
-│   │   │   │   │       ├── logical.py
-│   │   │   │   │       ├── membership.py
-│   │   │   │   │       └── relational-comparsion.py
-│   │   │   │   ├── python-devops-learning-path.md
 │   │   │   │   ├── readme.md
-│   │   │   │   ├── reference
-│   │   │   │   │   ├── automation-best-practices.md
-│   │   │   │   │   ├── built-in-functions-ref.md
-│   │   │   │   │   ├── error-exceptions-ref.md
-│   │   │   │   │   ├── iterative-logic-ref.md
-│   │   │   │   │   ├── operators-logic-ref.md
-│   │   │   │   │   ├── python-automation-patterns-ref.md
-│   │   │   │   │   ├── python-data-keywords-ref.md
-│   │   │   │   │   ├── python-devops-testing-ref.md
-│   │   │   │   │   ├── python-pep8-style-guide.md
-│   │   │   │   │   └── standard-library-ref.md
-│   │   │   │   ├── resources
-│   │   │   │   │   └── python-regular-expression-regex.pdf
-│   │   │   │   ├── scripts
-│   │   │   │   │   ├── audit-report.txt
-│   │   │   │   │   ├── disk-calc.py
-│   │   │   │   │   ├── fix
-│   │   │   │   │   │   ├── fix-index.py
-│   │   │   │   │   │   └── fix-links.py
-│   │   │   │   │   ├── health-check.py
-│   │   │   │   │   ├── log-formatter.py
-│   │   │   │   │   └── sre-linter.py
-│   │   │   │   └── tree.txt
-│   │   │   ├── reference
-│   │   │   │   ├── bash-architecture-ref.md
-│   │   │   │   ├── posix-vs-bash-compatibility-ref.md
-│   │   │   │   ├── regular-expressions-ref.md
-│   │   │   │   ├── script-hardening-best-practices-ref.md
-│   │   │   │   ├── shell-fundamentals-ref.md
-│   │   │   │   └── stream-editing-filtering-ref.md
-│   │   │   └── resources
-│   │   │       ├── advanced-bash-scripting-guide.pdf
-│   │   │       ├── automate-it.pdf
-│   │   │       ├── basics-of-web-hacking.pdf
-│   │   │       ├── pdf-scraper.py
-│   │   │       └── shell-scripting.pdf
-│   │   ├── 02-Labs
-│   │   │   ├── examples
-│   │   │   │   ├── cheatsheets
-│   │   │   │   │   └── refcheatsheet.md
-│   │   │   │   └── os-test.sh
-│   │   │   ├── part-03-system-drafting
-│   │   │   │   ├── 01-scripting-basics
+│   │   │   │   ├── shell-architecture.png
+│   │   │   │   └── shell-architecture.svg
+│   │   │   ├── 02-terminal-and-navigation
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── navigation-architecture.png
+│   │   │   │   └── readme.md
+│   │   │   ├── 03-file-manipulation
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── file-lifecycle.svg
+│   │   │   │   ├── hidden-files
 │   │   │   │   │   ├── challenges.md
-│   │   │   │   │   ├── readme.md
-│   │   │   │   │   └── scripting-lifecycle.svg
-│   │   │   │   └── 02-advanced-io
+│   │   │   │   │   ├── dotfiles-iceberg.svg
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── paging
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   ├── paging-ecosystem.svg
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── searching
+│   │   │   │       ├── calculate-system-metrics.sh
 │   │   │   │       ├── challenges.md
-│   │   │   │       ├── io-stream-architecture.png
-│   │   │   │       ├── io-stream-architecture.svg
+│   │   │   │       ├── grep-mastery.svg
 │   │   │   │       └── readme.md
-│   │   │   └── Windows-Foundations
-│   │   │       ├── assets
-│   │   │       │   ├── powershell-icon.svg
-│   │   │       │   └── windows-automation-banner.png
-│   │   │       ├── linkks.md
-│   │   │       ├── login-screen.md
-│   │   │       ├── part-1-powershell-automation
-│   │   │       │   ├── commands
-│   │   │       │   │   ├── diskandstorage
-│   │   │       │   │   │   ├── format-volume.md
-│   │   │       │   │   │   ├── get-disk.md
-│   │   │       │   │   │   ├── get-partition.md
-│   │   │       │   │   │   ├── get-volume.md
-│   │   │       │   │   │   ├── initialize-disk.md
-│   │   │       │   │   │   ├── new-partition.md
-│   │   │       │   │   │   ├── remove-partition.md
-│   │   │       │   │   │   ├── resize-partition.md
-│   │   │       │   │   │   └── set-volume.md
-│   │   │       │   │   ├── eventlogs
-│   │   │       │   │   │   ├── get-eventlog.md
-│   │   │       │   │   │   └── get-winevent.md
-│   │   │       │   │   ├── fileandacl
-│   │   │       │   │   │   ├── get-acl.md
-│   │   │       │   │   │   └── set-acl.md
-│   │   │       │   │   ├── hacksandtips
-│   │   │       │   │   │   ├── add-hostsentry.md
-│   │   │       │   │   │   ├── audit-firewallprofiles.md
-│   │   │       │   │   │   ├── audit-firewallrules.md
-│   │   │       │   │   │   ├── get-processconnections.md
-│   │   │       │   │   │   ├── get-systemuptime.md
-│   │   │       │   │   │   ├── get-wifipasswords.md
-│   │   │       │   │   │   ├── readme.md
-│   │   │       │   │   │   ├── reset-dnscache.md
-│   │   │       │   │   │   ├── reset-networkstack.md
-│   │   │       │   │   │   ├── resolve-multidns.md
-│   │   │       │   │   │   ├── test-tcpport.md
-│   │   │       │   │   │   ├── toggle-firewallprofile.md
-│   │   │       │   │   │   ├── trace-blockedtraffic.md
-│   │   │       │   │   │   └── verify-portstatus.md
-│   │   │       │   │   ├── network
-│   │   │       │   │   │   ├── disable-netadapter.md
-│   │   │       │   │   │   ├── enable-netadapter.md
-│   │   │       │   │   │   ├── get-dnsclientserveraddress.md
-│   │   │       │   │   │   ├── get-netadapter.md
-│   │   │       │   │   │   ├── get-netfirewallrule.md
-│   │   │       │   │   │   ├── get-netipaddress.md
-│   │   │       │   │   │   ├── get-netipconfiguration.md
-│   │   │       │   │   │   ├── get-netnat.md
-│   │   │       │   │   │   ├── get-netneighbor.md
-│   │   │       │   │   │   ├── get-netroute.md
-│   │   │       │   │   │   ├── get-nettcpconnection.md
-│   │   │       │   │   │   ├── get-netudpendpoint.md
-│   │   │       │   │   │   ├── new-netfirewallrule.md
-│   │   │       │   │   │   ├── resolve-dnsname.md
-│   │   │       │   │   │   ├── restart-netadapter.md
-│   │   │       │   │   │   ├── set-dnsclientserveraddress.md
-│   │   │       │   │   │   ├── set-netfirewallrule.md
-│   │   │       │   │   │   └── test-netconnection.md
-│   │   │       │   │   ├── ps-commands.md
-│   │   │       │   │   ├── registry
-│   │   │       │   │   │   ├── get-item.md
-│   │   │       │   │   │   ├── get-itemproperty.md
-│   │   │       │   │   │   ├── new-item.md
-│   │   │       │   │   │   ├── remove-item.md
-│   │   │       │   │   │   ├── remove-itemproperty.md
-│   │   │       │   │   │   └── set-itemproperty.md
-│   │   │       │   │   ├── remoting
-│   │   │       │   │   │   ├── enter-pssession.md
-│   │   │       │   │   │   ├── exit-pssession.md
-│   │   │       │   │   │   ├── get-pssession.md
-│   │   │       │   │   │   ├── invoke-command.md
-│   │   │       │   │   │   ├── new-pssession.md
-│   │   │       │   │   │   └── remove-pssession.md
-│   │   │       │   │   ├── scheduledtasks
-│   │   │       │   │   │   ├── disable-scheduledtask.md
-│   │   │       │   │   │   ├── enable-scheduledtask.md
-│   │   │       │   │   │   ├── get-scheduledtaskinfo.md
-│   │   │       │   │   │   ├── get-scheduledtask.md
-│   │   │       │   │   │   ├── register-scheduledtask.md
-│   │   │       │   │   │   ├── set-scheduledtask.md
-│   │   │       │   │   │   ├── start-scheduledtask.md
-│   │   │       │   │   │   ├── stop-scheduledtask.md
-│   │   │       │   │   │   └── unregister-scheduledtask.md
-│   │   │       │   │   ├── serviceandprocess
-│   │   │       │   │   │   ├── debug-process.md
-│   │   │       │   │   │   ├── get-process.md
-│   │   │       │   │   │   ├── get-service.md
-│   │   │       │   │   │   ├── new-service.md
-│   │   │       │   │   │   ├── remove-service.md
-│   │   │       │   │   │   ├── restart-service.md
-│   │   │       │   │   │   ├── set-service.md
-│   │   │       │   │   │   ├── start-process.md
-│   │   │       │   │   │   ├── start-service.md
-│   │   │       │   │   │   ├── stop-process.md
-│   │   │       │   │   │   ├── stop-service.md
-│   │   │       │   │   │   └── wait-process.md
-│   │   │       │   │   ├── userandgroup
-│   │   │       │   │   │   ├── add-localgroupmember.md
-│   │   │       │   │   │   ├── get-localgroup.md
-│   │   │       │   │   │   ├── get-localgroupmember.md
-│   │   │       │   │   │   ├── get-localuser.md
-│   │   │       │   │   │   ├── new-localgroup.md
-│   │   │       │   │   │   ├── new-localuser.md
-│   │   │       │   │   │   ├── remove-localgroup.md
-│   │   │       │   │   │   ├── remove-localgroupmember.md
-│   │   │       │   │   │   ├── remove-localuser.md
-│   │   │       │   │   │   └── set-localuser.md
-│   │   │       │   │   └── windowsupdate
-│   │   │       │   │       ├── check-pendingupdates.md
-│   │   │       │   │       ├── get-hotfix.md
-│   │   │       │   │       ├── get-windowsupdatelog.md
-│   │   │       │   │       └── list-updatehistory.md
-│   │   │       │   ├── devops-assessment.ps1
-│   │   │       │   ├── devops-assessment.py
-│   │   │       │   ├── god-mode.txt
-│   │   │       │   ├── lessons
-│   │   │       │   │   ├── automation
-│   │   │       │   │   │   └── active-directory-automation.md
-│   │   │       │   │   ├── conditional-statements.ps1
-│   │   │       │   │   ├── customobject.ps1
-│   │   │       │   │   ├── explain-powershell-pipeline.md
-│   │   │       │   │   ├── hashtable.ps1
-│   │   │       │   │   ├── hello-chuck.txt
-│   │   │       │   │   ├── modules.ps1
-│   │   │       │   │   ├── pipeline.ps1
-│   │   │       │   │   ├── powershell.md
-│   │   │       │   │   ├── pstest.ps1
-│   │   │       │   │   ├── syntax.ps1
-│   │   │       │   │   └── systemadmin
-│   │   │       │   │       └── system-admin.md
-│   │   │       │   ├── programremoval
-│   │   │       │   │   ├── purgemcafee.ps1
-│   │   │       │   │   ├── purgeomen.ps1
-│   │   │       │   │   ├── windows11debloat.ps1
-│   │   │       │   │   └── windowstracking.ps1
-│   │   │       │   ├── readme.md
-│   │   │       │   └── scripts
-│   │   │       │       └── manage-localusers.ps1
-│   │   │       ├── part-2-wsl-linux-integration
-│   │   │       │   ├── install-aws-cli.sh
-│   │   │       │   ├── readme.md
-│   │   │       │   ├── setup-wsl-devops.sh
-│   │   │       │   └── upgrade-wsl-version.sh
-│   │   │       ├── part-3-package-management
-│   │   │       │   ├── install.md
-│   │   │       │   └── scripts
-│   │   │       │       └── uninstall-applicationdeep.ps1
-│   │   │       ├── part-4-server-administration
-│   │   │       │   ├── datacenter
-│   │   │       │   │   └── product-key.md
-│   │   │       │   └── standard
-│   │   │       │       └── product-key.md
-│   │   │       ├── part-5-windows-containers
-│   │   │       │   └── githubdockerlink.txt
-│   │   │       ├── part-6-system-auditing
-│   │   │       │   ├── get-diskusage.ps1
-│   │   │       │   ├── get-systeminventory.ps1
-│   │   │       │   ├── readme.md
-│   │   │       │   └── windows11-debloat-risk-assessment.md
-│   │   │       ├── part-7-performance-tuning
-│   │   │       │   ├── 01-cpu-and-process-prioritization
-│   │   │       │   │   ├── optimize-systemperformance.ps1
-│   │   │       │   │   ├── readme.md
-│   │   │       │   │   └── set-processorperformance.ps1
-│   │   │       │   ├── 02-memory-management-and-swap
-│   │   │       │   │   ├── invoke-systemaudit.ps1
-│   │   │       │   │   └── readme.md
-│   │   │       │   ├── 03-storage-i-o-optimization
-│   │   │       │   │   ├── invoke-systemmaintenance.ps1
-│   │   │       │   │   └── readme.md
-│   │   │       │   ├── 04-network-stack-tuning
-│   │   │       │   │   ├── optimize-networkstack.ps1
-│   │   │       │   │   ├── optimize-networkstack-server.ps1
-│   │   │       │   │   └── readme.md
-│   │   │       │   ├── 05-power-and-thermal-profiles
-│   │   │       │   │   ├── optimize-powerplan.ps1
-│   │   │       │   │   └── readme.md
-│   │   │       │   ├── 06-labs-and-challenges
-│   │   │       │   │   ├── lab-bottleneck-resolution.md
-│   │   │       │   │   └── readme.md
-│   │   │       │   ├── 07-wsl2-optimization
-│   │   │       │   │   ├── readme.md
-│   │   │       │   │   └── set-wsl2performance.ps1
-│   │   │       │   ├── 08-server-hardening
-│   │   │       │   │   ├── initialize-serverhardening.ps1
-│   │   │       │   │   └── readme.md
-│   │   │       │   ├── 09-maintenance-automation
-│   │   │       │   │   ├── invoke-artifactcleanup.ps1
-│   │   │       │   │   └── readme.md
-│   │   │       │   ├── 10-health-monitoring
-│   │   │       │   │   ├── get-systemhealthscore.ps1
-│   │   │       │   │   └── readme.md
-│   │   │       │   ├── audit-report.md
-│   │   │       │   ├── project-summary.md
-│   │   │       │   ├── readme.md
-│   │   │       │   ├── script-reference.md
-│   │   │       │   └── updated-architecture.md
-│   │   │       ├── product-key-windows-2019.md
-│   │   │       ├── readme.md
-│   │   │       ├── reference
-│   │   │       │   ├── active-directory-identity-ref.md
-│   │   │       │   ├── powershell-automation-ref.md
-│   │   │       │   ├── sre-windows-troubleshooting-ref.md
-│   │   │       │   ├── windows-best-practices-ref.md
-│   │   │       │   └── windows-system-architecture-ref.md
-│   │   │       ├── resources
-│   │   │       │   ├── powershell.pdf
-│   │   │       │   └── putty-user-manual.pdf
-│   │   │       └── virtualbox-installations.md
-│   │   └── 03-Assessment
-│   │       └── scripting-audit-summary.md
-│   ├── 05-Container-Essentials
-│   │   ├── 01-Reference
-│   │   │   ├── 01-The-Big-Picture
+│   │   │   ├── 04-man-pages-and-help
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── man-pages-structure.svg
 │   │   │   │   └── readme.md
-│   │   │   ├── 02-The-Blueprint
+│   │   │   ├── 05-vim-basics
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── vim-modes-state.svg
+│   │   │   ├── 06-permissions
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── permission-architecture.svg
 │   │   │   │   └── readme.md
-│   │   │   ├── 03-The-Runtime
+│   │   │   ├── 07-basic-variables
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── variable-mechanics.svg
+│   │   │   └── 08-programs-and-commands
+│   │   │       ├── challenges.md
+│   │   │       ├── command-resolution-order.svg
+│   │   │       └── readme.md
+│   │   ├── part-02-shell-architecture
+│   │   │   ├── 01-arithmetic-and-metrics
+│   │   │   │   ├── calculate-metrics.sh
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── operators.sh
+│   │   │   │   ├── readme-advanced.md
 │   │   │   │   └── readme.md
-│   │   │   ├── 04-The-Network
+│   │   │   ├── 02-user-input
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── input-channels-mapping.svg
 │   │   │   │   └── readme.md
-│   │   │   ├── 05-The-Storage
+│   │   │   ├── 03-conditionals
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── conditional-logic-flow.png
+│   │   │   │   ├── conditional-logic-flow.svg
 │   │   │   │   └── readme.md
-│   │   │   ├── 06-The-Cleanup
+│   │   │   ├── 04-loops-and-processing
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── iteration-mechanics.png
+│   │   │   │   ├── iteration-mechanics.svg
+│   │   │   │   ├── readme-advanced.md
 │   │   │   │   └── readme.md
-│   │   │   ├── images
-│   │   │   │   ├── dockerarch.png
-│   │   │   │   └── dockerstates.png
-│   │   │   └── resources
-│   │   │       ├── a-very-informal-introduction-to-docker.pdf
-│   │   │       ├── containerisation-with-docker-and-k8s-1.pdf
-│   │   │       ├── containerisation-with-docker-and-k8s-2.pdf
-│   │   │       ├── containerisation-with-docker-and-k8s-3.pdf
-│   │   │       ├── containerisation-with-docker-and-k8s.pdf
-│   │   │       ├── containerize-your-apps-with-docker-and-k8s.pdf
-│   │   │       ├── containers-for-everyone.pdf
-│   │   │       ├── conterization-with-docker-and-kubernetes.pdf
-│   │   │       ├── diq.pdf
-│   │   │       ├── docker-and-kubernetes.pdf
-│   │   │       ├── docker-by-jrebel.pdf
-│   │   │       ├── docker-commands-cheat-sheet-pdf.pdf
-│   │   │       ├── docker-in-the-cloud.pdf
-│   │   │       ├── docker-kubernetes-helm.pdf
-│   │   │       ├── docker.pdf
-│   │   │       ├── docker-security.pdf
-│   │   │       ├── docker-tutorial.pdf
-│   │   │       └── learning-docker.pdf
-│   │   ├── 02-Labs
-│   │   │   └── scripts
-│   │   │       ├── docker-centos-install.sh
-│   │   │       └── docker-install.sh
-│   │   └── 03-Assessment
+│   │   │   ├── 05-functions-and-scope
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── modular-architecture.png
+│   │   │   │   ├── modular-architecture.svg
+│   │   │   │   └── readme.md
+│   │   │   └── 06-strict-mode-safety
+│   │   │       ├── challenges.md
+│   │   │       └── readme.md
+│   │   ├── part-03-system-drafting
+│   │   │   ├── 01-scripting-basics
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── scripting-lifecycle.svg
+│   │   │   └── 02-advanced-io
+│   │   │       ├── challenges.md
+│   │   │       ├── io-stream-architecture.png
+│   │   │       ├── io-stream-architecture.svg
+│   │   │       └── readme.md
+│   │   ├── readme.md
+│   │   ├── Reference
+│   │   │   ├── bash-architecture-ref.md
+│   │   │   ├── posix-vs-bash-compatibility-ref.md
+│   │   │   ├── regular-expressions-ref.md
+│   │   │   ├── script-hardening-best-practices-ref.md
+│   │   │   ├── shell-fundamentals-ref.md
+│   │   │   └── stream-editing-filtering-ref.md
+│   │   ├── resources
+│   │   │   ├── advanced-bash-scripting-guide.pdf
+│   │   │   ├── automate-it.pdf
+│   │   │   ├── basics-of-web-hacking.pdf
+│   │   │   ├── pdf-scraper.py
+│   │   │   └── shell-scripting.pdf
+│   │   └── tree.txt
+│   ├── 05-foundational-containers
+│   │   ├── 01-The-Big-Picture
+│   │   │   └── readme.md
+│   │   ├── 02-The-Blueprint
+│   │   │   └── readme.md
+│   │   ├── 03-The-Runtime
+│   │   │   └── readme.md
+│   │   ├── 04-The-Network
+│   │   │   └── readme.md
+│   │   ├── 05-The-Storage
+│   │   │   └── readme.md
+│   │   ├── 06-The-Cleanup
+│   │   │   └── readme.md
+│   │   ├── images
+│   │   │   ├── dockerarch.png
+│   │   │   └── dockerstates.png
+│   │   ├── MASTER_README.md
+│   │   ├── readme.md
+│   │   ├── resources
+│   │   │   ├── a-very-informal-introduction-to-docker.pdf
+│   │   │   ├── containerisation-with-docker-and-k8s-1.pdf
+│   │   │   ├── containerisation-with-docker-and-k8s-2.pdf
+│   │   │   ├── containerisation-with-docker-and-k8s-3.pdf
+│   │   │   ├── containerisation-with-docker-and-k8s.pdf
+│   │   │   ├── containerize-your-apps-with-docker-and-k8s.pdf
+│   │   │   ├── containers-for-everyone.pdf
+│   │   │   ├── conterization-with-docker-and-kubernetes.pdf
+│   │   │   ├── diq.pdf
+│   │   │   ├── docker-and-kubernetes.pdf
+│   │   │   ├── docker-by-jrebel.pdf
+│   │   │   ├── docker-commands-cheat-sheet-pdf.pdf
+│   │   │   ├── docker-in-the-cloud.pdf
+│   │   │   ├── docker-kubernetes-helm.pdf
+│   │   │   ├── docker.pdf
+│   │   │   ├── docker-security.pdf
+│   │   │   ├── docker-tutorial.pdf
+│   │   │   └── learning-docker.pdf
+│   │   └── scripts
+│   │       ├── docker-centos-install.sh
+│   │       └── docker-install.sh
+│   ├── 05-Foundational-Containers
+│   │   ├── 01-The-Big-Picture
+│   │   │   └── readme.md
+│   │   ├── 02-The-Blueprint
+│   │   │   └── readme.md
+│   │   ├── 03-The-Runtime
+│   │   │   └── readme.md
+│   │   ├── 04-The-Network
+│   │   │   └── readme.md
+│   │   ├── 05-The-Storage
+│   │   │   └── readme.md
+│   │   ├── 06-The-Cleanup
+│   │   │   └── readme.md
+│   │   ├── HUMAN_GUIDE.md
+│   │   ├── images
+│   │   │   ├── dockerarch.png
+│   │   │   └── dockerstates.png
+│   │   ├── readme.md
+│   │   ├── resources
+│   │   │   ├── a-very-informal-introduction-to-docker.pdf
+│   │   │   ├── containerisation-with-docker-and-k8s-1.pdf
+│   │   │   ├── containerisation-with-docker-and-k8s-2.pdf
+│   │   │   ├── containerisation-with-docker-and-k8s-3.pdf
+│   │   │   ├── containerisation-with-docker-and-k8s.pdf
+│   │   │   ├── containerize-your-apps-with-docker-and-k8s.pdf
+│   │   │   ├── containers-for-everyone.pdf
+│   │   │   ├── conterization-with-docker-and-kubernetes.pdf
+│   │   │   ├── diq.pdf
+│   │   │   ├── docker-and-kubernetes.pdf
+│   │   │   ├── docker-by-jrebel.pdf
+│   │   │   ├── docker-commands-cheat-sheet-pdf.pdf
+│   │   │   ├── docker-in-the-cloud.pdf
+│   │   │   ├── docker-kubernetes-helm.pdf
+│   │   │   ├── docker.pdf
+│   │   │   ├── docker-security.pdf
+│   │   │   ├── docker-tutorial.pdf
+│   │   │   └── learning-docker.pdf
+│   │   └── Scripts
+│   │       ├── docker-centos-install.sh
+│   │       └── docker-install.sh
 │   ├── 99-supplemental-content
 │   │   ├── 01-phase-1
 │   │   │   ├── 03-windows-basics
+│   │   │   │   ├── 00-DIRECTORY_MAP.md
 │   │   │   │   ├── assets
 │   │   │   │   │   ├── powershell-icon.svg
 │   │   │   │   │   └── windows-automation-banner.png
+│   │   │   │   ├── AUDIT_LOG.md
+│   │   │   │   ├── EXECUTIVE_SUMMARY.md
 │   │   │   │   ├── linkks.md
 │   │   │   │   ├── login-screen.md
+│   │   │   │   ├── MASTER_README.md
 │   │   │   │   ├── part-1-powershell-automation
 │   │   │   │   │   ├── commands
 │   │   │   │   │   │   ├── diskandstorage
@@ -1281,8 +1414,8 @@
 │   │   │   │   │   ├── script-reference.md
 │   │   │   │   │   └── updated-architecture.md
 │   │   │   │   ├── product-key-windows-2019.md
+│   │   │   │   ├── README_DOCUMENTATION.md
 │   │   │   │   ├── readme.md
-│   │   │   │   ├── README_RESTORATION.md
 │   │   │   │   ├── reference
 │   │   │   │   │   ├── active-directory-identity-ref.md
 │   │   │   │   │   ├── powershell-automation-ref.md
@@ -1292,6 +1425,7 @@
 │   │   │   │   ├── resources
 │   │   │   │   │   ├── powershell.pdf
 │   │   │   │   │   └── putty-user-manual.pdf
+│   │   │   │   ├── RESTORATION_SUMMARY.md
 │   │   │   │   └── virtualbox-installations.md
 │   │   │   ├── 04-data-formats
 │   │   │   │   ├── json
@@ -2613,196 +2747,193 @@
 │   │   │           ├── container-runtime-check.sh
 │   │   │           ├── scan-docker-image.sh
 │   │   │           └── validate-dockerfile.py
-│   │   └── 03-phase-3
-│   │       ├── 01-ci-cd-foundations
-│   │       │   ├── 01-jenkins-mastery
-│   │       │   │   ├── 01-introduction-to-ci-cd
-│   │       │   │   │   ├── challenges.md
-│   │       │   │   │   └── readme.md
-│   │       │   │   ├── 02-jenkins-architecture
-│   │       │   │   │   ├── challenges.md
-│   │       │   │   │   └── readme.md
-│   │       │   │   ├── 03-installation-and-setup
-│   │       │   │   │   ├── challenges.md
-│   │       │   │   │   └── readme.md
-│   │       │   │   ├── 04-pipelines-as-code
-│   │       │   │   │   ├── challenges.md
-│   │       │   │   │   └── readme.md
-│   │       │   │   └── 05-integrations-and-plugins
-│   │       │   │       ├── challenges.md
-│   │       │   │       └── readme.md
-│   │       │   ├── 02-github-actions-foundations
-│   │       │   │   ├── challenges.md
-│   │       │   │   └── readme.md
-│   │       │   ├── 03-gitlab-ci-basics
-│   │       │   │   ├── challenges.md
-│   │       │   │   └── readme.md
-│   │       │   ├── 04-artifact-registry-management
-│   │       │   │   ├── challenges.md
-│   │       │   │   └── readme.md
-│   │       │   ├── enhancement-summary.md
-│   │       │   ├── readme.md
-│   │       │   └── reference
-│   │       │       ├── artifact-registry-governance-ref.md
-│   │       │       ├── jenkins-architecture-deep-dive-ref.md
-│   │       │       └── pipeline-orchestration-patterns-ref.md
-│   │       ├── 02-container-orchestration
-│   │       │   ├── challenges.md
-│   │       │   ├── docker-mastery
-│   │       │   │   └── docker-ops-commands.md
-│   │       │   ├── enhancement-summary.md
-│   │       │   ├── fix-links.py
-│   │       │   ├── images
-│   │       │   │   ├── containerlifecycle.png
-│   │       │   │   ├── dockerarch.png
-│   │       │   │   ├── dockerimagelayer.png
-│   │       │   │   ├── docker-network-pattern-1.png
-│   │       │   │   ├── docker-network-pattern-2.png
-│   │       │   │   ├── docker-network-pattern-3.png
-│   │       │   │   ├── docker-network-pattern-4.png
-│   │       │   │   ├── docker-network-pattern-5.png
-│   │       │   │   ├── dockerstoragearch.png
-│   │       │   │   └── virtualvsdocker.png
-│   │       │   ├── interview-prep.md
-│   │       │   ├── part-02-orchestration-and-architecture
-│   │       │   │   ├── 01-networking-and-storage
-│   │       │   │   │   ├── 01-docker-networking
-│   │       │   │   │   │   └── readme.md
-│   │       │   │   │   ├── 02-docker-volumes
-│   │       │   │   │   │   └── readme.md
-│   │       │   │   │   ├── 03-multi-stage-builds
-│   │       │   │   │   │   └── readme.md
-│   │       │   │   │   ├── 04-private-registry
-│   │       │   │   │   │   └── readme.md
-│   │       │   │   │   ├── 05-backup-restore-migration
-│   │       │   │   │   │   └── readme.md
-│   │       │   │   │   ├── 06-nginx-ssl
-│   │       │   │   │   │   └── readme.md
-│   │       │   │   │   └── readme.md
-│   │       │   │   ├── 02-docker-compose
-│   │       │   │   │   ├── advanced
-│   │       │   │   │   │   ├── 01-production
-│   │       │   │   │   │   │   ├── challenges.md
-│   │       │   │   │   │   │   └── readme.md
-│   │       │   │   │   │   └── 02-orchestration
-│   │       │   │   │   │       ├── challenges.md
-│   │       │   │   │   │       └── readme.md
-│   │       │   │   │   ├── beginner
-│   │       │   │   │   │   ├── 01-basics
-│   │       │   │   │   │   │   └── readme.md
-│   │       │   │   │   │   ├── 02-volumes
-│   │       │   │   │   │   │   ├── assets
-│   │       │   │   │   │   │   │   └── volumes-vs-bind-mounts.svg
-│   │       │   │   │   │   │   └── readme.md
-│   │       │   │   │   │   └── 03-database-storage
-│   │       │   │   │   │       └── readme.md
-│   │       │   │   │   ├── intermediate
-│   │       │   │   │   │   ├── 01-advanced-features
-│   │       │   │   │   │   │   └── readme.md
-│   │       │   │   │   │   ├── 02-networks-volumes
-│   │       │   │   │   │   │   └── readme.md
-│   │       │   │   │   │   └── 03-secrets-configs
-│   │       │   │   │   │       └── readme.md
-│   │       │   │   │   └── readme.md
-│   │       │   │   └── readme.md
-│   │       │   ├── part-03-advanced-ops-and-projects
-│   │       │   │   ├── 01-security-and-optimization
-│   │       │   │   │   ├── 01-docker-security
-│   │       │   │   │   │   └── readme.md
-│   │       │   │   │   ├── 02-resource-management
-│   │       │   │   │   │   └── readme.md
-│   │       │   │   │   ├── 03-production-considerations
-│   │       │   │   │   │   └── readme.md
-│   │       │   │   │   └── readme.md
-│   │       │   │   ├── 02-real-world-projects
-│   │       │   │   │   ├── ansible
-│   │       │   │   │   │   └── setup.yml
-│   │       │   │   │   ├── composeprod.yaml
-│   │       │   │   │   ├── compose.yaml
-│   │       │   │   │   ├── docker-composeoverride.yml
-│   │       │   │   │   ├── flask
-│   │       │   │   │   │   ├── api-key.txt
-│   │       │   │   │   │   ├── app.py
-│   │       │   │   │   │   ├── config-dev.yaml
-│   │       │   │   │   │   ├── dockerfile
-│   │       │   │   │   │   ├── dockerfile.dev
-│   │       │   │   │   │   ├── .dockerignore
-│   │       │   │   │   │   └── requirements.txt
-│   │       │   │   │   ├── flask-data
-│   │       │   │   │   │   └── test.txt
-│   │       │   │   │   ├── frontend
-│   │       │   │   │   │   ├── dockerfile
-│   │       │   │   │   │   └── html
-│   │       │   │   │   │       └── index.html
-│   │       │   │   │   ├── .gitignore
-│   │       │   │   │   ├── myapp.conf
-│   │       │   │   │   ├── nginx.conf
-│   │       │   │   │   ├── pg-password.txt
-│   │       │   │   │   ├── readme.md
-│   │       │   │   │   └── runbook.md
-│   │       │   │   └── readme.md
-│   │       │   ├── readme.md
-│   │       │   └── reference
-│   │       │       ├── container-networking-deep-dive-ref.md
-│   │       │       └── k8s-control-plane-architecture-ref.md
-│   │       ├── 03-finops
-│   │       │   ├── enhancement-summary.md
-│   │       │   ├── images
-│   │       │   │   ├── cloudcapdiscount.png
-│   │       │   │   ├── cloud-cost-breakdown.png
-│   │       │   │   ├── finops-lifecycle.png
-│   │       │   │   ├── pricing-models.png
-│   │       │   │   └── regiontypecost.png
-│   │       │   ├── part-01-introduction
-│   │       │   │   └── readme.md
-│   │       │   ├── part-02-cloud-billing-basics
-│   │       │   │   └── readme.md
-│   │       │   ├── part-03-cost-visibility
-│   │       │   │   ├── challenges.md
-│   │       │   │   └── readme.md
-│   │       │   ├── part-04-budgeting-basics
-│   │       │   │   └── readme.md
-│   │       │   ├── readme.md
-│   │       │   └── reference
-│   │       │       ├── cost-attribution-chargeback-ref.md
-│   │       │       └── cost-optimization-strategies-ref.md
-│   │       ├── 04-mcp
-│   │       │   ├── challenges.md
-│   │       │   ├── enhancement-summary.md
-│   │       │   ├── part-01-architecture-and-primitives
-│   │       │   │   └── readme.md
-│   │       │   ├── part-02-ecosystem-and-servers
-│   │       │   │   └── readme.md
-│   │       │   ├── part-03-building-custom-servers
-│   │       │   │   └── readme.md
-│   │       │   ├── part-04-security-and-best-practices
-│   │       │   │   └── readme.md
-│   │       │   ├── readme.md
-│   │       │   └── reference
-│   │       │       ├── ai-agent-security-governance-ref.md
-│   │       │       └── mcp-protocol-architecture-ref.md
-│   │       ├── 05-blockchain
-│   │       │   ├── challenges.md
-│   │       │   ├── enhancement-summary.md
-│   │       │   ├── part-01-architecture-and-node-types
-│   │       │   │   └── readme.md
-│   │       │   ├── part-02-infrastructure-and-resources
-│   │       │   │   └── readme.md
-│   │       │   ├── part-03-decentralized-operations
-│   │       │   │   └── readme.md
-│   │       │   ├── part-04-maintenance-and-governance
-│   │       │   │   └── readme.md
-│   │       │   ├── readme.md
-│   │       │   └── reference
-│   │       │       ├── blockchain-infrastructure-operations-ref.md
-│   │       │       └── blockchain-node-architecture-ref.md
-│   │       └── readme.md
-│   ├── NAVIGATION_GUIDE.md
-│   ├── README.md
-│   ├── RESTORATION_AUDIT.json
-│   ├── RESTORATION_COMPLETE.md
-│   ├── RESTORATION_MANIFEST.json
-│   └── RESTORATION_REPORT.md
+│   │   ├── 03-phase-3
+│   │   │   ├── 01-ci-cd-foundations
+│   │   │   │   ├── 01-jenkins-mastery
+│   │   │   │   │   ├── 01-introduction-to-ci-cd
+│   │   │   │   │   │   ├── challenges.md
+│   │   │   │   │   │   └── readme.md
+│   │   │   │   │   ├── 02-jenkins-architecture
+│   │   │   │   │   │   ├── challenges.md
+│   │   │   │   │   │   └── readme.md
+│   │   │   │   │   ├── 03-installation-and-setup
+│   │   │   │   │   │   ├── challenges.md
+│   │   │   │   │   │   └── readme.md
+│   │   │   │   │   ├── 04-pipelines-as-code
+│   │   │   │   │   │   ├── challenges.md
+│   │   │   │   │   │   └── readme.md
+│   │   │   │   │   └── 05-integrations-and-plugins
+│   │   │   │   │       ├── challenges.md
+│   │   │   │   │       └── readme.md
+│   │   │   │   ├── 02-github-actions-foundations
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 03-gitlab-ci-basics
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── 04-artifact-registry-management
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── enhancement-summary.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── reference
+│   │   │   │       ├── artifact-registry-governance-ref.md
+│   │   │   │       ├── jenkins-architecture-deep-dive-ref.md
+│   │   │   │       └── pipeline-orchestration-patterns-ref.md
+│   │   │   ├── 02-container-orchestration
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── docker-mastery
+│   │   │   │   │   └── docker-ops-commands.md
+│   │   │   │   ├── enhancement-summary.md
+│   │   │   │   ├── fix-links.py
+│   │   │   │   ├── images
+│   │   │   │   │   ├── containerlifecycle.png
+│   │   │   │   │   ├── dockerarch.png
+│   │   │   │   │   ├── dockerimagelayer.png
+│   │   │   │   │   ├── docker-network-pattern-1.png
+│   │   │   │   │   ├── docker-network-pattern-2.png
+│   │   │   │   │   ├── docker-network-pattern-3.png
+│   │   │   │   │   ├── docker-network-pattern-4.png
+│   │   │   │   │   ├── docker-network-pattern-5.png
+│   │   │   │   │   ├── dockerstoragearch.png
+│   │   │   │   │   └── virtualvsdocker.png
+│   │   │   │   ├── interview-prep.md
+│   │   │   │   ├── part-02-orchestration-and-architecture
+│   │   │   │   │   ├── 01-networking-and-storage
+│   │   │   │   │   │   ├── 01-docker-networking
+│   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   ├── 02-docker-volumes
+│   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   ├── 03-multi-stage-builds
+│   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   ├── 04-private-registry
+│   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   ├── 05-backup-restore-migration
+│   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   ├── 06-nginx-ssl
+│   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   └── readme.md
+│   │   │   │   │   ├── 02-docker-compose
+│   │   │   │   │   │   ├── advanced
+│   │   │   │   │   │   │   ├── 01-production
+│   │   │   │   │   │   │   │   ├── challenges.md
+│   │   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   │   └── 02-orchestration
+│   │   │   │   │   │   │       ├── challenges.md
+│   │   │   │   │   │   │       └── readme.md
+│   │   │   │   │   │   ├── beginner
+│   │   │   │   │   │   │   ├── 01-basics
+│   │   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   │   ├── 02-volumes
+│   │   │   │   │   │   │   │   ├── assets
+│   │   │   │   │   │   │   │   │   └── volumes-vs-bind-mounts.svg
+│   │   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   │   └── 03-database-storage
+│   │   │   │   │   │   │       └── readme.md
+│   │   │   │   │   │   ├── intermediate
+│   │   │   │   │   │   │   ├── 01-advanced-features
+│   │   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   │   ├── 02-networks-volumes
+│   │   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   │   └── 03-secrets-configs
+│   │   │   │   │   │   │       └── readme.md
+│   │   │   │   │   │   └── readme.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── part-03-advanced-ops-and-projects
+│   │   │   │   │   ├── 01-security-and-optimization
+│   │   │   │   │   │   ├── 01-docker-security
+│   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   ├── 02-resource-management
+│   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   ├── 03-production-considerations
+│   │   │   │   │   │   │   └── readme.md
+│   │   │   │   │   │   └── readme.md
+│   │   │   │   │   ├── 02-real-world-projects
+│   │   │   │   │   │   ├── ansible
+│   │   │   │   │   │   │   └── setup.yml
+│   │   │   │   │   │   ├── composeprod.yaml
+│   │   │   │   │   │   ├── compose.yaml
+│   │   │   │   │   │   ├── docker-composeoverride.yml
+│   │   │   │   │   │   ├── flask
+│   │   │   │   │   │   │   ├── api-key.txt
+│   │   │   │   │   │   │   ├── app.py
+│   │   │   │   │   │   │   ├── config-dev.yaml
+│   │   │   │   │   │   │   ├── dockerfile
+│   │   │   │   │   │   │   ├── dockerfile.dev
+│   │   │   │   │   │   │   ├── .dockerignore
+│   │   │   │   │   │   │   └── requirements.txt
+│   │   │   │   │   │   ├── flask-data
+│   │   │   │   │   │   │   └── test.txt
+│   │   │   │   │   │   ├── frontend
+│   │   │   │   │   │   │   ├── dockerfile
+│   │   │   │   │   │   │   └── html
+│   │   │   │   │   │   │       └── index.html
+│   │   │   │   │   │   ├── .gitignore
+│   │   │   │   │   │   ├── myapp.conf
+│   │   │   │   │   │   ├── nginx.conf
+│   │   │   │   │   │   ├── pg-password.txt
+│   │   │   │   │   │   ├── readme.md
+│   │   │   │   │   │   └── runbook.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── reference
+│   │   │   │       ├── container-networking-deep-dive-ref.md
+│   │   │   │       └── k8s-control-plane-architecture-ref.md
+│   │   │   ├── 03-finops
+│   │   │   │   ├── enhancement-summary.md
+│   │   │   │   ├── images
+│   │   │   │   │   ├── cloudcapdiscount.png
+│   │   │   │   │   ├── cloud-cost-breakdown.png
+│   │   │   │   │   ├── finops-lifecycle.png
+│   │   │   │   │   ├── pricing-models.png
+│   │   │   │   │   └── regiontypecost.png
+│   │   │   │   ├── part-01-introduction
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── part-02-cloud-billing-basics
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── part-03-cost-visibility
+│   │   │   │   │   ├── challenges.md
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── part-04-budgeting-basics
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── reference
+│   │   │   │       ├── cost-attribution-chargeback-ref.md
+│   │   │   │       └── cost-optimization-strategies-ref.md
+│   │   │   ├── 04-mcp
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── enhancement-summary.md
+│   │   │   │   ├── part-01-architecture-and-primitives
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── part-02-ecosystem-and-servers
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── part-03-building-custom-servers
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── part-04-security-and-best-practices
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── reference
+│   │   │   │       ├── ai-agent-security-governance-ref.md
+│   │   │   │       └── mcp-protocol-architecture-ref.md
+│   │   │   ├── 05-blockchain
+│   │   │   │   ├── challenges.md
+│   │   │   │   ├── enhancement-summary.md
+│   │   │   │   ├── part-01-architecture-and-node-types
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── part-02-infrastructure-and-resources
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── part-03-decentralized-operations
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── part-04-maintenance-and-governance
+│   │   │   │   │   └── readme.md
+│   │   │   │   ├── readme.md
+│   │   │   │   └── reference
+│   │   │   │       ├── blockchain-infrastructure-operations-ref.md
+│   │   │   │       └── blockchain-node-architecture-ref.md
+│   │   │   └── readme.md
+│   │   └── tree.txt
+│   ├── readme.md
+│   └── tree.txt
 ├── 01-beginner_RECOVERY
 │   ├── 01-Linux-Engineering
 │   │   ├── 01-introduction
@@ -11014,43 +11145,54 @@
 │   │   │   ├── 53355d34c7c1096481f9badeba16969035e0db
 │   │   │   └── fee3416e2c0a56bcdf8ad0af991569deb5ed71
 │   │   ├── 01
+│   │   │   ├── 3b8f0084d2d1fb6ac48ceb6868af7725b282f7
 │   │   │   └── 40a3838328af5c12360051497c8588ce8b751d
 │   │   ├── 02
 │   │   │   ├── 13203660795f47d3c5ddfea5c81ec73ace92c4
+│   │   │   ├── 5437c4ccd6930cfed71e96bceeba62c7bbe8fc
 │   │   │   ├── 8e6e36bae7cce09b2f85ab7e9898c73475bb11
 │   │   │   └── d44d2f5ec8b5535a8601f0e7abc1772a9a7bc8
 │   │   ├── 03
+│   │   │   ├── 8ee825bdafe48889e7a177e293dcdc4432ab56
 │   │   │   ├── a9e9225c3fb4134fa3f538028b6c13fcfa81d2
 │   │   │   ├── c90d899f07cfc4d73d45c3f39b786f99be8f14
 │   │   │   └── d688cb0835ce754b5b9650dd95e3b5a1742f1a
 │   │   ├── 04
-│   │   │   └── 241c022ce4dc32fe768df5c3b46f391f51a51a
+│   │   │   ├── 241c022ce4dc32fe768df5c3b46f391f51a51a
+│   │   │   └── f374496873f28d08143e5026409bcbb485c7d3
 │   │   ├── 05
 │   │   │   ├── 0df0c047128810e35615bf3d72e408708acde8
 │   │   │   ├── 2ac34bed9783237ef3c304e7b3c0145ba14879
 │   │   │   └── f23679f82c49b50c05bcd86f86038449166b90
 │   │   ├── 06
 │   │   │   ├── 70aaf21b334d3256387105392b68ee7228b2d7
-│   │   │   └── 7a8b9fb976a33adbbf6d37f6c55a9a2e391ff8
+│   │   │   ├── 7a8b9fb976a33adbbf6d37f6c55a9a2e391ff8
+│   │   │   └── c02772963ce1e27dd6ca429ba25e5284ec8833
 │   │   ├── 07
+│   │   │   ├── 099551a31630343622389addf1c0d541bc70f1
 │   │   │   ├── 4fc5ed9155a1c0fff52c9935a4517db237ca6d
 │   │   │   └── 624327b662d700c54aa0d685a92e08282879d1
 │   │   ├── 08
 │   │   │   ├── 161921d45004c92938f2adaad7fedbd408a748
+│   │   │   ├── 8ee1787efebfa83ee9dca7fdea7be41952555a
 │   │   │   ├── 93370a4128a9af6af5896609de6dfc91e6994e
 │   │   │   └── ceb16e7ab02a663892e862b682828ba13271fe
 │   │   ├── 09
 │   │   │   ├── 00cde72d79860260a1fa60fb579c76493a28b5
-│   │   │   └── 2c2d7b90e3f15844556111bf03fca82b3130ba
+│   │   │   ├── 2c2d7b90e3f15844556111bf03fca82b3130ba
+│   │   │   └── 42527f45127e9683ffa890d5d193bcce51f84a
 │   │   ├── 0a
 │   │   │   ├── 43cdcfd3602766b1c031781d26b73fa07ff1c6
 │   │   │   ├── 46b4291f8fbb6b487c2bf60cf2768284a020ca
+│   │   │   ├── 5ffc8e886645577d1cae323fdfef6a4354b98e
 │   │   │   ├── c278049bfc297f6341657a104dde2bf661434c
-│   │   │   └── c9813b2872a2d17509bb92a88010caa52d1791
+│   │   │   ├── c9813b2872a2d17509bb92a88010caa52d1791
+│   │   │   └── d9d4829764c21ad29d1d6092bd062cb2399957
 │   │   ├── 0b
 │   │   │   ├── 11aa8b98cce2aef95819dc917ac8627e44b720
 │   │   │   ├── 17948b98ff83537480b0314cdf5129c0b85dd3
 │   │   │   ├── 2b5f39d24bae2eb21acc7f0a46cdb430f1d368
+│   │   │   ├── 2e488d5ce2d56d0b1fd577caed2bb14cf4ea0f
 │   │   │   ├── 87f038085f9eeb146cd46a218d12171bfdbfb2
 │   │   │   ├── bd7cfa196e6567ce857ee4e06a6e88aa834481
 │   │   │   └── c8c1d659637314217e76226fff549401952818
@@ -11064,6 +11206,7 @@
 │   │   ├── 0e
 │   │   │   ├── 33ff4cbd3b201ab2cf7b0e8a605b344138d234
 │   │   │   ├── 5162b0a0f065b288f2c4be2f58bca2936922f3
+│   │   │   ├── ccff5f60ffac0572a6558fbd7a287488229366
 │   │   │   └── cf2d5384e2b431038b85180e598e499b73ebf3
 │   │   ├── 0f
 │   │   │   ├── 04828f822d4b9125f1a26a321c55f4337e72b2
@@ -11074,8 +11217,10 @@
 │   │   ├── 10
 │   │   │   └── 50c852348fef4e2b31a063ec77d6ac614fd6d2
 │   │   ├── 11
+│   │   │   ├── 1e172dd4fcd566641914fadd102e7f4be99741
 │   │   │   └── acd77d0b8df6492890e50774df74e9da4aeb2e
 │   │   ├── 12
+│   │   │   ├── 08cb3ef0cadb14f9246fa436690b438a74b89b
 │   │   │   ├── 2a838353e5f60dc3bfa18aae4e9c87f62a86f1
 │   │   │   ├── 5c4859a62b32e5c6c53c38b1afbbfef9c20dc3
 │   │   │   ├── a04a49c04645620fbb3e03429766220ef1256a
@@ -11085,19 +11230,24 @@
 │   │   │   ├── 3413c020e71c7f7f5968f3fd00d8ad776fdac8
 │   │   │   └── d3b0ef26604798020e94bc6efcfb92569cb255
 │   │   ├── 14
+│   │   │   ├── 78e28e95c27112ff956556140d9abc1fd2d3f5
 │   │   │   ├── a9f2fad542e7845f73386f15762bf5f43f0862
 │   │   │   └── d6d032d0325b8c1c8e8078a9ae58b8a9b4ba6b
 │   │   ├── 15
+│   │   │   ├── 7214c6531de8dc9906b95f667e9558d898e2f1
+│   │   │   ├── b9da3002e03efa2c16c72db32aed571639ec92
 │   │   │   ├── c0f1523daf4ec5c3ed17d369aae2bb68c9e99f
 │   │   │   ├── d5f8e3478ca9726f7e9c73b4aea4963783fe62
 │   │   │   ├── ebb39941c06aa503d53a78eabfa60d5601bbb6
 │   │   │   └── f3928a177fae3ef3ed0dc6a90ae126a41a99fc
 │   │   ├── 16
+│   │   │   ├── 60c2d662aae16e450de58d60fa8c749a914e7d
 │   │   │   └── 9ef8722f1f6ed7ec8323d4258da01f9bf966c0
 │   │   ├── 17
 │   │   │   ├── 54deef8ed7b3cebadcc45b6ae8ee2bad058fad
 │   │   │   ├── 7ca1fec25e47a2cbe066b8e9f803e21db0d7f6
 │   │   │   ├── 843699771f96d4e7294c3ef0b224bdf53a786c
+│   │   │   ├── a5fe9e09ca8c61a95ff1f046ef60b02018897b
 │   │   │   └── c2900e84150aec2f5f421f15f2c7d1061e4acb
 │   │   ├── 18
 │   │   │   ├── 1ad401e0502e4359acd05643f05d01e30f51b4
@@ -11113,19 +11263,26 @@
 │   │   │   ├── c3f2682222a3f70b952175bfac91e75d458c9c
 │   │   │   └── dea748b812983840fc9af3cef1782d61ff664d
 │   │   ├── 1b
+│   │   │   ├── 091ed5d43c549656092fd20213988bdd587132
 │   │   │   ├── 4d85bdf04737175ea77078a0a9323630e3c5e0
 │   │   │   ├── 9d64b807c4d00e1d992982456965b771d0e264
 │   │   │   ├── a60e79cfdb561204db5921bdaf6ebe776217bb
 │   │   │   └── b21f9422764629bbf3f8579bbc8499d17323f8
+│   │   ├── 1c
+│   │   │   ├── 832e61626f9720d7e20182f120a47992cabf06
+│   │   │   └── 9896a4b6fd1dd2af47122b569a2eebe1022284
 │   │   ├── 1d
 │   │   │   └── f95ab0d87f2772ba530c5e8b2da7df539a4f60
 │   │   ├── 1e
+│   │   │   ├── 1cc6647f7a19d613b6336231a66fdeff31b666
 │   │   │   └── adb183cefb4d786151686517d8694bc9c7db8f
 │   │   ├── 1f
+│   │   │   ├── 31ecc8d87ec83b09999b7f990cb58707523b44
 │   │   │   ├── 76aab250e00060f3af641a9f1b30942d051460
 │   │   │   └── af78b32e6bb0cb8744a5cd8334e1d978b46639
 │   │   ├── 20
 │   │   │   ├── 56027196b9cb729a22a7ab480a60bf6c42661d
+│   │   │   ├── dae2ce9a903951e0ff5daabe29ab625f988677
 │   │   │   ├── f05a8705dbb3d0205aec98bb3649483d74bd2e
 │   │   │   └── fd1da9ce5ee5394a6919a3da5aeed15a415347
 │   │   ├── 21
@@ -11136,10 +11293,12 @@
 │   │   ├── 22
 │   │   │   ├── 1358ff5c32b8805f661e9b38ffbce821d54fce
 │   │   │   ├── 3c27ae9fc9b90397738df7c29fa3983ee3e479
-│   │   │   └── b3778058e3f0bc471b780c1648240b67365cc1
+│   │   │   ├── b3778058e3f0bc471b780c1648240b67365cc1
+│   │   │   └── d69a9ad5e8a5f440708d5dd3d678dfdcd66493
 │   │   ├── 23
 │   │   │   ├── 1913df93664e94c271a218500988698a5fcf29
 │   │   │   ├── 88c47130e54cf2a522927498b1dcb1db48668b
+│   │   │   ├── 8c997ca43e4c46bd5660481e34967c0fec01e4
 │   │   │   ├── d8dbdf3381dfcf7c8a28163b22473c98161b0d
 │   │   │   └── fdca6306015801961441ca7c5ad98fae8d2b4d
 │   │   ├── 24
@@ -11148,12 +11307,16 @@
 │   │   │   └── bc50c3f8ab82061dd465a9a87025947efbf249
 │   │   ├── 25
 │   │   │   ├── 3437d3230b62f3ec8a6179bcf608fed25d4012
+│   │   │   ├── 3652e92d09dd3b7cba68c23f5508c7a7b584fe
 │   │   │   ├── 7a7087bea25b7d57a0d40af1e4211b3d3328e7
+│   │   │   ├── 86d1ac209d80dbc88f04689482a7a67ce17015
 │   │   │   ├── a979a320d1a23398934ee25f31f653dff95d62
 │   │   │   └── edb9290d81713a0003c6cf728b137bd8e34f50
 │   │   ├── 26
 │   │   │   ├── 34bc7c4e0009c47128ab2626788cda6cc65773
-│   │   │   └── 85c9cf759748ccf422277bd3316b79da018b7c
+│   │   │   ├── 4d4e8fc3764b874a26e46364bc051945c60256
+│   │   │   ├── 85c9cf759748ccf422277bd3316b79da018b7c
+│   │   │   └── c959d6c56a6105ccb238ac25abf925650f35fa
 │   │   ├── 27
 │   │   │   ├── 4c74a20c964bea1c3b5208f5df4bdd7f866758
 │   │   │   ├── 5fcaccf30410e3c4cde7a77d9fce817be7cbe3
@@ -11163,24 +11326,34 @@
 │   │   │   └── 60b1205555b9677be39dd19b51733ec48f32f8
 │   │   ├── 29
 │   │   │   ├── 7c20f9642c62197e3508b19be486140032654c
-│   │   │   └── a1f90f0a675ef3ec04e11b0508f7b7f66f84a8
+│   │   │   ├── a1f90f0a675ef3ec04e11b0508f7b7f66f84a8
+│   │   │   └── fbea2ad971e565dc4fcde3893f57273afd8226
 │   │   ├── 2a
 │   │   │   ├── 0280ebdda3f09ce4ff507c5856301d5f710a56
-│   │   │   └── 03a8fe23090ba69d694afd6731252fcb493196
+│   │   │   ├── 03a8fe23090ba69d694afd6731252fcb493196
+│   │   │   ├── a1b8f4ff77a7db95c2d92bcf82bbbb212cb0d6
+│   │   │   └── ec86d915a597ed0960ed2265f811cc40f6898e
 │   │   ├── 2b
 │   │   │   ├── 40fd42a30476062df57becde149e85e8c5f2a4
-│   │   │   └── 83e343cd01fb522f55abdd2c0bf66d9f588fb3
+│   │   │   ├── 83e343cd01fb522f55abdd2c0bf66d9f588fb3
+│   │   │   ├── a77bcfa1bcd8697683cd801d8ece27cb35f67d
+│   │   │   ├── abc13999e5be40980fb932c80a39a9249fcd26
+│   │   │   └── c25716a18ebf7ea14c0b981e2d58018111180a
 │   │   ├── 2c
+│   │   │   ├── 0db129d840e411526e4394902e144eb79eeea4
 │   │   │   ├── 3f8a33e0dd6a8e92e787826f7c29c04b44604a
 │   │   │   ├── 92416eb8ea2164e6d8c7aee41b760fbb784d4e
+│   │   │   ├── 96d08cd37ae123b55527566ae0334e5f83c684
 │   │   │   └── b48c93b1176c81464e34ba6845882f9d000000
 │   │   ├── 2d
 │   │   │   ├── 1ac20c611e3e8ef1483f11a089a25c22e76274
 │   │   │   ├── 4d0f354e08d7c4f52b2208289f2ace9cdacccf
 │   │   │   └── cebb4fd727df95480bf2bb353e814a9b2ef67f
 │   │   ├── 2e
+│   │   │   ├── 01f9da531d15cccfc4bb402e716e766c37ad6e
 │   │   │   └── 78396958931f7a5d36294bc22f5ecbdad751a5
 │   │   ├── 2f
+│   │   │   ├── 16b1c6c8a791d81e9eb19e6e47331cd94c6e15
 │   │   │   ├── 813c555857c9e92e16fded0452f8be557c7bf4
 │   │   │   ├── 8f96bd08c534170b1c2dc2f8d44a6ccdd221d4
 │   │   │   ├── be4e0c5aaadc9fe054f88c7c0b0ffbc897976f
@@ -11195,24 +11368,30 @@
 │   │   │   ├── b1c617a1bfe2ce5be03022fb938045e32b327d
 │   │   │   └── bcf0caa977274f854052998ae1a6552f5f3aba
 │   │   ├── 31
+│   │   │   ├── 50eb13ca35d4399cfd9e2525ec4fd39faad49e
 │   │   │   ├── 765bbc2ffd21ee6e394bad8773b5c0acab75c6
 │   │   │   ├── 79b59ba0400cbafc7200b71cbd0794732bbe25
 │   │   │   ├── 88604c26288ebcf63dcb693eebfc366b989d5d
-│   │   │   └── a0c6fac81dadbd8cefb9afc0b7bb43e2e04933
+│   │   │   ├── a0c6fac81dadbd8cefb9afc0b7bb43e2e04933
+│   │   │   └── b77aa7cfc8cfa9575400dccbd78c957b50a5d2
 │   │   ├── 32
 │   │   │   ├── 27860e7b9daadab5a5617aa3457640d5bfcfaa
 │   │   │   ├── 4790fc9b2e0f67acb3935cc2de280fc3627bb1
 │   │   │   ├── 578635355c393f52270be614de2fd8a2d0c2e8
+│   │   │   ├── 5d0f65be76959e81736cdf1f2176f3ad28eef1
 │   │   │   ├── 7327c9e6f084a9875faf1a8d3b1f46b325947f
 │   │   │   ├── 905efcbf889c5d631660a687c4206051459a60
 │   │   │   └── b49c9039c354c60e6ce69b84a9cf605543fa05
 │   │   ├── 33
-│   │   │   └── 6ae486eb582f7ab23f6cca4a395900844b9949
+│   │   │   ├── 6ae486eb582f7ab23f6cca4a395900844b9949
+│   │   │   └── fc7cd6b275a41f7ff85e0c735d84574a20f637
 │   │   ├── 34
+│   │   │   ├── 00109364b5a59e6a861c68dc876f1958a0c87d
 │   │   │   ├── 06bc039216a9fae701b0290603d518c0650691
 │   │   │   ├── 19566521ff96327afb5b569e361b85cd5fd5e6
 │   │   │   ├── 8c7aa8995ca125ca66a4c11153b6497317c505
 │   │   │   ├── 8cee5865535b2334d6379b4ba9dc853e9e2728
+│   │   │   ├── 91ea3e0e3e14cefb970d7105835739f5e4c9f9
 │   │   │   └── a160f33af9fe8a3990a90f08f9b6c81f71b8db
 │   │   ├── 35
 │   │   │   ├── 0374ff23de2d93016be946c7a9413d424c08ea
@@ -11220,36 +11399,51 @@
 │   │   │   ├── 5a125b5f4e2b5c0cf4e840672c84236da6f3b2
 │   │   │   ├── 9469236d1bbf2e4127aa95d5a70b80d104569e
 │   │   │   └── d16a8d8abf820156b5f29ff63bc0d80384dbcb
+│   │   ├── 36
+│   │   │   ├── 26bc4c54edc9b7debe668aae66f7691ab4553d
+│   │   │   └── 5aad60f57ced9b793693e7bfaac317816b0a9b
 │   │   ├── 37
 │   │   │   ├── 55fd36a4c1dd2a9dc61db3ca853ee6b368858a
 │   │   │   ├── 5a93025a0238c0ebd7f189ec84daeaf89df84e
 │   │   │   ├── 809f78dcb0c66d2a01800e1fbb78113aca0962
+│   │   │   ├── f480e3ed2061dec024342d75fb030866ba09c8
 │   │   │   └── f89b045ee76f2f1dacb4ed3240db089e83b094
 │   │   ├── 38
 │   │   │   ├── 13cf807e1901c4860f5746e5015ae1666042d3
 │   │   │   ├── 239b0ad12f4b69b4fb365c793e393fc26a51fb
 │   │   │   └── d86200f0f9e617a6a2f696a287b2c61e039182
 │   │   ├── 39
+│   │   │   ├── 5b22d3c5ae6d33837aa60ff22bf1c3091ae1c9
+│   │   │   ├── 66d6c7ba9043eb8f3bd52062339de370fb2015
+│   │   │   ├── b089a8b440bf5098b27cb3582289fe0ce18681
 │   │   │   ├── b8f9e400079e8fe8a98a270d00841b1023cf1d
 │   │   │   ├── cc6ebe7431b816d66a9b53714b527bfbe392b6
 │   │   │   ├── e708287ae1fea27d96fc75784d5213c169080d
-│   │   │   └── f5f67e91e58437cd341e9f9d24678167a625ed
+│   │   │   ├── f5f67e91e58437cd341e9f9d24678167a625ed
+│   │   │   └── f653ea4b3b6421a90fa4e03b82e8e269b195b7
 │   │   ├── 3a
 │   │   │   ├── 2130ce516ee33241688b5e93fc7fdc817c8c71
 │   │   │   ├── 3ea23a1ee624d05e18a0575b77face60f4071b
 │   │   │   ├── 3fe8e7263196801e60fc156f3b162156a76b97
+│   │   │   ├── 717650798f74bced2ba2eeeaea93c0caae6d9e
 │   │   │   └── a8beb1fc9f07c86348598361f9d77bbd13efe1
 │   │   ├── 3b
+│   │   │   ├── 0f3937c64addf8e1329b03a579ab49ae31e8fa
 │   │   │   └── 8ad841ce6c837ad60014e28feaa83c93e0e4fb
 │   │   ├── 3c
+│   │   │   ├── 001d0c98399ba0bf07c39119d0dd64ee8210c8
 │   │   │   └── 310040d11d83faf01f8f3486c49c942cd1b0bc
 │   │   ├── 3d
 │   │   │   ├── 36323c53920c5353333ab26eba4a5bc8e39706
 │   │   │   ├── 683b1dc5967893e0a7682b14bb210cead42f2b
+│   │   │   ├── cc608d1b9e3bbd41525d9ad52e514087367121
 │   │   │   └── f92acfe000bb81864b1a6c6d36abd9f45009a0
 │   │   ├── 3e
-│   │   │   └── 67d9a4cbd1c0b93da7deb46aa4c9012e920a46
+│   │   │   ├── 67d9a4cbd1c0b93da7deb46aa4c9012e920a46
+│   │   │   └── a42dd2eb09ba6b75523b43fd6fdcc279caef41
 │   │   ├── 3f
+│   │   │   ├── 35eb5532294a81299dd41f79bc9d7cdefe57f4
+│   │   │   ├── 47f56b17cc70c3d5bab6030d36161362c19986
 │   │   │   ├── 605313aec1327f6c49f3848cafb10bfe38b8b6
 │   │   │   ├── a8de1a4c9930d194c33827c1ecabe0028199f2
 │   │   │   ├── b11b1ff27e448355eab4954513da1bb32fb74c
@@ -11263,11 +11457,15 @@
 │   │   ├── 41
 │   │   │   ├── 09f06f5cfa1384f777df577abbcdd46dd2e29f
 │   │   │   ├── d0510db74c861af66729efa3b70ca3c13475e5
+│   │   │   ├── d552923473254c3c5561a4f7b26b626036cca9
 │   │   │   ├── dc91552cea754f1f450a996a1cc0eb928ffc9a
 │   │   │   └── f533e1a89080312a7730d82e3ffbc92003a92d
 │   │   ├── 42
 │   │   │   ├── 1171e2aed5a3693e41813dddd4da8c1fe9b578
-│   │   │   └── bf7c8ffc172142ec24105d6581dd20db025793
+│   │   │   ├── bf7c8ffc172142ec24105d6581dd20db025793
+│   │   │   └── dc6f619b40f3a25358dfaec34afb5e138b673e
+│   │   ├── 43
+│   │   │   └── f74cf170ac15d49a9d0364cf77ba4b5103684b
 │   │   ├── 44
 │   │   │   ├── 1bf78689a057fce3810c77c9da7679d4b4f325
 │   │   │   ├── 664d6f9a17693ef34265cd82d965304731dc64
@@ -11293,30 +11491,48 @@
 │   │   │   └── d9eb9fe38da5c875ab13787d2d3c090b10fccf
 │   │   ├── 49
 │   │   │   ├── 37c10080d5709e947c6a4921a7cb3a00de712f
+│   │   │   ├── 4db23a9e57d389fa1c1095c2271ca435053ec9
 │   │   │   ├── 9b91dca85089adeb25efee1d1aef36bb798e91
 │   │   │   ├── e33c90314c40086522a9158edcb40fb607190a
 │   │   │   └── f0556ef45b21736eabaff1c42354c80fba11d2
 │   │   ├── 4a
+│   │   │   ├── 2a8e682eed6852619da287cb8556c41f81f462
 │   │   │   └── fb024f676f6a376242d7e4bb9067203fea0db8
 │   │   ├── 4b
 │   │   │   ├── 7066ab2c622f4fd57dd1dcb465761b754b5527
+│   │   │   ├── 8c769c5ea49de5c3ba6eafae3f0ae2a06bf83e
+│   │   │   ├── d5f483a5e83e66fa807d4fd430cbd81df1d89f
 │   │   │   └── f4836e6ed6626ad539e604267b353be6e87900
 │   │   ├── 4c
 │   │   │   ├── 12d04fdab899048668a532aea0b69e92eaf7d6
 │   │   │   ├── 22ef1f2bb2b47891f03a9b719b9890d8af22e4
+│   │   │   ├── 4cad742107163fde5e09082c42f4ed01e77491
+│   │   │   ├── 75ac1cd020ca21342c0df31a19c657b4394840
 │   │   │   ├── a8159399bc7e4aa1bfdcec4c024ce65d8ff38d
 │   │   │   └── bbcbb52737a1735a36e2c14e625522fb026148
+│   │   ├── 4d
+│   │   │   └── 802b4fa62e84e12eea2f8eb6d8c895b55aa87e
 │   │   ├── 4e
+│   │   │   ├── 152ced0f1de4eb7c4e8bb45b91961839f67035
 │   │   │   ├── 2f9326e7d636e3edc0f3da4d4240a56c610b75
+│   │   │   ├── 38470942c744e3fafe62498fe119db9b6e3aeb
 │   │   │   └── 475aba50d989efbba4d493dc7ccd202b2de75e
 │   │   ├── 4f
+│   │   │   ├── 50e7dbf0176a2d56ff5e8e82ea1982e4af4eee
+│   │   │   ├── 5a0db6744ea0328f947a2cd0e8c67117949b9a
 │   │   │   ├── 91384a1471fcef90b2d602b13f69ebd48a4224
-│   │   │   └── c0dfd6068510934f3acb93d6495980ea2f5745
+│   │   │   ├── c0dfd6068510934f3acb93d6495980ea2f5745
+│   │   │   └── cc5af82c9de3604df97167545f13221b8e6b85
 │   │   ├── 50
+│   │   │   ├── 01cee1c9bdfaad5b1f49cafd02df5daf5e6b94
 │   │   │   ├── 17fbaa3644a0895c23555f334d8708f9d6cc37
-│   │   │   └── 460bbb1f7f8845b871e50298ff257fa186ec81
+│   │   │   ├── 460bbb1f7f8845b871e50298ff257fa186ec81
+│   │   │   └── 580fd1448376c9c354b154cc1a8120a423e1de
 │   │   ├── 51
 │   │   │   ├── 08f2c1c74a8205e06934cceca563ee6fa32da6
+│   │   │   ├── 5bbda5d58a51cfe6029f51a71a192b6df0a9bb
+│   │   │   ├── 623e372608d97949eb8e8b8447b1160a9b0509
+│   │   │   ├── ae897be9e155a24cf134f3c4d28bd8618a6766
 │   │   │   └── beaae390183bceed10845b0e7b42764478e40c
 │   │   ├── 52
 │   │   │   ├── 1c90ba3d86f804a0310c6cb1a85499f16fcb9e
@@ -11325,10 +11541,12 @@
 │   │   │   ├── db301e98a974bc9371a52aec9a6942a49c287f
 │   │   │   └── ecf1d8dc3e2855e6259434c496bf9d8e9105aa
 │   │   ├── 54
+│   │   │   ├── 27da6a839b32e47a76e98e0101479b3ea271c8
 │   │   │   └── 8b87a95b32d7f420f5d802dcd0b3944076d50c
 │   │   ├── 55
 │   │   │   ├── 30eca24280c5edc02c639fcd7442e2fd64e1e1
-│   │   │   └── 689c28923cc3f4fa8ab73eba8c20b00dd42820
+│   │   │   ├── 689c28923cc3f4fa8ab73eba8c20b00dd42820
+│   │   │   └── 80f414c85f98d044699e1e2a690a3d09c49a2a
 │   │   ├── 56
 │   │   │   ├── 217b2dfec7bdd095a213cbb8f64f08ffc031aa
 │   │   │   ├── 552647e2abcb7dbfbfe9cb366c5f8cf25bc3bf
@@ -11336,6 +11554,7 @@
 │   │   │   ├── e20b99f8cbebc6b6b30552dd80b5bd926ddb21
 │   │   │   └── e6dcda525b019c712665779306dadf59a575b8
 │   │   ├── 57
+│   │   │   ├── 25fe7c2d0fbaae5a89ddc3cd352b19ffccbf01
 │   │   │   ├── 4cb367a953a489ca128a35b06e10a3e3b2f3e6
 │   │   │   ├── d2a34bae8af6f9a089af7d33a1a03e6d95acde
 │   │   │   ├── d626051f1703b93d53b2c3ee41d7770519a006
@@ -11343,61 +11562,88 @@
 │   │   │   └── f6cba1e4823f8abeb262f0efd56dbbbfdc6687
 │   │   ├── 58
 │   │   │   ├── 3daa6c620b32f5f5a9416c206a23709d7f2cef
+│   │   │   ├── 52e7a9c0758aca353ecd98845e2a81fad087ee
 │   │   │   ├── 82785ed093b426118e7c8d4f0edf3036193410
 │   │   │   ├── ebff90f437f45629403d62df31f4185f22e812
 │   │   │   └── fc3bbead294fe2b4273f71fa28480ab4d160a7
 │   │   ├── 59
 │   │   │   ├── 0732c459c3d892cec7bec67ca5cf74444bea00
+│   │   │   ├── 44a8448a6d43a8e463846c3535e4b03ee156f0
 │   │   │   ├── cd16e0fafb1e274a425342a760037c1c8d482b
 │   │   │   └── ead3f2e72950a2e729a0079865bc5e59a2b64a
 │   │   ├── 5a
+│   │   │   ├── 094770e54a9a60923004775902efacb3934f3c
 │   │   │   ├── 0ababe4aea500eaec5651bd8a0859df765c0cd
 │   │   │   ├── 277df1b3a13c35addab2f55580f8f5d79e300e
 │   │   │   ├── 2b7b9f8ebc79bc8a3d26fdda2d32a06b49d8e3
 │   │   │   └── 6e8190b2c8ff10a130d613282ef387fd963767
 │   │   ├── 5b
 │   │   │   ├── 05ef13ffa18ff546a629b815d7b75c0aea7d68
+│   │   │   ├── 2a896c22ed4e30f5be6e52719d98a071df8d58
 │   │   │   ├── 54dd115d7730f51062305d014fe4a500824ac3
 │   │   │   ├── 62ce3fc9e23d8d155c53e2d218d728dd91141f
-│   │   │   └── 6410d4457997994c3cd4b52e5ea005a378459d
+│   │   │   ├── 6410d4457997994c3cd4b52e5ea005a378459d
+│   │   │   └── c5bd32d7bec28d1d7fc0a3d1de6de3200815e6
 │   │   ├── 5c
 │   │   │   ├── 2d37ef438400feea85a377aa2ce325ee2eee5f
-│   │   │   └── 7dd507c756114fa11d3ca7e381f6fc8a08a3d5
+│   │   │   ├── 7dd507c756114fa11d3ca7e381f6fc8a08a3d5
+│   │   │   ├── cc5bf687245f67779c64455c17c1fa3b2612b3
+│   │   │   └── f3dd0052957c2de04d0da78a075d67a9eeb32b
 │   │   ├── 5d
+│   │   │   ├── 2c3111fc72b666156ff8981e42a5a570ad1990
 │   │   │   └── 7ae5baffaaac9ab493922fcfe1548a764b3411
 │   │   ├── 5e
-│   │   │   └── d9de8ab232400099c10b2d09df246281d3888c
+│   │   │   ├── 0582515c2effbfdfa191e0283e7350d5fa74a7
+│   │   │   ├── d9de8ab232400099c10b2d09df246281d3888c
+│   │   │   ├── e1e4f86bf6027d262fc7278d8acbe70ea1db4c
+│   │   │   └── f53c69d8ca11282c79ce2be68371ddcafe7d43
 │   │   ├── 5f
 │   │   │   └── b053346e3a0e667ecf04e90e4a922ec6106899
 │   │   ├── 60
+│   │   │   ├── 6ff0bcedf5be463ad38d847b10082cf66e964b
 │   │   │   ├── 8eb565210d2bd825eb7ff0f67bb63b0fddca8c
 │   │   │   └── 9cfe5d0a74a26633cf1be9522716bfbb7f4dce
 │   │   ├── 61
 │   │   │   ├── 1c870b82d3e276eb68e8bf1a42df6b8ee58bfb
 │   │   │   └── eca7d3b6f538e103a01e6a213c3e5a45626118
 │   │   ├── 62
-│   │   │   └── 2e3afbbeeb65d226202e5350945bef35838d6d
+│   │   │   ├── 2e3afbbeeb65d226202e5350945bef35838d6d
+│   │   │   └── 488b9d9905108921f31bc7d9f4b6d3dea602fb
 │   │   ├── 63
+│   │   │   ├── b09b62e8c36b670132ce1ce0e1b9f0a5c7082d
 │   │   │   ├── e2dd79f43c098077af443cffbfb8dac8e4f469
 │   │   │   └── efde82531f9ac492751faf589e8e0468e2a834
 │   │   ├── 64
 │   │   │   ├── 2ec3245fa93e43699c0a71d802f76223ac2a1a
-│   │   │   └── 88b85a25d68fae72a7b109b18e5490d56f1e5b
+│   │   │   ├── 88b85a25d68fae72a7b109b18e5490d56f1e5b
+│   │   │   └── 9ad30e338b211ed78a6bd6a0c4bae7844ce270
 │   │   ├── 65
+│   │   │   ├── 2beab88659228248b870de99b987f0d3d99a23
+│   │   │   ├── 2e79f2ac8523b1f9e0188bcd4bb4c033ed7e96
 │   │   │   ├── 8e5f3364a6fe478111c3af76ac54ddbede8f79
 │   │   │   └── 8ec06b3fa4271a5ff321693e655103ff692db2
 │   │   ├── 66
 │   │   │   ├── 2371ab92cebf9a3e2a1be4c3363fd5ab1bf622
+│   │   │   ├── 3bb98c689f027af81bb856d724933ff305df8d
 │   │   │   ├── 47503c300b27b3cdd09580c37f54b9ff2a075a
+│   │   │   ├── 58277c3ec8bea04c9b5c41ffb14a3d8f8a1e94
 │   │   │   ├── c2ee89f59f0a6634fc0b31c7ff5ed052f29752
 │   │   │   ├── d24db06ec6a516db0a5754c6568ca46a2d1d5e
 │   │   │   └── d43ae9bf7892144271196f3647f585abc64533
 │   │   ├── 67
 │   │   │   ├── 50de64477241a66546b5a73969fc4beffdb066
+│   │   │   ├── 8adbf186f5f2057737c7370c2c1325d18e2870
+│   │   │   ├── a2848061f08307ef0ff76686bce639ad6456f6
 │   │   │   └── a6d21f36fee232dfc7a6d4804f98b548d5578b
+│   │   ├── 68
+│   │   │   └── d7c5ace0681c7acfb56392e97eba276a54f3fa
 │   │   ├── 69
-│   │   │   └── 31f1966ca4fede1de6cd963aaa19abb0559a1d
+│   │   │   ├── 0cd981fbd1e0602bd03ff431f9743f264bb7ba
+│   │   │   ├── 31f1966ca4fede1de6cd963aaa19abb0559a1d
+│   │   │   ├── b7dadf9fedd469095b203a1d1b396cd9015adf
+│   │   │   └── c71449b6d214f6187306ad04860b825386a336
 │   │   ├── 6a
+│   │   │   ├── 3ea3168cebe9295575683ea591ed19ccacbd6c
 │   │   │   └── b2052cb8a801d0187a602173e8cd94b0d799cb
 │   │   ├── 6b
 │   │   │   ├── 15ea6ed3000640307d631daebdf005320fd1d7
@@ -11408,6 +11654,7 @@
 │   │   │   └── bb99ebf7ce9121f1915015b6d4734540fbd536
 │   │   ├── 6c
 │   │   │   ├── 5f02e9b68f88fea8942605a88f6bdb2a19eacd
+│   │   │   ├── 6132cf9752d28b1de9815b2ca63de98c02f649
 │   │   │   ├── 68a5a106763a4b87b843b026892dd3e596add3
 │   │   │   └── d66a34b27f0199bb03073bb92579c052fdaa88
 │   │   ├── 6d
@@ -11419,16 +11666,21 @@
 │   │   │   ├── 0a36e75ffc751d6d72b44b41d62bf741c2e654
 │   │   │   ├── 415e3af499f00e95e7a2b8a6114a41f830ee8f
 │   │   │   ├── 80f04bd42a1dd1118b1a792c1537962023b025
-│   │   │   └── aa489deb678bca796e6f7da1e0e1403b0e72d6
+│   │   │   ├── aa489deb678bca796e6f7da1e0e1403b0e72d6
+│   │   │   ├── c0620e01f43d06af9e7c0ed1704a8a0616ee80
+│   │   │   └── faef73d3f1411e4f9c8372e7c82153616895bf
 │   │   ├── 70
 │   │   │   ├── 154e84c2836472518647a394cb2cd2c9e00c43
 │   │   │   ├── 411c0e1160c8e00c374df3672ac52e09b414da
-│   │   │   └── 434bf244f94c382761974c9bf5e302bba6c834
+│   │   │   ├── 434bf244f94c382761974c9bf5e302bba6c834
+│   │   │   ├── 64386960938fce791791ec53e5a7db5aadd2b9
+│   │   │   └── a0f67f2a64fd3bfd71b2a7a6a000a659bd6ea2
 │   │   ├── 71
 │   │   │   ├── 0897623d2b479b7c3fa8a798dbd5e9ddc96384
 │   │   │   ├── 0b5797f531494a4b146eeaaa455219df0ec867
 │   │   │   ├── 5756841a01eb6f340fdc9bb308baa4958dcde3
-│   │   │   └── 8aa42b467e22e7816f67021cd944a6faba6c11
+│   │   │   ├── 8aa42b467e22e7816f67021cd944a6faba6c11
+│   │   │   └── f66faa69e065840f4906af5503134e5cba8f8b
 │   │   ├── 72
 │   │   │   ├── 2578a07b5e47ca1bcebc406c5d579a91dc5d84
 │   │   │   ├── c9d6ae990099f40d7cbbc608840c3d4e60a918
@@ -11440,36 +11692,45 @@
 │   │   │   └── 82b3720ca759d87f5a175bd2803498f3366538
 │   │   ├── 74
 │   │   │   ├── 8af2d37a4bbedf9b71e795735664eeb8588be6
+│   │   │   ├── 907fdaf9ac22be73627245952187f75412e80d
 │   │   │   ├── ba28362a64cc0c40c7df17d0994fd15ace8967
 │   │   │   └── d8908956c935ae291f66baa634d71db6ac357a
 │   │   ├── 75
 │   │   │   ├── 4ad4e3540bdd994826e71ac0841c579fe054bb
 │   │   │   ├── 57952beba4b73ce8097f4d979f410b2a471a15
+│   │   │   ├── 959d3c5ced5e2b81c09594b29d970e187ae773
 │   │   │   └── b40d472157ba66f01969e09d588b5c64bea69d
 │   │   ├── 76
+│   │   │   ├── 21598abfe8882de62aaa194599c6c1484ea692
 │   │   │   ├── 21b73569ee108d8bb3f48ddc2a5289c25aefab
 │   │   │   ├── 693b36fe9559b2fbad753a019a1fb1005cb300
+│   │   │   ├── 7f40e02ae38e7418c13b6d200eadae87920caa
 │   │   │   ├── a274ff546e3a2a1497b499dc84cd85d6a67228
 │   │   │   ├── c3aaadb1b1199d0973879ba3cb2cabc4b37aa0
 │   │   │   └── d2499f9228b447a5313111132199ab7d36533d
 │   │   ├── 77
 │   │   │   ├── 10f9cd8c1d014ef80b03c59c674a6bc416f2fc
 │   │   │   ├── 759168deb2de1321132cf608419019693133fa
-│   │   │   └── 830726df624e10c2bcfcddc24cfa2bef397ef0
+│   │   │   ├── 830726df624e10c2bcfcddc24cfa2bef397ef0
+│   │   │   └── d7862267b586ee3475e59d4b5da34ea1446921
 │   │   ├── 78
 │   │   │   ├── 0152b6343a53721dc1fb6e13a6c0c63433a9e5
 │   │   │   ├── 21b0713e047fa3fa562ecd8617ace66da6f015
 │   │   │   ├── 2b010ed052dc4981bfade099da3fe2181a44b1
 │   │   │   ├── 41e3f76766c31d8c18013302fd4bd8295c8250
 │   │   │   ├── 5a6ad90d0690cd84c7a1bf9ec4fb95854ef2d0
+│   │   │   ├── 6b426739df9a509adf69f18391dc6a882d597f
 │   │   │   └── e71f141d67221b95a64aa58713846f3ad8ec39
 │   │   ├── 79
 │   │   │   ├── 69876ef734c98aff8c05f62968bbde2b5c0687
 │   │   │   ├── 94982580ccc99a5dc5632c03bd6f8111a1835a
-│   │   │   └── 9c61f4fcb586eac3b2c0168cbbb4412d25c2b8
+│   │   │   ├── 9c61f4fcb586eac3b2c0168cbbb4412d25c2b8
+│   │   │   └── db527af79423dba77be69b25b7d2cc250ee144
 │   │   ├── 7a
 │   │   │   ├── 5c53311085e9ccaf186b11abb2752aa5f16f6a
-│   │   │   └── 8a1b5e6fa7807119549f5257c3a01eb39941ef
+│   │   │   ├── 859968c2f49d9804b210c79d7a1e4f0203bc6e
+│   │   │   ├── 8a1b5e6fa7807119549f5257c3a01eb39941ef
+│   │   │   └── fde58aec4dcb9649623cd571fb2f4e5655ed4f
 │   │   ├── 7b
 │   │   │   └── 90366a5a434d7f359868f72d19ee9b673afb84
 │   │   ├── 7c
@@ -11484,15 +11745,19 @@
 │   │   │   ├── a36fb347d8558c976fcfd3dc58b3a78e7c4650
 │   │   │   └── b77d6e882b0588b27c8cee1454a36ee5015d02
 │   │   ├── 7f
-│   │   │   └── 91fc8721ecd5b44d0906aef46d249a47b79598
+│   │   │   ├── 1dc98c024f90c7a4408db8b43ef1412481cf9c
+│   │   │   ├── 91fc8721ecd5b44d0906aef46d249a47b79598
+│   │   │   └── f6e7990814fc4d1b35f790dcfdf37671e3091a
 │   │   ├── 80
 │   │   │   ├── 130f48c58a08a1b4093060dbbd5e9156dc1fbe
 │   │   │   ├── 658e7246961bf2d556578529ded0b78392a8fe
 │   │   │   └── f7af9cd403c85b1a56feac128a5a46793c157e
 │   │   ├── 81
 │   │   │   ├── 1957dbb07bfca049eb49b462bf91aede8409ce
+│   │   │   ├── 8fe148e820d907e087768b3fcabe57374bd083
 │   │   │   └── 9420b3565bbe6836db652bf2fdf87430c1a06b
 │   │   ├── 82
+│   │   │   ├── 2495488cfdf2ef88a88d3bbeb4284906b3b8b5
 │   │   │   ├── 3e6bac4129f2db801c72faa4eaa534a983e486
 │   │   │   ├── 47b429bad90000ecb273da0e49a4e6888acb1c
 │   │   │   ├── ad6f3a4f7241cba8491b5c939cd2add4a47c8d
@@ -11503,6 +11768,7 @@
 │   │   │   ├── a77ce8560523ee63feca14b6377e9601b00a9b
 │   │   │   └── ab69879cfb43db50e93c97a9b0d925ca3ea29e
 │   │   ├── 84
+│   │   │   ├── 77a9dbaafa774503177bfb8f28243d84d50f0f
 │   │   │   ├── 7b99bb4177112c8d74361d7dbccbb181c5b134
 │   │   │   ├── d4cad90af4a685103b2a75556ad3144cb0a45a
 │   │   │   └── f3c4976b1781a5cafc88cf1a53120a26043c32
@@ -11517,74 +11783,105 @@
 │   │   │   ├── bcf8ee18b76a18b383179514f7655252396b89
 │   │   │   └── c18e4e0a238cedef3875a2d233395cf642aa33
 │   │   ├── 87
+│   │   │   ├── 26883464418e00b5dc18f50ac9e7f361afa346
 │   │   │   ├── 741cec025f4d5fa24ec1188584e5244d945dd2
+│   │   │   ├── 749e3590d0f51150d05efea3ab84df713049f0
 │   │   │   └── c18033df5eab558c37d35a5162c50b2a8cfd8e
 │   │   ├── 88
-│   │   │   └── 51635dd4ae16fd1e62c24843f3e690f717fac3
+│   │   │   ├── 51635dd4ae16fd1e62c24843f3e690f717fac3
+│   │   │   ├── 9addfec74c8dc4cc8d0199cf13df8252fc88ac
+│   │   │   └── d2255f6d5e5eafca21b6088bee2c67e260e893
 │   │   ├── 89
 │   │   │   ├── 41e3737a55dc2f03f7b0e6735ec73f7addf95f
-│   │   │   └── 5047a7537014771e0f888ba6dea23cb9da22c7
+│   │   │   ├── 5047a7537014771e0f888ba6dea23cb9da22c7
+│   │   │   ├── f737b1b88b6cfacb5c1e67e2fef81b42a9dee2
+│   │   │   └── f76e8b6857c0e6ad3a106c61877f51d9ec107b
 │   │   ├── 8a
+│   │   │   ├── b15148a084847d7908494a86bf81a1acabc8b2
+│   │   │   ├── d49d053511aa50076d7fa2728c0c5a1629e0c2
 │   │   │   ├── e12805929ab1624f8d108b0ec0456600cab676
+│   │   │   ├── e22d64013e47288775fbcd462984781ee63d6f
 │   │   │   └── ef319b04754593b6abff036c51b4ef90df8177
 │   │   ├── 8b
 │   │   │   ├── 16b93d4bfb65001d6a715e89033b6a3f457f2a
+│   │   │   ├── 1a0ae8471e433f6c59b32157be2ca254608c0f
+│   │   │   ├── 1b798d4eae5cb4e8919bff911c03b46fe816d5
 │   │   │   ├── 1cc5d112fd0296419bcb0a9001acebea2868c9
 │   │   │   ├── 3a66ff26cb98ae7dc8845b828e484c6452e149
-│   │   │   └── ae0e05fff7517fc8e4f0fa399d8b49e1508242
+│   │   │   ├── ae0e05fff7517fc8e4f0fa399d8b49e1508242
+│   │   │   └── af0be2ee38034c6f344ace915c35ef83252466
 │   │   ├── 8c
 │   │   │   ├── a84c15f3f34182647530e233a94e498fb270ac
 │   │   │   └── afe925be635b6c7466eea238a1c5a4d534541d
 │   │   ├── 8d
 │   │   │   ├── 279eb173e80fbf2d0f17893957cf2c61208dc8
+│   │   │   ├── 57891e82392ba13e9791249f89e2a57a5af839
 │   │   │   ├── 7a81cf8621370392ac280612a7543ed30d287c
 │   │   │   ├── b324d86f0e50191f0ea588e25b5553b481a79f
+│   │   │   ├── c530a0049c88cbbecf585511ec53d3e51ba831
 │   │   │   ├── c9e29e2304a8d0009b199d21ecf5dd5a3348a8
 │   │   │   └── f3fc630e30d73dce6aa667105fa4ff6439240f
 │   │   ├── 8e
-│   │   │   └── 27c320203d77af0c916c9fd50e40b57f11d856
+│   │   │   ├── 09266e34f79e7e993714a4387348c1cb90b180
+│   │   │   ├── 27c320203d77af0c916c9fd50e40b57f11d856
+│   │   │   └── 2e89619896dc522543c6511adb5fed1f4139a7
 │   │   ├── 8f
 │   │   │   ├── 3d6993141d9acc5b29ffe11ca9ff6482cbfcff
 │   │   │   ├── 7e5f33302dd56b5060ad4ed4fe30b9d5f56b2b
+│   │   │   ├── 982b8161bea65cf8b62f6cd0f0787442a5dd14
 │   │   │   └── b014e170612a3eb01f0ff7f3489c752ce04683
 │   │   ├── 90
+│   │   │   ├── 0f95e9af6e4a373383881ecb1257e249f9ef0d
 │   │   │   ├── 26184f4de862d92d919551fdf1b13f5d2c9d80
 │   │   │   ├── 7f90347a5484b3088a24840a031cb0c5fb2921
+│   │   │   ├── c86060e86ee7dd10f21f735d1dfaaf944cca8f
 │   │   │   └── e00f28b7fa60b467593766cbeaa1782bddc86f
 │   │   ├── 91
 │   │   │   ├── 0920245732a487338ce16ebaf629218a8244f2
+│   │   │   ├── 15edde33601196fe96526572192c4fe8d053a0
 │   │   │   ├── 834175c5701906d96ecc1a17c9eb39e51b9cc5
 │   │   │   └── b14091f4c48b70358bfddb4348557354d4d6a8
 │   │   ├── 92
+│   │   │   ├── 9bfe570ea98062d0c5d90d256ce3347dc34dbd
 │   │   │   ├── acdf322b7bfb8a7cb74ee41e5b8bb8131042ac
 │   │   │   └── e846bb4f149509d1635e6801f8509d7dc39d57
 │   │   ├── 93
 │   │   │   ├── 159fc596af63157bf2d4ab98d48c32ca2666b9
-│   │   │   └── 7b3fd0ef71b47ed83f792b16b9a1e5ad2737fa
+│   │   │   ├── 7b3fd0ef71b47ed83f792b16b9a1e5ad2737fa
+│   │   │   └── c87aa67e75caee9572b82f9dfb63821850d918
 │   │   ├── 94
 │   │   │   ├── 1dcf44d89ba001aa60da434c4b4175c641db5e
 │   │   │   ├── 6279ca6350cf8351db59687e1bc6c169d5a955
+│   │   │   ├── 6d45a7324caf1e00c9aba6116825713c1b923c
 │   │   │   ├── 90af12b76cb441687ebf864ddab5c0e4e3d07e
 │   │   │   ├── a814909021076caea23ebd7056a58652056768
-│   │   │   └── b034e9dd993a8b181fa6277b0f100afb0e1451
+│   │   │   ├── b034e9dd993a8b181fa6277b0f100afb0e1451
+│   │   │   └── b2ae7dc3a3a7680caa608447f5f89fc0cf81ac
 │   │   ├── 95
 │   │   │   ├── a6ba717528e5c43e4dc29b02f7a95cf5b8f3d4
 │   │   │   └── c9f605ad878e1c410f29b7a22a4350e03cf898
 │   │   ├── 96
+│   │   │   ├── 0ebc3fd5e28c38f9681c480dde18c7bdeea79d
 │   │   │   ├── 2c33f78af08b314a326e20d2f627c262982962
 │   │   │   ├── 5a8cef7f1a567de360035f21e1a6e80f47b7be
+│   │   │   ├── 72ebba9f45f440f12083149e7be6e0e3e9e911
 │   │   │   ├── c998e2324d30308bc1517a54218fef678a03b9
-│   │   │   └── ddca3676eb1eefbaeafe4eebfa58118cf5e2fc
+│   │   │   ├── ddca3676eb1eefbaeafe4eebfa58118cf5e2fc
+│   │   │   └── f67ae1e6c300a518b3c63e9d62b3b43776ec98
 │   │   ├── 97
 │   │   │   ├── 2d07630d59ed9ca26e8ae81a6dc5dbfde7d693
 │   │   │   ├── 6e7c153b5a7fddd5f014e9df5d3f57ffa2ecf1
 │   │   │   ├── 9ed6e85f20b2b91a4b021440dcb4ae56d015ac
+│   │   │   ├── c557913d30ca584fce1274b7779d66da4175d8
 │   │   │   ├── ca0c54e8f7933a91986a433a3cc3336e100e2e
+│   │   │   ├── d46c5d023fdee07e135977ae1abebccda525fa
 │   │   │   └── f81e7ab8e42d63ec73b84f200d1b9ae14f1b00
 │   │   ├── 98
+│   │   │   ├── 00c8489b665d063e22a0b1e2a5f4058441d1af
 │   │   │   ├── 143ab93aada87526766ffc22cd9c6573320af7
 │   │   │   ├── 1e01c2712de4fb117f842000e225cf55c27c10
 │   │   │   ├── 6e846e7ebfaa711fd705cdba89c1fe2b39bf97
+│   │   │   ├── 8d9feeb9e0bbc6699e46fac2b3e1f51616f1ef
 │   │   │   └── c2bd5a39c3431dabc210002256b7d8d6f413c2
 │   │   ├── 99
 │   │   │   ├── 7a227dacd3123cee339bb1535e2afb6f16f669
@@ -11593,6 +11890,7 @@
 │   │   │   ├── 22ccd784f41afdb0558095ef12eadcbcb807b0
 │   │   │   ├── 7afd005bfc35c9df6f425267486097f1a14d1d
 │   │   │   ├── 91097bd39c382ab48a794d3fbf7e316e0d9d11
+│   │   │   ├── adbc910ae04c9a19872832acc655f20ef61a47
 │   │   │   └── b51fb5f2d80fa5954c6331cd724750c7388e3d
 │   │   ├── 9b
 │   │   │   ├── 8ffa33cda119932f171e8e243a6b7972bf2e24
@@ -11601,6 +11899,7 @@
 │   │   ├── 9c
 │   │   │   ├── 427023b0fcb2d3bc2446fdd2e52c9fd174377a
 │   │   │   ├── 7f04b3e043a65651485ab21426c56294e13400
+│   │   │   ├── a6234cb147423e31f7e0827a366a7d5177fc20
 │   │   │   └── e1708804e33957b3dbddb60bf8485f7b8cc521
 │   │   ├── 9d
 │   │   │   ├── 41ef1ae0ba98fe623d4d16d16202dbe42e6df7
@@ -11609,6 +11908,7 @@
 │   │   │   ├── 52a1ea3df8660c7443966b8dc29c59892b99ad
 │   │   │   └── 950c5b0a716a2da5d3287fc208e28d0e6c1464
 │   │   ├── 9f
+│   │   │   ├── 0062dbb3cb73039f562a6200058d81780f666f
 │   │   │   ├── a4347830dca3abc5cda4f40a2071a2979c3a18
 │   │   │   ├── bc6e6539e1012e27256771e00d915e26101d15
 │   │   │   └── f3b449a9f632b785c392e063c76f8de2b78384
@@ -11622,19 +11922,25 @@
 │   │   ├── a1
 │   │   │   └── b4114a1ffebab39cf20c81eed53ce60aa1352b
 │   │   ├── a2
-│   │   │   └── 55a3ee9d0669da9dd8db7fdb1f85cdd788b1aa
+│   │   │   ├── 55a3ee9d0669da9dd8db7fdb1f85cdd788b1aa
+│   │   │   └── 93ce0f4dab7ac743e0699e93e488989e9937ba
 │   │   ├── a3
 │   │   │   ├── 523633af7d76b65635939a4b8a95acb0dc3487
 │   │   │   └── c4f5d0f427de8ee7932a7bedfbb2d69f28963c
 │   │   ├── a4
 │   │   │   ├── 5ff4af8a01e6fe8723c5f851bd073e38133344
-│   │   │   └── a64dfce15213da5e20fa762e12e2e43058f168
+│   │   │   ├── 987b4858fdf5ff8ad61b403a50bdd4d4630e2a
+│   │   │   ├── a64dfce15213da5e20fa762e12e2e43058f168
+│   │   │   └── cb31b53dae9be79a51c43e1da5a31bc5e214a3
 │   │   ├── a5
+│   │   │   ├── 4bb9742632728adf5256d1602e4b44c92d4bc7
 │   │   │   ├── 99c32f913ee5fe52b9ec1008de7c16d8967101
 │   │   │   ├── a2f7c0849128bb8d05623e24fac7959a4f3599
 │   │   │   └── a3db23c9b7a423aa81165b37176f88e27f02c8
 │   │   ├── a6
+│   │   │   ├── 1524cd006cbc1162ac94b9774a8f0fe08860d1
 │   │   │   ├── 690f555eb6cbb5a7f9eba1e9fcc1d6d0006019
+│   │   │   ├── eb25055c2bb2fcf82244344bfbf6d93b47320a
 │   │   │   └── f2236dc7308b6ffd2a4866549f1b6bd261ca0e
 │   │   ├── a7
 │   │   │   ├── 3091e6a749633054d74e9fb8c049b052d1446a
@@ -11643,42 +11949,56 @@
 │   │   ├── a8
 │   │   │   ├── 878362f58ae2279f0e774a4752e7775f8283de
 │   │   │   ├── 923a458b1895250f1771230b83da3648e56aac
-│   │   │   └── 94961c48b314e633ef08090b78daebbbbce59a
+│   │   │   ├── 94961c48b314e633ef08090b78daebbbbce59a
+│   │   │   └── df561c8741b94f67111f4c7859322bfefb1ef1
 │   │   ├── a9
 │   │   │   ├── 3a982d381d06884f7ba45cc5b3c3c719121fcd
 │   │   │   ├── 54b438dbc96f28243890d496708b6cc0c080de
 │   │   │   └── 8e6dedadd74d027c92797785c41b69de86978f
 │   │   ├── aa
-│   │   │   └── 2df1a0b736397aea10b23b454022395574269b
+│   │   │   ├── 2df1a0b736397aea10b23b454022395574269b
+│   │   │   └── 54c9e9d53e035519b17e522086d0bff2d834fd
 │   │   ├── ab
 │   │   │   ├── 0418516dc035b73ab9801aa27f0f7005e65e01
-│   │   │   └── 16a62fd1c3c404fb51872a3f80dd573d0a7f03
+│   │   │   ├── 16a62fd1c3c404fb51872a3f80dd573d0a7f03
+│   │   │   ├── 1e182382f39a92040b6be74ae102f919ca72da
+│   │   │   └── 26f24de8124c920975adf05b630353b2466b9a
 │   │   ├── ac
 │   │   │   ├── 5e4a7f48e4fd330a62381bc9c96f4837c7a24e
 │   │   │   ├── 67ecffcf8b295ad0756cbe208143728df28054
 │   │   │   └── 6cc2b1d76b5c5665837f681bf067d6e24462bf
 │   │   ├── ad
 │   │   │   ├── 55ee941eee5a69e531a25e05fcdf3922a595cc
+│   │   │   ├── 5eebf337854a00a66fb72ce633deb70d189144
 │   │   │   ├── 64f6ff5ce556f39942a8602188ed565dbdc8fc
+│   │   │   ├── c84f934d5a26a8e7d743df4017a15be7ec7cd1
+│   │   │   ├── d5e1299c94ed5ce99842c3339f5a6d3aea6c1b
 │   │   │   └── e4f68803300c636d280e4592ce965b93935781
 │   │   ├── ae
+│   │   │   ├── 02972bdf98835dcaf4b7cf3518be6e116486f1
+│   │   │   ├── 22d7698f8fbe7b27e765273d8d74e024045e27
 │   │   │   ├── 889ed5a370a99018dceef4060739d5ad155b93
 │   │   │   ├── 993d5316b9e7825961bf0541fa86d73293b29c
+│   │   │   ├── 9ecff8a9fc465c9d5d66195134a6f863a80b17
 │   │   │   └── bb738f1a0e34e3319b37d10f2d1e74cb6337bc
 │   │   ├── af
 │   │   │   ├── 3b81f1748e7ed7602cd768a85cfd85e9da4dba
 │   │   │   ├── 5c78816c9dca6bca9aa95560af1449ec66f8f6
 │   │   │   ├── a79c118332aeefef4455843fcc96ac4cacfcee
 │   │   │   ├── cd609eac4a57dc803db64827d765eaa5c2f203
-│   │   │   └── d5a91a3828f4899fc060e1d6bd3cba81b56dde
+│   │   │   ├── d5a91a3828f4899fc060e1d6bd3cba81b56dde
+│   │   │   └── dde7e7786901a80f06fbf4cbec8fe44128340f
 │   │   ├── b0
 │   │   │   ├── 31153c3063d3838e616854ca0c963cce10e427
 │   │   │   ├── 608f92da1da146495a86feab63df1fda419c78
 │   │   │   ├── cbc17ce1b355e383fa75a125d9c37f4076c8e7
 │   │   │   └── d98ef41c030812d748f517ea080664aa209993
+│   │   ├── b1
+│   │   │   └── 2ef11cd669b1cad2949667da58e69e4267644e
 │   │   ├── b2
 │   │   │   ├── 24e84d170fb2c9a3ab7dee51df1bbc02cb4514
-│   │   │   └── 4524fee2aa5809c210af7f4045554dd669686d
+│   │   │   ├── 4524fee2aa5809c210af7f4045554dd669686d
+│   │   │   └── e005952ef7d935918f2aa0b607a5e07c05f7c1
 │   │   ├── b3
 │   │   │   ├── 022404037650b04c990e9ac8ee7aaeb0a058fd
 │   │   │   └── 482ecf8786e6a617152a62458b8da75fce9e5b
@@ -11703,7 +12023,9 @@
 │   │   │   ├── f947d3b26da0b900da089d9f1a01761a405cb1
 │   │   │   └── fe89aa2ac87a71ed9fc742224040c34930a3c9
 │   │   ├── b8
+│   │   │   ├── 2a42bfd6ea98987b5786b5c758f1df0642d277
 │   │   │   ├── 3900a31b5ea47dfd9e920cb8b90b61c8e11007
+│   │   │   ├── 488fbefe7c7f51acfc4fae61d417b5de555ba3
 │   │   │   └── 9bb84efd94ef9e786efa7b99ffc21bd74dff2d
 │   │   ├── b9
 │   │   │   ├── 1156f5aaa5cd71d3a883f00ccc87655c701b95
@@ -11712,42 +12034,62 @@
 │   │   │   └── a2098bcc979121fed551cf54f4d8eacae18ef5
 │   │   ├── ba
 │   │   │   ├── afcdab4642b4a1d273d670f956a99f4b6ac529
-│   │   │   └── df757370a23e211350a5cf7e40a91b5637a8ad
+│   │   │   ├── df757370a23e211350a5cf7e40a91b5637a8ad
+│   │   │   └── e955814ef067e94257104ecaac814ea6ad8ef9
 │   │   ├── bb
+│   │   │   ├── 0e9b1cb442f9ffd6a4bd5f0f061c464b9a0b08
 │   │   │   └── 1fc0fe71f935265e6408aeb8bcbc9a68edb423
 │   │   ├── bc
 │   │   │   ├── 66cd1fda28478586fe44c835fb78ca49e4815b
-│   │   │   └── 93f59d7f3aae26055a1cda67ab9ab392b65e80
+│   │   │   ├── 93f59d7f3aae26055a1cda67ab9ab392b65e80
+│   │   │   ├── a9285615e597511a8c4e1f1b320eaebb351cdd
+│   │   │   ├── b2b4dc105e40d02a23d6bf2ec171eca889006d
+│   │   │   └── e4c78e84a5548d833b54b2aaf23574d9eed2fe
 │   │   ├── bd
 │   │   │   ├── 143190dfc85f0b74dddca78c1221e1afb9196a
 │   │   │   ├── 63183b90ba84d83054bf810e9afc68bc65e622
 │   │   │   ├── 8c0cd77d2107511476520a94a1089aea5a7b05
-│   │   │   └── df958c653a5547cd9202944c21150e5653ff86
+│   │   │   ├── 932c7d0c9615923738277e995d8e5e721570e1
+│   │   │   ├── df958c653a5547cd9202944c21150e5653ff86
+│   │   │   └── fa5b2063578c24a0cab39d2002015e1d8de3ce
 │   │   ├── be
-│   │   │   └── a48fbff70b06ba745fd6d48edb24595ce0c4f3
+│   │   │   ├── 932b7dc6272aae647bc703d2fd38d91ba2d46f
+│   │   │   ├── a48fbff70b06ba745fd6d48edb24595ce0c4f3
+│   │   │   └── a7136ecd48db8e0bdc05d6809131b0c37d7439
 │   │   ├── bf
 │   │   │   ├── 2a122d62aa45499bcc86946e4462686150109d
 │   │   │   ├── 4a242ec1c38eddcca049b59bb05eefc13b824a
+│   │   │   ├── a76edd5ff885db59c740b7c341bd6c11c8e22d
+│   │   │   ├── de0c47c161e98d2e6524bbe41fd8fcb41fbb4c
 │   │   │   └── f25c44eff17b2e7cd1390dfc1cc1a6a882d8cf
 │   │   ├── c0
 │   │   │   ├── 5da9b6a27c880be43f09d7a59e5c4dbd6288fd
 │   │   │   ├── 648c3746025cc5c79a6700d95a1a13da60e916
 │   │   │   ├── 66fea6af514a1e5e738e6b8da05f6b86e44626
 │   │   │   ├── 868a2e15a249df5a1de488babf2385afcee7f2
-│   │   │   └── c4f53bce3b6a8a4d0c1fe4adaff356127b3871
+│   │   │   ├── a22309de3a5892789f603192f07c92bf23bd59
+│   │   │   ├── aa233b59035152fb77b5311572f982f080c0b1
+│   │   │   ├── c4f53bce3b6a8a4d0c1fe4adaff356127b3871
+│   │   │   ├── dc28c39f5368e782ad426e40bf1fc22ee8b564
+│   │   │   └── dc8a3b0eea0b1aa451324325b94a190dc51f3b
 │   │   ├── c1
 │   │   │   ├── 2c5a87331f92e0abc1f15c23df6abb647e59ad
+│   │   │   ├── 49ba5ad7e096a59489607a3ad853a341a4f60b
 │   │   │   ├── 4b8b13f2d1b623d2c346f4fcc0b8cf978c9ef6
 │   │   │   ├── 7d96ffd41b02f11762d342573b67b0185abe84
 │   │   │   ├── af346f35ee05dc0eadcc41374b456e3325d264
 │   │   │   ├── c7752366c96b4339b77740ceaf990aca1bf33e
-│   │   │   └── d312666932a8ce9f079d36fd53634a261d8789
+│   │   │   ├── d312666932a8ce9f079d36fd53634a261d8789
+│   │   │   └── d9cbfef26af37370eff69fb7709518761ca54b
 │   │   ├── c2
+│   │   │   ├── 62d73ca840a140957e95a7f40ca352179543ae
 │   │   │   └── 820c553f146f0f5a0c7707e91edc810ead258d
 │   │   ├── c3
 │   │   │   ├── 054314463ec604a1826b1af3aae87712fc0646
 │   │   │   └── fa830e7dc6c71eb10045811b7fa3c9ec6bd11b
 │   │   ├── c4
+│   │   │   ├── 0dea3644526d5bf260fc2cc5dd085faa7c1c5a
+│   │   │   ├── 6ca20e30a5eb694d11d5c5ae9ead7b24fc6acf
 │   │   │   ├── 9dbea18ec6fe4c2b03a69a766dbe4f20ddbb6c
 │   │   │   ├── a07d1b92d844a5883ef0d9da8a47709644d77e
 │   │   │   ├── a822c0e0e95198252cf208079e310be3bb2884
@@ -11756,6 +12098,7 @@
 │   │   │   ├── d7ccf5e44efbfe4b7365d4b494643dffbbaa08
 │   │   │   └── e625ad634680b44bb76bcf6e0a8f2ad1b91748
 │   │   ├── c5
+│   │   │   ├── 1b608a0344e4e9128ee3aaca754e8bdcdd243f
 │   │   │   └── 62411359e8f1fa4da838894eca1d66412ebd1f
 │   │   ├── c6
 │   │   │   ├── 8784c64c701b0271630a6bbf3969550573937e
@@ -11763,12 +12106,17 @@
 │   │   ├── c7
 │   │   │   ├── 17f2fa751bf8f9d48fa9c264483abcaee72a1a
 │   │   │   ├── 8e300a1281a2c65ba368423f99930d0a2099bd
-│   │   │   └── bcc40c5de80442997142cf8b348e5c3db2d706
+│   │   │   ├── 9b707d4e603d53093f53476bc805b0430e98cd
+│   │   │   ├── bcc40c5de80442997142cf8b348e5c3db2d706
+│   │   │   ├── bcce70404fd13533acbdf23b2860c89bb19b83
+│   │   │   └── f5bf23c36bf7f807d499050051e5704458f9d4
 │   │   ├── c8
+│   │   │   ├── 8eadcdfff76c3d87c9a5836fe5cec4792009f8
 │   │   │   ├── ad713b0ec6ba1198ef39613a1adc11ce144828
 │   │   │   └── c0337c920fd10b2dfcf103455f5c3c39fe0ffc
 │   │   ├── c9
 │   │   │   ├── 2751408a19d068b195605e3b135f016ace161e
+│   │   │   ├── 40dfee8cbceb5de36e2f75cd58bb69695e35fe
 │   │   │   ├── 5a4a3e3cfbf41ed9b29b6dd40ebc9eeea6c751
 │   │   │   ├── b73cc9b1b1a648e9b307451926a4f853032b3c
 │   │   │   ├── c9160832dd97fad3c07d1f8117f9fbbbe0270f
@@ -11776,8 +12124,10 @@
 │   │   │   ├── e6ee915bee5fa484598451b330fa8d5b6c9902
 │   │   │   └── f4500fea60d22906312351f3174986018d40fc
 │   │   ├── ca
+│   │   │   ├── 65659aa4e5bc97d23798427f988b7a1f1b050b
 │   │   │   ├── 7c8210b3379a70bdd7ee82661f61980309f1e9
 │   │   │   ├── b3eb4d3c304cdf5e35b1cc9c20110b8188a4ac
+│   │   │   ├── b5639b3486ae939eacdc529dbf0be34ceab94c
 │   │   │   ├── cc8310a0709ae781c3d17e4b427fcc78c58559
 │   │   │   └── e26b6f9643f057bc91e9d533319a3c85cb9112
 │   │   ├── cb
@@ -11790,12 +12140,15 @@
 │   │   │   └── 6112550318bf3eb2dc68c308bdd788ce7b20cf
 │   │   ├── cd
 │   │   │   ├── 04dd89faed4eca5a9abd5fc956419a5707df4b
+│   │   │   ├── 17a8b13a0c99cb9642d5d9d00550dbf039c3eb
 │   │   │   ├── 8ddbd00eefd25d75c9d770ed1128adc97a88af
 │   │   │   └── f5c89d11ac6e50e1ee4021809f3bec580ead27
 │   │   ├── ce
+│   │   │   ├── 18862cd1e7b4081c195765787e05e8860e4a53
 │   │   │   ├── 2f2ee3fdf29cba03405d6e9907769a2b82871c
 │   │   │   ├── 519769df35093dc6db43f695484366584ab8a5
 │   │   │   ├── 62579fad7613415c6dbae986182ffd72a69465
+│   │   │   ├── c7ba4f61a2153d5b299749352f18c83aff235e
 │   │   │   └── de1bbdae704ae6e22d14296f248ff3876cc8f1
 │   │   ├── cf
 │   │   │   ├── bb0a6cc926f4caf511e7d4af90158029fdfde2
@@ -11803,9 +12156,13 @@
 │   │   │   └── c1581c9a6d965bdd0ad1fc394f9ed83ffd00eb
 │   │   ├── d0
 │   │   │   ├── 0c65104309493c9e25d0ad0d4faaa617420054
-│   │   │   └── 0d0d68a6acbb045f1eb9b756dfab3b2958e10c
+│   │   │   ├── 0d0d68a6acbb045f1eb9b756dfab3b2958e10c
+│   │   │   └── 585e3a920ac3d91e6e4318bdd168593bfa2a07
+│   │   ├── d1
+│   │   │   └── f41bc14b62f97c74522e1dac4b9237bfd26c07
 │   │   ├── d2
 │   │   │   ├── 20f51e8f73b610e9d13285a21d8cbe270601fc
+│   │   │   ├── 553f038485e252ea5e374be314590b6dc0e732
 │   │   │   └── af9b49dd3d099c042745d7e3fff12cdc01c9b4
 │   │   ├── d3
 │   │   │   ├── 1d985031973d13ec602ef80ce184f48ed6c793
@@ -11817,11 +12174,15 @@
 │   │   │   ├── e2fb7dba643ceae6027dd8585d38a92e077839
 │   │   │   └── f0c556036b9ba34e6026463fe9f5602acdd626
 │   │   ├── d4
+│   │   │   ├── 000f51ae3b1d360637c8aa101347e4003b604c
 │   │   │   └── c40c3e685fa8e3981f21951b67b2f50ba4076f
 │   │   ├── d5
+│   │   │   ├── 0539cad5c25084ef497fc45d97103d75b513d6
+│   │   │   ├── 27c7afe5fa4f52994f69280c647ac7e837e822
 │   │   │   ├── 406c64e86cda091cc1946cfb1b5c5f996e5f0a
 │   │   │   ├── 46ba0638aabde18383659ebb54bae0314e6079
 │   │   │   ├── 75e64a96758c6d7e0789069f5497fcae9a83b4
+│   │   │   ├── cdcc3bfb9303fc842e7a44766a6c326d973b09
 │   │   │   └── db5172310dc2925c1be9777efb4ed6cd86e007
 │   │   ├── d6
 │   │   │   ├── 0121973652cfc74919350e3a966960a918b381
@@ -11831,20 +12192,27 @@
 │   │   │   ├── 5bbb4a26ce621f7b2714934405fbfa108841fb
 │   │   │   ├── 6769eac0d8258b73de06e9e7356ae7dd33506c
 │   │   │   ├── 6ce0c67fe8653b6f692cfcfd5ffb15e31a0cab
+│   │   │   ├── 83a2ee45ff84fba1995f89b6d576a86c2d2df5
+│   │   │   ├── 99216d3e112c416cce1d92bb344898e5a2145f
 │   │   │   ├── a04fe35708388a25d448eed78262f7afb3d7a9
 │   │   │   └── a5614bed08d7afce75d5622e09034cb1106b12
 │   │   ├── d7
-│   │   │   └── 628021454b49079efed3537ee0402c4d79cca6
+│   │   │   ├── 628021454b49079efed3537ee0402c4d79cca6
+│   │   │   ├── 71deb2b264b962280092d754687478dbdc4fd0
+│   │   │   └── cacdf9e965bf6bc9f22487686314121ce81bf5
 │   │   ├── d8
 │   │   │   ├── 37356d2f5475adc594cab6949de58c760a6302
 │   │   │   ├── 75a5fde95b6f7f24b610b5b13a69482e106d5c
 │   │   │   └── b26ecef72b27ec4c1325a742866894c710125c
 │   │   ├── d9
+│   │   │   ├── 10c067df0d03a180f2c6fa1bcc1bbb424a2104
 │   │   │   ├── 4dd8565ac7ee49c42bcc06381d612fa6c8089f
 │   │   │   └── d9958b7736e251fd13703e1e8a00b467c91d49
 │   │   ├── da
 │   │   │   ├── 1036ae2d66cdaf56ae8b2a29a49d954c30547a
-│   │   │   └── 15df91e83a90c6db69518059c4f6024c49f687
+│   │   │   ├── 15df91e83a90c6db69518059c4f6024c49f687
+│   │   │   ├── c3b1ea46dab9a1d499b4d2ebc4bd3b1c31b85e
+│   │   │   └── eccfc2864d53360f65edcb84f7a3d1218596ff
 │   │   ├── db
 │   │   │   ├── 4df39b1770a984f9680918241a174f4fa12a7e
 │   │   │   └── 99ff0019a2961978c0199a5f2af1bd1f0a99dd
@@ -11863,8 +12231,13 @@
 │   │   │   ├── 4bbaf4ef3324a297e2d3e34ccdf27ef43c996e
 │   │   │   ├── 61375fadbdd35daabb6fc58d053670e6cd36e8
 │   │   │   ├── a8aa28cdcb5a47d037f107033730a8914310be
-│   │   │   └── bf1d77ee002c88c61999762cbb85dd3a2388b3
+│   │   │   ├── bf1d77ee002c88c61999762cbb85dd3a2388b3
+│   │   │   └── e58ea09d1713cf7d00420a68a63c4d08c65f2d
 │   │   ├── df
+│   │   │   ├── 24987571ad7cd56cb6118cb70ebe086bf6a652
+│   │   │   ├── 423f326587dfbc2db4125eb4c9319a721e7a89
+│   │   │   ├── 5d92b9a3b8d13d9d91886b1553c0e29601a737
+│   │   │   ├── 67940101bd9997e687aca09a8922fe2b63e3a5
 │   │   │   ├── c278a56c7378abdc7144f264c48b0672c92be9
 │   │   │   └── f703596f00e6735eca50d74a36c219711cd52b
 │   │   ├── e0
@@ -11876,13 +12249,17 @@
 │   │   ├── e2
 │   │   │   ├── 1c238c49231957f79318ad9d147959b7b6de86
 │   │   │   ├── 271afd3efb904132ec93837ac8d84fc601b262
+│   │   │   ├── 78882461a5abef30222f069b20c346b46725dd
 │   │   │   ├── 7ca0c8e0ed96306c97347a8802ad0292054b45
 │   │   │   ├── 86a7a2a4706e8babda7de143ad92f4b6f69558
+│   │   │   ├── 8cf915919dd36dc8746472883686b717e2656c
 │   │   │   ├── 9ad60b9ab06d01ce3f2fee64c1e59c4c8f69cb
 │   │   │   └── fa60857acf534fc25ee94cfe128247d6b2724c
 │   │   ├── e3
+│   │   │   ├── 31ffdd02f4881607ba2d83846009c2b7d316f3
 │   │   │   └── 475af93ba7839f91dc7bfe1fb54238e989281b
 │   │   ├── e4
+│   │   │   ├── 0ef503172586fd9d5330498b6fdfb9c40e1633
 │   │   │   ├── 249f8637cec4c59e8dd03edbe5abc071067925
 │   │   │   └── 987961cb72fa305696763003c4a908bf4d54e9
 │   │   ├── e5
@@ -11892,9 +12269,11 @@
 │   │   │   ├── 8eac7cd74ef27520bb7cd08b230bd002e4af6e
 │   │   │   └── beb4bd0bc8de69f20e54ea5272115dfbe02598
 │   │   ├── e6
+│   │   │   ├── 053cfb23be77c98368f4c82ef70416641d9e72
 │   │   │   ├── 6ba76d0d4024e04025917645046bd85f08fb5e
 │   │   │   ├── 7770c9ecedf945eae2cbbed587cc4095f5a790
 │   │   │   ├── 83d26f926386742e15daaadf8b7de9d76084f2
+│   │   │   ├── a7175ad2e0385df5ac4d06746a276ef2aaf4ee
 │   │   │   ├── b67f4e23bf39bcf1e4f256bbb06ed94f077b9d
 │   │   │   └── e0bfa8dbe4e7b1ab9bea34580091e76b98556f
 │   │   ├── e7
@@ -11904,12 +12283,15 @@
 │   │   ├── e8
 │   │   │   ├── 23f789ca842a128a25b70024041f9bd918b7a3
 │   │   │   ├── 24ca0f1ea6245f10a2933c5a1f71d92af002a2
-│   │   │   └── 9c15b6238d81bf9caf0a637df369634512e661
+│   │   │   ├── 25349f2792a47afe7f03c7e9313c681cf708fe
+│   │   │   ├── 9c15b6238d81bf9caf0a637df369634512e661
+│   │   │   └── e3f650e36d7b7a84a6bd848ed84e8ea2f3267b
 │   │   ├── e9
 │   │   │   ├── 3683027599a8e0556d2188b41789bd94fad9d6
 │   │   │   ├── 45346582d15c36ad8e0be729d774a07a7f427f
 │   │   │   └── ddada135fd1404bbafd81491c64c0547c6a5ac
 │   │   ├── ea
+│   │   │   ├── 33c82288e051c61ccb1763905afe9539ecc2d9
 │   │   │   ├── 92cadaa003b587546c918294202812279457fd
 │   │   │   ├── baae9d5fbda1e6d2b4a2eadfca34dd8edd7b36
 │   │   │   └── d8149440648188af1cdbf784214be3a870c7ce
@@ -11918,17 +12300,23 @@
 │   │   │   ├── 88291d3356bb51014f472fb9bf32fbf7dc6c34
 │   │   │   └── e4aab5732aedfbadcf6ee7860bc3149b4cbeeb
 │   │   ├── ec
-│   │   │   └── 7d126c29b4d2a4f574d516c84b42414e3a0ee7
+│   │   │   ├── 7d126c29b4d2a4f574d516c84b42414e3a0ee7
+│   │   │   └── b27a149353fc81102416b1b51ddc10a5eac092
 │   │   ├── ed
 │   │   │   ├── 065b3dbe716d448e425a5696a12cc949d8b8fb
-│   │   │   └── 2e4c962ac7dbccbf9831c1dcb024cb0329bae3
+│   │   │   ├── 2e4c962ac7dbccbf9831c1dcb024cb0329bae3
+│   │   │   ├── 393872d439243762757db06fe69390b6544004
+│   │   │   ├── 424fea379def31cb148e3cdfe965fd223a3ebf
+│   │   │   └── 6f6209864bff865e87486d94cee375f790dbb4
 │   │   ├── ee
 │   │   │   ├── 216b3afe148622d0811373f2fa5c4c2dea9677
 │   │   │   ├── 33d18fbf284b55f0bffe678763ef356e0cbadc
 │   │   │   ├── 44a26b51f1284cf0da4e44d491bae839e85fbb
 │   │   │   ├── 4e284129dc8e9623b4176572ac80b9c41b2788
 │   │   │   ├── 5fcdd94bfe63907242b6d820a34a6e2d56454e
-│   │   │   └── 850c971c6ef14c4448e89dc9a1269fea6b38f2
+│   │   │   ├── 850c971c6ef14c4448e89dc9a1269fea6b38f2
+│   │   │   ├── c44a4be415f1b9cca532a62dc9e7984e67060b
+│   │   │   └── ec39a935375fcd1a3bcc58274ac15218a21566
 │   │   ├── ef
 │   │   │   └── bfcb383ad55796cf1becd2cf32a9952d222426
 │   │   ├── f0
@@ -11939,9 +12327,11 @@
 │   │   │   └── fd07efe0049c6b178d4b6c59733814753b40df
 │   │   ├── f2
 │   │   │   ├── 077571c7641caedf506455d1e7ad96f329a461
+│   │   │   ├── 45897bc8d384615b57e861c4905397a6d32727
 │   │   │   ├── 812d636f6cfd809c9d6a38bab9795bead76ea8
 │   │   │   ├── 86490cb93745002c684515a11b8ae85680a226
-│   │   │   └── 8b5aece25aa163d5f2a07c72212fa0e1e97575
+│   │   │   ├── 8b5aece25aa163d5f2a07c72212fa0e1e97575
+│   │   │   └── c1678483f548ab29e4d2a7d209a5c042ee9a03
 │   │   ├── f3
 │   │   │   ├── b260eb05747e7f4baabebbebefdaeee0f1435b
 │   │   │   └── cfc90a36144146a7b21b238801e426e671b9fe
@@ -11952,6 +12342,7 @@
 │   │   │   ├── 36f50b01ba831add5178bc25043d07f8967e6f
 │   │   │   ├── 4b078247e536a5663ac8ffd70b72a62a7d0cf3
 │   │   │   ├── 53c62469ab841fc2b51aa43f6c987111ae3e44
+│   │   │   ├── 547ac6952a6f3741585287d9d161607cedeaf7
 │   │   │   ├── 74cf88f14f5040fc0cf210ea971a0faa040dac
 │   │   │   └── f10f3d07052e2d70b847931f66efd6cac408b9
 │   │   ├── f6
@@ -11960,25 +12351,34 @@
 │   │   ├── f7
 │   │   │   ├── 18b38c754937e2adc29a40ba5e909f1a1287fb
 │   │   │   ├── 7ec23683a76ed909960821ffda44450965fe1d
+│   │   │   ├── 9de3ee4a24eb1597aafcc846a3e041aabec374
 │   │   │   ├── affe0bf28d24a0676ca268dabf6e8a6e6d62f4
 │   │   │   ├── b5595e7e13aa5f51b4b06f8d245246e4f9f56c
 │   │   │   ├── ba5afd510875f8c3074e5eaec78fa3cad862c6
+│   │   │   ├── bb087855223083613e66ae3442a4ce63a7699b
 │   │   │   ├── bf6f93d714078a22024eafc62e5f6ade029fa8
 │   │   │   ├── cfb1c04fa44eef0ef71724cac39b9968557d44
 │   │   │   └── d101c88c49e2e6d75e7ad83ba32926bb7d3cc8
 │   │   ├── f8
 │   │   │   ├── 2348d26b8202f9d48a29062b49547f2778d007
+│   │   │   ├── 4cff920fac4e8f6d3a4d2496f84d109b978137
 │   │   │   ├── 5654ce39aa7d71932b2d484b60d239278cafef
 │   │   │   └── 8746d5bd90beab2312ff18121c0e666b211533
 │   │   ├── f9
+│   │   │   ├── 44ea283aa42ea4807b810ff807c12d90293b52
+│   │   │   ├── 4eaa05223988b5e7d22d25e73ae887097e4174
 │   │   │   ├── a444b024380633b46683337614031bb4a70e92
 │   │   │   ├── add4e72b279131343de5593b3b1319027da90a
 │   │   │   ├── efe19bca1c361a873dd5e4e91c8913ea06575c
 │   │   │   └── f8edebf5f01e6f9478de180b3258a4a812ece9
 │   │   ├── fa
+│   │   │   ├── 9c548d5743d4b29666a739ded3cad7950d327b
+│   │   │   ├── dc5b3c37095b24058793550a3adcc7f5e776f5
+│   │   │   ├── fa9173b1ef649087b983d0467cb434f03fe463
 │   │   │   └── feda9af0ebba8a21ca16370e41a7758c72da54
 │   │   ├── fb
-│   │   │   └── 1f97ac2c2317fed70ccb0858e3131fbd41e809
+│   │   │   ├── 1f97ac2c2317fed70ccb0858e3131fbd41e809
+│   │   │   └── 6235f2745ab9aa86eac26b56f94729557785c3
 │   │   ├── fc
 │   │   │   ├── 14023e787dc298d54bbd28bd1ae79c9a32e3ba
 │   │   │   ├── 25247e717c9a9dbbcc52b07cd0038c06d5100d
@@ -11986,9 +12386,12 @@
 │   │   │   └── dd16c710e3a0cfe1e827f4c4741da3b905b14f
 │   │   ├── fd
 │   │   │   ├── 08274c1e35a7662b8b476f6c6eb515771d3f51
+│   │   │   ├── 1335497138f488ae4c4a4b88bec4a171959c8b
 │   │   │   ├── 4932efbc619fd5533cb1ef27b9278f98a3f69d
 │   │   │   └── b8e3392405630dd94cda0809d1103dd5eddcf6
 │   │   ├── fe
+│   │   │   ├── 3417b8e6aff2c51a010cdce90769419bde8077
+│   │   │   ├── 7c0d097eeacac39c81f95ae275ca570db3cc01
 │   │   │   └── 8a038d314d0c1e47dc2a52af0804246a63b135
 │   │   ├── ff
 │   │   │   ├── 0511ca2aed5d706150e37f4efeaa3849ab9f66
@@ -11998,7 +12401,9 @@
 │   │   │   ├── 6b4893ecb1af651d6b56d82a3760cfecbbb014
 │   │   │   ├── 734c671032f4ec34a80f869ec38018c0c8d1c8
 │   │   │   ├── 959dcff7a997f1fd656fcef56b6e9f2e4d844b
-│   │   │   └── 9a4bba8b4365e819bc91c71d41f533e9ee0c7d
+│   │   │   ├── 9709005a087ef79c0d2326b53913fd58647696
+│   │   │   ├── 9a4bba8b4365e819bc91c71d41f533e9ee0c7d
+│   │   │   └── ecfe6692ea574130dfaac3033c7783ee9affb2
 │   │   ├── info
 │   │   │   ├── commit-graph
 │   │   │   └── packs
@@ -13219,4 +13624,4 @@
 ├── requirements.txt
 └── tree.txt
 
-3711 directories, 9509 files
+3756 directories, 9869 files
