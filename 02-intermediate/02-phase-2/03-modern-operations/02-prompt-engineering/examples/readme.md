@@ -8,7 +8,7 @@ Explore how Intermediate Prompt Engineering is applied to solve complex DevOps c
 **Solution**:
 1. **Automation**: Integrate an LLM (via API) into your CI pipeline (GitHub Actions).
 2. **Prompt**: 
-   > "Act as a Senior Cloud Security Engineer. I will provide you with a `git diff` of a Terraform plan. 
+   - "Act as a Senior Cloud Security Engineer. I will provide you with a `git diff` of a Terraform plan. 
    > **Goal**: Identify any high-risk security misconfigurations.
    > **Criteria**: Check for open ports (0.0.0.0/0), unencrypted S3 buckets, and lack of logging.
    > **Output**: If issues are found, list them as 'WARNING' bullet points. If no issues, reply 'NO ISSUES FOUND'."
