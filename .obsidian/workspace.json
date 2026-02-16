@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "07-boilerplates/04-playground/Ollama-Qwen/:wq",
     "07-boilerplates/04-playground/Ollama-Qwen/install_ollama_qwen.py",
     "07-boilerplates/04-playground/Ollama-Qwen",
     "01-beginner/99-supplemental-content/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/02-prompt-toolkit/readme.md",
@@ -251,7 +252,6 @@
     "01-beginner/05-Foundational-Containers/resources/docker-kubernetes-helm.pdf",
     "01-beginner/05-Foundational-Containers/resources/docker-in-the-cloud.pdf",
     "01-beginner/05-Foundational-Containers/resources/docker-commands-cheat-sheet-pdf.pdf",
-    "01-beginner/05-Foundational-Containers/resources/docker-by-jrebel.pdf",
     "01-beginner/05-Foundational-Containers/images/dockerstates.png",
     "01-beginner/05-Foundational-Containers/images/dockerarch.png",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-00-prerequisites/04-anaconda-setup/assets/environment-lifecycle.png",
