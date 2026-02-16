@@ -4,6 +4,12 @@
 
 ---
 
+## 🗺️ Start Here: The Master Map
+For the full curriculum roadmap and architectural overview, start here:
+👉 **[Master_Map.md](./Master_Map.md)**
+
+---
+
 ## 🏗️ Images vs. Containers: The Golden Rule
 Understanding the distinction is the first step toward container zen.
 
@@ -20,23 +26,14 @@ Understanding the distinction is the first step toward container zen.
 
 ---
 
-## 🛠️ The Docker Toolbelt (Essential Commands)
-| Command | Purpose | Junior Tip |
-| :--- | :--- | :--- |
-| `docker build -t app:v1 .` | Build Image | Always tag your images with a version, never just `latest`. |
-| `docker run -p 80:80` | Start Container | Mapping ports is how you expose your app to the world. |
-| `docker logs -f <id>` | Debugging | The first place to check if your container crashes on start. |
-| `docker exec -it <id> bash` | Inspection | Dropping into a running container to verify file paths. |
+## 📂 Curriculum Modules
+
+1.  **[01-Docker-Basics](./01-docker-basics/01-introduction/readme.md)**: Architecture (Daemon vs. CLI) and Engine internals.
+2.  **[02-Dockerfile Best Practices](./02-dockerfile-best-practices.md)**: **[New]** Security, `docker init`, and Multi-stage builds.
+3.  **[03-Persistence & Storage](./03-persistence-and-storage.md)**: **[New]** Bind Mounts vs. Managed Volumes.
+4.  **[04-Networking](./04-networking-and-connectivity.md)**: **[New]** Bridge networks and Port Mapping.
+5.  **[05-Cleanup & Maintenance](./05-cleanup-and-maintenance.md)**: **[New]** The art of the `prune`.
+6.  **[06-Advanced Debugging](./01-docker-basics/04-debugging/readme.md)**: SRE Inspection techniques.
 
 ---
-
-## 📂 Module Structure
-
-1. **[01-Docker-Basics](./01-docker-basics/01-introduction/readme.md)**: Architecture and Engine internals.
-2. **[02-Images-Containers](./01-docker-basics/02-images-and-containers/readme.md)**: Mastering the Lifecycle.
-3. **[03-Dockerfile-Basics](./01-docker-basics/03-dockerfile-basics/readme.md)**: Writing efficient recipes.
-4. **[04-Debugging](./01-docker-basics/04-debugging/readme.md)**: SRE Inspection techniques.
-
----
-
-**Next Step**: Start with [01-Introduction](./01-docker-basics/01-introduction/readme.md)
+*Last Updated: 2026 Audit*
