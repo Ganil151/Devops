@@ -111,6 +111,23 @@ sudo usermod -aG docker $USER
 
 ---
 
+## 🌟 Modern Standards: Docker Init & Compose v2
+
+As of 2024+, Docker has introduced tools to simplify the "Day 0" setup.
+
+### 1. The `docker init` Command
+Stop writing Dockerfiles from scratch! The `docker init` command analyzes your project (Go, Node, Python, Rust, etc.) and automatically generates:
+*   A production-ready `Dockerfile` (Multi-stage)
+*   A `.dockerignore` file
+*   A `compose.yaml` file
+*   A `README.Docker.md`
+
+### 2. `docker compose` vs `docker-compose`
+*   **Old Way**: `docker-compose up` (Python-based standalone tool, now deprecated).
+*   **New Way**: `docker compose up` (Go-based plugin built into the CLI).
+
+**Always prefer the space (`docker compose`) over the hyphen.**
+
 ## 🚀 Professional Pattern: Immutable Infrastructure
 
 In the past, engineers would log into a server and manually update packages. Over time, every server became a unique "Snowflake"—impossible to replicate.

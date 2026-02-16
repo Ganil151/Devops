@@ -95,6 +95,18 @@ CMD ["./myapp"]
 
 ---
 
+## ⚡ Modern Workflow: The `docker init` Shortcut
+
+While understanding Dockerfile syntax is crucial for debugging, you rarely need to write one from scratch anymore.
+
+Running `docker init` in your project root will:
+1.  Detect your language (Node, Python, Go, etc.).
+2.  Generate a **Multi-Stage Dockerfile** with best practices baked in.
+3.  Create a `.dockerignore` file automatically.
+4.  Set up a `compose.yaml` for local development.
+
+**Pro Tip**: Use `docker init` to get the skeleton, then customize it with your specific dependencies. It saves hours of boilerplate coding.
+
 ## ❓ Interview Preparation (Dockerfile)
 
 ### 🎯 Core Concepts
