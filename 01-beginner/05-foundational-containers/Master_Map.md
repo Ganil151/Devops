@@ -28,10 +28,44 @@ Welcome to the **Master Map** of Docker and Containerization. This curriculum is
 ---
 
 ## 🏗️ Architectural Overview
-<DOCKER_ARCHITECTURE_MAP>
+```mermaid
+graph TD
+    subgraph Client
+        CLI[Docker CLI]
+    end
+
+    subgraph Docker_Host_Daemon
+        Daemon[Docker Daemon (dockerd)]
+        Images[Images]
+        Containers[Containers]
+        Volumes[Volumes]
+        Network[Networks]
+        
+        Daemon --> Images
+        Daemon --> Containers
+        Daemon --> Volumes
+        Daemon --> Network
+    end
+
+    subgraph Registry
+        Hub[Docker Hub / GCR / ECR]
+    end
+
+    CLI -- REST API / Socket --> Daemon
+    Daemon -- docker pull --> Hub
+    Hub -- Image Layers --> Daemon
+```
 
 ## 🔄 The Lifecycle Flow
-<DOCKER_LIFECYCLE_DIAGRAM>
+```mermaid
+graph LR
+    Dockerfile[Dockerfile] -- docker build --> Image[Image]
+    Image -- docker run --> Container[Container]
+    Container -- stop/kill --> Stopped[Stopped Container]
+    Stopped -- docker rm --> Gone[Deleted]
+    Image -- docker push --> Registry[Registry]
+    Registry -- docker pull --> Image
+```
 
 ---
 *Last Updated: 2026 DevOps Audit*
