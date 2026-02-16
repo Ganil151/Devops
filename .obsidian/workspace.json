@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/03-git-version-control/02-intermediate-level/02-github-integration/readme.md",
+                "file": "01-beginner/03-git-version-control/02-intermediate-level/03-github-actions/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -216,6 +215,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/03-git-version-control/02-intermediate-level/02-github-integration/readme.md",
     "01-beginner/03-git-version-control/02-intermediate-level/01-git-workflows/readme.md",
     "01-beginner/03-git-version-control/01-beginner-level/03-git-commands/readme.md",
     "01-beginner/03-git-version-control/01-beginner-level/02-git-fundamentals/readme.md",
