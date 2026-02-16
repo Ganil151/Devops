@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/03-git-version-control/03-advanced-level/02-security-best-practices/readme.md",
+                "file": "01-beginner/03-git-version-control/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -215,6 +215,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/03-git-version-control/03-advanced-level/02-security-best-practices/readme.md",
     "01-beginner/03-git-version-control/03-advanced-level/01-git-advanced/readme.md",
     "01-beginner/03-git-version-control/02-intermediate-level/03-github-actions/readme.md",
     "01-beginner/03-git-version-control/02-intermediate-level/02-github-integration/readme.md",
@@ -260,7 +261,6 @@
     "02-intermediate/03-phase-3/06-finops/02-optimization-strategies/challenges.md",
     "02-intermediate/03-phase-3/04-mcp/04-security-and-auth/challenges.md",
     "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/challenges.md",
-    "02-intermediate/03-phase-3/04-mcp/03-mcp-for-kubernetes-and-cloud/readme.md",
     "Untitled.canvas"
   ]
 }
