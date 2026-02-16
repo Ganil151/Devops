@@ -1,0 +1,60 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#0f172a" />
+  
+  <!-- Divider -->
+  <line x1="600" y1="50" x2="600" y2="450" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Left Side: Input Channels -->
+  <text x="300" y="80" fill="#ffffff" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">📥 INPUT CHANNELS</text>
+  
+  <g transform="translate(150, 150)">
+    <!-- CLI Args -->
+    <rect x="-100" y="0" width="200" height="60" rx="10" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2" />
+    <text x="0" y="35" fill="#ffffff" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Positional Arguments</text>
+    <text x="0" y="80" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">./script.sh param1</text>
+    
+    <!-- Keyboard -->
+    <rect x="-100" y="110" width="200" height="60" rx="10" fill="#450a0a" stroke="#ef4444" stroke-width="2" />
+    <text x="0" y="145" fill="#ffffff" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Interactive Prompts</text>
+    <text x="0" y="190" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">read -p "Name: "</text>
+
+    <!-- Redirection -->
+    <rect x="-100" y="220" width="200" height="60" rx="10" fill="#064e3b" stroke="#10b981" stroke-width="2" />
+    <text x="0" y="255" fill="#ffffff" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Standard Input (Pipe)</text>
+    <text x="0" y="300" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">cat file | ./script.sh</text>
+  </g>
+
+  <!-- Right Side: Mapping -->
+  <text x="900" y="80" fill="#ffffff" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">🧩 VARIABLE MAPPING</text>
+
+  <g transform="translate(800, 130)">
+    <!-- $0 -->
+    <rect x="0" y="0" width="200" height="40" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="1" />
+    <text x="10" y="25" fill="#ffffff" font-family="monospace" font-size="14">$0</text>
+    <text x="190" y="25" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="end">script.sh (Self)</text>
+
+    <!-- $1 -->
+    <rect x="0" y="50" width="200" height="40" rx="5" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2" />
+    <text x="10" y="75" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold">$1</text>
+    <text x="190" y="75" fill="#ffffff" font-family="Arial" font-size="12" text-anchor="end">First Argument</text>
+
+    <!-- $2 -->
+    <rect x="0" y="100" width="200" height="40" rx="5" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2" />
+    <text x="10" y="125" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold">$2</text>
+    <text x="190" y="125" fill="#ffffff" font-family="Arial" font-size="12" text-anchor="end">Second Argument</text>
+
+    <!-- $# -->
+    <rect x="0" y="160" width="200" height="40" rx="5" fill="#365314" stroke="#10b981" stroke-width="2" />
+    <text x="10" y="185" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold">$#</text>
+    <text x="190" y="185" fill="#ffffff" font-family="Arial" font-size="12" text-anchor="end">Count of Args</text>
+
+    <!-- $@ -->
+    <rect x="0" y="210" width="200" height="40" rx="5" fill="#312e81" stroke="#818cf8" stroke-width="2" />
+    <text x="10" y="235" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold">$@</text>
+    <text x="190" y="235" fill="#ffffff" font-family="Arial" font-size="12" text-anchor="end">All Arguments</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="1180" y="480" fill="#64748b" font-family="Arial" font-size="16" text-anchor="end" font-weight="bold">SHELL INPUT ARCHITECTURE</text>
+</svg>

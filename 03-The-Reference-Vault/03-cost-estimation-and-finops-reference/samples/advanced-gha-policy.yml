@@ -1,0 +1,56 @@
+name: Infracost Advanced Guardrail
+on: [pull_request]
+
+jobs:
+  infracost:
+    name: Infracost Cost Policy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Setup Infracost
+        uses: infracost/actions/setup@v2
+        with:
+          api-key: ${{ secrets.INFRACOST_API_KEY }}
+
+      - name: Checkout base branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+
+      - name: Generate Infracost JSON for base
+        run: |
+          infracost breakdown --path . \
+                            --format json \
+                            --out-file /tmp/infracost-base.json
+
+      - name: Checkout PR branch
+        uses: actions/checkout@v3
+
+      - name: Generate Infracost diff
+        run: |
+          infracost diff --path . \
+                        --compare-to /tmp/infracost-base.json \
+                        --format json \
+                        --out-file /tmp/infracost.json
+
+      - name: Post Infracost comment
+        uses: infracost/actions/comment@v2
+        with:
+          path: /tmp/infracost.json
+          behavior: update
+
+      # --- CUSTOM POLICY ENFORCEMENT ---
+      - name: Check Cost Guardrail
+        run: |
+          # Use jq to extract the total monthly cost delta
+          DIFF_COST=$(jq '.diffTotalMonthlyCost | tonumber' /tmp/infracost.json)
+          echo "Price increase detected: \$$DIFF_COST"
+          
+          # Fail step if increase > $100
+          if (( $(echo "$DIFF_COST > 100" | bc -l) )); then
+            echo "🚨 BLOCKING PR: Cost increase exceeds monthly budget of \$100"
+            exit 1
+          fi
