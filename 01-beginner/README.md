@@ -1,45 +1,45 @@
-# 🎓 DevOps Beginner: The Phased Learning Path
+# 🎓 DevOps Beginner: The Phased Learning Path (Restored & Granular)
 
-> **"A Senior DevOps engineer is just a Junior who mastered the foundations and survived enough 2:00 AM outages."**
+> **"A Senior DevOps engineer is a Junior who survived enough 2:00 AM outages and mastered the granular details."**
 
-Welcome to your structured journey from "Casual CLI User" to "Infrastructure Architect." This curriculum has been reorganized into five logically progressive pillars. We move from the bedrock (Linux) to the packaging (Containers), ensuring you understand the *why* behind every command.
+This curriculum has been restored to its full technical depth, following the 2026 Architectural Audit. We have moved from a fragmented structure to a **Five Major Pillars** organization while maintaining every granular sub-file for deep-dive learning.
 
 ---
 
 ## 🗺️ The Five Major Pillars
 
 ### 1. [🐧 01-Linux-Foundations](./01-Linux-Foundations/readme.md)
-*The bedrock of the cloud. If you don't master the kernel, you're just a passenger.*
-- **Analogy**: The engine of a cargo ship. Components, fuel lines (data), and safety protocols (permissions).
-- **Incident Example**: The 2:00 AM "Disk Full" crisis and how to solve it in 3 commands.
+*Bedrock of the cloud. Includes distro-specific deep dives for Fedora, RHEL, and Debian.*
+- **Granular Focus**: FHS, Permissions, SSH Hardening, and Multi-Distro Package Management (dnf, apt, zypper).
+- **Nested Depth**: Complete script libraries for system auditing and network optimization.
 
 ### 2. [🌐 02-Networking-Logic](./02-Networking-Logic/readme.md)
-*How data shakes hands across the world.*
-- **Analogy**: The global postal system. Addresses (IP), zip codes (Subnets), and different delivery types (TCP vs UDP).
-- **Real-World**: Tracking a packet from your browser to a containerized database.
+*The handshake of the global internet.*
+- **Granular Focus**: Layer-by-layer OSI Model (Physical through Application).
+- **Nested Depth**: Granular documentation on cables, routing algorithms (OSPF), and diagnostic Python labs.
 
 ### 3. [🛠️ 03-Git-Version-Control](./03-Git-Version-Control/readme.md)
-*The time machine for your infrastructure.*
-- **Analogy**: Multi-verse survival. Saving states, merging timelines, and avoiding the "Git Force" push disaster.
-- **Workflow**: Local individual productivity vs. Remote team collaboration.
+*The time machine for infrastructure.*
+- **Granular Focus**: Local workflows vs. Remote Team Collaboration.
+- **Nested Depth**: GitHub Actions, security best practices, and merge conflict simulations.
 
 ### 4. [🤖 04-Scripting-Automation](./04-Scripting-Automation/readme.md)
-*Building your robot army.*
-- **Analogy**: Cooking for one vs. Cooking for 10,000. Writing recipes (scripts) that never fail.
-- **Goal**: If you have to do it twice, script it. If you have to do it three times, delete the computer and build a robot.
+*Your robot butler army.*
+- **Granular Focus**: Bash Architecture, Python Basics, and **Windows PowerShell Mastery**.
+- **Nested Depth**: System drafting, advanced I/O, and specialized Windows automation for SREs.
 
 ### 5. [🐳 05-Container-Essentials](./05-Container-Essentials/readme.md)
-*The universal standardized shipping container.*
-- **Analogy**: Shipping a cake across the ocean. Instead of shipping ingredients, we ship the oven, the chef, and the cake in one box.
-- **Lifecycle**: Blueprint (Dockerfile) -> Runtime (Container) -> Network (Conncetivity).
+*The universal shipping container for software.*
+- **Granular Focus**: The Blueprint (Dockerfile), Runtime Lifecycle, and Networking.
+- **Nested Depth**: Disk hygiene, multi-stage builds, and persistence logic.
 
 ---
 
-## 🏗️ Structure Per Pillar
-To keep your learning focused, every pillar follows this layout:
-- **01-Reference**: Where to read and learn concepts.
-- **02-Labs**: Hands-on practice and implementation.
-- **03-Assessment**: Test your knowledge with master quizzes and interview prep.
+## 🏗️ Standardized Layout
+Every pillar follows the "Three-Node" standard:
+1.  **01-Reference**: Granular technical documentation and "original" source files.
+2.  **02-Labs**: Practical environments and implementation scripts.
+3.  **03-Assessment**: Master quizzes and interview preparation.
 
 ---
-*Last Audit: 2026 - Human-Centric Overhaul*
+*Last Restoration Audit: 2026 - Data Integrity Re-established*
