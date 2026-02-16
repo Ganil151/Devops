@@ -202,6 +202,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/01-Linux-Engineering/HUMAN_GUIDE.md",
     "01-beginner/05-Foundational-Containers/Scripts/docker-install.sh",
     "01-beginner/05-Foundational-Containers/Scripts/docker-centos-install.sh",
     "01-beginner/05-Foundational-Containers/resources/learning-docker.pdf",
@@ -212,7 +213,6 @@
     "01-beginner/05-Foundational-Containers/resources/docker-in-the-cloud.pdf",
     "01-beginner/05-Foundational-Containers/resources/docker-commands-cheat-sheet-pdf.pdf",
     "01-beginner/05-Foundational-Containers/resources/docker-by-jrebel.pdf",
-    "01-beginner/05-Foundational-Containers/resources/docker-and-kubernetes.pdf",
     "01-beginner/05-Foundational-Containers/readme.md",
     "01-beginner/05-Foundational-Containers/images/dockerstates.png",
     "01-beginner/05-Foundational-Containers/images/dockerarch.png",
