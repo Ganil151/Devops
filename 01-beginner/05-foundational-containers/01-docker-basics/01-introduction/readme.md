@@ -48,13 +48,13 @@ The key difference lies in the **Kernel**. While VMs virtualize the entire hardw
 
 ![Docker vs VM](../../../images/virtualvsdocker.png)
 
-| Feature | Virtual Machines (VMs) | Docker Containers |
-| :--- | :--- | :--- |
-| **Guest OS** | Full OS (e.g., 2GB Windows/Linux) | None (Shared Host Kernel) |
-| **Size** | Gigabytes | Megabytes |
-| **Boot Time** | Minutes | Milliseconds |
-| **Efficiency** | High Overhead | Near-native performance |
-| **Isolation** | Hardware-level (Hypervisor) | OS-level (Namespaces/Cgroups) |
+| Feature        | Virtual Machines (VMs)            | Docker Containers             |
+| :------------- | :-------------------------------- | :---------------------------- |
+| **Guest OS**   | Full OS (e.g., 2GB Windows/Linux) | None (Shared Host Kernel)     |
+| **Size**       | Gigabytes                         | Megabytes                     |
+| **Boot Time**  | Minutes                           | Milliseconds                  |
+| **Efficiency** | High Overhead                     | Near-native performance       |
+| **Isolation**  | Hardware-level (Hypervisor)       | OS-level (Namespaces/Cgroups) |
 
 ---
 
