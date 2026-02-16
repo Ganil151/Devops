@@ -80,7 +80,7 @@ hint: To abort and get back to the state before "git rebase", run "git rebase --
 
 > To add files or folders to existing repository:
 - git merge --allow-unrelated-histories (branch-name)
-- git pull origin <branch-name> --allow-unrelated-histories
+- git pull origin (branch-name) --allow-unrelated-histories
 - git push origin main
 
 
