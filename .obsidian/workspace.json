@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/04-automation-scripting/part-02-shell-architecture/02-user-input/readme.md",
+                "file": "01-beginner/05-foundational-containers/01-docker-basics/01-introduction/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 282.5
+    "width": 282.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/04-automation-scripting/part-02-shell-architecture/02-user-input/readme.md",
     "01-beginner/04-automation-scripting/part-02-shell-architecture/02-user-input/input-channels-mapping.svg",
     "01-beginner/04-automation-scripting/part-02-shell-architecture/01-arithmetic-and-metrics/readme-advanced.md",
     "01-beginner/04-automation-scripting/part-02-shell-architecture/01-arithmetic-and-metrics/readme.md",
@@ -246,7 +248,6 @@
     "08-resources/04-images-and-infographics/screenshot-91.png",
     "08-resources/04-images-and-infographics/screenshot-90.png",
     "08-resources/04-images-and-infographics/screenshot-89.png",
-    "08-resources/04-images-and-infographics/screenshot-88.png",
     "08-resources/03-books-and-pdfs/morebooks.txt",
     "08-resources/02-cheat-sheets-and-docs/aws-inventory-master.md",
     "08-resources/02-cheat-sheets-and-docs/bashcustomization.txt",
