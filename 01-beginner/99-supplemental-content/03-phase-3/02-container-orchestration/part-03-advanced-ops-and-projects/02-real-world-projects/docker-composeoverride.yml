@@ -1,0 +1,15 @@
+# Development Override - Hot-reloading and Debugging
+services:
+  flask:
+    environment:
+      - FLASK_DEBUG=1
+      - FLASK_APP=./app.py
+    volumes:
+      - ./Flask:/app
+      - flask-data:/data
+    ports:
+      - "8080:8080" # Direct access for dev
+
+  postgres:
+    ports:
+      - "5432:5432" # Direct access for dev (optional)

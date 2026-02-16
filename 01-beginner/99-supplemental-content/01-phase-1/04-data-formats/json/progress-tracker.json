@@ -1,0 +1,20 @@
+[
+  {
+    "module": "Shell Scripting",
+    "topic": "Environment",
+    "status": "completed",
+    "last_updated": "2026-01-12"
+  },
+  {
+    "module": "Shell Scripting",
+    "topic": "Variables & Loops",
+    "status": "pending",
+    "last_updated": null
+  },
+  {
+    "module": "Shell Scripting",
+    "topic": "Functions",
+    "status": "pending",
+    "last_updated": null
+  }
+]
