@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 282.5,
-    "collapsed": true
+    "width": 282.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -214,8 +213,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "01-beginner/99-supplemental-content/02-phase-2/00-PHASE-2-DIRECTORY_MAP.md",
     "01-beginner/99-supplemental-content/00-MASTER_DIRECTORY_MAP.md",
     "02-intermediate/reference.md",
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/examples/readme.md",
@@ -261,7 +261,6 @@
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-01-python-foundations/04-data-structures/assets/python-data-structures.png",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-01-python-foundations/04-data-structures/assets/list-vs-tuple.png",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-01-python-foundations/04-data-structures/assets/dict-vs-set.png",
-    "01-beginner/04-Scripting-Automation/part-01-shell-foundations/03-file-manipulation/searching/readme.md",
     "Untitled.canvas"
   ]
 }
