@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
+                "file": "01-beginner/05-Container-Essentials/01-Reference/Blueprint/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "INTERMEDIATE_OPS_COMMANDS"
+              "title": "readme"
             }
           }
         ]
@@ -215,6 +215,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/03-phase-3/01-container-orchestration/00-docker-commands/INTERMEDIATE_OPS_COMMANDS.md",
     "01-beginner/04-Scripting-Automation/01-Reference/Python-Basics/part-01-python-foundations/07-functions-and-modules/challenges/solutions/solution-03-config-pkg/config/settings.py",
     "01-beginner/04-Scripting-Automation/01-Reference/Python-Basics/part-01-python-foundations/07-functions-and-modules/challenges/solutions/solution-03-config-pkg/config/loader.py",
     "01-beginner/04-Scripting-Automation/01-Reference/Python-Basics/part-01-python-foundations/07-functions-and-modules/challenges/solutions/solution-03-config-pkg/config/init.py",
@@ -225,7 +226,6 @@
     "01-beginner/04-Scripting-Automation/01-Reference/Python-Basics/part-03-python-systems-drafting/08-capstone-script/server-health-monitor/src/pycache",
     "01-beginner/04-Scripting-Automation/01-Reference/Python-Basics/part-03-python-systems-drafting/08-capstone-script/server-health-monitor/src/main.py",
     "01-beginner/04-Scripting-Automation/01-Reference/Python-Basics/part-03-python-systems-drafting/08-capstone-script/server-health-monitor/src/checker.py",
-    "01-beginner/04-Scripting-Automation/01-Reference/Python-Basics/part-03-python-systems-drafting/08-capstone-script/server-health-monitor/logs/monitor.log",
     "01-beginner/04-Scripting-Automation/01-Reference/Python-Basics/part-01-python-foundations/07-functions-and-modules/assets/monolith-vs-modular.png",
     "01-beginner/04-Scripting-Automation/01-Reference/Python-Basics/part-01-python-foundations/07-functions-and-modules/assets/function-anatomy.png",
     "01-beginner/04-Scripting-Automation/01-Reference/Python-Basics/part-01-python-foundations/04-data-structures/assets/python-data-structures.png",
