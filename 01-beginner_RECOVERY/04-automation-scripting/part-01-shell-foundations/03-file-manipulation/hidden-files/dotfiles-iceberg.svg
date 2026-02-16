@@ -1,0 +1,67 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (Ocean/Dark theme) -->
+  <rect width="1200" height="500" fill="#0f172a" />
+  
+  <!-- Ocean Gradient -->
+  <defs>
+    <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect x="0" y="150" width="1200" height="350" fill="url(#oceanGrad)" />
+
+  <!-- The Iceberg -->
+  <!-- Above Water (Visible) -->
+  <path d="M 600 50 L 750 150 L 450 150 Z" fill="#f8fafc" />
+  <!-- Under Water (Hidden) -->
+  <path d="M 450 150 L 750 150 L 700 450 L 500 450 Z" fill="#cbd5e1" opacity="0.9" />
+
+  <!-- Visible Labels (Above surface) -->
+  <g transform="translate(480, 80)">
+    <rect width="100" height="30" rx="5" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1" />
+    <text x="50" y="20" fill="#0f172a" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">Projects/</text>
+  </g>
+  <g transform="translate(620, 100)">
+    <rect width="100" height="30" rx="5" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1" />
+    <text x="50" y="20" fill="#0f172a" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">Photos/</text>
+  </g>
+
+  <!-- Hidden Labels (Below surface) -->
+  <!-- .bashrc -->
+  <g transform="translate(400, 200)">
+    <rect width="120" height="35" rx="5" fill="#1e293b" stroke="#ef4444" stroke-width="2" />
+    <text x="60" y="22" fill="#ef4444" font-family="Courier New" font-size="14" text-anchor="middle" font-weight="bold">.bashrc</text>
+  </g>
+  <!-- .ssh/ -->
+  <g transform="translate(680, 240)">
+    <rect width="120" height="35" rx="5" fill="#1e293b" stroke="#ef4444" stroke-width="2" />
+    <text x="60" y="22" fill="#ef4444" font-family="Courier New" font-size="14" text-anchor="middle" font-weight="bold">.ssh/</text>
+  </g>
+  <!-- .git/ -->
+  <g transform="translate(500, 300)">
+    <rect width="120" height="35" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="2" />
+    <text x="60" y="22" fill="#f59e0b" font-family="Courier New" font-size="14" text-anchor="middle" font-weight="bold">.git/</text>
+  </g>
+  <!-- .config/ -->
+  <g transform="translate(350, 360)">
+    <rect width="120" height="35" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="2" />
+    <text x="60" y="22" fill="#3b82f6" font-family="Courier New" font-size="14" text-anchor="middle" font-weight="bold">.config/</text>
+  </g>
+  <!-- .aws/ -->
+  <g transform="translate(650, 380)">
+    <rect width="120" height="35" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+    <text x="60" y="22" fill="#10b981" font-family="Courier New" font-size="14" text-anchor="middle" font-weight="bold">.aws/</text>
+  </g>
+
+  <!-- Annotation -->
+  <text x="600" y="490" fill="#ffffff" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold" letter-spacing="2">THE ICEBERG OF CONFIGURATION</text>
+
+  <!-- Water Surface Line -->
+  <line x1="0" y1="150" x2="1200" y2="150" stroke="#ffffff" stroke-width="3" />
+  <text x="1180" y="140" fill="#ffffff" font-family="Arial" font-size="14" text-anchor="end">Visible Surface (ls)</text>
+  <text x="1180" y="175" fill="#ffffff" font-family="Arial" font-size="14" text-anchor="end" opacity="0.8">Hidden Depths (ls -a)</text>
+
+</svg>

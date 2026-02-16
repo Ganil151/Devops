@@ -1,0 +1,28 @@
+![Stream Architecture](stream_architecture.png)
+
+**Stream Architecture in Shell Scripting**
+
+This diagram illustrates the three standard streams (stdin, stdout, stderr) and how data flows through shell processes:
+
+- **stdin (File Descriptor 0)**: Input stream receiving data from keyboard, files, pipes, or here documents
+- **stdout (File Descriptor 1)**: Standard output stream for normal program output
+- **stderr (File Descriptor 2)**: Standard error stream for error messages and diagnostics
+
+**Input Sources:**
+- Keyboard input (interactive)
+- File redirection (`< file`)
+- Pipe input (`command1 | command2`)
+- Here documents (`<<EOF`)
+
+**Output Destinations:**
+- Terminal display
+- File redirection (`> file`, `>> file`)
+- Pipe to next command (`| command`)
+- Null device (`/dev/null`)
+
+**Key Redirection Patterns:**
+- `command > file` - Redirect stdout to file
+- `command 2> file` - Redirect stderr to file  
+- `command &> file` - Redirect both stdout and stderr
+- `command 2>&1` - Redirect stderr to stdout
+- `command | tee file` - Output to both terminal and file

@@ -1,0 +1,4 @@
+# Standard requirements for health monitor
+# No external libraries used in baseline VERSION but 'requests' is 
+# recommended for further HTTP expansion.
+requests==2.31.0

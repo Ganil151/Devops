@@ -1,0 +1,67 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#0f172a" />
+  
+  <!-- Defs -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Left Side: Anatomy -->
+  <text x="300" y="80" fill="#ffffff" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">🧪 VARIABLE ANATOMY</text>
+  
+  <g transform="translate(100, 150)">
+    <!-- Key -->
+    <rect x="0" y="0" width="120" height="60" rx="4" fill="#1d4ed8" stroke="#3b82f6" stroke-width="2" />
+    <text x="60" y="35" fill="#ffffff" font-family="monospace" font-size="18" text-anchor="middle" font-weight="bold">USER</text>
+    <text x="60" y="80" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="middle">KEY (No $)</text>
+    
+    <!-- Operator -->
+    <text x="160" y="35" fill="#ffffff" font-family="monospace" font-size="24" text-anchor="middle">=</text>
+    <text x="160" y="80" fill="#ef4444" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">NO SPACES!</text>
+    
+    <!-- Value -->
+    <rect x="200" y="0" width="180" height="60" rx="4" fill="#065f46" stroke="#10b981" stroke-width="2" />
+    <text x="290" y="35" fill="#ffffff" font-family="monospace" font-size="18" text-anchor="middle" font-weight="bold">"ganil"</text>
+    <text x="290" y="80" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="middle">VALUE (Quoted)</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="600" y1="50" x2="600" y2="450" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Right Side: Scope -->
+  <text x="900" y="80" fill="#ffffff" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">🌐 SCOPE MANAGEMENT</text>
+
+  <g transform="translate(800, 150)">
+    <!-- Local -->
+    <rect x="-100" y="0" width="200" height="50" rx="8" fill="#334155" stroke="#475569" stroke-width="2" />
+    <text x="0" y="30" fill="#ffffff" font-family="Arial" font-size="14" text-anchor="middle">Local (Current Process)</text>
+    
+    <!-- Export Arrow -->
+    <line x1="0" y1="50" x2="0" y2="100" stroke="#3b82f6" stroke-width="3" />
+    <polygon points="-6,100 6,100 0,110" fill="#3b82f6" />
+    <text x="70" y="85" fill="#3b82f6" font-family="Arial" font-size="12" font-weight="bold">export</text>
+    
+    <!-- Environment -->
+    <rect x="-100" y="110" width="200" height="50" rx="8" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2" filter="url(#glow)" />
+    <text x="0" y="140" fill="#ffffff" font-family="Arial" font-size="14" text-anchor="middle">Environment Variable</text>
+    
+    <!-- Inherit Arrow -->
+    <line x1="0" y1="160" x2="0" y2="210" stroke="#10b981" stroke-width="3" />
+    <polygon points="-6,210 6,210 0,220" fill="#10b981" />
+    <text x="70" y="195" fill="#10b981" font-family="Arial" font-size="12" font-weight="bold">Inherit</text>
+    
+    <!-- Child -->
+    <rect x="-100" y="220" width="200" height="50" rx="8" fill="#064e3b" stroke="#059669" stroke-width="2" />
+    <text x="0" y="250" fill="#ffffff" font-family="Arial" font-size="14" text-anchor="middle">Child Script / App</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="1180" y="480" fill="#64748b" font-family="Arial" font-size="16" text-anchor="end" font-weight="bold">SHELL VARIABLE MECHANICS</text>
+</svg>
