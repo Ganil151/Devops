@@ -201,6 +201,8 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "01-beginner/03-Git-Version-Control/readme.md",
+    "01-beginner/02-Networking-Logic/readme.md",
     "01-beginner/01-Linux-Foundations/readme.md",
     "01-beginner/05-Container-Essentials/01-Reference/Blueprint/readme.md",
     "01-beginner/05-Container-Essentials/01-Reference/images",
@@ -245,8 +247,6 @@
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/06-permissions/challenges.md",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/05-vim-basics/readme.md",
     "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/05-vim-basics/challenges.md",
-    "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/04-man-pages-and-help/readme.md",
-    "01-beginner/04-Scripting-Automation/01-Reference/Bash-Fundamentals/04-man-pages-and-help/challenges.md",
     "Untitled.canvas"
   ]
 }
