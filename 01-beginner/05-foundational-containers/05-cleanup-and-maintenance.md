@@ -4,6 +4,26 @@ Docker is a "Disk Hog." Every failed build, old image, and stopped container lea
 
 ## 🪓 The Power of `prune`
 
+```mermaid
+graph TD
+    System[Docker System] --> C[Containers]
+    System --> I[Images]
+    System --> V[Volumes]
+    System --> N[Networks]
+    System --> B[Builder Cache]
+
+    C -->|prune| CR[Removed: Stopped]
+    I -->|prune| IR[Removed: Dangling]
+    V -->|prune| VR[Removed: Unused]
+    B -->|prune| BR[Removed: Hidden Cache]
+
+    style System fill:#f5f5f5,stroke:#333
+    style CR fill:#ffebee,stroke:#c62828
+    style IR fill:#ffebee,stroke:#c62828
+    style VR fill:#ffebee,stroke:#c62828
+    style BR fill:#ffebee,stroke:#c62828
+```
+
 The `prune` command is your primary weapon against disk bloat.
 
 | Target | Command | Result |
