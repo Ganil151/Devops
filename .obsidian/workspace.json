@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/99-supplemental-content/SUPPLEMENTAL_CONTENT_AUDIT.md",
     "01-beginner/99-supplemental-content/03-phase-3/00-PHASE-3-DIRECTORY_MAP.md",
     "01-beginner/99-supplemental-content/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/02-prompt-toolkit/slash-commands.md",
     "01-beginner/99-supplemental-content/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/02-prompt-toolkit/readme.md",
@@ -253,7 +254,6 @@
     "01-beginner/05-Foundational-Containers/images/dockerarch.png",
     "01-beginner/05-Foundational-Containers/05-The-Storage/readme.md",
     "01-beginner/05-Foundational-Containers/04-The-Network/readme.md",
-    "01-beginner/05-Foundational-Containers/03-The-Runtime/readme.md",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-00-prerequisites/04-anaconda-setup/assets/environment-lifecycle.png",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-00-prerequisites/04-anaconda-setup/assets/conda-architecture.png",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-01-python-foundations/02-control-flow/assets/control-flow-logic.png",
