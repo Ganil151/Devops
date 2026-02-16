@@ -10,7 +10,26 @@ When you install Docker, it creates a default virtual network called `bridge`.
 *   **Container**: The isolated guest process.
 *   **The Bridge**: The virtual switch that connects them.
 
-### 1. Port Forwarding (`-p`)
+### 1. The Bridge Pattern
+```mermaid
+graph LR
+    User((User)) -- Port 8080 --> Host[Host Machine]
+    Host -- Mapping --> Bridge[Docker Bridge]
+    
+    subgraph Container_Isolation
+        Bridge --> C1[Container: NGINX]
+        Bridge --> C2[Container: App]
+    end
+    
+    C1 -- Listening on 80 --> C1
+    C2 -- Listening on 3000 --> C2
+
+    style Host fill:#f5f5f5,stroke:#333
+    style Bridge fill:#e1f5fe,stroke:#01579b
+    style Container_Isolation fill:#fff,stroke-dasharray: 5 5
+```
+
+### 2. Port Forwarding (`-p`)
 This "punches a hole" in the container isolation so the outside world can reach the service.
 ```bash
 # [Host Port]:[Container Port]
