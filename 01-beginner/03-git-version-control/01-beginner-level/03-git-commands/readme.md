@@ -37,7 +37,7 @@ git config --global core.editor "code --wait"
 > Pull & Push and Remote
 - git remote -v: to see if you have a remote running
 
-- git remote add 
+- git remote add (url)
 
 - git remote add origin https://github.com/Ganil151/DevOps.git
 
