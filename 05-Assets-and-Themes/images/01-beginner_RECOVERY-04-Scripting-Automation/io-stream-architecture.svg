@@ -1,0 +1,55 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#0f172a" />
+  
+  <!-- Divider -->
+  <line x1="600" y1="50" x2="600" y2="450" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Left Side: Data Flow -->
+  <text x="300" y="80" fill="#ffffff" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">🌊 DATA FLOW ARCHITECTURE</text>
+  
+  <g transform="translate(300, 250)">
+    <!-- Central Process -->
+    <rect x="-80" y="-40" width="160" height="80" rx="10" fill="#1e3a8a" stroke="#3b82f6" stroke-width="3" />
+    <text x="0" y="5" fill="#ffffff" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">PROCESS</text>
+
+    <!-- Stdin -->
+    <path d="M -250 0 L -90 0" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,2" />
+    <polygon points="-100,-5 -90,0 -100,5" fill="#94a3b8" />
+    <text x="-170" y="-15" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="middle">Stdin: 0 (Keyboard)</text>
+
+    <!-- Stdout -->
+    <path d="M 80 -15 L 250 -40" stroke="#10b981" stroke-width="2" />
+    <polygon points="240,-45 250,-40 240,-35" fill="#10b981" />
+    <text x="160" y="-45" fill="#10b981" font-family="Arial" font-size="12" text-anchor="middle">Stdout: 1 (Success)</text>
+
+    <!-- Stderr -->
+    <path d="M 80 15 L 250 40" stroke="#ef4444" stroke-width="2" />
+    <polygon points="240,35 250,40 240,45" fill="#ef4444" />
+    <text x="160" y="45" fill="#ef4444" font-family="Arial" font-size="12" text-anchor="middle">Stderr: 2 (Error)</text>
+  </g>
+
+  <!-- Right Side: Redirection Tools -->
+  <text x="900" y="80" fill="#ffffff" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">🛠️ REDIRECTION TOOLS</text>
+
+  <g transform="translate(750, 130)">
+    <rect x="0" y="0" width="300" height="50" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+    <text x="20" y="30" fill="#ffffff" font-family="monospace" font-size="14">&gt; / &gt;&gt; </text>
+    <text x="280" y="30" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="end">Overwrite / Append</text>
+
+    <rect x="0" y="60" width="300" height="50" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+    <text x="20" y="90" fill="#ffffff" font-family="monospace" font-size="14">2&gt; / &amp;&gt;</text>
+    <text x="280" y="90" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="end">Error / Combined</text>
+
+    <rect x="0" y="120" width="300" height="50" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+    <text x="20" y="150" fill="#ffffff" font-family="monospace" font-size="14">2&gt;&amp;1</text>
+    <text x="280" y="150" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="end">Merge Stderr to Stdout</text>
+
+    <rect x="0" y="180" width="300" height="50" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+    <text x="20" y="210" fill="#ffffff" font-family="monospace" font-size="14">|</text>
+    <text x="280" y="210" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="end">The Pipe (Chain Tools)</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="1180" y="480" fill="#64748b" font-family="Arial" font-size="16" text-anchor="end" font-weight="bold">INPUT/OUTPUT STREAM ARCHITECTURE</text>
+</svg>

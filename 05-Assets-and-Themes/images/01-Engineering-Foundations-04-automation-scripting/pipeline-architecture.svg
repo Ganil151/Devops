@@ -1,0 +1,103 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for markers, gradients, and filters -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e0e0e0" />
+    </marker>
+    <marker id="arrowhead-flow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#03dac6" />
+    </marker>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .box { fill: #2d2d2d; stroke: #4caf50; stroke-width: 2; rx: 8; ry: 8; }
+      .box-cmd { fill: #252526; stroke: #2196f3; stroke-width: 2; rx: 8; ry: 8; }
+      .text { fill: #e0e0e0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px; text-anchor: middle; dominant-baseline: middle; }
+      .title { fill: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px; font-weight: bold; text-anchor: middle; }
+      .cmd-text { fill: #9cdcfe; font-family: Consolas, 'Courier New', monospace; font-size: 14px; text-anchor: middle; }
+      .arrow { stroke: #e0e0e0; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .flow-arrow { stroke: #03dac6; stroke-width: 3; fill: none; marker-end: url(#arrowhead-flow); stroke-dasharray: 5,5; }
+      .pipe-symbol { fill: #ff9800; font-family: Consolas, 'Courier New', monospace; font-size: 24px; font-weight: bold; text-anchor: middle; }
+      .label-box { fill: #333; opacity: 0.8; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg" />
+
+  <!-- Main Title -->
+  <text x="400" y="40" class="title">Linux Pipeline Architecture</text>
+  <text x="400" y="70" class="text" fill="#aaaaaa">How data flows between commands via pipes</text>
+
+  <!-- Flow Path Background (Visual Guide) -->
+  <path d="M 100 160 L 700 160" stroke="#333" stroke-width="60" stroke-linecap="round" />
+
+  <!-- Command 1 -->
+  <g transform="translate(50, 120)">
+    <rect width="160" height="80" class="box-cmd" />
+    <text x="80" y="30" class="text" font-weight="bold">Command 1</text>
+    <text x="80" y="55" class="cmd-text">cat access.log</text>
+    <text x="80" y="110" class="text" font-size="12" fill="#888">STDOUT</text>
+  </g>
+
+  <!-- Pipe 1 -->
+  <g transform="translate(230, 140)">
+    <circle cx="20" cy="20" r="25" fill="#1e1e1e" stroke="#ff9800" stroke-width="2" />
+    <text x="20" y="28" class="pipe-symbol">|</text>
+  </g>
+
+  <!-- Command 2 -->
+  <g transform="translate(290, 120)">
+    <rect width="160" height="80" class="box-cmd" />
+    <text x="80" y="30" class="text" font-weight="bold">Command 2</text>
+    <text x="80" y="55" class="cmd-text">grep "ERROR"</text>
+    <text x="80" y="110" class="text" font-size="12" fill="#888">STDIN / STDOUT</text>
+  </g>
+
+  <!-- Pipe 2 -->
+  <g transform="translate(470, 140)">
+    <circle cx="20" cy="20" r="25" fill="#1e1e1e" stroke="#ff9800" stroke-width="2" />
+    <text x="20" y="28" class="pipe-symbol">|</text>
+  </g>
+
+  <!-- Command 3 -->
+  <g transform="translate(530, 120)">
+    <rect width="160" height="80" class="box-cmd" />
+    <text x="80" y="30" class="text" font-weight="bold">Command 3</text>
+    <text x="80" y="55" class="cmd-text">wc -l</text>
+    <text x="80" y="110" class="text" font-size="12" fill="#888">STDIN</text>
+  </g>
+
+  <!-- Data Flow Visualization (Lower Section) -->
+  <g transform="translate(0, 50)">
+    <!-- Data Stream 1 -->
+    <path d="M 130 150 L 130 200" class="flow-arrow" />
+    <rect x="70" y="210" width="120" height="60" class="label-box" rx="5" />
+    <text x="130" y="235" class="text" fill="#fff">Raw Data</text>
+    <text x="130" y="255" class="text" font-size="11" fill="#bbb">(Thousands of lines)</text>
+
+    <!-- Data Stream 2 -->
+    <path d="M 370 150 L 370 200" class="flow-arrow" />
+    <rect x="310" y="210" width="120" height="60" class="label-box" rx="5" />
+    <text x="370" y="235" class="text" fill="#fff">Filtered Data</text>
+    <text x="370" y="255" class="text" font-size="11" fill="#bbb">(Only 'ERROR' lines)</text>
+
+    <!-- Final Result -->
+    <path d="M 610 150 L 610 200" class="flow-arrow" />
+    <rect x="550" y="210" width="120" height="60" class="label-box" rx="5" stroke="#03dac6" stroke-width="2" />
+    <text x="610" y="235" class="text" fill="#03dac6" font-weight="bold">Final Count</text>
+    <text x="610" y="255" class="text" font-size="11" fill="#bbb">(Single Number)</text>
+  </g>
+
+  <!-- Connectors between commands (Horizontal Flow) -->
+  <path d="M 210 160 L 230 160" stroke="#03dac6" stroke-width="2" marker-end="url(#arrowhead-flow)" />
+  <path d="M 270 160 L 290 160" stroke="#03dac6" stroke-width="2" marker-end="url(#arrowhead-flow)" />
+  
+  <path d="M 450 160 L 470 160" stroke="#03dac6" stroke-width="2" marker-end="url(#arrowhead-flow)" />
+  <path d="M 510 160 L 530 160" stroke="#03dac6" stroke-width="2" marker-end="url(#arrowhead-flow)" />
+
+  <!-- Legend / Explanation -->
+  <rect x="50" y="330" width="700" height="50" fill="#252526" rx="5" />
+  <text x="400" y="355" class="text" fill="#888">
+    The pipe <tspan fill="#ff9800" font-weight="bold">|</tspan> operator connects the <tspan fill="#e0e0e0" font-weight="bold">STDOUT</tspan> of the left command to the <tspan fill="#e0e0e0" font-weight="bold">STDIN</tspan> of the right command.
+  </text>
+</svg>

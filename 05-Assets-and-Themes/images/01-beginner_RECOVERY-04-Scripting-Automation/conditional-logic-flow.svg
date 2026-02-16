@@ -1,0 +1,58 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#0f172a" />
+  
+  <!-- Divider -->
+  <line x1="600" y1="50" x2="600" y2="450" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Left Side: Logic Flow -->
+  <text x="300" y="80" fill="#ffffff" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">🛣️ SCRIPT LOGIC FLOW</text>
+  
+  <g transform="translate(300, 150)">
+    <!-- Start -->
+    <rect x="-60" y="-30" width="120" height="40" rx="20" fill="#3b82f6" />
+    <text x="0" y="-5" fill="#ffffff" font-family="Arial" font-size="14" text-anchor="middle">Input</text>
+    
+    <!-- Arrow -->
+    <line x1="0" y1="10" x2="0" y2="50" stroke="#64748b" stroke-width="2" />
+    
+    <!-- Diamond -->
+    <g transform="translate(0, 100)">
+      <path d="M 0 -50 L 80 0 L 0 50 L -80 0 Z" fill="#1e293b" stroke="#f59e0b" stroke-width="3" />
+      <text x="0" y="5" fill="#ffffff" font-family="Arial" font-size="14" text-anchor="middle">Condition?</text>
+    </g>
+    
+    <!-- True Path -->
+    <line x1="80" y1="100" x2="180" y2="100" stroke="#10b981" stroke-width="2" />
+    <rect x="180" y="80" width="80" height="40" rx="5" fill="#064e3b" stroke="#10b981" />
+    <text x="220" y="105" fill="#10b981" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">TRUE</text>
+    
+    <!-- False Path -->
+    <line x1="-80" y1="100" x2="-180" y2="100" stroke="#ef4444" stroke-width="2" />
+    <rect x="-260" y="80" width="80" height="40" rx="5" fill="#450a0a" stroke="#ef4444" />
+    <text x="-220" y="105" fill="#ef4444" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">FALSE</text>
+  </g>
+
+  <!-- Right Side: Operators -->
+  <text x="900" y="80" fill="#ffffff" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">🧩 OPERATOR TYPES</text>
+
+  <g transform="translate(750, 130)">
+    <!-- File -->
+    <rect x="0" y="0" width="300" height="60" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="2" />
+    <text x="20" y="25" fill="#3b82f6" font-family="Arial" font-size="14" font-weight="bold">FILE TESTS</text>
+    <text x="20" y="45" fill="#94a3b8" font-family="monospace" font-size="12">-f (file), -d (dir), -x (exec)</text>
+    
+    <!-- String -->
+    <rect x="0" y="80" width="300" height="60" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+    <text x="20" y="105" fill="#10b981" font-family="Arial" font-size="14" font-weight="bold">STRING COMPARISON</text>
+    <text x="20" y="125" fill="#94a3b8" font-family="monospace" font-size="12">==, !=, -z (empty), -n (not-empty)</text>
+
+    <!-- Integer -->
+    <rect x="0" y="160" width="300" height="60" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="2" />
+    <text x="20" y="185" fill="#f59e0b" font-family="Arial" font-size="14" font-weight="bold">INTEGER COMPARISON</text>
+    <text x="20" y="205" fill="#94a3b8" font-family="monospace" font-size="12">-eq, -ne, -gt, -lt, -ge, -le</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="1180" y="480" fill="#64748b" font-family="Arial" font-size="16" text-anchor="end" font-weight="bold">SHELL CONDITIONALS & BOOLEAN LOGIC</text>
+</svg>

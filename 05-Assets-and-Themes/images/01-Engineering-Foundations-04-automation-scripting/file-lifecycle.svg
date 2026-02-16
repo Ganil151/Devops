@@ -1,0 +1,56 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#0f172a" />
+  
+  <!-- Divider -->
+  <line x1="600" y1="50" x2="600" y2="450" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Left Side: CRUD Lifecycle -->
+  <text x="300" y="80" fill="#ffffff" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">🧬 FILE OPERATIONS LIFECYCLE</text>
+  
+  <g transform="translate(100, 150)">
+    <!-- Create -->
+    <rect x="0" y="0" width="120" height="80" rx="4" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2" />
+    <text x="60" y="45" fill="#ffffff" font-family="monospace" font-size="16" text-anchor="middle" font-weight="bold">touch</text>
+    <text x="60" y="110" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="middle">CREATE</text>
+
+    <!-- Copy -->
+    <rect x="160" y="0" width="120" height="80" rx="4" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+    <text x="220" y="45" fill="#ffffff" font-family="monospace" font-size="16" text-anchor="middle" font-weight="bold">cp</text>
+    <text x="220" y="110" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="middle">COPY</text>
+
+    <!-- Move -->
+    <rect x="0" y="160" width="120" height="80" rx="4" fill="#1e293b" stroke="#f59e0b" stroke-width="2" />
+    <text x="60" y="205" fill="#ffffff" font-family="monospace" font-size="16" text-anchor="middle" font-weight="bold">mv</text>
+    <text x="60" y="270" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="middle">MOVE / RENAME</text>
+
+    <!-- Delete -->
+    <rect x="160" y="160" width="120" height="80" rx="4" fill="#450a0a" stroke="#ef4444" stroke-width="2" />
+    <text x="220" y="205" fill="#ffffff" font-family="monospace" font-size="16" text-anchor="middle" font-weight="bold">rm</text>
+    <text x="220" y="270" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="middle">DELETE</text>
+  </g>
+
+  <!-- Right Side: Safety First -->
+  <text x="900" y="80" fill="#ffffff" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">🛡️ SAFETY PROTOCOLS</text>
+
+  <g transform="translate(750, 130)">
+    <rect x="0" y="0" width="300" height="50" rx="5" fill="#1e293b" stroke="#ef4444" stroke-width="1" />
+    <text x="20" y="30" fill="#ffffff" font-family="monospace" font-size="14">rm -rf /</text>
+    <text x="280" y="30" fill="#ef4444" font-family="Arial" font-size="12" text-anchor="end" font-weight="bold">🚨 DANGER</text>
+
+    <rect x="0" y="60" width="300" height="50" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+    <text x="20" y="90" fill="#ffffff" font-family="monospace" font-size="14">cp -p</text>
+    <text x="280" y="90" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="end">Preserve Attributes</text>
+
+    <rect x="0" y="120" width="300" height="50" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+    <text x="20" y="150" fill="#ffffff" font-family="monospace" font-size="14">mkdir -p</text>
+    <text x="280" y="150" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="end">Recursive Create</text>
+
+    <rect x="0" y="180" width="300" height="50" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1" />
+    <text x="20" y="210" fill="#ffffff" font-family="monospace" font-size="14">alias rm='rm -i'</text>
+    <text x="280" y="210" fill="#94a3b8" font-family="Arial" font-size="12" text-anchor="end">Interactive Safety</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="1180" y="480" fill="#64748b" font-family="Arial" font-size="16" text-anchor="end" font-weight="bold">FILE MANIPULATION COMMANDS</text>
+</svg>

@@ -79,7 +79,7 @@ safe_copy() {
     
     if [[ ! -e "${src}" ]]; then
         log_error "Source does not exist: ${src}"
-        return 1
+        return 0 # Move on
     fi
     
     if [[ "${DRY_RUN}" == "false" ]]; then
@@ -88,9 +88,9 @@ safe_copy() {
         
         # Copy with preservation of attributes
         if [[ -d "${src}" ]]; then
-            cp -r "${src}" "${dest}"
+            cp -rn "${src}" "${dest}" 2>/dev/null || true
         else
-            cp -p "${src}" "${dest}"
+            cp -pn "${src}" "${dest}"
         fi
         log "Copied: ${src} → ${dest}"
     else
@@ -104,7 +104,7 @@ safe_move() {
     
     if [[ ! -e "${src}" ]]; then
         log_error "Source does not exist: ${src}"
-        return 1
+        return 0
     fi
     
     if [[ "${DRY_RUN}" == "false" ]]; then
@@ -113,6 +113,35 @@ safe_move() {
         log "Moved: ${src} → ${dest}"
     else
         log "DRY RUN: Would move ${src} → ${dest}"
+    fi
+}
+
+safe_merge_readme() {
+    local src="$1"
+    local dest="$2"
+    
+    # If destination doesn't exist, just copy
+    if [[ ! -e "${dest}" ]]; then
+        safe_copy "${src}" "${dest}"
+        return
+    fi
+    
+    # If it's a readme, compare sizes
+    if [[ "${src}" == *"readme.md" ]] || [[ "${src}" == *"README.md" ]]; then
+        local src_size=$(stat -c%s "${src}")
+        local dest_size=$(stat -c%s "${dest}")
+        
+        if (( src_size > dest_size )); then
+            log "Merging README: New one is bigger (${src_size} > ${dest_size}). Swapping."
+            [[ "${DRY_RUN}" == "false" ]] && mv "${dest}" "${dest%.md}-v2.md"
+            safe_copy "${src}" "${dest}"
+        else
+            log "Merging README: Existing one is bigger or equal (${dest_size} >= ${src_size}). Appending -v2 to new one."
+            safe_copy "${src}" "${dest%.md}-v2.md"
+        fi
+    else
+        # Not a readme, use no-clobber copy
+        safe_copy "${src}" "${dest}"
     fi
 }
 
@@ -157,12 +186,7 @@ migrate_pillar_01() {
             local rel_path="${file#${BASE_DIR}/01-beginner/01-Linux-Engineering/}"
             local dest_file="${linux_dest}/${rel_path}"
             
-            if [[ -e "${dest_file}" ]] && [[ "${file}" == *"readme.md" ]]; then
-                # Rename conflicting README
-                safe_copy "${file}" "${dest_file%.md}-v2.md"
-            elif [[ ! -e "${dest_file}" ]]; then
-                safe_copy "${file}" "${dest_file}"
-            fi
+            safe_merge_readme "${file}" "${dest_file}"
         done
     fi
     
@@ -179,11 +203,7 @@ migrate_pillar_01() {
             local rel_path="${file#${BASE_DIR}/01-beginner/02-Network-Protocols/}"
             local dest_file="${network_dest}/${rel_path}"
             
-            if [[ -e "${dest_file}" ]] && [[ "${file}" == *"readme.md" ]]; then
-                safe_copy "${file}" "${dest_file%.md}-v2.md"
-            elif [[ ! -e "${dest_file}" ]]; then
-                safe_copy "${file}" "${dest_file}"
-            fi
+            safe_merge_readme "${file}" "${dest_file}"
         done
     fi
     
@@ -200,11 +220,7 @@ migrate_pillar_01() {
             local rel_path="${file#${BASE_DIR}/01-beginner/03-Git-Version-Control/}"
             local dest_file="${git_dest}/${rel_path}"
             
-            if [[ -e "${dest_file}" ]] && [[ "${file}" == *"readme.md" ]]; then
-                safe_copy "${file}" "${dest_file%.md}-v2.md"
-            elif [[ ! -e "${dest_file}" ]]; then
-                safe_copy "${file}" "${dest_file}"
-            fi
+            safe_merge_readme "${file}" "${dest_file}"
         done
     fi
     
@@ -221,11 +237,7 @@ migrate_pillar_01() {
             local rel_path="${file#${BASE_DIR}/01-beginner/04-Scripting-Automation/}"
             local dest_file="${scripting_dest}/${rel_path}"
             
-            if [[ -e "${dest_file}" ]] && [[ "${file}" == *"readme.md" ]]; then
-                safe_copy "${file}" "${dest_file%.md}-v2.md"
-            elif [[ ! -e "${dest_file}" ]]; then
-                safe_copy "${file}" "${dest_file}"
-            fi
+            safe_merge_readme "${file}" "${dest_file}"
         done
     fi
     
@@ -254,11 +266,7 @@ migrate_pillar_02() {
             local rel_path="${file#${BASE_DIR}/01-beginner/05-Foundational-Containers/}"
             local dest_file="${containers_dest}/${rel_path}"
             
-            if [[ -e "${dest_file}" ]] && [[ "${file}" == *"readme.md" ]]; then
-                safe_copy "${file}" "${dest_file%.md}-v2.md"
-            elif [[ ! -e "${dest_file}" ]]; then
-                safe_copy "${file}" "${dest_file}"
-            fi
+            safe_merge_readme "${file}" "${dest_file}"
         done
     fi
     
@@ -380,15 +388,23 @@ migrate_pillar_05() {
     # Centralize all images
     safe_mkdir "${PILLAR_05}/images"
     
-    log "Collecting all image files..."
-    find "${BASE_DIR}" -type f \( \
+    log "Collecting all image files (excluding pillars)..."
+    # Find files, pruning any pillar directories to avoid infinite loop
+    find "${BASE_DIR}" \
+        -path "${PILLAR_01}" -prune -o \
+        -path "${PILLAR_02}" -prune -o \
+        -path "${PILLAR_03}" -prune -o \
+        -path "${PILLAR_04}" -prune -o \
+        -path "${PILLAR_05}" -prune -o \
+        -path "${BASE_DIR}/.git" -prune -o \
+        -type f \( \
         -name "*.png" -o \
         -name "*.svg" -o \
         -name "*.jpg" -o \
         -name "*.jpeg" -o \
         -name "*.webp" -o \
         -name "*.gif" \
-    \) | while read -r img; do
+    \) -print | while read -r img; do
         # Extract source domain from path
         local rel_path="${img#${BASE_DIR}/}"
         local domain=$(echo "${rel_path}" | cut -d'/' -f1-2 | tr '/' '-')
@@ -409,7 +425,15 @@ migrate_pillar_05() {
     fi
     
     # Collect all assets/ directories
-    find "${BASE_DIR}" -type d -name "assets" | while read -r assets_dir; do
+    log "Collecting all assets directories (excluding pillars)..."
+    find "${BASE_DIR}" \
+        -path "${PILLAR_01}" -prune -o \
+        -path "${PILLAR_02}" -prune -o \
+        -path "${PILLAR_03}" -prune -o \
+        -path "${PILLAR_04}" -prune -o \
+        -path "${PILLAR_05}" -prune -o \
+        -path "${BASE_DIR}/.git" -prune -o \
+        -type d -name "assets" -print | while read -r assets_dir; do
         local rel_path="${assets_dir#${BASE_DIR}/}"
         local domain=$(echo "${rel_path}" | cut -d'/' -f1-2 | tr '/' '-')
         

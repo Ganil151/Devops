@@ -1,0 +1,19 @@
+# Image Placeholder
+
+This file serves as a placeholder for:
+**event_driven_architecture_flow.svg**
+
+## Specifications:
+- **Dimensions**: 1600x900
+- **Format**: SVG (Scalable Vector Graphics)
+- **Color Scheme**: Purple gradient event bus with colorful services
+
+## Content Description:
+Flowchart showing:
+- Central event bus (Kafka/RabbitMQ)
+- Multiple microservices publishing and consuming events
+- Event flow arrows with labeled event types
+- Example events: OrderPlaced, StockReserved, PaymentProcessed, etc.
+
+## To Replace:
+Create the actual SVG according to specifications in `assets/README.md` and replace this file.

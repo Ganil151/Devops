@@ -1,0 +1,19 @@
+# Image Placeholder
+
+This file serves as a placeholder for:
+**database_per_service_pattern.jpg**
+
+## Specifications:
+- **Dimensions**: 1400x1000
+- **Format**: JPG (high quality, 90%)
+- **Color Scheme**: Professional business theme
+
+## Content Description:
+Diagram showing:
+- 3-4 microservices, each with dedicated database
+- Different database types (PostgreSQL, MongoDB, Redis)
+- API communication arrows (NOT direct database access)
+- Annotations: ✅ "Each service owns its data", ❌ "Never access another service's DB"
+
+## To Replace:
+Create the actual image according to specifications in `assets/README.md` and replace this file.

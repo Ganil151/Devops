@@ -1,0 +1,58 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark Mode Case Statement Logic -->
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+      <feOffset dx="1" dy="1" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888" />
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#121212" />
+
+  <!-- Input Variable -->
+  <rect x="300" y="20" width="200" height="50" rx="10" fill="#1E1E1E" stroke="#BB86FC" stroke-width="2" filter="url(#shadow)" />
+  <text x="400" y="45" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#BB86FC">case "$ACTION" in</text>
+
+  <!-- Split Paths -->
+  <path d="M 400 70 L 400 100 L 150 100 L 150 150" stroke="#888" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M 400 70 L 400 150" stroke="#888" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M 400 70 L 400 100 L 650 100 L 650 150" stroke="#888" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Pattern 1 -->
+  <rect x="75" y="150" width="150" height="60" rx="5" fill="#1E1E1E" stroke="#4CAF50" stroke-width="2" />
+  <text x="150" y="175" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#4CAF50">"start")</text>
+  <text x="150" y="200" text-anchor="middle" font-family="Arial" font-size="12" fill="#E0E0E0">systemctl start app</text>
+
+  <!-- Pattern 2 -->
+  <rect x="325" y="150" width="150" height="60" rx="5" fill="#1E1E1E" stroke="#2196F3" stroke-width="2" />
+  <text x="400" y="175" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#2196F3">"stop")</text>
+  <text x="400" y="200" text-anchor="middle" font-family="Arial" font-size="12" fill="#E0E0E0">systemctl stop app</text>
+
+  <!-- Pattern 3 (Default) -->
+  <rect x="575" y="150" width="150" height="60" rx="5" fill="#1E1E1E" stroke="#EF5350" stroke-width="2" />
+  <text x="650" y="175" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#EF5350">*)</text>
+  <text x="650" y="200" text-anchor="middle" font-family="Arial" font-size="12" fill="#E0E0E0">Usage message</text>
+
+  <!-- Close Case -->
+  <line x1="150" y1="210" x2="150" y2="300" stroke="#888" stroke-width="2" />
+  <line x1="400" y1="210" x2="400" y2="300" stroke="#888" stroke-width="2" />
+  <line x1="650" y1="210" x2="650" y2="300" stroke="#888" stroke-width="2" />
+  
+  <path d="M 150 300 L 650 300 L 650 330" stroke="#888" stroke-width="2" fill="none" />
+  <line x1="150" y1="300" x2="400" y2="300" stroke="#888" stroke-width="2" />
+  <line x1="400" y1="300" x2="400" y2="330" stroke="#888" stroke-width="2" />
+
+  <rect x="350" y="330" width="100" height="40" rx="10" fill="#1E1E1E" stroke="#BB86FC" stroke-width="2" />
+  <text x="400" y="355" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#BB86FC">esac</text>
+
+</svg>
