@@ -215,6 +215,7 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "01-beginner/99-supplemental-content/01-phase-1/03-windows-basics/README_RESTORATION.md",
     "01-beginner/99-supplemental-content/03-phase-3/readme.md",
     "01-beginner/99-supplemental-content/02-phase-2/10-container-security-basics/readme.md",
     "01-beginner/99-supplemental-content/02-phase-2/09-compliance-as-code-foundations/readme.md",
@@ -259,7 +260,6 @@
     "01-beginner/99-supplemental-content/02-phase-2/01-automation/07-terraform-patterns/part-01-core-fundamentals/01-foundations-and-variables/variables.tf",
     "01-beginner/99-supplemental-content/02-phase-2/01-automation/07-terraform-patterns/part-01-core-fundamentals/01-foundations-and-variables/readme.md",
     "01-beginner/99-supplemental-content/02-phase-2/01-automation/07-terraform-patterns/readme.md",
-    "01-beginner/99-supplemental-content/02-phase-2/01-automation/06-ansible-dynamic-inventory/reference/ansible-security-rbac-ref.md",
     "01-beginner/99-supplemental-content/02-phase-2/01-automation/03-go-basics/part-03-go-systems-drafting/04-capstone-cli-tool/go-cli-hero.png",
     "Untitled.canvas"
   ]
