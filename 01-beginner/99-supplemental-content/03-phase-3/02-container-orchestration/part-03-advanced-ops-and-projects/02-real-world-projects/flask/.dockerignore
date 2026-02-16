@@ -1,0 +1,33 @@
+# Ignore common version control and environment files
+.git
+.gitignore
+.hg
+.svn
+
+# Ignore build output directories and temporary files
+**/build
+**/dist
+**/tmp
+*.log
+*.lock
+
+# Ignore dependency installation directories for specific languages (handled within the container)
+node_modules
+venv
+env
+*.venv
+
+# Ignore sensitive information/secrets
+*.env
+dev.env
+.aws
+.ssh
+
+# Ignore common OS-specific files
+.DS_Store
+Thumbs.db
+
+# Keep the Dockerfile and README.md in the build context
+# (Files are included by default unless ignored, this is just illustrative)
+!Dockerfile
+!README.md
