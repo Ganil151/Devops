@@ -215,6 +215,7 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "tree.txt",
     "01-beginner/RESTORATION_AUDIT.json",
     "01-beginner/RESTORATION_COMPLETE.md",
     "01-beginner/NAVIGATION_GUIDE.md",
@@ -259,7 +260,6 @@
     "01-beginner/99-supplemental-content/02-phase-2/01-automation/07-terraform-patterns/reference/terraform-modular-architecture-ref.md",
     "01-beginner/99-supplemental-content/02-phase-2/01-automation/07-terraform-patterns/part-03-advanced-workflows/01-advanced-state-and-dry-patterns/backend.tf",
     "01-beginner/99-supplemental-content/02-phase-2/01-automation/07-terraform-patterns/part-02-modular-architecture/01-modules-and-environment-isolation/modules/s3-bucket/main.tf",
-    "01-beginner/99-supplemental-content/02-phase-2/01-automation/07-terraform-patterns/part-01-core-fundamentals/01-foundations-and-variables/variables.tf",
     "01-beginner/99-supplemental-content/02-phase-2/01-automation/03-go-basics/part-03-go-systems-drafting/04-capstone-cli-tool/go-cli-hero.png",
     "Untitled.canvas"
   ]
