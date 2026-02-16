@@ -8,27 +8,24 @@
 ## 🏛️ Architecture Overview
 
 ```mermaid
-graph TD
-    subgraph Core_Flow [The DevOps Lifecycle]
-        P1[01-Engineering-Foundations] -->|Supports| P2[02-Automation-Orchestration]
-        P2 -->|Enables| P4[04-Career-Strategy-Ops]
-    end
+graph TB
+    P1[01-Engineering-Foundations]
+    P2[02-Automation-Orchestration]
+    P3[03-The-Reference-Vault]
+    P4[04-Career-Strategy-Ops]
+    P5[05-Assets-and-Themes]
     
-    subgraph Knowledge_Sync [Intelligence Layer]
-        P3[03-The-Reference-Vault]
-        P5[05-Assets-and-Themes]
-    end
+    P1 -->|Supports| P2
+    P1 -->|Documented in| P3
+    P2 -->|Enables| P4
+    P3 -->|References| P5
+    P4 -->|Uses| P5
     
-    P1 -.->|Indexed in| P3
-    P2 -.->|Detailed in| P3
-    P3 -.->|Links to| P5
-    P4 -.->|Visualized by| P5
-    
-    style P1 fill:#4CAF50,stroke:#333,stroke-width:2px
-    style P2 fill:#2196F3,stroke:#333,stroke-width:2px
-    style P4 fill:#9C27B0,stroke:#333,stroke-width:2px
-    style P3 fill:#FF9800,stroke:#333,stroke-width:1px
-    style P5 fill:#F44336,stroke:#333,stroke-width:1px
+    style P1 fill:#4CAF50
+    style P2 fill:#2196F3
+    style P3 fill:#FF9800
+    style P4 fill:#9C27B0
+    style P5 fill:#F44336
 ```
 
 ---
