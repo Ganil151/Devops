@@ -215,6 +215,8 @@
   },
   "active": "e5b53e735af933f6",
   "lastOpenFiles": [
+    "01-beginner/02-Networking-Logic/01-Reference/01-Networking-Master-Guide.md",
+    "01-beginner/05-Container-Essentials/01-Reference/Network/Container-Networking.md",
     "01-beginner/05-Container-Essentials/01-Reference/Runtime/Lifecycle-and-Ops.md",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/07-functions-and-modules/challenges/solutions/solution-03-config-pkg/config/init.py",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/07-functions-and-modules/challenges/solutions/solution-03-config-pkg/config/settings.py",
@@ -257,8 +259,6 @@
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-02-python-architecture/04-testing-and-qa/readme.md",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-02-python-architecture/04-testing-and-qa/challenges.md",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-02-python-architecture/03-yaml-handling/readme.md",
-    "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-02-python-architecture/03-yaml-handling/challenges.md",
-    "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-02-python-architecture/02-json-handling/readme.md",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/assets/python-error-handling.png",
     "01-beginner/04-Scripting-Automation/02-Labs/Python-Basics/part-01-python-foundations/assets/python-data-flow.png",
     "Untitled.canvas"
