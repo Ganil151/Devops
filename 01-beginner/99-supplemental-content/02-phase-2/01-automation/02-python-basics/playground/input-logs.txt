@@ -1,5 +1,0 @@
-2026-01-30 [INFO] System boot complete.
-2026-01-30 [ERROR] Connection timed out on port 5432.
-2026-01-30 [INFO] User login: jdoe.
-2026-01-30 [ERROR] Permission denied on /etc/shadow.
-2026-01-31 [WARNING] Disk usage above 80%.

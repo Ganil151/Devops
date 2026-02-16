@@ -1,1 +1,0 @@
-Windows Admin Center: https://www.microsoft.com/en-us/evalcenter/evaluate-windows-admin-center
