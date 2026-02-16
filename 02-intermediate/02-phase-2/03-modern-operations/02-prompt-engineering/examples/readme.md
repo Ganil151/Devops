@@ -12,7 +12,7 @@ Explore how Intermediate Prompt Engineering is applied to solve complex DevOps c
    - **Goal**: Identify any high-risk security misconfigurations.
    - **Criteria**: Check for open ports (0.0.0.0/0), unencrypted S3 buckets, and lack of logging.
    - **Output**: If issues are found, list them as 'WARNING' bullet points. If no issues, reply 'NO ISSUES FOUND'."
-1. **Outcome**: The AI catches 80% of common errors instantly, allowing the humans to focus on complex architectural risks.
+3. **Outcome**: The AI catches 80% of common errors instantly, allowing the humans to focus on complex architectural risks.
 
 ---
 
