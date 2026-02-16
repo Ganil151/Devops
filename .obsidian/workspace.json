@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/03-git-version-control/01-beginner-level/03-git-commands/readme.md",
+                "file": "01-beginner/03-git-version-control/02-intermediate-level/01-git-workflows/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "01-beginner/03-git-version-control/01-beginner-level/03-git-commands/readme.md",
     "01-beginner/03-git-version-control/01-beginner-level/02-git-fundamentals/readme.md",
     "08-resources/05-templates-and-boilerplates/terraform-aws-base.tf",
     "08-resources/05-templates-and-boilerplates/ansible-base.yml",
@@ -260,7 +262,6 @@
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/README.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/troubleshooting.md",
     "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/n8n-mastery.md",
-    "02-intermediate/03-phase-3/04-mcp/02-building-mcp-servers/n8n/guides/TROUBLESHOOTING.md",
     "Untitled.canvas"
   ]
 }
