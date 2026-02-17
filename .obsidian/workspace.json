@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03-advanced/02-phase-2/03-part-3-the-building-blocks/02-ai-operations/01-aiops-ml-operations/challenges.md",
+                "file": "02-intermediate/02-phase-2/02-delivery-and-governance/01-ci-cd-pipelines/02-part-2-the-engine/02-jenkins-mastery/commands/comprehensive-jenkins-commands-and-diagnostics-reference.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "challenges"
+              "title": "comprehensive-jenkins-commands-and-diagnostics-reference"
             }
           }
         ]
@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "03-advanced/02-phase-2/03-part-3-the-building-blocks/02-ai-operations/01-aiops-ml-operations/challenges.md",
     "02-intermediate/02-phase-2/02-delivery-and-governance/02-gitops-mastery/reference/argocd-architecture-ref.md",
     "01-beginner/99-supplemental-content/02-phase-2/02-api-basics/reference/api-testing-devops-ref.md",
     "03-advanced/02-phase-2/02-part-2-the-engine/03-advanced-automation/01-part-1-the-blueprint/reference/advanced-automation-patterns-ref.md",
@@ -251,7 +252,6 @@
     "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/part-01-advanced-reasoning/readme.md",
     "01-beginner/99-supplemental-content/01-phase-1/03-windows-basics/RESTORATION_SUMMARY.md",
     "01-beginner_RECOVERY/99-supplemental-content/01-phase-1/03-windows-basics/part-1-powershell-automation/commands/diskandstorage/format-volume.md",
-    "01-beginner/99-supplemental-content/01-phase-1/03-windows-basics/AUDIT_LOG.md",
     "01-beginner/05-Foundational-Containers/images/dockerstates.png",
     "01-beginner/05-Foundational-Containers/images/dockerarch.png",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-00-prerequisites/04-anaconda-setup/assets/environment-lifecycle.png",
