@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ssh-",
+                "query": "ssh-co",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
