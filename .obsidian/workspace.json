@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "keysc",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
