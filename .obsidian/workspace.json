@@ -216,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "07-boilerplates/04-playground/Linux/Fedora/tools.txt",
     "07-boilerplates/04-playground/Linux/Fedora/thermal_guard.py",
     "07-boilerplates/04-playground/Linux/Fedora",
     "07-boilerplates/04-playground/Linux",
@@ -251,7 +252,6 @@
     "01-beginner/readme.md",
     "01-beginner/tree.txt",
     "01-beginner/05-Foundational-Containers/resources/learning-docker.pdf",
-    "01-beginner/05-Foundational-Containers/resources/docker.pdf",
     "01-beginner/05-Foundational-Containers/images/dockerstates.png",
     "01-beginner/05-Foundational-Containers/images/dockerarch.png",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-00-prerequisites/04-anaconda-setup/assets/environment-lifecycle.png",
