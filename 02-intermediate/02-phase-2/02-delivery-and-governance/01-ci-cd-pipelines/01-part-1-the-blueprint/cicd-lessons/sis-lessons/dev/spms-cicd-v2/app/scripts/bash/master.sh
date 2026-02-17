@@ -34,7 +34,7 @@ sudo yum install -y jenkins
 
 # Configure Jenkins
 sudo systemctl enable jenkins
-sudo systemctl start jenkins
+sudo systemctl start jenkins 
 
 # Configure Java in Jenkins
 echo "Configure Java"
