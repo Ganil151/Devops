@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-beginner/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-00-prerequisites/03-virtual-environments/readme.md",
+                "file": "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "DEPLOYMENT_CHECKLIST"
             }
           }
         ]
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 282.5,
-    "collapsed": true
+    "width": 282.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -216,15 +215,18 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
-    "07-boilerplates/04-playground/Linux/Fedora/tools.txt",
-    "07-boilerplates/04-playground/Linux/Fedora/thermal_guard.py",
-    "07-boilerplates/04-playground/Linux/Fedora",
-    "07-boilerplates/04-playground/Linux",
-    "07-boilerplates/04-playground/Ollama-Qwen/audit_database.py",
-    "07-boilerplates/04-playground/Ollama-Qwen/ollama_audit_wrapper.py",
-    "07-boilerplates/04-playground/Ollama-Qwen/:wq",
-    "07-boilerplates/04-playground/Ollama-Qwen/install_ollama_qwen.py",
-    "07-boilerplates/04-playground/Ollama-Qwen",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/ansible-test/worker_bootstrap.sh",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/ansible-test/sonarqube_bootstrap.sh",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/ansible-test/jenkins_bootstrap.sh",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/ansible-test/configure_ssh.sh",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/ansible-test/check-dry.sh",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/scripts/ansible-test",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/pom.xml",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/docker/grafana/provisioning/datasources/all.yml",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/docker/grafana/provisioning/dashboards/all.yml",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/docker/grafana/provisioning/datasources",
+    "05-labs/play-ground/microservices/spring-petclinic-microservices/docker/grafana/provisioning/dashboards",
+    "01-beginner/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-00-prerequisites/03-virtual-environments/readme.md",
     "01-beginner/99-supplemental-content/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/02-prompt-toolkit/readme.md",
     "01-beginner/99-supplemental-content/ORGANIZATION_SUMMARY.md",
     "01-beginner/99-supplemental-content/01-phase-1/00-PHASE-1-DIRECTORY_MAP.md",
@@ -249,9 +251,6 @@
     "01-beginner/03-git-version-control/MASTER_README.md",
     "01-beginner/02-networking-concepts/MASTER_README.md",
     "01-beginner/01-linux-fundamentals/MASTER_README.md",
-    "01-beginner/readme.md",
-    "01-beginner/tree.txt",
-    "01-beginner/05-Foundational-Containers/resources/learning-docker.pdf",
     "01-beginner/05-Foundational-Containers/images/dockerstates.png",
     "01-beginner/05-Foundational-Containers/images/dockerarch.png",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-00-prerequisites/04-anaconda-setup/assets/environment-lifecycle.png",
