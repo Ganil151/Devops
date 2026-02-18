@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "webhook",
+                "query": "ansible",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -214,7 +214,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "aec6a72c06563655",
   "lastOpenFiles": [
     "03-advanced/02-phase-2/03-part-3-the-building-blocks/02-ai-operations/01-aiops-ml-operations/challenges.md",
     "02-intermediate/02-phase-2/02-delivery-and-governance/02-gitops-mastery/reference/argocd-architecture-ref.md",
