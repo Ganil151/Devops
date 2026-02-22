@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/02-phase-2/02-delivery-and-governance/01-ci-cd-pipelines/01-part-1-the-blueprint/cicd-lessons/notes/cicd-com.md",
+                "file": "01-beginner/99-supplemental-content/03-phase-3/01-ci-cd-foundations/reference/artifact-registry-governance-ref.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "cicd-com"
+              "title": "artifact-registry-governance-ref"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ansible",
+                "query": "nexus",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,13 +84,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 282.5,
-    "collapsed": true
+    "width": 253.5
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,44 +213,46 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "e5b53e735af933f6",
   "lastOpenFiles": [
-    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/11-commands/11-output.md",
-    "01-beginner/01-linux-fundamentals/Assessment/05-ssh-interview.md",
-    "06-quizzes/02-intermediate/03-iac-terraform-ansible.md",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/README.md",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/ansible.cfg",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/group_vars/all.yml",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/group_vars",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/roles/maven/tasks/main.yml",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/roles/maven/defaults/main.yml",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/roles/kubectl/tasks/main.yml",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/roles/kubectl/defaults/main.yml",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/roles/java/tasks/main.yml",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/roles/java/defaults/main.yml",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/ansible/roles/awscli/tasks/main.yml",
-    "01-beginner/99-supplemental-content/02-phase-2/01-automation/00-foundations/part-01-philosophy-and-mindset/01-maturity-model.md",
-    "02-intermediate/02-phase-2/02-delivery-and-governance/01-ci-cd-pipelines/02-part-2-the-engine/02-jenkins-mastery/commands/comprehensive-jenkins-commands-and-diagnostics-reference.md",
-    "03-advanced/02-phase-2/03-part-3-the-building-blocks/02-ai-operations/01-aiops-ml-operations/challenges.md",
-    "02-intermediate/02-phase-2/02-delivery-and-governance/02-gitops-mastery/reference/argocd-architecture-ref.md",
-    "01-beginner/99-supplemental-content/02-phase-2/02-api-basics/reference/api-testing-devops-ref.md",
-    "03-advanced/02-phase-2/02-part-2-the-engine/03-advanced-automation/01-part-1-the-blueprint/reference/advanced-automation-patterns-ref.md",
-    "01-beginner/01-linux-fundamentals/Assessment/05-ssh-quiz.md",
-    "02-intermediate/02-phase-2/02-delivery-and-governance/01-ci-cd-pipelines/01-part-1-the-blueprint/cicd-lessons/notes/cicd-com.md",
-    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/03-server-configuration-and-ansible/01-ansible/command-reference.md",
-    "05-labs/play-ground/microservices/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
-    "01-beginner/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-00-prerequisites/03-virtual-environments/readme.md",
-    "01-beginner/99-supplemental-content/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/02-prompt-toolkit/readme.md",
-    "01-beginner/99-supplemental-content/ORGANIZATION_SUMMARY.md",
-    "01-beginner/99-supplemental-content/01-phase-1/00-PHASE-1-DIRECTORY_MAP.md",
-    "01-beginner/99-supplemental-content/03-phase-3/00-PHASE-3-DIRECTORY_MAP.md",
-    "01-beginner/99-supplemental-content/02-phase-2/00-PHASE-2-DIRECTORY_MAP.md",
-    "01-beginner/99-supplemental-content/00-MASTER_DIRECTORY_MAP.md",
-    "01-beginner/99-supplemental-content/SUPPLEMENTAL_CONTENT_AUDIT.md",
-    "01-beginner/99-supplemental-content/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/02-prompt-toolkit/slash-commands.md",
-    "01-beginner/99-supplemental-content/02-phase-2/06-prompt-engineering/part-01-ai-fundamentals/01-foundations-and-mental-models/readme.md",
-    "02-intermediate/reference.md",
-    "02-intermediate/02-phase-2/03-modern-operations/02-prompt-engineering/examples/readme.md",
+    "05-labs/play-ground/microservices/spms-project-2",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/vpc/networking/variables.tf",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/vpc/networking/subnets.tf",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/vpc/networking/routing.tf",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/vpc/networking/outputs.tf",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/vpc/networking/main.tf",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/vpc/networking/README.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/docker/grafana/provisioning/dashboards/all.yml",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/docker/grafana/provisioning/datasources/all.yml",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/ansible/roles/maven/tasks/main.yml",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/ansible/roles/maven/defaults/main.yml",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/ansible/roles/docker/tasks/main.yml",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/vpc/README.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/secrets/README.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/rds-postgres/README.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/eks/README.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/monitoring/README.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/ecr/README.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/modules/alb/README.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/RUNBOOK_AWS_DEPLOY.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/terraform/README.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/scripts/README.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/checklist/post-mortem-template.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/checklist/launch-checklist.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/docs/RUNBOOK_AWS_DEPLOY.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/docs/REFACTORING_SUMMARY.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/docs/QUICK_REFERENCE.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/docs/PORT_SUMMARY.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/docs/PORT_CONFIGURATION.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/docs/JAVA21_MIGRATION.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/docs/DEPLOYMENT_CHECKLIST.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/ansible/README.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/readme.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/contributing.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/cicd-implementation.md",
+    "05-labs/play-ground/microservices/spms-project-1/spring-petclinic-microservices/architecture.md",
+    "02-intermediate/05-Foundational-Containers/images/dockerstates.png",
+    "02-intermediate/05-Foundational-Containers/images/dockerarch.png",
     "01-beginner/05-Foundational-Containers/images/dockerstates.png",
     "01-beginner/05-Foundational-Containers/images/dockerarch.png",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-00-prerequisites/04-anaconda-setup/assets/environment-lifecycle.png",
@@ -261,8 +261,6 @@
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-01-python-foundations/07-functions-and-modules/assets/monolith-vs-modular.png",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-01-python-foundations/07-functions-and-modules/assets/function-anatomy.png",
     "01-beginner/04-Scripting-Automation/02-Python-Basics/part-01-python-foundations/04-data-structures/assets/python-data-structures.png",
-    "01-beginner/04-Scripting-Automation/02-Python-Basics/part-01-python-foundations/04-data-structures/assets/list-vs-tuple.png",
-    "01-beginner/04-Scripting-Automation/02-Python-Basics/part-01-python-foundations/04-data-structures/assets/dict-vs-set.png",
     "Untitled.canvas"
   ]
 }
