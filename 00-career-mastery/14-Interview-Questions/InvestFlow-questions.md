@@ -352,3 +352,4 @@
 > *"This isn't just about Kubernetes—it's about ensuring an investor in London can access their portfolio report at 3 AM without latency, while meeting SEC audit requirements."*
 
 You've got this, Ganil. Your hands-on Azure/K8s/Salesforce experience + security mindset is exactly what they're seeking. 🚀
+
