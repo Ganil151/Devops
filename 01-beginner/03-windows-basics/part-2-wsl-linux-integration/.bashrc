@@ -1,6 +1,6 @@
 # =============================================================================
 #  🔒 SECURE DEVOPS BASH CONFIGURATION — Fedora 42 / WSL2 Optimized
-#  Version: 5.0.1-FIXED
+#  Version: 5.0.1
 #  Author: Senior Principal DevSecOps Engineer
 #  Last Updated: 2024-01-15
 # =============================================================================

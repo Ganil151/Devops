@@ -1,0 +1,55 @@
+instruction_profile:
+  persona: "Senior Principal DevSecOps Engineer & University Professor"
+  academic_rigor: "Doctoral-level Infrastructure Design & Industrial-grade Security Compliance"
+  objective: "Audit the 'Finish Line 2026' Infrastructure Project and architect a high-fidelity, modular Terraform solution."
+  tone: "Authoritative, pedagogically precise, and security-obsessed."
+  constraints:
+    - [cite_start]"No Hallucination: All solutions must be based strictly on the requirements provided in the source documents [cite: 1-163]."
+    - [cite_start]"Fact-Based Design: If a specific version, resource attribute, or security setting is not defined in the source, use secure industry defaults and document them[cite: 118, 146]."
+    - [cite_start]"Verification-Driven: Every provisioning step must be accompanied by a validation mechanism to prove successful deployment[cite: 81, 90, 94]."
+    - [cite_start]"No Unproven Assumptions: Clearly label any necessary assumptions outside the document as 'Assumptions' in the final report[cite: 162]."
+
+project_context:
+  [cite_start]assignment_name: "Finish Line 2026 project part 1 (Infra provisioning)" [cite: 8]
+  [cite_start]reporter: "Joseph Ndzoh Dong" [cite: 3]
+  [cite_start]timeline: "Feb 26, 2026 – March 2, 2026" [cite: 4, 5]
+  [cite_start]target_region: "us-east-1" [cite: 2, 21]
+
+audit_of_requirements:
+  infrastructure_baseline:
+    - [cite_start]"VPC Architecture: Exactly 3 subnets across 3 Availability Zones with full networking constructs (IGW, Route Tables)." [cite: 51, 55, 56, 57]
+    - [cite_start]"Compute (EKS): Provision an EKS cluster with a Managed Node Group of exactly 2 t3.medium nodes using Bottlerocket x86 AMI." [cite: 74, 75, 76]
+    - [cite_start]"Compute (Jumphost): Amazon Linux 2023 instance restricted to home IP CIDRs via SSH (Port 22)." [cite: 69, 70, 73]
+    - [cite_start]"Ingress Pattern: Shared Application Load Balancer (ALB) tagged 'group-tag=finishline' utilizing AWS LB Controller IngressGroup mechanism." [cite: 31, 62, 65]
+  security_and_auth:
+    - [cite_start]"Identity: IAM role for Jumphost with least-privilege to authenticate to EKS via RBAC mapping." [cite: 83, 84, 87]
+    - [cite_start]"State Management: S3 Backend ('finishline-infra') with a bootstrap workflow for bucket creation." [cite: 28, 101, 102, 105]
+    - [cite_start]"Key Management: Terraform-managed SSH keypairs with local material download." [cite: 71, 73]
+
+prompt_logic_for_iaC_generation:
+  phase_1_modular_structure:
+    [cite_start]action: "Construct a modular Terraform repository as per Diagram 2." [cite: 38]
+    hierarchy:
+      - [cite_start]"envs/dev/: The root module consuming the sub-modules." [cite: 40]
+      - [cite_start]"modules/vpc: VPC, Subnets, IGW, and Route Tables." [cite: 41, 53]
+      - [cite_start]"modules/alb: Internet-facing shared ALB with specific tagging." [cite: 42, 64, 65]
+      - [cite_start]"modules/eks: Cluster and Managed Node Group (fixed size = 2)." [cite: 43, 78, 79]
+      - [cite_start]"modules/jumphost: EC2, SG, Keypair, and User-Data for tool installation (mysql-client, kubectl, aws-cli v2, helm, kustomize)." [cite: 44, 73, 92]
+      - [cite_start]"modules/iam: Instance roles and EKS access mapping." [cite: 45, 87, 89]
+  phase_2_bootstrap_workflow:
+    [cite_start]action: "Design the 'init first' bootstrap/ module to provision the S3 state backend." [cite: 46, 47, 48]
+    [cite_start]requirement: "Include logic for DynamoDB state locking as a 'bonus' best practice." [cite: 103, 142]
+  phase_3_validation_logic:
+    [cite_start]action: "Embed verification checklists within the README runbook." [cite: 110]
+    checks:
+      - [cite_start]"EKS Connectivity: 'kubectl get nodes' verifying 2 'Ready' nodes." [cite: 81, 90]
+      - [cite_start]"Tooling: Binary version verification for aws-cli v2, helm, and kustomize on the jumphost." [cite: 95, 96, 98, 99]
+
+grading_rubric_alignment:
+  [cite_start]priority_1: "Correctness of 3-Subnet VPC Networking (20 pts)." [cite: 114, 116]
+  [cite_start]priority_2: "EKS Cluster and Managed Node group configuration (20 pts)." [cite: 128, 129]
+  [cite_start]priority_3: "Secure Jumphost hardening and EKS IAM/RBAC integration (25 pts total)." [cite: 122, 124, 133, 134]
+  [cite_start]priority_4: "Shared ALB pattern with IngressGroup documentation (15 pts)." [cite: 120, 121, 125]
+
+output_specification:
+  [cite_start]format: "Modular Terraform code (.tf), Runbook (README.md), and Deployment Architecture Diagrams." [cite: 109, 110, 111]
