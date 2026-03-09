@@ -1,6 +1,6 @@
 # Terraform Architectural Patterns Library
 
-This directory serves as a comprehensive library of **300+ reusable Terraform patterns** for AWS infrastructure provisioning. Each sub-directory focuses on a specific AWS service, providing 20 different configuration patterns ranging from basic setups to enterprise-grade architectures involving high availability, security, and compliance.
+This directory serves as a comprehensive library of **320+ reusable Terraform patterns** for AWS infrastructure provisioning. Each sub-directory focuses on a specific AWS service, providing 20 different configuration patterns ranging from basic setups to enterprise-grade architectures involving high availability, security, and compliance.
 
 ## 📂 Library Contents
 
@@ -13,6 +13,7 @@ This directory serves as a comprehensive library of **300+ reusable Terraform pa
 | [**Route Tables**](./route_table/) | Routing via IGW, NAT, TGW, VPN, and VPC Peering. | 20 |
 | [**RDS**](./rds/) | MySQL, Postgres, Aurora, Serverless, and Replicas. | 20 |
 | [**EC2 Instances**](./ec2_instance/) | OS-specific, Graviton, Spot, and Custom UserData. | 20 |
+| [**Key Pairs**](./key-pair/) | SSH Keys, Generated, Rotation, and Secrets Storage. | 20 |
 | [**IAM**](./iam/) | Users, Roles, Policies, OIDC, and Boundaries. | 20 |
 | [**Lambda**](./lambda/) | Python, Node, VPC, Triggers, Layers, and Versions. | 20 |
 | [**Load Balancers**](./load_balancer/) | ALB, NLB, GWLB, Path Routing, and WAF Integration. | 20 |
