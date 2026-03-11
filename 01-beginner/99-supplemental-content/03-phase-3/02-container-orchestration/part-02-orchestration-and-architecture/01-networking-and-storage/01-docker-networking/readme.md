@@ -39,12 +39,12 @@ By the end of this module, you will:
 
 ## 🏗️ The Driver Landscape
 
-| Driver | Use Case | DevOps Analogy |
-| :--- | :--- | :--- |
-| **`bridge`** (Default) | Standard apps on one machine. | A private Wi-Fi network for your containers. |
-| **`host`** | High-perf apps (VoIP, High-speed data). | Removing the router and plugging directly into the wall. |
-| **`overlay`** | Swarm / Multi-host apps. | A VPN that connects islands across the ocean. |
-| **`none`** | Air-gapped / High-security tasks. | A vault with no internet or phone line. |
+| Driver             | Use Case                                | DevOps Analogy                                           |
+| :----------------- | :-------------------------------------- | :------------------------------------------------------- |
+| `bridge` (Default) | Standard apps on one machine.           | A private Wi-Fi network for your containers.             |
+| `host`             | High-perf apps (VoIP, High-speed data). | Removing the router and plugging directly into the wall. |
+| `overlay`          | Swarm / Multi-host apps.                | A VPN that connects islands across the ocean.            |
+| `none`             | Air-gapped / High-security tasks.       | A vault with no internet or phone line.                  |
 
 ---
 

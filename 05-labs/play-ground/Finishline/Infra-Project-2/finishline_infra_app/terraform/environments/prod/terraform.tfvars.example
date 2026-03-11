@@ -1,0 +1,10 @@
+# =============================================================================
+# Example Variables: prod Environment
+# Copy this file to terraform.tfvars and update values
+# =============================================================================
+
+project_name = "finishline-infra"
+environment  = "prod"
+aws_region   = "us-east-1"
+
+# Add more variables as needed
