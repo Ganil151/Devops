@@ -59,6 +59,12 @@ graph TD
 | **[02-infrastructure-as-code](./02-core-engineering/02-infrastructure-as-code/readme.md)** | Terraform, Ansible, Packer, Terragrunt | ✅ Complete |
 | **[03-automation-python](./02-core-engineering/03-automation-python/readme.md)** | Python foundations, boto3, systems automation | ✅ Complete |
 | **[04-containers-orchestration](./02-core-engineering/04-containers-orchestration/readme.md)** | Docker, Kubernetes, Helm, service mesh | ✅ Complete |
+| **[05-api-engineering](./02-core-engineering/05-api-engineering/readme.md)** | REST APIs, security, advanced workflows | ✅ Complete |
+| **[06-web-servers](./02-core-engineering/06-web-servers/readme.md)** | Nginx, reverse proxy, load balancing | ✅ Complete |
+| **[07-ci-cd](./02-core-engineering/07-ci-cd/readme.md)** | GitHub Actions, GitOps, deployment pipelines | ✅ Complete |
+| **[08-observability](./02-core-engineering/08-observability/readme.md)** | Monitoring, logging, alerting, metrics | ✅ Complete |
+| **[09-security](./02-core-engineering/09-security/readme.md)** | Compliance as code, security auditing | ✅ Complete |
+| **[10-finops](./02-core-engineering/10-finops/readme.md)** | Cloud cost optimization, budgeting | ✅ Complete |
 
 ### 🎯 Tier 3: Career Strategy
 *Professional development and career growth*
@@ -68,6 +74,7 @@ graph TD
 | **[01-personal-branding](./03-career-strategy/01-personal-branding/readme.md)** | GitHub profile, LinkedIn, portfolio projects | ✅ Complete |
 | **[02-resume-engineering](./03-career-strategy/02-resume-engineering/readme.md)** | ATS optimization, templates, examples | ✅ Complete |
 | **[03-soft-skills](./03-career-strategy/03-soft-skills/readme.md)** | Communication, day-in-life, prioritization | ✅ Complete |
+| **[04-productivity](./03-career-strategy/04-productivity/readme.md)** | Prompt engineering, AI automation | ✅ Complete |
 
 ### 🎓 Tier 4: Interview Readiness
 *Comprehensive interview preparation*

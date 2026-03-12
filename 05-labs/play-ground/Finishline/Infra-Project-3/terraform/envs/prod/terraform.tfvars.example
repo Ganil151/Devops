@@ -1,0 +1,31 @@
+# =============================================================================
+# Example Variables: prod Environment
+# Copy to terraform.tfvars and update values
+# Finish Line 2026 Infrastructure
+# =============================================================================
+
+# General
+project_name = "finishline-infra"
+environment  = "prod"
+manage_by    = "Terraform"
+aws_region   = "us-east-1"
+
+# VPC
+vpc_cidr               = "10.0.0.0/16"
+enable_dns_hostnames   = true
+enable_dns_support     = true
+availability_zones     = ["us-east-1a", "us-east-1b", "us-east-1c"]
+public_subnets_cidrs   = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+private_subnets_cidrs  = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
+
+# EKS
+cluster_name           = "finishline-infra-eks-cluster"
+cluster_version        = "1.31"
+endpoint_private_access = true
+endpoint_public_access  = true
+instance_types         = ["t3.medium"]
+
+# Jumphost - CRITICAL: Update with your home IP
+home_ip_cidrs          = ["<YOUR_HOME_IP>/32"]
+jumphost_instance_type = "t3.small"
+key_name               = "finishline-infra-key-pair"

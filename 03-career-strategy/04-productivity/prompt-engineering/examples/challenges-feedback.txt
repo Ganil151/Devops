@@ -1,0 +1,11 @@
+"Please systematically audit the Devops/ directory and populate all empty or incomplete subdirectories with coding challenges and their corresponding solutions.
+
+Requirements:
+
+Contextual Alignment: Each challenge must directly relate to the topic defined in the local README.md or the parent directory name (e.g., Python Fundamentals, CI/CD, Infrastructure as Code).
+
+Structure: Maintain the existing pattern: Create a challenges/ folder containing the prompt scripts and a solutions/ sub-folder containing the completed scripts.
+
+Naming Convention: Use the prefix challenge_XX_name.py and solution_XX_name.py.
+
+Complexity: Ensure the difficulty scales according to the path (Beginner, Intermediate, Advanced)."
