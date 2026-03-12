@@ -1,0 +1,44 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .box { fill: #2d2d2d; stroke: #306998; stroke-width: 2; rx: 8; ry: 8; }
+      .box-driver { fill: #2d2d2d; stroke: #9c27b0; stroke-width: 2; }
+      .box-browser { fill: #2d2d2d; stroke: #f44336; stroke-width: 2; }
+      .text { fill: #e0e0e0; font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; text-anchor: middle; }
+      .title { fill: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; font-size: 20px; font-weight: bold; text-anchor: middle; }
+      .arrow { stroke: #aaa; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#aaa" />
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" class="bg" />
+  <text x="400" y="40" class="title">Selenium Web Automation Architecture</text>
+
+  <!-- Script -->
+  <rect x="50" y="150" width="150" height="80" class="box" />
+  <text x="125" y="190" class="text">Python Script</text>
+  <text x="125" y="210" class="text" style="font-size:11px; fill:#888;">(Automation Logic)</text>
+
+  <!-- Driver -->
+  <rect x="300" y="150" width="150" height="80" class="box-driver" />
+  <text x="375" y="190" class="text">WebDriver</text>
+  <text x="375" y="210" class="text" style="font-size:11px; fill:#888;">(Gecko/Chrome Driver)</text>
+
+  <!-- Browser -->
+  <rect x="550" y="150" width="200" height="120" class="box-browser" />
+  <text x="650" y="190" class="text">Browser Instance</text>
+  <text x="650" y="210" class="text" style="font-size:11px; fill:#888;">(DOM / JavaScript Execution)</text>
+
+  <!-- Connections -->
+  <path d="M 200 190 L 300 190" class="arrow" />
+  <text x="250" y="180" class="text" style="font-size:10px;">Commands</text>
+  
+  <path d="M 450 190 L 550 190" class="arrow" />
+  <text x="500" y="180" class="text" style="font-size:10px;">Native Hooks</text>
+
+  <!-- Return Loop -->
+  <path d="M 650 270 C 650 350, 125 350, 125 230" class="arrow" stroke-dasharray="5,5" />
+  <text x="400" y="340" class="text" style="font-size:11px;">Status &amp; Screenshots</text>
+</svg>

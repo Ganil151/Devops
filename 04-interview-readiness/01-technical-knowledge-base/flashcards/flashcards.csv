@@ -1,0 +1,67 @@
+How does the traffic transition differ between Blue/Green and Canary deployments?,"Blue/Green switches 100% of traffic at once, while Canary rolls it out to a small percentage of users incrementally."
+Which tool is commonly used to manage automated traffic splitting and Canary rollouts in Kubernetes?,Flagger or Argo Rollouts.
+"In Kubernetes, what does the status 'OOMKilled' indicate about a pod?",The container was terminated by the system for exceeding its allocated memory limit.
+Which Linux exit code specifically denotes that a process was terminated by the Out-of-Memory (OOM) Killer?,137
+What is the primary objective of a 'Soak' load test?,To identify memory leaks or resource degradation by running a system at high load for an extended period.
+List the three pillars of observability.,"Logs, Metrics, and Traces."
+Which pillar of observability is best for visualizing the path of a single request across multiple microservices?,Traces
+What does the acronym 'CHREC' represent in regulated DevOps environments?,Change Request or Change Record.
+Why is a 'CHREC' essential for operations at a fintech company like InvestorFlow?,It provides a formal audit trail and risk assessment for every production change.
+"In a TCP three-way handshake, what is the second packet sent to establish a connection?",SYN-ACK
+What is the purpose of the 'ACK' packet in a TCP handshake?,It is the final acknowledgment from the client to the server that the connection is established.
+What is the primary function of a 'private subnet' in a tiered cloud architecture?,To isolate application servers and databases from direct exposure to the public internet.
+How does Mutual TLS (mTLS) enhance security within a service mesh?,"It ensures that both the client and the server verify each other's certificates for encrypted, two-way identity authentication."
+Which JVM flag should be tuned to ensure a containerized Java application respects its memory limits?,$-Xmx$ or $-XX:MaxRAMPercentage$.
+What is a major infrastructure trade-off when using a Blue/Green deployment strategy?,It requires double the infrastructure cost to maintain two identical environments simultaneously.
+"In performance monitoring, what does 'P95 latency' signify?",The latency threshold that 95% of all requests fall below.
+"Which Kubernetes tool automates the provisioning, management, and renewal of TLS certificates?",cert-manager
+What is the function of a 'Sync Gate' in a Salesforce-integrated CI/CD pipeline?,It ensures that Salesforce metadata and backend containerized services are deployed in a synchronized version state.
+Which cloud provider serves as the primary infrastructure for InvestorFlow?,Azure
+The practice of using machine-readable definition files to manage and provision infrastructure is known as _____.,Infrastructure as Code (IaC)
+What is the purpose of a 'Liveness Probe' in Kubernetes?,To determine if a container is still running correctly and trigger a restart if it is unresponsive.
+"In Azure, what is the primary role of a 'Network Security Group' (NSG)?",To act as a firewall that filters network traffic to and from Azure resources in a virtual network.
+"What compliance standard evaluates a company's controls regarding security, availability, and data confidentiality?",SOC 2
+What is the core practice of 'Continuous Integration' (CI)?,Merging developer code changes into a central repository frequently to trigger automated builds and tests.
+The operational framework that treats Git as the single source of truth for infrastructure and application state is called _____.,GitOps
+Why is a 'Baseline' load test performed before stress testing?,To establish standard performance metrics under normal traffic conditions for comparison.
+What information does a 'Log' typically provide in observability?,A discrete record of a specific event that happened at a particular point in time.
+Which networking packet is used to initiate the synchronization of sequence numbers during a TCP handshake?,SYN
+Where should sensitive credentials be stored in a Kubernetes environment to avoid hardcoding them in source code?,In Kubernetes Secrets or an external vault like Azure Key Vault.
+What is 'Drift' in the context of Infrastructure as Code?,The discrepancy that occurs when the actual state of the infrastructure deviates from the configuration defined in code.
+Why is 'TLS 1.2+' a mandatory requirement for Salesforce API integrations?,To comply with modern encryption standards and ensure data integrity during transit.
+Which subnet should host the load balancer in a standard multi-tier Azure application?,The public subnet
+How does a Canary deployment strategy improve 'MTTR' (Mean Time to Recovery)?,"It allows for automated rollbacks the moment performance metrics drop, minimizing the impact of a bad release."
+Which observability pillar is best suited to answer 'Why' a system failure is trending across many users?,Metrics
+Concept: Terraform,Definition: An open-source tool used to define and provision data center infrastructure using a high-level configuration language.
+"In load testing, how is 'Throughput' defined?",The total number of requests or transactions processed by a system per unit of time.
+What is the 'Zero Trust' security model?,"A security framework that assumes no entity is trusted by default, requiring constant verification for every request."
+How does 'ArgoCD' assist in Kubernetes lifecycle management?,It automates the deployment of applications by ensuring the cluster state matches the configuration stored in Git.
+What is a 'Runbook' in a DevOps context?,A set of documented procedures used by technical teams to address specific operational tasks or incidents.
+Why should non-overlapping CIDR blocks be used when planning a multi-cloud network between Azure and AWS?,To prevent IP address conflicts when peering networks or setting up VPN connections between the clouds.
+What is the function of a 'NAT Gateway' for resources in a private subnet?,It allows private resources to connect to the internet for outbound updates while blocking unsolicited inbound connections.
+"In Kubernetes, what is the 'Resource Request' in a pod specification?",The minimum amount of CPU or memory that the scheduler guarantees a container will receive.
+"In Kubernetes, what is the 'Resource Limit' in a pod specification?",The maximum amount of CPU or memory a container is allowed to consume before being throttled or terminated.
+Why is 'anonymized data' required for load testing in the fintech industry?,To protect sensitive investor PII and maintain compliance with financial privacy regulations.
+What does the business acronym 'AUM' stand for at InvestorFlow?,Assets Under Management
+What is the primary benefit of using 'Terragrunt' alongside Terraform?,It helps keep Terraform configurations DRY (Don't Repeat Yourself) and manages remote state more efficiently.
+"Which tool is recommended for conducting scriptable, developer-centric load tests using JavaScript?",k6
+What is the security mechanism 'HSTS' (HTTP Strict Transport Security)?,A policy that forces web browsers to interact with a website only via encrypted HTTPS connections.
+What typically happens to the 'Blue' environment in a Blue/Green rollout once the 'Green' environment is live and stable?,It is kept as a standby for immediate rollback or eventually decommissioned to save costs.
+Why is 'Structured Logging' in JSON format preferred for high-scale applications?,"It allows log management systems to easily parse, index, and query log data for faster troubleshooting."
+What is the 'Shift-Left' philosophy in the DevOps lifecycle?,"Integrating security, testing, and compliance checks earlier in the development process rather than at the end."
+Why is 'automation without documentation' considered a form of technical debt?,"It creates systems that are difficult for other team members to understand, maintain, or troubleshoot without the original author."
+What is 'Containerization'?,The process of bundling an application with all its required libraries and dependencies into a single image that runs consistently across environments.
+"In Kubernetes, what is the role of 'Ingress'?","It serves as an entry point that manages external access to services, typically providing load balancing and SSL termination."
+What is 'Prometheus'?,An open-source monitoring system that collects and stores metrics as time-series data.
+What is the purpose of a 'Correlation ID' in distributed tracing?,A unique tag assigned to a request that allows its path to be tracked through various independent microservices.
+How does a 'Pod Disruption Budget' (PDB) protect an application during cluster upgrades?,It ensures that a minimum number of pod replicas remain running while the cluster undergoes maintenance.
+"In Kubernetes, what is the 'Control Plane'?","The set of components, including the API server and scheduler, that manages the overall state and orchestration of the cluster."
+What is the 'Principle of Least Privilege' for CI/CD pipelines?,Granting the pipeline only the specific permissions it needs to perform its tasks to minimize security risks.
+What is a 'Web Application Firewall' (WAF)?,A security tool that monitors and filters HTTP traffic to protect web applications from common attacks like SQL injection.
+What is 'Static Analysis' in a CI pipeline?,The automated process of checking source code for security flaws or coding standard violations without actually running the program.
+Which observability tool is typically used to visualize metrics and create monitoring dashboards?,Grafana
+What is the 'Stress' phase of a load test intended to find?,The specific point at which the application or infrastructure fails under extreme traffic.
+"In the context of the TCP handshake, what does 'retransmission' usually indicate?","Network congestion, packet loss, or a server that is failing to respond within the expected timeframe."
+Why is 'Vertical Pod Autoscaler' (VPA) often used in 'recommendation mode' initially?,To observe actual resource usage patterns before allowing the system to automatically restart pods with new resource settings.
+What is 'Continuous Deployment' (CD) as opposed to Continuous Delivery?,Continuous Deployment automatically pushes every change that passes tests into production without manual intervention.
+What is the primary purpose of a 'Readiness Probe' in Kubernetes?,To determine if a container is ready to start accepting network traffic.

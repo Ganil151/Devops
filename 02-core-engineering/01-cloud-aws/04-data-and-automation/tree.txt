@@ -1,0 +1,26 @@
+./
+├── 01-Relational-and-NoSQL-Databases/
+│   ├── aws-database-intro.md
+│   └── README.md
+├── 02-Storage-and-Lifecycle-Management/
+│   ├── README.md
+│   ├── s3-bucket-policies.md
+│   ├── s3-encryption-sse-kms-vs-sse-s3.md
+│   ├── s3-event-notifications.md
+│   ├── s3-performance-optimization.md
+│   ├── s3-replication.md
+│   └── s3-static-website.md
+├── 03-Data-Backup-and-Recovery/
+│   └── README.md
+├── 04-Infrastructure-Governance-and-Audit/
+│   ├── automation-troubleshooting-hacks.md
+│   ├── cloud-scripting-fundamentals.md
+│   ├── README.md
+│   └── resource-management-automation.md
+├── CHALLENGES.md
+├── README.md
+├── technical-guides/
+│   └── quiz.md
+└── tree.txt
+
+6 directories, 18 files

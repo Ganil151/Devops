@@ -1,0 +1,109 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark Mode Function Architecture -->
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#121212" />
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#BB86FC">DevOps Function Architecture</text>
+
+  <!-- DevOps Script (Root) -->
+  <g transform="translate(300, 80)">
+    <rect width="200" height="50" rx="25" fill="#1e1e1e" stroke="#BB86FC" stroke-width="2" filter="url(#shadow)" />
+    <text x="100" y="32" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#BB86FC">DevOps Script</text>
+  </g>
+
+  <!-- Connection: Script -> Main -->
+  <line x1="400" y1="130" x2="400" y2="160" stroke="#666" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Main Function -->
+  <g transform="translate(325, 160)">
+    <rect width="150" height="50" rx="10" fill="#1e1e1e" stroke="#2196F3" stroke-width="2" filter="url(#shadow)" />
+    <text x="75" y="32" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#2196F3">Main Function</text>
+  </g>
+
+  <!-- Splitting Connections -->
+  <path d="M 400 210 L 400 240 L 150 240 L 150 270" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M 400 210 L 400 270" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M 400 210 L 400 240 L 650 240 L 650 270" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Category: Utility Functions -->
+  <g transform="translate(50, 270)">
+    <rect width="200" height="240" rx="10" fill="#1e1e1e" stroke="#4CAF50" stroke-width="2" />
+    <rect width="200" height="35" rx="10" fill="#2e7d32" />
+    <text x="100" y="23" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#fff">Utility Functions</text>
+    
+    <g transform="translate(20, 55)">
+      <rect width="160" height="40" rx="5" fill="#263238" stroke="#4CAF50" />
+      <text x="80" y="25" text-anchor="middle" font-family="monospace" font-size="12" fill="#e0e0e0">validate_input</text>
+    </g>
+    <g transform="translate(20, 115)">
+      <rect width="160" height="40" rx="5" fill="#263238" stroke="#4CAF50" />
+      <text x="80" y="25" text-anchor="middle" font-family="monospace" font-size="12" fill="#e0e0e0">log_message</text>
+    </g>
+    <g transform="translate(20, 175)">
+      <rect width="160" height="40" rx="5" fill="#263238" stroke="#4CAF50" />
+      <text x="80" y="25" text-anchor="middle" font-family="monospace" font-size="12" fill="#e0e0e0">check_deps</text>
+    </g>
+  </g>
+
+  <!-- Category: Service Functions -->
+  <g transform="translate(300, 270)">
+    <rect width="200" height="240" rx="10" fill="#1e1e1e" stroke="#FF9800" stroke-width="2" />
+    <rect width="200" height="35" rx="10" fill="#ef6c00" />
+    <text x="100" y="23" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#fff">Service Functions</text>
+    
+    <g transform="translate(20, 55)">
+      <rect width="160" height="40" rx="5" fill="#263238" stroke="#FF9800" />
+      <text x="80" y="25" text-anchor="middle" font-family="monospace" font-size="12" fill="#e0e0e0">deploy_service</text>
+    </g>
+    <g transform="translate(20, 115)">
+      <rect width="160" height="40" rx="5" fill="#263238" stroke="#FF9800" />
+      <text x="80" y="25" text-anchor="middle" font-family="monospace" font-size="12" fill="#e0e0e0">backup_db</text>
+    </g>
+    <g transform="translate(20, 175)">
+      <rect width="160" height="40" rx="5" fill="#263238" stroke="#FF9800" />
+      <text x="80" y="25" text-anchor="middle" font-family="monospace" font-size="12" fill="#e0e0e0">restart_svc</text>
+    </g>
+  </g>
+
+  <!-- Category: Monitoring Functions -->
+  <g transform="translate(550, 270)">
+    <rect width="200" height="240" rx="10" fill="#1e1e1e" stroke="#EF5350" stroke-width="2" />
+    <rect width="200" height="35" rx="10" fill="#c62828" />
+    <text x="100" y="23" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#fff">Monitoring Functions</text>
+    
+    <g transform="translate(20, 55)">
+      <rect width="160" height="40" rx="5" fill="#263238" stroke="#EF5350" />
+      <text x="80" y="25" text-anchor="middle" font-family="monospace" font-size="12" fill="#e0e0e0">check_health</text>
+    </g>
+    <g transform="translate(20, 115)">
+      <rect width="160" height="40" rx="5" fill="#263238" stroke="#EF5350" />
+      <text x="80" y="25" text-anchor="middle" font-family="monospace" font-size="12" fill="#e0e0e0">collect_metrics</text>
+    </g>
+    <g transform="translate(20, 175)">
+      <rect width="160" height="40" rx="5" fill="#263238" stroke="#EF5350" />
+      <text x="80" y="25" text-anchor="middle" font-family="monospace" font-size="12" fill="#e0e0e0">send_alerts</text>
+    </g>
+  </g>
+
+  <!-- Legend / Info -->
+  <text x="400" y="560" text-anchor="middle" font-family="Arial" font-size="14" font-style="italic" fill="#888">Modular architecture for scalable and maintainable DevOps scripts</text>
+</svg>
