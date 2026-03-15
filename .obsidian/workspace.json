@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/infrastructure-as-code-iac-principles.md",
+                "file": "01-beginner/03-git-version-control/01-beginner-level/03-git-commands/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "infrastructure-as-code-iac-principles"
+              "title": "readme"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5
+    "width": 253.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d6d30a61d0a3b2",
@@ -215,6 +216,7 @@
   },
   "active": "19ac471caa0c1888",
   "lastOpenFiles": [
+    "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/02-iac-foundations-and-terraform/01-fundamentals/01-iac-principles/infrastructure-as-code-iac-principles.md",
     "01-beginner/readme-v2.md",
     "01-beginner/99-supplemental-content/03-phase-3/02-container-orchestration/enhancement-summary.md",
     "01-beginner/99-supplemental-content/03-phase-3/02-container-orchestration/part-02-orchestration-and-architecture/01-networking-and-storage/02-docker-volumes/readme.md",
@@ -244,7 +246,6 @@
     "01-beginner/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/05-containers/eks/eks-security-networking-guide.md",
     "01-beginner/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/05-containers/eks/eks-monitoring-troubleshooting-guide.md",
     "01-beginner/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/05-containers/eks/eks-fundamentals-guide.md",
-    "01-beginner/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/05-containers/eks/eks-cluster-setup-guide.md",
     "05-labs/play-ground/Finishline/Finishline_Infra_Project_Assignment.pdf",
     "01-beginner/03-windows-basics/part-2-wsl-linux-integration/devops-bootstrap.sh",
     "01-beginner/03-windows-basics/part-2-wsl-linux-integration/config.json",
