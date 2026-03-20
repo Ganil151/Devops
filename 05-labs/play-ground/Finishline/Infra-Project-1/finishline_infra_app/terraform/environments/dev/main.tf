@@ -124,7 +124,7 @@ resource "aws_iam_role" "jumphost_role" {
   }
 }
 
-# IAM policy for EKS cluster access
+# IAM policy for EKS cluster access (least-privilege - scoped to Finishline cluster only)
 resource "aws_iam_role_policy" "jumphost_eks_access" {
   name = "${var.project_name}-${var.environment}-jumphost-eks-access"
   role = aws_iam_role.jumphost_role.id
@@ -138,7 +138,7 @@ resource "aws_iam_role_policy" "jumphost_eks_access" {
           "eks:DescribeCluster",
           "eks:ListClusters"
         ]
-        Resource = "*"
+        Resource = "arn:aws:eks:*:*:cluster/${var.cluster_name}"
       }
     ]
   })

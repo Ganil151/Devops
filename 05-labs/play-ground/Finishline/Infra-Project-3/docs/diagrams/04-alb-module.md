@@ -170,6 +170,64 @@ sequenceDiagram
 
 ---
 
+## Ingress to Pod Traffic Flow (Assignment §61, §62)
+
+```mermaid
+flowchart LR
+    subgraph Internet_Zone["🌐 Internet Zone"]
+        Client["👤 Client<br/>Browser/App"]
+    end
+
+    subgraph VPC_Public["📦 VPC - Public Subnets (AZ 1,2,3)"]
+        subgraph ALB_Zone["🔷 Shared ALB (group-tag: finishline)"]
+            ALB_DNS["finishline-alb-*.elb.amazonaws.com"]
+            Listener80["👂 :80"]
+            Listener443["👂 :443"]
+            TargetGroup["🎯 Target Group<br/>port: 80"]
+        end
+    end
+
+    subgraph VPC_Private["📦 VPC - Private Subnets (AZ 1,2,3)"]
+        subgraph EKS_Cluster["☸️ EKS Cluster"]
+            subgraph Ingress_Zone["🎫 Kubernetes Ingress
+            (group: finishline)"]
+                Ingress["aws-load-balancer-controller
+                Ingress resource"]
+                IngressRule["Host: *.finishline.com
+                Path: /api → svc:api"]
+            end
+
+            subgraph Services["🔌 Kubernetes Services"]
+                APIService["svc:api
+                ClusterIP: 10.x.x.x"]
+                WebService["svc:web
+                ClusterIP: 10.x.x.x"]
+            end
+
+            subgraph Pods["🖥️ Pods"]
+                APIPod["api-pod
+                :8080"]
+                WebPod["web-pod
+                :8080"]
+            end
+        end
+    end
+
+    Client --HTTP/HTTPS--> ALB_DNS
+    ALB_DNS --> Listener80
+    ALB_DNS --> Listener443
+    Listener80 --> TargetGroup
+    Listener443 --> TargetGroup
+    TargetGroup -->|Route to pod| Ingress
+    Ingress --> IngressRule
+    IngressRule --> APIService
+    IngressRule --> WebService
+    APIService --> APIPod
+    WebService --> WebPod
+```
+
+---
+
 ## Key Features
 
 | Feature                | Implementation                              | Reference |

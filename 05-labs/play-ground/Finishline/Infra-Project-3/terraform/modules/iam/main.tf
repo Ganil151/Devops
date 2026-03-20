@@ -35,6 +35,8 @@ resource "aws_iam_role_policy" "jumphost_eks_readonly" {
   name = "${local.project_name}-jumphost-eks-readonly"
   role = aws_iam_role.jumphost_role.id
 
+  # Least-privilege: Scope permissions to specific Finishline cluster only
+  # ARN format: arn:aws:eks:REGION:ACCOUNT_ID:cluster/CLUSTER_NAME
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -46,7 +48,7 @@ resource "aws_iam_role_policy" "jumphost_eks_readonly" {
           "eks:ListNodegroups",
           "eks:AccessKubernetesApi"
         ]
-        Resource = "*"
+        Resource = "arn:aws:eks:*:*:cluster/${var.cluster_name}"
       }
     ]
   })
