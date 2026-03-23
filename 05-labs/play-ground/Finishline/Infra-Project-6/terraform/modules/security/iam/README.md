@@ -103,29 +103,29 @@ flowchart LR
 
 ### EKS Cluster IAM
 
-| Resource                                    | Type              | Description                    |
-| ------------------------------------------- | ----------------- | ------------------------------ |
-| `aws_iam_role.eks-cluster-role`             | IAM Role          | EKS control plane role         |
-| `aws_iam_role_policy_attachment.*`          | Policy Attachment | Managed policies for cluster   |
-| `aws_iam_role.eks-nodegroup-role`           | IAM Role          | EKS worker node role           |
-| `aws_iam_role_policy_attachment.node-*`     | Policy Attachment | Managed policies for nodes     |
+| Resource                                | Type              | Description                  |
+| --------------------------------------- | ----------------- | ---------------------------- |
+| `aws_iam_role.eks-cluster-role`         | IAM Role          | EKS control plane role       |
+| `aws_iam_role_policy_attachment.*`      | Policy Attachment | Managed policies for cluster |
+| `aws_iam_role.eks-nodegroup-role`       | IAM Role          | EKS worker node role         |
+| `aws_iam_role_policy_attachment.node-*` | Policy Attachment | Managed policies for nodes   |
 
 ### OIDC Configuration
 
-| Resource                                         | Type              | Description                  |
-| ------------------------------------------------ | ----------------- | ---------------------------- |
-| `aws_iam_openid_connect_provider.eks-oidc-provider` | OIDC Provider     | EKS OIDC identity provider   |
-| `aws_iam_role.eks_oidc_role`                     | IAM Role          | Generic workload identity    |
-| `aws_iam_policy.eks_oidc_policy`                 | IAM Policy        | S3 access policy for workloads |
+| Resource                                            | Type          | Description                    |
+| --------------------------------------------------- | ------------- | ------------------------------ |
+| `aws_iam_openid_connect_provider.eks-oidc-provider` | OIDC Provider | EKS OIDC identity provider     |
+| `aws_iam_role.eks_oidc_role`                        | IAM Role      | Generic workload identity      |
+| `aws_iam_policy.eks_oidc_policy`                    | IAM Policy    | S3 access policy for workloads |
 
 ### Karpenter IAM
 
-| Resource                                        | Type              | Description                    |
-| ----------------------------------------------- | ----------------- | ------------------------------ |
-| `aws_iam_role.karpenter-controller-role`        | IAM Role          | Karpenter controller (IRSA)    |
-| `aws_iam_policy.karpenter-controller-policy`    | IAM Policy        | Karpenter controller permissions |
-| `aws_iam_role.karpenter-node-role`              | IAM Role          | Karpenter-provisioned nodes    |
-| `aws_iam_instance_profile.karpenter-node-profile` | Instance Profile | EC2 instance profile for nodes |
+| Resource                                          | Type             | Description                      |
+| ------------------------------------------------- | ---------------- | -------------------------------- |
+| `aws_iam_role.karpenter-controller-role`          | IAM Role         | Karpenter controller (IRSA)      |
+| `aws_iam_policy.karpenter-controller-policy`      | IAM Policy       | Karpenter controller permissions |
+| `aws_iam_role.karpenter-node-role`                | IAM Role         | Karpenter-provisioned nodes      |
+| `aws_iam_instance_profile.karpenter-node-profile` | Instance Profile | EC2 instance profile for nodes   |
 
 ---
 
@@ -169,6 +169,7 @@ flowchart TB
 ### Node Role
 
 Karpenter nodes assume a role with:
+
 - `AmazonEKSWorkerNodePolicy` - EKS node registration
 - `AmazonEKS_CNI_Policy` - VPC CNI plugin
 - `AmazonEC2ContainerRegistryReadOnly` - Container image pull
@@ -205,43 +206,43 @@ flowchart LR
 
 ### EKS Cluster Configuration
 
-| Variable                       | Type   | Default | Description                          |
-| ------------------------------ | ------ | ------- | ------------------------------------ |
-| `cluster_name`                 | string | -       | Name of the EKS cluster              |
-| `is_eks_cluster_enabled`       | bool   | `false` | Enable EKS cluster resources         |
-| `is_eks_role_enabled`          | bool   | `false` | Enable EKS cluster IAM role          |
-| `is_eks_nodegroup_role_enabled`| bool   | `false` | Enable EKS nodegroup IAM role        |
+| Variable                        | Type   | Default | Description                   |
+| ------------------------------- | ------ | ------- | ----------------------------- |
+| `cluster_name`                  | string | -       | Name of the EKS cluster       |
+| `is_eks_cluster_enabled`        | bool   | `false` | Enable EKS cluster resources  |
+| `is_eks_role_enabled`           | bool   | `false` | Enable EKS cluster IAM role   |
+| `is_eks_nodegroup_role_enabled` | bool   | `false` | Enable EKS nodegroup IAM role |
 
 ### OIDC Configuration
 
-| Variable                     | Type   | Default     | Description                          |
-| ---------------------------- | ------ | ----------- | ------------------------------------ |
-| `eks_oidc_url`               | string | `""`        | EKS OIDC provider URL                |
-| `eks_oidc_namespace`         | string | `"default"` | Kubernetes namespace for service account |
-| `eks_oidc_service_account`   | string | `""`        | Kubernetes service account name      |
-| `oidc_thumbprint`            | string | `""`        | OIDC provider thumbprint             |
+| Variable                   | Type   | Default     | Description                              |
+| -------------------------- | ------ | ----------- | ---------------------------------------- |
+| `eks_oidc_url`             | string | `""`        | EKS OIDC provider URL                    |
+| `eks_oidc_namespace`       | string | `"default"` | Kubernetes namespace for service account |
+| `eks_oidc_service_account` | string | `""`        | Kubernetes service account name          |
+| `oidc_thumbprint`          | string | `""`        | OIDC provider thumbprint                 |
 
 ### Karpenter Configuration
 
-| Variable                       | Type   | Default       | Description                          |
-| ------------------------------ | ------ | ------------- | ------------------------------------ |
-| `is_karpenter_enabled`         | bool   | `false`       | Enable Karpenter resources           |
-| `karpenter_namespace`          | string | `"karpenter"` | Karpenter controller namespace       |
-| `karpenter_service_account`    | string | `"karpenter"` | Karpenter service account name       |
-| `karpenter_cluster_name`       | string | `""`          | Cluster name for Karpenter (defaults to cluster_name) |
+| Variable                    | Type   | Default       | Description                                           |
+| --------------------------- | ------ | ------------- | ----------------------------------------------------- |
+| `is_karpenter_enabled`      | bool   | `false`       | Enable Karpenter resources                            |
+| `karpenter_namespace`       | string | `"karpenter"` | Karpenter controller namespace                        |
+| `karpenter_service_account` | string | `"karpenter"` | Karpenter service account name                        |
+| `karpenter_cluster_name`    | string | `""`          | Cluster name for Karpenter (defaults to cluster_name) |
 
 ### S3 Access Configuration
 
-| Variable          | Type   | Default | Description                          |
-| ----------------- | ------ | ------- | ------------------------------------ |
-| `s3_bucket_arn`   | string | `""`    | S3 bucket ARN for access             |
-| `s3_prefix`       | string | `""`    | S3 prefix/path for access            |
-| `s3_access_type`  | string | `"read"`| Access type: `read`, `write`, `readwrite` |
+| Variable         | Type   | Default  | Description                               |
+| ---------------- | ------ | -------- | ----------------------------------------- |
+| `s3_bucket_arn`  | string | `""`     | S3 bucket ARN for access                  |
+| `s3_prefix`      | string | `""`     | S3 prefix/path for access                 |
+| `s3_access_type` | string | `"read"` | Access type: `read`, `write`, `readwrite` |
 
 ### Naming Configuration
 
-| Variable                    | Type   | Default | Description                          |
-| --------------------------- | ------ | ------- | ------------------------------------ |
+| Variable                      | Type | Default | Description                                |
+| ----------------------------- | ---- | ------- | ------------------------------------------ |
 | `enable_deterministic_naming` | bool | `false` | Use deterministic names (no random suffix) |
 
 ---
@@ -377,6 +378,7 @@ terragrunt apply tfplan
 1. **Create EKS Cluster first** (OIDC URL comes from cluster)
 
 2. **Get OIDC URL:**
+
    ```bash
    aws eks describe-cluster \
      --name finishline-dev \
@@ -385,6 +387,7 @@ terragrunt apply tfplan
    ```
 
 3. **Get OIDC Thumbprint:**
+
    ```bash
    openssl s_client -showcerts -connect oidc.eks.us-east-1.amazonaws.com:443 \
      | openssl x509 -fingerprint -sha256 -noout \
@@ -395,11 +398,13 @@ terragrunt apply tfplan
 4. **Update terragrunt.hcl** with OIDC values
 
 5. **Re-apply IAM module:**
+
    ```bash
    terragrunt apply
    ```
 
 6. **Annotate Service Account:**
+
    ```bash
    # Get role ARN
    KARPENTER_ROLE_ARN=$(terragrunt output karpenter_controller_role_arn)
@@ -420,39 +425,39 @@ The OIDC trust policy includes both `sub` and `aud` claims for security:
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Federated": "arn:aws:iam::ACCOUNT:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/XXXXX"
-      },
-      "Action": "sts:AssumeRoleWithWebIdentity",
-      "Condition": {
-        "StringEquals": {
-          "oidc.eks.us-east-1.amazonaws.com/id/XXXXX:sub": "system:serviceaccount:karpenter:karpenter",
-          "oidc.eks.us-east-1.amazonaws.com/id/XXXXX:aud": "sts.amazonaws.com"
-        }
-      }
-    }
-  ]
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Principal": {
+				"Federated": "arn:aws:iam::ACCOUNT:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/XXXXX"
+			},
+			"Action": "sts:AssumeRoleWithWebIdentity",
+			"Condition": {
+				"StringEquals": {
+					"oidc.eks.us-east-1.amazonaws.com/id/XXXXX:sub": "system:serviceaccount:karpenter:karpenter",
+					"oidc.eks.us-east-1.amazonaws.com/id/XXXXX:aud": "sts.amazonaws.com"
+				}
+			}
+		}
+	]
 }
 ```
 
 ### Karpenter Security Boundaries
 
-| Action | Condition | Purpose |
-|--------|-----------|---------|
-| `ec2:TerminateInstances` | `karpenter.sh/discovery` tag | Only terminate Karpenter-managed instances |
-| `iam:PassRole` | `ec2.amazonaws.com` service | Only pass roles to EC2 |
-| `sts:AssumeRoleWithWebIdentity` | `aud: sts.amazonaws.com` | Prevent token misuse |
+| Action                          | Condition                    | Purpose                                    |
+| ------------------------------- | ---------------------------- | ------------------------------------------ |
+| `ec2:TerminateInstances`        | `karpenter.sh/discovery` tag | Only terminate Karpenter-managed instances |
+| `iam:PassRole`                  | `ec2.amazonaws.com` service  | Only pass roles to EC2                     |
+| `sts:AssumeRoleWithWebIdentity` | `aud: sts.amazonaws.com`     | Prevent token misuse                       |
 
 ### Naming Best Practices
 
-| Environment | `enable_deterministic_naming` | Reason |
-| ----------- | ----------------------------- | ------ |
+| Environment | `enable_deterministic_naming` | Reason                                          |
+| ----------- | ----------------------------- | ----------------------------------------------- |
 | Dev/Stage   | `false` (default)             | Random suffix prevents conflicts during testing |
-| Production  | `true`                        | Predictable names for automation and auditing |
+| Production  | `true`                        | Predictable names for automation and auditing   |
 
 ---
 
@@ -460,12 +465,12 @@ The OIDC trust policy includes both `sub` and `aud` claims for security:
 
 ### Common Issues
 
-| Issue | Cause | Resolution |
-|-------|-------|------------|
-| IRSA not working | Missing `aud` condition | Ensure OIDC thumbprint is correct |
-| Karpenter can't launch nodes | Missing `iam:PassRole` | Verify controller policy attachment |
-| `InvalidClientTokenId` | Wrong OIDC URL | Verify cluster name and region |
-| Service account annotation fails | Role not created | Apply IAM module after EKS creation |
+| Issue                            | Cause                   | Resolution                          |
+| -------------------------------- | ----------------------- | ----------------------------------- |
+| IRSA not working                 | Missing `aud` condition | Ensure OIDC thumbprint is correct   |
+| Karpenter can't launch nodes     | Missing `iam:PassRole`  | Verify controller policy attachment |
+| `InvalidClientTokenId`           | Wrong OIDC URL          | Verify cluster name and region      |
+| Service account annotation fails | Role not created        | Apply IAM module after EKS creation |
 
 ### Debug Commands
 
@@ -493,34 +498,34 @@ kubectl logs -n karpenter -l app.kubernetes.io/name=karpenter
 
 ### EKS Cluster Outputs
 
-| Output | Description |
-|--------|-------------|
-| `eks_cluster_role_name` | EKS cluster role name |
-| `eks_cluster_role_arn` | EKS cluster role ARN |
-| `eks_nodegroup_role_name` | Nodegroup role name |
-| `eks_nodegroup_role_arn` | Nodegroup role ARN |
+| Output                    | Description           |
+| ------------------------- | --------------------- |
+| `eks_cluster_role_name`   | EKS cluster role name |
+| `eks_cluster_role_arn`    | EKS cluster role ARN  |
+| `eks_nodegroup_role_name` | Nodegroup role name   |
+| `eks_nodegroup_role_arn`  | Nodegroup role ARN    |
 
 ### OIDC Outputs
 
-| Output | Description |
-|--------|-------------|
-| `oidc_provider_arn` | OIDC provider ARN |
-| `oidc_provider_url` | OIDC provider URL |
-| `eks_oidc_role_name` | Generic OIDC role name |
-| `eks_oidc_role_arn` | Generic OIDC role ARN |
-| `eks_oidc_policy_arn` | S3 access policy ARN |
+| Output                | Description            |
+| --------------------- | ---------------------- |
+| `oidc_provider_arn`   | OIDC provider ARN      |
+| `oidc_provider_url`   | OIDC provider URL      |
+| `eks_oidc_role_name`  | Generic OIDC role name |
+| `eks_oidc_role_arn`   | Generic OIDC role ARN  |
+| `eks_oidc_policy_arn` | S3 access policy ARN   |
 
 ### Karpenter Outputs
 
-| Output | Description |
-|--------|-------------|
-| `karpenter_controller_role_name` | Controller role name |
-| `karpenter_controller_role_arn` | Controller role ARN |
-| `karpenter_controller_policy_arn` | Controller policy ARN |
-| `karpenter_node_role_name` | Node role name |
-| `karpenter_node_role_arn` | Node role ARN |
+| Output                                 | Description           |
+| -------------------------------------- | --------------------- |
+| `karpenter_controller_role_name`       | Controller role name  |
+| `karpenter_controller_role_arn`        | Controller role ARN   |
+| `karpenter_controller_policy_arn`      | Controller policy ARN |
+| `karpenter_node_role_name`             | Node role name        |
+| `karpenter_node_role_arn`              | Node role ARN         |
 | `karpenter_node_instance_profile_name` | Instance profile name |
-| `karpenter_node_instance_profile_arn` | Instance profile ARN |
+| `karpenter_node_instance_profile_arn`  | Instance profile ARN  |
 
 ---
 

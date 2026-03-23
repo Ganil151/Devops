@@ -7,7 +7,7 @@ include {
 }
 
 terraform {
-  source = "../../../../modules//security/iam"
+  source = "${get_terragrunt_dir()}/../../../../modules/security/iam"
 }
 
 inputs = {

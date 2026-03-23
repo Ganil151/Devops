@@ -72,7 +72,7 @@ output "cluster_oidc_issuer_url" {
 
 output "cluster_oidc_issuer_arn" {
   description = "ARN of the OIDC Identity Provider for the EKS cluster"
-  value       = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:oidc-provider/${replace(aws_eks_cluster.eks[0].identity[0].oidc[0].issuer, "https://", "")}"
+  value       = try("arn:aws:iam::${data.aws_caller_identity.current.account_id}:oidc-provider/${replace(aws_eks_cluster.eks[0].identity[0].oidc[0].issuer, "https://", "")}", null)
 }
 
 output "cluster_oidc_issuer_thumbprint" {

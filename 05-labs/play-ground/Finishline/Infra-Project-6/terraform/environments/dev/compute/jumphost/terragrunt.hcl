@@ -31,14 +31,15 @@ dependency "iam" {
 }
 
 terraform {
-  source = "../../../../modules//compute/jumphost"
+  source = "${get_terragrunt_dir()}/../../../../modules/compute/jumphost"
 }
 
 #------------------------------------------------------------
 #  Load Bootstrap Script (legacy - use use_install_tools_script instead)
 #------------------------------------------------------------
 locals {
-  bootstrap_script_path = "${get_terragrunt_dir()}/../../../../bootstrap/scripts/jumphost_bootstrap.sh"
+  # Bootstrap script path - create this file if you need custom bootstrap logic
+  bootstrap_script_path = "${get_terragrunt_dir()}/../../../../scripts/jumphost_bootstrap.sh"
   bootstrap_script      = fileexists(local.bootstrap_script_path) ? file(local.bootstrap_script_path) : ""
 }
 
@@ -97,7 +98,7 @@ inputs = {
 
   # Install Tools Script - enables automatic tool installation on jumphost
   use_install_tools_script      = true
-  install_tools_script_path     = "../../../scripts/jumphost-install-tools.sh"
+  install_tools_script_path     = "${get_terragrunt_dir()}/../../../../scripts/jumphost-install-tools.sh"
 
   # Custom user_data (leave empty to use default install-tools script)
   user_data = ""

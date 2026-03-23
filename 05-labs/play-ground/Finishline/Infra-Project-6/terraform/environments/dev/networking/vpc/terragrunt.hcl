@@ -6,7 +6,7 @@ include {
 }
 
 terraform {
-  source = "${get_parent_terragrunt_dir()}/../../modules/networking/vpc"
+  source = "${get_terragrunt_dir()}/../../../../modules/networking/vpc"
 }
 
 inputs = {
@@ -24,13 +24,13 @@ inputs = {
   availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
 
   # Public Subnets
-  public_subnets_cidrs = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+  public_subnet_cidr = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
 
   # Private Subnets
-  private_subnets_cidrs = ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"]
+  private_subnet_cidr = ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"]
 
-  # Database Subnets
-  database_subnets_cidrs = ["10.0.20.0/24", "10.0.21.0/24", "10.0.22.0/24"]
+  # Database Subnets (not used by this module - kept for reference)
+  # database_subnets_cidrs = ["10.0.20.0/24", "10.0.21.0/24", "10.0.22.0/24"]
 
   # NAT Gateway
   enable_nat_gateway     = true

@@ -17,7 +17,7 @@ dependency "sg" {
 }
 
 terraform {
-  source = "../../../../modules//networking/alb"
+  source = "${get_terragrunt_dir()}/../../../../modules/networking/alb"
 }
 
 inputs = {

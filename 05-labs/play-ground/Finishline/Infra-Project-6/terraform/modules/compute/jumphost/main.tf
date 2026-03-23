@@ -54,7 +54,8 @@ resource "aws_instance" "jumphost" {
   monitoring = var.detailed_monitoring
 
   # User data - use the install-tools script if enabled and no custom user_data provided
-  user_data                   = var.use_install_tools_script && var.user_data == "" ? (var.install_tools_script_path != "" ? base64encode(templatefile(var.install_tools_script_path, {})) : null) : (var.user_data != "" ? base64encode(var.user_data) : null)
+  # Note: user_data accepts plain text up to 16KB; AWS automatically base64 encodes it
+  user_data                   = var.use_install_tools_script && var.user_data == "" ? (var.install_tools_script_path != "" ? file(var.install_tools_script_path) : null) : (var.user_data != "" ? var.user_data : null)
   user_data_replace_on_change = var.user_data_replace_on_change
 
   # Maintenance options

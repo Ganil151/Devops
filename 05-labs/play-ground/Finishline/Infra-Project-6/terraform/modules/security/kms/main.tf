@@ -1,4 +1,9 @@
 #============================================================
+#  Data Sources
+#============================================================
+data "aws_caller_identity" "current" {}
+
+#============================================================
 #  KMS Key for EKS Secrets Encryption
 #============================================================
 resource "aws_kms_key" "eks_secrets" {
@@ -14,7 +19,7 @@ resource "aws_kms_key" "eks_secrets" {
         Sid    = "Enable IAM User Permissions"
         Effect = "Allow"
         Principal = {
-          AWS = "arn:aws:iam::${var.account_id}:root"
+          AWS = "arn:aws:iam::${var.account_id != "" ? var.account_id : data.aws_caller_identity.current.account_id}:root"
         }
         Action   = "kms:*"
         Resource = "*"

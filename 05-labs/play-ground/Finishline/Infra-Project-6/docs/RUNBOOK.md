@@ -539,12 +539,12 @@ terragrunt apply tfplan
 
 **IAM Policies Attached:**
 
-| Role                 | Policies                                                                                                          |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| EKS Cluster          | AmazonEKSClusterPolicy, AmazonEKSVPCResourceController                                                            |
-| Nodegroup            | AmazonEKSWorkerNodePolicy, AmazonEKS_CNI_Policy, AmazonEC2ContainerRegistryReadOnly, AmazonEBSCSIDriverPolicy     |
-| Karpenter Controller | Custom policy (EC2, IAM PassRole, SSM, Pricing)                                                                   |
-| Karpenter Node       | AmazonEKSWorkerNodePolicy, AmazonEKS_CNI_Policy, AmazonEC2ContainerRegistryReadOnly, AmazonSSMManagedInstanceCore |
+| Role                 | Policies                                                                                                        |
+| -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| EKS Cluster          | AmazonEKSClusterPolicy, AmazonEKSVPCResourceController                                                          |
+| Nodegroup            | AmazonEKSWorkerNodePolicy, AmazonEKSCNIPolicy, AmazonEC2ContainerRegistryReadOnly, AmazonEBSCSIDriverPolicy     |
+| Karpenter Controller | Custom policy (EC2, IAM PassRole, SSM, Pricing)                                                                 |
+| Karpenter Node       | AmazonEKSWorkerNodePolicy, AmazonEKSCNIPolicy, AmazonEC2ContainerRegistryReadOnly, AmazonSSMManagedInstanceCore |
 
 **Verify:**
 

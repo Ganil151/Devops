@@ -136,7 +136,10 @@ resource "aws_route_table_association" "finishline_private" {
 #  NACL Resource
 #============================================================
 resource "aws_network_acl" "finishline_nacl" {
-  vpc_id     = aws_vpc.finishline_vpc.id
+  vpc_id = aws_vpc.finishline_vpc.id
+  # Combines IDs from both public and private subnets into a single list
+  # The concat() function merges two lists: public subnet IDs and private subnet IDs
+  # Using [*].id splat expression to collect all subnet IDs from each resource type
   subnet_ids = concat(aws_subnet.finishline_public_subnet[*].id, aws_subnet.finishline_private_subnet[*].id)
 
   dynamic "ingress" {

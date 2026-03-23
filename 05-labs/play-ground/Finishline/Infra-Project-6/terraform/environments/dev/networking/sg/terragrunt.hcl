@@ -11,7 +11,7 @@ dependency "vpc" {
 }
 
 terraform {
-  source = "${get_parent_terragrunt_dir()}/../../modules/networking/sg"
+  source = "${get_terragrunt_dir()}/../../../../modules/networking/sg"
 }
 
 inputs = {

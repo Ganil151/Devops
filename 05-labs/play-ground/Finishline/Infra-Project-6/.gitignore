@@ -1,0 +1,16 @@
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+.terragrunt-cache/
+terragrunt.hcl
+*.tfplan
+*.pem
+*.key
+**/jumphost.pem
+**/terraform.tfvars
+!terraform.tfvars.example
+*.log
+crash.log
+.DS_Store
+Thumbs.db
