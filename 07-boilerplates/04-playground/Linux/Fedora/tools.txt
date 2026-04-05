@@ -1,4 +1,0 @@
-sudo dnf install -y lm_sensors
-sudo sensors-detect --auto
-sudo install cpupower -y
-sudo cpupower frequency-set -g performance
