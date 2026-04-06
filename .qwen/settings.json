@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(docs.aws.amazon.com)",
+      "Bash(mkdir *)",
+      "Bash(powershell *)",
+      "Bash(ren *)"
+    ]
+  },
+  "$version": 3
+}
