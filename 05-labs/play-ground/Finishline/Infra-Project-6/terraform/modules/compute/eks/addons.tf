@@ -20,9 +20,7 @@ resource "aws_iam_role" "eks_nodegroup" {
 
   tags = local.tags
 }
-#============================================================
-#  IAM Role Policy Attachments for Node Group
-#============================================================
+
 resource "aws_iam_role_policy_attachment" "eks_nodegroup_amazon_eks_worker_node_policy" {
   count      = var.is_eks_nodegroup_role_enabled ? 1 : 0
   role       = aws_iam_role.eks_nodegroup[0].name
