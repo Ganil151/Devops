@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
+	// if and else statement
 	score := 72
 
 	if score >= 90 {

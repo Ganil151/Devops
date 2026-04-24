@@ -1,0 +1,52 @@
+.
+├── 01_setup_first_program
+│   └── main.go
+├── 02_variables_and_types
+│   ├── explained.md
+│   └── main.go
+├── 03_packages_imports
+│   └── main.go
+├── 04_var_vs_short_declares
+│   └── main.go
+├── 05_basic_types_strings
+│   └── main.go
+├── 06_basic_types_int
+│   └── main.go
+├── 07_basic_types_float
+│   └── main.go
+├── 08_basic_types_boolean
+│   └── main.go
+├── 09_constants
+│   └── main.go
+├── 10_if_and_else
+│   ├── main.go
+│   └── README.md
+├── 11_if_with_shortStatement
+│   ├── main.go
+│   └── README.md
+├── 12_for_loop
+│   ├── main.go
+│   └── README.md
+├── 13_switch_statement
+│   ├── main.go
+│   └── README.md
+├── 14_arrays
+│   ├── main.go
+│   └── README.md
+├── 15_slices
+│   ├── main.go
+│   └── README.md
+├── 16_for_range
+│   ├── main.go
+│   └── README.md
+├── docs
+│   └── go-cheatsheet.md
+├── go.mod
+├── images
+│   ├── Screenshot (2).png
+│   ├── Screenshot (3).png
+│   └── Screenshot (4).png
+├── README.md
+└── tree.txt
+
+19 directories, 31 files

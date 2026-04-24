@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "4b9570c3fd2832c1",
+    "id": "5bdce7258392a149",
     "type": "split",
     "children": [
       {
-        "id": "87f9b6e41ca7cc06",
+        "id": "dd1598db0e2069a5",
         "type": "tabs",
         "children": [
           {
-            "id": "19ac471caa0c1888",
+            "id": "0225de9cf5eb4f30",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-intermediate/02-phase-2/01-infrastructure-automation/02-config-management/04-cloud-native-provisioning-and-vendors/01-aws-cloudformation/vscode-integration/readme.md",
+                "file": "05-labs/play-ground/youtube-lessons/07-golang/10_if_and_else/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "README"
             }
           }
         ]
@@ -37,15 +37,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "ffd987256f9b7796",
+    "id": "b895565b86e1315f",
     "type": "split",
     "children": [
       {
-        "id": "d26b3b07f0a3f5b5",
+        "id": "500f3fac9079c6e0",
         "type": "tabs",
         "children": [
           {
-            "id": "e5b53e735af933f6",
+            "id": "a17b6d910509c794",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -58,12 +58,12 @@
             }
           },
           {
-            "id": "aec6a72c06563655",
+            "id": "25bd6fe928f5d96f",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "trunk based",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -75,7 +75,7 @@
             }
           },
           {
-            "id": "0115dce3b6d423be",
+            "id": "7a022f22efe2226d",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -88,24 +88,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5,
-    "collapsed": true
+    "width": 200
   },
   "right": {
-    "id": "51d6d30a61d0a3b2",
+    "id": "a00198361c88c4ff",
     "type": "split",
     "children": [
       {
-        "id": "79f7e5961609f473",
+        "id": "9acc12bea81121ca",
         "type": "tabs",
         "children": [
           {
-            "id": "fb76634982732554",
+            "id": "6fc9ff156f98a2af",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CICD/AWS/s3/variable.tf.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,25 +114,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for variable.tf"
+              "title": "Backlinks for README"
             }
           },
           {
-            "id": "6a6e68f85e6a8db0",
+            "id": "e0e2439ba273d131",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CICD/AWS/s3/variable.tf.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from variable.tf"
+              "title": "Outgoing links from README"
             }
           },
           {
-            "id": "1bdcc9a8415a21b5",
+            "id": "9c4828c4ff5fa71d",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -148,22 +147,7 @@
             }
           },
           {
-            "id": "b68eaa354f4ad7c1",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "CICD/AWS/s3/variable.tf.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of variable.tf"
-            }
-          },
-          {
-            "id": "3d57f24950df9aae",
+            "id": "a71aefdb40ebe82f",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -177,21 +161,25 @@
             }
           },
           {
-            "id": "30306de68b0ff6d2",
+            "id": "40a7d0154f5c62d9",
             "type": "leaf",
             "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "advanced-tables-toolbar"
+              "type": "outline",
+              "state": {
+                "file": "README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of README"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
@@ -214,54 +202,30 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19ac471caa0c1888",
+  "active": "0225de9cf5eb4f30",
   "lastOpenFiles": [
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-01-python-foundations/07-functions-and-modules/challenges/solutions/solution-03-config-pkg/config/settings.py",
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-01-python-foundations/07-functions-and-modules/challenges/solutions/solution-03-config-pkg/config/init.py",
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-01-python-foundations/07-functions-and-modules/challenges/solutions/solution-03-config-pkg/config/loader.py",
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-01-python-foundations/07-functions-and-modules/challenges/solutions/solution-03-config-pkg/config",
-    "01-foundations/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/server-manager/dns-server/unknown-1-2.webp",
-    "01-foundations/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/server-manager/dns-server/unknown-4.webp",
-    "01-foundations/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/server-manager/dns-server/unknown-1.webp",
-    "01-foundations/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/server-manager/dns-server/unknown.webp",
-    "01-foundations/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/server-manager/dns-server/unknown-3.webp",
-    "01-foundations/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/server-manager/dns-server/unknown-2.webp",
-    "01-foundations/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/server-manager/dns-server/screen-shot-2022-09-23-at-8-3.webp",
-    "01-foundations/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/server-manager/dns-server/unknown-1-3.webp",
-    "01-foundations/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/server-manager/dns-server/screen-shot-2022-09-23-at-8-1.webp",
-    "01-foundations/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/server-manager/dns-server/unknown-1-1.webp",
-    "01-foundations/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/server-manager/dns-server/how-to-install-and-configure-a-dns-server-on-windows-server-2019.md",
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/07-terraform-patterns/part-02-modular-architecture/01-modules-and-environment-isolation/modules/s3-bucket/main.tf",
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-03-python-systems-drafting/08-capstone-script/server-health-monitor/src/main.py",
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-03-python-systems-drafting/08-capstone-script/ops-mate/tests/test-health.py",
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-03-python-systems-drafting/08-capstone-script/server-health-monitor/src/reporter.py",
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-03-python-systems-drafting/08-capstone-script/server-health-monitor/src/checker.py",
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-03-python-systems-drafting/08-capstone-script/ops-mate/src/health.py",
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/02-python-basics/part-03-python-systems-drafting/08-capstone-script/ops-mate/src/utils.py",
-    "01-foundations/99-supplemental-content/01-phase-1/07-cloud-foundations/05-aws-basics/99-resources/aws/server-manager/tools-tab.md",
-    "01-foundations/99-supplemental-content/03-phase-3/02-container-orchestration/part-02-orchestration-and-architecture/02-docker-compose/intermediate/03-secrets-configs/readme.md",
-    "01-foundations/99-supplemental-content/03-phase-3/02-container-orchestration/part-02-orchestration-and-architecture/02-docker-compose/beginner/03-database-storage/readme.md",
-    "01-foundations/99-supplemental-content/03-phase-3/02-container-orchestration/part-02-orchestration-and-architecture/02-docker-compose/intermediate/01-advanced-features/readme.md",
-    "01-foundations/99-supplemental-content/03-phase-3/02-container-orchestration/part-02-orchestration-and-architecture/02-docker-compose/intermediate/02-networks-volumes/readme.md",
-    "01-foundations/99-supplemental-content/03-phase-3/02-container-orchestration/part-02-orchestration-and-architecture/02-docker-compose/beginner/01-basics/readme.md",
-    "01-foundations/99-supplemental-content/03-phase-3/02-container-orchestration/part-02-orchestration-and-architecture/02-docker-compose/beginner/02-volumes/readme.md",
-    "01-foundations/99-supplemental-content/03-phase-3/02-container-orchestration/part-02-orchestration-and-architecture/02-docker-compose/advanced/02-orchestration/readme.md",
-    "01-foundations/99-supplemental-content/03-phase-3/02-container-orchestration/part-02-orchestration-and-architecture/02-docker-compose/advanced/02-orchestration/challenges.md",
-    "01-foundations/99-supplemental-content/03-phase-3/02-container-orchestration/part-02-orchestration-and-architecture/02-docker-compose/advanced/01-production/challenges.md",
-    "01-foundations/99-supplemental-content/03-phase-3/02-container-orchestration/part-02-orchestration-and-architecture/02-docker-compose/advanced/01-production/readme.md",
-    "01-foundations/02-networking-concepts/02-network-models/osi-model/01-physical/devices/router/protocols/routing-protocol-metrics.md",
-    "01-foundations/02-networking-concepts/02-network-models/osi-model/01-physical/devices/router/protocols/routing-loops.md",
-    "01-foundations/02-networking-concepts/02-network-models/osi-model/01-physical/devices/router/protocols/routing-alogrithms.md",
-    "01-foundations/02-networking-concepts/02-network-models/osi-model/01-physical/devices/router/protocols/routing-concepts.md",
-    "01-foundations/02-networking-concepts/02-network-models/osi-model/01-physical/devices/router/protocols/ospf.md",
-    "01-foundations/02-networking-concepts/02-network-models/osi-model/01-physical/devices/router/protocols/route-aggregation.md",
-    "01-foundations/02-networking-concepts/02-network-models/osi-model/01-physical/devices/router/components/1841-cisco-router.md",
-    "01-foundations/02-networking-concepts/02-network-models/osi-model/01-physical/devices/router/components/router-devices-and-wic-modules.md",
-    "01-foundations/02-networking-concepts/02-network-models/osi-model/01-physical/devices/router/protocols/loop-back-interface.md",
-    "01-foundations/02-networking-concepts/02-network-models/osi-model/01-physical/devices/router/components/modem.md",
-    "01-foundations/99-supplemental-content/01-phase-1/08-repository-management/02-gitlab/02-intermediate-level/04-security-scanning/readme.md",
-    "01-foundations/99-supplemental-content/01-phase-1/08-repository-management/02-gitlab/01-beginner-level/04-issue-tracking/readme.md",
-    "01-foundations/99-supplemental-content/01-phase-1/08-repository-management/02-gitlab/02-intermediate-level/01-advanced-cicd/readme.md",
-    "Untitled.canvas"
+    "05-labs/play-ground/youtube-lessons/07-golang/13_switch_statement/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/main",
+    "05-labs/play-ground/youtube-lessons/07-golang/tree.txt",
+    "05-labs/play-ground/youtube-lessons/07-golang/16_for_range/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/16_for_range/main.go,",
+    "05-labs/play-ground/youtube-lessons/07-golang/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/16_for_range/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/16_for_range/main.go,README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/16_for_range",
+    "05-labs/play-ground/youtube-lessons/07-golang/15_slices/len_cap.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/15_slices/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/15_slices/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/15_slices",
+    "05-labs/play-ground/youtube-lessons/07-golang/14_arrays/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/14_arrays/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/14_arrays",
+    "05-labs/play-ground/youtube-lessons/07-golang/10_if_and_else/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/11_if_with_shortStatement/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/12_for_loop/README.md",
+    "05-labs/play-ground/terraform/TERRAFORM-STATE-CORRUPTION-RECOVERY-GUIDE.md",
+    "05-labs/play-ground/terraform/TERRAFORM-MODULE-README-TEMPLATE.md",
+    "README.md",
+    "docs/RUNBOOKS.md"
   ]
 }
