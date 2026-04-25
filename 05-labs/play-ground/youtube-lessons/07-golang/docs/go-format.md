@@ -453,5 +453,3 @@ fmt.Fprintf(&b, "metric{service=%q} %d\n", name, value)
 output := b.String()
 ```
 
-
-

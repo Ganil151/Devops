@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-labs/play-ground/youtube-lessons/07-golang/10_if_and_else/README.md",
+                "file": "05-labs/play-ground/youtube-lessons/07-golang/21_defer_basics/Defer.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Defer"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "a00198361c88c4ff",
@@ -204,23 +205,29 @@
   },
   "active": "0225de9cf5eb4f30",
   "lastOpenFiles": [
-    "05-labs/play-ground/youtube-lessons/07-golang/13_switch_statement/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/main",
-    "05-labs/play-ground/youtube-lessons/07-golang/tree.txt",
-    "05-labs/play-ground/youtube-lessons/07-golang/16_for_range/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/16_for_range/main.go,",
-    "05-labs/play-ground/youtube-lessons/07-golang/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/16_for_range/main.go",
-    "05-labs/play-ground/youtube-lessons/07-golang/16_for_range/main.go,README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/16_for_range",
-    "05-labs/play-ground/youtube-lessons/07-golang/15_slices/len_cap.go",
-    "05-labs/play-ground/youtube-lessons/07-golang/15_slices/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/15_slices/main.go",
-    "05-labs/play-ground/youtube-lessons/07-golang/15_slices",
-    "05-labs/play-ground/youtube-lessons/07-golang/14_arrays/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/14_arrays/main.go",
-    "05-labs/play-ground/youtube-lessons/07-golang/14_arrays",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/09_constants/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/09_constants",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/08_basic_types_boolean/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/08_basic_types_boolean",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/07_basic_types_float/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/07_basic_types_float",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/06_basic_types_int/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/06_basic_types_int",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/05_basic_types_strings/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/05_basic_types_strings",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/04_var_vs_short_declares/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/02_variables_and_types/explained.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/19_functions/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/21_defer_basics/Defer.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/docs/Go (Golang) Comprehensive Cheat Sheet.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/20_named_return_value/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/10_if_and_else/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/13_switch_statement/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/16_for_range/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/16_for_range/main.go,README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/15_slices/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/14_arrays/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/11_if_with_shortStatement/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/12_for_loop/README.md",
     "05-labs/play-ground/terraform/TERRAFORM-STATE-CORRUPTION-RECOVERY-GUIDE.md",
