@@ -11,24 +11,10 @@
             "id": "0225de9cf5eb4f30",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "05-labs/play-ground/youtube-lessons/07-golang/21_defer_basics/Defer.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Defer"
+              "title": "New tab"
             }
           }
         ]
@@ -205,20 +191,32 @@
   },
   "active": "0225de9cf5eb4f30",
   "lastOpenFiles": [
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/09_constants/main.go",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/09_constants",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/08_basic_types_boolean/main.go",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/08_basic_types_boolean",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/07_basic_types_float/main.go",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/07_basic_types_float",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/06_basic_types_int/main.go",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/06_basic_types_int",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/05_basic_types_strings/main.go",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/05_basic_types_strings",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/04_var_vs_short_declares/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/20_defer_basics/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/20_defer_basics/Defer.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/20_defer_basics",
+    "05-labs/play-ground/youtube-lessons/07-golang/21_defer_basics/Defer.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/20_defer_basics/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/20_defer_basics/Defer.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/20_defer_basics",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/19_functions/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/19_functions/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/19_functions",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/18_comma_ok/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/18_comma_ok/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/18_comma_ok",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/17_maps/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/17_maps/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/17_maps",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/16_for_range/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/16_for_range/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/15_slices/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/14_arrays/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/13_switch_statement/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/12_for_loop/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/11_if_with_shortStatement/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/10_if_and_else/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/fundamental/02_variables_and_types/explained.md",
     "05-labs/play-ground/youtube-lessons/07-golang/19_functions/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/21_defer_basics/Defer.md",
     "05-labs/play-ground/youtube-lessons/07-golang/docs/Go (Golang) Comprehensive Cheat Sheet.md",
     "05-labs/play-ground/youtube-lessons/07-golang/20_named_return_value/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/10_if_and_else/README.md",
@@ -228,11 +226,6 @@
     "05-labs/play-ground/youtube-lessons/07-golang/16_for_range/main.go,README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/15_slices/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/14_arrays/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/11_if_with_shortStatement/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/12_for_loop/README.md",
-    "05-labs/play-ground/terraform/TERRAFORM-STATE-CORRUPTION-RECOVERY-GUIDE.md",
-    "05-labs/play-ground/terraform/TERRAFORM-MODULE-README-TEMPLATE.md",
-    "README.md",
-    "docs/RUNBOOKS.md"
+    "05-labs/play-ground/youtube-lessons/07-golang/11_if_with_shortStatement/README.md"
   ]
 }
