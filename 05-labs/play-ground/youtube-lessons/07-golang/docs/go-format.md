@@ -1,4 +1,4 @@
-Excellent choice, Ganil. Let's take a **deep pedagogical dive** into Go's `fmt` package—the foundation of output, logging, debugging, and user-facing messages in infrastructure tooling.
+A **deep pedagogical dive** into Go's `fmt` package—the foundation of output, logging, debugging, and user-facing messages in infrastructure tooling.
 
 ---
 
