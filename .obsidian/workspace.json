@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-labs/play-ground/youtube-lessons/07-golang/docs/go-format.md",
+                "file": "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/07_json_unmarshal_into_struct/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "go-format"
+              "title": "README"
             }
           }
         ]
@@ -216,25 +216,32 @@
   },
   "active": "0225de9cf5eb4f30",
   "lastOpenFiles": [
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/04_json_decoder_decode_details/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/07_json_unmarshal_into_struct/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/07_json_unmarshal_into_struct/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/07_json_unmarshal_into_struct",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/06_reading_response_body/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/06_reading_response_body/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/06_reading_response_body",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/05_http_get/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/05_http_get/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/05_http_get",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/03_json_encoder_encode_details/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/02_http_multiple_routes/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/04_json_decoder_decode_details/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/04_json_decoder_decode_details",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/03_json_encoder_encode_details/main.go",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/03_json_encoder_encode_details",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/01_basic_http_server/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/docs/go-format.md",
     "05-labs/play-ground/readme.md",
     "05-labs/play-ground/IAC-AUDIT-REPORT.md",
     "05-labs/play-ground/EXECUTIVE-SUMMARY.md",
     "05-labs/play-ground/directory-map.md",
     "05-labs/play-ground/CICD-PIPELINE-EXAMPLE.md",
     "05-labs/play-ground/youtube-lessons/07-golang/docs/Go Modules & Project Structure.md",
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/03-go-basics/The.Go.Programming.Language.pdf",
-    "01-foundations/99-supplemental-content/02-phase-2/01-automation/03-go-basics/Unconfirmed 650627.crdownload",
-    "05-labs/play-ground/youtube-lessons/07-golang/go-modules/internal/greet/main.go",
     "05-labs/play-ground/youtube-lessons/07-golang/go-modules/internal/greet/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/go-modules/internal/greet",
     "05-labs/play-ground/youtube-lessons/07-golang/go-modules/internal/great/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/go-modules/internal/great/main.go",
-    "05-labs/play-ground/youtube-lessons/07-golang/go-modules/internal/great",
-    "05-labs/play-ground/youtube-lessons/07-golang/go-modules/internal",
-    "05-labs/play-ground/youtube-lessons/07-golang/go-modules/cmd",
-    "05-labs/play-ground/youtube-lessons/07-golang/go-modules/go.mod",
-    "05-labs/play-ground/youtube-lessons/07-golang/go-modules",
-    "05-labs/play-ground/youtube-lessons/07-golang/docs/go-format.md",
     "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/22_structs/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/23_method_value/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/21_pointers/README.md",
@@ -244,13 +251,6 @@
     "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/17_maps/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/16_for_range/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/14_arrays/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/12_for_loop/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/15_slices/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/11_if_with_shortStatement/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/13_switch_statement/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/10_if_and_else/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/02_variables_and_types/explained.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamental/20_defer_basics/Defer.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/21_defer_basics/Defer.md"
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/12_for_loop/README.md"
   ]
 }
