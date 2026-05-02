@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/07_json_unmarshal_into_struct/README.md",
+                "file": "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/08_external_api_call/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -216,8 +216,8 @@
   },
   "active": "0225de9cf5eb4f30",
   "lastOpenFiles": [
-    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/04_json_decoder_decode_details/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/07_json_unmarshal_into_struct/README.md",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/04_json_decoder_decode_details/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/07_json_unmarshal_into_struct/main.go",
     "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/07_json_unmarshal_into_struct",
     "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/06_reading_response_body/README.md",
