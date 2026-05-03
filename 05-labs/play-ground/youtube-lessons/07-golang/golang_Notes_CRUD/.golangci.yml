@@ -1,0 +1,23 @@
+version: '2'
+
+linters:
+  enable:
+    - gofmt
+    - govet
+    - errcheck
+    - staticcheck
+    - unused
+  disable:
+    - gocritic
+
+  settings:
+    govet:
+
+run:
+  timeout: 5m
+  issues-exit-code: 1
+  tests: true
+  enable-build-vcs: false
+  allow-parallel-runners: false
+  allow-serial-runners: false
+  go: '1.25.9'

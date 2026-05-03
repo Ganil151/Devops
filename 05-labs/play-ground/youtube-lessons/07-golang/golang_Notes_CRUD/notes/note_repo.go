@@ -20,7 +20,7 @@ func NewRepo(db *mongo.Database) *Repo {
 	}
 }
 
-// C.R.U.D Functions
+// C.R.U.D ( Create, Read, Update, Delete ) Functions
 func (r *Repo) Create(ctx context.Context, note *Note) (Note, error){
 	opCtx, cancel := context.WithTimeout(ctx, 5 *time.Second)
 	defer cancel()
@@ -31,3 +31,4 @@ func (r *Repo) Create(ctx context.Context, note *Note) (Note, error){
 	}
 	return *note, nil
 }
+
