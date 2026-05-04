@@ -449,8 +449,7 @@ func (r *NoteRepo) FindByID(ctx context.Context, id string) (*Note, error) {
 ## 6. 🧠 Deep Dive: Context.Context in Go
 
 ### 🔹 What Is `context.Context`?
-
-> `context.Context` is Go's standard way to carry **deadlines, cancellation signals, and request-scoped values** across API boundaries.
+-  `context.Context` is Go's standard way to carry **deadlines, cancellation signals, and request-scoped values** across API boundaries.
 
 ### 🔹 Why DevOps Engineers Care
 
@@ -903,7 +902,6 @@ gin.SetMode(gin.DebugMode)  // Forces verbose logging
 ## 13. ✅ Quick Reference Cheat Sheet
 
 ### 🔹 Common Gin Patterns
-
 ```go
 // Get path parameter
 id := c.Param("id")  // /notes/:id → "65a1b2c3..."
@@ -921,9 +919,7 @@ if err := c.ShouldBindJSON(&note); err != nil {
 // Return JSON response
 c.JSON(201, note)  // Status + body in one call
 ```
-
 ### 🔹 MongoDB Query Patterns
-
 ```go
 // Find one
 var note Note
@@ -944,9 +940,7 @@ _, err := collection.UpdateOne(
 // Delete
 _, err := collection.DeleteOne(ctx, bson.M{"_id": objID})
 ```
-
 ### 🔹 Context Patterns
-
 ```go
 // Timeout
 ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
@@ -974,21 +968,14 @@ ctx = context.WithValue(ctx, "user", "ganil151")
 ## 💬 Final Thought: You're Building Infrastructure Tooling
 
 > 🔁 **Remember**: This Notes API isn't just about notes.  
-> Swap `Note` for `Deployment`, `Alert`, `ConfigMap`, or `Secret`, and you've got the foundation for:
->
-> - Internal developer portals
-> - GitOps control planes
-> - Self-service infrastructure APIs
-> - Observability dashboards
 
-Every line of Go you write here scales to the systems that keep production running. That's powerful. 💪
+Swap `Note` for `Deployment`, `Alert`, `ConfigMap`, or `Secret`, and you've got the foundation for:
+ - Internal developer portals
+ - GitOps control planes
+ - Self-service infrastructure APIs
+ - Observability dashboards
 
-_Built with ❤️ for DevOps engineers learning Go — by Ganil_ 🚀
-
----
-
-> 📬 **Found a typo? Want a Kubernetes example or Terraform module?**  
-> Open an issue or DM me. Let's build reliable systems together. 🤝
+Open an issue or DM me. Let's build reliable systems together. 🤝
 
 ```bash
 # Quick start reminder:

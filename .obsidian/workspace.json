@@ -216,6 +216,8 @@
   },
   "active": "0225de9cf5eb4f30",
   "lastOpenFiles": [
+    "05-labs/play-ground/youtube-lessons/07-golang/golang_Notes_CRUD/tmp/api.exe~",
+    "05-labs/play-ground/youtube-lessons/07-golang/golang_Notes_CRUD/docs/Gin_Output.md",
     "05-labs/play-ground/youtube-lessons/07-golang/golang_Notes_CRUD/docs/TROUBLESHOOTING.md",
     "05-labs/play-ground/youtube-lessons/07-golang/golang_Notes_CRUD/docs/ARCHITECTURE.md",
     "05-labs/play-ground/youtube-lessons/07-golang/golang_Notes_CRUD/docs/API.md",
@@ -228,7 +230,6 @@
     "05-labs/play-ground/youtube-lessons/07-golang/golang_Notes_CRUD/test",
     "05-labs/play-ground/youtube-lessons/07-golang/golang_Notes_CRUD/scripts/seed-notes.go",
     "05-labs/play-ground/youtube-lessons/07-golang/golang_Notes_CRUD/scripts/migrate.go",
-    "05-labs/play-ground/youtube-lessons/07-golang/golang_Notes_CRUD/scripts/init-mongo.js",
     "05-labs/play-ground/youtube-lessons/07-golang/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/08_external_api_call/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/golang-net-http-module/07_json_unmarshal_into_struct/README.md",
@@ -249,8 +250,6 @@
     "05-labs/play-ground/youtube-lessons/07-golang/go-modules/internal/great/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/22_structs/README.md",
     "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/23_method_value/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/21_pointers/README.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/20_defer_basics/Defer.md",
-    "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/19_functions/README.md"
+    "05-labs/play-ground/youtube-lessons/07-golang/fundamentals/21_pointers/README.md"
   ]
 }
