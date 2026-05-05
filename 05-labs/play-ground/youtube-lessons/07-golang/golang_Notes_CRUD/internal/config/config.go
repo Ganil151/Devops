@@ -4,6 +4,7 @@ package config
 import (
 	"fmt"
 	"os"
+
 	"github.com/joho/godotenv"
 )
 
@@ -39,9 +40,9 @@ func Load() (*Config, error) {
 		return nil, fmt.Errorf("failed to extract SERVER_MODE: %w", err)
 	}
 
-	mongoColl, err := extract("MONGO_DB_COLLECTION")  // ✅ Singular, matches usage
+	mongoColl, err := extract("MONGO_DB_COLLECTIONS")  // ✅ Singular, matches usage
 	if err != nil {
-		return nil, fmt.Errorf("failed to extract MONGO_DB_COLLECTION: %w", err)
+		return nil, fmt.Errorf("failed to extract MONGO_DB_COLLECTIONS: %w", err)
 	}
 
 	return &Config{
